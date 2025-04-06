@@ -6,33 +6,32 @@ format:
     toc-depth: 2
     number-sections: true
     number-depth: 2
-editor: visual
+editor: source
 bibliography: references.bib
 ---
 
 # Assignment Details
 
-In your first statistical critique will focus on critiquing a key aspect of any statistical argument---data visualization. You have explored data visualizations over the last two weeks, thinking about what makes a plot more or less clear. You will use your knowledge of data visualizations to provide a critique for two different styles of visualizations, (1) a "pop" visualization, and (2) a "scientific" visualization.
+In your first statistical critique will focus on critiquing a key aspect of any statistical argument---data visualization. You have explored data visualizations over the last two weeks, thinking about what makes a plot more or less clear. 
+You will use your knowledge of data visualizations to provide a critique for two
+different styles of visualizations, (1) a "pop" visualization, and (2) a
+"scientific" visualization.
 
 ## Including your Visualizations
 
 You are expected to include the two visualizations you decide to critique. These visualizations **must** be included in the paragraph *surrounding your critique*. Please do not include the images at the end of your document.
 
-### Getting your visualizations
+### Getting your Visualizations
 
-For the New York Times visualization, you can left click on the image and save it to your computer.
+For the New York Times visualization, you can left click on the image and save
+it to your computer.
 
 ![Figure 1: Options when left clicking on NYT visualization -- select "Save Image As..." to save it to your computer](images/save_nyt.png)
 
-For the visualization from your research article, you may need to take screenshot of the page and crop it to only include the image.
+For the visualization from your chosen research article, you may need to take
+screenshot of the page and crop it to only include the image.
 
 ![Figure 2: Cropped image from scientific article](images/placebo_crop.png)
-
-::: callout-caution
-# No Visualization in Article
-
-If the article you selected **does not** have a visualization, you are permitted to substitute a *table* for a visualization. Similar to the instructions above, you are required to take a screenshot of the page and crop it to only include the table.
-:::
 
 ## Submission
 
@@ -40,13 +39,17 @@ You are allowed to use any text editing software to make your critique (e.g., Wo
 
 # Part One: Pop Visualizations
 
-It is common for blogs and online news to use visualizations to convey information to their readers. In this segment you will select a "pop" visualization and provide a critique of what the visualization does well and where it could be improved.
+It is common for blogs and online news to use visualizations to convey
+information to their readers. In this segment you will select a "pop" 
+visualization and provide a critique of what the visualization does well and
+where it could be improved.
 
 ## Getting Started
 
 1.  Go to the [What's Going on in This Graph website](https://www.nytimes.com/column/whats-going-on-in-this-graph)
 
-2.  Scroll through the weekly graphs and click on a plot that you are interested in
+2.  Scroll through the weekly graphs and click on a plot that you are interested
+in
 
 3.  Save the image to your computer (as instructed above)
 
@@ -59,62 +62,83 @@ Your critique of the visualization you selected needs to address the following q
 1.  What aesthetics are being used in the plot?
 
 ::: callout-tip
-# Aesthetics are Mapped to Variables
+# Aesthetics places where **variables** are being included in the plot! 
 
-Remember, `aes`thetics map **variables** to aspects of the plot. If your plot uses color, but the color **is not** associated with a variable, then color is not an aesthetic in the plot.
+If your plot uses color, but the color **is not** associated with a variable
+(e.g., every point is yellow), then color is not an aesthetic in the plot!
 :::
 
-2.  Name **at least two** things the visualization does well --- What makes the visualization clear to the reader?
+2.  Name **at least two** things the visualization does well --- What makes the
+visualization clear to the reader?
 
-3.  Name **at least two** ways the visualization could be improved --- What would the reader struggle to understand?
+3.  Name **at least two** ways the visualization could be improved --- What
+would the reader struggle to understand?
 
 # Part Two: Scientific Visualizations
 
-It is becoming increasingly common for scientific articles to be required to provide visualizations of the data alongside a statistical analysis. In this segment, you will use the scientific article you selected in Week 1 (your submission to the *Week 1: Statistics in Your Field* assignment) and provide a critique of what the visualization does well and where it could be improved.
+It is becoming increasingly common for scientific articles to be required to provide visualizations of the data alongside a statistical analysis. In this segment, you will choose a scientific article from one of the three Dr. Theobold
+has provided and provide a critique of what the visualization does well and
+where it could be improved.
 
-## Getting Started
+## Choosing an Article
 
-1.  Access the research article you selected in Week 1. If you cannot find it on your computer, go to the [Week 1: Statitics in Your Field assignment](https://canvas.calpoly.edu/)
+To save everyone time spent hunting for an interesting scientific article that
+has **both** visualizations **and** statistical methods taught in this course, 
+I've gone ahead and found three articles from different contexts:
 
-2.  Locate the visualization (or table)
+- [*Sensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue*](https://cpslo-my.sharepoint.com/personal/atheobol_calpoly_edu/Documents/dengue-fever.pdf?login_hint=atheobol%40calpoly.edu)
 
-3.  Take a screenshot of the visualization / table
+<!-- This article  -->
 
-4.  Crop the image to only include the visualization / table you are critiquing
+- [*AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking*](https://cpslo-my.sharepoint.com/personal/atheobol_calpoly_edu/Documents/ai-cognitive-offloading.pdf)
 
-5.  Save the image to your computer (as instructed above)
+<!-- This article  -->
 
-6.  Insert the image in your document (before your written critique)
+## Isolating the Visualization
 
-## Visualization / Table Critique
+1.  Locate a visualization in the article you chose. If there are multiple
+visualizations **choose one**!
 
-Your critique of the visualization you selected needs to address the following questions:
+3.  Take a screenshot of the visualization.
 
-1.  What aesthetics are being used in the visualization / table?
+4.  Crop the image to only include the visualization you are critiquing.
 
-2.  Name **at least two** things the visualization / table does well --- What makes the visualization clear to the reader?
+5.  Save the image to your computer (as instructed above).
 
-3.  Name **at least two** ways the visualization / table could be improved --- What would the reader struggle to understand?
+6.  Insert the image in your document (before your written critique).
 
-::: callout-tip
-# If you are referencing a table
+## Visualization Critique
 
-Similar to a visualization, the aesthetics of a table are variables being mapped to aspects of the table. Below is a table from Coyne et al. [-@coyne2020]. I like to think of the rows and columns of a table as similar to the x- and y-axis of a visualization.
+Your critique of the visualization you selected needs to address the following
+questions:
 
-![](images/table-example.png){fig-alt="An image of a table from a scientific journal."}
+1.  What aesthetics are being used in the visualization?
 
--   I start by noticing that the "study variables" are mapped to the rows (e.g., Social Network, Depressive Sym., Anxiety).
--   Then, I notice that the columns are associated with different values of Age.
--   Finally, I notice tha there are actually *two* rows per study variable, one associated with the mean and one associated with the standard deviation.
+2.  Name **at least two** things the visualization does well --- What makes the
+visualization clear to the reader?
 
-If I were to sketch out how this table would translate into a visualization, I would imagine the x-axis would be Age, the y-axis would be the value of the variable, there would be three facets (one per study variable), and there would be two types of points (one for the mean, one for the standard deviation). Here is a rough sketch of my mental image:
+3.  Name **at least two** ways the visualization could be improved --- What
+would the reader struggle to understand?
 
-![](images/table-to-plot.jpg){fig-alt="A drawing of how I would convert the table into a visualization. There are two plots, one with a title 'Social Network' and one with a title 'Anxiety', representing two of the variables the study researched. Each plot has an x-axis with different values of age (ranging from 13 to 20), and a y-axis ranging from 0 to 5. For each age, there are two points plotted. One point is plotted as a red triangle, representing the mean value for a specific age. A second point is plotted as a green circle, representing the standard devation for a specific age."}
+<!-- ::: callout-tip -->
+<!-- # If you are referencing a table -->
 
-In this plot, there are four aesthetics:
+<!-- Similar to a visualization, the aesthetics of a table are variables being mapped to aspects of the table. Below is a table from Coyne et al. [-@coyne2020]. I like to think of the rows and columns of a table as similar to the x- and y-axis of a visualization. -->
 
-1.  the age (included on the x-axis)
-2.  the study variable (included as facets)
-3.  the statistic measured (included as a color)
-4.  the value of the statistic (included on the y-axis)
-:::
+<!-- ![](images/table-example.png){fig-alt="An image of a table from a scientific journal."} -->
+
+<!-- -   I start by noticing that the "study variables" are mapped to the rows (e.g., Social Network, Depressive Sym., Anxiety). -->
+<!-- -   Then, I notice that the columns are associated with different values of Age. -->
+<!-- -   Finally, I notice tha there are actually *two* rows per study variable, one associated with the mean and one associated with the standard deviation. -->
+
+<!-- If I were to sketch out how this table would translate into a visualization, I would imagine the x-axis would be Age, the y-axis would be the value of the variable, there would be three facets (one per study variable), and there would be two types of points (one for the mean, one for the standard deviation). Here is a rough sketch of my mental image: -->
+
+<!-- ![](images/table-to-plot.jpg){fig-alt="A drawing of how I would convert the table into a visualization. There are two plots, one with a title 'Social Network' and one with a title 'Anxiety', representing two of the variables the study researched. Each plot has an x-axis with different values of age (ranging from 13 to 20), and a y-axis ranging from 0 to 5. For each age, there are two points plotted. One point is plotted as a red triangle, representing the mean value for a specific age. A second point is plotted as a green circle, representing the standard devation for a specific age."} -->
+
+<!-- In this plot, there are four aesthetics: -->
+
+<!-- 1.  the age (included on the x-axis) -->
+<!-- 2.  the study variable (included as facets) -->
+<!-- 3.  the statistic measured (included as a color) -->
+<!-- 4.  the value of the statistic (included on the y-axis) -->
+<!-- ::: -->
