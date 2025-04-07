@@ -86,13 +86,13 @@ To save everyone time spent hunting for an interesting scientific article that
 has **both** visualizations **and** statistical methods taught in this course, 
 I've gone ahead and found three articles from different contexts:
 
-- [*Sensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue*](https://cpslo-my.sharepoint.com/personal/atheobol_calpoly_edu/Documents/dengue-fever.pdf?login_hint=atheobol%40calpoly.edu)
+- [*Sensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue*](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EXujE_m4Z4ZAhAVhPxIAmZoB2F4e-nTl4Cfruxjs1IU6HA)
 
 **Abstract:** 
 
 *Dengue is a very common acute infectious disease in the tropical world. Health care professionals are able to better care for dengue patients if they can make an early diagnosis and make a plan for case management. This article investigated fever in 5729 children in Vietnam with 3 days or less of fever and identified 1692 dengue cases using advanced methods. We systematically collected a range of medical and laboratory findings on each patient when they entered the study and used statistical tools to determine if these medical and laboratory findings could enable early diagnosis, independent of sophisticated, gold-standard laboratory tests. Our results, called the Early Dengue Classifier, had performance characteristics suggesting it could improve the diagnostic proficiency of health care professionals. However the performance of the Early Dengue Classifier is not perfect and likely will not change the practice of experienced doctors in dengue endemic settings. Our study highlights the need for 2nd generation, easy-to-use rapid diagnostic tests that can accurately diagnose dengue in the first few days of fever.*
 
-- [*AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking*](https://cpslo-my.sharepoint.com/personal/atheobol_calpoly_edu/Documents/ai-cognitive-offloading.pdf)
+- [*AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking*](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/ESFytLXYbL9DuwxnwJPupI4BieXtFrDdtFG4y1nfvKdoAw?e=rGDC4k)
 
 **Abstract:** 
 
