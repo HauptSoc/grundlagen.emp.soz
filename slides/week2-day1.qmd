@@ -20,17 +20,18 @@ library(tidyverse)
 library(ggridges)
 library(gridExtra)
 
-my_theme <- theme(axis.title.x = element_text(size = 14),
-                  axis.title.y = element_text(size = 14),
-                  axis.title = element_text(size = 16), 
-                  axis.text.x = element_text(size = 12), 
-                  axis.text.y = element_text(size = 12), 
-                  legend.text = element_text(size = 12), 
-                  legend.title = element_text(size = 14)
-                  )
+my_theme <- theme_bw() + 
+  theme(axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14),
+        axis.title = element_text(size = 16), 
+        axis.text.x = element_text(size = 12), 
+        axis.text.y = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 14)
+        )
 ```
 
-# Researching Group Collaborations
+# Researching Survey Design
 
 ## 
 
@@ -38,11 +39,11 @@ my_theme <- theme(axis.title.x = element_text(size = 14),
 5-minutes
 :::
 
-::: columns
+:::::: columns
 ::: {.column width="47%"}
 If you [would]{.underline} like to participate
 
--   Complete [consent form](https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq5wvQIC5qYK9Er5WXQADAGttUMDE0TjZCOUZMSEg3V0JFV1dLU01ENERLVi4u) (say yes)
+-   Complete [consent form](https://forms.office.com/r/TckhG81y7q) (say yes)
 :::
 
 ::: {.column width="5%"}
@@ -51,9 +52,9 @@ If you [would]{.underline} like to participate
 ::: {.column width="47%"}
 If you [would not]{.underline} like to participate
 
--   Complete [consent form](https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq5wvQIC5qYK9Er5WXQADAGttUMDE0TjZCOUZMSEg3V0JFV1dLU01ENERLVi4u) (say no)
+-   Complete [consent form](https://forms.office.com/r/TckhG81y7q) (say no)
 :::
-:::
+::::::
 
 # Visualizing Numerical Variables
 
@@ -71,7 +72,8 @@ penguins %>%
        title = "Comparison of Bill Lengths between Antartic Penguin Species", 
        y = "",
        fill = "Penguin Sex") + 
-  my_theme
+  my_theme +
+  theme(legend.position = "top")
 
 ```
 
@@ -117,7 +119,7 @@ Univariate (One Variable) Visualizations -- For Numerical Data
 #| label: histogram
 
 ggplot(data = penguins, mapping = aes(x = bill_length_mm)) + 
-  geom_histogram(binwidth = 1.5) +
+  geom_histogram(binwidth = 1.5, color = "white", fill = "darkgray") +
   labs(x = "Bill Length (mm)") + 
   my_theme
 ```
@@ -186,6 +188,7 @@ ggplot(data = penguins,
        mapping = aes(y = bill_length_mm)) +
   geom_boxplot() + 
   labs(y = "Bill Length (mm)") +
+  my_theme +
   theme(axis.text.x = element_blank(), 
         axis.text.y = element_text(size = 20), 
         axis.title.y = element_text(size = 24),         
@@ -404,6 +407,7 @@ ggplot(data = penguins,
                      x = bill_depth_mm,
                      color = body_mass_g)
        ) +
+  my_theme +
   geom_point() +
   labs(x = "Bill Depth (mm)", 
        y = "Bill Length (mm)", 
@@ -468,4 +472,19 @@ ggplot(data = penguins,
 # Deadline Policy
 
 If you cannot submit an assignment by the deadline, you are required to submit a deadline extension request **before** the assignment deadline has passed.
+:::
+
+## Starting Statistical Critique 1
+
+</br>
+
+::: {.midi}
+**Step 1**: Go to [What's Going on in this Graph](https://www.nytimes.com/column/whats-going-on-in-this-graph) and pick a visualization to critique
+
+**Step 2:** Choose between the two scientific papers provided (to focus on for 
+your Statistical Critiques)
+
+**Step 3:** Choose a visualization from the paper to critique
+
+**Step 4:** Complete the [Statistical Critique](/critique/critique-1.qmd)!
 :::
