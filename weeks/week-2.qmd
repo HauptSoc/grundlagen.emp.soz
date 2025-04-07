@@ -57,7 +57,7 @@ knitr::include_graphics(here::here("images",
 
 [**Required Reading:** Exploring Numerical Data](https://openintro-ims.netlify.app/explore-numerical.html)
 
-### Reading Guide -- Due Tuesday by the start of class
+### Reading Guide -- Due Monday by the start of class
 
 [Download the Word Document](reading-guide/week2-reading2.docx)
 
@@ -67,7 +67,7 @@ knitr::include_graphics(here::here("images",
 Submit your completed reading guide to the Canvas assignment portal!
 :::
 
-## Concept Quiz – Due Tuesday by the start of class
+## Concept Quiz – Due Monday by the start of class
 
 ::: callout-note
 The two concept quizzes from each chapter have been combined into **one** concept quiz on Canvas.
