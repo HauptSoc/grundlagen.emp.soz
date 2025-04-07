@@ -5,7 +5,7 @@ format:
   revealjs:
     logo: images/ggplot2.png
     theme: style.scss
-editor: visual
+editor: source
 execute: 
   warning: false
   message: false
@@ -104,13 +104,13 @@ What objects are being used to represent the data?
 Univariate (One Variable) Visualizations -- For Numerical Data
 :::
 
-::: incremental
+:::: incremental
 ::: {style="color:#000000;"}
 -   Histogram (or Dotplot)
 -   Boxplot
 -   Density Plot
 :::
-:::
+::::
 
 ## Histogram
 
@@ -145,25 +145,25 @@ ggplot(data = penguins, mapping = aes(x = bill_length_mm)) +
 
 ## 
 
-::: columns
-::: {.column width="50"}
+::::::: columns
+:::: {.column width="50"}
 ### What are the strengths of a histogram?
 
 ::: fragment
 -   Inspect shape of a distribution (skewed or symmetric)
 -   Identify modes (most common values)
 :::
-:::
+::::
 
-::: {.column width="50"}
+:::: {.column width="50"}
 ### What are the weaknesses of a histogram?
 
 ::: fragment
 -   **Do not** plot raw data, plot summaries (counts) of the data!
 -   Sensitive to the width of the bins (`binwidth`)
 :::
-:::
-:::
+::::
+:::::::
 
 ## Boxplot
 
@@ -216,17 +216,17 @@ What calculations are necessary for creating a boxplot?
 
 ## 
 
-::: columns
-::: {.column width="50"}
+::::::: columns
+:::: {.column width="50"}
 ### What are strengths of a boxplot?
 
 ::: fragment
 -   Easy to flag unusual observations
 -   Easy to see the median
 :::
-:::
+::::
 
-::: {.column width="50"}
+:::: {.column width="50"}
 ### What are weaknesses of a boxplot?
 
 ::: fragment
@@ -234,8 +234,8 @@ What calculations are necessary for creating a boxplot?
 -   Only plot summary statistics
 -   Hide multiple modes
 :::
-:::
-:::
+::::
+:::::::
 
 ##  {background-color="#000000"}
 
@@ -261,8 +261,8 @@ ggplot(data = penguins,
 
 ## 
 
-::: columns
-::: {.column width="50"}
+::::::: columns
+:::: {.column width="50"}
 ### What are strengths of a density plot?
 
 ::: fragment
@@ -270,9 +270,9 @@ ggplot(data = penguins,
 -   Identify modes (most common values)
 -   Less jagged than a histogram
 :::
-:::
+::::
 
-::: {.column width="50"}
+:::: {.column width="50"}
 ### What are weaknesses of a density plot?
 
 ::: fragment
@@ -280,8 +280,8 @@ ggplot(data = penguins,
 -   y-axis is difficult to interpret
 -   Can over smooth and hide interesting shapes
 :::
-:::
-:::
+::::
+:::::::
 
 ##  {background-color="#D4D4D4"}
 
@@ -289,7 +289,7 @@ ggplot(data = penguins,
 Bivariate (Two Variables) Visualizations -- For Numerical Data
 :::
 
-::: incremental
+:::: incremental
 ::: {style="color: #000000;"}
 -   Scatterplots (Week 2)
 
@@ -299,7 +299,7 @@ Bivariate (Two Variables) Visualizations -- For Numerical Data
 
 -   Stacked Density Plots (Week 3)
 :::
-:::
+::::
 
 ## Scatterplots
 
@@ -341,8 +341,8 @@ What are the `geom`etric objects being plotted in a scatterplot?
 
 . . .
 
-::: columns
-::: {.column width="50"}
+::::::: columns
+:::: {.column width="50"}
 What are strengths of a scatterplot?
 
 ::: fragment
@@ -350,16 +350,16 @@ What are strengths of a scatterplot?
 -   Inspect form, strength, and direction of a relationship
 -   Identify unusual values
 :::
-:::
+::::
 
-::: {.column width="50"}
+:::: {.column width="50"}
 What are weaknesses of a scatterplot?
 
 ::: fragment
 -   Can get "busy" when there are lots of observations (points)
 :::
-:::
-:::
+::::
+:::::::
 
 ##  {background-color="#D4D4D4"}
 
@@ -367,33 +367,33 @@ What are weaknesses of a scatterplot?
 Multivariate (3+ Variables) Plots
 :::
 
-::: {style="color: #000000; font-size: 0.75em;"}
+:::::::::: {style="color: #000000; font-size: 0.75em;"}
 There are two main methods for adding a third (or fourth) variable into a data visualization:
 
-::: columns
-::: {.column width="50%"}
-::: fragment
+::::::::: columns
+::::: {.column width="50%"}
+:::: fragment
 ::: {style="color: #34605f; font-size: 1.25em;"}
 Colors
 :::
 
 -   creates colors for every level of a categorical variable
 -   creates a gradient for different values of a quantitative variable
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%"}
-::: fragment
+::::: {.column width="50%"}
+:::: fragment
 ::: {style="color: #b76352; font-size: 1.25em;"}
 Facets
 :::
 
 -   creates subplots for every level of a categorical variable
 -   labels each sub-plot with the value of the variable
-:::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
+::::::::::
 
 ## Colors in Scatterplots -- Numerical Variable
 
@@ -478,11 +478,10 @@ If you cannot submit an assignment by the deadline, you are required to submit a
 
 </br>
 
-::: {.midi}
+::: midi
 **Step 1**: Go to [What's Going on in this Graph](https://www.nytimes.com/column/whats-going-on-in-this-graph) and pick a visualization to critique
 
-**Step 2:** Choose between the two scientific papers provided (to focus on for 
-your Statistical Critiques)
+**Step 2:** Choose between the two scientific papers provided (to focus on for your Statistical Critiques)
 
 **Step 3:** Choose a visualization from the paper to critique
 
