@@ -693,8 +693,29 @@
     "text": "Project Proposal\n\n\nChoose a dataset\nChoose one numerical response variable\nChoose one numerical explanatory variable\nChoose a second explanatory variable, it can be either numerical or categorical\n\n\n\n\n\n\n\n\nChecking values of your numerical variable(s)\n\n\n\nYour numerical variable cannot have a small number of values (e.g., 2 or 3). You can use the distinct() function to determine the unique values of your variable. For example, by running distinct(hbr_maples, year) I would discover that year only has two values (2003 and 2004), meaning year is not eligible to be a numerical response or explanatory variable. It could, however, be a categorical explanatory variable!\n\n\n\n\n\n\nWrite your Introduction"
   },
   {
+    "objectID": "slides/week3-day1.html#revisions",
+    "href": "slides/week3-day1.html#revisions",
+    "title": "Incorporating Categorical Variables",
+    "section": "Revisions",
+    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question"
+  },
+  {
+    "objectID": "slides/week3-day1.html#completing-revisions",
+    "href": "slides/week3-day1.html#completing-revisions",
+    "title": "Incorporating Categorical Variables",
+    "section": "Completing Revisions",
+    "text": "Completing Revisions\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+  },
+  {
     "objectID": "slides/week3-day1.html#section",
     "href": "slides/week3-day1.html#section",
+    "title": "Incorporating Categorical Variables",
+    "section": "",
+    "text": "15-minutes\n\n\n\nReview Lab 1 comments\nAsk questions\nStart revisions"
+  },
+  {
+    "objectID": "slides/week3-day1.html#section-1",
+    "href": "slides/week3-day1.html#section-1",
     "title": "Incorporating Categorical Variables",
     "section": "",
     "text": "How would you describe a categorical variable?"
@@ -707,8 +728,8 @@
     "text": "In R…\ncategorical variables can have either character or factor data types\n\n\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n\n\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
   },
   {
-    "objectID": "slides/week3-day1.html#section-1",
-    "href": "slides/week3-day1.html#section-1",
+    "objectID": "slides/week3-day1.html#section-2",
+    "href": "slides/week3-day1.html#section-2",
     "title": "Incorporating Categorical Variables",
     "section": "",
     "text": "Fill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable"
@@ -721,22 +742,22 @@
     "text": "dplyr – a tool bag for data wrangling\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
   },
   {
-    "objectID": "slides/week3-day1.html#section-2",
-    "href": "slides/week3-day1.html#section-2",
+    "objectID": "slides/week3-day1.html#section-3",
+    "href": "slides/week3-day1.html#section-3",
     "title": "Incorporating Categorical Variables",
     "section": "",
     "text": "Brainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()"
   },
   {
-    "objectID": "slides/week3-day1.html#section-3",
-    "href": "slides/week3-day1.html#section-3",
+    "objectID": "slides/week3-day1.html#section-4",
+    "href": "slides/week3-day1.html#section-4",
     "title": "Incorporating Categorical Variables",
     "section": "",
     "text": "The Pipe %&gt;%"
   },
   {
-    "objectID": "slides/week3-day1.html#section-4",
-    "href": "slides/week3-day1.html#section-4",
+    "objectID": "slides/week3-day1.html#section-5",
+    "href": "slides/week3-day1.html#section-5",
     "title": "Incorporating Categorical Variables",
     "section": "",
     "text": "If you wanted means for each level of a categorical variable, what would you do?"
@@ -2312,102 +2333,193 @@
     "text": "Conclusions"
   },
   {
-    "objectID": "slides/week2-day2.html#revisions",
-    "href": "slides/week2-day2.html#revisions",
-    "title": "The Flaws of Averages",
-    "section": "Revisions",
-    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question"
-  },
-  {
-    "objectID": "slides/week2-day2.html#key---code-chunk-options",
-    "href": "slides/week2-day2.html#key---code-chunk-options",
-    "title": "The Flaws of Averages",
-    "section": "Key - Code Chunk Options",
-    "text": "Key - Code Chunk Options\nA code chunk option is declared after a #|. Here are some options we may want to use:\n\n\n#| label: packages – creates a label for the code chunk (describing its contents)\n#| echo: false – tells Quarto not to output the code in the rendered HTML (only the output)\n#| include: false – tells Quarto not to include the code or the output in the rendered HTML"
-  },
-  {
-    "objectID": "slides/week2-day2.html#key---previewing-your-data",
-    "href": "slides/week2-day2.html#key---previewing-your-data",
-    "title": "The Flaws of Averages",
-    "section": "Key - Previewing Your Data",
-    "text": "Key - Previewing Your Data\nThe glimpse() function is a great tool to preview the dataset you are working with! It gives you:\n\nthe dimensions of the data (rows and columns)\nthe names of the columns\nthe data type of each column (e.g., chr, dbl)\na preview of the first 10 rows of each column"
-  },
-  {
-    "objectID": "slides/week2-day2.html#key---plotting-your-data",
-    "href": "slides/week2-day2.html#key---plotting-your-data",
-    "title": "The Flaws of Averages",
-    "section": "Key - Plotting Your Data",
-    "text": "Key - Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x- and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
-  },
-  {
-    "objectID": "slides/week2-day2.html#completing-revisions",
-    "href": "slides/week2-day2.html#completing-revisions",
-    "title": "The Flaws of Averages",
-    "section": "Completing Revisions",
-    "text": "Completing Revisions\n\nLab 1 revisions are due by Wednesday, April 17 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
-  },
-  {
-    "objectID": "slides/week2-day2.html#section",
-    "href": "slides/week2-day2.html#section",
-    "title": "The Flaws of Averages",
+    "objectID": "activity/week-5-model-justification.html",
+    "href": "activity/week-5-model-justification.html",
+    "title": "Model Justification",
     "section": "",
-    "text": "Suppose…\n\n\n“Overall this instructor was educationally effective.”\n\n\n\n\n\n\n\n\nyear\nquarter\naverage\n\n\n\n\n2021\nFall\n4.53\n\n\n2021\nFall\n4.36\n\n\n2022\nWinter\n4.18\n\n\n2022\nWinter\n4.24\n\n\n2022\nSpring\n4.83\n\n\n2022\nSpring\n4.41\n\n\n2022\nSpring\n4.00"
+    "text": "This study seeks to investigate how the relationship between average SAT math scores and the percentage of students who are economically disadvantaged differs based on the size of the school. As seen in the plot below, the slope for this relationship was found to be similar across the different levels of schools. Therefore, this study used a parallel slopes (additive) multiple linear regression model.\n\n\n\n\n\n\n\n\n\nWhat do you feel is missing from this model justification?"
   },
   {
-    "objectID": "slides/week2-day2.html#section-1",
-    "href": "slides/week2-day2.html#section-1",
-    "title": "The Flaws of Averages",
+    "objectID": "weeks/week-0.html",
+    "href": "weeks/week-0.html",
+    "title": "Course Setup and Structure",
     "section": "",
-    "text": "How were those averages calculated?"
+    "text": "Welcome!\nIn this coursework, you’ll get set up with the Class Discord, learn about what is expected of you each week, and hear some tips from me about how to succeed.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
   },
   {
-    "objectID": "slides/week2-day2.html#section-2",
-    "href": "slides/week2-day2.html#section-2",
-    "title": "The Flaws of Averages",
+    "objectID": "weeks/week-0.html#set-up-your-account",
+    "href": "weeks/week-0.html#set-up-your-account",
+    "title": "Course Setup and Structure",
+    "section": "1.1 Set up your account",
+    "text": "1.1 Set up your account\n\nVerify your email\nTo use this Discord server, you must have a verified email.\nNobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.\n\n\nCreate your identity\nThe first thing you should do is decide what name and picture you would like to use.\n\nI would like to strongly encourage you to use your real name and picture, so that everyone can get to know you. However, if you prefer to remain anonymous, you are free to do so.\n\n(Please do not be like Regina and use the name of another student, however!\nThis kind of impersonation will result in a permanent ban from the server.)\n\n\nDecide about privacy and notifications\nThe default settings on the channel are probably just fine for you.\nFeel free to make any changes that work for you, though.\nYou can change your message notifications:\n\nYou can edit your privacy settings, although most things are already private:\n\n\n\nConnect other apps\nYou can connect other apps to Discord, either for productivity or just for fun.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "weeks/week-0.html#using-the-shannels",
+    "href": "weeks/week-0.html#using-the-shannels",
+    "title": "Course Setup and Structure",
+    "section": "1.2 Using the shannels",
+    "text": "1.2 Using the shannels\nThe server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.\n\nText shannels\nUse the #general channel for anything and everything:\n\nIf your question is about course logistics, rather than the material itself, consider using the #class-logistics channel:\n\nYou can use the specific weekly channels to ask questions about the material…\n\n… or the specific lab assignment.\n\nNotice that you can use tick marks (```), like in Quarto, to make your code appear in a formatted code box.\n\n\nVoice shannels\nTo join a voice channel, simply click it! Make sure you are careful about when you are muted or unmuted.\n\nThe extra “Side Chat” channels are limited to 4 or 8 people, if you would like to start an impromptu study conversation without being heard by me and / or the rest of the class. (I’ll only drop in if you invite us!)\nVoice channels can also be used for people to “Go Live”, and share their screen with everyone else.\n\nWhile this will usually be something professors use to demonstrate code, you can go live, too! But you may need to download the desktop version of Discord to do so.\n\n\nPrivate messages\nIt is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "weeks/week-0.html#see-you-at-the-party",
+    "href": "weeks/week-0.html#see-you-at-the-party",
+    "title": "Course Setup and Structure",
+    "section": "1.3 See you at the Party!",
+    "text": "1.3 See you at the Party!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "weeks/week-0.html#how-your-typical-week-will-look",
+    "href": "weeks/week-0.html#how-your-typical-week-will-look",
+    "title": "Course Setup and Structure",
+    "section": "2.1 How your typical week will look",
+    "text": "2.1 How your typical week will look\n\nReadings and videos (every week)\nI favor a “flipped classroom,” as it gives you more time to clarify and solidify statistical concepts through hands-on exercises. Each week, you will read the required chapter(s), completing a required reading guide to walk you through the central concepts for each week.\nDue Monday by the start of class.\n\n\nConcept quizzes (every week)\nEach week there will be a short (~10 questions) quiz over the reading and videos from the week. These quizzes are intended to ensure that you grasped the key concepts from the week’s readings. The quizzes are not timed, so you can feel free to check your answers with the textbook and / or videos if you so wish. The quizzes are marked on completion as complete or incomplete.\nDue Monday by the start of class.\n\n\nTutorials (every week)\nYou can think of the tutorials as an “interactive” textbook, as they interweave statistical ideas alongside examples of how to work with data in R and hands-on exercises writing the R code necessary to complete a given task. Each exercise has hints available if you get stuck!\nThe tutorials are work at your own pace, so you can complete them all at once or slowly throughout the week. The lab assignments will require for you to put the skills you learned in the tutorials to work, so you are required to complete each week’s tutorial before Wednesday’s lab.\nThe tutorials are marked on completion as complete or incomplete. You will submit a screenshot of the completion page at the end of the tutorial to confirm that you completed the tutorial for the week.\nDue Wednesday by the start of class.\n\n\nStatistical critiques (every 4-weeks)\nThese assignments are case studies in which you will evaluate a data visualization or statistical analysis, determining how well-performed and presented the analysis was and making recommendations for improving or using the analysis. Critiques are due roughly 1-week after they are assigned and should take 1-2 hours. You will receive feedback and a mark of Success or Growing (elaborated more on later), and you will be able to revise based on that feedback. There will be two total critiques.\n\n\nLab Assignments (every week)\nLabs will be assigned on Wednesday every week, providing the opportunity to explore the course concepts in the context of real data. Lab assignments will require for you to work through the tutorial for the week, thus the tutorials are due before the start of class on Wednesday.\nYou will complete the lab assignments in the same teams you collaborate with in class. You will access the lab assignment through Posit Cloud, which you will be walked through during the first lab. Your group will be expected to submit your completed lab on Canvas. You will need to submit only the HTML document.\nDue Mondays at 5pm.\n\n\nMidterm & Final Projects (Week 6 & Week 10)\nThere will be two projects throughout the quarter, where you will be asked to synthesize the statistical concepts you have learned in a formal statistical report. Your critiques will help guide you toward how you do / don’t want your report to look. Each project will be done independently, and requires you to submit a project proposal and draft report before the final deadline. You are encouraged to use the feedback received on these assignments to improve your final report. The final reports will be graded as Excellent, Satisfactory, Progressing, or No Credit based on a rubric that will be shared with the initial assignment.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
+    "href": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
+    "title": "Course Setup and Structure",
+    "section": "2.2 ✅ Week 1 Concept Quiz: Course Set-up",
+    "text": "2.2 ✅ Week 1 Concept Quiz: Course Set-up\nQuestion 1: Where are student hours held?\n\nIn person\nDiscord\nZoom by appointment\nCanvas\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the student hours section of the course syllabus!\n\n\nQuestion 2: What materials and technology are required for this course? Select all that apply!\n\nIntroduction to Modern Statistics\nRStudio Cloud – the application for working in R\nCanvas\nDiscord\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the required materials section of the course syllabus!\n\n\nQuestion 3: In this course, Reading Guides are due by ____, Concept Quizzes are due by ____, and Tutorials are due by ____.\nQuestion 4: If you have a question about the course content, what is the best first step?\n\nPost your question on Discord in the appropriate channel\nSend Dr. Theobold an email\nGo to Dr. Theobold’s office hours on Monday\nGoogle it\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the getting help section of the course syllabus!\n\n\nQuestion 5: You are permitted to submit up to ___ assignments late.\n\n\n\n\n\n\nTip\n\n\n\nLook at the late work policy section of the course syllabus!\n\n\nQuestion 6: If you need to submit an assignment late, you must do which of the following?\n\nemail Dr. Theobold to request a deadline extension\nsubmit a deadline extension request to the Google Form linked in the syllabus (and on Canvas)\nrequest an extension before the deadline\ncomplete the assignment no later than 3-days after the original deadline\n\nQuestion 7: If you receive a “Growing” on a Lab Assignment or a Critique, what should you do?\n\nread the comments and complete revisions on the problems receiving a “Growing”\nread the comments and complete revisions on the entire assignment\ncomplete revisions on the problems receiving a “Growing”\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the lab section of the course syllabus!\n\n\nQuestion 8: For revisions on Lab Assignments and Critiques to be considered that week they need to be turned in with:\n\nreflections on how your learning progressed from your initial attempt\nyour new answers\nyour original answers\nnothing\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the revisions section of the course syllabus!\n\n\nQuestion 9: You and a friend have been working on Critique 1 together. You finish up and want to go to bed, but they are still a little confused. You email them your file, and say, “Don’t copy this, just look how I did it so you can figure it out.” Have you violated Academic Honesty policies?\nQuestion 10: You have been working on making a visualization for your Midterm Project for what feels like forever and it seems like you are making little to no progress. You find an example analysis on the internet with the visualization you were hoping to make. You copy-and-paste the code used to make the visualization into your Midterm Project and do not reference that you used an outside source. You have violated the Academic Honesty policy.\nQuestion 11: Upload a picture of you introducing yourself in the “Introductions” channel of the STAT 313 Discord Server.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "slides/week1-day1.html#section",
+    "href": "slides/week1-day1.html#section",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "What do these averages mean?"
+    "text": "About Me…"
   },
   {
-    "objectID": "slides/week2-day2.html#section-3",
-    "href": "slides/week2-day2.html#section-3",
-    "title": "The Flaws of Averages",
+    "objectID": "slides/week1-day1.html#section-1",
+    "href": "slides/week1-day1.html#section-1",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "What statistic(s) should be used instead?"
+    "text": "What is Statistics?\n\n\n\nScientists seek to answer questions using rigorous methods and careful observations. These observations – collected from the likes of field notes, surveys, and experiments – form the backbone of a statistical investigation and are called data.\n\n\nStatistics is the study of how best to collect, analyze, and draw conclusions from data.\n\n\nIntroduction to Modern Statistics"
   },
   {
-    "objectID": "slides/week2-day2.html#section-4",
-    "href": "slides/week2-day2.html#section-4",
-    "title": "The Flaws of Averages",
+    "objectID": "slides/week1-day1.html#section-2",
+    "href": "slides/week1-day1.html#section-2",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "Averagarianism\n\n\n\n“The primary research method of averagarianism is aggregate, then analyze: First, combine many people together and look for patterns in the group. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight.”\nThe End of Average by Todd Rose"
+    "text": "What Statistics Is To Me\n\n \n\n\n\n\nThe data science cycle – Wickham & Grolemund"
   },
   {
-    "objectID": "slides/week2-day2.html#section-5",
-    "href": "slides/week2-day2.html#section-5",
-    "title": "The Flaws of Averages",
+    "objectID": "slides/week1-day1.html#section-3",
+    "href": "slides/week1-day1.html#section-3",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "Some Rules to Play By\n\n\n\n\n\nLook at and understand your data before aggregating!\nShould the variables that are numerical actually numerical?\nConsider what statistic is the most appropriate for the question."
+    "text": "What you can expect in STAT 313\n\nThis course will teach you the fundamentals of linear models—simple linear regression, multiple linear regression, and analysis of variance—and experimental design. You will extend the concepts covered in your Stat I course, to:\n\n\nwork with data in a reproducible way (using R)\nvisualize and summarize a variety of datasets (in R)\ncritically evaluate the use of Statistics\nperform statistical analyses to answer research questions (using R)"
   },
   {
-    "objectID": "slides/week2-day2.html#section-6",
-    "href": "slides/week2-day2.html#section-6",
-    "title": "The Flaws of Averages",
+    "objectID": "slides/week1-day1.html#section-4",
+    "href": "slides/week1-day1.html#section-4",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "Recorder – Manages in-class report\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\nResource Manager – Evaluates solution strategy\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder."
+    "text": "Coding 🙀\n\n\nCoding is a huge part of how doing statistics in the wild looks.\n\n\n\nEveryone is coming from a different background\nDifferent aspects of the course will be difficult to different people\nYou will be given coding resources each week\nUse your peers to support your learning"
   },
   {
-    "objectID": "slides/week2-day2.html#section-7",
-    "href": "slides/week2-day2.html#section-7",
-    "title": "The Flaws of Averages",
+    "objectID": "slides/week1-day1.html#section-5",
+    "href": "slides/week1-day1.html#section-5",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Course Components\n\n\n\n\nBefore Class\n\n\nReading Guides\nConcept Quizzes\nR Tutorials\n\n\n\n\n\nDuring Class\n\n\nGroup Discussion\nHands-on Activities\nLab Assignments\n\n\n\n\n\nOutside of Class\n\n\nStatistical Critiques\nMidterm Project\nFinal Project"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-6",
+    "href": "slides/week1-day1.html#section-6",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Specifications Based Grading\n\n\n\n\nEveryone is capable of earning an A!"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-7",
+    "href": "slides/week1-day1.html#section-7",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "How Smart are You?\n\n\n\n(2 minutes)\n\nWrite two criteria would you use to rank yourself compared to everyone else in this class\n\n\n\n\n(3 minutes)\n\nTalk with the person on your right about the criteria you proposed\n\n\n\n\n(5 minutes)\n\nShare out\nPerson with most vowels in name should be prepared to share!"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-8",
+    "href": "slides/week1-day1.html#section-8",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Cooperative Learning\n\nis a structured form of small-group learning\n\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-9",
+    "href": "slides/week1-day1.html#section-9",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Group Norms\n\n\n\n\nZero tolerance for: racism, sexism, homophobia, transphobia, ageism, ableism\nRespect one another\nIntent and impact both matter\n\n\n\n\n\nNon-judgmental\nTake space, make space\nEmbrace discomfort\nMake decisions by consensus"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-10",
+    "href": "slides/week1-day1.html#section-10",
+    "title": "Welcome to Stat 313!",
     "section": "",
     "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
   },
   {
-    "objectID": "slides/week2-day2.html#section-8",
-    "href": "slides/week2-day2.html#section-8",
-    "title": "The Flaws of Averages",
+    "objectID": "slides/week1-day1.html#section-11",
+    "href": "slides/week1-day1.html#section-11",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
+    "text": "Break"
+  },
+  {
+    "objectID": "weeks/week-7.html",
+    "href": "weeks/week-7.html",
+    "title": "Week 7 – Inference for Regression",
+    "section": "",
+    "text": "📖 Required Reading: Introduction to Modern Statistics – Study Design\n3. Which of the following statements are true about observational studies and experiments? Select all that apply!\n\nExperiments randomly assign the explanatory variable\nObservational studies randomly assign the explanatory variable\nObservational studies can make causal statements about the relationship between the explanatory and response variables\nExperiments can make causal statements about the relationship between the explanatory and response variables\n\n4. What are different methods for sampling from a population? Select all that apply!\n\nsimple random sampling\nstratified random sampling\ncluster sampling\nmultistage sampling\nconvenience sampling\n\n5. Cluster sampling and stratified sampling both rely on grouping observations, but have important differences. Match each method to how observations are randomly sampled.\n\n\nstratified sampling\ncluster sampling\n\ngroups of observations are created, groups are randomly selected, every observation in the selected group is sampled\ngroups of observations are created, observations within a group are randomly sampled\n\n\n\n1 Textbook Reading – Part 1\nRequired Reading: Exploring Sampling Variability\n\n\n\n\n\n\nReading Guide – Due Monday by the beginning of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Textbook Reading – Part 2\nRequired Reading: Confidence Intervals for the Slope\n\n\n\n\n\n\nReading Guide – Due Wednesday by the beginning of class (note the new time!)\n\n\n\nDownload the Word Document\n\n\n\n\n3 Concept Quiz – Due Wednesday by the beginning of class (note the new time!)\n1. Match each item to it’s respective analogy:\n\n\npoint estimate\nconfidence interval\n\n\n\nfishing with a net\nfishing with a spear\n\n\n2. To create a 95% confidence interval using the percentile method, what percentiles of the bootstrap distribution do you need to calculate?\n\n0th\n2.5th\n5th\n90th\n95th\n97.5th\n\n3. To create a 95% confidence interval using the standard error method, what standard error do you use?\n\nthe sample standard deviation\nthe bootstrap distribution standard deviation\na resample standard deviation\n1.96\n\n4. We almost never know if our confidence interval captured the true population parameter.\n\nTrue\nFalse\n\n5. What percentage of 99% confidence intervals do you expect to capture the true population parameter?\n6. The word “confident” in a confidence interval interpretation corresponds to what aspect of the interval?\n\nthe accuracy of the original sample\nthe reliability of the procedure for constructing confidence intervals\nthe precision of the bootstrap samples\n\n7. Which of the following are true?\n\nSmaller sample sizes tend to produce narrower confidence intervals.\nSmaller sample sizes tend to produce wider confidence intervals.\nLower confidence levels tend to produce wider confidence intervals.\nLower confidence levels tend to produce narrower confidence intervals.\n\n8. In a regression table, what does the “std_error” value associated with the slope represent?\n\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\nthe estimated standard deviation of the sampling distribution\nthe standard error of the sample\n\n9. In a regression table, how is the “std_error” value calculated?\n\na mathematical formula\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\n\n10. What percentage confidence interval is output in a regression table?\n\n99%\n95%\n90%\n\n\n\n4 R Tutorial – Due Wednesday by the beginning of class\nRequired Tutorial: Practice the infer Workflow",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "weeks/reading-guide/week6-reading2.html",
+    "href": "weeks/reading-guide/week6-reading2.html",
+    "title": "Week 6 Reading Guide Part 2 – Study Design",
+    "section": "",
+    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
+  },
+  {
+    "objectID": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
+    "href": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
+    "title": "Week 6 Reading Guide Part 2 – Study Design",
+    "section": "",
+    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
+  },
+  {
+    "objectID": "slides/week2-day2.html#plotting-your-data",
+    "href": "slides/week2-day2.html#plotting-your-data",
+    "title": "The Flaws of Averages",
+    "section": "Plotting Your Data",
+    "text": "Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
   },
   {
     "objectID": "slides/week2-day2.html#departure-delays",
@@ -2417,157 +2529,39 @@
     "text": "Departure Delays\n\nInspect the nycflights dataset\nVisualize departure delays\nPlay with histogram binwidth\nfilter() data to include only certain flights\ncalculate() summary statistics\nMake decisions based on summary statistics\nCompare summary statistics to a visualization"
   },
   {
-    "objectID": "weeks/week-10.html",
-    "href": "weeks/week-10.html",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "",
-    "text": "Welcome!\nThis week we explore one final area of ANOVA, a situation where we have multiple explanatory variables. This is called a two-way ANOVA. A two-way ANOVA extends the one-way ANOVA to situations with two categorical explanatory variables. This new methods allows researchers to simultaneously study two variables that might explain variability in the responses and explore whether the impacts of one explanatory variable change depending on the level of the other explanatory variable.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
+    "objectID": "slides/week2-day2.html#cooperative-learning",
+    "href": "slides/week2-day2.html#cooperative-learning",
+    "title": "The Flaws of Averages",
+    "section": "Cooperative Learning",
+    "text": "Cooperative Learning\nis a structured form of small-group learning.\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\n\n\n\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
   },
   {
-    "objectID": "weeks/week-10.html#textbook-reading",
-    "href": "weeks/week-10.html#textbook-reading",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "1.1 Textbook Reading",
-    "text": "1.1 Textbook Reading\nTo be honest, I didn’t have the energy this week to write another chapter on two-way ANOVA. So, instead we will be reading a couple of sections out of another statistics textbook. I’ve uploaded the PDFs of these sections to OneDrive, so you should be able to read them online or download them.\n\nSection 1 – Introduction to Two-Way ANOVA\n\n\n\n\n\n\nRead through “Step 6” on page 222\n\n\n\n\n\n\n\n\n\n\n\n\nExample 3.1 – Problematic Undertones\n\n\n\nI want to point out that the context of example 3.1 in this section has some major problematic undertones. The example focuses on “the effects of corporate and endorser credibility” on how likely someone is to buy shoes. For no clear reason, the example only considers “female” college students, which implicitly sends two problematic messages, (1) sex and gender are the same, and (2) women are more easily swayed by advertising.\nIn addition, the example uses Roseanne Barr as one of the celebrity endorsers—an actress who has written deplorable remarks about transgender people.\n\n\n\n\nSection 2 – Two-Way ANOVA Interaction Models\n\n\n\n\n\n\nRead through “Follow-up Confidence Intervals” on page 239\n\n\n\n\n\n\n\n\nReading Guide – Due Monday by the start of Class\nDownload the Word Document",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
+    "objectID": "slides/week2-day2.html#group-roles",
+    "href": "slides/week2-day2.html#group-roles",
+    "title": "The Flaws of Averages",
+    "section": "Group Roles",
+    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\n\nTalks with Resource Manager about ideas related to ways they could solve the problem.\nResponsible for organizing and recording answers to the assignment during discussions.\nCompiles a summary of the solutions discussed.\nSubmits final assignment.\n\n\n\n\n\n\nResource Manager – Manages resources for coding / statistical tasks\n\n\n\nReads prompt and ensures Recorder understands what the problem is asking.\nAsks group questions to Dr. Theobold.\nManages resources (e.g., cheatsheets, textbook, tutorials) for aiding in solution strategy.\nLeads discussion and encourages participation from Recorder.\nBrings conversation back if it deviates."
   },
   {
-    "objectID": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
-    "href": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "1.2 Concept Quiz – Due Monday by the start of class",
-    "text": "1.2 Concept Quiz – Due Monday by the start of class\n1. Match each two-way ANOVA model to its correct description.\n\n\n\nadditive model\n  \ninteraction model\n\nThe relationship between one factor and the response changes depending on the level of another factor.\n\nThe relationship between one factor and the response remains the same across all levels of another factor.\n\nThere is a significant relationship between each factor and the response.\n\n\n\n2. Match each two-way ANOVA model to its multiple linear regression counterpart.\n\n\nadditive model\ninteraction model\n\n\n\ndifferent slopes\nparallel slopes\n\n\n\n\n\n\n\n\n\n3. Which of the following are conditions of a two-way ANOVA model? (Select all that apply)\n\nindependence of observations between the groups\nindependence of observations within each group\nindependence of variables\nnormally distributed responses within each group\nnormally distributed residuals\nlinear relationship between the explanatory and response variables\nequal variance of residuals\nequal variance of responses within each group\n\n\n4. Which of the following is important to consider when assessing independence? (Select all that apply)\n\nIf the same observational unit (e.g., person, penguin, tree) could be sampled multiple times\nIf observations could be biologically related (e.g., parents, siblings, etc.)\nIf observations could be spatially related (e.g., countries that border each other)\nIf there is a relationship between the observations and the response variable\n\n\n\n\n5. [True or False] When an additive model is fit, the interpretation of the p-value associated with each explanatory variable is [conditional / independent] on the other explanatory variable(s) in the model.\n\n6. If the null hypothesis is rejected in an additive two-way ANOVA model, what model should be fit instead?\n\nseparate one-way ANOVA models\na one-way ANOVA model containing the variable with the smallest p-value (from the additive two-way ANOVA)\na mean only model\nan interaction two-way ANOVA model\na simple linear regression",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
+    "objectID": "slides/week2-day2.html#group-roles-1",
+    "href": "slides/week2-day2.html#group-roles-1",
+    "title": "The Flaws of Averages",
+    "section": "Group Roles",
+    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\n\nResource Manager – Evaluates solution strategy\n\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder.\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
   },
   {
-    "objectID": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
-    "href": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "1.3 R Tutorial – Due Wednesday by the start of class",
-    "text": "1.3 R Tutorial – Due Wednesday by the start of class\nThis week’s R tutorial is a short guide stepping you through model selection starting with a two-way ANOVA interaction model.\nClick here to access this week’s R tutorial\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit a screenshot of the completion page at the end of the tutorial.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
+    "objectID": "slides/week2-day2.html#accessing-lab-1",
+    "href": "slides/week2-day2.html#accessing-lab-1",
+    "title": "The Flaws of Averages",
+    "section": "Accessing Lab 1",
+    "text": "Accessing Lab 1\nStep 1: Both members of your group need to follow these instructions to join your group workspace.\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was assigned to be the group “leader” will act as the Recorder for your group (this week).\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\nStep 3: Both members open the Lab 2 assignment in your group workspace!\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
   },
   {
-    "objectID": "slides/week6-day2.html#deadline-reminders",
-    "href": "slides/week6-day2.html#deadline-reminders",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Deadline Reminders",
-    "text": "Deadline Reminders\n\nLab 4 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line."
-  },
-  {
-    "objectID": "slides/week6-day2.html#help-your-peers",
-    "href": "slides/week6-day2.html#help-your-peers",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Help your peers!",
-    "text": "Help your peers!\n\nAre the arguments / sentences easy to understand? Does the report flow?\nIs the same information included in multiple places?\nDo the plots have nice axis labels?\nCan you easily find the regression equations? Do the equations make sense?\nDo the interpretations / conclusions from the equations make sense?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
-    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Based on how the study was designed, what population can you infer these results onto?",
-    "text": "Based on how the study was designed, what population can you infer these results onto?\n\n\nJustify what population you believe your analysis can be inferred onto.\n\nThe sample of [possums / professors / crabs]?\nSome larger population of [possums / professors / crabs]?\n\nYour justification needs to connect with how the researchers collected their data!"
-  },
-  {
-    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
-    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Based on how the study was designed, what can you say about the relationships between the variables?",
-    "text": "Based on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#section",
-    "href": "slides/week6-day2.html#section",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "",
-    "text": "Data is Power"
-  },
-  {
-    "objectID": "slides/week6-day2.html#does-your-phone-recognize-your-face",
-    "href": "slides/week6-day2.html#does-your-phone-recognize-your-face",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Does your phone recognize your face?",
-    "text": "Does your phone recognize your face?\n\nJoy Buolamwini found that she had to put on a white mask for the facial detection program to “see” her face."
-  },
-  {
-    "objectID": "slides/week6-day2.html#how-does-google-label-your-images",
-    "href": "slides/week6-day2.html#how-does-google-label-your-images",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "How does Google label your images?",
-    "text": "How does Google label your images?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#should-the-cash-bail-system-change",
-    "href": "slides/week6-day2.html#should-the-cash-bail-system-change",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Should the cash bail system change?",
-    "text": "Should the cash bail system change?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
-    "href": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Will your car be able to drive you?",
-    "text": "Will your car be able to drive you?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#forward-selection-by-hand",
-    "href": "slides/week6-day2.html#forward-selection-by-hand",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Forward Selection (by Hand)",
-    "text": "Forward Selection (by Hand)\n\nStart with the most basic model (one mean)\nDecide which one variable to add (based on adjusted \\(R^2\\))\nDecide if you should add another variable\n\n\\(\\vdots\\)\n\nStop adding variables when adjusted \\(R^2\\) stops increasing"
-  },
-  {
-    "objectID": "slides/week6-day2.html#a-more-automated-option",
-    "href": "slides/week6-day2.html#a-more-automated-option",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "A More Automated Option",
-    "text": "A More Automated Option\n\nevals_train %&gt;% \n  map(.f = ~lm(score ~ .x + &lt;VARIABLES SELECTED&gt;, data = evals_train)) %&gt;% \n  map_df(.f = ~get_regression_summaries(.x)$adj_r_squared) %&gt;% \n  select(-ID, \n         -score,\n         -&lt;VARIABLE 1 SELECTED&gt;,\n         -&lt;VARIABLE 2 SELECTED&gt;\n         ) %&gt;% \n  pivot_longer(cols = everything(), \n               names_to = \"variable\", \n               values_to = \"adj_r_sq\") %&gt;% \n  slice_max(adj_r_sq)"
-  },
-  {
-    "objectID": "weeks/week-8.html",
-    "href": "weeks/week-8.html",
-    "title": "Week 8 – Hypothesis Tests for Slope Coefficients & Conditions for Inference",
-    "section": "",
-    "text": "1 Textbook Reading\nRequired Reading: Hypothesis Test for Slope & Inference Conditions\n\n\n\n\n\n\nReading Guide – Due Monday by the start of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Concept Quiz – Due Monday by the start of class\n1. Match each procedure to the question it addresses.\n\n\nconfidence intervals\nhypothesis tests\n\n\n\n\nWhat are plausible values for the population parameter?\nWhat are plausible values for the sample statistic?\nIs the population parameter different from 0?\nIs the value of the parameter different from a specified quantity?\n\n\n\n2. Which of the following are always true for hypothesis statements?\n\nThey are about sample statistics.\nThey are about relationships between variables.\nThey are about population parameters.\nThey are about differences in groups.\n\n3. To simulate what could have happened if the [null hypothesis was true / alternative hypothesis was true], we [separate the (x, y) pairs / keep the (x, y) pairs together] and [resample with replacement / randomly reassign a new y to each x].\n4. Which of the following are true about a null distribution? (select all that apply)\n\nIt is a distribution of statistics.\nThe values on the distribution represent what might have happened if the null hypothesis was true.\nThe values on the distribution represent what might have happened if the alternative hypothesis was true.\nIt is a distribution of sample observations.\n\n5. Name one similarity between a permutation distribution and a bootstrap distribution.\n6. Name one difference between a permutation distribution and a bootstrap distribution.\n7. For linear regression, the null distribution is always centered at ____.\n8. Which of the following are true about a p-value? (select all that apply)\n\nIt is calculated assuming the null hypothesis is true.\nIt is the probability the null hypothesis is true.\nIt quantifies how “surprising” our data are.\nIt compares the observed statistic to a distribution of values that could have happened if the null was true.\nIt is calculated assuming the alternative hypothesis is true.\nIt is a probability.\n\n9. Which of the following is true about a small p-value?\n\nThe sample statistic is unlikely to have happened by chance.\nThe sample size was large.\nThe sample statistic is unlikely to have happened if the null hypothesis was true.\nThe sample statistic was large.\n\n10. If you obtain a large p-value, what can you conclude about your hypotheses?\n\nWe cannot say the alternative hypothesis is false.\nWe cannot say the null hypothesis is false.\nThe null hypothesis is true.\nThe alternative hypothesis is true.\n\n11. If the probability of a Type I error goes down, what can you say about the probability of a Type II error?\n\nThe probability of a Type II error goes down.\nThe probability of a Type II error stays the same.\nThe probability of a Type II error goes up.\n\n12. If you obtained a small p-value (e.g., 0.02), what could you say about what you would expect if you constructed a 95% confidence interval?\n\nIt would contain the null hypothesized value.\nIt would not contain the null hypothesized value.\nIt would contain the sample statistic.\nIt would contain the true population parameter.\n\n13. In a regression table, what is the “statistic” value associated with the slope?\n\na bootstrap statistic\na z-statistic\nthe sample slope statistic\na t-statistic\n\n14. In a regression table, how is the p-value calculated?\n\nUsing a permutation distribution with 1000 resamples\nUsing a bootstrap distribution with 1000 samples\nUsing a Normal distribution\nUsing a t-distribution\n\n15. What are the required conditions for linear regression? (select all that apply)\n\na random sample was taken\nequal variance of residuals\na large sample was collected\nlinear relationship between x and y\nindependence of observations\nindependence of variables\nnormality of residuals\nnormality of observations\n\n16. In the scatterplot of stem dry mass versus stem length, what condition appears to be violated? (select all that apply)\n\nequal variance of residuals\nlinear relationship between x and y\nindependence of observations\nnormality of residuals\n\n17. Which of the following would violate the condition of independence? (select all that apply)\n\ncollecting a non-random sample\nobservations related geographically (spatially)\nobservations that are related in time (temporally)\nrepeated observations on the same person\nobservations related biologically\n\n18. When conducting a hypothesis test (in general), we assume the [observations / variables] are independent. When conducting a hypothesis test for a linear regression, the conditions require that the [observations / variables] are independent.\n\n\n3 R Tutorial – Due Wednesday by the start of class\nRequired Tutorial: Randomization test for the slope\nRequired Tutorial: Evaluating the technical conditions in linear regression",
-    "crumbs": [
-      "Weekly materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "weeks/reading-guide/week1-answers.html",
-    "href": "weeks/reading-guide/week1-answers.html",
-    "title": "Answers to Questions on Week 1 Reading Guide",
-    "section": "",
-    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
-  },
-  {
-    "objectID": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
-    "href": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
-    "title": "Answers to Questions on Week 1 Reading Guide",
-    "section": "",
-    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
-  },
-  {
-    "objectID": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
-    "href": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
-    "title": "Answers to Questions on Week 1 Reading Guide",
-    "section": "Chapter 2 Notes",
-    "text": "Chapter 2 Notes\nTrue or False: Convenience sampling tends to result in non-response bias.\nFalse! Convenience sampling makes it so our sample is not representative of the population, or we have a biased sample. Non-response bias requires the people sampled to choose not to respond.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n**True! If our sample is made up of volunteers, it is more likely to have people with strong views. This makes it so our \nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\nTrue! We need random assignment of our explanatory variable to determine if a relationship is causal.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\nTrue! An experiment needs to have a “baseline” treatment to compare with. \nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\nTrue! Mathematically, we know that random sampling should make our sample look similar to the population, so we are not systematically including / excluding certain individuals more / less.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables.\nFalse! Random sampling allows us to infer that our sample is representative of the population, it does not allow us to say anything about the relationship between the explanatory and response variables."
+    "objectID": "slides/week2-day2.html#r-resources",
+    "href": "slides/week2-day2.html#r-resources",
+    "title": "The Flaws of Averages",
+    "section": "R Resources",
+    "text": "R Resources"
   },
   {
     "objectID": "resources/week-2.html",
@@ -2686,11 +2680,25 @@
     "text": "To earn a “Complete” students need to have:"
   },
   {
+    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
+    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
+    "title": "Lab 1 – Grading Guide",
+    "section": "If their document doesn’t contain answers",
+    "text": "If their document doesn’t contain answers\nGeneral Comment\nCareful! Your document doesn’t contain any of your responses for Questions 5 through 10. In order for your responses to show up in the final submission, you need to (re)render the document after you have finished answering all the questions.\nFor Question 6\nLook over the solutions from Dr. Theobold for a tip on this question!"
+  },
+  {
     "objectID": "labs/grading-guides/lab-1-grading-guide.html#question-6",
     "href": "labs/grading-guides/lab-1-grading-guide.html#question-6",
     "title": "Lab 1 – Grading Guide",
     "section": "Question 6",
     "text": "Question 6\nIf they say the data are Audi cars\nTechnically, the first ten rows (observations) in the mpg data are Audi cars. Go back into Posit Cloud and use the arrow buttons (in the code chunk labeled mpg-data) to look at the other rows in these data. Does the mpg dataset contain only data on Audi cars?\nIf they say the observations are manufacturer, model, year, etc.\nYes, this dataset does include manufacturer, model, year, cyl as variables (columns) in the dataset. But what does each row represent? Look over the solutions from Dr. Theobold for a tip on this question!"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
+    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
+    "title": "Lab 1 – Grading Guide",
+    "section": "If their image doesn’t appear but they have answers to the rest of the questions",
+    "text": "If their image doesn’t appear but they have answers to the rest of the questions\nNice job completing all the questions! Be careful to double check that your image is appearing in your final HTML document. In your submitted file we can’t see the image you wanted to include."
   },
   {
     "objectID": "critique/grading-guides/critique-1-grading.html",
@@ -3543,186 +3551,157 @@
     "text": "1.3 Deliverable\nFor the Midterm Project Proposal assignment on Canvas, you are required to submit the data you have chosen to use as an Excel file (stored as either a .csv or .xlsx)."
   },
   {
-    "objectID": "weeks/reading-guide/week6-reading2.html",
-    "href": "weeks/reading-guide/week6-reading2.html",
-    "title": "Week 6 Reading Guide Part 2 – Study Design",
+    "objectID": "weeks/reading-guide/week1-answers.html",
+    "href": "weeks/reading-guide/week1-answers.html",
+    "title": "Answers to Questions on Week 1 Reading Guide",
     "section": "",
-    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
+    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
   },
   {
-    "objectID": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
-    "href": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
-    "title": "Week 6 Reading Guide Part 2 – Study Design",
+    "objectID": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
+    "href": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
+    "title": "Answers to Questions on Week 1 Reading Guide",
     "section": "",
-    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
+    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
   },
   {
-    "objectID": "weeks/week-7.html",
-    "href": "weeks/week-7.html",
-    "title": "Week 7 – Inference for Regression",
+    "objectID": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
+    "href": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
+    "title": "Answers to Questions on Week 1 Reading Guide",
+    "section": "Chapter 2 Notes",
+    "text": "Chapter 2 Notes\nTrue or False: Convenience sampling tends to result in non-response bias.\nFalse! Convenience sampling makes it so our sample is not representative of the population, or we have a biased sample. Non-response bias requires the people sampled to choose not to respond.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n**True! If our sample is made up of volunteers, it is more likely to have people with strong views. This makes it so our \nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\nTrue! We need random assignment of our explanatory variable to determine if a relationship is causal.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\nTrue! An experiment needs to have a “baseline” treatment to compare with. \nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\nTrue! Mathematically, we know that random sampling should make our sample look similar to the population, so we are not systematically including / excluding certain individuals more / less.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables.\nFalse! Random sampling allows us to infer that our sample is representative of the population, it does not allow us to say anything about the relationship between the explanatory and response variables."
+  },
+  {
+    "objectID": "weeks/week-8.html",
+    "href": "weeks/week-8.html",
+    "title": "Week 8 – Hypothesis Tests for Slope Coefficients & Conditions for Inference",
     "section": "",
-    "text": "📖 Required Reading: Introduction to Modern Statistics – Study Design\n3. Which of the following statements are true about observational studies and experiments? Select all that apply!\n\nExperiments randomly assign the explanatory variable\nObservational studies randomly assign the explanatory variable\nObservational studies can make causal statements about the relationship between the explanatory and response variables\nExperiments can make causal statements about the relationship between the explanatory and response variables\n\n4. What are different methods for sampling from a population? Select all that apply!\n\nsimple random sampling\nstratified random sampling\ncluster sampling\nmultistage sampling\nconvenience sampling\n\n5. Cluster sampling and stratified sampling both rely on grouping observations, but have important differences. Match each method to how observations are randomly sampled.\n\n\nstratified sampling\ncluster sampling\n\ngroups of observations are created, groups are randomly selected, every observation in the selected group is sampled\ngroups of observations are created, observations within a group are randomly sampled\n\n\n\n1 Textbook Reading – Part 1\nRequired Reading: Exploring Sampling Variability\n\n\n\n\n\n\nReading Guide – Due Monday by the beginning of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Textbook Reading – Part 2\nRequired Reading: Confidence Intervals for the Slope\n\n\n\n\n\n\nReading Guide – Due Wednesday by the beginning of class (note the new time!)\n\n\n\nDownload the Word Document\n\n\n\n\n3 Concept Quiz – Due Wednesday by the beginning of class (note the new time!)\n1. Match each item to it’s respective analogy:\n\n\npoint estimate\nconfidence interval\n\n\n\nfishing with a net\nfishing with a spear\n\n\n2. To create a 95% confidence interval using the percentile method, what percentiles of the bootstrap distribution do you need to calculate?\n\n0th\n2.5th\n5th\n90th\n95th\n97.5th\n\n3. To create a 95% confidence interval using the standard error method, what standard error do you use?\n\nthe sample standard deviation\nthe bootstrap distribution standard deviation\na resample standard deviation\n1.96\n\n4. We almost never know if our confidence interval captured the true population parameter.\n\nTrue\nFalse\n\n5. What percentage of 99% confidence intervals do you expect to capture the true population parameter?\n6. The word “confident” in a confidence interval interpretation corresponds to what aspect of the interval?\n\nthe accuracy of the original sample\nthe reliability of the procedure for constructing confidence intervals\nthe precision of the bootstrap samples\n\n7. Which of the following are true?\n\nSmaller sample sizes tend to produce narrower confidence intervals.\nSmaller sample sizes tend to produce wider confidence intervals.\nLower confidence levels tend to produce wider confidence intervals.\nLower confidence levels tend to produce narrower confidence intervals.\n\n8. In a regression table, what does the “std_error” value associated with the slope represent?\n\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\nthe estimated standard deviation of the sampling distribution\nthe standard error of the sample\n\n9. In a regression table, how is the “std_error” value calculated?\n\na mathematical formula\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\n\n10. What percentage confidence interval is output in a regression table?\n\n99%\n95%\n90%\n\n\n\n4 R Tutorial – Due Wednesday by the beginning of class\nRequired Tutorial: Practice the infer Workflow",
+    "text": "1 Textbook Reading\nRequired Reading: Hypothesis Test for Slope & Inference Conditions\n\n\n\n\n\n\nReading Guide – Due Monday by the start of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Concept Quiz – Due Monday by the start of class\n1. Match each procedure to the question it addresses.\n\n\nconfidence intervals\nhypothesis tests\n\n\n\n\nWhat are plausible values for the population parameter?\nWhat are plausible values for the sample statistic?\nIs the population parameter different from 0?\nIs the value of the parameter different from a specified quantity?\n\n\n\n2. Which of the following are always true for hypothesis statements?\n\nThey are about sample statistics.\nThey are about relationships between variables.\nThey are about population parameters.\nThey are about differences in groups.\n\n3. To simulate what could have happened if the [null hypothesis was true / alternative hypothesis was true], we [separate the (x, y) pairs / keep the (x, y) pairs together] and [resample with replacement / randomly reassign a new y to each x].\n4. Which of the following are true about a null distribution? (select all that apply)\n\nIt is a distribution of statistics.\nThe values on the distribution represent what might have happened if the null hypothesis was true.\nThe values on the distribution represent what might have happened if the alternative hypothesis was true.\nIt is a distribution of sample observations.\n\n5. Name one similarity between a permutation distribution and a bootstrap distribution.\n6. Name one difference between a permutation distribution and a bootstrap distribution.\n7. For linear regression, the null distribution is always centered at ____.\n8. Which of the following are true about a p-value? (select all that apply)\n\nIt is calculated assuming the null hypothesis is true.\nIt is the probability the null hypothesis is true.\nIt quantifies how “surprising” our data are.\nIt compares the observed statistic to a distribution of values that could have happened if the null was true.\nIt is calculated assuming the alternative hypothesis is true.\nIt is a probability.\n\n9. Which of the following is true about a small p-value?\n\nThe sample statistic is unlikely to have happened by chance.\nThe sample size was large.\nThe sample statistic is unlikely to have happened if the null hypothesis was true.\nThe sample statistic was large.\n\n10. If you obtain a large p-value, what can you conclude about your hypotheses?\n\nWe cannot say the alternative hypothesis is false.\nWe cannot say the null hypothesis is false.\nThe null hypothesis is true.\nThe alternative hypothesis is true.\n\n11. If the probability of a Type I error goes down, what can you say about the probability of a Type II error?\n\nThe probability of a Type II error goes down.\nThe probability of a Type II error stays the same.\nThe probability of a Type II error goes up.\n\n12. If you obtained a small p-value (e.g., 0.02), what could you say about what you would expect if you constructed a 95% confidence interval?\n\nIt would contain the null hypothesized value.\nIt would not contain the null hypothesized value.\nIt would contain the sample statistic.\nIt would contain the true population parameter.\n\n13. In a regression table, what is the “statistic” value associated with the slope?\n\na bootstrap statistic\na z-statistic\nthe sample slope statistic\na t-statistic\n\n14. In a regression table, how is the p-value calculated?\n\nUsing a permutation distribution with 1000 resamples\nUsing a bootstrap distribution with 1000 samples\nUsing a Normal distribution\nUsing a t-distribution\n\n15. What are the required conditions for linear regression? (select all that apply)\n\na random sample was taken\nequal variance of residuals\na large sample was collected\nlinear relationship between x and y\nindependence of observations\nindependence of variables\nnormality of residuals\nnormality of observations\n\n16. In the scatterplot of stem dry mass versus stem length, what condition appears to be violated? (select all that apply)\n\nequal variance of residuals\nlinear relationship between x and y\nindependence of observations\nnormality of residuals\n\n17. Which of the following would violate the condition of independence? (select all that apply)\n\ncollecting a non-random sample\nobservations related geographically (spatially)\nobservations that are related in time (temporally)\nrepeated observations on the same person\nobservations related biologically\n\n18. When conducting a hypothesis test (in general), we assume the [observations / variables] are independent. When conducting a hypothesis test for a linear regression, the conditions require that the [observations / variables] are independent.\n\n\n3 R Tutorial – Due Wednesday by the start of class\nRequired Tutorial: Randomization test for the slope\nRequired Tutorial: Evaluating the technical conditions in linear regression",
     "crumbs": [
       "Weekly materials",
-      "Week 7"
+      "Week 8"
     ]
   },
   {
-    "objectID": "slides/week1-day1.html#section",
-    "href": "slides/week1-day1.html#section",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "About Me…"
+    "objectID": "slides/week6-day2.html#deadline-reminders",
+    "href": "slides/week6-day2.html#deadline-reminders",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Deadline Reminders",
+    "text": "Deadline Reminders\n\nLab 4 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line."
   },
   {
-    "objectID": "slides/week1-day1.html#section-1",
-    "href": "slides/week1-day1.html#section-1",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "What is Statistics?\n\n\n\nScientists seek to answer questions using rigorous methods and careful observations. These observations – collected from the likes of field notes, surveys, and experiments – form the backbone of a statistical investigation and are called data.\n\n\nStatistics is the study of how best to collect, analyze, and draw conclusions from data.\n\n\nIntroduction to Modern Statistics"
+    "objectID": "slides/week6-day2.html#help-your-peers",
+    "href": "slides/week6-day2.html#help-your-peers",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Help your peers!",
+    "text": "Help your peers!\n\nAre the arguments / sentences easy to understand? Does the report flow?\nIs the same information included in multiple places?\nDo the plots have nice axis labels?\nCan you easily find the regression equations? Do the equations make sense?\nDo the interpretations / conclusions from the equations make sense?"
   },
   {
-    "objectID": "slides/week1-day1.html#section-2",
-    "href": "slides/week1-day1.html#section-2",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "What Statistics Is To Me\n\n \n\n\n\n\nThe data science cycle – Wickham & Grolemund"
+    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
+    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Based on how the study was designed, what population can you infer these results onto?",
+    "text": "Based on how the study was designed, what population can you infer these results onto?\n\n\nJustify what population you believe your analysis can be inferred onto.\n\nThe sample of [possums / professors / crabs]?\nSome larger population of [possums / professors / crabs]?\n\nYour justification needs to connect with how the researchers collected their data!"
   },
   {
-    "objectID": "slides/week1-day1.html#section-3",
-    "href": "slides/week1-day1.html#section-3",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "What you can expect in STAT 313\n\nThis course will teach you the fundamentals of linear models—simple linear regression, multiple linear regression, and analysis of variance—and experimental design. You will extend the concepts covered in your Stat I course, to:\n\n\nwork with data in a reproducible way (using R)\nvisualize and summarize a variety of datasets (in R)\ncritically evaluate the use of Statistics\nperform statistical analyses to answer research questions (using R)"
+    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
+    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Based on how the study was designed, what can you say about the relationships between the variables?",
+    "text": "Based on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
   },
   {
-    "objectID": "slides/week1-day1.html#section-4",
-    "href": "slides/week1-day1.html#section-4",
-    "title": "Welcome to Stat 313!",
+    "objectID": "slides/week6-day2.html#section",
+    "href": "slides/week6-day2.html#section",
+    "title": "Midterm Project Feedback & Machine Learning",
     "section": "",
-    "text": "Coding 🙀\n\n\nCoding is a huge part of how doing statistics in the wild looks.\n\n\n\nEveryone is coming from a different background\nDifferent aspects of the course will be difficult to different people\nYou will be given coding resources each week\nUse your peers to support your learning"
+    "text": "Data is Power"
   },
   {
-    "objectID": "slides/week1-day1.html#section-5",
-    "href": "slides/week1-day1.html#section-5",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Course Components\n\n\n\n\nBefore Class\n\n\nReading Guides\nConcept Quizzes\nR Tutorials\n\n\n\n\n\nDuring Class\n\n\nGroup Discussion\nHands-on Activities\nLab Assignments\n\n\n\n\n\nOutside of Class\n\n\nStatistical Critiques\nMidterm Project\nFinal Project"
+    "objectID": "slides/week6-day2.html#does-your-phone-recognize-your-face",
+    "href": "slides/week6-day2.html#does-your-phone-recognize-your-face",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Does your phone recognize your face?",
+    "text": "Does your phone recognize your face?\n\nJoy Buolamwini found that she had to put on a white mask for the facial detection program to “see” her face."
   },
   {
-    "objectID": "slides/week1-day1.html#section-6",
-    "href": "slides/week1-day1.html#section-6",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Specifications Based Grading\n\n\n\n\nEveryone is capable of earning an A!"
+    "objectID": "slides/week6-day2.html#how-does-google-label-your-images",
+    "href": "slides/week6-day2.html#how-does-google-label-your-images",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "How does Google label your images?",
+    "text": "How does Google label your images?"
   },
   {
-    "objectID": "slides/week1-day1.html#section-7",
-    "href": "slides/week1-day1.html#section-7",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "How Smart are You?\n\n\n\n(2 minutes)\n\nWrite two criteria would you use to rank yourself compared to everyone else in this class\n\n\n\n\n(3 minutes)\n\nTalk with the person on your right about the criteria you proposed\n\n\n\n\n(5 minutes)\n\nShare out\nPerson with most vowels in name should be prepared to share!"
+    "objectID": "slides/week6-day2.html#should-the-cash-bail-system-change",
+    "href": "slides/week6-day2.html#should-the-cash-bail-system-change",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Should the cash bail system change?",
+    "text": "Should the cash bail system change?"
   },
   {
-    "objectID": "slides/week1-day1.html#section-8",
-    "href": "slides/week1-day1.html#section-8",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Cooperative Learning\n\nis a structured form of small-group learning\n\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
+    "objectID": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
+    "href": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Will your car be able to drive you?",
+    "text": "Will your car be able to drive you?"
   },
   {
-    "objectID": "slides/week1-day1.html#section-9",
-    "href": "slides/week1-day1.html#section-9",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Group Norms\n\n\n\n\nZero tolerance for: racism, sexism, homophobia, transphobia, ageism, ableism\nRespect one another\nIntent and impact both matter\n\n\n\n\n\nNon-judgmental\nTake space, make space\nEmbrace discomfort\nMake decisions by consensus"
+    "objectID": "slides/week6-day2.html#forward-selection-by-hand",
+    "href": "slides/week6-day2.html#forward-selection-by-hand",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Forward Selection (by Hand)",
+    "text": "Forward Selection (by Hand)\n\nStart with the most basic model (one mean)\nDecide which one variable to add (based on adjusted \\(R^2\\))\nDecide if you should add another variable\n\n\\(\\vdots\\)\n\nStop adding variables when adjusted \\(R^2\\) stops increasing"
   },
   {
-    "objectID": "slides/week1-day1.html#section-10",
-    "href": "slides/week1-day1.html#section-10",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
+    "objectID": "slides/week6-day2.html#a-more-automated-option",
+    "href": "slides/week6-day2.html#a-more-automated-option",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "A More Automated Option",
+    "text": "A More Automated Option\n\nevals_train %&gt;% \n  map(.f = ~lm(score ~ .x + &lt;VARIABLES SELECTED&gt;, data = evals_train)) %&gt;% \n  map_df(.f = ~get_regression_summaries(.x)$adj_r_squared) %&gt;% \n  select(-ID, \n         -score,\n         -&lt;VARIABLE 1 SELECTED&gt;,\n         -&lt;VARIABLE 2 SELECTED&gt;\n         ) %&gt;% \n  pivot_longer(cols = everything(), \n               names_to = \"variable\", \n               values_to = \"adj_r_sq\") %&gt;% \n  slice_max(adj_r_sq)"
   },
   {
-    "objectID": "slides/week1-day1.html#section-11",
-    "href": "slides/week1-day1.html#section-11",
-    "title": "Welcome to Stat 313!",
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 10: Two-Way ANOVA",
     "section": "",
-    "text": "Break"
-  },
-  {
-    "objectID": "weeks/week-0.html",
-    "href": "weeks/week-0.html",
-    "title": "Course Setup and Structure",
-    "section": "",
-    "text": "Welcome!\nIn this coursework, you’ll get set up with the Class Discord, learn about what is expected of you each week, and hear some tips from me about how to succeed.",
+    "text": "Welcome!\nThis week we explore one final area of ANOVA, a situation where we have multiple explanatory variables. This is called a two-way ANOVA. A two-way ANOVA extends the one-way ANOVA to situations with two categorical explanatory variables. This new methods allows researchers to simultaneously study two variables that might explain variability in the responses and explore whether the impacts of one explanatory variable change depending on the level of the other explanatory variable.",
     "crumbs": [
       "Weekly materials",
-      "Week 0"
+      "Week 10"
     ]
   },
   {
-    "objectID": "weeks/week-0.html#set-up-your-account",
-    "href": "weeks/week-0.html#set-up-your-account",
-    "title": "Course Setup and Structure",
-    "section": "1.1 Set up your account",
-    "text": "1.1 Set up your account\n\nVerify your email\nTo use this Discord server, you must have a verified email.\nNobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.\n\n\nCreate your identity\nThe first thing you should do is decide what name and picture you would like to use.\n\nI would like to strongly encourage you to use your real name and picture, so that everyone can get to know you. However, if you prefer to remain anonymous, you are free to do so.\n\n(Please do not be like Regina and use the name of another student, however!\nThis kind of impersonation will result in a permanent ban from the server.)\n\n\nDecide about privacy and notifications\nThe default settings on the channel are probably just fine for you.\nFeel free to make any changes that work for you, though.\nYou can change your message notifications:\n\nYou can edit your privacy settings, although most things are already private:\n\n\n\nConnect other apps\nYou can connect other apps to Discord, either for productivity or just for fun.",
+    "objectID": "weeks/week-10.html#textbook-reading",
+    "href": "weeks/week-10.html#textbook-reading",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.1 Textbook Reading",
+    "text": "1.1 Textbook Reading\nTo be honest, I didn’t have the energy this week to write another chapter on two-way ANOVA. So, instead we will be reading a couple of sections out of another statistics textbook. I’ve uploaded the PDFs of these sections to OneDrive, so you should be able to read them online or download them.\n\nSection 1 – Introduction to Two-Way ANOVA\n\n\n\n\n\n\nRead through “Step 6” on page 222\n\n\n\n\n\n\n\n\n\n\n\n\nExample 3.1 – Problematic Undertones\n\n\n\nI want to point out that the context of example 3.1 in this section has some major problematic undertones. The example focuses on “the effects of corporate and endorser credibility” on how likely someone is to buy shoes. For no clear reason, the example only considers “female” college students, which implicitly sends two problematic messages, (1) sex and gender are the same, and (2) women are more easily swayed by advertising.\nIn addition, the example uses Roseanne Barr as one of the celebrity endorsers—an actress who has written deplorable remarks about transgender people.\n\n\n\n\nSection 2 – Two-Way ANOVA Interaction Models\n\n\n\n\n\n\nRead through “Follow-up Confidence Intervals” on page 239\n\n\n\n\n\n\n\n\nReading Guide – Due Monday by the start of Class\nDownload the Word Document",
     "crumbs": [
       "Weekly materials",
-      "Week 0"
+      "Week 10"
     ]
   },
   {
-    "objectID": "weeks/week-0.html#using-the-shannels",
-    "href": "weeks/week-0.html#using-the-shannels",
-    "title": "Course Setup and Structure",
-    "section": "1.2 Using the shannels",
-    "text": "1.2 Using the shannels\nThe server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.\n\nText shannels\nUse the #general channel for anything and everything:\n\nIf your question is about course logistics, rather than the material itself, consider using the #class-logistics channel:\n\nYou can use the specific weekly channels to ask questions about the material…\n\n… or the specific lab assignment.\n\nNotice that you can use tick marks (```), like in Quarto, to make your code appear in a formatted code box.\n\n\nVoice shannels\nTo join a voice channel, simply click it! Make sure you are careful about when you are muted or unmuted.\n\nThe extra “Side Chat” channels are limited to 4 or 8 people, if you would like to start an impromptu study conversation without being heard by me and / or the rest of the class. (I’ll only drop in if you invite us!)\nVoice channels can also be used for people to “Go Live”, and share their screen with everyone else.\n\nWhile this will usually be something professors use to demonstrate code, you can go live, too! But you may need to download the desktop version of Discord to do so.\n\n\nPrivate messages\nIt is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing.",
+    "objectID": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
+    "href": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.2 Concept Quiz – Due Monday by the start of class",
+    "text": "1.2 Concept Quiz – Due Monday by the start of class\n1. Match each two-way ANOVA model to its correct description.\n\n\n\nadditive model\n  \ninteraction model\n\nThe relationship between one factor and the response changes depending on the level of another factor.\n\nThe relationship between one factor and the response remains the same across all levels of another factor.\n\nThere is a significant relationship between each factor and the response.\n\n\n\n2. Match each two-way ANOVA model to its multiple linear regression counterpart.\n\n\nadditive model\ninteraction model\n\n\n\ndifferent slopes\nparallel slopes\n\n\n\n\n\n\n\n\n\n3. Which of the following are conditions of a two-way ANOVA model? (Select all that apply)\n\nindependence of observations between the groups\nindependence of observations within each group\nindependence of variables\nnormally distributed responses within each group\nnormally distributed residuals\nlinear relationship between the explanatory and response variables\nequal variance of residuals\nequal variance of responses within each group\n\n\n4. Which of the following is important to consider when assessing independence? (Select all that apply)\n\nIf the same observational unit (e.g., person, penguin, tree) could be sampled multiple times\nIf observations could be biologically related (e.g., parents, siblings, etc.)\nIf observations could be spatially related (e.g., countries that border each other)\nIf there is a relationship between the observations and the response variable\n\n\n\n\n5. [True or False] When an additive model is fit, the interpretation of the p-value associated with each explanatory variable is [conditional / independent] on the other explanatory variable(s) in the model.\n\n6. If the null hypothesis is rejected in an additive two-way ANOVA model, what model should be fit instead?\n\nseparate one-way ANOVA models\na one-way ANOVA model containing the variable with the smallest p-value (from the additive two-way ANOVA)\na mean only model\nan interaction two-way ANOVA model\na simple linear regression",
     "crumbs": [
       "Weekly materials",
-      "Week 0"
+      "Week 10"
     ]
   },
   {
-    "objectID": "weeks/week-0.html#see-you-at-the-party",
-    "href": "weeks/week-0.html#see-you-at-the-party",
-    "title": "Course Setup and Structure",
-    "section": "1.3 See you at the Party!",
-    "text": "1.3 See you at the Party!",
+    "objectID": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
+    "href": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.3 R Tutorial – Due Wednesday by the start of class",
+    "text": "1.3 R Tutorial – Due Wednesday by the start of class\nThis week’s R tutorial is a short guide stepping you through model selection starting with a two-way ANOVA interaction model.\nClick here to access this week’s R tutorial\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit a screenshot of the completion page at the end of the tutorial.",
     "crumbs": [
       "Weekly materials",
-      "Week 0"
+      "Week 10"
     ]
-  },
-  {
-    "objectID": "weeks/week-0.html#how-your-typical-week-will-look",
-    "href": "weeks/week-0.html#how-your-typical-week-will-look",
-    "title": "Course Setup and Structure",
-    "section": "2.1 How your typical week will look",
-    "text": "2.1 How your typical week will look\n\nReadings and videos (every week)\nI favor a “flipped classroom,” as it gives you more time to clarify and solidify statistical concepts through hands-on exercises. Each week, you will read the required chapter(s), completing a required reading guide to walk you through the central concepts for each week.\nDue Monday by the start of class.\n\n\nConcept quizzes (every week)\nEach week there will be a short (~10 questions) quiz over the reading and videos from the week. These quizzes are intended to ensure that you grasped the key concepts from the week’s readings. The quizzes are not timed, so you can feel free to check your answers with the textbook and / or videos if you so wish. The quizzes are marked on completion as complete or incomplete.\nDue Monday by the start of class.\n\n\nTutorials (every week)\nYou can think of the tutorials as an “interactive” textbook, as they interweave statistical ideas alongside examples of how to work with data in R and hands-on exercises writing the R code necessary to complete a given task. Each exercise has hints available if you get stuck!\nThe tutorials are work at your own pace, so you can complete them all at once or slowly throughout the week. The lab assignments will require for you to put the skills you learned in the tutorials to work, so you are required to complete each week’s tutorial before Wednesday’s lab.\nThe tutorials are marked on completion as complete or incomplete. You will submit a screenshot of the completion page at the end of the tutorial to confirm that you completed the tutorial for the week.\nDue Wednesday by the start of class.\n\n\nStatistical critiques (every 4-weeks)\nThese assignments are case studies in which you will evaluate a data visualization or statistical analysis, determining how well-performed and presented the analysis was and making recommendations for improving or using the analysis. Critiques are due roughly 1-week after they are assigned and should take 1-2 hours. You will receive feedback and a mark of Success or Growing (elaborated more on later), and you will be able to revise based on that feedback. There will be two total critiques.\n\n\nLab Assignments (every week)\nLabs will be assigned on Wednesday every week, providing the opportunity to explore the course concepts in the context of real data. Lab assignments will require for you to work through the tutorial for the week, thus the tutorials are due before the start of class on Wednesday.\nYou will complete the lab assignments in the same teams you collaborate with in class. You will access the lab assignment through Posit Cloud, which you will be walked through during the first lab. Your group will be expected to submit your completed lab on Canvas. You will need to submit only the HTML document.\nDue Mondays at 5pm.\n\n\nMidterm & Final Projects (Week 6 & Week 10)\nThere will be two projects throughout the quarter, where you will be asked to synthesize the statistical concepts you have learned in a formal statistical report. Your critiques will help guide you toward how you do / don’t want your report to look. Each project will be done independently, and requires you to submit a project proposal and draft report before the final deadline. You are encouraged to use the feedback received on these assignments to improve your final report. The final reports will be graded as Excellent, Satisfactory, Progressing, or No Credit based on a rubric that will be shared with the initial assignment.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
-    "href": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
-    "title": "Course Setup and Structure",
-    "section": "2.2 ✅ Week 1 Concept Quiz: Course Set-up",
-    "text": "2.2 ✅ Week 1 Concept Quiz: Course Set-up\nQuestion 1: Where are student hours held?\n\nIn person\nDiscord\nZoom by appointment\nCanvas\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the student hours section of the course syllabus!\n\n\nQuestion 2: What materials and technology are required for this course? Select all that apply!\n\nIntroduction to Modern Statistics\nRStudio Cloud – the application for working in R\nCanvas\nDiscord\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the required materials section of the course syllabus!\n\n\nQuestion 3: In this course, Reading Guides are due by ____, Concept Quizzes are due by ____, and Tutorials are due by ____.\nQuestion 4: If you have a question about the course content, what is the best first step?\n\nPost your question on Discord in the appropriate channel\nSend Dr. Theobold an email\nGo to Dr. Theobold’s office hours on Monday\nGoogle it\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the getting help section of the course syllabus!\n\n\nQuestion 5: You are permitted to submit up to ___ assignments late.\n\n\n\n\n\n\nTip\n\n\n\nLook at the late work policy section of the course syllabus!\n\n\nQuestion 6: If you need to submit an assignment late, you must do which of the following?\n\nemail Dr. Theobold to request a deadline extension\nsubmit a deadline extension request to the Google Form linked in the syllabus (and on Canvas)\nrequest an extension before the deadline\ncomplete the assignment no later than 3-days after the original deadline\n\nQuestion 7: If you receive a “Growing” on a Lab Assignment or a Critique, what should you do?\n\nread the comments and complete revisions on the problems receiving a “Growing”\nread the comments and complete revisions on the entire assignment\ncomplete revisions on the problems receiving a “Growing”\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the lab section of the course syllabus!\n\n\nQuestion 8: For revisions on Lab Assignments and Critiques to be considered that week they need to be turned in with:\n\nreflections on how your learning progressed from your initial attempt\nyour new answers\nyour original answers\nnothing\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the revisions section of the course syllabus!\n\n\nQuestion 9: You and a friend have been working on Critique 1 together. You finish up and want to go to bed, but they are still a little confused. You email them your file, and say, “Don’t copy this, just look how I did it so you can figure it out.” Have you violated Academic Honesty policies?\nQuestion 10: You have been working on making a visualization for your Midterm Project for what feels like forever and it seems like you are making little to no progress. You find an example analysis on the internet with the visualization you were hoping to make. You copy-and-paste the code used to make the visualization into your Midterm Project and do not reference that you used an outside source. You have violated the Academic Honesty policy.\nQuestion 11: Upload a picture of you introducing yourself in the “Introductions” channel of the STAT 313 Discord Server.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "activity/week-5-model-justification.html",
-    "href": "activity/week-5-model-justification.html",
-    "title": "Model Justification",
-    "section": "",
-    "text": "This study seeks to investigate how the relationship between average SAT math scores and the percentage of students who are economically disadvantaged differs based on the size of the school. As seen in the plot below, the slope for this relationship was found to be similar across the different levels of schools. Therefore, this study used a parallel slopes (additive) multiple linear regression model.\n\n\n\n\n\n\n\n\n\nWhat do you feel is missing from this model justification?"
   },
   {
     "objectID": "project/midterm-project/data-formatting-513.html",
@@ -5367,14 +5346,14 @@
     "href": "labs/lab-2.html#data-summaries",
     "title": "Lab 2: Visualizing and Summarizing Numerical Data",
     "section": "Data Summaries",
-    "text": "Data Summaries\nYou can also obtain numerical summaries for the flights headed to SFO, using the summarise() function:\n\nsummarise(sfo_flights, \n          mean_dd   = mean(dep_delay), \n          median_dd = median(dep_delay), \n          n         = n())\n\nNote that in the summarise() function I’ve created a list of three different numerical summaries that I’m interested in.\nThe names of these elements are user defined, like mean_dd, median_dd, n, and you can customize these names as you like (just don’t use spaces in your names!).\nCalculating these summary statistics also requires that you know the summary functions you would like to use.\nSummary statistics: Some useful function calls for summary statistics for a single numerical variable are as follows:\n\nmean(): calculates the average\nmedian(): calculates the median\nsd(): calculates the standard deviation\nvar(): calculates the variances\nIQR(): calculates the inner quartile range (Q3 - Q1)\nmin(): finds the minimum\nmax(): finds the maximum\nn(): reports the sample size\n\nNote that each of these functions takes a single variable as an input and returns a single value as an output."
+    "text": "Data Summaries\nYou can also obtain numerical summaries for the flights headed to SFO, using the summarise() function:\n\nsummarise(sfo_flights, \n          mean_dd   = mean(dep_delay), \n          median_dd = median(dep_delay), \n          n         = n()\n          )\n\nNote that in the summarise() function I’ve created a list of three different numerical summaries that I’m interested in.\nThe names of these elements are user defined, like mean_dd, median_dd, n, and you can customize these names as you like (just don’t use spaces in your names!).\nCalculating these summary statistics also requires that you know the summary functions you would like to use.\nSummary statistics: Some useful function calls for summary statistics for a single numerical variable are as follows:\n\nmean(): calculates the average\nmedian(): calculates the median\nsd(): calculates the standard deviation\nvar(): calculates the variances\nIQR(): calculates the inner quartile range (Q3 - Q1)\nmin(): finds the minimum\nmax(): finds the maximum\nn(): reports the sample size\n\nNote that each of these functions takes a single variable as an input and returns a single value as an output."
   },
   {
     "objectID": "labs/lab-2.html#summaries-vs.-visualizations",
     "href": "labs/lab-2.html#summaries-vs.-visualizations",
     "title": "Lab 2: Visualizing and Summarizing Numerical Data",
     "section": "Summaries vs. Visualizations",
-    "text": "Summaries vs. Visualizations\nIf I’m flying from New York to San Francisco, should I expect that my flights will typically arrive on time?\nLet’s think about how you could answer this question. One option is to summarize the data and inspect the output. Another option is to plot the delays and inspect the plots. Let’s try both!\nQuestion 7 – Calculate the following statistics for the arrival delays in the sfo_flights dataset:\n\nmean\nmedian\nmax\nmin\n\n\n## Code for exercise 7 goes here! \n\nQuestion 8 – Using the above summary statistics, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?\nQuestion 9 – Now, rather than calculating summary statistics, plot the distribution of arrival delays for the sfo_flights dataset.\nChoose the type of plot you believe is appropriate for visualizing the distribution of arrival delays. Don’t forget to give your visualization informative axis labels that include the units of measurement!\n\n## Code for exercise 9 goes here! \n\nQuestion 10 – Using the plot above, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?\nQuestion 11 – How did your answer change when using the plot versus using the summary statistics? i.e. What were you able to see in the plot that could could not “see” with the summary statistics?"
+    "text": "Summaries vs. Visualizations\nIf I’m flying from New York to San Francisco, should I expect that my flights will typically arrive on time?\nLet’s think about how you could answer this question. One option is to summarize the data and inspect the output. Another option is to plot the delays and inspect the plots. Let’s try both!\nQuestion 7 – Calculate the following statistics for the arrival delays in the sfo_flights dataset:\n\nmean\nmedian\nmax\nmin\n\nQuestion 8 – Using the above summary statistics, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?\nQuestion 9 – Now, rather than calculating summary statistics, plot the distribution of arrival delays for the sfo_flights dataset.\nChoose the type of plot you believe is appropriate for visualizing the distribution of arrival delays. Don’t forget to give your visualization informative axis labels that include the units of measurement!\nQuestion 10 – Using the plot above, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?\nQuestion 11 – What information did the plot give you that was missing from the summary statistics?"
   },
   {
     "objectID": "slides/week10-day1.html#wrapping-up-revisions",
@@ -6170,61 +6149,5 @@
     "title": "Week 8 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
-    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
-    "title": "Lab 1 – Grading Guide",
-    "section": "If their document doesn’t contain answers",
-    "text": "If their document doesn’t contain answers\nGeneral Comment\nCareful! Your document doesn’t contain any of your responses for Questions 5 through 10. In order for your responses to show up in the final submission, you need to (re)render the document after you have finished answering all the questions.\nFor Question 6\nLook over the solutions from Dr. Theobold for a tip on this question!"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
-    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
-    "title": "Lab 1 – Grading Guide",
-    "section": "If their image doesn’t appear but they have answers to the rest of the questions",
-    "text": "If their image doesn’t appear but they have answers to the rest of the questions\nNice job completing all the questions! Be careful to double check that your image is appearing in your final HTML document. In your submitted file we can’t see the image you wanted to include."
-  },
-  {
-    "objectID": "slides/week2-day2.html#plotting-your-data",
-    "href": "slides/week2-day2.html#plotting-your-data",
-    "title": "The Flaws of Averages",
-    "section": "Plotting Your Data",
-    "text": "Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
-  },
-  {
-    "objectID": "slides/week2-day2.html#cooperative-learning",
-    "href": "slides/week2-day2.html#cooperative-learning",
-    "title": "The Flaws of Averages",
-    "section": "Cooperative Learning",
-    "text": "Cooperative Learning\nis a structured form of small-group learning.\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\n\n\n\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
-  },
-  {
-    "objectID": "slides/week2-day2.html#group-roles",
-    "href": "slides/week2-day2.html#group-roles",
-    "title": "The Flaws of Averages",
-    "section": "Group Roles",
-    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\n\nTalks with Resource Manager about ideas related to ways they could solve the problem.\nResponsible for organizing and recording answers to the assignment during discussions.\nCompiles a summary of the solutions discussed.\nSubmits final assignment.\n\n\n\n\n\n\nResource Manager – Manages resources for coding / statistical tasks\n\n\n\nReads prompt and ensures Recorder understands what the problem is asking.\nAsks group questions to Dr. Theobold.\nManages resources (e.g., cheatsheets, textbook, tutorials) for aiding in solution strategy.\nLeads discussion and encourages participation from Recorder.\nBrings conversation back if it deviates."
-  },
-  {
-    "objectID": "slides/week2-day2.html#group-roles-1",
-    "href": "slides/week2-day2.html#group-roles-1",
-    "title": "The Flaws of Averages",
-    "section": "Group Roles",
-    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\n\nResource Manager – Evaluates solution strategy\n\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder.\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
-  },
-  {
-    "objectID": "slides/week2-day2.html#accessing-lab-1",
-    "href": "slides/week2-day2.html#accessing-lab-1",
-    "title": "The Flaws of Averages",
-    "section": "Accessing Lab 1",
-    "text": "Accessing Lab 1\nStep 1: Both members of your group need to follow these instructions to join your group workspace.\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was assigned to be the group “leader” will act as the Recorder for your group (this week).\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\nStep 3: Both members open the Lab 2 assignment in your group workspace!\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
-  },
-  {
-    "objectID": "slides/week2-day2.html#r-resources",
-    "href": "slides/week2-day2.html#r-resources",
-    "title": "The Flaws of Averages",
-    "section": "R Resources",
-    "text": "R Resources"
   }
 ]

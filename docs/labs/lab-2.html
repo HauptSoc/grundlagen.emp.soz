@@ -5103,7 +5103,8 @@ vertical-align: -.125em;
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(sfo_flights, </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean_dd   =</span> <span class="fu">mean</span>(dep_delay), </span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">median_dd =</span> <span class="fu">median</span>(dep_delay), </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">n         =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">n         =</span> <span class="fu">n</span>()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>          )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note that in the <code>summarise()</code> function I’ve created a list of three different numerical summaries that I’m interested in.</p>
 <p>The names of these elements are user defined, like <code>mean_dd</code>, <code>median_dd</code>, <code>n</code>, and you can customize these names as you like (just don’t use spaces in your names!).</p>
@@ -5132,17 +5133,11 @@ vertical-align: -.125em;
 <li>max</li>
 <li>min</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Code for exercise 7 goes here! </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><strong>Question 8 – Using the above summary statistics, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?</strong></p>
 <p><strong>Question 9 – Now, rather than calculating summary statistics, plot the distribution of arrival delays for the <code>sfo_flights</code> dataset.</strong></p>
 <p><em>Choose the type of plot you believe is appropriate for visualizing the <strong>distribution</strong> of arrival delays. Don’t forget to give your visualization informative axis labels that include the units of measurement!</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Code for exercise 9 goes here! </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><strong>Question 10 – Using the plot above, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?</strong></p>
-<p><strong>Question 11 – How did your answer change when using the plot versus using the summary statistics? i.e. What were you able to see in the plot that could could not “see” with the summary statistics?</strong></p>
+<p><strong>Question 11 – What information did the plot give you that was missing from the summary statistics?</strong></p>
 
 
 </section>
