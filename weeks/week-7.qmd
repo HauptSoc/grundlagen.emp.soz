@@ -24,6 +24,9 @@ execute:
 
 <!-- -   characterize the differences between observational studies and experiments -->
 
+<!-- [**Required Tutorial:** Sampling Strategies & Experimental Design](https://openintro.shinyapps.io/ims-01-data-03/#section-sampling-in-r) -->
+
+
 📖 [**Required Reading:** *Introduction to Modern Statistics* -- Study Design](https://openintro-ims.netlify.app/data-design.html)
 
 **3. Which of the following statements are true about observational studies and experiments? Select all that apply!**

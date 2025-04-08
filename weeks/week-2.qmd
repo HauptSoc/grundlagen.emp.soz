@@ -67,7 +67,7 @@ knitr::include_graphics(here::here("images",
 Submit your completed reading guide to the Canvas assignment portal!
 :::
 
-## Concept Quiz – Due Monday by the start of class
+## Concept Quiz – Due Wednesday by the start of class
 
 ::: callout-note
 The two concept quizzes from each chapter have been combined into **one** concept quiz on Canvas.
@@ -217,6 +217,7 @@ nycflights %>%
 `r emo::ji("computer")` [**Required Tutorial:** Exploring Numerical Data](https://openintro.shinyapps.io/ims-02-explore-02/)
 
 `r emo::ji("computer")` [**Required Tutorial:** Summarizing with Statistics](https://openintro.shinyapps.io/ims-02-explore-03/)
+<!-- Next time move this tutorial to Week 3 -->
 
 ::: callout-note
 # Submission

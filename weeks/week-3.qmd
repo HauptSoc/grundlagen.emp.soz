@@ -200,16 +200,13 @@ Step 3
 -   ascending (smallest to largest)
 -   descending (largest to smallest)
 
-## R Tutorial -- Due Wednesday by the start of class
+## No R tutorials this week!
+<!-- ## R Tutorial -- Due Wednesday by the start of class -->
 
-It has come to my attention that Posit Cloud has removed their tutorials in favor of what they are calling "recipes"---short tutorials on how to do specific things in R.
+<!-- `r emo::ji("computer")` [**Required Tutorial:** Summarizing with Statistics](https://openintro.shinyapps.io/ims-02-explore-03/) -->
 
-So, I'm pivoting to a different tutorial that uses `group_by()`---the tool you are learning this week---to explore different sampling strategies.
+<!-- ::: callout-note -->
+<!-- # Submission -->
 
-[**Required Tutorial:** Sampling Strategies & Experimental Design](https://openintro.shinyapps.io/ims-01-data-03/#section-sampling-in-r)
-
-::: callout-note
-# Submission
-
-Submit a screenshot of the completion page for each tutorial to the Canvas assignment portal!
-:::
+<!-- Submit a screenshot of the completion page for each tutorial to the Canvas assignment portal! -->
+<!-- ::: -->
