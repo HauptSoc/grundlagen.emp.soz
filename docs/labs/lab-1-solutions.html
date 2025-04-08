@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 313: Applied Experimental Design and Regression Models – STAT 313 / 513</title>
+<title>Lab 1 Solutions – STAT 313 / 513</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./computing-access.html" rel="next">
-<link href="./course-team.html" rel="prev">
-<link href="./images/favicon-2.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-2.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Course information</a></li><li class="breadcrumb-item"><a href="./index.html">Schedule</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 1 Solutions</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,8 +127,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/website-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/website-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/atheobold/stat-313-website" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -113,40 +145,40 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Course information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-team.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -163,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-access.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
   </div>
 </li>
@@ -180,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../course_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Resources</span></a>
   </div>
 </li>
@@ -197,13 +229,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/midterm-project/midterm-project-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/midterm-project/midterm-project-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm Project Description</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/final-project/final-project-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/final-project/final-project-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final Project Description</span></a>
   </div>
 </li>
@@ -220,67 +252,67 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-9.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10</span></a>
   </div>
 </li>
@@ -291,15 +323,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#r-code" id="toc-r-code" class="nav-link active" data-scroll-target="#r-code">R Code</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
+  <li><a href="#rendering-a-html-document" id="toc-rendering-a-html-document" class="nav-link" data-scroll-target="#rendering-a-html-document">Rendering a HTML Document</a></li>
+  <li><a href="#including-code-output" id="toc-including-code-output" class="nav-link" data-scroll-target="#including-code-output">Including Code Output</a></li>
+  <li><a href="#including-plots" id="toc-including-plots" class="nav-link" data-scroll-target="#including-plots">Including Plots</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Course information</a></li><li class="breadcrumb-item"><a href="./index.html">Schedule</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">STAT 313: Applied Experimental Design and Regression Models</h1>
+<h1 class="title">Lab 1 Solutions</h1>
 </div>
 
 
@@ -316,344 +358,185 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.</p>
-<div class="column-screen-inset-right">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 5%">
-<col style="width: 10%">
-<col style="width: 35%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Week</th>
-<th>Date</th>
-<th>Topic</th>
-<th style="text-align: center;">Prepare</th>
-<th style="text-align: center;">Lecture Slides</th>
-<th style="text-align: center;">Activity</th>
-<th style="text-align: center;">Lab</th>
-<th style="text-align: center;">Critique</th>
-<th style="text-align: center;">Project</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-0.html">0</a></td>
-<td>Sun, March 31</td>
-<td>Welcome to Stat 313 Course Set-up</td>
-<td style="text-align: center;"><a href="./weeks/week-0.html" title="Course Set-up">📖</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-1.html">1</a></td>
-<td>Mon, March 31 <strong>(no class)</strong></td>
-<td>Course Structure &amp; Statistics Review</td>
-<td style="text-align: center;"><a href="./weeks/week-1.html" title="Week 1 Coursework">📖</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, April 2</td>
-<td>Introduction to Data</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week1-day1-alt.html" title="Week 1 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"><p><a href="https://www.youtube.com/watch?v=_f3latmOhew" title="Video on How to Work in Quarto">🎥</a></p>
-<p><a href="./activity/week-1-quarto.html" title="Links to video, textbook, and tutorial resources">📋</a></p></td>
-<td style="text-align: center;"><a href="./labs/lab-1.html" title="Lab 1">💻</a> <br> Due April 7 <br> <a href="./labs/grading-guides/lab-1-solutions.html" title="Lab 1 Feedback">Lab 1 Feedback</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-2.html">2</a></td>
-<td>Mon, April 7</td>
-<td>Visualizing &amp; Summarizing Numerical Variables</td>
-<td style="text-align: center;"><a href="./weeks/week-2.html" title="Week 2 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week2-day1.html" title="Week 2 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"><a href="https://bit.ly/week-2-code-along" title="Code Along Activity">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, April 9</td>
-<td>The Flaws of Averages</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week2-day2.html" title="Week 2 Lab Warm-up Lecture Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-2.html" title="Lab 2">💻</a> <br> Due April 14 <br> <a href="./labs/grading-guides/lab-2-grading-guide.html" title="Lab 2 Feedback">Lab 2 Feedback</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-3.html">3</a></td>
-<td>Mon, April 14</td>
-<td>Incorporating Categorical Variables</td>
-<td style="text-align: center;"><a href="./weeks/week-3.html" title="Week 3 Courswork">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week3-day1.html" title="Week 3 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, April 16</td>
-<td>Ethics &amp; Categorical Variables</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week3-day2.html" title="Week 3 Review Lab Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-3.html" title="Lab 3">💻</a> <br> Due April 21 <br> <a href="./labs/grading-guides/lab-3-grading-guide.html" title="Lab 3 Feedback">Lab 3 Feedback</a></td>
-<td style="text-align: center;"><a href="./critique/critique-1.html" title="Statistical Critique 1">✍</a><a href="./critique/critique-1.html" title="Statistical Critique 1">Statistical Critique 1</a></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-4.html">4</a></td>
-<td>Mon, April 21</td>
-<td>Introduction to Linear Regression</td>
-<td style="text-align: center;"><a href="./weeks/week-4.html" title="Week 4 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week4-day1.html" title="Week 4 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Statistical Critique 1 Due<br>
-<br> <a href="./critique/grading-guides/critique-1-grading.html" title="Statistical Critique 1 Feedback">Statistical Critique 1 Feedback</a></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, April 23</td>
-<td>The Ugly History of Linear Regression</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week4-day2.html" title="Week 4 Review Lab Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-4.html" title="Lab 4">💻</a> <br> Due April 28 <br> <a href="./labs/grading-guides/lab-4-grading-guide.html" title="Lab 4 Feedback">Lab 4 Feedback</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./project/midterm-project/midterm-proposal-313.html" title="Midterm Project Proposal">📁 Midterm Project Proposal</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-5.html">5</a></td>
-<td>Mon, April 28</td>
-<td>Introduction to Multiple Linear Regression</td>
-<td style="text-align: center;"><a href="./weeks/week-5.html" title="Week 5 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week5-day1.html" title="Week 5 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"><a href="./activity/week-5-sample-selection.html" title="Sample Selection &amp; Scope of Inference Activity">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Midterm Projec Proposal Due</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, April 30</td>
-<td>Work Day – Coding a Multiple Linear Regression</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week5-day2.html" title="Midterm Project Warm-up Slides">🖥</a></td>
-<td style="text-align: center;"><a href="./activity/week-5-model-justification.html" title="Model Justification Critique">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td>Sun, May 4</td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><p>Midterm Project First Draft Due</p>
-<p>Gradin Rubric: <a href="./project/midterm-project/midterm-project-grading-rubric.html" title="Midterm Project Grading Rubric">✅</a></p>
-<p>Feedback: <a href="./project/midterm-project-help/midterm-project-feedback.html" title="Midterm Project Feedback Guide">📣</a></p></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-6.html">6</a></td>
-<td>Mon, May 5</td>
-<td>Variable Selection in Multiple Linear Regression</td>
-<td style="text-align: center;"><a href="./weeks/week-6.html" title="Week 6 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week6-day1.html" title="Week 6 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"><a href="./activity/week-6-model-selection.docx" title="Model Selection Activity">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td>Wed, May 7</td>
-<td>Machine Learning</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week6-day2.html" title="Week 6 Lab Review Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-6.html" title="Lab 6">💻</a> <br> Due May 12 <br> <a href="./labs/grading-guides/lab-6-grading-guide.html" title="Lab 6 Feedback">Lab 6 Feedback</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Sun, May 11</td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Midterm Project Final Version Due</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-7.html">7</a></td>
-<td>Mon, May 12</td>
-<td>Sampling Variability</td>
-<td style="text-align: center;"><a href="./weeks/week-7.html" title="Week 7 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week7-day1.html" title="Week 7 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"><a href="./activity/week-7-sampling-activity.html" title="Exploring Sampling Concepts">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, May 14</td>
-<td>Confidence Intervals</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week7-day2.html" title="Week 7 Lab Review Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-7.html" title="Lab 7">💻</a> <br> Due May 19 <br> <a href="./labs/grading-guides/lab-7-grading-guide.html" title="Lab 7 Feedback">Lab 7 Feedback</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-8.html">8</a></td>
-<td>Mon, May 19</td>
-<td>p-values &amp; Hypothesis Tests</td>
-<td style="text-align: center;"><a href="./weeks/week-8.html" title="Week 8 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week8-day1.html" title="Week 8 Review Lecture Slides">🖥</a></td>
-<td style="text-align: center;"><a href="./activity/week-8-grade-check.docx" title="Grade Check-in">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./critique/critique-2.html">✍ Statistical Critique 2</a></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, May 21</td>
-<td>Simulation-based Methods vs.&nbsp;Theory-based Methods</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week8-day2.html" title="Week 8 Lab Review Slides">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-8.html" title="Lab 8">💻</a> <br> Due May 26 <br> <a href="./labs/grading-guides/lab-8-grading-guide.html" title="Lab 8 Feedback">Lab 8 Feedback</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-9.html">9</a></td>
-<td><p>Mon, May 26</p>
-<p><em>No Class, School Holiday</em></p></td>
-<td></td>
-<td style="text-align: center;"><a href="./weeks/week-9.html" title="Week 9 Coursework">📖</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><br>
-</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./critique/critique-2.html" title="Statistical Critique 2">✍</a>Statistical Critique 2 Due</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td><p>Tues, May 27</p>
-<p><em>Classes follow a Monday Schedule</em></p></td>
-<td>One-Way Analysis of Variance</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week9-day1.html" title="One-way ANOVA Review">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./project/final-project/final-project-directions.html" title="Final Project Instructions">📁 Final Project Instructions</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td>Wed, May 28</td>
-<td>Inference for OWA &amp; Model Selection</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week9-day2.html" title="Coding a One-way ANOVA">🖥</a></td>
-<td style="text-align: center;">Assessing Independence: <a href="./project/final-project-help/assess_independence.html" title="Help on Assessing Independence">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Sun, June 2</td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><strong><em>Final Project First Draft Due</em></strong> <br> Grading Rubric: <a href="./project/final-project/final-project-grading-rubric.html" title="Final Project Grading Rubric">✅</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-10.html">10</a></td>
-<td>Mon, June 2</td>
-<td>Two-Way ANOVA Models</td>
-<td style="text-align: center;"><a href="./weeks/week-10.html" title="Week 10 Coursework">📖</a></td>
-<td style="text-align: center;"><a href="./slides/week10-day1.html" title="Week 10 Review Slides">🖥</a></td>
-<td style="text-align: center;">One-way to Two-way Model Selection Process: <a href="./project/final-project-help/owa-to-twa-model-selection-process.html" title="Model Selection Process for the Final Project">📋</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>Wed, June 4</td>
-<td>Last Day of STAT 313</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/week10-day2.html" title="Final Class Debrief">🖥</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">What <strong>should not</strong> be in your project: <a href="./project/final-project-help/no-gos.html" title="Things that don't belong in your report!">📋</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td>Sun, June 8</td>
-<td><strong><em>Final Project Final Version Due</em></strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Grading Rubric: <a href="./project/final-project/final-project-grading-rubric.html" title="Final Project Grading Rubric">✅</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Finals Week</td>
-<td>STAT 313-01 &amp; 02</td>
-<td><p>Poster Presentations</p>
-<p>Saturday, June 7, time TBD</p></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Presentation Instructions</td>
-</tr>
-</tbody>
-</table>
+<section id="r-code" class="level2">
+<h2 class="anchored" data-anchor-id="r-code">R Code</h2>
+<p>You can differentiate the R code within a Quarto file from the body of the document, based on the gray boxes that start with an <code>{r}.</code></p>
+<p>Here is an example of an R code chunk:</p>
+<p>Notice in the line after the <code>{r}</code> there are two lines that start with <code>#|</code> – this is the symbol that declares options for a code chunk. The <code>#| label:</code> allows us to specify a name for a code chunk, I typically choose a name that tells me what the code chunk does (e.g., load-packages, clean-data). The <code>#| include: false</code> option at the beginning of the code chunk controls how the code output looks in our final rendered document.</p>
+<p>This code chunk has two things we want to pay attention to:</p>
+<ol type="1">
+<li><p>The <code>library(tidyverse)</code> code loads in an R package called the “tidyverse”. This is code you will have in <strong>every</strong> lab assignment for this class!</p></li>
+<li><p>Code comments which are denoted by a <code>#</code> symbol. Code comments are a way for you (and me) to write what the code is doing, without R thinking what we are writing is code it should execute.</p></li>
+</ol>
+</section>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p>In order for us to be able to use the contents of the <code>tidyverse</code> package (e.g., data, functions), we need to run the code chunk above! There are a few ways to do this:</p>
+<ol type="1">
+<li>Clicking on the green “play” button in the upper right hand corner of the document. <em>This will run <strong>all</strong> the code included in the code chunk.</em></li>
+<li>Putting your cursor in the code chunk and using a keyboard shortcut to run the code. On a PC the shortcut is Control + Enter (pressed at the same time). On a Mac the shortcut is Command + Return. <em>This will run a <strong>single</strong> line of code, so you may need to do this multiple times is there is more than one line of code!</em></li>
+</ol>
+<p><strong>Question 4:</strong> Run the code in the above code chunk (<code>load-packages</code>) using either of these methods. What output do you see? What do you think this output is telling you?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;T’s Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The code is telling you what packages are being loaded into the R session! When you load (<code>library()</code>) the tidyverse, it actually loads nine different packages. The lines at the bottom are warning you that when you loaded in the tidyverse, some of the functions had the same names as functions that already existed.</p>
+</div>
+</div>
+</section>
+<section id="rendering-a-html-document" class="level2">
+<h2 class="anchored" data-anchor-id="rendering-a-html-document">Rendering a HTML Document</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. Rendering a document is similar to running the code <em>within</em> the document, as Quarto performs the same action (running each chunk of code) in order to render your final document.</p>
+<p><strong>Question 5:</strong> Click on the “Render” button to produce an HTML file (<em>you may need to enable popups to see the rendered document</em>). Do you see the above code chunk (<code>load-packages</code>) in the rendered HTML document? Why do you think this is the case?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;T’s Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You don’t see the code or the output because the <code>#| include: false</code> option is telling Quarto not (<code>false</code>) to <code>include</code> the code or the output from that code chunk.</p>
+</div>
+</div>
+</section>
+<section id="including-code-output" class="level2">
+<h2 class="anchored" data-anchor-id="including-code-output">Including Code Output</h2>
+<p>You can include code output in your rendered document:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 234 × 11
+   manufacturer model      displ  year   cyl trans drv     cty   hwy fl    class
+   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 audi         a4           1.8  1999     4 auto… f        18    29 p     comp…
+ 2 audi         a4           1.8  1999     4 manu… f        21    29 p     comp…
+ 3 audi         a4           2    2008     4 manu… f        20    31 p     comp…
+ 4 audi         a4           2    2008     4 auto… f        21    30 p     comp…
+ 5 audi         a4           2.8  1999     6 auto… f        16    26 p     comp…
+ 6 audi         a4           2.8  1999     6 manu… f        18    26 p     comp…
+ 7 audi         a4           3.1  2008     6 auto… f        18    27 p     comp…
+ 8 audi         a4 quattro   1.8  1999     4 manu… 4        18    26 p     comp…
+ 9 audi         a4 quattro   1.8  1999     4 auto… 4        16    25 p     comp…
+10 audi         a4 quattro   2    2008     4 manu… 4        20    28 p     comp…
+# ℹ 224 more rows</code></pre>
+</div>
+</div>
+<p><strong>Question 6:</strong> Run the code above to see a preview of the <code>mpg</code> dataset. What are the observations (cases) in these data?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(mpg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 234
+Columns: 11
+$ manufacturer &lt;chr&gt; "audi", "audi", "audi", "audi", "audi", "audi", "audi", "…
+$ model        &lt;chr&gt; "a4", "a4", "a4", "a4", "a4", "a4", "a4", "a4 quattro", "…
+$ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2.…
+$ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 200…
+$ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8, …
+$ trans        &lt;chr&gt; "auto(l5)", "manual(m5)", "manual(m6)", "auto(av)", "auto…
+$ drv          &lt;chr&gt; "f", "f", "f", "f", "f", "f", "f", "4", "4", "4", "4", "4…
+$ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, 1…
+$ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, 2…
+$ fl           &lt;chr&gt; "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p…
+$ class        &lt;chr&gt; "compact", "compact", "compact", "compact", "compact", "c…</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What uniquely separates each row from the other rows?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>We can also preview a dataset using the <code>glimpse()</code> function.</p>
+<p><strong>Question 7:</strong> Run the code above and compare the output to the previous code (<code>mpg</code>). How is the output different? Which output do you prefer?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;T’s Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>glimpse()</code> output shows you roughly the same information as just typing <code>mpg</code>, but the appearance is very different. First, the columns are included as rows. Second, the dimensions of the data (rows and columns) are given at the top of the summary.</p>
+<p>Personally, I like <code>glimpse()</code> but I could see why people would think the output is a bit strange.</p>
+</div>
+</div>
+</section>
+<section id="including-plots" class="level2">
+<h2 class="anchored" data-anchor-id="including-plots">Including Plots</h2>
+<p>You can also embed plots in the rendered document. Here is an example of a plot:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab-1-solutions_files/figure-html/mpg-plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Question 8</strong>: What do you think the <code>echo: false</code> option does in the above code chunk? <em>Hint: Render the document and see what you see!</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;T’s Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>echo: false</code> option tells Quarto that the R code should not be shown (but the plot should be!).</p>
+</div>
+</div>
+<p><strong>Question 9:</strong> What do you think the <code>mapping = aes(y = manufacturer, x = hwy))</code> code does?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;T’s Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As you learned this week, this is how we put variables on different aspects of the plot!</p>
+</div>
+</div>
+<p><strong>Question 10:</strong> What do you think the <code>labs(x = "Highway Miles Per Gallon", y = "Car Manufacturer")</code> code does?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;T’s Solution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is telling R what the labels on the plot should be!</p>
+</div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1076,18 +959,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./course-team.html" class="pagination-link" aria-label="Teaching team">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Teaching team</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./computing-access.html" class="pagination-link" aria-label="Access">
-        <span class="nav-page-text">Access</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1096,7 +967,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
