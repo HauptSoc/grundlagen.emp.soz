@@ -320,8 +320,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -339,52 +337,8 @@
 <h1>Lab 1</h1>
 
 </section>
-<section id="revisions" class="slide level2">
-<h2>Revisions</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<div style="font-size: 1.25em;">
-<p>“Complete” = Satisfactory</p>
-</div>
-<ul>
-<li>Your images were included in the document</li>
-<li>You provided responses to every question</li>
-</ul>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:47%;">
-<div style="font-size: 1.25em;">
-<p>“Incomplete” = Growing</p>
-</div>
-<ul>
-<li>Your images <u>were not</u> included in the document</li>
-<li>You <u>did not</u> provide responses to every question</li>
-</ul>
-</div></div>
-</section>
-<section id="key---code-chunk-options" class="slide level2">
-<h2>Key - Code Chunk Options</h2>
-<p>A code chunk option is declared after a <code>#|</code>. Here are some options we may want to use:</p>
-<div class="small">
-<ul>
-<li><code>#| label: packages</code> – creates a label for the code chunk (describing its contents)</li>
-<li><code>#| echo: false</code> – tells Quarto not to output the code in the rendered HTML (only the output)</li>
-<li><code>#| include: false</code> – tells Quarto not to include the code or the output in the rendered HTML</li>
-</ul>
-</div>
-</section>
-<section id="key---previewing-your-data" class="slide level2">
-<h2>Key - Previewing Your Data</h2>
-<p>The <code>glimpse()</code> function is a great tool to preview the dataset you are working with! It gives you:</p>
-<ul>
-<li>the dimensions of the data (rows and columns)</li>
-<li>the names of the columns</li>
-<li>the data type of each column (e.g., <code>chr</code>, <code>dbl</code>)</li>
-<li>a preview of the first 10 rows of each column</li>
-</ul>
-</section>
-<section id="key---plotting-your-data" class="slide level2">
-<h2>Key - Plotting Your Data</h2>
+<section id="plotting-your-data" class="slide level2">
+<h2>Plotting Your Data</h2>
 <p>Now that we’ve practiced making some plots, we know…</p>
 <div class="small">
 <p><code>mapping = aes(y = manufacturer, x = hwy)</code> declares what variables are plotted on the x- and y-axis.</p>
@@ -405,7 +359,7 @@
 <div class="fragment">
 <p><br></p>
 <div class="small">
-<p><code>labs(x = "Highway Miles Per Gallon", y = "Car Manufacturer")</code> declares new x- and y-axis labels for the plot.</p>
+<p><code>labs(x = "Highway Miles Per Gallon", y = "Car Manufacturer")</code> declares new x-axis and y-axis labels for the plot.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -420,230 +374,80 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="completing-revisions" class="slide level2">
-<h2>Completing Revisions</h2>
-<div style="font-size: 1.25em;">
-<p>Lab 1 revisions are due by Wednesday, April 17 (at midnight).</p>
-</div>
-<div class="small">
-<ol type="1">
-<li>Read comments on Canvas</li>
-<li>Go back into your Lab 1 on Posit Cloud and complete your revisions</li>
-<li>Render your revised Lab 1</li>
-<li>Download your revised HTML</li>
-</ol>
-</div>
-<div class="small">
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Reflections</strong></p>
-</div>
-<div class="callout-content">
-<p>Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div style="font-size: 3em; color: #ed8402;">
-<p>15-minutes</p>
-</div>
-<div style="font-size: 1.5em;">
-<ul>
-<li>Review Lab 1 comments</li>
-<li>Ask questions</li>
-<li>Start revisions</li>
-</ul>
-</div>
-</section>
-<section id="section-1" class="slide level2" data-background-color="#abdbe3">
-<h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>Suppose…</p>
-</div>
-<blockquote>
-<p><span style="color: #ed8402;">“Overall this instructor was educationally effective.”</span></p>
-</blockquote>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">year</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">quarter</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">average</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">2021</td>
-<td style="text-align: left;">Fall</td>
-<td style="text-align: right;">4.53</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2021</td>
-<td style="text-align: left;">Fall</td>
-<td style="text-align: right;">4.36</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;">Winter</td>
-<td style="text-align: right;">4.18</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;">Winter</td>
-<td style="text-align: right;">4.24</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;">Spring</td>
-<td style="text-align: right;">4.83</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;">Spring</td>
-<td style="text-align: right;">4.41</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;">Spring</td>
-<td style="text-align: right;">4.00</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-</div>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<center>
-<div style="font-size: 3.5em; color: #ed8402;">
-<p>How were those averages calculated?</p>
-</div>
-</center>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<center>
-<div style="font-size: 3.5em; color: #ed8402;">
-<p>What do these averages mean?</p>
-</div>
-</center>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div style="font-size: 2.5em; color: #000000;">
-<p>The Problem</p>
-</div>
-<p><br></p>
-<p>It’s incredibly rare for scientists, including statisticians, to explicitly think about that conditions underlying their models.</p>
-<div class="fragment">
-<div class="small">
-<blockquote>
-<p>“I’ve had many conversations in very different contexts with scientists about what the average calculated from the data (or mean in a model) could reasonably represent and whether that was really what the scientist was after.” <a href="https://critical-inference.com/more-on-average/">Dr.&nbsp;Megan Higgs</a></p>
-</blockquote>
-</div>
-</div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div style="font-size: 2.5em; color: #000000;">
-<p>Why so much resistance?</p>
-</div>
-<p><br></p>
-<div class="fragment">
-<div style="font-size: 0.75em; color: #000000;">
-<p>Departments hold specific expectations of statistics courses</p>
-<p><br></p>
-<div class="fragment">
-<p>These expectations are conditional on the assumption that means represent the magic quantity of interest.</p>
-</div>
-<p><br></p>
-<div class="fragment">
-<p>I’m then expected to educate you to “play the game” in the scientific culture of averages</p>
-</div>
-</div>
-</div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<div style="font-size: 3.5em; color: #000000;">
-<p>Averagarianism</p>
-</div>
-<div style="font-size: 0.75em; color: #000000;">
-<blockquote>
-<p>“The primary research method of averagarianism is <span style="color: #ed8402;">aggregate, then analyze</span>: First, <span style="color: #ed8402;">combine many people together and look for patterns in the group</span>. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight.”</p>
-<p>The End of Average by Todd Rose</p>
-</blockquote>
-</div>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div style="font-size: 2.5em; color: #000000;">
-<p>“We’ve always done it this way”</p>
-</div>
-<div style="font-size: 0.75em; color: #000000;">
-<p>Methods based on averages are available, easy, convenient, and take little creativity — and they are expected in our scientific culture.</p>
-<p><br></p>
-<div class="fragment">
-<p>Justification for using averages is simply not demanded — though justification for use of anything but averages is incredibly difficult to sell.</p>
-</div>
-</div>
-</section>
-<section id="section-8" class="slide level2" data-background-color="#f48153">
-<h2></h2>
-<div style="font-size: 3.5em; color: #000000;">
-<p>Some Rules to Play By</p>
-</div>
-<p><br></p>
-<div style="font-size: 0.75em; color: #000000;">
-<div>
-<ul>
-<li class="fragment">Look at and understand your <em>raw</em> data before aggregating</li>
-<li class="fragment">Boxplots don’t count as visualizing the <em>raw</em> data</li>
-</ul>
-</div>
+<!-- ##  {background-color="#D4D4D4"} -->
+<!-- ```{r packages} -->
+<!-- library(tidyverse) -->
+<!-- library(kableExtra) -->
+<!-- ``` -->
+<!-- ::: {style="font-size: 2em; color: #0F4C81;"} -->
+<!-- Suppose... -->
+<!-- ::: -->
+<!-- > ["Overall this instructor was educationally effective."]{style="color: #ed8402;"} -->
+<!-- . . . -->
+<!-- ::: {.midi} -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| label:  table-of-eval-scores -->
+<!-- evals <- tibble(  -->
+<!--   year = c(rep(2021, 2), rep(2022, 5) ),  -->
+<!--   quarter = c(rep("Fall", 2),  -->
+<!--               rep("Winter", 2),  -->
+<!--               rep("Spring", 3)  -->
+<!--               ), -->
+<!--   average = c(4.53, 4.36, 4.18, 4.24, 4.83, 4.41, 4)  -->
+<!--   ) -->
+<!-- kable(evals) %>%  -->
+<!--   kable_styling(stripe_color = "light blue") -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ##  -->
+<!-- </br> -->
+<!-- <center> -->
+<!-- ::: {style="font-size: 3.5em; color: #ed8402;"} -->
+<!-- How were those averages calculated? -->
+<!-- ::: -->
+<!-- </center> -->
+<!-- ##  -->
+<!-- </br> -->
+<!-- <center> -->
+<!-- ::: {style="font-size: 3.5em; color: #ed8402;"} -->
+<!-- What do these averages mean? -->
+<!-- ::: -->
+<!-- </center> -->
+<!-- ##  -->
+<!-- </br> -->
+<!-- <center> -->
+<!-- ::: {style="font-size: 3.5em; color: #0F4C81;"} -->
+<!-- What statistic(s) should be used instead? -->
+<!-- ::: -->
+<!-- </center> -->
+<!-- ##  -->
+<!-- ::: {style="font-size: 3.5em; color: #000000;"} -->
+<!-- Averagarianism -->
+<!-- ::: -->
+<!-- ::: {style="font-size: 0.75em; color: #000000;"} -->
+<!-- > "The primary research method of averagarianism is [aggregate, then analyze]{style="color: #ed8402;"}: First, [combine many people together and look for patterns in the group]{style="color: #ed8402;"}. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight." -->
+<!-- > -->
+<!-- > *The End of Average* by Todd Rose -->
+<!-- ::: -->
+<!-- ##  {background-color="#D4D4D4"} -->
+<!-- ::: {style="font-size: 3.5em; color: #000000;"} -->
+<!-- Some Rules to Play By -->
+<!-- ::: -->
+<!-- </br> -->
+<!-- :::: {style="color: #000000;"} -->
+<!-- ::: incremental -->
+<!-- -   Look at and understand your data before aggregating! -->
+<!-- -   Should the variables that are numerical **actually** numerical? -->
+<!-- -   Consider what statistic is the most appropriate for the question. -->
+<!-- ::: -->
+<!-- :::: -->
 </div>
 </section></section>
 <section>
 <section id="lab-2" class="title-slide slide level1 center">
 <h1>Lab 2</h1>
-<!-- ##  {background-color="#B6CADA"} -->
-<!-- ::: {style="font-size: 2em; color: #000000;"} -->
-<!-- How Smart are You? -->
-<!-- ::: -->
-<!-- ::: columns -->
-<!-- ::: {.column width="30%"} -->
-<!-- (2 minutes) -->
-<!-- -   Write two *criteria* would you use to *rank* yourself compared to everyone else in this class -->
-<!-- ::: -->
-<!-- ::: {.column width="2%"} -->
-<!-- ::: -->
-<!-- ::: {.column width="30%"} -->
-<!-- (3 minutes) -->
-<!-- -   Talk with the person on your right about the criteria you proposed -->
-<!-- ::: -->
-<!-- ::: {.column width="2%"} -->
-<!-- ::: -->
-<!-- ::: {.column width="30%"} -->
-<!-- (5 minutes) -->
-<!-- -   Share out -->
-<!-- -   Person with most vowels in name should be prepared to share! -->
-<!-- ::: -->
-<!-- ::: -->
+
 </section>
 <section id="departure-delays" class="slide level2">
 <h2>Departure Delays</h2>
@@ -657,69 +461,141 @@
 <li>Compare summary statistics to a visualization</li>
 </ul>
 </section></section>
+<section>
 <section id="working-in-groups" class="title-slide slide level1 center">
 <h1>Working in Groups</h1>
-<!-- ##  -->
-<!-- ::: {style="font-size: 2em; color: #000000;"} -->
-<!-- Cooperative Learning -->
-<!-- ::: -->
-<!-- is a structured form of small-group learning -->
-<!-- . . . -->
-<!-- </br> -->
-<!-- ::: {style="font-size: 0.85em;"} -->
-<!-- -   Roles relate to **how** the work should be done -->
-<!--     -   Roles **are not** about breaking up the work intellectually -->
-<!-- -   Roles allow each person to contribute to the group in significant ways -->
-<!--     -   Each person's participation is necessary to complete the task -->
-<!-- ::: -->
-<!-- ##  {background-color="#B6CADA"} -->
-<!-- ::: {style="font-size: 3em; color: #000000;"} -->
-<!-- Group Norms -->
-<!-- ::: -->
-<!-- ::: columns -->
-<!-- ::: {.column width="45%"} -->
-<!-- -   Zero tolerance for: racism, sexism, homophobia, transphobia, ageism, ableism -->
-<!-- -   Respect one another -->
-<!-- -   Intent and impact *both* matter -->
-<!-- ::: -->
-<!-- ::: {.column width="5%"} -->
-<!-- ::: -->
-<!-- ::: {.column width="45%"} -->
-<!-- -   Non-judgmental -->
-<!-- -   Take space, make space -->
-<!-- -   Embrace discomfort -->
-<!-- -   Make decisions by consensus -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ##  -->
-<!-- ::: {style="font-size: 2em; color: #000000;"} -->
-<!-- How We Learn Together -->
-<!-- ::: -->
-<!-- ::: columns -->
-<!-- ::: {.column width="45%"} -->
-<!-- ::: {style="font-size: 0.85em;"} -->
-<!-- -   No one is done until everyone is done -->
-<!-- -   You have the *right* to ask **anyone** in your group for help -->
-<!-- -   You have the *duty* to help **anyone** in your group who asks for help -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: {.column width="5%"} -->
-<!-- ::: -->
-<!-- ::: {.column width="45%"} -->
-<!-- ::: {style="font-size: 0.85em;"} -->
-<!-- -   Helping someone means explaining your thinking **not** giving answers or doing the work for them -->
-<!-- -   Provide a justification when you make a statement -->
-<!-- -   Think and work together -- don't divide up the work -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: -->
 
-<div class="quarto-auto-generated-content">
+<img data-src="images/cats-programming.jpg" alt="Two cats staring at a computer screen, in a dimly lit room. The computer screen is displaying a picture of a cat." class="r-stretch"></section>
+<section id="cooperative-learning" class="slide level2">
+<h2>Cooperative Learning</h2>
+<p>is a structured form of small-group learning.</p>
+<div class="fragment">
+<p><br></p>
+<ul>
+<li><p>Roles relate to <strong>how</strong> the work should be done</p>
+<ul>
+<li>Roles <strong>are not</strong> about breaking up the work intellectually</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Roles allow each person to contribute to the group in significant ways</p>
+<ul>
+<li>Each person’s participation is necessary to complete the task</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="group-roles" class="slide level2">
+<h2>Group Roles</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p><strong>Recorder</strong> – <em>Manages in-class report</em></p>
+<div class="fragment">
+<div class="small">
+<ul>
+<li>Talks with Resource Manager about ideas related to ways they could solve the problem.</li>
+<li>Responsible for organizing and recording answers to the assignment during discussions.</li>
+<li>Compiles a summary of the solutions discussed.</li>
+<li>Submits final assignment.</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:51%;">
+<p><strong>Resource Manager</strong> – <em>Manages resources for coding / statistical tasks</em></p>
+<div class="fragment">
+<div class="small">
+<ul>
+<li>Reads prompt and ensures Recorder understands what the problem is asking.</li>
+<li>Asks group questions to Dr.&nbsp;Theobold.</li>
+<li>Manages resources (e.g., cheatsheets, textbook, tutorials) for aiding in solution strategy.</li>
+<li>Leads discussion and encourages participation from Recorder.</li>
+<li>Brings conversation back if it deviates.</li>
+</ul>
+</div>
+</div>
+</div></div>
+</section>
+<section id="group-roles-1" class="slide level2">
+<h2>Group Roles</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p><strong>Recorder</strong> – <em>Manages in-class report</em></p>
+<div class="small">
+<ul>
+<li><strong>Does not</strong> ask the Resource Manager to solve the problem.</li>
+<li><strong>Does not</strong> ask the Resource Manager to write the code for them.</li>
+</ul>
+</div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:51%;">
+<p><strong>Resource Manager</strong> – <em>Evaluates solution strategy</em></p>
+<div class="small">
+<ul>
+<li><strong>Does not</strong> solve the problem themselves.</li>
+<li><strong>Does not</strong> tell the Recorder what to type.</li>
+<li><strong>Does not</strong> type for the Recorder.</li>
+</ul>
+</div>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<div class="small">
+<ul>
+<li><p>Helping someone means explaining your thinking <strong>not</strong> giving answers or doing the work for them</p></li>
+<li><p>Provide a justification when you make a statement</p></li>
+<li><p>Think and work together – don’t divide up the work</p></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="find-your-group" class="title-slide slide level1 center">
+<h1>Find Your Group!</h1>
+
+<img data-src="images/canvas-groups.png" alt="Screenshot of Canvas homepage noting with an arrow where the Groups a student is in can be found." class="r-stretch"></section>
+<section id="accessing-lab-1" class="slide level2">
+<h2>Accessing Lab 1</h2>
+<p><strong>Step 1:</strong> Both members of your group need to <a href="https://scribehow.com/shared/Joining_your_SGROUP_workspace__KnGc1NYfQqGcEmgoMwTQHQ">follow these instructions to join your group workspace.</a></p>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Roles</strong></p>
+</div>
+<div class="callout-content">
+<p>The person who was assigned to be the group “leader” will act as the Recorder for your group (this week).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Step 2:</strong> The Recorder <a href="">follows these instructions to copy the Lab 2 project into your group’s workspace</a></p>
+</div>
+<div class="fragment">
+<p><strong>Step 3:</strong> Both members open the Lab 2 assignment in your group workspace!</p>
+</div>
+<div class="fragment">
+<p><strong>Step 4:</strong> Follow the <a href="https://scribehow.com/shared/Moving_Files_in_Posit_Cloud_for_STAT_218_Copy__Q3uBlpp_TBWRZzVJmCjbsA">final instructions</a> to activate collaborative editing in the document.</p>
+</div>
+</section>
+<section id="r-resources" class="slide level2">
+<h2>R Resources</h2>
+
+
+<img data-src="images/week-2-resources.png" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -930,44 +806,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

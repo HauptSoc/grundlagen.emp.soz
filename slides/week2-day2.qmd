@@ -3,298 +3,139 @@ title: "The Flaws of Averages"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 execute: 
   echo: false
 ---
 
 # Lab 1
 
-## Revisions
-
-::: columns
-::: {.column width="47%"}
-::: {style="font-size: 1.25em;"}
-"Complete" = Satisfactory
-:::
-
--   Your images were included in the document
--   You provided responses to every question
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="47%"}
-::: {style="font-size: 1.25em;"}
-"Incomplete" = Growing
-:::
-
--   Your images [were not]{.underline} included in the document
--   You [did not]{.underline} provide responses to every question
-:::
-:::
-
-## Key - Code Chunk Options
-
-A code chunk option is declared after a `#|`. Here are some options we may want to use:
-
-::: small
--   `#| label: packages` -- creates a label for the code chunk (describing its contents)
--   `#| echo: false` -- tells Quarto not to output the code in the rendered HTML (only the output)
--   `#| include: false` -- tells Quarto not to include the code or the output in the rendered HTML
-:::
-
-## Key - Previewing Your Data
-
-The `glimpse()` function is a great tool to preview the dataset you are working with! It gives you:
-
--   the dimensions of the data (rows and columns)
--   the names of the columns
--   the data type of each column (e.g., `chr`, `dbl`)
--   a preview of the first 10 rows of each column
-
-## Key - Plotting Your Data
+## Plotting Your Data
 
 Now that we've practiced making some plots, we know...
 
-::: small
-`mapping = aes(y = manufacturer, x = hwy)` declares what variables are plotted on the x- and y-axis.
+:::: small
+`mapping = aes(y = manufacturer, x = hwy)` declares what variables are plotted
+on the x- and y-axis.
 
 ::: callout-tip
-The variable names you put insides `aes()` must be [**identical**]{.underline} to the names of the variables in the dataset!
+The variable names you put insides `aes()` must be [**identical**]{.underline}
+to the names of the variables in the dataset!
 :::
-:::
+::::
 
 . . .
 
 </br>
 
-::: small
-`labs(x = "Highway Miles Per Gallon", y = "Car Manufacturer")` declares new x- and y-axis labels for the plot.
+:::: small
+`labs(x = "Highway Miles Per Gallon", y = "Car Manufacturer")` declares new 
+x-axis and y-axis labels for the plot.
 
 ::: callout-tip
 Including nice axis labels (with their units) is a critical part of [**every**]{.underline} visualization we make!
 :::
-:::
+::::
 
-## Completing Revisions
+<!-- ##  {background-color="#D4D4D4"} -->
 
-::: {style="font-size: 1.25em;"}
-Lab 1 revisions are due by Wednesday, April 17 (at midnight).
-:::
+<!-- ```{r packages} -->
+<!-- library(tidyverse) -->
+<!-- library(kableExtra) -->
+<!-- ``` -->
 
-::: small
-1.  Read comments on Canvas
-2.  Go back into your Lab 1 on Posit Cloud and complete your revisions
-3.  Render your revised Lab 1
-4.  Download your revised HTML
-:::
+<!-- ::: {style="font-size: 2em; color: #0F4C81;"} -->
+<!-- Suppose... -->
+<!-- ::: -->
 
-::: small
-::: callout-warning
-# Reflections
+<!-- > ["Overall this instructor was educationally effective."]{style="color: #ed8402;"} -->
 
-Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas.
-:::
-:::
+<!-- . . . -->
 
-## 
+<!-- ::: {.midi} -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| label:  table-of-eval-scores -->
 
-::: {style="font-size: 3em; color: #ed8402;"}
-15-minutes
-:::
+<!-- evals <- tibble(  -->
+<!--   year = c(rep(2021, 2), rep(2022, 5) ),  -->
+<!--   quarter = c(rep("Fall", 2),  -->
+<!--               rep("Winter", 2),  -->
+<!--               rep("Spring", 3)  -->
+<!--               ), -->
+<!--   average = c(4.53, 4.36, 4.18, 4.24, 4.83, 4.41, 4)  -->
+<!--   ) -->
 
-::: {style="font-size: 1.5em;"}
--   Review Lab 1 comments
--   Ask questions
--   Start revisions
-:::
+<!-- kable(evals) %>%  -->
+<!--   kable_styling(stripe_color = "light blue") -->
+<!-- ``` -->
+<!-- ::: -->
 
-##  {background-color="#abdbe3"}
+<!-- ##  -->
 
-```{r packages}
-library(tidyverse)
-library(kableExtra)
-```
+<!-- </br> -->
 
-::: {style="font-size: 2em; color: #000000;"}
-Suppose...
-:::
+<!-- <center> -->
 
-> ["Overall this instructor was educationally effective."]{style="color: #ed8402;"}
+<!-- ::: {style="font-size: 3.5em; color: #ed8402;"} -->
+<!-- How were those averages calculated? -->
+<!-- ::: -->
 
-. . .
+<!-- </center> -->
 
-```{r}
-#| echo: false
-#| label:  table-of-eval-scores
+<!-- ##  -->
 
-evals <- tibble( 
-  year = c(rep(2021, 2), rep(2022, 5) ), 
-  quarter = c(rep("Fall", 2), 
-              rep("Winter", 2), 
-              rep("Spring", 3) 
-              ),
-  average = c(4.53, 4.36, 4.18, 4.24, 4.83, 4.41, 4) 
-  )
+<!-- </br> -->
 
-kable(evals) %>% 
-  kable_styling(stripe_color = "light blue")
-```
+<!-- <center> -->
 
-## 
+<!-- ::: {style="font-size: 3.5em; color: #ed8402;"} -->
+<!-- What do these averages mean? -->
+<!-- ::: -->
 
-<center>
+<!-- </center> -->
 
-::: {style="font-size: 3.5em; color: #ed8402;"}
-How were those averages calculated?
-:::
+<!-- ##  -->
 
-</center>
+<!-- </br> -->
 
-## 
+<!-- <center> -->
 
-<center>
+<!-- ::: {style="font-size: 3.5em; color: #0F4C81;"} -->
+<!-- What statistic(s) should be used instead? -->
+<!-- ::: -->
 
-::: {style="font-size: 3.5em; color: #ed8402;"}
-What do these averages mean?
-:::
+<!-- </center> -->
 
-</center>
+<!-- ##  -->
 
-## 
+<!-- ::: {style="font-size: 3.5em; color: #000000;"} -->
+<!-- Averagarianism -->
+<!-- ::: -->
 
-::: {style="font-size: 2.5em; color: #000000;"}
-The Problem
-:::
+<!-- ::: {style="font-size: 0.75em; color: #000000;"} -->
+<!-- > "The primary research method of averagarianism is [aggregate, then analyze]{style="color: #ed8402;"}: First, [combine many people together and look for patterns in the group]{style="color: #ed8402;"}. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight." -->
+<!-- > -->
+<!-- > *The End of Average* by Todd Rose -->
+<!-- ::: -->
 
-</br>
+<!-- ##  {background-color="#D4D4D4"} -->
 
-It's incredibly rare for scientists, including statisticians, to explicitly think about that conditions underlying their models.
+<!-- ::: {style="font-size: 3.5em; color: #000000;"} -->
+<!-- Some Rules to Play By -->
+<!-- ::: -->
 
-. . .
+<!-- </br> -->
 
-::: small
-> "I've had many conversations in very different contexts with scientists about what the average calculated from the data (or mean in a model) could reasonably represent and whether that was really what the scientist was after." [Dr. Megan Higgs](https://critical-inference.com/more-on-average/)
-:::
-
-## 
-
-::: {style="font-size: 2.5em; color: #000000;"}
-Why so much resistance?
-:::
-
-</br>
-
-. . .
-
-::: {style="font-size: 0.75em; color: #000000;"}
-Departments hold specific expectations of statistics courses
-
-</br>
-
-::: fragment
-These expectations are conditional on the assumption that means represent the magic quantity of interest.
-:::
-
-</br>
-
-::: fragment
-I'm then expected to educate you to "play the game" in the scientific culture of averages
-:::
-:::
-
-## 
-
-::: {style="font-size: 3.5em; color: #000000;"}
-Averagarianism
-:::
-
-::: {style="font-size: 0.75em; color: #000000;"}
-> "The primary research method of averagarianism is [aggregate, then analyze]{style="color: #ed8402;"}: First, [combine many people together and look for patterns in the group]{style="color: #ed8402;"}. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight."
->
-> The End of Average by Todd Rose
-:::
-
-## 
-
-::: {style="font-size: 2.5em; color: #000000;"}
-"We've always done it this way"
-:::
-
-::: {style="font-size: 0.75em; color: #000000;"}
-Methods based on averages are available, easy, convenient, and take little creativity --- and they are expected in our scientific culture.
-
-</br>
-
-::: fragment
-Justification for using averages is simply not demanded --- though justification for use of anything but averages is incredibly difficult to sell.
-:::
-:::
-
-##  {background-color="#f48153"}
-
-::: {style="font-size: 3.5em; color: #000000;"}
-Some Rules to Play By
-:::
-
-</br>
-
-::: {style="font-size: 0.75em; color: #000000;"}
-::: incremental
--   Look at and understand your *raw* data before aggregating
--   Boxplots don't count as visualizing the *raw* data
-:::
-:::
+<!-- :::: {style="color: #000000;"} -->
+<!-- ::: incremental -->
+<!-- -   Look at and understand your data before aggregating! -->
+<!-- -   Should the variables that are numerical **actually** numerical? -->
+<!-- -   Consider what statistic is the most appropriate for the question. -->
+<!-- ::: -->
+<!-- :::: -->
 
 # Lab 2
-
-<!-- ##  {background-color="#B6CADA"} -->
-
-<!-- ::: {style="font-size: 2em; color: #000000;"} -->
-
-<!-- How Smart are You? -->
-
-<!-- ::: -->
-
-<!-- ::: columns -->
-
-<!-- ::: {.column width="30%"} -->
-
-<!-- (2 minutes) -->
-
-<!-- -   Write two *criteria* would you use to *rank* yourself compared to everyone else in this class -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="2%"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="30%"} -->
-
-<!-- (3 minutes) -->
-
-<!-- -   Talk with the person on your right about the criteria you proposed -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="2%"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="30%"} -->
-
-<!-- (5 minutes) -->
-
-<!-- -   Share out -->
-
-<!-- -   Person with most vowels in name should be prepared to share! -->
-
-<!-- ::: -->
-
-<!-- ::: -->
 
 ## Departure Delays
 
@@ -306,83 +147,134 @@ Some Rules to Play By
 -   Make decisions based on summary statistics
 -   Compare summary statistics to a visualization
 
-# Working in Groups
+# Working in Groups 
 
-<!-- ##  -->
+![](images/cats-programming.jpg){fig-alt="Two cats staring at a computer screen, in a dimly lit room. The computer screen is displaying a picture of a cat."}
 
-<!-- ::: {style="font-size: 2em; color: #000000;"} -->
-<!-- Cooperative Learning -->
-<!-- ::: -->
+## Cooperative Learning
 
-<!-- is a structured form of small-group learning -->
+is a structured form of small-group learning.
 
-<!-- . . . -->
+. . .
 
-<!-- </br> -->
+</br>
 
-<!-- ::: {style="font-size: 0.85em;"} -->
-<!-- -   Roles relate to **how** the work should be done -->
-<!--     -   Roles **are not** about breaking up the work intellectually -->
-<!-- -   Roles allow each person to contribute to the group in significant ways -->
-<!--     -   Each person's participation is necessary to complete the task -->
-<!-- ::: -->
+-   Roles relate to **how** the work should be done
 
-<!-- ##  {background-color="#B6CADA"} -->
+    -   Roles **are not** about breaking up the work intellectually
 
-<!-- ::: {style="font-size: 3em; color: #000000;"} -->
-<!-- Group Norms -->
-<!-- ::: -->
+. . .
 
-<!-- ::: columns -->
-<!-- ::: {.column width="45%"} -->
-<!-- -   Zero tolerance for: racism, sexism, homophobia, transphobia, ageism, ableism -->
+-   Roles allow each person to contribute to the group in significant ways
 
-<!-- -   Respect one another -->
+    -   Each person's participation is necessary to complete the task
 
-<!-- -   Intent and impact *both* matter -->
-<!-- ::: -->
+## Group Roles
 
-<!-- ::: {.column width="5%"} -->
-<!-- ::: -->
+::: columns
+::: {.column width="47%"}
+**Recorder** -- *Manages in-class report*
 
-<!-- ::: {.column width="45%"} -->
-<!-- -   Non-judgmental -->
+::: {.fragment}
+::: {.small}
+-   Talks with Resource Manager about ideas related to ways they could solve the
+problem.
+-   Responsible for organizing and recording answers to the assignment during
+discussions.
+-   Compiles a summary of the solutions discussed.
+-   Submits final assignment.
+:::
+:::
+:::
 
-<!-- -   Take space, make space -->
+::: {.column width="2%"}
+:::
 
-<!-- -   Embrace discomfort -->
+::: {.column width="51%"}
+**Resource Manager** -- *Manages resources for coding / statistical tasks*
 
-<!-- -   Make decisions by consensus -->
-<!-- ::: -->
-<!-- ::: -->
+::: {.fragment}
+::: {.small}
+-   Reads prompt and ensures Recorder understands what the problem is asking. 
+-   Asks group questions to Dr. Theobold. 
+-   Manages resources (e.g., cheatsheets, textbook, tutorials) for aiding in
+solution strategy. 
+-   Leads discussion and encourages participation from Recorder.
+-   Brings conversation back if it deviates.
+:::
+:::
+:::
 
-<!-- ##  -->
+:::
 
-<!-- ::: {style="font-size: 2em; color: #000000;"} -->
-<!-- How We Learn Together -->
-<!-- ::: -->
+## Group Roles
 
-<!-- ::: columns -->
-<!-- ::: {.column width="45%"} -->
-<!-- ::: {style="font-size: 0.85em;"} -->
-<!-- -   No one is done until everyone is done -->
+::: columns
+::: {.column width="47%"}
+**Recorder** -- *Manages in-class report*
 
-<!-- -   You have the *right* to ask **anyone** in your group for help -->
+::: {.small}
+-   **Does not** ask the Resource Manager to solve the problem. 
+-   **Does not** ask the Resource Manager to write the code for them. 
+:::
+:::
 
-<!-- -   You have the *duty* to help **anyone** in your group who asks for help -->
-<!-- ::: -->
-<!-- ::: -->
+::: {.column width="2%"}
+:::
 
-<!-- ::: {.column width="5%"} -->
-<!-- ::: -->
+::: {.column width="51%"}
+**Resource Manager** -- *Evaluates solution strategy*
 
-<!-- ::: {.column width="45%"} -->
-<!-- ::: {style="font-size: 0.85em;"} -->
-<!-- -   Helping someone means explaining your thinking **not** giving answers or doing the work for them -->
+::: {.small}
+-   **Does not** solve the problem themselves. 
+-   **Does not** tell the Recorder what to type.
+-   **Does not** type for the Recorder. 
+:::
+:::
 
-<!-- -   Provide a justification when you make a statement -->
+:::
 
-<!-- -   Think and work together -- don't divide up the work -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: -->
+. . .
+
+</br> 
+
+::: {.small}
+-   Helping someone means explaining your thinking **not** giving answers or
+doing the work for them
+
+-   Provide a justification when you make a statement
+
+-   Think and work together -- don't divide up the work
+:::
+
+# Find Your Group! 
+
+![](images/canvas-groups.png){fig-alt="Screenshot of Canvas homepage noting with an arrow where the Groups a student is in can be found."}
+
+## Accessing Lab 1
+
+**Step 1:** Both members of your group need to [follow these instructions to join your group workspace.](https://scribehow.com/shared/Joining_your_SGROUP_workspace__KnGc1NYfQqGcEmgoMwTQHQ)
+
+. . .
+
+::: {.callout-note}
+# Roles
+The person who was assigned to be the group "leader" will act as the Recorder
+for your group (this week). 
+:::
+
+. . .
+
+**Step 2:** The Recorder [follows these instructions to copy the Lab 2 project into your group's workspace]()
+
+. . .
+
+**Step 3:** Both members open the Lab 2 assignment in your group workspace!
+
+. . .
+
+**Step 4:** Follow the [final instructions](https://scribehow.com/shared/Moving_Files_in_Posit_Cloud_for_STAT_218_Copy__Q3uBlpp_TBWRZzVJmCjbsA) to activate collaborative editing in the document. 
+
+## R Resources
+
+![](images/week-2-resources.png)

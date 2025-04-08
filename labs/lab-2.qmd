@@ -163,7 +163,8 @@ You can also obtain numerical summaries for the flights headed to SFO, using the
 summarise(sfo_flights, 
           mean_dd   = mean(dep_delay), 
           median_dd = median(dep_delay), 
-          n         = n())
+          n         = n()
+          )
 ```
 
 Note that in the `summarise()` function I've created a list of three different numerical summaries that I'm interested in.
@@ -200,7 +201,6 @@ Let's think about how you could answer this question. One option is to summarize
 
 ```{r}
 #| label: arrival-delay-stats
-## Code for exercise 7 goes here! 
 
 
 ```
@@ -213,11 +213,10 @@ Let's think about how you could answer this question. One option is to summarize
 
 ```{r}
 #| label: arrival-delay-plot
-## Code for exercise 9 goes here! 
 
 
 ```
 
 **Question 10 -- Using the plot above, what is your answer be to my question? What should I expect if I am flying from New York to San Francisco?**
 
-**Question 11 -- How did your answer change when using the plot versus using the summary statistics? i.e. What were you able to see in the plot that could could not "see" with the summary statistics?**
+**Question 11 -- What information did the plot give you that was missing from the summary statistics?**

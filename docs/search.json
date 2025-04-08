@@ -2351,63 +2351,63 @@
     "href": "slides/week2-day2.html#section",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "15-minutes\n\n\n\nReview Lab 1 comments\nAsk questions\nStart revisions"
+    "text": "Suppose…\n\n\n“Overall this instructor was educationally effective.”\n\n\n\n\n\n\n\n\nyear\nquarter\naverage\n\n\n\n\n2021\nFall\n4.53\n\n\n2021\nFall\n4.36\n\n\n2022\nWinter\n4.18\n\n\n2022\nWinter\n4.24\n\n\n2022\nSpring\n4.83\n\n\n2022\nSpring\n4.41\n\n\n2022\nSpring\n4.00"
   },
   {
     "objectID": "slides/week2-day2.html#section-1",
     "href": "slides/week2-day2.html#section-1",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "Suppose…\n\n\n“Overall this instructor was educationally effective.”\n\n\n\n\n\n\n\nyear\nquarter\naverage\n\n\n\n\n2021\nFall\n4.53\n\n\n2021\nFall\n4.36\n\n\n2022\nWinter\n4.18\n\n\n2022\nWinter\n4.24\n\n\n2022\nSpring\n4.83\n\n\n2022\nSpring\n4.41\n\n\n2022\nSpring\n4.00"
+    "text": "How were those averages calculated?"
   },
   {
     "objectID": "slides/week2-day2.html#section-2",
     "href": "slides/week2-day2.html#section-2",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "How were those averages calculated?"
+    "text": "What do these averages mean?"
   },
   {
     "objectID": "slides/week2-day2.html#section-3",
     "href": "slides/week2-day2.html#section-3",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "What do these averages mean?"
+    "text": "What statistic(s) should be used instead?"
   },
   {
     "objectID": "slides/week2-day2.html#section-4",
     "href": "slides/week2-day2.html#section-4",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "The Problem\n\n\nIt’s incredibly rare for scientists, including statisticians, to explicitly think about that conditions underlying their models.\n\n\n\n“I’ve had many conversations in very different contexts with scientists about what the average calculated from the data (or mean in a model) could reasonably represent and whether that was really what the scientist was after.” Dr. Megan Higgs"
+    "text": "Averagarianism\n\n\n\n“The primary research method of averagarianism is aggregate, then analyze: First, combine many people together and look for patterns in the group. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight.”\nThe End of Average by Todd Rose"
   },
   {
     "objectID": "slides/week2-day2.html#section-5",
     "href": "slides/week2-day2.html#section-5",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "Why so much resistance?\n\n\n\n\nDepartments hold specific expectations of statistics courses\n\n\nThese expectations are conditional on the assumption that means represent the magic quantity of interest.\n\n\n\nI’m then expected to educate you to “play the game” in the scientific culture of averages"
+    "text": "Some Rules to Play By\n\n\n\n\n\nLook at and understand your data before aggregating!\nShould the variables that are numerical actually numerical?\nConsider what statistic is the most appropriate for the question."
   },
   {
     "objectID": "slides/week2-day2.html#section-6",
     "href": "slides/week2-day2.html#section-6",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "Averagarianism\n\n\n\n“The primary research method of averagarianism is aggregate, then analyze: First, combine many people together and look for patterns in the group. Then, use these group patterns (such as averages and other statistics) to analyze and model individuals. The science of the individual instead instructs scientists to analyze, then aggregate: First, look for pattern within each individual. Then, look for ways to combine these individual patterns into collective insight.”\nThe End of Average by Todd Rose"
+    "text": "Recorder – Manages in-class report\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\nResource Manager – Evaluates solution strategy\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder."
   },
   {
     "objectID": "slides/week2-day2.html#section-7",
     "href": "slides/week2-day2.html#section-7",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "“We’ve always done it this way”\n\n\nMethods based on averages are available, easy, convenient, and take little creativity — and they are expected in our scientific culture.\n\n\nJustification for using averages is simply not demanded — though justification for use of anything but averages is incredibly difficult to sell."
+    "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
   },
   {
     "objectID": "slides/week2-day2.html#section-8",
     "href": "slides/week2-day2.html#section-8",
     "title": "The Flaws of Averages",
     "section": "",
-    "text": "Some Rules to Play By\n\n\n\n\n\nLook at and understand your raw data before aggregating\nBoxplots don’t count as visualizing the raw data"
+    "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
   },
   {
     "objectID": "slides/week2-day2.html#departure-delays",
@@ -6184,5 +6184,47 @@
     "title": "Lab 1 – Grading Guide",
     "section": "If their image doesn’t appear but they have answers to the rest of the questions",
     "text": "If their image doesn’t appear but they have answers to the rest of the questions\nNice job completing all the questions! Be careful to double check that your image is appearing in your final HTML document. In your submitted file we can’t see the image you wanted to include."
+  },
+  {
+    "objectID": "slides/week2-day2.html#plotting-your-data",
+    "href": "slides/week2-day2.html#plotting-your-data",
+    "title": "The Flaws of Averages",
+    "section": "Plotting Your Data",
+    "text": "Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
+  },
+  {
+    "objectID": "slides/week2-day2.html#cooperative-learning",
+    "href": "slides/week2-day2.html#cooperative-learning",
+    "title": "The Flaws of Averages",
+    "section": "Cooperative Learning",
+    "text": "Cooperative Learning\nis a structured form of small-group learning.\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\n\n\n\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
+  },
+  {
+    "objectID": "slides/week2-day2.html#group-roles",
+    "href": "slides/week2-day2.html#group-roles",
+    "title": "The Flaws of Averages",
+    "section": "Group Roles",
+    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\n\nTalks with Resource Manager about ideas related to ways they could solve the problem.\nResponsible for organizing and recording answers to the assignment during discussions.\nCompiles a summary of the solutions discussed.\nSubmits final assignment.\n\n\n\n\n\n\nResource Manager – Manages resources for coding / statistical tasks\n\n\n\nReads prompt and ensures Recorder understands what the problem is asking.\nAsks group questions to Dr. Theobold.\nManages resources (e.g., cheatsheets, textbook, tutorials) for aiding in solution strategy.\nLeads discussion and encourages participation from Recorder.\nBrings conversation back if it deviates."
+  },
+  {
+    "objectID": "slides/week2-day2.html#group-roles-1",
+    "href": "slides/week2-day2.html#group-roles-1",
+    "title": "The Flaws of Averages",
+    "section": "Group Roles",
+    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\n\nResource Manager – Evaluates solution strategy\n\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder.\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
+  },
+  {
+    "objectID": "slides/week2-day2.html#accessing-lab-1",
+    "href": "slides/week2-day2.html#accessing-lab-1",
+    "title": "The Flaws of Averages",
+    "section": "Accessing Lab 1",
+    "text": "Accessing Lab 1\nStep 1: Both members of your group need to follow these instructions to join your group workspace.\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was assigned to be the group “leader” will act as the Recorder for your group (this week).\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\nStep 3: Both members open the Lab 2 assignment in your group workspace!\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
+  },
+  {
+    "objectID": "slides/week2-day2.html#r-resources",
+    "href": "slides/week2-day2.html#r-resources",
+    "title": "The Flaws of Averages",
+    "section": "R Resources",
+    "text": "R Resources"
   }
 ]
