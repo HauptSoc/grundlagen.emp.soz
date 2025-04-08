@@ -11,7 +11,26 @@ execute:
 - answers to all eight (8) questions
 - a correct response to Question 6
 
+## If their document doesn't contain answers
+
+**General Comment**
+
+Careful! Your document doesn't contain any of your responses for Questions 5 through 10. In order for your responses to show up in the final submission, you need to (re)render the document after you have finished answering all the questions. 
+
+**For Question 6**
+
+Look over the solutions from Dr. Theobold for a tip on this question!
+
 ## Question 6
 
-<!-- mpg observations -->
+**If they say the data are Audi cars**
 
+Technically, the first ten rows (observations) in the `mpg` data are Audi cars. Go back into Posit Cloud and use the arrow buttons (in the code chunk labeled `mpg-data`) to look at the other rows in these data. Does the `mpg` dataset contain only data on Audi cars? 
+
+**If they say the observations are manufacturer, model, year, etc.**
+
+Yes, this dataset does include manufacturer, model, year, cyl as **variables** (columns) in the dataset. But what does each **row** represent? Look over the solutions from Dr. Theobold for a tip on this question!
+
+## If their image doesn't appear but they have answers to the rest of the questions
+
+Nice job completing all the questions! Be careful to double check that your image is appearing in your final HTML document. In your submitted file we can't see the image you wanted to include. 
