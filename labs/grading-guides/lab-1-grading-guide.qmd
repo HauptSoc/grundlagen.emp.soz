@@ -1,4 +1,10 @@
-# Lab 1 Feedback Guide
+---
+title: "Lab 1 -- Grading Guide"
+format: html
+editor: visual
+execute: 
+  eval: false
+---
 
 **If they have answers to all eight (8) questions, they earn a "Complete".**
 
@@ -8,7 +14,7 @@ List of favorite animals, include a picture, change section header
 
 **If their image doesn't appear in the document**
 
-**Question 2** -- Careful! Your image is not appearing in your rendered HTML file. There are a few different ways to fix this. First is to change the YAML (title section) of your document, as outlined in the Canvas announcement. If you did this and your image is still not showing up, then the issue might be how you are including your image. Generally, uploading an image to your project works better than including a URL link to an image. There are instructions on how to do this in the #lab channel of #Week 1 on Discord. 
+**Question 2** -- Careful! Your image is not appearing in your rendered HTML file. There are a few different ways to fix this. First is to change the YAML (title section) of your document, as outlined in the Canvas announcement. If you did this and your image is still not showing up, then the issue might be how you are including your image. Generally, uploading an image to your project works better than including a URL link to an image. There are instructions on how to do this in the #lab channel of #Week 1 on Discord.
 
 ## Question 4
 
