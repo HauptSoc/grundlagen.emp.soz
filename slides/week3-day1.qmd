@@ -30,6 +30,66 @@ salamander <- vertebrates_full_code %>%
   filter(species != "Cutthroat trout")
 ```
 
+# Lab 1
+
+## Revisions
+
+:::::::: columns
+:::: {.column width="47%"}
+::: {style="font-size: 1.25em;"}
+"Complete" = Satisfactory
+:::
+
+-   Your images were included in the document
+-   You provided responses to every question
+::::
+
+::: {.column width="5%"}
+:::
+
+:::: {.column width="47%"}
+::: {style="font-size: 1.25em;"}
+"Incomplete" = Growing
+:::
+
+-   Your images [were not]{.underline} included in the document
+-   You [did not]{.underline} provide responses to every question
+::::
+::::::::
+
+## Completing Revisions
+
+::: {style="font-size: 1.25em;"}
+Lab 1 revisions are due by Friday, April 18 (at midnight).
+:::
+
+::: small
+1.  Read comments on Canvas
+2.  Go back into your Lab 1 on Posit Cloud and complete your revisions
+3.  Render your revised Lab 1
+4.  Download your revised HTML
+:::
+
+:::: small
+::: callout-warning
+# Reflections
+
+Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas.
+:::
+::::
+
+## 
+
+::: {style="font-size: 3em; color: #ed8402;"}
+15-minutes
+:::
+
+::: {style="font-size: 1.5em;"}
+-   Review Lab 1 comments
+-   Ask questions
+-   Start revisions
+:::
+
 ##  {background-color="#D4D4D4"}
 
 <center>
@@ -74,7 +134,7 @@ Fill in the associated data types (e.g. character, factor, integer, double) with
 
 ## `dplyr` -- a tool bag for data wrangling
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 ![](images/dplyr.png)
 :::
@@ -95,7 +155,7 @@ Fill in the associated data types (e.g. character, factor, integer, double) with
 
 `group_by()`
 :::
-:::
+::::::
 
 ##  {background-color="#D4D4D4"}
 
@@ -103,7 +163,7 @@ Fill in the associated data types (e.g. character, factor, integer, double) with
 Brainstorm definitions for each verb
 :::
 
-::: columns
+:::::: columns
 ::: {.column width="30%"}
 `filter()`
 
@@ -123,16 +183,16 @@ Brainstorm definitions for each verb
 
 ::: {.column width="65%"}
 :::
-:::
+::::::
 
 ## 
 
-::: columns
-::: {.column width="55"}
+:::::::: columns
+:::: {.column width="55"}
 ::: {style="font-size: 1.5em;"}
 The Pipe `%>%`
 :::
-:::
+::::
 
 ::: {.column width="15%"}
 :::
@@ -150,7 +210,7 @@ knitr::include_graphics("images/pipe.png")
 knitr::include_graphics("images/not_a_pipe.jpg")
 ```
 :::
-:::
+::::::::
 
 <center>![](images/pipe_process.png)</center>
 
@@ -199,7 +259,7 @@ trout %>%
 The channels of the Mack Creek which were sampled were classified into the following groups:
 :::
 
-::: columns
+:::::: columns
 ::: {.column width="15%"}
 `"C"`
 
@@ -238,7 +298,7 @@ side channel
 
 not sampled by unit
 :::
-:::
+::::::
 
 ## `filter()`-ing Specific Channel Types
 
@@ -285,8 +345,8 @@ trout %>%
 
 ## Salamander Size
 
-::: columns
-::: {.column width="70%"}
+:::::::::: columns
+:::: {.column width="70%"}
 ::: small
 ```{r}
 #| echo: true
@@ -302,13 +362,13 @@ ggplot(data = salamander,
   labs(x = "Snout to Tail Length (mm)")
 ```
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="25%"}
-::: small
+:::::: {.column width="25%"}
+::::: small
 ::: fragment
 How would this histogram look if there was no variation in salamander length?
 
@@ -318,9 +378,9 @@ How would this histogram look if there was no variation in salamander length?
 ::: fragment
 What are possible causes for the variation in salamander length?
 :::
-:::
-:::
-:::
+:::::
+::::::
+::::::::::
 
 ## Faceted Histograms
 
@@ -341,8 +401,8 @@ ggplot(data = salamander,
 
 ## Side-by-Side Boxplots
 
-::: columns
-::: {.column width="50"}
+:::::::: columns
+:::: {.column width="50"}
 ::: small
 ```{r}
 #| fig-width: 6
@@ -361,10 +421,10 @@ ggplot(data = salamander,
        y = "") 
 ```
 :::
-:::
+::::
 
-::: {.column width="50"}
-::: small
+::::: {.column width="50"}
+:::: small
 ::: fragment
 ```{r}
 #| fig-width: 6
@@ -384,9 +444,9 @@ ggplot(data = salamander,
 
 ```
 :::
-:::
-:::
-:::
+::::
+:::::
+::::::::
 
 ## Colors in Boxplots
 
