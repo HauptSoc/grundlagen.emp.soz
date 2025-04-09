@@ -304,7 +304,7 @@ for your group (this week).
 . . .
 
 ::: {.midi}
-**Step 2:** The Recorder [follows these instructions to copy the Lab 2 project into your group's workspace]()
+**Step 2:** The Recorder [follows these instructions to copy the Lab 2 project into your group's workspace](https://scribehow.com/shared/Moving_Files_in_Posit_Cloud_for_STAT_313__Q3uBlpp_TBWRZzVJmCjbsA)
 :::
 
 . . .
