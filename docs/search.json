@@ -6160,5 +6160,12 @@
       "Weekly materials",
       "Week 3"
     ]
+  },
+  {
+    "objectID": "slides/week2-day2.html#r-tips-and-tricks",
+    "href": "slides/week2-day2.html#r-tips-and-tricks",
+    "title": "Exploring Flight Delays",
+    "section": "R Tips and Tricks!",
+    "text": "R Tips and Tricks!\nThings you should know before you start coding in the wild.\n\n\n\nR is case sensitive\n\ngeom_boxplot() not Geom_boxplot()\n\nSpelling matters!\n\nnycflights not ncyflights\n\nParentheses are tricky!\n\nYou will want to triple check that each beginning parenthesis ( has a counterpart ).\n\n\n\n\n\n\n\nggplot(data = penguins, \n       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +\n  geom_point()\n\nError: &lt;text&gt;:5:0: unexpected end of input\n3:   geom_point()\n4: \n  ^"
   }
 ]

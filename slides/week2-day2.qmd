@@ -8,6 +8,11 @@ execute:
   echo: false
 ---
 
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
 # Lab 1
 
 ## Plotting Your Data
@@ -36,6 +41,36 @@ x-axis and y-axis labels for the plot.
 Including nice axis labels (with their units) is a critical part of [**every**]{.underline} visualization we make!
 :::
 ::::
+
+## R Tips and Tricks!
+
+Things you should know before you start coding in the wild. 
+
+::: {.incremental}
+::: {.small}
+- R is case sensitive 
+    * `geom_boxplot()` **not** `Geom_boxplot()`
+- Spelling matters!
+    * `nycflights` **not** `ncyflights`
+- Parentheses are tricky! 
+    * You will want to triple check that each beginning parenthesis `(` has a counterpart `)`. 
+
+:::
+:::
+
+. . .
+
+::: {.small}
+```{r}
+#| error: true
+#| echo: true
+
+ggplot(data = penguins, 
+       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +
+  geom_point()
+
+```
+:::
 
 <!-- ##  {background-color="#D4D4D4"} -->
 
