@@ -172,7 +172,7 @@ is a structured form of small-group learning.
 ## Group Roles
 
 ::: columns
-::: {.column width="47%"}
+::: {.column width="44%"}
 **Recorder** -- *Manages in-class report*
 
 ::: {.fragment}
@@ -190,7 +190,7 @@ discussions.
 ::: {.column width="2%"}
 :::
 
-::: {.column width="51%"}
+::: {.column width="54%"}
 **Resource Manager** -- *Manages resources for coding / statistical tasks*
 
 ::: {.fragment}
@@ -236,15 +236,14 @@ solution strategy.
 
 . . .
 
-</br> 
-
 ::: {.small}
--   Helping someone means explaining your thinking **not** giving answers or
-doing the work for them
+-   Helping someone means explaining your thinking **not** giving answers or doing the work for them
 
 -   Provide a justification when you make a statement
 
 -   Think and work together -- don't divide up the work
+
+-   No cross talk with other groups
 :::
 
 # Find Your Group! 
@@ -253,27 +252,37 @@ doing the work for them
 
 ## Accessing Lab 1
 
+::: {.midi}
 **Step 1:** Both members of your group need to [follow these instructions to join your group workspace.](https://scribehow.com/shared/Joining_your_SGROUP_workspace__KnGc1NYfQqGcEmgoMwTQHQ)
+:::
 
 . . .
 
+::: {.small}
 ::: {.callout-note}
 # Roles
 The person who was assigned to be the group "leader" will act as the Recorder
 for your group (this week). 
 :::
+:::
 
 . . .
 
+::: {.midi}
 **Step 2:** The Recorder [follows these instructions to copy the Lab 2 project into your group's workspace]()
+:::
 
 . . .
 
+::: {.midi}
 **Step 3:** Both members open the Lab 2 assignment in your group workspace!
+:::
 
 . . .
 
+::: {.midi}
 **Step 4:** Follow the [final instructions](https://scribehow.com/shared/Moving_Files_in_Posit_Cloud_for_STAT_218_Copy__Q3uBlpp_TBWRZzVJmCjbsA) to activate collaborative editing in the document. 
+:::
 
 ## R Resources
 
