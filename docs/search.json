@@ -2517,49 +2517,49 @@
   {
     "objectID": "slides/week2-day2.html#plotting-your-data",
     "href": "slides/week2-day2.html#plotting-your-data",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "Plotting Your Data",
     "text": "Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
   },
   {
     "objectID": "slides/week2-day2.html#departure-delays",
     "href": "slides/week2-day2.html#departure-delays",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "Departure Delays",
     "text": "Departure Delays\n\nInspect the nycflights dataset\nVisualize departure delays\nPlay with histogram binwidth\nfilter() data to include only certain flights\ncalculate() summary statistics\nMake decisions based on summary statistics\nCompare summary statistics to a visualization"
   },
   {
     "objectID": "slides/week2-day2.html#cooperative-learning",
     "href": "slides/week2-day2.html#cooperative-learning",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "Cooperative Learning",
     "text": "Cooperative Learning\nis a structured form of small-group learning.\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\n\n\n\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
   },
   {
     "objectID": "slides/week2-day2.html#group-roles",
     "href": "slides/week2-day2.html#group-roles",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "Group Roles",
     "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\n\nTalks with Resource Manager about ideas related to ways they could solve the problem.\nResponsible for organizing and recording answers to the assignment during discussions.\nCompiles a summary of the solutions discussed.\nSubmits final assignment.\n\n\n\n\n\n\nResource Manager – Manages resources for coding / statistical tasks\n\n\n\nReads prompt and ensures Recorder understands what the problem is asking.\nAsks group questions to Dr. Theobold.\nManages resources (e.g., cheatsheets, textbook, tutorials) for aiding in solution strategy.\nLeads discussion and encourages participation from Recorder.\nBrings conversation back if it deviates."
   },
   {
     "objectID": "slides/week2-day2.html#group-roles-1",
     "href": "slides/week2-day2.html#group-roles-1",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "Group Roles",
     "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\n\nResource Manager – Evaluates solution strategy\n\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder.\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
   },
   {
     "objectID": "slides/week2-day2.html#accessing-lab-1",
     "href": "slides/week2-day2.html#accessing-lab-1",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "Accessing Lab 1",
     "text": "Accessing Lab 1\nStep 1: Both members of your group need to follow these instructions to join your group workspace.\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was assigned to be the group “leader” will act as the Recorder for your group (this week).\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\nStep 3: Both members open the Lab 2 assignment in your group workspace!\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
   },
   {
     "objectID": "slides/week2-day2.html#r-resources",
     "href": "slides/week2-day2.html#r-resources",
-    "title": "The Flaws of Averages",
+    "title": "Exploring Flight Delays",
     "section": "R Resources",
     "text": "R Resources"
   },

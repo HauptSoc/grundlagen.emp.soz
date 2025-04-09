@@ -1,5 +1,5 @@
 ---
-title: "The Flaws of Averages"
+title: "Exploring Flight Delays"
 format: 
   revealjs:
     theme: style.scss
