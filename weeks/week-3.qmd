@@ -99,7 +99,7 @@ knitr::include_graphics(here::here("images",
 # Read Sections 3.3 - 3.6!
 :::
 
-## Concept Quiz -- Due Wednesday by the start of class
+## Concept Quiz -- Due Monday by the start of class
 
 **1. Suppose you've run the following code to make side-by-side boxplots of life expectancy:**
 
@@ -163,15 +163,15 @@ This does not go inside the `aes()` function!
 -   character
 -   factor
 
-**5. In Lab 2, you worked with the `nycflights` dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Match the code to its corresponding step.**
+**5. In Lab 2, you worked with the `nycflights` dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Choose which code belongs in each of the blanks.**
 
 :::::: columns
 ::: {.column width="40%"}
-Step 1 `%>%`
+____ `%>%`
 
-Step 2 `%>%`
+____ `%>%`
 
-Step 3
+____
 :::
 
 ::: {.column width="5%"}
@@ -201,6 +201,7 @@ Step 3
 -   descending (largest to smallest)
 
 ## No R tutorials this week!
+
 <!-- ## R Tutorial -- Due Wednesday by the start of class -->
 
 <!-- `r emo::ji("computer")` [**Required Tutorial:** Summarizing with Statistics](https://openintro.shinyapps.io/ims-02-explore-03/) -->

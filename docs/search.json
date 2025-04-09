@@ -6149,5 +6149,16 @@
     "title": "Week 8 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
+  },
+  {
+    "objectID": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
+    "href": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "1.4 Concept Quiz – Due Monday by the start of class",
+    "text": "1.4 Concept Quiz – Due Monday by the start of class\n1. Suppose you’ve run the following code to make side-by-side boxplots of life expectancy:\n\nggplot(data = gapminder_small, \n       mapping = aes(x = country, y = lifeExp)) +\n  geom_boxplot() +\n  labs(x = \"\", \n       y = \"\", \n       title = \"Life Expectancy (in Years) by Country\",\n       fill = \"Country\"\n       )\n\nYour resulting plot looks like this:\n\n\n\n\n\n\n\n\n\nWhat should you do?\n\nMove country to the y-axis.\nRemove some countries so the names don’t overlap.\nNothing, it looks great!\n\n2. If you didn’t want to stack your boxplots side-by-side, how else could you separate the groups?\n\n\n\n\n\n\nTip\n\n\n\nThis does not go inside the aes() function!\n\n\n3. What functions are necessary to calculate summary statistics for different groups of a categorical variable?\n\nsummarize()\nmutate()\narrange()\ngroup_by()\nfilter()\n\n4. A categorical variable could be correctly stored as what data types?\n\ninteger\ndouble\ncharacter\nfactor\n\n5. In Lab 2, you worked with the nycflights dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Choose which code belongs in each of the blanks.\n\n\n____ %&gt;%\n____ %&gt;%\n\n\n\n\nnycflights\ngroup_by(airline)\nfilter(dest == \"SFO\")\nsummarize(mean_dd = mean(dep_delay))\n\n\n6. What function did you learn that is used for converting a numerical variable to a categorical variable (a process called discretizing)?\n\nmutate()\nfilter()\nif_else()\ngroup_by()\n\n7. The arrange() function sorts or reorder a data frame’s rows according to the values of the specified variable. By default, what ordering does it use for the rows?\n\nascending (smallest to largest)\ndescending (largest to smallest)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
   }
 ]
