@@ -15,7 +15,7 @@ execute:
 
 ## R Resources
 
-You should have at least one member of your lab group pull up the R resources from Canvas. Specifically, the "cheat sheets" from Weeks 2 & 3 will be very helpful while completing this assignment.
+The Resource Manager should pull up the R resources from Canvas. Specifically, the "cheat sheets" from Weeks 2 & 3 will be very helpful while completing this assignment.
 
 ## Load packages
 
@@ -48,7 +48,7 @@ First, we'll view the `and_vertebrates` dataframe where these data are stored.
 #| eval: false
 #| label: data-view
 
-View(and_vertebrates)
+and_vertebrates
 ```
 
 ## Exploring the Dataset
@@ -66,7 +66,7 @@ The **codebook** (description of the variables) can be accessed by pulling up th
 
 ```{r}
 #| label: data-dimensions
-## Your code for question 1 (and 2) goes here!
+
 
 ```
 
@@ -80,7 +80,7 @@ The `species` variable refers to the species of the animal which was captured. Y
 
 ```{r}
 #| label: distinct-species
-## Your code for question 3 goes here!
+
 
 ```
 
@@ -88,7 +88,7 @@ The `species` variable refers to the species of the animal which was captured. Y
 
 Alright, you should have found that there is more than one species included in these data. For our analysis, we are only interested in Cutthroat trout.
 
-This study used electrofishing to capture the trout. Electrofishing is a technique that uses direct current electricity flowing between a submerged cathode and anode, to insert an electric current into the water. This current stuns fish in a (hopefully) non-lethal manner, in order to capture them for marking and measuring. Technically, smaller fish are less affected by the current, so there presumably is a size of fish that is "uncatchable". For our analysis, we are going to filter out fish that are less than 4 inches long, as this size of fish is nearly impossible to capture.
+This study used electrofishing to capture the trout. Electrofishing is a technique that uses direct current electricity flowing between a submerged cathode and anode, to insert an electric current into the water. This current stuns fish in a (hopefully) non-lethal manner, in order to capture them for marking and measuring. Technically, smaller fish are less affected by the current, so there presumably is a size of fish that is "uncatchable." For our analysis, we are going to filter out fish that are less than 4 inches long, as this size of fish is nearly impossible to capture.
 
 **Question 4 -- Use the `filter()` function to include *only* observations on Cutthroat trout whose `length_1_mm` is greater than 4 inches (or 101 mm).** *The only part you need to remove is the `...`! Keep the `trout <-`!*
 
@@ -104,11 +104,10 @@ Alright, now that we've gotten our data ready for analysis, let's start with som
 
 **Question 5 -- Using `ggplot()` create a visualization of the *distribution* of the lengths of the Cutthroat trout (from the `trout` dataset you `filter`ed above).** *Your plot should have axis labels that describe the variable being plotted, and its associated units!*
 
-*Keep in mind the smallest value on your plot should be 101mm if you completed #4 correctly.*
+***Hint:** The smallest value on your plot should be 101mm if you completed #4 correctly.*
 
 ```{r}
 #| label: distribution-of-filtered-lengths
-## Your code for question 6 goes here!
 
 
 ```
@@ -117,9 +116,9 @@ Alright, now that we've gotten our data ready for analysis, let's start with som
 
 ## Adding Categorical Variables
 
-When we are interested in comparing the distribution of a numerical variable across groups of a categorical variable, we "typically" see people use stacked histograms or side-by-side boxplots. I believe an unsung hero of these types of comparisons is the **ridge plot**.
+When we are interested in comparing the distribution of a numerical variable across groups of a categorical variable, we "typically" see people use faceted histograms or side-by-side boxplots. I believe an unsung hero of these types of comparisons is the **ridge plot**.
 
-As introduced in *Introduction to Modern Statistics*, a ridge plot essentially has multiple density plots stacked in the same plotting window. A key feature of ridge plots is a categorical variable is **always** on the y-axis, with a numeric variable on the x-axis.
+As introduced in *Introduction to Modern Statistics*, a ridge plot essentially has multiple density plots stacked in the same plotting window. A key feature of ridge plots is *a categorical variable* is **always** **on the y-axis**, with *a numeric variable* **on the x-axis**.
 
 In R, we use the `geom_density_ridges()` function from the **ggridges** package to create a ridge plot. Yes, this is new, but don't worry! The function has the same layout as things you've seen before.
 
@@ -136,7 +135,7 @@ ggplot(data = trout,
 
 ```
 
-**Question 8 -- Modify your plot from #7 to incorporate the `section` of the forest into your plot, using either `color` or `facet`s.** *Hint: The `fill` aesthetic will **fill** the ridge plots with color.*
+**Question 8 -- Modify your plot from #7 to incorporate the `section` of the forest into your plot, using either `color` or `facet`**s**.** *Hint: The `fill` aesthetic will **fill** the ridge plots with color.*
 
 **Question 9 -- Based on your plot, how different are the lengths of the Cutthroat trout between the different channel types and forest sections?** *Be sure to address how the centers and shapes of ALL these distributions compare!*
 
@@ -148,7 +147,7 @@ Paired with visualizations, summary statistics can provide a clearer picture for
 
 ```{r}
 #| label: channel-avg
-## Your code for question 11 goes here!
+
 
 ```
 
@@ -156,8 +155,8 @@ Paired with visualizations, summary statistics can provide a clearer picture for
 
 ```{r}
 #| label: channel-section-avg
-## Your code for question 12 goes here!
+
 
 ```
 
-**Question 12 -- How do the differences in these averages compare with what you saw in your visualization in Question 9? Why do you believe they are similar or different from what you saw in the visualizations?** *Hint: Your response should directly compare the statistics you got in Question 11 with the density ridges you saw in Question 8.*
+**Question 12 -- How do these averages compare with what you saw in your visualization in Question 9? Why do you believe they are similar or different from what you saw in the visualizations?** *Hint: Your response should directly compare the statistics you got in Question 11 with the density ridges you saw in Question 8.*

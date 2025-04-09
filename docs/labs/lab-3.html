@@ -5009,7 +5009,7 @@ vertical-align: -.125em;
 <h1>Getting started</h1>
 <section id="r-resources" class="level2">
 <h2 class="anchored" data-anchor-id="r-resources">R Resources</h2>
-<p>You should have at least one member of your lab group pull up the R resources from Canvas. Specifically, the “cheat sheets” from Weeks 2 &amp; 3 will be very helpful while completing this assignment.</p>
+<p>The Resource Manager should pull up the R resources from Canvas. Specifically, the “cheat sheets” from Weeks 2 &amp; 3 will be very helpful while completing this assignment.</p>
 </section>
 <section id="load-packages" class="level2">
 <h2 class="anchored" data-anchor-id="load-packages">Load packages</h2>
@@ -5033,7 +5033,7 @@ vertical-align: -.125em;
 </blockquote>
 <p>First, we’ll view the <code>and_vertebrates</code> dataframe where these data are stored.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(and_vertebrates)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>and_vertebrates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exploring-the-dataset" class="level2">
@@ -5043,52 +5043,43 @@ vertical-align: -.125em;
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>?and_vertebrates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Question 1 – How large is the <code>and_vertebrates</code> dataset? (i.e. How many rows and columns does the dataset have?)</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Your code for question 1 (and 2) goes here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><strong>Question 2 – Are there categorical variables in the dataset? If so, what are their names?</strong> <em>Hint: What data types are categorical variables stored as?</em></p>
 </section>
 <section id="accessing-the-levels-of-a-variable" class="level2">
 <h2 class="anchored" data-anchor-id="accessing-the-levels-of-a-variable">Accessing the Levels of a Variable</h2>
 <p>The <code>species</code> variable refers to the species of the animal which was captured. You can use the <code>distinct()</code> function to access the distinct values of a categorical variable (e.g., <code>distinct(nycflights, carrier)</code>). Notice the first input is the name of the dataset and the second input is the name of the categorical variable!</p>
 <p><strong>Question 3 – Use the <code>distinct()</code> function to discover the levels / values of the <code>species</code> variable.</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Your code for question 3 goes here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 </section>
 <section id="data-wrangling" class="level1">
 <h1>Data Wrangling</h1>
 <p>Alright, you should have found that there is more than one species included in these data. For our analysis, we are only interested in Cutthroat trout.</p>
-<p>This study used electrofishing to capture the trout. Electrofishing is a technique that uses direct current electricity flowing between a submerged cathode and anode, to insert an electric current into the water. This current stuns fish in a (hopefully) non-lethal manner, in order to capture them for marking and measuring. Technically, smaller fish are less affected by the current, so there presumably is a size of fish that is “uncatchable”. For our analysis, we are going to filter out fish that are less than 4 inches long, as this size of fish is nearly impossible to capture.</p>
+<p>This study used electrofishing to capture the trout. Electrofishing is a technique that uses direct current electricity flowing between a submerged cathode and anode, to insert an electric current into the water. This current stuns fish in a (hopefully) non-lethal manner, in order to capture them for marking and measuring. Technically, smaller fish are less affected by the current, so there presumably is a size of fish that is “uncatchable.” For our analysis, we are going to filter out fish that are less than 4 inches long, as this size of fish is nearly impossible to capture.</p>
 <p><strong>Question 4 – Use the <code>filter()</code> function to include <em>only</em> observations on Cutthroat trout whose <code>length_1_mm</code> is greater than 4 inches (or 101 mm).</strong> <em>The only part you need to remove is the <code>...</code>! Keep the <code>trout &lt;-</code>!</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>trout <span class="ot">&lt;-</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>trout <span class="ot">&lt;-</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="data-visualizations" class="level1">
 <h1>Data Visualizations</h1>
 <p>Alright, now that we’ve gotten our data ready for analysis, let’s start with some visualizations</p>
 <p><strong>Question 5 – Using <code>ggplot()</code> create a visualization of the <em>distribution</em> of the lengths of the Cutthroat trout (from the <code>trout</code> dataset you <code>filter</code>ed above).</strong> <em>Your plot should have axis labels that describe the variable being plotted, and its associated units!</em></p>
-<p><em>Keep in mind the smallest value on your plot should be 101mm if you completed #4 correctly.</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Your code for question 6 goes here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p><em><strong>Hint:</strong> The smallest value on your plot should be 101mm if you completed #4 correctly.</em></p>
 <p><strong>Question 6 – Name three possible sources of variation for the length of a Cutthroat trout.</strong></p>
 <section id="adding-categorical-variables" class="level2">
 <h2 class="anchored" data-anchor-id="adding-categorical-variables">Adding Categorical Variables</h2>
-<p>When we are interested in comparing the distribution of a numerical variable across groups of a categorical variable, we “typically” see people use stacked histograms or side-by-side boxplots. I believe an unsung hero of these types of comparisons is the <strong>ridge plot</strong>.</p>
-<p>As introduced in <em>Introduction to Modern Statistics</em>, a ridge plot essentially has multiple density plots stacked in the same plotting window. A key feature of ridge plots is a categorical variable is <strong>always</strong> on the y-axis, with a numeric variable on the x-axis.</p>
+<p>When we are interested in comparing the distribution of a numerical variable across groups of a categorical variable, we “typically” see people use faceted histograms or side-by-side boxplots. I believe an unsung hero of these types of comparisons is the <strong>ridge plot</strong>.</p>
+<p>As introduced in <em>Introduction to Modern Statistics</em>, a ridge plot essentially has multiple density plots stacked in the same plotting window. A key feature of ridge plots is <em>a categorical variable</em> is <strong>always</strong> <strong>on the y-axis</strong>, with <em>a numeric variable</em> <strong>on the x-axis</strong>.</p>
 <p>In R, we use the <code>geom_density_ridges()</code> function from the <strong>ggridges</strong> package to create a ridge plot. Yes, this is new, but don’t worry! The function has the same layout as things you’ve seen before.</p>
 <p><strong>Question 7 – Fill in the code below to create a ridge plot comparing the lengths of Cutthroat trout between the different types of channels (<code>unittype</code>).</strong> <em>Be sure to add nice axis labels to your plot, which describe the variables being plotted (and their units)!</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> trout, </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">&lt;</span>NUMERICAL VARIABLE<span class="sc">&gt;</span>, </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> <span class="sc">&lt;</span>CATEGORICAL VARIABLE<span class="sc">&gt;</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>       ) <span class="sc">+</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> trout, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">&lt;</span>NUMERICAL VARIABLE<span class="sc">&gt;</span>, </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> <span class="sc">&lt;</span>CATEGORICAL VARIABLE<span class="sc">&gt;</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>       ) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Question 8 – Modify your plot from #7 to incorporate the <code>section</code> of the forest into your plot, using either <code>color</code> or <code>facet</code>s.</strong> <em>Hint: The <code>fill</code> aesthetic will <strong>fill</strong> the ridge plots with color.</em></p>
+<p><strong>Question 8 – Modify your plot from #7 to incorporate the <code>section</code> of the forest into your plot, using either <code>color</code> or <code>facet</code></strong>s<strong>.</strong> <em>Hint: The <code>fill</code> aesthetic will <strong>fill</strong> the ridge plots with color.</em></p>
 <p><strong>Question 9 – Based on your plot, how different are the lengths of the Cutthroat trout between the different channel types and forest sections?</strong> <em>Be sure to address how the centers and shapes of ALL these distributions compare!</em></p>
 </section>
 </section>
@@ -5096,14 +5087,8 @@ vertical-align: -.125em;
 <h1>Data Summaries</h1>
 <p>Paired with visualizations, summary statistics can provide a clearer picture for the comparisons we are interested in. To obtain summary statistics for different groups of a categorical variable, we need to use our friend the <code>group_by()</code> function.</p>
 <p><strong>Question 10 – Find the average length of Cutthroat trout from the different channel types (<code>unittype</code>).</strong> <em>Be sure to use the <code>trout</code> dataset from Question 4!</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Your code for question 11 goes here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><strong>Question 11 – Find the average length of Cutthroat trout from the different channel types (<code>unittype</code>) <em>and</em> forest <code>section</code>.</strong> <em>Be sure to use the <code>trout</code> dataset from Question 4!</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Your code for question 12 goes here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>Question 12 – How do the differences in these averages compare with what you saw in your visualization in Question 9? Why do you believe they are similar or different from what you saw in the visualizations?</strong> <em>Hint: Your response should directly compare the statistics you got in Question 11 with the density ridges you saw in Question 8.</em></p>
+<p><strong>Question 12 – How do these averages compare with what you saw in your visualization in Question 9? Why do you believe they are similar or different from what you saw in the visualizations?</strong> <em>Hint: Your response should directly compare the statistics you got in Question 11 with the density ridges you saw in Question 8.</em></p>
 
 
 </section>
