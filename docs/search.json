@@ -696,15 +696,15 @@
     "objectID": "slides/week3-day1.html#revisions",
     "href": "slides/week3-day1.html#revisions",
     "title": "Incorporating Categorical Variables",
-    "section": "Revisions",
-    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question"
+    "section": "",
+    "text": "“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question"
   },
   {
     "objectID": "slides/week3-day1.html#completing-revisions",
     "href": "slides/week3-day1.html#completing-revisions",
     "title": "Incorporating Categorical Variables",
-    "section": "Completing Revisions",
-    "text": "Completing Revisions\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+    "section": "",
+    "text": "Lab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
   },
   {
     "objectID": "slides/week3-day1.html#section",
@@ -724,8 +724,8 @@
     "objectID": "slides/week3-day1.html#in-r",
     "href": "slides/week3-day1.html#in-r",
     "title": "Incorporating Categorical Variables",
-    "section": "In R…",
-    "text": "In R…\ncategorical variables can have either character or factor data types\n\n\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n\n\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
+    "section": "",
+    "text": "categorical variables can have either character or factor data types\n\n. . .\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n. . .\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
   },
   {
     "objectID": "slides/week3-day1.html#section-2",
@@ -738,8 +738,8 @@
     "objectID": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
     "href": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
     "title": "Incorporating Categorical Variables",
-    "section": "dplyr – a tool bag for data wrangling",
-    "text": "dplyr – a tool bag for data wrangling\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
+    "section": "",
+    "text": "filter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
   },
   {
     "objectID": "slides/week3-day1.html#section-3",
@@ -766,64 +766,64 @@
     "objectID": "slides/week3-day1.html#trout-size",
     "href": "slides/week3-day1.html#trout-size",
     "title": "Incorporating Categorical Variables",
-    "section": "Trout Size",
-    "text": "Trout Size\n\nThe HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n\n\n\n\nWhy na.rm = TRUE?"
+    "section": "",
+    "text": "The HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n. . .\n\n\n\nWhy na.rm = TRUE?"
   },
   {
     "objectID": "slides/week3-day1.html#classifying-channel-types",
     "href": "slides/week3-day1.html#classifying-channel-types",
     "title": "Incorporating Categorical Variables",
-    "section": "Classifying Channel Types",
-    "text": "Classifying Channel Types\n\nThe channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit"
+    "section": "",
+    "text": "The channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit"
   },
   {
     "objectID": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "href": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "title": "Incorporating Categorical Variables",
-    "section": "filter()-ing Specific Channel Types",
-    "text": "filter()-ing Specific Channel Types\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n\n\nWhat would you do?\n\n\n\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n\n\n\n\nWhy use %in% instead of ==?"
+    "section": "",
+    "text": "The majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n. . .\n\nWhat would you do?\n\n. . .\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n. . .\n\n\nWhy use %in% instead of ==?"
   },
   {
     "objectID": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
     "href": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
     "title": "Incorporating Categorical Variables",
-    "section": "Incorporating Categorical Variables into Data Visualizations",
-    "text": "Incorporating Categorical Variables into Data Visualizations\n\n\nAs a variable on the x- or y-axis\nAs a color / fill\nAs a facet"
+    "section": "",
+    "text": "As a variable on the x- or y-axis\nAs a color / fill\nAs a facet"
   },
   {
     "objectID": "slides/week3-day1.html#salamander-size",
     "href": "slides/week3-day1.html#salamander-size",
     "title": "Incorporating Categorical Variables",
-    "section": "Salamander Size",
-    "text": "Salamander Size\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
   },
   {
     "objectID": "slides/week3-day1.html#faceted-histograms",
     "href": "slides/week3-day1.html#faceted-histograms",
     "title": "Incorporating Categorical Variables",
-    "section": "Faceted Histograms",
-    "text": "Faceted Histograms\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")"
   },
   {
     "objectID": "slides/week3-day1.html#side-by-side-boxplots",
     "href": "slides/week3-day1.html#side-by-side-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Side-by-Side Boxplots",
-    "text": "Side-by-Side Boxplots\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")"
   },
   {
     "objectID": "slides/week3-day1.html#colors-in-boxplots",
     "href": "slides/week3-day1.html#colors-in-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Colors in Boxplots",
-    "text": "Colors in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")"
   },
   {
     "objectID": "slides/week3-day1.html#facets-colors-in-boxplots",
     "href": "slides/week3-day1.html#facets-colors-in-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Facets & Colors in Boxplots",
-    "text": "Facets & Colors in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")"
   },
   {
     "objectID": "slides/week3-day1.html#facets-colors-in-boxplots-output",
@@ -836,8 +836,8 @@
     "objectID": "slides/week3-day1.html#facets-color-in-scatterplots",
     "href": "slides/week3-day1.html#facets-color-in-scatterplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Facets & Color in Scatterplots",
-    "text": "Facets & Color in Scatterplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")"
   },
   {
     "objectID": "slides/week3-day1.html#facets-color-in-scatterplots-output",
@@ -850,8 +850,8 @@
     "objectID": "slides/week3-day1.html#your-turn-90-seconds",
     "href": "slides/week3-day1.html#your-turn-90-seconds",
     "title": "Incorporating Categorical Variables",
-    "section": "Your Turn – 90 seconds",
-    "text": "Your Turn – 90 seconds\n\n\nWhat are the aesthetics included in this plot?\n\n\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+    "section": "",
+    "text": ". . .\nWhat are the aesthetics included in this plot?\n. . .\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
   },
   {
     "objectID": "slides/week3-day1.html#your-tasks",
@@ -998,7 +998,7 @@
     "href": "slides/week2-day1.html#warm-up",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Warm-up",
-    "text": "Warm-up\n\n\nWhere are variables being included in this plot?\nWhat objects are being used to represent the data?"
+    "text": "Warm-up\n\n\n\n\n\n\n\n\n\n. . .\nWhere are variables being included in this plot?\nWhat objects are being used to represent the data?"
   },
   {
     "objectID": "slides/week2-day1.html#todays-layout",
@@ -1019,42 +1019,42 @@
     "href": "slides/week2-day1.html#histogram",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Histogram",
-    "text": "Histogram\n\n\n\nIs count a variable in the dataset?\nHow did ggplot decide how tall each bar should be?"
+    "text": "Histogram\n\n\n\n\n\n\n\n\n\n\n\nIs count a variable in the dataset?\nHow did ggplot decide how tall each bar should be?"
   },
   {
     "objectID": "slides/week2-day1.html#section-2",
     "href": "slides/week2-day1.html#section-2",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "",
-    "text": "What are the strengths of a histogram?\n\n\nInspect shape of a distribution (skewed or symmetric)\nIdentify modes (most common values)\n\n\n\nWhat are the weaknesses of a histogram?\n\n\nDo not plot raw data, plot summaries (counts) of the data!\nSensitive to the width of the bins (binwidth)"
+    "text": "What are the strengths of a histogram?\n\n\nInspect shape of a distribution (skewed or symmetric)\nIdentify modes (most common values)\n\n\n\n\n\nWhat are the weaknesses of a histogram?\n\n\nDo not plot raw data, plot summaries (counts) of the data!\nSensitive to the width of the bins (binwidth)"
   },
   {
     "objectID": "slides/week2-day1.html#boxplot",
     "href": "slides/week2-day1.html#boxplot",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Boxplot",
-    "text": "Boxplot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat calculations are necessary for creating a boxplot?"
+    "text": "Boxplot\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\nWhat calculations are necessary for creating a boxplot?"
   },
   {
     "objectID": "slides/week2-day1.html#section-3",
     "href": "slides/week2-day1.html#section-3",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "",
-    "text": "What are strengths of a boxplot?\n\n\nEasy to flag unusual observations\nEasy to see the median\n\n\n\nWhat are weaknesses of a boxplot?\n\n\nDon’t plot raw data\nOnly plot summary statistics\nHide multiple modes"
+    "text": "What are strengths of a boxplot?\n\n\nEasy to flag unusual observations\nEasy to see the median\n\n\n\n\n\nWhat are weaknesses of a boxplot?\n\n\nDon’t plot raw data\nOnly plot summary statistics\nHide multiple modes"
   },
   {
     "objectID": "slides/week2-day1.html#density-plot",
     "href": "slides/week2-day1.html#density-plot",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Density Plot",
-    "text": "Density Plot\n\n\n\nA smooth approximation to a variable’s distribution\nPlots density (as a proportion) on the y-axis"
+    "text": "Density Plot\n\n\n\n\n\n\n\n\n\n. . .\n\nA smooth approximation to a variable’s distribution\nPlots density (as a proportion) on the y-axis"
   },
   {
     "objectID": "slides/week2-day1.html#section-5",
     "href": "slides/week2-day1.html#section-5",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "",
-    "text": "What are strengths of a density plot?\n\n\nInspect shape of a distribution (skewed or symmetric)\nIdentify modes (most common values)\nLess jagged than a histogram\n\n\n\nWhat are weaknesses of a density plot?\n\n\nDo not plot raw data, plot summaries (proportions) of the data!\ny-axis is difficult to interpret\nCan over smooth and hide interesting shapes"
+    "text": "What are strengths of a density plot?\n\n\nInspect shape of a distribution (skewed or symmetric)\nIdentify modes (most common values)\nLess jagged than a histogram\n\n\n\n\n\nWhat are weaknesses of a density plot?\n\n\nDo not plot raw data, plot summaries (proportions) of the data!\ny-axis is difficult to interpret\nCan over smooth and hide interesting shapes"
   },
   {
     "objectID": "slides/week2-day1.html#section-6",
@@ -1068,14 +1068,14 @@
     "href": "slides/week2-day1.html#scatterplots",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Scatterplots",
-    "text": "Scatterplots\n\n\nWhat are the geometric objects being plotted in a scatterplot?"
+    "text": "Scatterplots\n\n\n\n\n\n\n\n\n\n. . .\nWhat are the geometric objects being plotted in a scatterplot?"
   },
   {
     "objectID": "slides/week2-day1.html#section-7",
     "href": "slides/week2-day1.html#section-7",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "",
-    "text": "“The scatterplot the most generally useful invention in the history of statistical graphics.”\n\n\n\n\n\nWhat are strengths of a scatterplot?\n\n\nPlots the raw data!\nInspect form, strength, and direction of a relationship\nIdentify unusual values\n\n\n\nWhat are weaknesses of a scatterplot?\n\n\nCan get “busy” when there are lots of observations (points)"
+    "text": "“The scatterplot the most generally useful invention in the history of statistical graphics.”\n\n\n. . .\n\n\nWhat are strengths of a scatterplot?\n\n\nPlots the raw data!\nInspect form, strength, and direction of a relationship\nIdentify unusual values\n\n\n\nWhat are weaknesses of a scatterplot?\n\n\nCan get “busy” when there are lots of observations (points)"
   },
   {
     "objectID": "slides/week2-day1.html#section-8",
@@ -1103,14 +1103,14 @@
     "href": "slides/week2-day1.html#why-not-use-facets-with-a-numerical-variable",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Why not use facets with a numerical variable???",
-    "text": "Why not use facets with a numerical variable???"
+    "text": "Why not use facets with a numerical variable???\n. . ."
   },
   {
     "objectID": "slides/week2-day1.html#due-by-wednesday",
     "href": "slides/week2-day1.html#due-by-wednesday",
     "title": "Visualizing & Summarizing Numerical Data",
     "section": "Due by Wednesday",
-    "text": "Due by Wednesday\n\nVisualizing Numerical Data – Reading Guide, Part 2\nVisualizing & Summarizing Numerical Data – Concept Quiz\nExploring Numerical Data – R Tutorial, Part 1\nSummarizing with Statistics – R Tutorial, Part 2\n\n\n\n\n\n\n\n\nDeadline Policy\n\n\nIf you cannot submit an assignment by the deadline, you are required to submit a deadline extension request before the assignment deadline has passed."
+    "text": "Due by Wednesday\n\nVisualizing Numerical Data – Reading Guide, Part 2\nVisualizing & Summarizing Numerical Data – Concept Quiz\nExploring Numerical Data – R Tutorial, Part 1\nSummarizing with Statistics – R Tutorial, Part 2\n\n. . .\n\n\n\n\n\n\nDeadline Policy\n\n\n\nIf you cannot submit an assignment by the deadline, you are required to submit a deadline extension request before the assignment deadline has passed."
   },
   {
     "objectID": "slides/week2-day1.html#starting-statistical-critique-1",
@@ -2518,8 +2518,8 @@
     "objectID": "slides/week2-day2.html#plotting-your-data",
     "href": "slides/week2-day2.html#plotting-your-data",
     "title": "Exploring Flight Delays",
-    "section": "Plotting Your Data",
-    "text": "Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
+    "section": "",
+    "text": "Now that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n. . .\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
   },
   {
     "objectID": "slides/week2-day2.html#departure-delays",
@@ -2533,7 +2533,7 @@
     "href": "slides/week2-day2.html#cooperative-learning",
     "title": "Exploring Flight Delays",
     "section": "Cooperative Learning",
-    "text": "Cooperative Learning\nis a structured form of small-group learning.\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\n\n\n\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
+    "text": "Cooperative Learning\nis a structured form of small-group learning.\n. . .\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\n\n. . .\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
   },
   {
     "objectID": "slides/week2-day2.html#group-roles",
@@ -2547,14 +2547,14 @@
     "href": "slides/week2-day2.html#group-roles-1",
     "title": "Exploring Flight Delays",
     "section": "Group Roles",
-    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\n\nResource Manager – Evaluates solution strategy\n\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder.\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work\nNo cross talk with other groups"
+    "text": "Group Roles\n\n\nRecorder – Manages in-class report\n\n\nDoes not ask the Resource Manager to solve the problem.\nDoes not ask the Resource Manager to write the code for them.\n\n\n\n\n\nResource Manager – Evaluates solution strategy\n\n\nDoes not solve the problem themselves.\nDoes not tell the Recorder what to type.\nDoes not type for the Recorder.\n\n\n\n\n. . .\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work\nNo cross talk with other groups"
   },
   {
     "objectID": "slides/week2-day2.html#accessing-lab-1",
     "href": "slides/week2-day2.html#accessing-lab-1",
     "title": "Exploring Flight Delays",
     "section": "Accessing Lab 1",
-    "text": "Accessing Lab 1\n\nStep 1: Both members of your group need to follow these instructions to join your group workspace.\n\n\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was assigned to be the group “leader” will act as the Recorder for your group (this week).\n\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 2 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
+    "text": "Accessing Lab 1\n\nStep 1: Both members of your group need to follow these instructions to join your group workspace.\n\n. . .\n\n\n\n\n\n\n\nRoles\n\n\n\nThe person who was assigned to be the group “leader” will act as the Recorder for your group (this week).\n\n\n\n. . .\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n. . .\n\nStep 3: Both members open the Lab 2 assignment in your group workspace!\n\n. . .\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
   },
   {
     "objectID": "slides/week2-day2.html#r-resources",
@@ -5359,15 +5359,15 @@
     "objectID": "slides/week10-day1.html#wrapping-up-revisions",
     "href": "slides/week10-day1.html#wrapping-up-revisions",
     "title": "Week 10: Two-way ANOVA",
-    "section": "Wrapping Up Revisions",
-    "text": "Wrapping Up Revisions\nThe final round of revisions on all assignments are due by Sunday, June 9.\n\n\n\n\n\n\n\nOne round of revisions\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions."
+    "section": "",
+    "text": "The final round of revisions on all assignments are due by Sunday, June 9.\n. . .\n\n\n\n\n\n\nOne round of revisions\n\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions."
   },
   {
     "objectID": "slides/week10-day1.html#final-project",
     "href": "slides/week10-day1.html#final-project",
     "title": "Week 10: Two-way ANOVA",
-    "section": "Final Project",
-    "text": "Final Project\n\nFeedback (from me) will be provided no later than Thursday evening\nPeer feedback on Wednesday\n\nPrint your report!"
+    "section": "",
+    "text": "Feedback (from me) will be provided no later than Thursday evening\nPeer feedback on Wednesday\n\nPrint your report!"
   },
   {
     "objectID": "slides/week10-day1.html#section",
@@ -5402,35 +5402,35 @@
     "href": "slides/week10-day1.html#research-question",
     "title": "Week 10: Two-way ANOVA",
     "section": "Research Question",
-    "text": "Research Question\n\nDoes the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the treatment was applied?\n\n\n\nOr, because the study was an experiment…\n\nDoes the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year of the treatment?"
+    "text": "Research Question\n\nDoes the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the treatment was applied?\n\n. . .\n\nOr, because the study was an experiment…\n\nDoes the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year of the treatment?"
   },
   {
     "objectID": "slides/week10-day1.html#conditions",
     "href": "slides/week10-day1.html#conditions",
     "title": "Week 10: Two-way ANOVA",
     "section": "Conditions",
-    "text": "Conditions\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups\n\n\n\n\n\nNormality of the residuals / responses\n\n\n\nThe distribution of responses for each group is approximately normal"
+    "text": "Conditions\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups\n\n\n. . .\n\nNormality of the residuals / responses\n\n\n\nThe distribution of responses for each group is approximately normal"
   },
   {
     "objectID": "slides/week10-day1.html#theory-based-two-way-anova",
     "href": "slides/week10-day1.html#theory-based-two-way-anova",
     "title": "Week 10: Two-way ANOVA",
     "section": "Theory-based Two-Way ANOVA",
-    "text": "Theory-based Two-Way ANOVA\n\naov(stem_dry_mass ~ watershed * year_cat, \n    data = hbr_maples_small)\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.012460942\n0.0124609422\n56.61926\n1.322406e-12\n\n\nyear_cat\n1\n0.116975377\n0.1169753767\n531.50546\n1.011525e-60\n\n\nwatershed:year_cat\n1\n0.003819154\n0.0038191541\n17.35324\n4.452323e-05\n\n\nResiduals\n221\n0.048638368\n0.0002200831\nNA\nNA\n\n\n\n\n\n\n\n\n\nThe watershed:year_cat line is testing if the relationship between the calcium treatment (watershed) and mean stem dry mass differs between 2003 and 2004.\n\n\n\n\n\nDoes it?"
+    "text": "Theory-based Two-Way ANOVA\n\naov(stem_dry_mass ~ watershed * year_cat, \n    data = hbr_maples_small)\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.012460942\n0.0124609422\n56.61926\n1.322406e-12\n\n\nyear_cat\n1\n0.116975377\n0.1169753767\n531.50546\n1.011525e-60\n\n\nwatershed:year_cat\n1\n0.003819154\n0.0038191541\n17.35324\n4.452323e-05\n\n\nResiduals\n221\n0.048638368\n0.0002200831\nNA\nNA\n\n\n\n\n\n\n\n. . .\n\nThe watershed:year_cat line is testing if the relationship between the calcium treatment (watershed) and mean stem dry mass differs between 2003 and 2004.\n\n. . .\n\n\nDoes it?"
   },
   {
     "objectID": "slides/week10-day1.html#how-are-those-p-values-calculated",
     "href": "slides/week10-day1.html#how-are-those-p-values-calculated",
     "title": "Week 10: Two-way ANOVA",
     "section": "How are those p-values calculated?",
-    "text": "How are those p-values calculated?\nThe p-values in the previous table use Type I sums of squares.\n\nType I sums of squares are “sequential,” meaning variables are tested in the order they are listed.\n\n\n\nSo, the p-value for watershed:year_cat is conditional on including watershed and year_cat as explanatory variables.\n\n\n\nIs that what we want????"
+    "text": "How are those p-values calculated?\nThe p-values in the previous table use Type I sums of squares.\n\nType I sums of squares are “sequential,” meaning variables are tested in the order they are listed.\n\n. . .\n\nSo, the p-value for watershed:year_cat is conditional on including watershed and year_cat as explanatory variables.\n. . .\n\nIs that what we want????"
   },
   {
     "objectID": "slides/week10-day1.html#testing-main-effects",
     "href": "slides/week10-day1.html#testing-main-effects",
     "title": "Week 10: Two-way ANOVA",
     "section": "Testing “main effects”",
-    "text": "Testing “main effects”\nIf there is evidence of an interaction, we do not test if the main effects are “significant.”\n\n\nWhy?\n\n\n\nThe interactions depend on these variables, so they should be included in the model!"
+    "text": "Testing “main effects”\nIf there is evidence of an interaction, we do not test if the main effects are “significant.”\n. . .\n\nWhy?\n. . .\n\nThe interactions depend on these variables, so they should be included in the model!"
   },
   {
     "objectID": "slides/week10-day1.html#interpreting-main-effects",
@@ -5451,7 +5451,7 @@
     "href": "slides/week10-day1.html#testing-for-a-relationship-for-each-variable",
     "title": "Week 10: Two-way ANOVA",
     "section": "Testing for a relationship for each variable",
-    "text": "Testing for a relationship for each variable\n\naov(stem_dry_mass ~ elevation + watershed, \n    data = hbr_maples_small) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nelevation\n1\n0.0006503957\n6.503957e-04\n9.515513\n2.446313e-03\n\n\nwatershed\n1\n0.0031676880\n3.167688e-03\n46.344364\n2.531165e-10\n\n\nResiduals\n143\n0.0097742065\n6.835109e-05\nNA\nNA\n\n\n\n\n\n\n\n\n\n\nDo you think it matters which variable comes first?"
+    "text": "Testing for a relationship for each variable\n\naov(stem_dry_mass ~ elevation + watershed, \n    data = hbr_maples_small) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nelevation\n1\n0.0006503957\n6.503957e-04\n9.515513\n2.446313e-03\n\n\nwatershed\n1\n0.0031676880\n3.167688e-03\n46.344364\n2.531165e-10\n\n\nResiduals\n143\n0.0097742065\n6.835109e-05\nNA\nNA\n\n\n\n\n\n\n\n\n. . .\n\nDo you think it matters which variable comes first?"
   },
   {
     "objectID": "slides/week10-day1.html#lets-see",
@@ -5465,14 +5465,14 @@
     "href": "slides/week10-day1.html#sequential-versus-partial-sums-of-squares",
     "title": "Week 10: Two-way ANOVA",
     "section": "Sequential Versus Partial Sums of Squares",
-    "text": "Sequential Versus Partial Sums of Squares\nSimilar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.\n\n\n\nThe p-value for each variable is conditional on the variable(s) that came before it.\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on…nothing.\n\n\n\n\n\nIf we want the p-value for each explanatory variable to be conditional on every variable included in the model, then we need to use a different type of sums of squares!"
+    "text": "Sequential Versus Partial Sums of Squares\nSimilar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.\n\n\n\nThe p-value for each variable is conditional on the variable(s) that came before it.\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on…nothing.\n\n\n\n. . .\n\nIf we want the p-value for each explanatory variable to be conditional on every variable included in the model, then we need to use a different type of sums of squares!"
   },
   {
     "objectID": "slides/week10-day1.html#partial-sums-of-squares",
     "href": "slides/week10-day1.html#partial-sums-of-squares",
     "title": "Week 10: Two-way ANOVA",
     "section": "Partial Sums of Squares",
-    "text": "Partial Sums of Squares\n\nType III sums of squares are “partial,” meaning every term in the model is tested in light of the other terms in the model.\n\n\n\n\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on elevation being included in the model\n\n\n\n\n\n\n\n\n\n\nOnly different for variables that were not first\n\n\nWe could have used Type III sums of squares for the interaction model and would have gotten the same p-value!"
+    "text": "Partial Sums of Squares\n\nType III sums of squares are “partial,” meaning every term in the model is tested in light of the other terms in the model.\n\n. . .\n\n\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on elevation being included in the model\n\n\n. . .\n\n\n\n\n\n\nOnly different for variables that were not first\n\n\n\nWe could have used Type III sums of squares for the interaction model and would have gotten the same p-value!"
   },
   {
     "objectID": "slides/week10-day1.html#getting-the-conditional-tests-for-every-variable",
@@ -5493,7 +5493,7 @@
     "href": "slides/week10-day1.html#keeping-non-significant-variables",
     "title": "Week 10: Two-way ANOVA",
     "section": "Keeping “Non-significant” Variables",
-    "text": "Keeping “Non-significant” Variables\n\nShould you always remove variables with “large” p-values from an ANOVA?\n\n\nNo!\nEven “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!"
+    "text": "Keeping “Non-significant” Variables\n\nShould you always remove variables with “large” p-values from an ANOVA?\n. . .\n\nNo!\nEven “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!"
   },
   {
     "objectID": "slides/week10-day1.html#hypothesis-test-steps",
@@ -6165,7 +6165,35 @@
     "objectID": "slides/week2-day2.html#r-tips-and-tricks",
     "href": "slides/week2-day2.html#r-tips-and-tricks",
     "title": "Exploring Flight Delays",
-    "section": "R Tips and Tricks!",
-    "text": "R Tips and Tricks!\nThings you should know before you start coding in the wild.\n\n\n\nR is case sensitive\n\ngeom_boxplot() not Geom_boxplot()\n\nSpelling matters!\n\nnycflights not ncyflights\n\nParentheses are tricky!\n\nYou will want to triple check that each beginning parenthesis ( has a counterpart ).\n\n\n\n\n\n\n\nggplot(data = penguins, \n       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +\n  geom_point()\n\nError: &lt;text&gt;:5:0: unexpected end of input\n3:   geom_point()\n4: \n  ^"
+    "section": "",
+    "text": "Things you should know before you start coding in the wild.\n\n\n\nR is case sensitive\n\ngeom_boxplot() not Geom_boxplot()\n\nSpelling matters!\n\nnycflights not ncyflights\n\nParentheses are tricky!\n\nYou will want to triple check that each beginning parenthesis ( has a counterpart ).\n\n\n\n\n. . .\n\n\nggplot(data = penguins, \n       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +\n  geom_point()\n\nError: &lt;text&gt;:5:0: unexpected end of input\n3:   geom_point()\n4: \n  ^"
+  },
+  {
+    "objectID": "slides/week3-day1.html",
+    "href": "slides/week3-day1.html",
+    "title": "Incorporating Categorical Variables",
+    "section": "",
+    "text": "“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question\n\n\n\n\n\n\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas.\n\n\n\n\n\n\n\n15-minutes\n\n\n\nReview Lab 1 comments\nAsk questions\nStart revisions\n\n\n\n\n\n\n\nHow would you describe a categorical variable?\n\n\n\n\n\ncategorical variables can have either character or factor data types\n\n. . .\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n. . .\ncharacter – unstructured & variable number of levels\n\nis inherently unordered\n\n\n\n\n\nFill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable\n\n\n\n\n\n\n\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()\n\n\n\n\n\n\nBrainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()\n\n\n\n\n\n\n\n\n\n\n\n\nThe Pipe %&gt;%\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you wanted means for each level of a categorical variable, what would you do?\n\n\n\n\n\nThe HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n. . .\n\n\n\nWhy na.rm = TRUE?\n\n\n\n\n\n\nThe channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit\n\n\n\n\n\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n. . .\n\nWhat would you do?\n\n. . .\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n. . .\n\n\nWhy use %in% instead of ==?\n\n\n\n\n\n\nAs a variable on the x- or y-axis\nAs a color / fill\nAs a facet\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\nWhat are the aesthetics included in this plot?\n. . .\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+  },
+  {
+    "objectID": "slides/week2-day1.html",
+    "href": "slides/week2-day1.html",
+    "title": "Visualizing & Summarizing Numerical Data",
+    "section": "",
+    "text": "5-minutes\n\n\n\nIf you would like to participate\n\nComplete consent form (say yes)\n\n\n\n\nIf you would not like to participate\n\nComplete consent form (say no)"
+  },
+  {
+    "objectID": "slides/week2-day2.html",
+    "href": "slides/week2-day2.html",
+    "title": "Exploring Flight Delays",
+    "section": "",
+    "text": "Now that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n. . .\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!\n\n\n\n\n\n\nThings you should know before you start coding in the wild.\n\n\n\nR is case sensitive\n\ngeom_boxplot() not Geom_boxplot()\n\nSpelling matters!\n\nnycflights not ncyflights\n\nParentheses are tricky!\n\nYou will want to triple check that each beginning parenthesis ( has a counterpart ).\n\n\n\n\n. . .\n\n\nggplot(data = penguins, \n       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +\n  geom_point()\n\nError: &lt;text&gt;:5:0: unexpected end of input\n3:   geom_point()\n4: \n  ^"
+  },
+  {
+    "objectID": "slides/week10-day1.html",
+    "href": "slides/week10-day1.html",
+    "title": "Week 10: Two-way ANOVA",
+    "section": "",
+    "text": "The final round of revisions on all assignments are due by Sunday, June 9.\n. . .\n\n\n\n\n\n\nOne round of revisions\n\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions.\n\n\n\n\n\n\nFeedback (from me) will be provided no later than Thursday evening\nPeer feedback on Wednesday\n\nPrint your report!"
   }
 ]

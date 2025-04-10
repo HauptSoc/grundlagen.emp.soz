@@ -216,8 +216,17 @@ nycflights %>%
 
 `r emo::ji("computer")` [**Required Tutorial:** Exploring Numerical Data](https://openintro.shinyapps.io/ims-02-explore-02/)
 
-`r emo::ji("computer")` [**Required Tutorial:** Summarizing with Statistics](https://openintro.shinyapps.io/ims-02-explore-03/)
-<!-- Next time move this tutorial to Week 3 -->
+<!-- In the future do regression this week!  -->
+
+<!-- Visualizing two variables -->
+<!-- https://openintro.shinyapps.io/ims-03-model-01/ -->
+
+<!-- Correlation -->
+<!-- https://openintro.shinyapps.io/ims-03-model-02/ -->
+
+<!-- Simple linear regression -->
+<!-- https://openintro.shinyapps.io/ims-03-model-03/ -->
+
 
 ::: callout-note
 # Submission
