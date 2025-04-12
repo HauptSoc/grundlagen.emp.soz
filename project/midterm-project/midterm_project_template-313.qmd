@@ -12,14 +12,13 @@ execute:
   warning: false
 ---
 
-```{r data}
-# This is where you will load in your data! 
-# Reference the R package you data live inside, since you will need to load that package in!
+```{r}
+#| label: data
 
 library(tidyverse)
 library(moderndive)
 
-# Package for your data:
+# Reference the R package you data live inside, since you will need to load that package in!
 
 ```
 
@@ -29,9 +28,10 @@ library(moderndive)
 
 ### Variables
 
-### Data Visualizations
+### Visualizations
 
-```{r scatterplot}
+```{r}
+#| label: scatterplot
 #| fig-align: center
 #| layout-nrow: 1
 
@@ -41,21 +41,32 @@ library(moderndive)
 
 ```
 
-### Proposed Statistical Model
+### Statistical Methods
+<!-- What model did you choose and why? -->
 
-## Findings
 
-### Multiple Linear Regression Model
+## Results
 
-```{r lm}
+```{r}
+#| label: fit-linear-regression-model
+
 ## Code to fit your multiple linear regression model
 
 ## Code to get coefficient table from regression model
 
 ```
 
-### Model Interpretations
+## Discussion 
+<!-- Model interpretations -->
 
-## Study Limitations
+
+
+## Limitations
+<!-- How does the study design influence what can / cannot be said about the relationships you found in your analysis? -->
+<!-- How does the study design influence what population you can / cannot infer your results onto? -->
+
+
 
 ## Conclusions
+<!-- Connecting findings back to original research question -->
+
