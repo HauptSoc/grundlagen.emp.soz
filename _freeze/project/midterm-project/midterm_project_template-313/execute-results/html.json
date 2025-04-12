@@ -1,9 +1,11 @@
 {
-  "hash": "9b9d5bbba642b0ab2f641ae51dad7e15",
+  "hash": "1738713dfaa8b89c1280ff980ac396ae",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Your Title Goes Here! Make it fun!\"\nauthor: \"Your Name Here!\"\nformat: \n  html:\n    code-tools: true\n    embed-resources: true\neditor: visual\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n\n## Introduction\n\n## Methods\n\n### Variables\n\n### Data Visualizations\n\n\n::: {.cell layout-nrow=\"1\" layout-align=\"center\"}\n\n:::\n\n\n### Proposed Statistical Model\n\n## Findings\n\n### Multiple Linear Regression Model\n\n\n::: {.cell}\n\n:::\n\n\n### Model Interpretations\n\n## Study Limitations\n\n## Conclusions\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Your Title Goes Here! Make it fun!\"\nauthor: \"Your Name Here!\"\nformat: \n  html:\n    code-tools: true\n    embed-resources: true\neditor: visual\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Introduction\n\n## Methods\n\n### Variables\n\n### Visualizations\n\n\n\n\n\n::: {.cell layout-nrow=\"1\" layout-align=\"center\"}\n\n:::\n\n\n\n\n\n### Statistical Methods\n<!-- What model did you choose and why? -->\n\n\n## Results\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Discussion \n<!-- Model interpretations -->\n\n\n\n## Limitations\n<!-- How does the study design influence what can / cannot be said about the relationships you found in your analysis? -->\n<!-- How does the study design influence what population you can / cannot infer your results onto? -->\n\n\n\n## Conclusions\n<!-- Connecting findings back to original research question -->\n\n",
+    "supporting": [
+      "midterm_project_template-313_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
