@@ -2,12 +2,9 @@
 title: "Reading a Research Paper - Part 2"
 format: 
   html:
-    number-sections: true
-    number-depth: 1
+    number-sections: false
 editor: source
 ---
-
-# Reading a research paper 
 
 Statistics is an important research tool used in many fields. In this
 assignment, you will read the original research article analyzing the dengue
@@ -24,9 +21,9 @@ practitioners’ ability to diagnose dengue, a 2015 paper by Tuan et al.
 investigated the possibility of detecting dengue using a variety of clinical
 measurements like white blood cell count and platelet count. This activity will
 help you read the paper by Tuan et al.. The paper is available at 
-https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003638.
+<https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003638>.
 
-# Outline of a research paper 
+# Outline of a Research Paper 
 
 Research papers in many fields, particularly the sciences, often contain the
 following main sections: 
@@ -58,7 +55,7 @@ connections to broader scientific questions. The conclusion is often the reverse
 of the introduction: it starts with the specific question addressed by this
 paper, then discusses the implications of this research for science in general.
 
-# Reading a research paper 
+# Reading a Research Paper 
 
 Reading a research paper, particularly in a field in which you are not an
 expert, can be challenging. The trick is to skim the paper for the most relevant
@@ -74,7 +71,7 @@ details. The Abstract is more succinct than the Introduction, but it also
 provides less motivation. When the Introduction is long, you may want to skim
 for key details. 
 
-Read the Abstract and introduction. Then answer the following questions.
+Read the **Abstract** and **Introduction**. Then answer the following questions.
 
 1. Why is it important for the researchers to build a model to detect dengue in
 hospital patients? 
@@ -91,18 +88,12 @@ In particular, we want to answer the following questions:
 - What statistical methods did the researchers use? 
 - What did the researchers conclude from their study? 
 
-This information is provided in the Methods and Results sections of the paper.
-These sections also contain lots of other details which is valuable, but not
-crucial to understand on a first reading, so we will focus on the most important
-parts of the Methods and Results. 
+This information is provided in the **Methods** and **Results** sections of the
+paper. These sections also contain lots of other details which is valuable, but
+not crucial to understand on a first reading, so we will focus on the most
+important parts of the **Methods** and **Results**. 
 
 # Study Participants 
-
-Read the Patient Enrollment subsection of the Methods, and then answer the
-following questions. 
-
-3. How many patients participated in the study? 
-
 
 Potential research subjects must meet certain criteria, defined by the
 researchers, to participate in a study. Inclusion criteria define requirements
@@ -110,7 +101,7 @@ for inclusion in the study (e.g., a target age range or social group), while
 exclusion criteria are reasons a subject would be asked not to participate
 (e.g., certain medical conditions). 
 
-4. What are the inclusion/exclusion criteria for this study? 
+3. What are the inclusion/exclusion criteria for this study? 
 
 
 # Data Collection and Analysis 
@@ -118,30 +109,31 @@ exclusion criteria are reasons a subject would be asked not to participate
 Now that we know who was studied, we want to know what data was collected about
 each participant, and how it was analyzed. Read the *Clinical and laboratory
 investigations on the day of enrolment* and *Statistical methods* subsections of
-the Methods. Then answer the following questions. 
+the **Methods**. Then answer the following questions. 
 
-5. Which variables were recorded for the patients in the study? 
+4. Which variables were recorded for the patients in the study? 
 
-6. Which types of statistical methods were used to model the relation between
-the explanatory variables and whether the patient had dengue? (It is ok if
+5. Which types of statistical methods were used to model the relation between
+the explanatory variables and whether the patient had dengue? (It is okay if
 you’re not familiar with all these methods!) 
 
-7. How did the researchers choose which variables to include in their logistic
+6. How did the researchers choose which variables to include in their logistic
 regression model? 
 
-8. Which threshold did the researchers use when converting their predicted
+7. Which threshold did the researchers use when converting their predicted
 probabilities into binary predictions? 
 
 # Results 
 
 Finally, let’s see what the researchers concluded from their statistical models!
-Read the Early Dengue Classifier subsection of the Results, then answer the
-following questions. 
+Read the *Early Dengue Classifier* subsection of the **Results**, then answer
+the following questions. 
 
-9. Which variables did the researchers include in their final logistic
+8. Which variables did the researchers include in their final logistic
 regression model? 
 
-10. What sensitivity and specificity values did the researchers observe using
-their final model? 
+9. Were there other models that performed as well as the model that the
+researchers chose? If so, why were these other models not selected? 
 
-11. What Area Under the ROC Curve (AUC) did the researchers observe? 
+10. What does it mean that the model had a "sensitivity" of 74.8% for correctly
+classifying dengue? 

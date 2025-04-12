@@ -2,8 +2,7 @@
 title: "Reading a Research Paper - Part 1"
 format: 
   html:
-    number-sections: true
-    number-depth: 1
+    number-sections: false
 editor: source
 bibliography: references.bib
 ---
@@ -37,9 +36,6 @@ answer the following questions:
 
 2.  What are the research questions / research goals?
 
-3.  What statistical methods do you think would be appropriate to address those
-research questions / research goals? Explain your reasoning.
-
 # Background
 
 Dengue is the commonest arboviral disease of humans. An early and accurate
@@ -49,7 +45,7 @@ control and is central to achieving the World Health Organisation target of a
 
 # Methods
 
-5729 children with fever of \< 72hrs duration were enrolled into this
+5729 children with fever of < 72hrs duration were enrolled into this
 multicenter prospective study in southern Vietnam between 2010-2012. A composite
 of gold standard diagnostic tests identified 1692 dengue cases. Using
 statistical methods, a novel Early Dengue Classifier (EDC) was developed that
