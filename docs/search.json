@@ -2309,7 +2309,7 @@
     "href": "project/midterm-project/midterm_project_template-313.html#methods",
     "title": "Your Title Goes Here! Make it fun!",
     "section": "Methods",
-    "text": "Methods\n\nVariables\n\n\nData Visualizations\n\n\n\n\n\n\n\n\nProposed Statistical Model"
+    "text": "Methods\n\nVariables\n\n\nVisualizations\n\n\n\n\n\n\n\n\nStatistical Methods"
   },
   {
     "objectID": "project/midterm-project/midterm_project_template-313.html#findings",
@@ -6183,14 +6183,14 @@
     "href": "project/midterm-project/midterm-proposal-313.html#from-the-lterdatasampler-package",
     "title": "STAT 313: Midterm Project Proposal",
     "section": "1.1 From the lterdatasampler package:",
-    "text": "1.1 From the lterdatasampler package:\n\nand_vertebrates: Size data for Cutthroat trout and salamanders in different sections of forest (from Lab 3).\n\nAdditional information about the data: https://lter.github.io/lterdatasampler/articles/and_vertebrates_vignette.html\nPublication resulting from data collected\n\nhbr_maples: Data on the growth of Sugar Maple (Acer saccharum) seedlings in response to calcium addition.\n\nAdditional information about the data: https://lter.github.io/lterdatasampler/articles/hbr_maples_vignette.html\nPublication resulting from data collected\n\nnwt_pikas: Data on the stress of p\n\nAdditional information about data: https://lter.github.io/lterdatasampler/articles/nwt_pikas_vignette.html\nPublication resulting from data collected"
+    "text": "1.1 From the lterdatasampler package:\n\nand_vertebrates: Size data for Cutthroat trout and salamanders in different sections of forest (from Lab 3).\n\nAdditional information about the data: https://lter.github.io/lterdatasampler/articles/and_vertebrates_vignette.html\nPublication resulting from data collected\n\n\n\n\nhbr_maples: Data on the growth of Sugar Maple (Acer saccharum) seedlings in response to calcium addition.\n\nAdditional information about the data: https://lter.github.io/lterdatasampler/articles/hbr_maples_vignette.html\nPublication resulting from data collected\n\n\n\n\nnwt_pikas: Data on the stress of p\n\nAdditional information about data: https://lter.github.io/lterdatasampler/articles/nwt_pikas_vignette.html\nPublication resulting from data collected"
   },
   {
     "objectID": "project/midterm-project/midterm-proposal-313.html#from-the-openintro-package",
     "href": "project/midterm-project/midterm-proposal-313.html#from-the-openintro-package",
     "title": "STAT 313: Midterm Project Proposal",
     "section": "1.2 From the openintro package:",
-    "text": "1.2 From the openintro package:\n\nbirths14: Data from US births from 2014 (similar to ncbirths dataset from Week 4).\n\nPublication resulting from data collected\n\npossum: Data representing possums in Australia and New Guinea\n\nPublication resulting from data collected"
+    "text": "1.2 From the openintro package:\n\nbirths14: Data from US births from 2014 (similar to ncbirths dataset from Week 4).\n\nPublication resulting from data collected\n\n\n\n\npossum: Data representing possums in Australia and New Guinea\n\nPublication resulting from data collected"
   },
   {
     "objectID": "project/midterm-project/midterm-proposal-313.html#from-the-moderndive-package",
@@ -6205,5 +6205,26 @@
     "title": "STAT 313: Midterm Project Proposal",
     "section": "1.4 Deliverable",
     "text": "1.4 Deliverable\nFor the Midterm Project Proposal assignment on Canvas, you are required to state at the beginning of the document, the name of the dataset you have chosen to use.\n\n\n\n\n\n\nNo need to download the data!\n\n\n\nEvery dataset is included in an R package, so there is no need to download the raw data file!"
+  },
+  {
+    "objectID": "project/midterm-project/midterm_project_template-313.html#results",
+    "href": "project/midterm-project/midterm_project_template-313.html#results",
+    "title": "Your Title Goes Here! Make it fun!",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "project/midterm-project/midterm_project_template-313.html#discussion",
+    "href": "project/midterm-project/midterm_project_template-313.html#discussion",
+    "title": "Your Title Goes Here! Make it fun!",
+    "section": "Discussion",
+    "text": "Discussion"
+  },
+  {
+    "objectID": "project/midterm-project/midterm_project_template-313.html#limitations",
+    "href": "project/midterm-project/midterm_project_template-313.html#limitations",
+    "title": "Your Title Goes Here! Make it fun!",
+    "section": "Limitations",
+    "text": "Limitations"
   }
 ]

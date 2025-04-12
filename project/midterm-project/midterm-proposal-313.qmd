@@ -8,6 +8,8 @@ format:
     number-sections: true
     number-depth: 2
 editor: source
+resources: 
+  - "../dataset-publications/"
 ---
 
 This week you will get started on your midterm project by selecting what dataset
@@ -28,29 +30,40 @@ package (e.g., `library(lterdatasampler)`) at the beginning of your analysis.
 
 -   [`and_vertebrates`](https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-and&identifier=4027&revision=16): Size data for Cutthroat trout and salamanders in different sections of forest (from Lab 3).
     * Additional information about the data: <https://lter.github.io/lterdatasampler/articles/and_vertebrates_vignette.html>
-    * [Publication resulting from data collected](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/ESAubSdYG9xNt8uEPfRMHFIBdM8bJigac_BysStGZI_XSg)
-
+    * [Publication resulting from data collected](../dataset-publications/and-vertebrates-publication.pdf)
+    
+<!-- https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/ESAubSdYG9xNt8uEPfRMHFIBdM8bJigac_BysStGZI_XSg -->
     
 -   [`hbr_maples`](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-hbr.157.3): Data on the growth of Sugar Maple (Acer saccharum) seedlings in response to calcium addition.
     * Additional information about the data: <https://lter.github.io/lterdatasampler/articles/hbr_maples_vignette.html>
-    * [Publication resulting from data collected](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EQsqYRiS1g9JjNV6o3bRHKkB8V9wu26h6X1gzEv1VoOV4Q)
+    * [Publication resulting from data collected](../dataset-publications/hbr-maples-publication.pdf)
     
+<!-- https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EQsqYRiS1g9JjNV6o3bRHKkB8V9wu26h6X1gzEv1VoOV4Q -->
+  
 -   [`nwt_pikas`](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.268.1): Data on the stress of p
     * Additional information about data: <https://lter.github.io/lterdatasampler/articles/nwt_pikas_vignette.html>
-    * [Publication resulting from data collected](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/ERDZ95KvsV9Js6I6JG0PU0UBPsFwBPKJ-h8FIIfTG2Wc_A)
-    
+    * [Publication resulting from data collected](../dataset-publications/nwt-pika-publication.PDF)
+  
+<!-- https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/ERDZ95KvsV9Js6I6JG0PU0UBPsFwBPKJ-h8FIIfTG2Wc_A -->
+
 ## From the **openintro** package:
 
 -   [`births14`](https://www.icpsr.umich.edu/web/ICPSR/studies/36461): Data from US births from 2014 (similar to `ncbirths` dataset from Week 4).
-    * [Publication resulting from data collected](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/Ec1AsfZG3YdPprEjMRfAAIYBi5zOAD3Pg2nuGhf6IIgU-Q)
+    * [Publication resulting from data collected](../dataset-publications/births-14-report.pdf)
+    
+<!-- https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/Ec1AsfZG3YdPprEjMRfAAIYBi5zOAD3Pg2nuGhf6IIgU-Q -->
 
 -   [`possum`](https://www.openintro.org/data/index.php?data=possum): Data representing possums in Australia and New Guinea 
-    * [Publication resulting from data collected](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EUxnosoiksNLhrGopLITu8oBSNoSuZGoNBJ9mdwPPeKJ4w)
+    * [Publication resulting from data collected](../dataset-publications/possums-publication.pdf)
+    
+<!-- https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EUxnosoiksNLhrGopLITu8oBSNoSuZGoNBJ9mdwPPeKJ4 -->
 
 ## From the **moderndive** package:
 
 -   [`evals`](https://moderndive.github.io/moderndive/reference/evals.html): Data from end of semester student evaluations from University of Texas at Austin (discussed in ModernDive textbook)
-    * [Publication resulting from data collected](https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EffyXD8fhLVPlpqdKiRvvCYBbtRMK9ihfbksjuMxWygbsQ)
+    * [Publication resulting from data collected](../dataset-publications/evals-publication.pdf)
+
+<!-- https://cpslo-my.sharepoint.com/:b:/g/personal/atheobol_calpoly_edu/EffyXD8fhLVPlpqdKiRvvCYBbtRMK9ihfbksjuMxWygbsQ -->
 
 ## Deliverable
 
