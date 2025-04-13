@@ -4,7 +4,7 @@ format:
   revealjs:
     logo: images/dplyr.png
     theme: [simple, style.scss]
-editor: visual
+editor: source
 execute: 
   echo: false
 ---
@@ -28,6 +28,16 @@ trout <- vertebrates_full_code %>%
 
 salamander <- vertebrates_full_code %>% 
   filter(species != "Cutthroat trout")
+
+my_theme <- theme_bw() + 
+  theme(axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14),
+        axis.title = element_text(size = 16), 
+        axis.text.x = element_text(size = 12), 
+        axis.text.y = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 14)
+        )
 ```
 
 # Lab 1
@@ -40,8 +50,8 @@ salamander <- vertebrates_full_code %>%
 "Complete" = Satisfactory
 :::
 
--   Your images were included in the document
 -   You provided responses to every question
+-   You correctly identified the observational unit for the `mpg` dataset
 ::::
 
 ::: {.column width="5%"}
@@ -52,8 +62,9 @@ salamander <- vertebrates_full_code %>%
 "Incomplete" = Growing
 :::
 
--   Your images [were not]{.underline} included in the document
 -   You [did not]{.underline} provide responses to every question
+-   You [did not]{.underline} correctly identify the observational unit for the
+`mpg` dataset
 ::::
 ::::::::
 
@@ -64,37 +75,29 @@ Lab 1 revisions are due by Friday, April 18 (at midnight).
 :::
 
 ::: small
-1.  Read comments on Canvas
-2.  Go back into your Lab 1 on Posit Cloud and complete your revisions
-3.  Render your revised Lab 1
-4.  Download your revised HTML
+1.  Read comments on Canvas.
+2.  Go back into your Lab 1 on Posit Cloud and complete your revisions.
+3.  Render your revised Lab 1.
+4.  Download your revised HTML.
 :::
 
 :::: small
 ::: callout-warning
 # Reflections
 
-Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas.
+Revisions are required to be accompanied with reflections on what you learned
+while completing your revisions. **Reflections must be written in your Lab 1
+Quarto file (next to the problems you revised).** 
 :::
 ::::
 
-## 
+# Categorical Variables
 
-::: {style="font-size: 3em; color: #ed8402;"}
-15-minutes
-:::
-
-::: {style="font-size: 1.5em;"}
--   Review Lab 1 comments
--   Ask questions
--   Start revisions
-:::
-
-##  {background-color="#D4D4D4"}
+##  {background-color="#b4d4ec"}
 
 <center>
 
-::: {style="margin-top: 100px; font-size: 3em; color: #000000;"}
+::: {style="margin-top: 100px; font-size: 2.5em; color: #000000;"}
 How would you describe a categorical variable?
 :::
 
@@ -120,7 +123,7 @@ categorical variables can have either `character` *or* `factor` data types
 
 -   is inherently unordered
 
-##  {background-color="#D4D4D4"}
+##  {background-color="#E4E4E4"}
 
 ::: {style="font-size: 1.25em;"}
 Fill in the associated data types (e.g. character, factor, integer, double) with each type of variable.
@@ -185,36 +188,15 @@ Brainstorm definitions for each verb
 :::
 ::::::
 
-## 
+## The Pipe ![](images/pipe.png){fig-alt="A hex of the pipe operator from the magrittr package. The pipe operator is a % followed by a > followed by another %, which is used to chain data wrangling operations together." width=10%}
 
-:::::::: columns
-:::: {.column width="55"}
-::: {style="font-size: 1.5em;"}
-The Pipe `%>%`
-:::
-::::
+<center>
+![](images/pipe_process.png){fig-alt=""}
+</center>
 
-::: {.column width="15%"}
-:::
+## The Pipe in Action!
 
-::: {.column width="15%"}
-```{r}
-#| label: pipe-image
-knitr::include_graphics("images/pipe.png")
-```
-:::
-
-::: {.column width="15%"}
-```{r}
-#| label: not-a-pipe-image
-knitr::include_graphics("images/not_a_pipe.jpg")
-```
-:::
-::::::::
-
-<center>![](images/pipe_process.png)</center>
-
-## 
+##  {background-color="#b4d4ec"}
 
 ::: {style="margin-top: 100px; font-size: 2em;"}
 If you wanted means for each level of a categorical variable, what would you do?
@@ -331,7 +313,7 @@ trout %>%
 
 </br>
 
-<center>**Why use `%in%` instead of `==`?**</center>
+<center>**When we have more than one value we want to keep, we need to use `%in%` not `==`!**</center>
 
 ## Incorporating Categorical Variables into Data Visualizations
 
@@ -358,8 +340,8 @@ trout %>%
 
 ggplot(data = salamander, 
        mapping = aes(x = length_2_mm)) + 
-  geom_histogram(binwidth = 14) + 
-  labs(x = "Snout to Tail Length (mm)")
+  geom_histogram(binwidth = 14, color = "white") + 
+  labs(x = "Snout to Tail Length of Salamander (mm)")
 ```
 :::
 ::::
@@ -393,9 +375,9 @@ What are possible causes for the variation in salamander length?
 
 ggplot(data = salamander, 
        mapping = aes(x = length_2_mm)) + 
-  geom_histogram(binwidth = 14) + 
+  geom_histogram(binwidth = 14, color = "white") + 
   facet_wrap(~ section, scales = "free") +
-  labs(x = "Snout to Tail Length (mm)")
+  labs(x = "Snout to Tail Length of Salamander (mm)")
 ```
 :::
 
@@ -528,21 +510,26 @@ ggplot(data = salamander,
 
 trout %>%
   filter(unittype %in% c("R", "I", "S")) %>% 
-  ggplot(aes(x = length_1_mm, y = weight_g, color = unittype)) + 
+  ggplot(aes(x = length_1_mm, y = weight_g, color = unittype, shape = unittype)) + 
   geom_jitter(alpha = 0.8) + 
   labs(x = "Length (mm)", 
        y = "Weight (g)", 
-       color = "Channel \nClassification") + 
+       color = "Channel \nClassification", 
+       shape = "Channel \nClassification") + 
   theme_light()
 ```
 
 . . .
 
+::: {.midi}
 What are the aesthetics included in this plot?
+:::
 
 . . .
 
+::: {.midi}
 What is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?
+:::
 
 # [Statistical Critique](../critique/critique-1.qmd)
 
@@ -550,9 +537,20 @@ What is one aspect of this plot that you believe is well done? What is one aspec
 
 1.  Find your visualizations
 
--   Visualization from your Week 1 article (Statistics in Your Field)
 -   Visualization from the [New York Times](https://www.nytimes.com/column/whats-going-on-in-this-graph)
+-   Visualization from your chosen scientific article 
 
 2.  Discuss the `aes`thetics included in the plots
 3.  Discuss what you believe the plot does well
 4.  Discuss what improvements could be made to make the plot more clear
+
+# [Reading a Research Paper](../project/reading-research-paper-pt-1.qmd)
+
+## Your Tasks
+
+Read the Background and Methods in the summary at the beginning of the Tuan et
+al. paper. Then answer the following questions:
+
+1.  What data is involved in this research study?
+
+2.  What are the research questions / research goals?

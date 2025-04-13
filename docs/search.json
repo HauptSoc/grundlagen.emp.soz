@@ -696,15 +696,15 @@
     "objectID": "slides/week3-day1.html#revisions",
     "href": "slides/week3-day1.html#revisions",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "“Complete” = Satisfactory\n\n\nYou provided responses to every question\nYou correctly identified the observational unit for the mpg dataset\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYou did not provide responses to every question\nYou did not correctly identify the observational unit for the mpg dataset"
+    "section": "Revisions",
+    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYou provided responses to every question\nYou correctly identified the observational unit for the mpg dataset\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYou did not provide responses to every question\nYou did not correctly identify the observational unit for the mpg dataset"
   },
   {
     "objectID": "slides/week3-day1.html#completing-revisions",
     "href": "slides/week3-day1.html#completing-revisions",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "Lab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These must be written in your Lab 1 Quarto file (next to the problems you revised)."
+    "section": "Completing Revisions",
+    "text": "Completing Revisions\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas.\nGo back into your Lab 1 on Posit Cloud and complete your revisions.\nRender your revised Lab 1.\nDownload your revised HTML.\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. Reflections must be written in your Lab 1 Quarto file (next to the problems you revised)."
   },
   {
     "objectID": "slides/week3-day1.html#section",
@@ -724,8 +724,8 @@
     "objectID": "slides/week3-day1.html#in-r",
     "href": "slides/week3-day1.html#in-r",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "categorical variables can have either character or factor data types\n\n. . .\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n. . .\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
+    "section": "In R…",
+    "text": "In R…\ncategorical variables can have either character or factor data types\n\n\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n\n\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
   },
   {
     "objectID": "slides/week3-day1.html#section-2",
@@ -738,15 +738,15 @@
     "objectID": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
     "href": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "filter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
+    "section": "dplyr – a tool bag for data wrangling",
+    "text": "dplyr – a tool bag for data wrangling\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
   },
   {
     "objectID": "slides/week3-day1.html#section-3",
     "href": "slides/week3-day1.html#section-3",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "The Pipe %&gt;%"
+    "text": "If you wanted means for each level of a categorical variable, what would you do?"
   },
   {
     "objectID": "slides/week3-day1.html#section-4",
@@ -766,64 +766,64 @@
     "objectID": "slides/week3-day1.html#trout-size",
     "href": "slides/week3-day1.html#trout-size",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "The HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n. . .\n\n\n\nWhy na.rm = TRUE?"
+    "section": "Trout Size",
+    "text": "Trout Size\n\nThe HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n\n\n\n\nWhy na.rm = TRUE?"
   },
   {
     "objectID": "slides/week3-day1.html#classifying-channel-types",
     "href": "slides/week3-day1.html#classifying-channel-types",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "The channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit"
+    "section": "Classifying Channel Types",
+    "text": "Classifying Channel Types\n\nThe channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit"
   },
   {
     "objectID": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "href": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "The majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n. . .\n\nWhat would you do?\n\n. . .\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n. . .\n\n\nWhy use %in% instead of ==?"
+    "section": "filter()-ing Specific Channel Types",
+    "text": "filter()-ing Specific Channel Types\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n\n\nWhat would you do?\n\n\n\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n\n\n\n\nWhen we have more than one value we want to keep, we need to use %in% not ==!"
   },
   {
     "objectID": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
     "href": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "As a variable on the x- or y-axis\nAs a color / fill\nAs a facet"
+    "section": "Incorporating Categorical Variables into Data Visualizations",
+    "text": "Incorporating Categorical Variables into Data Visualizations\n\n\nAs a variable on the x- or y-axis\nAs a color / fill\nAs a facet"
   },
   {
     "objectID": "slides/week3-day1.html#salamander-size",
     "href": "slides/week3-day1.html#salamander-size",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
+    "section": "Salamander Size",
+    "text": "Salamander Size\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14, color = \"white\") + \n  labs(x = \"Snout to Tail Length of Salamander (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
   },
   {
     "objectID": "slides/week3-day1.html#faceted-histograms",
     "href": "slides/week3-day1.html#faceted-histograms",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`)."
+    "section": "Faceted Histograms",
+    "text": "Faceted Histograms\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14, color = \"white\") + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length of Salamander (mm)\")"
   },
   {
     "objectID": "slides/week3-day1.html#side-by-side-boxplots",
     "href": "slides/week3-day1.html#side-by-side-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
+    "section": "Side-by-Side Boxplots",
+    "text": "Side-by-Side Boxplots\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")"
   },
   {
     "objectID": "slides/week3-day1.html#colors-in-boxplots",
     "href": "slides/week3-day1.html#colors-in-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
+    "section": "Colors in Boxplots",
+    "text": "Colors in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")"
   },
   {
     "objectID": "slides/week3-day1.html#facets-colors-in-boxplots",
     "href": "slides/week3-day1.html#facets-colors-in-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
+    "section": "Facets & Colors in Boxplots",
+    "text": "Facets & Colors in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")"
   },
   {
     "objectID": "slides/week3-day1.html#facets-colors-in-boxplots-output",
@@ -836,8 +836,8 @@
     "objectID": "slides/week3-day1.html#facets-color-in-scatterplots",
     "href": "slides/week3-day1.html#facets-color-in-scatterplots",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 5435 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "section": "Facets & Color in Scatterplots",
+    "text": "Facets & Color in Scatterplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")"
   },
   {
     "objectID": "slides/week3-day1.html#facets-color-in-scatterplots-output",
@@ -850,8 +850,8 @@
     "objectID": "slides/week3-day1.html#your-turn-90-seconds",
     "href": "slides/week3-day1.html#your-turn-90-seconds",
     "title": "Incorporating Categorical Variables",
-    "section": "",
-    "text": "Warning: Removed 96 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n. . .\nWhat are the aesthetics included in this plot?\n. . .\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+    "section": "Your Turn – 90 seconds",
+    "text": "Your Turn – 90 seconds\n\n\n\nWhat are the aesthetics included in this plot?\n\n\n\n\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
   },
   {
     "objectID": "slides/week3-day1.html#your-tasks",
@@ -6289,5 +6289,33 @@
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
     "text": "ncbirths %&gt;% \n  ggplot(mapping = aes(x = weeks, y = weight, color = mage)) + \n  geom_jitter() + \n  geom_smooth(method = \"lm\") +\n  labs(x = \"Weeks of Gestation\", \n       y = \"Weight of Baby (lbs)\", \n       color = \"Mother's Age\") +\n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "slides/week3-day1.html#the-pipe",
+    "href": "slides/week3-day1.html#the-pipe",
+    "title": "Incorporating Categorical Variables",
+    "section": "The Pipe ",
+    "text": "The Pipe"
+  },
+  {
+    "objectID": "slides/week3-day1.html#the-pipe-in-action",
+    "href": "slides/week3-day1.html#the-pipe-in-action",
+    "title": "Incorporating Categorical Variables",
+    "section": "The Pipe in Action!",
+    "text": "The Pipe in Action!"
+  },
+  {
+    "objectID": "slides/week3-day1.html#your-turn",
+    "href": "slides/week3-day1.html#your-turn",
+    "title": "Incorporating Categorical Variables",
+    "section": "Your Turn!",
+    "text": "Your Turn!\n\nIf you wanted means for each level of a categorical variable, what would you do?"
+  },
+  {
+    "objectID": "slides/week3-day1.html#facets-in-boxplots",
+    "href": "slides/week3-day1.html#facets-in-boxplots",
+    "title": "Incorporating Categorical Variables",
+    "section": "Facets in Boxplots",
+    "text": "Facets in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~unittype) +\n  labs(x = \"Snout to Tail Length of Salamander (mm)\", \n       y = \"\")"
   }
 ]

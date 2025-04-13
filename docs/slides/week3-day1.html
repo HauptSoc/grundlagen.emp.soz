@@ -410,8 +410,8 @@
 <p>“Complete” = Satisfactory</p>
 </div>
 <ul>
-<li>Your images were included in the document</li>
 <li>You provided responses to every question</li>
+<li>You correctly identified the observational unit for the <code>mpg</code> dataset</li>
 </ul>
 </div><div class="column" style="width:5%;">
 
@@ -420,8 +420,8 @@
 <p>“Incomplete” = Growing</p>
 </div>
 <ul>
-<li>Your images <u>were not</u> included in the document</li>
 <li>You <u>did not</u> provide responses to every question</li>
+<li>You <u>did not</u> correctly identify the observational unit for the <code>mpg</code> dataset</li>
 </ul>
 </div></div>
 </section>
@@ -432,10 +432,10 @@
 </div>
 <div class="small">
 <ol type="1">
-<li>Read comments on Canvas</li>
-<li>Go back into your Lab 1 on Posit Cloud and complete your revisions</li>
-<li>Render your revised Lab 1</li>
-<li>Download your revised HTML</li>
+<li>Read comments on Canvas.</li>
+<li>Go back into your Lab 1 on Posit Cloud and complete your revisions.</li>
+<li>Render your revised Lab 1.</li>
+<li>Download your revised HTML.</li>
 </ol>
 </div>
 <div class="small">
@@ -448,29 +448,21 @@
 <p><strong>Reflections</strong></p>
 </div>
 <div class="callout-content">
-<p>Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas.</p>
+<p>Revisions are required to be accompanied with reflections on what you learned while completing your revisions. <strong>Reflections must be written in your Lab 1 Quarto file (next to the problems you revised).</strong></p>
 </div>
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="categorical-variables" class="title-slide slide level1 center">
+<h1>Categorical Variables</h1>
+
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div style="font-size: 3em; color: #ed8402;">
-<p>15-minutes</p>
-</div>
-<div style="font-size: 1.5em;">
-<ul>
-<li>Review Lab 1 comments</li>
-<li>Ask questions</li>
-<li>Start revisions</li>
-</ul>
-</div>
-</section>
-<section id="section-1" class="slide level2" data-background-color="#D4D4D4">
+<section id="section" class="slide level2" data-background-color="#b4d4ec">
 <h2></h2>
 <center>
-<div style="margin-top: 100px; font-size: 3em; color: #000000;">
+<div style="margin-top: 100px; font-size: 2.5em; color: #000000;">
 <p>How would you describe a categorical variable?</p>
 </div>
 </center>
@@ -493,7 +485,7 @@
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2" data-background-color="#D4D4D4">
+<section id="section-1" class="slide level2" data-background-color="#E4E4E4">
 <h2></h2>
 <div style="font-size: 1.25em;">
 <p>Fill in the associated data types (e.g.&nbsp;character, factor, integer, double) with each type of variable.</p>
@@ -537,7 +529,7 @@
 <p><code>group_by()</code></p>
 </div></div>
 </section>
-<section id="section-3" class="slide level2" data-background-color="#D4D4D4">
+<section id="section-2" class="slide level2" data-background-color="#D4D4D4">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
 <p>Brainstorm definitions for each verb</p>
@@ -556,41 +548,16 @@
 
 </div></div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:55;">
-<div style="font-size: 1.5em;">
-<p>The Pipe <code>%&gt;%</code></p>
-</div>
-</div><div class="column" style="width:15%;">
-
-</div><div class="column" style="width:15%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="images/pipe.png" width="120"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:15%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="images/not_a_pipe.jpg" width="108"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
+<section id="the-pipe" class="slide level2">
+<h2>The Pipe <img data-src="images/pipe.png" style="width:10.0%" alt="A hex of the pipe operator from the magrittr package. The pipe operator is a % followed by a > followed by another %, which is used to chain data wrangling operations together."></h2>
 <center>
-<img data-src="images/pipe_process.png">
+<img data-src="images/pipe_process.png" alt="">
 </center>
 </section>
-<section id="section-5" class="slide level2">
+<section id="the-pipe-in-action" class="slide level2">
+<h2>The Pipe in Action!</h2>
+</section>
+<section id="section-3" class="slide level2" data-background-color="#b4d4ec">
 <h2></h2>
 <div style="margin-top: 100px; font-size: 2em;">
 <p>If you wanted means for each level of a categorical variable, what would you do?</p>
@@ -681,7 +648,7 @@
 <div class="fragment">
 <p><br></p>
 <center>
-<strong>Why use <code>%in%</code> instead of <code>==</code>?</strong>
+<strong>When we have more than one value we want to keep, we need to use <code>%in%</code> not <code>==</code>!</strong>
 </center>
 </div>
 </section>
@@ -703,8 +670,8 @@
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> salamander, </span>
 <span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> length_2_mm)) <span class="sc">+</span> </span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">14</span>) <span class="sc">+</span> </span>
-<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Snout to Tail Length (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Snout to Tail Length of Salamander (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -734,9 +701,9 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5" data-code-line-numbers="|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> salamander, </span>
 <span id="cb5-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> length_2_mm)) <span class="sc">+</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">14</span>) <span class="sc">+</span> </span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
 <span id="cb5-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> section, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Snout to Tail Length (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Snout to Tail Length of Salamander (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -873,10 +840,14 @@
 <h2>Your Turn – 90 seconds</h2>
 
 <img data-src="week3-day1_files/figure-revealjs/aesthetic-activity-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
+<div class="midi">
 <p>What are the aesthetics included in this plot?</p>
 </div>
+</div>
 <div class="fragment">
+<div class="midi">
 <p>What is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?</p>
+</div>
 </div>
 </section></section>
 <section>
@@ -890,13 +861,26 @@
 <li>Find your visualizations</li>
 </ol>
 <ul>
-<li>Visualization from your Week 1 article (Statistics in Your Field)</li>
 <li>Visualization from the <a href="https://www.nytimes.com/column/whats-going-on-in-this-graph">New York Times</a></li>
+<li>Visualization from your chosen scientific article</li>
 </ul>
 <ol start="2" type="1">
 <li>Discuss the <code>aes</code>thetics included in the plots</li>
 <li>Discuss what you believe the plot does well</li>
 <li>Discuss what improvements could be made to make the plot more clear</li>
+</ol>
+</section></section>
+<section>
+<section id="reading-a-research-paper" class="title-slide slide level1 center">
+<h1><a href="../project/reading-research-paper-pt-1.html">Reading a Research Paper</a></h1>
+
+</section>
+<section id="your-tasks-1" class="slide level2">
+<h2>Your Tasks</h2>
+<p>Read the Background and Methods in the summary at the beginning of the Tuan et al.&nbsp;paper. Then answer the following questions:</p>
+<ol type="1">
+<li><p>What data is involved in this research study?</p></li>
+<li><p>What are the research questions / research goals?</p></li>
 </ol>
 
 <div class="quarto-auto-generated-content">
