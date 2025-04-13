@@ -6169,7 +6169,7 @@
     "href": "project/reading-research-paper-pt-1.html",
     "title": "Reading a Research Paper - Part 1",
     "section": "",
-    "text": "Reading a research paper\nStatistics is an important research tool used in many fields. The purpose of this assignment is to help you begin to read a research paper that uses statistical methods to address an important research question. In a later assignment, you will read the paper in full, but for now we will focus on reading a summary of the paper. Most research papers include a summary of their contents at the beginning. You may see this summary referred to as an abstract, a summary, or an executive summary, depending on the journal and the field. Reading this summary first, before we dive into the full details, is very helpful to get an overview of what the authors did.\n\n\nOverview\nDengue is a mosquito-borne viral disease which affects hundreds of millions of people each year. A paper by Tuan et al. (2015) explored dengue diagnosis in Vietnam. The paper is available at: https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003638\n\n\nInstructions\nRead the Background and Methods in the summary at the beginning of the Tuan et al. paper. (For convenience, the background and methods are copied below). Then answer the following questions:\n\nWhat data is involved in this research study?\nWhat are the research questions / research goals?\n\n\n\nBackground\nDengue is the commonest arboviral disease of humans. An early and accurate diagnosis of dengue can support clinical management, surveillance and disease control and is central to achieving the World Health Organisation target of a 50% reduction in dengue case mortality by 2020.\n\n\nMethods\n5729 children with fever of &lt; 72hrs duration were enrolled into this multicenter prospective study in southern Vietnam between 2010-2012. A composite of gold standard diagnostic tests identified 1692 dengue cases. Using statistical methods, a novel Early Dengue Classifier (EDC) was developed that used patient age, white blood cell count and platelet count to discriminate dengue cases from non-dengue cases.\n\n\n\n\n\nReferences\n\nTuan, Nguyen Minh, Ho Thi Nhan, Nguyen Van Vinh Chau, Nguyen Thanh Hung, Ha Manh Tuan, Ta Van Tram, Nguyen Le Da Ha, et al. 2015. “Sensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue.” Edited by Scott B Halstead. PLOS Neglected Tropical Diseases 9 (4): e0003638. https://doi.org/10.1371/journal.pntd.0003638."
+    "text": "Statistics is an important research tool used in many fields. The purpose of this assignment is to help you begin to read a research paper that uses statistical methods to address an important research question. In a later assignment, you will read the paper in full, but for now we will focus on reading a summary of the paper. Most research papers include a summary of their contents at the beginning. You may see this summary referred to as an abstract, a summary, or an executive summary, depending on the journal and the field. Reading this summary first, before we dive into the full details, is very helpful to get an overview of what the authors did."
   },
   {
     "objectID": "project/reading-research-paper-pt-2.html",
@@ -6226,5 +6226,12 @@
     "title": "Your Title Goes Here! Make it fun!",
     "section": "Limitations",
     "text": "Limitations"
+  },
+  {
+    "objectID": "project/reading-research-paper-pt-1.html#submission",
+    "href": "project/reading-research-paper-pt-1.html#submission",
+    "title": "Reading a Research Paper - Part 1",
+    "section": "Submission",
+    "text": "Submission\nYou are allowed to use any text editing software to make your document (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
   }
 ]
