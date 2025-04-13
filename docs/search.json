@@ -696,64 +696,64 @@
     "objectID": "slides/week3-day1.html#revisions",
     "href": "slides/week3-day1.html#revisions",
     "title": "Incorporating Categorical Variables",
-    "section": "Revisions",
-    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question"
+    "section": "",
+    "text": "“Complete” = Satisfactory\n\n\nYou provided responses to every question\nYou correctly identified the observational unit for the mpg dataset\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYou did not provide responses to every question\nYou did not correctly identify the observational unit for the mpg dataset"
   },
   {
     "objectID": "slides/week3-day1.html#completing-revisions",
     "href": "slides/week3-day1.html#completing-revisions",
     "title": "Incorporating Categorical Variables",
-    "section": "Completing Revisions",
-    "text": "Completing Revisions\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+    "section": "",
+    "text": "Lab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These must be written in your Lab 1 Quarto file (next to the problems you revised)."
   },
   {
     "objectID": "slides/week3-day1.html#section",
     "href": "slides/week3-day1.html#section",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "15-minutes\n\n\n\nReview Lab 1 comments\nAsk questions\nStart revisions"
+    "text": "How would you describe a categorical variable?"
   },
   {
     "objectID": "slides/week3-day1.html#section-1",
     "href": "slides/week3-day1.html#section-1",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "How would you describe a categorical variable?"
+    "text": "Fill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable"
   },
   {
     "objectID": "slides/week3-day1.html#in-r",
     "href": "slides/week3-day1.html#in-r",
     "title": "Incorporating Categorical Variables",
-    "section": "In R…",
-    "text": "In R…\ncategorical variables can have either character or factor data types\n\n\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n\n\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
+    "section": "",
+    "text": "categorical variables can have either character or factor data types\n\n. . .\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n. . .\ncharacter – unstructured & variable number of levels\n\nis inherently unordered"
   },
   {
     "objectID": "slides/week3-day1.html#section-2",
     "href": "slides/week3-day1.html#section-2",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "Fill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable"
+    "text": "Brainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()"
   },
   {
     "objectID": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
     "href": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
     "title": "Incorporating Categorical Variables",
-    "section": "dplyr – a tool bag for data wrangling",
-    "text": "dplyr – a tool bag for data wrangling\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
+    "section": "",
+    "text": "filter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()"
   },
   {
     "objectID": "slides/week3-day1.html#section-3",
     "href": "slides/week3-day1.html#section-3",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "Brainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()"
+    "text": "The Pipe %&gt;%"
   },
   {
     "objectID": "slides/week3-day1.html#section-4",
     "href": "slides/week3-day1.html#section-4",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "The Pipe %&gt;%"
+    "text": "If you wanted means for each level of a categorical variable, what would you do?"
   },
   {
     "objectID": "slides/week3-day1.html#section-5",
@@ -766,64 +766,64 @@
     "objectID": "slides/week3-day1.html#trout-size",
     "href": "slides/week3-day1.html#trout-size",
     "title": "Incorporating Categorical Variables",
-    "section": "Trout Size",
-    "text": "Trout Size\n\nThe HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n\n\n\n\nWhy na.rm = TRUE?"
+    "section": "",
+    "text": "The HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n. . .\n\n\n\nWhy na.rm = TRUE?"
   },
   {
     "objectID": "slides/week3-day1.html#classifying-channel-types",
     "href": "slides/week3-day1.html#classifying-channel-types",
     "title": "Incorporating Categorical Variables",
-    "section": "Classifying Channel Types",
-    "text": "Classifying Channel Types\n\nThe channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit"
+    "section": "",
+    "text": "The channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit"
   },
   {
     "objectID": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "href": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "title": "Incorporating Categorical Variables",
-    "section": "filter()-ing Specific Channel Types",
-    "text": "filter()-ing Specific Channel Types\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n\n\nWhat would you do?\n\n\n\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n\n\n\n\nWhy use %in% instead of ==?"
+    "section": "",
+    "text": "The majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n. . .\n\nWhat would you do?\n\n. . .\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n. . .\n\n\nWhy use %in% instead of ==?"
   },
   {
     "objectID": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
     "href": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
     "title": "Incorporating Categorical Variables",
-    "section": "Incorporating Categorical Variables into Data Visualizations",
-    "text": "Incorporating Categorical Variables into Data Visualizations\n\n\nAs a variable on the x- or y-axis\nAs a color / fill\nAs a facet"
+    "section": "",
+    "text": "As a variable on the x- or y-axis\nAs a color / fill\nAs a facet"
   },
   {
     "objectID": "slides/week3-day1.html#salamander-size",
     "href": "slides/week3-day1.html#salamander-size",
     "title": "Incorporating Categorical Variables",
-    "section": "Salamander Size",
-    "text": "Salamander Size\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
   },
   {
     "objectID": "slides/week3-day1.html#faceted-histograms",
     "href": "slides/week3-day1.html#faceted-histograms",
     "title": "Incorporating Categorical Variables",
-    "section": "Faceted Histograms",
-    "text": "Faceted Histograms\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`)."
   },
   {
     "objectID": "slides/week3-day1.html#side-by-side-boxplots",
     "href": "slides/week3-day1.html#side-by-side-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Side-by-Side Boxplots",
-    "text": "Side-by-Side Boxplots\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
   },
   {
     "objectID": "slides/week3-day1.html#colors-in-boxplots",
     "href": "slides/week3-day1.html#colors-in-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Colors in Boxplots",
-    "text": "Colors in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
   },
   {
     "objectID": "slides/week3-day1.html#facets-colors-in-boxplots",
     "href": "slides/week3-day1.html#facets-colors-in-boxplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Facets & Colors in Boxplots",
-    "text": "Facets & Colors in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
   },
   {
     "objectID": "slides/week3-day1.html#facets-colors-in-boxplots-output",
@@ -836,8 +836,8 @@
     "objectID": "slides/week3-day1.html#facets-color-in-scatterplots",
     "href": "slides/week3-day1.html#facets-color-in-scatterplots",
     "title": "Incorporating Categorical Variables",
-    "section": "Facets & Color in Scatterplots",
-    "text": "Facets & Color in Scatterplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")"
+    "section": "",
+    "text": "ggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 5435 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week3-day1.html#facets-color-in-scatterplots-output",
@@ -850,15 +850,15 @@
     "objectID": "slides/week3-day1.html#your-turn-90-seconds",
     "href": "slides/week3-day1.html#your-turn-90-seconds",
     "title": "Incorporating Categorical Variables",
-    "section": "Your Turn – 90 seconds",
-    "text": "Your Turn – 90 seconds\n\n\nWhat are the aesthetics included in this plot?\n\n\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+    "section": "",
+    "text": "Warning: Removed 96 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n. . .\nWhat are the aesthetics included in this plot?\n. . .\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
   },
   {
     "objectID": "slides/week3-day1.html#your-tasks",
     "href": "slides/week3-day1.html#your-tasks",
     "title": "Incorporating Categorical Variables",
     "section": "Your Tasks",
-    "text": "Your Tasks\n\nFind your visualizations\n\n\nVisualization from your Week 1 article (Statistics in Your Field)\nVisualization from the New York Times\n\n\nDiscuss the aesthetics included in the plots\nDiscuss what you believe the plot does well\nDiscuss what improvements could be made to make the plot more clear"
+    "text": "Your Tasks\n\nFind your visualizations\n\n\nVisualization from the New York Times\nVisualization from your chosen scientific article\n\n\nDiscuss the aesthetics included in the plots\nDiscuss what you believe the plot does well\nDiscuss what improvements could be made to make the plot more clear"
   },
   {
     "objectID": "labs/lab-8.html",
@@ -2170,21 +2170,21 @@
     "href": "critique/stat-critique-2-template.html",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "",
-    "text": "# This is where you will load in your data! \n# Reference the R package you data live inside, since you will need to load that package in!\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(moderndive)\n\n# Package for your data:"
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(moderndive)\nlibrary(broom)\n\n# Reference the R package you data live inside, since you will need to load that package in!\n# Package for your data:"
   },
   {
     "objectID": "critique/stat-critique-2-template.html#visualizations",
     "href": "critique/stat-critique-2-template.html#visualizations",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "Visualizations",
-    "text": "Visualizations\nIn the code chunk below, copy-and-paste the plots you created in your Midterm Project."
+    "text": "Visualizations\n\n# In the code chunk below, copy-and-paste the plots you created in your Midterm Project."
   },
   {
     "objectID": "critique/stat-critique-2-template.html#model-justification",
     "href": "critique/stat-critique-2-template.html#model-justification",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "Model Justification",
-    "text": "Model Justification\nJustify (in 2-3 sentences) why you chose this model!"
+    "text": "Model Justification"
   },
   {
     "objectID": "critique/stat-critique-2-template.html#part-four-lessons-learned",
@@ -4199,7 +4199,7 @@
     "href": "critique/critique-2.html#assignment-details",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "Assignment Details",
-    "text": "Assignment Details\nIn your second statistical critique, you will focus on critiquing another key aspect of any statistical argument—statistical significance. No doubt you have seen \\(p\\)-values in a previous statistical course and / or disciplinary course, and this week you’re adding to that knowledge. For this critique you will compare the model you selected in your Midterm Project with what model you would have chosen based on a statistical test.\nThis critique involves coding! You can find a template for critique on Posit Cloud."
+    "text": "Assignment Details\nIn your second statistical critique, you will focus on critiquing another key aspect of any statistical argument—statistical significance. No doubt you have seen \\(p\\)-values in a previous statistical course and / or disciplinary course, and this week you’re adding to that knowledge. For this critique you will compare the model you selected in your Midterm Project with what model you would have chosen based on a statistical test.\nThis critique involves coding! You can find a template for critique posted in the STAT 313 main workspace on Posit Cloud."
   },
   {
     "objectID": "critique/critique-2.html#part-zero-p-values-in-multiple-linear-regression",
@@ -4918,8 +4918,8 @@
     "objectID": "slides/week3-day2.html#revisions-due-tonight",
     "href": "slides/week3-day2.html#revisions-due-tonight",
     "title": "Week 3 Day 2",
-    "section": "Revisions Due Tonight",
-    "text": "Revisions Due Tonight\nIf you submitted revisions and your grade is still “Incomplete” – you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day."
+    "section": "",
+    "text": "If you submitted revisions and your grade is still “Incomplete” – you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day."
   },
   {
     "objectID": "slides/week3-day2.html#a-grading-reminder",
@@ -4961,21 +4961,21 @@
     "href": "slides/week3-day2.html#completing-revisions",
     "title": "Week 3 Day 2",
     "section": "Completing Revisions",
-    "text": "Completing Revisions\nLab 2 revisions are due by Wednesday, April 24.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 2\nDownload your revised HTML\nSubmit your revisions to the original Lab 2 assignment\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 2 Quarto file (next to the problems you revised), in a Word document, in the comment box on Canvas."
+    "text": "Completing Revisions\nLab 2 revisions are due by Wednesday, April 24.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 2\nDownload your revised HTML\nSubmit your revisions to the original Lab 2 assignment\n\n\n\n\n\n\n\n\nReflections\n\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 2 Quarto file (next to the problems you revised), in a Word document, in the comment box on Canvas."
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---gender",
     "href": "slides/week3-day2.html#choosing-what-to-measure---gender",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Gender",
-    "text": "Choosing What to Measure - Gender\nKeller et al. (2017) designed a study to examine whether a community-based suicide prevention project could increase willingness to seek professional help for suicidal ideation among eastern Montana youth.\n\n\nStudents attending the Let’s Talk theater workshop, were asked to report their gender, race, and age."
+    "text": "Choosing What to Measure - Gender\nKeller et al. (2017) designed a study to examine whether a community-based suicide prevention project could increase willingness to seek professional help for suicidal ideation among eastern Montana youth.\n. . .\n\nStudents attending the Let’s Talk theater workshop, were asked to report their gender, race, and age."
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---gender-1",
     "href": "slides/week3-day2.html#choosing-what-to-measure---gender-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Gender",
-    "text": "Choosing What to Measure - Gender\nResearchers provided students with the following question:\n\nWhat is your gender?\nMale, Female, Other\n\n\n \n\nWhat information are the researchers missing?"
+    "text": "Choosing What to Measure - Gender\nResearchers provided students with the following question:\n\nWhat is your gender?\nMale, Female, Other\n\n. . .\n \n\nWhat information are the researchers missing?"
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---sex",
@@ -4989,7 +4989,7 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---sex-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Sex",
-    "text": "Choosing What to Measure - Sex\nThe intake form for a local heart clinic asks the following question:\n\nWhat is sex were you assigned at birth?\nMale, Female, Other\n\n\n \n\nWhat information are the doctors missing?"
+    "text": "Choosing What to Measure - Sex\nThe intake form for a local heart clinic asks the following question:\n\nWhat is sex were you assigned at birth?\nMale, Female, Other\n\n. . .\n \n\nWhat information are the doctors missing?"
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---race",
@@ -5003,7 +5003,7 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---race-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Race",
-    "text": "Choosing What to Measure - Race\nLooking at the births14 dataset, the race of the mother was classified as:\n\nwhite\nnonwhite\n\n\n \n\nWhat information are researchers missing?"
+    "text": "Choosing What to Measure - Race\nLooking at the births14 dataset, the race of the mother was classified as:\n\nwhite\nnonwhite\n\n. . .\n \n\nWhat information are researchers missing?"
   },
   {
     "objectID": "slides/week3-day2.html#todays-data",
@@ -5024,7 +5024,7 @@
     "href": "slides/week3-day2.html#data-layout",
     "title": "Week 3 Day 2",
     "section": "Data Layout",
-    "text": "Data Layout\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n2017\nMACKCC-L\nCC\nL\n1\n2\nSC\n29\nNA\nCascade torrent salamander\n39\n67\n1.30\nNONE\n2017-09-05\nNA\n\n\n2003\nMACKCC-L\nCC\nL\n1\n2\nSC\n48\nNA\nCascade torrent salamander\n33\n55\nNA\nNONE\n2003-09-02\nNA\n\n\n1995\nMACKOG-L\nOG\nL\n2\n2\nC\n10\nNA\nCoastal giant salamander\n26\n49\n0.70\nNONE\n1995-08-29\nNA\n\n\n2019\nMACKOG-U\nOG\nU\n1\n12\nP\n13\n1043544\nCoastal giant salamander\n120\n192\n50.00\nNONE\n2019-09-05\nNA\n\n\n2015\nMACKCC-U\nCC\nU\n1\n9\nC\n75\n19055544\nCutthroat trout\n122\nNA\n17.14\nNONE\n2015-09-01\nRECAP\n\n\n2005\nMACKCC-L\nCC\nL\n1\n2\nSC\n34\nNA\nCutthroat trout\n85\nNA\nNA\nNONE\n2005-08-31\nNA\n\n\n1995\nMACKOG-M\nOG\nM\n1\n10\nS\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-29\nJAM\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n\n\n\n\n\n\nWhat are the observations / rows in this dataset?"
+    "text": "Data Layout\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n1994\nMACKCC-L\nCC\nL\n1\n3\nSC\n20\nNA\nCascade torrent salamander\n40\n72\n1.95\nNONE\n1994-08-30\nNA\n\n\n2017\nMACKCC-L\nCC\nL\n1\n2\nSC\n29\nNA\nCascade torrent salamander\n39\n67\n1.30\nNONE\n2017-09-05\nNA\n\n\n2008\nMACKOG-U\nOG\nU\n1\n11\nC\n15\nNA\nCoastal giant salamander\n55\n98\n6.75\nNONE\n2008-09-17\nNA\n\n\n2008\nMACKOG-M\nOG\nM\n1\n9\nC\n101\nNA\nCoastal giant salamander\n49\n85\nNA\nNONE\n2008-09-16\nNA\n\n\n1995\nMACKCC-L\nCC\nL\n1\n6\nSC\n15\nNA\nCutthroat trout\n74\nNA\n4.50\nNONE\n1995-08-30\nNA\n\n\n2007\nMACKOG-U\nOG\nU\n1\n10\nP\n37\nNA\nCutthroat trout\n89\nNA\nNA\nNONE\n2007-09-13\nNA\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n1990\nMACKCC-L\nCC\nL\n1\n3\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1990-08-15\nnot sampled\n\n\n\n\n\n\n\n. . .\nWhat are the observations / rows in this dataset?"
   },
   {
     "objectID": "slides/week3-day2.html#if-you-wanted-to-find-the-mean-mass-for-cutthroat-trout-in-each-section-what-would-you-do",
@@ -5045,14 +5045,14 @@
     "href": "slides/week3-day2.html#step-2-group_by-summarize",
     "title": "Week 3 Day 2",
     "section": "Step 2: group_by() + summarize()",
-    "text": "Step 2: group_by() + summarize()\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g,\n                     na.rm = TRUE)\n            )\n\n\n\n# A tibble: 2 × 2\n  section    mean_mass\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Clear cut       9.38\n2 Old growth      8.21\n\n\n\n\n\n\n\n\n\n\nRemember na.rm = TRUE is important if there are missing values!"
+    "text": "Step 2: group_by() + summarize()\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g,\n                     na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section    mean_mass\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Clear cut       9.38\n2 Old growth      8.21\n\n\n. . .\n\n\n\n\n\n\n\nRemember na.rm = TRUE is important if there are missing values!"
   },
   {
     "objectID": "slides/week3-day2.html#are-they-different",
     "href": "slides/week3-day2.html#are-they-different",
     "title": "Week 3 Day 2",
     "section": "Are they different?",
-    "text": "Are they different?\n\n\n\n\n\n\n\n\n\nForest Section\nMean Biomass\n\n\n\n\nClear cut\n9.380571\n\n\nOld growth\n8.213796\n\n\n\n\n\n\n\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
+    "text": "Are they different?\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(mean_mass = mean(weight_g, \n                             na.rm = TRUE)\n            ) %&gt;% \n  rename(`Forest Section` = section, \n         `Mean Biomass` = mean_mass) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nForest Section\nMean Biomass\n\n\n\n\nClear cut\n9.380571\n\n\nOld growth\n8.213796\n\n\n\n\n\n\n\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
   },
   {
     "objectID": "slides/week3-day2.html#lets-make-a-visualization",
@@ -5066,7 +5066,7 @@
     "href": "slides/week3-day2.html#are-they-different-1",
     "title": "Week 3 Day 2",
     "section": "Are they different?",
-    "text": "Are they different?\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
+    "text": "Are they different?\n\n\nPicking joint bandwidth of 1.35\n\n\nWarning: Removed 7839 rows containing non-finite outside the scale range\n(`stat_density_ridges()`).\n\n\n\n\n\n\n\n\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
   },
   {
     "objectID": "slides/week3-day2.html#lets-add-in-the-type-of-channel",
@@ -5087,14 +5087,14 @@
     "href": "slides/week3-day2.html#group_by-multiple-variables",
     "title": "Week 3 Day 2",
     "section": "group_by() Multiple Variables",
-    "text": "group_by() Multiple Variables\n\ntrout %&gt;% \n  group_by(section, unittype) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g, \n                     na.rm = TRUE)\n            )\n\n\n\n# A tibble: 13 × 3\n# Groups:   section [2]\n   section    unittype mean_mass\n   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;\n 1 Clear cut  C             8.47\n 2 Clear cut  P            13.4 \n 3 Clear cut  R             8.06\n 4 Clear cut  S             4.34\n 5 Clear cut  SC            4.80\n 6 Clear cut  &lt;NA&gt;         16.3 \n 7 Old growth C             7.58\n 8 Old growth I             9.81\n 9 Old growth IP            1.39\n10 Old growth P            10.4 \n11 Old growth R             6.66\n12 Old growth SC            5.38\n13 Old growth &lt;NA&gt;         13.4"
+    "text": "group_by() Multiple Variables\n\ntrout %&gt;% \n  group_by(section, unittype) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g, \n                     na.rm = TRUE)\n            )\n\n`summarise()` has grouped output by 'section'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 13 × 3\n# Groups:   section [2]\n   section    unittype mean_mass\n   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;\n 1 Clear cut  C             8.47\n 2 Clear cut  P            13.4 \n 3 Clear cut  R             8.06\n 4 Clear cut  S             4.34\n 5 Clear cut  SC            4.80\n 6 Clear cut  &lt;NA&gt;         16.3 \n 7 Old growth C             7.58\n 8 Old growth I             9.81\n 9 Old growth IP            1.39\n10 Old growth P            10.4 \n11 Old growth R             6.66\n12 Old growth SC            5.38\n13 Old growth &lt;NA&gt;         13.4"
   },
   {
     "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color",
     "href": "slides/week3-day2.html#visualization-2.0-incorporating-color",
     "title": "Week 3 Day 2",
     "section": "Visualization 2.0 – Incorporating Color",
-    "text": "Visualization 2.0 – Incorporating Color\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     fill = section, \n                     y = unittype)\n       ) +\n  geom_density_ridges(alpha = 0.5) +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       fill = \"Section of HJ Andrews \\nExperimental Forest\", \n       y = \"Type of Channel\")\n\n\n\n\nWhy put unittype on the y-axis instead of section???"
+    "text": "Visualization 2.0 – Incorporating Color\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     fill = section, \n                     y = unittype)\n       ) +\n  geom_density_ridges(alpha = 0.5) +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       fill = \"Section of HJ Andrews \\nExperimental Forest\", \n       y = \"Type of Channel\")\n\n\n\n\n\n\n\n\n. . .\n\nWhy put unittype on the y-axis instead of section???"
   },
   {
     "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color-output",
@@ -5534,43 +5534,43 @@
     "objectID": "slides/week5-day1.html#plan-for-today",
     "href": "slides/week5-day1.html#plan-for-today",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Plan for Today",
-    "text": "Plan for Today\n\nReview different types of multiple linear regression models\nComplete an activity on sample selection\nStart Midterm Project write-up"
+    "section": "",
+    "text": "Review different types of multiple linear regression models\nComplete an activity on sample selection\nStart Midterm Project write-up"
   },
   {
     "objectID": "slides/week5-day1.html#plan-for-wednesday",
     "href": "slides/week5-day1.html#plan-for-wednesday",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Plan for Wednesday",
-    "text": "Plan for Wednesday\nNo lab – focus on getting all the coding accomplished for the Midterm Project"
+    "section": "",
+    "text": "No lab – focus on getting all the coding accomplished for the Midterm Project"
   },
   {
     "objectID": "slides/week5-day1.html#draft-due-by-sunday",
     "href": "slides/week5-day1.html#draft-due-by-sunday",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Draft Due by Sunday",
-    "text": "Draft Due by Sunday\nTo get everyone feedback on their drafts in a timely manner, the first drafts are due by Sunday.\n\n\n\n\n\n\nDeadline Extension\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
+    "section": "",
+    "text": "To get everyone feedback on their drafts in a timely manner, the first drafts are due by Sunday.\n\n\n\n\n\n\nDeadline Extension\n\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
   },
   {
     "objectID": "slides/week5-day1.html#reminders-about-deadlines",
     "href": "slides/week5-day1.html#reminders-about-deadlines",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Reminders About Deadlines",
-    "text": "Reminders About Deadlines\n\nMidterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
+    "section": "",
+    "text": "Midterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
   },
   {
     "objectID": "slides/week5-day1.html#section",
     "href": "slides/week5-day1.html#section",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Before…"
+    "text": "Before…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-1",
     "href": "slides/week5-day1.html#section-1",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Now…"
+    "text": "Now…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-2",
@@ -5584,14 +5584,14 @@
     "href": "slides/week5-day1.html#section-3",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Offsets!\n\n\nsmoke_lm &lt;- lm(weight ~ weeks * habit, data = ncbirths)\n\nget_regression_table(smoke_lm)\n\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\n\n\n\n\n\nInteraction Model\n\n\nThe * means the variables are interacting!"
+    "text": "Offsets!\n\n\nsmoke_lm &lt;- lm(weight ~ weeks * habit, data = ncbirths)\n\nget_regression_table(smoke_lm)\n\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\n\n\n\n\n\nInteraction Model\n\n\n\nThe * means the variables are interacting!"
   },
   {
     "objectID": "slides/week5-day1.html#estimated-regression-equations",
     "href": "slides/week5-day1.html#estimated-regression-equations",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Estimated Regression Equations",
-    "text": "Estimated Regression Equations\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\nWhat is the regression equation for non-smoker mothers?\n\n\n\nWhat is the regression equation for smoker mothers?"
+    "text": "Estimated Regression Equations\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\nWhat is the regression equation for non-smoker mothers?\n\n. . .\n\nWhat is the regression equation for smoker mothers?"
   },
   {
     "objectID": "slides/week5-day1.html#section-4",
@@ -5605,7 +5605,7 @@
     "href": "slides/week5-day1.html#section-6",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Multiple slopes\n\n\nage_lm &lt;- lm(weight ~ weeks + mage, data = ncbirths)\n\nget_regression_table(age_lm)\n\n\n\n# A tibble: 3 × 3\n  term      estimate std_error\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept   -6.68      0.492\n2 weeks        0.346     0.012\n3 mage         0.02      0.006\n\n\n\n\nHow do you interpret the value of 0.346?\n\n\n\n\nHow do you interpret the value of 0.02?"
+    "text": "Multiple slopes\n\n\nage_lm &lt;- lm(weight ~ weeks + mage, data = ncbirths)\n\nget_regression_table(age_lm)\n\n\n\n# A tibble: 3 × 3\n  term      estimate std_error\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept   -6.68      0.492\n2 weeks        0.346     0.012\n3 mage         0.02      0.006\n\n\n. . .\n\nHow do you interpret the value of 0.346?\n\n. . .\n\nHow do you interpret the value of 0.02?"
   },
   {
     "objectID": "slides/week5-day1.html#section-7",
@@ -5619,49 +5619,49 @@
     "href": "slides/week5-day1.html#section-8",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "When investigating if a relationship differs…\n\n\n\nAlways start with the “interaction” / different slopes model.\n\n\n\n\nIf the slopes look different, you’re done!\n\n\n\n\nIf the slopes look similar, then fit the “additive” / parallel slopes model."
+    "text": "When investigating if a relationship differs…\n\n. . .\n\nAlways start with the “interaction” / different slopes model.\n\n. . .\n\nIf the slopes look different, you’re done!\n\n. . .\n\nIf the slopes look similar, then fit the “additive” / parallel slopes model."
   },
   {
     "objectID": "slides/week5-day1.html#section-9",
     "href": "slides/week5-day1.html#section-9",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Different Enough?"
+    "text": "Different Enough?\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week5-day1.html#section-10",
     "href": "slides/week5-day1.html#section-10",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "What if they’re not very different?"
+    "text": "What if they’re not very different?\n\n\nMA_schools %&gt;% \n  ggplot(mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_parallel_slopes() + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\") +\n  my_theme"
   },
   {
     "objectID": "slides/week5-day1.html#section-11",
     "href": "slides/week5-day1.html#section-11",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
+    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
   },
   {
     "objectID": "slides/week5-day1.html#section-12",
     "href": "slides/week5-day1.html#section-12",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Baseline\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
+    "text": "Group equations – Baseline\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n. . .\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-13",
     "href": "slides/week5-day1.html#section-13",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
+    "text": "Group equations – Offsets\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n. . .\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n. . .\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#find-your-data-group",
     "href": "slides/week5-day1.html#find-your-data-group",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Find Your Data Group!",
-    "text": "Find Your Data Group!\nOnce you have found other students working on the same dataset, complete the sample selection activity.\n\n\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+    "text": "Find Your Data Group!\nOnce you have found other students working on the same dataset, complete the sample selection activity.\n. . .\n\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
   },
   {
     "objectID": "slides/week5-day1.html#steps-before-wednesday",
@@ -6254,5 +6254,40 @@
     "title": "Reading a Research Paper Part 1",
     "section": "",
     "text": "Read the Background and Methods in the summary at the beginning of the Tuan et al. paper. Then answer the following questions:\n\nWhat data is involved in this research study?\nWhat are the research questions / research goals?"
+  },
+  {
+    "objectID": "slides/week3-day1.html",
+    "href": "slides/week3-day1.html",
+    "title": "Incorporating Categorical Variables",
+    "section": "",
+    "text": "“Complete” = Satisfactory\n\n\nYou provided responses to every question\nYou correctly identified the observational unit for the mpg dataset\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYou did not provide responses to every question\nYou did not correctly identify the observational unit for the mpg dataset\n\n\n\n\n\n\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These must be written in your Lab 1 Quarto file (next to the problems you revised).\n\n\n\n\n\n\n\n\nHow would you describe a categorical variable?\n\n\n\n\n\ncategorical variables can have either character or factor data types\n\n. . .\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n. . .\ncharacter – unstructured & variable number of levels\n\nis inherently unordered\n\n\n\n\n\nFill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable\n\n\n\n\n\n\n\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()\n\n\n\n\n\n\nBrainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()\n\n\n\n\n\n\n\n\n\n\n\n\nThe Pipe %&gt;%\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you wanted means for each level of a categorical variable, what would you do?\n\n\n\n\n\nThe HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n. . .\n\n\n\nWhy na.rm = TRUE?\n\n\n\n\n\n\nThe channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit\n\n\n\n\n\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n. . .\n\nWhat would you do?\n\n. . .\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n. . .\n\n\nWhy use %in% instead of ==?\n\n\n\n\n\n\nAs a variable on the x- or y-axis\nAs a color / fill\nAs a facet\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 5435 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 96 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n. . .\nWhat are the aesthetics included in this plot?\n. . .\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+  },
+  {
+    "objectID": "slides/week3-day1.html#your-tasks-1",
+    "href": "slides/week3-day1.html#your-tasks-1",
+    "title": "Incorporating Categorical Variables",
+    "section": "Your Tasks",
+    "text": "Your Tasks\nRead the Background and Methods in the summary at the beginning of the Tuan et al. paper. Then answer the following questions:\n\nWhat data is involved in this research study?\nWhat are the research questions / research goals?"
+  },
+  {
+    "objectID": "slides/week3-day2.html",
+    "href": "slides/week3-day2.html",
+    "title": "Week 3 Day 2",
+    "section": "",
+    "text": "If you submitted revisions and your grade is still “Incomplete” – you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day."
+  },
+  {
+    "objectID": "slides/week5-day1.html",
+    "href": "slides/week5-day1.html",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "",
+    "text": "Review different types of multiple linear regression models\nComplete an activity on sample selection\nStart Midterm Project write-up\n\n\n\n\nNo lab – focus on getting all the coding accomplished for the Midterm Project\n\n\n\nTo get everyone feedback on their drafts in a timely manner, the first drafts are due by Sunday.\n\n\n\n\n\n\nDeadline Extension\n\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week).\n\n\n\n\n\n\nMidterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
+  },
+  {
+    "objectID": "slides/week5-day1.html#section-5",
+    "href": "slides/week5-day1.html#section-5",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "",
+    "text": "ncbirths %&gt;% \n  ggplot(mapping = aes(x = weeks, y = weight, color = mage)) + \n  geom_jitter() + \n  geom_smooth(method = \"lm\") +\n  labs(x = \"Weeks of Gestation\", \n       y = \"Weight of Baby (lbs)\", \n       color = \"Mother's Age\") +\n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   }
 ]
