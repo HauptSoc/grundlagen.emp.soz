@@ -63,6 +63,16 @@ information, and skip over technical details that are not essential to
 understanding the key take-aways. The questions below will guide you to the most
 important sections in the paper by Tuan et al. 
 
+## Submission
+
+[Click here to download a template file](reading-research-paper-pt-2-student.qmd)
+for completing this assignment: 
+
+You are allowed to use any text editing software to make your document 
+(e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are
+unsure how to save your file as a PDF, I recommend using Google!
+
+
 # The Abstract and Introduction 
 
 A good place to start is often with the Abstract and Introduction, which allow

@@ -1,0 +1,72 @@
+---
+title: "Reading a Research Paper Part 2"
+format: docx
+---
+
+# Reading a Research Paper 
+
+Reading a research paper, particularly in a field in which you are not an
+expert, can be challenging. The trick is to skim the paper for the most relevant
+information, and skip over technical details that are not essential to
+understanding the key take-aways. The questions below will guide you to the most
+important sections in the paper by Tuan et al. 
+
+# The Abstract and Introduction 
+
+A good place to start is often with the Abstract and Introduction, which allow
+you get an overview of the paper, and usually don’t contain too many technical
+details. The Abstract is more succinct than the Introduction, but it also
+provides less motivation. When the Introduction is long, you may want to skim
+for key details. 
+
+Read the **Abstract** and **Introduction**. Then answer the following questions.
+
+1. Why is it important for the researchers to build a model to detect dengue in
+hospital patients? 
+
+2. What is the specific purpose of the research study? 
+
+# Study Participants 
+
+Potential research subjects must meet certain criteria, defined by the
+researchers, to participate in a study. Inclusion criteria define requirements
+for inclusion in the study (e.g., a target age range or social group), while
+exclusion criteria are reasons a subject would be asked not to participate
+(e.g., certain medical conditions). 
+
+3. What are the inclusion/exclusion criteria for this study? 
+
+# Data Collection and Analysis 
+
+Now that we know who was studied, we want to know what data was collected about
+each participant, and how it was analyzed. Read the *Clinical and laboratory
+investigations on the day of enrolment* and *Statistical methods* subsections of
+the **Methods**. Then answer the following questions. 
+
+4. Which variables were recorded for the patients in the study? 
+
+5. Which types of statistical methods were used to model the relation between
+the explanatory variables and whether the patient had dengue? (It is okay if
+you’re not familiar with all these methods!) 
+
+6. How did the researchers choose which variables to include in their logistic
+regression model? 
+
+7. Which threshold did the researchers use when converting their predicted
+probabilities into binary predictions? 
+
+# Results 
+
+Finally, let’s see what the researchers concluded from their statistical models!
+Read the *Early Dengue Classifier* subsection of the **Results**, then answer
+the following questions. 
+
+8. Which variables did the researchers include in their final logistic
+regression model? 
+
+9. Were there other models that performed as well as the model that the
+researchers chose? If so, why were these other models not selected? 
+
+10. What does it mean that the model had a "sensitivity" of 74.8% for correctly
+classifying dengue? 
+

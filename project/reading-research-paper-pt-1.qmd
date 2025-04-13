@@ -38,6 +38,9 @@ answer the following questions:
 
 ## Submission
 
+[Click here to download a template file](reading-research-paper-pt-1-student.qmd)
+for completing this assignment: 
+
 You are allowed to use any text editing software to make your document 
 (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are
 unsure how to save your file as a PDF, I recommend using Google!
