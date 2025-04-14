@@ -191,7 +191,7 @@ Brainstorm definitions for each verb
 ## The Pipe ![](images/pipe.png){fig-alt="A hex of the pipe operator from the magrittr package. The pipe operator is a % followed by a > followed by another %, which is used to chain data wrangling operations together." width=10%}
 
 <center>
-![](images/pipe_process.png){fig-alt=""}
+![](images/pipe_process.png){fig-alt="A cartoon-style diagram of data processing using pipe-shaped illustrations. The diagram begins with 'data' flowing into pipes labeled with various data transformation functions from the dplyr package: 'filter,' 'mutate,' 'group_by,' and 'summarize.' Each function name is positioned next to a differently shaped or colored pipe, representing how data is modified at each step. The background is teal, and the function names are written in white monospaced font with arrows indicating the flow direction."}
 </center>
 
 ## The Pipe in Action!
