@@ -4968,14 +4968,14 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---gender",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Gender",
-    "text": "Choosing What to Measure - Gender\nKeller et al. (2017) designed a study to examine whether a community-based suicide prevention project could increase willingness to seek professional help for suicidal ideation among eastern Montana youth.\n. . .\n\nStudents attending the Let’s Talk theater workshop, were asked to report their gender, race, and age."
+    "text": "Choosing What to Measure - Gender\nKeller et al. (2017) designed a study to examine whether a community-based suicide prevention project could increase willingness to seek professional help for suicidal ideation among eastern Montana youth.\n\n\nStudents attending the Let’s Talk theater workshop, were asked to report their gender, race, and age."
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---gender-1",
     "href": "slides/week3-day2.html#choosing-what-to-measure---gender-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Gender",
-    "text": "Choosing What to Measure - Gender\nResearchers provided students with the following question:\n\nWhat is your gender?\nMale, Female, Other\n\n. . .\n \n\nWhat information are the researchers missing?"
+    "text": "Choosing What to Measure - Gender\nResearchers provided students with the following question:\n\nWhat is your gender?\nMale, Female, Other\n\n\n\n\nWhat information are the researchers missing?\n\n\n\n\nWhy is that information important?"
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---sex",
@@ -4989,7 +4989,7 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---sex-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Sex",
-    "text": "Choosing What to Measure - Sex\nThe intake form for a local heart clinic asks the following question:\n\nWhat is sex were you assigned at birth?\nMale, Female, Other\n\n. . .\n \n\nWhat information are the doctors missing?"
+    "text": "Choosing What to Measure - Sex\nThe intake form for a local heart clinic asks the following question:\n\nWhat is sex were you assigned at birth?\nMale, Female, Other\n\n\n\n\nWhat information are the doctors missing?\n\n\n\n\nWhy is that information important?"
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---race",
@@ -5003,28 +5003,28 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---race-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Race",
-    "text": "Choosing What to Measure - Race\nLooking at the births14 dataset, the race of the mother was classified as:\n\nwhite\nnonwhite\n\n. . .\n \n\nWhat information are researchers missing?"
+    "text": "Choosing What to Measure - Race\nLooking at the births14 dataset, the race of the mother was classified as:\n\nwhite\nnonwhite\n\n\n\n\nWhat information is missing?\n\n\n\n\nWhy is that information important?"
   },
   {
     "objectID": "slides/week3-day2.html#todays-data",
     "href": "slides/week3-day2.html#todays-data",
     "title": "Week 3 Day 2",
     "section": "Today’s Data",
-    "text": "Today’s Data\n\n\nThe and_vertebrates dataset contains length and weight observations for Coastal Cutthroat Trout and two salamander species (Coastal Giant Salamander, and Cascade Torrent Salamander) in previously clear cut (c. 1963) and old growth coniferous forest sections of Mack Creek in HJ Andrews Experimental Forest, Willamette National Forest, Oregon."
+    "text": "Today’s Data\n\n\n\n\nThe and_vertebrates dataset contains length and weight observations for Coastal Cutthroat Trout and two salamander species (Coastal Giant Salamander, and Cascade Torrent Salamander) in previously clear cut (c. 1963) and old growth coniferous forest sections of Mack Creek in HJ Andrews Experimental Forest, Willamette National Forest, Oregon."
   },
   {
     "objectID": "slides/week3-day2.html#research-question",
     "href": "slides/week3-day2.html#research-question",
     "title": "Week 3 Day 2",
     "section": "Research Question",
-    "text": "Research Question\n \n\n\nAre there differences in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
+    "text": "Research Question\n\n\n\nAre there differences in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?\n\n\n\n\n\n\n\n\n\n\nClear Cutting\n\n\nIn the 1950s and 60s researchers clear cut sections of the HJ Andrews forest to research the efficiency of forest operations, including logging, road building, and forest regeneration."
   },
   {
     "objectID": "slides/week3-day2.html#data-layout",
     "href": "slides/week3-day2.html#data-layout",
     "title": "Week 3 Day 2",
     "section": "Data Layout",
-    "text": "Data Layout\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n1994\nMACKCC-L\nCC\nL\n1\n3\nSC\n20\nNA\nCascade torrent salamander\n40\n72\n1.95\nNONE\n1994-08-30\nNA\n\n\n2017\nMACKCC-L\nCC\nL\n1\n2\nSC\n29\nNA\nCascade torrent salamander\n39\n67\n1.30\nNONE\n2017-09-05\nNA\n\n\n2008\nMACKOG-U\nOG\nU\n1\n11\nC\n15\nNA\nCoastal giant salamander\n55\n98\n6.75\nNONE\n2008-09-17\nNA\n\n\n2008\nMACKOG-M\nOG\nM\n1\n9\nC\n101\nNA\nCoastal giant salamander\n49\n85\nNA\nNONE\n2008-09-16\nNA\n\n\n1995\nMACKCC-L\nCC\nL\n1\n6\nSC\n15\nNA\nCutthroat trout\n74\nNA\n4.50\nNONE\n1995-08-30\nNA\n\n\n2007\nMACKOG-U\nOG\nU\n1\n10\nP\n37\nNA\nCutthroat trout\n89\nNA\nNA\nNONE\n2007-09-13\nNA\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n1990\nMACKCC-L\nCC\nL\n1\n3\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1990-08-15\nnot sampled\n\n\n\n\n\n\n\n. . .\nWhat are the observations / rows in this dataset?"
+    "text": "Data Layout\n\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n2019\nMACKOG-M\nOG\nM\n1\n8\nSC\n17\nNA\nCascade torrent salamander\n28\n52\n0.80\nNONE\n2019-09-04\nTorrent salamander\n\n\n2003\nMACKCC-L\nCC\nL\n1\n2\nSC\n48\nNA\nCascade torrent salamander\n33\n55\nNA\nNONE\n2003-09-02\nNA\n\n\n2010\nMACKCC-U\nCC\nU\n1\n7\nC\n56\nNA\nCoastal giant salamander\n26\n50\n0.67\nNONE\n2010-09-08\nNA\n\n\n2015\nMACKOG-L\nOG\nL\n2\n3\nC\n5\nNA\nCoastal giant salamander\n45\n80\n3.31\nNONE\n2015-09-02\nNA\n\n\n1998\nMACKCC-L\nCC\nL\n1\n1\nC\n45\nNA\nCutthroat trout\n89\nNA\nNA\nNONE\n1998-09-04\nNA\n\n\n2011\nMACKOG-M\nOG\nM\n1\n6\nP\n4\nNA\nCutthroat trout\n85\nNA\n5.92\nNONE\n2011-09-14\nNA\n\n\n1990\nMACKCC-L\nCC\nL\n1\n3\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1990-08-15\nnot sampled\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n\n\n\n\n\n\n\nWhat are the observations / rows in this dataset?"
   },
   {
     "objectID": "slides/week3-day2.html#if-you-wanted-to-find-the-mean-mass-for-cutthroat-trout-in-each-section-what-would-you-do",
@@ -5045,28 +5045,28 @@
     "href": "slides/week3-day2.html#step-2-group_by-summarize",
     "title": "Week 3 Day 2",
     "section": "Step 2: group_by() + summarize()",
-    "text": "Step 2: group_by() + summarize()\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g,\n                     na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section    mean_mass\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Clear cut       9.38\n2 Old growth      8.21\n\n\n. . .\n\n\n\n\n\n\n\nRemember na.rm = TRUE is important if there are missing values!"
+    "text": "Step 2: group_by() + summarize()\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g,\n                     na.rm = TRUE)\n            )\n\n\n\n# A tibble: 2 × 2\n  section    mean_mass\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Clear cut       9.38\n2 Old growth      8.21\n\n\n\n\n\n\n\n\n\n\nRemember na.rm = TRUE is important if there are missing values!"
   },
   {
     "objectID": "slides/week3-day2.html#are-they-different",
     "href": "slides/week3-day2.html#are-they-different",
     "title": "Week 3 Day 2",
     "section": "Are they different?",
-    "text": "Are they different?\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(mean_mass = mean(weight_g, \n                             na.rm = TRUE)\n            ) %&gt;% \n  rename(`Forest Section` = section, \n         `Mean Biomass` = mean_mass) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nForest Section\nMean Biomass\n\n\n\n\nClear cut\n9.380571\n\n\nOld growth\n8.213796\n\n\n\n\n\n\n\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
+    "text": "Are they different?\n\n\n\n\n\n\n\n\n\nForest Section\nMean Biomass\n\n\n\n\nClear cut\n9.380571\n\n\nOld growth\n8.213796\n\n\n\n\n\n\n\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
   },
   {
     "objectID": "slides/week3-day2.html#lets-make-a-visualization",
     "href": "slides/week3-day2.html#lets-make-a-visualization",
     "title": "Week 3 Day 2",
     "section": "Let’s Make a Visualization!",
-    "text": "Let’s Make a Visualization!\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     y = section)\n       ) +\n  geom_density_ridges() +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       y = \"Section of HJ Andrews Experimental Forest\")"
+    "text": "Let’s Make a Visualization!\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     y = section)\n       ) +\n  geom_density_ridges() +\n  labs(x = \"Weight of Cutthroat Trout (g)\",\n       y = \"\",\n       title = \"Length of Salamanders for Different Sections of HJ Andrews Experimental Forest\")"
   },
   {
     "objectID": "slides/week3-day2.html#are-they-different-1",
     "href": "slides/week3-day2.html#are-they-different-1",
     "title": "Week 3 Day 2",
     "section": "Are they different?",
-    "text": "Are they different?\n\n\nPicking joint bandwidth of 1.35\n\n\nWarning: Removed 7839 rows containing non-finite outside the scale range\n(`stat_density_ridges()`).\n\n\n\n\n\n\n\n\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
+    "text": "Are they different?\n\nWould you conclude there is a difference in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
   },
   {
     "objectID": "slides/week3-day2.html#lets-add-in-the-type-of-channel",
@@ -5087,14 +5087,14 @@
     "href": "slides/week3-day2.html#group_by-multiple-variables",
     "title": "Week 3 Day 2",
     "section": "group_by() Multiple Variables",
-    "text": "group_by() Multiple Variables\n\ntrout %&gt;% \n  group_by(section, unittype) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g, \n                     na.rm = TRUE)\n            )\n\n`summarise()` has grouped output by 'section'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 13 × 3\n# Groups:   section [2]\n   section    unittype mean_mass\n   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;\n 1 Clear cut  C             8.47\n 2 Clear cut  P            13.4 \n 3 Clear cut  R             8.06\n 4 Clear cut  S             4.34\n 5 Clear cut  SC            4.80\n 6 Clear cut  &lt;NA&gt;         16.3 \n 7 Old growth C             7.58\n 8 Old growth I             9.81\n 9 Old growth IP            1.39\n10 Old growth P            10.4 \n11 Old growth R             6.66\n12 Old growth SC            5.38\n13 Old growth &lt;NA&gt;         13.4"
+    "text": "group_by() Multiple Variables\n\ntrout %&gt;% \n  group_by(section, unittype) %&gt;% \n  summarize(\n    mean_mass = mean(weight_g, \n                     na.rm = TRUE)\n            )\n\n\n\n# A tibble: 13 × 3\n# Groups:   section [2]\n   section    unittype mean_mass\n   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;\n 1 Clear cut  C             8.47\n 2 Clear cut  P            13.4 \n 3 Clear cut  R             8.06\n 4 Clear cut  S             4.34\n 5 Clear cut  SC            4.80\n 6 Clear cut  &lt;NA&gt;         16.3 \n 7 Old growth C             7.58\n 8 Old growth I             9.81\n 9 Old growth IP            1.39\n10 Old growth P            10.4 \n11 Old growth R             6.66\n12 Old growth SC            5.38\n13 Old growth &lt;NA&gt;         13.4"
   },
   {
     "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color",
     "href": "slides/week3-day2.html#visualization-2.0-incorporating-color",
     "title": "Week 3 Day 2",
     "section": "Visualization 2.0 – Incorporating Color",
-    "text": "Visualization 2.0 – Incorporating Color\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     fill = section, \n                     y = unittype)\n       ) +\n  geom_density_ridges(alpha = 0.5) +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       fill = \"Section of HJ Andrews \\nExperimental Forest\", \n       y = \"Type of Channel\")\n\n\n\n\n\n\n\n\n. . .\n\nWhy put unittype on the y-axis instead of section???"
+    "text": "Visualization 2.0 – Incorporating Color\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     fill = section, \n                     y = unittype)\n       ) +\n  geom_density_ridges(alpha = 0.5) +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       fill = \"Section of HJ Andrews \\nExperimental Forest\", \n       y = \"Type of Channel\")"
   },
   {
     "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color-output",
@@ -6317,5 +6317,19 @@
     "title": "Incorporating Categorical Variables",
     "section": "Facets in Boxplots",
     "text": "Facets in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~unittype) +\n  labs(x = \"Snout to Tail Length of Salamander (mm)\", \n       y = \"\")"
+  },
+  {
+    "objectID": "slides/week3-day2.html#section",
+    "href": "slides/week3-day2.html#section",
+    "title": "Week 3 Day 2",
+    "section": "",
+    "text": "If you wanted to find the mean mass for Cutthroat trout in each section, what would you do?"
+  },
+  {
+    "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color-1",
+    "href": "slides/week3-day2.html#visualization-2.0-incorporating-color-1",
+    "title": "Week 3 Day 2",
+    "section": "Visualization 2.0 – Incorporating Color",
+    "text": "Visualization 2.0 – Incorporating Color\n\n\nWhy put unittype on the y-axis instead of section???"
   }
 ]

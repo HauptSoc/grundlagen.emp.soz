@@ -4,7 +4,7 @@ subtitle: "STAT 313"
 format: 
   revealjs:
     theme: [simple, style.scss]
-editor: visual
+editor: source
 bibliography: references.bib
 ---
 
@@ -16,6 +16,7 @@ library(lterdatasampler)
 library(tidyverse)
 library(ggridges)
 library(palmerpenguins)
+library(gt)
 
 vertebrates_full_code <- and_vertebrates %>% 
   mutate(section = if_else(section == "CC", 
@@ -40,117 +41,22 @@ my_theme <- theme(axis.title.x = element_text(size = 16),
                   )
 ```
 
-# Lab 1
-
-## Revisions Due Tonight
-
-If you submitted revisions and your grade is still "Incomplete" -- you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day.
-
-# Lab 2
-
-## A Grading Reminder
-
-<br>
-
-:::::::: columns
-:::: {.column width="47%"}
-::: {style="font-size: 1.25em;"}
-"Complete" = Satisfactory
-:::
-
-<br>
-
-Your group obtained a "Success" on **every** question
-::::
-
-::: {.column width="5%"}
-:::
-
-:::: {.column width="47%"}
-::: {style="font-size: 1.25em;"}
-"Incomplete" = Growing
-:::
-
-<br>
-
-Your group received a "Growing" on *at least one* question
-::::
-::::::::
-
-## Common Mistakes
-
-::: small
--   Units in axis labels (Q2 & Q9)
-    -   What unit were the departure / arrival delays measured in?
--   Justifying *why* I should expect to be early / late (Q8 & Q10)
-    -   Why is the mean / median a reasonable estimate of the "typical" delay?
-    -   What aspect(s) of the distribution did you use to decide what a "typical" delay is?
-:::
-
-## Copying the Lab -- Last Week's Recorder
-
-The person who typed your lab needs to make their project "public"
-
-1.  Open Posit Cloud
-2.  Go to the STAT 313 workspace
-3.  Click on "Your Content"
-4.  Open the settings for your Lab 2 project
-
-![](images/open-project-settings.png)
-
-## Copying the Lab -- Last Week's Recorder
-
-5.  Change the access for your project to "Space Members"
-
-![](images/make-project-public.png)
-
-## Copying the Lab -- Everyone Else
-
-::: small
-1.  Find your group member's lab (you can use the search bar to search for their name)
-:::
-
-![](images/search-for-name.png)
-
-::: small
-2.  Open their Lab 2 project
-3.  Select "Save a Permanent Copy"
-:::
-
-![](images/save-a-copy.png)
-
-## Completing Revisions
-
-Lab 2 revisions are due by Wednesday, April 24.
-
-::: small
-1.  Read comments on Canvas
-2.  Copy your group's lab assignment
-3.  Complete your revisions
-4.  Render your revised Lab 2
-5.  Download your revised HTML
-6.  Submit your revisions to the [original Lab 2]{.underline} assignment
-:::
-
-:::: callout-warning
-# Reflections
-
-::: small
-Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 2 Quarto file (next to the problems you revised), in a Word document, in the comment box on Canvas.
-:::
-::::
+# Lab 1 Revisions Due Friday
 
 # Ethical Considerations with Categorical Variables
 
 ## Choosing What to Measure - Gender
 
-Keller et al. [-@keller2017] designed a study to examine whether a community-based suicide prevention project could increase willingness to seek professional help for suicidal ideation among eastern Montana youth.
+Keller et al. [-@keller2017] designed a study to examine whether a
+community-based suicide prevention project could increase willingness to seek
+professional help for suicidal ideation among eastern Montana youth.
 
 . . .
 
 </br>
 
-Students attending the *Let's Talk* theater workshop, were asked to report their gender, race, and age.
+Students attending the *Let's Talk* theater workshop, were asked to report their
+gender, race, and age.
 
 ## Choosing What to Measure - Gender
 
@@ -162,15 +68,24 @@ Researchers provided students with the following question:
 
 . . .
 
-</br> </br>
+</br>
 
-::: {style="font-size: 1.5em; color: #0F4C81"}
+::: {style="font-size: 1.25em; color: #ed8402;"}
 What information are the researchers missing?
+:::
+
+. . .
+
+::: {style="font-size: 1.25em; color: #ed8402"}
+Why is that information important?
 :::
 
 ## Choosing What to Measure - Sex
 
-$\beta$ blockers have been shown to improve survival in patients with congestive heart failure. These medicines block the effects of the hormone epinephrine (adrenaline). Research suggests that beta blockers have a differing effect for individuals with high levels of estrogen [@khan2000].
+$\beta$ blockers have been shown to improve survival in patients with congestive
+heart failure. These medicines block the effects of the hormone epinephrine
+(adrenaline). Research suggests that beta blockers have a differing effect for
+individuals with high levels of estrogen [@khan2000].
 
 ## Choosing What to Measure - Sex
 
@@ -182,51 +97,98 @@ The intake form for a local heart clinic asks the following question:
 
 . . .
 
-</br> </br>
+</br>
 
-::: {style="font-size: 1.5em; color: #0F4C81"}
+::: {style="font-size: 1.25em; color: #ed8402;"}
 What information are the doctors missing?
+:::
+
+. . .
+
+::: {style="font-size: 1.25em; color: #ed8402"}
+Why is that information important?
 :::
 
 ## Choosing What to Measure - Race
 
-Every year, the US publishes a large dataset on the public birth records for babies born that year. These data contain information about the baby, the pregnancy, and the birth parent(s).
+Every year, the US publishes a large dataset on the public birth records for
+babies born that year. These data contain information about the baby, the
+pregnancy, and the birth parent(s).
 
 ## Choosing What to Measure - Race
 
-Looking at the [`births14`](https://www.openintro.org/data/index.php?data=births14) dataset, the race of the mother was classified as:
+Looking at the [`births14`](https://www.openintro.org/data/index.php?data=births14)
+dataset, the race of the mother was classified as:
 
 -   white
 -   nonwhite
 
 . . .
 
-</br> </br>
+</br>
 
-::: {style="font-size: 1.5em; color: #0F4C81"}
-What information are researchers missing?
+::: {style="font-size: 1.25em; color: #ed8402;"}
+What information is missing?
 :::
+
+. . .
+
+::: {style="font-size: 1.25em; color: #ed8402"}
+Why is that information important?
+:::
+
 
 # Lab 3
 
 ## Today's Data
 
+::: columns
+::: {.column width="40%"}
 ::: small
-> The and_vertebrates dataset contains length and weight observations for Coastal Cutthroat Trout and two salamander species (Coastal Giant Salamander, and Cascade Torrent Salamander) in previously clear cut (c. 1963) and old growth coniferous forest sections of Mack Creek in HJ Andrews Experimental Forest, Willamette National Forest, Oregon.
+> The `and_vertebrates` dataset contains length and weight observations for
+> Coastal Cutthroat Trout and two salamander species (Coastal Giant Salamander,
+> and Cascade Torrent Salamander) in previously clear cut (c. 1963) and old
+> growth coniferous forest sections of Mack Creek in HJ Andrews Experimental
+> Forest, Willamette National Forest, Oregon.
+:::
 :::
 
-![](images/hj-andrews.jpeg)
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+![](images/hj-andrews-map.png){fig-alt="A map displaying the location of the HJ Andrews Experimental Forest in Oregon. The forest is closest to Eugene, Oregon."}
+:::
+:::
+
+<!-- Tribes native to this area: Klamath, Northern Paiute, Molalla -->
 
 ## Research Question
 
-</br> </br>
+</br>
 
 ::: centered
 > Are there differences in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?
 :::
 
+. . .
+
+</br> 
+
+::: {.callout-note}
+# Clear Cutting
+
+In the 1950s and 60s researchers clear cut sections of the HJ Andrews forest
+to research the efficiency of forest operations, including logging, road
+building, and forest regeneration. 
+:::
+
+<!-- Studies have shown that the impacts of clear-cutting, including changes in  -->
+<!-- streamflow and nutrient losses, can persist for decades -->
+
 ## Data Layout
 
+::: {.small}
 ```{r}
 #| label: data-preview
 #| echo: false
@@ -235,14 +197,19 @@ and_vertebrates %>%
   group_by(species) %>% 
   slice_sample(n = 2) %>% 
   ungroup() %>% 
-  gt::gt()
+  gt() |> 
+  tab_style(
+    style = cell_text(size = "14px"),
+    locations = cells_body()
+  )
 ```
+:::
 
 . . .
 
 What are the observations / rows in this dataset?
 
-## If you wanted to find the mean mass for Cutthroat trout in each section, what would you do? {background-color="#B6CADA"}
+## If you wanted to find the mean mass for Cutthroat trout in each section, what would you do? {background-color="#b4d4ec"}
 
 ## Step 1: Remove Salamanders
 
@@ -302,7 +269,15 @@ trout %>%
             ) %>% 
   rename(`Forest Section` = section, 
          `Mean Biomass` = mean_mass) %>% 
-  gt::gt()
+  gt() %>%
+  tab_style(
+    style = cell_text(size = "28px"),
+    locations = cells_body()
+  ) |> 
+  tab_style(
+    style = cell_text(size = "36px"), 
+    locations = cells_column_labels()
+  )
 ```
 :::
 
@@ -324,8 +299,9 @@ ggplot(data = trout,
                      y = section)
        ) +
   geom_density_ridges() +
-  labs(x = "Weight of Cutthroat Trout (g)", 
-       y = "Section of HJ Andrews Experimental Forest") 
+  labs(x = "Weight of Cutthroat Trout (g)",
+       y = "",
+       title = "Length of Salamanders for Different Sections of HJ Andrews Experimental Forest") 
 ```
 
 ## Are they different?
@@ -338,8 +314,9 @@ ggplot(data = trout,
        mapping = aes(x = weight_g, 
                      y = section)) +
   geom_density_ridges() +
-  labs(x = "Weight of Cutthroat Trout (g)", 
-       y = "Section of HJ Andrews Experimental Forest") +
+  labs(x = "Weight of Cutthroat Trout (g)",
+       y = "",
+       title = "Length of Salamanders for Different Sections of HJ Andrews Experimental Forest") +
   my_theme
 ```
 
@@ -432,7 +409,23 @@ ggplot(data = trout,
        y = "Type of Channel")
 ```
 
-. . .
+
+## Visualization 2.0 -- Incorporating Color
+
+```{r}
+#| echo: false
+#| fig-align: center
+
+ggplot(data = trout, 
+       mapping = aes(x = weight_g, 
+                     fill = section, 
+                     y = unittype)
+       ) +
+  geom_density_ridges(alpha = 0.5) +
+  labs(x = "Weight of Cutthroat Trout (g)", 
+       fill = "Section of HJ Andrews \nExperimental Forest", 
+       y = "Type of Channel")
+```
 
 </br>
 
