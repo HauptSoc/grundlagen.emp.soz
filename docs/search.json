@@ -3891,7 +3891,7 @@
     "href": "labs/grading-guides/lab-2-grading-guide.html#b",
     "title": "Lab 2 - Grading Guide",
     "section": "1 (b)",
-    "text": "1 (b)\nAre there numerical variables in the dataset? If so, what are their names?\nSuccess:\n\nLists all variables with an int or dbl data type:\n\nyear\nmonth (many may miss)\nday\ndep_time\ndep_delay\narr_time\narr_delay\nflight (many may miss)\nair_time\ndistance\nhour\nminute\n\nPermitted to miss 1 variable\n\nGrowing:\n\nIf misses 2 or more variables\nIf includes categorical variables (labeled chr)\n\nFeedback: For Question 1(b), you need to be careful to include ALL of the variables that R believes are numerical, that includes variables which may behave more like a categorical variable."
+    "text": "1 (b)\nAre there numerical variables in the dataset? If so, what are their names?\nSuccess:\n\nLists all 12 variables with an int or dbl data type:\n\nyear\nmonth (many may miss)\nday\ndep_time\ndep_delay\narr_time\narr_delay\nflight (many may miss)\nair_time\ndistance\nhour\nminute\n\nPermitted to miss 1 variable\n\nGrowing:\n\nIf misses 2 or more variables\nIf includes categorical variables (labeled chr)\n\nFeedback: For Question 1(b), you need to be careful to include ALL of the variables that R believes are numerical, that includes variables which may behave more like a categorical variable."
   },
   {
     "objectID": "labs/grading-guides/lab-2-grading-guide.html#section",
@@ -3968,7 +3968,7 @@
     "href": "labs/grading-guides/lab-2-grading-guide.html#section-8",
     "title": "Lab 2 - Grading Guide",
     "section": "11",
-    "text": "11\nHow did your answer change when using the plot versus using the summary statistics? i.e. What were you able to see in the plot that could could not “see” with the summary statistics?\nSuccess:\n\nStates if / how their answer did / did not change\nDiscusses what could be see in the visualizations that could not be seen in the statistics\n\nskew\nmode / peak\n\n\nGrowing:\n\nResponse does not discuss what could be seen in the visualizations that could not be seen in the statistics\n\nFeedback: You should address what you were able to SEE in the visualization (e.g., shape, skew, number of peaks) that you could not “see” in the summary statistics.\n\nResponse doesn’t discuss if / how the answer to the question changed\n\nFeedback: Great job discussing how the shape of the distribution informs you choice of statistic! You did not, however, discuss if / how your answer to my question changed between looking at the plot versus looking at the statistics."
+    "text": "11\nWhat information did the plot give you that was missing from the summary statistics?\nSuccess:\n\nDiscusses what could be see in the visualizations that could not be seen in the statistics\n\nskew\nmode / peak\n\n\nGrowing:\n\nResponse does not discuss what could be seen in the visualizations that could not be seen in the statistics\n\nFeedback: You should address what you were able to SEE in the visualization (e.g., shape, skew, number of peaks) that you could not “see” in the summary statistics.\n\nResponse doesn’t discuss if / how the answer to the question changed\n\nFeedback: Great job discussing how the shape of the distribution informs you choice of statistic! You did not, however, discuss if / how your answer to my question changed between looking at the plot versus looking at the statistics."
   },
   {
     "objectID": "project/final-project/final_project_template-313.html#variables",
@@ -6167,5 +6167,12 @@
     "title": "Exploring Flight Delays",
     "section": "R Tips and Tricks!",
     "text": "R Tips and Tricks!\nThings you should know before you start coding in the wild.\n\n\n\nR is case sensitive\n\ngeom_boxplot() not Geom_boxplot()\n\nSpelling matters!\n\nnycflights not ncyflights\n\nParentheses are tricky!\n\nYou will want to triple check that each beginning parenthesis ( has a counterpart ).\n\n\n\n\n\n\n\nggplot(data = penguins, \n       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +\n  geom_point()\n\nError: &lt;text&gt;:5:0: unexpected end of input\n3:   geom_point()\n4: \n  ^"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-2-grading-guide.html#c",
+    "href": "labs/grading-guides/lab-2-grading-guide.html#c",
+    "title": "Lab 2 - Grading Guide",
+    "section": "1 (c)",
+    "text": "1 (c)\nOf the numerical variables you named in (b), which variables behave more like a categorical variable?\nSuccess:\n\nLists all of the following variables:\n\nyear\nmonth (many may miss)\nflight (many may miss)\n\nIf additional variables are listed they are variables that could reasonably be argued to be categorical.\n\nGrowing:\n\nIf misses any of the three variables listed above\nIf includes variables that do not behave like categorical variables (e.g., arr_time)\n\nIf they missed any of the variables listed above:\nTake another look and see if any of the variables listed as integers behave more like categorical variables (variables that could be used to group observations).\nIf they included numerical variables:\nCategorical variables group observations! We talked this week about how categorical variables have a finite (small) number of values. The variable you chose does not necessarily reflect this. What variables do?"
   }
 ]
