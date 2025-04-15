@@ -4,7 +4,7 @@ format:
   revealjs:
     theme: style.scss
 embed-resources: true
-editor: visual
+editor: source
 ---
 
 ```{r packages}
@@ -43,32 +43,32 @@ Relationships Between Variables
 
 -   In a statistical model, we generally have one variable that is the output and one or more variables that are the inputs.
 
-::: columns
-::: {.column width="40%"}
-::: {.fragment .fade-in-then-semi-out}
+:::::::::: columns
+::::: {.column width="40%"}
+:::: {.fragment .fade-in-then-semi-out}
 ::: {style="font-size: 0.65em;"}
 -   Response variable
     -   a.k.a. $y$, dependent
     -   The quantity you want to understand
     -   In this class -- always numerical
 :::
-:::
-:::
+::::
+:::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="55%"}
-::: {style="font-size: 0.65em;"}
+::::: {.column width="55%"}
+:::: {style="font-size: 0.65em;"}
 ::: fragment
 -   Explanatory variable
     -   a.k.a. $x$, independent, explanatory, predictor
     -   Something you think might be related to the response
     -   Either numerical or categorical
 :::
-:::
-:::
-:::
+::::
+:::::
+::::::::::
 
 ## 
 
@@ -95,7 +95,7 @@ ggplot(data = bdims, aes(y = wgt, x = hgt)) +
 
 </br>
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 -   The scatterplot has been called the most "generally useful invention in the history of statistical graphics."
 :::
@@ -106,7 +106,7 @@ ggplot(data = bdims, aes(y = wgt, x = hgt)) +
 ::: {.column width="55%"}
 -   It is a simple two-dimensional plot in which the two coordinates of each dot represent the values of two variables measured on a single observation.
 :::
-:::
+::::::
 
 ## 
 
@@ -144,7 +144,7 @@ The [ncbirths]{style="color: #e28743;"} dataset is a random sample of 1,000 case
 Your Turn!
 :::
 
-::: columns
+:::::: columns
 ::: {.column width="65%"}
 ```{r}
 #| echo: false
@@ -170,7 +170,7 @@ How would your characterize this relationship?
 -   strength
 -   unusual observations
 :::
-:::
+::::::
 
 ## Cleaning & Filtering the Data
 
@@ -190,19 +190,19 @@ births_post28 <- ncbirths %>%
 
 . . .
 
-::: small
+:::: small
 ::: callout-caution
 # Change in scope of inference
 
 Removing these observations narrows the population of births we are able to make inferences onto! In this case, what population could we infer our findings onto?
 :::
-:::
+::::
 
 # Summarizing a Linear Relationship
 
 ## 
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 </br> Correlation:
 :::
@@ -210,7 +210,7 @@ Removing these observations narrows the population of births we are able to make
 ::: {.column width="80%"}
 > strength and direction of a *linear* relationship between two *quantitative* variables
 :::
-:::
+:::::
 
 . . .
 
@@ -224,7 +224,7 @@ Removing these observations narrows the population of births we are able to make
 Anscombe Correlations
 :::
 
-::: columns
+::::::: columns
 ::: {.column width="65%"}
 ```{r}
 #| echo: false
@@ -245,7 +245,7 @@ ggplot(data = anscombe, aes(x = x, y = y)) +
 ::: {.column width="5%"}
 :::
 
-::: {.column width="30%"}
+:::: {.column width="30%"}
 ::: {style="font-size: 0.75em;"}
 Four datasets, very different graphical presentations
 
@@ -253,8 +253,8 @@ Four datasets, very different graphical presentations
 -   same correlation
 -   same regression line
 :::
-:::
-:::
+::::
+:::::::
 
 . . .
 
@@ -280,7 +280,7 @@ What if I ran `get_correlation(births_post28, weight ~ weeks)` instead? Would I 
 
 ## 
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 </br> Linear regression:
 :::
@@ -288,7 +288,7 @@ What if I ran `get_correlation(births_post28, weight ~ weeks)` instead? Would I 
 ::: {.column width="80%"}
 > we assume the the relationship between our response variable ($y$) and explanatory variable ($x$) can be modeled with a linear function, plus some random noise
 :::
-:::
+:::::
 
 . . .
 
@@ -300,8 +300,8 @@ $response = intercept + slope \cdot explanatory + noise$
 
 </br>
 
-::: columns
-::: {.column width="47%"}
+::::::::: columns
+:::: {.column width="47%"}
 ::: fragment
 **Population Model**
 
@@ -317,13 +317,13 @@ $\beta_1$ = population slope
 
 $\epsilon$ = errors / residuals
 :::
-:::
+::::
 
 ::: {.column width="3%"}
 :::
 
-::: {.column width="50%"}
-::: fragment
+::::: {.column width="50%"}
+:::: fragment
 **Sample Model**
 
 $\widehat{y} = b_0 + b_1 \cdot x$
@@ -337,9 +337,9 @@ $b_1$ = sample slope
 ::: fragment
 [Why does this equation have a hat on $y$?]{style="color: #e28743;"}
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 # Linear Regression with One Numerical Explanatory Variable
 
@@ -370,13 +370,13 @@ get_regression_table(weeks_lm) %>%
 
 </br>
 
-::: small
+:::: small
 ::: callout-note
 # `get_regression_table()`
 
 This function lives in the **moderndive** package, so we will need to load in this package (e.g., `library(moderndive`) if we want to use the `get_regression_table()` function.
 :::
-:::
+::::
 
 ## 
 
@@ -396,8 +396,8 @@ $$\widehat{y} = b_0 + b_1 \cdot x$$
 
 . . .
 
-::: columns
-::: {.column width="48%"}
+::::::: columns
+:::: {.column width="48%"}
 ::: small
 ```{r}
 #| echo: true
@@ -407,7 +407,7 @@ weeks_lm <- lm(weight ~ weeks,
                data = births_post28)
 ```
 :::
-:::
+::::
 
 ::: {.column width="2%"}
 :::
@@ -419,7 +419,7 @@ get_regression_table(weeks_lm) %>%
   gt::gt()
 ```
 :::
-:::
+:::::::
 
 . . .
 
@@ -431,24 +431,24 @@ get_regression_table(weeks_lm) %>%
 
 ##  {background-color="#b76352"}
 
-::: columns
-::: {.column width="45%"}
+::::::::: columns
+:::: {.column width="45%"}
 ::: {style="font-size: 1.75em; color: #000000;"}
 How do you interpret the intercept value of `r filter(births_table, term == "intercept")$estimate`?
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
-::: fragment
+::::: {.column width="45%"}
+:::: fragment
 ::: {style="font-size: 1.75em; color: #000000;"}
 How do you interpret the slope value of `r filter(births_table, term == "weeks")$estimate`?
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## 
 
@@ -513,11 +513,11 @@ gt::gt()
 
 . . .
 
-::: centered
+:::: centered
 ::: {style="font-size: 2em;"}
 🤔
 :::
-:::
+::::
 
 ## Step 4: Write Estimated Regression Equation
 
@@ -546,7 +546,7 @@ $$</center>
 
 . . .
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 $x$ is a categorical variable with levels:
 
@@ -563,7 +563,7 @@ We need to convert to:
 -   a "baseline" group
 -   "offsets" / adjustments to the baseline
 :::
-:::
+::::::
 
 ## Choosing a Baseline Group
 
@@ -610,7 +610,7 @@ Can we conclude that smoking [caused]{style="color: #e28743;"} these babies to w
 
 # Midterm Project Step 1
 
-## [Project Proposal](../project/midterm-proposal-313.qmd)
+## [Project Proposal](../project/midterm-project/midterm-proposal-313.qmd)
 
 ::: small
 1.  Choose a dataset
@@ -622,13 +622,13 @@ Can we conclude that smoking [caused]{style="color: #e28743;"} these babies to w
 4.  Choose a second explanatory variable, it can be either numerical or categorical
 :::
 
-::: callout-tip
+:::: callout-tip
 # Checking values of your numerical variable(s)
 
 ::: small
 Your numerical variable **cannot** have a small number of values (e.g., 2 or 3). You can use the `distinct()` function to determine the unique values of your variable. For example, by running `distinct(hbr_maples, year)` I would discover that `year` only has two values (2003 and 2004), meaning `year` is not eligible to be a numerical response or explanatory variable. It could, however, be a categorical explanatory variable!
 :::
-:::
+::::
 
 ::: small
 5.  Write your Introduction

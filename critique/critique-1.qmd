@@ -7,7 +7,6 @@ format:
     number-sections: true
     number-depth: 2
 editor: source
-bibliography: references.bib
 ---
 
 # Assignment Details
