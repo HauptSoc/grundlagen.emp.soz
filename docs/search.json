@@ -697,28 +697,28 @@
     "href": "slides/week3-day1.html#revisions",
     "title": "Incorporating Categorical Variables",
     "section": "Revisions",
-    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYour images were included in the document\nYou provided responses to every question\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYour images were not included in the document\nYou did not provide responses to every question"
+    "text": "Revisions\n\n\n\n“Complete” = Satisfactory\n\n\nYou provided responses to every question\nYou correctly identified the observational unit for the mpg dataset\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYou did not provide responses to every question\nYou did not correctly identify the observational unit for the mpg dataset"
   },
   {
     "objectID": "slides/week3-day1.html#completing-revisions",
     "href": "slides/week3-day1.html#completing-revisions",
     "title": "Incorporating Categorical Variables",
     "section": "Completing Revisions",
-    "text": "Completing Revisions\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 1 Quarto file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+    "text": "Completing Revisions\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas.\nGo back into your Lab 1 on Posit Cloud and complete your revisions.\nRender your revised Lab 1.\nDownload your revised HTML.\n\n\n\n\n\n\n\n\n\nReflections\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. Reflections must be written in your Lab 1 Quarto file (next to the problems you revised)."
   },
   {
     "objectID": "slides/week3-day1.html#section",
     "href": "slides/week3-day1.html#section",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "15-minutes\n\n\n\nReview Lab 1 comments\nAsk questions\nStart revisions"
+    "text": "How would you describe a categorical variable?"
   },
   {
     "objectID": "slides/week3-day1.html#section-1",
     "href": "slides/week3-day1.html#section-1",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "How would you describe a categorical variable?"
+    "text": "Fill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable"
   },
   {
     "objectID": "slides/week3-day1.html#in-r",
@@ -732,7 +732,7 @@
     "href": "slides/week3-day1.html#section-2",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "Fill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable"
+    "text": "Brainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()"
   },
   {
     "objectID": "slides/week3-day1.html#dplyr-a-tool-bag-for-data-wrangling",
@@ -746,14 +746,14 @@
     "href": "slides/week3-day1.html#section-3",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "Brainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()"
+    "text": "If you wanted means for each level of a categorical variable, what would you do?"
   },
   {
     "objectID": "slides/week3-day1.html#section-4",
     "href": "slides/week3-day1.html#section-4",
     "title": "Incorporating Categorical Variables",
     "section": "",
-    "text": "The Pipe %&gt;%"
+    "text": "If you wanted means for each level of a categorical variable, what would you do?"
   },
   {
     "objectID": "slides/week3-day1.html#section-5",
@@ -781,7 +781,7 @@
     "href": "slides/week3-day1.html#filter-ing-specific-channel-types",
     "title": "Incorporating Categorical Variables",
     "section": "filter()-ing Specific Channel Types",
-    "text": "filter()-ing Specific Channel Types\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n\n\nWhat would you do?\n\n\n\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n\n\n\n\nWhy use %in% instead of ==?"
+    "text": "filter()-ing Specific Channel Types\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n\n\nWhat would you do?\n\n\n\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n\n\n\n\nWhen we have more than one value we want to keep, we need to use %in% not ==!"
   },
   {
     "objectID": "slides/week3-day1.html#incorporating-categorical-variables-into-data-visualizations",
@@ -795,14 +795,14 @@
     "href": "slides/week3-day1.html#salamander-size",
     "title": "Incorporating Categorical Variables",
     "section": "Salamander Size",
-    "text": "Salamander Size\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
+    "text": "Salamander Size\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14, color = \"white\") + \n  labs(x = \"Snout to Tail Length of Salamander (mm)\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?"
   },
   {
     "objectID": "slides/week3-day1.html#faceted-histograms",
     "href": "slides/week3-day1.html#faceted-histograms",
     "title": "Incorporating Categorical Variables",
     "section": "Faceted Histograms",
-    "text": "Faceted Histograms\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")"
+    "text": "Faceted Histograms\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14, color = \"white\") + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length of Salamander (mm)\")"
   },
   {
     "objectID": "slides/week3-day1.html#side-by-side-boxplots",
@@ -851,14 +851,14 @@
     "href": "slides/week3-day1.html#your-turn-90-seconds",
     "title": "Incorporating Categorical Variables",
     "section": "Your Turn – 90 seconds",
-    "text": "Your Turn – 90 seconds\n\n\nWhat are the aesthetics included in this plot?\n\n\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+    "text": "Your Turn – 90 seconds\n\n\n\nWhat are the aesthetics included in this plot?\n\n\n\n\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
   },
   {
     "objectID": "slides/week3-day1.html#your-tasks",
     "href": "slides/week3-day1.html#your-tasks",
     "title": "Incorporating Categorical Variables",
     "section": "Your Tasks",
-    "text": "Your Tasks\n\nFind your visualizations\n\n\nVisualization from your Week 1 article (Statistics in Your Field)\nVisualization from the New York Times\n\n\nDiscuss the aesthetics included in the plots\nDiscuss what you believe the plot does well\nDiscuss what improvements could be made to make the plot more clear"
+    "text": "Your Tasks\n\nFind your visualizations\n\n\nVisualization from the New York Times\nVisualization from your chosen scientific article\n\n\nDiscuss the aesthetics included in the plots\nDiscuss what you believe the plot does well\nDiscuss what improvements could be made to make the plot more clear"
   },
   {
     "objectID": "labs/lab-8.html",
@@ -2170,21 +2170,21 @@
     "href": "critique/stat-critique-2-template.html",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "",
-    "text": "# This is where you will load in your data! \n# Reference the R package you data live inside, since you will need to load that package in!\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(moderndive)\n\n# Package for your data:"
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(moderndive)\nlibrary(broom)\n\n# Reference the R package you data live inside, since you will need to load that package in!\n# Package for your data:"
   },
   {
     "objectID": "critique/stat-critique-2-template.html#visualizations",
     "href": "critique/stat-critique-2-template.html#visualizations",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "Visualizations",
-    "text": "Visualizations\nIn the code chunk below, copy-and-paste the plots you created in your Midterm Project."
+    "text": "Visualizations\n\n# In the code chunk below, copy-and-paste the plots you created in your Midterm Project."
   },
   {
     "objectID": "critique/stat-critique-2-template.html#model-justification",
     "href": "critique/stat-critique-2-template.html#model-justification",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "Model Justification",
-    "text": "Model Justification\nJustify (in 2-3 sentences) why you chose this model!"
+    "text": "Model Justification"
   },
   {
     "objectID": "critique/stat-critique-2-template.html#part-four-lessons-learned",
@@ -2309,7 +2309,7 @@
     "href": "project/midterm-project/midterm_project_template-313.html#methods",
     "title": "Your Title Goes Here! Make it fun!",
     "section": "Methods",
-    "text": "Methods\n\nVariables\n\n\nData Visualizations\n\n\n\n\n\n\n\n\nProposed Statistical Model"
+    "text": "Methods\n\nVariables\n\n\nVisualizations\n\n\n\n\n\n\n\n\nStatistical Methods"
   },
   {
     "objectID": "project/midterm-project/midterm_project_template-313.html#findings",
@@ -2333,193 +2333,18 @@
     "text": "Conclusions"
   },
   {
-    "objectID": "activity/week-5-model-justification.html",
-    "href": "activity/week-5-model-justification.html",
-    "title": "Model Justification",
-    "section": "",
-    "text": "This study seeks to investigate how the relationship between average SAT math scores and the percentage of students who are economically disadvantaged differs based on the size of the school. As seen in the plot below, the slope for this relationship was found to be similar across the different levels of schools. Therefore, this study used a parallel slopes (additive) multiple linear regression model.\n\n\n\n\n\n\n\n\n\nWhat do you feel is missing from this model justification?"
-  },
-  {
-    "objectID": "weeks/week-0.html",
-    "href": "weeks/week-0.html",
-    "title": "Course Setup and Structure",
-    "section": "",
-    "text": "Welcome!\nIn this coursework, you’ll get set up with the Class Discord, learn about what is expected of you each week, and hear some tips from me about how to succeed.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "weeks/week-0.html#set-up-your-account",
-    "href": "weeks/week-0.html#set-up-your-account",
-    "title": "Course Setup and Structure",
-    "section": "1.1 Set up your account",
-    "text": "1.1 Set up your account\n\nVerify your email\nTo use this Discord server, you must have a verified email.\nNobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.\n\n\nCreate your identity\nThe first thing you should do is decide what name and picture you would like to use.\n\nI would like to strongly encourage you to use your real name and picture, so that everyone can get to know you. However, if you prefer to remain anonymous, you are free to do so.\n\n(Please do not be like Regina and use the name of another student, however!\nThis kind of impersonation will result in a permanent ban from the server.)\n\n\nDecide about privacy and notifications\nThe default settings on the channel are probably just fine for you.\nFeel free to make any changes that work for you, though.\nYou can change your message notifications:\n\nYou can edit your privacy settings, although most things are already private:\n\n\n\nConnect other apps\nYou can connect other apps to Discord, either for productivity or just for fun.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "weeks/week-0.html#using-the-shannels",
-    "href": "weeks/week-0.html#using-the-shannels",
-    "title": "Course Setup and Structure",
-    "section": "1.2 Using the shannels",
-    "text": "1.2 Using the shannels\nThe server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.\n\nText shannels\nUse the #general channel for anything and everything:\n\nIf your question is about course logistics, rather than the material itself, consider using the #class-logistics channel:\n\nYou can use the specific weekly channels to ask questions about the material…\n\n… or the specific lab assignment.\n\nNotice that you can use tick marks (```), like in Quarto, to make your code appear in a formatted code box.\n\n\nVoice shannels\nTo join a voice channel, simply click it! Make sure you are careful about when you are muted or unmuted.\n\nThe extra “Side Chat” channels are limited to 4 or 8 people, if you would like to start an impromptu study conversation without being heard by me and / or the rest of the class. (I’ll only drop in if you invite us!)\nVoice channels can also be used for people to “Go Live”, and share their screen with everyone else.\n\nWhile this will usually be something professors use to demonstrate code, you can go live, too! But you may need to download the desktop version of Discord to do so.\n\n\nPrivate messages\nIt is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "weeks/week-0.html#see-you-at-the-party",
-    "href": "weeks/week-0.html#see-you-at-the-party",
-    "title": "Course Setup and Structure",
-    "section": "1.3 See you at the Party!",
-    "text": "1.3 See you at the Party!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "weeks/week-0.html#how-your-typical-week-will-look",
-    "href": "weeks/week-0.html#how-your-typical-week-will-look",
-    "title": "Course Setup and Structure",
-    "section": "2.1 How your typical week will look",
-    "text": "2.1 How your typical week will look\n\nReadings and videos (every week)\nI favor a “flipped classroom,” as it gives you more time to clarify and solidify statistical concepts through hands-on exercises. Each week, you will read the required chapter(s), completing a required reading guide to walk you through the central concepts for each week.\nDue Monday by the start of class.\n\n\nConcept quizzes (every week)\nEach week there will be a short (~10 questions) quiz over the reading and videos from the week. These quizzes are intended to ensure that you grasped the key concepts from the week’s readings. The quizzes are not timed, so you can feel free to check your answers with the textbook and / or videos if you so wish. The quizzes are marked on completion as complete or incomplete.\nDue Monday by the start of class.\n\n\nTutorials (every week)\nYou can think of the tutorials as an “interactive” textbook, as they interweave statistical ideas alongside examples of how to work with data in R and hands-on exercises writing the R code necessary to complete a given task. Each exercise has hints available if you get stuck!\nThe tutorials are work at your own pace, so you can complete them all at once or slowly throughout the week. The lab assignments will require for you to put the skills you learned in the tutorials to work, so you are required to complete each week’s tutorial before Wednesday’s lab.\nThe tutorials are marked on completion as complete or incomplete. You will submit a screenshot of the completion page at the end of the tutorial to confirm that you completed the tutorial for the week.\nDue Wednesday by the start of class.\n\n\nStatistical critiques (every 4-weeks)\nThese assignments are case studies in which you will evaluate a data visualization or statistical analysis, determining how well-performed and presented the analysis was and making recommendations for improving or using the analysis. Critiques are due roughly 1-week after they are assigned and should take 1-2 hours. You will receive feedback and a mark of Success or Growing (elaborated more on later), and you will be able to revise based on that feedback. There will be two total critiques.\n\n\nLab Assignments (every week)\nLabs will be assigned on Wednesday every week, providing the opportunity to explore the course concepts in the context of real data. Lab assignments will require for you to work through the tutorial for the week, thus the tutorials are due before the start of class on Wednesday.\nYou will complete the lab assignments in the same teams you collaborate with in class. You will access the lab assignment through Posit Cloud, which you will be walked through during the first lab. Your group will be expected to submit your completed lab on Canvas. You will need to submit only the HTML document.\nDue Mondays at 5pm.\n\n\nMidterm & Final Projects (Week 6 & Week 10)\nThere will be two projects throughout the quarter, where you will be asked to synthesize the statistical concepts you have learned in a formal statistical report. Your critiques will help guide you toward how you do / don’t want your report to look. Each project will be done independently, and requires you to submit a project proposal and draft report before the final deadline. You are encouraged to use the feedback received on these assignments to improve your final report. The final reports will be graded as Excellent, Satisfactory, Progressing, or No Credit based on a rubric that will be shared with the initial assignment.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
-    "href": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
-    "title": "Course Setup and Structure",
-    "section": "2.2 ✅ Week 1 Concept Quiz: Course Set-up",
-    "text": "2.2 ✅ Week 1 Concept Quiz: Course Set-up\nQuestion 1: Where are student hours held?\n\nIn person\nDiscord\nZoom by appointment\nCanvas\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the student hours section of the course syllabus!\n\n\nQuestion 2: What materials and technology are required for this course? Select all that apply!\n\nIntroduction to Modern Statistics\nRStudio Cloud – the application for working in R\nCanvas\nDiscord\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the required materials section of the course syllabus!\n\n\nQuestion 3: In this course, Reading Guides are due by ____, Concept Quizzes are due by ____, and Tutorials are due by ____.\nQuestion 4: If you have a question about the course content, what is the best first step?\n\nPost your question on Discord in the appropriate channel\nSend Dr. Theobold an email\nGo to Dr. Theobold’s office hours on Monday\nGoogle it\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the getting help section of the course syllabus!\n\n\nQuestion 5: You are permitted to submit up to ___ assignments late.\n\n\n\n\n\n\nTip\n\n\n\nLook at the late work policy section of the course syllabus!\n\n\nQuestion 6: If you need to submit an assignment late, you must do which of the following?\n\nemail Dr. Theobold to request a deadline extension\nsubmit a deadline extension request to the Google Form linked in the syllabus (and on Canvas)\nrequest an extension before the deadline\ncomplete the assignment no later than 3-days after the original deadline\n\nQuestion 7: If you receive a “Growing” on a Lab Assignment or a Critique, what should you do?\n\nread the comments and complete revisions on the problems receiving a “Growing”\nread the comments and complete revisions on the entire assignment\ncomplete revisions on the problems receiving a “Growing”\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the lab section of the course syllabus!\n\n\nQuestion 8: For revisions on Lab Assignments and Critiques to be considered that week they need to be turned in with:\n\nreflections on how your learning progressed from your initial attempt\nyour new answers\nyour original answers\nnothing\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the revisions section of the course syllabus!\n\n\nQuestion 9: You and a friend have been working on Critique 1 together. You finish up and want to go to bed, but they are still a little confused. You email them your file, and say, “Don’t copy this, just look how I did it so you can figure it out.” Have you violated Academic Honesty policies?\nQuestion 10: You have been working on making a visualization for your Midterm Project for what feels like forever and it seems like you are making little to no progress. You find an example analysis on the internet with the visualization you were hoping to make. You copy-and-paste the code used to make the visualization into your Midterm Project and do not reference that you used an outside source. You have violated the Academic Honesty policy.\nQuestion 11: Upload a picture of you introducing yourself in the “Introductions” channel of the STAT 313 Discord Server.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 0"
-    ]
-  },
-  {
-    "objectID": "slides/week1-day1.html#section",
-    "href": "slides/week1-day1.html#section",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "About Me…"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-1",
-    "href": "slides/week1-day1.html#section-1",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "What is Statistics?\n\n\n\nScientists seek to answer questions using rigorous methods and careful observations. These observations – collected from the likes of field notes, surveys, and experiments – form the backbone of a statistical investigation and are called data.\n\n\nStatistics is the study of how best to collect, analyze, and draw conclusions from data.\n\n\nIntroduction to Modern Statistics"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-2",
-    "href": "slides/week1-day1.html#section-2",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "What Statistics Is To Me\n\n \n\n\n\n\nThe data science cycle – Wickham & Grolemund"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-3",
-    "href": "slides/week1-day1.html#section-3",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "What you can expect in STAT 313\n\nThis course will teach you the fundamentals of linear models—simple linear regression, multiple linear regression, and analysis of variance—and experimental design. You will extend the concepts covered in your Stat I course, to:\n\n\nwork with data in a reproducible way (using R)\nvisualize and summarize a variety of datasets (in R)\ncritically evaluate the use of Statistics\nperform statistical analyses to answer research questions (using R)"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-4",
-    "href": "slides/week1-day1.html#section-4",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Coding 🙀\n\n\nCoding is a huge part of how doing statistics in the wild looks.\n\n\n\nEveryone is coming from a different background\nDifferent aspects of the course will be difficult to different people\nYou will be given coding resources each week\nUse your peers to support your learning"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-5",
-    "href": "slides/week1-day1.html#section-5",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Course Components\n\n\n\n\nBefore Class\n\n\nReading Guides\nConcept Quizzes\nR Tutorials\n\n\n\n\n\nDuring Class\n\n\nGroup Discussion\nHands-on Activities\nLab Assignments\n\n\n\n\n\nOutside of Class\n\n\nStatistical Critiques\nMidterm Project\nFinal Project"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-6",
-    "href": "slides/week1-day1.html#section-6",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Specifications Based Grading\n\n\n\n\nEveryone is capable of earning an A!"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-7",
-    "href": "slides/week1-day1.html#section-7",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "How Smart are You?\n\n\n\n(2 minutes)\n\nWrite two criteria would you use to rank yourself compared to everyone else in this class\n\n\n\n\n(3 minutes)\n\nTalk with the person on your right about the criteria you proposed\n\n\n\n\n(5 minutes)\n\nShare out\nPerson with most vowels in name should be prepared to share!"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-8",
-    "href": "slides/week1-day1.html#section-8",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Cooperative Learning\n\nis a structured form of small-group learning\n\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-9",
-    "href": "slides/week1-day1.html#section-9",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Group Norms\n\n\n\n\nZero tolerance for: racism, sexism, homophobia, transphobia, ageism, ableism\nRespect one another\nIntent and impact both matter\n\n\n\n\n\nNon-judgmental\nTake space, make space\nEmbrace discomfort\nMake decisions by consensus"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-10",
-    "href": "slides/week1-day1.html#section-10",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
-  },
-  {
-    "objectID": "slides/week1-day1.html#section-11",
-    "href": "slides/week1-day1.html#section-11",
-    "title": "Welcome to Stat 313!",
-    "section": "",
-    "text": "Break"
-  },
-  {
-    "objectID": "weeks/week-7.html",
-    "href": "weeks/week-7.html",
-    "title": "Week 7 – Inference for Regression",
-    "section": "",
-    "text": "📖 Required Reading: Introduction to Modern Statistics – Study Design\n3. Which of the following statements are true about observational studies and experiments? Select all that apply!\n\nExperiments randomly assign the explanatory variable\nObservational studies randomly assign the explanatory variable\nObservational studies can make causal statements about the relationship between the explanatory and response variables\nExperiments can make causal statements about the relationship between the explanatory and response variables\n\n4. What are different methods for sampling from a population? Select all that apply!\n\nsimple random sampling\nstratified random sampling\ncluster sampling\nmultistage sampling\nconvenience sampling\n\n5. Cluster sampling and stratified sampling both rely on grouping observations, but have important differences. Match each method to how observations are randomly sampled.\n\n\nstratified sampling\ncluster sampling\n\ngroups of observations are created, groups are randomly selected, every observation in the selected group is sampled\ngroups of observations are created, observations within a group are randomly sampled\n\n\n\n1 Textbook Reading – Part 1\nRequired Reading: Exploring Sampling Variability\n\n\n\n\n\n\nReading Guide – Due Monday by the beginning of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Textbook Reading – Part 2\nRequired Reading: Confidence Intervals for the Slope\n\n\n\n\n\n\nReading Guide – Due Wednesday by the beginning of class (note the new time!)\n\n\n\nDownload the Word Document\n\n\n\n\n3 Concept Quiz – Due Wednesday by the beginning of class (note the new time!)\n1. Match each item to it’s respective analogy:\n\n\npoint estimate\nconfidence interval\n\n\n\nfishing with a net\nfishing with a spear\n\n\n2. To create a 95% confidence interval using the percentile method, what percentiles of the bootstrap distribution do you need to calculate?\n\n0th\n2.5th\n5th\n90th\n95th\n97.5th\n\n3. To create a 95% confidence interval using the standard error method, what standard error do you use?\n\nthe sample standard deviation\nthe bootstrap distribution standard deviation\na resample standard deviation\n1.96\n\n4. We almost never know if our confidence interval captured the true population parameter.\n\nTrue\nFalse\n\n5. What percentage of 99% confidence intervals do you expect to capture the true population parameter?\n6. The word “confident” in a confidence interval interpretation corresponds to what aspect of the interval?\n\nthe accuracy of the original sample\nthe reliability of the procedure for constructing confidence intervals\nthe precision of the bootstrap samples\n\n7. Which of the following are true?\n\nSmaller sample sizes tend to produce narrower confidence intervals.\nSmaller sample sizes tend to produce wider confidence intervals.\nLower confidence levels tend to produce wider confidence intervals.\nLower confidence levels tend to produce narrower confidence intervals.\n\n8. In a regression table, what does the “std_error” value associated with the slope represent?\n\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\nthe estimated standard deviation of the sampling distribution\nthe standard error of the sample\n\n9. In a regression table, how is the “std_error” value calculated?\n\na mathematical formula\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\n\n10. What percentage confidence interval is output in a regression table?\n\n99%\n95%\n90%\n\n\n\n4 R Tutorial – Due Wednesday by the beginning of class\nRequired Tutorial: Practice the infer Workflow",
-    "crumbs": [
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "weeks/reading-guide/week6-reading2.html",
-    "href": "weeks/reading-guide/week6-reading2.html",
-    "title": "Week 6 Reading Guide Part 2 – Study Design",
-    "section": "",
-    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
-  },
-  {
-    "objectID": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
-    "href": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
-    "title": "Week 6 Reading Guide Part 2 – Study Design",
-    "section": "",
-    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
-  },
-  {
     "objectID": "slides/week2-day2.html#plotting-your-data",
     "href": "slides/week2-day2.html#plotting-your-data",
     "title": "Exploring Flight Delays",
     "section": "Plotting Your Data",
     "text": "Plotting Your Data\nNow that we’ve practiced making some plots, we know…\n\nmapping = aes(y = manufacturer, x = hwy) declares what variables are plotted on the x- and y-axis.\n\n\n\n\n\n\nTip\n\n\nThe variable names you put insides aes() must be identical to the names of the variables in the dataset!\n\n\n\n\n\n\n\nlabs(x = \"Highway Miles Per Gallon\", y = \"Car Manufacturer\") declares new x-axis and y-axis labels for the plot.\n\n\n\n\n\n\nTip\n\n\nIncluding nice axis labels (with their units) is a critical part of every visualization we make!"
+  },
+  {
+    "objectID": "slides/week2-day2.html#r-tips-and-tricks",
+    "href": "slides/week2-day2.html#r-tips-and-tricks",
+    "title": "Exploring Flight Delays",
+    "section": "R Tips and Tricks!",
+    "text": "R Tips and Tricks!\nThings you should know before you start coding in the wild.\n\n\n\nR is case sensitive\n\ngeom_boxplot() not Geom_boxplot()\n\nSpelling matters!\n\nnycflights not ncyflights\n\nParentheses are tricky!\n\nYou will want to triple check that each beginning parenthesis ( has a counterpart ).\n\n\n\n\n\n\n\nggplot(data = penguins, \n       mapping = aes(x = bill_length_mm, y = bill_depth_mm) +\n  geom_point()\n\nError: &lt;text&gt;:5:0: unexpected end of input\n3:   geom_point()\n4: \n  ^"
   },
   {
     "objectID": "slides/week2-day2.html#departure-delays",
@@ -2562,6 +2387,159 @@
     "title": "Exploring Flight Delays",
     "section": "R Resources",
     "text": "R Resources"
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "",
+    "text": "Welcome!\nThis week we explore one final area of ANOVA, a situation where we have multiple explanatory variables. This is called a two-way ANOVA. A two-way ANOVA extends the one-way ANOVA to situations with two categorical explanatory variables. This new methods allows researchers to simultaneously study two variables that might explain variability in the responses and explore whether the impacts of one explanatory variable change depending on the level of the other explanatory variable.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#textbook-reading",
+    "href": "weeks/week-10.html#textbook-reading",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.1 Textbook Reading",
+    "text": "1.1 Textbook Reading\nTo be honest, I didn’t have the energy this week to write another chapter on two-way ANOVA. So, instead we will be reading a couple of sections out of another statistics textbook. I’ve uploaded the PDFs of these sections to OneDrive, so you should be able to read them online or download them.\n\nSection 1 – Introduction to Two-Way ANOVA\n\n\n\n\n\n\nRead through “Step 6” on page 222\n\n\n\n\n\n\n\n\n\n\n\n\nExample 3.1 – Problematic Undertones\n\n\n\nI want to point out that the context of example 3.1 in this section has some major problematic undertones. The example focuses on “the effects of corporate and endorser credibility” on how likely someone is to buy shoes. For no clear reason, the example only considers “female” college students, which implicitly sends two problematic messages, (1) sex and gender are the same, and (2) women are more easily swayed by advertising.\nIn addition, the example uses Roseanne Barr as one of the celebrity endorsers—an actress who has written deplorable remarks about transgender people.\n\n\n\n\nSection 2 – Two-Way ANOVA Interaction Models\n\n\n\n\n\n\nRead through “Follow-up Confidence Intervals” on page 239\n\n\n\n\n\n\n\n\nReading Guide – Due Monday by the start of Class\nDownload the Word Document",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
+    "href": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.2 Concept Quiz – Due Monday by the start of class",
+    "text": "1.2 Concept Quiz – Due Monday by the start of class\n1. Match each two-way ANOVA model to its correct description.\n\n\n\nadditive model\n  \ninteraction model\n\nThe relationship between one factor and the response changes depending on the level of another factor.\n\nThe relationship between one factor and the response remains the same across all levels of another factor.\n\nThere is a significant relationship between each factor and the response.\n\n\n\n2. Match each two-way ANOVA model to its multiple linear regression counterpart.\n\n\nadditive model\ninteraction model\n\n\n\ndifferent slopes\nparallel slopes\n\n\n\n\n\n\n\n\n\n3. Which of the following are conditions of a two-way ANOVA model? (Select all that apply)\n\nindependence of observations between the groups\nindependence of observations within each group\nindependence of variables\nnormally distributed responses within each group\nnormally distributed residuals\nlinear relationship between the explanatory and response variables\nequal variance of residuals\nequal variance of responses within each group\n\n\n4. Which of the following is important to consider when assessing independence? (Select all that apply)\n\nIf the same observational unit (e.g., person, penguin, tree) could be sampled multiple times\nIf observations could be biologically related (e.g., parents, siblings, etc.)\nIf observations could be spatially related (e.g., countries that border each other)\nIf there is a relationship between the observations and the response variable\n\n\n\n\n5. [True or False] When an additive model is fit, the interpretation of the p-value associated with each explanatory variable is [conditional / independent] on the other explanatory variable(s) in the model.\n\n6. If the null hypothesis is rejected in an additive two-way ANOVA model, what model should be fit instead?\n\nseparate one-way ANOVA models\na one-way ANOVA model containing the variable with the smallest p-value (from the additive two-way ANOVA)\na mean only model\nan interaction two-way ANOVA model\na simple linear regression",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
+    "href": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.3 R Tutorial – Due Wednesday by the start of class",
+    "text": "1.3 R Tutorial – Due Wednesday by the start of class\nThis week’s R tutorial is a short guide stepping you through model selection starting with a two-way ANOVA interaction model.\nClick here to access this week’s R tutorial\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit a screenshot of the completion page at the end of the tutorial.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "slides/week6-day2.html#deadline-reminders",
+    "href": "slides/week6-day2.html#deadline-reminders",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Deadline Reminders",
+    "text": "Deadline Reminders\n\nLab 4 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line."
+  },
+  {
+    "objectID": "slides/week6-day2.html#help-your-peers",
+    "href": "slides/week6-day2.html#help-your-peers",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Help your peers!",
+    "text": "Help your peers!\n\nAre the arguments / sentences easy to understand? Does the report flow?\nIs the same information included in multiple places?\nDo the plots have nice axis labels?\nCan you easily find the regression equations? Do the equations make sense?\nDo the interpretations / conclusions from the equations make sense?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
+    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Based on how the study was designed, what population can you infer these results onto?",
+    "text": "Based on how the study was designed, what population can you infer these results onto?\n\n\nJustify what population you believe your analysis can be inferred onto.\n\nThe sample of [possums / professors / crabs]?\nSome larger population of [possums / professors / crabs]?\n\nYour justification needs to connect with how the researchers collected their data!"
+  },
+  {
+    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
+    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Based on how the study was designed, what can you say about the relationships between the variables?",
+    "text": "Based on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#section",
+    "href": "slides/week6-day2.html#section",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "",
+    "text": "Data is Power"
+  },
+  {
+    "objectID": "slides/week6-day2.html#does-your-phone-recognize-your-face",
+    "href": "slides/week6-day2.html#does-your-phone-recognize-your-face",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Does your phone recognize your face?",
+    "text": "Does your phone recognize your face?\n\nJoy Buolamwini found that she had to put on a white mask for the facial detection program to “see” her face."
+  },
+  {
+    "objectID": "slides/week6-day2.html#how-does-google-label-your-images",
+    "href": "slides/week6-day2.html#how-does-google-label-your-images",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "How does Google label your images?",
+    "text": "How does Google label your images?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#should-the-cash-bail-system-change",
+    "href": "slides/week6-day2.html#should-the-cash-bail-system-change",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Should the cash bail system change?",
+    "text": "Should the cash bail system change?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
+    "href": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Will your car be able to drive you?",
+    "text": "Will your car be able to drive you?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#forward-selection-by-hand",
+    "href": "slides/week6-day2.html#forward-selection-by-hand",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "Forward Selection (by Hand)",
+    "text": "Forward Selection (by Hand)\n\nStart with the most basic model (one mean)\nDecide which one variable to add (based on adjusted \\(R^2\\))\nDecide if you should add another variable\n\n\\(\\vdots\\)\n\nStop adding variables when adjusted \\(R^2\\) stops increasing"
+  },
+  {
+    "objectID": "slides/week6-day2.html#a-more-automated-option",
+    "href": "slides/week6-day2.html#a-more-automated-option",
+    "title": "Midterm Project Feedback & Machine Learning",
+    "section": "A More Automated Option",
+    "text": "A More Automated Option\n\nevals_train %&gt;% \n  map(.f = ~lm(score ~ .x + &lt;VARIABLES SELECTED&gt;, data = evals_train)) %&gt;% \n  map_df(.f = ~get_regression_summaries(.x)$adj_r_squared) %&gt;% \n  select(-ID, \n         -score,\n         -&lt;VARIABLE 1 SELECTED&gt;,\n         -&lt;VARIABLE 2 SELECTED&gt;\n         ) %&gt;% \n  pivot_longer(cols = everything(), \n               names_to = \"variable\", \n               values_to = \"adj_r_sq\") %&gt;% \n  slice_max(adj_r_sq)"
+  },
+  {
+    "objectID": "weeks/week-8.html",
+    "href": "weeks/week-8.html",
+    "title": "Week 8 – Hypothesis Tests for Slope Coefficients & Conditions for Inference",
+    "section": "",
+    "text": "1 Textbook Reading\nRequired Reading: Hypothesis Test for Slope & Inference Conditions\n\n\n\n\n\n\nReading Guide – Due Monday by the start of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Concept Quiz – Due Monday by the start of class\n1. Match each procedure to the question it addresses.\n\n\nconfidence intervals\nhypothesis tests\n\n\n\n\nWhat are plausible values for the population parameter?\nWhat are plausible values for the sample statistic?\nIs the population parameter different from 0?\nIs the value of the parameter different from a specified quantity?\n\n\n\n2. Which of the following are always true for hypothesis statements?\n\nThey are about sample statistics.\nThey are about relationships between variables.\nThey are about population parameters.\nThey are about differences in groups.\n\n3. To simulate what could have happened if the [null hypothesis was true / alternative hypothesis was true], we [separate the (x, y) pairs / keep the (x, y) pairs together] and [resample with replacement / randomly reassign a new y to each x].\n4. Which of the following are true about a null distribution? (select all that apply)\n\nIt is a distribution of statistics.\nThe values on the distribution represent what might have happened if the null hypothesis was true.\nThe values on the distribution represent what might have happened if the alternative hypothesis was true.\nIt is a distribution of sample observations.\n\n5. Name one similarity between a permutation distribution and a bootstrap distribution.\n6. Name one difference between a permutation distribution and a bootstrap distribution.\n7. For linear regression, the null distribution is always centered at ____.\n8. Which of the following are true about a p-value? (select all that apply)\n\nIt is calculated assuming the null hypothesis is true.\nIt is the probability the null hypothesis is true.\nIt quantifies how “surprising” our data are.\nIt compares the observed statistic to a distribution of values that could have happened if the null was true.\nIt is calculated assuming the alternative hypothesis is true.\nIt is a probability.\n\n9. Which of the following is true about a small p-value?\n\nThe sample statistic is unlikely to have happened by chance.\nThe sample size was large.\nThe sample statistic is unlikely to have happened if the null hypothesis was true.\nThe sample statistic was large.\n\n10. If you obtain a large p-value, what can you conclude about your hypotheses?\n\nWe cannot say the alternative hypothesis is false.\nWe cannot say the null hypothesis is false.\nThe null hypothesis is true.\nThe alternative hypothesis is true.\n\n11. If the probability of a Type I error goes down, what can you say about the probability of a Type II error?\n\nThe probability of a Type II error goes down.\nThe probability of a Type II error stays the same.\nThe probability of a Type II error goes up.\n\n12. If you obtained a small p-value (e.g., 0.02), what could you say about what you would expect if you constructed a 95% confidence interval?\n\nIt would contain the null hypothesized value.\nIt would not contain the null hypothesized value.\nIt would contain the sample statistic.\nIt would contain the true population parameter.\n\n13. In a regression table, what is the “statistic” value associated with the slope?\n\na bootstrap statistic\na z-statistic\nthe sample slope statistic\na t-statistic\n\n14. In a regression table, how is the p-value calculated?\n\nUsing a permutation distribution with 1000 resamples\nUsing a bootstrap distribution with 1000 samples\nUsing a Normal distribution\nUsing a t-distribution\n\n15. What are the required conditions for linear regression? (select all that apply)\n\na random sample was taken\nequal variance of residuals\na large sample was collected\nlinear relationship between x and y\nindependence of observations\nindependence of variables\nnormality of residuals\nnormality of observations\n\n16. In the scatterplot of stem dry mass versus stem length, what condition appears to be violated? (select all that apply)\n\nequal variance of residuals\nlinear relationship between x and y\nindependence of observations\nnormality of residuals\n\n17. Which of the following would violate the condition of independence? (select all that apply)\n\ncollecting a non-random sample\nobservations related geographically (spatially)\nobservations that are related in time (temporally)\nrepeated observations on the same person\nobservations related biologically\n\n18. When conducting a hypothesis test (in general), we assume the [observations / variables] are independent. When conducting a hypothesis test for a linear regression, the conditions require that the [observations / variables] are independent.\n\n\n3 R Tutorial – Due Wednesday by the start of class\nRequired Tutorial: Randomization test for the slope\nRequired Tutorial: Evaluating the technical conditions in linear regression",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "weeks/reading-guide/week1-answers.html",
+    "href": "weeks/reading-guide/week1-answers.html",
+    "title": "Answers to Questions on Week 1 Reading Guide",
+    "section": "",
+    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
+  },
+  {
+    "objectID": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
+    "href": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
+    "title": "Answers to Questions on Week 1 Reading Guide",
+    "section": "",
+    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
+  },
+  {
+    "objectID": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
+    "href": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
+    "title": "Answers to Questions on Week 1 Reading Guide",
+    "section": "Chapter 2 Notes",
+    "text": "Chapter 2 Notes\nTrue or False: Convenience sampling tends to result in non-response bias.\nFalse! Convenience sampling makes it so our sample is not representative of the population, or we have a biased sample. Non-response bias requires the people sampled to choose not to respond.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n**True! If our sample is made up of volunteers, it is more likely to have people with strong views. This makes it so our \nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\nTrue! We need random assignment of our explanatory variable to determine if a relationship is causal.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\nTrue! An experiment needs to have a “baseline” treatment to compare with. \nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\nTrue! Mathematically, we know that random sampling should make our sample look similar to the population, so we are not systematically including / excluding certain individuals more / less.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables.\nFalse! Random sampling allows us to infer that our sample is representative of the population, it does not allow us to say anything about the relationship between the explanatory and response variables."
   },
   {
     "objectID": "resources/week-2.html",
@@ -3271,7 +3249,7 @@
     "href": "critique/critique-1.html#choosing-an-article",
     "title": "Statistical Critique 1",
     "section": "3.1 Choosing an Article",
-    "text": "3.1 Choosing an Article\nTo save everyone time spent hunting for an interesting scientific article that has both visualizations and statistical methods taught in this course, I’ve gone ahead and found three articles from different contexts:\n\nSensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue\n\nAbstract:\nDengue is a very common acute infectious disease in the tropical world. Health care professionals are able to better care for dengue patients if they can make an early diagnosis and make a plan for case management. This article investigated fever in 5729 children in Vietnam with 3 days or less of fever and identified 1692 dengue cases using advanced methods. We systematically collected a range of medical and laboratory findings on each patient when they entered the study and used statistical tools to determine if these medical and laboratory findings could enable early diagnosis, independent of sophisticated, gold-standard laboratory tests. Our results, called the Early Dengue Classifier, had performance characteristics suggesting it could improve the diagnostic proficiency of health care professionals. However the performance of the Early Dengue Classifier is not perfect and likely will not change the practice of experienced doctors in dengue endemic settings. Our study highlights the need for 2nd generation, easy-to-use rapid diagnostic tests that can accurately diagnose dengue in the first few days of fever.\n\nAI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking\n\nAbstract:\nThe proliferation of artificial intelligence (AI) tools has transformed numerous aspects of daily life, yet its impact on critical thinking remains under explored. This study investigates the relationship between AI tool usage and critical thinking skills, focusing on cognitive offloading as a mediating factor. Utilizing a mixed-method approach, we conducted surveys and in-depth interviews with 666 participants across diverse age groups and educational backgrounds. Quantitative data were analysed using ANOVA and correlation analysis, while qualitative insights were obtained through thematic analysis of interview transcripts. The findings revealed a significant negative correlation between frequent AI tool usage and critical thinking abilities, mediated by increased cognitive offloading. Younger participants exhibited higher dependence on AI tools and lower critical thinking scores compared to older participants. Furthermore, higher educational attainment was associated with better critical thinking skills, regardless of AI usage. These results highlight the potential cognitive costs of AI tool reliance, emphasizing the need for educational strategies that promote critical engagement with AI technologies. This study contributes to the growing discourse on AI’s cognitive implications, offering practical recommendations for mitigating its adverse effects on critical thinking. The findings underscore the importance of fostering critical thinking in an AI-driven world, making this research essential reading for educators, policymakers, and technologists."
+    "text": "3.1 Choosing an Article\n\nTo save everyone time spent hunting for an interesting scientific article that has both visualizations and statistical methods taught in this course, I’ve gone ahead and found three articles from different contexts:\n\nSensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue\n\nAbstract:\nDengue is a very common acute infectious disease in the tropical world. Health care professionals are able to better care for dengue patients if they can make an early diagnosis and make a plan for case management. This article investigated fever in 5729 children in Vietnam with 3 days or less of fever and identified 1692 dengue cases using advanced methods. We systematically collected a range of medical and laboratory findings on each patient when they entered the study and used statistical tools to determine if these medical and laboratory findings could enable early diagnosis, independent of sophisticated, gold-standard laboratory tests. Our results, called the Early Dengue Classifier, had performance characteristics suggesting it could improve the diagnostic proficiency of health care professionals. However the performance of the Early Dengue Classifier is not perfect and likely will not change the practice of experienced doctors in dengue endemic settings. Our study highlights the need for 2nd generation, easy-to-use rapid diagnostic tests that can accurately diagnose dengue in the first few days of fever.\n\nAI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking\n\nAbstract:\nThe proliferation of artificial intelligence (AI) tools has transformed numerous aspects of daily life, yet its impact on critical thinking remains under explored. This study investigates the relationship between AI tool usage and critical thinking skills, focusing on cognitive offloading as a mediating factor. Utilizing a mixed-method approach, we conducted surveys and in-depth interviews with 666 participants across diverse age groups and educational backgrounds. Quantitative data were analysed using ANOVA and correlation analysis, while qualitative insights were obtained through thematic analysis of interview transcripts. The findings revealed a significant negative correlation between frequent AI tool usage and critical thinking abilities, mediated by increased cognitive offloading. Younger participants exhibited higher dependence on AI tools and lower critical thinking scores compared to older participants. Furthermore, higher educational attainment was associated with better critical thinking skills, regardless of AI usage. These results highlight the potential cognitive costs of AI tool reliance, emphasizing the need for educational strategies that promote critical engagement with AI technologies. This study contributes to the growing discourse on AI’s cognitive implications, offering practical recommendations for mitigating its adverse effects on critical thinking. The findings underscore the importance of fostering critical thinking in an AI-driven world, making this research essential reading for educators, policymakers, and technologists."
   },
   {
     "objectID": "critique/critique-1.html#isolating-the-visualization",
@@ -3292,7 +3270,7 @@
     "href": "index.html",
     "title": "STAT 313: Applied Experimental Design and Regression Models",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nLecture Slides\nActivity\nLab\nCritique\nProject\n\n\n\n\n0\nSun, March 31\nWelcome to Stat 313 Course Set-up\n📖\n\n\n\n\n\n\n\n1\nMon, March 31 (no class)\nCourse Structure & Statistics Review\n📖\n\n\n\n\n\n\n\n\nWed, April 2\nIntroduction to Data\n\n🖥\n🎥\n📋\n💻  Due April 7  Lab 1 Feedback\nLab 1 Solutions\n\n\n\n\n2\nMon, April 7\nVisualizing & Summarizing Numerical Variables\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, April 9\nExploring Flight Delays\n\n🖥\n\n💻  Due April 14  Lab 2 Feedback\n\n\n\n\n3\nMon, April 14\nIncorporating Categorical Variables\n📖\n🖥\n\n\n\n\n\n\n\nWed, April 16\nEthics & Categorical Variables\n\n🖥\n\n💻  Due April 21  Lab 3 Feedback\n✍Statistical Critique 1\n\n\n\n4\nMon, April 21\nIntroduction to Linear Regression\n📖\n🖥\n\n\nStatistical Critique 1 Due\n Statistical Critique 1 Feedback\n\n\n\n\nWed, April 23\nThe Ugly History of Linear Regression\n\n🖥\n\n💻  Due April 28  Lab 4 Feedback\n\n📁 Midterm Project Proposal\n\n\n5\nMon, April 28\nIntroduction to Multiple Linear Regression\n📖\n🖥\n📋\n\n\nMidterm Projec Proposal Due\n\n\n\nWed, April 30\nWork Day – Coding a Multiple Linear Regression\n\n🖥\n📋\n\n\n\n\n\n\nSun, May 4\n\n\n\n\n\n\nMidterm Project First Draft Due\nGradin Rubric: ✅\nFeedback: 📣\n\n\n6\nMon, May 5\nVariable Selection in Multiple Linear Regression\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 7\nMachine Learning\n\n🖥\n\n💻  Due May 12  Lab 6 Feedback\n\n\n\n\n\nSun, May 11\n\n\n\n\n\n\nMidterm Project Final Version Due\n\n\n7\nMon, May 12\nSampling Variability\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 14\nConfidence Intervals\n\n🖥\n\n💻  Due May 19  Lab 7 Feedback\n\n\n\n\n8\nMon, May 19\np-values & Hypothesis Tests\n📖\n🖥\n📋\n\n✍ Statistical Critique 2\n\n\n\n\nWed, May 21\nSimulation-based Methods vs. Theory-based Methods\n\n🖥\n\n💻  Due May 26  Lab 8 Feedback\n\n\n\n\n9\nMon, May 26\nNo Class, School Holiday\n\n📖\n\n\n\n\n✍Statistical Critique 2 Due\n\n\n\n\nTues, May 27\nClasses follow a Monday Schedule\nOne-Way Analysis of Variance\n\n🖥\n\n\n\n📁 Final Project Instructions\n\n\n\nWed, May 28\nInference for OWA & Model Selection\n\n🖥\nAssessing Independence: 📋\n\n\n\n\n\n\nSun, June 2\n\n\n\n\n\n\nFinal Project First Draft Due  Grading Rubric: ✅\n\n\n10\nMon, June 2\nTwo-Way ANOVA Models\n📖\n🖥\nOne-way to Two-way Model Selection Process: 📋\n\n\n\n\n\n\nWed, June 4\nLast Day of STAT 313\n\n🖥\n\n\n\nWhat should not be in your project: 📋\n\n\n\nSun, June 8\nFinal Project Final Version Due\n\n\n\n\n\nGrading Rubric: ✅\n\n\nFinals Week\nSTAT 313-01 & 02\nPoster Presentations\nSaturday, June 7, time TBD\n\n\n\n\n\nPresentation Instructions",
+    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nLecture Slides\nActivity\nLab\nCritique\nProject\n\n\n\n\n0\nSun, March 31\nWelcome to Stat 313 Course Set-up\n📖\n\n\n\n\n\n\n\n1\nMon, March 31 (no class)\nCourse Structure & Statistics Review\n📖\n\n\n\n\n\n\n\n\nWed, April 2\nIntroduction to Data\n\n🖥\n🎥\n📋\n💻  Due April 7  Lab 1 Feedback\nLab 1 Solutions\n\n\n\n\n2\nMon, April 7\nVisualizing & Summarizing Numerical Variables\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, April 9\nExploring Flight Delays\n\n🖥\n\n💻  Due April 14  Lab 2 Feedback\n\n\n\n\n3\nMon, April 14\nIncorporating Categorical Variables\n📖\n🖥\n\n\n\n\n\n\n\nWed, April 16\nEthics & Categorical Variables\n\n🖥\n\n💻  Due April 21  Lab 3 Feedback\n✍Statistical Critique 1\n📖 Reading a Research Paper Pt. 1\n\n\n4\nMon, April 21\nIntroduction to Linear Regression\n📖\n🖥\n\n\nStatistical Critique 1 Due\n Statistical Critique 1 Feedback\nReading a Research Paper Pt. 1 Due\n\n\n\nWed, April 23\nThe Ugly History of Linear Regression\n\n🖥\n\n💻  Due April 28  Lab 4 Feedback\n\n📁 Midterm Project Proposal\n📖 Reading a Research Paper Pt. 2\n\n\n5\nMon, April 28\nIntroduction to Multiple Linear Regression\n📖\n🖥\n📋\n\n\nMidterm Project Proposal Due\n\n\n\nWed, April 30\nWork Day – Coding a Multiple Linear Regression\n\n🖥\n📋\n\n\nReading a Research Paper Pt. 2 Due\n\n\n\nSun, May 4\n\n\n\n\n\n\nMidterm Project First Draft Due\nGradin Rubric: ✅\nFeedback: 📣\n\n\n6\nMon, May 5\nVariable Selection in Multiple Linear Regression\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 7\nSampling Variability\n📖\n🖥\n📋\n💻  Due May 12  Lab 6 Feedback\n\n\n\n\n\nSun, May 11\n\n\n\n\n\n\nMidterm Project Final Version Due\n\n\n7\nMon, May 12\nConfidence Intervals\n\n🖥\n\n\n\n\n\n\n\nWed, May 14\np-values & Hypothesis Tests\n📖\n🖥\n📋\n💻  Due May 19  Lab 7 Feedback\n✍ Statistical Critique 2\n\n\n\n8\nMon, May 19\nSimulation-based Methods vs. Theory-based Methods\n\n🖥\n\n\n✍Statistical Critique 2 Due\n\n\n\n\nWed, May 21\nOne-Way Analysis of Variance\n📖\n🖥\n\n💻  Due May 26  Lab 8 Feedback\n\n\n\n\n9\nMon, May 26\nNo Class, School Holiday\n\n\n\n\n\n\n\n\n\n\n\nTues, May 27\nClasses follow a Monday Schedule\nInference for OWA\n\n🖥\nAssessing Independence: 📋\n\n\n📁 Final Project Instructions\n\n\n\nWed, May 28\nWork Day – Coding a OWA\n\n\n\n\n\n\n\n\n\nSun, June 2\n\n\n\n\n\n\nFinal Project First Draft Due  Grading Rubric: ✅\n\n\n10\nMon, June 2\nTwo-Way ANOVA Models\n📖\n🖥\n\n\n\n\n\n\n\nWed, June 4\nLast Day of STAT 313\n\n🖥\n\n\n\nWhat should not be in your project: 📋\n\n\n\nSun, June 8\nFinal Project Final Version Due\n\n\n\n\n\nGrading Rubric: ✅\n\n\nFinals Week\nSTAT 313-01 & 02\nPoster Presentations\nSaturday, June 7, time TBD\n\n\n\n\n\nPresentation Instructions",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -3551,157 +3529,186 @@
     "text": "1.3 Deliverable\nFor the Midterm Project Proposal assignment on Canvas, you are required to submit the data you have chosen to use as an Excel file (stored as either a .csv or .xlsx)."
   },
   {
-    "objectID": "weeks/reading-guide/week1-answers.html",
-    "href": "weeks/reading-guide/week1-answers.html",
-    "title": "Answers to Questions on Week 1 Reading Guide",
+    "objectID": "weeks/reading-guide/week6-reading2.html",
+    "href": "weeks/reading-guide/week6-reading2.html",
+    "title": "Week 6 Reading Guide Part 2 – Study Design",
     "section": "",
-    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
+    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
   },
   {
-    "objectID": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
-    "href": "weeks/reading-guide/week1-answers.html#chapter-1-notes",
-    "title": "Answers to Questions on Week 1 Reading Guide",
+    "objectID": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
+    "href": "weeks/reading-guide/week6-reading2.html#chapter-2-sampling-experimental-design",
+    "title": "Week 6 Reading Guide Part 2 – Study Design",
     "section": "",
-    "text": "In a data frame, rows correspond to: observations\nIn a data frame, columns correspond to: variables\n\nTrue or False: A pair of variables can be both associated AND independent.\nFalse – They can only be one or the other!\n\nTrue or False: Given a pair of variables, one will always be the explanatory variable and one the response variable.\nTechnically, this is false. For a variable to be the “explanatory variable” it needs to explain the changes in the “response variable”. You could have two variables that are not related at all.\n\nTrue or False: If a study does have an explanatory and a response variable, that means changes in the explanatory variable must cause changes in the response variable.\nFalse! For an explanatory variable to cause changes in a response variable, we need to have an experiment where the explanatory variable is randomly assigned.\n\nTrue or False: Observational studies can show a naturally occurring association between variables.\nTrue! Observational studies can show associations between variables, but they cannot show that one variable causes changes in another. This is because observational studies do not have random assignment."
+    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
   },
   {
-    "objectID": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
-    "href": "weeks/reading-guide/week1-answers.html#chapter-2-notes",
-    "title": "Answers to Questions on Week 1 Reading Guide",
-    "section": "Chapter 2 Notes",
-    "text": "Chapter 2 Notes\nTrue or False: Convenience sampling tends to result in non-response bias.\nFalse! Convenience sampling makes it so our sample is not representative of the population, or we have a biased sample. Non-response bias requires the people sampled to choose not to respond.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n**True! If our sample is made up of volunteers, it is more likely to have people with strong views. This makes it so our \nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\nTrue! We need random assignment of our explanatory variable to determine if a relationship is causal.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\nTrue! An experiment needs to have a “baseline” treatment to compare with. \nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\nTrue! Mathematically, we know that random sampling should make our sample look similar to the population, so we are not systematically including / excluding certain individuals more / less.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables.\nFalse! Random sampling allows us to infer that our sample is representative of the population, it does not allow us to say anything about the relationship between the explanatory and response variables."
-  },
-  {
-    "objectID": "weeks/week-8.html",
-    "href": "weeks/week-8.html",
-    "title": "Week 8 – Hypothesis Tests for Slope Coefficients & Conditions for Inference",
+    "objectID": "weeks/week-7.html",
+    "href": "weeks/week-7.html",
+    "title": "Week 7 – Inference for Regression",
     "section": "",
-    "text": "1 Textbook Reading\nRequired Reading: Hypothesis Test for Slope & Inference Conditions\n\n\n\n\n\n\nReading Guide – Due Monday by the start of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Concept Quiz – Due Monday by the start of class\n1. Match each procedure to the question it addresses.\n\n\nconfidence intervals\nhypothesis tests\n\n\n\n\nWhat are plausible values for the population parameter?\nWhat are plausible values for the sample statistic?\nIs the population parameter different from 0?\nIs the value of the parameter different from a specified quantity?\n\n\n\n2. Which of the following are always true for hypothesis statements?\n\nThey are about sample statistics.\nThey are about relationships between variables.\nThey are about population parameters.\nThey are about differences in groups.\n\n3. To simulate what could have happened if the [null hypothesis was true / alternative hypothesis was true], we [separate the (x, y) pairs / keep the (x, y) pairs together] and [resample with replacement / randomly reassign a new y to each x].\n4. Which of the following are true about a null distribution? (select all that apply)\n\nIt is a distribution of statistics.\nThe values on the distribution represent what might have happened if the null hypothesis was true.\nThe values on the distribution represent what might have happened if the alternative hypothesis was true.\nIt is a distribution of sample observations.\n\n5. Name one similarity between a permutation distribution and a bootstrap distribution.\n6. Name one difference between a permutation distribution and a bootstrap distribution.\n7. For linear regression, the null distribution is always centered at ____.\n8. Which of the following are true about a p-value? (select all that apply)\n\nIt is calculated assuming the null hypothesis is true.\nIt is the probability the null hypothesis is true.\nIt quantifies how “surprising” our data are.\nIt compares the observed statistic to a distribution of values that could have happened if the null was true.\nIt is calculated assuming the alternative hypothesis is true.\nIt is a probability.\n\n9. Which of the following is true about a small p-value?\n\nThe sample statistic is unlikely to have happened by chance.\nThe sample size was large.\nThe sample statistic is unlikely to have happened if the null hypothesis was true.\nThe sample statistic was large.\n\n10. If you obtain a large p-value, what can you conclude about your hypotheses?\n\nWe cannot say the alternative hypothesis is false.\nWe cannot say the null hypothesis is false.\nThe null hypothesis is true.\nThe alternative hypothesis is true.\n\n11. If the probability of a Type I error goes down, what can you say about the probability of a Type II error?\n\nThe probability of a Type II error goes down.\nThe probability of a Type II error stays the same.\nThe probability of a Type II error goes up.\n\n12. If you obtained a small p-value (e.g., 0.02), what could you say about what you would expect if you constructed a 95% confidence interval?\n\nIt would contain the null hypothesized value.\nIt would not contain the null hypothesized value.\nIt would contain the sample statistic.\nIt would contain the true population parameter.\n\n13. In a regression table, what is the “statistic” value associated with the slope?\n\na bootstrap statistic\na z-statistic\nthe sample slope statistic\na t-statistic\n\n14. In a regression table, how is the p-value calculated?\n\nUsing a permutation distribution with 1000 resamples\nUsing a bootstrap distribution with 1000 samples\nUsing a Normal distribution\nUsing a t-distribution\n\n15. What are the required conditions for linear regression? (select all that apply)\n\na random sample was taken\nequal variance of residuals\na large sample was collected\nlinear relationship between x and y\nindependence of observations\nindependence of variables\nnormality of residuals\nnormality of observations\n\n16. In the scatterplot of stem dry mass versus stem length, what condition appears to be violated? (select all that apply)\n\nequal variance of residuals\nlinear relationship between x and y\nindependence of observations\nnormality of residuals\n\n17. Which of the following would violate the condition of independence? (select all that apply)\n\ncollecting a non-random sample\nobservations related geographically (spatially)\nobservations that are related in time (temporally)\nrepeated observations on the same person\nobservations related biologically\n\n18. When conducting a hypothesis test (in general), we assume the [observations / variables] are independent. When conducting a hypothesis test for a linear regression, the conditions require that the [observations / variables] are independent.\n\n\n3 R Tutorial – Due Wednesday by the start of class\nRequired Tutorial: Randomization test for the slope\nRequired Tutorial: Evaluating the technical conditions in linear regression",
+    "text": "📖 Required Reading: Introduction to Modern Statistics – Study Design\n3. Which of the following statements are true about observational studies and experiments? Select all that apply!\n\nExperiments randomly assign the explanatory variable\nObservational studies randomly assign the explanatory variable\nObservational studies can make causal statements about the relationship between the explanatory and response variables\nExperiments can make causal statements about the relationship between the explanatory and response variables\n\n4. What are different methods for sampling from a population? Select all that apply!\n\nsimple random sampling\nstratified random sampling\ncluster sampling\nmultistage sampling\nconvenience sampling\n\n5. Cluster sampling and stratified sampling both rely on grouping observations, but have important differences. Match each method to how observations are randomly sampled.\n\n\nstratified sampling\ncluster sampling\n\ngroups of observations are created, groups are randomly selected, every observation in the selected group is sampled\ngroups of observations are created, observations within a group are randomly sampled\n\n\n\n1 Textbook Reading – Part 1\nRequired Reading: Exploring Sampling Variability\n\n\n\n\n\n\nReading Guide – Due Monday by the beginning of class\n\n\n\nDownload the Word Document\n\n\n\n\n2 Textbook Reading – Part 2\nRequired Reading: Confidence Intervals for the Slope\n\n\n\n\n\n\nReading Guide – Due Wednesday by the beginning of class (note the new time!)\n\n\n\nDownload the Word Document\n\n\n\n\n3 Concept Quiz – Due Wednesday by the beginning of class (note the new time!)\n1. Match each item to it’s respective analogy:\n\n\npoint estimate\nconfidence interval\n\n\n\nfishing with a net\nfishing with a spear\n\n\n2. To create a 95% confidence interval using the percentile method, what percentiles of the bootstrap distribution do you need to calculate?\n\n0th\n2.5th\n5th\n90th\n95th\n97.5th\n\n3. To create a 95% confidence interval using the standard error method, what standard error do you use?\n\nthe sample standard deviation\nthe bootstrap distribution standard deviation\na resample standard deviation\n1.96\n\n4. We almost never know if our confidence interval captured the true population parameter.\n\nTrue\nFalse\n\n5. What percentage of 99% confidence intervals do you expect to capture the true population parameter?\n6. The word “confident” in a confidence interval interpretation corresponds to what aspect of the interval?\n\nthe accuracy of the original sample\nthe reliability of the procedure for constructing confidence intervals\nthe precision of the bootstrap samples\n\n7. Which of the following are true?\n\nSmaller sample sizes tend to produce narrower confidence intervals.\nSmaller sample sizes tend to produce wider confidence intervals.\nLower confidence levels tend to produce wider confidence intervals.\nLower confidence levels tend to produce narrower confidence intervals.\n\n8. In a regression table, what does the “std_error” value associated with the slope represent?\n\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\nthe estimated standard deviation of the sampling distribution\nthe standard error of the sample\n\n9. In a regression table, how is the “std_error” value calculated?\n\na mathematical formula\nthe standard deviation of the sample\nthe standard deviation of the bootstrap distribution\n\n10. What percentage confidence interval is output in a regression table?\n\n99%\n95%\n90%\n\n\n\n4 R Tutorial – Due Wednesday by the beginning of class\nRequired Tutorial: Practice the infer Workflow",
     "crumbs": [
       "Weekly materials",
-      "Week 8"
+      "Week 7"
     ]
   },
   {
-    "objectID": "slides/week6-day2.html#deadline-reminders",
-    "href": "slides/week6-day2.html#deadline-reminders",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Deadline Reminders",
-    "text": "Deadline Reminders\n\nLab 4 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line."
-  },
-  {
-    "objectID": "slides/week6-day2.html#help-your-peers",
-    "href": "slides/week6-day2.html#help-your-peers",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Help your peers!",
-    "text": "Help your peers!\n\nAre the arguments / sentences easy to understand? Does the report flow?\nIs the same information included in multiple places?\nDo the plots have nice axis labels?\nCan you easily find the regression equations? Do the equations make sense?\nDo the interpretations / conclusions from the equations make sense?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
-    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Based on how the study was designed, what population can you infer these results onto?",
-    "text": "Based on how the study was designed, what population can you infer these results onto?\n\n\nJustify what population you believe your analysis can be inferred onto.\n\nThe sample of [possums / professors / crabs]?\nSome larger population of [possums / professors / crabs]?\n\nYour justification needs to connect with how the researchers collected their data!"
-  },
-  {
-    "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
-    "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Based on how the study was designed, what can you say about the relationships between the variables?",
-    "text": "Based on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#section",
-    "href": "slides/week6-day2.html#section",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "objectID": "slides/week1-day1.html#section",
+    "href": "slides/week1-day1.html#section",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "Data is Power"
+    "text": "About Me…"
   },
   {
-    "objectID": "slides/week6-day2.html#does-your-phone-recognize-your-face",
-    "href": "slides/week6-day2.html#does-your-phone-recognize-your-face",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Does your phone recognize your face?",
-    "text": "Does your phone recognize your face?\n\nJoy Buolamwini found that she had to put on a white mask for the facial detection program to “see” her face."
-  },
-  {
-    "objectID": "slides/week6-day2.html#how-does-google-label-your-images",
-    "href": "slides/week6-day2.html#how-does-google-label-your-images",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "How does Google label your images?",
-    "text": "How does Google label your images?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#should-the-cash-bail-system-change",
-    "href": "slides/week6-day2.html#should-the-cash-bail-system-change",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Should the cash bail system change?",
-    "text": "Should the cash bail system change?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
-    "href": "slides/week6-day2.html#will-your-car-be-able-to-drive-you",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Will your car be able to drive you?",
-    "text": "Will your car be able to drive you?"
-  },
-  {
-    "objectID": "slides/week6-day2.html#forward-selection-by-hand",
-    "href": "slides/week6-day2.html#forward-selection-by-hand",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "Forward Selection (by Hand)",
-    "text": "Forward Selection (by Hand)\n\nStart with the most basic model (one mean)\nDecide which one variable to add (based on adjusted \\(R^2\\))\nDecide if you should add another variable\n\n\\(\\vdots\\)\n\nStop adding variables when adjusted \\(R^2\\) stops increasing"
-  },
-  {
-    "objectID": "slides/week6-day2.html#a-more-automated-option",
-    "href": "slides/week6-day2.html#a-more-automated-option",
-    "title": "Midterm Project Feedback & Machine Learning",
-    "section": "A More Automated Option",
-    "text": "A More Automated Option\n\nevals_train %&gt;% \n  map(.f = ~lm(score ~ .x + &lt;VARIABLES SELECTED&gt;, data = evals_train)) %&gt;% \n  map_df(.f = ~get_regression_summaries(.x)$adj_r_squared) %&gt;% \n  select(-ID, \n         -score,\n         -&lt;VARIABLE 1 SELECTED&gt;,\n         -&lt;VARIABLE 2 SELECTED&gt;\n         ) %&gt;% \n  pivot_longer(cols = everything(), \n               names_to = \"variable\", \n               values_to = \"adj_r_sq\") %&gt;% \n  slice_max(adj_r_sq)"
-  },
-  {
-    "objectID": "weeks/week-10.html",
-    "href": "weeks/week-10.html",
-    "title": "Week 10: Two-Way ANOVA",
+    "objectID": "slides/week1-day1.html#section-1",
+    "href": "slides/week1-day1.html#section-1",
+    "title": "Welcome to Stat 313!",
     "section": "",
-    "text": "Welcome!\nThis week we explore one final area of ANOVA, a situation where we have multiple explanatory variables. This is called a two-way ANOVA. A two-way ANOVA extends the one-way ANOVA to situations with two categorical explanatory variables. This new methods allows researchers to simultaneously study two variables that might explain variability in the responses and explore whether the impacts of one explanatory variable change depending on the level of the other explanatory variable.",
+    "text": "What is Statistics?\n\n\n\nScientists seek to answer questions using rigorous methods and careful observations. These observations – collected from the likes of field notes, surveys, and experiments – form the backbone of a statistical investigation and are called data.\n\n\nStatistics is the study of how best to collect, analyze, and draw conclusions from data.\n\n\nIntroduction to Modern Statistics"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-2",
+    "href": "slides/week1-day1.html#section-2",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "What Statistics Is To Me\n\n \n\n\n\n\nThe data science cycle – Wickham & Grolemund"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-3",
+    "href": "slides/week1-day1.html#section-3",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "What you can expect in STAT 313\n\nThis course will teach you the fundamentals of linear models—simple linear regression, multiple linear regression, and analysis of variance—and experimental design. You will extend the concepts covered in your Stat I course, to:\n\n\nwork with data in a reproducible way (using R)\nvisualize and summarize a variety of datasets (in R)\ncritically evaluate the use of Statistics\nperform statistical analyses to answer research questions (using R)"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-4",
+    "href": "slides/week1-day1.html#section-4",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Coding 🙀\n\n\nCoding is a huge part of how doing statistics in the wild looks.\n\n\n\nEveryone is coming from a different background\nDifferent aspects of the course will be difficult to different people\nYou will be given coding resources each week\nUse your peers to support your learning"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-5",
+    "href": "slides/week1-day1.html#section-5",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Course Components\n\n\n\n\nBefore Class\n\n\nReading Guides\nConcept Quizzes\nR Tutorials\n\n\n\n\n\nDuring Class\n\n\nGroup Discussion\nHands-on Activities\nLab Assignments\n\n\n\n\n\nOutside of Class\n\n\nStatistical Critiques\nMidterm Project\nFinal Project"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-6",
+    "href": "slides/week1-day1.html#section-6",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Specifications Based Grading\n\n\n\n\nEveryone is capable of earning an A!"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-7",
+    "href": "slides/week1-day1.html#section-7",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "How Smart are You?\n\n\n\n(2 minutes)\n\nWrite two criteria would you use to rank yourself compared to everyone else in this class\n\n\n\n\n(3 minutes)\n\nTalk with the person on your right about the criteria you proposed\n\n\n\n\n(5 minutes)\n\nShare out\nPerson with most vowels in name should be prepared to share!"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-8",
+    "href": "slides/week1-day1.html#section-8",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Cooperative Learning\n\nis a structured form of small-group learning\n\n\n\n\nRoles relate to how the work should be done\n\nRoles are not about breaking up the work intellectually\n\nRoles allow each person to contribute to the group in significant ways\n\nEach person’s participation is necessary to complete the task"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-9",
+    "href": "slides/week1-day1.html#section-9",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Group Norms\n\n\n\n\nZero tolerance for: racism, sexism, homophobia, transphobia, ageism, ableism\nRespect one another\nIntent and impact both matter\n\n\n\n\n\nNon-judgmental\nTake space, make space\nEmbrace discomfort\nMake decisions by consensus"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-10",
+    "href": "slides/week1-day1.html#section-10",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "How We Learn Together\n\n\n\n\n\nNo one is done until everyone is done\nYou have the right to ask anyone in your group for help\nYou have the duty to help anyone in your group who asks for help\n\n\n\n\n\n\n\nHelping someone means explaining your thinking not giving answers or doing the work for them\nProvide a justification when you make a statement\nThink and work together – don’t divide up the work"
+  },
+  {
+    "objectID": "slides/week1-day1.html#section-11",
+    "href": "slides/week1-day1.html#section-11",
+    "title": "Welcome to Stat 313!",
+    "section": "",
+    "text": "Break"
+  },
+  {
+    "objectID": "weeks/week-0.html",
+    "href": "weeks/week-0.html",
+    "title": "Course Setup and Structure",
+    "section": "",
+    "text": "Welcome!\nIn this coursework, you’ll get set up with the Class Discord, learn about what is expected of you each week, and hear some tips from me about how to succeed.",
     "crumbs": [
       "Weekly materials",
-      "Week 10"
+      "Week 0"
     ]
   },
   {
-    "objectID": "weeks/week-10.html#textbook-reading",
-    "href": "weeks/week-10.html#textbook-reading",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "1.1 Textbook Reading",
-    "text": "1.1 Textbook Reading\nTo be honest, I didn’t have the energy this week to write another chapter on two-way ANOVA. So, instead we will be reading a couple of sections out of another statistics textbook. I’ve uploaded the PDFs of these sections to OneDrive, so you should be able to read them online or download them.\n\nSection 1 – Introduction to Two-Way ANOVA\n\n\n\n\n\n\nRead through “Step 6” on page 222\n\n\n\n\n\n\n\n\n\n\n\n\nExample 3.1 – Problematic Undertones\n\n\n\nI want to point out that the context of example 3.1 in this section has some major problematic undertones. The example focuses on “the effects of corporate and endorser credibility” on how likely someone is to buy shoes. For no clear reason, the example only considers “female” college students, which implicitly sends two problematic messages, (1) sex and gender are the same, and (2) women are more easily swayed by advertising.\nIn addition, the example uses Roseanne Barr as one of the celebrity endorsers—an actress who has written deplorable remarks about transgender people.\n\n\n\n\nSection 2 – Two-Way ANOVA Interaction Models\n\n\n\n\n\n\nRead through “Follow-up Confidence Intervals” on page 239\n\n\n\n\n\n\n\n\nReading Guide – Due Monday by the start of Class\nDownload the Word Document",
+    "objectID": "weeks/week-0.html#set-up-your-account",
+    "href": "weeks/week-0.html#set-up-your-account",
+    "title": "Course Setup and Structure",
+    "section": "1.1 Set up your account",
+    "text": "1.1 Set up your account\n\nVerify your email\nTo use this Discord server, you must have a verified email.\nNobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.\n\n\nCreate your identity\nThe first thing you should do is decide what name and picture you would like to use.\n\nI would like to strongly encourage you to use your real name and picture, so that everyone can get to know you. However, if you prefer to remain anonymous, you are free to do so.\n\n(Please do not be like Regina and use the name of another student, however!\nThis kind of impersonation will result in a permanent ban from the server.)\n\n\nDecide about privacy and notifications\nThe default settings on the channel are probably just fine for you.\nFeel free to make any changes that work for you, though.\nYou can change your message notifications:\n\nYou can edit your privacy settings, although most things are already private:\n\n\n\nConnect other apps\nYou can connect other apps to Discord, either for productivity or just for fun.",
     "crumbs": [
       "Weekly materials",
-      "Week 10"
+      "Week 0"
     ]
   },
   {
-    "objectID": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
-    "href": "weeks/week-10.html#concept-quiz-due-monday-by-the-start-of-class",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "1.2 Concept Quiz – Due Monday by the start of class",
-    "text": "1.2 Concept Quiz – Due Monday by the start of class\n1. Match each two-way ANOVA model to its correct description.\n\n\n\nadditive model\n  \ninteraction model\n\nThe relationship between one factor and the response changes depending on the level of another factor.\n\nThe relationship between one factor and the response remains the same across all levels of another factor.\n\nThere is a significant relationship between each factor and the response.\n\n\n\n2. Match each two-way ANOVA model to its multiple linear regression counterpart.\n\n\nadditive model\ninteraction model\n\n\n\ndifferent slopes\nparallel slopes\n\n\n\n\n\n\n\n\n\n3. Which of the following are conditions of a two-way ANOVA model? (Select all that apply)\n\nindependence of observations between the groups\nindependence of observations within each group\nindependence of variables\nnormally distributed responses within each group\nnormally distributed residuals\nlinear relationship between the explanatory and response variables\nequal variance of residuals\nequal variance of responses within each group\n\n\n4. Which of the following is important to consider when assessing independence? (Select all that apply)\n\nIf the same observational unit (e.g., person, penguin, tree) could be sampled multiple times\nIf observations could be biologically related (e.g., parents, siblings, etc.)\nIf observations could be spatially related (e.g., countries that border each other)\nIf there is a relationship between the observations and the response variable\n\n\n\n\n5. [True or False] When an additive model is fit, the interpretation of the p-value associated with each explanatory variable is [conditional / independent] on the other explanatory variable(s) in the model.\n\n6. If the null hypothesis is rejected in an additive two-way ANOVA model, what model should be fit instead?\n\nseparate one-way ANOVA models\na one-way ANOVA model containing the variable with the smallest p-value (from the additive two-way ANOVA)\na mean only model\nan interaction two-way ANOVA model\na simple linear regression",
+    "objectID": "weeks/week-0.html#using-the-shannels",
+    "href": "weeks/week-0.html#using-the-shannels",
+    "title": "Course Setup and Structure",
+    "section": "1.2 Using the shannels",
+    "text": "1.2 Using the shannels\nThe server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.\n\nText shannels\nUse the #general channel for anything and everything:\n\nIf your question is about course logistics, rather than the material itself, consider using the #class-logistics channel:\n\nYou can use the specific weekly channels to ask questions about the material…\n\n… or the specific lab assignment.\n\nNotice that you can use tick marks (```), like in Quarto, to make your code appear in a formatted code box.\n\n\nVoice shannels\nTo join a voice channel, simply click it! Make sure you are careful about when you are muted or unmuted.\n\nThe extra “Side Chat” channels are limited to 4 or 8 people, if you would like to start an impromptu study conversation without being heard by me and / or the rest of the class. (I’ll only drop in if you invite us!)\nVoice channels can also be used for people to “Go Live”, and share their screen with everyone else.\n\nWhile this will usually be something professors use to demonstrate code, you can go live, too! But you may need to download the desktop version of Discord to do so.\n\n\nPrivate messages\nIt is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing.",
     "crumbs": [
       "Weekly materials",
-      "Week 10"
+      "Week 0"
     ]
   },
   {
-    "objectID": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
-    "href": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
-    "title": "Week 10: Two-Way ANOVA",
-    "section": "1.3 R Tutorial – Due Wednesday by the start of class",
-    "text": "1.3 R Tutorial – Due Wednesday by the start of class\nThis week’s R tutorial is a short guide stepping you through model selection starting with a two-way ANOVA interaction model.\nClick here to access this week’s R tutorial\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit a screenshot of the completion page at the end of the tutorial.",
+    "objectID": "weeks/week-0.html#see-you-at-the-party",
+    "href": "weeks/week-0.html#see-you-at-the-party",
+    "title": "Course Setup and Structure",
+    "section": "1.3 See you at the Party!",
+    "text": "1.3 See you at the Party!",
     "crumbs": [
       "Weekly materials",
-      "Week 10"
+      "Week 0"
     ]
+  },
+  {
+    "objectID": "weeks/week-0.html#how-your-typical-week-will-look",
+    "href": "weeks/week-0.html#how-your-typical-week-will-look",
+    "title": "Course Setup and Structure",
+    "section": "2.1 How your typical week will look",
+    "text": "2.1 How your typical week will look\n\nReadings and videos (every week)\nI favor a “flipped classroom,” as it gives you more time to clarify and solidify statistical concepts through hands-on exercises. Each week, you will read the required chapter(s), completing a required reading guide to walk you through the central concepts for each week.\nDue Monday by the start of class.\n\n\nConcept quizzes (every week)\nEach week there will be a short (~10 questions) quiz over the reading and videos from the week. These quizzes are intended to ensure that you grasped the key concepts from the week’s readings. The quizzes are not timed, so you can feel free to check your answers with the textbook and / or videos if you so wish. The quizzes are marked on completion as complete or incomplete.\nDue Monday by the start of class.\n\n\nTutorials (every week)\nYou can think of the tutorials as an “interactive” textbook, as they interweave statistical ideas alongside examples of how to work with data in R and hands-on exercises writing the R code necessary to complete a given task. Each exercise has hints available if you get stuck!\nThe tutorials are work at your own pace, so you can complete them all at once or slowly throughout the week. The lab assignments will require for you to put the skills you learned in the tutorials to work, so you are required to complete each week’s tutorial before Wednesday’s lab.\nThe tutorials are marked on completion as complete or incomplete. You will submit a screenshot of the completion page at the end of the tutorial to confirm that you completed the tutorial for the week.\nDue Wednesday by the start of class.\n\n\nStatistical critiques (every 4-weeks)\nThese assignments are case studies in which you will evaluate a data visualization or statistical analysis, determining how well-performed and presented the analysis was and making recommendations for improving or using the analysis. Critiques are due roughly 1-week after they are assigned and should take 1-2 hours. You will receive feedback and a mark of Success or Growing (elaborated more on later), and you will be able to revise based on that feedback. There will be two total critiques.\n\n\nLab Assignments (every week)\nLabs will be assigned on Wednesday every week, providing the opportunity to explore the course concepts in the context of real data. Lab assignments will require for you to work through the tutorial for the week, thus the tutorials are due before the start of class on Wednesday.\nYou will complete the lab assignments in the same teams you collaborate with in class. You will access the lab assignment through Posit Cloud, which you will be walked through during the first lab. Your group will be expected to submit your completed lab on Canvas. You will need to submit only the HTML document.\nDue Mondays at 5pm.\n\n\nMidterm & Final Projects (Week 6 & Week 10)\nThere will be two projects throughout the quarter, where you will be asked to synthesize the statistical concepts you have learned in a formal statistical report. Your critiques will help guide you toward how you do / don’t want your report to look. Each project will be done independently, and requires you to submit a project proposal and draft report before the final deadline. You are encouraged to use the feedback received on these assignments to improve your final report. The final reports will be graded as Excellent, Satisfactory, Progressing, or No Credit based on a rubric that will be shared with the initial assignment.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
+    "href": "weeks/week-0.html#week-1-concept-quiz-course-set-up",
+    "title": "Course Setup and Structure",
+    "section": "2.2 ✅ Week 1 Concept Quiz: Course Set-up",
+    "text": "2.2 ✅ Week 1 Concept Quiz: Course Set-up\nQuestion 1: Where are student hours held?\n\nIn person\nDiscord\nZoom by appointment\nCanvas\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the student hours section of the course syllabus!\n\n\nQuestion 2: What materials and technology are required for this course? Select all that apply!\n\nIntroduction to Modern Statistics\nRStudio Cloud – the application for working in R\nCanvas\nDiscord\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the required materials section of the course syllabus!\n\n\nQuestion 3: In this course, Reading Guides are due by ____, Concept Quizzes are due by ____, and Tutorials are due by ____.\nQuestion 4: If you have a question about the course content, what is the best first step?\n\nPost your question on Discord in the appropriate channel\nSend Dr. Theobold an email\nGo to Dr. Theobold’s office hours on Monday\nGoogle it\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the getting help section of the course syllabus!\n\n\nQuestion 5: You are permitted to submit up to ___ assignments late.\n\n\n\n\n\n\nTip\n\n\n\nLook at the late work policy section of the course syllabus!\n\n\nQuestion 6: If you need to submit an assignment late, you must do which of the following?\n\nemail Dr. Theobold to request a deadline extension\nsubmit a deadline extension request to the Google Form linked in the syllabus (and on Canvas)\nrequest an extension before the deadline\ncomplete the assignment no later than 3-days after the original deadline\n\nQuestion 7: If you receive a “Growing” on a Lab Assignment or a Critique, what should you do?\n\nread the comments and complete revisions on the problems receiving a “Growing”\nread the comments and complete revisions on the entire assignment\ncomplete revisions on the problems receiving a “Growing”\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the lab section of the course syllabus!\n\n\nQuestion 8: For revisions on Lab Assignments and Critiques to be considered that week they need to be turned in with:\n\nreflections on how your learning progressed from your initial attempt\nyour new answers\nyour original answers\nnothing\n\n\n\n\n\n\n\nTip\n\n\n\nLook at the revisions section of the course syllabus!\n\n\nQuestion 9: You and a friend have been working on Critique 1 together. You finish up and want to go to bed, but they are still a little confused. You email them your file, and say, “Don’t copy this, just look how I did it so you can figure it out.” Have you violated Academic Honesty policies?\nQuestion 10: You have been working on making a visualization for your Midterm Project for what feels like forever and it seems like you are making little to no progress. You find an example analysis on the internet with the visualization you were hoping to make. You copy-and-paste the code used to make the visualization into your Midterm Project and do not reference that you used an outside source. You have violated the Academic Honesty policy.\nQuestion 11: Upload a picture of you introducing yourself in the “Introductions” channel of the STAT 313 Discord Server.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 0"
+    ]
+  },
+  {
+    "objectID": "activity/week-5-model-justification.html",
+    "href": "activity/week-5-model-justification.html",
+    "title": "Model Justification",
+    "section": "",
+    "text": "This study seeks to investigate how the relationship between average SAT math scores and the percentage of students who are economically disadvantaged differs based on the size of the school. As seen in the plot below, the slope for this relationship was found to be similar across the different levels of schools. Therefore, this study used a parallel slopes (additive) multiple linear regression model.\n\n\n\n\n\n\n\n\n\nWhat do you feel is missing from this model justification?"
   },
   {
     "objectID": "project/midterm-project/data-formatting-513.html",
@@ -4192,7 +4199,7 @@
     "href": "critique/critique-2.html#assignment-details",
     "title": "Statistical Critique 2: Exploring p-values",
     "section": "Assignment Details",
-    "text": "Assignment Details\nIn your second statistical critique, you will focus on critiquing another key aspect of any statistical argument—statistical significance. No doubt you have seen \\(p\\)-values in a previous statistical course and / or disciplinary course, and this week you’re adding to that knowledge. For this critique you will compare the model you selected in your Midterm Project with what model you would have chosen based on a statistical test.\nThis critique involves coding! You can find a template for critique on Posit Cloud."
+    "text": "Assignment Details\nIn your second statistical critique, you will focus on critiquing another key aspect of any statistical argument—statistical significance. No doubt you have seen \\(p\\)-values in a previous statistical course and / or disciplinary course, and this week you’re adding to that knowledge. For this critique you will compare the model you selected in your Midterm Project with what model you would have chosen based on a statistical test.\nThis critique involves coding! You can find a template for critique posted in the STAT 313 main workspace on Posit Cloud."
   },
   {
     "objectID": "critique/critique-2.html#part-zero-p-values-in-multiple-linear-regression",
@@ -4565,11 +4572,11 @@
     ]
   },
   {
-    "objectID": "weeks/week-3.html#concept-quiz-due-wednesday-by-the-start-of-class",
-    "href": "weeks/week-3.html#concept-quiz-due-wednesday-by-the-start-of-class",
+    "objectID": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
+    "href": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
     "title": "Week Three: Incorporating Categorical Variables",
-    "section": "1.4 Concept Quiz – Due Wednesday by the start of class",
-    "text": "1.4 Concept Quiz – Due Wednesday by the start of class\n1. Suppose you’ve run the following code to make side-by-side boxplots of life expectancy:\n\nggplot(data = gapminder_small, \n       mapping = aes(x = country, y = lifeExp)) +\n  geom_boxplot() +\n  labs(x = \"\", \n       y = \"\", \n       title = \"Life Expectancy (in Years) by Country\",\n       fill = \"Country\"\n       )\n\nYour resulting plot looks like this:\n\n\n\n\n\n\n\n\n\nWhat should you do?\n\nMove country to the y-axis.\nRemove some countries so the names don’t overlap.\nNothing, it looks great!\n\n2. If you didn’t want to stack your boxplots side-by-side, how else could you separate the groups?\n\n\n\n\n\n\nTip\n\n\n\nThis does not go inside the aes() function!\n\n\n3. What functions are necessary to calculate summary statistics for different groups of a categorical variable?\n\nsummarize()\nmutate()\narrange()\ngroup_by()\nfilter()\n\n4. A categorical variable could be correctly stored as what data types?\n\ninteger\ndouble\ncharacter\nfactor\n\n5. In Lab 2, you worked with the nycflights dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Match the code to its corresponding step.\n\n\nStep 1 %&gt;%\nStep 2 %&gt;%\nStep 3\n\n\n\nnycflights\ngroup_by(airline)\nfilter(dest == \"SFO\")\nsummarize(mean_dd = mean(dep_delay))\n\n\n6. What function did you learn that is used for converting a numerical variable to a categorical variable (a process called discretizing)?\n\nmutate()\nfilter()\nif_else()\ngroup_by()\n\n7. The arrange() function sorts or reorder a data frame’s rows according to the values of the specified variable. By default, what ordering does it use for the rows?\n\nascending (smallest to largest)\ndescending (largest to smallest)",
+    "section": "1.4 Concept Quiz – Due Monday by the start of class",
+    "text": "1.4 Concept Quiz – Due Monday by the start of class\n1. Suppose you’ve run the following code to make side-by-side boxplots of life expectancy:\n\nggplot(data = gapminder_small, \n       mapping = aes(x = country, y = lifeExp)) +\n  geom_boxplot() +\n  labs(x = \"\", \n       y = \"\", \n       title = \"Life Expectancy (in Years) by Country\",\n       fill = \"Country\"\n       )\n\nYour resulting plot looks like this:\n\n\n\n\n\n\n\n\n\nWhat should you do?\n\nMove country to the y-axis.\nRemove some countries so the names don’t overlap.\nNothing, it looks great!\n\n2. If you didn’t want to stack your boxplots side-by-side, how else could you separate the groups?\n\n\n\n\n\n\nTip\n\n\n\nThis does not go inside the aes() function!\n\n\n3. What functions are necessary to calculate summary statistics for different groups of a categorical variable?\n\nsummarize()\nmutate()\narrange()\ngroup_by()\nfilter()\n\n4. A categorical variable could be correctly stored as what data types?\n\ninteger\ndouble\ncharacter\nfactor\n\n5. In Lab 2, you worked with the nycflights dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Choose which code belongs in each of the blanks.\n\n\n____ %&gt;%\n____ %&gt;%\n\n\n\n\nnycflights\ngroup_by(airline)\nfilter(dest == \"SFO\")\nsummarize(mean_dd = mean(dep_delay))\n\n\n6. What function did you learn that is used for converting a numerical variable to a categorical variable (a process called discretizing)?\n\nmutate()\nfilter()\nif_else()\ngroup_by()\n\n7. The arrange() function sorts or reorder a data frame’s rows according to the values of the specified variable. By default, what ordering does it use for the rows?\n\nascending (smallest to largest)\ndescending (largest to smallest)",
     "crumbs": [
       "Weekly materials",
       "Week 3"
@@ -4911,8 +4918,8 @@
     "objectID": "slides/week3-day2.html#revisions-due-tonight",
     "href": "slides/week3-day2.html#revisions-due-tonight",
     "title": "Week 3 Day 2",
-    "section": "Revisions Due Tonight",
-    "text": "Revisions Due Tonight\nIf you submitted revisions and your grade is still “Incomplete” – you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day."
+    "section": "",
+    "text": "If you submitted revisions and your grade is still “Incomplete” – you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day."
   },
   {
     "objectID": "slides/week3-day2.html#a-grading-reminder",
@@ -4954,7 +4961,7 @@
     "href": "slides/week3-day2.html#completing-revisions",
     "title": "Week 3 Day 2",
     "section": "Completing Revisions",
-    "text": "Completing Revisions\nLab 2 revisions are due by Wednesday, April 24.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 2\nDownload your revised HTML\nSubmit your revisions to the original Lab 2 assignment\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 2 Quarto file (next to the problems you revised), in a Word document, in the comment box on Canvas."
+    "text": "Completing Revisions\nLab 2 revisions are due by Wednesday, April 24.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 2\nDownload your revised HTML\nSubmit your revisions to the original Lab 2 assignment\n\n\n\n\n\n\n\n\nReflections\n\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 2 Quarto file (next to the problems you revised), in a Word document, in the comment box on Canvas."
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---gender",
@@ -4968,7 +4975,7 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---gender-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Gender",
-    "text": "Choosing What to Measure - Gender\nResearchers provided students with the following question:\n\nWhat is your gender?\nMale, Female, Other\n\n\n \n\nWhat information are the researchers missing?"
+    "text": "Choosing What to Measure - Gender\nResearchers provided students with the following question:\n\nWhat is your gender?\nMale, Female, Other\n\n\n\n\nWhat information are the researchers missing?\n\n\n\n\nWhy is that information important?"
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---sex",
@@ -4982,7 +4989,7 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---sex-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Sex",
-    "text": "Choosing What to Measure - Sex\nThe intake form for a local heart clinic asks the following question:\n\nWhat is sex were you assigned at birth?\nMale, Female, Other\n\n\n \n\nWhat information are the doctors missing?"
+    "text": "Choosing What to Measure - Sex\nThe intake form for a local heart clinic asks the following question:\n\nWhat is sex were you assigned at birth?\nMale, Female, Other\n\n\n\n\nWhat information are the doctors missing?\n\n\n\n\nWhy is that information important?"
   },
   {
     "objectID": "slides/week3-day2.html#choosing-what-to-measure---race",
@@ -4996,28 +5003,28 @@
     "href": "slides/week3-day2.html#choosing-what-to-measure---race-1",
     "title": "Week 3 Day 2",
     "section": "Choosing What to Measure - Race",
-    "text": "Choosing What to Measure - Race\nLooking at the births14 dataset, the race of the mother was classified as:\n\nwhite\nnonwhite\n\n\n \n\nWhat information are researchers missing?"
+    "text": "Choosing What to Measure - Race\nLooking at the births14 dataset, the race of the mother was classified as:\n\nwhite\nnonwhite\n\n\n\n\nWhat information is missing?\n\n\n\n\nWhy is that information important?"
   },
   {
     "objectID": "slides/week3-day2.html#todays-data",
     "href": "slides/week3-day2.html#todays-data",
     "title": "Week 3 Day 2",
     "section": "Today’s Data",
-    "text": "Today’s Data\n\n\nThe and_vertebrates dataset contains length and weight observations for Coastal Cutthroat Trout and two salamander species (Coastal Giant Salamander, and Cascade Torrent Salamander) in previously clear cut (c. 1963) and old growth coniferous forest sections of Mack Creek in HJ Andrews Experimental Forest, Willamette National Forest, Oregon."
+    "text": "Today’s Data\n\n\n\n\nThe and_vertebrates dataset contains length and weight observations for Coastal Cutthroat Trout and two salamander species (Coastal Giant Salamander, and Cascade Torrent Salamander) in previously clear cut (c. 1963) and old growth coniferous forest sections of Mack Creek in HJ Andrews Experimental Forest, Willamette National Forest, Oregon."
   },
   {
     "objectID": "slides/week3-day2.html#research-question",
     "href": "slides/week3-day2.html#research-question",
     "title": "Week 3 Day 2",
     "section": "Research Question",
-    "text": "Research Question\n \n\n\nAre there differences in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?"
+    "text": "Research Question\n\n\n\nAre there differences in fish biomass between clear cut and old growth sections of the HJ Andrews Forest?\n\n\n\n\n\n\n\n\n\n\nClear Cutting\n\n\nIn the 1950s and 60s researchers clear cut sections of the HJ Andrews forest to research the efficiency of forest operations, including logging, road building, and forest regeneration."
   },
   {
     "objectID": "slides/week3-day2.html#data-layout",
     "href": "slides/week3-day2.html#data-layout",
     "title": "Week 3 Day 2",
     "section": "Data Layout",
-    "text": "Data Layout\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n2017\nMACKCC-L\nCC\nL\n1\n2\nSC\n29\nNA\nCascade torrent salamander\n39\n67\n1.30\nNONE\n2017-09-05\nNA\n\n\n2003\nMACKCC-L\nCC\nL\n1\n2\nSC\n48\nNA\nCascade torrent salamander\n33\n55\nNA\nNONE\n2003-09-02\nNA\n\n\n1995\nMACKOG-L\nOG\nL\n2\n2\nC\n10\nNA\nCoastal giant salamander\n26\n49\n0.70\nNONE\n1995-08-29\nNA\n\n\n2019\nMACKOG-U\nOG\nU\n1\n12\nP\n13\n1043544\nCoastal giant salamander\n120\n192\n50.00\nNONE\n2019-09-05\nNA\n\n\n2015\nMACKCC-U\nCC\nU\n1\n9\nC\n75\n19055544\nCutthroat trout\n122\nNA\n17.14\nNONE\n2015-09-01\nRECAP\n\n\n2005\nMACKCC-L\nCC\nL\n1\n2\nSC\n34\nNA\nCutthroat trout\n85\nNA\nNA\nNONE\n2005-08-31\nNA\n\n\n1995\nMACKOG-M\nOG\nM\n1\n10\nS\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-29\nJAM\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n\n\n\n\n\n\nWhat are the observations / rows in this dataset?"
+    "text": "Data Layout\n\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n2019\nMACKOG-M\nOG\nM\n1\n8\nSC\n17\nNA\nCascade torrent salamander\n28\n52\n0.80\nNONE\n2019-09-04\nTorrent salamander\n\n\n2003\nMACKCC-L\nCC\nL\n1\n2\nSC\n48\nNA\nCascade torrent salamander\n33\n55\nNA\nNONE\n2003-09-02\nNA\n\n\n2010\nMACKCC-U\nCC\nU\n1\n7\nC\n56\nNA\nCoastal giant salamander\n26\n50\n0.67\nNONE\n2010-09-08\nNA\n\n\n2015\nMACKOG-L\nOG\nL\n2\n3\nC\n5\nNA\nCoastal giant salamander\n45\n80\n3.31\nNONE\n2015-09-02\nNA\n\n\n1998\nMACKCC-L\nCC\nL\n1\n1\nC\n45\nNA\nCutthroat trout\n89\nNA\nNA\nNONE\n1998-09-04\nNA\n\n\n2011\nMACKOG-M\nOG\nM\n1\n6\nP\n4\nNA\nCutthroat trout\n85\nNA\n5.92\nNONE\n2011-09-14\nNA\n\n\n1990\nMACKCC-L\nCC\nL\n1\n3\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1990-08-15\nnot sampled\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n\n\n\n\n\n\n\nWhat are the observations / rows in this dataset?"
   },
   {
     "objectID": "slides/week3-day2.html#if-you-wanted-to-find-the-mean-mass-for-cutthroat-trout-in-each-section-what-would-you-do",
@@ -5052,7 +5059,7 @@
     "href": "slides/week3-day2.html#lets-make-a-visualization",
     "title": "Week 3 Day 2",
     "section": "Let’s Make a Visualization!",
-    "text": "Let’s Make a Visualization!\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     y = section)\n       ) +\n  geom_density_ridges() +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       y = \"Section of HJ Andrews Experimental Forest\")"
+    "text": "Let’s Make a Visualization!\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     y = section)\n       ) +\n  geom_density_ridges() +\n  labs(x = \"Weight of Cutthroat Trout (g)\",\n       y = \"\",\n       title = \"Length of Salamanders for Different Sections of HJ Andrews Experimental Forest\")"
   },
   {
     "objectID": "slides/week3-day2.html#are-they-different-1",
@@ -5087,7 +5094,7 @@
     "href": "slides/week3-day2.html#visualization-2.0-incorporating-color",
     "title": "Week 3 Day 2",
     "section": "Visualization 2.0 – Incorporating Color",
-    "text": "Visualization 2.0 – Incorporating Color\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     fill = section, \n                     y = unittype)\n       ) +\n  geom_density_ridges(alpha = 0.5) +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       fill = \"Section of HJ Andrews \\nExperimental Forest\", \n       y = \"Type of Channel\")\n\n\n\n\nWhy put unittype on the y-axis instead of section???"
+    "text": "Visualization 2.0 – Incorporating Color\n\nggplot(data = trout, \n       mapping = aes(x = weight_g, \n                     fill = section, \n                     y = unittype)\n       ) +\n  geom_density_ridges(alpha = 0.5) +\n  labs(x = \"Weight of Cutthroat Trout (g)\", \n       fill = \"Section of HJ Andrews \\nExperimental Forest\", \n       y = \"Type of Channel\")"
   },
   {
     "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color-output",
@@ -5527,43 +5534,43 @@
     "objectID": "slides/week5-day1.html#plan-for-today",
     "href": "slides/week5-day1.html#plan-for-today",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Plan for Today",
-    "text": "Plan for Today\n\nReview different types of multiple linear regression models\nComplete an activity on sample selection\nStart Midterm Project write-up"
+    "section": "",
+    "text": "Review different types of multiple linear regression models\nComplete an activity on sample selection\nStart Midterm Project write-up"
   },
   {
     "objectID": "slides/week5-day1.html#plan-for-wednesday",
     "href": "slides/week5-day1.html#plan-for-wednesday",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Plan for Wednesday",
-    "text": "Plan for Wednesday\nNo lab – focus on getting all the coding accomplished for the Midterm Project"
+    "section": "",
+    "text": "No lab – focus on getting all the coding accomplished for the Midterm Project"
   },
   {
     "objectID": "slides/week5-day1.html#draft-due-by-sunday",
     "href": "slides/week5-day1.html#draft-due-by-sunday",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Draft Due by Sunday",
-    "text": "Draft Due by Sunday\nTo get everyone feedback on their drafts in a timely manner, the first drafts are due by Sunday.\n\n\n\n\n\n\nDeadline Extension\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
+    "section": "",
+    "text": "To get everyone feedback on their drafts in a timely manner, the first drafts are due by Sunday.\n\n\n\n\n\n\nDeadline Extension\n\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
   },
   {
     "objectID": "slides/week5-day1.html#reminders-about-deadlines",
     "href": "slides/week5-day1.html#reminders-about-deadlines",
     "title": "Introduction to Multiple Linear Regression",
-    "section": "Reminders About Deadlines",
-    "text": "Reminders About Deadlines\n\nMidterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
+    "section": "",
+    "text": "Midterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
   },
   {
     "objectID": "slides/week5-day1.html#section",
     "href": "slides/week5-day1.html#section",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Before…"
+    "text": "Before…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-1",
     "href": "slides/week5-day1.html#section-1",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Now…"
+    "text": "Now…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-2",
@@ -5577,14 +5584,14 @@
     "href": "slides/week5-day1.html#section-3",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Offsets!\n\n\nsmoke_lm &lt;- lm(weight ~ weeks * habit, data = ncbirths)\n\nget_regression_table(smoke_lm)\n\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\n\n\n\n\n\nInteraction Model\n\n\nThe * means the variables are interacting!"
+    "text": "Offsets!\n\n\nsmoke_lm &lt;- lm(weight ~ weeks * habit, data = ncbirths)\n\nget_regression_table(smoke_lm)\n\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\n\n\n\n\n\nInteraction Model\n\n\n\nThe * means the variables are interacting!"
   },
   {
     "objectID": "slides/week5-day1.html#estimated-regression-equations",
     "href": "slides/week5-day1.html#estimated-regression-equations",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Estimated Regression Equations",
-    "text": "Estimated Regression Equations\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\nWhat is the regression equation for non-smoker mothers?\n\n\n\nWhat is the regression equation for smoker mothers?"
+    "text": "Estimated Regression Equations\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\nWhat is the regression equation for non-smoker mothers?\n\n. . .\n\nWhat is the regression equation for smoker mothers?"
   },
   {
     "objectID": "slides/week5-day1.html#section-4",
@@ -5598,7 +5605,7 @@
     "href": "slides/week5-day1.html#section-6",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Multiple slopes\n\n\nage_lm &lt;- lm(weight ~ weeks + mage, data = ncbirths)\n\nget_regression_table(age_lm)\n\n\n\n# A tibble: 3 × 3\n  term      estimate std_error\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept   -6.68      0.492\n2 weeks        0.346     0.012\n3 mage         0.02      0.006\n\n\n\n\nHow do you interpret the value of 0.346?\n\n\n\n\nHow do you interpret the value of 0.02?"
+    "text": "Multiple slopes\n\n\nage_lm &lt;- lm(weight ~ weeks + mage, data = ncbirths)\n\nget_regression_table(age_lm)\n\n\n\n# A tibble: 3 × 3\n  term      estimate std_error\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept   -6.68      0.492\n2 weeks        0.346     0.012\n3 mage         0.02      0.006\n\n\n. . .\n\nHow do you interpret the value of 0.346?\n\n. . .\n\nHow do you interpret the value of 0.02?"
   },
   {
     "objectID": "slides/week5-day1.html#section-7",
@@ -5612,49 +5619,49 @@
     "href": "slides/week5-day1.html#section-8",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "When investigating if a relationship differs…\n\n\n\nAlways start with the “interaction” / different slopes model.\n\n\n\n\nIf the slopes look different, you’re done!\n\n\n\n\nIf the slopes look similar, then fit the “additive” / parallel slopes model."
+    "text": "When investigating if a relationship differs…\n\n. . .\n\nAlways start with the “interaction” / different slopes model.\n\n. . .\n\nIf the slopes look different, you’re done!\n\n. . .\n\nIf the slopes look similar, then fit the “additive” / parallel slopes model."
   },
   {
     "objectID": "slides/week5-day1.html#section-9",
     "href": "slides/week5-day1.html#section-9",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Different Enough?"
+    "text": "Different Enough?\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week5-day1.html#section-10",
     "href": "slides/week5-day1.html#section-10",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "What if they’re not very different?"
+    "text": "What if they’re not very different?\n\n\nMA_schools %&gt;% \n  ggplot(mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_parallel_slopes() + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\") +\n  my_theme"
   },
   {
     "objectID": "slides/week5-day1.html#section-11",
     "href": "slides/week5-day1.html#section-11",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
+    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
   },
   {
     "objectID": "slides/week5-day1.html#section-12",
     "href": "slides/week5-day1.html#section-12",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Baseline\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
+    "text": "Group equations – Baseline\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n. . .\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-13",
     "href": "slides/week5-day1.html#section-13",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
+    "text": "Group equations – Offsets\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n. . .\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n. . .\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#find-your-data-group",
     "href": "slides/week5-day1.html#find-your-data-group",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Find Your Data Group!",
-    "text": "Find Your Data Group!\nOnce you have found other students working on the same dataset, complete the sample selection activity.\n\n\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+    "text": "Find Your Data Group!\nOnce you have found other students working on the same dataset, complete the sample selection activity.\n. . .\n\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
   },
   {
     "objectID": "slides/week5-day1.html#steps-before-wednesday",
@@ -6151,17 +6158,14 @@
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
   },
   {
-    "objectID": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
-    "href": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
-    "title": "Week Three: Incorporating Categorical Variables",
-    "section": "1.4 Concept Quiz – Due Monday by the start of class",
-    "text": "1.4 Concept Quiz – Due Monday by the start of class\n1. Suppose you’ve run the following code to make side-by-side boxplots of life expectancy:\n\nggplot(data = gapminder_small, \n       mapping = aes(x = country, y = lifeExp)) +\n  geom_boxplot() +\n  labs(x = \"\", \n       y = \"\", \n       title = \"Life Expectancy (in Years) by Country\",\n       fill = \"Country\"\n       )\n\nYour resulting plot looks like this:\n\n\n\n\n\n\n\n\n\nWhat should you do?\n\nMove country to the y-axis.\nRemove some countries so the names don’t overlap.\nNothing, it looks great!\n\n2. If you didn’t want to stack your boxplots side-by-side, how else could you separate the groups?\n\n\n\n\n\n\nTip\n\n\n\nThis does not go inside the aes() function!\n\n\n3. What functions are necessary to calculate summary statistics for different groups of a categorical variable?\n\nsummarize()\nmutate()\narrange()\ngroup_by()\nfilter()\n\n4. A categorical variable could be correctly stored as what data types?\n\ninteger\ndouble\ncharacter\nfactor\n\n5. In Lab 2, you worked with the nycflights dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Choose which code belongs in each of the blanks.\n\n\n____ %&gt;%\n____ %&gt;%\n\n\n\n\nnycflights\ngroup_by(airline)\nfilter(dest == \"SFO\")\nsummarize(mean_dd = mean(dep_delay))\n\n\n6. What function did you learn that is used for converting a numerical variable to a categorical variable (a process called discretizing)?\n\nmutate()\nfilter()\nif_else()\ngroup_by()\n\n7. The arrange() function sorts or reorder a data frame’s rows according to the values of the specified variable. By default, what ordering does it use for the rows?\n\nascending (smallest to largest)\ndescending (largest to smallest)",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
+    "objectID": "critique/reading-research-paper.html",
+    "href": "critique/reading-research-paper.html",
+    "title": "Reading a Research Paper",
+    "section": "",
+    "text": "1 Reading a research paper\nStatistics is an important research tool used in many fields. In this assignment, you will read the original research article analyzing the dengue data which we have used in class. The purpose of this assignment is to help you learn how to read a research paper, and extract key details about the study and results. Later, we will try to replicate the authors’ results ourselves.\n\n\n2 Overview\nDengue is a mosquito-borne viral disease which affects hundreds of millions of people each year. Early diagnosis is crucial for patients to have the best prognosis, but relies on a variety of labo ratory tests. To enhance practitioners’ ability to diagnose dengue, a 2015 paper by Tuan et al. investigated the possibility of detecting dengue using a variety of clinical measurements like white blood cell count and platelet count. This activity will help you read the paper by Tuan et al.. The paper is available at https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003638.\n\n\n3 Outline of a research paper\nResearch papers in many fields, particularly the sciences, often contain the following main sections:\n\nAbstract: A short overview of the full paper, giving highlights of the motivation and back ground, the research question, the data, and the results.\nIntroduction: A broad overview of the research question the authors want to study, motivation for studying this question, and the authors’ approach to answering their question. The introduction often starts very general, then narrows to the specific question addressed in this paper. More detail is provided in the introduction than in the abstract, and more time is spent on motivation and related literature.\nMethods: The data and analysis techniques used to answer the research question. This typically describes the what the data looks like, how and where it was collected, and any statistical tools (e.g. visualizations, regression, hypothesis testing) that were used when analyzing the data.\nResults: A summary of the analysis results, such as figures showing regression fits, and tables of regression coefficients and p-values.\nDiscussion: A discussion of the analysis results, in context of the original research question. In this section, explanations for why particular results were observed may be proposed.\nConclusion: A short summary of the paper and its key results, and their connections to broader scientific questions. The conclusion is often the reverse of the introduction: it starts with the specific question addressed by this paper, then discusses the implications of this research for science in general.\n\n\n\n4 Reading a research paper\nReading a research paper, particularly in a field in which you are not an expert, can be challenging. The trick is to skim the paper for the most relevant information, and skip over technical details that are not essential to understanding the key take-aways. The questions below will guide you to the most important sections in the paper by Tuan et al. \n\n\n5 The Abstract and Introduction\nA good place to start is often with the Abstract and Introduction, which allow you get an overview of the paper, and usually don’t contain too many technical details. The Abstract is more succinct than the Introduction, but it also provides less motivation. When the Introduction is long, you may want to skim for key details.\nRead the Abstract and introduction. Then answer the following questions.\n\nWhy is it important for the researchers to build a model to detect dengue in hospital patients?\nWhat is the specific purpose of the research study?\n\nSo far, we know what question the researchers are trying to answer, and we know that they are going to build some kind of model to predict dengue. Our goal for the rest of the paper is to understand how the authors conducted this analysis. In particular, we want to answer the following questions:\n\nWho participated in the study?\nWhat did the researchers record about each participant?\nWhat statistical methods did the researchers use?\nWhat did the researchers conclude from their study?\n\nThis information is provided in the Methods and Results sections of the paper. These sections also contain lots of other details which is valuable, but not crucial to understand on a first reading, so we will focus on the most important parts of the Methods and Results.\n\n\n6 Study Participants\nRead the Patient Enrollment subsection of the Methods, and then answer the following questions.\n\nHow many patients participated in the study?\n\nPotential research subjects must meet certain criteria, defined by the researchers, to participate in a study. Inclusion criteria define requirements for inclusion in the study (e.g., a target age range or social group), while exclusion criteria are reasons a subject would be asked not to participate (e.g., certain medical conditions).\n\nWhat are the inclusion/exclusion criteria for this study?\n\n\n\n7 Data Collection and Analysis\nNow that we know who was studied, we want to know what data was collected about each participant, and how it was analyzed. Read the Clinical and laboratory investigations on the day of enrolment and Statistical methods subsections of the Methods. Then answer the following questions.\n\nWhich variables were recorded for the patients in the study?\nWhich types of statistical methods were used to model the relation between the explanatory variables and whether the patient had dengue? (It is ok if you’re not familiar with all these methods!)\nHow did the researchers choose which variables to include in their logistic regression model?\nWhich threshold did the researchers use when converting their predicted probabilities into binary predictions?\n\n\n\n8 Results\nFinally, let’s see what the researchers concluded from their statistical models! Read the Early Dengue Classifier subsection of the Results, then answer the following questions.\n\nWhich variables did the researchers include in their final logistic regression model?\nWhat sensitivity and specificity values did the researchers observe using their final model?\nWhat Area Under the ROC Curve (AUC) did the researchers observe?"
   },
   {
+<<<<<<< HEAD
     "objectID": "slides/week2-day2.html#r-tips-and-tricks",
     "href": "slides/week2-day2.html#r-tips-and-tricks",
     "title": "Exploring Flight Delays",
@@ -6174,5 +6178,173 @@
     "title": "Lab 2 - Grading Guide",
     "section": "1 (c)",
     "text": "1 (c)\nOf the numerical variables you named in (b), which variables behave more like a categorical variable?\nSuccess:\n\nLists all of the following variables:\n\nyear\nmonth (many may miss)\nflight (many may miss)\n\nIf additional variables are listed they are variables that could reasonably be argued to be categorical.\n\nGrowing:\n\nIf misses any of the three variables listed above\nIf includes variables that do not behave like categorical variables (e.g., arr_time)\n\nIf they missed any of the variables listed above:\nTake another look and see if any of the variables listed as integers behave more like categorical variables (variables that could be used to group observations).\nIf they included numerical variables:\nCategorical variables group observations! We talked this week about how categorical variables have a finite (small) number of values. The variable you chose does not necessarily reflect this. What variables do?"
+=======
+    "objectID": "project/reading-research-paper-pt-1.html",
+    "href": "project/reading-research-paper-pt-1.html",
+    "title": "Reading a Research Paper - Part 1",
+    "section": "",
+    "text": "Statistics is an important research tool used in many fields. The purpose of this assignment is to help you begin to read a research paper that uses statistical methods to address an important research question. In a later assignment, you will read the paper in full, but for now we will focus on reading a summary of the paper. Most research papers include a summary of their contents at the beginning. You may see this summary referred to as an abstract, a summary, or an executive summary, depending on the journal and the field. Reading this summary first, before we dive into the full details, is very helpful to get an overview of what the authors did."
+  },
+  {
+    "objectID": "project/reading-research-paper-pt-2.html",
+    "href": "project/reading-research-paper-pt-2.html",
+    "title": "Reading a Research Paper - Part 2",
+    "section": "",
+    "text": "Statistics is an important research tool used in many fields. In this assignment, you will read the original research article analyzing the dengue data which we have used in class. The purpose of this assignment is to help you learn how to read a research paper, and extract key details about the study and results. Later, we will try to replicate the authors’ results ourselves."
+  },
+  {
+    "objectID": "project/midterm-project/midterm-proposal-313.html#from-the-lterdatasampler-package",
+    "href": "project/midterm-project/midterm-proposal-313.html#from-the-lterdatasampler-package",
+    "title": "STAT 313: Midterm Project Proposal",
+    "section": "1.1 From the lterdatasampler package:",
+    "text": "1.1 From the lterdatasampler package:\n\nand_vertebrates: Size data for Cutthroat trout and salamanders in different sections of forest (from Lab 3).\n\nAdditional information about the data: https://lter.github.io/lterdatasampler/articles/and_vertebrates_vignette.html\nPublication resulting from data collected\n\n\n\n\nhbr_maples: Data on the growth of Sugar Maple (Acer saccharum) seedlings in response to calcium addition.\n\nAdditional information about the data: https://lter.github.io/lterdatasampler/articles/hbr_maples_vignette.html\nPublication resulting from data collected\n\n\n\n\nnwt_pikas: Data on the stress of p\n\nAdditional information about data: https://lter.github.io/lterdatasampler/articles/nwt_pikas_vignette.html\nPublication resulting from data collected"
+  },
+  {
+    "objectID": "project/midterm-project/midterm-proposal-313.html#from-the-openintro-package",
+    "href": "project/midterm-project/midterm-proposal-313.html#from-the-openintro-package",
+    "title": "STAT 313: Midterm Project Proposal",
+    "section": "1.2 From the openintro package:",
+    "text": "1.2 From the openintro package:\n\nbirths14: Data from US births from 2014 (similar to ncbirths dataset from Week 4).\n\nPublication resulting from data collected\n\n\n\n\npossum: Data representing possums in Australia and New Guinea\n\nPublication resulting from data collected"
+  },
+  {
+    "objectID": "project/midterm-project/midterm-proposal-313.html#from-the-moderndive-package",
+    "href": "project/midterm-project/midterm-proposal-313.html#from-the-moderndive-package",
+    "title": "STAT 313: Midterm Project Proposal",
+    "section": "1.3 From the moderndive package:",
+    "text": "1.3 From the moderndive package:\n\nevals: Data from end of semester student evaluations from University of Texas at Austin (discussed in ModernDive textbook)\n\nPublication resulting from data collected"
+  },
+  {
+    "objectID": "project/midterm-project/midterm-proposal-313.html#deliverable",
+    "href": "project/midterm-project/midterm-proposal-313.html#deliverable",
+    "title": "STAT 313: Midterm Project Proposal",
+    "section": "1.4 Deliverable",
+    "text": "1.4 Deliverable\nFor the Midterm Project Proposal assignment on Canvas, you are required to state at the beginning of the document, the name of the dataset you have chosen to use.\n\n\n\n\n\n\nNo need to download the data!\n\n\n\nEvery dataset is included in an R package, so there is no need to download the raw data file!"
+  },
+  {
+    "objectID": "project/midterm-project/midterm_project_template-313.html#results",
+    "href": "project/midterm-project/midterm_project_template-313.html#results",
+    "title": "Your Title Goes Here! Make it fun!",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "project/midterm-project/midterm_project_template-313.html#discussion",
+    "href": "project/midterm-project/midterm_project_template-313.html#discussion",
+    "title": "Your Title Goes Here! Make it fun!",
+    "section": "Discussion",
+    "text": "Discussion"
+  },
+  {
+    "objectID": "project/midterm-project/midterm_project_template-313.html#limitations",
+    "href": "project/midterm-project/midterm_project_template-313.html#limitations",
+    "title": "Your Title Goes Here! Make it fun!",
+    "section": "Limitations",
+    "text": "Limitations"
+  },
+  {
+    "objectID": "project/reading-research-paper-pt-1.html#submission",
+    "href": "project/reading-research-paper-pt-1.html#submission",
+    "title": "Reading a Research Paper - Part 1",
+    "section": "Submission",
+    "text": "Submission\nClick here to download a template file for completing this assignment:\nYou are allowed to use any text editing software to make your document (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
+  },
+  {
+    "objectID": "project/reading-research-paper-pt-2.html#submission",
+    "href": "project/reading-research-paper-pt-2.html#submission",
+    "title": "Reading a Research Paper - Part 2",
+    "section": "Submission",
+    "text": "Submission\nClick here to download a template file for completing this assignment:\nYou are allowed to use any text editing software to make your document (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
+  },
+  {
+    "objectID": "project/reading-research-paper-pt-2-student.html",
+    "href": "project/reading-research-paper-pt-2-student.html",
+    "title": "Reading a Research Paper Part 2",
+    "section": "",
+    "text": "Reading a Research Paper\nReading a research paper, particularly in a field in which you are not an expert, can be challenging. The trick is to skim the paper for the most relevant information, and skip over technical details that are not essential to understanding the key take-aways. The questions below will guide you to the most important sections in the paper by Tuan et al. \n\n\nThe Abstract and Introduction\nA good place to start is often with the Abstract and Introduction, which allow you get an overview of the paper, and usually don’t contain too many technical details. The Abstract is more succinct than the Introduction, but it also provides less motivation. When the Introduction is long, you may want to skim for key details.\nRead the Abstract and Introduction. Then answer the following questions.\n\nWhy is it important for the researchers to build a model to detect dengue in hospital patients?\nWhat is the specific purpose of the research study?\n\n\n\nStudy Participants\nPotential research subjects must meet certain criteria, defined by the researchers, to participate in a study. Inclusion criteria define requirements for inclusion in the study (e.g., a target age range or social group), while exclusion criteria are reasons a subject would be asked not to participate (e.g., certain medical conditions).\n\nWhat are the inclusion/exclusion criteria for this study?\n\n\n\nData Collection and Analysis\nNow that we know who was studied, we want to know what data was collected about each participant, and how it was analyzed. Read the Clinical and laboratory investigations on the day of enrolment and Statistical methods subsections of the Methods. Then answer the following questions.\n\nWhich variables were recorded for the patients in the study?\nWhich types of statistical methods were used to model the relation between the explanatory variables and whether the patient had dengue? (It is okay if you’re not familiar with all these methods!)\nHow did the researchers choose which variables to include in their logistic regression model?\nWhich threshold did the researchers use when converting their predicted probabilities into binary predictions?\n\n\n\nResults\nFinally, let’s see what the researchers concluded from their statistical models! Read the Early Dengue Classifier subsection of the Results, then answer the following questions.\n\nWhich variables did the researchers include in their final logistic regression model?\nWere there other models that performed as well as the model that the researchers chose? If so, why were these other models not selected?\nWhat does it mean that the model had a “sensitivity” of 74.8% for correctly classifying dengue?"
+  },
+  {
+    "objectID": "project/reading-research-paper-pt-1-student.html",
+    "href": "project/reading-research-paper-pt-1-student.html",
+    "title": "Reading a Research Paper Part 1",
+    "section": "",
+    "text": "Read the Background and Methods in the summary at the beginning of the Tuan et al. paper. Then answer the following questions:\n\nWhat data is involved in this research study?\nWhat are the research questions / research goals?"
+  },
+  {
+    "objectID": "slides/week3-day1.html",
+    "href": "slides/week3-day1.html",
+    "title": "Incorporating Categorical Variables",
+    "section": "",
+    "text": "“Complete” = Satisfactory\n\n\nYou provided responses to every question\nYou correctly identified the observational unit for the mpg dataset\n\n\n\n\n\n“Incomplete” = Growing\n\n\nYou did not provide responses to every question\nYou did not correctly identify the observational unit for the mpg dataset\n\n\n\n\n\n\n\nLab 1 revisions are due by Friday, April 18 (at midnight).\n\n\n\nRead comments on Canvas\nGo back into your Lab 1 on Posit Cloud and complete your revisions\nRender your revised Lab 1\nDownload your revised HTML\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These must be written in your Lab 1 Quarto file (next to the problems you revised).\n\n\n\n\n\n\n\n\nHow would you describe a categorical variable?\n\n\n\n\n\ncategorical variables can have either character or factor data types\n\n. . .\nfactor – structured & fixed number of levels / options\n\ncan be ordered or unordered\n\n\n. . .\ncharacter – unstructured & variable number of levels\n\nis inherently unordered\n\n\n\n\n\nFill in the associated data types (e.g. character, factor, integer, double) with each type of variable.\n\n\n\n\nVariable\nData Type in R\n\n\n\n\nCategorical variable\n\n\n\nContinuous numerical variable\n\n\n\nDiscrete numerical variable\n\n\n\n\n\n\n\n\n\n\n\n\n\nfilter()\nselect()\nmutate()\nsummarize()\narrange()\ngroup_by()\n\n\n\n\n\n\nBrainstorm definitions for each verb\n\n\n\nfilter()\nselect()\nmutate()\ngroup_by()\nsummarize()\narrange()\n\n\n\n\n\n\n\n\n\n\n\n\nThe Pipe %&gt;%\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you wanted means for each level of a categorical variable, what would you do?\n\n\n\n\n\nThe HJ Andrews Experimental Forest houses one of the larges long-term ecological research stations, specifically researching cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek.\n\n\n\ntrout %&gt;% \n  group_by(section) %&gt;% \n  summarize(\n    mean_length = mean(length_1_mm, \n                       na.rm = TRUE)\n            )\n\n# A tibble: 2 × 2\n  section                               mean_length\n  &lt;chr&gt;                                       &lt;dbl&gt;\n1 clear cut forest                             85.3\n2 upstream old growth coniferous forest        81.4\n\n\n\n. . .\n\n\n\nWhy na.rm = TRUE?\n\n\n\n\n\n\nThe channels of the Mack Creek which were sampled were classified into the following groups:\n\n\n\n\"C\"\n\"I\"\n\"IP\"\n\"P\"\n\"R\"\n\"S\"\n\"SC\"\nNA\n\n\n\ncascade\nriffle\nisolated pool\npool\nrapid\nstep (small falls)\nside channel\nnot sampled by unit\n\n\n\n\n\n\nThe majority of the Cutthroat trout were captured in cascades (C), pools (P), and side channels (SC). Suppose we want to only retain these levels of the unittype variable.\n\n. . .\n\nWhat would you do?\n\n. . .\n\n\n\ntrout %&gt;% \n  filter(\n    unittype %in% c(\"C\", \"P\", \"SC\")\n         )\n\n\n. . .\n\n\nWhy use %in% instead of ==?\n\n\n\n\n\n\nAs a variable on the x- or y-axis\nAs a color / fill\nAs a facet\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would this histogram look if there was no variation in salamander length?\n\n\n\nWhat are possible causes for the variation in salamander length?\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_2_mm)) + \n  geom_histogram(binwidth = 14) + \n  facet_wrap(~ section, scales = \"free\") +\n  labs(x = \"Snout to Tail Length (mm)\")\n\nWarning: Removed 265 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                     y = species)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\") \n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(y = length_1_mm, \n                     x = species)\n         ) + \n  geom_boxplot() + \n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = unittype)\n         ) + \n  geom_boxplot() + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Channel Type\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species, \n                       color = section)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~ unittype) + \n  labs(x = \"Snout to Tail Length (mm)\", \n       y = \"\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 9 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = section)\n         ) + \n  geom_point(alpha = 0.25) + \n  facet_wrap(~species) +\n  labs(y = \"Snout to Tail Length (mm)\", \n       x = \"Weight (g)\", \n       color = \"Section in Mack Creek\")\n\nWarning: Removed 5435 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 96 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n. . .\nWhat are the aesthetics included in this plot?\n. . .\nWhat is one aspect of this plot that you believe is well done? What is one aspect of the plot that could be improved?"
+  },
+  {
+    "objectID": "slides/week3-day1.html#your-tasks-1",
+    "href": "slides/week3-day1.html#your-tasks-1",
+    "title": "Incorporating Categorical Variables",
+    "section": "Your Tasks",
+    "text": "Your Tasks\nRead the Background and Methods in the summary at the beginning of the Tuan et al. paper. Then answer the following questions:\n\nWhat data is involved in this research study?\nWhat are the research questions / research goals?"
+  },
+  {
+    "objectID": "slides/week3-day2.html",
+    "href": "slides/week3-day2.html",
+    "title": "Week 3 Day 2",
+    "section": "",
+    "text": "If you submitted revisions and your grade is still “Incomplete” – you forgot to submit reflections! Please add these as a comment to your assignment by the end of the day."
+  },
+  {
+    "objectID": "slides/week5-day1.html",
+    "href": "slides/week5-day1.html",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "",
+    "text": "Review different types of multiple linear regression models\nComplete an activity on sample selection\nStart Midterm Project write-up\n\n\n\n\nNo lab – focus on getting all the coding accomplished for the Midterm Project\n\n\n\nTo get everyone feedback on their drafts in a timely manner, the first drafts are due by Sunday.\n\n\n\n\n\n\nDeadline Extension\n\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week).\n\n\n\n\n\n\nMidterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
+  },
+  {
+    "objectID": "slides/week5-day1.html#section-5",
+    "href": "slides/week5-day1.html#section-5",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "",
+    "text": "ncbirths %&gt;% \n  ggplot(mapping = aes(x = weeks, y = weight, color = mage)) + \n  geom_jitter() + \n  geom_smooth(method = \"lm\") +\n  labs(x = \"Weeks of Gestation\", \n       y = \"Weight of Baby (lbs)\", \n       color = \"Mother's Age\") +\n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "slides/week3-day1.html#the-pipe",
+    "href": "slides/week3-day1.html#the-pipe",
+    "title": "Incorporating Categorical Variables",
+    "section": "The Pipe ",
+    "text": "The Pipe"
+  },
+  {
+    "objectID": "slides/week3-day1.html#the-pipe-in-action",
+    "href": "slides/week3-day1.html#the-pipe-in-action",
+    "title": "Incorporating Categorical Variables",
+    "section": "The Pipe in Action!",
+    "text": "The Pipe in Action!"
+  },
+  {
+    "objectID": "slides/week3-day1.html#your-turn",
+    "href": "slides/week3-day1.html#your-turn",
+    "title": "Incorporating Categorical Variables",
+    "section": "Your Turn!",
+    "text": "Your Turn!\n\nIf you wanted means for each level of a categorical variable, what would you do?"
+  },
+  {
+    "objectID": "slides/week3-day1.html#facets-in-boxplots",
+    "href": "slides/week3-day1.html#facets-in-boxplots",
+    "title": "Incorporating Categorical Variables",
+    "section": "Facets in Boxplots",
+    "text": "Facets in Boxplots\n\n\nggplot(data = salamander, \n       mapping = aes(x = length_1_mm, \n                       y = species)\n         ) + \n  geom_boxplot() + \n  facet_wrap(~unittype) +\n  labs(x = \"Snout to Tail Length of Salamander (mm)\", \n       y = \"\")"
+  },
+  {
+    "objectID": "slides/week3-day2.html#section",
+    "href": "slides/week3-day2.html#section",
+    "title": "Week 3 Day 2",
+    "section": "",
+    "text": "If you wanted to find the mean mass for Cutthroat trout in each section, what would you do?"
+  },
+  {
+    "objectID": "slides/week3-day2.html#visualization-2.0-incorporating-color-1",
+    "href": "slides/week3-day2.html#visualization-2.0-incorporating-color-1",
+    "title": "Week 3 Day 2",
+    "section": "Visualization 2.0 – Incorporating Color",
+    "text": "Visualization 2.0 – Incorporating Color\n\n\nWhy put unittype on the y-axis instead of section???"
+>>>>>>> 74bbd1e2296283cb79014cca6da3acd092d125fe
   }
 ]

@@ -5,13 +5,16 @@ format:
     table-of-contents: true
     number-sections: true
     number-depth: 2
-editor: visual
+editor: source
 bibliography: references.bib
 execute: 
   echo: false
   message: false
   warning: false
 ---
+
+<!-- This should be revised to reflect ANOVA being introduced with SLR and MLR as  -->
+<!-- a "descriptive" method.  -->
 
 ```{r}
 #| include: false
@@ -446,9 +449,9 @@ Based on the `p.value` column, it doesn't seem like there is evidence that the r
 
 ## How do body mass and flipper length influence a penguin's bill length?
 
-Our multiple linear regressions take take on a variety of flavors, including models with multiple numerical explanatory variables. An example of this type of model is adding flipper length as a second explanatory variable (in addition to body mass) when explaining the length of a penguin's bill. This type of investigation is similar to what many of you did for your Midterm Project, where you decided if there was evidence that **both** explanatory variables have a relationship with the response. 
+Our multiple linear regressions take take on a variety of flavors, including models with multiple numerical explanatory variables. An example of this type of model is adding flipper length as a second explanatory variable (in addition to body mass) when explaining the length of a penguin's bill. This type of investigation is similar to what many of you did for your Midterm Project, where you decided if there was evidence that **both** explanatory variables have a relationship with the response.
 
-Based on the scatterplot below, it does seem that both body mass and flipper length have a relationship with a penguin's bill length. As the color of the points gets darker (longer flippers), a penguin's bill length also increases. 
+Based on the scatterplot below, it does seem that both body mass and flipper length have a relationship with a penguin's bill length. As the color of the points gets darker (longer flippers), a penguin's bill length also increases.
 
 ```{r}
 #| label: fig-scatterplot-bill-flipper
@@ -465,7 +468,7 @@ penguins_clean %>%
 
 ### Which method?
 
-As said before, we have two tools we can use (1) a permutation distribution, and (2) a $t$-distribution. Let's see which tool seems like the best option. 
+As said before, we have two tools we can use (1) a permutation distribution, and (2) a $t$-distribution. Let's see which tool seems like the best option.
 
 ```{r}
 #| label: fig-dual-slr
@@ -524,7 +527,7 @@ As I did not find that any of these conditions were violated, it seems reasonabl
 
 ### Obtaining our p-value
 
-Unfortunately, when testing for a relationship between each explanatory variable and the response, the `get_regression_table()` function does not do what we want. What we want is for the p-value for each variable to be *conditional* on the other variable(s) in the model, but the p-values for variables output from `get_regression_table()` are tested in the order they are listed. Meaning, if `body_mass_g` is the first variable listed in the model, then the p-value output **is not** conditional on `flipper_length_mm` also being included in the model. 
+Unfortunately, when testing for a relationship between each explanatory variable and the response, the `get_regression_table()` function does not do what we want. What we want is for the p-value for each variable to be *conditional* on the other variable(s) in the model, but the p-values for variables output from `get_regression_table()` are tested in the order they are listed. Meaning, if `body_mass_g` is the first variable listed in the model, then the p-value output **is not** conditional on `flipper_length_mm` also being included in the model.
 
 But we have a tool that will give us what we want! An ANOVA!!!
 
@@ -567,4 +570,4 @@ $H_0$: For penguins in the Palmer Archipelago, controlling for a penguin's flipp
 
 $H_A$: For penguins in the Palmer Archipelago, controlling for a penguin's flipper length there **is** a relationship between a penguin's body mass and their bill length
 
-Given the p-values output from the table, it appears that after controlling for a penguin's flipper length, there is a relationship between a penguin's body mass and bill length (p-value < 0.0001). Similarly, there is also evidence that (after controlling for a penguin's body mass) there is a relationship between the length of a penguin's flipper and its bill length (p-value < 0.0001). 
+Given the p-values output from the table, it appears that after controlling for a penguin's flipper length, there is a relationship between a penguin's body mass and bill length (p-value \< 0.0001). Similarly, there is also evidence that (after controlling for a penguin's body mass) there is a relationship between the length of a penguin's flipper and its bill length (p-value \< 0.0001).

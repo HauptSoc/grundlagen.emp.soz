@@ -82,6 +82,8 @@ where it could be improved.
 
 ## Choosing an Article
 
+<!-- Change to have everyone use the same article (Nicole's research paper) -->
+
 To save everyone time spent hunting for an interesting scientific article that
 has **both** visualizations **and** statistical methods taught in this course, 
 I've gone ahead and found three articles from different contexts:

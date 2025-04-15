@@ -5105,7 +5105,7 @@ window.Quarto = {
   <li><a href="#model-justification" id="toc-model-justification" class="nav-link" data-scroll-target="#model-justification">Model Justification</a></li>
   </ul></li>
   <li><a href="#part-two-using-a-p-value-instead" id="toc-part-two-using-a-p-value-instead" class="nav-link" data-scroll-target="#part-two-using-a-p-value-instead">Part Two: Using a p-value Instead</a></li>
-  <li><a href="#part-three-learning-more-about-the-backlash-against-p-values" id="toc-part-three-learning-more-about-the-backlash-against-p-values" class="nav-link" data-scroll-target="#part-three-learning-more-about-the-backlash-against-p-values">Part Three: Learning More about the Backlash Against <span class="math inline">\(p\)</span>-values</a>
+  <li><a href="#part-three-learning-more-about-misuses-of-p-values" id="toc-part-three-learning-more-about-misuses-of-p-values" class="nav-link" data-scroll-target="#part-three-learning-more-about-misuses-of-p-values">Part Three: Learning More about Misuses of <span class="math inline">\(p\)</span>-values</a>
   <ul class="collapse">
   <li><a href="#part-four-lessons-learned" id="toc-part-four-lessons-learned" class="nav-link" data-scroll-target="#part-four-lessons-learned">Part Four: Lessons Learned</a></li>
   </ul></li>
@@ -5141,49 +5141,52 @@ window.Quarto = {
 
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is where you will load in your data! </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Reference the R package you data live inside, since you will need to load that package in!</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(moderndive)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Package for your data:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reference the R package you data live inside, since you will need to load that package in!</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Package for your data:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="part-one-revisiting-the-midterm-project" class="level1">
 <h1>Part One: Revisiting the Midterm Project</h1>
 <p>For the first part of this critique, you are going to revisit the model you selected for your Midterm Project.</p>
 <section id="visualizations" class="level2">
 <h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
-<p><strong>In the code chunk below, copy-and-paste the plots you created in your Midterm Project.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the code chunk below, copy-and-paste the plots you created in your Midterm Project.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="model-justification" class="level2">
 <h2 class="anchored" data-anchor-id="model-justification">Model Justification</h2>
-<p><strong>Justify (in 2-3 sentences) why you chose this model!</strong></p>
+<!-- Justify (in 2-3 sentences) why you chose this model! -->
 </section>
 </section>
 <section id="part-two-using-a-p-value-instead" class="level1">
 <h1>Part Two: Using a p-value Instead</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: fit the most complex regression model</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: run an ANOVA to obtain p-values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: fit the most complex regression model</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: run an ANOVA to obtain p-values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Based on the p-value(s) you obtained, what model is the “best” model?</strong></p>
+<p><strong>Based on the p-value(s) you obtained from the ANOVA, what model is the “best” model?</strong></p>
 </section>
-<section id="part-three-learning-more-about-the-backlash-against-p-values" class="level1">
-<h1>Part Three: Learning More about the Backlash Against <span class="math inline">\(p\)</span>-values</h1>
-<p><strong>Type out what you find about your journal’s publication criteria or simply copy-and-paste the criteria you find listed on their website.</strong></p>
+<section id="part-three-learning-more-about-misuses-of-p-values" class="level1">
+<h1>Part Three: Learning More about Misuses of <span class="math inline">\(p\)</span>-values</h1>
+<!-- Note which (if any) of the ASA's p-value misinterpretations apply to the  -->
+<!-- article by Tuan et al. -->
+<!-- Make sure to JUSTIFY why you do / do not believe the p-values are misinterpreted! -->
 <section id="part-four-lessons-learned" class="level2">
 <h2 class="anchored" data-anchor-id="part-four-lessons-learned">Part Four: Lessons Learned</h2>
 <p>Now that you have explored the use of p-values for model selection and publication criteria, write down <strong>two</strong> things you have learned that you will take with you.</p>
