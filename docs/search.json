@@ -5290,7 +5290,7 @@
     "href": "slides/week3-day2.html#data-layout",
     "title": "Week 3 Day 2",
     "section": "Data Layout",
-    "text": "Data Layout\n\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n2019\nMACKOG-M\nOG\nM\n1\n8\nSC\n17\nNA\nCascade torrent salamander\n28\n52\n0.80\nNONE\n2019-09-04\nTorrent salamander\n\n\n2003\nMACKCC-L\nCC\nL\n1\n2\nSC\n48\nNA\nCascade torrent salamander\n33\n55\nNA\nNONE\n2003-09-02\nNA\n\n\n2010\nMACKCC-U\nCC\nU\n1\n7\nC\n56\nNA\nCoastal giant salamander\n26\n50\n0.67\nNONE\n2010-09-08\nNA\n\n\n2015\nMACKOG-L\nOG\nL\n2\n3\nC\n5\nNA\nCoastal giant salamander\n45\n80\n3.31\nNONE\n2015-09-02\nNA\n\n\n1998\nMACKCC-L\nCC\nL\n1\n1\nC\n45\nNA\nCutthroat trout\n89\nNA\nNA\nNONE\n1998-09-04\nNA\n\n\n2011\nMACKOG-M\nOG\nM\n1\n6\nP\n4\nNA\nCutthroat trout\n85\nNA\n5.92\nNONE\n2011-09-14\nNA\n\n\n1990\nMACKCC-L\nCC\nL\n1\n3\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1990-08-15\nnot sampled\n\n\n1995\nMACKCC-M\nCC\nM\n1\n9\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-30\nDRY\n\n\n\n\n\n\n\n\n\nWhat are the observations / rows in this dataset?"
+    "text": "Data Layout\n\n\n\n\n\n\n\n\n\nyear\nsitecode\nsection\nreach\npass\nunitnum\nunittype\nvert_index\npitnumber\nspecies\nlength_1_mm\nlength_2_mm\nweight_g\nclip\nsampledate\nnotes\n\n\n\n\n2013\nMACKOG-U\nOG\nU\n1\n14\nP\n1\nNA\nCascade torrent salamander\n41\n71\nNA\nNONE\n2013-09-06\nNA\n\n\n2017\nMACKCC-L\nCC\nL\n1\n2\nSC\n29\nNA\nCascade torrent salamander\n39\n67\n1.3\nNONE\n2017-09-05\nNA\n\n\n1995\nMACKCC-L\nCC\nL\n1\n1\nP\n12\nNA\nCoastal giant salamander\n67\n114\n11.1\nNONE\n1995-08-30\nNA\n\n\n2003\nMACKCC-U\nCC\nU\n1\n9\nC\n63\nNA\nCoastal giant salamander\n85\n151\nNA\nNONE\n2003-09-02\nADULT\n\n\n1998\nMACKOG-M\nOG\nM\n1\n5\nC\n2\nNA\nCutthroat trout\n121\nNA\nNA\nLV\n1998-09-02\nNA\n\n\n2007\nMACKOG-U\nOG\nU\n1\n13\nC\n74\nNA\nCutthroat trout\n45\nNA\nNA\nNONE\n2007-09-13\nNA\n\n\n1990\nMACKCC-L\nCC\nL\n1\n3\nSC\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1990-08-15\nnot sampled\n\n\n1995\nMACKOG-M\nOG\nM\n1\n10\nS\n1\nNA\nNA\nNA\nNA\nNA\nNONE\n1995-08-29\nJAM\n\n\n\n\n\n\n\n\n\nWhat are the observations / rows in this dataset?"
   },
   {
     "objectID": "slides/week3-day2.html#if-you-wanted-to-find-the-mean-mass-for-cutthroat-trout-in-each-section-what-would-you-do",
@@ -6072,5 +6072,12 @@
     "title": "Week 8 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
+  },
+  {
+    "objectID": "slides/week3-day2.html#accessing-lab-3",
+    "href": "slides/week3-day2.html#accessing-lab-3",
+    "title": "Week 3 Day 2",
+    "section": "Accessing Lab 3",
+    "text": "Accessing Lab 3\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was not the Recorder last week acts as the Recorder this week (change roles!).\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 3 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
   }
 ]
