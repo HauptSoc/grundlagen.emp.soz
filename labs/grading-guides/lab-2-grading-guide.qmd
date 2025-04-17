@@ -33,7 +33,7 @@ execute:
 
 **Success**:
 
--   Lists **all** variables with an `int` or `dbl` data type:
+-   Lists **all** 12 variables with an `int` or `dbl` data type:
     -   year
     -   month (many may miss)
     -   day
@@ -54,6 +54,31 @@ execute:
 -   If includes categorical variables (labeled `chr`)
 
 *Feedback:* For Question 1(b), you need to be careful to include ALL of the variables that R believes are numerical, that includes variables which may behave more like a categorical variable.
+
+## 1 (c)
+
+**Of the numerical variables you named in (b), which variables behave more like a categorical variable?**
+
+**Success**:
+
+-   Lists all of the following variables:
+    -   year
+    -   month (many may miss)
+    -   flight (many may miss)
+-   If additional variables are listed they are variables that could reasonably be argued to be categorical.
+
+**Growing**:
+
+-   If misses any of the three variables listed above
+-   If includes variables that **do not** behave like categorical variables (e.g., `arr_time`)
+
+**If they missed any of the variables listed above:**
+
+Take another look and see if any of the variables listed as `int`egers behave more like categorical variables (variables that could be used to group observations).
+
+**If they included numerical variables:**
+
+Categorical variables group observations! We talked this week about how categorical variables have a finite (small) number of values. The variable you chose does not necessarily reflect this. What variables do?
 
 ## 2
 
@@ -294,11 +319,10 @@ ggplot(data = sfo_flights,
 
 ## 11
 
-**How did your answer change when using the plot versus using the summary statistics? i.e. What were you able to see in the plot that could could not "see" with the summary statistics?**
+**What information did the plot give you that was missing from the summary statistics?**
 
 **Success**:
 
--   States if / how their answer did / did not change
 -   Discusses what could be see in the visualizations that could not be seen in the statistics
     -   skew
     -   mode / peak

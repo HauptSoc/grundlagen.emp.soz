@@ -4,7 +4,7 @@ format:
   revealjs:
     theme: style.scss
 embed-resources: true
-editor: visual
+editor: source
 ---
 
 ```{r packages}
@@ -678,7 +678,7 @@ Can we conclude that smoking [caused]{style="color: #e28743;"} these babies to w
 
 # Midterm Project Step 1
 
-## [Project Proposal](../project/midterm-proposal-313.qmd)
+## [Project Proposal](../project/midterm-project/midterm-proposal-313.qmd)
 
 ::: small
 1.  Choose a dataset

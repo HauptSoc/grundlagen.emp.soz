@@ -451,4 +451,34 @@ ggplot(data = trout,
   facet_wrap(~section)
 ```
 
+# Lab 3 
+
+## Accessing Lab 3
+
+::: {.midi}
+::: {.callout-note}
+# Roles
+The person who **was not** the Recorder last week acts as the Recorder this week
+(change roles!). 
+:::
+:::
+
+. . .
+
+::: {.midi}
+**Step 2:** The Recorder [follows these instructions to copy the Lab 2 project into your group's workspace](https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA)
+:::
+
+. . .
+
+::: {.midi}
+**Step 3:** Both members open the Lab 3 assignment in your group workspace!
+:::
+
+. . .
+
+::: {.midi}
+**Step 4:** Follow the [final instructions](https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw) to activate collaborative editing in the document. 
+:::
+
 ## References
