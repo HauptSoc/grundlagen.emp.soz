@@ -53,7 +53,7 @@ Your group obtained a "Success" on **every** question
 
 <br>
 
-Your group received a "Growing" on *at least one* question
+Your group received a "Growing" on ***at least one*** question
 ::::
 ::::::::
 
@@ -67,10 +67,36 @@ Your group received a "Growing" on *at least one* question
     -   What aspect(s) of the distribution did you use to decide what a "typical" delay is?
 :::
 
-<!-- ## Making a Duplicate of Your Group's Lab 2 Project  -->
-<!-- Insert new instructions on how to make a copy of the group project for  -->
-<!-- individual revisions.  -->
+## Making a Duplicate of Your Group's Lab 2 Project
 
+::: {.small}
+1. Log in to [Posit Cloud]()
+2. Open your Weeks 2-3 Group Workspace
+3. Find Lab 2
+:::
+
+![](images/find-lab.png){fig-alt="A screenshot of a group's Lab 2 project in their group workspace. There is a purple box around an icon with two boxes that has a 'plus' (+) symbol in the middle."}
+
+::: columns
+::: {.column width="40%"}
+::: {.small}
+4. Make a personal copy of your group's lab 2
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+![](images/make-a-copy.png){width="50%" fig-alt="A screenshot of the pop-up that appears when you click on the 'Make a copy' icon next to the Lab 2 project."}
+:::
+:::
+
+::: {.small}
+::: {.callout-important}
+# Every member must have their own copy of the lab! No one works in the original document.
+:::
+:::
 
 ## Completing Revisions
 
@@ -89,9 +115,28 @@ Lab 2 revisions are due by Friday, April 24.
 # Reflections
 
 ::: small
-Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 2 Quarto file (next to the problems you revised), in a Word document, in the comment box on Canvas.
+Revisions are required to be accompanied with reflections on what you learned
+while completing your revisions. These are expected to be written in your Lab 2
+Quarto file (next to the problems you revised). 
 :::
 ::::
+
+## A Word About Reflections
+
+::: {.small}
+> When I initially answered question 6, I believed “observations” were the
+> variables used to classify each column in the data frame. Therefore, I 
+> believed the answer to be manufacturer, model, year, etc., or the column
+> headers. However, after analyzing the data again and looking over the reading,
+> I learned that “observations” or “cases” actually refer to the subjects that
+> the data is collected on. In this instance, the data set presents information
+> on cars, and that is why the observations/cases would actually be cars. It is
+> important to be able to distinguish between cases and variables because that
+> is how we can correctly analyze our data and prevent errors in our
+> interpretations.
+:::
+
+# (Simple) Linear Regression
 
 ```{r post-26-births-table}
 births_post28 <- ncbirths %>% 
@@ -102,6 +147,8 @@ weeks_lm <- lm(weight ~ weeks, data = births_post28)
 
 births_table <- get_regression_table(weeks_lm)
 ```
+
+##
 
 ::: {style="font-size: 2em; color: #000000;"}
 Relationships Between Variables
@@ -132,7 +179,7 @@ Relationships Between Variables
 -   Explanatory variable
     -   a.k.a. $x$, independent, explanatory, predictor
     -   Something you think might be related to the response
-    -   Either numerical or categorical
+    -   In this class -- either numerical or categorical
 :::
 ::::
 :::::
@@ -366,8 +413,6 @@ $response = intercept + slope \cdot explanatory + noise$
 
 ## Writing the Regression Equation
 
-</br>
-
 ::::::::: columns
 :::: {.column width="47%"}
 ::: fragment
@@ -405,6 +450,13 @@ $b_1$ = sample slope
 ::: fragment
 [Why does this equation have a hat on $y$?]{style="color: #e28743;"}
 :::
+
+::: {.fragment}
+::: {style="color: #b4d4ec;"}
+What does the hat represent?
+:::
+:::
+
 ::::
 :::::
 :::::::::
@@ -442,7 +494,7 @@ get_regression_table(weeks_lm) %>%
 ::: callout-note
 # `get_regression_table()`
 
-This function lives in the **moderndive** package, so we will need to load in this package (e.g., `library(moderndive`) if we want to use the `get_regression_table()` function.
+This function lives in the **moderndive** package, so we will need to load in this package (e.g., `library(moderndive)`) if we want to use the `get_regression_table()` function.
 :::
 ::::
 
@@ -497,7 +549,7 @@ get_regression_table(weeks_lm) %>%
 
 [Write out the estimated regression equation!]{style="color: #e28743;"}
 
-##  {background-color="#b76352"}
+##  {background-color="#E4E4E4"}
 
 ::::::::: columns
 :::: {.column width="45%"}
@@ -532,7 +584,7 @@ $\widehat{weight} = `r filter(births_table, term == "intercept")$estimate`+`r fi
 
 . . .
 
-[What would the residual be for a pregnancy that lasted 39 weeks and whose baby weighed 7.63 pounds?]{style="color: #e28743; font-size: 1.5em;"}
+[What would the residual be for a pregnancy that lasted 39 weeks with a baby that weighed 7.63 pounds?]{style="color: #e28743; font-size: 1.5em;"}
 
 # Linear Regression with One Categorical Explanatory Variable
 
@@ -676,7 +728,7 @@ We just concluded that babies born to a `"smoker"` weigh, on average, 0.4 pounds
 
 Can we conclude that smoking [caused]{style="color: #e28743;"} these babies to weigh less? Why or why not?
 
-# Midterm Project Step 1
+# Midterm Project Preparation
 
 ## [Project Proposal](../project/midterm-project/midterm-proposal-313.qmd)
 
@@ -687,7 +739,7 @@ Can we conclude that smoking [caused]{style="color: #e28743;"} these babies to w
 
 3.  Choose one numerical explanatory variable
 
-4.  Choose a second explanatory variable, it can be either numerical or categorical
+4.  Choose a second explanatory variable, it must be categorical
 :::
 
 :::: callout-tip
@@ -701,3 +753,23 @@ Your numerical variable **cannot** have a small number of values (e.g., 2 or 3).
 ::: small
 5.  Write your Introduction
 :::
+
+## [Reading a **Full** Research Paper](../project/reading-research-paper-pt-2.qmd)
+
+We are going to read through excerpts from the **Abstract**, **Introduction**, 
+**Methods**, and **Results** sections of the 
+[Dengue Fever paper by Tuan et al. (2015)](https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003638). 
+
+. . .
+
+Within these sections, you are asked to answer ten (10) questions about the 
+design of the study, the statistical methods used, and the findings of the
+analyses. 
+
+. . .
+
+</br>
+
+This will guide you in thinking about the structure of ***your*** Midterm
+Project report!
+
