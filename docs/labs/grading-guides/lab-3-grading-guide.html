@@ -493,6 +493,11 @@ Note
 <li>Doesn’t include units (mm) in x-axis label</li>
 </ul>
 <p><em>Feedback:</em> It is important for the axis label to contain the units of the variable. What units were the lengths measured in?</p>
+<ul>
+<li>Doesn’t change y-axis label to something related to channel types</li>
+</ul>
+<p><em>Feedback:</em> It is important for the axis label to describe the variable being plotted. What does the “unittype” variable represent? You can look up what each variable means in the help file (?and_vertebrates).</p>
+<p>contain the units of the variable. What units were the lengths measured in?</p>
 </section>
 <section id="question-8-adding-another-categorical-variable" class="level2">
 <h2 class="anchored" data-anchor-id="question-8-adding-another-categorical-variable">Question 8 – Adding another categorical variable</h2>
@@ -509,6 +514,39 @@ Note
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> length_1_mm, <span class="at">y =</span> unittype, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+If they used <code>color</code> instead of <code>fill</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Feedback:</em> The <code>color</code> aesthetic only colors the outside of the ridge plot. However, if you were to use the <code>fill</code> aesthetic the entire ridge would be filled with color!</p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+If they didn’t use <code>alpha</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Feedback:</em> You can’t see the CC distributions for most of the channel types because they are hidden behind the OG distributions. Adding <code>alpha = 0.5</code> inside of the <code>geom_density_ridges()</code> makes the distribution more transparent, so you can see BOTH distributions!</p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Growing:</strong></p>
 <ul>
 <li>y-axis should say something about the type of channel</li>
@@ -524,13 +562,12 @@ Not marking down on axis label
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If they got a growing on #8 for an axis label, they don’t get a growing here.</p>
+<p>If they got a growing on #7 for an axis label, they don’t get a growing here.</p>
 </div>
 </div>
 <ul>
-<li>If doesn’t use facets or colors ::: callout-note # If they used <code>color</code> instead of <code>fill</code></li>
+<li>If doesn’t use facets or colors</li>
 </ul>
-<p><em>Feedback:</em> The <code>color</code> aesthetic only colors the outside of the ridge plot. However, if you were to use the <code>fill</code> aesthetic the entire ridge would be filled with color! :::</p>
 </section>
 <section id="question-9-based-on-the-plot-how-different-are-the-lengths-between-the-channel-types-and-forest-sections" class="level2">
 <h2 class="anchored" data-anchor-id="question-9-based-on-the-plot-how-different-are-the-lengths-between-the-channel-types-and-forest-sections">Question 9 – Based on the plot, how different are the lengths between the channel types and forest sections?</h2>
@@ -596,9 +633,9 @@ If they don’t name their summary statistics
 </ul>
 <p><strong>Growing:</strong></p>
 <ul>
-<li>If their statement doesn’t connect the means to the shape of the distributions seen in Question 8</li>
+<li>If their statement doesn’t connect larger means to skewed distributions</li>
 </ul>
-<p><strong>Feedback:</strong> Note that in Question 11 you are specifically using the mean to summarize the center of the distribution. In Question 8 you saw the shape of each channel / forest section’s distribution. Based on what you saw, how do the shapes of the distributions influence the means you are seeing in Question 11?</p>
+<p><em>Feedback:</em> While I would agree that most of these means are similar to the location of the peaks you found in Question 8, are there any groups that have a mean that is NOT close to where the peak appears to be (on the plot). Why might that be the case? What might this have to do with the shape of the distributions?</p>
 
 
 </section>

@@ -1,7 +1,7 @@
 ---
 title: "Lab 3: Grading Guide"
 format: html
-editor: visual
+editor: source
 execute: 
   eval: false
 ---
@@ -130,7 +130,15 @@ ggplot(data = trout,
 
 -   Doesn't include units (mm) in x-axis label
 
-*Feedback:* It is important for the axis label to contain the units of the variable. What units were the lengths measured in?
+*Feedback:* It is important for the axis label to contain the units of the
+variable. What units were the lengths measured in?
+
+-   Doesn't change y-axis label to something related to channel types
+
+*Feedback:* It is important for the axis label to describe the variable being plotted. What does the "unittype" variable represent? You can look up what each variable means in the help file (?and_vertebrates). 
+
+contain the units of the
+variable. What units were the lengths measured in?
 
 ## Question 8 -- Adding another categorical variable
 
@@ -150,21 +158,44 @@ ggplot(data = trout,
 
 ```
 
+::: columns
+::: {.column width="40%"}
+::: callout-note 
+# If they used `color` instead of `fill`
+
+*Feedback:* The `color` aesthetic only colors the outside of the ridge plot. 
+However, if you were to use the `fill` aesthetic the entire ridge would be filled with color!
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+::: callout-note 
+# If they didn't use `alpha`
+
+*Feedback:* You can't see the CC distributions for most of the channel types 
+because they are hidden behind the OG distributions. Adding `alpha = 0.5` inside
+of the `geom_density_ridges()` makes the distribution more transparent, so you 
+can see BOTH distributions! 
+:::
+:::
+:::
+
 **Growing:**
 
 -   y-axis should say something about the type of channel
 
 *Feedback:* It is important for the axis label to describe the variable that is being measured. What would be a good y-axis title for what the `unittype` variable measured?
 
-::: callout-note
+::: {.callout-note}
 # Not marking down on axis label
 
-If they got a growing on #8 for an axis label, they don't get a growing here.
+If they got a growing on #7 for an axis label, they don't get a growing here.
 :::
 
--   If doesn't use facets or colors ::: callout-note \# If they used `color` instead of `fill`
-
-*Feedback:* The `color` aesthetic only colors the outside of the ridge plot. However, if you were to use the `fill` aesthetic the entire ridge would be filled with color! :::
+-   If doesn't use facets or colors 
 
 ## Question 9 -- Based on the plot, how different are the lengths between the channel types and forest sections?
 
@@ -201,7 +232,8 @@ trout %>%
 ::: callout-note
 # If they don't name their summary statistics
 
-*Feedback:* For Question 11, the output of your summary statistics looks a lot nicer if you give them names! (like the example that was given)
+*Feedback:* For Question 11, the output of your summary statistics looks a lot
+nicer if you give them names! (like the example that was given)
 :::
 
 **Growing:** If process is not correct
@@ -227,6 +259,7 @@ trout %>%
 
 **Growing:**
 
--   If their statement doesn't connect the means to the shape of the distributions seen in Question 8
+-   If their statement doesn't connect larger means to skewed distributions
 
-**Feedback:** Note that in Question 11 you are specifically using the mean to summarize the center of the distribution. In Question 8 you saw the shape of each channel / forest section's distribution. Based on what you saw, how do the shapes of the distributions influence the means you are seeing in Question 11?
+*Feedback:* While I would agree that most of these means are similar to the location of the peaks you found in Question 8, are there any groups that have a mean that is NOT close to where the peak appears to be (on the plot). Why might that be the case? What might this have to do with the shape of the distributions?
+
