@@ -29,7 +29,6 @@ This section should lay out the steps, decisions, and logic leading to the stati
 -   Produce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.
 
     -   For a multiple linear regression with *one numerical variable and one categorical variable*, you should produce **two** visualizations: one with different slopes and one with parallel slopes.
-    -   For a multiple linear regression with *two numerical variables*, you should produce **three** visualizations: one with both explanatory variables included, and two with each explanatory variable on its own.
 
 ::: callout-caution
 # Every visualization should have nicely formatted axis labels!
@@ -60,7 +59,7 @@ Use the `get_regression_table()` function from the **moderndive** package to pro
 
 -   Write out the estimated regression equation for your statistical model.
 
-    -   If your regression contains categorical variables, you can either write your equation out with indicator variables *or* write out a different equation for each group.
+    -   For your regression equation, you can either use indicator variables for each level of the categorical variable *or* write out a different equation for each group.
 
 -   Interpret **in the context of the data** the coefficients from the regression equation.
 
