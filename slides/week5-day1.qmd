@@ -367,6 +367,17 @@ $$\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \times \text{percent disadvan}$$
 $$\widehat{SAT}_{large} = 581.64 - 2.78 \times \text{percent disadvan}$$
 :::
 
+<!-- ## ADD SLIDES ABOUT ANOVA  -->
+<!-- Type 1: sequential sums of squares -->
+<!-- THIS IS WHAT anova() gives! -->
+
+<!-- Type 2: this type tests for each main effect after the other main effect -->
+<!-- THIS SHOULD ONLY BE USED IF THERE IS NO INTERACTION -->
+
+<!-- Type 3: This type tests for the presence of a main effect after the other main -->
+<!-- effect and interaction.   -->
+<!-- THIS SHOULD BE USED IF THERE IS AN INTERACTION -->
+
 # Sample Selection Activity
 
 ## Find Your Data Group!
@@ -375,16 +386,16 @@ Once you have found other students working on the same dataset, complete [the sa
 
 . . .
 
-:::{.small}
-1. What are the observations / rows in this dataset?
+::: small
+1.  What are the observations / rows in this dataset?
 
-2. From what population was the sample drawn?
+2.  From what population was the sample drawn?
 
-3. For an observation to be included in the dataset, what inclusion criteria needed to be met?
+3.  For an observation to be included in the dataset, what inclusion criteria needed to be met?
 
-4. How were the observations who satisfied the inclusion criteria sampled from the population?
+4.  How were the observations who satisfied the inclusion criteria sampled from the population?
 
-5. Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
+5.  Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
 :::
 
 # Midterm Project Work Time

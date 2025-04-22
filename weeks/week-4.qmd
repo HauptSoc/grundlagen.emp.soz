@@ -24,7 +24,12 @@ library(skimr)
 
 Welcome!
 
-In this week's coursework we are going to start exploring statistical methods---linear regression. We will start with the "basic" case or simple linear regression, with a single quantitative explanatory variable and a quantitative response. We will review the concepts behind linear regression, learn how to visualize regression models, and practice obtaining the estimated regression lines in `R`.
+In this week's coursework we are going to start exploring statistical
+methods---linear regression. We will start with the "basic" case or simple
+linear regression, with a single quantitative explanatory variable and a
+quantitative response. We will review the concepts behind linear regression,
+learn how to visualize regression models, and practice obtaining the estimated
+regression lines in `R`.
 
 ## Learning Outcomes
 
@@ -60,7 +65,7 @@ knitr::include_graphics(here::here("images",
 Don't worry about Section 5.3.3, it goes a bit too in the weeds for what we are interested in.
 :::
 
-### Reading Guide
+### Reading Guide -- Due Monday by the start of class
 
 [Download the Word Document](reading-guide/week4-reading.docx)
 

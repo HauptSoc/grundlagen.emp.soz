@@ -518,32 +518,53 @@
     "text": "Introduction & Research Questions\n\n\nIn 4-6 sentences, introduce / describe your data.\n\nWhat is the context of the data?\nFor what purpose were these data collected?\n\n\n\n\n\nOutline the two questions your research seeks to address.\n\nYou will have one question for each one-way ANOVA model\nYour question should be in terms of “differences in group means” not “relationships”"
   },
   {
+    "objectID": "slides/week4-day1.html#a-grading-reminder",
+    "href": "slides/week4-day1.html#a-grading-reminder",
+    "title": "Introduction to Linear Regression",
+    "section": "A Grading Reminder",
+    "text": "A Grading Reminder\n\n\n\n\n“Complete” = Satisfactory\n\n\nYour group obtained a “Success” on every question\n\n\n\n\n“Incomplete” = Growing\n\n\nYour group received a “Growing” on at least one question"
+  },
+  {
+    "objectID": "slides/week4-day1.html#common-mistakes",
+    "href": "slides/week4-day1.html#common-mistakes",
+    "title": "Introduction to Linear Regression",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\n\n\nUnits in axis labels (Q2 & Q9)\n\nWhat unit were the departure / arrival delays measured in?\n\nJustifying why I should expect to be early / late (Q8 & Q10)\n\nWhy is the mean / median a reasonable estimate of the “typical” delay?\nWhat aspect(s) of the distribution did you use to decide what a “typical” delay is?"
+  },
+  {
+    "objectID": "slides/week4-day1.html#completing-revisions",
+    "href": "slides/week4-day1.html#completing-revisions",
+    "title": "Introduction to Linear Regression",
+    "section": "Completing Revisions",
+    "text": "Completing Revisions\nLab 2 revisions are due by Friday, April 24.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 2\nDownload your revised HTML\nSubmit your revisions to the original Lab 2 assignment\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These are expected to be written in your Lab 2 Quarto file (next to the problems you revised)."
+  },
+  {
     "objectID": "slides/week4-day1.html#section",
     "href": "slides/week4-day1.html#section",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Visualizing Linear Regression\n\n\n\n\n\n\n\nThe scatterplot has been called the most “generally useful invention in the history of statistical graphics.”\n\n\n\n\n\nIt is a simple two-dimensional plot in which the two coordinates of each dot represent the values of two variables measured on a single observation."
+    "text": "Relationships Between Variables\n\n\n\nIn a statistical model, we generally have one variable that is the output and one or more variables that are the inputs.\n\n\n\n\n\n\nResponse variable\n\na.k.a. \\(y\\), dependent\nThe quantity you want to understand\nIn this class – always numerical\n\n\n\n\n\n\n\n\n\n\nExplanatory variable\n\na.k.a. \\(x\\), independent, explanatory, predictor\nSomething you think might be related to the response\nIn this class – either numerical or categorical"
   },
   {
     "objectID": "slides/week4-day1.html#section-1",
     "href": "slides/week4-day1.html#section-1",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Characterizing Relationships\n\n\n\n\nForm (e.g. linear, quadratic, non-linear)\nDirection (e.g. positive, negative)\nStrength (how much scatter/noise?)\nUnusual observations (do points not fit the overall pattern?)"
+    "text": "Visualizing Linear Regression\n\n\n\n\n\n\n\nThe scatterplot has been called the most “generally useful invention in the history of statistical graphics.”\n\n\n\n\n\nIt is a simple two-dimensional plot in which the two coordinates of each dot represent the values of two variables measured on a single observation."
   },
   {
     "objectID": "slides/week4-day1.html#section-2",
     "href": "slides/week4-day1.html#section-2",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Data for Today\n\nThe ncbirths dataset is a random sample of 1,000 cases taken from a larger dataset collected in North Carolina in 2004.\n\n\nEach case describes the birth of a single child born in North Carolina, along with various characteristics of the child (e.g. birth weight, length of gestation, etc.), the child’s mother (e.g. age, weight gained during pregnancy, smoking habits, etc.) and the child’s father (e.g. age)."
+    "text": "Characterizing Relationships\n\n\n\n\nForm (e.g. linear, quadratic, non-linear)\nDirection (e.g. positive, negative)\nStrength (how much scatter/noise?)\nUnusual observations (do points not fit the overall pattern?)"
   },
   {
     "objectID": "slides/week4-day1.html#section-3",
     "href": "slides/week4-day1.html#section-3",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Your Turn!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would your characterize this relationship?\n\nform\ndirection\nstrength\nunusual observations"
+    "text": "Data for Today\n\nThe ncbirths dataset is a random sample of 1,000 cases taken from a larger dataset collected in North Carolina in 2004.\n\n\nEach case describes the birth of a single child born in North Carolina, along with various characteristics of the child (e.g. birth weight, length of gestation, etc.), the child’s mother (e.g. age, weight gained during pregnancy, smoking habits, etc.) and the child’s father (e.g. age)."
   },
   {
     "objectID": "slides/week4-day1.html#cleaning-filtering-the-data",
@@ -557,14 +578,14 @@
     "href": "slides/week4-day1.html#section-4",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Correlation:\n\n\nstrength and direction of a linear relationship between two quantitative variables\n\n\n\n\nCorrelation coefficient between -1 and 1\nSign of the correlations shows direction\nMagnitude of the correlation shows strength"
+    "text": "Your Turn!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow would your characterize this relationship?\n\nform\ndirection\nstrength\nunusual observations"
   },
   {
     "objectID": "slides/week4-day1.html#section-5",
     "href": "slides/week4-day1.html#section-5",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Anscombe Correlations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFour datasets, very different graphical presentations\n\nsame mean and standard deviation in both \\(x\\) and \\(y\\)\nsame correlation\nsame regression line\n\n\n\n\n\nFor which of these relationships is correlation a reasonable summary measure?"
+    "text": "Correlation:\n\n\nstrength and direction of a linear relationship between two quantitative variables\n\n\n\n\nCorrelation coefficient between -1 and 1\nSign of the correlations shows direction\nMagnitude of the correlation shows strength"
   },
   {
     "objectID": "slides/week4-day1.html#calculating-correlation-in-r",
@@ -578,14 +599,14 @@
     "href": "slides/week4-day1.html#section-6",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Linear regression:\n\n\nwe assume the the relationship between our response variable (\\(y\\)) and explanatory variable (\\(x\\)) can be modeled with a linear function, plus some random noise\n\n\n\n\n\\(response = intercept + slope \\cdot explanatory + noise\\)"
+    "text": "Anscombe Correlations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFour datasets, very different graphical presentations\n\nsame mean and standard deviation in both \\(x\\) and \\(y\\)\nsame correlation\nsame regression line\n\n\n\n\n\nFor which of these relationships is correlation a reasonable summary measure?"
   },
   {
     "objectID": "slides/week4-day1.html#writing-the-regression-equation",
     "href": "slides/week4-day1.html#writing-the-regression-equation",
     "title": "Introduction to Linear Regression",
     "section": "Writing the Regression Equation",
-    "text": "Writing the Regression Equation\n\n\n\n\nPopulation Model\n\\(y = \\beta_0 + \\beta_1 \\cdot x + \\epsilon\\)\n\n\\(y\\) = response\n\\(\\beta_0\\) = population intercept\n\\(\\beta_1\\) = population slope\n\\(\\epsilon\\) = errors / residuals\n\n\n\n\n\nSample Model\n\\(\\widehat{y} = b_0 + b_1 \\cdot x\\)\n\n\\(b_0\\) = sample intercept\n\\(b_1\\) = sample slope\n\nWhy does this equation have a hat on \\(y\\)?"
+    "text": "Writing the Regression Equation\n\n\n\nPopulation Model\n\\(y = \\beta_0 + \\beta_1 \\cdot x + \\epsilon\\)\n\n\\(y\\) = response\n\\(\\beta_0\\) = population intercept\n\\(\\beta_1\\) = population slope\n\\(\\epsilon\\) = errors / residuals\n\n\n\n\n\nSample Model\n\\(\\widehat{y} = b_0 + b_1 \\cdot x\\)\n\n\\(b_0\\) = sample intercept\n\\(b_1\\) = sample slope\n\nWhy does this equation have a hat on \\(y\\)?\n\n\n\nWhat does the hat represent?"
   },
   {
     "objectID": "slides/week4-day1.html#step-1-fit-a-linear-regression",
@@ -599,35 +620,35 @@
     "href": "slides/week4-day1.html#step-2-obtain-coefficient-table",
     "title": "Introduction to Linear Regression",
     "section": "Step 2: Obtain coefficient table",
-    "text": "Step 2: Obtain coefficient table\n\nget_regression_table(weeks_lm)\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n-5.003\n0.582\n-8.603\n0\n-6.144\n-3.862\n\n\nweeks\n0.316\n0.015\n21.010\n0\n0.287\n0.346\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nget_regression_table()\n\n\nThis function lives in the moderndive package, so we will need to load in this package (e.g., library(moderndive) if we want to use the get_regression_table() function."
+    "text": "Step 2: Obtain coefficient table\n\nget_regression_table(weeks_lm)\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n-5.003\n0.582\n-8.603\n0\n-6.144\n-3.862\n\n\nweeks\n0.316\n0.015\n21.010\n0\n0.287\n0.346\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nget_regression_table()\n\n\nThis function lives in the moderndive package, so we will need to load in this package (e.g., library(moderndive)) if we want to use the get_regression_table() function."
   },
   {
     "objectID": "slides/week4-day1.html#section-7",
     "href": "slides/week4-day1.html#section-7",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Our focus (for now…)"
+    "text": "Linear regression:\n\n\nwe assume the the relationship between our response variable (\\(y\\)) and explanatory variable (\\(x\\)) can be modeled with a linear function, plus some random noise\n\n\n\n\n\\(response = intercept + slope \\cdot explanatory + noise\\)"
   },
   {
     "objectID": "slides/week4-day1.html#section-8",
     "href": "slides/week4-day1.html#section-8",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Estimated regression equation\n\n\\[\\widehat{y} = b_0 + b_1 \\cdot x\\]\n\n\n\n\n\nweeks_lm &lt;- lm(weight ~ weeks, \n               data = births_post28)\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n-5.003\n0.582\n-8.603\n0\n-6.144\n-3.862\n\n\nweeks\n0.316\n0.015\n21.010\n0\n0.287\n0.346\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out the estimated regression equation!"
+    "text": "Our focus (for now…)"
   },
   {
     "objectID": "slides/week4-day1.html#section-9",
     "href": "slides/week4-day1.html#section-9",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "How do you interpret the intercept value of -5.003?\n\n\n\n\n\n\nHow do you interpret the slope value of 0.316?"
+    "text": "Estimated regression equation\n\n\\[\\widehat{y} = b_0 + b_1 \\cdot x\\]\n\n\n\n\n\nweeks_lm &lt;- lm(weight ~ weeks, \n               data = births_post28)\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n-5.003\n0.582\n-8.603\n0\n-6.144\n-3.862\n\n\nweeks\n0.316\n0.015\n21.010\n0\n0.287\n0.346\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out the estimated regression equation!"
   },
   {
     "objectID": "slides/week4-day1.html#section-10",
     "href": "slides/week4-day1.html#section-10",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Obtaining Residuals\n\n\n\\(\\widehat{weight} = -5.003+0.316 \\cdot weeks\\)\n\n\nWhat would the residual be for a pregnancy that lasted 39 weeks and whose baby weighed 7.63 pounds?"
+    "text": "How do you interpret the intercept value of -5.003?\n\n\n\n\n\n\nHow do you interpret the slope value of 0.316?"
   },
   {
     "objectID": "slides/week4-day1.html#step-1-finding-distinct-levels",
@@ -641,7 +662,7 @@
     "href": "slides/week4-day1.html#section-11",
     "title": "Introduction to Linear Regression",
     "section": "",
-    "text": "Step 2: Fit a linear regression\n\n\nhabit_lm &lt;- lm(weight ~ habit,\n               data = births_post28)\n\n\n\n\nStep 3: Obtain coefficient table\n\n\nget_regression_table(habit_lm)\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n7.246\n0.046\n158.369\n0.000\n7.157\n7.336\n\n\nhabit: smoker\n-0.418\n0.128\n-3.270\n0.001\n-0.668\n-0.167\n\n\n\n\n\n\n\n\n\n\n\n🤔"
+    "text": "Obtaining Residuals\n\n\n\\(\\widehat{weight} = -5.003+0.316 \\cdot weeks\\)\n\n\nWhat would the residual be for a pregnancy that lasted 39 weeks with a baby that weighed 7.63 pounds?"
   },
   {
     "objectID": "slides/week4-day1.html#step-4-write-estimated-regression-equation",
@@ -690,7 +711,7 @@
     "href": "slides/week4-day1.html#project-proposal",
     "title": "Introduction to Linear Regression",
     "section": "Project Proposal",
-    "text": "Project Proposal\n\n\nChoose a dataset\nChoose one numerical response variable\nChoose one numerical explanatory variable\nChoose a second explanatory variable, it can be either numerical or categorical\n\n\n\n\n\n\n\n\nChecking values of your numerical variable(s)\n\n\n\nYour numerical variable cannot have a small number of values (e.g., 2 or 3). You can use the distinct() function to determine the unique values of your variable. For example, by running distinct(hbr_maples, year) I would discover that year only has two values (2003 and 2004), meaning year is not eligible to be a numerical response or explanatory variable. It could, however, be a categorical explanatory variable!\n\n\n\n\n\n\nWrite your Introduction"
+    "text": "Project Proposal\n\n\nChoose a dataset\nChoose one numerical response variable\nChoose one numerical explanatory variable\nChoose a second explanatory variable, it must be categorical\n\n\n\n\n\n\n\n\nChecking values of your numerical variable(s)\n\n\n\nYour numerical variable cannot have a small number of values (e.g., 2 or 3). You can use the distinct() function to determine the unique values of your variable. For example, by running distinct(hbr_maples, year) I would discover that year only has two values (2003 and 2004), meaning year is not eligible to be a numerical response or explanatory variable. It could, however, be a categorical explanatory variable!\n\n\n\n\n\n\nWrite your Introduction"
   },
   {
     "objectID": "slides/week10-day1.html#wrapping-up-revisions",
@@ -2724,7 +2745,7 @@
     "href": "weeks/week-4.html#textbook-reading",
     "title": "Week Four: Simple Linear Regression (Basic Regression)",
     "section": "1.1 Textbook Reading",
-    "text": "1.1 Textbook Reading\nChapter 5 (https://moderndive.com/5-regression.html)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nDon’t worry about Section 5.3.3, it goes a bit too in the weeds for what we are interested in.\n\n\n\nReading Guide\nDownload the Word Document\n\n\n\n\n\n\nDifferent colored answers\n\n\n\nPlease use a different color for your answers to the reading guide, so it is easier to find your responses! 😊",
+    "text": "1.1 Textbook Reading\nChapter 5 (https://moderndive.com/5-regression.html)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nDon’t worry about Section 5.3.3, it goes a bit too in the weeds for what we are interested in.\n\n\n\nReading Guide – Due Monday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nDifferent colored answers\n\n\n\nPlease use a different color for your answers to the reading guide, so it is easier to find your responses! 😊",
     "crumbs": [
       "Weekly materials",
       "Week 4"
@@ -5391,6 +5412,13 @@
     "text": "Visualization 2.0 – Incorporating Facets"
   },
   {
+    "objectID": "slides/week3-day2.html#accessing-lab-3",
+    "href": "slides/week3-day2.html#accessing-lab-3",
+    "title": "Week 3 Day 2",
+    "section": "Accessing Lab 3",
+    "text": "Accessing Lab 3\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was not the Recorder last week acts as the Recorder this week (change roles!).\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 3 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
+  },
+  {
     "objectID": "slides/week3-day2.html#references",
     "href": "slides/week3-day2.html#references",
     "title": "Week 3 Day 2",
@@ -5479,14 +5507,14 @@
     "href": "slides/week5-day1.html#section",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Before…"
+    "text": "Before…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-1",
     "href": "slides/week5-day1.html#section-1",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Now…"
+    "text": "Now…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-2",
@@ -5517,6 +5545,13 @@
     "text": "What if we have a second numerical explanatory variable?"
   },
   {
+    "objectID": "slides/week5-day1.html#section-5",
+    "href": "slides/week5-day1.html#section-5",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "",
+    "text": "ncbirths %&gt;% \n  ggplot(mapping = aes(x = weeks, y = weight, color = mage)) + \n  geom_jitter() + \n  geom_smooth(method = \"lm\") +\n  labs(x = \"Weeks of Gestation\", \n       y = \"Weight of Baby (lbs)\", \n       color = \"Mother's Age\") +\n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
     "objectID": "slides/week5-day1.html#section-6",
     "href": "slides/week5-day1.html#section-6",
     "title": "Introduction to Multiple Linear Regression",
@@ -5542,35 +5577,35 @@
     "href": "slides/week5-day1.html#section-9",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Different Enough?"
+    "text": "Different Enough?\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week5-day1.html#section-10",
     "href": "slides/week5-day1.html#section-10",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "What if they’re not very different?"
+    "text": "What if they’re not very different?\n\n\nMA_schools %&gt;% \n  ggplot(mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_parallel_slopes() + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\") +\n  my_theme"
   },
   {
     "objectID": "slides/week5-day1.html#section-11",
     "href": "slides/week5-day1.html#section-11",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
+    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
   },
   {
     "objectID": "slides/week5-day1.html#section-12",
     "href": "slides/week5-day1.html#section-12",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Baseline\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
+    "text": "Group equations – Baseline\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-13",
     "href": "slides/week5-day1.html#section-13",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
+    "text": "Group equations – Offsets\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#find-your-data-group",
@@ -6074,10 +6109,31 @@
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
   },
   {
-    "objectID": "slides/week3-day2.html#accessing-lab-3",
-    "href": "slides/week3-day2.html#accessing-lab-3",
-    "title": "Week 3 Day 2",
-    "section": "Accessing Lab 3",
-    "text": "Accessing Lab 3\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was not the Recorder last week acts as the Recorder this week (change roles!).\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 3 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
+    "objectID": "slides/week4-day1.html#a-word-about-reflections",
+    "href": "slides/week4-day1.html#a-word-about-reflections",
+    "title": "Introduction to Linear Regression",
+    "section": "A Word About Reflections",
+    "text": "A Word About Reflections\n\n\nWhen I initially answered question 6, I believed “observations” were the variables used to classify each column in the data frame. Therefore, I believed the answer to be manufacturer, model, year, etc., or the column headers. However, after analyzing the data again and looking over the reading, I learned that “observations” or “cases” actually refer to the subjects that the data is collected on. In this instance, the data set presents information on cars, and that is why the observations/cases would actually be cars. It is important to be able to distinguish between cases and variables because that is how we can correctly analyze our data and prevent errors in our interpretations."
+  },
+  {
+    "objectID": "slides/week4-day1.html#section-12",
+    "href": "slides/week4-day1.html#section-12",
+    "title": "Introduction to Linear Regression",
+    "section": "",
+    "text": "Step 2: Fit a linear regression\n\n\nhabit_lm &lt;- lm(weight ~ habit,\n               data = births_post28)\n\n\n\n\nStep 3: Obtain coefficient table\n\n\nget_regression_table(habit_lm)\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n7.246\n0.046\n158.369\n0.000\n7.157\n7.336\n\n\nhabit: smoker\n-0.418\n0.128\n-3.270\n0.001\n-0.668\n-0.167\n\n\n\n\n\n\n\n\n\n\n\n🤔"
+  },
+  {
+    "objectID": "slides/week4-day1.html#making-a-duplicate-of-your-groups-lab-2-project",
+    "href": "slides/week4-day1.html#making-a-duplicate-of-your-groups-lab-2-project",
+    "title": "Introduction to Linear Regression",
+    "section": "Making a Duplicate of Your Group’s Lab 2 Project",
+    "text": "Making a Duplicate of Your Group’s Lab 2 Project\n\n\nLog in to Posit Cloud\nOpen your Weeks 2-3 Group Workspace\nFind Lab 2\n\n\n\n\n\n\n\nMake a personal copy of your group’s lab 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery member must have their own copy of the lab! No one works in the original document."
+  },
+  {
+    "objectID": "slides/week4-day1.html#reading-a-full-research-paper",
+    "href": "slides/week4-day1.html#reading-a-full-research-paper",
+    "title": "Introduction to Linear Regression",
+    "section": "Reading a Full Research Paper",
+    "text": "Reading a Full Research Paper\nWe are going to read through excerpts from the Abstract, Introduction, Methods, and Results sections of the Dengue Fever paper by Tuan et al. (2015).\n\nWithin these sections, you are asked to answer ten (10) questions about the design of the study, the statistical methods used, and the findings of the analyses.\n\n\n\nThis will guide you in thinking about the structure of your Midterm Project report!"
   }
 ]

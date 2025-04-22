@@ -450,15 +450,41 @@
 <div style="font-size: 3em; color: #000000;">
 <p>Before…</p>
 </div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
-<img data-src="week5-day1_files/figure-revealjs/old-slr-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="week5-day1_files/figure-html/old-slr-1.png" width="672" class="r-stretch"></section>
 <section id="section-1" class="slide level2" data-background-color="#D4D4D4">
 <h2></h2>
 <div style="font-size: 3em; color: #000000;">
 <p>Now…</p>
 </div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
-<img data-src="week5-day1_files/figure-revealjs/two-mlr-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="week5-day1_files/figure-html/two-mlr-1.png" width="672" class="r-stretch"></section>
 <section id="section-2" class="slide level2" data-background-color="#B6CADA">
 <h2></h2>
 <p><br> <br></p>
@@ -474,9 +500,9 @@
 <p>Offsets!</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>smoke_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(weight <span class="sc">~</span> weeks <span class="sc">*</span> habit, <span class="at">data =</span> ncbirths)</span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(smoke_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>smoke_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(weight <span class="sc">~</span> weeks <span class="sc">*</span> habit, <span class="at">data =</span> ncbirths)</span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(smoke_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -535,17 +561,46 @@
 </section>
 <section id="section-5" class="slide level2" data-background-color="#D4D4D4">
 <h2></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>ncbirths <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> weeks, <span class="at">y =</span> weight, <span class="at">color =</span> mage)) <span class="sc">+</span> </span>
+<span id="cb10-3"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span> </span>
+<span id="cb10-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb10-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Weeks of Gestation"</span>, </span>
+<span id="cb10-6"><a></a>       <span class="at">y =</span> <span class="st">"Weight of Baby (lbs)"</span>, </span>
+<span id="cb10-7"><a></a>       <span class="at">color =</span> <span class="st">"Mother's Age"</span>) <span class="sc">+</span></span>
+<span id="cb10-8"><a></a>  my_theme</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation:
+colour.
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
-<img data-src="week5-day1_files/figure-revealjs/mlr-two-num-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="week5-day1_files/figure-html/mlr-two-num-1.png" width="672" class="r-stretch"></section>
 <section id="section-6" class="slide level2" data-background-color="#D4D4D4">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
 <p>Multiple slopes</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>age_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(weight <span class="sc">~</span> weeks <span class="sc">+</span> mage, <span class="at">data =</span> ncbirths)</span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(age_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>age_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(weight <span class="sc">~</span> weeks <span class="sc">+</span> mage, <span class="at">data =</span> ncbirths)</span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(age_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -602,26 +657,47 @@
 <div style="font-size: 2em; color: #000000;">
 <p>Different Enough?</p>
 </div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 
-<img data-src="week5-day1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="week5-day1_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section>
 <section id="section-10" class="slide level2" data-background-color="#B6CADA">
 <h2></h2>
 <div style="font-size: 1.5em; color: #000000;">
 <p>What if they’re not very different?</p>
 </div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>MA_schools <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> average_sat_math, </span>
+<span id="cb18-3"><a></a>                       <span class="at">x =</span> perc_disadvan, </span>
+<span id="cb18-4"><a></a>                       <span class="at">color =</span> size)) <span class="sc">+</span> </span>
+<span id="cb18-5"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb18-6"><a></a>  <span class="fu">geom_parallel_slopes</span>() <span class="sc">+</span> </span>
+<span id="cb18-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Percent Economically Disadvantaged"</span>, </span>
+<span id="cb18-8"><a></a>       <span class="at">y =</span> <span class="st">"Average SAT Math"</span>, </span>
+<span id="cb18-9"><a></a>       <span class="at">color =</span> <span class="st">"Size of School"</span>) <span class="sc">+</span></span>
+<span id="cb18-10"><a></a>  my_theme</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="week5-day1_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+</div>
+<img data-src="week5-day1_files/figure-html/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"></section>
 <section id="section-11" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
 <p>Parallel Slopes</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, </span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="at">data =</span> MA_schools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, </span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="at">data =</span> MA_schools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, </span>
+<span id="cb20-2"><a></a>   <span class="at">data =</span> MA_schools) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-3"><a></a>  <span class="fu">get_regression_table</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb20-4"><a></a>  <span class="fu">select</span>(term<span class="sc">:</span>std_error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
   term          estimate std_error
@@ -639,6 +715,9 @@
 <p>Group equations – Baseline</p>
 </div>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, <span class="at">data =</span> MA_schools) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-2"><a></a>  <span class="fu">get_regression_table</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a></a>  <span class="fu">select</span>(term<span class="sc">:</span>std_error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
   term          estimate std_error
@@ -659,6 +738,9 @@
 <p>Group equations – Offsets</p>
 </div>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, <span class="at">data =</span> MA_schools) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a></a>  <span class="fu">get_regression_table</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a></a>  <span class="fu">select</span>(term<span class="sc">:</span>std_error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
   term          estimate std_error
@@ -684,6 +766,14 @@
 <div class="small">
 <p><span class="math display">\[\widehat{SAT}_{large} = 581.64 - 2.78 \times \text{percent disadvan}\]</span></p>
 </div>
+<!-- ## ADD SLIDES ABOUT ANOVA  -->
+<!-- Type 1: sequential sums of squares -->
+<!-- THIS IS WHAT anova() gives! -->
+<!-- Type 2: this type tests for each main effect after the other main effect -->
+<!-- THIS SHOULD ONLY BE USED IF THERE IS NO INTERACTION -->
+<!-- Type 3: This type tests for the presence of a main effect after the other main -->
+<!-- effect and interaction.   -->
+<!-- THIS SHOULD BE USED IF THERE IS AN INTERACTION -->
 </div>
 </section></section>
 <section>
@@ -947,44 +1037,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
