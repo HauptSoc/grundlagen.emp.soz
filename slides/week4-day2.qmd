@@ -1,12 +1,15 @@
 ---
 title: "Week 4, Day 2"
+editor: source
 format: 
   revealjs: 
     theme: style.scss
 ---
 
-```{r pakages}
-library(emo)
+```{r}
+#| label: packages
+#| include: false
+
 library(tidyverse)
 library(openintro)
 library(ggridges)
@@ -16,120 +19,32 @@ library(kableExtra)
 library(png)
 library(moderndive)
 library(lterdatasampler)
+library(gt)
 
 options(show.signif.stars = FALSE)
 ```
 
 # Lab 2
 
-## Revisions Due Tonight
+## Revisions Due Friday
 
-Please make sure you submitted reflections with your revisions! If there are not revisions present when I start grading them tomorrow morning, your revisions are not eligible to be regraded.
-
-# Lab 3
-
-## A Grading Reminder
-
-<br>
-
-::: columns
-::: {.column width="47%"}
-::: {style="font-size: 1.25em;"}
-"Complete" = Satisfactory
-:::
-
-<br>
-
-Your group obtained a "Success" on **every** question
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="47%"}
-::: {style="font-size: 1.25em;"}
-"Incomplete" = Growing
-:::
-
-<br>
-
-Your group received a "Growing" on *at least one* question
-:::
-:::
-
-## Common Mistakes
-
-::: small
-::: incremental
--   **Categorical variables in R (Q2)**
-    -   What data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?
-    -   The output of `glimpse()` can help!
--   **Comparing distributions between groups (Q9)**
-    -   Were trout observed in every channel type in both sections of forest?
--   **Calculating group means (Q10)**
-    -   `group_by()`creates groups based on a categorical variable [**not**]{.underline} based on the dataset
-    -   `group_by(species)` [**not**]{.underline} `group_by(trout)`
-:::
-:::
-
-## Copying the Lab -- Last Week's Recorder
-
-The person who typed your lab needs to make their project "public"
-
-1.  Open Posit Cloud
-2.  Go to the STAT 313 workspace
-3.  Click on "Your Content"
-4.  Open the settings for your Lab 3 project
-
-![](images/open-project-settings.png)
-
-## Copying the Lab -- Last Week's Recorder
-
-5.  Change the access for your project to "Space Members"
-
-![](images/make-project-public.png)
-
-## Copying the Lab -- Everyone Else
-
-1.  Find your group member's lab (you can use the search bar to search for their name)
-
-![](images/search-for-name.png)
-
-2.  Open their Lab 3 project
-3.  Select "Save a Permanent Copy"
-
-![](images/save-a-copy.png)
-
-## Completing Revisions
-
-Lab 3 revisions are due by Wednesday, May 1.
-
-::: small
-1.  Read comments on Canvas
-2.  Copy your group's lab assignment
-3.  Complete your revisions
-4.  Render your revised Lab 3
-5.  Download your revised HTML
-6.  Submit your revisions to the [original Lab 3]{.underline} assignment portal
-:::
-
-::: callout-warning
-# Reflections
-
-::: small
-Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas.
-:::
-:::
+Please make sure you submitted reflections with your revisions! If there are not
+revisions present when I start grading them on Saturday morning, your revisions
+are not eligible to be regraded.
 
 # The History of Regression
 
 ## Least Squares
 
-::: columns
+:::::: columns
 ::: {.column width="55%"}
 Published in 1805 by Legendre
 
-```{r, out.width = "50%", out.height = "40%"}
+```{r}
+#| label: legendre
+#| out-height: 40%
+#| out-width: 50%
+#| fig-alt: "An image of Adrien-Marie Legendre, a famous mathematician from early in the 18th century."
 knitr::include_graphics("images/legendre.jpg")
 ```
 :::
@@ -140,11 +55,15 @@ knitr::include_graphics("images/legendre.jpg")
 ::: {.column width="40%"}
 and Gauss in 1809
 
-```{r, out.width = "50%", out.height = "20%"}
+```{r}
+#| label: gauss
+#| out-height: 40%
+#| out-width: 50%
+#| fig-alt: "An image of Carl Friedrich Gauss, a famous mathematician from late in the 18th century."
 knitr::include_graphics("images/gauss.jpg")
 ```
 :::
-:::
+::::::
 
 ::: {style="font-size: 0.75em;"}
 Used to determine, from astronomical observations, the orbits of bodies about the Sun.
@@ -152,15 +71,15 @@ Used to determine, from astronomical observations, the orbits of bodies about th
 
 ## "regression"
 
-::: columns
+::::::: columns
 ::: {.column width="40%"}
-![](images/galton.png)
+![](images/galton.png){fig-alt="A picture of Francis Galton in a suit and tie. He is an old, unattractive man."}
 :::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="55%"}
+:::: {.column width="55%"}
 ::: incremental
 -   Coined by Francis Galton in the 19th century
 
@@ -169,14 +88,14 @@ Used to determine, from astronomical observations, the orbits of bodies about th
     -   Heights of children of tall parents tend to be tall, but shorter than their parents
     -   "regression to the mean"
 :::
-:::
-:::
+::::
+:::::::
 
 ## A "polymath"
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
-![](images/correlation.jpg)
+![](images/correlation.jpg){fig-alt="A image taken from one of Galton's papers on correlation. The image displays a table of numbers and a diagram of computing relationships between these numbers."}
 :::
 
 ::: {.column width="5%"}
@@ -189,13 +108,13 @@ Used to determine, from astronomical observations, the orbits of bodies about th
 
 -   Galton's developments and discoveries were fueled in large part by his fascination with the science of heredity.
 :::
-:::
+::::::
 
 <!-- Galton was wrestling with the unanswered question of how different traits stayed stable in a population over generations, building on the work of his cousin Charles Darwin, who had published On the Origin of Species in 1859. -->
 
 ## The Invention of Eugenics
 
-::: columns
+::::::: columns
 ::: {.column width="50%"}
 -   Based on Greek *eugenes*, meaning "well-born"
 
@@ -207,20 +126,23 @@ Used to determine, from astronomical observations, the orbits of bodies about th
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
+:::: {.column width="45%"}
 ::: small
 > "What nature does blindly, slowly and ruthlessly, man may do providently, quickly, and kindly. As it lies within his power, so it becomes his duty to work in that direction."
 >
 > Francis Galton
 :::
-:::
-:::
+::::
+:::::::
 
 ## And then it spread...
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
-```{r, out.height = "50%"}
+```{r}
+#| label: hitler
+#| out-height: 50%
+#| fig-alt: "An image of Adolf Hitler in front of his book Mein Kampf."
 knitr::include_graphics("images/hitler.jpg")
 ```
 :::
@@ -235,31 +157,33 @@ knitr::include_graphics("images/hitler.jpg")
 
 -   Believed Germans should do everything possible to make sure their gene pool stayed "pure"
 :::
-:::
+::::::
 
 ## But wasn't that a long time ago?
 
-::: columns
-::: {.column width="50%"}
-::: fragment
+::::::::: columns
+::::: {.column width="50%"}
+:::: fragment
 ```{r}
+#| label: indigenous-sterilization
 #| out-height: 25%
 #| out-width: 60%
+#| fig-alt: "An image of an indigenous woman holding a globe. The image says 'Women of All Red Noations with the abbreviation WARN. WARN referrs to a Native American women's organization founded in 1974 which advocated for Native American civil and reproductive rights, particularly focusing on issues affecting women."
 knitr::include_graphics("images/native-sterilization.png")
 ```
 
 ::: small
 Between 1970 and 1976 between 25% and 50% of Native Americans were sterilized, many without consent
 :::
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%"}
-::: fragment
+::::: {.column width="50%"}
+:::: fragment
 ```{r}
 #| out-height: 25%
 #| out-width: 60%
-
+#| fig-alt: "An image of protesters holding a 'Free Britney' sign and a 'Freedom for Britney 2020' sign. These signs represent the #FreeBritney movement, a social media campaign that advocated for Britney Spears to be released from her court-ordered conservatorship which had begun in 2008. The movement gained traction in 2019 and 2020, fueled by fan concerns about the conservatorship and its implications for Spears's well-being and autonomy. Ultimately, the movement played a significant role in raising awareness about the conservatorship and contributing to its eventual termination in 2021."
 knitr::include_graphics("images/free-britney.jpeg")
 ```
 
@@ -270,15 +194,15 @@ In 1927 the US Supreme Court ruled that sterilization of the handicapped did not
 
 In 1957 "conservatorship" was introduced "to avoid the stigma of incompetency"
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## Would you be in this class?
 
 . . .
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 Is your skin white?
 
@@ -297,7 +221,7 @@ Are you Muslim, Hindu, Buddhist, Sikh, Tao, or Jewish?
 
 Do you identify as LGBTQIQ+?
 :::
-:::
+::::::
 
 ## 
 
@@ -319,7 +243,7 @@ More Information
 > Data includes lake name, dates of freeze-up and thaw, and duration of ice cover of lakes in the Madison, WI area. Ice cover duration is the number of days that a lake is frozen, excluding periods where the lake thaws before refreezing again. Lakes Monona and Wingra are considered to be frozen if they are completely ice covered, while Lake Mendota is considered to be frozen if there is ice from Picnic Point to Maple Bluff and more than 50% of the lake is covered by ice.
 :::
 
-![](images/madison.jpeg)
+![](images/madison.jpeg){fig-alt="An ariel photo of Madison, Wisconsin. The image shows the two lakes to the north and south of Madison and the medium sized skyline of buildings."}
 
 ## Research Question
 
@@ -341,7 +265,15 @@ ntl_icecover %>%
   group_by(lakeid) %>% 
   slice_sample(n = 4) %>% 
   ungroup() %>% 
-  gt::gt()
+  gt()  %>%
+  tab_style(
+    style = cell_text(size = "24px"),
+    locations = cells_body()
+  ) |> 
+  tab_style(
+    style = cell_text(size = "30px"), 
+    locations = cells_column_labels()
+  )
 ```
 
 . . .

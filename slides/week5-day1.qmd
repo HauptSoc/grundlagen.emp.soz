@@ -3,7 +3,7 @@ title: "Introduction to Multiple Linear Regression"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
 ```{r set-up}
@@ -24,6 +24,101 @@ my_theme <- theme_bw() +
         panel.grid.minor = element_blank()
         )
 ```
+
+# Lab 3
+
+## A Grading Reminder
+
+<br>
+
+:::::::: columns
+:::: {.column width="47%"}
+::: {style="font-size: 1.25em;"}
+"Complete" = Satisfactory
+:::
+
+<br>
+
+Your group obtained a "Success" on **every** question
+::::
+
+::: {.column width="5%"}
+:::
+
+:::: {.column width="47%"}
+::: {style="font-size: 1.25em;"}
+"Incomplete" = Growing
+:::
+
+<br>
+
+Your group received a "Growing" on *at least one* question
+::::
+::::::::
+
+## Common Mistakes
+
+:::: small
+::: incremental
+-   **Categorical variables in R (Q2)**
+    -   What data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?
+    -   The output of `glimpse()` can help!
+-   **Comparing distributions between groups (Q9)**
+    -   Were trout observed in every channel type in both sections of forest?
+-   **Calculating group means (Q10)**
+    -   `group_by()`creates groups based on a categorical variable [**not**]{.underline} based on the dataset
+    -   `group_by(species)` [**not**]{.underline} `group_by(trout)`
+:::
+::::
+
+## Copying the Lab -- Last Week's Recorder
+
+The person who typed your lab needs to make their project "public"
+
+1.  Open Posit Cloud
+2.  Go to the STAT 313 workspace
+3.  Click on "Your Content"
+4.  Open the settings for your Lab 3 project
+
+![](images/open-project-settings.png)
+
+## Copying the Lab -- Last Week's Recorder
+
+5.  Change the access for your project to "Space Members"
+
+![](images/make-project-public.png)
+
+## Copying the Lab -- Everyone Else
+
+1.  Find your group member's lab (you can use the search bar to search for their name)
+
+![](images/search-for-name.png)
+
+2.  Open their Lab 3 project
+3.  Select "Save a Permanent Copy"
+
+![](images/save-a-copy.png)
+
+## Completing Revisions
+
+Lab 3 revisions are due by Wednesday, May 1.
+
+::: small
+1.  Read comments on Canvas
+2.  Copy your group's lab assignment
+3.  Complete your revisions
+4.  Render your revised Lab 3
+5.  Download your revised HTML
+6.  Submit your revisions to the [original Lab 3]{.underline} assignment portal
+:::
+
+:::: callout-warning
+# Reflections
+
+::: small
+Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas.
+:::
+::::
 
 # Midterm Project Week
 
@@ -46,15 +141,16 @@ To get everyone feedback on their drafts in a timely manner, the first drafts ar
 ::: callout-caution
 # Deadline Extension
 
-A deadline extension [**is**]{.underline} permitted for the first draft. Deadline extensions [**are not**]{.underline} permitted for the final version (due next week).
+A deadline extension [**is**]{.underline} permitted for the first draft. 
+Deadline extensions [**are not**]{.underline} permitted for the final version
+(due next week).
 :::
 
 ## Reminders About Deadlines
 
 -   Midterm Project Proposal is due [today]{.underline} by 5pm
--   Lab 3 revisions are due Wednesday (May 1)
+-   Lab 3 revisions are due Friday (May 1)
 -   Statistical Critique revisions are due next Wednesday (May 8)
--   Second round of Lab 2 revisions are due by Wednesday (May 1)
 
 # Multiple Linear Regression
 
@@ -368,14 +464,19 @@ $$\widehat{SAT}_{large} = 581.64 - 2.78 \times \text{percent disadvan}$$
 :::
 
 <!-- ## ADD SLIDES ABOUT ANOVA  -->
+
 <!-- Type 1: sequential sums of squares -->
+
 <!-- THIS IS WHAT anova() gives! -->
 
 <!-- Type 2: this type tests for each main effect after the other main effect -->
+
 <!-- THIS SHOULD ONLY BE USED IF THERE IS NO INTERACTION -->
 
 <!-- Type 3: This type tests for the presence of a main effect after the other main -->
+
 <!-- effect and interaction.   -->
+
 <!-- THIS SHOULD BE USED IF THERE IS AN INTERACTION -->
 
 # Sample Selection Activity

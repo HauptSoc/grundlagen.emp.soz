@@ -5528,21 +5528,21 @@
     "href": "slides/week5-day1.html#reminders-about-deadlines",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Reminders About Deadlines",
-    "text": "Reminders About Deadlines\n\nMidterm Project Proposal is due today by 5pm\nLab 3 revisions are due Wednesday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nSecond round of Lab 2 revisions are due by Wednesday (May 1)"
+    "text": "Reminders About Deadlines\n\nMidterm Project Proposal is due today by 5pm\nLab 3 revisions are due Friday (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)"
   },
   {
     "objectID": "slides/week5-day1.html#section",
     "href": "slides/week5-day1.html#section",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Before…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Before…"
   },
   {
     "objectID": "slides/week5-day1.html#section-1",
     "href": "slides/week5-day1.html#section-1",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Now…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "Now…"
   },
   {
     "objectID": "slides/week5-day1.html#section-2",
@@ -5605,35 +5605,35 @@
     "href": "slides/week5-day1.html#section-9",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Different Enough?\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "Different Enough?"
   },
   {
     "objectID": "slides/week5-day1.html#section-10",
     "href": "slides/week5-day1.html#section-10",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "What if they’re not very different?\n\n\nMA_schools %&gt;% \n  ggplot(mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_parallel_slopes() + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\") +\n  my_theme"
+    "text": "What if they’re not very different?"
   },
   {
     "objectID": "slides/week5-day1.html#section-11",
     "href": "slides/week5-day1.html#section-11",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
+    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
   },
   {
     "objectID": "slides/week5-day1.html#section-12",
     "href": "slides/week5-day1.html#section-12",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Baseline\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
+    "text": "Group equations – Baseline\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-13",
     "href": "slides/week5-day1.html#section-13",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Group equations – Offsets\n\n\nlm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %&gt;% \n  get_regression_table() %&gt;% \n  select(term:std_error)\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
+    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#find-your-data-group",
@@ -6135,5 +6135,54 @@
     "title": "Week 8 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
+  },
+  {
+    "objectID": "slides/week4-day2.html#revisions-due-friday",
+    "href": "slides/week4-day2.html#revisions-due-friday",
+    "title": "Week 4, Day 2",
+    "section": "Revisions Due Friday",
+    "text": "Revisions Due Friday\nPlease make sure you submitted reflections with your revisions! If there are not revisions present when I start grading them on Saturday morning, your revisions are not eligible to be regraded."
+  },
+  {
+    "objectID": "slides/week5-day1.html#a-grading-reminder",
+    "href": "slides/week5-day1.html#a-grading-reminder",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "A Grading Reminder",
+    "text": "A Grading Reminder\n\n\n\n\n“Complete” = Satisfactory\n\n\nYour group obtained a “Success” on every question\n\n\n\n\n“Incomplete” = Growing\n\n\nYour group received a “Growing” on at least one question"
+  },
+  {
+    "objectID": "slides/week5-day1.html#common-mistakes",
+    "href": "slides/week5-day1.html#common-mistakes",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\n\n\n\nCategorical variables in R (Q2)\n\nWhat data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?\nThe output of glimpse() can help!\n\nComparing distributions between groups (Q9)\n\nWere trout observed in every channel type in both sections of forest?\n\nCalculating group means (Q10)\n\ngroup_by()creates groups based on a categorical variable not based on the dataset\ngroup_by(species) not group_by(trout)"
+  },
+  {
+    "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
+    "href": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Copying the Lab – Last Week’s Recorder",
+    "text": "Copying the Lab – Last Week’s Recorder\nThe person who typed your lab needs to make their project “public”\n\nOpen Posit Cloud\nGo to the STAT 313 workspace\nClick on “Your Content”\nOpen the settings for your Lab 3 project"
+  },
+  {
+    "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder-1",
+    "href": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder-1",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Copying the Lab – Last Week’s Recorder",
+    "text": "Copying the Lab – Last Week’s Recorder\n\nChange the access for your project to “Space Members”"
+  },
+  {
+    "objectID": "slides/week5-day1.html#copying-the-lab-everyone-else",
+    "href": "slides/week5-day1.html#copying-the-lab-everyone-else",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Copying the Lab – Everyone Else",
+    "text": "Copying the Lab – Everyone Else\n\nFind your group member’s lab (you can use the search bar to search for their name)\n\n\n\nOpen their Lab 3 project\nSelect “Save a Permanent Copy”"
+  },
+  {
+    "objectID": "slides/week5-day1.html#completing-revisions",
+    "href": "slides/week5-day1.html#completing-revisions",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Completing Revisions",
+    "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 1.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment portal\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
   }
 ]
