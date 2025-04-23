@@ -32,6 +32,41 @@ Please make sure you submitted reflections with your revisions! If there are not
 revisions present when I start grading them on Saturday morning, your revisions
 are not eligible to be regraded.
 
+# Statistical Critique
+
+## Common Mistakes
+
+::: {.midi}
+> "What variables go with each aesthetic?"
+
+- I need you to be **specific** about what variable is being mapped to each 
+component of the plot
+:::
+
+. . .
+
+::: {.small}
+> "Careful! Aesthetics are places where variables are being included on the
+> plot, which is different from stylistic decisions made by the illustrator.
+> Which of these aesthetics are associated with variables?"
+
+:::
+
+::: {.midi}
+- Things like axis titles, grid lines, and annotations are stylistic decisions 
+made by the plot creator. Aesthetics are places where **variables** are being
+included in the plot. 
+:::
+
+## Statistical Critique Revisions
+
+Are due on Wednesday, May 7. 
+
+Next week the focus will be to get your Midterm Project first draft out the 
+door, so we will postpone the revision deadline until the following week. 
+
+You are welcome to complete your revisions before then! 
+
 # The History of Regression
 
 ## Least Squares
@@ -282,4 +317,39 @@ ntl_icecover %>%
 # Recording the `year` of the winter
 
 How is the `year` variable related to the `ice_on` and `ice_off` variables?
+:::
+
+## Accessing Lab 3
+
+::: {.midi}
+**Step 1:** Both members of your group need to join your **group** workspace 
+(link posted in the Announcements of your group)
+:::
+
+. . .
+
+::: {.small}
+::: {.callout-note}
+# Roles
+The person whose birthday is closest to January 1 will act as the Recorder
+for your group (this week). 
+:::
+:::
+
+. . .
+
+::: {.midi}
+**Step 2:** The Recorder [follows these instructions to copy the Lab 2 project into your group's workspace](https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA)
+:::
+
+. . .
+
+::: {.midi}
+**Step 3:** Both members open the Lab 3 assignment in your group workspace!
+:::
+
+. . .
+
+::: {.midi}
+**Step 4:** Follow the [final instructions](https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw) to activate collaborative editing in the document. 
 :::

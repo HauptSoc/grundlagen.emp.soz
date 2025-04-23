@@ -1939,7 +1939,7 @@
     "href": "slides/week4-day2.html#common-mistakes",
     "title": "Week 4, Day 2",
     "section": "Common Mistakes",
-    "text": "Common Mistakes\n\n\n\nCategorical variables in R (Q2)\n\nWhat data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?\nThe output of glimpse() can help!\n\nComparing distributions between groups (Q9)\n\nWere trout observed in every channel type in both sections of forest?\n\nCalculating group means (Q10)\n\ngroup_by()creates groups based on a categorical variable not based on the dataset\ngroup_by(species) not group_by(trout)"
+    "text": "Common Mistakes\n\n\n“What variables go with each aesthetic?”\n\n\nI need you to be specific about what variable is being mapped to each component of the plot\n\n\n\n\n\n“Careful! Aesthetics are places where variables are being included on the plot, which is different from stylistic decisions made by the illustrator. Which of these aesthetics are associated with variables?”\n\n\n\n\nThings like axis titles, grid lines, and annotations are stylistic decisions made by the plot creator. Aesthetics are places where variables are being included in the plot."
   },
   {
     "objectID": "slides/week4-day2.html#copying-the-lab-last-weeks-recorder",
@@ -6184,5 +6184,19 @@
     "title": "Introduction to Multiple Linear Regression",
     "section": "Completing Revisions",
     "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 1.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment portal\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+  },
+  {
+    "objectID": "slides/week4-day2.html#accessing-lab-3",
+    "href": "slides/week4-day2.html#accessing-lab-3",
+    "title": "Week 4, Day 2",
+    "section": "Accessing Lab 3",
+    "text": "Accessing Lab 3\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nThe person whose birthday is closest to January 1 will act as the Recorder for your group (this week).\n\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 3 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
+  },
+  {
+    "objectID": "slides/week4-day2.html#statistical-critique-revisions",
+    "href": "slides/week4-day2.html#statistical-critique-revisions",
+    "title": "Week 4, Day 2",
+    "section": "Statistical Critique Revisions",
+    "text": "Statistical Critique Revisions\nAre due on Wednesday, May 7.\nNext week the focus will be to get your Midterm Project first draft out the door, so we will postpone the revision deadline until the following week.\nYou are welcome to complete your revisions before then!"
   }
 ]
