@@ -1652,287 +1652,11 @@
     "text": "Opening the Lab 1 Document\n\nClick on the lab-1.qmd file in the lower right hand corner to open the lab assignment\n\n\n\nStart working!"
   },
   {
-    "objectID": "slides/week1-day2.html#section",
-    "href": "slides/week1-day2.html#section",
-    "title": "Working with Data",
-    "section": "",
-    "text": "There’s Data\n\n\nGender stereotypes in 5-7 year old children\n\n\n\n\n\n\n\n\nsubject\nsex\nage\ntrait\ntarget\nstereotype\nhigh_achieve_caution\n\n\n\n\n82\nfemale\n6\nnice\nadults\n0.75\n0.75\n\n\n39\nfemale\n7\nnice\nchildren\n0.25\n0.75\n\n\n73\nmale\n6\nnice\nadults\n0.75\n0.75\n\n\n85\nmale\n5\nsmart\nadults\n1.00\n0.50\n\n\n100\nfemale\n5\nnice\nadults\n0.75\n0.75\n\n\n33\nmale\n5\nnice\nchildren\n0.50\n0.75"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-1",
-    "href": "slides/week1-day2.html#section-1",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Lots of Data\n\nBody girth measurements and skeletal diameter measurements for 247 men and 260 women.\n\n\n\n\n\n\nage\nwgt\nhgt\nsex\nsho_gi\nwai_gi\nnav_gi\nhip_gi\n\n\n\n\n19\n61.1\n172.7\n0\n96.9\n67.6\n86.2\n99.1\n\n\n24\n73.4\n172.7\n1\n112.9\n79.1\n78.3\n97.1\n\n\n41\n77.3\n170.2\n0\n98.9\n80.5\n98.8\n107.2\n\n\n40\n75.2\n160.2\n0\n115.5\n90.5\n103.5\n108.1\n\n\n19\n48.6\n159.0\n0\n99.1\n62.3\n68.7\n83.9\n\n\n29\n63.0\n168.9\n0\n95.1\n67.4\n77.7\n95.1"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-2",
-    "href": "slides/week1-day2.html#section-2",
-    "title": "Working with Data",
-    "section": "",
-    "text": "In Every Context\n\n\nNBA player of the week from 1985 to 2016\n\n\n\n\n\n\n\n\nAge\nDate\nDraft Year\nHeight\nPlayer\nPosition\n\n\n\n\n28\nMar 8, 2010\n2003\n6-4\nDwyane Wade\nSG\n\n\n30\nJan 28, 2013\n2001\n6-2\nTony Parker\nG\n\n\n30\nFeb 8, 2016\n2006\n6-11\nLaMarcus Aldridge\nFC\n\n\n25\nMar 17, 1991\n1987\n6-3\nKenny Smith\nPG\n\n\n33\nMar 7, 2011\n1998\n6-7\nPaul Pierce\nSF\n\n\n25\nNov 29, 1987\n1983\n6-7\nClyde Drexler\nSG"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-3",
-    "href": "slides/week1-day2.html#section-3",
-    "title": "Working with Data",
-    "section": "",
-    "text": "You Can Imagine\n\n\nFish Sampled on Blackfoot River\n\n\n\n\n\n\n\n\ntrip\nmark\nlength\nweight\nyear\nsection\nspecies\n\n\n\n\n1\n0\n104\n10\n1993\nJohnsrud\nRBT\n\n\n1\n0\n410\n500\n1998\nScottyBrown\nRBT\n\n\n2\n0\n292\n265\n2000\nScottyBrown\nWCT\n\n\n2\n1\n308\nNA\n1990\nJohnsrud\nRBT\n\n\n1\n0\n295\n260\n1991\nScottyBrown\nRBT\n\n\n1\n0\n205\n100\n1998\nScottyBrown\nWCT"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-4",
-    "href": "slides/week1-day2.html#section-4",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Your Turn\n\n\nEvery year, the US releases to the public a large data set containing information on births recorded in the country.\nA total of 13 variables were collected on every birth, including information about:\n\nthe birth (baby weight, sex of baby, premie status)\nthe pregnancy (hospital visits, length of gestation, )\nthe mother’s attributes (age, smoking status, marital status, race)\nthe father’s age\n\n\n\n\nHow would you expect this dataframe to look?"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-5",
-    "href": "slides/week1-day2.html#section-5",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Types of Variables\n\n\n\nDiagram of types of variables we will analyze!"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-6",
-    "href": "slides/week1-day2.html#section-6",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Examples\n\n\nA person’s height (usually) would be a continuous, numerical variable\nThe number of classes someone takes would be a discrete, numerical variable\nA course letter grade would be a ordinal, categorical variable\nThe color of someone’s hair would be a regular, categorical variable"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-7",
-    "href": "slides/week1-day2.html#section-7",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Your Turn\n\n\nSuppose researchers have yearly data on Elephant Seal abundance on Pedras Blancas from 2010 - 2014.\n\n\n\nWhat type of variable would year be?"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-8",
-    "href": "slides/week1-day2.html#section-8",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Types of Studies\n\n\n\nExperiment\n\nrandomization\nreplication\ncontrolling\nblocking\n\n\n\n\nObservational Study\n\ncollect data in a way that does not directly interfere with how the data arise"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-9",
-    "href": "slides/week1-day2.html#section-9",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Relationships Between Variables\n\n\nexplanatory variable \\(\\rightarrow\\) might affect \\(\\rightarrow\\) response variable\n\n\nIf two variables are not associated, then they are said to be independent.\nIf two variables are associated, then they are said to be dependent."
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-10",
-    "href": "slides/week1-day2.html#section-10",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Causal Inference\n\n\nassociation \\(\\neq\\) causation\n\n\nWhat do you need to say that the explanatory variable causes a change in the response variable?"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-11",
-    "href": "slides/week1-day2.html#section-11",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Lab Warm-up"
-  },
-  {
-    "objectID": "slides/week1-day2.html#section-12",
-    "href": "slides/week1-day2.html#section-12",
-    "title": "Working with Data",
-    "section": "",
-    "text": "Data Types in R\n\n\n\nglimpse(births_small)\n\nRows: 1,000\nColumns: 10\n$ fage           &lt;int&gt; 34, 36, 37, NA, 32, 32, 37, 29, 30, 29, 30, 34, 28, 28,…\n$ mage           &lt;dbl&gt; 34, 31, 36, 16, 31, 26, 36, 24, 32, 26, 34, 27, 22, 31,…\n$ weeks          &lt;dbl&gt; 37, 41, 37, 38, 36, 39, 36, 40, 39, 39, 42, 40, 40, 39,…\n$ premie         &lt;chr&gt; \"full term\", \"full term\", \"full term\", \"full term\", \"pr…\n$ gained         &lt;dbl&gt; 28, 41, 28, 29, 48, 45, 20, 65, 25, 22, 40, 30, 31, NA,…\n$ weight         &lt;dbl&gt; 6.96, 8.86, 7.51, 6.19, 6.75, 6.69, 6.13, 6.74, 8.94, 9…\n$ lowbirthweight &lt;chr&gt; \"not low\", \"not low\", \"not low\", \"not low\", \"not low\", …\n$ sex            &lt;fct&gt; male, female, female, male, female, female, female, mal…\n$ habit          &lt;chr&gt; \"nonsmoker\", \"nonsmoker\", \"nonsmoker\", \"nonsmoker\", \"no…\n$ whitemom       &lt;chr&gt; \"white\", \"white\", \"not white\", \"white\", \"white\", \"white…\n\n\n\n\n\nWhat do you think dbl means?\nHow is that different from int?\n\n\n\nWhat does chr mean?\nHow might it differ from fct?"
-  },
-  {
-    "objectID": "labs/lab-9.html",
-    "href": "labs/lab-9.html",
-    "title": "Lab 9 – One-Way ANOVA",
-    "section": "",
-    "text": "library(tidyverse)\nlibrary(infer)\nlibrary(ggridges)\nlibrary(broom)"
-  },
-  {
-    "objectID": "labs/lab-9.html#todays-data",
-    "href": "labs/lab-9.html#todays-data",
-    "title": "Lab 9 – One-Way ANOVA",
-    "section": "Today’s Data",
-    "text": "Today’s Data\nThese data come from the Gapminder Foundation, an organization interested in increasing the use and understanding of statistics and other information about social, economic and environmental development at local, national and global levels.\nToday we will be comparing math achievement scores across continents and years. Math achievement was measured for 42 countries based on their average score for the grade 8 international TIMSS test.\n\nmath_scores &lt;- read_csv(here::here(\"labs\", \n                                   \"data\",\n                                   \"math_scores.csv\")\n                        )\n\n# Creating a year_cat variable that is the categorical version of year\nmath_scores &lt;- mutate(math_scores, \n                      year_cat = as.factor(year)\n                      )\n\n# Removing the missing values from the grade_8_math_score variable\nmath_scores &lt;- drop_na(data = math_scores, \n                       grade_8_math_score)"
-  },
-  {
-    "objectID": "labs/lab-9.html#data-visualizations",
-    "href": "labs/lab-9.html#data-visualizations",
-    "title": "Lab 9 – One-Way ANOVA",
-    "section": "Data Visualizations",
-    "text": "Data Visualizations\nThe first step for a statistical analysis should always be creating visualizations of the data. Similar to what you are expected to do for your project, you will make three density ridge plots:\n\nvisualizing the relationship between math score and year\nvisualizing the relationship between math score and continent\nvisualizing the relationship between math score with both year and continent\n\nQuestion 1 – Fill in the code below to visualize the distribution of grade 8 math scores over time.\nDon’t forget to include axis labels!\n\nggplot(data = math_scores, \n       mapping = aes(x = ____, \n                     y = ____)) +\n  geom_density_ridges(scale = 1) \n\nNote: I’ve included a scale = 1 argument to show you how you can get the density plots not to overlap!\nQuestion 2 – What do you see in the plot you made? How do the centers (means) of the distributions compare? What about the variability (spread) of the distributions?\nQuestion 3 – Write the code to visualize the distribution of grade 8 math scores for the six different continents.\nDon’t forget to include axis labels!\nQuestion 4 – What do you see in the plot you made? How do the centers (means) of the distributions compare? What about the variability (spread) of the distributions?\nQuestion 5 – Write the code to visualize the distribution of grade 8 math scores for the six different continents for each of the four years.\nRemember, you could either include a facet or a color here!Also remember you can use alpha to change the transparency of your density ridges!\nQuestion 6 – What do you see in the plot you made? Does it seem that the relationship between year and grade 8 math scores changes based on the continent of the student?"
-  },
-  {
-    "objectID": "labs/lab-9.html#statistical-model",
-    "href": "labs/lab-9.html#statistical-model",
-    "title": "Lab 9 – One-Way ANOVA",
-    "section": "Statistical Model",
-    "text": "Statistical Model\nFor our analysis we will be using an analysis of variance (ANOVA) model. An ANOVA is an appropriate statistical model as we have a continuous response variable (grade 8 math score) and categorical explanatory variables (year, continent). Year is not considered to be a continuous numerical variable as we have only four measurements in time (1996, 1999, 2003, 2007).\n\nModel Conditions\nAn ANOVA has model conditions that are very similar to what we learned for linear regression. In this section we will evaluate the conditions of the model.\nFor this section, it might be helpful to know how many observations there are for each year and for each continent. I have written code below to provide you with a table of these numbers:\n\ncount(math_scores, continent, year) %&gt;% \n  pivot_wider(names_from = continent, \n              values_from = n, \n              values_fill = 0) %&gt;% \n  janitor::adorn_totals(where = c(\"row\", \"col\"))\n\n\nIndependence\nBased on the table we know:\n\neach year has measurements on about six continents\neach continent has measurements for about four years\n\nUse this information to evaluate the condition of independence of observations.\nQuestion 7 – Is it reasonable to assume that the observations within a continent are independent of each other?\nQuestion 8 – Is it reasonable to assume that the observations within a year are independent of each other?\nQuestion 9 – Is it reasonable to assume that the observations between continents are independent of each other?\nQuestion 10 – Is it reasonable to assume that the observations between a years are independent of each other?\n\n\nNormality\nNow we will evaluate the normality of the the distributions of grade 8 math scores across years and across continents – the plot you created in #5. Keep in mind, the normality condition is very important when the sample sizes for each group are relatively small.\nQuestion 11 – Is it reasonable to say that the grade 8 math scores across the four years and six continents are normally distributed?\n\n\nEqual Variance\nNow we will evaluate the normality of the the distributions of grade 8 math scores across years and across continents – the plot you created in #5. Keep in mind, the constant variance condition is especially important when the sample sizes differ between groups.\nFor this section, it might be helpful to know the standard deviations for each year / continent combo. I have written code below to provide you with a table of these numbers:\nKeep in mind a standard deviation of NA can happen for two reasons, (1) there is no data, or (2) there is only one observation.\n\nmath_scores %&gt;% \n  group_by(year, continent) %&gt;% \n  summarize(var = var(grade_8_math_score, na.rm = TRUE)\n            ) %&gt;% \n  pivot_wider(names_from = continent, values_from = var)\n\nLooking at the table, we can see that the largest variance of 10257 (North America, 2007) is nearly 27 times larger than the smallest variance of 381 (Europe, 2003). That’s a lot! So, our equal variance condition is definitely violated.\nBut, we have learned tools to attempt to remedy this issue! Let’s take the log of grade_8_math_score and see how the variances compare.\n\nmath_scores %&gt;% \n  group_by(year, continent) %&gt;% \n  summarize(log_var = var(log(grade_8_math_score))\n            ) %&gt;%\n  pivot_wider(names_from = continent, values_from = log_var)\n\nQuestion 12 – Based on the variances in the table above, is it reasonable to say that the log grade 8 math scores across the four years and six continents have equal variability?"
-  },
-  {
-    "objectID": "labs/lab-9.html#one-way-anova-inference",
-    "href": "labs/lab-9.html#one-way-anova-inference",
-    "title": "Lab 9 – One-Way ANOVA",
-    "section": "One-Way ANOVA Inference",
-    "text": "One-Way ANOVA Inference\nWe are going to test out both methods for conducting a hypothesis test for an ANOVA – theory-based and simulation-based methods. Keep in mind both methods require independence of observations and equal variability. Normality, however, is only a condition of theory-based methods.\n\nTesting for a Difference Between Years\nSince the distribution of grade 8 math scores across the four years wasn’t horribly not Normal, let’s give a theory-based method a try.\nQuestion 13 – Fill in the code below to conduct a one-way ANOVA modeling the relationship between mean grade 8 math score and the year\nKeep in mind the response variable comes first and the explanatory variable comes second!\n\naov(____ ~ ____, data = math_scores) %&gt;% \n  broom::tidy()\n\nQuestion 14 – At an \\(\\alpha = 0.1\\), what decision would you reach for your hypothesis test?\nQuestion 15 – What would you conclude about the relationship between the mean grade 8 math scores and year?\n\n\nTesting for a Difference Between Continents\nSince the distribution of grade 8 math scores across the six continents didn’t look very Normal, so let’s give a simulation-based method a try.\nI’ve gotten you started by calculating the observed F-statistic for the relationship between a country’s grade 8 math score and its continent.\n\nobs_F &lt;- math_scores %&gt;% \n  specify(response = grade_8_math_score, \n          explanatory = continent) %&gt;% \n  calculate(stat = \"F\")\n\nQuestion 16 – Write the code to generate a permutation distribution of resampled F-statistics.\nQuestion 17 – Visualize the null distribution and shade how the p-value should be calculated\nKeep in mind you only look at the right tail for an ANOVA!\nQuestion 18 – Calculate the p-value for the observed F-statistic\nQuestion 19 – At an \\(\\alpha = 0.1\\), what decision would you reach for your hypothesis test?\nQuestion 20 – What would you conclude about the relationship between the mean grade 8 math scores and continent?"
-  },
-  {
-    "objectID": "slides/week5-day2.html#revision-deadlines",
-    "href": "slides/week5-day2.html#revision-deadlines",
-    "title": "Midterm Project Work Day",
-    "section": "Revision Deadlines",
-    "text": "Revision Deadlines\n\nLab 3 Revisions are due today (May 1)\nSecond round of revisions for Lab 2 are due today (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nLab 4 Revisions are due next Wednesday (May 8)\n\n\n\n\n\n\n\nMaking a copy of your group’s Lab 4\n\n\nIf you were the recorder (typer) for your group, you need to make your project public. If you were not the recorder, you need to make a copy of your group’s project."
-  },
-  {
-    "objectID": "slides/week5-day2.html#midterm-project",
-    "href": "slides/week5-day2.html#midterm-project",
-    "title": "Midterm Project Work Day",
-    "section": "Midterm Project",
-    "text": "Midterm Project\nThe first draft of your Midterm Project is due on Sunday at midnight.\n\n\n\n\n\n\nDeadline Extension\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
-  },
-  {
-    "objectID": "slides/week5-day2.html#introduction-versus-methods",
-    "href": "slides/week5-day2.html#introduction-versus-methods",
-    "title": "Midterm Project Work Day",
-    "section": "Introduction Versus Methods",
-    "text": "Introduction Versus Methods\n\nThe description of your data goes in your Introduction.\nThe description of your variables goes at the beginning of your Methods, in the Variables subsection!"
-  },
-  {
-    "objectID": "slides/week5-day2.html#data-description-a-word-of-caution",
-    "href": "slides/week5-day2.html#data-description-a-word-of-caution",
-    "title": "Midterm Project Work Day",
-    "section": "Data Description – A Word of Caution",
-    "text": "Data Description – A Word of Caution\nBe cautious in how you are using the resources I provided—do not copy these descriptions.\nInserting a verbatim copy of the descriptions seen in the data resources is plagiarism.\n\n\n\n\n\n\nIn text citation\n\n\nIf you wish to borrow elements of these descriptions, you need to quote them and provide a reference to the resource. e.g., “This data set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children” (United States Department of Health and Human Services, 2014)."
-  },
-  {
-    "objectID": "slides/week5-day2.html#specific-dataset-advice",
-    "href": "slides/week5-day2.html#specific-dataset-advice",
-    "title": "Midterm Project Work Day",
-    "section": "Specific Dataset Advice",
-    "text": "Specific Dataset Advice\n\nFor the and_vertebrates data, you should include species as an explanatory variable. If you don’t you are assuming the same relationship applies to trout AND salamanders.\nFor the hbr_maples data, you cannot use year as a numerical variable. There are only two years of data!\nFor the pie_crabs data:\n\nsite and latitude measure the same thing"
-  },
-  {
-    "objectID": "slides/week5-day2.html#step-0-read-in-your-data",
-    "href": "slides/week5-day2.html#step-0-read-in-your-data",
-    "title": "Midterm Project Work Day",
-    "section": "Step 0 – Read in Your Data",
-    "text": "Step 0 – Read in Your Data\n\nLocate what package your data live in (found in the directions for the midterm project proposal)\nLoad in the package you need!\nGet started!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(openintro)\n\nOR\n\nlibrary(lterdatasampler)\n\n\n\n\n\n\n\n\n\nmoderndive Package\n\n\nWe will be using the moderndive package to get our regression tables, so do not remove this package from your project!"
-  },
-  {
-    "objectID": "slides/week5-day2.html#step-1-visualizations",
-    "href": "slides/week5-day2.html#step-1-visualizations",
-    "title": "Midterm Project Work Day",
-    "section": "Step 1 – Visualizations",
-    "text": "Step 1 – Visualizations\n\n\n\nTwo Numerical Variables\n\n\n\n\n\n\nThree total visualizations\n\n\n\n\n\n\n\n\nVisualize the model with both variables, using a color gradient\nVisualize a simple linear regression with the one explanatory variable\nVisualize a simple linear regression with the other explanatory variable\n\n\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\n\n\n\n\nTwo total visualizations\n\n\n\n\n\n\n\n\nVisualize the “different slopes” multiple linear regression using geom_smooth(method = \"lm\")\nVisualize the “parallel slopes” multiple linear regression usinggeom_parallel_slopes()"
-  },
-  {
-    "objectID": "slides/week5-day2.html#step-2-decide-the-best-model",
-    "href": "slides/week5-day2.html#step-2-decide-the-best-model",
-    "title": "Midterm Project Work Day",
-    "section": "Step 2 – Decide the “Best” Model",
-    "text": "Step 2 – Decide the “Best” Model\n\n\nTwo Numerical Variables\n\n\nIf there appears to be a relationship with the colors – include both variables!\nIf the colors are equally dispersed throughout the plot – choose the one variable that has the stronger relationship (larger slope)!\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\nLook at the plot where the lines are allowed to be different! Does it look like they are?\nIf the lines look different – you should use the different slopes (interaction) model!\nIf the lines look similar – you should use the parallel slopes (additive) model!"
-  },
-  {
-    "objectID": "slides/week5-day2.html#step-3-fit-the-regression-model-you-chose-with-lm",
-    "href": "slides/week5-day2.html#step-3-fit-the-regression-model-you-chose-with-lm",
-    "title": "Midterm Project Work Day",
-    "section": "Step 3 – Fit the regression model you chose with lm()",
-    "text": "Step 3 – Fit the regression model you chose with lm()\n\n\nTwo Numerical Variables\n\n\nAre both variables included? Use a + to separate them!\n\n\n\nmy_model &lt;- lm(size ~ latitude + water_temp, \n               data = pie_crab)\n\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\nAre the slopes different? You need to fit a different slopes model! Use a * to separate the variables!\n\n\n\nmy_model &lt;- lm(tail_l ~ age * pop, \n               data = possum)\n\n\n\nAre the slopes similar? You need to fit a parallel slopes model! Use a + to separate the variables!\n\n\n\nmy_model &lt;- lm(weight ~ weeks + habit, \n               data = births14)"
-  },
-  {
-    "objectID": "slides/week5-day2.html#step-4-get-the-coefficients-with-get_regression_table",
-    "href": "slides/week5-day2.html#step-4-get-the-coefficients-with-get_regression_table",
-    "title": "Midterm Project Work Day",
-    "section": "Step 4: Get the coefficients with get_regression_table()",
-    "text": "Step 4: Get the coefficients with get_regression_table()"
-  },
-  {
-    "objectID": "slides/week5-day2.html#section",
-    "href": "slides/week5-day2.html#section",
-    "title": "Midterm Project Work Day",
-    "section": "",
-    "text": "Now interpret!"
-  },
-  {
-    "objectID": "weeks/week-2.html",
-    "href": "weeks/week-2.html",
-    "title": "Week Two: Summarizing & Visualizing Numerical Data",
-    "section": "",
-    "text": "Welcome!\nIn this week’s coursework we are going to continuing exploring data, through data summaries and visualizations, focusing specifically on numerical variables. We will be using the dplyr package in R to wrangle our data and the ggplot2 package to created data visualizations.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#learning-outcomes",
-    "href": "weeks/week-2.html#learning-outcomes",
-    "title": "Week Two: Summarizing & Visualizing Numerical Data",
-    "section": "0.1 Learning Outcomes",
-    "text": "0.1 Learning Outcomes\nBy the end of this coursework you should be able to:\n\noutline the differences between numerical and categorical variables\ndescribe what type of summary statistic is appropriate for a given distribution of a numerical variable\ndiscuss when it is / is not appropriate to summarize a variable with a mean\ncreate visualizations of one and two numerical variables\ndiscuss the benefits and shortcomings of different visualizations",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#textbook-reading-part-1",
-    "href": "weeks/week-2.html#textbook-reading-part-1",
-    "title": "Week Two: Summarizing & Visualizing Numerical Data",
-    "section": "1.1 Textbook Reading – Part 1",
-    "text": "1.1 Textbook Reading – Part 1\n\n\n\n\n\n\n\n\n\n\n\nRequired Reading: Exploring Numerical Data\n\nReading Guide – Due Monday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit your completed reading guide to the Canvas assignment portal!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class",
-    "href": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class",
-    "title": "Week Two: Summarizing & Visualizing Numerical Data",
-    "section": "1.2 Concept Quiz – Due Wednesday by the start of class",
-    "text": "1.2 Concept Quiz – Due Wednesday by the start of class\n\n\n\n\n\n\nNote\n\n\n\nThe two concept quizzes from each chapter have been combined into one concept quiz on Canvas.\n\n\n\nSuppose we have data on the departure delays of flights flying out of New York. What shape would you expect the distribution of departure delays to have?\n\n\nright skew\nleft skew\nbimodal\nmutimodal\nuniform\n\nHint: Think about how you would “typically” expect flight delays to behave.\n\nTo better decide what summary statistic we should use to summarize the departure delays it would be best to create a data visualization of the distribution of departure delays. What type of visualizations could we make? Select all that apply!\n\n\nboxplot\nhistogram\nbarplot\ndensity plot\nscatterplot",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#textbook-reading-part-2",
-    "href": "weeks/week-2.html#textbook-reading-part-2",
-    "title": "Week Two: Summarizing & Visualizing Numerical Data",
-    "section": "1.3 Textbook Reading – Part 2",
-    "text": "1.3 Textbook Reading – Part 2\nRequired Reading: Data Visualization\n\n\n\n\n\n\n\n\n\n\n\n\nReading Guide – Due Wednesday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit your completed reading guide to the Canvas assignment portal!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class-1",
-    "href": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class-1",
-    "title": "Week Two: Summarizing & Visualizing Numerical Data",
-    "section": "1.4 Concept Quiz – Due Wednesday by the start of class",
-    "text": "1.4 Concept Quiz – Due Wednesday by the start of class\n\n\n\n\n\n\nNote\n\n\n\nThe two concept quizzes from each chapter have been combined into one concept quiz on Canvas.\n\n\n\nWhat aesthetics are being used in the following plot?\n\nHint: Think about what goes inside of the aes() function and what does not.\n\n\n\n\n\n\n\n\n\n\nx axis\ny axis\ncolor\nfacets\npoints\nlines\n\n\nWhat geometric objects are being used in the displayed visualization?\n\nHint: Think about what geoms you would use to make this plot!\n\npoints\nlines / smoothers\ncolors\nfacets\n\n\nWhat aspects of the distribution of departure delays can you see in the histogram that you could not see in the boxplot?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshape of distribution\nmedian\noutliers\nmode",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "slides/week4-day2.html#revisions-due-tonight",
-    "href": "slides/week4-day2.html#revisions-due-tonight",
+    "objectID": "slides/week4-day2.html#revisions-due-friday",
+    "href": "slides/week4-day2.html#revisions-due-friday",
     "title": "Week 4, Day 2",
-    "section": "Revisions Due Tonight",
-    "text": "Revisions Due Tonight\nPlease make sure you submitted reflections with your revisions! If there are not revisions present when I start grading them tomorrow morning, your revisions are not eligible to be regraded."
-  },
-  {
-    "objectID": "slides/week4-day2.html#a-grading-reminder",
-    "href": "slides/week4-day2.html#a-grading-reminder",
-    "title": "Week 4, Day 2",
-    "section": "A Grading Reminder",
-    "text": "A Grading Reminder\n\n\n\n\n“Complete” = Satisfactory\n\n\nYour group obtained a “Success” on every question\n\n\n\n\n“Incomplete” = Growing\n\n\nYour group received a “Growing” on at least one question"
+    "section": "Revisions Due Friday",
+    "text": "Revisions Due Friday\nPlease make sure you submitted reflections with your revisions! If there are not revisions present when I start grading them on Saturday morning, your revisions are not eligible to be regraded."
   },
   {
     "objectID": "slides/week4-day2.html#common-mistakes",
@@ -1942,32 +1666,11 @@
     "text": "Common Mistakes\n\n\n“What variables go with each aesthetic?”\n\n\nI need you to be specific about what variable is being mapped to each component of the plot\n\n\n\n\n\n“Careful! Aesthetics are places where variables are being included on the plot, which is different from stylistic decisions made by the illustrator. Which of these aesthetics are associated with variables?”\n\n\n\n\nThings like axis titles, grid lines, and annotations are stylistic decisions made by the plot creator. Aesthetics are places where variables are being included in the plot."
   },
   {
-    "objectID": "slides/week4-day2.html#copying-the-lab-last-weeks-recorder",
-    "href": "slides/week4-day2.html#copying-the-lab-last-weeks-recorder",
+    "objectID": "slides/week4-day2.html#statistical-critique-revisions",
+    "href": "slides/week4-day2.html#statistical-critique-revisions",
     "title": "Week 4, Day 2",
-    "section": "Copying the Lab – Last Week’s Recorder",
-    "text": "Copying the Lab – Last Week’s Recorder\nThe person who typed your lab needs to make their project “public”\n\nOpen Posit Cloud\nGo to the STAT 313 workspace\nClick on “Your Content”\nOpen the settings for your Lab 3 project"
-  },
-  {
-    "objectID": "slides/week4-day2.html#copying-the-lab-last-weeks-recorder-1",
-    "href": "slides/week4-day2.html#copying-the-lab-last-weeks-recorder-1",
-    "title": "Week 4, Day 2",
-    "section": "Copying the Lab – Last Week’s Recorder",
-    "text": "Copying the Lab – Last Week’s Recorder\n\nChange the access for your project to “Space Members”"
-  },
-  {
-    "objectID": "slides/week4-day2.html#copying-the-lab-everyone-else",
-    "href": "slides/week4-day2.html#copying-the-lab-everyone-else",
-    "title": "Week 4, Day 2",
-    "section": "Copying the Lab – Everyone Else",
-    "text": "Copying the Lab – Everyone Else\n\nFind your group member’s lab (you can use the search bar to search for their name)\n\n\n\nOpen their Lab 3 project\nSelect “Save a Permanent Copy”"
-  },
-  {
-    "objectID": "slides/week4-day2.html#completing-revisions",
-    "href": "slides/week4-day2.html#completing-revisions",
-    "title": "Week 4, Day 2",
-    "section": "Completing Revisions",
-    "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 1.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment portal\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+    "section": "Statistical Critique Revisions",
+    "text": "Statistical Critique Revisions\nAre due on Wednesday, May 7.\nNext week the focus will be to get your Midterm Project first draft out the door, so we will postpone the revision deadline until the following week.\nYou are welcome to complete your revisions before then!"
   },
   {
     "objectID": "slides/week4-day2.html#least-squares",
@@ -2045,6 +1748,250 @@
     "title": "Week 4, Day 2",
     "section": "Data Layout",
     "text": "Data Layout\n\n\n\n\n\n\n\n\nlakeid\nice_on\nice_off\nice_duration\nyear\n\n\n\n\nLake Mendota\n1880-11-23\n1881-05-03\n161\n1880\n\n\nLake Mendota\n1932-12-10\n1933-04-04\n115\n1932\n\n\nLake Mendota\n2003-01-04\n2003-04-03\n89\n2002\n\n\nLake Mendota\n1953-12-30\n1954-03-25\n85\n1953\n\n\nLake Monona\n1963-12-18\n1964-03-19\n92\n1963\n\n\nLake Monona\n1989-12-07\n1990-03-15\n98\n1989\n\n\nLake Monona\n1985-12-06\n1986-03-29\n113\n1985\n\n\nLake Monona\n1996-12-20\n1997-03-26\n96\n1996\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecording the year of the winter\n\n\nHow is the year variable related to the ice_on and ice_off variables?"
+  },
+  {
+    "objectID": "slides/week4-day2.html#accessing-lab-3",
+    "href": "slides/week4-day2.html#accessing-lab-3",
+    "title": "Week 4, Day 2",
+    "section": "Accessing Lab 3",
+    "text": "Accessing Lab 3\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nThe person whose birthday is closest to January 1 will act as the Recorder for your group (this week).\n\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 3 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
+  },
+  {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4: Simple Linear Regression",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(lterdatasampler)\n\n# New package from reading -- to get regression table\nlibrary(moderndive)"
+  },
+  {
+    "objectID": "labs/lab-4.html#data-for-today",
+    "href": "labs/lab-4.html#data-for-today",
+    "title": "Lab 4: Simple Linear Regression",
+    "section": "Data for Today",
+    "text": "Data for Today\nToday we’ll be working with data on lake ice duration for two lakes surrounding Madison, Wisconsin. This dataset contains information on the number of days of ice (ice duration) on each lake for years between 1851 and 2019. These data are stored in the ntl_icecover dataset, which lives in the lterdatsampler package.\nAccording to the EPA, lake ice duration can be an indicator of climate change. This is because lake ice is dependent on several environmental factors, so changes in these factors will influence the formation of ice on top of lakes. As a result, the study and analysis of lake ice formation can inform scientists about how quickly the climate is changing, and are critical to minimizing disruptions to lake ecosystems."
+  },
+  {
+    "objectID": "labs/lab-4.html#inspecting-the-data",
+    "href": "labs/lab-4.html#inspecting-the-data",
+    "title": "Lab 4: Simple Linear Regression",
+    "section": "Inspecting the Data",
+    "text": "Inspecting the Data\nQuestion 1 – How large is the ntl_icecover dataset? (i.e. How many rows and columns does it have?)\n\n# Code to answer question 1 goes here!"
+  },
+  {
+    "objectID": "labs/lab-4.html#visualize-a-simple-linear-regression",
+    "href": "labs/lab-4.html#visualize-a-simple-linear-regression",
+    "title": "Lab 4: Simple Linear Regression",
+    "section": "Visualize a Simple Linear Regression",
+    "text": "Visualize a Simple Linear Regression\nLet’s start with tools to visualize and summarize linear regression.\n\nTools\n\nVisualize the relationship between x & y – geom_point()\nVisualize the linear regression line – geom_smooth()\n\nWe will be investigating the relationship between the ice_duration of each lake and the year.\n\n\nStep 1\nQuestion 2 – Make a scatterplot of the relationship between the ice_duration (response) and the year (explanatory). Be sure to make the axis labels look nice, including any necessary units!\n\n# Code to answer question 2 goes here!\n\nQuestion 3 – Describe the relationship you see in the scatterplot. Be sure to address the four aspects we discussed in class: form, direction, strength, and unusual points. Hint: You need to explicitly state where the unusual observations are!\n\n\nStep 2\nTo add a regression line on top of a scatterplot, you add (+) a geom_smooth() layer to your plot. However, if you add a “plain” geom_smooth() to the plot, it uses a wiggly line. You need to tell geom_smooth() what type of smoother line you want for it to use! We can get a straight line by including method = \"lm\" inside of geom_smooth().\nQuestion 4 – Add a linear regression line to the scatterplot you made in Question 3. No code goes here, you need to modify your scatterplot from Question 3!"
+  },
+  {
+    "objectID": "labs/lab-4.html#fit-a-simple-linear-regression-model",
+    "href": "labs/lab-4.html#fit-a-simple-linear-regression-model",
+    "title": "Lab 4: Simple Linear Regression",
+    "section": "Fit a Simple Linear Regression Model",
+    "text": "Fit a Simple Linear Regression Model\nNext, we are going to summarize the relationship between ice_duration and year with a linear regression equation.\n\nTools\n\nCalculate the correlation between x & y – get_correlation()\nModel the relationship between x & y – lm()\nExplore coefficient estimates – get_regression_table()\n\n\n\nStep 1\nQuestion 5 – Calculate the correlation between these variables, using the get_correlation() function.\n\n# Code to answer question 5 goes here!\n\n\n\nStep 2\nNext, we will “fit” a linear regression with the lm() function. Remember, the “formula” for lm() is response_variable ~ explanatory_variable. Also recall that you need to tell lm() where the data live using data = argument!\nQuestion 6 – Fit a linear regression modeling the relationship between between ice_duration and year. The only part you need to remove is the ...! Keep the ice_lm &lt;-!\n\n# Code to answer question 6 goes here!\n\nice_lm &lt;- ...\n\n\n\nStep 3\nFinally, to get the regression equation, we need grab the coefficients out of the linear model object you made in Step 2. The get_regression_table() function is a handy tool to do just that!\nQuestion 7 – Use the get_regression_table() function to obtain the coefficient estimates for the ice_lm regression you fit in Question 6.\n\n# Code to answer question 7 goes here!\n\nQuestion 8 – Using the coefficient estimates above, write out the estimated regression equation. Your equation needs to be in the context of the variables, not in generic \\(x\\) and \\(y\\) statements!\nQuestion 9 – Interpret the value of the slope coefficient. Your interpretation needs to be in the context of the variables!\nQuestion 10 – Sometimes interpreting a 1-unit increase in the explanatory variable is not a meaningful change, so we instead use larger increases. Based on your slope interpretation from Q9, what do you expect to happen to the duration of ice cover for an increase of 100 years?"
+  },
+  {
+    "objectID": "labs/lab-4.html#a-preview-of-whats-to-come",
+    "href": "labs/lab-4.html#a-preview-of-whats-to-come",
+    "title": "Lab 4: Simple Linear Regression",
+    "section": "A preview of what’s to come",
+    "text": "A preview of what’s to come\nIn our analysis above, we only looked at the relationship between ice duration and year, not accounting for which lake the measurements came from. That is another (categorical) explanatory variable we could include in our regression model!\nQuestion 11 – Using the code you wrote for Question 4 (with the regression line added), add a color for the name of the lake (lakeid).\n\n# Code to answer question 11 goes here!"
+  },
+  {
+    "objectID": "weeks/week-5.html",
+    "href": "weeks/week-5.html",
+    "title": "Week Five: Multiple Linear Regression",
+    "section": "",
+    "text": "Welcome!\nIn this week’s coursework we are going to build off the concepts we learned last week and delve deeper into linear regression. We are going to explore multiple linear regression, a statistical model where we have multiple explanatory variables and a single numerical response. We are going to refresh how to visualize these types of models, practice fitting these types of models in R, and the learn how to interpret these types of models.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#learning-outcomes",
+    "href": "weeks/week-5.html#learning-outcomes",
+    "title": "Week Five: Multiple Linear Regression",
+    "section": "0.1 Learning Outcomes",
+    "text": "0.1 Learning Outcomes\nBy the end of this coursework you should be able to:\n\ndescribe to someone what a multiple linear regression is\noutline how a categorical explanatory variable can be included in a simple linear regression\nvisualize multiple linear regression models with one numerical and one categorical explanatory variable\ncalculate the simple linear regression line for each group of a categorical variable\noutline how a second numerical explanatory variable can be included in a simple linear regression\nvisualize multiple linear regression models with two numerical explanatory variables\ninterpret the coefficient of each explanatory variable included in the regression model\nrecite different methods that can be used to decide what multiple linear regression model is “best”\ndescribe the benefits and costs of using “model selection” for deciding on a multiple linear regression model",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#textbook-reading",
+    "href": "weeks/week-5.html#textbook-reading",
+    "title": "Week Five: Multiple Linear Regression",
+    "section": "1.1 Textbook Reading",
+    "text": "1.1 Textbook Reading\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Chapter 6 (https://moderndive.com/6-multiple-regression.html)\n\n\n\nReading Guide – Due Monday by the start of class\nDownload the Word Document",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#concept-quiz-due-monday-by-the-start-of-class",
+    "href": "weeks/week-5.html#concept-quiz-due-monday-by-the-start-of-class",
+    "title": "Week Five: Multiple Linear Regression",
+    "section": "1.2 Concept Quiz – Due Monday by the start of class",
+    "text": "1.2 Concept Quiz – Due Monday by the start of class\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1 – Based on the visualizations above, I believe the [interaction / parallel slopes] model is more appropriate because the slopes between the groups are [very different / very similar].\nQuestion 2 – What type of model does the following code obtain?\n\nminority_lm &lt;- lm(score ~ age * ethnicity, data = evals)\n\n\ninteraction model\nparallel slopes model\nsimple linear regression model\n\n\nThe following is the output from the above regression model (from Question 2):\n\n\n# A tibble: 4 × 7\n  term                    estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept                  2.61      0.518      5.04   0        1.59     3.63 \n2 age                        0.032     0.011      2.84   0.005    0.01     0.054\n3 ethnicity: not minority    2.00      0.534      3.74   0        0.945    3.04 \n4 age:ethnicitynot minor…   -0.04      0.012     -3.51   0       -0.063   -0.018\n\n\n\nQuestion 3 – The intercept line represents the [evaluation score / mean evaluation score] for [male / female / minority / non-minority] faculty.\n\nQuestion 4 – The age line represents the relationship between age and evaluation scores for [male / female / minority / non-minority] faculty.\n\nQuestion 5 – The ethnicity:not minority line represents the [mean / adjustment to the mean] evaluation score for [male / female / minority / non-minority] faculty.\n\nQuestion 6 – The age:ethnicitynot minority line represents the [slope / adjustment to the slope] for the relationship between age and evaluation scores for [male / female / minority / non-minority] faculty.\n\nQuestion 7 – The value of the age:ethnicitynot minority line (-0.004) [does / does not ] match the decision I made in Question 1 as there is [little difference / substantial difference] in the slopes between the minority and non-minority faculty.\n\nQuestion 8 – What type of model does the following code obtain?\n\nbty_lm &lt;- lm(score ~ age + bty_avg, data = evals)\n\n\nmultiple linear regression with two numerical predictors\ninteraction model\nparallel slopes\n\n\nThe following is the output from the above regression model (from Question 8):\n\n\n# A tibble: 3 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    4.06      0.17      23.9    0        3.72     4.39 \n2 age         -0.003     0.003     -1.15   0.251   -0.008    0.002\n3 bty_avg      0.061     0.017      3.55   0        0.027    0.094\n\n\n\nQuestion 9 – The intercept represents the [course evaluation score / mean course evaluation score] for professors whose age is __ and who have a average beauty score of ___.\n\nQuestion 10 – We interpret the value of -0.003 by age as:\nFor every [1 day / 1 year / 1 evaluation] increase in professor’s [evaluation score / age / average beauty] we expect the [course evaluation score / mean course evaluation score] to [increase / decrease] by __, after accounting for [ethnicity / gender / average beauty scores].",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#r-tutorial-due-wednesday-by-the-start-of-class",
+    "href": "weeks/week-5.html#r-tutorial-due-wednesday-by-the-start-of-class",
+    "title": "Week Five: Multiple Linear Regression",
+    "section": "1.3 R Tutorial – Due Wednesday by the start of class",
+    "text": "1.3 R Tutorial – Due Wednesday by the start of class\n\nRegression modeling: Parallel Slopes\nRegression modeling: Evaluating and extending parallel slopes model",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html",
+    "href": "weeks/week-3.html",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "",
+    "text": "Welcome!\nIn this week’s coursework we are going to dive deeper into exploring data, by incorporating categorical variables. Specifically, we will explore how we can incorporate categorical variables into our visualizations through the use of colors and facets. We will also explore how we can obtain summary statistics for different groups of a categorical variable, making our summaries more specific.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#learning-outcomes",
+    "href": "weeks/week-3.html#learning-outcomes",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "0.1 Learning Outcomes",
+    "text": "0.1 Learning Outcomes\nBy the end of this coursework you should be able to:\n\ndescribe what a categorical variable is and how these types of variables are stored in R\ndetermine whether a variable in a dataset is categorical\nincorporate categorical variables into visualizations of two and three variables\nobtain summary statistics for each level of a categorical variable",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#reading-guide-due-monday-by-the-start-of-class",
+    "href": "weeks/week-3.html#reading-guide-due-monday-by-the-start-of-class",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "1.1 Reading Guide – Due Monday by the start of class",
+    "text": "1.1 Reading Guide – Due Monday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nAnswers\n\n\n\nPlease include your answers as a different color! You can pick whatever color you like, but please use a color other than black.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#textbook-reading-part-1",
+    "href": "weeks/week-3.html#textbook-reading-part-1",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "1.2 Textbook Reading – Part 1",
+    "text": "1.2 Textbook Reading – Part 1\n\n\n\n\n\n\n\n\n\n\n\nRequired Reading: Incorporating Categorical Variables into Visualizations\n\n\n\n\n\n\nOnly read Section 4.6!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#textbook-reading-part-2",
+    "href": "weeks/week-3.html#textbook-reading-part-2",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "1.3 Textbook Reading – Part 2",
+    "text": "1.3 Textbook Reading – Part 2\nRequired Reading: Incorporating Categorical Variables into Summary Statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRead Sections 3.3 - 3.6!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
+    "href": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "1.4 Concept Quiz – Due Monday by the start of class",
+    "text": "1.4 Concept Quiz – Due Monday by the start of class\n1. Suppose you’ve run the following code to make side-by-side boxplots of life expectancy:\n\nggplot(data = gapminder_small, \n       mapping = aes(x = country, y = lifeExp)) +\n  geom_boxplot() +\n  labs(x = \"\", \n       y = \"\", \n       title = \"Life Expectancy (in Years) by Country\",\n       fill = \"Country\"\n       )\n\nYour resulting plot looks like this:\n\n\n\n\n\n\n\n\n\nWhat should you do?\n\nMove country to the y-axis.\nRemove some countries so the names don’t overlap.\nNothing, it looks great!\n\n2. If you didn’t want to stack your boxplots side-by-side, how else could you separate the groups?\n\n\n\n\n\n\nTip\n\n\n\nThis does not go inside the aes() function!\n\n\n3. What functions are necessary to calculate summary statistics for different groups of a categorical variable?\n\nsummarize()\nmutate()\narrange()\ngroup_by()\nfilter()\n\n4. A categorical variable could be correctly stored as what data types?\n\ninteger\ndouble\ncharacter\nfactor\n\n5. In Lab 2, you worked with the nycflights dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Choose which code belongs in each of the blanks.\n\n\n____ %&gt;%\n____ %&gt;%\n\n\n\n\nnycflights\ngroup_by(airline)\nfilter(dest == \"SFO\")\nsummarize(mean_dd = mean(dep_delay))\n\n\n6. What function did you learn that is used for converting a numerical variable to a categorical variable (a process called discretizing)?\n\nmutate()\nfilter()\nif_else()\ngroup_by()\n\n7. The arrange() function sorts or reorder a data frame’s rows according to the values of the specified variable. By default, what ordering does it use for the rows?\n\nascending (smallest to largest)\ndescending (largest to smallest)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#no-r-tutorials-this-week",
+    "href": "weeks/week-3.html#no-r-tutorials-this-week",
+    "title": "Week Three: Incorporating Categorical Variables",
+    "section": "1.5 No R tutorials this week!",
+    "text": "1.5 No R tutorials this week!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "slides/week9-day2.html#upcoming-deadlines",
+    "href": "slides/week9-day2.html#upcoming-deadlines",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Upcoming Deadlines",
+    "text": "Upcoming Deadlines\n\nLab 7 revisions are due today (by midnight)\nLab 8 revisions are due next Wednesday\nStatistical Critique 2 revisions are due next Wednesday\nFinal revisions on all assignments will be accepted until Sunday, June 9\n\n\n\n\n\n\n\nDon’t forget reflections!"
+  },
+  {
+    "objectID": "slides/week9-day2.html#common-mistakes",
+    "href": "slides/week9-day2.html#common-mistakes",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\n\n\nQuestions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 6 – Equal variance is not about equal points above and below the line!\n\n\n\nQuestion 11 – Your hypothesis test decision should state what \\(\\alpha\\) was used!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
+  },
+  {
+    "objectID": "slides/week9-day2.html#visualizations-density-ridges",
+    "href": "slides/week9-day2.html#visualizations-density-ridges",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Visualizations – Density Ridges",
+    "text": "Visualizations – Density Ridges\n\nggplot(data = &lt;NAME OF DATASET&gt;, \n       mapping = aes(x = &lt;NAME OF NUMERICAL VARIABLE&gt;, \n                     y = &lt;NAME OF CATEGORICAL VARIABLE&gt;)\n       ) + \n  geom_density_ridges()+\n  labs(x = \"&lt;TITLE FOR THE X-AXIS&gt;\", \n       y = \"&lt;TITLE FOR THE Y-AXIS&gt;\")\n\n\n\n\n\n\n\nRevisit the code you wrote for Question 8 of Lab 3"
+  },
+  {
+    "objectID": "slides/week9-day2.html#choosing-a-statistical-model",
+    "href": "slides/week9-day2.html#choosing-a-statistical-model",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Choosing a Statistical Model",
+    "text": "Choosing a Statistical Model\n\nEveryone will fit two one-way ANOVA models — one model for each explanatory variable!\n\n\n\nYou will need to choose whether to use a theory-based method or a simulation-based method.\nYour choice is based on the model conditions — specifically the normality condition.\n\nThe density ridge plots can be used to check the normality and equal variance conditions.\nThe study design should be used to check the independence condition."
+  },
+  {
+    "objectID": "slides/week9-day2.html#theory-based-method",
+    "href": "slides/week9-day2.html#theory-based-method",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Theory-based Method",
+    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- aov(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
+  },
+  {
+    "objectID": "slides/week9-day2.html#simulation-based-method",
+    "href": "slides/week9-day2.html#simulation-based-method",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Simulation-based Method",
+    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
+  },
+  {
+    "objectID": "slides/week9-day2.html#model-validity",
+    "href": "slides/week9-day2.html#model-validity",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Model Validity",
+    "text": "Model Validity\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
+  },
+  {
+    "objectID": "slides/week9-day2.html#two-way-anova",
+    "href": "slides/week9-day2.html#two-way-anova",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Two-way ANOVA",
+    "text": "Two-way ANOVA"
+  },
+  {
+    "objectID": "slides/week9-day2.html#code-for-plot",
+    "href": "slides/week9-day2.html#code-for-plot",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Code for Plot",
+    "text": "Code for Plot\n\n\nggplot(data = evals_small, \n       mapping = aes(y = age_cat, x = min_eval, fill = gender)) + \n  geom_density_ridges(alpha = 0.5) + \n  scale_fill_brewer(palette = \"PRGn\") +\n  labs(y = \"\",\n       title = \"Gaps between male and female faculty evaluation scores become more pronounced with age\", \n       x = \"\", \n       fill = \"Professor's Sex\") +\n  theme(legend.position = \"top\")\n\n\n\n\n\n\n\n\nLegend Positions\n\n\n\nThere are four options for legend.position\n\n\"none\" (removes the legend)\n\"left\" (difficult to read with the y-axis label)\n\"right\" (the default position)\n\"bottom\" (difficult to read with the x-axis label)\n\"top\" (generally my preference)"
   },
   {
     "objectID": "labs/grading-guides/lab-8-grading-guide.html",
@@ -2500,13 +2447,6 @@
     "title": "Your Title Goes Here! Make it fun!",
     "section": "Discussion",
     "text": "Discussion"
-  },
-  {
-    "objectID": "project/midterm-project/midterm_project_template-313.html#limitations",
-    "href": "project/midterm-project/midterm_project_template-313.html#limitations",
-    "title": "Your Title Goes Here! Make it fun!",
-    "section": "Limitations",
-    "text": "Limitations"
   },
   {
     "objectID": "project/midterm-project/midterm_project_template-313.html#conclusions",
@@ -3928,7 +3868,7 @@
     "href": "project/midterm-project/midterm-project-directions.html",
     "title": "Midterm Project Guidelines",
     "section": "",
-    "text": "Your Task\nFor this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal. Your project is required to have at least two explanatory variables, one of which must be numerical. You are expected to justify why you chose each explanatory variable in the Introduction section of your report.\n\n\nIntroduction\n\nIn 4-6 sentences describe how the data were collected, the context of the data (e.g., Are they from a study or a publication?), and the background of the research problem (e.g., What question do these data address? Why were the data collected?)\n\n\n\n\n\n\n\nTip\n\n\n\nYou may need to look up the publication(s) the data are associated with to obtain information on how they were collected.\n\n\n\nState the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “What is the relationship between…” and should be as specific as possible. Your Findings section should directly address the question(s) you pose here.\n\n\n\nMethods\nThis section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.\n\nDescribe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.\nProduce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.\n\nFor a multiple linear regression with one numerical variable and one categorical variable, you should produce two visualizations: one with different slopes and one with parallel slopes.\n\n\n\n\n\n\n\n\nEvery visualization should have nicely formatted axis labels!\n\n\n\n\n\n\n\nDescribe what you see in the visualizations, making direct references to the plots!\nOutline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about why the method being used are appropriate for the investigation at hand making direct reference to the visualizations.\n\n\n\n\n\n\n\nDeciding on a Statistical Model\n\n\n\nThe statistical model you fit in the next section depends on what you see in your visualization. Click here for a flowchart of how you should select the statistical model that is best for your situation.\n\n\n\n\nFindings\nIn this section you will write up your findings for each research question of interest.\n\nFit the statistical model stated at the end of the Methods section\nObtain the coefficients for the model\n\n\n\n\n\n\n\nTable of Coefficents\n\n\n\nUse the get_regression_table() function from the moderndive package to provide nicely formatted output from your regression model.\n\n\n\nWrite out the estimated regression equation for your statistical model.\n\nFor your regression equation, you can either use indicator variables for each level of the categorical variable or write out a different equation for each group.\n\nInterpret in the context of the data the coefficients from the regression equation.\n\n\n\nStudy Limitations\nWrite a 3-4 sentence statement on what can be inferred from the design of the study and the results of your statistical analysis. Specifically, answer these two questions and comment on their implications:\n\nBased on the sampling method used, what larger population can you infer the results or your analysis onto?\nBased on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables. Specifically, can cause-and-effect statements be made?\n\n\n\nConclusions\nBased on your visualizations and the regression model, what is your conclusion for the questions of interest?\n\n\n\n\n\n\nCaution\n\n\n\nThere should be no mention of p-values in your conclusion!",
+    "text": "Your Task\nFor this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal. Your project is required to have at least two explanatory variables, one of which must be numerical. You are expected to justify why you chose each explanatory variable in the Introduction section of your report.\n\n\nIntroduction\n\nIn no fewer than six (6) sentences describe how the data were collected, the context of the data. Your description should address the following questions:\n\nAre these data from a study or a publication?\nWhat question do these data address?\nWhy were the data collected?\nHow were the data collected?\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou may need to look up the publication(s) the data are associated with to obtain information on how they were collected.\n\n\n\nState the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “What is the relationship between…” and should be as specific as possible. Your Findings section should directly address the question(s) you pose here.\n\n\n\nMethods\nThis section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.\n\nDescribe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.\nProduce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.\n\nFor a multiple linear regression with one numerical variable and one categorical variable, you should produce two visualizations: one with different slopes and one with parallel slopes.\n\n\n\n\n\n\n\n\nEvery visualization should have nicely formatted axis labels!\n\n\n\n\n\n\n\nDescribe what you see in the visualizations, making direct references to the plots!\nOutline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about why the method being used are appropriate for the investigation at hand making direct reference to the visualizations.\n\n\n\n\n\n\n\nDeciding on a Statistical Model\n\n\n\nThe statistical model you fit in the next section depends on what you see in your visualization. Click here for a flowchart of how you should select the statistical model that is best for your situation.\n\n\n\n\nResults\nIn this section you will fit your statistical model and display the results.\n\nFit the statistical model stated at the end of the Methods section\nObtain the coefficients for the model\n\n\n\n\n\n\n\nTable of Coefficents\n\n\n\nUse the get_regression_table() function from the moderndive package to provide nicely formatted output from your regression model.\n\n\n\n\nDiscussion\nIn this section you will write up your findings for each research question of interest.\n\nWrite out the estimated regression equation for your statistical model.\n\nFor your regression equation, you can either use indicator variables (e.g. \\(1_{CC}(x)\\)) for each level of the categorical variable or write out a different equation for each group.\n\nInterpret in the context of the data the coefficients from the regression equation.\nConnect the findings of your regression back to the research question you posed in the Introduction.\nPropose a possible explanation for why these results were observed.\n\n\n\nConclusions\nIn this section, you will provide a short summary of the key findings of your analysis, and their connection to the broader scientific community.\n\nBased on your visualizations and the regression model, what is your conclusion for the questions of interest?\n\n\n\n\n\n\n\nCaution\n\n\n\nThere should be no mention of p-values in your conclusion!\n\n\n\n\nWhat are the implications of this research for science in general?\n\nBased on the sampling methods used, what larger population can you infer the results or your analysis onto?\nBased on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables. Specifically, can cause-and-effect statements be made?",
     "crumbs": [
       "Projects",
       "Midterm Project Description"
@@ -4790,241 +4730,273 @@
     "text": "Model Validity"
   },
   {
-    "objectID": "slides/week9-day2.html#upcoming-deadlines",
-    "href": "slides/week9-day2.html#upcoming-deadlines",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 7 revisions are due today (by midnight)\nLab 8 revisions are due next Wednesday\nStatistical Critique 2 revisions are due next Wednesday\nFinal revisions on all assignments will be accepted until Sunday, June 9\n\n\n\n\n\n\n\nDon’t forget reflections!"
-  },
-  {
-    "objectID": "slides/week9-day2.html#common-mistakes",
-    "href": "slides/week9-day2.html#common-mistakes",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\n\n\nQuestions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 6 – Equal variance is not about equal points above and below the line!\n\n\n\nQuestion 11 – Your hypothesis test decision should state what \\(\\alpha\\) was used!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
-  },
-  {
-    "objectID": "slides/week9-day2.html#visualizations-density-ridges",
-    "href": "slides/week9-day2.html#visualizations-density-ridges",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Visualizations – Density Ridges",
-    "text": "Visualizations – Density Ridges\n\nggplot(data = &lt;NAME OF DATASET&gt;, \n       mapping = aes(x = &lt;NAME OF NUMERICAL VARIABLE&gt;, \n                     y = &lt;NAME OF CATEGORICAL VARIABLE&gt;)\n       ) + \n  geom_density_ridges()+\n  labs(x = \"&lt;TITLE FOR THE X-AXIS&gt;\", \n       y = \"&lt;TITLE FOR THE Y-AXIS&gt;\")\n\n\n\n\n\n\n\nRevisit the code you wrote for Question 8 of Lab 3"
-  },
-  {
-    "objectID": "slides/week9-day2.html#choosing-a-statistical-model",
-    "href": "slides/week9-day2.html#choosing-a-statistical-model",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Choosing a Statistical Model",
-    "text": "Choosing a Statistical Model\n\nEveryone will fit two one-way ANOVA models — one model for each explanatory variable!\n\n\n\nYou will need to choose whether to use a theory-based method or a simulation-based method.\nYour choice is based on the model conditions — specifically the normality condition.\n\nThe density ridge plots can be used to check the normality and equal variance conditions.\nThe study design should be used to check the independence condition."
-  },
-  {
-    "objectID": "slides/week9-day2.html#theory-based-method",
-    "href": "slides/week9-day2.html#theory-based-method",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Theory-based Method",
-    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- aov(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
-  },
-  {
-    "objectID": "slides/week9-day2.html#simulation-based-method",
-    "href": "slides/week9-day2.html#simulation-based-method",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Simulation-based Method",
-    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
-  },
-  {
-    "objectID": "slides/week9-day2.html#model-validity",
-    "href": "slides/week9-day2.html#model-validity",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Model Validity",
-    "text": "Model Validity\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
-  },
-  {
-    "objectID": "slides/week9-day2.html#two-way-anova",
-    "href": "slides/week9-day2.html#two-way-anova",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Two-way ANOVA",
-    "text": "Two-way ANOVA"
-  },
-  {
-    "objectID": "slides/week9-day2.html#code-for-plot",
-    "href": "slides/week9-day2.html#code-for-plot",
-    "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Code for Plot",
-    "text": "Code for Plot\n\n\nggplot(data = evals_small, \n       mapping = aes(y = age_cat, x = min_eval, fill = gender)) + \n  geom_density_ridges(alpha = 0.5) + \n  scale_fill_brewer(palette = \"PRGn\") +\n  labs(y = \"\",\n       title = \"Gaps between male and female faculty evaluation scores become more pronounced with age\", \n       x = \"\", \n       fill = \"Professor's Sex\") +\n  theme(legend.position = \"top\")\n\n\n\n\n\n\n\n\nLegend Positions\n\n\n\nThere are four options for legend.position\n\n\"none\" (removes the legend)\n\"left\" (difficult to read with the y-axis label)\n\"right\" (the default position)\n\"bottom\" (difficult to read with the x-axis label)\n\"top\" (generally my preference)"
-  },
-  {
-    "objectID": "weeks/week-3.html",
-    "href": "weeks/week-3.html",
-    "title": "Week Three: Incorporating Categorical Variables",
+    "objectID": "weeks/week-2.html",
+    "href": "weeks/week-2.html",
+    "title": "Week Two: Summarizing & Visualizing Numerical Data",
     "section": "",
-    "text": "Welcome!\nIn this week’s coursework we are going to dive deeper into exploring data, by incorporating categorical variables. Specifically, we will explore how we can incorporate categorical variables into our visualizations through the use of colors and facets. We will also explore how we can obtain summary statistics for different groups of a categorical variable, making our summaries more specific.",
+    "text": "Welcome!\nIn this week’s coursework we are going to continuing exploring data, through data summaries and visualizations, focusing specifically on numerical variables. We will be using the dplyr package in R to wrangle our data and the ggplot2 package to created data visualizations.",
     "crumbs": [
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "weeks/week-3.html#learning-outcomes",
-    "href": "weeks/week-3.html#learning-outcomes",
-    "title": "Week Three: Incorporating Categorical Variables",
+    "objectID": "weeks/week-2.html#learning-outcomes",
+    "href": "weeks/week-2.html#learning-outcomes",
+    "title": "Week Two: Summarizing & Visualizing Numerical Data",
     "section": "0.1 Learning Outcomes",
-    "text": "0.1 Learning Outcomes\nBy the end of this coursework you should be able to:\n\ndescribe what a categorical variable is and how these types of variables are stored in R\ndetermine whether a variable in a dataset is categorical\nincorporate categorical variables into visualizations of two and three variables\nobtain summary statistics for each level of a categorical variable",
+    "text": "0.1 Learning Outcomes\nBy the end of this coursework you should be able to:\n\noutline the differences between numerical and categorical variables\ndescribe what type of summary statistic is appropriate for a given distribution of a numerical variable\ndiscuss when it is / is not appropriate to summarize a variable with a mean\ncreate visualizations of one and two numerical variables\ndiscuss the benefits and shortcomings of different visualizations",
     "crumbs": [
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "weeks/week-3.html#reading-guide-due-monday-by-the-start-of-class",
-    "href": "weeks/week-3.html#reading-guide-due-monday-by-the-start-of-class",
-    "title": "Week Three: Incorporating Categorical Variables",
-    "section": "1.1 Reading Guide – Due Monday by the start of class",
-    "text": "1.1 Reading Guide – Due Monday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nAnswers\n\n\n\nPlease include your answers as a different color! You can pick whatever color you like, but please use a color other than black.",
+    "objectID": "weeks/week-2.html#textbook-reading-part-1",
+    "href": "weeks/week-2.html#textbook-reading-part-1",
+    "title": "Week Two: Summarizing & Visualizing Numerical Data",
+    "section": "1.1 Textbook Reading – Part 1",
+    "text": "1.1 Textbook Reading – Part 1\n\n\n\n\n\n\n\n\n\n\n\nRequired Reading: Exploring Numerical Data\n\nReading Guide – Due Monday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit your completed reading guide to the Canvas assignment portal!",
     "crumbs": [
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "weeks/week-3.html#textbook-reading-part-1",
-    "href": "weeks/week-3.html#textbook-reading-part-1",
-    "title": "Week Three: Incorporating Categorical Variables",
-    "section": "1.2 Textbook Reading – Part 1",
-    "text": "1.2 Textbook Reading – Part 1\n\n\n\n\n\n\n\n\n\n\n\nRequired Reading: Incorporating Categorical Variables into Visualizations\n\n\n\n\n\n\nOnly read Section 4.6!",
+    "objectID": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class",
+    "href": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class",
+    "title": "Week Two: Summarizing & Visualizing Numerical Data",
+    "section": "1.2 Concept Quiz – Due Wednesday by the start of class",
+    "text": "1.2 Concept Quiz – Due Wednesday by the start of class\n\n\n\n\n\n\nNote\n\n\n\nThe two concept quizzes from each chapter have been combined into one concept quiz on Canvas.\n\n\n\nSuppose we have data on the departure delays of flights flying out of New York. What shape would you expect the distribution of departure delays to have?\n\n\nright skew\nleft skew\nbimodal\nmutimodal\nuniform\n\nHint: Think about how you would “typically” expect flight delays to behave.\n\nTo better decide what summary statistic we should use to summarize the departure delays it would be best to create a data visualization of the distribution of departure delays. What type of visualizations could we make? Select all that apply!\n\n\nboxplot\nhistogram\nbarplot\ndensity plot\nscatterplot",
     "crumbs": [
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "weeks/week-3.html#textbook-reading-part-2",
-    "href": "weeks/week-3.html#textbook-reading-part-2",
-    "title": "Week Three: Incorporating Categorical Variables",
+    "objectID": "weeks/week-2.html#textbook-reading-part-2",
+    "href": "weeks/week-2.html#textbook-reading-part-2",
+    "title": "Week Two: Summarizing & Visualizing Numerical Data",
     "section": "1.3 Textbook Reading – Part 2",
-    "text": "1.3 Textbook Reading – Part 2\nRequired Reading: Incorporating Categorical Variables into Summary Statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRead Sections 3.3 - 3.6!",
+    "text": "1.3 Textbook Reading – Part 2\nRequired Reading: Data Visualization\n\n\n\n\n\n\n\n\n\n\n\n\nReading Guide – Due Wednesday by the start of class\nDownload the Word Document\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit your completed reading guide to the Canvas assignment portal!",
     "crumbs": [
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
-    "href": "weeks/week-3.html#concept-quiz-due-monday-by-the-start-of-class",
-    "title": "Week Three: Incorporating Categorical Variables",
-    "section": "1.4 Concept Quiz – Due Monday by the start of class",
-    "text": "1.4 Concept Quiz – Due Monday by the start of class\n1. Suppose you’ve run the following code to make side-by-side boxplots of life expectancy:\n\nggplot(data = gapminder_small, \n       mapping = aes(x = country, y = lifeExp)) +\n  geom_boxplot() +\n  labs(x = \"\", \n       y = \"\", \n       title = \"Life Expectancy (in Years) by Country\",\n       fill = \"Country\"\n       )\n\nYour resulting plot looks like this:\n\n\n\n\n\n\n\n\n\nWhat should you do?\n\nMove country to the y-axis.\nRemove some countries so the names don’t overlap.\nNothing, it looks great!\n\n2. If you didn’t want to stack your boxplots side-by-side, how else could you separate the groups?\n\n\n\n\n\n\nTip\n\n\n\nThis does not go inside the aes() function!\n\n\n3. What functions are necessary to calculate summary statistics for different groups of a categorical variable?\n\nsummarize()\nmutate()\narrange()\ngroup_by()\nfilter()\n\n4. A categorical variable could be correctly stored as what data types?\n\ninteger\ndouble\ncharacter\nfactor\n\n5. In Lab 2, you worked with the nycflights dataset, which contained information on flights departing from NYC airports. If we wanted to know the average departure delay for every airline in the dataset (e.g., Delta, Allegiant, United), what steps would we need to use? Choose which code belongs in each of the blanks.\n\n\n____ %&gt;%\n____ %&gt;%\n\n\n\n\nnycflights\ngroup_by(airline)\nfilter(dest == \"SFO\")\nsummarize(mean_dd = mean(dep_delay))\n\n\n6. What function did you learn that is used for converting a numerical variable to a categorical variable (a process called discretizing)?\n\nmutate()\nfilter()\nif_else()\ngroup_by()\n\n7. The arrange() function sorts or reorder a data frame’s rows according to the values of the specified variable. By default, what ordering does it use for the rows?\n\nascending (smallest to largest)\ndescending (largest to smallest)",
+    "objectID": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class-1",
+    "href": "weeks/week-2.html#concept-quiz-due-wednesday-by-the-start-of-class-1",
+    "title": "Week Two: Summarizing & Visualizing Numerical Data",
+    "section": "1.4 Concept Quiz – Due Wednesday by the start of class",
+    "text": "1.4 Concept Quiz – Due Wednesday by the start of class\n\n\n\n\n\n\nNote\n\n\n\nThe two concept quizzes from each chapter have been combined into one concept quiz on Canvas.\n\n\n\nWhat aesthetics are being used in the following plot?\n\nHint: Think about what goes inside of the aes() function and what does not.\n\n\n\n\n\n\n\n\n\n\nx axis\ny axis\ncolor\nfacets\npoints\nlines\n\n\nWhat geometric objects are being used in the displayed visualization?\n\nHint: Think about what geoms you would use to make this plot!\n\npoints\nlines / smoothers\ncolors\nfacets\n\n\nWhat aspects of the distribution of departure delays can you see in the histogram that you could not see in the boxplot?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshape of distribution\nmedian\noutliers\nmode",
     "crumbs": [
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "weeks/week-3.html#no-r-tutorials-this-week",
-    "href": "weeks/week-3.html#no-r-tutorials-this-week",
-    "title": "Week Three: Incorporating Categorical Variables",
-    "section": "1.5 No R tutorials this week!",
-    "text": "1.5 No R tutorials this week!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
+    "objectID": "slides/week5-day2.html#revision-deadlines",
+    "href": "slides/week5-day2.html#revision-deadlines",
+    "title": "Midterm Project Work Day",
+    "section": "Revision Deadlines",
+    "text": "Revision Deadlines\n\nLab 3 Revisions are due today (May 1)\nSecond round of revisions for Lab 2 are due today (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nLab 4 Revisions are due next Wednesday (May 8)\n\n\n\n\n\n\n\nMaking a copy of your group’s Lab 4\n\n\nIf you were the recorder (typer) for your group, you need to make your project public. If you were not the recorder, you need to make a copy of your group’s project."
   },
   {
-    "objectID": "weeks/week-5.html",
-    "href": "weeks/week-5.html",
-    "title": "Week Five: Multiple Linear Regression",
+    "objectID": "slides/week5-day2.html#midterm-project",
+    "href": "slides/week5-day2.html#midterm-project",
+    "title": "Midterm Project Work Day",
+    "section": "Midterm Project",
+    "text": "Midterm Project\nThe first draft of your Midterm Project is due on Sunday at midnight.\n\n\n\n\n\n\nDeadline Extension\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
+  },
+  {
+    "objectID": "slides/week5-day2.html#introduction-versus-methods",
+    "href": "slides/week5-day2.html#introduction-versus-methods",
+    "title": "Midterm Project Work Day",
+    "section": "Introduction Versus Methods",
+    "text": "Introduction Versus Methods\n\nThe description of your data goes in your Introduction.\nThe description of your variables goes at the beginning of your Methods, in the Variables subsection!"
+  },
+  {
+    "objectID": "slides/week5-day2.html#data-description-a-word-of-caution",
+    "href": "slides/week5-day2.html#data-description-a-word-of-caution",
+    "title": "Midterm Project Work Day",
+    "section": "Data Description – A Word of Caution",
+    "text": "Data Description – A Word of Caution\nBe cautious in how you are using the resources I provided—do not copy these descriptions.\nInserting a verbatim copy of the descriptions seen in the data resources is plagiarism.\n\n\n\n\n\n\nIn text citation\n\n\nIf you wish to borrow elements of these descriptions, you need to quote them and provide a reference to the resource. e.g., “This data set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children” (United States Department of Health and Human Services, 2014)."
+  },
+  {
+    "objectID": "slides/week5-day2.html#specific-dataset-advice",
+    "href": "slides/week5-day2.html#specific-dataset-advice",
+    "title": "Midterm Project Work Day",
+    "section": "Specific Dataset Advice",
+    "text": "Specific Dataset Advice\n\nFor the and_vertebrates data, you should include species as an explanatory variable. If you don’t you are assuming the same relationship applies to trout AND salamanders.\nFor the hbr_maples data, you cannot use year as a numerical variable. There are only two years of data!\nFor the pie_crabs data:\n\nsite and latitude measure the same thing"
+  },
+  {
+    "objectID": "slides/week5-day2.html#step-0-read-in-your-data",
+    "href": "slides/week5-day2.html#step-0-read-in-your-data",
+    "title": "Midterm Project Work Day",
+    "section": "Step 0 – Read in Your Data",
+    "text": "Step 0 – Read in Your Data\n\nLocate what package your data live in (found in the directions for the midterm project proposal)\nLoad in the package you need!\nGet started!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(openintro)\n\nOR\n\nlibrary(lterdatasampler)\n\n\n\n\n\n\n\n\n\nmoderndive Package\n\n\nWe will be using the moderndive package to get our regression tables, so do not remove this package from your project!"
+  },
+  {
+    "objectID": "slides/week5-day2.html#step-1-visualizations",
+    "href": "slides/week5-day2.html#step-1-visualizations",
+    "title": "Midterm Project Work Day",
+    "section": "Step 1 – Visualizations",
+    "text": "Step 1 – Visualizations\n\n\n\nTwo Numerical Variables\n\n\n\n\n\n\nThree total visualizations\n\n\n\n\n\n\n\n\nVisualize the model with both variables, using a color gradient\nVisualize a simple linear regression with the one explanatory variable\nVisualize a simple linear regression with the other explanatory variable\n\n\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\n\n\n\n\nTwo total visualizations\n\n\n\n\n\n\n\n\nVisualize the “different slopes” multiple linear regression using geom_smooth(method = \"lm\")\nVisualize the “parallel slopes” multiple linear regression usinggeom_parallel_slopes()"
+  },
+  {
+    "objectID": "slides/week5-day2.html#step-2-decide-the-best-model",
+    "href": "slides/week5-day2.html#step-2-decide-the-best-model",
+    "title": "Midterm Project Work Day",
+    "section": "Step 2 – Decide the “Best” Model",
+    "text": "Step 2 – Decide the “Best” Model\n\n\nTwo Numerical Variables\n\n\nIf there appears to be a relationship with the colors – include both variables!\nIf the colors are equally dispersed throughout the plot – choose the one variable that has the stronger relationship (larger slope)!\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\nLook at the plot where the lines are allowed to be different! Does it look like they are?\nIf the lines look different – you should use the different slopes (interaction) model!\nIf the lines look similar – you should use the parallel slopes (additive) model!"
+  },
+  {
+    "objectID": "slides/week5-day2.html#step-3-fit-the-regression-model-you-chose-with-lm",
+    "href": "slides/week5-day2.html#step-3-fit-the-regression-model-you-chose-with-lm",
+    "title": "Midterm Project Work Day",
+    "section": "Step 3 – Fit the regression model you chose with lm()",
+    "text": "Step 3 – Fit the regression model you chose with lm()\n\n\nTwo Numerical Variables\n\n\nAre both variables included? Use a + to separate them!\n\n\n\nmy_model &lt;- lm(size ~ latitude + water_temp, \n               data = pie_crab)\n\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\nAre the slopes different? You need to fit a different slopes model! Use a * to separate the variables!\n\n\n\nmy_model &lt;- lm(tail_l ~ age * pop, \n               data = possum)\n\n\n\nAre the slopes similar? You need to fit a parallel slopes model! Use a + to separate the variables!\n\n\n\nmy_model &lt;- lm(weight ~ weeks + habit, \n               data = births14)"
+  },
+  {
+    "objectID": "slides/week5-day2.html#step-4-get-the-coefficients-with-get_regression_table",
+    "href": "slides/week5-day2.html#step-4-get-the-coefficients-with-get_regression_table",
+    "title": "Midterm Project Work Day",
+    "section": "Step 4: Get the coefficients with get_regression_table()",
+    "text": "Step 4: Get the coefficients with get_regression_table()"
+  },
+  {
+    "objectID": "slides/week5-day2.html#section",
+    "href": "slides/week5-day2.html#section",
+    "title": "Midterm Project Work Day",
     "section": "",
-    "text": "Welcome!\nIn this week’s coursework we are going to build off the concepts we learned last week and delve deeper into linear regression. We are going to explore multiple linear regression, a statistical model where we have multiple explanatory variables and a single numerical response. We are going to refresh how to visualize these types of models, practice fitting these types of models in R, and the learn how to interpret these types of models.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
+    "text": "Now interpret!"
   },
   {
-    "objectID": "weeks/week-5.html#learning-outcomes",
-    "href": "weeks/week-5.html#learning-outcomes",
-    "title": "Week Five: Multiple Linear Regression",
-    "section": "0.1 Learning Outcomes",
-    "text": "0.1 Learning Outcomes\nBy the end of this coursework you should be able to:\n\ndescribe to someone what a multiple linear regression is\noutline how a categorical explanatory variable can be included in a simple linear regression\nvisualize multiple linear regression models with one numerical and one categorical explanatory variable\ncalculate the simple linear regression line for each group of a categorical variable\noutline how a second numerical explanatory variable can be included in a simple linear regression\nvisualize multiple linear regression models with two numerical explanatory variables\ninterpret the coefficient of each explanatory variable included in the regression model\nrecite different methods that can be used to decide what multiple linear regression model is “best”\ndescribe the benefits and costs of using “model selection” for deciding on a multiple linear regression model",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html#textbook-reading",
-    "href": "weeks/week-5.html#textbook-reading",
-    "title": "Week Five: Multiple Linear Regression",
-    "section": "1.1 Textbook Reading",
-    "text": "1.1 Textbook Reading\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Chapter 6 (https://moderndive.com/6-multiple-regression.html)\n\n\n\nReading Guide – Due Monday by the start of class\nDownload the Word Document",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html#concept-quiz-due-monday-by-the-start-of-class",
-    "href": "weeks/week-5.html#concept-quiz-due-monday-by-the-start-of-class",
-    "title": "Week Five: Multiple Linear Regression",
-    "section": "1.2 Concept Quiz – Due Monday by the start of class",
-    "text": "1.2 Concept Quiz – Due Monday by the start of class\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1 – Based on the visualizations above, I believe the [interaction / parallel slopes] model is more appropriate because the slopes between the groups are [very different / very similar].\nQuestion 2 – What type of model does the following code obtain?\n\nminority_lm &lt;- lm(score ~ age * ethnicity, data = evals)\n\n\ninteraction model\nparallel slopes model\nsimple linear regression model\n\n\nThe following is the output from the above regression model (from Question 2):\n\n\n# A tibble: 4 × 7\n  term                    estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept                  2.61      0.518      5.04   0        1.59     3.63 \n2 age                        0.032     0.011      2.84   0.005    0.01     0.054\n3 ethnicity: not minority    2.00      0.534      3.74   0        0.945    3.04 \n4 age:ethnicitynot minor…   -0.04      0.012     -3.51   0       -0.063   -0.018\n\n\n\nQuestion 3 – The intercept line represents the [evaluation score / mean evaluation score] for [male / female / minority / non-minority] faculty.\n\nQuestion 4 – The age line represents the relationship between age and evaluation scores for [male / female / minority / non-minority] faculty.\n\nQuestion 5 – The ethnicity:not minority line represents the [mean / adjustment to the mean] evaluation score for [male / female / minority / non-minority] faculty.\n\nQuestion 6 – The age:ethnicitynot minority line represents the [slope / adjustment to the slope] for the relationship between age and evaluation scores for [male / female / minority / non-minority] faculty.\n\nQuestion 7 – The value of the age:ethnicitynot minority line (-0.004) [does / does not ] match the decision I made in Question 1 as there is [little difference / substantial difference] in the slopes between the minority and non-minority faculty.\n\nQuestion 8 – What type of model does the following code obtain?\n\nbty_lm &lt;- lm(score ~ age + bty_avg, data = evals)\n\n\nmultiple linear regression with two numerical predictors\ninteraction model\nparallel slopes\n\n\nThe following is the output from the above regression model (from Question 8):\n\n\n# A tibble: 3 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    4.06      0.17      23.9    0        3.72     4.39 \n2 age         -0.003     0.003     -1.15   0.251   -0.008    0.002\n3 bty_avg      0.061     0.017      3.55   0        0.027    0.094\n\n\n\nQuestion 9 – The intercept represents the [course evaluation score / mean course evaluation score] for professors whose age is __ and who have a average beauty score of ___.\n\nQuestion 10 – We interpret the value of -0.003 by age as:\nFor every [1 day / 1 year / 1 evaluation] increase in professor’s [evaluation score / age / average beauty] we expect the [course evaluation score / mean course evaluation score] to [increase / decrease] by __, after accounting for [ethnicity / gender / average beauty scores].",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html#r-tutorial-due-wednesday-by-the-start-of-class",
-    "href": "weeks/week-5.html#r-tutorial-due-wednesday-by-the-start-of-class",
-    "title": "Week Five: Multiple Linear Regression",
-    "section": "1.3 R Tutorial – Due Wednesday by the start of class",
-    "text": "1.3 R Tutorial – Due Wednesday by the start of class\n\nRegression modeling: Parallel Slopes\nRegression modeling: Evaluating and extending parallel slopes model",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4: Simple Linear Regression",
+    "objectID": "labs/lab-9.html",
+    "href": "labs/lab-9.html",
+    "title": "Lab 9 – One-Way ANOVA",
     "section": "",
-    "text": "library(tidyverse)\nlibrary(lterdatasampler)\n\n# New package from reading -- to get regression table\nlibrary(moderndive)"
+    "text": "library(tidyverse)\nlibrary(infer)\nlibrary(ggridges)\nlibrary(broom)"
   },
   {
-    "objectID": "labs/lab-4.html#data-for-today",
-    "href": "labs/lab-4.html#data-for-today",
-    "title": "Lab 4: Simple Linear Regression",
-    "section": "Data for Today",
-    "text": "Data for Today\nToday we’ll be working with data on lake ice duration for two lakes surrounding Madison, Wisconsin. This dataset contains information on the number of days of ice (ice duration) on each lake for years between 1851 and 2019. These data are stored in the ntl_icecover dataset, which lives in the lterdatsampler package.\nAccording to the EPA, lake ice duration can be an indicator of climate change. This is because lake ice is dependent on several environmental factors, so changes in these factors will influence the formation of ice on top of lakes. As a result, the study and analysis of lake ice formation can inform scientists about how quickly the climate is changing, and are critical to minimizing disruptions to lake ecosystems."
+    "objectID": "labs/lab-9.html#todays-data",
+    "href": "labs/lab-9.html#todays-data",
+    "title": "Lab 9 – One-Way ANOVA",
+    "section": "Today’s Data",
+    "text": "Today’s Data\nThese data come from the Gapminder Foundation, an organization interested in increasing the use and understanding of statistics and other information about social, economic and environmental development at local, national and global levels.\nToday we will be comparing math achievement scores across continents and years. Math achievement was measured for 42 countries based on their average score for the grade 8 international TIMSS test.\n\nmath_scores &lt;- read_csv(here::here(\"labs\", \n                                   \"data\",\n                                   \"math_scores.csv\")\n                        )\n\n# Creating a year_cat variable that is the categorical version of year\nmath_scores &lt;- mutate(math_scores, \n                      year_cat = as.factor(year)\n                      )\n\n# Removing the missing values from the grade_8_math_score variable\nmath_scores &lt;- drop_na(data = math_scores, \n                       grade_8_math_score)"
   },
   {
-    "objectID": "labs/lab-4.html#inspecting-the-data",
-    "href": "labs/lab-4.html#inspecting-the-data",
-    "title": "Lab 4: Simple Linear Regression",
-    "section": "Inspecting the Data",
-    "text": "Inspecting the Data\nQuestion 1 – How large is the ntl_icecover dataset? (i.e. How many rows and columns does it have?)\n\n# Code to answer question 1 goes here!"
+    "objectID": "labs/lab-9.html#data-visualizations",
+    "href": "labs/lab-9.html#data-visualizations",
+    "title": "Lab 9 – One-Way ANOVA",
+    "section": "Data Visualizations",
+    "text": "Data Visualizations\nThe first step for a statistical analysis should always be creating visualizations of the data. Similar to what you are expected to do for your project, you will make three density ridge plots:\n\nvisualizing the relationship between math score and year\nvisualizing the relationship between math score and continent\nvisualizing the relationship between math score with both year and continent\n\nQuestion 1 – Fill in the code below to visualize the distribution of grade 8 math scores over time.\nDon’t forget to include axis labels!\n\nggplot(data = math_scores, \n       mapping = aes(x = ____, \n                     y = ____)) +\n  geom_density_ridges(scale = 1) \n\nNote: I’ve included a scale = 1 argument to show you how you can get the density plots not to overlap!\nQuestion 2 – What do you see in the plot you made? How do the centers (means) of the distributions compare? What about the variability (spread) of the distributions?\nQuestion 3 – Write the code to visualize the distribution of grade 8 math scores for the six different continents.\nDon’t forget to include axis labels!\nQuestion 4 – What do you see in the plot you made? How do the centers (means) of the distributions compare? What about the variability (spread) of the distributions?\nQuestion 5 – Write the code to visualize the distribution of grade 8 math scores for the six different continents for each of the four years.\nRemember, you could either include a facet or a color here!Also remember you can use alpha to change the transparency of your density ridges!\nQuestion 6 – What do you see in the plot you made? Does it seem that the relationship between year and grade 8 math scores changes based on the continent of the student?"
   },
   {
-    "objectID": "labs/lab-4.html#visualize-a-simple-linear-regression",
-    "href": "labs/lab-4.html#visualize-a-simple-linear-regression",
-    "title": "Lab 4: Simple Linear Regression",
-    "section": "Visualize a Simple Linear Regression",
-    "text": "Visualize a Simple Linear Regression\nLet’s start with tools to visualize and summarize linear regression.\n\nTools\n\nVisualize the relationship between x & y – geom_point()\nVisualize the linear regression line – geom_smooth()\n\nWe will be investigating the relationship between the ice_duration of each lake and the year.\n\n\nStep 1\nQuestion 2 – Make a scatterplot of the relationship between the ice_duration (response) and the year (explanatory). Be sure to make the axis labels look nice, including any necessary units!\n\n# Code to answer question 2 goes here!\n\nQuestion 3 – Describe the relationship you see in the scatterplot. Be sure to address the four aspects we discussed in class: form, direction, strength, and unusual points. Hint: You need to explicitly state where the unusual observations are!\n\n\nStep 2\nTo add a regression line on top of a scatterplot, you add (+) a geom_smooth() layer to your plot. However, if you add a “plain” geom_smooth() to the plot, it uses a wiggly line. You need to tell geom_smooth() what type of smoother line you want for it to use! We can get a straight line by including method = \"lm\" inside of geom_smooth().\nQuestion 4 – Add a linear regression line to the scatterplot you made in Question 3. No code goes here, you need to modify your scatterplot from Question 3!"
+    "objectID": "labs/lab-9.html#statistical-model",
+    "href": "labs/lab-9.html#statistical-model",
+    "title": "Lab 9 – One-Way ANOVA",
+    "section": "Statistical Model",
+    "text": "Statistical Model\nFor our analysis we will be using an analysis of variance (ANOVA) model. An ANOVA is an appropriate statistical model as we have a continuous response variable (grade 8 math score) and categorical explanatory variables (year, continent). Year is not considered to be a continuous numerical variable as we have only four measurements in time (1996, 1999, 2003, 2007).\n\nModel Conditions\nAn ANOVA has model conditions that are very similar to what we learned for linear regression. In this section we will evaluate the conditions of the model.\nFor this section, it might be helpful to know how many observations there are for each year and for each continent. I have written code below to provide you with a table of these numbers:\n\ncount(math_scores, continent, year) %&gt;% \n  pivot_wider(names_from = continent, \n              values_from = n, \n              values_fill = 0) %&gt;% \n  janitor::adorn_totals(where = c(\"row\", \"col\"))\n\n\nIndependence\nBased on the table we know:\n\neach year has measurements on about six continents\neach continent has measurements for about four years\n\nUse this information to evaluate the condition of independence of observations.\nQuestion 7 – Is it reasonable to assume that the observations within a continent are independent of each other?\nQuestion 8 – Is it reasonable to assume that the observations within a year are independent of each other?\nQuestion 9 – Is it reasonable to assume that the observations between continents are independent of each other?\nQuestion 10 – Is it reasonable to assume that the observations between a years are independent of each other?\n\n\nNormality\nNow we will evaluate the normality of the the distributions of grade 8 math scores across years and across continents – the plot you created in #5. Keep in mind, the normality condition is very important when the sample sizes for each group are relatively small.\nQuestion 11 – Is it reasonable to say that the grade 8 math scores across the four years and six continents are normally distributed?\n\n\nEqual Variance\nNow we will evaluate the normality of the the distributions of grade 8 math scores across years and across continents – the plot you created in #5. Keep in mind, the constant variance condition is especially important when the sample sizes differ between groups.\nFor this section, it might be helpful to know the standard deviations for each year / continent combo. I have written code below to provide you with a table of these numbers:\nKeep in mind a standard deviation of NA can happen for two reasons, (1) there is no data, or (2) there is only one observation.\n\nmath_scores %&gt;% \n  group_by(year, continent) %&gt;% \n  summarize(var = var(grade_8_math_score, na.rm = TRUE)\n            ) %&gt;% \n  pivot_wider(names_from = continent, values_from = var)\n\nLooking at the table, we can see that the largest variance of 10257 (North America, 2007) is nearly 27 times larger than the smallest variance of 381 (Europe, 2003). That’s a lot! So, our equal variance condition is definitely violated.\nBut, we have learned tools to attempt to remedy this issue! Let’s take the log of grade_8_math_score and see how the variances compare.\n\nmath_scores %&gt;% \n  group_by(year, continent) %&gt;% \n  summarize(log_var = var(log(grade_8_math_score))\n            ) %&gt;%\n  pivot_wider(names_from = continent, values_from = log_var)\n\nQuestion 12 – Based on the variances in the table above, is it reasonable to say that the log grade 8 math scores across the four years and six continents have equal variability?"
   },
   {
-    "objectID": "labs/lab-4.html#fit-a-simple-linear-regression-model",
-    "href": "labs/lab-4.html#fit-a-simple-linear-regression-model",
-    "title": "Lab 4: Simple Linear Regression",
-    "section": "Fit a Simple Linear Regression Model",
-    "text": "Fit a Simple Linear Regression Model\nNext, we are going to summarize the relationship between ice_duration and year with a linear regression equation.\n\nTools\n\nCalculate the correlation between x & y – get_correlation()\nModel the relationship between x & y – lm()\nExplore coefficient estimates – get_regression_table()\n\n\n\nStep 1\nQuestion 5 – Calculate the correlation between these variables, using the get_correlation() function.\n\n# Code to answer question 5 goes here!\n\n\n\nStep 2\nNext, we will “fit” a linear regression with the lm() function. Remember, the “formula” for lm() is response_variable ~ explanatory_variable. Also recall that you need to tell lm() where the data live using data = argument!\nQuestion 6 – Fit a linear regression modeling the relationship between between ice_duration and year. The only part you need to remove is the ...! Keep the ice_lm &lt;-!\n\n# Code to answer question 6 goes here!\n\nice_lm &lt;- ...\n\n\n\nStep 3\nFinally, to get the regression equation, we need grab the coefficients out of the linear model object you made in Step 2. The get_regression_table() function is a handy tool to do just that!\nQuestion 7 – Use the get_regression_table() function to obtain the coefficient estimates for the ice_lm regression you fit in Question 6.\n\n# Code to answer question 7 goes here!\n\nQuestion 8 – Using the coefficient estimates above, write out the estimated regression equation. Your equation needs to be in the context of the variables, not in generic \\(x\\) and \\(y\\) statements!\nQuestion 9 – Interpret the value of the slope coefficient. Your interpretation needs to be in the context of the variables!\nQuestion 10 – Sometimes interpreting a 1-unit increase in the explanatory variable is not a meaningful change, so we instead use larger increases. Based on your slope interpretation from Q9, what do you expect to happen to the duration of ice cover for an increase of 100 years?"
+    "objectID": "labs/lab-9.html#one-way-anova-inference",
+    "href": "labs/lab-9.html#one-way-anova-inference",
+    "title": "Lab 9 – One-Way ANOVA",
+    "section": "One-Way ANOVA Inference",
+    "text": "One-Way ANOVA Inference\nWe are going to test out both methods for conducting a hypothesis test for an ANOVA – theory-based and simulation-based methods. Keep in mind both methods require independence of observations and equal variability. Normality, however, is only a condition of theory-based methods.\n\nTesting for a Difference Between Years\nSince the distribution of grade 8 math scores across the four years wasn’t horribly not Normal, let’s give a theory-based method a try.\nQuestion 13 – Fill in the code below to conduct a one-way ANOVA modeling the relationship between mean grade 8 math score and the year\nKeep in mind the response variable comes first and the explanatory variable comes second!\n\naov(____ ~ ____, data = math_scores) %&gt;% \n  broom::tidy()\n\nQuestion 14 – At an \\(\\alpha = 0.1\\), what decision would you reach for your hypothesis test?\nQuestion 15 – What would you conclude about the relationship between the mean grade 8 math scores and year?\n\n\nTesting for a Difference Between Continents\nSince the distribution of grade 8 math scores across the six continents didn’t look very Normal, so let’s give a simulation-based method a try.\nI’ve gotten you started by calculating the observed F-statistic for the relationship between a country’s grade 8 math score and its continent.\n\nobs_F &lt;- math_scores %&gt;% \n  specify(response = grade_8_math_score, \n          explanatory = continent) %&gt;% \n  calculate(stat = \"F\")\n\nQuestion 16 – Write the code to generate a permutation distribution of resampled F-statistics.\nQuestion 17 – Visualize the null distribution and shade how the p-value should be calculated\nKeep in mind you only look at the right tail for an ANOVA!\nQuestion 18 – Calculate the p-value for the observed F-statistic\nQuestion 19 – At an \\(\\alpha = 0.1\\), what decision would you reach for your hypothesis test?\nQuestion 20 – What would you conclude about the relationship between the mean grade 8 math scores and continent?"
   },
   {
-    "objectID": "labs/lab-4.html#a-preview-of-whats-to-come",
-    "href": "labs/lab-4.html#a-preview-of-whats-to-come",
-    "title": "Lab 4: Simple Linear Regression",
-    "section": "A preview of what’s to come",
-    "text": "A preview of what’s to come\nIn our analysis above, we only looked at the relationship between ice duration and year, not accounting for which lake the measurements came from. That is another (categorical) explanatory variable we could include in our regression model!\nQuestion 11 – Using the code you wrote for Question 4 (with the regression line added), add a color for the name of the lake (lakeid).\n\n# Code to answer question 11 goes here!"
+    "objectID": "slides/week1-day2.html#section",
+    "href": "slides/week1-day2.html#section",
+    "title": "Working with Data",
+    "section": "",
+    "text": "There’s Data\n\n\nGender stereotypes in 5-7 year old children\n\n\n\n\n\n\n\n\nsubject\nsex\nage\ntrait\ntarget\nstereotype\nhigh_achieve_caution\n\n\n\n\n82\nfemale\n6\nnice\nadults\n0.75\n0.75\n\n\n39\nfemale\n7\nnice\nchildren\n0.25\n0.75\n\n\n73\nmale\n6\nnice\nadults\n0.75\n0.75\n\n\n85\nmale\n5\nsmart\nadults\n1.00\n0.50\n\n\n100\nfemale\n5\nnice\nadults\n0.75\n0.75\n\n\n33\nmale\n5\nnice\nchildren\n0.50\n0.75"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-1",
+    "href": "slides/week1-day2.html#section-1",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Lots of Data\n\nBody girth measurements and skeletal diameter measurements for 247 men and 260 women.\n\n\n\n\n\n\nage\nwgt\nhgt\nsex\nsho_gi\nwai_gi\nnav_gi\nhip_gi\n\n\n\n\n19\n61.1\n172.7\n0\n96.9\n67.6\n86.2\n99.1\n\n\n24\n73.4\n172.7\n1\n112.9\n79.1\n78.3\n97.1\n\n\n41\n77.3\n170.2\n0\n98.9\n80.5\n98.8\n107.2\n\n\n40\n75.2\n160.2\n0\n115.5\n90.5\n103.5\n108.1\n\n\n19\n48.6\n159.0\n0\n99.1\n62.3\n68.7\n83.9\n\n\n29\n63.0\n168.9\n0\n95.1\n67.4\n77.7\n95.1"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-2",
+    "href": "slides/week1-day2.html#section-2",
+    "title": "Working with Data",
+    "section": "",
+    "text": "In Every Context\n\n\nNBA player of the week from 1985 to 2016\n\n\n\n\n\n\n\n\nAge\nDate\nDraft Year\nHeight\nPlayer\nPosition\n\n\n\n\n28\nMar 8, 2010\n2003\n6-4\nDwyane Wade\nSG\n\n\n30\nJan 28, 2013\n2001\n6-2\nTony Parker\nG\n\n\n30\nFeb 8, 2016\n2006\n6-11\nLaMarcus Aldridge\nFC\n\n\n25\nMar 17, 1991\n1987\n6-3\nKenny Smith\nPG\n\n\n33\nMar 7, 2011\n1998\n6-7\nPaul Pierce\nSF\n\n\n25\nNov 29, 1987\n1983\n6-7\nClyde Drexler\nSG"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-3",
+    "href": "slides/week1-day2.html#section-3",
+    "title": "Working with Data",
+    "section": "",
+    "text": "You Can Imagine\n\n\nFish Sampled on Blackfoot River\n\n\n\n\n\n\n\n\ntrip\nmark\nlength\nweight\nyear\nsection\nspecies\n\n\n\n\n1\n0\n104\n10\n1993\nJohnsrud\nRBT\n\n\n1\n0\n410\n500\n1998\nScottyBrown\nRBT\n\n\n2\n0\n292\n265\n2000\nScottyBrown\nWCT\n\n\n2\n1\n308\nNA\n1990\nJohnsrud\nRBT\n\n\n1\n0\n295\n260\n1991\nScottyBrown\nRBT\n\n\n1\n0\n205\n100\n1998\nScottyBrown\nWCT"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-4",
+    "href": "slides/week1-day2.html#section-4",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Your Turn\n\n\nEvery year, the US releases to the public a large data set containing information on births recorded in the country.\nA total of 13 variables were collected on every birth, including information about:\n\nthe birth (baby weight, sex of baby, premie status)\nthe pregnancy (hospital visits, length of gestation, )\nthe mother’s attributes (age, smoking status, marital status, race)\nthe father’s age\n\n\n\n\nHow would you expect this dataframe to look?"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-5",
+    "href": "slides/week1-day2.html#section-5",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Types of Variables\n\n\n\nDiagram of types of variables we will analyze!"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-6",
+    "href": "slides/week1-day2.html#section-6",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Examples\n\n\nA person’s height (usually) would be a continuous, numerical variable\nThe number of classes someone takes would be a discrete, numerical variable\nA course letter grade would be a ordinal, categorical variable\nThe color of someone’s hair would be a regular, categorical variable"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-7",
+    "href": "slides/week1-day2.html#section-7",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Your Turn\n\n\nSuppose researchers have yearly data on Elephant Seal abundance on Pedras Blancas from 2010 - 2014.\n\n\n\nWhat type of variable would year be?"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-8",
+    "href": "slides/week1-day2.html#section-8",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Types of Studies\n\n\n\nExperiment\n\nrandomization\nreplication\ncontrolling\nblocking\n\n\n\n\nObservational Study\n\ncollect data in a way that does not directly interfere with how the data arise"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-9",
+    "href": "slides/week1-day2.html#section-9",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Relationships Between Variables\n\n\nexplanatory variable \\(\\rightarrow\\) might affect \\(\\rightarrow\\) response variable\n\n\nIf two variables are not associated, then they are said to be independent.\nIf two variables are associated, then they are said to be dependent."
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-10",
+    "href": "slides/week1-day2.html#section-10",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Causal Inference\n\n\nassociation \\(\\neq\\) causation\n\n\nWhat do you need to say that the explanatory variable causes a change in the response variable?"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-11",
+    "href": "slides/week1-day2.html#section-11",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Lab Warm-up"
+  },
+  {
+    "objectID": "slides/week1-day2.html#section-12",
+    "href": "slides/week1-day2.html#section-12",
+    "title": "Working with Data",
+    "section": "",
+    "text": "Data Types in R\n\n\n\nglimpse(births_small)\n\nRows: 1,000\nColumns: 10\n$ fage           &lt;int&gt; 34, 36, 37, NA, 32, 32, 37, 29, 30, 29, 30, 34, 28, 28,…\n$ mage           &lt;dbl&gt; 34, 31, 36, 16, 31, 26, 36, 24, 32, 26, 34, 27, 22, 31,…\n$ weeks          &lt;dbl&gt; 37, 41, 37, 38, 36, 39, 36, 40, 39, 39, 42, 40, 40, 39,…\n$ premie         &lt;chr&gt; \"full term\", \"full term\", \"full term\", \"full term\", \"pr…\n$ gained         &lt;dbl&gt; 28, 41, 28, 29, 48, 45, 20, 65, 25, 22, 40, 30, 31, NA,…\n$ weight         &lt;dbl&gt; 6.96, 8.86, 7.51, 6.19, 6.75, 6.69, 6.13, 6.74, 8.94, 9…\n$ lowbirthweight &lt;chr&gt; \"not low\", \"not low\", \"not low\", \"not low\", \"not low\", …\n$ sex            &lt;fct&gt; male, female, female, male, female, female, female, mal…\n$ habit          &lt;chr&gt; \"nonsmoker\", \"nonsmoker\", \"nonsmoker\", \"nonsmoker\", \"no…\n$ whitemom       &lt;chr&gt; \"white\", \"white\", \"not white\", \"white\", \"white\", \"white…\n\n\n\n\n\nWhat do you think dbl means?\nHow is that different from int?\n\n\n\nWhat does chr mean?\nHow might it differ from fct?"
   },
   {
     "objectID": "labs/lab-7.html",
@@ -5503,6 +5475,48 @@
     "text": "Obtaining a p-value Using Theory\nAs we saw in the reading this week, the output from the get_regression_table() function provides us with theory-based estimates of our standard error, \\(t\\)-statistic, and p-value.\n12. Use the get_regression_table() function to obtain the theory-based p-value for your hypothesis test.\nHint: You’ll want to use the model you fit in #3.\n13. How does this p-value compare to what you obtained in #11?\n14. Based on your answers to #4-6, which p-value do you believe is the most reliable? Why? Note: If you believe neither are reliable, say so and state why."
   },
   {
+    "objectID": "slides/week5-day1.html#a-grading-reminder",
+    "href": "slides/week5-day1.html#a-grading-reminder",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "A Grading Reminder",
+    "text": "A Grading Reminder\n\n\n\n\n“Complete” = Satisfactory\n\n\nYour group obtained a “Success” on every question\n\n\n\n\n“Incomplete” = Growing\n\n\nYour group received a “Growing” on at least one question"
+  },
+  {
+    "objectID": "slides/week5-day1.html#common-mistakes",
+    "href": "slides/week5-day1.html#common-mistakes",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\n\n\n\nCategorical variables in R (Q2)\n\nWhat data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?\nThe output of glimpse() can help!\n\nComparing distributions between groups (Q9)\n\nWere trout observed in every channel type in both sections of forest?\n\nCalculating group means (Q10)\n\ngroup_by()creates groups based on a categorical variable not based on the dataset\ngroup_by(species) not group_by(trout)"
+  },
+  {
+    "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
+    "href": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Copying the Lab – Last Week’s Recorder",
+    "text": "Copying the Lab – Last Week’s Recorder\nThe person who typed your lab needs to make their project “public”\n\nOpen Posit Cloud\nGo to the STAT 313 workspace\nClick on “Your Content”\nOpen the settings for your Lab 3 project"
+  },
+  {
+    "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder-1",
+    "href": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder-1",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Copying the Lab – Last Week’s Recorder",
+    "text": "Copying the Lab – Last Week’s Recorder\n\nChange the access for your project to “Space Members”"
+  },
+  {
+    "objectID": "slides/week5-day1.html#copying-the-lab-everyone-else",
+    "href": "slides/week5-day1.html#copying-the-lab-everyone-else",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Copying the Lab – Everyone Else",
+    "text": "Copying the Lab – Everyone Else\n\nFind your group member’s lab (you can use the search bar to search for their name)\n\n\n\nOpen their Lab 3 project\nSelect “Save a Permanent Copy”"
+  },
+  {
+    "objectID": "slides/week5-day1.html#completing-revisions",
+    "href": "slides/week5-day1.html#completing-revisions",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Completing Revisions",
+    "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 1.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment portal\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+  },
+  {
     "objectID": "slides/week5-day1.html#plan-for-today",
     "href": "slides/week5-day1.html#plan-for-today",
     "title": "Introduction to Multiple Linear Regression",
@@ -5571,13 +5585,6 @@
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
     "text": "What if we have a second numerical explanatory variable?"
-  },
-  {
-    "objectID": "slides/week5-day1.html#section-5",
-    "href": "slides/week5-day1.html#section-5",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "",
-    "text": "ncbirths %&gt;% \n  ggplot(mapping = aes(x = weeks, y = weight, color = mage)) + \n  geom_jitter() + \n  geom_smooth(method = \"lm\") +\n  labs(x = \"Weeks of Gestation\", \n       y = \"Weight of Baby (lbs)\", \n       color = \"Mother's Age\") +\n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week5-day1.html#section-6",
@@ -6135,68 +6142,5 @@
     "title": "Week 8 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
-  },
-  {
-    "objectID": "slides/week4-day2.html#revisions-due-friday",
-    "href": "slides/week4-day2.html#revisions-due-friday",
-    "title": "Week 4, Day 2",
-    "section": "Revisions Due Friday",
-    "text": "Revisions Due Friday\nPlease make sure you submitted reflections with your revisions! If there are not revisions present when I start grading them on Saturday morning, your revisions are not eligible to be regraded."
-  },
-  {
-    "objectID": "slides/week5-day1.html#a-grading-reminder",
-    "href": "slides/week5-day1.html#a-grading-reminder",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "A Grading Reminder",
-    "text": "A Grading Reminder\n\n\n\n\n“Complete” = Satisfactory\n\n\nYour group obtained a “Success” on every question\n\n\n\n\n“Incomplete” = Growing\n\n\nYour group received a “Growing” on at least one question"
-  },
-  {
-    "objectID": "slides/week5-day1.html#common-mistakes",
-    "href": "slides/week5-day1.html#common-mistakes",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\n\n\n\nCategorical variables in R (Q2)\n\nWhat data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?\nThe output of glimpse() can help!\n\nComparing distributions between groups (Q9)\n\nWere trout observed in every channel type in both sections of forest?\n\nCalculating group means (Q10)\n\ngroup_by()creates groups based on a categorical variable not based on the dataset\ngroup_by(species) not group_by(trout)"
-  },
-  {
-    "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
-    "href": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "Copying the Lab – Last Week’s Recorder",
-    "text": "Copying the Lab – Last Week’s Recorder\nThe person who typed your lab needs to make their project “public”\n\nOpen Posit Cloud\nGo to the STAT 313 workspace\nClick on “Your Content”\nOpen the settings for your Lab 3 project"
-  },
-  {
-    "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder-1",
-    "href": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder-1",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "Copying the Lab – Last Week’s Recorder",
-    "text": "Copying the Lab – Last Week’s Recorder\n\nChange the access for your project to “Space Members”"
-  },
-  {
-    "objectID": "slides/week5-day1.html#copying-the-lab-everyone-else",
-    "href": "slides/week5-day1.html#copying-the-lab-everyone-else",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "Copying the Lab – Everyone Else",
-    "text": "Copying the Lab – Everyone Else\n\nFind your group member’s lab (you can use the search bar to search for their name)\n\n\n\nOpen their Lab 3 project\nSelect “Save a Permanent Copy”"
-  },
-  {
-    "objectID": "slides/week5-day1.html#completing-revisions",
-    "href": "slides/week5-day1.html#completing-revisions",
-    "title": "Introduction to Multiple Linear Regression",
-    "section": "Completing Revisions",
-    "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 1.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment portal\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
-  },
-  {
-    "objectID": "slides/week4-day2.html#accessing-lab-3",
-    "href": "slides/week4-day2.html#accessing-lab-3",
-    "title": "Week 4, Day 2",
-    "section": "Accessing Lab 3",
-    "text": "Accessing Lab 3\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nThe person whose birthday is closest to January 1 will act as the Recorder for your group (this week).\n\n\n\n\n\n\n\nStep 2: The Recorder follows these instructions to copy the Lab 2 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 3 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document."
-  },
-  {
-    "objectID": "slides/week4-day2.html#statistical-critique-revisions",
-    "href": "slides/week4-day2.html#statistical-critique-revisions",
-    "title": "Week 4, Day 2",
-    "section": "Statistical Critique Revisions",
-    "text": "Statistical Critique Revisions\nAre due on Wednesday, May 7.\nNext week the focus will be to get your Midterm Project first draft out the door, so we will postpone the revision deadline until the following week.\nYou are welcome to complete your revisions before then!"
   }
 ]
