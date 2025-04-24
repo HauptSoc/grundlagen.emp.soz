@@ -24,9 +24,13 @@ library(moderndive)
 
 ## Introduction
 
+
+
 ## Methods
 
+
 ### Variables
+
 
 ### Visualizations
 
@@ -42,7 +46,9 @@ library(moderndive)
 ```
 
 ### Statistical Methods
+
 <!-- What model did you choose and why? -->
+
 
 
 ## Results
@@ -56,17 +62,18 @@ library(moderndive)
 
 ```
 
-## Discussion 
+## Discussion
+
 <!-- Model interpretations -->
 
 
 
-## Limitations
-<!-- How does the study design influence what can / cannot be said about the relationships you found in your analysis? -->
-<!-- How does the study design influence what population you can / cannot infer your results onto? -->
-
-
-
 ## Conclusions
-<!-- Connecting findings back to original research question -->
+
+<!-- 1. Connecting findings back to original research question -->
+
+<!-- 2. How does the study design influence what can / cannot be said about the relationships you found in your analysis? -->
+
+<!-- 3. How does the study design influence what population you can / cannot infer your results onto? -->
+
 

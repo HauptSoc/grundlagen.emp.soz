@@ -1,7 +1,7 @@
 ---
 title: "Midterm Project Guidelines"
 format: html
-editor: visual
+editor: source
 resources: 
 - model_selection_process/model_seletion.html
 ---
@@ -12,7 +12,11 @@ For this project, you are expected to use a multiple linear regression to invest
 
 # Introduction
 
--   In 4-6 sentences describe how the data were collected, the context of the data (e.g., Are they from a study or a publication?), and the background of the research problem (e.g., What question do these data address? Why were the data collected?)
+-   In **no fewer than six (6)**  sentences describe how the data were collected, the context of the data. Your description should address the following questions:
+    * Are these data from a study or a publication?
+    * What question do these data address? 
+    * Why were the data collected? 
+    * How were the data collected?
 
 ::: callout-tip
 You may need to look up the publication(s) the data are associated with to obtain information on how they were collected.
@@ -24,9 +28,12 @@ You may need to look up the publication(s) the data are associated with to obtai
 
 This section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.
 
--   Describe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.
+-   Describe the response and explanatory variables, how they were measured and
+their associated units. For categorical variables, describe the levels of the
+categorical variable.
 
--   Produce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.
+-   Produce data visualizations exploring the relationship(s) you are interested
+in investigating, contrasting the need for a second explanatory variable.
 
     -   For a multiple linear regression with *one numerical variable and one categorical variable*, you should produce **two** visualizations: one with different slopes and one with parallel slopes.
 
@@ -44,9 +51,9 @@ This section should lay out the steps, decisions, and logic leading to the stati
 The statistical model you fit in the next section depends on what you see in your visualization. [Click here](../midterm-project-help/model-selection.qmd) for a flowchart of how you should select the statistical model that is best for your situation.
 :::
 
-# Findings
+# Results
 
-In this section you will write up your findings for each research question of interest.
+In this section you will fit your statistical model and display the results.
 
 -   Fit the statistical model stated at the end of the Methods section
 -   Obtain the coefficients for the model
@@ -57,24 +64,45 @@ In this section you will write up your findings for each research question of in
 Use the `get_regression_table()` function from the **moderndive** package to provide nicely formatted output from your regression model.
 :::
 
+# Discussion 
+
+In this section you will write up your findings for each research question of
+interest.
+
 -   Write out the estimated regression equation for your statistical model.
 
-    -   For your regression equation, you can either use indicator variables for each level of the categorical variable *or* write out a different equation for each group.
+    -   For your regression equation, you can either use indicator variables 
+    (e.g. $1_{CC}(x)$) for each level of the categorical variable *or* write out a
+    different equation for each group.
 
--   Interpret **in the context of the data** the coefficients from the regression equation.
+-   Interpret **in the context of the data** the coefficients from the 
+regression equation.
 
-# Study Limitations
+-   Connect the findings of your regression back to the research question you 
+posed in the **Introduction**. 
 
-Write a 3-4 sentence statement on what can be inferred from the design of the study and the results of your statistical analysis. Specifically, answer these two questions and comment on their implications:
-
--   Based on the sampling method used, what larger population can you infer the results or your analysis onto?
-
--   Based on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables. Specifically, can cause-and-effect statements be made?
+-   Propose a possible explanation for why these results were observed. 
 
 # Conclusions
 
-Based on your visualizations **and** the regression model, what is your conclusion for the questions of interest?
+In this section, you will provide a short summary of the key findings of your
+analysis, and their connection to the broader scientific community. 
+
+- Based on your visualizations **and** the regression model, what is your
+conclusion for the questions of interest?
 
 ::: callout-caution
 There should be **no** mention of p-values in your conclusion!
 :::
+
+<!-- Write a 3-4 sentence statement on what can be inferred from the design of the study and the results of your statistical analysis. Specifically, answer these two questions and comment on their implications: -->
+
+- What are the implications of this research for science in general?
+
+    * Based on the sampling methods used, what larger population can you infer
+    the results or your analysis onto?
+
+    * Based on the design of the study, what type of statements can be made
+    about the relationship between the explanatory and response variables.
+    Specifically, can cause-and-effect statements be made?
+
