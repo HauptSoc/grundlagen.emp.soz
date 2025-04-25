@@ -4786,7 +4786,7 @@
     "href": "slides/week5-day2.html#revision-deadlines",
     "title": "Midterm Project Work Day",
     "section": "Revision Deadlines",
-    "text": "Revision Deadlines\n\nLab 3 Revisions are due today (May 1)\nSecond round of revisions for Lab 2 are due today (May 1)\nStatistical Critique revisions are due next Wednesday (May 8)\nLab 4 Revisions are due next Wednesday (May 8)\n\n\n\n\n\n\n\nMaking a copy of your group’s Lab 4\n\n\nIf you were the recorder (typer) for your group, you need to make your project public. If you were not the recorder, you need to make a copy of your group’s project."
+    "text": "Revision Deadlines\n\nLab 3 Revisions are due next Wednesday (May 7)\nStatistical Critique revisions are due next Wednesday (May 7)"
   },
   {
     "objectID": "slides/week5-day2.html#midterm-project",
@@ -4814,42 +4814,42 @@
     "href": "slides/week5-day2.html#specific-dataset-advice",
     "title": "Midterm Project Work Day",
     "section": "Specific Dataset Advice",
-    "text": "Specific Dataset Advice\n\nFor the and_vertebrates data, you should include species as an explanatory variable. If you don’t you are assuming the same relationship applies to trout AND salamanders.\nFor the hbr_maples data, you cannot use year as a numerical variable. There are only two years of data!\nFor the pie_crabs data:\n\nsite and latitude measure the same thing"
+    "text": "Specific Dataset Advice\n\nFor the and_vertebrates data, you should include species as an explanatory variable. If you don’t you are assuming the same relationship applies to trout AND salamanders.\nFor the hbr_maples data, you cannot use year as a numerical variable. There are only two years of data!\n\nIf you want to use year as a categorical variable, let Dr. T know and they will help you write code to change the data type of this variable!"
   },
   {
     "objectID": "slides/week5-day2.html#step-0-read-in-your-data",
     "href": "slides/week5-day2.html#step-0-read-in-your-data",
     "title": "Midterm Project Work Day",
     "section": "Step 0 – Read in Your Data",
-    "text": "Step 0 – Read in Your Data\n\nLocate what package your data live in (found in the directions for the midterm project proposal)\nLoad in the package you need!\nGet started!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(openintro)\n\nOR\n\nlibrary(lterdatasampler)\n\n\n\n\n\n\n\n\n\nmoderndive Package\n\n\nWe will be using the moderndive package to get our regression tables, so do not remove this package from your project!"
+    "text": "Step 0 – Read in Your Data\n\n\nLocate what package your data live in (found in the directions for the midterm project proposal)\nLoad in the package you need!\nGet started!\n\n\n\n\n\nlibrary(openintro)\n\nOR\n\nlibrary(lterdatasampler)\n\n\n\n\n\n\n\n\n\n\n\nmoderndive Package\n\n\nWe will be using the moderndive package to get our regression tables, so do not remove this package from your project!"
   },
   {
     "objectID": "slides/week5-day2.html#step-1-visualizations",
     "href": "slides/week5-day2.html#step-1-visualizations",
     "title": "Midterm Project Work Day",
     "section": "Step 1 – Visualizations",
-    "text": "Step 1 – Visualizations\n\n\n\nTwo Numerical Variables\n\n\n\n\n\n\nThree total visualizations\n\n\n\n\n\n\n\n\nVisualize the model with both variables, using a color gradient\nVisualize a simple linear regression with the one explanatory variable\nVisualize a simple linear regression with the other explanatory variable\n\n\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\n\n\n\n\nTwo total visualizations\n\n\n\n\n\n\n\n\nVisualize the “different slopes” multiple linear regression using geom_smooth(method = \"lm\")\nVisualize the “parallel slopes” multiple linear regression usinggeom_parallel_slopes()"
+    "text": "Step 1 – Visualizations\nYou will make two total visualizations:\n\n\nA “different slopes” multiple linear regression using geom_smooth(method = \"lm\")\n\n\nggplot(data = MA_schools, \n       mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_smooth(method = \"lm\") + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\")"
   },
   {
     "objectID": "slides/week5-day2.html#step-2-decide-the-best-model",
     "href": "slides/week5-day2.html#step-2-decide-the-best-model",
     "title": "Midterm Project Work Day",
     "section": "Step 2 – Decide the “Best” Model",
-    "text": "Step 2 – Decide the “Best” Model\n\n\nTwo Numerical Variables\n\n\nIf there appears to be a relationship with the colors – include both variables!\nIf the colors are equally dispersed throughout the plot – choose the one variable that has the stronger relationship (larger slope)!\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\nLook at the plot where the lines are allowed to be different! Does it look like they are?\nIf the lines look different – you should use the different slopes (interaction) model!\nIf the lines look similar – you should use the parallel slopes (additive) model!"
+    "text": "Step 2 – Decide the “Best” Model\n\nNext, you will decide which of these two models seems like the better model.\n\n\n\n\nLook at the plot where the lines are allowed to be different! Does it look like they are?\nIf the lines look different – you should use the different slopes (interaction) model!\nIf the lines look similar – you should use the parallel slopes (additive) model!\n\n\n\n\n\n\n\n\n\n\n\nNo p-values\n\n\nYour model decision needs to rely exclusively on the visualizations, you cannot use p-values to make your decision."
   },
   {
     "objectID": "slides/week5-day2.html#step-3-fit-the-regression-model-you-chose-with-lm",
     "href": "slides/week5-day2.html#step-3-fit-the-regression-model-you-chose-with-lm",
     "title": "Midterm Project Work Day",
     "section": "Step 3 – Fit the regression model you chose with lm()",
-    "text": "Step 3 – Fit the regression model you chose with lm()\n\n\nTwo Numerical Variables\n\n\nAre both variables included? Use a + to separate them!\n\n\n\nmy_model &lt;- lm(size ~ latitude + water_temp, \n               data = pie_crab)\n\n\n\n\n\n\nOne Categorical & One Numerical Variable\n\n\nAre the slopes different? You need to fit a different slopes model! Use a * to separate the variables!\n\n\n\nmy_model &lt;- lm(tail_l ~ age * pop, \n               data = possum)\n\n\n\nAre the slopes similar? You need to fit a parallel slopes model! Use a + to separate the variables!\n\n\n\nmy_model &lt;- lm(weight ~ weeks + habit, \n               data = births14)"
+    "text": "Step 3 – Fit the regression model you chose with lm()\n\n\nAre the slopes different? You need to fit a different slopes model! Use a * to separate the variables!\n\n\n\nmy_model &lt;- lm(tail_l ~ age * pop, data = possum)\n\n\n\n\n\nAre the slopes similar? You need to fit a parallel slopes model! Use a + to separate the variables!\n\n\n\nmy_model &lt;- lm(weight ~ weeks + habit, data = births14)"
   },
   {
     "objectID": "slides/week5-day2.html#step-4-get-the-coefficients-with-get_regression_table",
     "href": "slides/week5-day2.html#step-4-get-the-coefficients-with-get_regression_table",
     "title": "Midterm Project Work Day",
     "section": "Step 4: Get the coefficients with get_regression_table()",
-    "text": "Step 4: Get the coefficients with get_regression_table()"
+    "text": "Step 4: Get the coefficients with get_regression_table()\n\nRegardless of the model you fit, you need to get your estimated coefficients using the get_regression_table() function!\n\n\nget_regression_table(my_model)"
   },
   {
     "objectID": "slides/week5-day2.html#section",
@@ -6128,5 +6128,19 @@
     "title": "Week 8 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
+  },
+  {
+    "objectID": "slides/week5-day2.html#lab-3-lab-4-revisions",
+    "href": "slides/week5-day2.html#lab-3-lab-4-revisions",
+    "title": "Midterm Project Work Day",
+    "section": "Lab 3 & Lab 4 Revisions",
+    "text": "Lab 3 & Lab 4 Revisions\n\n\nLog in to Posit Cloud\nOpen your Weeks 2-3 Group Workspace\nFind Lab 3\n\n\n\n\n\n\n\nMake a personal copy of your group’s Lab 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery member must have their own copy of the lab! No one works in the original document."
+  },
+  {
+    "objectID": "slides/week5-day2.html#step-1-visualizations-1",
+    "href": "slides/week5-day2.html#step-1-visualizations-1",
+    "title": "Midterm Project Work Day",
+    "section": "Step 1 – Visualizations",
+    "text": "Step 1 – Visualizations\n\n\nA “parallel slopes” multiple linear regression using geom_parallel_slopes()\n\n\nggplot(data = MA_schools, \n       mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_parallel_slopes(method = \"lm\") + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\")"
   }
 ]

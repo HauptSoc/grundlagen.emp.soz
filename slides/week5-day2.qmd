@@ -3,26 +3,50 @@ title: "Midterm Project Work Day"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
 # Reminders About Deadlines
 
 ## Revision Deadlines
 
--   Lab 3 Revisions are due today (May 1)
+-   Lab 3 Revisions are due next Wednesday (May 7)
 
--   Second round of revisions for Lab 2 are due today (May 1)
+-   Statistical Critique revisions are due next Wednesday (May 7)
 
--   Statistical Critique revisions are due next Wednesday (May 8)
+<!-- -   Lab 4 Revisions are due next Friday (May 9) -->
 
--   Lab 4 Revisions are due next Wednesday (May 8)
+## Lab 3 & Lab 4 Revisions
 
-::: callout-caution
-# Making a copy of your group's Lab 4
-
-If you were the recorder (typer) for your group, you need to [make your project public](https://atheobold.github.io/stat-313-website/slides/week4-day2.html#copying-the-lab-last-weeks-recorder). If you were not the recorder, you need to [make a copy of your group's project](https://atheobold.github.io/stat-313-website/slides/week4-day2.html#copying-the-lab-everyone-else).
+::: {.small}
+1. Log in to [Posit Cloud]()
+2. Open your Weeks 2-3 Group Workspace
+3. Find Lab 3
 :::
+
+![](images/find-lab.png){fig-alt="A screenshot of a group's Lab 2 project in their group workspace. There is a purple box around an icon with two boxes that has a 'plus' (+) symbol in the middle."}
+
+::: columns
+::: {.column width="40%"}
+::: {.small}
+4. Make a personal copy of your group's Lab 3
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+![](images/make-a-copy.png){width="50%" fig-alt="A screenshot of the pop-up that appears when you click on the 'Make a copy' icon next to the Lab 2 project."}
+:::
+:::
+
+::: {.small}
+::: {.callout-important}
+# Every member must have their own copy of the lab! No one works in the original document.
+:::
+:::
+
 
 ## Midterm Project
 
@@ -44,14 +68,14 @@ A deadline extension [**is**]{.underline} permitted for the first draft. Deadlin
 
 ## Data Description -- A Word of Caution
 
-Be cautious in how you are using the resources I provided---do not copy these descriptions. 
+Be cautious in how you are using the resources I provided---do not copy these descriptions.
 
-Inserting a verbatim copy of the descriptions seen in the data resources is [**plagiarism**]{.underline}. 
+Inserting a verbatim copy of the descriptions seen in the data resources is [**plagiarism**]{.underline}.
 
-:::{.callout-caution}
+::: callout-caution
 # In text citation
 
-If you wish to borrow elements of these descriptions, you need to quote them and provide a reference to the resource. e.g., "This data set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children" (United States Department of Health and Human Services, 2014). 
+If you wish to borrow elements of these descriptions, you need to quote them and provide a reference to the resource. e.g., "This data set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children" (United States Department of Health and Human Services, 2014).
 :::
 
 ## Specific Dataset Advice
@@ -59,60 +83,23 @@ If you wish to borrow elements of these descriptions, you need to quote them and
 -   For the `and_vertebrates` data, you should include `species` as an explanatory variable. If you don't you are assuming the same relationship applies to trout AND salamanders.
 
 -   For the `hbr_maples` data, you cannot use `year` as a numerical variable. There are only two years of data!
-
--   For the `pie_crabs` data:
-    -   `site` and `latitude` measure the [same]{.underline} thing
+    * If you want to use `year` as a categorical variable, let Dr. T know and they will help you write code to change the data type of this variable!
 
 # Coding a Multiple Linear Regression
 
 ## Step 0 -- Read in Your Data
 
+::: {.midi}
 -   Locate what package your data live in (found in the directions for the midterm project proposal)
 
 -   Load in the package you need!
 
 -   Get started!
-
-<!-- ::: columns -->
-
-<!-- ::: {.column width="47%"} -->
-
-<!-- STAT 313 -->
-
-<!-- ::: small -->
-
-<!-- -   Locate what package your data live in (found in the directions for the midterm project proposal) -->
-
-<!-- -   Load in the package you need! -->
-
-<!-- -   Get started! -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="3%"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="50%"} -->
-
-<!-- STAT 513 -->
-
-<!-- ::: small -->
-
-<!-- -   Upload your formatted dataset to your Midterm Project on Posit Cloud -->
-
-<!-- -   Write the following code to load in your dataset: -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ::: -->
+:::
 
 . . .
 
+::: {.midi}
 ```{r}
 #| eval: false
 #| echo: true
@@ -121,7 +108,7 @@ If you wish to borrow elements of these descriptions, you need to quote them and
 library(openintro)
 ```
 
-**OR** 
+**OR**
 
 ```{r}
 #| eval: false
@@ -130,121 +117,104 @@ library(openintro)
 
 library(lterdatasampler)
 ```
+:::
 
 . . .
 
-:::{.callout-caution}
+::: {.midi}
+::: callout-caution
 # moderndive Package
 
 We will be using the **moderndive** package to get our regression tables, so **do not** remove this package from your project!
 :::
-
-```{r}
-#| eval: false
-#| echo: false
-name_you_want <- read_csv("name of your dataset.csv")
-
-name_you_want <- read_xlsx("name of your dataset.xlsx")
-```
+:::
 
 ## Step 1 -- Visualizations
 
-::: columns
-::: {.column width="47%"}
-:::{.fragment .fade-in-then-semi-out	}
-[Two Numerical Variables]{.underline}
+You will make **two** total visualizations: 
 
-::: callout-tip
-# Three total visualizations
-:::
+::: {.midi}
+1.  A "different slopes" multiple linear regression using `geom_smooth(method = "lm")`
 
-::: small
-1. Visualize the model with **both** variables, using a `color` gradient
-2. Visualize a simple linear regression with the one explanatory variable
-3. Visualize a simple linear regression with the other explanatory variable
-:::
-:::
-:::
+```{r}
+#| label: interaction-code
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|6"
 
-::: {.column width="3%"}
-:::
-
-::: {.column width="50%"}
-:::{.fragment}
-[One Categorical & One Numerical Variable]{.underline}
-
-::: callout-tip
-# Two total visualizations
+ggplot(data = MA_schools, 
+       mapping = aes(y = average_sat_math, 
+                       x = perc_disadvan, 
+                       color = size)) + 
+  geom_point() +
+  geom_smooth(method = "lm") + 
+  labs(x = "Percent Economically Disadvantaged", 
+       y = "Average SAT Math", 
+       color = "Size of School") 
+```
 :::
 
-::: small
-1. Visualize the "different slopes" multiple linear regression using `geom_smooth(method = "lm")`
-2. Visualize the "parallel slopes" multiple linear regression using`geom_parallel_slopes()`
-:::
-:::
-:::
+## Step 1 -- Visualizations
+
+::: {.midi}
+2.  A "parallel slopes" multiple linear regression using `geom_parallel_slopes()`
+
+```{r}
+#| label: additive-code
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|6"
+
+ggplot(data = MA_schools, 
+       mapping = aes(y = average_sat_math, 
+                       x = perc_disadvan, 
+                       color = size)) + 
+  geom_point() +
+  geom_parallel_slopes(method = "lm") + 
+  labs(x = "Percent Economically Disadvantaged", 
+       y = "Average SAT Math", 
+       color = "Size of School") 
+```
 :::
 
 ## Step 2 -- Decide the "Best" Model
 
-::: columns
-::: {.column width="45%"}
-[Two Numerical Variables]{.underline}
+::: {.midi}
+Next, you will decide which of these two models seems like the better model. 
+:::
 
-::: {style="color: #0F4C81; font-size: 0.85em"}
--   If there appears to be a relationship with the colors -- include **both** variables!
+::: {.small}
+::: {.incremental}
+-   Look at the plot where the lines are allowed to be different! Does it look
+like they are?
 
--   If the colors are equally dispersed throughout the plot -- choose the [**one**]{.underline} variable that has the [**stronger**]{.underline} relationship (larger slope)!
+-   If the lines look different -- you should use the different slopes
+(interaction) model!
+
+-   If the lines look similar -- you should use the parallel slopes (additive)
+model!
 :::
 :::
 
-::: {.column width="5%"}
-:::
+. . .
 
-::: {.column width="45%"}
-[One Categorical & One Numerical Variable]{.underline}
+::: {.midi}
+::: {.callout-important}
+# No p-values
 
-::: {style="color: #0F4C81; font-size: 0.85em"}
--   Look at the plot where the lines are allowed to be different! Does it look like they are?
-
--   If the lines look different -- you should use the different slopes (interaction) model! 
-
--   If the lines look similar -- you should use the parallel slopes (additive) model! 
-:::
+Your model decision needs to rely **exclusively** on the visualizations, you 
+cannot use p-values to make your decision. 
 :::
 :::
 
 ## Step 3 -- Fit the regression model you chose with `lm()`
 
-::: columns
-::: {.column width="45%"}
-[Two Numerical Variables]{.underline}
+</br>
 
-::: {style="color: #0F4C81; font-size: 0.75em"}
--   Are both variables included? Use a `+` to separate them!
-
-::: small
-```{r}
-#| eval: false
-#| echo: true
-#| label: two-num-model
-#| code-line-numbers: false
-
-my_model <- lm(size ~ latitude + water_temp, 
-               data = pie_crab)
-```
+::: {.midi}
+Are the slopes different? You need to fit a different slopes model! Use a 
+`*` to separate the variables!
 :::
-:::
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="45%"}
-[One Categorical & One Numerical Variable]{.underline}
-
-::: {style="color: #0F4C81; font-size: 0.65em"}
--   Are the slopes different? You need to fit a different slopes model! Use a `*` to separate the variables!
 
 ::: small
 ```{r}
@@ -253,12 +223,18 @@ my_model <- lm(size ~ latitude + water_temp,
 #| label: interaction-model
 #| code-line-numbers: false
 
-my_model <- lm(tail_l ~ age * pop, 
-               data = possum)
+my_model <- lm(tail_l ~ age * pop, data = possum)
 ```
 :::
 
--   Are the slopes similar? You need to fit a parallel slopes model! Use a `+` to separate the variables!
+. . .
+
+</br>
+
+::: {.midi}
+Are the slopes similar? You need to fit a parallel slopes model! Use a
+`+` to separate the variables!
+:::
 
 ::: small
 ```{r}
@@ -267,15 +243,28 @@ my_model <- lm(tail_l ~ age * pop,
 #| label: parallel-model
 #| code-line-numbers: false
 
-my_model <- lm(weight ~ weeks + habit, 
-               data = births14)
+my_model <- lm(weight ~ weeks + habit, data = births14)
 ```
-:::
-:::
-:::
 :::
 
 ## Step 4: Get the coefficients with `get_regression_table()`
+
+</br>
+
+Regardless of the model you fit, you need to get your estimated coefficients
+using the `get_regression_table()` function!
+
+</br>
+
+```{r}
+#| label: get-regression-table-code
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+
+get_regression_table(my_model)
+```
+
 
 ##  {background-color="#D4D4D4"}
 
