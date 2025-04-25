@@ -3,12 +3,12 @@ title: "Midterm Project Guidelines"
 format: html
 editor: source
 resources: 
-- model_selection_process/model_seletion.html
+  - help/one_cat_one_quant_flowchart.jpg
 ---
 
 # Your Task
 
-For this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal. Your project is required to have *at least two* explanatory variables, one of which must be numerical. You are expected to justify *why* you chose each explanatory variable in the *Introduction* section of your report.
+For this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal. 
 
 # Introduction
 
@@ -22,7 +22,7 @@ For this project, you are expected to use a multiple linear regression to invest
 You may need to look up the publication(s) the data are associated with to obtain information on how they were collected.
 :::
 
--   State the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, "What is the relationship between..." and should be as specific as possible. Your *Findings* section should directly address the question(s) you pose here.
+-   State the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, "What is the relationship between..." and should be as specific as possible. Your **Discussion** section should directly address the question(s) you pose here.
 
 # Methods
 
@@ -32,30 +32,38 @@ This section should lay out the steps, decisions, and logic leading to the stati
 their associated units. For categorical variables, describe the levels of the
 categorical variable.
 
+::: callout-tip
+You may need to look up the publication(s) the data are associated with to obtain information on how each variable was measured by the researchers. 
+:::
+
 -   Produce data visualizations exploring the relationship(s) you are interested
 in investigating, contrasting the need for a second explanatory variable.
 
-    -   For a multiple linear regression with *one numerical variable and one categorical variable*, you should produce **two** visualizations: one with different slopes and one with parallel slopes.
+    -   For a multiple linear regression with one numerical variable and one categorical variable, you should produce **two** visualizations, (1) a scatterplot where each group has a  regression line with its own slope (interaction model), and (2) a scatterplot where every group has parallel regression lines (parallel slopes model).
 
-::: callout-caution
+::: callout-important
 # Every visualization should have nicely formatted axis labels!
 :::
 
--   Describe what you see in the visualizations, making direct references to the plots!
+-   Describe what you see in the visualizations, making direct references to the plots! Specifically, your description or each plot needs to address the following:
+    * form
+    * direction
+    * strength
+    * outliers
 
 -   Outline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about ***why*** the method being used are appropriate for the investigation at hand making direct reference to the visualizations.
 
 ::: callout-tip
 # Deciding on a Statistical Model
 
-The statistical model you fit in the next section depends on what you see in your visualization. [Click here](../midterm-project-help/model-selection.qmd) for a flowchart of how you should select the statistical model that is best for your situation.
+The statistical model you fit in the next section depends on what you see in your visualization. [Click here](../midterm-project-help/one_cat_one_quant_flowchart.jpg) for a flowchart of how you should select the statistical model that is best for your situation.
 :::
 
 # Results
 
 In this section you will fit your statistical model and display the results.
 
--   Fit the statistical model stated at the end of the Methods section
+-   Fit the statistical model stated at the end of the **Methods** section
 -   Obtain the coefficients for the model
 
 ::: callout-tip
@@ -78,10 +86,22 @@ interest.
 -   Interpret **in the context of the data** the coefficients from the 
 regression equation.
 
+::: {.callout-important}
+# Every Coefficient Needs Interpreted!
+You need to interpret **both** the intercept and the slope for each group!
+:::
+
 -   Connect the findings of your regression back to the research question you 
 posed in the **Introduction**. 
 
 -   Propose a possible explanation for why these results were observed. 
+
+::: {.callout-tip}
+# External Research
+
+You might need to do a bit of independent research on *why* you obtained 
+the results you did. 
+:::
 
 # Conclusions
 
