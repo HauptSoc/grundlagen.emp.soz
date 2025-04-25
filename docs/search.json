@@ -2972,123 +2972,478 @@
     "text": "Overall Project Grade\n\n\n\n\n\n\n\n\n\nExcellent Project\nSatisfactory Project\nProgressing Project\nNo Credit\n\n\n\n\nAt most one section is marked “Satisfactory” the remainder are marked “Excellent”\nAt most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”\nAt most two sections are marked “Progressing” the remainder are marked “Satisfactory”\nAt most one section is marked “Satisfactory” or “Excellent” the remainder are marked “Progressing”"
   },
   {
-    "objectID": "project/midterm-project-help/model-selection.html#one-categorical-one-numerical-explanatory-variable",
-    "href": "project/midterm-project-help/model-selection.html#one-categorical-one-numerical-explanatory-variable",
-    "title": "Model Selection Process",
-    "section": "One Categorical & One Numerical Explanatory Variable",
-    "text": "One Categorical & One Numerical Explanatory Variable"
-  },
-  {
-    "objectID": "project/midterm-project-help/model-selection.html#two-numerical-explanatory-variables",
-    "href": "project/midterm-project-help/model-selection.html#two-numerical-explanatory-variables",
-    "title": "Model Selection Process",
-    "section": "Two Numerical Explanatory Variables",
-    "text": "Two Numerical Explanatory Variables"
-  },
-  {
-    "objectID": "project/final-project/final-project-grading-rubric.html",
-    "href": "project/final-project/final-project-grading-rubric.html",
-    "title": "Final Project Rubric",
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html",
+    "href": "project/midterm-project/help/midterm-project-feedback.html",
+    "title": "Midterm Project Feedback Guide",
     "section": "",
-    "text": "Introduction\nMethods\nFindings\nStudy Limitations\nConclusions\n\n\n\n\nExcellent\n\nProvides robust description of data and context.\nWell articulated research question(s) correctly phrased for a one-way ANOVA.\n\n\nOutlines variables considered for analysis, describes how variables were collected, including their associated units / levels.\nCreates data visualizations requested, axis labels allow visualization to be interpreted independent of additional information.\nProvides robust description of relationships seen in visualization.\n\n\nCorrectly fits one-way ANOVA models and obtains ANOVA table.\nProvides well written conclusion regarding the hypotheses tested in the both one-way ANOVAs, with few if any errors that do not bring into question understanding of the underlying concepts.\nCorrectly determines if an additive two-way ANOVA model should be fit.\n(If applicable) Provides well written conclusion regarding the hypotheses tested in the two-way ANOVA, with few if any errors that do not bring into question understanding of the underlying concepts.\nEvaluates conditions of one-way ANOVA model with few if any errors that do not bring into question understanding of the underlying concepts.\n\n\nClearly articulates sampling methodology used in study, connects methodology to whom the analysis can be inferred onto.\nClearly articulates the design of the study, connects study design to what relationships can be inferred between the variables.\nInterpretations are all described in the context of the data, not in general terms.\n\n\nProvides well articulated description of how the findings from the statistical model(s) connect to what was seen in visualizations.\nReaches a conclusion for the research question stated in the Introduction.\n\n\n\nSatisfactory\n\nProvides satisfactory description of data, but description lacks some details regarding the context.\nResearch question(s) articulated but contain instances of incorrect language for a one-way ANOVA.\n\n\nOutlines variables considered for analysis, omitting some details regarding how the variables were collected and / or their associated units / levels.\nCreates data visualizations requested, some additional information is needed to supplement axis labels.\nProvides satisfactory description of relationships seen in visualization, where some details have been omitted.\n\n\nCorrectly fits one-way ANOVA models and obtains ANOVA table.\nProvides well written conclusion regarding the hypotheses tested in the both one-way ANOVAs, with some errors that bring into question understanding of underlying concepts.\nCorrectly determines if an additive two-way ANOVA model should be fit.\n(If applicable) Provides well written conclusion regarding the hypotheses tested in the two-way ANOVA, with some errors that bring into question understanding of underlying concepts.\nEvaluates conditions of one-way ANOVA model with some errors that bring into question understanding of underlying concepts.\n\n\nDescribes sampling methodology used in study and states whom the analysis can be inferred onto, but connections between methods and inference are at times unclear.\nStatement regarding what relationships can be inferred between the variables is mostly clear, with connections to the design of the study.\nInterpretations are all described in the context of the study.\n\n\nDescription of connection between model findings and visualizations are mostly clear, but connections to the research question stated in the Introduction are at times unclear.\n\n\n\nProgressing\n\nProvides poor description of data, where description lacks multiple details regarding the context.\nResearch question(s) poorly articulated, with little to no general connection to a one-way ANOVA.\n\n\nOutlines variables considered for analysis, with very few details regarding how they were collected and / or their associated units / levels.\nCreates data visualizations requested, axis labels require additional information to understand the context.\nProvides poor description of relationships seen in visualization.\n\n\nDoes not correctly fit one-way ANOVA models and obtains ANOVA table.\nProvides written conclusion regarding the hypotheses tested in the both one-way ANOVAs, with many errors that bring into question understanding of underlying concepts.\nDoes not correctly determine if an additive two-way ANOVA model should be fit.\n(If applicable) Provides written conclusion regarding the hypotheses tested in the both two-way ANOVA, with many errors that bring into question understanding of underlying concepts.\nEvaluates conditions of one-way ANOVA model with many errors that bring into question understanding of underlying concepts.\n\n\nStatement regarding who the analysis can be inferred to is mostly unclear, with few if any connections to the sampling methodology used.\nStatement regarding what relationships can be inferred between the variables is mostly unclear, with few if any connections to the design of the study.\nInterpretations are done in general statements, not in the context of the study.\n\n\nDescription of connection between model findings and visualization is unclear with little to no connection to the research question stated in the Introduction.\n\n\n\nNo Credit\n\nProvides little to no description of data.\nResearch question(s) not articulated.\n\n\nOutlines variables considered for analysis, with no details regarding their associated units / levels.\nCreates data visualizations requested, axis labels are not changed.\nProvides little to no description of relationships seen in visualization.\n\n\nDoes not fit one-way ANOVA models and obtains ANOVA table.\nInterpretations of one-way ANOVA contain multiple errors that demonstrate little to no understanding of the underlying concepts.\nDoes not correctly determine if an additive two-way ANOVA model should be fit.\nEvaluation of model conditions bring into question any understanding of the underlying concepts.\n\n\nStatement regarding who the analysis can be inferred to is mostly unclear, with no connections to the sampling methodology used.\nStatement regarding what relationships can be inferred between the variables is mostly unclear, with no connections to the design of the study.\nInterpretations are done in general statements, not in the context of the study.\n\n\nLittle to no description of connection between models fit and visualization, no connection to the research question stated in the Introduction."
+    "text": "Excellent\nQuestion is posed in terms of the multiple linear regression model:\n\none numerical & one categorical explanatory variables - if the relationship (between x and y) differs based on the categorical variable\ntwo numerical explanatory variables – if there is a relationship between each explanatory variable and the response in the same equation (not two separate questions)\n\n\n\nSatisfactory\nResearch questions are correctly framed in terms of relationships, but don’t reflect the multiple regression being explored.\n\n\nProgressing\nResearch questions are not posed as questions!"
   },
   {
-    "objectID": "project/final-project/final-project-grading-rubric.html#overall-project-grade",
-    "href": "project/final-project/final-project-grading-rubric.html#overall-project-grade",
-    "title": "Final Project Rubric",
-    "section": "Overall Project Grade",
-    "text": "Overall Project Grade\n\n\n\n\n\n\n\n\n\nExcellent Project\nSatisfactory Project\nProgressing Project\nNo Credit\n\n\n\n\nAt most one section is marked “Satisfactory” the remainder are marked “Excellent”\n\n\nPresentation is completed\nAt most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”\n\nPresentation is completed\nAt most two sections are marked “Progressing” the remainder are marked “Satisfactory”\n\nPresentation is not completed\nAt most one section is marked “No Credit” and the remainder of the sections are marked “Progressing”\n\nPresentation is not completed"
-  },
-  {
-    "objectID": "project/final-project-help/no-gos.html",
-    "href": "project/final-project-help/no-gos.html",
-    "title": "Things that cannot go in your project!",
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#research-questions",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#research-questions",
+    "title": "Midterm Project Feedback Guide",
     "section": "",
-    "text": "Statements of hypotheses (e.g., \\(H_0\\) or \\(H_A\\))\nStatements that say your condition has been “met” 😡\n\nIf you have no evidence that the condition is violated, simply state so.\n\nThe s-word (significance) 😱\n\nProvide a more descriptive summary of your findings!\n\nLong paragraphs!\n\nBreak into smaller 3-4 sentence paragraphs surrounding the same topic.\n\nThe same sentence written in multiple sections. 🙃"
+    "text": "Excellent\nQuestion is posed in terms of the multiple linear regression model:\n\none numerical & one categorical explanatory variables - if the relationship (between x and y) differs based on the categorical variable\ntwo numerical explanatory variables – if there is a relationship between each explanatory variable and the response in the same equation (not two separate questions)\n\n\n\nSatisfactory\nResearch questions are correctly framed in terms of relationships, but don’t reflect the multiple regression being explored.\n\n\nProgressing\nResearch questions are not posed as questions!"
   },
   {
-    "objectID": "project/final-presentations/presentation-instructions.html",
-    "href": "project/final-presentations/presentation-instructions.html",
-    "title": "Final Project Presentations",
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#variables-of-interest",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#variables-of-interest",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Variables of Interest",
+    "text": "Variables of Interest\n\n\n\n\n\n\n\nPresent\nOutlines all three variables of interest:\n\nHow was each variable measured? – this needs to be connected to the data collection methods\nWhat units was each variable measured in?\n\n\n\nPartially Present\nMissing details about units OR how the variables were measured\n\n\nMissing\nMissing details about units AND how the variables were measured"
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#data-visualizations",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#data-visualizations",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Data Visualizations",
+    "text": "Data Visualizations\n\n\n\n\n\n\n\nPresent\nCreates all required visualizations:\n\nTwo visualizations for one numerical and one categorical explanatory variables – parallel slopes & different slopes\nThree visualizations for two numerical explanatory variables – one with all three variables included (color gradient), one for each SLR\n\n\n\nPartially Present\nMissing one of the required visualizations\n\n\nMissing\nAll visualizations are missing"
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#visualization-descriptions",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#visualization-descriptions",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Visualization Descriptions",
+    "text": "Visualization Descriptions\n\n\n\n\n\n\n\nPresent\nDescribes each of the visualizations\n\n\nPartially Present\nAt least one visualization is not described\n\n\nMissing\nDoes not describe visualizations"
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#proposed-statistical-model",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#proposed-statistical-model",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Proposed Statistical Model",
+    "text": "Proposed Statistical Model\n\n\n\n\n\n\n\nPresent\nStates what statistical model was selected\n\n\nPartially Present\nDescribes what visualization was chosen, not what statistical model was chosen\n\n\nMissing\nDoes not state what model or visualization was chosen"
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#writes-out-regression-equations",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#writes-out-regression-equations",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Writes out Regression Equation(s)",
+    "text": "Writes out Regression Equation(s)\n\n\n\n\n\n\n\nPresent\nRegression equation is included, and, if needed, indicator variables or multiple equations are used to separate groups\n\n\nPartially Present\nOnly one equation is provided when there should be multiple equations\n\n\nMissing\nNo equation"
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#interprets-model-coefficients",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#interprets-model-coefficients",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Interprets Model Coefficients",
+    "text": "Interprets Model Coefficients\n\n\n\n\n\n\n\nPresent\nInterpretations for every intercept and slope are provided\n\n\nPartially Present\nSome intercept and / or slope interpretations are missing\n\n\nMissing\nNone of the coefficients are interpreted"
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#study-limitations---graded-by-dr.-theobold",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#study-limitations---graded-by-dr.-theobold",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Study Limitations - Graded by Dr. Theobold",
+    "text": "Study Limitations - Graded by Dr. Theobold\n\nScope of Inference\n\n\n\n\n\n\n\nExcellent\nClearly states who the analysis can be inferred to, connecting to sampling methodology used.\n\n\nSatisfactory\nStatement regarding who the analysis can be inferred to is mostly clear, with connections to the sampling methodology used.\n\n\nProgressing\nStatement regarding who the analysis can be inferred to is mostly unclear, with few if any connections to the sampling methodology used.\n\n\n\n\nCause & Effect\n\n\n\n\n\n\n\nExcellent\nClearly states what relationships can be inferred between the variables, connecting to the design of the study.\n\n\nSatisfactory\nStatement regarding what relationships can be inferred between the variables is mostly clear, with connections to the design of the study.\n\n\nProgressing\nStatement regarding what relationships can be inferred between the variables is mostly unclear, with few if any connections to the design of the study."
+  },
+  {
+    "objectID": "project/midterm-project/help/midterm-project-feedback.html#conclusion-graded-by-dr.-theobold",
+    "href": "project/midterm-project/help/midterm-project-feedback.html#conclusion-graded-by-dr.-theobold",
+    "title": "Midterm Project Feedback Guide",
+    "section": "Conclusion – Graded by Dr. Theobold",
+    "text": "Conclusion – Graded by Dr. Theobold\n\n\n\n\n\n\n\nPresent\nConnects visualization and regression model to research question posed in the Introduction.\n\n\nPartially Present\nDiscusses research question posed in the Introduction, but is missing connections to the visualization OR the regression model.\n\n\nMissing\nDoes not discuss the research question posed in the Introduction."
+  },
+  {
+    "objectID": "project/final-project/final-project-directions.html",
+    "href": "project/final-project/final-project-directions.html",
+    "title": "Final Project Guidelines",
     "section": "",
-    "text": "During finals week each of you will give a 3-minute presentation on one aspect of your final project you found the most interesting. Notice, you need to pick one aspect, since your presentation is so short.\nHere are some examples of what you could choose:\nOf course you could choose other topics, the only requirement is that your topic is related to what you did in your final project."
-  },
-  {
-    "objectID": "project/final-presentations/presentation-instructions.html#slides",
-    "href": "project/final-presentations/presentation-instructions.html#slides",
-    "title": "Final Project Presentations",
-    "section": "Slides",
-    "text": "Slides\nFor your presentation you are allowed to make two slides:\n\nA title slide (make it fun!) with your name\nA content slide\n\nSlides are due by 5pm the night before your final exam timeslot. If you do not submit slides by the deadline, you will not be allowed to present.\n\nSTAT 313-02 – slides are due by Monday (June 10) by 5pm\nSTAT 313-01 – slides are due by Tuesday (June 11) by 5pm\n\n\n\n\n\n\n\nCaution\n\n\n\nYour slides must be submitted as a PDF. Make sure they are saved in the correct orientation! I do not have the time to open PowerPoint slides and convert them to a PDF. So, if you do not submit your slides as a PDF, you will not be allowed to present."
-  },
-  {
-    "objectID": "project/final-presentations/presentation-instructions.html#presentations",
-    "href": "project/final-presentations/presentation-instructions.html#presentations",
-    "title": "Final Project Presentations",
-    "section": "Presentations",
-    "text": "Presentations\nFor ease, I will randomly order the presentations. If you have a strong preference for when you would like to present, you can request a position. However, I cannot guarantee that I can accommodate every request.\nI will publish the order of presentations by 8pm the day before the final exam."
-  },
-  {
-    "objectID": "labs/grading-guides/lab-1-grading-guide.html",
-    "href": "labs/grading-guides/lab-1-grading-guide.html",
-    "title": "Lab 1 – Grading Guide",
-    "section": "",
-    "text": "To earn a “Complete” students need to have:"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
-    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
-    "title": "Lab 1 – Grading Guide",
-    "section": "If their document doesn’t contain answers",
-    "text": "If their document doesn’t contain answers\nGeneral Comment\nCareful! Your document doesn’t contain any of your responses for Questions 5 through 10. In order for your responses to show up in the final submission, you need to (re)render the document after you have finished answering all the questions.\nFor Question 6\nLook over the solutions from Dr. Theobold for a tip on this question!"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-1-grading-guide.html#question-6",
-    "href": "labs/grading-guides/lab-1-grading-guide.html#question-6",
-    "title": "Lab 1 – Grading Guide",
-    "section": "Question 6",
-    "text": "Question 6\nIf they say the data are Audi cars\nTechnically, the first ten rows (observations) in the mpg data are Audi cars. Go back into Posit Cloud and use the arrow buttons (in the code chunk labeled mpg-data) to look at the other rows in these data. Does the mpg dataset contain only data on Audi cars?\nIf they say the observations are manufacturer, model, year, etc.\nYes, this dataset does include manufacturer, model, year, cyl as variables (columns) in the dataset. But what does each row represent? Look over the solutions from Dr. Theobold for a tip on this question!"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
-    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
-    "title": "Lab 1 – Grading Guide",
-    "section": "If their image doesn’t appear but they have answers to the rest of the questions",
-    "text": "If their image doesn’t appear but they have answers to the rest of the questions\nNice job completing all the questions! Be careful to double check that your image is appearing in your final HTML document. In your submitted file we can’t see the image you wanted to include."
-  },
-  {
-    "objectID": "critique/grading-guides/critique-1-grading.html",
-    "href": "critique/grading-guides/critique-1-grading.html",
-    "title": "Stat Critique 1 Grading Guide",
-    "section": "",
-    "text": "Double Encoding\n\n\n\nIt’s okay if they only mention one of the aesthetics that a variable is associated with when it is mapped to multiple aesthetics.\n\n\nGrowing\n\nDoesn’t name variables mapped to each aesthetic (e.g., only says the x-axis, y-axis, and color are used)\n\nFeedback: We want you to state specifically the names of the variables mapped to each aesthetic!\n\nSays a color aesthetic is used but the same color is used for every observation\n\nFeedback: Careful! Aesthetics are places where variables are being incorporated into the plot. Is the color in this plot associated with a variable?\n\nMisses an aesthetic that is being used\n\nFeedback for general plots: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, there are [multiple plots / multiple colors / multiple lines] not just one. What variable is associated with these separate [plots / colors / lines]?\nFeedback for maps: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, we have “hidden” x- and y-variables. What variables are associated with the location of a state on the map?\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that are done well.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe the visualization does well.\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that could be improved.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe could be improved."
-  },
-  {
-    "objectID": "critique/grading-guides/critique-1-grading.html#pop-visualization-nyt-scientific-visualization",
-    "href": "critique/grading-guides/critique-1-grading.html#pop-visualization-nyt-scientific-visualization",
-    "title": "Stat Critique 1 Grading Guide",
-    "section": "",
-    "text": "Double Encoding\n\n\n\nIt’s okay if they only mention one of the aesthetics that a variable is associated with when it is mapped to multiple aesthetics.\n\n\nGrowing\n\nDoesn’t name variables mapped to each aesthetic (e.g., only says the x-axis, y-axis, and color are used)\n\nFeedback: We want you to state specifically the names of the variables mapped to each aesthetic!\n\nSays a color aesthetic is used but the same color is used for every observation\n\nFeedback: Careful! Aesthetics are places where variables are being incorporated into the plot. Is the color in this plot associated with a variable?\n\nMisses an aesthetic that is being used\n\nFeedback for general plots: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, there are [multiple plots / multiple colors / multiple lines] not just one. What variable is associated with these separate [plots / colors / lines]?\nFeedback for maps: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, we have “hidden” x- and y-variables. What variables are associated with the location of a state on the map?\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that are done well.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe the visualization does well.\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that could be improved.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe could be improved."
-  },
-  {
-    "objectID": "course_resources.html",
-    "href": "course_resources.html",
-    "title": "R Resources",
-    "section": "",
-    "text": "Tip\n\n\n\nClick on the link related to a specific week to explore R skills learned that week!",
+    "text": "For this project, you are expected to use a two-way ANOVA to investigate the relationship between one numerical response variable and two categorical explanatory variables. You are permitted to use the same dataset as your Midterm Project, so long as there are at least two categorical variables to choose from.\n\n\n\n\n\n\nDiscretizing numerical variables\n\n\n\nIf you would like to analyze a discrete numerical variable (e.g., number of pets) as a categorical variable, you will need to convert that variable into a categorical variable in R as R assumes all variables with numbers should be numerical.\nYou will need Dr. Theobold’s help to perform this task. Dr. Theobold will work with you to convert your variable as long as you request help before Friday, May 31 at 4pm.",
     "crumbs": [
-      "R Resources",
-      "R Resources"
+      "Projects",
+      "Final Project Description"
     ]
   },
   {
-    "objectID": "course_resources.html#bonus",
-    "href": "course_resources.html#bonus",
-    "title": "R Resources",
-    "section": "Bonus",
-    "text": "Bonus\n\nggplot Customizations\n\n\nPivoted Summary Tables",
+    "objectID": "project/final-project/final-project-directions.html#your-task",
+    "href": "project/final-project/final-project-directions.html#your-task",
+    "title": "Final Project Guidelines",
+    "section": "",
+    "text": "For this project, you are expected to use a two-way ANOVA to investigate the relationship between one numerical response variable and two categorical explanatory variables. You are permitted to use the same dataset as your Midterm Project, so long as there are at least two categorical variables to choose from.\n\n\n\n\n\n\nDiscretizing numerical variables\n\n\n\nIf you would like to analyze a discrete numerical variable (e.g., number of pets) as a categorical variable, you will need to convert that variable into a categorical variable in R as R assumes all variables with numbers should be numerical.\nYou will need Dr. Theobold’s help to perform this task. Dr. Theobold will work with you to convert your variable as long as you request help before Friday, May 31 at 4pm.",
     "crumbs": [
-      "R Resources",
-      "R Resources"
+      "Projects",
+      "Final Project Description"
+    ]
+  },
+  {
+    "objectID": "project/final-project/final-project-directions.html#data-description",
+    "href": "project/final-project/final-project-directions.html#data-description",
+    "title": "Final Project Guidelines",
+    "section": "1.1 Data Description",
+    "text": "1.1 Data Description\nIn 4-6 sentences describe:\n\nhow the data were collected\nthe context of the data (e.g., are the data from from a published study?)\nthe background of the research problem (e.g., why were the data collected?)",
+    "crumbs": [
+      "Projects",
+      "Final Project Description"
+    ]
+  },
+  {
+    "objectID": "project/final-project/final-project-directions.html#questions-of-interest",
+    "href": "project/final-project/final-project-directions.html#questions-of-interest",
+    "title": "Final Project Guidelines",
+    "section": "1.2 Questions of Interest",
+    "text": "1.2 Questions of Interest\nState the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should be phrased in terms of your alternative hypothesis, meaning it should start with “Does the mean ___ differ based on ___ …”. Your Findings section should directly address the question(s) you pose here.\n\n\n\n\n\n\nMultiple research questions\n\n\n\nThis week you are starting with research questions are appropriate for the one-way ANOVA models you are fitting. However, you may find that you need to add research questions based on the models you fit in Week 10!",
+    "crumbs": [
+      "Projects",
+      "Final Project Description"
+    ]
+  },
+  {
+    "objectID": "project/final-project/final-project-directions.html#one-way-anova-models",
+    "href": "project/final-project/final-project-directions.html#one-way-anova-models",
+    "title": "Final Project Guidelines",
+    "section": "3.1 One-Way ANOVA Models",
+    "text": "3.1 One-Way ANOVA Models\nEveryone starts here! In this section, you need to do the following:\n\nFit two one-way ANOVA models – one model for each categorical explanatory variable\nObtain the ANOVA table for the model\nBased on the ANOVA table, state what decision was reached for the hypothesis in the one-way ANOVA model\nBased on the decision you made, state what you can conclude regarding the relationship between your variables",
+    "crumbs": [
+      "Projects",
+      "Final Project Description"
+    ]
+  },
+  {
+    "objectID": "project/final-project/final-project-directions.html#two-way-anova-additive-model",
+    "href": "project/final-project/final-project-directions.html#two-way-anova-additive-model",
+    "title": "Final Project Guidelines",
+    "section": "3.2 Two-Way ANOVA Additive Model",
+    "text": "3.2 Two-Way ANOVA Additive Model\n\n\n\n\n\n\nWhen to proceed\n\n\n\nIf you rejected the null hypothesis for both one-way ANOVA models, you can proceed to fitting a two-way ANOVA model\n\n\n\nFit a two-way ANOVA additive model\nObtain the tidy ANOVA table for the model\nBased on the ANOVA table, state what decision was reached for each hypothesis in the two-way ANOVA additive model.\nBased on the decision you made, state what you can conclude regarding the relationship between your variables.",
+    "crumbs": [
+      "Projects",
+      "Final Project Description"
+    ]
+  },
+  {
+    "objectID": "project/final-project/final-project-directions.html#model-validity",
+    "href": "project/final-project/final-project-directions.html#model-validity",
+    "title": "Final Project Guidelines",
+    "section": "3.3 Model Validity",
+    "text": "3.3 Model Validity\n\nEvaluate the conditions of both one-way ANOVA models\n\n\n\n\n\n\n\nCondition violations\n\n\n\nIf you find through the study design and / or your visualizations that certain model conditions are violated, you are expected to do your best to remedy these violations. If you need help figuring out how to do this, email Dr. Theobold before Friday, May 31 at 4pm!\n\n\n\nBased on your analysis of the conditions, describe whether you believe the tests you performed are “reliable.”",
+    "crumbs": [
+      "Projects",
+      "Final Project Description"
+    ]
+  },
+  {
+    "objectID": "project/final-project-help/assess_independence.html",
+    "href": "project/final-project-help/assess_independence.html",
+    "title": "Evaluating Independence",
+    "section": "",
+    "text": "Independence is about observations and relationships between observations."
+  },
+  {
+    "objectID": "project/final-project-help/assess_independence.html#independence-within-groups",
+    "href": "project/final-project-help/assess_independence.html#independence-within-groups",
+    "title": "Evaluating Independence",
+    "section": "Independence Within Groups",
+    "text": "Independence Within Groups\n\nWhat are the groups in your analysis?\nAre the observations within those groups related?\n\nIs an observation included multiple times within a group?\nAre there relationships (e.g., biological, spatial, temporal) between the observations?"
+  },
+  {
+    "objectID": "project/final-project-help/assess_independence.html#independence-between-groups",
+    "href": "project/final-project-help/assess_independence.html#independence-between-groups",
+    "title": "Evaluating Independence",
+    "section": "Independence Between Groups",
+    "text": "Independence Between Groups\n\nWhat are the groups in your analysis?\nAre the observations between those groups related?\n\nCan an observation appear in more than one group?"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-6-grading-guide.html",
+    "href": "labs/grading-guides/lab-6-grading-guide.html",
+    "title": "Lab 6 Grading Guide",
+    "section": "",
+    "text": "Note\n\n\n\nBased on my code, the model selection process should go:\ncls_credits \\(\\rightarrow\\) bty_avg \\(\\rightarrow\\) gender\nIn Step 4 they are given two variables (cls_perc_eval, eval_completion) which both increase adjusted \\(R^2\\) by 0.018, not the 0.02 which is required to add another variable. So, everyone should stop at Step 4.\n\n\n\n\nTo earn a Success:\n\nfits other 7 models (rank, pic_outfit, pic_color, large_class, eval_completion, cls_level)\nfinds other 7 adjusted \\(R^2\\) values\nstates top model includes cls_credits variable\n\nIf they do not state the top model or what variable was chosen:\n\nCareful! Technically, you told me the name of the object that contains the model you decided was best. I want you to tell me the name of the variable(s) included in that model!\n\n\n\n\nTo earn a Success:\n\nfits 13 models that include the variable chosen in #1 as an explanatory variable\nfinds 13 adjusted \\(R^2\\) values\nstates top model includes cls_credits & bty_avg\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are two variables in the model (e.g., “beauty average was chosen” or “beauty score was included”):\n\nCareful! Your model contains more variables than just bty_avg. Be specific about naming every variable included in your top model!\n\n\n\n\nTo earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1 and #2 as an explanatory variables\nstates top model includes all the variables they’ve chosen (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1 or #2 as an explanatory variable\n\nCareful! Thus far, you’ve chosen two variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are three variables in the model (e.g., “gender was included in the model” or “gender was chosen”):\n\nCareful! You were specifically asked to name EVERY variable included in your top model.\n\n\n\n\nTo earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1, #2, and #3 as an explanatory variables\nstate the top model is the model from Step 3 (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1, #2, or #3 as an explanatory variable\n\nCareful! Thus far, you’ve chosen three variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\nIf they choose to add either cls_perc_eval or eval_completion:\n\nCareful! Look back at the adjusted R-squareds for these variables. Did they increase 2% (0.02) from your last adjusted R-squared?\n\n\n\n\nTo earn a Success:\n\nstates that the step() function did not choose the same model\nstate that this difference was caused by different criteria (or the use of AIC)\n\nIf they don’t talk about the step() function using a different model comparison criteria:\n\nLook back at the output from the step() function, specifically the first line of the output. Based on this line, do you think the step() function is also using adjusted R-squared to decide what model is best? If not, what criteria do you think the step() function is using?"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-1",
+    "href": "labs/grading-guides/lab-6-grading-guide.html#question-1",
+    "title": "Lab 6 Grading Guide",
+    "section": "",
+    "text": "To earn a Success:\n\nfits other 7 models (rank, pic_outfit, pic_color, large_class, eval_completion, cls_level)\nfinds other 7 adjusted \\(R^2\\) values\nstates top model includes cls_credits variable\n\nIf they do not state the top model or what variable was chosen:\n\nCareful! Technically, you told me the name of the object that contains the model you decided was best. I want you to tell me the name of the variable(s) included in that model!"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-2",
+    "href": "labs/grading-guides/lab-6-grading-guide.html#question-2",
+    "title": "Lab 6 Grading Guide",
+    "section": "",
+    "text": "To earn a Success:\n\nfits 13 models that include the variable chosen in #1 as an explanatory variable\nfinds 13 adjusted \\(R^2\\) values\nstates top model includes cls_credits & bty_avg\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are two variables in the model (e.g., “beauty average was chosen” or “beauty score was included”):\n\nCareful! Your model contains more variables than just bty_avg. Be specific about naming every variable included in your top model!"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-3",
+    "href": "labs/grading-guides/lab-6-grading-guide.html#question-3",
+    "title": "Lab 6 Grading Guide",
+    "section": "",
+    "text": "To earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1 and #2 as an explanatory variables\nstates top model includes all the variables they’ve chosen (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1 or #2 as an explanatory variable\n\nCareful! Thus far, you’ve chosen two variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are three variables in the model (e.g., “gender was included in the model” or “gender was chosen”):\n\nCareful! You were specifically asked to name EVERY variable included in your top model."
+  },
+  {
+    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-4",
+    "href": "labs/grading-guides/lab-6-grading-guide.html#question-4",
+    "title": "Lab 6 Grading Guide",
+    "section": "",
+    "text": "To earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1, #2, and #3 as an explanatory variables\nstate the top model is the model from Step 3 (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1, #2, or #3 as an explanatory variable\n\nCareful! Thus far, you’ve chosen three variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\nIf they choose to add either cls_perc_eval or eval_completion:\n\nCareful! Look back at the adjusted R-squareds for these variables. Did they increase 2% (0.02) from your last adjusted R-squared?"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-6",
+    "href": "labs/grading-guides/lab-6-grading-guide.html#question-6",
+    "title": "Lab 6 Grading Guide",
+    "section": "",
+    "text": "To earn a Success:\n\nstates that the step() function did not choose the same model\nstate that this difference was caused by different criteria (or the use of AIC)\n\nIf they don’t talk about the step() function using a different model comparison criteria:\n\nLook back at the output from the step() function, specifically the first line of the output. Based on this line, do you think the step() function is also using adjusted R-squared to decide what model is best? If not, what criteria do you think the step() function is using?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STAT 313: Applied Experimental Design and Regression Models",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nLecture Slides\nActivity\nLab\nCritique\nProject\n\n\n\n\n0\nSun, March 31\nWelcome to Stat 313 Course Set-up\n📖\n\n\n\n\n\n\n\n1\nMon, March 31 (no class)\nCourse Structure & Statistics Review\n📖\n\n\n\n\n\n\n\n\nWed, April 2\nIntroduction to Data\n\n🖥\n🎥\n📋\n💻  Due April 7  Lab 1 Feedback\nLab 1 Solutions\n\n\n\n\n2\nMon, April 7\nVisualizing & Summarizing Numerical Variables\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, April 9\nExploring Flight Delays\n\n🖥\n\n💻  Due April 14  Lab 2 Feedback\n\n\n\n\n3\nMon, April 14\nIncorporating Categorical Variables\n📖\n🖥\n\n\n\n\n\n\n\nWed, April 16\nEthics & Categorical Variables\n\n🖥\n\n💻  Due April 21  Lab 3 Feedback\n✍Statistical Critique 1\n📖 Reading a Research Paper Pt. 1\n\n\n4\nMon, April 21\nIntroduction to Linear Regression\n📖\n🖥\n\n\nStatistical Critique 1 Due\n Statistical Critique 1 Feedback\nReading a Research Paper Pt. 1 Due\n\n\n\nWed, April 23\nThe Ugly History of Linear Regression\n\n🖥\n\n💻  Due April 28  Lab 4 Feedback\n\n📁 Midterm Project Proposal\n📖 Reading a Research Paper Pt. 2\n\n\n5\nMon, April 28\nIntroduction to Multiple Linear Regression\n📖\n🖥\n📋\n\n\nMidterm Project Proposal Due\nReading a Research Paper Pt. 2 Due\n\n\n\nWed, April 30\nWork Day – Coding a Multiple Linear Regression\n\n🖥\n📋\n\n\nMidterm Project Instructions\n\n\n\nSun, May 4\n\n\n\n\n\n\nMidterm Project First Draft Due\nGrading Rubric\n\n\n6\nMon, May 5\nVariable Selection in Multiple Linear Regression\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 7\nSampling Variability\n📖\n🖥\n📋\n💻  Due May 12  Lab 6 Feedback\n\n\n\n\n\nSun, May 11\n\n\n\n\n\n\nMidterm Project Final Version Due\n\n\n7\nMon, May 12\nConfidence Intervals\n\n🖥\n\n\n\n\n\n\n\nWed, May 14\np-values & Hypothesis Tests\n📖\n🖥\n📋\n💻  Due May 19  Lab 7 Feedback\n✍ Statistical Critique 2\n\n\n\n8\nMon, May 19\nSimulation-based Methods vs. Theory-based Methods\n\n🖥\n\n\n✍Statistical Critique 2 Due\n\n\n\n\nWed, May 21\nOne-Way Analysis of Variance\n📖\n🖥\n\n💻  Due May 26  Lab 8 Feedback\n\n\n\n\n9\nMon, May 26\nNo Class, School Holiday\n\n\n\n\n\n\n\n\n\n\n\nTues, May 27\nClasses follow a Monday Schedule\nInference for OWA\n\n🖥\nAssessing Independence: 📋\n\n\n📁 Final Project Instructions\n\n\n\nWed, May 28\nWork Day – Coding a OWA\n\n\n\n\n\n\n\n\n\nSun, June 2\n\n\n\n\n\n\nFinal Project First Draft Due  Grading Rubric: ✅\n\n\n10\nMon, June 2\nTwo-Way ANOVA Models\n📖\n🖥\n\n\n\n\n\n\n\nWed, June 4\nLast Day of STAT 313\n\n🖥\n\n\n\nWhat should not be in your project: 📋\n\n\n\nSun, June 8\nFinal Project Final Version Due\n\n\n\n\n\nGrading Rubric: ✅\n\n\nFinals Week\nSTAT 313-01 & 02\nPoster Presentations\nSaturday, June 7, time TBD\n\n\n\n\n\nPresentation Instructions",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "critique/critique-1.html",
+    "href": "critique/critique-1.html",
+    "title": "Statistical Critique 1",
+    "section": "",
+    "text": "In your first statistical critique will focus on critiquing a key aspect of any statistical argument—data visualization. You have explored data visualizations over the last two weeks, thinking about what makes a plot more or less clear. You will use your knowledge of data visualizations to provide a critique for two different styles of visualizations, (1) a “pop” visualization, and (2) a “scientific” visualization.\n\n\nYou are expected to include the two visualizations you decide to critique. These visualizations must be included in the paragraph surrounding your critique. Please do not include the images at the end of your document.\n\n\nFor the New York Times visualization, you can left click on the image and save it to your computer.\n\n\n\nFigure 1: Options when left clicking on NYT visualization – select “Save Image As…” to save it to your computer\n\n\nFor the visualization from your chosen research article, you may need to take screenshot of the page and crop it to only include the image.\n\n\n\nFigure 2: Screenshot of a single image from one of the scientific research articles\n\n\n\n\n\n\nYou are allowed to use any text editing software to make your critique (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
+  },
+  {
+    "objectID": "critique/critique-1.html#including-your-visualizations",
+    "href": "critique/critique-1.html#including-your-visualizations",
+    "title": "Statistical Critique 1",
+    "section": "",
+    "text": "You are expected to include the two visualizations you decide to critique. These visualizations must be included in the paragraph surrounding your critique. Please do not include the images at the end of your document.\n\n\nFor the New York Times visualization, you can left click on the image and save it to your computer.\n\n\n\nFigure 1: Options when left clicking on NYT visualization – select “Save Image As…” to save it to your computer\n\n\nFor the visualization from your chosen research article, you may need to take screenshot of the page and crop it to only include the image.\n\n\n\nFigure 2: Screenshot of a single image from one of the scientific research articles"
+  },
+  {
+    "objectID": "critique/critique-1.html#submission",
+    "href": "critique/critique-1.html#submission",
+    "title": "Statistical Critique 1",
+    "section": "",
+    "text": "You are allowed to use any text editing software to make your critique (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
+  },
+  {
+    "objectID": "critique/critique-1.html#getting-started",
+    "href": "critique/critique-1.html#getting-started",
+    "title": "Statistical Critique 1",
+    "section": "2.1 Getting Started",
+    "text": "2.1 Getting Started\n\nGo to the What’s Going on in This Graph website\nScroll through the weekly graphs and click on a plot that you are interested in\nSave the image to your computer (as instructed above)\nInsert the image in your document (before your written critique)"
+  },
+  {
+    "objectID": "critique/critique-1.html#visualization-critique",
+    "href": "critique/critique-1.html#visualization-critique",
+    "title": "Statistical Critique 1",
+    "section": "2.2 Visualization Critique",
+    "text": "2.2 Visualization Critique\nYour critique of the visualization you selected needs to address the following questions:\n\nWhat aesthetics are being used in the plot?\n\n\n\n\n\n\n\nAesthetics places where variables are being included in the plot!\n\n\n\nIf your plot uses color, but the color is not associated with a variable (e.g., every point is yellow), then color is not an aesthetic in the plot!\n\n\n\nName at least two things the visualization does well — What makes the visualization clear to the reader?\nName at least two ways the visualization could be improved — What would the reader struggle to understand?"
+  },
+  {
+    "objectID": "critique/critique-1.html#choosing-an-article",
+    "href": "critique/critique-1.html#choosing-an-article",
+    "title": "Statistical Critique 1",
+    "section": "3.1 Choosing an Article",
+    "text": "3.1 Choosing an Article\n\nTo save everyone time spent hunting for an interesting scientific article that has both visualizations and statistical methods taught in this course, I’ve gone ahead and found three articles from different contexts:\n\nSensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue\n\nAbstract:\nDengue is a very common acute infectious disease in the tropical world. Health care professionals are able to better care for dengue patients if they can make an early diagnosis and make a plan for case management. This article investigated fever in 5729 children in Vietnam with 3 days or less of fever and identified 1692 dengue cases using advanced methods. We systematically collected a range of medical and laboratory findings on each patient when they entered the study and used statistical tools to determine if these medical and laboratory findings could enable early diagnosis, independent of sophisticated, gold-standard laboratory tests. Our results, called the Early Dengue Classifier, had performance characteristics suggesting it could improve the diagnostic proficiency of health care professionals. However the performance of the Early Dengue Classifier is not perfect and likely will not change the practice of experienced doctors in dengue endemic settings. Our study highlights the need for 2nd generation, easy-to-use rapid diagnostic tests that can accurately diagnose dengue in the first few days of fever.\n\nAI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking\n\nAbstract:\nThe proliferation of artificial intelligence (AI) tools has transformed numerous aspects of daily life, yet its impact on critical thinking remains under explored. This study investigates the relationship between AI tool usage and critical thinking skills, focusing on cognitive offloading as a mediating factor. Utilizing a mixed-method approach, we conducted surveys and in-depth interviews with 666 participants across diverse age groups and educational backgrounds. Quantitative data were analysed using ANOVA and correlation analysis, while qualitative insights were obtained through thematic analysis of interview transcripts. The findings revealed a significant negative correlation between frequent AI tool usage and critical thinking abilities, mediated by increased cognitive offloading. Younger participants exhibited higher dependence on AI tools and lower critical thinking scores compared to older participants. Furthermore, higher educational attainment was associated with better critical thinking skills, regardless of AI usage. These results highlight the potential cognitive costs of AI tool reliance, emphasizing the need for educational strategies that promote critical engagement with AI technologies. This study contributes to the growing discourse on AI’s cognitive implications, offering practical recommendations for mitigating its adverse effects on critical thinking. The findings underscore the importance of fostering critical thinking in an AI-driven world, making this research essential reading for educators, policymakers, and technologists."
+  },
+  {
+    "objectID": "critique/critique-1.html#isolating-the-visualization",
+    "href": "critique/critique-1.html#isolating-the-visualization",
+    "title": "Statistical Critique 1",
+    "section": "3.2 Isolating the Visualization",
+    "text": "3.2 Isolating the Visualization\n\nLocate a visualization in the article you chose. If there are multiple visualizations choose one!\nTake a screenshot of the visualization.\nCrop the image to only include the visualization you are critiquing.\nSave the image to your computer (as instructed above).\nInsert the image in your document (before your written critique)."
+  },
+  {
+    "objectID": "critique/critique-1.html#visualization-critique-1",
+    "href": "critique/critique-1.html#visualization-critique-1",
+    "title": "Statistical Critique 1",
+    "section": "3.3 Visualization Critique",
+    "text": "3.3 Visualization Critique\nYour critique of the visualization you selected needs to address the following questions:\n\nWhat aesthetics are being used in the visualization?\nName at least two things the visualization does well — What makes the visualization clear to the reader?\nName at least two ways the visualization could be improved — What would the reader struggle to understand?"
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Course Instructor",
+    "section": "",
+    "text": "Dr. Allison Theobold (she / they) is an Assistant Professor of Statistics at Cal Poly in beautiful San Luis Obispo, California. Allison received her doctorate in Statistics, with an emphasis in Statistics Education, from Montana State University. Allison’s work focuses on innovation in statistics and data science education, with an emphasis on equitable pedagogy and learning trajectories. Allison is also interested in exploring pedagogical approaches for enhancing retention of under-represented students in STEM, including creating inclusive discoursive spaces and equitable group collaborations.",
+    "crumbs": [
+      "Course information",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#student-hours",
+    "href": "course-support.html#student-hours",
+    "title": "Course support",
+    "section": "Student Hours",
+    "text": "Student Hours\n\n\n\n\n\n\n\nDay\nTime\n\n\nMondays\n3:10 pm – 4:00 pm (in-person)\n\n\nWednesdays\n2:10 pm - 3:00 pm (individual meetings via Zoom)\n3:10 - 4:00 (in-person)\n\n\n\nA lot of questions are most effectively answered in-person, and student hours are the best place to come ask me questions! I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself.\n\nPersonal Meetings\nIf you would like to talk with me individually, I’ve reserved time on Wednesdays from 3:10pm to 4:00pm for individual appointments. You can make appointments through the following link: https://calendly.com/allisontheobold\nI do request that you make appointments at least 1-hour ahead of time, so I don’t miss our meeting!\nIf you need to meet, but none of the student hours work for you please let me know! It is possible we can communicate asynchronously through Discord or email, but I am happy to schedule a meeting during another time if necessary.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#discord",
+    "href": "course-support.html#discord",
+    "title": "Course support",
+    "section": "Discord",
+    "text": "Discord\nWe will use Discord to manage questions and responses regarding course content. There are channels for the different components of each week (e.g., Week 1 Lab Assignment). Please do not send an email about homework questions or questions about the course material. It is incredibly helpful for others in the course to see the questions you have and the responses to those questions. I will try to answer any questions posted to Discord within 3-4 hours (unless it is posted at midnight). If you think you can answer another student’s question, please respond!",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should be posted to Discord), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Allison Theobold at atheobol@calpoly.edu.\nI do my best to reply to emails promptly and helpfully. However, I receive a lot of emails. To help both you and me, here are some specific expectations about emails:\n\nPlease tell me what course and section (by time or number) you are in!\nIf you email me between 9am and 4pm on Monday through Friday, I’ll try my best to reply to you on the same day.\nIf you email me outside of those hours, I will do my best to respond to you by the next working day. For my own mental health, I do not work on weekends. Thus, if you send an email after 4pm on Friday or during the weekend, you will not receive a response until Monday morning.\nIf your question is much easier to discuss face-to-face, I may ask you to meet with me in my office or on Discord (at a time that works for both of us) rather than answering directly in an email.\nInclude any relevant photos / screenshots / error messages / PDFs / links with your email.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#well-being-access-and-accommodations",
+    "href": "course-support.html#well-being-access-and-accommodations",
+    "title": "Course support",
+    "section": "Well-being, Access, and Accommodations",
+    "text": "Well-being, Access, and Accommodations\n\nWhat if I have accommodations or feel that accommodations would be beneficial to my learning?\nI enthusiastically support the mission of Disability Resource Center to make education accessible to all. I design all my courses with accessibility at the forefront of my thinking, but if you have any suggestions for ways I can make things more accessible, please let me know. Come talk to me if you need accommodation for your disabilities. I honor self-diagnosis: let’s talk to each other about how we can make the course as accessible as possible. See also the standard syllabus statements, which include more information about formal processes.\n\n\nI’m having difficulty paying for food and rent, what can I do?\nIf you have difficulty affording groceries or accessing sufficient food to eat every day, or if you lack a safe and stable place to live, and you believe this may affect your performance in the course, I urge you to contact the Dean of Students for support. Furthermore, please notify me if you are comfortable in doing so. This will enable me to advocate for you and to connect you with other campus resources.\n\n\nMy mental health is impairing my ability to engage in my classes, what should I do?\nNational surveys of college students have consistently found that stress, sleep problems, anxiety, depression, interpersonal concerns, death of a significant other and alcohol use are among the top ten health impediments to academic performance. If you are experiencing any mental health issues, I and Cal Poly are here to help you. Cal Poly’s Counseling Services (805-756-2511) is a free and confidential resource for assistance, support and advocacy.\n\n\nSomeone is threatening me, what can I do?\nI will listen and believe you if someone is threatening you. I will help you get the help you need. I commit to changing campus culture that responds poorly to dating violence and stalking.\n\n\nWhat if I can’t arrange for childcare?\nIf you are responsible for childcare on short notice, you are welcome to bring children to class with you. If you are a lactating parent, you many take breaks to feed your infant or express milk as needed. If I can support yo in navigating parenting, coursework, and other obligations in any way, please let me know.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#technology-accommodations",
+    "href": "course-support.html#technology-accommodations",
+    "title": "Course support",
+    "section": "Technology accommodations",
+    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#course-materials-costs",
+    "href": "course-support.html#course-materials-costs",
+    "title": "Course support",
+    "section": "Course materials costs",
+    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.).",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "This course uses Posit Cloud for lab assignments and projects. There is a link to join the STAT 313 Posit Cloud Workspace at the bottom of the Week 1 Module on Canvas.\nIf you have worked with R & RStudio before, I do not want you using the local installation of RStudio to work on your Labs / Projects. I cannot help you on your code if things go sideways! If you use Posit Cloud, however, I can “peek in” to your project and help you debug your code. :)",
+    "crumbs": [
+      "Computing",
+      "Access"
+    ]
+  },
+  {
+    "objectID": "activity/week-1-quarto.html",
+    "href": "activity/week-1-quarto.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "Quarto is possibly my favorite thing that happened in 2023! It is an easy-to-use tool for creating reproducible data analyses. Our weekly lab assignments will be done in Quarto, so this week each of you is going to complete your own lab assignment, so you can get to know Quarto a bit on your own.\n\nAccessing Lab 1\nWe will be using Posit Cloud to work with R, so there is no need for you to download any software. However, you will need to create an account for you to be able to access the weekly labs.\nHere are the steps you need to complete for you to access this week’s (and every week’s) lab assignment:\n\nClick on the Posit Cloud link below the “Lab” assignment module on Canvas\nCreate a log-in for Posit Cloud\n\n\n\n\nWhat you will see when you first click on the link to join the Posit Cloud workspace for STAT 313 / 513\n\n\n\nClick “Yes” to join the STAT 313 / 513 workspace\n\n\n\n\nPrompt you should see after you make an account, asking if you want to join the workspace – you should click “Yes”\n\n\n\nIf you successfully joined the workspace, you should see a page that looks like this:\n\n\n\n\nThe “Welcome to Stat 313 / 513 Winter 2024” welcome message you should see if you successfully joined the workspace\n\n\n\n\n\n\n\n\nYour welcome page should reflect the course you are registered for\n\n\n\nIn the image above, the message says “Welcome to Stat 513 Winter 2024”. If you are registered for Stat 313, your welcome message should say “Welcome to Stat 313 Winter 2024”.\n\n\n\nOnce you are in the workspace, you need to access the Content tab, which is where the lab assignments will be listed\n\n\n\n\nWhat you should see if you click on the “Content” tab in the Stat 313 / 513 workspace\n\n\n\nClick on the Lab 1 project to open this week’s lab assignment\n\n 7. Once you are in the Lab 1 project, the final step is to open the Lab 1 Quarto document. To do this, you need to click on the lab-1.qmd document, located in the lower right pane.\n\n\n\nWhere you need to click to open the Lab 1 assignment (lab-1.qmd) and what you should see pop up once you open the document\n\n\nNow that you have Lab 1 open, you are ready to get started! Use the resources below to learn more about working in a Quarto document.\n\n\nLearning About Quarto\n\n🎥 Video Guide of Quarto\nLink to video: https://www.youtube.com/watch?v=_f3latmOhew\n\n\n\n\n\n\nWatch the first 10-minutes!\n\n\n\n\n\n\n\n\n📖 Textbook Guide of Quarto\nLink to textbook chapter: https://r4ds.hadley.nz/quarto.html\n\n\n\n\n\n\nRead sectios 28.1 through 28.5\n\n\n\n\n\n\n\n\n💻 Tutorial of Quarto\nLink to tutorial: https://quarto.org/docs/get-started/hello/rstudio.html\n\n\n\n\n\n\nI’d recommend also watching the video!"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html",
+    "href": "activity/week-5-sample-selection.html",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "",
+    "text": "This activity is designed to help you critically evaluate how the data you are using in your Midterm Project were collected. You only need to complete one section of the activity, the section related to your dataset!"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#inclusion-criteria",
+    "href": "activity/week-5-sample-selection.html#inclusion-criteria",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "Inclusion Criteria",
+    "text": "Inclusion Criteria\nThis activity will lead you in thinking about inclusion criteria–criteria which needed to be met in order for an observation to be included in a sample. Inclusion criteria determine which members of a population can or cannot be included as a possible observation in a study.\nInclusion criteria are used for experiments and observational studies! For example, a clinical trial for a new treatment for individuals with chronic heart failure might require potential subjects to:\n\nbe between 18 to 80 years of age\nhave been diagnosed with chronic heart failure within at least 6 months\nbe currently taking stable doses of heart failure therapies\nbe willing to return for required follow-up (post-test) visits\n\nAnyone meeting the inclusion criteria would be eligible to participate in the study. This does not mean that everyone meeting these criteria would participate in the study! The researchers would then decide how to sample from these eligible participants to obtain the sample for their study.\n\nAlright, let’s give this a go with the dataset you chose for your Midterm Project!"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#and_vertebrates",
+    "href": "activity/week-5-sample-selection.html#and_vertebrates",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "and_vertebrates",
+    "text": "and_vertebrates\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#ntl_icecover",
+    "href": "activity/week-5-sample-selection.html#ntl_icecover",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "ntl_icecover",
+    "text": "ntl_icecover\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#hbr_maples",
+    "href": "activity/week-5-sample-selection.html#hbr_maples",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "hbr_maples",
+    "text": "hbr_maples\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#pie_crab",
+    "href": "activity/week-5-sample-selection.html#pie_crab",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "pie_crab",
+    "text": "pie_crab\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#births14",
+    "href": "activity/week-5-sample-selection.html#births14",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "births14",
+    "text": "births14\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#possum",
+    "href": "activity/week-5-sample-selection.html#possum",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "possum",
+    "text": "possum\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#evals",
+    "href": "activity/week-5-sample-selection.html#evals",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "evals",
+    "text": "evals\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#gapminder",
+    "href": "activity/week-5-sample-selection.html#gapminder",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "gapminder",
+    "text": "gapminder\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "STAT 313: Applied Experimental Design and Regression Models",
+    "section": "",
+    "text": "A deep dive into linear models for analyzing multivariate data sets. In this course, you will learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models. Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data. This class emphasizes data analysis over mathematical theory.",
+    "crumbs": [
+      "Course information",
+      "Overview"
     ]
   },
   {
@@ -3389,486 +3744,117 @@
     ]
   },
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "STAT 313: Applied Experimental Design and Regression Models",
+    "objectID": "course_resources.html",
+    "href": "course_resources.html",
+    "title": "R Resources",
     "section": "",
-    "text": "A deep dive into linear models for analyzing multivariate data sets. In this course, you will learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models. Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data. This class emphasizes data analysis over mathematical theory.",
+    "text": "Tip\n\n\n\nClick on the link related to a specific week to explore R skills learned that week!",
     "crumbs": [
-      "Course information",
-      "Overview"
+      "R Resources",
+      "R Resources"
     ]
   },
   {
-    "objectID": "activity/week-5-sample-selection.html",
-    "href": "activity/week-5-sample-selection.html",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "",
-    "text": "This activity is designed to help you critically evaluate how the data you are using in your Midterm Project were collected. You only need to complete one section of the activity, the section related to your dataset!"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#inclusion-criteria",
-    "href": "activity/week-5-sample-selection.html#inclusion-criteria",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "Inclusion Criteria",
-    "text": "Inclusion Criteria\nThis activity will lead you in thinking about inclusion criteria–criteria which needed to be met in order for an observation to be included in a sample. Inclusion criteria determine which members of a population can or cannot be included as a possible observation in a study.\nInclusion criteria are used for experiments and observational studies! For example, a clinical trial for a new treatment for individuals with chronic heart failure might require potential subjects to:\n\nbe between 18 to 80 years of age\nhave been diagnosed with chronic heart failure within at least 6 months\nbe currently taking stable doses of heart failure therapies\nbe willing to return for required follow-up (post-test) visits\n\nAnyone meeting the inclusion criteria would be eligible to participate in the study. This does not mean that everyone meeting these criteria would participate in the study! The researchers would then decide how to sample from these eligible participants to obtain the sample for their study.\n\nAlright, let’s give this a go with the dataset you chose for your Midterm Project!"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#and_vertebrates",
-    "href": "activity/week-5-sample-selection.html#and_vertebrates",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "and_vertebrates",
-    "text": "and_vertebrates\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#ntl_icecover",
-    "href": "activity/week-5-sample-selection.html#ntl_icecover",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "ntl_icecover",
-    "text": "ntl_icecover\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#hbr_maples",
-    "href": "activity/week-5-sample-selection.html#hbr_maples",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "hbr_maples",
-    "text": "hbr_maples\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#pie_crab",
-    "href": "activity/week-5-sample-selection.html#pie_crab",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "pie_crab",
-    "text": "pie_crab\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#births14",
-    "href": "activity/week-5-sample-selection.html#births14",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "births14",
-    "text": "births14\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#possum",
-    "href": "activity/week-5-sample-selection.html#possum",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "possum",
-    "text": "possum\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#evals",
-    "href": "activity/week-5-sample-selection.html#evals",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "evals",
-    "text": "evals\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-5-sample-selection.html#gapminder",
-    "href": "activity/week-5-sample-selection.html#gapminder",
-    "title": "Sample Selection & Scope of Inference",
-    "section": "gapminder",
-    "text": "gapminder\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
-  },
-  {
-    "objectID": "activity/week-1-quarto.html",
-    "href": "activity/week-1-quarto.html",
-    "title": "Introduction to Quarto",
-    "section": "",
-    "text": "Quarto is possibly my favorite thing that happened in 2023! It is an easy-to-use tool for creating reproducible data analyses. Our weekly lab assignments will be done in Quarto, so this week each of you is going to complete your own lab assignment, so you can get to know Quarto a bit on your own.\n\nAccessing Lab 1\nWe will be using Posit Cloud to work with R, so there is no need for you to download any software. However, you will need to create an account for you to be able to access the weekly labs.\nHere are the steps you need to complete for you to access this week’s (and every week’s) lab assignment:\n\nClick on the Posit Cloud link below the “Lab” assignment module on Canvas\nCreate a log-in for Posit Cloud\n\n\n\n\nWhat you will see when you first click on the link to join the Posit Cloud workspace for STAT 313 / 513\n\n\n\nClick “Yes” to join the STAT 313 / 513 workspace\n\n\n\n\nPrompt you should see after you make an account, asking if you want to join the workspace – you should click “Yes”\n\n\n\nIf you successfully joined the workspace, you should see a page that looks like this:\n\n\n\n\nThe “Welcome to Stat 313 / 513 Winter 2024” welcome message you should see if you successfully joined the workspace\n\n\n\n\n\n\n\n\nYour welcome page should reflect the course you are registered for\n\n\n\nIn the image above, the message says “Welcome to Stat 513 Winter 2024”. If you are registered for Stat 313, your welcome message should say “Welcome to Stat 313 Winter 2024”.\n\n\n\nOnce you are in the workspace, you need to access the Content tab, which is where the lab assignments will be listed\n\n\n\n\nWhat you should see if you click on the “Content” tab in the Stat 313 / 513 workspace\n\n\n\nClick on the Lab 1 project to open this week’s lab assignment\n\n 7. Once you are in the Lab 1 project, the final step is to open the Lab 1 Quarto document. To do this, you need to click on the lab-1.qmd document, located in the lower right pane.\n\n\n\nWhere you need to click to open the Lab 1 assignment (lab-1.qmd) and what you should see pop up once you open the document\n\n\nNow that you have Lab 1 open, you are ready to get started! Use the resources below to learn more about working in a Quarto document.\n\n\nLearning About Quarto\n\n🎥 Video Guide of Quarto\nLink to video: https://www.youtube.com/watch?v=_f3latmOhew\n\n\n\n\n\n\nWatch the first 10-minutes!\n\n\n\n\n\n\n\n\n📖 Textbook Guide of Quarto\nLink to textbook chapter: https://r4ds.hadley.nz/quarto.html\n\n\n\n\n\n\nRead sectios 28.1 through 28.5\n\n\n\n\n\n\n\n\n💻 Tutorial of Quarto\nLink to tutorial: https://quarto.org/docs/get-started/hello/rstudio.html\n\n\n\n\n\n\nI’d recommend also watching the video!"
-  },
-  {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "This course uses Posit Cloud for lab assignments and projects. There is a link to join the STAT 313 Posit Cloud Workspace at the bottom of the Week 1 Module on Canvas.\nIf you have worked with R & RStudio before, I do not want you using the local installation of RStudio to work on your Labs / Projects. I cannot help you on your code if things go sideways! If you use Posit Cloud, however, I can “peek in” to your project and help you debug your code. :)",
+    "objectID": "course_resources.html#bonus",
+    "href": "course_resources.html#bonus",
+    "title": "R Resources",
+    "section": "Bonus",
+    "text": "Bonus\n\nggplot Customizations\n\n\nPivoted Summary Tables",
     "crumbs": [
-      "Computing",
-      "Access"
+      "R Resources",
+      "R Resources"
     ]
   },
   {
-    "objectID": "course-support.html",
-    "href": "course-support.html",
-    "title": "Course support",
+    "objectID": "critique/grading-guides/critique-1-grading.html",
+    "href": "critique/grading-guides/critique-1-grading.html",
+    "title": "Stat Critique 1 Grading Guide",
     "section": "",
-    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
+    "text": "Double Encoding\n\n\n\nIt’s okay if they only mention one of the aesthetics that a variable is associated with when it is mapped to multiple aesthetics.\n\n\nGrowing\n\nDoesn’t name variables mapped to each aesthetic (e.g., only says the x-axis, y-axis, and color are used)\n\nFeedback: We want you to state specifically the names of the variables mapped to each aesthetic!\n\nSays a color aesthetic is used but the same color is used for every observation\n\nFeedback: Careful! Aesthetics are places where variables are being incorporated into the plot. Is the color in this plot associated with a variable?\n\nMisses an aesthetic that is being used\n\nFeedback for general plots: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, there are [multiple plots / multiple colors / multiple lines] not just one. What variable is associated with these separate [plots / colors / lines]?\nFeedback for maps: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, we have “hidden” x- and y-variables. What variables are associated with the location of a state on the map?\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that are done well.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe the visualization does well.\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that could be improved.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe could be improved."
   },
   {
-    "objectID": "course-support.html#lectures-and-labs",
-    "href": "course-support.html#lectures-and-labs",
-    "title": "Course support",
-    "section": "Lectures and labs",
-    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#student-hours",
-    "href": "course-support.html#student-hours",
-    "title": "Course support",
-    "section": "Student Hours",
-    "text": "Student Hours\n\n\n\n\n\n\n\nDay\nTime\n\n\nMondays\n3:10 pm – 4:00 pm (in-person)\n\n\nWednesdays\n2:10 pm - 3:00 pm (individual meetings via Zoom)\n3:10 - 4:00 (in-person)\n\n\n\nA lot of questions are most effectively answered in-person, and student hours are the best place to come ask me questions! I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself.\n\nPersonal Meetings\nIf you would like to talk with me individually, I’ve reserved time on Wednesdays from 3:10pm to 4:00pm for individual appointments. You can make appointments through the following link: https://calendly.com/allisontheobold\nI do request that you make appointments at least 1-hour ahead of time, so I don’t miss our meeting!\nIf you need to meet, but none of the student hours work for you please let me know! It is possible we can communicate asynchronously through Discord or email, but I am happy to schedule a meeting during another time if necessary.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#discord",
-    "href": "course-support.html#discord",
-    "title": "Course support",
-    "section": "Discord",
-    "text": "Discord\nWe will use Discord to manage questions and responses regarding course content. There are channels for the different components of each week (e.g., Week 1 Lab Assignment). Please do not send an email about homework questions or questions about the course material. It is incredibly helpful for others in the course to see the questions you have and the responses to those questions. I will try to answer any questions posted to Discord within 3-4 hours (unless it is posted at midnight). If you think you can answer another student’s question, please respond!",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#email",
-    "href": "course-support.html#email",
-    "title": "Course support",
-    "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should be posted to Discord), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Allison Theobold at atheobol@calpoly.edu.\nI do my best to reply to emails promptly and helpfully. However, I receive a lot of emails. To help both you and me, here are some specific expectations about emails:\n\nPlease tell me what course and section (by time or number) you are in!\nIf you email me between 9am and 4pm on Monday through Friday, I’ll try my best to reply to you on the same day.\nIf you email me outside of those hours, I will do my best to respond to you by the next working day. For my own mental health, I do not work on weekends. Thus, if you send an email after 4pm on Friday or during the weekend, you will not receive a response until Monday morning.\nIf your question is much easier to discuss face-to-face, I may ask you to meet with me in my office or on Discord (at a time that works for both of us) rather than answering directly in an email.\nInclude any relevant photos / screenshots / error messages / PDFs / links with your email.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#well-being-access-and-accommodations",
-    "href": "course-support.html#well-being-access-and-accommodations",
-    "title": "Course support",
-    "section": "Well-being, Access, and Accommodations",
-    "text": "Well-being, Access, and Accommodations\n\nWhat if I have accommodations or feel that accommodations would be beneficial to my learning?\nI enthusiastically support the mission of Disability Resource Center to make education accessible to all. I design all my courses with accessibility at the forefront of my thinking, but if you have any suggestions for ways I can make things more accessible, please let me know. Come talk to me if you need accommodation for your disabilities. I honor self-diagnosis: let’s talk to each other about how we can make the course as accessible as possible. See also the standard syllabus statements, which include more information about formal processes.\n\n\nI’m having difficulty paying for food and rent, what can I do?\nIf you have difficulty affording groceries or accessing sufficient food to eat every day, or if you lack a safe and stable place to live, and you believe this may affect your performance in the course, I urge you to contact the Dean of Students for support. Furthermore, please notify me if you are comfortable in doing so. This will enable me to advocate for you and to connect you with other campus resources.\n\n\nMy mental health is impairing my ability to engage in my classes, what should I do?\nNational surveys of college students have consistently found that stress, sleep problems, anxiety, depression, interpersonal concerns, death of a significant other and alcohol use are among the top ten health impediments to academic performance. If you are experiencing any mental health issues, I and Cal Poly are here to help you. Cal Poly’s Counseling Services (805-756-2511) is a free and confidential resource for assistance, support and advocacy.\n\n\nSomeone is threatening me, what can I do?\nI will listen and believe you if someone is threatening you. I will help you get the help you need. I commit to changing campus culture that responds poorly to dating violence and stalking.\n\n\nWhat if I can’t arrange for childcare?\nIf you are responsible for childcare on short notice, you are welcome to bring children to class with you. If you are a lactating parent, you many take breaks to feed your infant or express milk as needed. If I can support yo in navigating parenting, coursework, and other obligations in any way, please let me know.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#technology-accommodations",
-    "href": "course-support.html#technology-accommodations",
-    "title": "Course support",
-    "section": "Technology accommodations",
-    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#course-materials-costs",
-    "href": "course-support.html#course-materials-costs",
-    "title": "Course support",
-    "section": "Course materials costs",
-    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.).",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "Course Instructor",
+    "objectID": "critique/grading-guides/critique-1-grading.html#pop-visualization-nyt-scientific-visualization",
+    "href": "critique/grading-guides/critique-1-grading.html#pop-visualization-nyt-scientific-visualization",
+    "title": "Stat Critique 1 Grading Guide",
     "section": "",
-    "text": "Dr. Allison Theobold (she / they) is an Assistant Professor of Statistics at Cal Poly in beautiful San Luis Obispo, California. Allison received her doctorate in Statistics, with an emphasis in Statistics Education, from Montana State University. Allison’s work focuses on innovation in statistics and data science education, with an emphasis on equitable pedagogy and learning trajectories. Allison is also interested in exploring pedagogical approaches for enhancing retention of under-represented students in STEM, including creating inclusive discoursive spaces and equitable group collaborations.",
-    "crumbs": [
-      "Course information",
-      "Teaching team"
-    ]
+    "text": "Double Encoding\n\n\n\nIt’s okay if they only mention one of the aesthetics that a variable is associated with when it is mapped to multiple aesthetics.\n\n\nGrowing\n\nDoesn’t name variables mapped to each aesthetic (e.g., only says the x-axis, y-axis, and color are used)\n\nFeedback: We want you to state specifically the names of the variables mapped to each aesthetic!\n\nSays a color aesthetic is used but the same color is used for every observation\n\nFeedback: Careful! Aesthetics are places where variables are being incorporated into the plot. Is the color in this plot associated with a variable?\n\nMisses an aesthetic that is being used\n\nFeedback for general plots: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, there are [multiple plots / multiple colors / multiple lines] not just one. What variable is associated with these separate [plots / colors / lines]?\nFeedback for maps: You’ve got a great start, but there are some aesthetics in this plot that are missing from your description. Technically, we have “hidden” x- and y-variables. What variables are associated with the location of a state on the map?\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that are done well.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe the visualization does well.\n\n\n\nGrowing\n\nOnly says one thing the visualization does well\n\nFeedback: Careful! You were asked to provide TWO aspects of the visualization that could be improved.\n\nAt least one statement about what the visualization does well is unclear\n\nFeedback: I’m having a hard time understanding what specific aspect you believe could be improved."
   },
   {
-    "objectID": "critique/critique-1.html",
-    "href": "critique/critique-1.html",
-    "title": "Statistical Critique 1",
+    "objectID": "labs/grading-guides/lab-1-grading-guide.html",
+    "href": "labs/grading-guides/lab-1-grading-guide.html",
+    "title": "Lab 1 – Grading Guide",
     "section": "",
-    "text": "In your first statistical critique will focus on critiquing a key aspect of any statistical argument—data visualization. You have explored data visualizations over the last two weeks, thinking about what makes a plot more or less clear. You will use your knowledge of data visualizations to provide a critique for two different styles of visualizations, (1) a “pop” visualization, and (2) a “scientific” visualization.\n\n\nYou are expected to include the two visualizations you decide to critique. These visualizations must be included in the paragraph surrounding your critique. Please do not include the images at the end of your document.\n\n\nFor the New York Times visualization, you can left click on the image and save it to your computer.\n\n\n\nFigure 1: Options when left clicking on NYT visualization – select “Save Image As…” to save it to your computer\n\n\nFor the visualization from your chosen research article, you may need to take screenshot of the page and crop it to only include the image.\n\n\n\nFigure 2: Screenshot of a single image from one of the scientific research articles\n\n\n\n\n\n\nYou are allowed to use any text editing software to make your critique (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
+    "text": "To earn a “Complete” students need to have:"
   },
   {
-    "objectID": "critique/critique-1.html#including-your-visualizations",
-    "href": "critique/critique-1.html#including-your-visualizations",
-    "title": "Statistical Critique 1",
+    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
+    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-document-doesnt-contain-answers",
+    "title": "Lab 1 – Grading Guide",
+    "section": "If their document doesn’t contain answers",
+    "text": "If their document doesn’t contain answers\nGeneral Comment\nCareful! Your document doesn’t contain any of your responses for Questions 5 through 10. In order for your responses to show up in the final submission, you need to (re)render the document after you have finished answering all the questions.\nFor Question 6\nLook over the solutions from Dr. Theobold for a tip on this question!"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-1-grading-guide.html#question-6",
+    "href": "labs/grading-guides/lab-1-grading-guide.html#question-6",
+    "title": "Lab 1 – Grading Guide",
+    "section": "Question 6",
+    "text": "Question 6\nIf they say the data are Audi cars\nTechnically, the first ten rows (observations) in the mpg data are Audi cars. Go back into Posit Cloud and use the arrow buttons (in the code chunk labeled mpg-data) to look at the other rows in these data. Does the mpg dataset contain only data on Audi cars?\nIf they say the observations are manufacturer, model, year, etc.\nYes, this dataset does include manufacturer, model, year, cyl as variables (columns) in the dataset. But what does each row represent? Look over the solutions from Dr. Theobold for a tip on this question!"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
+    "href": "labs/grading-guides/lab-1-grading-guide.html#if-their-image-doesnt-appear-but-they-have-answers-to-the-rest-of-the-questions",
+    "title": "Lab 1 – Grading Guide",
+    "section": "If their image doesn’t appear but they have answers to the rest of the questions",
+    "text": "If their image doesn’t appear but they have answers to the rest of the questions\nNice job completing all the questions! Be careful to double check that your image is appearing in your final HTML document. In your submitted file we can’t see the image you wanted to include."
+  },
+  {
+    "objectID": "project/final-presentations/presentation-instructions.html",
+    "href": "project/final-presentations/presentation-instructions.html",
+    "title": "Final Project Presentations",
     "section": "",
-    "text": "You are expected to include the two visualizations you decide to critique. These visualizations must be included in the paragraph surrounding your critique. Please do not include the images at the end of your document.\n\n\nFor the New York Times visualization, you can left click on the image and save it to your computer.\n\n\n\nFigure 1: Options when left clicking on NYT visualization – select “Save Image As…” to save it to your computer\n\n\nFor the visualization from your chosen research article, you may need to take screenshot of the page and crop it to only include the image.\n\n\n\nFigure 2: Screenshot of a single image from one of the scientific research articles"
+    "text": "During finals week each of you will give a 3-minute presentation on one aspect of your final project you found the most interesting. Notice, you need to pick one aspect, since your presentation is so short.\nHere are some examples of what you could choose:\nOf course you could choose other topics, the only requirement is that your topic is related to what you did in your final project."
   },
   {
-    "objectID": "critique/critique-1.html#submission",
-    "href": "critique/critique-1.html#submission",
-    "title": "Statistical Critique 1",
+    "objectID": "project/final-presentations/presentation-instructions.html#slides",
+    "href": "project/final-presentations/presentation-instructions.html#slides",
+    "title": "Final Project Presentations",
+    "section": "Slides",
+    "text": "Slides\nFor your presentation you are allowed to make two slides:\n\nA title slide (make it fun!) with your name\nA content slide\n\nSlides are due by 5pm the night before your final exam timeslot. If you do not submit slides by the deadline, you will not be allowed to present.\n\nSTAT 313-02 – slides are due by Monday (June 10) by 5pm\nSTAT 313-01 – slides are due by Tuesday (June 11) by 5pm\n\n\n\n\n\n\n\nCaution\n\n\n\nYour slides must be submitted as a PDF. Make sure they are saved in the correct orientation! I do not have the time to open PowerPoint slides and convert them to a PDF. So, if you do not submit your slides as a PDF, you will not be allowed to present."
+  },
+  {
+    "objectID": "project/final-presentations/presentation-instructions.html#presentations",
+    "href": "project/final-presentations/presentation-instructions.html#presentations",
+    "title": "Final Project Presentations",
+    "section": "Presentations",
+    "text": "Presentations\nFor ease, I will randomly order the presentations. If you have a strong preference for when you would like to present, you can request a position. However, I cannot guarantee that I can accommodate every request.\nI will publish the order of presentations by 8pm the day before the final exam."
+  },
+  {
+    "objectID": "project/final-project-help/no-gos.html",
+    "href": "project/final-project-help/no-gos.html",
+    "title": "Things that cannot go in your project!",
     "section": "",
-    "text": "You are allowed to use any text editing software to make your critique (e.g., Word, Pages, Google Docs), but your submission must be a PDF. If you are unsure how to save your file as a PDF, I recommend using Google!"
+    "text": "Statements of hypotheses (e.g., \\(H_0\\) or \\(H_A\\))\nStatements that say your condition has been “met” 😡\n\nIf you have no evidence that the condition is violated, simply state so.\n\nThe s-word (significance) 😱\n\nProvide a more descriptive summary of your findings!\n\nLong paragraphs!\n\nBreak into smaller 3-4 sentence paragraphs surrounding the same topic.\n\nThe same sentence written in multiple sections. 🙃"
   },
   {
-    "objectID": "critique/critique-1.html#getting-started",
-    "href": "critique/critique-1.html#getting-started",
-    "title": "Statistical Critique 1",
-    "section": "2.1 Getting Started",
-    "text": "2.1 Getting Started\n\nGo to the What’s Going on in This Graph website\nScroll through the weekly graphs and click on a plot that you are interested in\nSave the image to your computer (as instructed above)\nInsert the image in your document (before your written critique)"
-  },
-  {
-    "objectID": "critique/critique-1.html#visualization-critique",
-    "href": "critique/critique-1.html#visualization-critique",
-    "title": "Statistical Critique 1",
-    "section": "2.2 Visualization Critique",
-    "text": "2.2 Visualization Critique\nYour critique of the visualization you selected needs to address the following questions:\n\nWhat aesthetics are being used in the plot?\n\n\n\n\n\n\n\nAesthetics places where variables are being included in the plot!\n\n\n\nIf your plot uses color, but the color is not associated with a variable (e.g., every point is yellow), then color is not an aesthetic in the plot!\n\n\n\nName at least two things the visualization does well — What makes the visualization clear to the reader?\nName at least two ways the visualization could be improved — What would the reader struggle to understand?"
-  },
-  {
-    "objectID": "critique/critique-1.html#choosing-an-article",
-    "href": "critique/critique-1.html#choosing-an-article",
-    "title": "Statistical Critique 1",
-    "section": "3.1 Choosing an Article",
-    "text": "3.1 Choosing an Article\n\nTo save everyone time spent hunting for an interesting scientific article that has both visualizations and statistical methods taught in this course, I’ve gone ahead and found three articles from different contexts:\n\nSensitivity and Specificity of a Novel Classifier for the Early Diagnosis of Dengue\n\nAbstract:\nDengue is a very common acute infectious disease in the tropical world. Health care professionals are able to better care for dengue patients if they can make an early diagnosis and make a plan for case management. This article investigated fever in 5729 children in Vietnam with 3 days or less of fever and identified 1692 dengue cases using advanced methods. We systematically collected a range of medical and laboratory findings on each patient when they entered the study and used statistical tools to determine if these medical and laboratory findings could enable early diagnosis, independent of sophisticated, gold-standard laboratory tests. Our results, called the Early Dengue Classifier, had performance characteristics suggesting it could improve the diagnostic proficiency of health care professionals. However the performance of the Early Dengue Classifier is not perfect and likely will not change the practice of experienced doctors in dengue endemic settings. Our study highlights the need for 2nd generation, easy-to-use rapid diagnostic tests that can accurately diagnose dengue in the first few days of fever.\n\nAI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking\n\nAbstract:\nThe proliferation of artificial intelligence (AI) tools has transformed numerous aspects of daily life, yet its impact on critical thinking remains under explored. This study investigates the relationship between AI tool usage and critical thinking skills, focusing on cognitive offloading as a mediating factor. Utilizing a mixed-method approach, we conducted surveys and in-depth interviews with 666 participants across diverse age groups and educational backgrounds. Quantitative data were analysed using ANOVA and correlation analysis, while qualitative insights were obtained through thematic analysis of interview transcripts. The findings revealed a significant negative correlation between frequent AI tool usage and critical thinking abilities, mediated by increased cognitive offloading. Younger participants exhibited higher dependence on AI tools and lower critical thinking scores compared to older participants. Furthermore, higher educational attainment was associated with better critical thinking skills, regardless of AI usage. These results highlight the potential cognitive costs of AI tool reliance, emphasizing the need for educational strategies that promote critical engagement with AI technologies. This study contributes to the growing discourse on AI’s cognitive implications, offering practical recommendations for mitigating its adverse effects on critical thinking. The findings underscore the importance of fostering critical thinking in an AI-driven world, making this research essential reading for educators, policymakers, and technologists."
-  },
-  {
-    "objectID": "critique/critique-1.html#isolating-the-visualization",
-    "href": "critique/critique-1.html#isolating-the-visualization",
-    "title": "Statistical Critique 1",
-    "section": "3.2 Isolating the Visualization",
-    "text": "3.2 Isolating the Visualization\n\nLocate a visualization in the article you chose. If there are multiple visualizations choose one!\nTake a screenshot of the visualization.\nCrop the image to only include the visualization you are critiquing.\nSave the image to your computer (as instructed above).\nInsert the image in your document (before your written critique)."
-  },
-  {
-    "objectID": "critique/critique-1.html#visualization-critique-1",
-    "href": "critique/critique-1.html#visualization-critique-1",
-    "title": "Statistical Critique 1",
-    "section": "3.3 Visualization Critique",
-    "text": "3.3 Visualization Critique\nYour critique of the visualization you selected needs to address the following questions:\n\nWhat aesthetics are being used in the visualization?\nName at least two things the visualization does well — What makes the visualization clear to the reader?\nName at least two ways the visualization could be improved — What would the reader struggle to understand?"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STAT 313: Applied Experimental Design and Regression Models",
+    "objectID": "project/final-project/final-project-grading-rubric.html",
+    "href": "project/final-project/final-project-grading-rubric.html",
+    "title": "Final Project Rubric",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nLecture Slides\nActivity\nLab\nCritique\nProject\n\n\n\n\n0\nSun, March 31\nWelcome to Stat 313 Course Set-up\n📖\n\n\n\n\n\n\n\n1\nMon, March 31 (no class)\nCourse Structure & Statistics Review\n📖\n\n\n\n\n\n\n\n\nWed, April 2\nIntroduction to Data\n\n🖥\n🎥\n📋\n💻  Due April 7  Lab 1 Feedback\nLab 1 Solutions\n\n\n\n\n2\nMon, April 7\nVisualizing & Summarizing Numerical Variables\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, April 9\nExploring Flight Delays\n\n🖥\n\n💻  Due April 14  Lab 2 Feedback\n\n\n\n\n3\nMon, April 14\nIncorporating Categorical Variables\n📖\n🖥\n\n\n\n\n\n\n\nWed, April 16\nEthics & Categorical Variables\n\n🖥\n\n💻  Due April 21  Lab 3 Feedback\n✍Statistical Critique 1\n📖 Reading a Research Paper Pt. 1\n\n\n4\nMon, April 21\nIntroduction to Linear Regression\n📖\n🖥\n\n\nStatistical Critique 1 Due\n Statistical Critique 1 Feedback\nReading a Research Paper Pt. 1 Due\n\n\n\nWed, April 23\nThe Ugly History of Linear Regression\n\n🖥\n\n💻  Due April 28  Lab 4 Feedback\n\n📁 Midterm Project Proposal\n📖 Reading a Research Paper Pt. 2\n\n\n5\nMon, April 28\nIntroduction to Multiple Linear Regression\n📖\n🖥\n📋\n\n\nMidterm Project Proposal Due\n\n\n\nWed, April 30\nWork Day – Coding a Multiple Linear Regression\n\n🖥\n📋\n\n\nReading a Research Paper Pt. 2 Due\n\n\n\nSun, May 4\n\n\n\n\n\n\nMidterm Project First Draft Due\nGradin Rubric: ✅\nFeedback: 📣\n\n\n6\nMon, May 5\nVariable Selection in Multiple Linear Regression\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 7\nSampling Variability\n📖\n🖥\n📋\n💻  Due May 12  Lab 6 Feedback\n\n\n\n\n\nSun, May 11\n\n\n\n\n\n\nMidterm Project Final Version Due\n\n\n7\nMon, May 12\nConfidence Intervals\n\n🖥\n\n\n\n\n\n\n\nWed, May 14\np-values & Hypothesis Tests\n📖\n🖥\n📋\n💻  Due May 19  Lab 7 Feedback\n✍ Statistical Critique 2\n\n\n\n8\nMon, May 19\nSimulation-based Methods vs. Theory-based Methods\n\n🖥\n\n\n✍Statistical Critique 2 Due\n\n\n\n\nWed, May 21\nOne-Way Analysis of Variance\n📖\n🖥\n\n💻  Due May 26  Lab 8 Feedback\n\n\n\n\n9\nMon, May 26\nNo Class, School Holiday\n\n\n\n\n\n\n\n\n\n\n\nTues, May 27\nClasses follow a Monday Schedule\nInference for OWA\n\n🖥\nAssessing Independence: 📋\n\n\n📁 Final Project Instructions\n\n\n\nWed, May 28\nWork Day – Coding a OWA\n\n\n\n\n\n\n\n\n\nSun, June 2\n\n\n\n\n\n\nFinal Project First Draft Due  Grading Rubric: ✅\n\n\n10\nMon, June 2\nTwo-Way ANOVA Models\n📖\n🖥\n\n\n\n\n\n\n\nWed, June 4\nLast Day of STAT 313\n\n🖥\n\n\n\nWhat should not be in your project: 📋\n\n\n\nSun, June 8\nFinal Project Final Version Due\n\n\n\n\n\nGrading Rubric: ✅\n\n\nFinals Week\nSTAT 313-01 & 02\nPoster Presentations\nSaturday, June 7, time TBD\n\n\n\n\n\nPresentation Instructions",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
+    "text": "Introduction\nMethods\nFindings\nStudy Limitations\nConclusions\n\n\n\n\nExcellent\n\nProvides robust description of data and context.\nWell articulated research question(s) correctly phrased for a one-way ANOVA.\n\n\nOutlines variables considered for analysis, describes how variables were collected, including their associated units / levels.\nCreates data visualizations requested, axis labels allow visualization to be interpreted independent of additional information.\nProvides robust description of relationships seen in visualization.\n\n\nCorrectly fits one-way ANOVA models and obtains ANOVA table.\nProvides well written conclusion regarding the hypotheses tested in the both one-way ANOVAs, with few if any errors that do not bring into question understanding of the underlying concepts.\nCorrectly determines if an additive two-way ANOVA model should be fit.\n(If applicable) Provides well written conclusion regarding the hypotheses tested in the two-way ANOVA, with few if any errors that do not bring into question understanding of the underlying concepts.\nEvaluates conditions of one-way ANOVA model with few if any errors that do not bring into question understanding of the underlying concepts.\n\n\nClearly articulates sampling methodology used in study, connects methodology to whom the analysis can be inferred onto.\nClearly articulates the design of the study, connects study design to what relationships can be inferred between the variables.\nInterpretations are all described in the context of the data, not in general terms.\n\n\nProvides well articulated description of how the findings from the statistical model(s) connect to what was seen in visualizations.\nReaches a conclusion for the research question stated in the Introduction.\n\n\n\nSatisfactory\n\nProvides satisfactory description of data, but description lacks some details regarding the context.\nResearch question(s) articulated but contain instances of incorrect language for a one-way ANOVA.\n\n\nOutlines variables considered for analysis, omitting some details regarding how the variables were collected and / or their associated units / levels.\nCreates data visualizations requested, some additional information is needed to supplement axis labels.\nProvides satisfactory description of relationships seen in visualization, where some details have been omitted.\n\n\nCorrectly fits one-way ANOVA models and obtains ANOVA table.\nProvides well written conclusion regarding the hypotheses tested in the both one-way ANOVAs, with some errors that bring into question understanding of underlying concepts.\nCorrectly determines if an additive two-way ANOVA model should be fit.\n(If applicable) Provides well written conclusion regarding the hypotheses tested in the two-way ANOVA, with some errors that bring into question understanding of underlying concepts.\nEvaluates conditions of one-way ANOVA model with some errors that bring into question understanding of underlying concepts.\n\n\nDescribes sampling methodology used in study and states whom the analysis can be inferred onto, but connections between methods and inference are at times unclear.\nStatement regarding what relationships can be inferred between the variables is mostly clear, with connections to the design of the study.\nInterpretations are all described in the context of the study.\n\n\nDescription of connection between model findings and visualizations are mostly clear, but connections to the research question stated in the Introduction are at times unclear.\n\n\n\nProgressing\n\nProvides poor description of data, where description lacks multiple details regarding the context.\nResearch question(s) poorly articulated, with little to no general connection to a one-way ANOVA.\n\n\nOutlines variables considered for analysis, with very few details regarding how they were collected and / or their associated units / levels.\nCreates data visualizations requested, axis labels require additional information to understand the context.\nProvides poor description of relationships seen in visualization.\n\n\nDoes not correctly fit one-way ANOVA models and obtains ANOVA table.\nProvides written conclusion regarding the hypotheses tested in the both one-way ANOVAs, with many errors that bring into question understanding of underlying concepts.\nDoes not correctly determine if an additive two-way ANOVA model should be fit.\n(If applicable) Provides written conclusion regarding the hypotheses tested in the both two-way ANOVA, with many errors that bring into question understanding of underlying concepts.\nEvaluates conditions of one-way ANOVA model with many errors that bring into question understanding of underlying concepts.\n\n\nStatement regarding who the analysis can be inferred to is mostly unclear, with few if any connections to the sampling methodology used.\nStatement regarding what relationships can be inferred between the variables is mostly unclear, with few if any connections to the design of the study.\nInterpretations are done in general statements, not in the context of the study.\n\n\nDescription of connection between model findings and visualization is unclear with little to no connection to the research question stated in the Introduction.\n\n\n\nNo Credit\n\nProvides little to no description of data.\nResearch question(s) not articulated.\n\n\nOutlines variables considered for analysis, with no details regarding their associated units / levels.\nCreates data visualizations requested, axis labels are not changed.\nProvides little to no description of relationships seen in visualization.\n\n\nDoes not fit one-way ANOVA models and obtains ANOVA table.\nInterpretations of one-way ANOVA contain multiple errors that demonstrate little to no understanding of the underlying concepts.\nDoes not correctly determine if an additive two-way ANOVA model should be fit.\nEvaluation of model conditions bring into question any understanding of the underlying concepts.\n\n\nStatement regarding who the analysis can be inferred to is mostly unclear, with no connections to the sampling methodology used.\nStatement regarding what relationships can be inferred between the variables is mostly unclear, with no connections to the design of the study.\nInterpretations are done in general statements, not in the context of the study.\n\n\nLittle to no description of connection between models fit and visualization, no connection to the research question stated in the Introduction."
   },
   {
-    "objectID": "labs/grading-guides/lab-6-grading-guide.html",
-    "href": "labs/grading-guides/lab-6-grading-guide.html",
-    "title": "Lab 6 Grading Guide",
-    "section": "",
-    "text": "Note\n\n\n\nBased on my code, the model selection process should go:\ncls_credits \\(\\rightarrow\\) bty_avg \\(\\rightarrow\\) gender\nIn Step 4 they are given two variables (cls_perc_eval, eval_completion) which both increase adjusted \\(R^2\\) by 0.018, not the 0.02 which is required to add another variable. So, everyone should stop at Step 4.\n\n\n\n\nTo earn a Success:\n\nfits other 7 models (rank, pic_outfit, pic_color, large_class, eval_completion, cls_level)\nfinds other 7 adjusted \\(R^2\\) values\nstates top model includes cls_credits variable\n\nIf they do not state the top model or what variable was chosen:\n\nCareful! Technically, you told me the name of the object that contains the model you decided was best. I want you to tell me the name of the variable(s) included in that model!\n\n\n\n\nTo earn a Success:\n\nfits 13 models that include the variable chosen in #1 as an explanatory variable\nfinds 13 adjusted \\(R^2\\) values\nstates top model includes cls_credits & bty_avg\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are two variables in the model (e.g., “beauty average was chosen” or “beauty score was included”):\n\nCareful! Your model contains more variables than just bty_avg. Be specific about naming every variable included in your top model!\n\n\n\n\nTo earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1 and #2 as an explanatory variables\nstates top model includes all the variables they’ve chosen (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1 or #2 as an explanatory variable\n\nCareful! Thus far, you’ve chosen two variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are three variables in the model (e.g., “gender was included in the model” or “gender was chosen”):\n\nCareful! You were specifically asked to name EVERY variable included in your top model.\n\n\n\n\nTo earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1, #2, and #3 as an explanatory variables\nstate the top model is the model from Step 3 (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1, #2, or #3 as an explanatory variable\n\nCareful! Thus far, you’ve chosen three variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\nIf they choose to add either cls_perc_eval or eval_completion:\n\nCareful! Look back at the adjusted R-squareds for these variables. Did they increase 2% (0.02) from your last adjusted R-squared?\n\n\n\n\nTo earn a Success:\n\nstates that the step() function did not choose the same model\nstate that this difference was caused by different criteria (or the use of AIC)\n\nIf they don’t talk about the step() function using a different model comparison criteria:\n\nLook back at the output from the step() function, specifically the first line of the output. Based on this line, do you think the step() function is also using adjusted R-squared to decide what model is best? If not, what criteria do you think the step() function is using?"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-1",
-    "href": "labs/grading-guides/lab-6-grading-guide.html#question-1",
-    "title": "Lab 6 Grading Guide",
-    "section": "",
-    "text": "To earn a Success:\n\nfits other 7 models (rank, pic_outfit, pic_color, large_class, eval_completion, cls_level)\nfinds other 7 adjusted \\(R^2\\) values\nstates top model includes cls_credits variable\n\nIf they do not state the top model or what variable was chosen:\n\nCareful! Technically, you told me the name of the object that contains the model you decided was best. I want you to tell me the name of the variable(s) included in that model!"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-2",
-    "href": "labs/grading-guides/lab-6-grading-guide.html#question-2",
-    "title": "Lab 6 Grading Guide",
-    "section": "",
-    "text": "To earn a Success:\n\nfits 13 models that include the variable chosen in #1 as an explanatory variable\nfinds 13 adjusted \\(R^2\\) values\nstates top model includes cls_credits & bty_avg\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are two variables in the model (e.g., “beauty average was chosen” or “beauty score was included”):\n\nCareful! Your model contains more variables than just bty_avg. Be specific about naming every variable included in your top model!"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-3",
-    "href": "labs/grading-guides/lab-6-grading-guide.html#question-3",
-    "title": "Lab 6 Grading Guide",
-    "section": "",
-    "text": "To earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1 and #2 as an explanatory variables\nstates top model includes all the variables they’ve chosen (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1 or #2 as an explanatory variable\n\nCareful! Thus far, you’ve chosen two variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\n\n\n\n\n\n\nIndicating Multiple Variables\n\n\n\nThe response needs to indicate in some way that there are two variables included in the model. This can be by saying bty_avg was “added” to the previous model or by stating both variables included in the model.\n\n\nIf they do not indicate that there are three variables in the model (e.g., “gender was included in the model” or “gender was chosen”):\n\nCareful! You were specifically asked to name EVERY variable included in your top model."
-  },
-  {
-    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-4",
-    "href": "labs/grading-guides/lab-6-grading-guide.html#question-4",
-    "title": "Lab 6 Grading Guide",
-    "section": "",
-    "text": "To earn a Success:\n\nmodifies code to fit models that include the variables chosen in #1, #2, and #3 as an explanatory variables\nstate the top model is the model from Step 3 (cls_credits, bty_avg, gender)\n\nIf they don’t include a variable from #1, #2, or #3 as an explanatory variable\n\nCareful! Thus far, you’ve chosen three variables to be included in your model. So, your code (the map() function and select() function) need to have both these variables included, not just one!\n\nIf they choose to add either cls_perc_eval or eval_completion:\n\nCareful! Look back at the adjusted R-squareds for these variables. Did they increase 2% (0.02) from your last adjusted R-squared?"
-  },
-  {
-    "objectID": "labs/grading-guides/lab-6-grading-guide.html#question-6",
-    "href": "labs/grading-guides/lab-6-grading-guide.html#question-6",
-    "title": "Lab 6 Grading Guide",
-    "section": "",
-    "text": "To earn a Success:\n\nstates that the step() function did not choose the same model\nstate that this difference was caused by different criteria (or the use of AIC)\n\nIf they don’t talk about the step() function using a different model comparison criteria:\n\nLook back at the output from the step() function, specifically the first line of the output. Based on this line, do you think the step() function is also using adjusted R-squared to decide what model is best? If not, what criteria do you think the step() function is using?"
-  },
-  {
-    "objectID": "project/final-project-help/assess_independence.html",
-    "href": "project/final-project-help/assess_independence.html",
-    "title": "Evaluating Independence",
-    "section": "",
-    "text": "Independence is about observations and relationships between observations."
-  },
-  {
-    "objectID": "project/final-project-help/assess_independence.html#independence-within-groups",
-    "href": "project/final-project-help/assess_independence.html#independence-within-groups",
-    "title": "Evaluating Independence",
-    "section": "Independence Within Groups",
-    "text": "Independence Within Groups\n\nWhat are the groups in your analysis?\nAre the observations within those groups related?\n\nIs an observation included multiple times within a group?\nAre there relationships (e.g., biological, spatial, temporal) between the observations?"
-  },
-  {
-    "objectID": "project/final-project-help/assess_independence.html#independence-between-groups",
-    "href": "project/final-project-help/assess_independence.html#independence-between-groups",
-    "title": "Evaluating Independence",
-    "section": "Independence Between Groups",
-    "text": "Independence Between Groups\n\nWhat are the groups in your analysis?\nAre the observations between those groups related?\n\nCan an observation appear in more than one group?"
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html",
-    "href": "project/final-project/final-project-directions.html",
-    "title": "Final Project Guidelines",
-    "section": "",
-    "text": "For this project, you are expected to use a two-way ANOVA to investigate the relationship between one numerical response variable and two categorical explanatory variables. You are permitted to use the same dataset as your Midterm Project, so long as there are at least two categorical variables to choose from.\n\n\n\n\n\n\nDiscretizing numerical variables\n\n\n\nIf you would like to analyze a discrete numerical variable (e.g., number of pets) as a categorical variable, you will need to convert that variable into a categorical variable in R as R assumes all variables with numbers should be numerical.\nYou will need Dr. Theobold’s help to perform this task. Dr. Theobold will work with you to convert your variable as long as you request help before Friday, May 31 at 4pm.",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html#your-task",
-    "href": "project/final-project/final-project-directions.html#your-task",
-    "title": "Final Project Guidelines",
-    "section": "",
-    "text": "For this project, you are expected to use a two-way ANOVA to investigate the relationship between one numerical response variable and two categorical explanatory variables. You are permitted to use the same dataset as your Midterm Project, so long as there are at least two categorical variables to choose from.\n\n\n\n\n\n\nDiscretizing numerical variables\n\n\n\nIf you would like to analyze a discrete numerical variable (e.g., number of pets) as a categorical variable, you will need to convert that variable into a categorical variable in R as R assumes all variables with numbers should be numerical.\nYou will need Dr. Theobold’s help to perform this task. Dr. Theobold will work with you to convert your variable as long as you request help before Friday, May 31 at 4pm.",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html#data-description",
-    "href": "project/final-project/final-project-directions.html#data-description",
-    "title": "Final Project Guidelines",
-    "section": "1.1 Data Description",
-    "text": "1.1 Data Description\nIn 4-6 sentences describe:\n\nhow the data were collected\nthe context of the data (e.g., are the data from from a published study?)\nthe background of the research problem (e.g., why were the data collected?)",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html#questions-of-interest",
-    "href": "project/final-project/final-project-directions.html#questions-of-interest",
-    "title": "Final Project Guidelines",
-    "section": "1.2 Questions of Interest",
-    "text": "1.2 Questions of Interest\nState the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should be phrased in terms of your alternative hypothesis, meaning it should start with “Does the mean ___ differ based on ___ …”. Your Findings section should directly address the question(s) you pose here.\n\n\n\n\n\n\nMultiple research questions\n\n\n\nThis week you are starting with research questions are appropriate for the one-way ANOVA models you are fitting. However, you may find that you need to add research questions based on the models you fit in Week 10!",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html#one-way-anova-models",
-    "href": "project/final-project/final-project-directions.html#one-way-anova-models",
-    "title": "Final Project Guidelines",
-    "section": "3.1 One-Way ANOVA Models",
-    "text": "3.1 One-Way ANOVA Models\nEveryone starts here! In this section, you need to do the following:\n\nFit two one-way ANOVA models – one model for each categorical explanatory variable\nObtain the ANOVA table for the model\nBased on the ANOVA table, state what decision was reached for the hypothesis in the one-way ANOVA model\nBased on the decision you made, state what you can conclude regarding the relationship between your variables",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html#two-way-anova-additive-model",
-    "href": "project/final-project/final-project-directions.html#two-way-anova-additive-model",
-    "title": "Final Project Guidelines",
-    "section": "3.2 Two-Way ANOVA Additive Model",
-    "text": "3.2 Two-Way ANOVA Additive Model\n\n\n\n\n\n\nWhen to proceed\n\n\n\nIf you rejected the null hypothesis for both one-way ANOVA models, you can proceed to fitting a two-way ANOVA model\n\n\n\nFit a two-way ANOVA additive model\nObtain the tidy ANOVA table for the model\nBased on the ANOVA table, state what decision was reached for each hypothesis in the two-way ANOVA additive model.\nBased on the decision you made, state what you can conclude regarding the relationship between your variables.",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/final-project/final-project-directions.html#model-validity",
-    "href": "project/final-project/final-project-directions.html#model-validity",
-    "title": "Final Project Guidelines",
-    "section": "3.3 Model Validity",
-    "text": "3.3 Model Validity\n\nEvaluate the conditions of both one-way ANOVA models\n\n\n\n\n\n\n\nCondition violations\n\n\n\nIf you find through the study design and / or your visualizations that certain model conditions are violated, you are expected to do your best to remedy these violations. If you need help figuring out how to do this, email Dr. Theobold before Friday, May 31 at 4pm!\n\n\n\nBased on your analysis of the conditions, describe whether you believe the tests you performed are “reliable.”",
-    "crumbs": [
-      "Projects",
-      "Final Project Description"
-    ]
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html",
-    "href": "project/midterm-project-help/midterm-project-feedback.html",
-    "title": "Midterm Project Feedback Guide",
-    "section": "",
-    "text": "Excellent\nQuestion is posed in terms of the multiple linear regression model:\n\none numerical & one categorical explanatory variables - if the relationship (between x and y) differs based on the categorical variable\ntwo numerical explanatory variables – if there is a relationship between each explanatory variable and the response in the same equation (not two separate questions)\n\n\n\nSatisfactory\nResearch questions are correctly framed in terms of relationships, but don’t reflect the multiple regression being explored.\n\n\nProgressing\nResearch questions are not posed as questions!"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#research-questions",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#research-questions",
-    "title": "Midterm Project Feedback Guide",
-    "section": "",
-    "text": "Excellent\nQuestion is posed in terms of the multiple linear regression model:\n\none numerical & one categorical explanatory variables - if the relationship (between x and y) differs based on the categorical variable\ntwo numerical explanatory variables – if there is a relationship between each explanatory variable and the response in the same equation (not two separate questions)\n\n\n\nSatisfactory\nResearch questions are correctly framed in terms of relationships, but don’t reflect the multiple regression being explored.\n\n\nProgressing\nResearch questions are not posed as questions!"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#variables-of-interest",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#variables-of-interest",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Variables of Interest",
-    "text": "Variables of Interest\n\n\n\n\n\n\n\nPresent\nOutlines all three variables of interest:\n\nHow was each variable measured? – this needs to be connected to the data collection methods\nWhat units was each variable measured in?\n\n\n\nPartially Present\nMissing details about units OR how the variables were measured\n\n\nMissing\nMissing details about units AND how the variables were measured"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#data-visualizations",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#data-visualizations",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Data Visualizations",
-    "text": "Data Visualizations\n\n\n\n\n\n\n\nPresent\nCreates all required visualizations:\n\nTwo visualizations for one numerical and one categorical explanatory variables – parallel slopes & different slopes\nThree visualizations for two numerical explanatory variables – one with all three variables included (color gradient), one for each SLR\n\n\n\nPartially Present\nMissing one of the required visualizations\n\n\nMissing\nAll visualizations are missing"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#visualization-descriptions",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#visualization-descriptions",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Visualization Descriptions",
-    "text": "Visualization Descriptions\n\n\n\n\n\n\n\nPresent\nDescribes each of the visualizations\n\n\nPartially Present\nAt least one visualization is not described\n\n\nMissing\nDoes not describe visualizations"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#proposed-statistical-model",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#proposed-statistical-model",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Proposed Statistical Model",
-    "text": "Proposed Statistical Model\n\n\n\n\n\n\n\nPresent\nStates what statistical model was selected\n\n\nPartially Present\nDescribes what visualization was chosen, not what statistical model was chosen\n\n\nMissing\nDoes not state what model or visualization was chosen"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#writes-out-regression-equations",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#writes-out-regression-equations",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Writes out Regression Equation(s)",
-    "text": "Writes out Regression Equation(s)\n\n\n\n\n\n\n\nPresent\nRegression equation is included, and, if needed, indicator variables or multiple equations are used to separate groups\n\n\nPartially Present\nOnly one equation is provided when there should be multiple equations\n\n\nMissing\nNo equation"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#interprets-model-coefficients",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#interprets-model-coefficients",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Interprets Model Coefficients",
-    "text": "Interprets Model Coefficients\n\n\n\n\n\n\n\nPresent\nInterpretations for every intercept and slope are provided\n\n\nPartially Present\nSome intercept and / or slope interpretations are missing\n\n\nMissing\nNone of the coefficients are interpreted"
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#study-limitations---graded-by-dr.-theobold",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#study-limitations---graded-by-dr.-theobold",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Study Limitations - Graded by Dr. Theobold",
-    "text": "Study Limitations - Graded by Dr. Theobold\n\nScope of Inference\n\n\n\n\n\n\n\nExcellent\nClearly states who the analysis can be inferred to, connecting to sampling methodology used.\n\n\nSatisfactory\nStatement regarding who the analysis can be inferred to is mostly clear, with connections to the sampling methodology used.\n\n\nProgressing\nStatement regarding who the analysis can be inferred to is mostly unclear, with few if any connections to the sampling methodology used.\n\n\n\n\nCause & Effect\n\n\n\n\n\n\n\nExcellent\nClearly states what relationships can be inferred between the variables, connecting to the design of the study.\n\n\nSatisfactory\nStatement regarding what relationships can be inferred between the variables is mostly clear, with connections to the design of the study.\n\n\nProgressing\nStatement regarding what relationships can be inferred between the variables is mostly unclear, with few if any connections to the design of the study."
-  },
-  {
-    "objectID": "project/midterm-project-help/midterm-project-feedback.html#conclusion-graded-by-dr.-theobold",
-    "href": "project/midterm-project-help/midterm-project-feedback.html#conclusion-graded-by-dr.-theobold",
-    "title": "Midterm Project Feedback Guide",
-    "section": "Conclusion – Graded by Dr. Theobold",
-    "text": "Conclusion – Graded by Dr. Theobold\n\n\n\n\n\n\n\nPresent\nConnects visualization and regression model to research question posed in the Introduction.\n\n\nPartially Present\nDiscusses research question posed in the Introduction, but is missing connections to the visualization OR the regression model.\n\n\nMissing\nDoes not discuss the research question posed in the Introduction."
+    "objectID": "project/final-project/final-project-grading-rubric.html#overall-project-grade",
+    "href": "project/final-project/final-project-grading-rubric.html#overall-project-grade",
+    "title": "Final Project Rubric",
+    "section": "Overall Project Grade",
+    "text": "Overall Project Grade\n\n\n\n\n\n\n\n\n\nExcellent Project\nSatisfactory Project\nProgressing Project\nNo Credit\n\n\n\n\nAt most one section is marked “Satisfactory” the remainder are marked “Excellent”\n\n\nPresentation is completed\nAt most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”\n\nPresentation is completed\nAt most two sections are marked “Progressing” the remainder are marked “Satisfactory”\n\nPresentation is not completed\nAt most one section is marked “No Credit” and the remainder of the sections are marked “Progressing”\n\nPresentation is not completed"
   },
   {
     "objectID": "project/midterm-project/midterm-project-directions.html",
     "href": "project/midterm-project/midterm-project-directions.html",
     "title": "Midterm Project Guidelines",
     "section": "",
-    "text": "Your Task\nFor this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal. Your project is required to have at least two explanatory variables, one of which must be numerical. You are expected to justify why you chose each explanatory variable in the Introduction section of your report.\n\n\nIntroduction\n\nIn no fewer than six (6) sentences describe how the data were collected, the context of the data. Your description should address the following questions:\n\nAre these data from a study or a publication?\nWhat question do these data address?\nWhy were the data collected?\nHow were the data collected?\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou may need to look up the publication(s) the data are associated with to obtain information on how they were collected.\n\n\n\nState the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “What is the relationship between…” and should be as specific as possible. Your Findings section should directly address the question(s) you pose here.\n\n\n\nMethods\nThis section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.\n\nDescribe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.\nProduce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.\n\nFor a multiple linear regression with one numerical variable and one categorical variable, you should produce two visualizations: one with different slopes and one with parallel slopes.\n\n\n\n\n\n\n\n\nEvery visualization should have nicely formatted axis labels!\n\n\n\n\n\n\n\nDescribe what you see in the visualizations, making direct references to the plots!\nOutline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about why the method being used are appropriate for the investigation at hand making direct reference to the visualizations.\n\n\n\n\n\n\n\nDeciding on a Statistical Model\n\n\n\nThe statistical model you fit in the next section depends on what you see in your visualization. Click here for a flowchart of how you should select the statistical model that is best for your situation.\n\n\n\n\nResults\nIn this section you will fit your statistical model and display the results.\n\nFit the statistical model stated at the end of the Methods section\nObtain the coefficients for the model\n\n\n\n\n\n\n\nTable of Coefficents\n\n\n\nUse the get_regression_table() function from the moderndive package to provide nicely formatted output from your regression model.\n\n\n\n\nDiscussion\nIn this section you will write up your findings for each research question of interest.\n\nWrite out the estimated regression equation for your statistical model.\n\nFor your regression equation, you can either use indicator variables (e.g. \\(1_{CC}(x)\\)) for each level of the categorical variable or write out a different equation for each group.\n\nInterpret in the context of the data the coefficients from the regression equation.\nConnect the findings of your regression back to the research question you posed in the Introduction.\nPropose a possible explanation for why these results were observed.\n\n\n\nConclusions\nIn this section, you will provide a short summary of the key findings of your analysis, and their connection to the broader scientific community.\n\nBased on your visualizations and the regression model, what is your conclusion for the questions of interest?\n\n\n\n\n\n\n\nCaution\n\n\n\nThere should be no mention of p-values in your conclusion!\n\n\n\n\nWhat are the implications of this research for science in general?\n\nBased on the sampling methods used, what larger population can you infer the results or your analysis onto?\nBased on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables. Specifically, can cause-and-effect statements be made?",
+    "text": "Your Task\nFor this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal.\n\n\nIntroduction\n\nIn no fewer than six (6) sentences describe how the data were collected, the context of the data. Your description should address the following questions:\n\nAre these data from a study or a publication?\nWhat question do these data address?\nWhy were the data collected?\nHow were the data collected?\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou may need to look up the publication(s) the data are associated with to obtain information on how they were collected.\n\n\n\nState the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “What is the relationship between…” and should be as specific as possible. Your Discussion section should directly address the question(s) you pose here.\n\n\n\nMethods\nThis section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.\n\nDescribe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.\n\n\n\n\n\n\n\nTip\n\n\n\nYou may need to look up the publication(s) the data are associated with to obtain information on how each variable was measured by the researchers.\n\n\n\nProduce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.\n\nFor a multiple linear regression with one numerical variable and one categorical variable, you should produce two visualizations, (1) a scatterplot where each group has a regression line with its own slope (interaction model), and (2) a scatterplot where every group has parallel regression lines (parallel slopes model).\n\n\n\n\n\n\n\n\nEvery visualization should have nicely formatted axis labels!\n\n\n\n\n\n\n\nDescribe what you see in the visualizations, making direct references to the plots! Specifically, your description or each plot needs to address the following:\n\nform\ndirection\nstrength\noutliers\n\nOutline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about why the method being used are appropriate for the investigation at hand making direct reference to the visualizations.\n\n\n\n\n\n\n\nDeciding on a Statistical Model\n\n\n\nThe statistical model you fit in the next section depends on what you see in your visualization. Click here for a flowchart of how you should select the statistical model that is best for your situation.\n\n\n\n\nResults\nIn this section you will fit your statistical model and display the results.\n\nFit the statistical model stated at the end of the Methods section\nObtain the coefficients for the model\n\n\n\n\n\n\n\nTable of Coefficents\n\n\n\nUse the get_regression_table() function from the moderndive package to provide nicely formatted output from your regression model.\n\n\n\n\nDiscussion\nIn this section you will write up your findings for each research question of interest.\n\nWrite out the estimated regression equation for your statistical model.\n\nFor your regression equation, you can either use indicator variables (e.g. \\(1_{CC}(x)\\)) for each level of the categorical variable or write out a different equation for each group.\n\nInterpret in the context of the data the coefficients from the regression equation.\n\n\n\n\n\n\n\nEvery Coefficient Needs Interpreted!\n\n\n\nYou need to interpret both the intercept and the slope for each group!\n\n\n\nConnect the findings of your regression back to the research question you posed in the Introduction.\nPropose a possible explanation for why these results were observed.\n\n\n\n\n\n\n\nExternal Research\n\n\n\nYou might need to do a bit of independent research on why you obtained the results you did.\n\n\n\n\nConclusions\nIn this section, you will provide a short summary of the key findings of your analysis, and their connection to the broader scientific community.\n\nBased on your visualizations and the regression model, what is your conclusion for the questions of interest?\n\n\n\n\n\n\n\nCaution\n\n\n\nThere should be no mention of p-values in your conclusion!\n\n\n\n\nWhat are the implications of this research for science in general?\n\nBased on the sampling methods used, what larger population can you infer the results or your analysis onto?\nBased on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables. Specifically, can cause-and-effect statements be made?",
     "crumbs": [
       "Projects",
       "Midterm Project Description"
