@@ -358,7 +358,7 @@ window.Quarto = {
 
 <section id="your-task" class="level1">
 <h1>Your Task</h1>
-<p>For this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal. Your project is required to have <em>at least two</em> explanatory variables, one of which must be numerical. You are expected to justify <em>why</em> you chose each explanatory variable in the <em>Introduction</em> section of your report.</p>
+<p>For this project, you are expected to use a multiple linear regression to investigate the relationship between the variables you outlined in your Midterm Project Proposal.</p>
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
@@ -385,20 +385,35 @@ Tip
 </div>
 </div>
 <ul>
-<li>State the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “What is the relationship between…” and should be as specific as possible. Your <em>Findings</em> section should directly address the question(s) you pose here.</li>
+<li>State the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “What is the relationship between…” and should be as specific as possible. Your <strong>Discussion</strong> section should directly address the question(s) you pose here.</li>
 </ul>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <p>This section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.</p>
 <ul>
-<li><p>Describe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.</p></li>
+<li>Describe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may need to look up the publication(s) the data are associated with to obtain information on how each variable was measured by the researchers.</p>
+</div>
+</div>
+<ul>
 <li><p>Produce data visualizations exploring the relationship(s) you are interested in investigating, contrasting the need for a second explanatory variable.</p>
 <ul>
-<li>For a multiple linear regression with <em>one numerical variable and one categorical variable</em>, you should produce <strong>two</strong> visualizations: one with different slopes and one with parallel slopes.</li>
+<li>For a multiple linear regression with one numerical variable and one categorical variable, you should produce <strong>two</strong> visualizations, (1) a scatterplot where each group has a regression line with its own slope (interaction model), and (2) a scatterplot where every group has parallel regression lines (parallel slopes model).</li>
 </ul></li>
 </ul>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -412,8 +427,14 @@ Every visualization should have nicely formatted axis labels!
 </div>
 </div>
 <ul>
-<li><p>Describe what you see in the visualizations, making direct references to the plots!</p></li>
-<li><p>Outline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about <strong><em>why</em></strong> the method being used are appropriate for the investigation at hand making direct reference to the visualizations.</p></li>
+<li>Describe what you see in the visualizations, making direct references to the plots! Specifically, your description or each plot needs to address the following:
+<ul>
+<li>form</li>
+<li>direction</li>
+<li>strength</li>
+<li>outliers</li>
+</ul></li>
+<li>Outline the appropriate statistical model you will use to answer the question(s) of interest that you stated previously. Be specific about <strong><em>why</em></strong> the method being used are appropriate for the investigation at hand making direct reference to the visualizations.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -425,7 +446,7 @@ Deciding on a Statistical Model
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The statistical model you fit in the next section depends on what you see in your visualization. <a href="../../project/midterm-project-help/model-selection.html">Click here</a> for a flowchart of how you should select the statistical model that is best for your situation.</p>
+<p>The statistical model you fit in the next section depends on what you see in your visualization. <a href="../midterm-project-help/one_cat_one_quant_flowchart.jpg">Click here</a> for a flowchart of how you should select the statistical model that is best for your situation.</p>
 </div>
 </div>
 </section>
@@ -433,7 +454,7 @@ Deciding on a Statistical Model
 <h1>Results</h1>
 <p>In this section you will fit your statistical model and display the results.</p>
 <ul>
-<li>Fit the statistical model stated at the end of the Methods section</li>
+<li>Fit the statistical model stated at the end of the <strong>Methods</strong> section</li>
 <li>Obtain the coefficients for the model</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -459,9 +480,37 @@ Table of Coefficents
 <li>For your regression equation, you can either use indicator variables (e.g.&nbsp;<span class="math inline">\(1_{CC}(x)\)</span>) for each level of the categorical variable <em>or</em> write out a different equation for each group.</li>
 </ul></li>
 <li><p>Interpret <strong>in the context of the data</strong> the coefficients from the regression equation.</p></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Every Coefficient Needs Interpreted!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You need to interpret <strong>both</strong> the intercept and the slope for each group!</p>
+</div>
+</div>
+<ul>
 <li><p>Connect the findings of your regression back to the research question you posed in the <strong>Introduction</strong>.</p></li>
 <li><p>Propose a possible explanation for why these results were observed.</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+External Research
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might need to do a bit of independent research on <em>why</em> you obtained the results you did.</p>
+</div>
+</div>
 </section>
 <section id="conclusions" class="level1">
 <h1>Conclusions</h1>
