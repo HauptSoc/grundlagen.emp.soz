@@ -258,9 +258,9 @@ Note, to qualify for the student subscription you **must** use your Cal Poly ema
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
 | **Peer Evaluations (7 total)** | all 7 completed             | at least 6 completed    | at least 5 completed    | 4 or fewer completed    |
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Midterm Project**            | Excellent                   | Satisfactory            | Progressing             | No Credit               |
+| **Midterm Project**            | Excellent                   | Satisfactory            | Progressing             | Novice                  |
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Final Project**              | Excellent                   | Satisfactory            | Progressing             | No Credit               |
+| **Final Project**              | Excellent                   | Satisfactory            | Progressing             | Novice                  |
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
 
 [^2]: A "Satisfactory" lab or critique occurs when **every** problem has been marked *Satisfactory.*
