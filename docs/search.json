@@ -6233,5 +6233,12 @@
     "title": "Sample Selection & Scope of Inference",
     "section": "nwt_pikas",
     "text": "nwt_pikas\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "slides/week5-day1.html#inclusion-criteria",
+    "href": "slides/week5-day1.html#inclusion-criteria",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Inclusion Criteria",
+    "text": "Inclusion Criteria\n\n\nPotential research subjects must meet certain criteria, defined by the researchers, to participate in a study. Inclusion criteria define requirements for inclusion in the study (e.g., a target age range or social group), while exclusion criteria are reasons a subject would be asked not to participate (e.g., certain medical conditions).\n\n\n\nFor the Dengue Fever paper,\n\n\n\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
   }
 ]
