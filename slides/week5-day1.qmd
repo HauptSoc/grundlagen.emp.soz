@@ -263,7 +263,7 @@ Would you say that these two groups have different regression lines?
 . . .
 
 ::: {style="font-size: 2em; color: #000000;"}
-What would the principle of parsimony say?
+What would Occam's razor suggest?
 :::
 
 
