@@ -65,9 +65,10 @@ Your group received a "Growing" on *at least one* question
     -   The output of `glimpse()` can help!
 -   **Comparing distributions between groups (Q9)**
     -   Were trout observed in every channel type in both sections of forest?
--   **Calculating group means (Q10)**
-    -   `group_by()`creates groups based on a categorical variable [**not**]{.underline} based on the dataset
-    -   `group_by(species)` [**not**]{.underline} `group_by(trout)`
+    -   Does every group have a unimodal distribution?
+-   **Comparing means to distributions (Q12)**
+    - 
+    - 
 :::
 ::::
 
