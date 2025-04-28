@@ -36,18 +36,6 @@ Alright, let's give this a go with the dataset you chose for your Midterm Projec
 
 5.  Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
 
-## [`ntl_icecover`](https://lter.github.io/lterdatasampler/articles/ntl_icecover_vignette.html)
-
-1.  What are the observations / rows in this dataset?
-
-2.  From what population was the sample drawn?
-
-3.  For an observation to be included in the dataset, what *inclusion criteria* needed to be met?
-
-4.  How were the observations who satisfied the inclusion criteria sampled from the population?
-
-5.  Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
-
 ## [`hbr_maples`](https://lter.github.io/lterdatasampler/articles/hbr_maples_vignette.html)
 
 1.  What are the observations / rows in this dataset?
@@ -60,7 +48,7 @@ Alright, let's give this a go with the dataset you chose for your Midterm Projec
 
 5.  Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
 
-## [`pie_crab`](https://lter.github.io/lterdatasampler/articles/pie_crab_vignette.html)
+## [`nwt_pikas`](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.268.1)
 
 1.  What are the observations / rows in this dataset?
 
@@ -97,18 +85,6 @@ Alright, let's give this a go with the dataset you chose for your Midterm Projec
 5.  Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
 
 ## [`evals`](https://moderndive.github.io/moderndive/reference/evals.html)
-
-1.  What are the observations / rows in this dataset?
-
-2.  From what population was the sample drawn?
-
-3.  For an observation to be included in the dataset, what *inclusion criteria* needed to be met?
-
-4.  How were the observations who satisfied the inclusion criteria sampled from the population?
-
-5.  Based on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?
-
-## [`gapminder`](https://cran.r-project.org/web/packages/gapminder/readme/README.html)
 
 1.  What are the observations / rows in this dataset?
 
