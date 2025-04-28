@@ -66,43 +66,47 @@ Your group received a "Growing" on *at least one* question
 -   **Comparing distributions between groups (Q9)**
     -   Were trout observed in every channel type in both sections of forest?
     -   Does every group have a unimodal distribution?
+    -   How different are the centers and spread of the distributions?
 -   **Comparing means to distributions (Q12)**
-    - 
-    - 
+    -   Are the means you obtained close to the peaks of the distributions? 
+    -   Why might that not be the case for some distributions? 
 :::
 ::::
 
-## Copying the Lab -- Last Week's Recorder
+## Making a Duplicate of Your Group's Lab 3 Project
 
-The person who typed your lab needs to make their project "public"
+::: {.small}
+1. Log in to [Posit Cloud](https://posit.cloud/)
+2. Open your Weeks 2-3 Group Workspace
+3. Find Lab 3
+:::
 
-1.  Open Posit Cloud
-2.  Go to the STAT 313 workspace
-3.  Click on "Your Content"
-4.  Open the settings for your Lab 3 project
+![](images/find-lab.png){fig-alt="A screenshot of a group's Lab 2 project in their group workspace. There is a purple box around an icon with two boxes that has a 'plus' (+) symbol in the middle."}
 
-![](images/open-project-settings.png)
+::: columns
+::: {.column width="40%"}
+::: {.small}
+4. Make a personal copy of your group's Lab 3
+:::
+:::
 
-## Copying the Lab -- Last Week's Recorder
+::: {.column width="5%"}
+:::
 
-5.  Change the access for your project to "Space Members"
+::: {.column width="55%"}
+![](images/make-a-copy.png){width="50%" fig-alt="A screenshot of the pop-up that appears when you click on the 'Make a copy' icon next to the Lab 2 project."}
+:::
+:::
 
-![](images/make-project-public.png)
-
-## Copying the Lab -- Everyone Else
-
-1.  Find your group member's lab (you can use the search bar to search for their name)
-
-![](images/search-for-name.png)
-
-2.  Open their Lab 3 project
-3.  Select "Save a Permanent Copy"
-
-![](images/save-a-copy.png)
+::: {.small}
+::: {.callout-important}
+# Every member must have their own copy of the lab! No one works in the original document.
+:::
+:::
 
 ## Completing Revisions
 
-Lab 3 revisions are due by Wednesday, May 1.
+Lab 3 revisions are due by Wednesday, May 7.
 
 ::: small
 1.  Read comments on Canvas
@@ -110,14 +114,16 @@ Lab 3 revisions are due by Wednesday, May 1.
 3.  Complete your revisions
 4.  Render your revised Lab 3
 5.  Download your revised HTML
-6.  Submit your revisions to the [original Lab 3]{.underline} assignment portal
+6.  Submit your revisions to the [original Lab 3]{.underline} assignment
 :::
 
 :::: callout-warning
 # Reflections
 
 ::: small
-Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas.
+Revisions are required to be accompanied with reflections on what you learned
+while completing your revisions. These are expected to be written in your Lab 3
+Quarto file (next to the problems you revised). 
 :::
 ::::
 
@@ -147,25 +153,25 @@ Deadline extensions [**are not**]{.underline} permitted for the final version
 (due next week).
 :::
 
-## Reminders About Deadlines
+## Deadlines Throughout the Week
 
--   Midterm Project Proposal is due [today]{.underline} by 5pm
--   Lab 3 revisions are due Friday (May 1)
--   Statistical Critique revisions are due next Wednesday (May 8)
+To try and keep everyone on track for getting the Midterm Project draft 
+completed by Sunday, I've made some "check point" assignments throughout the 
+week. 
+
+- Introduction (due Tuesday)
+- Methods & Results (due Thursday)
+- Discussion & Conclusion (due Sunday)
 
 # Multiple Linear Regression
 
-##  {background-color="#D4D4D4"}
-
-::: {style="font-size: 3em; color: #000000;"}
-Before...
-:::
+##  Before...
 
 ```{r old-slr}
 #| echo: false
 ncbirths %>% 
   ggplot(mapping = aes(x = weeks, y = weight)) + 
-  geom_jitter() + 
+  geom_jitter(alpha = 0.5) + 
   geom_smooth(method = "lm") +
   labs(x = "Weeks of Gestation", 
        y = "Weight of Baby (lbs)") +
@@ -173,27 +179,24 @@ ncbirths %>%
 
 ```
 
-##  {background-color="#D4D4D4"}
-
-::: {style="font-size: 3em; color: #000000;"}
-Now...
-:::
+##  Now...
 
 ```{r two-mlr}
 #| echo: false
 
-ncbirths %>% 
+ncbirths |> 
+  drop_na(weeks, weight) |> 
   ggplot(mapping = aes(x = weeks, y = weight, color = habit)) + 
-  geom_jitter(alpha = 0.8) + 
+  geom_jitter(alpha = 0.5) + 
   geom_smooth(method = "lm") +
   labs(x = "Weeks of Gestation", 
        y = "Weight of Baby (lbs)", 
-       color = "Parent Smoking Status") + 
+       color = "Birth Parent \nSmoking Status") + 
   my_theme
 
 ```
 
-##  {background-color="#B6CADA"}
+##  {background-color="#E4E4E4"}
 
 </br> </br>
 
@@ -205,11 +208,7 @@ How?
 
 </center>
 
-##  {background-color="#D4D4D4"}
-
-::: {style="font-size: 2em; color: #000000;"}
-Offsets!
-:::
+## Offsets!
 
 ```{r smoke-mlr}
 #| eval: false
@@ -255,86 +254,23 @@ What is the regression equation for non-smoker mothers?
 What is the regression equation for smoker mothers?
 :::
 
-##  {background-color="#B6CADA"}
-
-<center>
-
-::: {style="font-size: 3em; color: #000000;"}
-What if we have a second numerical explanatory variable?
-:::
-
-</center>
-
-##  {background-color="#D4D4D4"}
-
-```{r mlr-two-num}
-ncbirths %>% 
-  ggplot(mapping = aes(x = weeks, y = weight, color = mage)) + 
-  geom_jitter() + 
-  geom_smooth(method = "lm") +
-  labs(x = "Weeks of Gestation", 
-       y = "Weight of Baby (lbs)", 
-       color = "Mother's Age") +
-  my_theme
-
-```
-
 ##  {background-color="#D4D4D4"}
 
 ::: {style="font-size: 2em; color: #000000;"}
-Multiple slopes
-:::
-
-```{r age-mlr}
-#| eval: false
-#| echo: true
-#| code-line-numbers: false
-
-age_lm <- lm(weight ~ weeks + mage, data = ncbirths)
-
-get_regression_table(age_lm)
-
-```
-
-```{r age-mlr-output}
-#| echo: false
-age_lm <- lm(weight ~ weeks + mage, data = ncbirths)
-
-get_regression_table(age_lm) %>% 
-  select(term:std_error)
-```
-
-. . .
-
-::: {style="font-size: 1.25em; color: #0F4C81;"}
-How do you interpret the value of 0.346?
+Would you say that these two groups have different regression lines?
 :::
 
 . . .
-
-::: {style="font-size: 1.25em; color: #0F4C81;"}
-How do you interpret the value of 0.02?
-:::
-
-##  {background-color="#B6CADA"}
-
-<center>
-
-::: {style="font-size: 2.5em; color: #000000;"}
-But how do we decide if the interaction model is "best" without a p-value??????
-:::
-
-</center>
-
-##  {background-color="#D4D4D4"}
 
 ::: {style="font-size: 2em; color: #000000;"}
-When investigating if a relationship differs...
+What would the principle of parsimony say?
 :::
 
-. . .
 
-::: {style="font-size: 1.25em; color: #0F4C81;"}
+
+##  When investigating if a relationship differs...
+
+::: {style="font-size: 1.25em; color: #000000;"}
 Always start with the "interaction" / different slopes model.
 :::
 
@@ -346,8 +282,8 @@ If the slopes look different, you're done!
 
 . . .
 
-::: {style="font-size: 1.25em; color: #34605f;"}
-If the slopes look similar, then fit the "additive" / parallel slopes model.
+::: {style="font-size: 1.25em; color: #0F4C81;"}
+If the slopes look similar, then fit the "additive" (parallel slopes) model.
 :::
 
 ## 
@@ -371,11 +307,7 @@ ggplot(data = MA_schools,
   my_theme
 ```
 
-##  {background-color="#B6CADA"}
-
-::: {style="font-size: 1.5em; color: #000000;"}
-What if they're not very different?
-:::
+##  What if they're not very different?
 
 ```{r}
 #| fig-align: center
@@ -392,11 +324,7 @@ MA_schools %>%
   my_theme
 ```
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Parallel Slopes
-:::
+## Parallel Slopes
 
 ```{r}
 #| eval: false
@@ -416,11 +344,13 @@ lm(average_sat_math ~ perc_disadvan + size,
   select(term:std_error)
 ```
 
-##  {background-color="#B6CADA"}
+. . .
 
-::: {style="font-size: 2em; color: #000000;"}
-Group equations -- Baseline
+::: {.callout-warning}
+# What group is the baseline group?
 :::
+
+##  Group equations -- Baseline
 
 ```{r}
 lm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %>% 
@@ -432,11 +362,7 @@ lm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %>%
 
 $$\widehat{SAT}_{small} = 588 - 2.78 \times \text{percent disadvantaged}$$
 
-##  {background-color="#B6CADA"}
-
-::: {style="font-size: 2em; color: #000000;"}
-Group equations -- Offsets
-:::
+##  Group equations -- Offsets
 
 ```{r}
 lm(average_sat_math ~ perc_disadvan + size, data = MA_schools) %>% 
@@ -464,22 +390,6 @@ $$\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \times \text{percent disadvan}$$
 $$\widehat{SAT}_{large} = 581.64 - 2.78 \times \text{percent disadvan}$$
 :::
 
-<!-- ## ADD SLIDES ABOUT ANOVA  -->
-
-<!-- Type 1: sequential sums of squares -->
-
-<!-- THIS IS WHAT anova() gives! -->
-
-<!-- Type 2: this type tests for each main effect after the other main effect -->
-
-<!-- THIS SHOULD ONLY BE USED IF THERE IS NO INTERACTION -->
-
-<!-- Type 3: This type tests for the presence of a main effect after the other main -->
-
-<!-- effect and interaction.   -->
-
-<!-- THIS SHOULD BE USED IF THERE IS AN INTERACTION -->
-
 # Sample Selection Activity
 
 ## Find Your Data Group!
@@ -504,32 +414,22 @@ Once you have found other students working on the same dataset, complete [the sa
 
 ## Steps Before Wednesday
 
-1.  Insert the description of your dataset and variables (from the Midterm Proposal) into the "Introduction" of your project
+::: {.midi}
+::: {.incremental}
+1.  Create a personal copy of the Midterm Project template on Posit Cloud. 
 
-2.  Pose a research question about your selected variables, **which can be addressed with multiple linear regression**
+2. Insert the description of your dataset (from the Midterm Proposal) into the
+"Introduction" section of your project. 
 
-3.  Insert the code to create the required two (or three) visualizations
+3.  Insert the description of the variables (from the Midterm Proposal) into the
+"Methods" section of your project.
 
-4.  Write a description of what you see in the visualizations
+4.  Pose a research question about your selected variables, **which can be addressed with multiple linear regression**.
 
-5.  Make a decision which model you believe is "best"
+5.  Insert the code to create the required two visualizations.
 
-<!-- ## Steps Before Wednesday (STAT 513) -->
+6.  Write a description of what you see in the visualizations.
 
-<!-- ::: small -->
-
-<!-- 1.  Create a [nicely formatted version of your dataset](../project/data-formatting-513.qmd) -->
-
-<!-- 2.  Insert the description of your dataset and variables (from the Midterm Proposal) into the "Introduction" of your project -->
-
-<!-- 3.  Pose a research question about your selected variables, **which can be addressed with multiple linear regression** -->
-
-<!-- 4.  Work with Dr. Theobold to write code to read in your data! -->
-
-<!-- 5.  Insert the code to create the required two (or three) visualizations -->
-
-<!-- 6.  Write a description of what you see in the visualizations -->
-
-<!-- 7.  Make a decision which model you believe is "best" -->
-
-<!-- ::: -->
+7.  Make a decision which model you believe is "best."
+:::
+:::

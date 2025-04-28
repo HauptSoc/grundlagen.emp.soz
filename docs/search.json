@@ -3660,7 +3660,7 @@
     "href": "course-syllabus.html#what-constitutes-plagiarism-in-a-statistics-class",
     "title": "STAT 313: Applied Experimental Design and Regression Models",
     "section": "8.3 What constitutes plagiarism in a statistics class?",
-    "text": "8.3 What constitutes plagiarism in a statistics class?\nParaphrasing or quoting another’s work without citing the source is a form of academic misconduct. This included the R code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.\nEven inadvertent or unintentional misuse or appropriation of another’s work (such as relying heavily on source material that is not expressly acknowledged) is considered plagiarism. If you are struggling with writing the R code for an assignment, please reach out to me. I would prefer that I get to help you rather than you spending hours Googling things and get nowhere!\nAny incident of dishonesty, copying or plagiarism will be reported to the Office of Student Rights and Responsibilities. Cheating or plagiarism will earn you an “Incomplete” grade on the assignment and you will not be able to submit revisions for that assignment.\nIf you have any questions about using and citing sources, you are expected to ask for clarification.\nFor more information about what constitutes cheating and plagiarism, please see https://academicprograms.calpoly.edu/content/academicpolicies/Cheating.",
+    "text": "8.3 What constitutes plagiarism in a statistics class?\nParaphrasing or quoting another’s work without citing the source is a form of academic misconduct. This included the R code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.\nEven inadvertent or unintentional misuse or appropriation of another’s work (such as relying heavily on generative AI) is considered plagiarism. If you are struggling with writing the R code for an assignment, please reach out to me. I would prefer that I get to help you rather than you spending hours Googling things and get nowhere!\nAny incident of dishonesty, copying or plagiarism will be reported to the Office of Student Rights and Responsibilities. Cheating or plagiarism will earn you an “Incomplete” grade on the assignment and you will not be able to submit revisions for that assignment.\nIf you have any questions about using and citing sources, you are expected to ask for clarification.\nFor more information about what constitutes cheating and plagiarism, please see https://academicprograms.calpoly.edu/content/academicpolicies/Cheating.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -5472,7 +5472,7 @@
     "href": "slides/week5-day1.html#common-mistakes",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Common Mistakes",
-    "text": "Common Mistakes\n\n\n\nCategorical variables in R (Q2)\n\nWhat data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?\nThe output of glimpse() can help!\n\nComparing distributions between groups (Q9)\n\nWere trout observed in every channel type in both sections of forest?\n\nCalculating group means (Q10)\n\ngroup_by()creates groups based on a categorical variable not based on the dataset\ngroup_by(species) not group_by(trout)"
+    "text": "Common Mistakes\n\n\n\nCategorical variables in R (Q2)\n\nWhat data types does R use to store categorical variables? Integers? Characters? Doubles? Factors? Dates?\nThe output of glimpse() can help!\n\nComparing distributions between groups (Q9)\n\nWere trout observed in every channel type in both sections of forest?\nDoes every group have a unimodal distribution?\nHow different are the centers and spread of the distributions?\n\nComparing means to distributions (Q12)\n\nAre the means you obtained close to the peaks of the distributions?\nWhy might that not be the case for some distributions?"
   },
   {
     "objectID": "slides/week5-day1.html#copying-the-lab-last-weeks-recorder",
@@ -5500,7 +5500,7 @@
     "href": "slides/week5-day1.html#completing-revisions",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Completing Revisions",
-    "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 1.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment portal\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas."
+    "text": "Completing Revisions\nLab 3 revisions are due by Wednesday, May 7.\n\n\nRead comments on Canvas\nCopy your group’s lab assignment\nComplete your revisions\nRender your revised Lab 3\nDownload your revised HTML\nSubmit your revisions to the original Lab 3 assignment\n\n\n\n\n\n\n\n\nReflections\n\n\n\nRevisions are required to be accompanied with reflections on what you learned while completing your revisions. These are expected to be written in your Lab 3 Quarto file (next to the problems you revised)."
   },
   {
     "objectID": "slides/week5-day1.html#plan-for-today",
@@ -5535,28 +5535,28 @@
     "href": "slides/week5-day1.html#section",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Before…"
+    "text": "How?"
   },
   {
     "objectID": "slides/week5-day1.html#section-1",
     "href": "slides/week5-day1.html#section-1",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Now…"
+    "text": "Would you say that these two groups have different regression lines?\n\n\n\nWhat would the principle of parsimony say?"
   },
   {
     "objectID": "slides/week5-day1.html#section-2",
     "href": "slides/week5-day1.html#section-2",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "How?"
+    "text": "Different Enough?"
   },
   {
     "objectID": "slides/week5-day1.html#section-3",
     "href": "slides/week5-day1.html#section-3",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Offsets!\n\n\nsmoke_lm &lt;- lm(weight ~ weeks * habit, data = ncbirths)\n\nget_regression_table(smoke_lm)\n\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\n\n\n\n\n\nInteraction Model\n\n\nThe * means the variables are interacting!"
+    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#estimated-regression-equations",
@@ -5570,49 +5570,49 @@
     "href": "slides/week5-day1.html#section-4",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "What if we have a second numerical explanatory variable?"
+    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
   },
   {
     "objectID": "slides/week5-day1.html#section-6",
     "href": "slides/week5-day1.html#section-6",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Multiple slopes\n\n\nage_lm &lt;- lm(weight ~ weeks + mage, data = ncbirths)\n\nget_regression_table(age_lm)\n\n\n\n# A tibble: 3 × 3\n  term      estimate std_error\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept   -6.68      0.492\n2 weeks        0.346     0.012\n3 mage         0.02      0.006\n\n\n\n\nHow do you interpret the value of 0.346?\n\n\n\n\nHow do you interpret the value of 0.02?"
+    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-7",
     "href": "slides/week5-day1.html#section-7",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "But how do we decide if the interaction model is “best” without a p-value??????"
+    "text": "What if they’re not very different?"
   },
   {
     "objectID": "slides/week5-day1.html#section-8",
     "href": "slides/week5-day1.html#section-8",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "When investigating if a relationship differs…\n\n\n\nAlways start with the “interaction” / different slopes model.\n\n\n\n\nIf the slopes look different, you’re done!\n\n\n\n\nIf the slopes look similar, then fit the “additive” / parallel slopes model."
+    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
   },
   {
     "objectID": "slides/week5-day1.html#section-9",
     "href": "slides/week5-day1.html#section-9",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Different Enough?"
+    "text": "Group equations – Baseline\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-10",
     "href": "slides/week5-day1.html#section-10",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "What if they’re not very different?"
+    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-11",
     "href": "slides/week5-day1.html#section-11",
     "title": "Introduction to Multiple Linear Regression",
     "section": "",
-    "text": "Parallel Slopes\n\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92"
+    "text": "Group equations – Offsets\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
   },
   {
     "objectID": "slides/week5-day1.html#section-12",
@@ -5640,7 +5640,7 @@
     "href": "slides/week5-day1.html#steps-before-wednesday",
     "title": "Introduction to Multiple Linear Regression",
     "section": "Steps Before Wednesday",
-    "text": "Steps Before Wednesday\n\nInsert the description of your dataset and variables (from the Midterm Proposal) into the “Introduction” of your project\nPose a research question about your selected variables, which can be addressed with multiple linear regression\nInsert the code to create the required two (or three) visualizations\nWrite a description of what you see in the visualizations\nMake a decision which model you believe is “best”"
+    "text": "Steps Before Wednesday\n\n\n\nCreate a personal copy of the Midterm Project template on Posit Cloud.\nInsert the description of your dataset (from the Midterm Proposal) into the “Introduction” section of your project.\nInsert the description of the variables (from the Midterm Proposal) into the “Methods” section of your project.\nPose a research question about your selected variables, which can be addressed with multiple linear regression.\nInsert the code to create the required two visualizations.\nWrite a description of what you see in the visualizations.\nMake a decision which model you believe is “best.”"
   },
   {
     "objectID": "slides/week7-day2.html#course-updates",
@@ -6142,5 +6142,96 @@
     "title": "Midterm Project Work Day",
     "section": "Step 1 – Visualizations",
     "text": "Step 1 – Visualizations\n\n\nA “parallel slopes” multiple linear regression using geom_parallel_slopes()\n\n\nggplot(data = MA_schools, \n       mapping = aes(y = average_sat_math, \n                       x = perc_disadvan, \n                       color = size)) + \n  geom_point() +\n  geom_parallel_slopes(method = \"lm\") + \n  labs(x = \"Percent Economically Disadvantaged\", \n       y = \"Average SAT Math\", \n       color = \"Size of School\")"
+  },
+  {
+    "objectID": "slides/week5-day1.html#making-a-duplicate-of-your-groups-lab-2-project",
+    "href": "slides/week5-day1.html#making-a-duplicate-of-your-groups-lab-2-project",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Making a Duplicate of Your Group’s Lab 2 Project",
+    "text": "Making a Duplicate of Your Group’s Lab 2 Project\n\n\nLog in to Posit Cloud\nOpen your Weeks 2-3 Group Workspace\nFind Lab 3\n\n\n\n\n\n\n\nMake a personal copy of your group’s Lab 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery member must have their own copy of the lab! No one works in the original document."
+  },
+  {
+    "objectID": "slides/week5-day1.html#making-a-duplicate-of-your-groups-lab-3-project",
+    "href": "slides/week5-day1.html#making-a-duplicate-of-your-groups-lab-3-project",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Making a Duplicate of Your Group’s Lab 3 Project",
+    "text": "Making a Duplicate of Your Group’s Lab 3 Project\n\n\nLog in to Posit Cloud\nOpen your Weeks 2-3 Group Workspace\nFind Lab 3\n\n\n\n\n\n\n\nMake a personal copy of your group’s Lab 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery member must have their own copy of the lab! No one works in the original document."
+  },
+  {
+    "objectID": "slides/week5-day1.html#deadlines-throughout-the-week",
+    "href": "slides/week5-day1.html#deadlines-throughout-the-week",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Deadlines Throughout the Week",
+    "text": "Deadlines Throughout the Week\nTo try and keep everyone on track for getting the Midterm Project draft completed by Sunday, I’ve made some “check point” assignments throughout the week.\n\nIntroduction (due Tuesday)\nMethods & Results (due Thursday)\nDiscussion & Conclusion (due Sunday)"
+  },
+  {
+    "objectID": "slides/week5-day1.html#before",
+    "href": "slides/week5-day1.html#before",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Before…",
+    "text": "Before…"
+  },
+  {
+    "objectID": "slides/week5-day1.html#now",
+    "href": "slides/week5-day1.html#now",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Now…",
+    "text": "Now…"
+  },
+  {
+    "objectID": "slides/week5-day1.html#section-5",
+    "href": "slides/week5-day1.html#section-5",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "",
+    "text": "Group equations – Baseline\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
+  },
+  {
+    "objectID": "slides/week5-day1.html#offsets",
+    "href": "slides/week5-day1.html#offsets",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Offsets!",
+    "text": "Offsets!\n\nsmoke_lm &lt;- lm(weight ~ weeks * habit, data = ncbirths)\n\nget_regression_table(smoke_lm)\n\n\n\n# A tibble: 4 × 3\n  term              estimate std_error\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept           -5.94      0.484\n2 weeks                0.341     0.013\n3 habit: smoker       -1.86      1.63 \n4 weeks:habitsmoker    0.039     0.042\n\n\n\n\n\n\n\n\nInteraction Model\n\n\nThe * means the variables are interacting!"
+  },
+  {
+    "objectID": "slides/week5-day1.html#when-investigating-if-a-relationship-differs",
+    "href": "slides/week5-day1.html#when-investigating-if-a-relationship-differs",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "When investigating if a relationship differs…",
+    "text": "When investigating if a relationship differs…\n\nAlways start with the “interaction” / different slopes model.\n\n\n\nIf the slopes look different, you’re done!\n\n\n\n\nIf the slopes look similar, then fit the “additive” (parallel slopes) model."
+  },
+  {
+    "objectID": "slides/week5-day1.html#what-if-theyre-not-very-different",
+    "href": "slides/week5-day1.html#what-if-theyre-not-very-different",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "What if they’re not very different?",
+    "text": "What if they’re not very different?"
+  },
+  {
+    "objectID": "slides/week5-day1.html#parallel-slopes",
+    "href": "slides/week5-day1.html#parallel-slopes",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Parallel Slopes",
+    "text": "Parallel Slopes\n\nlm(average_sat_math ~ perc_disadvan + size, \n   data = MA_schools)\n\n\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\n\n\n\n\nWhat group is the baseline group?"
+  },
+  {
+    "objectID": "slides/week5-day1.html#group-equations-baseline",
+    "href": "slides/week5-day1.html#group-equations-baseline",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Group equations – Baseline",
+    "text": "Group equations – Baseline\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\\[\\widehat{SAT}_{small} = 588 - 2.78 \\times \\text{percent disadvantaged}\\]"
+  },
+  {
+    "objectID": "slides/week5-day1.html#group-equations-offsets",
+    "href": "slides/week5-day1.html#group-equations-offsets",
+    "title": "Introduction to Multiple Linear Regression",
+    "section": "Group equations – Offsets",
+    "text": "Group equations – Offsets\n\n\n# A tibble: 4 × 3\n  term          estimate std_error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 intercept       588.       7.61 \n2 perc_disadvan    -2.78     0.106\n3 size: medium    -11.9      7.54 \n4 size: large      -6.36     6.92 \n\n\n\n\n\\[\\widehat{SAT}_{medium} = (588 - 11.9) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{medium} = 576.1 - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\n\n\\[\\widehat{SAT}_{large} = (588 - 6.36) - 2.78 \\times \\text{percent disadvan}\\]\n\n\n\\[\\widehat{SAT}_{large} = 581.64 - 2.78 \\times \\text{percent disadvan}\\]"
+  },
+  {
+    "objectID": "activity/week-5-sample-selection.html#nwt_pikas",
+    "href": "activity/week-5-sample-selection.html#nwt_pikas",
+    "title": "Sample Selection & Scope of Inference",
+    "section": "nwt_pikas",
+    "text": "nwt_pikas\n\nWhat are the observations / rows in this dataset?\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
   }
 ]

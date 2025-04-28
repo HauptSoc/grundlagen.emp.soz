@@ -435,49 +435,59 @@
 <li class="fragment"><strong>Comparing distributions between groups (Q9)</strong>
 <ul>
 <li class="fragment">Were trout observed in every channel type in both sections of forest?</li>
+<li class="fragment">Does every group have a unimodal distribution?</li>
+<li class="fragment">How different are the centers and spread of the distributions?</li>
 </ul></li>
-<li class="fragment"><strong>Calculating group means (Q10)</strong>
+<li class="fragment"><strong>Comparing means to distributions (Q12)</strong>
 <ul>
-<li class="fragment"><code>group_by()</code>creates groups based on a categorical variable <u><strong>not</strong></u> based on the dataset</li>
-<li class="fragment"><code>group_by(species)</code> <u><strong>not</strong></u> <code>group_by(trout)</code></li>
+<li class="fragment">Are the means you obtained close to the peaks of the distributions?</li>
+<li class="fragment">Why might that not be the case for some distributions?</li>
 </ul></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="copying-the-lab-last-weeks-recorder" class="slide level2">
-<h2>Copying the Lab – Last Week’s Recorder</h2>
-<p>The person who typed your lab needs to make their project “public”</p>
+<section id="making-a-duplicate-of-your-groups-lab-3-project" class="slide level2">
+<h2>Making a Duplicate of Your Group’s Lab 3 Project</h2>
+<div class="small">
 <ol type="1">
-<li>Open Posit Cloud</li>
-<li>Go to the STAT 313 workspace</li>
-<li>Click on “Your Content”</li>
-<li>Open the settings for your Lab 3 project</li>
+<li>Log in to <a href="https://posit.cloud/">Posit Cloud</a></li>
+<li>Open your Weeks 2-3 Group Workspace</li>
+<li>Find Lab 3</li>
 </ol>
+</div>
+<p><img data-src="images/find-lab.png" alt="A screenshot of a group's Lab 2 project in their group workspace. There is a purple box around an icon with two boxes that has a 'plus' (+) symbol in the middle."></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="small">
+<ol start="4" type="1">
+<li>Make a personal copy of your group’s Lab 3</li>
+</ol>
+</div>
+</div><div class="column" style="width:5%;">
 
-<img data-src="images/open-project-settings.png" class="r-stretch"></section>
-<section id="copying-the-lab-last-weeks-recorder-1" class="slide level2">
-<h2>Copying the Lab – Last Week’s Recorder</h2>
-<ol start="5" type="1">
-<li>Change the access for your project to “Space Members”</li>
-</ol>
+</div><div class="column" style="width:55%;">
+<p><img data-src="images/make-a-copy.png" style="width:50.0%" alt="A screenshot of the pop-up that appears when you click on the 'Make a copy' icon next to the Lab 2 project."></p>
+</div></div>
+<div class="small">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Every member must have their own copy of the lab! No one works in the original document.</strong></p>
+</div>
+<div class="callout-content">
 
-<img data-src="images/make-project-public.png" class="r-stretch"></section>
-<section id="copying-the-lab-everyone-else" class="slide level2">
-<h2>Copying the Lab – Everyone Else</h2>
-<ol type="1">
-<li>Find your group member’s lab (you can use the search bar to search for their name)</li>
-</ol>
-<p><img data-src="images/search-for-name.png"></p>
-<ol start="2" type="1">
-<li>Open their Lab 3 project</li>
-<li>Select “Save a Permanent Copy”</li>
-</ol>
-<p><img data-src="images/save-a-copy.png"></p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="completing-revisions" class="slide level2">
 <h2>Completing Revisions</h2>
-<p>Lab 3 revisions are due by Wednesday, May 1.</p>
+<p>Lab 3 revisions are due by Wednesday, May 7.</p>
 <div class="small">
 <ol type="1">
 <li>Read comments on Canvas</li>
@@ -485,7 +495,7 @@
 <li>Complete your revisions</li>
 <li>Render your revised Lab 3</li>
 <li>Download your revised HTML</li>
-<li>Submit your revisions to the <u>original Lab 3</u> assignment portal</li>
+<li>Submit your revisions to the <u>original Lab 3</u> assignment</li>
 </ol>
 </div>
 <div class="callout callout-warning callout-titled callout-style-default">
@@ -498,7 +508,7 @@
 </div>
 <div class="callout-content">
 <div class="small">
-<p>Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These can be written in your Lab 3 file (next to the problems you revised), in a Word document, or in the comment box on Canvas.</p>
+<p>Revisions are required to be accompanied with reflections on what you learned while completing your revisions. These are expected to be written in your Lab 3 Quarto file (next to the problems you revised).</p>
 </div>
 </div>
 </div>
@@ -538,12 +548,13 @@
 </div>
 </div>
 </section>
-<section id="reminders-about-deadlines" class="slide level2">
-<h2>Reminders About Deadlines</h2>
+<section id="deadlines-throughout-the-week" class="slide level2">
+<h2>Deadlines Throughout the Week</h2>
+<p>To try and keep everyone on track for getting the Midterm Project draft completed by Sunday, I’ve made some “check point” assignments throughout the week.</p>
 <ul>
-<li>Midterm Project Proposal is due <u>today</u> by 5pm</li>
-<li>Lab 3 revisions are due Friday (May 1)</li>
-<li>Statistical Critique revisions are due next Wednesday (May 8)</li>
+<li>Introduction (due Tuesday)</li>
+<li>Methods &amp; Results (due Thursday)</li>
+<li>Discussion &amp; Conclusion (due Sunday)</li>
 </ul>
 </section></section>
 <section>
@@ -551,21 +562,15 @@
 <h1>Multiple Linear Regression</h1>
 
 </section>
-<section id="section" class="slide level2" data-background-color="#D4D4D4">
-<h2></h2>
-<div style="font-size: 3em; color: #000000;">
-<p>Before…</p>
-</div>
+<section id="before" class="slide level2">
+<h2>Before…</h2>
 
 <img data-src="week5-day1_files/figure-revealjs/old-slr-1.png" width="960" class="r-stretch"></section>
-<section id="section-1" class="slide level2" data-background-color="#D4D4D4">
-<h2></h2>
-<div style="font-size: 3em; color: #000000;">
-<p>Now…</p>
-</div>
+<section id="now" class="slide level2">
+<h2>Now…</h2>
 
 <img data-src="week5-day1_files/figure-revealjs/two-mlr-1.png" width="960" class="r-stretch"></section>
-<section id="section-2" class="slide level2" data-background-color="#B6CADA">
+<section id="section" class="slide level2" data-background-color="#E4E4E4">
 <h2></h2>
 <p><br> <br></p>
 <center>
@@ -574,11 +579,8 @@
 </div>
 </center>
 </section>
-<section id="section-3" class="slide level2" data-background-color="#D4D4D4">
-<h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>Offsets!</p>
-</div>
+<section id="offsets" class="slide level2">
+<h2>Offsets!</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>smoke_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(weight <span class="sc">~</span> weeks <span class="sc">*</span> habit, <span class="at">data =</span> ncbirths)</span>
 <span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a></span>
@@ -631,66 +633,21 @@
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<center>
-<div style="font-size: 3em; color: #000000;">
-<p>What if we have a second numerical explanatory variable?</p>
-</div>
-</center>
-</section>
-<section id="section-5" class="slide level2" data-background-color="#D4D4D4">
-<h2></h2>
-
-<img data-src="week5-day1_files/figure-revealjs/mlr-two-num-1.png" width="960" class="r-stretch"></section>
-<section id="section-6" class="slide level2" data-background-color="#D4D4D4">
+<section id="section-1" class="slide level2" data-background-color="#D4D4D4">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Multiple slopes</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>age_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(weight <span class="sc">~</span> weeks <span class="sc">+</span> mage, <span class="at">data =</span> ncbirths)</span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(age_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-  term      estimate std_error
-  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;
-1 intercept   -6.68      0.492
-2 weeks        0.346     0.012
-3 mage         0.02      0.006</code></pre>
-</div>
+<p>Would you say that these two groups have different regression lines?</p>
 </div>
 <div class="fragment">
-<div style="font-size: 1.25em; color: #0F4C81;">
-<p>How do you interpret the value of 0.346?</p>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.25em; color: #0F4C81;">
-<p>How do you interpret the value of 0.02?</p>
-</div>
-</div>
-</section>
-<section id="section-7" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<center>
-<div style="font-size: 2.5em; color: #000000;">
-<p>But how do we decide if the interaction model is “best” without a p-value??????</p>
-</div>
-</center>
-</section>
-<section id="section-8" class="slide level2" data-background-color="#D4D4D4">
-<h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>When investigating if a relationship differs…</p>
+<p>What would the principle of parsimony say?</p>
 </div>
-<div class="fragment">
-<div style="font-size: 1.25em; color: #0F4C81;">
+</div>
+</section>
+<section id="when-investigating-if-a-relationship-differs" class="slide level2">
+<h2>When investigating if a relationship differs…</h2>
+<div style="font-size: 1.25em; color: #000000;">
 <p>Always start with the “interaction” / different slopes model.</p>
-</div>
 </div>
 <div class="fragment">
 <div style="font-size: 1.25em; color: #b76352;">
@@ -698,33 +655,27 @@
 </div>
 </div>
 <div class="fragment">
-<div style="font-size: 1.25em; color: #34605f;">
-<p>If the slopes look similar, then fit the “additive” / parallel slopes model.</p>
+<div style="font-size: 1.25em; color: #0F4C81;">
+<p>If the slopes look similar, then fit the “additive” (parallel slopes) model.</p>
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
 <p>Different Enough?</p>
 </div>
 
 <img data-src="week5-day1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="section-10" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<div style="font-size: 1.5em; color: #000000;">
-<p>What if they’re not very different?</p>
-</div>
+<section id="what-if-theyre-not-very-different" class="slide level2">
+<h2>What if they’re not very different?</h2>
 
 <img data-src="week5-day1_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="section-11" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>Parallel Slopes</p>
-</div>
+<section id="parallel-slopes" class="slide level2">
+<h2>Parallel Slopes</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, </span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="at">data =</span> MA_schools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(average_sat_math <span class="sc">~</span> perc_disadvan <span class="sc">+</span> size, </span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="at">data =</span> MA_schools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div class="cell">
@@ -738,12 +689,24 @@
 4 size: large      -6.36     6.92 </code></pre>
 </div>
 </div>
-</section>
-<section id="section-12" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>Group equations – Baseline</p>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<p><strong>What group is the baseline group?</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="group-equations-baseline" class="slide level2">
+<h2>Group equations – Baseline</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
@@ -759,11 +722,8 @@
 <p><span class="math display">\[\widehat{SAT}_{small} = 588 - 2.78 \times \text{percent disadvantaged}\]</span></p>
 </div>
 </section>
-<section id="section-13" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>Group equations – Offsets</p>
-</div>
+<section id="group-equations-offsets" class="slide level2">
+<h2>Group equations – Offsets</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
@@ -790,14 +750,6 @@
 <div class="small">
 <p><span class="math display">\[\widehat{SAT}_{large} = 581.64 - 2.78 \times \text{percent disadvan}\]</span></p>
 </div>
-<!-- ## ADD SLIDES ABOUT ANOVA  -->
-<!-- Type 1: sequential sums of squares -->
-<!-- THIS IS WHAT anova() gives! -->
-<!-- Type 2: this type tests for each main effect after the other main effect -->
-<!-- THIS SHOULD ONLY BE USED IF THERE IS NO INTERACTION -->
-<!-- Type 3: This type tests for the presence of a main effect after the other main -->
-<!-- effect and interaction.   -->
-<!-- THIS SHOULD BE USED IF THERE IS AN INTERACTION -->
 </div>
 </section></section>
 <section>
@@ -827,23 +779,19 @@
 </section>
 <section id="steps-before-wednesday" class="slide level2">
 <h2>Steps Before Wednesday</h2>
+<div class="midi">
+<div>
 <ol type="1">
-<li><p>Insert the description of your dataset and variables (from the Midterm Proposal) into the “Introduction” of your project</p></li>
-<li><p>Pose a research question about your selected variables, <strong>which can be addressed with multiple linear regression</strong></p></li>
-<li><p>Insert the code to create the required two (or three) visualizations</p></li>
-<li><p>Write a description of what you see in the visualizations</p></li>
-<li><p>Make a decision which model you believe is “best”</p></li>
+<li class="fragment"><p>Create a personal copy of the Midterm Project template on Posit Cloud.</p></li>
+<li class="fragment"><p>Insert the description of your dataset (from the Midterm Proposal) into the “Introduction” section of your project.</p></li>
+<li class="fragment"><p>Insert the description of the variables (from the Midterm Proposal) into the “Methods” section of your project.</p></li>
+<li class="fragment"><p>Pose a research question about your selected variables, <strong>which can be addressed with multiple linear regression</strong>.</p></li>
+<li class="fragment"><p>Insert the code to create the required two visualizations.</p></li>
+<li class="fragment"><p>Write a description of what you see in the visualizations.</p></li>
+<li class="fragment"><p>Make a decision which model you believe is “best.”</p></li>
 </ol>
-<!-- ## Steps Before Wednesday (STAT 513) -->
-<!-- ::: small -->
-<!-- 1.  Create a [nicely formatted version of your dataset](../project/data-formatting-513.qmd) -->
-<!-- 2.  Insert the description of your dataset and variables (from the Midterm Proposal) into the "Introduction" of your project -->
-<!-- 3.  Pose a research question about your selected variables, **which can be addressed with multiple linear regression** -->
-<!-- 4.  Work with Dr. Theobold to write code to read in your data! -->
-<!-- 5.  Insert the code to create the required two (or three) visualizations -->
-<!-- 6.  Write a description of what you see in the visualizations -->
-<!-- 7.  Make a decision which model you believe is "best" -->
-<!-- ::: -->
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
