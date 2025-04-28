@@ -452,7 +452,7 @@ When completing lab assignments, you will work in a team of two students. In Wee
 
 Paraphrasing or quoting another's work without citing the source is a form of academic misconduct. This included the `R` code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.
 
-Even inadvertent or unintentional misuse or appropriation of another's work (such as relying heavily on source material that is not expressly acknowledged) is considered plagiarism. If you are struggling with writing the `R` code for an assignment, please reach out to me. I would prefer that I get to help you rather than you spending hours Googling things and get nowhere!
+Even inadvertent or unintentional misuse or appropriation of another's work (such as relying heavily on generative AI) is considered plagiarism. If you are struggling with writing the `R` code for an assignment, please reach out to me. I would prefer that I get to help you rather than you spending hours Googling things and get nowhere!
 
 Any incident of dishonesty, copying or plagiarism will be reported to the Office of Student Rights and Responsibilities. Cheating or plagiarism will earn you an "Incomplete" grade on the assignment and you **will not** be able to submit revisions for that assignment.
 
