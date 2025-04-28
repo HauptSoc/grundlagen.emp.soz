@@ -195,6 +195,10 @@ If they use x and y in the equation but then define what variables they are asso
 
 **Growing**:
 
+-   Didn't use language indicating that 20.3 is an expected / estimated / predicted amount
+
+*Feedback:* See feedback for Q9, and integrate into this problem, too! 
+
 -   Uses y-intercept when increasing 100 years
 
 *Feedback:* Careful! Look back at your interpretation for Question 9. Did you include the y-intercept when you interpreted the value of the slope? How can you translate what you did in Question 9 to an increase of 100 years instead of 1 year?
@@ -216,11 +220,32 @@ ggplot(data = ntl_icecover,
        y = "Ice Duration (days)")
 ```
 
+::: columns
+::: {.column width="47%"}
 ::: callout-tip
+# Repeat Issues from Question 4
+
 If they got a Growing for Question 4 from using a wiggly line, they don't need to get a Growing here!
 
 If they got a Growing for Question 2 for forgetting units on the y-axis, they don't need to get a Growing here!
 :::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip}
+# If they don't relabel their legend
+
+Nice job adding color to your plot! Technically, we can also change the title of 
+the legend inside the `labs()` function! All you would need to do is add another line that says `color = "Lake in Madison, WI"`. 
+:::
+:::
+:::
+
+
+
 
 **Growing**:
 
