@@ -14,48 +14,16 @@ editor: source
 
 -   Statistical Critique revisions are due next Wednesday (May 7)
 
-<!-- -   Lab 4 Revisions are due next Friday (May 9) -->
+-   The first draft of your Midterm Project is due on [Sunday at midnight]{.underline}.
 
-## Lab 3 & Lab 4 Revisions
-
-::: {.small}
-1. Log in to [Posit Cloud]()
-2. Open your Weeks 2-3 Group Workspace
-3. Find Lab 3
-:::
-
-![](images/find-lab.png){fig-alt="A screenshot of a group's Lab 2 project in their group workspace. There is a purple box around an icon with two boxes that has a 'plus' (+) symbol in the middle."}
-
-::: columns
-::: {.column width="40%"}
-::: {.small}
-4. Make a personal copy of your group's Lab 3
-:::
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
-![](images/make-a-copy.png){width="50%" fig-alt="A screenshot of the pop-up that appears when you click on the 'Make a copy' icon next to the Lab 2 project."}
-:::
-:::
-
-::: {.small}
-::: {.callout-important}
-# Every member must have their own copy of the lab! No one works in the original document.
-:::
-:::
-
-
-## Midterm Project
-
-The first draft of your Midterm Project is due on [Sunday at midnight]{.underline}.
+. . .
 
 ::: callout-caution
 # Deadline Extension
 
-A deadline extension [**is**]{.underline} permitted for the first draft. Deadline extensions [**are not**]{.underline} permitted for the final version (due next week).
+A deadline extension [**is**]{.underline} permitted for the first draft.
+Deadline extensions [**are not**]{.underline} permitted for the final version
+(due next week).
 :::
 
 # Comments from Project Proposals
@@ -64,26 +32,45 @@ A deadline extension [**is**]{.underline} permitted for the first draft. Deadlin
 
 -   The description of your data goes in your Introduction.
 
--   The description of your variables goes at the beginning of your Methods, in the Variables subsection!
+-   The description of your variables goes at the beginning of your Methods, in 
+the Variables subsection!
 
 ## Data Description -- A Word of Caution
 
-Be cautious in how you are using the resources I provided---do not copy these descriptions.
+Be cautious in how you are using the resources I provided---do not copy these
+descriptions.
 
-Inserting a verbatim copy of the descriptions seen in the data resources is [**plagiarism**]{.underline}.
+Inserting a verbatim copy of the descriptions seen in the data resources is
+[**plagiarism**]{.underline}.
 
 ::: callout-caution
 # In text citation
 
-If you wish to borrow elements of these descriptions, you need to quote them and provide a reference to the resource. e.g., "This data set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children" (United States Department of Health and Human Services, 2014).
+If you wish to borrow elements of these descriptions, you need to quote them and
+provide a reference to the resource. e.g., "This data set has been of interest 
+to medical researchers who are studying the relation between habits and
+practices of expectant mothers and the birth of their children" (United States
+Department of Health and Human Services, 2014).
 :::
+
+## Variable Selection
+
+Be sure to review the feedback provided in your Midterm Project Proposal 
+**before** starting your first draft. 
+
+Specifically, make sure I did not have any objections to the variables you chose
+for your analysis!
 
 ## Specific Dataset Advice
 
--   For the `and_vertebrates` data, you should include `species` as an explanatory variable. If you don't you are assuming the same relationship applies to trout AND salamanders.
+-   For the `and_vertebrates` data, you should include `species` as an 
+explanatory variable. If you don't you are assuming the same relationship 
+applies to trout AND salamanders.
 
--   For the `hbr_maples` data, you cannot use `year` as a numerical variable. There are only two years of data!
-    * If you want to use `year` as a categorical variable, let Dr. T know and they will help you write code to change the data type of this variable!
+-   For the `hbr_maples` data, you cannot use `year` as a numerical variable. 
+There are only two years of data!
+    * If you want to use `year` as a categorical variable, let Dr. T know and
+    they will help you write code to change the data type of this variable!
 
 # Coding a Multiple Linear Regression
 

@@ -4786,7 +4786,7 @@
     "href": "slides/week5-day2.html#revision-deadlines",
     "title": "Midterm Project Work Day",
     "section": "Revision Deadlines",
-    "text": "Revision Deadlines\n\nLab 3 Revisions are due next Wednesday (May 7)\nStatistical Critique revisions are due next Wednesday (May 7)"
+    "text": "Revision Deadlines\n\nLab 3 Revisions are due next Wednesday (May 7)\nStatistical Critique revisions are due next Wednesday (May 7)\nThe first draft of your Midterm Project is due on Sunday at midnight.\n\n\n\n\n\n\n\n\nDeadline Extension\n\n\nA deadline extension is permitted for the first draft. Deadline extensions are not permitted for the final version (due next week)."
   },
   {
     "objectID": "slides/week5-day2.html#midterm-project",
@@ -6240,5 +6240,12 @@
     "title": "Introduction to Multiple Linear Regression",
     "section": "Inclusion Criteria",
     "text": "Inclusion Criteria\n\n\nPotential research subjects must meet certain criteria, defined by the researchers, to participate in a study. Inclusion criteria define requirements for inclusion in the study (e.g., a target age range or social group), while exclusion criteria are reasons a subject would be asked not to participate (e.g., certain medical conditions).\n\n\n\nFor the Dengue Fever paper,\n\n\n\nFrom what population was the sample drawn?\nFor an observation to be included in the dataset, what inclusion criteria needed to be met?\nHow were the observations who satisfied the inclusion criteria sampled from the population?\nBased on the inclusion criteria and sampling methods, to what population can the findings of the study be generalized?"
+  },
+  {
+    "objectID": "slides/week5-day2.html#variable-selection",
+    "href": "slides/week5-day2.html#variable-selection",
+    "title": "Midterm Project Work Day",
+    "section": "Variable Selection",
+    "text": "Variable Selection\nBe sure to review the feedback provided in your Midterm Project Proposal before starting your first draft.\nSpecifically, make sure I did not have any objections to the variables you chose for your analysis!"
   }
 ]
