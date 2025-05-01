@@ -1,208 +1,123 @@
 ---
-title: "Week 6 Reading Guide Part 2 -- Study Design"
+title: "Week 6 Reading Guide Part 2: Sampling Variability"
+format: docx
+editor: visual
 ---
 
-## Chapter 2: Sampling & Experimental Design
+## Sampling
 
-### Section 2.1.1: Populations & Samples
+### 7.1 -- Sampling Bowl
 
-What is a population?
+**Why was it important to mix the bowl before the balls were sampled?**
 
-</br>
+</br> </br>
 
-If a census was performed, how were observations sampled?
+**Why is it that our 33 groups of friends did not all have the same numbers of balls that were red out of 50, and hence different proportions red?**
 
-</br>
+</br> </br>
 
-How is a sample different from a population?
+### 7.2 -- Virtual Sampling
 
-</br>
+**Why couldn't we study the effects of sampling variation when we used the virtual shovel only once? Why did we need to take more than one virtual sample (in our case 33 virtual samples)?**
 
-### Section 2.1.2: Parameters & Statistics
+</br> </br>
 
-What is a statistic?
+**Why did we not take 1000 "tactile" samples of 50 balls by hand?**
 
-</br>
+</br> </br>
 
-What is a parameter?
+**Looking at Figure 8, would you say that sampling 50 balls where 30% of them were red is likely or not? What about sampling 50 balls where 10% of them were red?**
 
-</br>
+</br> </br>
 
-What is the relationship between a statistic and a parameter?
+**In Figure 12, shovels were used to take 1000 samples each, the proportion of the shovel's balls that were red was calculated for each sample, and then the distribution of these 1000 proportions were visualized using a histogram. We did this for shovels with 25, 50, and 100 slots in them. As the size of the shovels increased, the histograms got narrower. In other words, as the size of the shovels increased from 25 to 50 to 100, what happened to the proportions?**
 
-</br>
+a.  They varied less
+b.  They varied by the same amount
+c.  They varied more
 
-### Section 2.1.3: Anecdotal Evidence
+</br> </br>
 
-What is anecdotal evidence?
+**What summary statistic was used to quantify how much the 1000 proportions red varied?**
 
-</br>
+a.  The interquartile range
+b.  The standard deviation
+c.  The range: the largest value minus the smallest.
 
-### Section 2.1.4: Sampling from a Population
+### 7.3 -- Sampling Framework
 
-What does it mean for something to be biased?
+**In the case of the bowl activity, what is the population parameter? Do we know its value?**
 
-</br>
+</br> </br>
 
-How can a sample be biased?
+**What would performing a census in the bowl activity correspond to? Why was a a census not performed?**
 
-</br>
+</br> </br>
 
-How are observations sampled when a researcher uses a simple random sample?
+**What purpose do point estimates serve in general? What is the name of the point estimate specific to the bowl activity? What is its mathematical notation?**
 
-</br>
+</br> </br>
 
-What does it mean for a sample to be "representative" of the population?
+**How did we ensure that our tactile samples using the shovel were random?**
 
-</br>
+</br> </br>
 
-What does it mean for a study to have non-response bias?
+**Why is it important that sampling be done at random?**
 
-</br>
+</br> </br>
 
-What does it mean for a study to have response bias?
+**What are we inferring about the bowl based on the samples using the shovel?**
 
-</br>
+</br> </br>
 
-How are observations sampled when a researcher uses a convenience sample?
+**What purpose did the sampling distributions serve?**
 
-</br>
+</br> </br>
 
-#### Notes
+**What does the standard error of the sample proportion** $\hat{p}$ quantify?
 
--   Someone must first be *chosen* to be in a study and refuse to participate in order to have **non-response bias**.
+</br> </br>
 
--   There must be a valid reason for someone to lie or be untruthful to justify saying **response bias** is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are **predictable** and **systematic** based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.
+The table below is a version of Table 2, matching sample sizes $n$ to different *standard errors* of the sample proportion $\widehat{p}$, but with the rows randomly re-ordered and the sample sizes removed. Fill in the table by matching the correct sample sizes to the correct standard errors.
 
-</br>
+| Sample Size | Standard Error of $\widehat{p}$ |
+|-------------|---------------------------------|
+| n =         | 0.094                           |
+| n =         | 0.045                           |
+| n =         | 0.069                           |
 
-True or False: Convenience sampling tends to result in non-response bias.
+</br> </br>
 
-</br>
+**What is the difference between an *accurate* and a *precise* estimate?**
 
-True or False: Volunteer sampling tends to result in response bias.
+</br> </br>
 
-</br>
+**How do we ensure that an estimate is *accurate*?**
 
-### Section 2.1.5: Four Sampling Methods
+</br> </br>
 
-How are observations sampled when a researcher uses a stratified sampling method?
+**How do we ensure that an estimate is *precise*?**
 
-</br>
+</br> </br>
 
-What is a strata and how is it used in stratified sampling?
+**In a real-life situation, we would not take 1000 different samples to infer about a population, but rather only one. Then, what was the purpose of our exercises where we took 1000 different samples?**
 
-</br>
+</br> </br>
 
-How are observations sampled when a researcher uses a cluster sampling method?
+**Figure 15 with the targets shows four combinations of "accurate versus precise" estimates. Draw four *sampling distributions* of the sample proportion** $\widehat{p}$ that correspond with each option.
 
-</br>
+**High precision, low accuracy**
 
-How are clusters made in cluster sampling?
+</br> </br> </br> </br>
 
-</br>
+**High precision, high accuracy**
 
-How are clusters similar to and different from strata?
+</br> </br> </br> </br>
 
-</br>
+**Low precision, low accuracy**
 
-How are observations sampled when a researcher uses a multistage sampling method?
+</br> </br> </br> </br>
 
-</br>
+**Low precision, high accuracy**
 
-#### Notes
-
-Ideally, how should we sample cases from our target population? Using what sampling method?
-
-</br>
-
-True or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.
-
-</br>
-
-### Section 2.2.1: Principles of Experimental Design
-
-What does it me for an experiment to control for a specific variable?
-
-</br>
-
-What is a control and how is it used in an experiment?
-
-</br>
-
-What is randomization and how is it used in an experiment?
-
-</br>
-
-What is a confounding variable?
-
-</br>
-
-What does it mean for an experiment to have replication?
-
-</br>
-
-What is a replicate?
-
-</br>
-
-What is blocking and how is it used in an experiment?
-
-</br>
-
-What are blocks?
-
-</br>
-
-### Section 2.2.2: Reducing Bias in Human Experiments
-
-In an experiment, what is a treatment group?
-
-</br>
-
-In an experiment, what is a control group?
-
-</br>
-
-What does it mean for an experiment to be blind?
-
-</br>
-
-What does it mean for an experiment to be double blind?
-
-</br>
-
-What is a placebo effect?
-
-</br>
-
-### Section 2.3: Observational Studies
-
-What is a prospective study?
-
-</br>
-
-What is a retrospective study?
-
-</br>
-
-#### Notes
-
-What are the four principles of a well-designed randomized experiment?
-
-</br>
-
-True or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.
-
-</br>
-
-True or False: In order for an experiment to be valid, a placebo must be used.
-
-</br>
-
-True or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.
-
-</br>
-
-True or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables.
-
+</br> </br> </br> </br>

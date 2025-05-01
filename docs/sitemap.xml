@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week7-reading2.html</loc>
-    <lastmod>2025-04-24T19:29:08.587Z</lastmod>
-  </url>
-  <url>
     <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week7-reading1.html</loc>
     <lastmod>2025-04-24T19:29:08.587Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week8-day2.html</loc>
-    <lastmod>2025-04-24T19:29:08.508Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week-6-reading2.html</loc>
+    <lastmod>2025-05-01T21:38:40.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week-6-reading1.html</loc>
+    <lastmod>2025-05-01T21:52:53.661Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/slides/week9-day1.html</loc>
@@ -21,20 +21,16 @@
     <lastmod>2025-04-24T19:29:08.488Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week10-day1.html</loc>
-    <lastmod>2025-04-24T19:29:08.487Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/labs/lab-8.html</loc>
+    <lastmod>2025-04-24T19:29:08.344Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/lab-2.html</loc>
-    <lastmod>2025-04-24T19:29:08.343Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week8-day1.html</loc>
-    <lastmod>2025-04-24T19:29:08.507Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week3-day1.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week3-day2.html</loc>
     <lastmod>2025-04-24T19:29:08.488Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/labs/lab-6.html</loc>
+    <lastmod>2025-04-24T19:29:08.344Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/labs/lab-3.html</loc>
@@ -49,16 +45,16 @@
     <lastmod>2025-04-24T19:29:08.487Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week4-day2.html</loc>
-    <lastmod>2025-04-24T19:29:08.488Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week5-day2.html</loc>
+    <lastmod>2025-04-29T23:12:28.215Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/lab-4.html</loc>
-    <lastmod>2025-04-24T19:29:08.344Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week1-day2.html</loc>
+    <lastmod>2025-04-24T19:29:08.487Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/week-5.html</loc>
-    <lastmod>2025-04-24T19:29:08.671Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/labs/lab-9.html</loc>
+    <lastmod>2025-04-24T19:29:08.345Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/weeks/week-3.html</loc>
@@ -86,7 +82,7 @@
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/slides/week6-day1.html</loc>
-    <lastmod>2025-05-01T15:21:40.669Z</lastmod>
+    <lastmod>2025-05-01T15:22:16.575Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm_project_template-313.html</loc>
@@ -113,111 +109,27 @@
     <lastmod>2025-04-24T19:29:08.488Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/week-10.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/week-6.html</loc>
+    <lastmod>2025-05-01T21:47:44.104Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/week-0.html</loc>
     <lastmod>2025-04-24T19:29:08.671Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week6-day2.html</loc>
-    <lastmod>2025-04-24T19:29:08.489Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week1-day1.html</loc>
+    <lastmod>2025-04-24T19:29:08.487Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/week-8.html</loc>
-    <lastmod>2025-04-24T19:29:08.672Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/week-7.html</loc>
+    <lastmod>2025-05-01T21:45:56.400Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/reading-guide/week1-answers.html</loc>
-    <lastmod>2025-04-24T19:29:08.653Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/mlr-anova.html</loc>
+    <lastmod>2025-04-24T19:29:08.486Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/resources/week-2.html</loc>
-    <lastmod>2025-04-24T19:29:08.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm-project-grading-rubric.html</loc>
-    <lastmod>2025-04-25T14:27:03.147Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/help/midterm-project-feedback.html</loc>
-    <lastmod>2025-04-24T19:29:08.362Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/final-project/final-project-directions.html</loc>
-    <lastmod>2025-04-24T19:29:08.361Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/final-project-help/assess_independence.html</loc>
-    <lastmod>2025-04-24T19:29:08.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/grading-guides/lab-6-grading-guide.html</loc>
-    <lastmod>2025-04-24T19:29:08.342Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/index.html</loc>
-    <lastmod>2025-04-25T14:52:58.830Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/critique/critique-1.html</loc>
-    <lastmod>2025-04-24T19:29:07.630Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/course-team.html</loc>
-    <lastmod>2025-04-24T19:29:07.629Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/course-support.html</loc>
-    <lastmod>2025-04-24T19:29:07.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/computing-access.html</loc>
-    <lastmod>2025-04-24T19:29:07.626Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/activity/week-1-quarto.html</loc>
-    <lastmod>2025-04-24T19:29:07.620Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/activity/week-5-sample-selection.html</loc>
-    <lastmod>2025-04-28T00:57:40.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/course-overview.html</loc>
-    <lastmod>2025-04-24T19:29:07.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/course-syllabus.html</loc>
-    <lastmod>2025-04-28T00:24:08.899Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/course_resources.html</loc>
-    <lastmod>2025-04-24T19:29:07.629Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/critique/grading-guides/critique-1-grading.html</loc>
-    <lastmod>2025-04-24T19:29:07.641Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/grading-guides/lab-1-grading-guide.html</loc>
-    <lastmod>2025-04-24T19:29:08.342Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/final-presentations/presentation-instructions.html</loc>
-    <lastmod>2025-04-24T19:29:08.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/final-project-help/no-gos.html</loc>
-    <lastmod>2025-04-24T19:29:08.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/final-project/final-project-grading-rubric.html</loc>
-    <lastmod>2025-04-24T19:29:08.362Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm-project-directions.html</loc>
-    <lastmod>2025-04-24T21:24:20.081Z</lastmod>
-  </url>
-  <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm-proposal-313.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/project/reading-research-paper-pt-2.html</loc>
     <lastmod>2025-04-24T19:29:08.364Z</lastmod>
   </url>
   <url>
@@ -225,27 +137,115 @@
     <lastmod>2025-04-24T19:29:08.364Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/project/reading-research-paper-pt-2.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm-proposal-313.html</loc>
     <lastmod>2025-04-24T19:29:08.364Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/mlr-anova.html</loc>
-    <lastmod>2025-04-24T19:29:08.486Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm-project-directions.html</loc>
+    <lastmod>2025-04-24T21:24:20.081Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/reading-guide/week6-reading2.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/project/final-project/final-project-grading-rubric.html</loc>
+    <lastmod>2025-04-24T19:29:08.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/project/final-project-help/no-gos.html</loc>
+    <lastmod>2025-04-24T19:29:08.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/project/final-presentations/presentation-instructions.html</loc>
+    <lastmod>2025-04-24T19:29:08.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/labs/grading-guides/lab-1-grading-guide.html</loc>
+    <lastmod>2025-04-24T19:29:08.342Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/critique/grading-guides/critique-1-grading.html</loc>
+    <lastmod>2025-04-24T19:29:07.641Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/course_resources.html</loc>
+    <lastmod>2025-04-24T19:29:07.629Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/course-syllabus.html</loc>
+    <lastmod>2025-04-28T00:29:02.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/course-overview.html</loc>
+    <lastmod>2025-04-24T19:29:07.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/activity/week-5-sample-selection.html</loc>
+    <lastmod>2025-04-28T14:13:19.270Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/activity/week-1-quarto.html</loc>
+    <lastmod>2025-04-24T19:29:07.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/computing-access.html</loc>
+    <lastmod>2025-04-24T19:29:07.626Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/course-support.html</loc>
+    <lastmod>2025-04-24T19:29:07.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/course-team.html</loc>
+    <lastmod>2025-04-24T19:29:07.629Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/critique/critique-1.html</loc>
+    <lastmod>2025-04-24T19:29:07.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/index.html</loc>
+    <lastmod>2025-04-25T14:52:58.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/labs/grading-guides/lab-6-grading-guide.html</loc>
+    <lastmod>2025-04-24T19:29:08.342Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/project/final-project-help/assess_independence.html</loc>
+    <lastmod>2025-04-24T19:29:08.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/project/final-project/final-project-directions.html</loc>
+    <lastmod>2025-04-24T19:29:08.361Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/help/midterm-project-feedback.html</loc>
+    <lastmod>2025-04-24T19:29:08.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/project/midterm-project/midterm-project-grading-rubric.html</loc>
+    <lastmod>2025-04-25T14:27:03.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/resources/week-2.html</loc>
+    <lastmod>2025-04-24T19:29:08.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/reading-guide/week1-answers.html</loc>
+    <lastmod>2025-04-24T19:29:08.653Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/reading-guide/week9-reading2.html</loc>
     <lastmod>2025-04-24T19:29:08.654Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/week-7.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/week-8.html</loc>
     <lastmod>2025-04-24T19:29:08.672Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week1-day1.html</loc>
-    <lastmod>2025-04-24T19:29:08.487Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week6-day2.html</loc>
+    <lastmod>2025-05-01T15:25:38.030Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/week-0.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/week-10.html</loc>
     <lastmod>2025-04-24T19:29:08.671Z</lastmod>
   </url>
   <url>
@@ -262,7 +262,7 @@
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/weeks/week-9.html</loc>
-    <lastmod>2025-04-24T19:29:08.672Z</lastmod>
+    <lastmod>2025-05-01T21:47:57.432Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/labs/grading-guides/lab-4-grading-guide.html</loc>
@@ -305,16 +305,16 @@
     <lastmod>2025-04-24T19:29:08.671Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week5-day2.html</loc>
-    <lastmod>2025-04-29T23:12:28.215Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/week-5.html</loc>
+    <lastmod>2025-04-24T19:29:08.671Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/lab-9.html</loc>
-    <lastmod>2025-04-24T19:29:08.345Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/labs/lab-4.html</loc>
+    <lastmod>2025-04-24T19:29:08.344Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week1-day2.html</loc>
-    <lastmod>2025-04-24T19:29:08.487Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week4-day2.html</loc>
+    <lastmod>2025-04-24T19:29:08.488Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/labs/lab-7.html</loc>
@@ -329,35 +329,39 @@
     <lastmod>2025-04-24T19:29:08.488Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/lab-6.html</loc>
-    <lastmod>2025-04-24T19:29:08.344Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week5-day1.html</loc>
+    <lastmod>2025-04-28T14:13:49.361Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week3-day2.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week3-day1.html</loc>
     <lastmod>2025-04-24T19:29:08.488Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/labs/lab-8.html</loc>
-    <lastmod>2025-04-24T19:29:08.344Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week8-day1.html</loc>
+    <lastmod>2025-04-24T19:29:08.507Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/slides/week5-day1.html</loc>
-    <lastmod>2025-04-28T14:13:49.361Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/labs/lab-2.html</loc>
+    <lastmod>2025-04-24T19:29:08.343Z</lastmod>
+  </url>
+  <url>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week10-day1.html</loc>
+    <lastmod>2025-04-24T19:29:08.487Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/slides/week7-day2.html</loc>
     <lastmod>2025-04-24T19:29:08.502Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/week-6.html</loc>
-    <lastmod>2025-05-01T14:32:47.265Z</lastmod>
+    <loc>https://atheobold.github.io/stat-313-website/slides/week8-day2.html</loc>
+    <lastmod>2025-04-24T19:29:08.508Z</lastmod>
   </url>
   <url>
     <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week-8-reading-mlr.html</loc>
     <lastmod>2025-04-24T19:29:08.575Z</lastmod>
   </url>
   <url>
-    <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week8-reading.html</loc>
+    <loc>https://atheobold.github.io/stat-313-website/weeks/chapters/week7-reading2.html</loc>
     <lastmod>2025-04-24T19:29:08.587Z</lastmod>
   </url>
 </urlset>

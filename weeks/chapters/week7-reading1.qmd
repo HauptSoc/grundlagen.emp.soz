@@ -1,5 +1,5 @@
 ---
-title: "Week 7 -- Exploring Sampling"
+title: "Week 7 -- Confidence Intervals for the Slope"
 format: 
   html:
     table-of-contents: true
@@ -9,842 +9,922 @@ editor: visual
 bibliography: references.bib
 execute: 
   echo: false
-resources: 
-  - reading_guide/week7_reading_guide_sampling.docx
-  - reading_guide/week7_reading_guide_sampling.html
+  message: false
+  warning: false
 ---
 
 ```{r set-up}
 #| include: false
 
 library(tidyverse)
+library(openintro)
 library(moderndive)
 library(infer)
-library(forcats)
-```
 
-This week, we begin our adventure into statistical inference by learning about *sampling*. The concepts behind sampling form the basis of confidence intervals and hypothesis testing, which we'll cover in the second portion of this week's reading and next week. We will see that the skills you learned during the first three weeks of class, in particular data visualization and data wrangling, will also play an important role in the development of your understanding of sampling.
+# Set output digit precision
+options(scipen = 999) # , digits = 4)
+set.seed(1234)
 
-This week's reading comes primarily from [Chater 7](https://moderndive.com/7-sampling.html) from *ModernDive* [@kim2020], with a smattering of my own ideas.
-
-### Reading Guide
-
-Download the reading guide as a [Word Document here](reading_guide/week7_reading_guide_sampling.docx)
-
-Download the reading guide as an [HTML file here](reading_guide/week7_reading_guide_sampling.html)
-
-## Sampling bowl activity
-
-Let's start with a hands-on activity.
-
-### What proportion of this bowl's balls are red?
-
-![A bowl with red and white balls.](images/sampling_bowl_1.jpg){#fig-bowl}
-
-Take a look at the bowl in @fig-bowl. It has a certain number of red and a certain number of white balls all of equal size. Furthermore, it appears the bowl has been mixed beforehand, as there does not seem to be any coherent pattern to the spatial distribution of the red and white balls.
-
-Let's now ask ourselves, what proportion of this bowl's balls are red?
-
-One way to answer this question would be to perform an exhaustive count: remove each ball individually, count the number of red balls and the number of white balls, and divide the number of red balls by the total number of balls. However, this would be a long and tedious process.
-
-### Using the shovel once
-
-![Inserting a shovel into the bowl.](images/sampling_bowl_2.jpg){#fig-shovel-in-bowl}
-
-![Removing 50 balls from the bowl.](images/sampling_bowl_3_cropped.jpg){#fig-shovel}
-
-Instead of performing an exhaustive count, let's insert a shovel into the bowl as seen in @fig-shovel-in-bowl. Using the shovel, let's remove $5 \times 10 = 50$ balls, as seen in @fig-shovel.
-
-Observe that 17 of the balls are red and thus 0.34 = 34% of the shovel's balls are red. We can view the proportion of balls that are red in this shovel as a guess of the proportion of balls that are red in the entire bowl. While not as exact as doing an exhaustive count of all the balls in the bowl, our guess of 34% took much less time and energy to make.
-
-However, say, we started this activity over from the beginning. In other words, we replace the 50 balls back into the bowl and start over. Would we remove exactly 17 red balls again? In other words, would our guess at the proportion of the bowl's balls that are red be exactly 34% again? Maybe?
-
-::: {#fig-sampling-process layout-ncol="3"}
-![](images/tactile_2_a.jpg)
-
-![](images/tactile_2_b.jpg) ![](images/tactile_2_c.jpg)
-
-Repeating sampling activity 33 times.
-:::
-
-What if we repeated this activity several times following the process, as shown in @fig-sampling-process? Would we obtain exactly 17 red balls each time? In other words, would our guess at the proportion of the bowl's balls that are red be exactly 34% every time? Surely not. Let's repeat this exercise several times with the help of 33 groups of friends to understand how the value differs with repetition.
-
-### Using the shovel 33 times
-
-Each of our 33 groups of friends will do the following:
-
--   Use the shovel to remove 50 balls each.
--   Count the number of red balls and thus compute the proportion of the 50 balls that are red.
--   Return the balls into the bowl.
--   Mix the contents of the bowl a little to not let a previous group's results influence the next group's.
-
-Each of our 33 groups of friends make note of their proportion of red balls from their sample collected. Each group then marks their proportion of their 50 balls that were red in the appropriate bin in a hand-drawn histogram as seen in @fig-draw-hist.
-
-![Constructing a histogram of proportions.](images/tactile_3_a.jpg){#fig-draw-hist}
-
-Recall from Week 2 that histograms allow us to visualize the *distribution* of a numerical variable. In particular, where the center of the values falls and how the values vary. A partially completed histogram of the first 10 out of 33 groups of friends' results can be seen in @fig-draw-hist.
-
-![Hand-drawn histogram of first 10 out of 33 proportions.](images/tactile_3_c.jpg){#fig-full-hist}
-
-Observe the following in the histogram in @fig-full-hist:
-
--   At the low end, one group removed 50 balls from the bowl with proportion red between 0.20 and 0.25.
--   At the high end, another group removed 50 balls from the bowl with proportion between 0.45 and 0.5 red.
--   However, the most frequently occurring proportions were between 0.30 and 0.35 red, right in the middle of the distribution.
--   The shape of this distribution is somewhat bell-shaped.
-
-Let's construct this same hand-drawn histogram in R using your data visualization skills that you honed in Week 2! We saved our 33 groups of friends' results in the `tactile_prop_red` data frame included in the **moderndive** package. Run the following to display the first 10 of 33 rows:
-
-```{r}
-#| echo: true
-tactile_prop_red
-```
-
-Observe for each `group` that we have their names, the number of `red_balls` they obtained, and the corresponding proportion out of 50 balls that were red named `prop_red`. We also have a `replicate` variable enumerating each of the 33 groups. We chose this name because each row can be viewed as one instance of a replicated (in other words repeated) activity: using the shovel to remove 50 balls and computing the proportion of those balls that are red.
-
-Let's visualize the distribution of these 33 proportions using `geom_histogram()` with `binwidth = 0.05` in @fig-student-proportions. This is a computerized and complete version of the partially completed hand-drawn histogram you saw in @fig-full-hist. Note that setting `boundary = 0.4` indicates that we want a binning scheme such that one of the bins' boundary is at 0.4. This helps us to more closely align this histogram with the hand-drawn histogram in @fig-full-hist.
-
-```{r distribution-of-student-proportions}
-#| label: fig-student-proportions
-#| fig-cap: "Distribution of 33 proportions based on 33 samples of size 50."
-#| echo: true
-
-ggplot(tactile_prop_red, aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 50 balls that were red", 
-       title = "Distribution of 33 proportions red") 
-```
-
-### What did we just do?
-
-What we just demonstrated in this activity is the statistical concept of *sampling*. We would like to know the proportion of the bowl's balls that are red. Because the bowl has a large number of balls, performing an exhaustive count of the red and white balls would be time-consuming. We thus extracted a *sample* of 50 balls using the shovel to make an *estimate*. Using this sample of 50 balls, we estimated the proportion of the *bowl's* balls that are red to be 34%.
-
-Moreover, because we mixed the balls before each use of the shovel, the samples were randomly drawn. Because each sample was drawn at random, the samples were different from each other. Because the samples were different from each other, we obtained the different proportions red observed in @fig-student-proportions. This is known as the concept of *sampling variation*.
-
-The purpose of this sampling activity was to develop an understanding of two key concepts relating to sampling:
-
-1.  Understanding the effect of sampling variation.
-2.  Understanding the effect of sample size on sampling variation.
-
-In the next section, we'll mimic the hands-on sampling activity we just performed on a computer. This will allow us not only to repeat the sampling exercise much more than 33 times, but it will also allow us to use shovels with different numbers of slots than just 50.
-
-Afterwards, we'll present you with definitions, terminology, and notation related to sampling. As in many disciplines, such necessary background knowledge may seem inaccessible and even confusing at first. However, as with many difficult topics, if you truly understand the underlying concepts and practice, practice, practice, you'll be able to master them.
-
-To close this chapter, we'll generalize the "sampling from a bowl" exercise to other sampling scenarios and present a theoretical result known as the *Central Limit Theorem*.
-
-## Virtual sampling {#sec-sampling-simulation}
-
-In the previous section, we performed a *tactile* sampling activity by hand. In other words, we used a physical bowl of balls and a physical shovel. We performed this sampling activity by hand first so that we could develop a firm understanding of the root ideas behind sampling. In this section, we'll mimic this tactile sampling activity with a *virtual* sampling activity using a computer. In other words, we'll use a virtual analog to the bowl of balls and a virtual analog to the shovel.
-
-### Using the virtual shovel once
-
-Let's start by performing the virtual analog of the tactile sampling exercise we performed before. We first need a virtual analog of the bowl seen in Figure @fig-bowl. To this end, we included a data frame named `bowl` in the **moderndive** package. The rows of `bowl` correspond exactly with the contents of the actual bowl.
-
-```{r bowl-data}
-#| echo: true
-bowl
-```
-
-Observe that `bowl` has `r nrow(bowl)` rows, telling us that the bowl contains `r nrow(bowl)` equally sized balls. The first variable `ball_ID` is used as an *identification variable* -- none of the balls in the actual bowl are marked with numbers. The second variable `color` indicates whether a particular virtual ball is red or white. You can view the contents of the bowl in RStudio's data viewer, scrolling through the contents to convince yourself that `bowl` is indeed a virtual analog of the actual bowl in @fig-bowl.
-
-Now that we have a virtual analog of our bowl, we next need a virtual analog to the shovel seen in @fig-shovel to generate virtual samples of 50 balls. We're going to use the `rep_sample_n()` function included in the **infer** package. This function allows us to take `rep`eated, or `rep`licated, `samples` of size `n` from a given dataset.
-
-Looking at the code below you should notice:
-
--   The dataset (`bowl`) is the first argument
--   `size` corresponds to the size of each sample
--   `reps` corresponds to the number of samples
--   `replace` corresponds to whether each sampled observation should be replaced after it is drawn
-
-```{r}
-#| echo: true
-virtual_shovel <- rep_sample_n(bowl,
-                               size = 50, 
-                               replace = FALSE,
-                               reps = 1)
-virtual_shovel
-```
-
-Observe that `virtual_shovel` has `r nrow(virtual_shovel)` rows corresponding to our virtual sample of size `r nrow(virtual_shovel)`. The `ball_ID` variable identifies which of the `r nrow(bowl)` balls from `bowl` are included in our sample of `r nrow(virtual_shovel)` balls while `color` denotes its color. However, what does the `replicate` variable indicate? In `virtual_shovel`'s case, `replicate` is equal to 1 for all `r nrow(virtual_shovel)` rows. This is telling us that these `r nrow(virtual_shovel)` rows correspond to the first repeated/replicated use of the shovel, in our case our first sample. We'll see shortly that when we "virtually" take 33 samples, `replicate` will take values between 1 and 33.
-
-Let's compute the proportion of balls in our virtual sample that are red using the **dplyr** data wrangling verbs you learned in Week 3. First, for each of our `r nrow(virtual_shovel)` sampled balls, let's identify if it is red or not using a test for equality with `==`. Let's create a new Boolean variable `is_red` using the `mutate()` function:
-
-```{r red-boolean}
-#| echo: true
-mutate(.data = virtual_shovel, 
-       is_red = (color == "red")
-       )
-```
-
-Observe that for every row where `color == "red"`, the Boolean (logical) value `TRUE` is returned and for every row where `color` is not equal to `"red"`, the Boolean `FALSE` is returned.
-
-Second, let's compute the number of balls out of `r nrow(virtual_shovel)` that are red using the `summarize()` function. Recall from Week 3 that `summarize()` takes a data frame with many rows and returns a data frame with a **single** row containing summary statistics, like the `mean()` or `median()`. In this case, we use the `sum()` function:
-
-```{r number-reds}
-#| echo: true
-mutate(.data = virtual_shovel, 
-       is_red = (color == "red")
-       ) %>% 
-summarize(num_red = sum(is_red)
-          )
-```
-
-```{r number-reds-object}
-n_red_virtual_shovel <- virtual_shovel %>%
-  mutate(is_red = (color == "red")) %>%
-  summarize(num_red = sum(is_red)) %>%
-  pull(num_red)
-```
-
-Why does this work? Because R treats `TRUE` like the number `1` and `FALSE` like the number `0`. So summing the number of `TRUE`s and `FALSE`s is equivalent to summing `1`'s and `0`'s. In the end, this operation counts the number of balls where `color` is `red`. In our case, `r n_red_virtual_shovel` of the `r nrow(virtual_shovel)` balls were red. However, you might have gotten a different number red because of the randomness of the virtual sampling.
-
-Third and lastly, let's compute the proportion of the `r nrow(virtual_shovel)` sampled balls that are red by dividing `num_red` by `r nrow(virtual_shovel)`:
-
-```{r proportion-reds}
-#| echo: true
-mutate(.data = virtual_shovel, 
-       is_red = (color == "red")
-       ) %>% 
-summarize(num_red = sum(is_red) / 50
-          )
-```
-
-```{r proportion-reds-object}
-virtual_shovel_prop_red <- virtual_shovel %>%
-  mutate(is_red = color == "red") %>%
-  summarize(prop_red = sum(is_red) / 50) %>%
-  pull(prop_red)
-
-virtual_shovel_perc_red <- virtual_shovel_prop_red * 100
-```
-
-Great! `r virtual_shovel_perc_red`% of `virtual_shovel`'s `r nrow(virtual_shovel)` balls were red! So based on this particular sample of `r nrow(virtual_shovel)` balls, our guess at the proportion of the `bowl`'s balls that are red is `r virtual_shovel_perc_red`%. But remember from our earlier tactile sampling activity that if we repeat this sampling, we will not necessarily obtain the same value of `r virtual_shovel_perc_red`% again. There will likely be some variation. In fact, our 33 groups of friends computed 33 such proportions whose distribution we visualized in @fig-full-hist. We saw that these estimates *varied*. Let's now perform the virtual analog of having 33 groups of students use the sampling shovel!
-
-### Using the virtual shovel 33 times
-
-Recall that in our tactile sampling exercise, we had 33 groups of students each use the shovel, yielding 33 samples of size 50 balls. We then used these 33 samples to compute 33 proportions. In other words, we repeated / replicated using the shovel 33 times. We can perform this repeated / replicated sampling virtually by once again using our virtual shovel function `rep_sample_n()`, but by adding the `reps = 33` argument. This is telling R that we want to repeat the sampling 33 times.
-
-We'll save these results in a data frame called `virtual_samples`. We provide a preview of the first 10 rows of `virtual_samples` below:
-
-```{r}
-virtual_samples <- rep_sample_n(bowl, 
-                                size = 50, 
-                                reps = 33, 
-                                replace = FALSE)
-virtual_samples
-```
-
-Observe that the first 50 rows of `replicate` are equal to `1`. If you were to continue scrolling through the dataset (like you can in RStudio's data previewer), you would find that the next 50 rows of `replicate` are equal to `2`. This is telling us that the first 50 rows correspond to the first sample of 50 balls while the next 50 rows correspond to the second sample of 50 balls. This pattern continues for all `reps = 33` replicates and thus `virtual_samples` has 33 $\times$ 50 = 1650 rows.
-
-Let's now take `virtual_samples` and compute the resulting 33 proportions red. We'll use the same **dplyr** verbs as before, but this time with an additional `group_by()` of the `replicate` variable. Recall from Week 3 that by assigning the grouping variable *before* we `summarize()`, we'll obtain a different summary statistic for each level of our group variable. Thus, we should end up with 33 different proportions, since we have 33 different `replicate`s. We display a preview of the first 10 out of 33 rows:
-
-```{r}
-virtual_prop_red <- virtual_samples %>% 
-  group_by(replicate) %>% 
-  summarize(prop_red = sum(color == "red") / 50) 
-  
-virtual_prop_red
-```
-
-As with our 33 groups of friends' tactile samples, there is variation in the resulting 33 virtual proportions red. Let's visualize this variation in a histogram! In @fig-samplingdistribution-virtual we've added `binwidth = 0.05` and `boundary = 0.4` arguments as well. Recall that setting `boundary = 0.4` ensures a binning scheme with one of the bins' boundaries at 0.4. Since the `binwidth = 0.05` is also set, this will create bins with boundaries at 0.30, 0.35, 0.45, 0.5, etc. as well.
-
-```{r}
-#| label: fig-samplingdistribution-virtual
-#| fig-cap: "Distribution of 33 proportions based on 33 samples of size 50."
-#| echo: true
-
-ggplot(data = virtual_prop_red, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 50 balls that were red") 
-```
-
-Observe that we occasionally obtained proportions red that are less than 30%. On the other hand, we occasionally obtained proportions that are greater than 45%. However, the most frequently occurring proportions were between 35% and 40% (for 11 out of 33 samples). Why do we have these differences in proportions red? Because of *sampling variation*.
-
-Let's now compare our virtual results with our tactile results from the previous section in @fig-tactile-vs-virtual. Observe that both histograms are somewhat similar in their center and variation, although not identical. These slight differences are again due to random sampling variation. Furthermore, observe that both distributions are somewhat bell-shaped.
-
-```{r tactile-vs-virtual}
-#| label: fig-tactile-vs-virtual
-#| fig-cap: "Comparing 33 virtual and 33 tactile proportions red."
-
-bind_rows(
-  virtual_prop_red %>%
-    mutate(type = "Virtual sampling"),
-  tactile_prop_red %>%
-    select(replicate, red = red_balls, prop_red) %>%
-    mutate(type = "Tactile sampling")
-) %>%
-  mutate(type = factor(type, levels = c("Virtual sampling", "Tactile sampling"))) %>%
-  ggplot(aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  facet_wrap(~type) +
-  labs(
-    x = "Proportion of 50 balls that were red",
-    title = "Comparing distributions"
-  )
-
-```
-
-### Using the virtual shovel 1000 times
-
-Now say we want to study the effects of sampling variation not for 33 samples, but rather for a larger number of samples, say 1000! We have two choices at this point:
-
-1.  We could have our groups of friends manually take 1000 samples of 50 balls and compute the corresponding 1000 proportions. This would be a tedious and time-consuming task and would likely leave our friends upset with us.
-
-2.  We could use the power of R to automate this repetitive task!
-
-I believe all of us would choose option 2, so let's abandon tactile sampling in favor of only virtual sampling. Once again let's use the `rep_sample_n()` function with sample `size` set to be 50 once again, but this time with the number of replicates (`reps`) set to `1000`.
-
-```{r}
-#| echo: true
-virtual_samples <- rep_sample_n(bowl, 
-                                size = 50, 
-                                reps = 1000, 
-                                replace = FALSE)
-virtual_samples
-```
-
-Observe that now `virtual_samples` has 1000 $\times$ 50 = `r nrow(virtual_samples)` rows, instead of the 33 $\times$ 50 = 1650 rows from earlier. Using the same data wrangling code as earlier, let's take the data frame `virtual_samples` with 1000 $\times$ 50 = 50,000 rows and compute the resulting 1000 proportions of red balls.
-
-```{r}
-#| echo: true
-
-virtual_prop_red <- virtual_samples %>% 
-  group_by(replicate) %>% 
-  summarize(prop_red = sum(color == "red") / 50) 
-
-virtual_prop_red
-```
-
-Observe that we now have 1000 replicates of `prop_red`, the proportion of 50 balls that are red. Using the same code as earlier, let's now visualize the distribution of these 1000 replicates of `prop_red` in a histogram in @fig-samplingdistribution-virtual-1000.
-
-```{r}
-#| label: fig-samplingdistribution-virtual-1000
-#| fig-cap: "Distribution of 1000 proportions based on 1000 samples of size 50."
-#| echo: true
-ggplot(virtual_prop_red, aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 50 balls that were red", 
-       title = "Distribution of 1000 proportions red") 
-```
-
-Once again, the most frequently occurring proportions of red balls occur between 35% and 40%. Every now and then, we obtain proportions as low as between 20% and 25%, and others as high as between 55% and 60%. These are rare, however. Furthermore, observe that we now have a much more symmetric and smoother bell-shaped distribution. This distribution is, in fact, approximated well by a normal distribution. At this point we recommend you read the "Normal distribution" section (Appendix @sec-appendix) for a brief discussion on the properties of the normal distribution.
-
-### Using different shovels
-
-Now say instead of just one shovel, you have three choices of shovels to extract a sample of balls with: shovels of size 25, 50, and 100.
-
-::: {#fig-shovel-sizes layout-ncol="2"}
-![A shovel with 25 slots](images/shovel_025.jpg)
-
-![A shovel with 50 slots](images/shovel_050.jpg)
-
-![A shovel with 100 slots](images/shovel_100.jpg)
-
-Three shovels to extract three different sample sizes.
-:::
-
-If your goal is still to estimate the proportion of the bowl's balls that are red, which shovel would you choose? In our experience, most people would choose the largest shovel with 100 slots because it would yield the "best" guess of the proportion of the bowl's balls that are red. Let's define some criteria for "best" in this subsection.
-
-Using our newly developed tools for virtual sampling, let's unpack the effect of having different sample sizes! In other words, let's use `rep_sample_n()` with `size` set to `25`, `50`, and `100`, respectively, while keeping the number of repeated/replicated samples at 1000:
-
-1.  Virtually use the appropriate shovel to generate 1000 samples with `size` balls.
-2.  Compute the resulting 1000 replicates of the proportion of the shovel's balls that are red.
-3.  Visualize the distribution of these 1000 proportions red using a histogram.
-
-Run each of the following code segments individually and then compare the three resulting histograms.
-
-```{r hist-n-comparison}
-#| echo: true
-#| label: fig-comparing-sampling-distributions
-#| fig-cap: "Comparing the distributions of proportion red for different sample sizes."
-#| fig-subcap:
-#|   - "n = 25"
-#|   - "n = 50"
-#|   - "n = 100" 
-#| layout-nrow: 1
-
-# Segment 1: sample size = 25 ------------------------------
-# 1.a) Virtually use shovel 1000 times
-virtual_samples_25 <- rep_sample_n(bowl, 
-                                   size = 25, 
-                                   reps = 1000, 
-                                   replace = FALSE)
-
-# 1.b) Compute resulting 1000 replicates of proportion red
-virtual_prop_red_25 <- virtual_samples_25 %>% 
-  group_by(replicate) %>% 
-  summarize(prop_red = sum(color == "red") / 25)
-
-# 1.c) Plot distribution via a histogram
-ggplot(data = virtual_prop_red_25, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 25 balls that were red") 
-
-# Segment 2: sample size = 50 ------------------------------
-# 2.a) Virtually use shovel 1000 times
-virtual_samples_50 <- rep_sample_n(bowl, 
-                                   size = 50, 
-                                   reps = 1000, 
-                                   replace = FALSE)
-
-# 2.b) Compute resulting 1000 replicates of proportion red
-virtual_prop_red_50 <- virtual_samples_50 %>% 
-  group_by(replicate) %>% 
-  summarize(prop_red = sum(color == "red") /50) 
-
-# 2.c) Plot distribution via a histogram
-ggplot(data = virtual_prop_red_50, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 50 balls that were red")  
-
-# Segment 3: sample size = 100 ------------------------------
-# 3.a) Virtually using shovel with 100 slots 1000 times
-virtual_samples_100 <- rep_sample_n(bowl, 
-                                    size = 100, 
-                                    reps = 1000)
-
-# 3.b) Compute resulting 1000 replicates of proportion red
-virtual_prop_red_100 <- virtual_samples_100 %>% 
-  group_by(replicate) %>% 
-  summarize(prop_red = sum(color == "red") / 100) 
-
-# 3.c) Plot distribution via a histogram
-ggplot(data = virtual_prop_red_100, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 100 balls that were red") 
-```
-
-For easy comparison, we present the three resulting histograms in a single row with matching x and y axes in Figure @fig-comparing-sampling-distributions.
-
-Observe that as the sample size increases, the variation of the 1000 replicates of the proportion of red decreases. In other words, as the sample size increases, there are fewer differences due to sampling variation and the distribution centers more tightly around the same value. Eyeballing @fig-comparing-sampling-distributions, all three histograms appear to center around roughly 40%.
-
-We can be numerically explicit about the amount of variation in our three sets of 1000 values of `prop_red` using the *standard deviation*. A standard deviation is a summary statistic that measures the amount of variation within a numerical variable (see Appendix @sec-appendix) for a brief discussion on the properties of the standard deviation. For all three sample sizes, let's compute the standard deviation of the 1000 proportions red by running the following data wrangling code that uses the `sd()` summary function.
-
-```{r }
-#| echo: true
-
-# n = 25
-virtual_prop_red_25 %>% 
-  summarize(sd = sd(prop_red))
-# n = 50
-virtual_prop_red_50 %>% 
-  summarize(sd = sd(prop_red))
-# n = 100
-virtual_prop_red_100 %>% 
-  summarize(sd = sd(prop_red))
-```
-
-Let's compare these three measures of distributional variation in @tbl-comparing-n.
-
-```{r comparing-n}
-#| label: tbl-comparing-n
-#| tbl-cap: "Comparing standard deviations of proportions red for three different shovels."
-
-virtual_prop_red_25 <- virtual_prop_red_25 %>%
-  mutate(n = 25)
-
-virtual_prop_red_50<- virtual_prop_red_50 %>%
-  mutate(n = 50)
-
-virtual_prop_red_100 <- virtual_prop_red_100 %>%
-  mutate(n = 100)
-
-virtual_prop <- bind_rows(
-  virtual_prop_red_25,
-  virtual_prop_red_50,
-  virtual_prop_red_100
-)
-
-comparing_n_table <- virtual_prop %>%
-  group_by(n) %>%
-  summarize(sd = sd(prop_red)) %>%
-  rename(`Number of slots in shovel` = n, `Standard deviation of proportions red` = sd)
-
-comparing_n_table %>%
-  knitr::kable(
-    digits = 3,
-    booktabs = TRUE,
-    linesep = ""
-  ) %>%
-  kableExtra::kable_styling()
-```
-
-## Sampling framework
-
-In both our tactile and our virtual sampling activities, we used sampling for the purpose of estimation. We extracted samples in order to *estimate* the proportion of the bowl's balls that are red. We used sampling as a less time-consuming approach than performing an exhaustive count of all the balls. Our virtual sampling activity built up to the results shown in @fig-comparing-sampling-distributions and @tbl-comparing-n -- comparing 1000 proportions red based on samples of size 25, 50, and 100. This was our first attempt at understanding two key concepts relating to sampling for estimation:
-
-1.  The effect of *sampling variation* on our estimates.
-2.  The effect of sample size on *sampling variation*.
-
-Now that you have built some intuition relating to sampling, let's now attach words and labels to the various concepts we've explored so far. Specifically in the next section, we'll introduce terminology and notation as well as statistical definitions related to sampling. This will allow us to succinctly summarize and refer to the ideas behind sampling for the rest of this book.
-
-### Terminology and notation {#sec-terminology-and-notation}
-
-Let's now attach words and labels to the various sampling concepts we've seen so far by introducing some terminology and mathematical notation. While they may seem daunting at first, we'll make sure to tie each of them to sampling bowl activities you performed earlier. Furthermore, throughout this book we'll give you plenty of opportunity for practice, as the best method for mastering these terms is repetition.
-
-The first set of terms and notation relate to **populations**:
-
-1.  A **population** is a collection of individuals or observations we are interested in. This is also commonly denoted as a **study population**. We mathematically denote the population's size using upper-case $N$.
-
-2.  A **population parameter** is some numerical summary about the population that is unknown but you wish you knew. For example, when this quantity is a mean like the average height of all Canadians, the population parameter of interest is the *population mean*.
-
-3.  A **census** is an exhaustive enumeration or counting of all $N$ individuals in the population. We do this in order to compute the population parameter's value *exactly*. Of note is that as the number $N$ of individuals in our population increases, conducting a census gets more expensive (in terms of time, energy, and money).
-
-So in our sampling activities, the **population** is the collection of $N$ = `r nrow(bowl)` identically sized red and white balls in the bowl shown in @fig-bowl. Recall that we also represented the bowl "virtually" in the data frame `bowl`:
-
-```{r}
-#| echo: true
-bowl
-```
-
-The **population parameter** here is the proportion of the bowl's balls that are red. Whenever we're interested in a proportion of some value in a population, the population parameter has a specific name: the *population proportion*. We denote population proportions with the letter $p$. We'll see later on that we can also consider other types of population parameters, like population means and population slopes.
-
-In order to compute this population proportion $p$ exactly, we need to first conduct a **census** by going through all $N$ = `r nrow(bowl)` and counting the number that are red. We then divide this count by `r nrow(bowl)` to obtain the proportion red.
-
-You might be now asking yourself: "Wait. I understand that performing a census on the actual bowl would take a long time. But can't we conduct a 'virtual' census using the virtual bowl?" You are absolutely correct! In fact when the *ModernDive* authors created the `bowl` data frame, they made its contents match the contents of actual bowl not by doing a census, but by reading the contents written on the box the bowl came in!
-
-Let's conduct this "virtual" census by using the same `dplyr` verbs you used earlier to count the number of balls that are red:
-
-```{r num-red}
-#| echo: true
-summarize(bowl, 
-          total_red = sum(color == "red")
-          ) 
-```
-
-```{r num-red-object}
-
-total_red <- summarize(bowl, 
-          total_red = sum(color == "red")
-          ) %>% 
-  pull(total_red)
-
-prop_red <- total_red / nrow(bowl)
-
-```
-
-Since `r total_red` of the `r nrow(bowl)` are red, the proportion is `r total_red`/`r nrow(bowl)` = `r prop_red` = `r prop_red * 100`%. So we know the value of the population parameter: in our case, the population proportion $p$ is equal to `r prop_red`.
-
-At this point, you might be further asking yourself: "If we had a way of knowing that the proportion of the balls that are red is `r prop_red * 100`%, then why did we do any sampling?" Great question! Normally, you wouldn't do any sampling! However, the sampling activities we did this chapter are merely simulations of how sampling is done in real-life! We perform these simulations in order to study:
-
-1.  The effect of *sampling variation* on our estimates.
-2.  The effect of sample size on *sampling variation*.
-
-In real-life sampling not only will the population size $N$ be very large making a census expensive, but sometimes we won't even know how big the population is! For now however, we press on with our next set of terms and notation.
-
-The second set of terms and notation relate to **samples**:
-
-1.  **Sampling** is the act of collecting a sample from the population, which we generally only do when we can't perform a census. We mathematically denote the sample size using lower case $n$, as opposed to upper case $N$ which denotes the population's size. Typically the sample size $n$ is much smaller than the population size $N$. Thus sampling is a much cheaper alternative than performing a census.
-
-2.  A **point estimate**, also known as a **sample statistic**, is a summary statistic computed from a sample that *estimates* the unknown population parameter.
-
-So previously we conducted **sampling** using a shovel with 50 slots to extract samples of size $n$ = 50. To perform the virtual analog of this sampling, recall that we used the `rep_sample_n()` function as follows:
-
-```{r}
-#| echo: true
-virtual_shovel <- rep_sample_n(bowl, 
-                               size = 50, 
-                               reps = 1, 
-                               replace = FALSE)
-virtual_shovel
-```
-
-Using the sample of 50 balls contained in `virtual_shovel`, we generated an estimate of the proportion of the bowl's balls that are red `prop_red`
-
-```{r}
-#| echo: true
-virtual_shovel %>% 
-  summarize(prop_red = sum(color == "red") / 50) 
-```
-
-So in our case, the value of `prop_red` is the **point estimate** of the population proportion $p$ since it estimates the latter's value. Furthermore, this point estimate has a specific name when considering proportions: the *sample proportion*. It is denoted using $\widehat{p}$ because it is a common convention in statistics to use a "hat" symbol to denote point estimates.
-
-The third set of terms relate to **sampling methodology**: the method used to collect samples. You'll see here and throughout the rest of your book that the *way* you collect samples directly influences their quality.
-
-1.  A sample is said to be **representative** if it roughly "looks like" the population. In other words, if the sample's characteristics are a "good" representation of the population's characteristics.
-
-2.  We say a sample is **generalizable** if any results based on the sample can generalize to the population. In other words, if we can make "good" guesses about the population using the sample.
-
-3.  We say a sampling procedure is **biased** if certain individuals in a population have a higher chance of being included in a sample than others. We say a sampling procedure is **unbiased** if every individual in a population has an equal chance of being sampled.
-
-We say a sample of $n$ balls extracted using our shovel is **representative** of the population if it's contents "roughly resemble" the contents of the bowl. If so, then the proportion of the shovel's balls that are red can **generalize** to the proportion of the bowl's $N$ = `r nrow(bowl)` balls that are red. Or expressed differently, $\widehat{p}$ is a "good guess" of $p$. Now say we cheated when using the shovel and removed a number of white balls in favor of red balls. Then this sample would be **biased** towards red balls, and thus the sample would no longer be representative of the bowl.
-
-The fourth and final set of terms and notation relate to the goal of sampling:
-
-1.  One way to ensure that a sample is unbiased and representative of the population is by using **random sampling**
-
-2.  **Inference** is the act of "making a guess" about some unknown. **Statistical inference** is the act of making a guess about a population using a sample.
-
-In our case, since the `rep_sample_n()` function uses your computer's [random number generator](https://en.wikipedia.org/wiki/Random_number_generation), we were in fact performing **random sampling**.
-
-Let's now put all four sets of terms and notation together, keeping our sampling activities in mind:
-
--   Since we extracted a sample of $n$ = 50 balls at *random*, we mixed all of the equally sized balls before using the shovel, then
--   the contents of the shovel are *unbiased* and *representative* of the contents of the bowl, thus
--   any result based on the shovel can *generalize* to the bowl, thus
--   the sample proportion $\widehat{p}$ of the $n$ = 50 balls in the shovel that are red is a "good guess" of the population proportion $p$ of the bowl's $N$ = `r nrow(bowl)` balls that are red, thus
--   instead of conducting a *census* of the `r nrow(bowl)` balls in the bowl, we can **infer** about the bowl using the sample from the shovel.
-
-What you have been performing is **statistical inference**. This is one of the most important concepts in all of statistics. So much so, we included this term in the title of our book: "Statistical Inference via Data Science". More generally speaking,
-
--   If the sampling of a sample of size $n$ is done at *random*, then
--   the sample is *unbiased* and *representative* of the population of size $N$, thus
--   any result based on the sample can *generalize* to the population, thus
--   the point estimate is a "good guess" of the unknown population parameter, thus
--   instead of performing a census, we can *infer* about the population using sampling.
-
-In the second reading this week, we'll introduce the `infer` package, which makes statistical inference "tidy" and transparent.
-
-### Statistical definitions
-
-To further attach words and labels to the various sampling concepts we've seen so far, we also introduce some important statistical definitions related to sampling. As a refresher of our 1000 repeated / replicated virtual samples of size $n$ = 25, $n$ = 50, and $n$ = 100 in @sec-sampling-simulation, let's display @fig-comparing-sampling-distributions again.
-
-```{r hist-n-comparison-again}
-#| fig-cap: ""
-#| fig-subcap:
-#|   - "n = 25"
-#|   - "n = 50"
-#|   - "n = 100" 
-#| layout-nrow: 1
-
-ggplot(data = virtual_prop_red_25, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 25 balls that were red") 
-
-ggplot(data = virtual_prop_red_50, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 50 balls that were red")  
-
-ggplot(data = virtual_prop_red_100, 
-       mapping = aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 100 balls that were red") 
-```
-
-These types of distributions have a special name: **sampling distributions of point estimates**. Their visualization displays the effect of sampling variation on the distribution of any point estimate, in this case, the sample proportion $\widehat{p}$. Using these sampling distributions, for a given sample size $n$, we can make statements about what values we can typically expect. Unfortunately, the term *sampling distribution* is often confused with a *sample's distribution* which is merely the distribution of the values in a single sample.
-
-For example, observe the centers of all three sampling distributions: they are all roughly centered around 0.4 = 40%. Furthermore, observe that while we are somewhat likely to observe sample proportions of red balls of 0.2 = 20% when using the shovel with 25 slots, we will almost never observe a proportion of 20% when using the shovel with 100 slots. Observe also the effect of sample size on the sampling variation. As the sample size $n$ increases from 25 to 50 to 100, the variation of the sampling distribution decreases and thus the values cluster more and more tightly around the same center of around 40%. We quantified this variation using the standard deviation of our sample proportions in @tbl-comparing-n, which we display again below:
-
-```{r comparing-n-repeat}
-comparing_n_table %>%
-  knitr::kable(
-    digits = 3,
-    caption = "Previously seen comparing standard deviations of proportions red for three different shovels",
-    booktabs = TRUE,
-    linesep = ""
-  ) %>%
-  kableExtra::kable_styling()
-```
-
-So as the sample size increases, the standard deviation of the proportion of red balls decreases. This type of standard deviation has another special name: **standard error of a point estimate**. Standard errors quantify the effect of sampling variation induced on our estimates. In other words, they quantify how much we can expect different proportions of a shovel's balls that are red *to vary* from one sample to another sample to another sample, and so on. As a general rule, as sample size increases, the standard error decreases.
-
-Similarly to confusion between *sampling distributions* with *a sample's distribution*, people often confuse the *standard error* with the *standard deviation*. This is especially the case since a standard error is itself a kind of standard deviation. The best advice we can give is that a standard error is merely a *kind* of standard deviation: the standard deviation of any point estimate from sampling. In other words, all standard errors are standard deviations, but not every standard deviation is necessarily a standard error.
-
-To help reinforce these concepts, let's re-display @fig-comparing-sampling-distributions but using our new terminology, notation, and definitions relating to sampling in @fig-comparing-sampling-distributions-2.
-
-```{r comparing-sampling-distributions-2}
-#| label: fig-comparing-sampling-distributions-2
-#| fig-cap: "Three sampling distributions of the sample proportion $\\widehat{p}$."
-
-virtual_prop %>%
-  mutate(
-    n = str_c("n = ", n),
-    n = factor(n, levels = c("n = 25", "n = 50", "n = 100"))
-  ) %>%
-  ggplot(aes(x = prop_red)) +
-  geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(
-    x = expression(paste("Sample proportion ", hat(p))),
-    title = expression(paste("Sampling distributions of ", hat(p), " based on n = 25, 50, 100."))
-  ) +
-  facet_wrap(~n)
-```
-
-Furthermore, let's re-display @tbl-comparing-n but using our new terminology, notation, and definitions relating to sampling in @tbl-comparing-n-2.
-
-```{r comparing-n-2}
-#| label: tbl-comparing-n-2
-#| tbl-cap: "Standard errors of the sample proportion based on sample sizes of 25, 50, and 100"
-
-virtual_prop %>%
-  group_by(n) %>%
-  summarize(sd = sd(prop_red)) %>%
-  mutate(
-    n = str_c("n = ", n),
-    n = factor(n, levels = c("n = 25", "n = 50", "n = 100"))
-  ) %>%
-  rename(`Sample size (n)` = n, `Standard error of $\\widehat{p}$` = sd) %>% 
-  knitr::kable(
-    digits = 3,
-    booktabs = TRUE,
-    escape = FALSE,
-    linesep = ""
-  ) %>%
-  kableExtra::kable_styling()
-```
-
-Remember the key message of this last table: that as the sample size $n$ goes up, the "typical" error of your point estimate will go down, as quantified by the *standard error*.
-
-### The moral of the story {#moral-of-the-story}
-
-Let's recap this section so far. We've seen that if a sample is generated at random, then the resulting point estimate is a "good guess" of the true unknown population parameter. In our sampling activities, since we made sure to mix the balls first before extracting a sample with the shovel, the resulting sample proportion $\widehat{p}$ of the shovel's balls that were red was a "good guess" of the population proportion $p$ of the bowl's balls that were red.
-
-However, what do we mean by our point estimate being a "good guess"? Sometimes, we'll get an estimate that is less than the true value of the population parameter, while at other times we'll get an estimate that is greater. This is due to sampling variation. However, despite this sampling variation, our estimates will "on average" be correct and thus will be centered at the true value. This is because our sampling was done at random and thus in an unbiased fashion.
-
-In our sampling activities, sometimes our sample proportion $\widehat{p}$ was less than the true population proportion $p$, while at other times it was greater. This was due to the sampling variability. However, despite this sampling variation, our sample proportions $\widehat{p}$ were "on average" correct and thus were centered at the true value of the population proportion $p$. This is because we mixed our bowl before taking samples and thus the sampling was done at random and thus in an unbiased fashion. This is also known as having an *accurate* estimate.
-
-Recall from earlier that the value of the population proportion $p$ of the $N$ = `r nrow(bowl)` balls in the bowl was `r total_red`/`r nrow(bowl)` = `r prop_red` = `prop_red * 100`%. We computed this value by performing a virtual census of `bowl`. Let's re-display our sampling distributions from @fig-comparing-sampling-distributions and @fig-comparing-sampling-distributions-2, but now with a vertical red line marking the **true** population proportion $p$ of balls that are red = `r prop_red * 100`% in @fig-comparing-sampling-distributions-3. We see that while there is a certain amount of error in the sample proportions $\widehat{p}$ for all three sampling distributions, on average the $\widehat{p}$ are centered at the true population proportion red $p$.
-
-```{r comparing-sampling-distributions-3}
-#| label: fig-comparing-sampling-distributions-3
-#| fig-cap: "Three sampling distributions with population proportion $p$ marked by vertical line."
-p <- bowl %>%
+p_red <- bowl %>%
   summarize(mean(color == "red")) %>%
   pull()
+n_balls_sample <- 50L
 
-virtual_prop %>%
-  mutate(
-    n = str_c("n = ", n),
-    n = factor(n, levels = c("n = 25", "n = 50", "n = 100"))
-  ) %>%
-  ggplot(aes(x = prop_red)) +
-  geom_histogram(
-    binwidth = 0.05, boundary = 0.4,
-    color = "black", fill = "white"
-  ) +
-  labs(
-    x = expression(paste("Sample proportion ", hat(p))),
-    title = expression(paste(
-      "Sampling distributions of ", hat(p),
-      " based on n = 25, 50, 100."
-    ))
-  ) +
-  facet_wrap(~n) +
-  geom_vline(xintercept = p, col = "red", linewidth = 1.5)
+births14 <- births14 |> 
+  mutate(ID = 1:n()) |> 
+  relocate(ID, mage, weight)
 ```
 
-We also saw in this section that as your sample size $n$ increases, your point estimates will vary less and less and be more and more concentrated around the true population parameter. This variation is quantified by the decreasing *standard error*. In other words, the typical error of your point estimates will decrease. In our sampling exercise, as the sample size increased, the variation of our sample proportions $\widehat{p}$ decreased. You can observe this behavior in @fig-comparing-sampling-distributions-3. This is also known as having a *precise* estimate.
+This week's reading is a compilation of [Chapter 8](https://moderndive.com/8-confidence-intervals.html) from *ModernDive* [@kim2020], [Chapter 24](openintro-ims.netlify.app/inf-model-slr.html) from *Introduction to Modern Statistics* [@ims], with a smattering of my own ideas.
 
-So random sampling ensures our point estimates are *accurate*, while on the other hand having a large sample size ensures our point estimates are *precise*. While the terms "accuracy" and "precision" may sound like they mean the same thing, there is a subtle difference. Accuracy describes how "on target" our estimates are, whereas precision describes how "consistent" our estimates are. @fig-accuracy-vs-precision illustrates the difference.
+### Sampling Review
 
-!["Comparing accuracy and precision."](images/accuracy_vs_precision.jpg){#fig-accuracy-vs-precision}
+In the last reading, we studied the concept of sampling variation. Using the example of estimating the proportion of red balls in a bowl, we started with a "tactile" exercise where a shovel was used to draw a sample of balls from the bowl. While we could have performed an exhaustive count of **all** the balls in the bowl, this would have been a tedious process. So instead, we used a shovel to extract a sample of balls and used the resulting proportion that were red as an *estimate*. Furthermore, we made sure to mix the bowl's contents before every use of the shovel. Because of the randomness created by the mixing, different uses of the shovel yielded different proportions red and hence different estimates of the proportion of the bowl's balls that are red.
 
-At this point, you might be asking yourself: "Why did we take 1000 repeated samples of size n = 25, 50, and 100? Shouldn't we be taking only *one* sample that's as large as possible?". If you did ask yourself these questions, your suspicion is correct! Recall from earlier when we asked ourselves "If we had a way of knowing that the proportion of the balls that are red is `r prop_red * 100`%, then why did we do any sampling?" Similarly, we took 1000 repeated samples as a simulation of how sampling is done in real-life! We used these simulations to study:
+We then used R to mimic this "tactile" sampling process. Using our computer's random number generator, we were able to quickly mimic the tactile sampling procedure a large number of times. Moreover, we were able to explore how different our results would be if we used different sized shovels, with 25, 50, and 100 slots. When we visualized the results of these three different shovel sizes, we saw that as the sample size increased, the variation in the estimates ($\widehat{p}$) decreased.
 
-1.  The effect of *sampling variation* on our estimates.
-2.  The effect of sample size on *sampling variation*.
+These visualizations of the repeated sampling from the bowl have a special name in Statistics -- a *sampling distribution*. These distributions all us to study how our estimates (\$\widehat{p}) varied from one sample to another; in other words, we wanted to study the effect of *sampling variation*. Once we had over 1,000 different estimates, we quantified the variation of these estimates using their standard deviation, which also has a special name in Statistics -- the *standard error*. Visually we saw the spread of the sampling distributions get narrower as the sample size increased, which was reiterated by the standard errors -- the standard errors decreased as the sample size increased. This decrease in spread of the sampling distribution gives us more *precise* estimates that varied less around the center.
 
-This is not how sampling is done in real life! In a real-life scenario, we wouldn't take 1000 repeated/replicated samples, but rather a single sample that's as large as we can afford. In the next chapter you will read about methods we can use to approximate these sampling distributions, when we have only one sample.
+We then tied these sampling concepts to the statistical terminology and mathematical notation related to sampling. Our *study population* was the large bowl with $N$ = `r nrow(bowl)` balls, while the *population parameter*, the unknown quantity of interest, was the population proportion $p$ of the bowl's balls that were red. Since performing a *census* would be expensive in terms of time and energy, we instead extracted a *sample* of size $n$ = 50. The *point estimate*, also known as a *sample statistic*, used to estimate $p$ was the sample proportion $\widehat{p}$ of these 50 sampled balls that were red. Furthermore, since the sample was obtained at *random*, it can be considered as *unbiased* and *representative* of the population. Thus any results based on the sample could be *generalized* to the population. Therefore, the proportion of the shovel's balls that were red was a "good guess" of the proportion of the bowl's balls that are red. In other words, we used the sample to *infer* about the population.
 
-## Central Limit Theorem
+However, we acknowledged that both the tactile and virtual sampling exercises are not what one would do in real life; this was merely an activity used to study the effects of sampling variation. In a real-life situation, we would not take 1,000s of samples of size $n$, but rather take a *single* representative sample that's as large as possible. Additionally, we knew that the true proportion of the bowl's balls that were red was `r p_red*100`%. In a real-life situation, we will not know what this value is. Because if we did, then why would we take a sample to estimate it?
 
-This chapter began with (virtual) access to a large bowl of balls (our population) and a desire to figure out the proportion of red balls. Despite having access to this population, in reality, you almost **never** will have **access to the population,** either because the population is too large, ever changing, or too expensive to take a census of. Accepting this reality means accepting that we need to use *statistical inference.*
+So how does one quantify the effects of sampling variation when you only have a *single sample* to work with? You cannot directly study the effects of sampling variation when you only have one sample. One common method to study this is *bootstrapping resampling*, which will be the focus of the earlier sections of this reading.
 
-In @sec-terminology-and-notation, we stated that "statistical inference is the act of making a guess about a population using a sample." But how do we *do* this inference? In the previous section, we defined the *sampling framework* only to state that in reality we take one large sample, instead of many samples as done in the sampling framework (which we modeled physically by taking many samples from the bowl).
+Furthermore, what if we would like not only a single estimate of the unknown population parameter, but also a *range of highly plausible* values? For example, when you read about political polls, they tell you the percent of all Californians who support a specific measure, but in addition to this estimate they provide the poll's "margin of error". This margin of error can be used to construct a range of plausible values for the true percentage of people who support a specific measure. This range of plausible values is what's known as a *confidence interval*, which will be the focus of the later sections of this reading.
 
-In reality, we take *only one* sample and use that *one* sample to make statements about the population parameter. This ability of making statements about the population is allowable by a famous theorem, or mathematically proven truth, called the *Central Limit Theorem*. What you visualized in @fig-comparing-sampling-distributions and @fig-comparing-sampling-distributions-2 and summarized in @tbl-comparing-n and @tbl-comparing-n-2 was a demonstration of this theorem. It loosely states that when sample means are based on larger and larger sample sizes, the sampling distribution of these sample means becomes both more and more normally shaped and more and more narrow.
+## Baby Birth Weights
 
-In other words, as our sample size gets larger (1) the sampling distribution of a point estimate (like a sample proportion) increasingly follows a *normal distribution* and (2) the variation of these sampling distributions gets smaller, as quantified by their standard errors. We discuss the properties of the normal distribution in Appendix @sec-appendix-normal-curve.
+Medical researchers may be interested in the relationship between a baby's birth weight and the age of the mother, so as to provide medical interventions for specific age groups if it is found that they are associated with lower birth weights.
 
-Shuyi Chiou, Casey Dunn, and Pathikrit Bhattacharyya created a 3-minute and 38-second video at <https://youtu.be/jvoxEYmQHNM> explaining this crucial statistical theorem using the average weight of wild bunny rabbits and the average wingspan of dragons as examples. It's very clever!
+Every year, the US releases to the public a large data set containing information on births recorded in the country. The [`births14`](http://openintrostat.github.io/openintro/reference/births14.html) dataset is a random sample of 1,000 cases from one such dataset released in 2014.
 
-![](images/bunnies.png){#fig-CLT-video-preview}
+### Observed data
 
-Here's what is so surprising about the Central Limit Theorem: regardless of the shape of the underlying population distribution, the sampling distribution of means (such as the sample mean of bunny weights or the sample mean of the length of dragon wings) and proportions (such as the sample proportion red in our shovels) will be **normal.** Normal distributions are defined by where they are centered and how wide they are, and the Central Limit Theorem gives us both:
+@fig-births-slr visualizes the relationship between `mage` and `weight` for this sample of 1,000 birth records.
 
-1.  The sampling distribution of the point estimate is centered at the true population parameter
+```{r births-slr-plot}
+#| label: fig-births-slr
+#| fig-cap: "Weight of baby at birth (in lbs) as explained by mother's age."
+#| echo: true
+#| 
 
-2.  We have an estimate for how wide the sampling distribution of the point estimate is, given by the standard error (which we will discuss in the next chapter on confidence intervals)
+ggplot(data = births14, 
+       mapping = aes(x = mage, y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(x = "Mother's Age", 
+       y = "Birth Weight of Baby (lbs)")
+```
 
-What the Central Limit Theorem creates for us is a ladder between a *single* sample and the population. By the Central Limit Theorem, we can say that (1) our sample's point estimate is drawn from a normal distribution centered at the true population parameter and (2)that the width of that normal distribution is governed by the standard error of our point estimate. Relating this to our bowl, if we pull one sample and get the sample proportion of red balls $\widehat{p}$, this value of $\widehat{p}$ is drawn from the normal curve centered at the true population proportion of red balls $p$ with the computed standard error.
+@tbl-births-slr displays the estimated regression coefficients for modeling the relationship between `mage` and `weight` for this sample of 1,000 birth records.
 
-## Appendix {#sec-appendix}
+```{r births-slr-code}
+#| echo: true
+#| eval: false
 
-### Normal distribution {#sec-appendix-normal-curve}
+births_lm <- lm(weight ~ mage, data = births14)
 
-Let's review one specific distribution: the *Normal Distribution*. Bell shaped distributions like the Normal Distribution are defined by two values: (1) the *mean* $\mu$ ("mu") which locates the center of the distribution and (2) the *standard deviation* $\sigma$ ("sigma") which determines the variation of the distribution. In @fig-normal-curves, we plot three normal distributions where:
+get_regression_table(births_lm)
+```
 
-1.  The solid normal curve has mean $\mu = 5$ & standard deviation $\sigma = 2$.
-2.  The dotted normal curve has mean $\mu = 5$ & standard deviation $\sigma = 5$.
-3.  The dashed normal curve has mean $\mu = 15$ & standard deviation $\sigma = 2$.
+```{r}
+#| label: tbl-births-slr
+#| tbl-cap: "The least squares estimates of the intercept and slope for modeling the relationship between baby's birth weight and mother's age."
 
-```{r normal-curves}
-#| label: fig-normal-curves
-#| fig-cap: "Three normal distributions."
+births_lm <- lm(weight ~ mage, data = births14)
 
-all_points <- tibble(
-  domain = seq(from = -10, to = 25, by = 0.01),
-  `mu = 5, sigma = 2` = dnorm(x = domain, mean = 5, sd = 2),
-  `mu = 5, sigma = 5` = dnorm(x = domain, mean = 5, sd = 5),
-  `mu = 15, sigma = 2` = dnorm(x = domain, mean = 15, sd = 2)
+births_table <- get_regression_table(births_lm) 
+
+births_table |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+
+```
+
+Based on these coefficients, the estimated regression equation is:
+
+$$ \widehat{\text{birth weight}} = -6.793 + 0.014 \times \text{mother's age}$$
+
+::: callout-note
+We will let $\beta_1$ represent the slope of the relationship between baby's birth weight and mother's age for **every** baby born in the US in 2014. We will estimate $\beta_1$ using the `births14` dataset, labeling the estimate $b_1$ (just as we did in Week 4).
+:::
+
+::: callout-caution
+A **parameter** is the value of the statistic of interest for the entire **population**.
+
+We typically estimate the parameter using a "point estimate" from a sample of data. The point estimate is also referred to as the **statistic**.
+:::
+
+### Variability of the statistic
+
+This sample of 1,000 births is only one of possibly tens of thousands of possible samples that could have been taken from the large dataset released in 2014. So, then we might wonder how different our regression equation would be if we had a different sample. There is no reason to believe that $\beta_1$ is 0.279, but there is also no reason to believe that $\beta_1$ is particularly far away from $b_1 =$ 0.279.
+
+Just this week you read about how estimates, such as $b_1$, are prone to sampling variation -- the variability from sample to sample. For example, if we took a different sample of 1,000 births, would we obtain a slope of exactly 0.279? No, that seems fairly unlikely. We might obtain a slope of 0.29 or 0.26, or even 0.35!
+
+When we studied the effects of sampling variation, we took many samples, something that was easily done with a shovel and a bowl of red and white balls. In this case, however, how would we obtain another sample? Well, we would need to go to the source of the data---the large public dataset released in 2014---and take another random sample of 1,000 observations. Maybe we don't have access to that original dataset of 2014 births, how could we study the effects of sampling variation using our single sample? We will do so using a technique known as **bootstrap resampling with replacement**, which we now illustrate.
+
+### Resampling once
+
+![Step 1: Write out mother's ages and baby's birth weights on 1,000 slips of paper representing one of the 1,000 births included in the original sample.](images/baby-postit.jpg){#fig-baby-post-it}
+
+**Step 1**: Print out 1,000 identically sized slips of paper (or post-it notes) representing the sample of 1,000 babies in our sample. On each piece of paper, write the mother's age and the birth weight of the baby. @fig-baby-post-it displays six of these such papers.
+
+**Step 2**: Put the 1,000 slips of paper into a hat as seen in @fig-hat.
+
+![Step 2: Putting 1,000 slips of paper (post-its) in a hat.](images/hat.JPG){#fig-hat}
+
+**Step 3**: Mix the hat's contents and draw one slip of paper at random, as seen in @fig-draw-out. Record the mother's age and baby's birth weight, as printed on the paper.
+
+![Step 3: Drawing one slip of paper at random.](images/draw-out2.jpg){#fig-draw-out}
+
+**Step 4**: Put the slip of paper back in the hat! In other words, replace it as seen in @fig-put-back.
+
+![Step 4: Replacing slip of paper.](images/put-back.jpg){#fig-put-back}
+
+**Step 5**: Repeat Steps 3 and 4 a total of 999 more times, resulting in 1,000 recorded mother's ages and baby birth weights.
+
+What we just performed was a *resampling* of the original sample of 1,000 birth records. We **are not** sampling 1,000 birth records from the population of all 2014 US births as we did for our original sample. Instead, we are mimicking this process by resampling 1,000 birth records from our original sample.
+
+Now ask yourselves, why did we replace our resampled slip of paper back into the hat in Step 4? Because if we left the slip of paper out of the hat each time we performed Step 4, we would end up with the **same** 1,000 birth records! In other words, replacing the slips of paper induces *sampling variation*.
+
+Being more precise with our terminology, we just performed a *resampling with replacement* from the original sample of 1,000 birth records. Had we left the slip of paper out of the hat each time we performed Step 4, this would be *resampling without replacement*.
+
+Let's study our sample of 1,000 resampled birth records. First, I've made a table of the number of times each observation (birth record) was resampled. @tbl-resample-id displays the birth records that were resampled the most often. Based on the table, it appears that record IDs 71 and 534 were resampled six times.
+
+```{r births-resample}
+#| label: tbl-resample-id
+#| tbl-cap: "Frequencies of how often a given birth record (ID) was resampled." 
+
+resample1<- births14 |> 
+  mutate(ID = 1:n()) |> 
+  relocate(ID) |> 
+  rep_sample_n(size = 1000, replace = TRUE) |> 
+  ungroup()
+
+resample1 |> 
+  count(ID) |> 
+  slice_max(order_by = n, n = 10) |>  
+  pivot_wider(names_from = ID, values_from = n) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+
+```
+
+::: callout-tip
+# Remember
+
+When sampling with replacement, not every observation is guaranteed to be sampled. So, some observations from the original sample may never appear in the resample, whereas others may appear multiple times.
+:::
+
+@fig-compare-dist compares the relationship between mother's age and baby's birth weight from our resample with the relationship in our original sample.
+
+```{r}
+#| echo: true
+#| label: fig-compare-dist
+#| fig-cap: "Comparing relationship between `mage` and `weight` in the resampled birth records compared to the relationship seen in the original sample of birth records."
+#| fig-subcap:
+#|   - "Original Sample of 1,000 Birth Records"
+#|   - "Resample of 1,000 Birth Records"
+#| layout-nrow: 1
+
+ggplot(data = births14, 
+       mapping = aes(x = mage, y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(x = "Mother's Age", 
+       y = "Birth Weight (lbs)")
+
+ggplot(data = resample1, 
+       mapping = aes(x = mage, y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(x = "Mother's Age", 
+       y = "Birth Weight (lbs)")
+
+```
+
+Observed in @fig-compare-dist that while the general shape of both relationships are similar, they are not identical.
+
+Recall, from the previous section that the sample slope ($b_1$) from the original sample was `r filter(births_table, term == "weeks")$estimate`. What about for our resample? Based on the scatterplot, what would your guess be? Larger than before? Smaller than before?
+
+Let's look at the coefficient estimates for the resampled dataset. @tbl-births-resample displays the estimated regression coefficients for modeling the relationship between `mage` and `weight` for the resample of 1,000 birth records.
+
+```{r births-resample-code}
+#| echo: true
+#| eval: false
+
+resample_lm <- lm(weight ~ mage, data = resample1)
+
+get_regression_table(resample_lm)
+```
+
+```{r}
+#| label: tbl-births-resample
+#| tbl-cap: "The least squares estimates of the intercept and slope for modeling the relationship between baby's birth weight and mother's age, for the *resample* of 1,000 birth records."
+
+resample_lm <- lm(weight ~ mage, data = resample1)
+
+resample_table <- get_regression_table(resample_lm)
+
+resample_table |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+
+```
+
+For the resampled dataset, the relationship between mother's age and baby birth weight is much weaker than in the original sample, with an estimated slope of $b_1 =$ `r filter(resample_table, term == "mage")$estimate`.
+
+What if we repeated this resampling exercise many times? Would we obtain the same slope each time? In other words, would our guess at the slope for the relationship between mother's age and baby's birth weight for all births in the US in 2014 exactly `r filter(resample_table, term == "mage")$estimate` every time?
+
+## Computer simulation and resampling
+
+It should be very clear that tactile resampling with a dataset with 1,000 observations would be extremely time consuming, nothing we would want to ask our friends to do. A computer, however, would be happy to do this process for us!
+
+### Virtually resampling once
+
+First, let's perform the virtual analog of resampling once. Recall that the `births14` dataset included in the **openintro** package contains the 1,000 birth records from the original study. Furthermore, recall in the last chapter that we used the `rep_sample_n()` function as a virtual shovel to sample balls from our virtual bowl of 2400 balls as follows:
+
+```{r}
+virtual_shovel <- rep_sample_n(bowl, 
+                               size = 50, 
+                               replace = FALSE, 
+                               reps = 1)
+
+```
+
+Let's modify this code to perform the resampling *with replacement* from the 1,000 birth records in the original sample:
+
+```{r virtual-sample-code}
+#| echo: true
+virtual_resample <- rep_sample_n(births14, 
+                                 size = 1000,
+                                 replace = TRUE, 
+                                 reps = 1)
+
+```
+
+Observe how we explicitly set the `replace` argument to `TRUE` in order to tell `rep_sample_n()` that we would like to sample birth records *with replacement*. Had we not kept `replace = FALSE`, we would have done resampling *without replacement*. Additionally, we changed the sample `size`, as we need to create a sample with the *same* size as the original sample which had 1,000 observations.
+
+Let's look at only the first 10 out of 1,000 rows of `virtual_resample`:
+
+```{r virtual-resample-preview}
+#| echo: true
+virtual_resample
+```
+
+The `replicate` variable only takes on the value of 1 corresponding to us only having `reps = 1`, the `ID` variable indicates which of the 1,000 birth records was resampled, and `mage` and `weight` denote mother's age and the baby's birth weight, respectively.
+
+Let's now compute the slope for the relationship between mother's age and baby's birth weight for this resample:
+
+```{r virtual-resample-lm}
+#| echo: true
+#| eval: false
+virtual_resample_lm <- lm(weight ~ mage, data = virtual_resample)
+
+get_regression_table(virtual_resample_lm)
+```
+
+```{r virtual-resample-lm-table}
+#| label: tbl-virtual-resample-lm
+#| tbl-cap: "The least squares estimates of the intercept and slope for modeling the relationship between baby's birth weight and mother's age, for the virtual resample of 1,000 birth records."
+
+virtual_resample_lm <- lm(weight ~ mage, data = virtual_resample)
+
+virtual_resample_table <- get_regression_table(virtual_resample_lm)
+
+virtual_resample_table |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+```
+
+As we saw when we did our tactile resampling exercise, @tbl-virtual-resample-lm shows that the estimated slope is different from the slope of our original sample of `r filter(resample_table, term == "mage")$estimate`.
+
+### **infer** package workflow
+
+Unfortunately, our process of virtual resampling relies on us fitting a linear regression for each `rep`licate of our `virtual_resample` dataset. This gets a bit tricky coding wise, as we would need to fit 35 different linear regressions if we had 35 different resamples of our data.
+
+Enter, **infer**, an R package for statistical inference. **infer** makes efficient use of the `%>%` pipe operator we learned in Week 3 to spell out the sequence of steps necessary to perform statistical inference in a "tidy" and transparent fashion. Furthermore, just as the **dplyr** package provides functions with verb-like names to perform data wrangling, the **infer** package provides functions with intuitive verb-like names to perform statistical inference.
+
+Let's go back to our original slope. Previously, we computed the value of the sample slope $b_1$ using the `lm()` function:
+
+```{r slr-repeat}
+#| eval: false
+#| echo: true
+
+births_lm <- lm(weight ~ mage, data = births14)
+
+get_regression_table(births_lm)
+
+```
+
+We'll see that we can also do this using **infer** functions `specify()` and `calculate()`:
+
+```{r infer-slope}
+#| eval: false
+#| echo: true
+births14 %>% 
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  calculate(stat = "slope")
+```
+
+You might be asking yourself: "Isn't the **infer** code longer? Why would I use that code?". While not immediately apparent, you'll see that there are three chief benefits to the **infer** workflow as opposed to the `lm()` function workflow we had previously.
+
+First, the **infer** verb names better align with the overall resampling framework you need to understand to construct confidence intervals and to conduct hypothesis tests. We'll see flowchart diagrams of this framework in the upcoming @fig-infer-workflow-ci.
+
+Second, you can jump back and forth seamlessly between confidence intervals and hypothesis testing with minimal changes to your code. This will become apparent next week, when we also use **infer** to conduct hypothesis tests for the slope statistic.
+
+Third, the **infer** workflow is much simpler for conducting inference when you have *more than one variable*, meaning we can extend what we've learned for simple linear regression to multiple linear regression models.
+
+Let's now illustrate the sequence of verbs necessary to construct a confidence interval for $\b_1$, the slope of the relationship between mother's age and baby's birth weight for all US births in 2014.
+
+#### 1. `specify()` variables {#sec-specify}
+
+!["Diagram of `specify()`ing variables."](images/specify.png){#fig-infer-specify}
+
+As shown in @fig-infer-specify, the `specify()` function is used to choose which variables in a data frame will be the focus of our statistical inference. We do this by `specify`ing the `response` argument. For example, in our `births14` data frame, the response variable of interest is `weight` and the explanatory variable is `mage`:
+
+```{r}
+#| echo: true
+births14 %>% 
+  specify(response = weight, 
+          explanatory = mage)
+```
+
+Notice how the dataset got smaller, now there are only two columns where before there were `r ncol(births14)`. You should also notice the messages above the dataset (`Response: weight (numeric)` and `Explanatory: mage`). These are *meta-data* about the grouping structure of the dataset, declaring which variable has been assigned to the explanatory / response.
+
+::: callout-note
+This is similar to how the `group_by()` verb from `dplyr` doesn't change the data, but only adds "grouping" meta-data, as we saw in Week 3.
+:::
+
+#### 2. `generate()` replicates {#sec-generate}
+
+!["Diagram of `generate()` replicates."](images/generate.png){#fig-infer-generate}
+
+After we `specify()` the variables of interest, we pipe the results into the `generate()` function to generate replicates. @fig-infer-generate shows how this is combined with `specify()` to start the pipeline. In other words, repeat the resampling process a large number of times, similar to how we collected 35 different samples of balls from the bowl.
+
+The `generate()` function's first argument is `reps`, which sets the number of replicates we would like to generate. Suppose we were interested in obtaining 50 different resamples (each of 1,000 birth records). Then, we would we set `reps = 50`, telling **infer** that we are interested in obtaining 50 different resamples, each with 1,000 observations.
+
+```{r}
+n_virtual_resample <- 50
+```
+
+The second argument `type` determines the type of computer simulation we'd like to perform. We set this to `type = "bootstrap"` indicating that we want to perform bootstrap resampling, meaning the resampling should be done *with replacement*. You'll see different options for `type` when we learn about hypothesis testing next week.
+
+```{r infer-generate-code}
+#| echo: true
+births14 %>% 
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  generate(reps = 50, 
+           type = "bootstrap")
+```
+
+Observe that the resulting data frame has `r scales::comma(nrow(births14) * n_virtual_resample)` rows. This is because we performed resampling of `r nrow(births14)` birth records with replacement `r n_virtual_resample` times and `r nrow(births14)` $\times$ `r n_virtual_resample` = `r scales::comma(nrow(births14) * n_virtual_resample)`.
+
+The variable `replicate` indicates which resample each row belongs to. So it has the value `1` `r nrow(births14)` times, the value `2` `r nrow(births14)` times, all the way through to the value `r n_virtual_resample` `r nrow(births14)` times.
+
+**Comparing with original workflow**: Note that the steps of the **infer** workflow so far produce the same results as the original workflow using the `rep_sample_n()` function we saw earlier. In other words, the following two code chunks produce similar results:
+
+::: columns
+::: {.column width="45%"}
+**infer** workflow
+
+```{r infer-vs-rep}
+#| eval: false
+#| echo: true
+births14 %>%
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  generate(reps = 50, 
+           type = "bootstrap") 
+             
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+Original workflow
+
+```{r rep-vs-infer}
+#| eval: false
+#| echo: true
+
+rep_sample_n(births14, 
+             size = 1000, 
+             replace = TRUE,
+             reps = 50)
+```
+:::
+:::
+
+#### 3. `calculate()` summary statistics {#sec-calculate}
+
+![Diagram of calculate()d summary statistics.](images/calculate.png){#fig-calculate}
+
+After we `generate()` many replicates of bootstrap resampling with replacement, we next want to summarize each of the `r n_virtual_resample` resamples of size `r nrow(births14)` to a single sample statistic value. As seen in @fig-calculate, the `calculate()` function does this.
+
+In our case, we want to calculate the slope between mother's age and baby's birth weight for each bootstrap resample of size `r nrow(births14)`. To do so, we set the `stat` argument to `"slope"`.
+
+::: callout-tip
+You can also set the `stat` argument to a variety of other common summary statistics, like `"median"`, `"sum"`, `"sd"` (standard deviation), and `"prop"` (proportion). To see a list of all possible summary statistics you can use, type `?calculate` and read the help file.
+:::
+
+Let's save the result in a data frame called `bootstrap_distribution` and explore its contents:
+
+```{r births-infer-process-code}
+#| echo: true
+
+bootstrap_distribution <- births14 %>% 
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  generate(reps = 50) %>% 
+  calculate(stat = "slope")
+
+bootstrap_distribution
+```
+
+Observe that the resulting data frame has `r n_virtual_resample` rows and two columns. The `replicate` column corresponds to the `r n_virtual_resample` replicates and the `stat` column corresponds to the estimated slope for each resample.
+
+#### 4. `visualize()` the results {.unnumbered}
+
+![Diagram of closing the entire process by visualize()ing the results.](images/visualize.png){#fig-visualize}
+
+The `visualize()`verb provides a quick way to visualize the bootstrap distribution as a histogram of the numerical `stat` variable's values. The pipeline of the main **infer** verbs used for exploring bootstrap distribution results is shown in @fig-infer-visualize.
+
+```{r visualize-code}
+#| eval: false
+#| echo: true
+visualize(bootstrap_distribution)
+```
+
+```{r boostrap-distribution-infer}
+#| label: fig-infer-visualize
+#| fig-cap: "Bootstrap distribution of slope statistics from 50 bootstrap resamples."
+visualize(bootstrap_distribution) 
+```
+
+::: callout-tip
+The `visualize()` function can take many other arguments which we'll see momentarily to customize the plot further. It also works with helper functions to do the shading of the histogram values corresponding to the confidence interval values.
+:::
+
+**Comparing with original workflow**: In fact, `visualize()` is a *wrapper function* for the `ggplot()` function that uses a `geom_histogram()` layer. That's a lot of fancy language which means that the `visualize()` function does the **same** thing as we did previously with `ggplot()`, just with fewer steps.
+
+::: columns
+::: {.column width="45%"}
+**infer** workflow
+
+```{r infer-vs-ggplot}
+#| eval: false
+#| echo: true
+visualize(bootstrap_distribution)
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+Original workflow
+
+```{r ggplot-vs-infer}
+#| eval: false
+#| echo: true
+ggplot(data = bootstrap_distribution,
+       mapping = aes(x = stat)) +
+  geom_histogram()
+```
+:::
+:::
+
+::: callout-caution
+Careful! It might sound tempting to ditch the `ggplot()` code altogether now that you know of a simpler approach. The `visualize()` function only works for a specific case -- a data frame containing a distribution of `calculate()`d statistics.
+:::
+
+Let's recap the steps of the **infer** workflow for constructing a bootstrap distribution and then visualizing it in @fig-infer-workflow-ci.
+
+![infer package workflow for resampling](images/ci_diagram.png){#fig-infer-workflow-ci}
+
+### Virtually resampling 1,000 times
+
+To change from resampling 50 times to resampling 1,000 times, only one line of code needs to change---the number of `reps`. In the code process below, we've chained together the entire **infer** pipeline, connecting the specify, generate, calculate, and visualize steps.
+
+```{r entire-infer}
+#| label: fig-infer-1000
+#| fig-cap: "Bootstrap distribution with 1,000 replicates."
+#| echo: true
+
+bootstrap_1000 <- births14 |> 
+  specify(response = weight, 
+          explanatory = mage) |> 
+  generate(reps = 1000, 
+           type = "bootstrap") |> 
+  calculate(stat = "slope") 
+
+visualize(bootstrap_1000) + 
+  labs(x = "Bootstrap Slope Statistic", 
+       y = "Bootstrap Distribution of 1,000 Resamples")
+```
+
+::: callout-note
+# Changing axis labels
+
+Notice you can still use the `labs()` function to change your axis labels. Notice that you still need to connect the axis labels with the plot using a `+` sign.
+:::
+
+What do you notice about this distribution? What distribution does it resemble? Why is that the case?
+
+### Connection to sampling distributions
+
+The histogram of sample slopes in @fig-infer-1000 is called the **bootstrap distribution**. The bootstrap distribution is an *approximation* to the sampling distribution of sample slopes.
+
+If you recall back to the last chapter, a sampling distribution was a distribution of statistics from repeatedly *sampling* from the **population**. However, a bootstrap distribution is a distribution of statistics from repeatedly *resampling* from the **sample**. This may seem rather strange, how can a distribution based entirely on the sample approximate a distribution based on the population? That's a great question!
+
+The bootstrapping process hinges on the belief that the sample is representative of the population. Meaning, there are not systematic differences between the sample and the population. For example, if there were no young mothers in the sample of 1,000 birth records in the `births14` dataset. If we have a random sample, however, then on average our sample should look very similar to our population. Meaning, the individuals in the sample can "stand in" for individuals in the population with similar characteristics. So, we can think of repeatedly *resampling* from our sample as a similar process as sampling from the population.
+
+::: {.callout-caution collapse="true"}
+### No guaranteed representation
+
+The process of randomly sampling **does not** guarantee that smaller groups of observations will *always* appear in the sample. Rather, by randomly sampling from the population, on average the representation of individuals in the sample should reflect the proportion of individuals in the population.
+
+To me, this feels rather uncomfortable as a random sample assumes that you can generalize from the sample onto the population from which it was drawn. This means you are generalizing the observations of a few individuals onto the entire population of similar individuals. For example, if you were to collect a random sample of Cal Poly students, it is likely your sample would include very few Black students (as Cal Poly is a predominantly white institution). But, if your sample was random, statistically you could infer from your small sample of Black students onto the entire population of Black students at Cal Poly. That seems kind of iffy to me.
+:::
+
+## Understanding confidence intervals {#sec-understanding}
+
+Let's start this section with an analogy involving fishing. Say you are trying to catch a fish. On the one hand, you could use a spear, while on the other you could use a net. Using the net will probably allow you to catch more fish!
+
+In the `births14` investigation, we are trying to estimate the population slope for the relationship between mother's age and baby's birth weight ($\beta_1$) for **all** babies born in the US in 2014. Think of the value of $\beta_1$ as a fish.
+
+On the one hand, we could use the appropriate *point estimate/sample statistic* to estimate $\beta_1$, which we saw in @tbl-births-slr is the sample slope $b_1$. Based on our sample of `r nrow(births14)` birth records, the sample slope was `r filter(births_table, term == "mage")$estimate`. Think of using this value as "fishing with a spear."
+
+What would "fishing with a net" correspond to? Look at the bootstrap distribution in @fig-infer-1000 once more. Between which values would you say that "most" sample slopes lie? While this question is somewhat subjective, saying that most sample slopes lie between 0 and 0.03 would not be unreasonable. Think of this interval as the "net."
+
+What we've just illustrated is the concept of a *confidence interval*, which I'll abbreviate with "CI" throughout this chapter. As opposed to a point estimate / sample statistic that estimates the value of an unknown population parameter with a single value, a *confidence interval* gives what can be interpreted as a range of plausible values. Going back to our analogy, point estimates / sample statistics can be thought of as spears, whereas confidence intervals can be thought of as nets.
+
+![Analogy of difference between point estimates and confidence intervals.](images/point_estimate_vs_conf_int.png){#fig-spear-net}
+
+Our proposed interval of 0 to 0.03 was constructed by eye and was thus somewhat subjective. We now introduce two methods for constructing such intervals in a more exact fashion: the *percentile method* and the *standard error method*.
+
+Both methods for confidence interval construction share some commonalities. First, they are both constructed from a bootstrap distribution, as you constructed in the previous section and visualized in @fig-infer-1000.
+
+Second, they both require you to specify the *confidence level*. Commonly used confidence levels include 90%, 95%, and 99%. All other things being equal, higher confidence levels correspond to wider confidence intervals, and lower confidence levels correspond to narrower confidence intervals.
+
+```{r bootstrap-1000-percentile-interval}
+percentile_ci <- get_confidence_interval(bootstrap_1000, level = 0.95)
+```
+
+### Percentile method {#sec-percentile-method}
+
+One method to construct a 95% confidence interval is to use the middle 95% of values of the bootstrap distribution. We can do this by computing the 2.5th and 97.5th percentiles, which are `r round(percentile_ci[["lower_ci"]], digits = 4)` and `r round(percentile_ci[["upper_ci"]], digits = 4)`, respectively. This is known as the *percentile method* for constructing confidence intervals.
+
+For now, let's focus only on the concepts behind a percentile method constructed confidence interval; we'll show you the code that computes these values in the next section.
+
+Let's mark these percentiles on the bootstrap distribution with vertical lines in @fig-percentile-method. About 95% of the `slope` variable values in `bootstrap_1000` fall between `r round(percentile_ci[["lower_ci"]], digits = 4)` and `r round(percentile_ci[["upper_ci"]], digits = 4)`, with 2.5% to the left of the leftmost line and 2.5% to the right of the rightmost line.
+
+```{r percentile-method-CI}
+#| label: fig-percentile-method
+#| fig-cap: "Percentile method 95% confidence interval. Interval endpoints marked by vertical lines." 
+
+ggplot(bootstrap_1000, aes(x = stat)) +
+  geom_histogram(binwidth = 0.005, color = "white") +
+  labs(x = "Resample sample slope statistics") + 
+  geom_vline(xintercept = percentile_ci[[1, 1]], linewidth = 1.5, color = "blue") +
+  geom_vline(xintercept = percentile_ci[[1, 2]], linewidth = 1.5, color = "blue")
+```
+
+### Standard error method {#sec-se-method}
+
+```{r bootstrap-1000-se-interval}
+obs_slope <- births14 %>% 
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  calculate(stat = "slope") %>% 
+  pull(stat)
+  
+  
+standard_error_ci <- bootstrap_1000 %>% 
+  get_confidence_interval(type = "se", 
+                          point_estimate = obs_slope, 
+                          level = 0.95)
+
+bootstrap_se <- bootstrap_1000 %>%
+  summarize(se = sd(stat)) %>%
+  pull(se)
+```
+
+Recall in the last chapter we saw that if a numerical variable follows a normal distribution, or, in other words, the histogram of this variable is bell-shaped, then roughly 95% of values fall between $\pm$ `r qnorm(0.975) %>% round(2)` standard deviations of the mean. Given that our bootstrap distribution based on `r nrow(bootstrap_1000)` resamples with replacement in @fig-infer-1000 is normally shaped, let's use this fact about normal distributions to construct a confidence interval in a different way.
+
+First, recall the bootstrap distribution has a mean equal to `r mean(bootstrap_1000$stat) %>% round(3)`. This value almost coincides exactly with the value of the sample slope $b_1$ of our original `r nrow(births14)` birth records `r filter(births_table, term == "mage")$estimate`. Second, let's compute the standard deviation of the bootstrap distribution using the bootstrap slope statistics stored in the `stat` column of the `bootstrap_1000` data frame:
+
+```{r}
+#| echo: true
+bootstrap_1000 %>% 
+  summarize(SE = sd(stat))
+```
+
+What is this value? Recall that the bootstrap distribution is an approximation to the sampling distribution. Thus, the variability of the sampling distribution may be approximated by the variability of the resampling distribution. Recall also that the standard deviation of a sampling distribution has a special name: the *standard error*. Putting these two facts together, we can say that `r bootstrap_se %>% round(5)` is an approximation of the standard error of $b_1$.
+
+Traditional theory-based methodologies for inference also have formulas for standard errors, assuming some conditions are not violated. In this method, we are not using a formula to get our standard error, but using the standard error of the bootstrap distribution. Thus, using our 95% rule of thumb about normal distributions, we can use the following formula to determine the lower and upper endpoints of a 95% confidence interval for $\beta_1$:
+
+$$
+b_1 \pm `r qnorm(0.975) %>% round(2)` \times SE = (b_1 - `r qnorm(0.975) %>% round(2)` \times SE, b_1 + `r qnorm(0.975) %>% round(2)` \times SE)
+$$
+
+$$
+= (`r filter(births_table, term == "mage")$estimate` - `r qnorm(0.975) %>% round(2)` \times `r bootstrap_se %>% round(3)`, `r filter(births_table, term == "mage")$estimate` + `r qnorm(0.975) %>% round(2)` \times `r bootstrap_se %>% round(3)`)
+$$
+
+$$
+= (`r filter(births_table, term == "mage")$estimate  - (qnorm(0.975) %>% round(2) * bootstrap_se %>% round(3))`, `r filter(births_table, term == "mage")$estimate + (qnorm(0.975) %>% round(2) * bootstrap_se %>% round(3))`)
+$$
+
+::: callout-note
+To use the bootstrap standard error in this formula the bootstrap distribution **must** be bell shaped and symmetric. This is often the case with bootstrap distributions, especially those in which the original distribution of the sample is not highly skewed, however it is not always the case. Next week, we'll go deeper into the explorations of model conditions.
+:::
+
+Let's now add the SE method confidence interval with dashed lines in @fig-percentile-and-se-method.
+
+```{r percentile-and-se-method}
+#| label: fig-percentile-and-se-method 
+#| fig-cap: "Comparing two 95% confidence interval methods."
+
+ggplot(data = bootstrap_1000, 
+       mapping = aes(x = stat)) +
+  geom_histogram(binwidth = 0.005, color = "white") +
+  labs(x = "Bootstrap Slope Statistic", 
+       title = "Percentile method CI (solid green lines) \n SE method CI (dashed blue lines)") +
+  geom_vline(xintercept = percentile_ci[[1, 1]], 
+             linewidth = 1, 
+             color = "darkgreen") +
+  geom_vline(xintercept = percentile_ci[[1, 2]], 
+             linewidth = 1, 
+             color = "darkgreen") +
+  geom_vline(xintercept = standard_error_ci[[1, 1]], 
+             linetype = "dashed", 
+             linewidth = 1, 
+             color = "blue") +
+  geom_vline(xintercept = standard_error_ci[[1, 2]], 
+             linetype = "dashed", 
+             linewidth = 1, 
+             color = "blue")
+```
+
+We see that both methods produce nearly identical 95% confidence intervals for $\beta_1$ with the percentile method yielding $(`r round(percentile_ci[["lower_ci"]], 4)`, `r round(percentile_ci[["upper_ci"]], 4)`)$ while the standard error method produces $(`r round(standard_error_ci[["lower_ci"]], 4)`, `r round(standard_error_ci[["upper_ci"]], 4)`)$.
+
+Now that we've introduced the concept of confidence intervals and laid out the intuition behind two methods for constructing them, let's explore the code that allows us to construct them.
+
+## Constructing confidence intervals
+
+Now that we've covered two methods for obtaining confidence intervals, let's now check out the **infer** package code that explicitly constructs these. There are also some additional neat functions to visualize the resulting confidence intervals built-in to the **infer** package!
+
+#### Percentile method with **infer** {#sec-percentile-infer}
+
+Recall the percentile method for constructing 95% confidence intervals we introduced in @sec-percentile-method. This method sets the lower endpoint of the confidence interval at the 2.5th percentile of the bootstrap distribution and similarly sets the upper endpoint at the 97.5th percentile. The resulting interval captures the middle 95% of the values of the sample mean in the bootstrap distribution.
+
+We can compute the 95% confidence interval using the `get_confidence_interval()` function function from the `infer` package. This function takes three arguments (inputs):
+
+-   a data frame containing `calculate()`d statistics (e.g., slope statistics)
+-   a confidence `level` (e.g., 0.95 or 0.99)
+-   the `type` of interval to be made -- `"percentile"` or `"se"`
+
+```{r}
+#| echo: true
+percentile_ci <- get_confidence_interval(bootstrap_distribution, 
+                                         level = 0.95, 
+                                         type = "percentile")
+percentile_ci
+```
+
+Alternatively, we can visualize this interval by adding a `shade_confidence_interval()` layer to the `visualize()` step. This step requires the `endpoints` of the interval to be specified, so the previous step **must** come *before* the following step.
+
+```{r shade-interval-code}
+#| echo: true
+#| eval: false
+visualize(bootstrap_1000) + 
+  shade_confidence_interval(endpoints = percentile_ci)
+```
+
+```{r percentile-ci-viz}
+#| fig-cap: "Percentile method 95% confidence interval shaded corresponding to potential values."
+#| label: fig-percentile-ci-viz
+
+visualize(bootstrap_1000) +
+  shade_confidence_interval(endpoints = percentile_ci) 
+```
+
+Observe in @fig-percentile-ci-viz that 95% of the sample slopes stored in the `stat` variable in `bootstrap_1000` fall between the two endpoints marked with the darker lines, with 2.5% of the sample means to the left of the shaded area and 2.5% of the sample means to the right.
+
+::: callout-tip
+The default colors for `shade_confidence_interval()` are `color = "mediumaquamarine"` and `fill = "turquoise"`. You can, however, change these colors if you wish!
+
+```{r different-color-shading}
+#| eval: false
+#| echo: true
+visualize(bootstrap_distribution) + 
+  shade_ci(endpoints = percentile_ci, color = "hotpink", fill = "khaki")
+```
+:::
+
+#### Standard error method with `infer` {#sec-se-infer}
+
+Recall the standard error method for constructing 95% confidence intervals we introduced in @sec-se-method. From properties of the Normal Distribution, we know that for any distribution that is bell shaped and symmetric, roughly 95% of the values lie within two standard deviations of the mean. Recall that in the case of the sampling distribution, the standard deviation has a special name: the *standard error*. Moreover, remember that the bootstrap distribution provides us with a robust estimate of the standard error of the sampling distribution.
+
+So in our case, 95% of values of the bootstrap distribution will lie within $\pm `r qnorm(0.975) %>% round(2)`$ standard errors of $b_1$. Thus, a 95% confidence interval is
+
+$$
+b_a \pm `r qnorm(0.975) %>% round(2)` \times SE = (b_1 - `r qnorm(0.975) %>% round(2)` \times SE, b_1 + `r qnorm(0.975) %>% round(2)` \times SE)
+$$
+
+Computation of the 95% confidence interval can once again be done by inputting the the `bootstrap_1000` data frame we created into the `get_confidence_interval()` function, using roughly the same code as before. There are two components, however, that must change:
+
+-   we need to set the `type` argument to be `"se"`
+-   we need to specify where the confidence interval should be centered -- the `point_estimate`
+
+To calculate the point estimate, we need one additional step **before** calculating our confidence interval. Rather than using the output from the `lm()` function like we did in @tbl-births-slr, let's obtain our observed slope statistic using the infer pipeline! This process should look familiar, in fact the only part that has changed is we no longer have a `generate()` step. We are not generating any resamples, so that step is no longer needed. All we need to do is `specify()` our variables and `calculate()` the `"slope"` statistic.
+
+```{r standard-error-ci}
+#| echo: true
+
+obs_slope <- births14 |> 
+  specify(response = weight, 
+          explanatory = mage) |> 
+  calculate(stat = "slope")
+
+standard_error_ci <- get_confidence_interval(bootstrap_1000, 
+                                             type = "se", 
+                                             point_estimate = obs_slope, 
+                                             level = 0.95)
+standard_error_ci
+```
+
+If we would like to visualize this interval, we can once again add a `shade_confidence_interval()` layer to our plot. However, when visualizing an interval constructed using the SE method, we need to declare the `endpoints` of the interval, as seen in @fig-se-ci-viz.
+
+```{r se-interval-code}
+#| eval: false
+#| echo: true
+visualize(bootstrap_1000) + 
+  shade_confidence_interval(endpoints = standard_error_ci)
+```
+
+```{r se-ci-viz}
+#| label: fig-se-ci-viz 
+#| fig-cap: "Standard-error-method 95% confidence interval."
+
+visualize(bootstrap_1000) +
+    shade_confidence_interval(endpoints = standard_error_ci)
+```
+
+As noted in @sec-se-method, both methods produce similar confidence intervals:
+
+```{r table-comparison-of-intervals}
+#| label: tbl-comparison-of-intervals
+#| tbl-cap: "Comparison of 95% confidence intervals between percentile and SE methods."
+
+both_CI <- bind_rows(
+  percentile_ci %>% 
+    mutate(type = "Percentile"),
+  standard_error_ci |> 
+    mutate(type = "SE")
   ) %>% 
-  pivot_longer(cols = -domain,
-               names_to = "Distribution", 
-               values_to = "value") %>% 
-  mutate(
-    Distribution = factor(Distribution), 
-    Distribution = fct_relevel(Distribution, 
-                               "mu = 5, sigma = 2", 
-                               "mu = 5, sigma = 5", 
-                               "mu = 15, sigma = 2")
-    )
+  relocate(type) %>% 
+  rename(`2.5%` = lower_ci, 
+         `97.5%` = upper_ci)
 
-
-for_labels <- all_points %>% 
-  filter(between(domain, 3.795, 3.805) & Distribution == "mu = 5, sigma = 2" |
-         between(domain, 0.005, 0.0105) & Distribution == "mu = 5, sigma = 5" |
-         between(domain, 16.005, 16.015) & Distribution == "mu = 15, sigma = 2")
-
-
-all_points %>% 
-  ggplot(aes(x = domain, y = value, linetype = Distribution)) +
-  geom_line() +
-  geom_text(data = for_labels, aes(label = Distribution),
-                            nudge_x = c(-2, -1.5, 2)) +
-  theme_light() +
-  scale_linetype_manual(values=c("solid", "dotted", "longdash")) + 
-  theme(
-    axis.title.y = element_blank(),
-    axis.title.x = element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank(),
-    legend.position = "none"
-  )
+both_CI %>% 
+  knitr::kable() %>% 
+  kableExtra::kable_styling()
 ```
 
-Notice how the solid and dotted line Normal Distributions have the same center due to their common mean $\mu$ = 5. However, the dotted line normal curve is wider due to its larger standard deviation of $\sigma$ = 5. On the other hand, the solid and dashed line normal curves have the same variation due to their common standard deviation $\sigma$ = 2. However, they are centered at different locations.
+## Interpreting confidence intervals
 
-When the mean $\mu$ = 0 and the standard deviation $\sigma$ = 1, the normal distribution has a special name. It's called the *Standard Normal Distribution* or the $z$-curve.
+Now that we've shown you how to construct confidence intervals using a sample drawn from a population, let's now focus on how to interpret their effectiveness. The effectiveness of a confidence interval is judged by whether or not it contains the true value of the population parameter. Going back to our fishing analogy in @sec-understanding, this is like asking, "Did our net capture the fish?".
 
-Furthermore, if a variable follows a normal curve, there are *three rules of thumb* we can use:
+So, for example, does our percentile-based confidence interval of (`r percentile_ci[["lower_ci"]] %>% round(4)`, `r percentile_ci[["upper_ci"]] %>% round(4)`) "capture" the slope of the relationship between mother's age and baby's birth weight ($\beta_1$) for *all* babies born in the US in 2014? Alas, we'll never know, because we don't know what the true value of $\beta_1$ is. After all, we're sampling to estimate it!
 
-1.  68% of values will lie within $\pm$ 1 standard deviation of the mean.
-2.  95% of values will lie within $\pm$ 1.96 $\approx$ 2 standard deviations of the mean.
-3.  99.7% of values will lie within $\pm$ 3 standard deviations of the mean.
+In order to interpret a confidence interval's effectiveness, we need to *know* what the value of the population parameter is. That way we can say whether or not a confidence interval "captured" this value. In the case of `births14` dataset, we have the ability to go find the original dataset, housing the birth records of every baby born in the US in 2014. I did so, and found that the slope for the relationship between mother's age and baby's birth weight ($\beta_1$) for *all* babies born in the US in 2014 was $\beta_1 = 0.0007$.
 
-Let's illustrate this on a standard normal curve in @fig-normal-rule-of-thumb. The dashed lines are at -3, -1.96, -1, 0, 1, 1.96, and 3. These 7 lines cut up the x-axis into 8 segments. The areas under the normal curve for each of the 8 segments are marked and add up to 100%. For example:
+### Did our interval(s) capture $\beta_1$?
 
-1.  The middle two segments represent the interval -1 to 1. The shaded area above this interval represents 34% + 34% = 68% of the area under the curve. In other words, 68% of values.
+Now that we know the value of $\beta_1$, we can see if the intervals we constructed previously do in fact contain this parameter. The percentile interval of (`r percentile_ci[["lower_ci"]] %>% round(4)`, `r percentile_ci[["upper_ci"]] %>% round(4)`) contains $\beta_1 = 0.0007$ and the SE interval of `r standard_error_ci[["lower_ci"]] %>% round(4)`, `r standard_error_ci[["upper_ci"]] %>% round(4)`) also contains $\beta_1 = 0.0007$. Will our 95% confidence intervals *always* contain $\beta_1$? Let's see!
 
-2.  The middle four segments represent the interval -1.96 to 1.96. The shaded area above this interval represents 13.5% + 34% + 34% + 13.5% = 95% of the area under the curve. In other words, 95% of values.
+### Constructing more intervals
 
-3.  The middle six segments represent the interval -3 to 3. The shaded area above this interval represents 2.35% + 13.5% + 34% + 34% + 13.5% + 2.35% = 99.7% of the area under the curve. In other words, 99.7% of values.
+Let's construct 50 more confidence intervals for $\beta_1$ using the infer workflow we learned before. We can then compare how many of these confidence intervals "captured" the true value of $\beta_1$, which we know to be 0.0007. That is to say, "Did the net capture the fish?".
+
+In the code below, we create a second bootstrap distribution, also with 1,000 bootstrap resamples. Then, using this second bootstrap distribution, we use the percentile method to calculate a 95% confidence interval.
+
+::: callout-note
+### Choice of method
+
+I've chosen to use the percentile method as we saw that the intervals had similar results and the percentile method has fewer steps. So, I'm choosing to be efficient! However, since we saw the bootstrap distribution was bell shaped and symmetric, either method would work.
+:::
+
+```{r second-CI}
+#| echo: true
+bootstrap_1000_v2 <- births14 %>% 
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  generate(reps = 1000, 
+           type = "bootstrap") %>% 
+  calculate(stat = "slope")
+  
+percentile_ci_2 <- get_confidence_interval(bootstrap_1000_v2, 
+                                         level = 0.95)
+percentile_ci_2
+```
+
+Notice this interval, also contains $\beta_1$. Let's do this again...
+
+```{r third-CI}
+#| echo: true
+bootstrap_1000_v3 <- births14 %>% 
+  specify(response = weight, 
+          explanatory = mage) %>% 
+  generate(reps = 1000, 
+           type = "bootstrap") %>% 
+  calculate(stat = "slope")
+  
+percentile_ci_3 <- get_confidence_interval(bootstrap_1000_v3, 
+                                         level = 0.95)
+percentile_ci_3
+```
+
+Again, our interval contains $\beta_1$. Let's scale this up and look at 50 different intervals constructed using this method. @fig-50-intervals visualizes these 50 intervals, where:
+
+-   the true value of $\beta_1 = 0.0007$ is marked with a red, vertical line
+-   each of the intervals is marked with a horizontal line
+
+If the interval contained $\beta_1 = 0.0007$, the line is colored grey. If the interval **did not** contain $\beta_1 = 0.0007$, the line is colored black.
+
+```{r fifty-CIs}
+#| label: fig-50-intervals
+#| fig-cap: "50 percentile-based 95% confidence intervals for the true slope for the relationship between mother's age and baby's birth weight, for all babies born in the US in 2014."
+
+get_ci_function <- function(x){
+  
+  CI <- births14 %>% 
+    specify(response = weight, 
+            explanatory = mage) %>% 
+    generate(reps = 1000, 
+             type = "bootstrap") %>% 
+    calculate(stat = "slope") %>% 
+    get_confidence_interval(level = 0.95)
+  
+  return(CI)
+}
+
+ci_df <- map_df(1:50, get_ci_function)
+
+#Identify if confidence interval captured true beta-1 = 0.0007
+ci_df <- ci_df %>% 
+  mutate(captured = lower_ci <= 0.0007, 
+         replicate = 1:n())
+
+# Plot them!
+ggplot(data = ci_df) +
+  geom_segment(mapping = 
+                 aes(y = replicate, 
+                     yend = replicate, 
+                     x = lower_ci, 
+                     xend = upper_ci,
+                     alpha = factor(captured, 
+                                    levels = c("TRUE", "FALSE")
+                                    )
+                 )
+               ) + 
+  labs(
+    x = "95% Confidence Interval for Beta1",
+    y = "Interval Number",
+    alpha = "Captured Beta1"
+  ) +
+  geom_vline(xintercept = 0.0007, color = "red") +
+  coord_cartesian(xlim = c(-0.0001, 0.03)) +
+  theme_light() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+
+```
+
+Of the 50 95% confidence intervals, 46 of them captured the true value of $\beta_1 = 0.0007$, whereas 4 of them didn't. In other words, 46 of our nets caught the fish, and 4 of our nets didn't.
+
+This is where the "95% confidence level" comes into play: for every 50 95% confidence intervals constructed, we expect that about 95% of them will capture $\beta_1$ and 5% of them won't. That's a bit tricky for 50, as 95% of 50 is 47.5. Technically, we can only have either 47 or 48 intervals contain $\beta_1$, but this should reinforce that the process is not exact. We will not always get 95% of the intervals containing $\beta_1$, but on average we expect that 95% of them should.
+
+### Connection to the empiracle rule
+
+You might wonder, why do only 5% of the 95% confidence intervals miss the parameter they are estimating. This reasoning goes back to what you read on the empiracle rule for bell-shaped and symmetric curves. Namely, the rule of thumb that 95% of values will lie within approximately 2 standard deviations of the center of the distribution. The center of a sampling distribution is the value of the parameter. For our example, this value is $\beta_1 = 0.0007$, the value of the slope for the relationship between mother's age and baby's birth weight for all babies born in the US in 2014.
+
+@fig-normal-rule-of-thumb displays the sampling distribution of $b_1$, centered at $\beta_1 = 0.0007$. Because our sampling distribution is bell-shaped and symmetric, we know that 95% of the slope statistics should fall within 2 standard errors of the center, as noted by the two dashed lines. That means, only 5% of the slope statistics should fall *outside* this interval. Our sample slope statistic ($b_1$) is **always** the center of our confidence interval. So, if our sample slope statistic is greater than 2 standard deviations from the center of the sampling distribution, its confidence interval **will not** contain $\beta_1$.
 
 ```{r normal-rule-of-thumb}
 #| label: fig-normal-rule-of-thumb
 #| fig-cap: "Rules of thumb about areas under normal curves."
-
-shade_3_sd <- function(x) {
-  y <- dnorm(x, mean = 0, sd = 1)
-  y[x <= -3 | x >= 3] <- NA
-  return(y)
-}
 
 shade_2_sd <- function(x) {
   y <- dnorm(x, mean = 0, sd = 1)
@@ -852,54 +932,70 @@ shade_2_sd <- function(x) {
   return(y)
 }
 
-shade_1_sd <- function(x) {
-  y <- dnorm(x, mean = 0, sd = 1)
-  y[x <= -1 | x >= 1] <- NA
-  return(y)
-}
-
-labels <- tibble(
-  x = c(-3.5, -2.5, -1.5, -0.5, 
-        0.5, 1.5, 2.5, 3.5),
-  label = c("0.15%", "2.35%", "13.5%", "34%", "34%",
-            "13.5%", "2.35%", "0.15%")
-  ) %>% 
-  mutate(y = rep(0.3, times = n())
-         )
+bootstrap_2se_lower <- 0.0007 - (2 * sd(bootstrap_1000$stat))
+bootstrap_2se_upper <- 0.0007 + (2 * sd(bootstrap_1000$stat))
 
 ggplot(data = tibble(x = c(-4, 4)), 
        mapping = aes(x)) +
-  geom_text(data = labels, aes(y = y, label = label)) + 
   # Trace normal curve
   stat_function(fun = dnorm, 
-                args = list(mean = 0, sd = 1), 
+                args = list(mean = 0.0007, sd = sd(bootstrap_1000$stat)), 
                 n = 1000) + 
   # Shade and delineate +/- 3 SD
-  stat_function(fun = shade_3_sd, 
-                geom = "area", 
-                fill = "black", 
-                alpha = 0.25, 
-                n = 1000) +
-  # Shade and delineate +/- 2 SD
   stat_function(fun = shade_2_sd, 
                 geom = "area", 
                 fill = "black", 
                 alpha = 0.25, 
                 n = 1000) +
-  # Shade and delineate +/- 1 SD
-  stat_function(fun = shade_1_sd, 
-                geom = "area", 
-                fill = "black", 
-                alpha = 0.25, 
-                n = 1000) +
-  geom_vline(xintercept = c(-3, -1.96, -1, 0, 1, 1.96, 3), 
+  geom_vline(xintercept = c(bootstrap_2se_lower, bootstrap_2se_upper), 
              linetype = "dashed", 
              alpha = 0.5) +
+  geom_vline(xintercept = 0.0007, 
+             linetype = "solid", 
+             color = "red") +
   # Axes
-  scale_x_continuous(breaks = seq(from = -3, to = 3, by = 1)) +
-  labs(x = "z-score", y = "") +
+  scale_x_continuous(limits = c(-0.025, 0.025)) +
+  labs(x = "Bootstrap Slope Statistic", y = "") +
   theme(axis.title.y = element_blank(), 
         axis.text.y = element_blank(), 
         axis.ticks.y = element_blank()
         )
 ```
+
+### Precise and shorthand interpretation
+
+Let's return our attention to 95% confidence intervals. The precise and mathematically correct interpretation of a 95% confidence interval is a little long-winded:
+
+> Precise interpretation: If we repeated our sampling procedure a large number of times, we expect about 95% of the resulting confidence intervals to capture the value of the population parameter.
+
+This is what we observed in @fig-50-intervals. Our confidence interval construction procedure is 95% *reliable*. That is to say, we can expect our confidence intervals to include the true population parameter about 95% of the time.
+
+A common but incorrect interpretation is: "There is a 95% probability that the confidence interval contains $\beta_1$." Looking at @fig-50-intervals, each of the confidence intervals either does or doesn't contain $\beta_1$. In other words, the probability is either 100% or 0%.
+
+So if the 95% confidence level only relates to the reliability of the confidence interval construction procedure and not to a given confidence interval itself, what insight can be derived from a given confidence interval? Loosely speaking, we can think of these intervals as our "best guess" of a plausible range of values for the slope of the relationship between mother's age and baby's birth weight $\beta_1$ of *all* babies born in the US in 2014. It is typical to use the following shorthand summary of the precise interpretation:
+
+> We are 95% "confident" that a 95% confidence interval captures the value of the population parameter. We use quotation marks around "confident" to emphasize that while 95% relates to the reliability of our confidence interval construction procedure, ultimately a constructed confidence interval is our best guess of an interval that contains the population parameter. In other words, it's our best net.
+
+So returning to the first confidence interval we calculated, we would interpret this interval as "We are 95% 'confident' that the slope of the relationship between mother's age and baby's birth weight $\beta_1$ of *all* babies born in the US in 2014 is between `r percentile_ci[["lower_ci"]] %>% round(4)` and `r percentile_ci[["upper_ci"]] %>% round(4)`.
+
+### Width of confidence intervals {#ci-width}
+
+Now that we know how to interpret confidence intervals, let's go over some factors that determine their width.
+
+#### Impact of confidence level
+
+One factor that determines confidence interval widths is the pre-specified confidence level. For example, we used 95% confidence intervals for this reading, but we could have equally chosen 85% intervals. A 95% confidence interval created using the percentile method contains 95% of the values in the bootstrap distribution. An 85% confidence interval would only contain 85% of these values, so it would be a **narrower** confidence interval. The quantification of the confidence level should match what many expect of the word "confident." In order to be more confident in our best guess of a range of values, we need to widen the range of values.
+
+To elaborate on this, imagine we want to guess the forecasted high temperature in Seoul, South Korea on August 15th. Given Seoul's temperate climate with four distinct seasons, we could say somewhat confidently that the high temperature would be between 50°F - 95°F (10°C - 35°C). However, if we wanted a temperature range we were *absolutely* confident about, we would need to widen it.
+
+We need this wider range to allow for the possibility of anomalous weather, like a freak cold spell or an extreme heat wave. So a range of temperatures we could be near certain about would be between 32°F - 110°F (0°C - 43°C). On the other hand, if we could tolerate being a little less confident, we could narrow this range to between 70°F - 85°F (21°C - 30°C).
+
+So in order to have a higher confidence level, our confidence intervals must be wider. Ideally, we would have both a high confidence level and narrow confidence intervals. However, we cannot have it both ways. If we want to be more confident, we need to allow for wider intervals. Conversely, if we would like a narrow interval, we must tolerate a lower confidence level.
+
+> The moral of the story is: Higher confidence levels tend to produce wider confidence intervals.
+
+#### Impact of sample size
+
+Pulling from what we learned about the *Central Limit Theorem* at the end of the last reading, we know that variability decreases when sample size increases. We quantified the sampling variation of these sampling distributions using their standard deviation, which has that special name: the standard error. So as the sample size increases, the standard error decreases.
+
+Connecting to what you learned in this reading, if we have a large sample size, the spread of the bootstrap distribution will be smaller, which in turn leads to smaller estimated standard errors, and narrower confidence intervals. In @sec-se-method you saw directly how the standard error is used when calculating a confidence interval.

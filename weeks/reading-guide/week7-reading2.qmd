@@ -1,93 +1,169 @@
 ---
-title: "Week 7 Reading Guide Part 2 -- Confidence Intervals"
-format: docx
+title: "Week 8 Reading Guide: Hypothesis Tests & Model Conditions"
+format: docx 
 editor: visual
 ---
 
 ## Section 1 -- Baby Birth Weights
 
-**What is the process of obtaining one bootstrap resample?**
+**What is the process of obtaining one shuffled sample?**
 
 </br> </br> </br>
 
-**With a bootstrap resample, do we put the cards back into the hat once they are drawn? Why not leave them out?**
+**With a shuffled resample, once the values are written on the cards what happens? Why is this a necessary step?**
 
 </br> </br>
 
-**With a bootstrap resample, will every observation be sampled at least once?**
+**What process is used to shuffle the cards? Are the cards put back into the hat once they are drawn?**
 
 </br> </br>
 
-**How similar was the resampled slope statistic to the original slope statistic found in the original data?**
+**How similar was the shuffled slope statistic (in Figure 2) to the original slope statistic found in the original data?**
 
 </br> </br>
 
-## Section 2 -- Computer simulation and resampling
-
-**What function comes first in the infer workflow for obtaining multiple resamples?**
-
-</br>
-
-**What function comes second in the infer workflow for obtaining multiple resamples?**
-
-</br>
-
-**What function comes third in the infer workflow for obtaining multiple resamples?**
-
-</br>
-
-**What function comes forth in the infer workflow for obtaining multiple resamples?**
-
-</br>
-
-**What is the chief difference between a bootstrap distribution and a sampling distribution?**
+**Where was the distribution of 10 shuffled slope statistics (in Figure 3) centered? Why was it centered there?**
 
 </br> </br>
 
-**Looking at the bootstrap distribution for the sample slope in Figure 13, between what two values would you say most values lie?**
+**What does the word "permute" mean? How is this term related to the shuffling method that was used to obtain the slope statistic?**
 
 </br> </br>
 
-## Section 3 -- Understanding confidence intervals
+## Section 2 -- Hypothesis tests
 
-**If you were to construct a 90% confidence interval using the percentile method, what percentiles would you use to construct the interval?**
-
-</br> </br>
-
-**What condition about the bootstrap distribution cannot be violated for us to be able to construct confidence intervals using the standard error method?**
+**What general form does a null hypothesis take? i.e. what does the null hypothesis generally assume?**
 
 </br> </br>
 
-**Say we wanted to construct a 68% confidence interval instead of a 95% confidence interval for** $\beta_1$. Describe what changes are needed to make this happen.
-
-::: callout-tip
-Hint: I suggest you look at the normal distribution rules from the last chapter.
-:::
+**What is the difference between a one-sided and a two-sided alternative hypothesis? How do you decide which to use?**
 
 </br> </br>
 
-## Section 4 -- Constructing confidence intervals
-
-**What function helps you visualize your confidence interval?**
+**What is a null distribution?**
 
 </br> </br>
 
-## Section 5 -- Interpreting confidence intervals
-
-**What value do we hope is contained in our confidence interval?**
+**How is a null distribution created?**
 
 </br> </br>
 
-**Do we typically know if this value is contained in our interval?**
+**How is a p-value related to a null distribution? i.e. how is a p-value calculated?**
 
 </br> </br>
 
-**If I made 200 90% confidence intervals, how many would you expect to contain the true parameter?**
+## Section 3 -- Conducting a hypothesis test
+
+**When creating a null distribution, what are the sequence of functions you use?**
 
 </br> </br>
 
-**What is wrong with the following interpretation of a confidence interval?**
+**Why is the `hypothesize()` function used to make a null distribution but not for a bootstrap distribution?**
 
-> There is a 95% probability that $\beta_1$ lies between -0.0018 and 0.0285.
+</br> </br>
+
+**What does the `null = "independence"` input in `hypothesize()` mean? What is it assuming about the variables declared in the `specify()` step?**
+
+</br> </br>
+
+**What method is used to `generate()` new samples? i.e. what is input as the `type`?**
+
+</br> </br>
+
+**Why is the null distribution centered at 0?**
+
+</br> </br>
+
+**How was the p-value calculated using the null distribution?**
+
+</br> </br>
+
+**How was the significance threshold (**$\alpha$) used to reach a hypothesis testing decision?
+
+</br> </br>
+
+## Section 4 -- Interpreting a hypothesis test
+
+**Why do we never accept the null hypothesis?**
+
+</br> </br>
+
+**What is a Type I error?**
+
+</br> </br>
+
+**What is a Type II error?**
+
+</br> </br>
+
+**If you choose a smaller value of** $\alpha$ what happens to your Type I error rate?
+
+</br> </br>
+
+**If you choose a smaller value of** $\alpha$ what happens to your Type II error rate?
+
+</br> </br>
+
+## Section 5 -- Comparing with confidence intervals
+
+**Why do we look for 0 in our confidence interval?**
+
+</br> </br>
+
+**If our confidence interval contains 0 what decision would we have made in our hypothesis test?**
+
+</br> </br>
+
+**What is the difference between statistical and practical significance?**
+
+</br> </br>
+
+## Section 6 -- Theory-based hypothesis tests & confidence intervals
+
+**How is the `std_error` column in the regression table calculated?**
+
+</br> </br>
+
+**How is the `statistic` column in the regression table calculated? What type of statistic is it?**
+
+</br> </br>
+
+**How is the `p_value` column in the regression table calculated?**
+
+</br> </br>
+
+**How are the `lower_ci` and `upper_ci` columns in the regression table calculated?**
+
+</br> </br>
+
+**What is the relationship between theory-based methods and simulation-based methods?**
+
+**How is the `std_error` column in the regression table calculated?**
+
+</br> </br>
+
+## Section 7 -- Checking model conditions
+
+**What are the four conditions that need to be evaluated for linear regression?**
+
+</br> </br>
+
+**What is a residual?**
+
+</br> </br>
+
+**What does it mean for the residuals to be independent?**
+
+</br> </br>
+
+**What distribution must the residuals look similar to?**
+
+</br> </br>
+
+**What does it mean for there to be "equal variance" in the residuals?**
+
+</br> </br>
+
+**What happens if one of these conditions is violated?**
 
 </br> </br>

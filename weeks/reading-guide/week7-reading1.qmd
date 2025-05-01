@@ -1,123 +1,93 @@
 ---
-title: "Week 7 Reading Guide Part 2 -- Sampling"
+title: "Week 7 Reading Guide Part 2 -- Confidence Intervals"
 format: docx
 editor: visual
 ---
 
-## Sampling
+## Section 1 -- Baby Birth Weights
 
-### 7.1 -- Sampling Bowl
+**What is the process of obtaining one bootstrap resample?**
 
-**Why was it important to mix the bowl before the balls were sampled?**
+</br> </br> </br>
 
-</br> </br>
-
-**Why is it that our 33 groups of friends did not all have the same numbers of balls that were red out of 50, and hence different proportions red?**
+**With a bootstrap resample, do we put the cards back into the hat once they are drawn? Why not leave them out?**
 
 </br> </br>
 
-### 7.2 -- Virtual Sampling
-
-**Why couldn't we study the effects of sampling variation when we used the virtual shovel only once? Why did we need to take more than one virtual sample (in our case 33 virtual samples)?**
+**With a bootstrap resample, will every observation be sampled at least once?**
 
 </br> </br>
 
-**Why did we not take 1000 "tactile" samples of 50 balls by hand?**
+**How similar was the resampled slope statistic to the original slope statistic found in the original data?**
 
 </br> </br>
 
-**Looking at Figure 8, would you say that sampling 50 balls where 30% of them were red is likely or not? What about sampling 50 balls where 10% of them were red?**
+## Section 2 -- Computer simulation and resampling
+
+**What function comes first in the infer workflow for obtaining multiple resamples?**
+
+</br>
+
+**What function comes second in the infer workflow for obtaining multiple resamples?**
+
+</br>
+
+**What function comes third in the infer workflow for obtaining multiple resamples?**
+
+</br>
+
+**What function comes forth in the infer workflow for obtaining multiple resamples?**
+
+</br>
+
+**What is the chief difference between a bootstrap distribution and a sampling distribution?**
 
 </br> </br>
 
-**In Figure 12, shovels were used to take 1000 samples each, the proportion of the shovel's balls that were red was calculated for each sample, and then the distribution of these 1000 proportions were visualized using a histogram. We did this for shovels with 25, 50, and 100 slots in them. As the size of the shovels increased, the histograms got narrower. In other words, as the size of the shovels increased from 25 to 50 to 100, what happened to the proportions?**
-
-a.  They varied less
-b.  They varied by the same amount
-c.  They varied more
+**Looking at the bootstrap distribution for the sample slope in Figure 13, between what two values would you say most values lie?**
 
 </br> </br>
 
-**What summary statistic was used to quantify how much the 1000 proportions red varied?**
+## Section 3 -- Understanding confidence intervals
 
-a.  The interquartile range
-b.  The standard deviation
-c.  The range: the largest value minus the smallest.
-
-### 7.3 -- Sampling Framework
-
-**In the case of the bowl activity, what is the population parameter? Do we know its value?**
+**If you were to construct a 90% confidence interval using the percentile method, what percentiles would you use to construct the interval?**
 
 </br> </br>
 
-**What would performing a census in the bowl activity correspond to? Why was a a census not performed?**
+**What condition about the bootstrap distribution cannot be violated for us to be able to construct confidence intervals using the standard error method?**
 
 </br> </br>
 
-**What purpose do point estimates serve in general? What is the name of the point estimate specific to the bowl activity? What is its mathematical notation?**
+**Say we wanted to construct a 68% confidence interval instead of a 95% confidence interval for** $\beta_1$. Describe what changes are needed to make this happen.
+
+::: callout-tip
+Hint: I suggest you look at the normal distribution rules from the last chapter.
+:::
 
 </br> </br>
 
-**How did we ensure that our tactile samples using the shovel were random?**
+## Section 4 -- Constructing confidence intervals
+
+**What function helps you visualize your confidence interval?**
 
 </br> </br>
 
-**Why is it important that sampling be done at random?**
+## Section 5 -- Interpreting confidence intervals
+
+**What value do we hope is contained in our confidence interval?**
 
 </br> </br>
 
-**What are we inferring about the bowl based on the samples using the shovel?**
+**Do we typically know if this value is contained in our interval?**
 
 </br> </br>
 
-**What purpose did the sampling distributions serve?**
+**If I made 200 90% confidence intervals, how many would you expect to contain the true parameter?**
 
 </br> </br>
 
-**What does the standard error of the sample proportion** $\hat{p}$ quantify?
+**What is wrong with the following interpretation of a confidence interval?**
+
+> There is a 95% probability that $\beta_1$ lies between -0.0018 and 0.0285.
 
 </br> </br>
-
-The table below is a version of Table 2, matching sample sizes $n$ to different *standard errors* of the sample proportion $\widehat{p}$, but with the rows randomly re-ordered and the sample sizes removed. Fill in the table by matching the correct sample sizes to the correct standard errors.
-
-| Sample Size | Standard Error of $\widehat{p}$ |
-|-------------|---------------------------------|
-| n =         | 0.094                           |
-| n =         | 0.045                           |
-| n =         | 0.069                           |
-
-</br> </br>
-
-**What is the difference between an *accurate* and a *precise* estimate?**
-
-</br> </br>
-
-**How do we ensure that an estimate is *accurate*?**
-
-</br> </br>
-
-**How do we ensure that an estimate is *precise*?**
-
-</br> </br>
-
-**In a real-life situation, we would not take 1000 different samples to infer about a population, but rather only one. Then, what was the purpose of our exercises where we took 1000 different samples?**
-
-</br> </br>
-
-**Figure 15 with the targets shows four combinations of "accurate versus precise" estimates. Draw four *sampling distributions* of the sample proportion** $\widehat{p}$ that correspond with each option.
-
-**High precision, low accuracy**
-
-</br> </br> </br> </br>
-
-**High precision, high accuracy**
-
-</br> </br> </br> </br>
-
-**Low precision, low accuracy**
-
-</br> </br> </br> </br>
-
-**Low precision, high accuracy**
-
-</br> </br> </br> </br>
