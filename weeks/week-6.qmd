@@ -14,6 +14,7 @@ execute:
 
 ```{r}
 #| include: false
+#| label: packages-functions-sourced
 source("_common.R")
 
 set.seed(1234)
@@ -37,9 +38,10 @@ In [Section 6.3.1 of *ModernDive*](https://moderndive.com/6-multiple-regression.
 
 When comparing the left and right-hand plots below, we observed that the three lines corresponding to small, medium, and large high schools were not that different. Given this similarity, we stated it could be argued that the "simpler" parallel slopes model should be favored.
 
-```{r sat-plots}
+```{r}
 #| echo: true
 #| layout-nrow: 1
+#| label: sat-plots
 
 # Interaction model
 ggplot(MA_schools, 
@@ -60,16 +62,17 @@ ggplot(MA_schools,
 
 In @tbl-interaction-coef and @tbl-parallel-coef, we observed that the interaction model was "more complex" in that the regression table had six (6) rows versus the four (4) rows of the parallel slopes model.
 
-```{r interaction-lm}
+```{r}
 #| echo: true
 #| eval: false
+#| label: interaction-lm
 
 sat_interaction <- lm(average_sat_math ~ perc_disadvan * size, 
                           data = MA_schools)
 get_regression_table(sat_interaction)
 ```
 
-```{r interaction-kable}
+```{r}
 #| echo: false
 #| label: tbl-interaction-coef
 #| tbl-cap: "Interaction model coefficient estimates"
@@ -83,9 +86,10 @@ get_regression_table(sat_interaction) |>
   kableExtra::kable_styling()
 ```
 
-```{r parallel-lm}
+```{r}
 #| echo: true
 #| eval: false
+#| label: parallel-lm
 
 sat_parallel_slopes <- lm(average_sat_math ~ perc_disadvan + size, 
                               data = MA_schools)
@@ -135,7 +139,8 @@ ggplot(MA_schools,
 
 As evidenced by the plot, there appears to be a moderately strong relationship between SAT math scores and the percent of students who are economically disadvantaged. Next, let's fit the linear regression for modeling the relationship between SAT math scores and the percent of students who are economically disadvantaged.
 
-```{r sat-slr}
+```{r}
+#| label: sat-slr
 
 sat_simple <- lm(average_sat_math ~ perc_disadvan, data = MA_schools)
 ```
@@ -148,15 +153,18 @@ Recall, we can use the `get_regression_points()` function[^2] to our saved linea
 2.  the fitted values ($\hat{y}$)
 3.  the residuals ($y - \hat{y}$)
 
-```{r slr-augment}
+```{r}
 #| echo: true
+#| label: slr-augment
+
 get_regression_points(sat_simple) 
 ```
 
 Let's now use the `var()` summary function within a `summarize()` to compute the variance of these three terms:
 
-```{r slr-variances}
+```{r}
 #| echo: true
+#| label: slr-variances
 
 get_regression_points(sat_simple) %>% 
   summarize(var_y = var(average_sat_math), 
@@ -184,7 +192,7 @@ Thus, $R^2$ can be interpreted as follows:
 
 1.  $R^2$ values of 0 tell us that our model explains 0% of the variation in $y$. Say we fit a model to the Massachusetts high school data and obtained $R^2 = 0$. This would be telling us that the combination of explanatory variables ($x$) we used and model form we chose (interaction or parallel slopes) explains 0% of the variation in the SAT math scores. Or, in other words, the combination of explanatory variables ($x$) we used and model form we chose tell us **nothing** about average math SAT scores. The model is a poor fit.
 
-2.  $R^2$ values of 1 tell us that our model explains 100% of the variation in $y$. Say we fit a model to the Massachusetts high school data and obtained $R^2 = 1$. This would be telling us that the combination of explanatory variables ($x$) we used and model form we chose (interaction or parallel slopes) explains 0% of the variation in the SAT math scores. Or, in other words, the combination of explanatory variables ($x$) we used and model form we chose tell us **everything** we need to know about average math SAT scores.
+2.  $R^2$ values of 1 tell us that our model explains 100% of the variation in $y$. Say we fit a model to the Massachusetts high school data and obtained $R^2 = 1$. This would be telling us that the combination of explanatory variables ($x$) we used and model form we chose (interaction or parallel slopes) explains 100% of the variation in the SAT math scores. Or, in other words, the combination of explanatory variables ($x$) we used and model form we chose tell us **everything** we need to know about average math SAT scores.
 
 In practice however, $R^2$ values of 1 almost never occur. Think about it in the context of Massachusetts high schools. There are an infinite number of factors that influence why certain high schools perform well on SAT's on average while others don't perform well. The idea that a human-designed statistical model can capture all the heterogeneity of all high school students in Massachusetts is bordering on hubris. However, even if such models are not perfect, they may still prove useful in determining educational policy. A general principle of modeling we should keep in mind is a famous quote by eminent statistician George Box: ["All models are wrong, but some are useful."](https://jamesclear.com/all-models-are-wrong)
 
@@ -201,7 +209,7 @@ The `ncbirths` dataset contains a variety of variables on the habits and practic
 
 Let's explore each of these basic regression models!
 
-```{r slr-comparison}
+```{r}
 #| label: tbl-slr-comparison
 #| tbl-cap: "Comparison of four different simple regressions on birth weight of baby"
 
@@ -285,7 +293,8 @@ Thus, adding *any* variable will **always** result in a larger value of $R^2$.
 
 For example, I've added a new column to the `ncbirths` dataset, one that is entirely simulated noise and has **no** relationship with the birth weight of the baby. Here is a plot of my variable, just to confirm!
 
-```{r add-noise-column}
+```{r}
+#| label: add-noise-column
 # create a variable that is just noise
 # use it as a predictor
 # show R^2 increases
@@ -298,7 +307,9 @@ ncbirths_noise <- ncbirths |>
          )
 ```
 
-```{r plot-noise}
+```{r}
+#| label: plot-noise
+
 ggplot(data = ncbirths_noise, 
        mapping = aes(x = noise, y = weight)) +
   geom_point() + 
@@ -308,8 +319,9 @@ ggplot(data = ncbirths_noise,
 
 Alright, now I'm including this `noise` variable as an explanatory variable in the multiple linear regression, where `weeks` is also an explanatory variable.
 
-```{r model-with-noise}
+```{r}
 #| echo: true
+#| label: model-with-noise
 
 noise_lm <- lm(weight ~ weeks + noise, data = ncbirths_noise)
 
@@ -343,14 +355,15 @@ Adjusted $R^2$ could also have been used instead of unadjusted $R^2$ for basic r
 
 Coming back to the multiple linear regression where I included a second `noise` variable, we can compare the unadjusted $R^2$ to the adjusted $R^2$. Rather than calculating all of these summary statistics "by hand", we can use the `get_regression_summaries()` function to obtain interesting summary statistics about the model:
 
-```{r noise-summaries-code}
+```{r}
 #| echo: true
 #| eval: false
+#| label: noise-summaries-code
 
 get_regression_summaries(noise_lm)
 ```
 
-```{r noise-summaries}
+```{r}
 #| echo: false
 #| label: tbl-noise-summaries
 #| tbl-cap: "Summary statistics from multiple linear regression with noise and weeks as predictor variables"
@@ -369,7 +382,7 @@ Alright, let's apply the concept of adjusted $R^2$ to a multiple linear regressi
 
 In @tbl-r-sq-compare-sat below, I've calculated the adjusted $R^2$ for both the interaction model and parallel slopes model, and compared them to the simple linear regression model:
 
-```{r parallel-variances}
+```{r}
 #| echo: false
 #| message: false
 #| label: tbl-r-sq-compare-sat
@@ -403,7 +416,7 @@ Observe how the adjusted $R^2$ values for the interaction model and parallel slo
 
 Now let's repeat this $R^2$ comparison between interaction and parallel slopes model for our models of $y$ = teaching score for UT Austin professors. In the *ModernDive* textbook, you visually compared using parallel slopes or different slopes to model the relationship between `age` and teaching `score` for male and female professors.
 
-```{r evals-model-compare}
+```{r}
 #| echo: false
 #| message: false
 #| label: tbl-evals-model-compare
@@ -444,7 +457,7 @@ The dataset includes results from 10,000 loans, and we'll be looking at a subset
 The [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data can be found in the [**openintro**](http://openintrostat.github.io/openintro) R package. Based on the data in this dataset we have created two new variables: `credit_util` which is calculated as the total credit utilized divided by the total credit limit and `bankruptcy` which turns the number of bankruptcies to an indicator variable (0 for no bankruptcies and 1 for at least 1 bankruptcy). We will refer to this modified dataset as `loans`.
 :::
 
-```{r loans-data-matrix}
+```{r}
 #| label: tbl-loans-preview
 #| tbl-cap: "First six rows of the `loans` dataset."
 
@@ -466,7 +479,7 @@ loans %>%
                 full_width = FALSE)
 ```
 
-```{r loans-variables}
+```{r}
 #| label: tbl-loans-variables
 #| tbl-cap: "Variables and their descriptions for the `loans` dataset."
 
@@ -504,7 +517,7 @@ An important consideration in implementing either of these stepwise selection st
 
 Let's consider two models, which are shown in @tbl-loans-full-for-model-selection and @tbl-loans-full-except-issue-month below. The first table summarizes the full model since it includes **all** predictors, while the second does not include the `issue_month` variable.
 
-```{r loans-full-for-model-selection}
+```{r}
 #| label: tbl-loans-full-for-model-selection
 #| tbl-cap: "The fit for the full regression model, including the adjusted R-squared."
 
@@ -536,7 +549,7 @@ m_full_w_rsq %>%
   row_spec(11:12, italic = TRUE)
 ```
 
-```{r loans-full-except-issue-month}
+```{r}
 #| label: tbl-loans-full-except-issue-month
 #| tbl-cap: "he fit for the regression model after dropping issue month, including the adjusted R-squared."
  
