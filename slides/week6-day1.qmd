@@ -3,7 +3,7 @@ title: "Variable Selection in Multiple Regression"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
 ```{r set-up}
@@ -12,95 +12,44 @@ library(moderndive)
 library(palmerpenguins)
 ```
 
-# Statistical Critique
+# Reminders About Deadlines
 
-## Feedback & Revisions
+## Revision Deadlines
 
-::: incremental
+-   Lab 3 Revisions are due on Wednesday (May 7)
+
+-   Statistical Critique revisions are due Wednesday (May 7)
+
+## Lab 3 & Lab 4 Revisions
+
 ::: small
--   You are expected to directly state what variable(s) are associated with each aesthetic (e.g., the x-axis is associated with time).
--   Aesthetics are associated with **variables**
-    -   If there is only one color / shape / linetype being used in the plot, it is not associated with a variable!
-    -   If there are multiple plots, then there is a variable associated with how the plots are separated!
-:::
+1.  Log in to [Posit Cloud](https://posit.cloud/)
+2.  Open your Weeks 2-3 Group Workspace
+3.  Find Lab 3
 :::
 
-. . .
+![](images/find-lab.png){fig-alt="A screenshot of a group's Lab 2 project in their group workspace. There is a purple box around an icon with two boxes that has a 'plus' (+) symbol in the middle."}
 
-::: callout-caution
-# Revision Deadline
-
-Revisions for Statistical Critiques are due on Wednesday (May 8)
-:::
-
-# Midterm Project
-
-## Research Questions
-
-::: incremental
--   Your research question should be a [question]{.underline}
-
--   Your question should be able to be addressed with a [multiple linear regression]{.underline}
-
-    -   Is the relationship between stem length and stem dry mass different for watersheds treated with calcium versus without?
-    -   What is the relationship between the size of a fiddler crab and the latitude and water temperature in which it lives?
-:::
-
-## Data Visualizations & Coefficient Interpretations
-
-::: incremental
--   Descriptions of your visualizations should address:
-
-    -   form, direction, strength, and unusual points
-
--   Descriptions of your visualizations should go **immediately below** the visualization, *before* the "Proposed Statistical Model" section
-
--   You should interpret **every** coefficient from your regression equation(s)!
-
-    -   Every y-intercept and every slope
-:::
-
-## Study Limitations -- Scope of Inference
-
-Based on how the study was designed, what population can you infer these results onto?
-
-::: fragment
+::::::: columns
+:::: {.column width="40%"}
 ::: small
--   Every sugar maple?
--   Sugar maples in the Northeast?
--   Sugar maples in New Hampshire?
--   Sugar maples in the Hubbard Brook Experimental Forest?
--   Sugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?
--   This sample of sugar maples?
+4.  Make a personal copy of your group's Lab 3
 :::
+::::
+
+::: {.column width="5%"}
 :::
 
-. . .
-
-Why?
-
-## Study Limitations -- Causal Inference
-
-Based on how the study was designed, what can you say about the relationships between the variables?
-
-::: fragment
-::: small
--   Can you say that your explanatory variable(s) [causes]{.underline} changes in your response variable?
--   Why or why not?
--   What can you say about these relationships?
+::: {.column width="55%"}
+![](images/make-a-copy.png){width="50%" fig-alt="A screenshot of the pop-up that appears when you click on the 'Make a copy' icon next to the Lab 2 project."}
 :::
+:::::::
+
+:::: small
+::: callout-important
+# Every member must have their own copy of the lab! No one works in the original document.
 :::
-
-## Writing Conclusions
-
--   Circle back to your research question
--   What did you learn in your visualizations?
--   What did you learn in your regression model?
--   What conclusions would you reach about your research question?
-
-::: callout-caution
-# No "significance" & no p-values
-:::
+::::
 
 # Model Selection
 
@@ -154,7 +103,7 @@ How do you use model selection?
 
 . . .
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
 -   Stepwise Selection
     -   Forward Selection
@@ -169,7 +118,7 @@ How do you use model selection?
     -   Cross Validation
     -   Testing / Training Datasets
 :::
-:::
+::::::
 
 . . .
 
@@ -187,26 +136,26 @@ $R^2$ -- Coefficient of Determination
 
 <!-- Wright was one of the giants of 20th century evolutionary biology. -->
 
-::: columns
-::: {.column width="45%"}
+:::::::: columns
+:::: {.column width="45%"}
 ![](images/wright.jpg)
 
 ::: {style="font-size: 0.75em;"}
 Wright, Sewall (1921). Correlation and causation. Journal of Agricultural Research 20: 557-585.
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
+:::: {.column width="45%"}
 ::: {style="font-size: 0.75em;"}
 > In statistics, the coefficient of determination, denoted $R^2$ or $r^2$ and pronounced "R squared," is the proportion of the variation in the dependent variable that is predictable from the independent variable(s).
 >
 > *Wikipedia*
 :::
-:::
-:::
+::::
+::::::::
 
 ## 
 
@@ -238,7 +187,7 @@ But! $R^2$ **always** increases as you increase the number of explanatory variab
 The variance of the residuals will **always** decrease when you include additional explanatory variables.
 :::
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
 **Simple Linear Regression**
 
@@ -253,7 +202,7 @@ $0.85 = 1 - \frac{0.75}{5}$
 
 $0.86 = 1 - \frac{0.7}{5}$
 :::
-:::
+::::::
 
 ## 
 
@@ -261,26 +210,26 @@ $0.86 = 1 - \frac{0.7}{5}$
 Adjusted $R^2$
 :::
 
-::: columns
-::: {.column width="45%"}
+:::::::: columns
+:::: {.column width="45%"}
 ![](images/ezekiel.jpeg)
 
 ::: {style="font-size: 0.75em;"}
 Mordecai Ezekiel (1930). Methods Of Correlation Analysis, Wiley, pp. 208-211.
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
+:::: {.column width="45%"}
 ::: {style="font-size: 0.75em;"}
 > The use of an adjusted $R^2$ is an attempt to account for the phenomenon of the $R^2$ automatically increasing when extra explanatory variables are added to the model.
 >
 > *Wikipedia*
 :::
-:::
-:::
+::::
+::::::::
 
 ## 
 
@@ -306,26 +255,26 @@ Suppose you have a categorical variable with 4 levels included in your **paralle
 p-values
 :::
 
-::: columns
-::: {.column width="45%"}
+:::::::: columns
+:::: {.column width="45%"}
 ![](images/fisher.jpeg)
 
 ::: {style="font-size: 0.75em;"}
 Fisher R. A. (1950). Statistical methods for research workers.
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
+:::: {.column width="45%"}
 ::: {style="font-size: 0.75em;"}
 > In null-hypothesis significance testing, the p-value is the probability of obtaining test results at least as extreme as the result actually observed, under the assumption that the null hypothesis is correct. A very small p-value means that such an extreme observed outcome would be very unlikely under the null hypothesis.
 >
 > *Wikipedia*
 :::
-:::
-:::
+::::
+::::::::
 
 ## 
 
@@ -333,8 +282,8 @@ Fisher R. A. (1950). Statistical methods for research workers.
 AIC
 :::
 
-::: columns
-::: {.column width="55%"}
+:::::::: columns
+:::: {.column width="55%"}
 ```{r}
 #| out-width: 40%
 knitr::include_graphics("images/akaike.jpg")
@@ -343,19 +292,19 @@ knitr::include_graphics("images/akaike.jpg")
 ::: {style="font-size: 0.75em;"}
 Akaike, H. (1973). Information theory and an extension of the maximum likelihood principle.
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="40%"}
+:::: {.column width="40%"}
 ::: {style="font-size: 0.6em;"}
 > The Akaike information criterion (AIC) is an estimator of prediction error and thereby relative quality of statistical models for a given set of data. Given a collection of models for the data, AIC estimates the quality of each model, relative to each of the other models.
 >
 > *Wikipedia*
 :::
-:::
-:::
+::::
+::::::::
 
 ## 
 

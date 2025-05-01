@@ -2285,7 +2285,7 @@
     "href": "slides/week6-day1.html#study-limitations-scope-of-inference",
     "title": "Variable Selection in Multiple Regression",
     "section": "Study Limitations – Scope of Inference",
-    "text": "Study Limitations – Scope of Inference\nBased on how the study was designed, what population can you infer these results onto?\n\n\n\nEvery sugar maple?\nSugar maples in the Northeast?\nSugar maples in New Hampshire?\nSugar maples in the Hubbard Brook Experimental Forest?\nSugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?\nThis sample of sugar maples?\n\n\n\n. . .\nWhy?"
+    "text": "Study Limitations – Scope of Inference\nBased on how the study was designed, what population can you infer these results onto?\n\n\n\nEvery sugar maple?\nSugar maples in the Northeast?\nSugar maples in New Hampshire?\nSugar maples in the Hubbard Brook Experimental Forest?\nSugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?\nThis sample of sugar maples?\n\n\n\n\nWhy?"
   },
   {
     "objectID": "slides/week6-day1.html#study-limitations-causal-inference",
@@ -2306,28 +2306,28 @@
     "href": "slides/week6-day1.html#section",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "What is model selection?\n\n. . .\n \n\nWhy use model selection?"
+    "text": "What is model selection?\n\n\n \n\nWhy use model selection?"
   },
   {
     "objectID": "slides/week6-day1.html#section-1",
     "href": "slides/week6-day1.html#section-1",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "Lots of available predictor variables\n\n\nevals:\n\n\n\n\n\nID\nprof_ID\nscore\nage\nbty_avg\ngender\nethnicity\nlanguage\nrank\npic_outfit\npic_color\ncls_did_eval\ncls_students\ncls_level\n\n\n\n\n27\n6\n4.5\n62\n5.500\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n176\n285\nupper\n\n\n120\n20\n3.4\n57\n4.333\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n12\n15\nupper\n\n\n16\n4\n4.3\n40\n3.167\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n18\n20\nupper"
+    "text": "Lots of available predictor variables\n\n\nevals:\n\n\n\n\n\nID\nprof_ID\nscore\nage\nbty_avg\ngender\nethnicity\nlanguage\nrank\npic_outfit\npic_color\ncls_did_eval\ncls_students\ncls_level\n\n\n\n\n389\n79\n3.7\n57\n3.000\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n58\n97\nupper\n\n\n140\n25\n4.8\n34\n7.833\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n20\n26\nupper\n\n\n87\n16\n4.1\n45\n4.167\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n35\n37\nupper"
   },
   {
     "objectID": "slides/week6-day1.html#section-2",
     "href": "slides/week6-day1.html#section-2",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "Interested in prediction not explanation\n\n\n. . .\n\nYou want to predict an outcome variable \\(y\\) based on the information contained in a set of predictor variables \\(x\\). You don’t care so much about understanding how all the variables relate and interact with one another, but rather only whether you can make good predictions about \\(y\\) using the information in \\(x\\).\nModernDive"
+    "text": "Interested in prediction not explanation\n\n\n\n\nYou want to predict an outcome variable \\(y\\) based on the information contained in a set of predictor variables \\(x\\). You don’t care so much about understanding how all the variables relate and interact with one another, but rather only whether you can make good predictions about \\(y\\) using the information in \\(x\\).\nModernDive"
   },
   {
     "objectID": "slides/week6-day1.html#section-3",
     "href": "slides/week6-day1.html#section-3",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "How do you use model selection?\n\n. . .\n\n\n\nStepwise Selection\n\nForward Selection\nBackward Selection\n\n\n\n\n\n\nResampling Methods\n\nCross Validation\nTesting / Training Datasets\n\n\n\n\n. . .\n\nWith any of these methods, you get to choose how you decide if one model is better than another model."
+    "text": "How do you use model selection?\n\n\n\n\n\nStepwise Selection\n\nForward Selection\nBackward Selection\n\n\n\n\n\n\nResampling Methods\n\nCross Validation\nTesting / Training Datasets\n\n\n\n\n\n\nWith any of these methods, you get to choose how you decide if one model is better than another model."
   },
   {
     "objectID": "slides/week6-day1.html#section-4",
@@ -2341,14 +2341,14 @@
     "href": "slides/week6-day1.html#section-5",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "\\(R^2 = 1 - \\frac{\\text{var}(\\text{residuals})}{\\text{var}(y)}\\)\n\n\n\\(\\text{var}(\\text{residuals})\\) is the variance of the residuals “leftover” from the regression model\n\\(\\text{var}(y)\\) is the inherent variability of the response variable\n\n. . .\n\nSuppose we have a simple linear regression with an \\(R^2\\) of 0.85. How would you interpret this quantity?"
+    "text": "\\(R^2 = 1 - \\frac{\\text{var}(\\text{residuals})}{\\text{var}(y)}\\)\n\n\n\\(\\text{var}(\\text{residuals})\\) is the variance of the residuals “leftover” from the regression model\n\\(\\text{var}(y)\\) is the inherent variability of the response variable\n\n\n\nSuppose we have a simple linear regression with an \\(R^2\\) of 0.85. How would you interpret this quantity?"
   },
   {
     "objectID": "slides/week6-day1.html#section-6",
     "href": "slides/week6-day1.html#section-6",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "But! \\(R^2\\) always increases as you increase the number of explanatory variables.\n\n. . .\n\n\nThe variance of the residuals will always decrease when you include additional explanatory variables.\n\n\n\nSimple Linear Regression\n\\(0.85 = 1 - \\frac{0.75}{5}\\)\n\n\n\nOne Additional Variable\n\\(0.86 = 1 - \\frac{0.7}{5}\\)"
+    "text": "But! \\(R^2\\) always increases as you increase the number of explanatory variables.\n\n\n\n\nThe variance of the residuals will always decrease when you include additional explanatory variables.\n\n\n\nSimple Linear Regression\n\\(0.85 = 1 - \\frac{0.75}{5}\\)\n\n\n\nOne Additional Variable\n\\(0.86 = 1 - \\frac{0.7}{5}\\)"
   },
   {
     "objectID": "slides/week6-day1.html#section-7",
@@ -2362,7 +2362,7 @@
     "href": "slides/week6-day1.html#section-8",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "\\(R^2_{adj} = 1 - R^2 \\times \\frac{(n - 1)}{(n - k - 1)}\\)\n\n\n\\(n\\) is the sample size\n\\(k\\) is the number of coefficients needed to be calculated\n\n. . .\n\nSuppose you have a categorical variable with 4 levels included in your parallel slopes multiple linear regression.\n\nWhat value will you use for \\(k\\) in the calculation of \\(n - k - 1\\)?"
+    "text": "\\(R^2_{adj} = 1 - R^2 \\times \\frac{(n - 1)}{(n - k - 1)}\\)\n\n\n\\(n\\) is the sample size\n\\(k\\) is the number of coefficients needed to be calculated\n\n\n\nSuppose you have a categorical variable with 4 levels included in your parallel slopes multiple linear regression.\n\nWhat value will you use for \\(k\\) in the calculation of \\(n - k - 1\\)?"
   },
   {
     "objectID": "slides/week6-day1.html#section-9",
@@ -2376,14 +2376,14 @@
     "href": "slides/week6-day1.html#section-10",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "AIC\n\n\n\n\nknitr::include_graphics(\"images/akaike.jpg\")\n\n\n\n\n\n\n\n\n\nAkaike, H. (1973). Information theory and an extension of the maximum likelihood principle.\n\n\n\n\n\n\nThe Akaike information criterion (AIC) is an estimator of prediction error and thereby relative quality of statistical models for a given set of data. Given a collection of models for the data, AIC estimates the quality of each model, relative to each of the other models.\nWikipedia"
+    "text": "AIC\n\n\n\n\n\n\n\n\n\n\n\n\n\nAkaike, H. (1973). Information theory and an extension of the maximum likelihood principle.\n\n\n\n\n\n\nThe Akaike information criterion (AIC) is an estimator of prediction error and thereby relative quality of statistical models for a given set of data. Given a collection of models for the data, AIC estimates the quality of each model, relative to each of the other models.\nWikipedia"
   },
   {
     "objectID": "slides/week6-day1.html#section-11",
     "href": "slides/week6-day1.html#section-11",
     "title": "Variable Selection in Multiple Regression",
     "section": "",
-    "text": "How do you use AIC to choose a “best” model?\n\n. . .\n\n\n\n\n\n\n\nmodel\nAIC\nDelta AIC\n\n\n\n\nFull Model\n4724.970\n0.000000\n\n\nAll Variables Except Year\n4727.242\n2.272501\n\n\nAll Variables Except Flipper Length\n4757.214\n32.244605\n\n\nAll Variables Except Species\n4793.681\n68.710933\n\n\n\n\n\n\n\n\n. . .\n\n\nIf you’ve ever assessed whether \\(\\Delta\\) AIC \\(&gt; 2\\) you have done something that is mathematically close to \\(p &lt; 0.05\\)."
+    "text": "How do you use AIC to choose a “best” model?\n\n\n\n\n\n\n\n\n\nmodel\nAIC\nDelta AIC\n\n\n\n\nFull Model\n4724.970\n0.000000\n\n\nAll Variables Except Year\n4727.242\n2.272501\n\n\nAll Variables Except Flipper Length\n4757.214\n32.244605\n\n\nAll Variables Except Species\n4793.681\n68.710933\n\n\n\n\n\n\n\n\n\n\n\n\nIf you’ve ever assessed whether \\(\\Delta\\) AIC \\(&gt; 2\\) you have done something that is mathematically close to \\(p &lt; 0.05\\)."
   },
   {
     "objectID": "slides/week6-day1.html#backward-selection-by-hand",
@@ -6267,6 +6267,6 @@
     "href": "slides/week6-day1.html#lab-3-lab-4-revisions",
     "title": "Variable Selection in Multiple Regression",
     "section": "Lab 3 & Lab 4 Revisions",
-    "text": "Lab 3 & Lab 4 Revisions\n\n\nLog in to Posit Cloud\nOpen your Weeks 2-3 Group Workspace\nFind Lab 3\n\n\n\n\n\n\n\nMake a personal copy of your group’s Lab 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery member must have their own copy of the lab! No one works in the original document."
+    "text": "Lab 3 & Lab 4 Revisions\n\n\nLog in to Posit Cloud\nOpen your Weeks 2-3 Group Workspace\nFind Lab 3\n\n\n\n\n\n\n\nMake a personal copy of your group’s Lab 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery member must have their own copy of the lab! No one works in the original document."
   }
 ]

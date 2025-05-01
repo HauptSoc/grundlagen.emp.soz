@@ -2,22 +2,94 @@
 title: "Midterm Project Feedback & Machine Learning"
 author: "STAT 313"
 format: revealjs
-editor: visual
+editor: source
 ---
 
 ## Deadline Reminders
 
--   Lab 4 revisions are due tonight
+-   Lab 3 revisions are due tonight
 -   Statistical Critique 1 revisions are due tonight
 -   The final version of your Midterm Project is due Sunday at midnight
 
 ::: callout-important
 # Deadline Extensions
 
-You **cannot** request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. **Do not ride the line.**
+You **cannot** request deadline extensions for the final version of your Midterm
+Project. The assignment portal closes at 11:59pm on Sunday. 
+**Do not ride the line. Submissions made after 11:59pm will not be accepted.**
 :::
 
 # Midterm Project Review
+
+# Midterm Project
+
+## Research Questions
+
+::: incremental
+-   Your research question should be a [question]{.underline}
+
+-   Your question should be able to be addressed with a [multiple linear regression]{.underline}
+
+    -   Is the relationship between stem length and stem dry mass different for watersheds treated with calcium versus without?
+    -   Is there a relationship between the elevation a pika lives and its stress levels? Does this relationship differ for male and female pika?
+:::
+
+## Data Visualizations & Coefficient Interpretations
+
+::: incremental
+-   Descriptions of your visualizations should address:
+
+    -   form, direction, strength, and unusual points
+
+-   Descriptions of your visualizations should go **immediately below** the visualization, *before* the "Proposed Statistical Model" section
+
+-   You should interpret **every** coefficient from your regression equation(s)!
+
+    -   Every y-intercept and every slope
+:::
+
+## Study Limitations -- Scope of Inference
+
+Based on how the study was designed, what population can you infer these results onto?
+
+:::: fragment
+::: small
+-   Every sugar maple?
+-   Sugar maples in the Northeast?
+-   Sugar maples in New Hampshire?
+-   Sugar maples in the Hubbard Brook Experimental Forest?
+-   Sugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?
+-   This sample of sugar maples?
+:::
+::::
+
+. . .
+
+Why?
+
+## Study Limitations -- Causal Inference
+
+Based on how the study was designed, what can you say about the relationships between the variables?
+
+:::: fragment
+::: small
+-   Can you say that your explanatory variable(s) [causes]{.underline} changes in your response variable?
+-   Why or why not?
+-   What can you say about these relationships?
+:::
+::::
+
+## Writing Conclusions
+
+-   Circle back to your research question
+-   What did you learn in your visualizations?
+-   What did you learn in your regression model?
+-   What conclusions would you reach about your research question?
+
+::: callout-caution
+# No "significance" & no p-values
+:::
+
 
 ## Help your peers!
 
@@ -58,265 +130,6 @@ Stating that the study was "observational" doesn't tell me that you understand w
 
 -   What **specifically** would have the researchers have needed to do in order to use causal language?
 
-<!-- ##  {background-color="black" background-image="images/glamour-of-graphics.jpg" background-size="contain"} -->
-
-<!-- ::: {style="font-size: 3em; color: #ed8402;"} -->
-
-<!-- Better Practices for Data Visualization -->
-
-<!-- ::: -->
-
-<!-- ## Some Guidelines -->
-
-<!-- ::: columns -->
-
-<!-- ::: {.column width="40%"} -->
-
-<!-- -   Titles should be top left aligned (usually) -->
-
-<!-- -   Don’t make people tilt their head -->
-
-<!-- -   Alignment should create clean lines and symmetry -->
-
-<!-- -   Remove and lighten grids as much as possible -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="5%"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="55%"} -->
-
-<!-- -   Legends suck -->
-
-<!-- -   Whitespace is like garlic; take the amount you need and then triple it -->
-
-<!-- -   Fonts matter -->
-
-<!-- -   Color is hard -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ## Some Guidelines -->
-
-<!-- ::: columns -->
-
-<!-- ::: {.column width="40%"} -->
-
-<!-- -   Titles should be top left aligned (usually) -->
-
-<!-- -   [Don’t make people tilt their head]{style="color: #ed8402;"} -->
-
-<!-- -   Alignment should create clean lines and symmetry -->
-
-<!-- -   [Remove and lighten grids as much as possible]{style="color: #ed8402;"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="5%"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="55%"} -->
-
-<!-- -   Legends suck -->
-
-<!-- -   Whitespace is like garlic; take the amount you need and then triple it -->
-
-<!-- -   Fonts matter -->
-
-<!-- -   [Color is hard]{style="color: #ed8402;"} -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ## Don’t make people [tilt]{style="color: #34605f;"} their head -->
-
-<!-- ![](images/plot-title.png) -->
-
-<!-- ## Tailoring Colors -->
-
-<!-- Different color palettes are available through a variety of R packages. Popular options include: -->
-
-<!-- ::: columns -->
-
-<!-- ::: {.column width="47%"} -->
-
-<!-- ::: fragment -->
-
-<!-- [RColorBrewer](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html) -->
-
-<!-- ![](images/color-brewer.png) -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="3%"} -->
-
-<!-- ::: -->
-
-<!-- ::: {.column width="47%"} -->
-
-<!-- ::: fragment -->
-
-<!-- [viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) -->
-
-<!-- ![](images/viridis.png) -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- . . . -->
-
-<!-- [This website](https://github.com/EmilHvitfeldt/r-color-palettes) provides an exhaustive list of color themes. -->
-
-<!-- ## Grids: [remove and lighten]{style="color: #34605f;"} as much as possible -->
-
-<!-- ![](images/backgrounds.png) -->
-
-<!-- ## A Reasonable Option -- `theme_minimal()` -->
-
-<!-- </br> -->
-
-<!-- ```{r} -->
-
-<!-- #| label: example-theme-minimal -->
-
-<!-- library(tidyverse) -->
-
-<!-- library(openintro) -->
-
-<!-- library(ggridges) -->
-
-<!-- library(lterdatasampler) -->
-
-<!-- ggplot(data = nycflights,  -->
-
-<!--        mapping = aes(x = dep_delay)) + -->
-
-<!--   geom_histogram() + -->
-
-<!--   labs(x = "Departure Delays (min)",  -->
-
-<!--       y = "",  -->
-
-<!--       title = "Number of Delayed Flights Leaving NYC Airports") + -->
-
-<!--   theme_minimal() -->
-
-<!-- ``` -->
-
-<!-- ## An Example for Categorical -->
-
-<!-- ```{r} -->
-
-<!-- #| label: example-color-discrete -->
-
-<!-- #| echo: true -->
-
-<!-- #| output-location: slide -->
-
-<!-- and_vertebrates %>%  -->
-
-<!--   ggplot(mapping = aes(x = length_1_mm,  -->
-
-<!--                      y = weight_g,  -->
-
-<!--                      color = species)) + -->
-
-<!--   geom_point(alpha = 0.5) + -->
-
-<!--   labs(x = "Length (mm)",  -->
-
-<!--       y = "",  -->
-
-<!--       color = "Species", -->
-
-<!--       title = "Comparing Weight (g) versus Length (mm)", -->
-
-<!--       subtitle = "for Different Vertebrate Species in Mack Creek") + -->
-
-<!--   theme_minimal() + -->
-
-<!--   scale_color_brewer(palette = "Dark2") -->
-
-<!-- ``` -->
-
-<!-- ## An Example for Continuous -->
-
-<!-- ```{r} -->
-
-<!-- #| label: example-color-gradient -->
-
-<!-- #| echo: true -->
-
-<!-- #| output-location: slide -->
-
-<!-- pie_crab %>%  -->
-
-<!--   ggplot(mapping = aes(x = latitude,  -->
-
-<!--                      y = size,  -->
-
-<!--                      color = water_temp)) + -->
-
-<!--   geom_point(alpha = 0.5) + -->
-
-<!--   labs(x = "Latitude",  -->
-
-<!--       y = "",  -->
-
-<!--       color = "Water Temperature (C)", -->
-
-<!--       title = "Size of Fiddler Crabs (mm) Across the Atlantic Coast") + -->
-
-<!--   theme_minimal() + -->
-
-<!--   scale_color_viridis_c(option = "magma", direction = -1) -->
-
-<!-- ``` -->
-
-# Machine Learning
-
-# Machine Learning
-
-> "the use and development of computer systems that are able to learn and adapt without following explicit instructions, by using algorithms and statistical models to analyze and draw inferences from patterns in data"
-
-##  {background-color="#B6CADA"}
-
-</br>
-
-<center>
-
-::: {style="font-size: 5em; color: #000000;"}
-**Data is Power**
-:::
-
-</center>
-
-## Does your phone recognize your face?
-
-![Joy Buolamwini found that she had to put on a white mask for the facial detection program to "see" her face.](images/buolamwini.jpg)
-
-## How does Google label your images?
-
-![](images/google.png)
-
-## Should the cash bail system change?
-
-![](images/prop-25.png)
-
-## Will your car be able to drive you?
-
-![](images/cars.jpg)
 
 # Lab 6
 
