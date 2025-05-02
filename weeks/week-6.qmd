@@ -27,7 +27,7 @@ set.seed(1234)
 ::: callout-note
 ## Reading Guide -- Due Monday by the beginning of class
 
-[Download the Word Document](reading-guide/week-6-reading1.docx)
+[Download the Word Document](reading-guide/week6-reading1.docx)
 :::
 
 # Textbook Reading Part 2 -- Due by Wednesday
@@ -58,6 +58,12 @@ set.seed(1234)
 
 **Question 8** -- Forward selection \[adds / removes\] variables from the model. If the \[R-squared / correlation / adjusted R-squared\] when the variable is \[added / removed\] is \[smaller / larger\], the variable will be \[added / removed\] from the final model.
 
-# R Tutorial -- Due Wednesday by the start of class
+# R Tutorials 
 
-[Assessing Model Fit](https://openintro.shinyapps.io/ims-03-model-05/#section-assessing-model-fit)
+::: {.callout-important}
+# Note that one is due on Monday and one is due on Wednesday!
+:::
+
+**Due Monday:** [Assessing Model Fit](https://openintro.shinyapps.io/ims-03-model-05/#section-assessing-model-fit)
+
+**Due Wednesday:** [Foundations of Inference](https://openintro.shinyapps.io/ims-04-foundations-01/)

@@ -1,5 +1,5 @@
 ---
-title: "Week 7 -- Exploring Sampling"
+title: "Sampling Variability"
 format: 
   html:
     table-of-contents: true
@@ -10,8 +10,7 @@ bibliography: references.bib
 execute: 
   echo: false
 resources: 
-  - reading_guide/week7_reading_guide_sampling.docx
-  - reading_guide/week7_reading_guide_sampling.html
+  - reading_guide/week-reading2.docx
 ---
 
 ```{r set-up}
@@ -26,12 +25,6 @@ library(forcats)
 This week, we begin our adventure into statistical inference by learning about *sampling*. The concepts behind sampling form the basis of confidence intervals and hypothesis testing, which we'll cover in the second portion of this week's reading and next week. We will see that the skills you learned during the first three weeks of class, in particular data visualization and data wrangling, will also play an important role in the development of your understanding of sampling.
 
 This week's reading comes primarily from [Chater 7](https://moderndive.com/7-sampling.html) from *ModernDive* [@kim2020], with a smattering of my own ideas.
-
-### Reading Guide
-
-Download the reading guide as a [Word Document here](reading_guide/week7_reading_guide_sampling.docx)
-
-Download the reading guide as an [HTML file here](reading_guide/week7_reading_guide_sampling.html)
 
 ## Sampling bowl activity
 

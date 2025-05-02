@@ -65,6 +65,10 @@ library(gridExtra)
 <!-- ::: -->
 <!-- ::::: -->
 
+<!-- Types of Studies R tutorial: https://openintro.shinyapps.io/ims-01-data-02/ -->
+
+<!-- Sampling Strategies and Experimental Design: https://openintro.shinyapps.io/ims-01-data-03/ -->
+
 Welcome!
 
 In this week's coursework we are transitioning into our last topic of the quarter---comparing multiple means. These comparisons have a specific name, ANalysis of VAriance (ANOVA).
