@@ -379,8 +379,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reading-guide" id="toc-reading-guide" class="nav-link active" data-scroll-target="#reading-guide"><span class="header-section-number">0.1</span> Reading Guide</a></li>
-  <li><a href="#sampling-bowl-activity" id="toc-sampling-bowl-activity" class="nav-link" data-scroll-target="#sampling-bowl-activity"><span class="header-section-number">1</span> Sampling bowl activity</a>
+  <li><a href="#sampling-bowl-activity" id="toc-sampling-bowl-activity" class="nav-link active" data-scroll-target="#sampling-bowl-activity"><span class="header-section-number">1</span> Sampling bowl activity</a>
   <ul class="collapse">
   <li><a href="#what-proportion-of-this-bowls-balls-are-red" id="toc-what-proportion-of-this-bowls-balls-are-red" class="nav-link" data-scroll-target="#what-proportion-of-this-bowls-balls-are-red"><span class="header-section-number">1.1</span> What proportion of this bowl’s balls are red?</a></li>
   <li><a href="#using-the-shovel-once" id="toc-using-the-shovel-once" class="nav-link" data-scroll-target="#using-the-shovel-once"><span class="header-section-number">1.2</span> Using the shovel once</a></li>
@@ -432,10 +431,6 @@ window.Quarto = {
 
 <p>This week, we begin our adventure into statistical inference by learning about <em>sampling</em>. The concepts behind sampling form the basis of confidence intervals and hypothesis testing, which we’ll cover in the second portion of this week’s reading and next week. We will see that the skills you learned during the first three weeks of class, in particular data visualization and data wrangling, will also play an important role in the development of your understanding of sampling.</p>
 <p>This week’s reading comes primarily from <a href="https://moderndive.com/7-sampling.html">Chater 7</a> from <em>ModernDive</em> <span class="citation" data-cites="kim2020">(<a href="#ref-kim2020" role="doc-biblioref">Kim et al. 2020</a>)</span>, with a smattering of my own ideas.</p>
-<section id="reading-guide" class="level3" data-number="0.1">
-<h3 data-number="0.1" class="anchored" data-anchor-id="reading-guide"><span class="header-section-number">0.1</span> Reading Guide</h3>
-<p>Download the reading guide as a <a href="../reading_guide/week6-reading2.docx">Word Document here</a></p>
-</section>
 <section id="sampling-bowl-activity" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="sampling-bowl-activity"><span class="header-section-number">1</span> Sampling bowl activity</h2>
 <p>Let’s start with a hands-on activity.</p>
@@ -637,16 +632,16 @@ Figure&nbsp;7: Distribution of 33 proportions based on 33 samples of size 50.
 # Groups:   replicate [1]
    replicate ball_ID color
        &lt;int&gt;   &lt;int&gt; &lt;chr&gt;
- 1         1    2135 red  
- 2         1     902 red  
- 3         1      90 white
- 4         1     750 white
- 5         1    1403 white
- 6         1     144 white
- 7         1     526 white
- 8         1    1511 white
- 9         1     588 red  
-10         1     408 red  
+ 1         1     537 red  
+ 2         1     922 white
+ 3         1     721 white
+ 4         1    1503 white
+ 5         1     829 red  
+ 6         1     967 white
+ 7         1    1906 red  
+ 8         1     816 red  
+ 9         1    1248 white
+10         1    1474 red  
 # ℹ 40 more rows</code></pre>
 </div>
 </div>
@@ -661,16 +656,16 @@ Figure&nbsp;7: Distribution of 33 proportions based on 33 samples of size 50.
 # Groups:   replicate [1]
    replicate ball_ID color is_red
        &lt;int&gt;   &lt;int&gt; &lt;chr&gt; &lt;lgl&gt; 
- 1         1    2135 red   TRUE  
- 2         1     902 red   TRUE  
- 3         1      90 white FALSE 
- 4         1     750 white FALSE 
- 5         1    1403 white FALSE 
- 6         1     144 white FALSE 
- 7         1     526 white FALSE 
- 8         1    1511 white FALSE 
- 9         1     588 red   TRUE  
-10         1     408 red   TRUE  
+ 1         1     537 red   TRUE  
+ 2         1     922 white FALSE 
+ 3         1     721 white FALSE 
+ 4         1    1503 white FALSE 
+ 5         1     829 red   TRUE  
+ 6         1     967 white FALSE 
+ 7         1    1906 red   TRUE  
+ 8         1     816 red   TRUE  
+ 9         1    1248 white FALSE 
+10         1    1474 red   TRUE  
 # ℹ 40 more rows</code></pre>
 </div>
 </div>
@@ -686,10 +681,10 @@ Figure&nbsp;7: Distribution of 33 proportions based on 33 samples of size 50.
 <pre><code># A tibble: 1 × 2
   replicate num_red
       &lt;int&gt;   &lt;int&gt;
-1         1      15</code></pre>
+1         1      24</code></pre>
 </div>
 </div>
-<p>Why does this work? Because R treats <code>TRUE</code> like the number <code>1</code> and <code>FALSE</code> like the number <code>0</code>. So summing the number of <code>TRUE</code>s and <code>FALSE</code>s is equivalent to summing <code>1</code>’s and <code>0</code>’s. In the end, this operation counts the number of balls where <code>color</code> is <code>red</code>. In our case, 15 of the 50 balls were red. However, you might have gotten a different number red because of the randomness of the virtual sampling.</p>
+<p>Why does this work? Because R treats <code>TRUE</code> like the number <code>1</code> and <code>FALSE</code> like the number <code>0</code>. So summing the number of <code>TRUE</code>s and <code>FALSE</code>s is equivalent to summing <code>1</code>’s and <code>0</code>’s. In the end, this operation counts the number of balls where <code>color</code> is <code>red</code>. In our case, 24 of the 50 balls were red. However, you might have gotten a different number red because of the randomness of the virtual sampling.</p>
 <p>Third and lastly, let’s compute the proportion of the 50 sampled balls that are red by dividing <code>num_red</code> by 50:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">.data =</span> virtual_shovel, </span>
@@ -701,10 +696,10 @@ Figure&nbsp;7: Distribution of 33 proportions based on 33 samples of size 50.
 <pre><code># A tibble: 1 × 2
   replicate num_red
       &lt;int&gt;   &lt;dbl&gt;
-1         1     0.3</code></pre>
+1         1    0.48</code></pre>
 </div>
 </div>
-<p>Great! 30% of <code>virtual_shovel</code>’s 50 balls were red! So based on this particular sample of 50 balls, our guess at the proportion of the <code>bowl</code>’s balls that are red is 30%. But remember from our earlier tactile sampling activity that if we repeat this sampling, we will not necessarily obtain the same value of 30% again. There will likely be some variation. In fact, our 33 groups of friends computed 33 such proportions whose distribution we visualized in <a href="#fig-full-hist" class="quarto-xref">Figure&nbsp;6</a>. We saw that these estimates <em>varied</em>. Let’s now perform the virtual analog of having 33 groups of students use the sampling shovel!</p>
+<p>Great! 48% of <code>virtual_shovel</code>’s 50 balls were red! So based on this particular sample of 50 balls, our guess at the proportion of the <code>bowl</code>’s balls that are red is 48%. But remember from our earlier tactile sampling activity that if we repeat this sampling, we will not necessarily obtain the same value of 48% again. There will likely be some variation. In fact, our 33 groups of friends computed 33 such proportions whose distribution we visualized in <a href="#fig-full-hist" class="quarto-xref">Figure&nbsp;6</a>. We saw that these estimates <em>varied</em>. Let’s now perform the virtual analog of having 33 groups of students use the sampling shovel!</p>
 </section>
 <section id="using-the-virtual-shovel-33-times" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="using-the-virtual-shovel-33-times"><span class="header-section-number">2.2</span> Using the virtual shovel 33 times</h3>
@@ -716,16 +711,16 @@ Figure&nbsp;7: Distribution of 33 proportions based on 33 samples of size 50.
 # Groups:   replicate [33]
    replicate ball_ID color
        &lt;int&gt;   &lt;int&gt; &lt;chr&gt;
- 1         1    1050 red  
- 2         1     845 white
- 3         1    2073 white
- 4         1     662 red  
- 5         1    1813 white
- 6         1     126 red  
- 7         1    2306 white
- 8         1       1 white
- 9         1     971 red  
-10         1     429 white
+ 1         1     736 red  
+ 2         1    1238 red  
+ 3         1    2219 white
+ 4         1     412 red  
+ 5         1       9 red  
+ 6         1      84 white
+ 7         1     137 white
+ 8         1     536 red  
+ 9         1     725 white
+10         1    1598 red  
 # ℹ 1,640 more rows</code></pre>
 </div>
 </div>
@@ -738,14 +733,14 @@ Figure&nbsp;7: Distribution of 33 proportions based on 33 samples of size 50.
        &lt;int&gt;    &lt;dbl&gt;
  1         1     0.38
  2         2     0.32
- 3         3     0.36
- 4         4     0.42
- 5         5     0.28
- 6         6     0.34
- 7         7     0.36
- 8         8     0.44
- 9         9     0.28
-10        10     0.36
+ 3         3     0.34
+ 4         4     0.36
+ 5         5     0.3 
+ 6         6     0.4 
+ 7         7     0.26
+ 8         8     0.5 
+ 9         9     0.34
+10        10     0.42
 # ℹ 23 more rows</code></pre>
 </div>
 </div>
@@ -804,16 +799,16 @@ Figure&nbsp;9: Comparing 33 virtual and 33 tactile proportions red.
 # Groups:   replicate [1,000]
    replicate ball_ID color
        &lt;int&gt;   &lt;int&gt; &lt;chr&gt;
- 1         1    2318 white
- 2         1     823 white
- 3         1    2072 white
- 4         1    1422 white
- 5         1     641 white
- 6         1     788 white
- 7         1    2103 white
- 8         1    1218 white
- 9         1    1612 white
-10         1    2089 white
+ 1         1    1476 red  
+ 2         1    1771 red  
+ 3         1    2148 white
+ 4         1     257 white
+ 5         1    1564 white
+ 6         1    2024 white
+ 7         1    1406 white
+ 8         1     404 white
+ 9         1    1310 red  
+10         1     264 white
 # ℹ 49,990 more rows</code></pre>
 </div>
 </div>
@@ -828,16 +823,16 @@ Figure&nbsp;9: Comparing 33 virtual and 33 tactile proportions red.
 <pre><code># A tibble: 1,000 × 2
    replicate prop_red
        &lt;int&gt;    &lt;dbl&gt;
- 1         1     0.26
- 2         2     0.34
- 3         3     0.4 
- 4         4     0.28
- 5         5     0.46
- 6         6     0.28
- 7         7     0.36
- 8         8     0.32
+ 1         1     0.3 
+ 2         2     0.36
+ 3         3     0.38
+ 4         4     0.4 
+ 5         5     0.44
+ 6         6     0.38
+ 7         7     0.48
+ 8         8     0.46
  9         9     0.38
-10        10     0.44
+10        10     0.3 
 # ℹ 990 more rows</code></pre>
 </div>
 </div>
@@ -1022,7 +1017,7 @@ Figure&nbsp;12: Comparing the distributions of proportion red for different samp
 <pre><code># A tibble: 1 × 1
       sd
    &lt;dbl&gt;
-1 0.0971</code></pre>
+1 0.0951</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># n = 50</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>virtual_prop_red_50 <span class="sc">%&gt;%</span> </span>
@@ -1031,7 +1026,7 @@ Figure&nbsp;12: Comparing the distributions of proportion red for different samp
 <pre><code># A tibble: 1 × 1
       sd
    &lt;dbl&gt;
-1 0.0682</code></pre>
+1 0.0689</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># n = 100</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>virtual_prop_red_100 <span class="sc">%&gt;%</span> </span>
@@ -1040,7 +1035,7 @@ Figure&nbsp;12: Comparing the distributions of proportion red for different samp
 <pre><code># A tibble: 1 × 1
       sd
    &lt;dbl&gt;
-1 0.0474</code></pre>
+1 0.0465</code></pre>
 </div>
 </div>
 <p>Let’s compare these three measures of distributional variation in <a href="#tbl-comparing-n" class="quarto-xref">Table&nbsp;1</a>.</p>
@@ -1062,11 +1057,11 @@ Table&nbsp;1: Comparing standard deviations of proportions red for three differe
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">25</td>
-<td style="text-align: right;">0.097</td>
+<td style="text-align: right;">0.095</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">50</td>
-<td style="text-align: right;">0.068</td>
+<td style="text-align: right;">0.069</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">100</td>
@@ -1159,16 +1154,16 @@ Table&nbsp;1: Comparing standard deviations of proportions red for three differe
 # Groups:   replicate [1]
    replicate ball_ID color
        &lt;int&gt;   &lt;int&gt; &lt;chr&gt;
- 1         1    1570 white
- 2         1    1371 white
- 3         1     561 white
- 4         1     416 white
- 5         1    1230 white
- 6         1    1755 red  
- 7         1    1162 red  
- 8         1    1363 red  
- 9         1    1625 red  
-10         1     826 red  
+ 1         1     269 red  
+ 2         1       6 white
+ 3         1    1580 white
+ 4         1    1986 red  
+ 5         1    1971 white
+ 6         1    1505 red  
+ 7         1    1710 white
+ 8         1     472 white
+ 9         1     883 red  
+10         1     811 white
 # ℹ 40 more rows</code></pre>
 </div>
 </div>
@@ -1180,7 +1175,7 @@ Table&nbsp;1: Comparing standard deviations of proportions red for three differe
 <pre><code># A tibble: 1 × 2
   replicate prop_red
       &lt;int&gt;    &lt;dbl&gt;
-1         1     0.56</code></pre>
+1         1     0.36</code></pre>
 </div>
 </div>
 <p>So in our case, the value of <code>prop_red</code> is the <strong>point estimate</strong> of the population proportion <span class="math inline">\(p\)</span> since it estimates the latter’s value. Furthermore, this point estimate has a specific name when considering proportions: the <em>sample proportion</em>. It is denoted using <span class="math inline">\(\widehat{p}\)</span> because it is a common convention in statistics to use a “hat” symbol to denote point estimates.</p>
@@ -1264,11 +1259,11 @@ Table&nbsp;1: Comparing standard deviations of proportions red for three differe
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">25</td>
-<td style="text-align: right;">0.097</td>
+<td style="text-align: right;">0.095</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">50</td>
-<td style="text-align: right;">0.068</td>
+<td style="text-align: right;">0.069</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">100</td>
@@ -1316,11 +1311,11 @@ Table&nbsp;2: Standard errors of the sample proportion based on sample sizes of 
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">n = 25</td>
-<td style="text-align: right;">0.097</td>
+<td style="text-align: right;">0.095</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">n = 50</td>
-<td style="text-align: right;">0.068</td>
+<td style="text-align: right;">0.069</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">n = 100</td>

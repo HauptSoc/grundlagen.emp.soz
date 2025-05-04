@@ -16,11 +16,13 @@ library(palmerpenguins)
 
 ## Revision Deadlines
 
--   Lab 3 Revisions are due on Wednesday (May 7)
+-   Lab 3 revisions are due on Wednesday (May 7)
 
 -   Statistical Critique revisions are due Wednesday (May 7)
 
-## Lab 3 & Lab 4 Revisions
+-   Lab 4 revisions are due on Friday (May 9)
+
+## Lab 3 Revisions
 
 ::: small
 1.  Log in to [Posit Cloud](https://posit.cloud/)
@@ -51,27 +53,55 @@ library(palmerpenguins)
 :::
 ::::
 
-# Model Selection
+# Lab 4
 
-## 
-
-::: {style="font-size: 2.5em; color: #76b5c5;"}
-**What is model selection?**
+::: {.small}
+::: {.incremental}
+- Question 8: Write out the estimated regression equation
+    + Your equation needs to indicate the explanatory and response variables
+    (not x and y).
+    + Your equation needs to indicate that the response is *estimated*, not
+    an exact value. 
+:::
 :::
 
 . . .
 
-</br> </br>
+::: {.small}
+::: columns
+::: {.column width="47%"}
+- Question 9: Interpret the slope coefficient
+    + If you increase `year` by 1, how much do you expect the 
+    `ice duration` to change?
 
-::: {style="font-size: 2.5em; color: #e28743;"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+::: {.fragment}
+- Question 10: A different slope interpretation
+    + If you increase `year` by 100, how much do you expect the 
+    `ice duration` to change?
+:::
+:::
+:::
+:::
+
+# Model Selection
+
+# Model Selection
+
+</br>
+
+**What is model selection?**
+
+. . .
+
 **Why use model selection?**
-:::
 
-## 
-
-::: {style="font-size: 1.5em;"}
-1.  Lots of available predictor variables
-:::
+## 1.  Lots of available predictor variables
 
 `evals`:
 
@@ -83,11 +113,7 @@ slice_sample(evals, n = 3) |>
   kableExtra::kable_styling()
 ```
 
-## 
-
-::: {style="font-size: 1.5em;"}
-2.  Interested in prediction not explanation
-:::
+## 2.  Interested in prediction not explanation
 
 . . .
 
@@ -95,11 +121,7 @@ slice_sample(evals, n = 3) |>
 >
 > *ModernDive*
 
-## 
-
-::: {style="font-size: 2em; color: #76b5c5;"}
-How do you use model selection?
-:::
+## How do you use model selection?
 
 . . .
 
@@ -128,20 +150,16 @@ How do you use model selection?
 
 # Model Comparison Measures
 
-## 
-
-::: {style="font-size: 2em; color: #76b5c5;"}
-$R^2$ -- Coefficient of Determination
-:::
+## $R^2$ -- Coefficient of Determination
 
 <!-- Wright was one of the giants of 20th century evolutionary biology. -->
 
 :::::::: columns
 :::: {.column width="45%"}
-![](images/wright.jpg)
+![](images/wright.jpg){fig-alt="A headshot of Sewall Wright in front of a chalkboard. Sewall is a white man with small black glasses, appears to be roughly 60 in this image."}
 
 ::: {style="font-size: 0.75em;"}
-Wright, Sewall (1921). Correlation and causation. Journal of Agricultural Research 20: 557-585.
+Wright, Sewall (1921). Correlation and Causation. *Journal of Agricultural Research* 20: 557-585.
 :::
 ::::
 
@@ -157,11 +175,7 @@ Wright, Sewall (1921). Correlation and causation. Journal of Agricultural Resear
 ::::
 ::::::::
 
-## 
-
-::: {style="font-size: 2em"}
-$R^2 = 1 - \frac{\text{var}(\text{residuals})}{\text{var}(y)}$
-:::
+## $R^2 = 1 - \frac{\text{var}(\text{residuals})}{\text{var}(y)}$
 
 -   $\text{var}(\text{residuals})$ is the variance of the residuals "leftover" from the regression model
 
@@ -173,11 +187,9 @@ $R^2 = 1 - \frac{\text{var}(\text{residuals})}{\text{var}(y)}$
 Suppose we have a simple linear regression with an $R^2$ of 0.85. How would you interpret this quantity?
 :::
 
-## 
+## Wait! 
 
-::: {style="font-size: 1.5em;"}
-But! $R^2$ **always** increases as you increase the number of explanatory variables.
-:::
+$R^2$ **always** increases as you increase the number of explanatory variables.
 
 . . .
 
@@ -204,18 +216,14 @@ $0.86 = 1 - \frac{0.7}{5}$
 :::
 ::::::
 
-## 
-
-::: {style="font-size: 2em; color: #76b5c5;"}
-Adjusted $R^2$
-:::
+## Adjusted $R^2$
 
 :::::::: columns
 :::: {.column width="45%"}
-![](images/ezekiel.jpeg)
+![](images/ezekiel.jpeg){fig-alt="An image of Mordaeai Ezekiel at a desk writing on a notebook. Mordecai is a #FFFFFF man with small glasses and appears to be in his late 30s."}
 
 ::: {style="font-size: 0.75em;"}
-Mordecai Ezekiel (1930). Methods Of Correlation Analysis, Wiley, pp. 208-211.
+Mordecai Ezekiel (1930). Methods Of Correlation Analysis, Wiley, p. 208-211.
 :::
 ::::
 
@@ -231,11 +239,7 @@ Mordecai Ezekiel (1930). Methods Of Correlation Analysis, Wiley, pp. 208-211.
 ::::
 ::::::::
 
-## 
-
-::: {style="font-size: 1.25em"}
-$R^2_{adj} = 1 - R^2 \times \frac{(n - 1)}{(n - k - 1)}$
-:::
+## $R^2_{adj} = 1 - R^2 \times \frac{(n - 1)}{(n - k - 1)}$
 
 -   $n$ is the sample size
 
@@ -244,23 +248,20 @@ $R^2_{adj} = 1 - R^2 \times \frac{(n - 1)}{(n - k - 1)}$
 . . .
 
 ::: {style="font-size: 1.2em; color: #e28743;"}
-Suppose you have a categorical variable with 4 levels included in your **parallel slopes** multiple linear regression.
+Suppose you have a categorical variable with 4 levels included in your
+**parallel slopes** multiple linear regression.
 
 > What value will you use for $k$ in the calculation of $n - k - 1$?
 :::
 
-## 
-
-::: {style="font-size: 2em; color: #76b5c5;"}
-p-values
-:::
+## p-values
 
 :::::::: columns
 :::: {.column width="45%"}
-![](images/fisher.jpeg)
+![](images/fisher.jpeg){fig-alt="A headshot of Ronald Fisher, the famous Statistician from the 1950s. Fisher is pictured with small glasses that are seemingly attached with a single strand of wire. He appears to be in his early 30s."}
 
 ::: {style="font-size: 0.75em;"}
-Fisher R. A. (1950). Statistical methods for research workers.
+Fisher R. A. (1950). Statistical Methods for Research Workers.
 :::
 ::::
 
@@ -276,16 +277,17 @@ Fisher R. A. (1950). Statistical methods for research workers.
 ::::
 ::::::::
 
-## 
+<!-- ## How do you use p-values to choose a "best" model? -->
 
-::: {style="font-size: 2em; color: #76b5c5;"}
-AIC
-:::
+<!-- Make a slide here! -->
+
+## AIC
 
 :::::::: columns
 :::: {.column width="55%"}
 ```{r}
 #| out-width: 40%
+#| fig-alt: "An image of the famous Japanese statistician Akaike in a nice blue suit at a formal event. Akaike appears to be older with grey hair and larger glasses."
 knitr::include_graphics("images/akaike.jpg")
 ```
 
@@ -306,13 +308,7 @@ Akaike, H. (1973). Information theory and an extension of the maximum likelihood
 ::::
 ::::::::
 
-## 
-
-::: {style="font-size: 1.5em; color: #76b5c5;"}
-How do you use AIC to choose a "best" model?
-:::
-
-. . .
+## How do you use AIC to choose a "best" model?
 
 </br>
 
@@ -371,11 +367,7 @@ If you've ever assessed whether $\Delta$ AIC $> 2$ you have done something that 
     -   Highest adjusted $R^2$
 -   Keep removing variables until adjusted $R^2$ doesn't increase
 
-## 
-
-::: {style="font-size: 4em;"}
-What's your best model?
-:::
+# What's your best model?
 
 ## Adding a Constraint
 
@@ -387,11 +379,7 @@ Repeat the same process, but now for a variable to be removed the adjusted $R^2$
 What's your best model?
 :::
 
-## 
-
-::: {style="font-size: 2em; color: #B6CADA;"}
-If you're not interested in prediction, what should you use instead?
-:::
+## If you're not interested in prediction, what should you use instead?
 
 > In fact, many statisticians discourage the use of stepwise regression alone for model selection and advocate, instead, for a more thoughtful approach that carefully considers the research focus and features of the data.
 >
