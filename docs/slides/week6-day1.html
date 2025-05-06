@@ -342,12 +342,13 @@
 <section id="revision-deadlines" class="slide level2">
 <h2>Revision Deadlines</h2>
 <ul>
-<li><p>Lab 3 Revisions are due on Wednesday (May 7)</p></li>
+<li><p>Lab 3 revisions are due on Wednesday (May 7)</p></li>
 <li><p>Statistical Critique revisions are due Wednesday (May 7)</p></li>
+<li><p>Lab 4 revisions are due on Friday (May 9)</p></li>
 </ul>
 </section>
-<section id="lab-3-lab-4-revisions" class="slide level2">
-<h2>Lab 3 &amp; Lab 4 Revisions</h2>
+<section id="lab-3-revisions" class="slide level2">
+<h2>Lab 3 Revisions</h2>
 <div class="small">
 <ol type="1">
 <li>Log in to <a href="https://posit.cloud/">Posit Cloud</a></li>
@@ -384,30 +385,61 @@
 </div>
 </div>
 </section></section>
-<section>
+<section id="lab-4" class="title-slide slide level1 center">
+<h1>Lab 4</h1>
+<div class="small">
+<div>
+<ul>
+<li class="fragment">Question 8: Write out the estimated regression equation
+<ul>
+<li class="fragment">Your equation needs to indicate the explanatory and response variables (not x and y).</li>
+<li class="fragment">Your equation needs to indicate that the response is <em>estimated</em>, not an exact value.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<div class="small">
+<div class="columns">
+<div class="column" style="width:47%;">
+<ul>
+<li>Question 9: Interpret the slope coefficient
+<ul>
+<li>If you increase <code>year</code> by 1, how much do you expect the <code>ice duration</code> to change?</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="fragment">
+<ul>
+<li>Question 10: A different slope interpretation
+<ul>
+<li>If you increase <code>year</code> by 100, how much do you expect the <code>ice duration</code> to change?</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+</div>
+</div>
+</section>
+
 <section id="model-selection" class="title-slide slide level1 center">
 <h1>Model Selection</h1>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div style="font-size: 2.5em; color: #76b5c5;">
+
+<section>
+<section id="model-selection-1" class="title-slide slide level1 center">
+<h1>Model Selection</h1>
+<p><br></p>
 <p><strong>What is model selection?</strong></p>
-</div>
 <div class="fragment">
-<p><br> <br></p>
-<div style="font-size: 2.5em; color: #e28743;">
 <p><strong>Why use model selection?</strong></p>
 </div>
-</div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div style="font-size: 1.5em;">
-<ol type="1">
-<li>Lots of available predictor variables</li>
-</ol>
-</div>
+<section id="lots-of-available-predictor-variables" class="slide level2">
+<h2>1. Lots of available predictor variables</h2>
 <p><code>evals</code>:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -432,51 +464,51 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">50</td>
-<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">3.7</td>
 <td style="text-align: right;">33</td>
-<td style="text-align: right;">5.833</td>
-<td style="text-align: left;">female</td>
+<td style="text-align: right;">7.000</td>
+<td style="text-align: left;">male</td>
 <td style="text-align: left;">not minority</td>
 <td style="text-align: left;">english</td>
 <td style="text-align: left;">tenure track</td>
-<td style="text-align: left;">not formal</td>
-<td style="text-align: left;">black&amp;white</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: left;">formal</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">15</td>
 <td style="text-align: left;">upper</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">281</td>
+<td style="text-align: right;">260</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">4.2</td>
 <td style="text-align: right;">52</td>
-<td style="text-align: right;">4.7</td>
-<td style="text-align: right;">38</td>
-<td style="text-align: right;">6.500</td>
-<td style="text-align: left;">female</td>
+<td style="text-align: right;">3.167</td>
+<td style="text-align: left;">male</td>
 <td style="text-align: left;">not minority</td>
 <td style="text-align: left;">english</td>
 <td style="text-align: left;">tenured</td>
-<td style="text-align: left;">formal</td>
-<td style="text-align: left;">black&amp;white</td>
-<td style="text-align: right;">58</td>
-<td style="text-align: right;">69</td>
+<td style="text-align: left;">not formal</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">98</td>
 <td style="text-align: left;">upper</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">326</td>
-<td style="text-align: right;">65</td>
-<td style="text-align: right;">4.0</td>
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">2.333</td>
-<td style="text-align: left;">female</td>
+<td style="text-align: right;">294</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">4.4</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">3.833</td>
+<td style="text-align: left;">male</td>
 <td style="text-align: left;">not minority</td>
 <td style="text-align: left;">english</td>
-<td style="text-align: left;">teaching</td>
-<td style="text-align: left;">not formal</td>
-<td style="text-align: left;">color</td>
-<td style="text-align: right;">67</td>
-<td style="text-align: right;">100</td>
+<td style="text-align: left;">tenure track</td>
+<td style="text-align: left;">formal</td>
+<td style="text-align: left;">black&amp;white</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">22</td>
 <td style="text-align: left;">upper</td>
 </tr>
 </tbody>
@@ -486,13 +518,8 @@
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div style="font-size: 1.5em;">
-<ol start="2" type="1">
-<li>Interested in prediction not explanation</li>
-</ol>
-</div>
+<section id="interested-in-prediction-not-explanation" class="slide level2">
+<h2>2. Interested in prediction not explanation</h2>
 <div class="fragment">
 <blockquote>
 <p>You want to predict an outcome variable <span class="math inline">\(y\)</span> based on the information contained in a set of predictor variables <span class="math inline">\(x\)</span>. You don’t care so much about understanding how all the variables relate and interact with one another, but rather only whether you can make good predictions about <span class="math inline">\(y\)</span> using the information in <span class="math inline">\(x\)</span>.</p>
@@ -500,11 +527,8 @@
 </blockquote>
 </div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #76b5c5;">
-<p>How do you use model selection?</p>
-</div>
+<section id="how-do-you-use-model-selection" class="slide level2">
+<h2>How do you use model selection?</h2>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:45%;">
@@ -538,17 +562,14 @@
 <h1>Model Comparison Measures</h1>
 
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #76b5c5;">
-<p><span class="math inline">\(R^2\)</span> – Coefficient of Determination</p>
-</div>
+<section id="r2-coefficient-of-determination" class="slide level2">
+<h2><span class="math inline">\(R^2\)</span> – Coefficient of Determination</h2>
 <!-- Wright was one of the giants of 20th century evolutionary biology. -->
 <div class="columns">
 <div class="column" style="width:45%;">
-<p><img data-src="images/wright.jpg"></p>
+<p><img data-src="images/wright.jpg" alt="A headshot of Sewall Wright in front of a chalkboard. Sewall is a white man with small black glasses, appears to be roughly 60 in this image."></p>
 <div style="font-size: 0.75em;">
-<p>Wright, Sewall (1921). Correlation and causation. Journal of Agricultural Research 20: 557-585.</p>
+<p>Wright, Sewall (1921). Correlation and Causation. <em>Journal of Agricultural Research</em> 20: 557-585.</p>
 </div>
 </div><div class="column" style="width:5%;">
 
@@ -561,11 +582,8 @@
 </div>
 </div></div>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em">
-<p><span class="math inline">\(R^2 = 1 - \frac{\text{var}(\text{residuals})}{\text{var}(y)}\)</span></p>
-</div>
+<section id="r2-1---fractextvartextresidualstextvary" class="slide level2">
+<h2><span class="math inline">\(R^2 = 1 - \frac{\text{var}(\text{residuals})}{\text{var}(y)}\)</span></h2>
 <ul>
 <li><p><span class="math inline">\(\text{var}(\text{residuals})\)</span> is the variance of the residuals “leftover” from the regression model</p></li>
 <li><p><span class="math inline">\(\text{var}(y)\)</span> is the inherent variability of the response variable</p></li>
@@ -576,11 +594,9 @@
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<div style="font-size: 1.5em;">
-<p>But! <span class="math inline">\(R^2\)</span> <strong>always</strong> increases as you increase the number of explanatory variables.</p>
-</div>
+<section id="wait" class="slide level2">
+<h2>Wait!</h2>
+<p><span class="math inline">\(R^2\)</span> <strong>always</strong> increases as you increase the number of explanatory variables.</p>
 <div class="fragment">
 <p><br></p>
 <div style="color: #e28743;">
@@ -598,16 +614,13 @@
 </div></div>
 </div>
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #76b5c5;">
-<p>Adjusted <span class="math inline">\(R^2\)</span></p>
-</div>
+<section id="adjusted-r2" class="slide level2">
+<h2>Adjusted <span class="math inline">\(R^2\)</span></h2>
 <div class="columns">
 <div class="column" style="width:45%;">
-<p><img data-src="images/ezekiel.jpeg"></p>
+<p><img data-src="images/ezekiel.jpeg" alt="An image of Mordaeai Ezekiel at a desk writing on a notebook. Mordecai is a #FFFFFF man with small glasses and appears to be in his late 30s."></p>
 <div style="font-size: 0.75em;">
-<p>Mordecai Ezekiel (1930). Methods Of Correlation Analysis, Wiley, pp.&nbsp;208-211.</p>
+<p>Mordecai Ezekiel (1930). Methods Of Correlation Analysis, Wiley, p.&nbsp;208-211.</p>
 </div>
 </div><div class="column" style="width:5%;">
 
@@ -620,11 +633,8 @@
 </div>
 </div></div>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<div style="font-size: 1.25em">
-<p><span class="math inline">\(R^2_{adj} = 1 - R^2 \times \frac{(n - 1)}{(n - k - 1)}\)</span></p>
-</div>
+<section id="r2_adj-1---r2-times-fracn---1n---k---1" class="slide level2">
+<h2><span class="math inline">\(R^2_{adj} = 1 - R^2 \times \frac{(n - 1)}{(n - k - 1)}\)</span></h2>
 <ul>
 <li><p><span class="math inline">\(n\)</span> is the sample size</p></li>
 <li><p><span class="math inline">\(k\)</span> is the number of coefficients needed to be calculated</p></li>
@@ -638,16 +648,13 @@
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #76b5c5;">
-<p>p-values</p>
-</div>
+<section id="p-values" class="slide level2">
+<h2>p-values</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
-<p><img data-src="images/fisher.jpeg"></p>
+<p><img data-src="images/fisher.jpeg" alt="A headshot of Ronald Fisher, the famous Statistician from the 1950s. Fisher is pictured with small glasses that are seemingly attached with a single strand of wire. He appears to be in his early 30s."></p>
 <div style="font-size: 0.75em;">
-<p>Fisher R. A. (1950). Statistical methods for research workers.</p>
+<p>Fisher R. A. (1950). Statistical Methods for Research Workers.</p>
 </div>
 </div><div class="column" style="width:5%;">
 
@@ -659,19 +666,18 @@
 </blockquote>
 </div>
 </div></div>
+<!-- ## How do you use p-values to choose a "best" model? -->
+<!-- Make a slide here! -->
 </section>
-<section id="section-10" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #76b5c5;">
-<p>AIC</p>
-</div>
+<section id="aic" class="slide level2">
+<h2>AIC</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="images/akaike.jpg" style="width:40.0%"></p>
+<p><img data-src="images/akaike.jpg" style="width:40.0%" alt="An image of the famous Japanese statistician Akaike in a nice blue suit at a formal event. Akaike appears to be older with grey hair and larger glasses."></p>
 </figure>
 </div>
 </div>
@@ -690,12 +696,8 @@
 </div>
 </div></div>
 </section>
-<section id="section-11" class="slide level2">
-<h2></h2>
-<div style="font-size: 1.5em; color: #76b5c5;">
-<p>How do you use AIC to choose a “best” model?</p>
-</div>
-<div class="fragment">
+<section id="how-do-you-use-aic-to-choose-a-best-model" class="slide level2">
+<h2>How do you use AIC to choose a “best” model?</h2>
 <p><br></p>
 <div style="font-size: 0.75em;">
 <div class="cell">
@@ -736,7 +738,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="fragment">
 <p><br></p>
 <div style="font-size: 0.75em; color: #e28743;">
@@ -766,28 +767,24 @@
 </ul></li>
 <li>Keep removing variables until adjusted <span class="math inline">\(R^2\)</span> doesn’t increase</li>
 </ul>
-</section>
-<section id="section-12" class="slide level2">
-<h2></h2>
-<div style="font-size: 4em;">
-<p>What’s your best model?</p>
-</div>
+</section></section>
+<section>
+<section id="whats-your-best-model" class="title-slide slide level1 center">
+<h1>What’s your best model?</h1>
+
 </section>
 <section id="adding-a-constraint" class="slide level2">
 <h2>Adding a Constraint</h2>
 <p>Repeat the same process, but now for a variable to be removed the adjusted <span class="math inline">\(R^2\)</span> must increase by <strong>at least</strong> 2% (0.02).</p>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section" class="slide level2">
 <h2></h2>
 <div style="font-size: 4em;">
 <p>What’s your best model?</p>
 </div>
 </section>
-<section id="section-14" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #B6CADA;">
-<p>If you’re not interested in prediction, what should you use instead?</p>
-</div>
+<section id="if-youre-not-interested-in-prediction-what-should-you-use-instead" class="slide level2">
+<h2>If you’re not interested in prediction, what should you use instead?</h2>
 <blockquote>
 <p>In fact, many statisticians discourage the use of stepwise regression alone for model selection and advocate, instead, for a more thoughtful approach that carefully considers the research focus and features of the data.</p>
 <p><em>Introduction to Modern Statistics</em></p>

@@ -6085,7 +6085,7 @@
     "href": "slides/week6-day1.html#lots-of-available-predictor-variables",
     "title": "Variable Selection in Multiple Regression",
     "section": "1. Lots of available predictor variables",
-    "text": "1. Lots of available predictor variables\nevals:\n\n\n\n\n\nID\nprof_ID\nscore\nage\nbty_avg\ngender\nethnicity\nlanguage\nrank\npic_outfit\npic_color\ncls_did_eval\ncls_students\ncls_level\n\n\n\n\n245\n48\n4.4\n50\n3.167\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n22\n27\nlower\n\n\n375\n76\n3.7\n43\n4.167\nfemale\nminority\nenglish\ntenured\nformal\ncolor\n47\n103\nlower\n\n\n75\n14\n3.5\n49\n4.000\nmale\nnot minority\nnon-english\ntenured\nnot formal\ncolor\n30\n36\nupper"
+    "text": "1. Lots of available predictor variables\nevals:\n\n\n\n\n\nID\nprof_ID\nscore\nage\nbty_avg\ngender\nethnicity\nlanguage\nrank\npic_outfit\npic_color\ncls_did_eval\ncls_students\ncls_level\n\n\n\n\n240\n45\n3.7\n33\n7.000\nmale\nnot minority\nenglish\ntenure track\nformal\ncolor\n13\n15\nupper\n\n\n260\n49\n4.2\n52\n3.167\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n78\n98\nupper\n\n\n294\n56\n4.4\n32\n3.833\nmale\nnot minority\nenglish\ntenure track\nformal\nblack&white\n20\n22\nupper"
   },
   {
     "objectID": "slides/week6-day1.html#interested-in-prediction-not-explanation",
