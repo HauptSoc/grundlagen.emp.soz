@@ -11,8 +11,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="STAT 313">
-  <title>STAT 313 / 513 – Midterm Project Feedback &amp; Machine Learning</title>
+  <title>STAT 313 / 513 – Midterm Project Feedback &amp; Model Selection</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -392,14 +391,9 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Midterm Project Feedback &amp; Machine Learning</h1>
+  <h1 class="title">Midterm Project Feedback &amp; Model Selection</h1>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-STAT 313 
-</div>
-</div>
 </div>
 
 </section>
@@ -424,15 +418,34 @@ STAT 313
 </div>
 </div>
 </section>
+<section>
 <section id="midterm-project-review" class="title-slide slide level1 center">
 <h1>Midterm Project Review</h1>
 
 </section>
-
-<section>
-<section id="midterm-project" class="title-slide slide level1 center">
-<h1>Midterm Project</h1>
-
+<section id="data-descriptions" class="slide level2">
+<h2>Data Descriptions</h2>
+<p>Your Introduction should <strong>at a minimum</strong> address the following questions:</p>
+<ol type="1">
+<li>Who collected the data?</li>
+<li>How were the data collected?</li>
+<li>When were the data collected?</li>
+<li>Why were the data collected?</li>
+<li>What question do these data address?</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Are your data associated with a publication?</strong></p>
+</div>
+<div class="callout-content">
+<p>If so, you should have a reference to this publication in your Introduction!</p>
+</div>
+</div>
+</div>
 </section>
 <section id="research-questions" class="slide level2">
 <h2>Research Questions</h2>
@@ -447,6 +460,21 @@ STAT 313
 </ul>
 </div>
 </section>
+<section id="variables" class="slide level2">
+<h2>Variables</h2>
+<blockquote>
+<p>Describe the response and explanatory variables, how they were measured and their associated units.</p>
+</blockquote>
+<div>
+<ul>
+<li class="fragment">How were the variables measured?
+<ul>
+<li class="fragment">How do you know?</li>
+<li class="fragment">If the researchers do not explicitly state how a variable was measured, don’t guess! Be transparent about information you do not know!</li>
+</ul></li>
+</ul>
+</div>
+</section>
 <section id="data-visualizations-coefficient-interpretations" class="slide level2">
 <h2>Data Visualizations &amp; Coefficient Interpretations</h2>
 <div>
@@ -455,11 +483,7 @@ STAT 313
 <ul>
 <li class="fragment">form, direction, strength, and unusual points</li>
 </ul></li>
-<li class="fragment"><p>Descriptions of your visualizations should go <strong>immediately below</strong> the visualization, <em>before</em> the “Proposed Statistical Model” section</p></li>
-<li class="fragment"><p>You should interpret <strong>every</strong> coefficient from your regression equation(s)!</p>
-<ul>
-<li class="fragment">Every y-intercept and every slope</li>
-</ul></li>
+<li class="fragment"><p>Descriptions of your visualizations should go <strong>immediately below</strong> the visualization, <em>before</em> the “Statistical Methods” subsection.</p></li>
 </ul>
 </div>
 </section>
@@ -469,22 +493,31 @@ STAT 313
 <div class="fragment">
 <div class="small">
 <ul>
-<li>Every sugar maple?</li>
-<li>Sugar maples in the Northeast?</li>
-<li>Sugar maples in New Hampshire?</li>
-<li>Sugar maples in the Hubbard Brook Experimental Forest?</li>
-<li>Sugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?</li>
-<li>This sample of sugar maples?</li>
+<li>Every penguin?</li>
+<li>Penguins in Antarctica?</li>
+<li>Penguins on the Biscoe, Dream, and Torgersen islands?</li>
+<li>Penguins in similar areas to those that were sampled?</li>
+<li>This sample of penguins?</li>
 </ul>
 </div>
 </div>
-<div class="fragment">
-<p>Why?</p>
+</section>
+<section id="study-limitations-scope-of-inference-1" class="slide level2">
+<h2>Study Limitations – Scope of Inference</h2>
+<p>Based on how the study was designed, what population can you infer these results onto?</p>
+<div class="small">
+<p><strong>Justify</strong> what population you believe your analysis can be inferred onto.</p>
+<ul>
+<li>The sample of [possums / professors / crabs]?</li>
+<li>Some larger population of [possums / professors / crabs]?</li>
+</ul>
+<p>Your justification needs to connect with how the researchers collected their data!</p>
 </div>
 </section>
 <section id="study-limitations-causal-inference" class="slide level2">
 <h2>Study Limitations – Causal Inference</h2>
 <p>Based on how the study was designed, what can you say about the relationships between the variables?</p>
+<p><br></p>
 <div class="fragment">
 <div class="small">
 <ul>
@@ -493,6 +526,17 @@ STAT 313
 <li>What can you say about these relationships?</li>
 </ul>
 </div>
+</div>
+</section>
+<section id="study-limitations-causal-inference-1" class="slide level2">
+<h2>Study Limitations – Causal Inference</h2>
+<p>Based on how the study was designed, what can you say about the relationships between the variables?</p>
+<p><br></p>
+<div class="small">
+<p>Stating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!</p>
+<ul>
+<li>What <strong>specifically</strong> would have the researchers have needed to do in order to use causal language?</li>
+</ul>
 </div>
 </section>
 <section id="writing-conclusions" class="slide level2">
@@ -516,49 +560,12 @@ STAT 313
 </div>
 </div>
 </div>
-</section>
-<section id="help-your-peers" class="slide level2">
-<h2>Help your peers!</h2>
-<ul>
-<li><p>Are the arguments / sentences easy to understand? Does the report flow?</p></li>
-<li><p>Is the same information included in multiple places?</p></li>
-<li><p>Do the plots have nice axis labels?</p></li>
-<li><p>Can you easily find the regression equations? Do the equations make sense?</p></li>
-<li><p>Do the interpretations / conclusions from the equations make sense?</p></li>
-</ul>
 </section></section>
-<section id="peer-feedback" class="title-slide slide level1 center">
-<h1>Peer Feedback</h1>
+<section id="model-selection" class="title-slide slide level1 center">
+<h1>Model Selection</h1>
 
 </section>
 
-<section>
-<section id="study-limitations" class="title-slide slide level1 center">
-<h1>Study Limitations</h1>
-
-</section>
-<section id="based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto" class="slide level2">
-<h2>Based on how the study was designed, what population can you infer these results onto?</h2>
-<div class="fragment">
-<p><br></p>
-<p><strong>Justify</strong> what population you believe your analysis can be inferred onto.</p>
-<ul>
-<li>The sample of [possums / professors / crabs]?</li>
-<li>Some larger population of [possums / professors / crabs]?</li>
-</ul>
-<p>Your justification needs to connect with how the researchers collected their data!</p>
-</div>
-</section>
-<section id="based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables" class="slide level2">
-<h2>Based on how the study was designed, what can you say about the relationships between the variables?</h2>
-<p><br></p>
-<div class="fragment">
-<p>Stating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!</p>
-<ul>
-<li>What <strong>specifically</strong> would have the researchers have needed to do in order to use causal language?</li>
-</ul>
-</div>
-</section></section>
 <section>
 <section id="lab-6" class="title-slide slide level1 center">
 <h1>Lab 6</h1>

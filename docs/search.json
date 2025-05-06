@@ -3460,77 +3460,77 @@
   {
     "objectID": "slides/week6-day2.html#deadline-reminders",
     "href": "slides/week6-day2.html#deadline-reminders",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Deadline Reminders",
     "text": "Deadline Reminders\n\nLab 3 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line. Submissions made after 11:59pm will not be accepted."
   },
   {
     "objectID": "slides/week6-day2.html#research-questions",
     "href": "slides/week6-day2.html#research-questions",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Research Questions",
     "text": "Research Questions\n\n\nYour research question should be a question\nYour question should be able to be addressed with a multiple linear regression\n\nIs the relationship between stem length and stem dry mass different for watersheds treated with calcium versus without?\nIs there a relationship between the elevation a pika lives and its stress levels? Does this relationship differ for male and female pika?"
   },
   {
     "objectID": "slides/week6-day2.html#data-visualizations-coefficient-interpretations",
     "href": "slides/week6-day2.html#data-visualizations-coefficient-interpretations",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Data Visualizations & Coefficient Interpretations",
-    "text": "Data Visualizations & Coefficient Interpretations\n\n\nDescriptions of your visualizations should address:\n\nform, direction, strength, and unusual points\n\nDescriptions of your visualizations should go immediately below the visualization, before the “Proposed Statistical Model” section\nYou should interpret every coefficient from your regression equation(s)!\n\nEvery y-intercept and every slope"
+    "text": "Data Visualizations & Coefficient Interpretations\n\n\nDescriptions of your visualizations should address:\n\nform, direction, strength, and unusual points\n\nDescriptions of your visualizations should go immediately below the visualization, before the “Statistical Methods” subsection."
   },
   {
     "objectID": "slides/week6-day2.html#study-limitations-scope-of-inference",
     "href": "slides/week6-day2.html#study-limitations-scope-of-inference",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Study Limitations – Scope of Inference",
-    "text": "Study Limitations – Scope of Inference\nBased on how the study was designed, what population can you infer these results onto?\n\n\n\nEvery sugar maple?\nSugar maples in the Northeast?\nSugar maples in New Hampshire?\nSugar maples in the Hubbard Brook Experimental Forest?\nSugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?\nThis sample of sugar maples?\n\n\n\n\nWhy?"
+    "text": "Study Limitations – Scope of Inference\nBased on how the study was designed, what population can you infer these results onto?\n\n\n\nEvery penguin?\nPenguins in Antarctica?\nPenguins on the Biscoe, Dream, and Torgersen islands?\nPenguins in similar areas to those that were sampled?\nThis sample of penguins?"
   },
   {
     "objectID": "slides/week6-day2.html#study-limitations-causal-inference",
     "href": "slides/week6-day2.html#study-limitations-causal-inference",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Study Limitations – Causal Inference",
-    "text": "Study Limitations – Causal Inference\nBased on how the study was designed, what can you say about the relationships between the variables?\n\n\n\nCan you say that your explanatory variable(s) causes changes in your response variable?\nWhy or why not?\nWhat can you say about these relationships?"
+    "text": "Study Limitations – Causal Inference\nBased on how the study was designed, what can you say about the relationships between the variables?\n\n\n\n\nCan you say that your explanatory variable(s) causes changes in your response variable?\nWhy or why not?\nWhat can you say about these relationships?"
   },
   {
     "objectID": "slides/week6-day2.html#writing-conclusions",
     "href": "slides/week6-day2.html#writing-conclusions",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Writing Conclusions",
     "text": "Writing Conclusions\n\nCircle back to your research question\nWhat did you learn in your visualizations?\nWhat did you learn in your regression model?\nWhat conclusions would you reach about your research question?\n\n\n\n\n\n\n\nNo “significance” & no p-values"
   },
   {
     "objectID": "slides/week6-day2.html#help-your-peers",
     "href": "slides/week6-day2.html#help-your-peers",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Help your peers!",
     "text": "Help your peers!\n\nAre the arguments / sentences easy to understand? Does the report flow?\nIs the same information included in multiple places?\nDo the plots have nice axis labels?\nCan you easily find the regression equations? Do the equations make sense?\nDo the interpretations / conclusions from the equations make sense?"
   },
   {
     "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
     "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-population-can-you-infer-these-results-onto",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Based on how the study was designed, what population can you infer these results onto?",
     "text": "Based on how the study was designed, what population can you infer these results onto?\n\n\nJustify what population you believe your analysis can be inferred onto.\n\nThe sample of [possums / professors / crabs]?\nSome larger population of [possums / professors / crabs]?\n\nYour justification needs to connect with how the researchers collected their data!"
   },
   {
     "objectID": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
     "href": "slides/week6-day2.html#based-on-how-the-study-was-designed-what-can-you-say-about-the-relationships-between-the-variables",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Based on how the study was designed, what can you say about the relationships between the variables?",
     "text": "Based on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
   },
   {
     "objectID": "slides/week6-day2.html#forward-selection-by-hand",
     "href": "slides/week6-day2.html#forward-selection-by-hand",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "Forward Selection (by Hand)",
     "text": "Forward Selection (by Hand)\n\nStart with the most basic model (one mean)\nDecide which one variable to add (based on adjusted \\(R^2\\))\nDecide if you should add another variable\n\n\\(\\vdots\\)\n\nStop adding variables when adjusted \\(R^2\\) stops increasing"
   },
   {
     "objectID": "slides/week6-day2.html#a-more-automated-option",
     "href": "slides/week6-day2.html#a-more-automated-option",
-    "title": "Midterm Project Feedback & Machine Learning",
+    "title": "Midterm Project Feedback & Model Selection",
     "section": "A More Automated Option",
     "text": "A More Automated Option\n\nevals_train %&gt;% \n  map(.f = ~lm(score ~ .x + &lt;VARIABLES SELECTED&gt;, data = evals_train)) %&gt;% \n  map_df(.f = ~get_regression_summaries(.x)$adj_r_squared) %&gt;% \n  select(-ID, \n         -score,\n         -&lt;VARIABLE 1 SELECTED&gt;,\n         -&lt;VARIABLE 2 SELECTED&gt;\n         ) %&gt;% \n  pivot_longer(cols = everything(), \n               names_to = \"variable\", \n               values_to = \"adj_r_sq\") %&gt;% \n  slice_max(adj_r_sq)"
   },
@@ -6142,5 +6142,33 @@
     "title": "Variable Selection in Multiple Regression",
     "section": "p-values",
     "text": "p-values\n\n\n\n\nFisher R. A. (1950). Statistical Methods for Research Workers.\n\n\n\n\n\n\nIn null-hypothesis significance testing, the p-value is the probability of obtaining test results at least as extreme as the result actually observed, under the assumption that the null hypothesis is correct. A very small p-value means that such an extreme observed outcome would be very unlikely under the null hypothesis.\nWikipedia"
+  },
+  {
+    "objectID": "slides/week6-day2.html#data-descriptions",
+    "href": "slides/week6-day2.html#data-descriptions",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Data Descriptions",
+    "text": "Data Descriptions\nYour Introduction should at a minimum address the following questions:\n\nWho collected the data?\nHow were the data collected?\nWhen were the data collected?\nWhy were the data collected?\nWhat question do these data address?\n\n\n\n\n\n\n\nAre your data associated with a publication?\n\n\nIf so, you should have a reference to this publication in your Introduction!"
+  },
+  {
+    "objectID": "slides/week6-day2.html#variables",
+    "href": "slides/week6-day2.html#variables",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Variables",
+    "text": "Variables\n\nDescribe the response and explanatory variables, how they were measured and their associated units.\n\n\n\nHow were the variables measured?\n\nHow do you know?\nIf the researchers do not explicitly state how a variable was measured, don’t guess! Be transparent about information you do not know!"
+  },
+  {
+    "objectID": "slides/week6-day2.html#study-limitations-scope-of-inference-1",
+    "href": "slides/week6-day2.html#study-limitations-scope-of-inference-1",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Study Limitations – Scope of Inference",
+    "text": "Study Limitations – Scope of Inference\nBased on how the study was designed, what population can you infer these results onto?\n\nJustify what population you believe your analysis can be inferred onto.\n\nThe sample of [possums / professors / crabs]?\nSome larger population of [possums / professors / crabs]?\n\nYour justification needs to connect with how the researchers collected their data!"
+  },
+  {
+    "objectID": "slides/week6-day2.html#study-limitations-causal-inference-1",
+    "href": "slides/week6-day2.html#study-limitations-causal-inference-1",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Study Limitations – Causal Inference",
+    "text": "Study Limitations – Causal Inference\nBased on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
   }
 ]

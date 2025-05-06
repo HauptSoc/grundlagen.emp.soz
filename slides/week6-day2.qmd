@@ -1,7 +1,8 @@
 ---
-title: "Midterm Project Feedback & Machine Learning"
-author: "STAT 313"
-format: revealjs
+title: "Midterm Project Feedback & Model Selection"
+format: 
+  revealjs:
+    theme: style.scss
 editor: source
 ---
 
@@ -21,7 +22,21 @@ Project. The assignment portal closes at 11:59pm on Sunday.
 
 # Midterm Project Review
 
-# Midterm Project
+## Data Descriptions
+
+Your Introduction should **at a minimum** address the following questions:
+
+1. Who collected the data?
+2. How were the data collected?
+3. When were the data collected?
+3. Why were the data collected? 
+4. What question do these data address? 
+
+::: {.callout-important}
+# Are your data associated with a publication?
+
+If so, you should have a reference to this publication in your Introduction!
+:::
 
 ## Research Questions
 
@@ -34,6 +49,18 @@ Project. The assignment portal closes at 11:59pm on Sunday.
     -   Is there a relationship between the elevation a pika lives and its stress levels? Does this relationship differ for male and female pika?
 :::
 
+## Variables
+
+> Describe the response and explanatory variables, how they were measured and
+their associated units. 
+
+::: {.incremental}
+- How were the variables measured? 
+  * How do you know?
+  * If the researchers do not explicitly state how a variable was measured, 
+  don't guess! Be transparent about information you do not know!
+:::
+
 ## Data Visualizations & Coefficient Interpretations
 
 ::: incremental
@@ -41,11 +68,7 @@ Project. The assignment portal closes at 11:59pm on Sunday.
 
     -   form, direction, strength, and unusual points
 
--   Descriptions of your visualizations should go **immediately below** the visualization, *before* the "Proposed Statistical Model" section
-
--   You should interpret **every** coefficient from your regression equation(s)!
-
-    -   Every y-intercept and every slope
+-   Descriptions of your visualizations should go **immediately below** the visualization, *before* the "Statistical Methods" subsection.
 :::
 
 ## Study Limitations -- Scope of Inference
@@ -54,22 +77,32 @@ Based on how the study was designed, what population can you infer these results
 
 :::: fragment
 ::: small
--   Every sugar maple?
--   Sugar maples in the Northeast?
--   Sugar maples in New Hampshire?
--   Sugar maples in the Hubbard Brook Experimental Forest?
--   Sugar maples in similar areas of the Hubbard Brook Experimental Forest to those that were sampled?
--   This sample of sugar maples?
+-   Every penguin?
+-   Penguins in Antarctica?
+-   Penguins on the Biscoe, Dream, and Torgersen islands?
+-   Penguins in similar areas to those that were sampled?
+-   This sample of penguins?
 :::
 ::::
 
-. . .
+## Study Limitations -- Scope of Inference
 
-Why?
+Based on how the study was designed, what population can you infer these results onto?
+
+::: small
+**Justify** what population you believe your analysis can be inferred onto.
+
+-   The sample of \[possums / professors / crabs\]?
+-   Some larger population of \[possums / professors / crabs\]?
+
+Your justification needs to connect with how the researchers collected their data!
+:::
 
 ## Study Limitations -- Causal Inference
 
 Based on how the study was designed, what can you say about the relationships between the variables?
+
+</br> 
 
 :::: fragment
 ::: small
@@ -78,6 +111,18 @@ Based on how the study was designed, what can you say about the relationships be
 -   What can you say about these relationships?
 :::
 ::::
+
+## Study Limitations -- Causal Inference
+
+Based on how the study was designed, what can you say about the relationships between the variables?
+
+</br> 
+
+::: small
+Stating that the study was "observational" doesn't tell me that you understand what would be required to use cause-and-effect language!
+
+-   What **specifically** would have the researchers have needed to do in order to use causal language?
+:::
 
 ## Writing Conclusions
 
@@ -90,46 +135,7 @@ Based on how the study was designed, what can you say about the relationships be
 # No "significance" & no p-values
 :::
 
-
-## Help your peers!
-
--   Are the arguments / sentences easy to understand? Does the report flow?
-
--   Is the same information included in multiple places?
-
--   Do the plots have nice axis labels?
-
--   Can you easily find the regression equations? Do the equations make sense?
-
--   Do the interpretations / conclusions from the equations make sense?
-
-# Peer Feedback
-
-# Study Limitations
-
-## Based on how the study was designed, what population can you infer these results onto?
-
-. . .
-
-</br>
-
-**Justify** what population you believe your analysis can be inferred onto.
-
--   The sample of \[possums / professors / crabs\]?
--   Some larger population of \[possums / professors / crabs\]?
-
-Your justification needs to connect with how the researchers collected their data!
-
-## Based on how the study was designed, what can you say about the relationships between the variables?
-
-</br>
-
-. . .
-
-Stating that the study was "observational" doesn't tell me that you understand what would be required to use cause-and-effect language!
-
--   What **specifically** would have the researchers have needed to do in order to use causal language?
-
+# Model Selection
 
 # Lab 6
 
