@@ -35,9 +35,7 @@ evals <- evals |>
 
 ## Your Challenge
 
-This week you have learned about model selection. During class you worked on performing a backward selection process to determine the "best" model for penguin body mass.
-
-Today, you are going to use **forward selection** to determine the "best" model for professor's evaluation score. This task will require you to fit **tons** of linear regressions. **You must be able to show me exactly how you got to your top model.** Meaning, I need to see a record of **every** model you fit and compared along the way.
+This week you have learned about model selection. Today, you are going to use **forward selection** to determine the "best" model for professor's evaluation score. This task will require you to fit **tons** of linear regressions. **You must be able to show me exactly how you got to your top model.** Meaning, I need to see a record of **every** model you fit and compared along the way.
 
 ## Forward Selection
 

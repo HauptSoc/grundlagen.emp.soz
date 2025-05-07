@@ -6170,5 +6170,82 @@
     "title": "Midterm Project Feedback & Model Selection",
     "section": "Study Limitations – Causal Inference",
     "text": "Study Limitations – Causal Inference\nBased on how the study was designed, what can you say about the relationships between the variables?\n\n\nStating that the study was “observational” doesn’t tell me that you understand what would be required to use cause-and-effect language!\n\nWhat specifically would have the researchers have needed to do in order to use causal language?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#choose-a-best-model",
+    "href": "slides/week6-day2.html#choose-a-best-model",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Choose a “Best” Model",
+    "text": "Choose a “Best” Model\n\nGiven candidate models of similar predictive or explanatory power, the simplest model is most likely to be the best choice (Occam’s razor)."
+  },
+  {
+    "objectID": "slides/week6-day2.html#how-does-model-selection-work",
+    "href": "slides/week6-day2.html#how-does-model-selection-work",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "How does model selection work?",
+    "text": "How does model selection work?\n\n\n\nChoose a set of variables you are interested in including in your model.\nChoose a metric to compare your models (e.g., adjusted R-squared, AIC, p-values).\nChoose a threshold that you will use to say one model is discernibly “better” than another model (e.g., higher adjusted R-squared).\nChoose how you want to progress through the different model options (e.g., forward selection, backward selection, fit all possible models)."
+  },
+  {
+    "objectID": "slides/week6-day2.html#why-would-you-want-to-use-model-selection",
+    "href": "slides/week6-day2.html#why-would-you-want-to-use-model-selection",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Why would you want to use model selection?",
+    "text": "Why would you want to use model selection?\n\n\n\nYour data have LOTS of variables\n\n\nBy “lots” I mean LOTS, like 100+.\nIn this setting, model selection can help you find the “signal” through the noise—which variables actually matter?\n\n\n\n\n\n\nYou’re interested in prediction\n\n\nYou mostly care about finding a model that will get you the best predictions, and are not interested in interpreting the coefficients from the model."
+  },
+  {
+    "objectID": "slides/week6-day2.html#what-variables-are-most-important-for-a-babys-birth-weight",
+    "href": "slides/week6-day2.html#what-variables-are-most-important-for-a-babys-birth-weight",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "What variables are most important for a baby’s birth weight?",
+    "text": "What variables are most important for a baby’s birth weight?\n\n\n\nWhat variables do we have to choose from?\n\n\n\n\n\n\n\n\nVariables\n\n\n\n\nfage\n\n\nmage\n\n\nmature\n\n\nweeks\n\n\npremie\n\n\nvisits\n\n\ngained\n\n\nweight\n\n\nlowbirthweight\n\n\nsex\n\n\nhabit\n\n\nmarital\n\n\nwhitemom\n\n\n\n\n\n\n\n\n\n\n\n\n\nlm(formula = weight ~ mage + mature + weeks + premie + gained + \n    lowbirthweight + sex + habit + whitemom, data = births14_clean)"
+  },
+  {
+    "objectID": "slides/week6-day2.html#section",
+    "href": "slides/week6-day2.html#section",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "",
+    "text": "Suppose you picked the"
+  },
+  {
+    "objectID": "slides/week6-day2.html#should-you-always-use-model-selection",
+    "href": "slides/week6-day2.html#should-you-always-use-model-selection",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Should you always use model selection?",
+    "text": "Should you always use model selection?\n\nIn fact, many statisticians discourage the use of stepwise regression alone for model selection and advocate, instead, for a more thoughtful approach that carefully considers the research focus and features of the data.\nIntroduction to Modern Statistics"
+  },
+  {
+    "objectID": "slides/week6-day2.html#predicting-a-babys-weight",
+    "href": "slides/week6-day2.html#predicting-a-babys-weight",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Predicting a Baby’s Weight",
+    "text": "Predicting a Baby’s Weight\n\n\n\nWhat variables do we have to choose from?\n\n\n\n\n\n\n\n\nVariables\n\n\n\n\nfage\n\n\nmage\n\n\nmature\n\n\nweeks\n\n\npremie\n\n\nvisits\n\n\ngained\n\n\nweight\n\n\nlowbirthweight\n\n\nsex\n\n\nhabit\n\n\nmarital\n\n\nwhitemom\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing backward selection with AIC, the “best model” includes:\n\n\n\n\n\n\n\n\nChosen Variables\n\n\n\n\nmage\n\n\nmature\n\n\nweeks\n\n\npremie\n\n\ngained\n\n\nlowbirthweight\n\n\nsex\n\n\nhabit\n\n\nwhitemom"
+  },
+  {
+    "objectID": "slides/week6-day2.html#a-different-sample",
+    "href": "slides/week6-day2.html#a-different-sample",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "A Different Sample",
+    "text": "A Different Sample\nUsing a different sample of 1,000 births, the “best model” includes:\n\n\n\n\n\n\n\n\nChosen Variables\n\n\n\n\nfage\n\n\nweeks\n\n\nmarital\n\n\ngained\n\n\nlowbirthweight\n\n\ngender\n\n\nhabit\n\n\nwhitemom\n\n\n\n\n\n\n\n\nDid we get the same “best” model?"
+  },
+  {
+    "objectID": "slides/week6-day2.html#predicting-a-babys-weight-1",
+    "href": "slides/week6-day2.html#predicting-a-babys-weight-1",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Predicting a Baby’s Weight",
+    "text": "Predicting a Baby’s Weight\nUsing backward selection with AIC, the “best model” includes:\n\n\n\n\n\n\n\n\nChosen Variables\n\n\n\n\nfage\n\n\nweeks\n\n\nmarital\n\n\ngained\n\n\nlowbirthweight\n\n\ngender\n\n\nhabit\n\n\nwhitemom\n\n\n\n\n\n\n\n::: ::: ::: :::"
+  },
+  {
+    "objectID": "slides/week6-day2.html#choosing-what-variable-to-add",
+    "href": "slides/week6-day2.html#choosing-what-variable-to-add",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Choosing What Variable to Add",
+    "text": "Choosing What Variable to Add\nIn each step, you will choose which one variable to add based on the adjusted R-squared value.\n\n\n\nget_regression_summaries(backward_model)\n\n# A tibble: 1 × 9\n  r_squared adj_r_squared   mse  rmse sigma statistic p_value    df  nobs\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.605         0.601 0.819 0.905  0.91      151.       0     8   800"
+  },
+  {
+    "objectID": "slides/week6-day2.html#accessing-lab-6",
+    "href": "slides/week6-day2.html#accessing-lab-6",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "Accessing Lab 6",
+    "text": "Accessing Lab 6\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was the Recorder last week is the Resource Manager this week! The person who was the Resource Manager last week is the Recorder this week!\n\n\n\n\n\n\nStep 1: The Recorder follows these instructions to copy the Lab 6 project into your group’s workspace\n\n\n\n\nStep 2: Both members open the Lab 6 assignment in your group workspace!\n\n\n\n\nStep 3: Follow the final instructions to activate collaborative editing in the document."
   }
 ]

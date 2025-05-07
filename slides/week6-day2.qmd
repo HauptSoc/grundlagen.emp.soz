@@ -6,6 +6,14 @@ format:
 editor: source
 ---
 
+```{r}
+#| label: packages
+
+library(tidyverse)
+library(openintro)
+library(moderndive)
+```
+
 ## Deadline Reminders
 
 -   Lab 3 revisions are due tonight
@@ -137,6 +145,193 @@ Stating that the study was "observational" doesn't tell me that you understand w
 
 # Model Selection
 
+> Model selection is the task of selecting a model from among various candidates
+on the basis of performance criterion to choose the best one.
+
+. . .
+
+> In the context of statistical analyses, this may be the selection of a
+statistical model from a set of candidate models, given data. 
+>
+> Wikipedia
+
+## How does model selection work?
+
+::: {.incremental}
+::: {.midi}
+1. Choose a set of variables you are interested in including in your model. 
+
+2. Choose a metric to compare your models (e.g., adjusted R-squared, AIC, 
+p-values).
+
+3. Choose a threshold that you will use to say one model is discernibly "better"
+than another model (e.g., higher adjusted R-squared). 
+
+4. Choose how you want to progress through the different model options (e.g., 
+forward selection, backward selection, fit all possible models). 
+:::
+:::
+
+## Why would you want to use model selection?
+
+::: columns
+::: {.column width="47%"}
+::: {.fragment}
+**Your data have LOTS of variables** 
+
+</br> 
+
+::: {.midi}
+By "lots" I mean LOTS, like 100+. 
+
+In this setting, model selection can help you find the "signal" through the 
+noise---which variables **actually** matter?
+:::
+:::
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+::: {.fragment}
+**You're interested in prediction**
+
+</br> 
+
+::: {.midi}
+You mostly care about finding a model that will get you the best predictions, 
+and are not interested in *interpreting* the coefficients from the model. 
+:::
+:::
+:::
+:::
+
+# Let's give it a try!
+
+## Predicting a Baby's Weight
+
+```{r}
+#| label: births14-step
+#| include: false
+
+births14_clean <- drop_na(births14)
+
+full_model <- lm(weight ~ ., data = births14_clean)
+null_model <- lm(weight ~ 1, data = births14_clean)
+
+# step(full_model, 
+#      scope = list(lower = null_model, upper = full_model), 
+#      direction = "forward")
+# weight ~ fage + mage + mature + weeks + premie + visits + gained + lowbirthweight + sex + habit + marital + whitemom
+
+backward_model <- step(full_model, 
+                       scope = list(lower = null_model, upper = full_model), 
+                       direction = "backward")
+# weight ~ mage + mature + weeks + premie + gained + lowbirthweight + sex + habit + whitemom
+```
+
+::: columns
+::: {.column width="50%"}
+::: {.small}
+What variables do we have to choose from?
+
+```{r}
+#| label: data-preview
+vars <- births14 |> 
+  colnames()
+
+tibble(Variables = vars) |> 
+  gt::gt() |> 
+  gt::tab_style(
+    style = gt::cell_text(weight = "bold"),  
+    locations = gt::cells_column_labels(columns = Variables)
+    )
+
+```
+:::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+::: {.fragment}
+::: {.small}
+
+Using backward selection with AIC, the "best model" includes:
+
+```{r}
+#| label: best-backward-model-births14
+
+chosen_vars <- backward_model$model |> 
+  colnames() 
+
+tibble(`Chosen Variables` = chosen_vars) |> 
+  filter(`Chosen Variables` != "weight") |> 
+  gt::gt() |> 
+  gt::tab_style(
+    style = gt::cell_text(weight = "bold"),  
+    locations = gt::cells_column_labels(columns = `Chosen Variables`)
+    )
+
+```
+:::
+:::
+:::
+:::
+
+# Would you expect to get the same "best" model with a different dataset?
+
+
+## A Different Sample
+
+```{r}
+#| label: ncbirths-step
+#| include: false
+
+ncbirths_clean <- drop_na(ncbirths)
+
+full_model <- lm(weight ~ ., data = ncbirths_clean)
+null_model <- lm(weight ~ 1, data = ncbirths_clean)
+
+backward_model <- step(full_model, 
+                       scope = list(lower = null_model, upper = full_model), 
+                       direction = "backward")
+# fage + weeks + marital + gained + lowbirthweight + gender + habit + whitemom
+```
+
+Using a different sample of 1,000 births, the "best model" includes:
+
+```{r}
+#| label: best-backward-model-ncbirths
+
+chosen_vars <- backward_model$model |> 
+  colnames() 
+
+tibble(`Chosen Variables` = chosen_vars) |> 
+  filter(`Chosen Variables` != "weight") |> 
+  gt::gt() |> 
+  gt::tab_style(
+    style = gt::cell_text(weight = "bold"),  
+    locations = gt::cells_column_labels(columns = `Chosen Variables`)
+    )
+
+```
+
+. . .
+
+Did we get the same "best" model?
+
+## Should you always use model selection?
+
+> In fact, many statisticians discourage the use of stepwise regression alone
+> for model selection and advocate, instead, for a more thoughtful approach that
+> carefully considers the research focus and features of the data.
+>
+> *Introduction to Modern Statistics*
+
 # Lab 6
 
 ## Forward Selection (by Hand)
@@ -150,6 +345,24 @@ Stating that the study was "observational" doesn't tell me that you understand w
 $\vdots$
 
 4.  Stop adding variables when adjusted $R^2$ stops increasing
+
+## Choosing What Variable to Add
+
+In each step, you will choose which **one** variable to add based on the 
+adjusted R-squared value. 
+
+</br> 
+
+::: {.small}
+```{r}
+#| label: regression-summaries
+#| echo: true
+#| code-line-numbers: false
+
+get_regression_summaries(backward_model)
+```
+:::
+
 
 ## A More Automated Option
 
@@ -172,3 +385,32 @@ evals_train %>%
                values_to = "adj_r_sq") %>% 
   slice_max(adj_r_sq)
 ```
+
+## Accessing Lab 6
+
+::: {.small}
+::: {.callout-important}
+# Roles
+
+The person who was the Recorder last week is the Resource Manager this week! 
+The person who was the Resource Manager last week is the Recorder this week!
+:::
+:::
+
+. . .
+
+::: {.midi}
+**Step 1:** The Recorder [follows these instructions to copy the Lab 6 project into your group's workspace](https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA)
+:::
+
+. . .
+
+::: {.midi}
+**Step 2:** Both members open the Lab 6 assignment in your group workspace!
+:::
+
+. . .
+
+::: {.midi}
+**Step 3:** Follow the [final instructions](https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw) to activate collaborative editing in the document. 
+:::
