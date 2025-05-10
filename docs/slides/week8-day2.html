@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>STAT 313 / 513 – 🔬 Simulation-Based Methods versus Theory-Based Methods</title>
+  <title>STAT 313 / 513 – ANalysis Of VAriance</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -192,2116 +192,455 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">🔬 Simulation-Based Methods versus Theory-Based Methods</h1>
+  <h1 class="title"><strong>AN</strong>alysis <strong>O</strong>f <strong>VA</strong>riance</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="lab-7-recap" class="title-slide slide level1 center">
-<h1>Lab 7 Recap</h1>
+<section id="week-9" class="title-slide slide level1 center">
+<h1>Week 9</h1>
 
 </section>
-<section id="common-mistakes" class="slide level2">
-<h2>Common Mistakes</h2>
-<p><br></p>
-<p><strong>Question 6</strong> (Bootstrap Distribution):</p>
+<section id="final-project-first-draft" class="slide level2">
+<h2>Final Project First Draft</h2>
+<p><strong>Step 1</strong> - Due by tonight!</p>
+<div class="small">
 <ul>
-<li>Did not use an informative axis label</li>
+<li>Introduction (Data description, research questions)</li>
 </ul>
-<p><br></p>
-<p><strong>Question 8</strong> (Interpret Confidence Interval):</p>
-<ul>
-<li>Did not include population in interpretation</li>
-<li>Stated interval was about “all marshes” (no geographical information)</li>
-</ul>
-</section></section>
-<section>
-<section id="statistical-critique-2" class="title-slide slide level1 center">
-<h1>Statistical Critique 2</h1>
-
-</section>
-<section id="first-steps" class="slide level2">
-<h2>First Steps</h2>
-<ol type="1">
-<li>Open the directions!</li>
-<li>Copy the Statistical Critique template on Posit Cloud</li>
-<li>Copy-and-paste code from your Midterm Project</li>
-<li>Copy-and-paste your justification for why you chose the model you chose</li>
-</ol>
-</section>
-<section id="next-steps" class="slide level2">
-<h2>Next Steps</h2>
-<ol start="4" type="1">
-<li>Fit the most complex model</li>
-<li>Obtain an ANOVA table of your model</li>
-<li>Use the p-values in the ANOVA table to decide what model is best</li>
-</ol>
-</section>
-<section id="what-is-the-most-complex-model" class="slide level2">
-<h2>What is the “most complex” model?</h2>
-<p><strong>For 1 numerical &amp; 1 categorical explanatory variables</strong></p>
-<ul>
-<li>Fit the <strong>different slopes</strong> (interaction) model</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>species_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> bill_depth_mm <span class="sc">*</span> species, </span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<p><br></p>
-<p><strong>For 2 numerical explanatory variables</strong></p>
+<p><strong>Step 2</strong> - Due by Thursday</p>
+<div class="small">
 <ul>
-<li>Fit the model with <strong>both</strong> variables included:</li>
+<li>Methods (Data visualizations)</li>
+<li>Findings (Data analysis)</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>bill_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_depth_mm, </span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</section>
-<section id="how-do-i-know-what-model-is-best-from-the-anova-table" class="slide level2">
-<h2>How do I know what model is “best” from the ANOVA table?</h2>
-<p><strong>For 1 numerical &amp; 1 categorical explanatory variables</strong></p>
+<div class="fragment">
+<p><strong>Step 3</strong> - Due by Sunday</p>
+<div class="small">
 <ul>
-<li>Look at the interaction line (e.g., <code>bill_depth_mm:species</code>), it is testing if the slopes are different!</li>
+<li>Study Limitations</li>
+<li>Conclusion</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(species_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="garbkhetdq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#garbkhetdq table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#garbkhetdq thead, #garbkhetdq tbody, #garbkhetdq tfoot, #garbkhetdq tr, #garbkhetdq td, #garbkhetdq th {
-  border-style: none;
-}
-
-#garbkhetdq p {
-  margin: 0;
-  padding: 0;
-}
-
-#garbkhetdq .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#garbkhetdq .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#garbkhetdq .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#garbkhetdq .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#garbkhetdq .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#garbkhetdq .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#garbkhetdq .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#garbkhetdq .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#garbkhetdq .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#garbkhetdq .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#garbkhetdq .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#garbkhetdq .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#garbkhetdq .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#garbkhetdq .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#garbkhetdq .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#garbkhetdq .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#garbkhetdq .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#garbkhetdq .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#garbkhetdq .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#garbkhetdq .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#garbkhetdq .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#garbkhetdq .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#garbkhetdq .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#garbkhetdq .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#garbkhetdq .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#garbkhetdq .gt_left {
-  text-align: left;
-}
-
-#garbkhetdq .gt_center {
-  text-align: center;
-}
-
-#garbkhetdq .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#garbkhetdq .gt_font_normal {
-  font-weight: normal;
-}
-
-#garbkhetdq .gt_font_bold {
-  font-weight: bold;
-}
-
-#garbkhetdq .gt_font_italic {
-  font-style: italic;
-}
-
-#garbkhetdq .gt_super {
-  font-size: 65%;
-}
-
-#garbkhetdq .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#garbkhetdq .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#garbkhetdq .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#garbkhetdq .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#garbkhetdq .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#garbkhetdq .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#garbkhetdq .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#garbkhetdq .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#garbkhetdq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-
-<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<thead>
-<tr class="gt_col_headings header">
-<th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
-<th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
-<th id="Sum Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
-<th id="Mean Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
-<th id="F value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
-<th id="Pr(&amp;gt;F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_left" headers="term">bill_depth_mm</td>
-<td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">561.5708</td>
-<td class="gt_row gt_right" headers="Mean Sq">561.570850</td>
-<td class="gt_row gt_right" headers="F value">93.96508</td>
-<td class="gt_row gt_right" headers="Pr(>F)">9.384795e-20</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="term">species</td>
-<td class="gt_row gt_right" headers="Df">2</td>
-<td class="gt_row gt_right" headers="Sum Sq">7460.3201</td>
-<td class="gt_row gt_right" headers="Mean Sq">3730.160057</td>
-<td class="gt_row gt_right" headers="F value">624.15060</td>
-<td class="gt_row gt_right" headers="Pr(>F)">7.116342e-114</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="term">bill_depth_mm:species</td>
-<td class="gt_row gt_right" headers="Df">2</td>
-<td class="gt_row gt_right" headers="Sum Sq">134.2515</td>
-<td class="gt_row gt_right" headers="Mean Sq">67.125732</td>
-<td class="gt_row gt_right" headers="F value">11.23184</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.897629e-05</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Df">336</td>
-<td class="gt_row gt_right" headers="Sum Sq">2008.0631</td>
-<td class="gt_row gt_right" headers="Mean Sq">5.976378</td>
-<td class="gt_row gt_right" headers="F value">NA</td>
-<td class="gt_row gt_right" headers="Pr(>F)">NA</td>
-</tr>
-</tbody>
-</table>
-
 </div>
 </div>
-</div>
+</section></section>
+<section>
+<section id="one-way-anova" class="title-slide slide level1 center">
+<h1>One-Way ANOVA</h1>
+
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p><code>bill_depth_mm:species</code>: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!</p>
+<div style="font-size: 2.5em; color: #000000;">
+<p>Before…</p>
 </div>
-</section>
-<section id="how-do-i-know-what-model-is-best-from-the-anova-table-1" class="slide level2">
-<h2>How do I know what model is “best” from the ANOVA table?</h2>
-<p><strong>For 2 numerical explanatory variables</strong></p>
-<ul>
-<li>Look at the p-value for each variable, it is testing if that variable has a relationship with the response (conditional on the other variable being in the model)!</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(bill_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="axjqsscqxw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#axjqsscqxw table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-#axjqsscqxw thead, #axjqsscqxw tbody, #axjqsscqxw tfoot, #axjqsscqxw tr, #axjqsscqxw td, #axjqsscqxw th {
-  border-style: none;
-}
-
-#axjqsscqxw p {
-  margin: 0;
-  padding: 0;
-}
-
-#axjqsscqxw .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#axjqsscqxw .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#axjqsscqxw .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#axjqsscqxw .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#axjqsscqxw .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#axjqsscqxw .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#axjqsscqxw .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#axjqsscqxw .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#axjqsscqxw .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#axjqsscqxw .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#axjqsscqxw .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#axjqsscqxw .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#axjqsscqxw .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#axjqsscqxw .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#axjqsscqxw .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#axjqsscqxw .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#axjqsscqxw .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#axjqsscqxw .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#axjqsscqxw .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#axjqsscqxw .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#axjqsscqxw .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#axjqsscqxw .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#axjqsscqxw .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#axjqsscqxw .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#axjqsscqxw .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#axjqsscqxw .gt_left {
-  text-align: left;
-}
-
-#axjqsscqxw .gt_center {
-  text-align: center;
-}
-
-#axjqsscqxw .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#axjqsscqxw .gt_font_normal {
-  font-weight: normal;
-}
-
-#axjqsscqxw .gt_font_bold {
-  font-weight: bold;
-}
-
-#axjqsscqxw .gt_font_italic {
-  font-style: italic;
-}
-
-#axjqsscqxw .gt_super {
-  font-size: 65%;
-}
-
-#axjqsscqxw .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#axjqsscqxw .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#axjqsscqxw .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#axjqsscqxw .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#axjqsscqxw .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#axjqsscqxw .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#axjqsscqxw .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#axjqsscqxw .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#axjqsscqxw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-
-<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<thead>
-<tr class="gt_col_headings header">
-<th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
-<th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
-<th id="Sum Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
-<th id="Mean Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
-<th id="F value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
-<th id="Pr(&amp;gt;F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_left" headers="term">body_mass_g</td>
-<td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">3599.71136</td>
-<td class="gt_row gt_right" headers="Mean Sq">3599.71136</td>
-<td class="gt_row gt_right" headers="F value">186.673943</td>
-<td class="gt_row gt_right" headers="Pr(>F)">3.685224e-34</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="term">bill_depth_mm</td>
-<td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">27.41605</td>
-<td class="gt_row gt_right" headers="Mean Sq">27.41605</td>
-<td class="gt_row gt_right" headers="F value">1.421742</td>
-<td class="gt_row gt_right" headers="Pr(>F)">2.339508e-01</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Df">339</td>
-<td class="gt_row gt_right" headers="Sum Sq">6537.07813</td>
-<td class="gt_row gt_right" headers="Mean Sq">19.28342</td>
-<td class="gt_row gt_right" headers="F value">NA</td>
-<td class="gt_row gt_right" headers="Pr(>F)">NA</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
+<img data-src="week8-day2_files/figure-revealjs/slr-1.png" width="960" class="r-stretch"></section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<div style="font-size: 1.25em; color: #000000;">
-<p><code>body_mass_g</code>: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!</p>
+<div style="font-size: 2.5em; color: #000000;">
+<p>Now…</p>
 </div>
-<p><br></p>
-<div style="font-size: 1.25em; color: #000000;">
-<p><code>bill_depth_mm</code>: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!</p>
-</div>
-</section></section>
+
+<img data-src="week8-day2_files/figure-revealjs/age-cat-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="last-week-we-covered-confidence-intervals-this-week-were-learning-more-about-hypothesis-tests." class="title-slide slide level1 center">
-<h1>Last week we covered confidence intervals, this week we’re learning more about hypothesis tests.</h1>
+<section id="why" class="title-slide slide level1 center">
+<h1>Why?</h1>
 
 </section>
-<section id="testing-for-a-population-slope-beta_1" class="slide level2">
-<h2>Testing for a Population Slope (<span class="math inline">\(\beta_1\)</span>)</h2>
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><span class="math display">\[H_0: \beta_1 = 0\]</span></p>
-<p><span class="math display">\[H_A: \beta_1 \neq 0\]</span></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="week8-day2_files/figure-revealjs/evals-slr-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="fragment">
-<div style="font-size: 1em; color: #ed8402;">
-<p>What do these hypotheses mean <em>in words</em>?</p>
-</div>
-</div>
-</section>
-<section id="what-do-you-think" class="slide level2">
-<h2>What do you think?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="math inline">\(\widehat{score} = 3.88 + 0.066 \times \text{bty_avg}\)</span></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="week8-day2_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="fragment">
-<div style="font-size: 1.5em; color: #b76352;">
-<p>Will we reject <span class="math inline">\(H_0\)</span>?</p>
-</div>
-</div>
-</section></section>
-<section id="how-will-we-decide" class="title-slide slide level1 center">
-<h1>How will we decide?</h1>
-
-</section>
-
-<section>
-<section id="how-will-we-decide-1" class="title-slide slide level1 center">
-<h1>How will we decide?</h1>
-<div class="midi">
-<p>by generating statistics that could have happened if <span class="math inline">\(H_0\)</span> was true and comparing our observed statistic to these statistics to see how unusual it is</p>
-</div>
-</section>
-<section id="if-h_0-was-true-then" class="slide level2">
-<h2>If <span class="math inline">\(H_0\)</span> was true then…</h2>
-<p><br></p>
-<p><span class="math inline">\(\beta_1\)</span> = 0</p>
-<p><br></p>
-<p>which means…</p>
-</section></section>
-<section>
-<section id="how-do-we-generate-statistics-that-could-have-happened-if-h_0-was-true" class="title-slide slide level1 center">
-<h1>How do we generate statistics that could have happened if <span class="math inline">\(H_0\)</span> was true?</h1>
-
-</section>
-<section id="one-possible-shuffle" class="slide level2">
-<h2>One possible shuffle</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="cell">
-<div class="cell-output-display">
-<div id="dqmtciszgo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dqmtciszgo table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#dqmtciszgo thead, #dqmtciszgo tbody, #dqmtciszgo tfoot, #dqmtciszgo tr, #dqmtciszgo td, #dqmtciszgo th {
-  border-style: none;
-}
-
-#dqmtciszgo p {
-  margin: 0;
-  padding: 0;
-}
-
-#dqmtciszgo .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#dqmtciszgo .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#dqmtciszgo .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#dqmtciszgo .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#dqmtciszgo .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#dqmtciszgo .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#dqmtciszgo .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#dqmtciszgo .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#dqmtciszgo .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#dqmtciszgo .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#dqmtciszgo .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#dqmtciszgo .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#dqmtciszgo .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#dqmtciszgo .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#dqmtciszgo .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dqmtciszgo .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#dqmtciszgo .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#dqmtciszgo .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#dqmtciszgo .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dqmtciszgo .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#dqmtciszgo .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dqmtciszgo .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#dqmtciszgo .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dqmtciszgo .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#dqmtciszgo .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dqmtciszgo .gt_left {
-  text-align: left;
-}
-
-#dqmtciszgo .gt_center {
-  text-align: center;
-}
-
-#dqmtciszgo .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#dqmtciszgo .gt_font_normal {
-  font-weight: normal;
-}
-
-#dqmtciszgo .gt_font_bold {
-  font-weight: bold;
-}
-
-#dqmtciszgo .gt_font_italic {
-  font-style: italic;
-}
-
-#dqmtciszgo .gt_super {
-  font-size: 65%;
-}
-
-#dqmtciszgo .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#dqmtciszgo .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#dqmtciszgo .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#dqmtciszgo .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#dqmtciszgo .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#dqmtciszgo .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#dqmtciszgo .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-
-<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<thead>
-<tr class="gt_col_headings header">
-<th id="score" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">score</th>
-<th id="bty_avg" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bty_avg</th>
-<th id="shuffled_score" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">shuffled_score</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.7</td>
-<td class="gt_row gt_right" headers="bty_avg">3.000</td>
-<td class="gt_row gt_right" headers="shuffled_score">2.8</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">3.6</td>
-<td class="gt_row gt_right" headers="bty_avg">4.833</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.6</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.3</td>
-<td class="gt_row gt_right" headers="bty_avg">4.333</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.5</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.8</td>
-<td class="gt_row gt_right" headers="bty_avg">3.500</td>
-<td class="gt_row gt_right" headers="shuffled_score">2.8</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">3.7</td>
-<td class="gt_row gt_right" headers="bty_avg">3.000</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.7</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">3.6</td>
-<td class="gt_row gt_right" headers="bty_avg">3.167</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.9</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.3</td>
-<td class="gt_row gt_right" headers="bty_avg">3.167</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.1</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">3.5</td>
-<td class="gt_row gt_right" headers="bty_avg">4.833</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.6</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">3.6</td>
-<td class="gt_row gt_right" headers="bty_avg">4.333</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.5</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.6</td>
-<td class="gt_row gt_right" headers="bty_avg">7.333</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.6</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.4</td>
-<td class="gt_row gt_right" headers="bty_avg">2.500</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.4</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.5</td>
-<td class="gt_row gt_right" headers="bty_avg">4.333</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.3</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.2</td>
-<td class="gt_row gt_right" headers="bty_avg">2.833</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.4</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.8</td>
-<td class="gt_row gt_right" headers="bty_avg">6.500</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.3</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.3</td>
-<td class="gt_row gt_right" headers="bty_avg">4.000</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.8</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.8</td>
-<td class="gt_row gt_right" headers="bty_avg">3.667</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.1</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">3.1</td>
-<td class="gt_row gt_right" headers="bty_avg">1.667</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.7</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.6</td>
-<td class="gt_row gt_right" headers="bty_avg">6.500</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.0</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.8</td>
-<td class="gt_row gt_right" headers="bty_avg">5.000</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.5</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.1</td>
-<td class="gt_row gt_right" headers="bty_avg">6.167</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.8</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.5</td>
-<td class="gt_row gt_right" headers="bty_avg">4.167</td>
-<td class="gt_row gt_right" headers="shuffled_score">3.5</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">3.6</td>
-<td class="gt_row gt_right" headers="bty_avg">3.000</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.7</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">4.8</td>
-<td class="gt_row gt_right" headers="bty_avg">6.167</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.1</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="score">4.8</td>
-<td class="gt_row gt_right" headers="bty_avg">3.667</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.1</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="score">3.8</td>
-<td class="gt_row gt_right" headers="bty_avg">3.167</td>
-<td class="gt_row gt_right" headers="shuffled_score">4.4</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:55%;">
-<div class="fragment">
-<p>Which results in a slope statistic of…</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.06663704</code></pre>
-</div>
-</div>
-</div>
-</div></div>
-</section></section>
-<section id="but-thats-just-one-statistic" class="title-slide slide level1 center">
-<h1>But that’s just <strong>one</strong> statistic!</h1>
-
-</section>
-
-<section>
-<section id="but-thats-just-one-statistic-1" class="title-slide slide level1 center">
-<h1>But that’s just <strong>one</strong> statistic!</h1>
-<p>We want a sampling distribution of <strong>lots</strong> of statistics that could have happened if <span class="math inline">\(H_0\)</span> was true!</p>
-</section>
-<section id="lots-of-statistics-that-could-have-happened-if-h_0-was-true" class="slide level2">
-<h2>Lots of statistics that could have happened if <span class="math inline">\(H_0\)</span> was true</h2>
-
-<img data-src="week8-day2_files/figure-revealjs/evals-permute-1.png" width="960" class="r-stretch"></section>
-<section id="where-does-our-observed-statistic-fall-on-this-distribution" class="slide level2">
-<h2>Where does our observed statistic fall on this distribution?</h2>
-
-<img data-src="week8-day2_files/figure-revealjs/null-dist-1.png" width="960" class="r-stretch"></section>
-<section id="is-our-observed-statistic-likely-to-happen-if-the-null-was-true" class="slide level2">
-<h2>Is our observed statistic <em>likely</em> to happen if the null was true?</h2>
-<div class="fragment">
-<p>If it is unlikely to happen, then we should reject <span class="math inline">\(H_0\)</span>!</p>
-<p>Why???</p>
-</div>
-<div class="fragment">
-<p><br></p>
-<p>The probability of observing a statistic as or more extreme than 0.0666 if <span class="math inline">\(H_0\)</span> was true is approximately 0%.</p>
-</div>
-<div class="fragment">
-<p><br></p>
-<p>So, it seems like <span class="math inline">\(H_0\)</span> is not a reasonable characterization of the relationship.</p>
-</div>
-</section></section>
-<section id="what-conclusion-would-you-reach-about-the-relationship-between-professors-evaluation-scores-and-their-attractiveness" class="title-slide slide level1 center">
-<h1>What conclusion would you reach about the relationship between professors’ evaluation scores and their attractiveness?</h1>
-
-</section>
-
-<section id="the-conclusion-we-reached-depends-on-our-p-value-being-reliable." class="title-slide slide level1 center">
-<h1>The conclusion we reached depends on our p-value being reliable.</h1>
-
-</section>
-
-<section>
-<section id="the-conclusion-we-reached-depends-on-our-p-value-being-reliable.-1" class="title-slide slide level1 center">
-<h1>The conclusion we reached depends on our p-value being reliable.</h1>
-<p>How can we know if our p-value is reliable?</p>
-</section>
-<section id="model-conditions" class="slide level2">
-<h2>Model Conditions</h2>
-<p>For our p-value to be trustworthy, we need to know that the conditions of our model are not violated.</p>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>For linear regression we are assuming…</p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:55%;">
-<p><strong>L</strong>inear relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p>
-<p><br></p>
-<p><strong>I</strong>ndependent observations</p>
-<p><br></p>
-<p><strong>N</strong>ormality of residuals</p>
-<p><br></p>
-<p><strong>E</strong>qual variance of residuals</p>
-</div></div>
-</div>
-</section>
-<section id="what-happens-if-the-conditions-are-violated" class="slide level2">
-<h2>What happens if the conditions are violated?</h2>
-<p>In general, when the conditions associated with these methods are violated, we will <u>underestimate</u> the true standard error (spread) of the sampling distribution.</p>
-<div class="fragment">
-<ul>
-<li>Our p-values will be <strong>too</strong> small!</li>
-<li>Our confidence intervals will be <strong>too</strong> narrow!</li>
-<li>We will make more Type I errors than we expect!</li>
-</ul>
-</div>
-</section>
-<section id="section-2" class="slide level2">
+<section id="section-2" class="slide level2" data-background-color="#B6CADA">
 <h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p><strong>L</strong>inear relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p>
+<div style="font-size: 4em; color: #000000;">
+<p>Goal of an ANOVA</p>
 </div>
-
-<img data-src="week8-day2_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
-<p><strong><em>What should we do?</em></strong></p>
-</div>
+<p>Analysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different.</p>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>Variable transformation!</p>
+<div style="font-size: 4em; color: #B6CADA;">
+<p><strong>How???</strong></p>
 </div>
+<ul>
+<li>Compare how different a group of means are</li>
+<li>Scale the differences relative to the variability of the groups</li>
+<li>Summarize the differences with one number</li>
+</ul>
+</section></section>
+<section id="visualizations-for-an-anova" class="title-slide slide level1 center">
+<h1>Visualizations for an ANOVA</h1>
 
-<img data-src="week8-day2_files/figure-revealjs/transform-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+</section>
+
+<section>
+<section id="visualizations-for-an-anova-1" class="title-slide slide level1 center">
+<h1>Visualizations for an ANOVA</h1>
+<p>We want visualizations that allow for us to easily compare:</p>
+<ul>
+<li>the center (mean) of the groups</li>
+<li>the spread (variability) of the groups</li>
+</ul>
+</section>
 <section id="section-4" class="slide level2">
 <h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p><strong>I</strong>ndependence of observations</p>
-</div>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>The <code>evals</code> dataset contains 463 observations on 94 professors. Meaning, professors have <strong>multiple</strong> observations.</p>
-<p><br></p>
-<p><strong><em>What should we do?</em></strong></p>
-</div><div class="column" style="width:5%;">
 
-</div><div class="column" style="width:55%;">
-<div class="fragment">
-<p><strong>Best</strong> – use a random effects model</p>
-<p><strong>Reasonable</strong> – collapse the multiple scores into a single score</p>
-</div>
+<img data-src="week8-day2_files/figure-revealjs/age-cat-density-1.png" style="width:70.0%" class="r-stretch"><div class="fragment">
+<div style="color: #34605f;">
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>What can you say about the differences <em>between</em> the age groups?</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<p>What can you say about the variability <em>within</em> the age groups?</p>
 </div></div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="carrying-out-an-anova" class="title-slide slide level1 center">
+<h1>Carrying out an ANOVA</h1>
+
 </section>
 <section id="section-5" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p><strong>E</strong>qual variance of residuals</p>
+<p>Step 1: Compare your groups</p>
 </div>
+<!-- ![](images/groups.png) -->
 
-<img data-src="week8-day2_files/figure-revealjs/non-constant-variance-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
-<p><strong><em>What should we do?</em></strong></p>
-</div>
-</section>
+<img data-src="week8-day2_files/figure-revealjs/compare-groups-1.png" style="width:70.0%" class="r-stretch"></section>
 <section id="section-6" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Variable transformation!</p>
+<p>Step 2: Find the overall mean</p>
 </div>
 
-<img data-src="week8-day2_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<!-- ![](images/overall_mean.png) -->
+<img data-src="week8-day2_files/figure-revealjs/overall-mean-1.png" style="width:70.0%" class="r-stretch"><div class="fragment">
+<div style="font-size: 1.25em; color: #ed8402;">
+<p>This ignores the groups and finds <u>one</u> mean for every observation!</p>
+</div>
+</div>
+</section>
 <section id="section-7" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p><strong>N</strong>ormality of residuals</p>
+<p>Step 3: Find the group means</p>
 </div>
 
-<img data-src="week8-day2_files/figure-revealjs/non-normal-1.png" width="960" class="r-stretch"><div class="fragment">
-<p><strong><em>What should we do?</em></strong></p>
-</div>
-</section>
+<img data-src="week8-day2_files/figure-revealjs/group-means-1.png" style="width:70.0%" class="r-stretch"></section>
 <section id="section-8" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Variable transformation!</p>
+<p>Step 4: Calculate the sum of squares <em>between</em> groups</p>
 </div>
 
-<img data-src="week8-day2_files/figure-revealjs/normal-1.png" width="960" class="r-stretch"></section>
-<section id="what-if-we-cant-fix-a-condition-being-violated" class="slide level2">
-<h2>What if we can’t fix a condition being violated?</h2>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:45%;">
-<p>For the <strong>L</strong>, <strong>I</strong>, and <strong>E</strong> conditions…</p>
-<p>we need to ask for help!</p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:45%;">
-<div class="fragment">
-<p>For the <strong>N</strong> condition…</p>
-<p>we need to use simulation instead of mathematical formulas to get our p-value and confidence interval.</p>
-</div>
-</div></div>
-</div>
-</section></section>
-<section>
-<section id="simulation-based-methods-versus-theory-based-methods" class="title-slide slide level1 center">
-<h1>Simulation-Based Methods versus Theory-Based Methods</h1>
-
-</section>
-<section id="mathematical-theory-based-methods" class="slide level2">
-<h2>Mathematical / Theory-based Methods</h2>
-<div>
-<ul>
-<li class="fragment">Are a “simpler” approach</li>
-<li class="fragment">Use formulas instead of simulation to obtain standard error</li>
-<li class="fragment">Use <span class="math inline">\(t\)</span>-distribution to get p-value and confidence interval</li>
-<li class="fragment">Require that the residuals are normally distributed</li>
-</ul>
-</div>
-</section>
-<section id="how-does-this-look" class="slide level2">
-<h2>How does this look?</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Before</a></li><li><a href="#tabset-1-2">Now</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>obs_slope <span class="ot">&lt;-</span> evals <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> score, </span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> bty_avg) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>   bty_avg 
-0.06663704 </code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="smaller">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>evals_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(score <span class="sc">~</span> bty_avg, <span class="at">data =</span> evals)</span>
-<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(evals_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 7
-  term      estimate std_error statistic p_value lower_ci upper_ci
-  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 intercept    3.88      0.076     51.0        0    3.73     4.03 
-2 bty_avg      0.067     0.016      4.09       0    0.035    0.099</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+<img data-src="week8-day2_files/figure-revealjs/sum-of-squares-1.png" style="width:70.0%" class="r-stretch"></section>
 <section id="section-9" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>How did R calculate the <span class="math inline">\(t\)</span>-statistic?</p>
+<p>Step 5: Calculate the sum of squares <em>within</em> groups</p>
 </div>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Step 1: SE</a></li><li><a href="#tabset-2-2">Step 2: t-statistic</a></li><li><a href="#tabset-2-3">Proof!</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><span class="math inline">\(SE_{b_1} = \frac{\frac{s_y}{s_x} \cdot \sqrt{1 - r^2}}{\sqrt{n - 2}}\)</span></p>
-</div><div class="column" style="width:5%;">
 
-</div><div class="column" style="width:55%;">
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.01495204</code></pre>
+<img data-src="week8-day2_files/figure-revealjs/sum-of-squares-2-1.png" style="width:70.0%" class="r-stretch"></section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 6: Calculate the F-statistic</p>
 </div>
+
+<!-- ::: {style="color: #B6CADA;"} -->
+<!-- Can an F-statistic be negative? -->
+<!-- ::: -->
+<img data-src="images/sum-of-squares.jpeg" class="r-stretch"></section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 7: Find the p-value</p>
 </div>
-</div></div>
+
+<img data-src="images/f_dist.png" class="r-stretch"></section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p><strong>F-distribution</strong></p>
 </div>
-<div id="tabset-2-2">
-<p><span class="math inline">\(t = \frac{b_1}{SE_{b_1}} = \frac{0.067}{0.014952} = 4.4809947\)</span></p>
-</div>
-<div id="tabset-2-3">
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 7
-  term      estimate std_error statistic p_value lower_ci upper_ci
-  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 intercept    3.88      0.076     51.0        0    3.73     4.03 
-2 bty_avg      0.067     0.016      4.09       0    0.035    0.099</code></pre>
-</div>
-</div>
-</div>
+<p>An <span class="math inline">\(F\)</span>-distribution is a variant of the <span class="math inline">\(t\)</span>-distribution, and is also defined by degrees of freedom.</p>
+<div class="fragment">
+<p><br></p>
+<p>This distribution is defined by <strong>two</strong> different degrees of freedom:</p>
+<div class="small">
+<ol type="1">
+<li>from the numerator (MSG) : <span class="math inline">\(k\)</span> (number of groups) <span class="math inline">\(- 1\)</span></li>
+<li>from the denominator (MSE) : <span class="math inline">\(n\)</span> (number of observations) <span class="math inline">\(- k\)</span></li>
+</ol>
 </div>
 </div>
 </section>
-<section id="how-does-r-calculate-the-p-value" class="slide level2">
-<h2>How does R calculate the p-value?</h2>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Two degrees of freedom!</p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="small">
+<p>Changing the numerator degrees of freedom</p>
+</div>
+<p><img data-src="images/f_num_df.png"></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="small">
+<p>Changing the denominator degrees of freedom</p>
+</div>
+<p><img data-src="images/f_denom_df.png"></p>
+</div></div>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div style="font-size: 3em; color: #000000;">
+<p>Do you always use an F-distribution to get the p-value?</p>
+</div>
 <div class="fragment">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="week8-day2_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
-</figure>
+<center>
+<div style="font-size: 3em; color: #0F4C81;">
+<p>NO!</p>
 </div>
+</center>
 </div>
+</section>
+<section id="conditions-of-an-anova" class="slide level2">
+<h2>Conditions of an ANOVA</h2>
+<ul>
+<li>Independence of observations</li>
+</ul>
+<div class="small">
+<blockquote>
+<p>Observations are independent <em>within</em> groups <strong>and</strong> <em>between</em> groups</p>
+</blockquote>
+</div>
+<div class="fragment">
+<ul>
+<li>Normality of the residuals</li>
+</ul>
+<div class="small">
+<blockquote>
+<p>The distribution of residuals for each group is approximately normal</p>
+</blockquote>
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Different <span class="math inline">\(t\)</span>-distributions</strong></p>
-</div>
-<div class="callout-content">
-<p>A <span class="math inline">\(t\)</span>-distribution has a <em>slightly</em> different shape depending on the sample size. Technically, we are using a <span class="math inline">\(t\)</span>-distribution with <span class="math inline">\(n - 2\)</span> degrees of freedom to get our p-value.</p>
+<ul>
+<li>Equal variability of the groups</li>
+</ul>
+<div class="small">
+<blockquote>
+<p>The spread of the distributions are similar across groups</p>
+</blockquote>
 </div>
 </div>
+</section>
+<section id="choosing-a-method" class="slide level2">
+<h2>Choosing a Method</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div style="font-size: 1.25em; color: #000000;">
+<p>Which condition(s) are required to use “theory-based” methods?</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>All three!</p>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<div style="font-size: 1.25em; color: #000000;">
+<p>Which condition(s) are required to use “simulation-based” methods?</p>
+</div>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>All but normality!</p>
+</div>
+</div></div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+
+<img data-src="week8-day2_files/figure-revealjs/conditions-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
+<div style="font-size: 1.5em; color: #34605f;">
+<p>What do you think? Which method should we use?</p>
 </div>
 </div>
 </section></section>
-<section id="did-we-get-similar-results-between-these-methods" class="title-slide slide level1 center">
-<h1>Did we get similar results between these methods?</h1>
-
-</section>
-
 <section>
-<section id="did-we-get-similar-results-between-these-methods-1" class="title-slide slide level1 center">
-<h1>Did we get similar results between these methods?</h1>
-<p>Why do you think that is?</p>
-</section>
-<section id="approximating-the-permutation-distribution" class="slide level2">
-<h2>Approximating the permutation distribution</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>A <span class="math inline">\(t\)</span>-distribution can be a reasonable approximation for the permutation distribution <u>if the normality condition is not violated</u>.</p>
-</div><div class="column" style="width:5%;">
+<section id="simulation-based-methods" class="title-slide slide level1 center">
+<h1>Simulation-based Methods</h1>
 
-</div><div class="column" style="width:55%;">
+</section>
+<section id="step-1-calculating-the-observed-f-statistic" class="slide level2">
+<h2>Step 1: Calculating the Observed F-statistic</h2>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="week8-day2_files/figure-revealjs/t-distribution-1.png" width="960"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>obs_F <span class="ot">&lt;-</span> evals_small <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> min_eval, </span>
+<span id="cb1-3"><a></a>          <span class="at">explanatory =</span> age_cat) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: min_eval (numeric)
+Explanatory: age_cat (factor)
+# A tibble: 1 × 1
+   stat
+  &lt;dbl&gt;
+1  1.41</code></pre>
 </div>
 </div>
+</section>
+<section id="step-2-simulating-what-could-have-happened-under-h_0" class="slide level2">
+<h2>Step 2: Simulating what could have happened under <span class="math inline">\(H_0\)</span></h2>
+<div class="fragment">
+<p><br></p>
+<div style="font-size: 1.25em; color: #34605f;">
+<p>How could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?</p>
+</div>
+</div>
+</section>
+<section id="another-permutation-distribution" class="slide level2">
+<h2>Another Permutation Distribution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>null_dist <span class="ot">&lt;-</span> evals_small <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> min_eval, </span>
+<span id="cb3-3"><a></a>          <span class="at">explanatory =</span> age_cat) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="another-permutation-distribution-1" class="slide level2">
+<h2>Another Permutation Distribution</h2>
+
+<img data-src="week8-day2_files/figure-revealjs/visualize-null-dist-1.png" width="960" class="r-stretch"><div class="fragment">
+<div style="font-size: 1.25em; color: #ed8402;">
+<p>Why doesn’t the distribution have negative numbers?</p>
+</div>
+</div>
+</section>
+<section id="visualizing-the-p-value" class="slide level2">
+<h2>Visualizing the p-value</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> obs_F, </span>
+<span id="cb4-3"><a></a>                <span class="at">direction =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualizing-the-p-value-1" class="slide level2">
+<h2>Visualizing the p-value</h2>
+
+<img data-src="week8-day2_files/figure-revealjs/p-value-visualization-annotated-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="making-a-decision-reaching-a-conclusion" class="slide level2">
+<h2>Making a Decision &amp; Reaching a Conclusion</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>For a p-value of 0.239, what decision would you reach regarding your hypothesis test?</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p>What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?</p>
 </div>
 </div></div>
 </section>
-<section id="section-10" class="slide level2">
-<h2><img data-src="images/gapminder.png"></h2>
-<blockquote>
-<p>What is the relationship between life expectancy GDP per capita?</p>
-</blockquote>
-<div class="fragment">
-<ul>
-<li>Decide on a variable transformation</li>
-<li>Assess model conditions (L, I, N, E)</li>
-<li>Compare hypothesis test results between simulation-based methods and theory-based methods</li>
-</ul>
+<section id="large-p-values-neq-evidence-for-the-null-hypothesis" class="slide level2">
+<h2>Large p-values <span class="math inline">\(\neq\)</span> evidence for the null hypothesis!</h2>
 
+<img data-src="images/No evidence against the null.png" class="r-stretch"></section></section>
+<section>
+<section id="what-if-we-didnt-believe-the-normality-condition-was-violated" class="title-slide slide level1 center">
+<h1>What if we didn’t believe the normality condition was violated?</h1>
 
+</section>
+<section id="theory-based-methods" class="slide level2">
+<h2>Theory-based Methods</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">aov</span>(min_eval <span class="sc">~</span> age_cat, </span>
+<span id="cb5-2"><a></a>    <span class="at">data =</span> evals_small)  <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 6
+  term         df sumsq meansq statistic p.value
+  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 age_cat       3  1.24  0.414      1.41   0.244
+2 Residuals    90 26.4   0.293     NA     NA    </code></pre>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>How was the <code>statistic</code> calculated?</p>
+</div>
+<div class="fragment">
+<p>What distribution was used to calculate the <code>p.value</code>?</p>
+</div>
+</section>
+<section id="making-a-decision-reaching-a-conclusion-1" class="slide level2">
+<h2>Making a Decision &amp; Reaching a Conclusion</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>For a p-value of 0.244, what decision would you reach regarding your hypothesis test?</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p>What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?</p>
+</div>
+</div></div>
+</section>
+<section id="section-16" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<div style="font-size: 3em; color: #0F4C81;">
+<p>Did the two methods yield different results?</p>
+</div>
+</section></section>
+<section>
+<section id="final-project-work-session" class="title-slide slide level1 center">
+<h1>Final Project Work Session</h1>
+
+</section>
+<section id="introduction-research-questions" class="slide level2">
+<h2>Introduction &amp; Research Questions</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>In 4-6 sentences, introduce / describe your data.</p>
+<ul>
+<li>What is the context of the data?</li>
+<li>For what purpose were these data collected?</li>
+</ul>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p>Outline the <u><strong>two</strong></u> questions your research seeks to address.</p>
+<ul>
+<li>You will have one question for each one-way ANOVA model</li>
+<li>Your question should be in terms of “differences in group means” not “relationships”</li>
+</ul>
+</div>
+</div></div>
+
+
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

@@ -1,3 +1,10 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
 tidyverse
 ggplot2
 tibble
@@ -8,7 +15,7 @@ dplyr
 stringr
 forcats
 lubridate
-infer
-moderndive
-lterdatasampler
 palmerpenguins
+broom
+ggridges
+infer

@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>STAT 313 / 513 – 🧑🏽‍🔬 P-values &amp; Hypothesis Tests</title>
+  <title>STAT 313 / 513 – 🔬 Simulation-Based Methods versus Theory-Based Methods</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -192,508 +192,2126 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">🧑🏽‍🔬 P-values &amp; Hypothesis Tests</h1>
+  <h1 class="title">🔬 Simulation-Based Methods versus Theory-Based Methods</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="plan-for-the-rest-of-the-quarter" class="title-slide slide level1 center">
-<h1>Plan for the rest of the quarter</h1>
+<section id="lab-7-recap" class="title-slide slide level1 center">
+<h1>Lab 7 Recap</h1>
 
 </section>
-<section id="weeks-8-9-10" class="slide level2">
-<h2>Weeks 8, 9, &amp; 10</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<div class="fragment">
-<p><strong>Week 8</strong></p>
+<section id="common-mistakes" class="slide level2">
+<h2>Common Mistakes</h2>
+<p><br></p>
+<p><strong>Question 6</strong> (Bootstrap Distribution):</p>
 <ul>
-<li>Learn about hypothesis testing for SLR &amp; MLR</li>
-<li>Compare “visual” model selection with p-value model selection</li>
+<li>Did not use an informative axis label</li>
 </ul>
-</div>
-</div><div class="column" style="width:30%;">
-<div class="fragment">
-<p><strong>Week 9</strong></p>
+<p><br></p>
+<p><strong>Question 8</strong> (Interpret Confidence Interval):</p>
 <ul>
-<li>Learn about one-way ANOVA</li>
-<li>Get started on first portion of Final Project</li>
+<li>Did not include population in interpretation</li>
+<li>Stated interval was about “all marshes” (no geographical information)</li>
 </ul>
-</div>
-</div><div class="column" style="width:30%;">
-<div class="fragment">
-<p><strong>Week 10</strong></p>
-<ul>
-<li>Learn about two-way ANOVA</li>
-<li>Finish Final Project</li>
-</ul>
-</div>
-</div></div>
+</section></section>
+<section>
+<section id="statistical-critique-2" class="title-slide slide level1 center">
+<h1>Statistical Critique 2</h1>
+
 </section>
-<section id="upcoming-deadlines" class="slide level2">
-<h2>Upcoming Deadlines</h2>
+<section id="first-steps" class="slide level2">
+<h2>First Steps</h2>
+<ol type="1">
+<li>Open the directions!</li>
+<li>Copy the Statistical Critique template on Posit Cloud</li>
+<li>Copy-and-paste code from your Midterm Project</li>
+<li>Copy-and-paste your justification for why you chose the model you chose</li>
+</ol>
+</section>
+<section id="next-steps" class="slide level2">
+<h2>Next Steps</h2>
+<ol start="4" type="1">
+<li>Fit the most complex model</li>
+<li>Obtain an ANOVA table of your model</li>
+<li>Use the p-values in the ANOVA table to decide what model is best</li>
+</ol>
+</section>
+<section id="what-is-the-most-complex-model" class="slide level2">
+<h2>What is the “most complex” model?</h2>
+<p><strong>For 1 numerical &amp; 1 categorical explanatory variables</strong></p>
 <ul>
-<li>Lab 6 revisions are due on Wednesday (by midnight)</li>
-<li>Statistical Critique 2 is due next Monday (at 5pm)</li>
-<li>Final revisions on <strong>all</strong> assignments will be accepted until Sunday, March 17</li>
+<li>Fit the <strong>different slopes</strong> (interaction) model</li>
 </ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>species_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> bill_depth_mm <span class="sc">*</span> species, </span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Revision Deadlines</strong></p>
+<div class="fragment">
+<p><br></p>
+<p><strong>For 2 numerical explanatory variables</strong></p>
+<ul>
+<li>Fit the model with <strong>both</strong> variables included:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>bill_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_depth_mm, </span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-content">
-<p>If you did not submit revisions by the deadline (or forgot to include your reflections), your assignment <strong>is not</strong> eligible for additional revisions.</p>
+</div>
+</section>
+<section id="how-do-i-know-what-model-is-best-from-the-anova-table" class="slide level2">
+<h2>How do I know what model is “best” from the ANOVA table?</h2>
+<p><strong>For 1 numerical &amp; 1 categorical explanatory variables</strong></p>
+<ul>
+<li>Look at the interaction line (e.g., <code>bill_depth_mm:species</code>), it is testing if the slopes are different!</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(species_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="swimloynfg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#swimloynfg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#swimloynfg thead, #swimloynfg tbody, #swimloynfg tfoot, #swimloynfg tr, #swimloynfg td, #swimloynfg th {
+  border-style: none;
+}
+
+#swimloynfg p {
+  margin: 0;
+  padding: 0;
+}
+
+#swimloynfg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#swimloynfg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#swimloynfg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#swimloynfg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#swimloynfg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#swimloynfg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swimloynfg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#swimloynfg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#swimloynfg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#swimloynfg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#swimloynfg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#swimloynfg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#swimloynfg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#swimloynfg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#swimloynfg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#swimloynfg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#swimloynfg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#swimloynfg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#swimloynfg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swimloynfg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#swimloynfg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#swimloynfg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#swimloynfg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swimloynfg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#swimloynfg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#swimloynfg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swimloynfg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swimloynfg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#swimloynfg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swimloynfg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#swimloynfg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swimloynfg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#swimloynfg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swimloynfg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#swimloynfg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swimloynfg .gt_left {
+  text-align: left;
+}
+
+#swimloynfg .gt_center {
+  text-align: center;
+}
+
+#swimloynfg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#swimloynfg .gt_font_normal {
+  font-weight: normal;
+}
+
+#swimloynfg .gt_font_bold {
+  font-weight: bold;
+}
+
+#swimloynfg .gt_font_italic {
+  font-style: italic;
+}
+
+#swimloynfg .gt_super {
+  font-size: 65%;
+}
+
+#swimloynfg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#swimloynfg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#swimloynfg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#swimloynfg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#swimloynfg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#swimloynfg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#swimloynfg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#swimloynfg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#swimloynfg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
+<th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
+<th id="Sum-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
+<th id="Mean-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
+<th id="F-value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
+<th id="Pr(>F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">bill_depth_mm</td>
+<td class="gt_row gt_right" headers="Df">1</td>
+<td class="gt_row gt_right" headers="Sum Sq">561.5708</td>
+<td class="gt_row gt_right" headers="Mean Sq">561.570850</td>
+<td class="gt_row gt_right" headers="F value">93.96508</td>
+<td class="gt_row gt_right" headers="Pr(>F)">9.384795e-20</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">species</td>
+<td class="gt_row gt_right" headers="Df">2</td>
+<td class="gt_row gt_right" headers="Sum Sq">7460.3201</td>
+<td class="gt_row gt_right" headers="Mean Sq">3730.160057</td>
+<td class="gt_row gt_right" headers="F value">624.15060</td>
+<td class="gt_row gt_right" headers="Pr(>F)">7.116342e-114</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">bill_depth_mm:species</td>
+<td class="gt_row gt_right" headers="Df">2</td>
+<td class="gt_row gt_right" headers="Sum Sq">134.2515</td>
+<td class="gt_row gt_right" headers="Mean Sq">67.125732</td>
+<td class="gt_row gt_right" headers="F value">11.23184</td>
+<td class="gt_row gt_right" headers="Pr(>F)">1.897629e-05</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">Residuals</td>
+<td class="gt_row gt_right" headers="Df">336</td>
+<td class="gt_row gt_right" headers="Sum Sq">2008.0631</td>
+<td class="gt_row gt_right" headers="Mean Sq">5.976378</td>
+<td class="gt_row gt_right" headers="F value">NA</td>
+<td class="gt_row gt_right" headers="Pr(>F)">NA</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 </div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<div style="font-size: 4em; color: #000000;">
-<p>you…</p>
-</div>
-<div style="font-size: 1.25em; color: #000000;">
-<ul>
-<li>understand the importance of sampling variability</li>
-<li>know about using confidence intervals to estimate a range of plausible values for the population parameter</li>
-<li>want to know how p-values fit in</li>
-</ul>
+<div style="font-size: 2em; color: #000000;">
+<p><code>bill_depth_mm:species</code>: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!</p>
 </div>
 </section>
-<section id="section-1" class="slide level2" data-background-color="#B6CADA">
+<section id="how-do-i-know-what-model-is-best-from-the-anova-table-1" class="slide level2">
+<h2>How do I know what model is “best” from the ANOVA table?</h2>
+<p><strong>For 2 numerical explanatory variables</strong></p>
+<ul>
+<li>Look at the p-value for each variable, it is testing if that variable has a relationship with the response (conditional on the other variable being in the model)!</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(bill_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="mvjcksdmew" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mvjcksdmew table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mvjcksdmew thead, #mvjcksdmew tbody, #mvjcksdmew tfoot, #mvjcksdmew tr, #mvjcksdmew td, #mvjcksdmew th {
+  border-style: none;
+}
+
+#mvjcksdmew p {
+  margin: 0;
+  padding: 0;
+}
+
+#mvjcksdmew .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mvjcksdmew .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mvjcksdmew .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mvjcksdmew .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mvjcksdmew .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mvjcksdmew .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mvjcksdmew .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mvjcksdmew .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mvjcksdmew .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mvjcksdmew .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mvjcksdmew .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mvjcksdmew .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mvjcksdmew .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mvjcksdmew .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mvjcksdmew .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mvjcksdmew .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mvjcksdmew .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mvjcksdmew .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mvjcksdmew .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mvjcksdmew .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mvjcksdmew .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mvjcksdmew .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mvjcksdmew .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mvjcksdmew .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mvjcksdmew .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mvjcksdmew .gt_left {
+  text-align: left;
+}
+
+#mvjcksdmew .gt_center {
+  text-align: center;
+}
+
+#mvjcksdmew .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mvjcksdmew .gt_font_normal {
+  font-weight: normal;
+}
+
+#mvjcksdmew .gt_font_bold {
+  font-weight: bold;
+}
+
+#mvjcksdmew .gt_font_italic {
+  font-style: italic;
+}
+
+#mvjcksdmew .gt_super {
+  font-size: 65%;
+}
+
+#mvjcksdmew .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mvjcksdmew .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mvjcksdmew .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mvjcksdmew .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mvjcksdmew .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mvjcksdmew .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mvjcksdmew .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mvjcksdmew .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mvjcksdmew div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
+<th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
+<th id="Sum-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
+<th id="Mean-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
+<th id="F-value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
+<th id="Pr(>F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">body_mass_g</td>
+<td class="gt_row gt_right" headers="Df">1</td>
+<td class="gt_row gt_right" headers="Sum Sq">3599.71136</td>
+<td class="gt_row gt_right" headers="Mean Sq">3599.71136</td>
+<td class="gt_row gt_right" headers="F value">186.673943</td>
+<td class="gt_row gt_right" headers="Pr(>F)">3.685224e-34</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">bill_depth_mm</td>
+<td class="gt_row gt_right" headers="Df">1</td>
+<td class="gt_row gt_right" headers="Sum Sq">27.41605</td>
+<td class="gt_row gt_right" headers="Mean Sq">27.41605</td>
+<td class="gt_row gt_right" headers="F value">1.421742</td>
+<td class="gt_row gt_right" headers="Pr(>F)">2.339508e-01</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">Residuals</td>
+<td class="gt_row gt_right" headers="Df">339</td>
+<td class="gt_row gt_right" headers="Sum Sq">6537.07813</td>
+<td class="gt_row gt_right" headers="Mean Sq">19.28342</td>
+<td class="gt_row gt_right" headers="F value">NA</td>
+<td class="gt_row gt_right" headers="Pr(>F)">NA</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2">
 <h2></h2>
-<div style="font-size: 2.5em; color: #000000;">
-<p>What if I want to know if the population parameter differs from a specific value?</p>
+<div style="font-size: 1.25em; color: #000000;">
+<p><code>body_mass_g</code>: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!</p>
+</div>
+<p><br></p>
+<div style="font-size: 1.25em; color: #000000;">
+<p><code>bill_depth_mm</code>: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!</p>
+</div>
+</section></section>
+<section>
+<section id="last-week-we-covered-confidence-intervals-this-week-were-learning-more-about-hypothesis-tests." class="title-slide slide level1 center">
+<h1>Last week we covered confidence intervals, this week we’re learning more about hypothesis tests.</h1>
+
+</section>
+<section id="testing-for-a-population-slope-beta_1" class="slide level2">
+<h2>Testing for a Population Slope (<span class="math inline">\(\beta_1\)</span>)</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><span class="math display">\[H_0: \beta_1 = 0\]</span></p>
+<p><span class="math display">\[H_A: \beta_1 \neq 0\]</span></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="week8-day1_files/figure-revealjs/evals-slr-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="fragment">
+<div style="font-size: 1em; color: #ed8402;">
+<p>What do these hypotheses mean <em>in words</em>?</p>
+</div>
+</div>
+</section>
+<section id="what-do-you-think" class="slide level2">
+<h2>What do you think?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="math inline">\(\widehat{score} = 3.88 + 0.066 \times \text{bty_avg}\)</span></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="week8-day1_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="fragment">
+<div style="font-size: 1.5em; color: #b76352;">
+<p>Will we reject <span class="math inline">\(H_0\)</span>?</p>
+</div>
+</div>
+</section></section>
+<section id="how-will-we-decide" class="title-slide slide level1 center">
+<h1>How will we decide?</h1>
+
+</section>
+
+<section>
+<section id="how-will-we-decide-1" class="title-slide slide level1 center">
+<h1>How will we decide?</h1>
+<div class="midi">
+<p>by generating statistics that could have happened if <span class="math inline">\(H_0\)</span> was true and comparing our observed statistic to these statistics to see how unusual it is</p>
+</div>
+</section>
+<section id="if-h_0-was-true-then" class="slide level2">
+<h2>If <span class="math inline">\(H_0\)</span> was true then…</h2>
+<p><br></p>
+<p><span class="math inline">\(\beta_1\)</span> = 0</p>
+<p><br></p>
+<p>which means…</p>
+</section></section>
+<section>
+<section id="how-do-we-generate-statistics-that-could-have-happened-if-h_0-was-true" class="title-slide slide level1 center">
+<h1>How do we generate statistics that could have happened if <span class="math inline">\(H_0\)</span> was true?</h1>
+
+</section>
+<section id="one-possible-shuffle" class="slide level2">
+<h2>One possible shuffle</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="jkfyinrdgr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jkfyinrdgr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jkfyinrdgr thead, #jkfyinrdgr tbody, #jkfyinrdgr tfoot, #jkfyinrdgr tr, #jkfyinrdgr td, #jkfyinrdgr th {
+  border-style: none;
+}
+
+#jkfyinrdgr p {
+  margin: 0;
+  padding: 0;
+}
+
+#jkfyinrdgr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jkfyinrdgr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jkfyinrdgr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jkfyinrdgr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jkfyinrdgr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jkfyinrdgr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jkfyinrdgr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jkfyinrdgr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jkfyinrdgr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jkfyinrdgr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jkfyinrdgr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jkfyinrdgr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jkfyinrdgr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jkfyinrdgr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jkfyinrdgr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jkfyinrdgr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jkfyinrdgr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jkfyinrdgr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jkfyinrdgr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jkfyinrdgr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jkfyinrdgr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jkfyinrdgr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jkfyinrdgr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jkfyinrdgr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jkfyinrdgr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jkfyinrdgr .gt_left {
+  text-align: left;
+}
+
+#jkfyinrdgr .gt_center {
+  text-align: center;
+}
+
+#jkfyinrdgr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jkfyinrdgr .gt_font_normal {
+  font-weight: normal;
+}
+
+#jkfyinrdgr .gt_font_bold {
+  font-weight: bold;
+}
+
+#jkfyinrdgr .gt_font_italic {
+  font-style: italic;
+}
+
+#jkfyinrdgr .gt_super {
+  font-size: 65%;
+}
+
+#jkfyinrdgr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jkfyinrdgr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jkfyinrdgr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jkfyinrdgr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jkfyinrdgr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jkfyinrdgr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jkfyinrdgr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jkfyinrdgr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jkfyinrdgr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="score" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">score</th>
+<th id="bty_avg" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bty_avg</th>
+<th id="shuffled_score" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">shuffled_score</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.3</td>
+<td class="gt_row gt_right" headers="bty_avg">4.333</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.9</td>
+<td class="gt_row gt_right" headers="bty_avg">4.333</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">3.8</td>
+<td class="gt_row gt_right" headers="bty_avg">4.833</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.7</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.0</td>
+<td class="gt_row gt_right" headers="bty_avg">5.167</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.7</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.4</td>
+<td class="gt_row gt_right" headers="bty_avg">3.667</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">3.7</td>
+<td class="gt_row gt_right" headers="bty_avg">4.167</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.9</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.1</td>
+<td class="gt_row gt_right" headers="bty_avg">4.833</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.3</td>
+<td class="gt_row gt_right" headers="bty_avg">3.833</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.7</td>
+<td class="gt_row gt_right" headers="bty_avg">3.667</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.6</td>
+<td class="gt_row gt_right" headers="bty_avg">4.833</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.9</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.0</td>
+<td class="gt_row gt_right" headers="bty_avg">4.833</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.3</td>
+<td class="gt_row gt_right" headers="bty_avg">4.333</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">3.3</td>
+<td class="gt_row gt_right" headers="bty_avg">3.500</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">3.5</td>
+<td class="gt_row gt_right" headers="bty_avg">4.000</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.2</td>
+<td class="gt_row gt_right" headers="bty_avg">4.333</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.9</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">3.5</td>
+<td class="gt_row gt_right" headers="bty_avg">3.000</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.8</td>
+<td class="gt_row gt_right" headers="bty_avg">4.667</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.9</td>
+<td class="gt_row gt_right" headers="bty_avg">3.500</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">5.0</td>
+<td class="gt_row gt_right" headers="bty_avg">5.500</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">3.9</td>
+<td class="gt_row gt_right" headers="bty_avg">2.333</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">4.8</td>
+<td class="gt_row gt_right" headers="bty_avg">2.500</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.9</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">4.5</td>
+<td class="gt_row gt_right" headers="bty_avg">2.333</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.9</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">3.7</td>
+<td class="gt_row gt_right" headers="bty_avg">4.833</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="score">3.3</td>
+<td class="gt_row gt_right" headers="bty_avg">5.500</td>
+<td class="gt_row gt_right" headers="shuffled_score">3.7</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="score">3.2</td>
+<td class="gt_row gt_right" headers="bty_avg">5.500</td>
+<td class="gt_row gt_right" headers="shuffled_score">4.4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<div class="fragment">
+<p>Which results in a slope statistic of…</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.06663704</code></pre>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section id="but-thats-just-one-statistic" class="title-slide slide level1 center">
+<h1>But that’s just <strong>one</strong> statistic!</h1>
+
+</section>
+
+<section>
+<section id="but-thats-just-one-statistic-1" class="title-slide slide level1 center">
+<h1>But that’s just <strong>one</strong> statistic!</h1>
+<p>We want a sampling distribution of <strong>lots</strong> of statistics that could have happened if <span class="math inline">\(H_0\)</span> was true!</p>
+</section>
+<section id="lots-of-statistics-that-could-have-happened-if-h_0-was-true" class="slide level2">
+<h2>Lots of statistics that could have happened if <span class="math inline">\(H_0\)</span> was true</h2>
+
+<img data-src="week8-day1_files/figure-revealjs/evals-permute-1.png" width="960" class="r-stretch"></section>
+<section id="where-does-our-observed-statistic-fall-on-this-distribution" class="slide level2">
+<h2>Where does our observed statistic fall on this distribution?</h2>
+
+<img data-src="week8-day1_files/figure-revealjs/null-dist-1.png" width="960" class="r-stretch"></section>
+<section id="is-our-observed-statistic-likely-to-happen-if-the-null-was-true" class="slide level2">
+<h2>Is our observed statistic <em>likely</em> to happen if the null was true?</h2>
+<div class="fragment">
+<p>If it is unlikely to happen, then we should reject <span class="math inline">\(H_0\)</span>!</p>
+<p>Why???</p>
 </div>
 <div class="fragment">
-<center>
-<div style="font-size: 3em; color: #0F4C81;">
-<p>Hypothesis test!</p>
+<p><br></p>
+<p>The probability of observing a statistic as or more extreme than 0.0666 if <span class="math inline">\(H_0\)</span> was true is approximately 0%.</p>
 </div>
-</center>
+<div class="fragment">
+<p><br></p>
+<p>So, it seems like <span class="math inline">\(H_0\)</span> is not a reasonable characterization of the relationship.</p>
+</div>
+</section></section>
+<section id="what-conclusion-would-you-reach-about-the-relationship-between-professors-evaluation-scores-and-their-attractiveness" class="title-slide slide level1 center">
+<h1>What conclusion would you reach about the relationship between professors’ evaluation scores and their attractiveness?</h1>
+
+</section>
+
+<section id="the-conclusion-we-reached-depends-on-our-p-value-being-reliable." class="title-slide slide level1 center">
+<h1>The conclusion we reached depends on our p-value being reliable.</h1>
+
+</section>
+
+<section>
+<section id="the-conclusion-we-reached-depends-on-our-p-value-being-reliable.-1" class="title-slide slide level1 center">
+<h1>The conclusion we reached depends on our p-value being reliable.</h1>
+<p>How can we know if our p-value is reliable?</p>
+</section>
+<section id="model-conditions" class="slide level2">
+<h2>Model Conditions</h2>
+<p>For our p-value to be trustworthy, we need to know that the conditions of our model are not violated.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>For linear regression we are assuming…</p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<p><strong>L</strong>inear relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p>
+<p><br></p>
+<p><strong>I</strong>ndependent observations</p>
+<p><br></p>
+<p><strong>N</strong>ormality of residuals</p>
+<p><br></p>
+<p><strong>E</strong>qual variance of residuals</p>
+</div></div>
+</div>
+</section>
+<section id="what-happens-if-the-conditions-are-violated" class="slide level2">
+<h2>What happens if the conditions are violated?</h2>
+<p>In general, when the conditions associated with these methods are violated, we will <u>underestimate</u> the true standard error (spread) of the sampling distribution.</p>
+<div class="fragment">
+<ul>
+<li>Our p-values will be <strong>too</strong> small!</li>
+<li>Our confidence intervals will be <strong>too</strong> narrow!</li>
+<li>We will make more Type I errors than we expect!</li>
+</ul>
 </div>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<div style="font-size: 3em; color: #000000;">
-<p>Hypothesis test goal:</p>
+<div style="font-size: 2em; color: #000000;">
+<p><strong>L</strong>inear relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p>
 </div>
-<div style="font-size: 1.5em; color: #000000;">
-<p>Assess how different what we saw in our data is from what could have happened if the null hypothesis was true*</p>
-</div>
-<div class="fragment">
-<div style="font-size: 0.75em;">
-<p>*For hypothesis tests, we live in an alternative universe where <span class="math inline">\(H_0\)</span> is true</p>
-</div>
-</div>
-</section>
-<section id="how-can-we-approximate-what-could-have-happened-if-the-null-was-true" class="slide level2">
-<h2>How can we approximate what could have happened if the null was true?</h2>
-<div class="fragment">
-<div style="font-size: 2em; color: #ed8402;">
-<p>Permutation!</p>
-</div>
-</div>
-</section>
-<section id="a-permutation-resample" class="slide level2">
-<h2>A Permutation Resample</h2>
-<div>
-<ul>
-<li class="fragment"><p>Assumes the original sample is “representative” of observations in the population</p></li>
-<li class="fragment"><p>Uses the original sample to generate new samples that might have occurred if the null hypothesis was true.</p></li>
-</ul>
-</div>
-<div class="fragment">
-<div style="color: #34605f;">
-<p>We can use statistics from these resamples to approximate the true sampling distribution under the null!</p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="why-do-we-want-a-sampling-distribution" class="title-slide slide level1 center">
-<h1>Why do we want a sampling distribution?</h1>
 
-</section>
-<section id="testing-a-population-parameter" class="slide level2">
-<h2>Testing a Population Parameter</h2>
-<div>
-<ul>
-<li class="fragment"><p>Like before, we are interested in knowing how a statistic varies from sample to sample.</p></li>
-<li class="fragment"><p>Knowing a statistic’s behavior helps us make better / more informed decisions!</p></li>
-<li class="fragment"><p>This helps us know what statistics are more or less likely to occur <span style="color: #e28743">if the null hypothesis is true</span>.</p></li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="p-values" class="title-slide slide level1 center">
-<h1>p-values</h1>
-<div class="fragment">
-<div style="font-size: 1.5em; color: #000000;">
-<blockquote>
-<p>Quantify how “surprising” what we saw in our data is, if the null hypothesis was true</p>
-</blockquote>
-</div>
-</div>
-</section>
-<section id="how-do-i-get-a-p-value" class="slide level2">
-<h2>How do I get a p-value?</h2>
-<div class="fragment">
-<center>
-<div style="font-size: 2em; color: #ed8402;">
-<p>Permuting!</p>
-</div>
-</center></div>
-<div class="fragment">
-<div class="small">
-<ol type="1">
-<li><p>From your original sample, separate the <span class="math inline">\(x\)</span> values from the <span class="math inline">\(y\)</span> values.</p></li>
-<li><p>Create new ordered pairs by randomly pairing <span class="math inline">\(x\)</span> values with <span class="math inline">\(y\)</span> values (permuting the labels).</p></li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<center>
-<div style="font-size: 0.75em; color: #ed8402;">
-<p>This is your permuted resample.</p>
-</div>
-</center>
-</div>
-<div class="fragment">
-<div class="small">
-<ol start="3" type="1">
-<li>Repeat this process many, many times.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div class="small">
-<ol start="4" type="1">
-<li>Calculate a numerical summary (e.g., slope) for each permutation resample.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<center>
-<div style="font-size: 0.75em; color: #ed8402;">
-<p>These are your permuted statistics.</p>
-</div>
-</center>
-</div>
-</section>
-<section id="permutation-distribution" class="slide level2">
-<h2>Permutation Distribution</h2>
-<div class="fragment">
-<blockquote>
-<p><span style="color: #000000;"><em>definition</em>: a distribution of the</span> <span style="color: #e28743;"><em>permuted statistics</em></span> <span style="color: #000000;">from every</span> <span style="color: #e28743;"><em>permuted resample</em></span></p>
-</blockquote>
-</div>
-<div class="fragment">
-<p>Displays the variability in the statistic that could have happened with repeated sampling, <strong>if the null hypothesis was true</strong>.</p>
-</div>
-<div class="fragment">
-<div style="color: #e28743;">
-<p>Approximates the true sampling distribution under the null!</p>
-</div>
+<img data-src="week8-day1_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
+<p><strong><em>What should we do?</em></strong></p>
 </div>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>How do I get my p-value?</p>
+<p>Variable transformation!</p>
 </div>
-<div class="fragment">
-<p>Compare the observed statistic with the statistics produced assuming the null hypothesis was true.</p>
-</div>
-<div class="fragment">
-<p><br></p>
-<div style="font-size: 1.25em;">
-<p>A p-value summarizes the <span style="color: #76b5c5;"><strong>probability</strong></span> of obtaining a sample statistic <u>as or more extreme than what we observed</u>, <span style="color: #76b5c5;"><strong>if the null hypothesis was true</strong></span>.</p>
-</div>
-<!-- add slides about HT decisions -->
-</div>
-</section>
+
+<img data-src="week8-day1_files/figure-revealjs/transform-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="section-4" class="slide level2">
 <h2></h2>
-<div style="font-size: 3em; color: #000000;">
-<p>Your turn!</p>
+<div style="font-size: 2em; color: #000000;">
+<p><strong>I</strong>ndependence of observations</p>
 </div>
-<div style="font-size: 1.5em; color: #000000;">
-<p><strong>What is one similarity and one difference between</strong></p>
-</div>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div style="font-size: 1.5em; color: #76b5c5;">
-<p>a permutation distribution</p>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:45%;">
-<div style="font-size: 1.5em; color: #e28743;">
-<p>a bootstrap distribution</p>
-</div>
-</div></div>
-</section>
-<section id="exploring-the-hbr_maples-dataset" class="slide level2">
-<h2>Exploring the <code>hbr_maples</code> dataset!</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><img data-src="images/hbr_maples.jpg"></p>
+<p>The <code>evals</code> dataset contains 463 observations on 94 professors. Meaning, professors have <strong>multiple</strong> observations.</p>
+<p><br></p>
+<p><strong><em>What should we do?</em></strong></p>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:55%;">
-<p><code>stem_length</code>: a number denoting the height of the seedling in millimeters</p>
-<p><code>stem_dry_mass</code>: a number denoting the dry mass of the stem in grams</p>
+<div class="fragment">
+<p><strong>Best</strong> – use a random effects model</p>
+<p><strong>Reasonable</strong> – collapse the multiple scores into a single score</p>
+</div>
 </div></div>
 </section>
 <section id="section-5" class="slide level2">
 <h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p><strong>E</strong>qual variance of residuals</p>
+</div>
 
-<img data-src="week8-day1_files/figure-revealjs/seedlings-slr-1.png" width="960" class="r-stretch"><div class="fragment">
-<div style="font-size: 1.5em; color: #76b5c5;">
-<p><strong>What condition do we need to be worried about?</strong></p>
-</div>
+<img data-src="week8-day1_files/figure-revealjs/non-constant-variance-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
+<p><strong><em>What should we do?</em></strong></p>
 </div>
 </section>
-<section id="in-this-sample-of-359-sugar-maples" class="slide level2">
-<h2>In this sample of 359 sugar maples…</h2>
-<p><span class="math display">\[\widehat{\text{stem dry mass}} = -0.043 + 0.001 \times \text{stem length}\]</span></p>
-<div class="fragment">
-<p><br></p>
-<div style="font-size: 1.5em;">
-<p>What slope could have happened if there was <strong>no</strong> relationship between stem length and stem dry mass?</p>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Variable transformation!</p>
 </div>
+
+<img data-src="week8-day1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p><strong>N</strong>ormality of residuals</p>
 </div>
-</section>
-<section id="generating-a-permuted-resample-and-calculating-permuted-statistics" class="slide level2">
-<h2>Generating a permuted resample and calculating permuted statistics</h2>
-<p><br></p>
-<div class="fragment">
-<p><strong>Step 1:</strong> <code>specify()</code> your response and explanatory variables</p>
-</div>
-<div class="fragment">
-<p><strong>Step 2:</strong> <code>hypothesize()</code> what would happen under the null</p>
-</div>
-<div class="fragment">
-<p><strong>Step 3:</strong> <code>generate()</code> permuted resamples</p>
-</div>
-<div class="fragment">
-<p><strong>Step 4:</strong> <code>calculate()</code> the statistic of interest</p>
+
+<img data-src="week8-day1_files/figure-revealjs/non-normal-1.png" width="960" class="r-stretch"><div class="fragment">
+<p><strong><em>What should we do?</em></strong></p>
 </div>
 </section>
-<section id="step-1-specify-your-variables" class="slide level2">
-<h2>Step 1: Specify your variables!</h2>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Variable transformation!</p>
+</div>
+
+<img data-src="week8-day1_files/figure-revealjs/normal-1.png" width="960" class="r-stretch"></section>
+<section id="what-if-we-cant-fix-a-condition-being-violated" class="slide level2">
+<h2>What if we can’t fix a condition being violated?</h2>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>For the <strong>L</strong>, <strong>I</strong>, and <strong>E</strong> conditions…</p>
+<p>we need to ask for help!</p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="fragment">
+<p>For the <strong>N</strong> condition…</p>
+<p>we need to use simulation instead of mathematical formulas to get our p-value and confidence interval.</p>
+</div>
+</div></div>
+</div>
+</section></section>
+<section>
+<section id="simulation-based-methods-versus-theory-based-methods" class="title-slide slide level1 center">
+<h1>Simulation-Based Methods versus Theory-Based Methods</h1>
+
+</section>
+<section id="mathematical-theory-based-methods" class="slide level2">
+<h2>Mathematical / Theory-based Methods</h2>
+<div>
+<ul>
+<li class="fragment">Are a “simpler” approach</li>
+<li class="fragment">Use formulas instead of simulation to obtain standard error</li>
+<li class="fragment">Use <span class="math inline">\(t\)</span>-distribution to get p-value and confidence interval</li>
+<li class="fragment">Require that the residuals are normally distributed</li>
+</ul>
+</div>
+</section>
+<section id="how-does-this-look" class="slide level2">
+<h2>How does this look?</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Before</a></li><li><a href="#tabset-1-2">Now</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
-<span id="cb1-3"><a></a>          <span class="at">explanatory =</span> stem_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>obs_slope <span class="ot">&lt;-</span> evals <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> score, </span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> bty_avg) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>   bty_avg 
+0.06663704 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="smaller">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>evals_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(score <span class="sc">~</span> bty_avg, <span class="at">data =</span> evals)</span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_regression_table</span>(evals_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  term      estimate std_error statistic p_value lower_ci upper_ci
+  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 intercept    3.88      0.076     51.0        0    3.73     4.03 
+2 bty_avg      0.067     0.016      4.09       0    0.035    0.099</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="step-2-state-your-hypothesis" class="slide level2">
-<h2>Step 2: State your hypothesis!</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
-<span id="cb2-3"><a></a>          <span class="at">explanatory =</span> stem_length) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>How did R calculate the <span class="math inline">\(t\)</span>-statistic?</p>
 </div>
-<p><br></p>
-<p><code>"independence"</code> – the assumed relationship between the explanatory and response variables under the null hypothesis</p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Step 1: SE</a></li><li><a href="#tabset-2-2">Step 2: t-statistic</a></li><li><a href="#tabset-2-3">Proof!</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="math inline">\(SE_{b_1} = \frac{\frac{s_y}{s_x} \cdot \sqrt{1 - r^2}}{\sqrt{n - 2}}\)</span></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01495204</code></pre>
+</div>
+</div>
+</div></div>
+</div>
+<div id="tabset-2-2">
+<p><span class="math inline">\(t = \frac{b_1}{SE_{b_1}} = \frac{0.067}{0.014952} = 4.4809947\)</span></p>
+</div>
+<div id="tabset-2-3">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  term      estimate std_error statistic p_value lower_ci upper_ci
+  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 intercept    3.88      0.076     51.0        0    3.73     4.03 
+2 bty_avg      0.067     0.016      4.09       0    0.035    0.099</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-does-r-calculate-the-p-value" class="slide level2">
+<h2>How does R calculate the p-value?</h2>
 <div class="fragment">
-<div class="callout callout-tip callout-titled callout-style-default">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="week8-day1_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Independence of variables</strong></p>
+<p><strong>Different <span class="math inline">\(t\)</span>-distributions</strong></p>
 </div>
 <div class="callout-content">
-<p>Note! This is different from assuming your observations are independent!</p>
+<p>A <span class="math inline">\(t\)</span>-distribution has a <em>slightly</em> different shape depending on the sample size. Technically, we are using a <span class="math inline">\(t\)</span>-distribution with <span class="math inline">\(n - 2\)</span> degrees of freedom to get our p-value.</p>
 </div>
 </div>
 </div>
 </div>
+</section></section>
+<section id="did-we-get-similar-results-between-these-methods" class="title-slide slide level1 center">
+<h1>Did we get similar results between these methods?</h1>
+
 </section>
-<section id="step-3-generate-your-resamples" class="slide level2">
-<h2>Step 3: Generate your resamples!</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
-<span id="cb3-3"><a></a>          <span class="at">explanatory =</span> stem_length) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p><br></p>
+
+<section>
+<section id="did-we-get-similar-results-between-these-methods-1" class="title-slide slide level1 center">
+<h1>Did we get similar results between these methods?</h1>
+<p>Why do you think that is?</p>
+</section>
+<section id="approximating-the-permutation-distribution" class="slide level2">
+<h2>Approximating the permutation distribution</h2>
 <div class="columns">
-<div class="column" style="width:45%;">
-<p><code>reps</code> – the number of resamples you want to generate</p>
+<div class="column" style="width:40%;">
+<p>A <span class="math inline">\(t\)</span>-distribution can be a reasonable approximation for the permutation distribution <u>if the normality condition is not violated</u>.</p>
 </div><div class="column" style="width:5%;">
 
-</div><div class="column" style="width:45%;">
-<p><code>"permute"</code> – the method that should be used to generate the new samples</p>
+</div><div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="week8-day1_files/figure-revealjs/t-distribution-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </div></div>
-</div>
 </section>
-<section id="dont-worry" class="slide level2">
-<h2>Don’t worry,</h2>
-<p><code>infer</code> will let you know if you missed something!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
-<span id="cb4-3"><a></a>          <span class="at">explanatory =</span> stem_length) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-4"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<pre><code>Error: Permuting should be done only when doing independence hypothesis test. See `hypothesize()`.
-In addition: Warning message:
-You have given `type = "permute"`, but `type` is expected to be `"bootstrap"`.
-This workflow is untested and the results may not mean what you think they mean. </code></pre>
-</section>
-<section id="step-4-calculate-your-statistics" class="slide level2">
-<h2>Step 4: Calculate your statistics!</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
-<span id="cb6-3"><a></a>          <span class="at">explanatory =</span> stem_length) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-6"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn!</h2>
-<p>Why is the <code>hypothesize()</code> function used to make a null distribution but not for a bootstrap distribution?</p>
-<p><br></p>
-<p>What does the <code>null = "independence"</code> input in <code>hypothesize()</code> mean? What is it assuming about the variables declared in the <code>specify()</code> step?</p>
-</section>
-<section id="the-final-product" class="slide level2">
-<h2>The final product</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span> </span>
-<span id="cb7-2"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Permuted Slope Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="week8-day1_files/figure-revealjs/null-dist-1.png" style="width:70.0%" class="r-stretch"></section>
-<section id="is-our-observed-statistic-unlikely-if-the-null-hypothesis-was-true" class="slide level2">
-<h2>Is our observed statistic unlikely if the null hypothesis was true?</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span></span>
-<span id="cb8-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> obs_slope, </span>
-<span id="cb8-3"><a></a>                <span class="at">direction =</span> <span class="st">"two-sided"</span>) <span class="sc">+</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Permuted Slope Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="week8-day1_files/figure-revealjs/null-dist-with-obs-slope-1.png" width="960" class="r-stretch"></section>
-<section id="the-p-value-is" class="slide level2">
-<h2>The p-value is…</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">get_p_value</span>(null_dist, </span>
-<span id="cb9-2"><a></a>            <span class="at">obs_stat =</span> obs_slope, </span>
-<span id="cb9-3"><a></a>            <span class="at">direction =</span> <span class="st">"two-sided"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Please be cautious in reporting a p-value of 0. This result is an approximation
-based on the number of `reps` chosen in the `generate()` step.
-ℹ See `get_p_value()` (`?infer::get_p_value()`) for more information.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  p_value
-    &lt;dbl&gt;
-1       0</code></pre>
-</div>
-</div>
+<section id="section-10" class="slide level2">
+<h2><img data-src="images/gapminder.png"></h2>
+<blockquote>
+<p>What is the relationship between life expectancy GDP per capita?</p>
+</blockquote>
 <div class="fragment">
-<p><br></p>
-<div style="font-size: 1.5em; color: #ed8402;">
-<p>Why did we get a warning?</p>
-</div>
-</div>
-</section>
-<section id="how-do-we-interpret-a-p-value" class="slide level2">
-<h2>How do we interpret a p-value?</h2>
-<div class="fragment">
-<p>Need:</p>
 <ul>
-<li>probability of what we saw in the data</li>
-<li>assuming the null hypothesis is true</li>
+<li>Decide on a variable transformation</li>
+<li>Assess model conditions (L, I, N, E)</li>
+<li>Compare hypothesis test results between simulation-based methods and theory-based methods</li>
 </ul>
-</div>
-<div class="fragment">
-<blockquote>
-<p>The probability of observing a slope statistic (for the relationship between stem length and stem dry mass) as or more extreme than what was observed is less than 1 in 1000, if there was no relationship between a sugar maple’s stem length and stem dry mass.</p>
-</blockquote>
-</div>
-</section>
-<section id="classic-interpretation-mistakes" class="slide level2">
-<h2>Classic interpretation mistakes</h2>
-<p><br></p>
-<blockquote>
-<p>“The probability that the null hypothesis is true is about 0%.”</p>
-</blockquote>
-<div class="fragment">
-<div style="font-size: 1.25em; color: #ed8402;">
-<p>You assume the null is true when you calculate a p-value!</p>
-</div>
-<!-- add slide about HT decision / conclusion -->
-<!-- add slide about why we choose 0.05 versus 0.01 -->
-<!-- add slide about why we use != instead of > or < -->
+
+
 </div>
 </section></section>
-<section>
-<section id="grade-check-in" class="title-slide slide level1 center">
-<h1>Grade Check-in</h1>
-
-</section>
-<section id="midterm-projects-study-limitations" class="slide level2">
-<h2>Midterm Projects – Study Limitations</h2>
-<p><br></p>
-<p>You must <strong>justify</strong> why you believe you can infer onto a population larger than your sample!</p>
-<div class="fragment">
-<p><br></p>
-<p>Causal statements <strong>do not</strong> come from random / representative samples!</p>
-</div>
-</section>
-<section id="midterm-project-grades" class="slide level2">
-<h2>Midterm Project Grades</h2>
-<div class="small">
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Excellent Project</strong></th>
-<th><strong>Satisfactory Project</strong></th>
-<th><strong>Progressing Project</strong></th>
-<th><strong>No Credit</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>At most one section is marked “Satisfactory” the remainder are marked “Excellent”</td>
-<td>At most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”</td>
-<td>At most two sections are marked “Progressing” the remainder are marked “Satisfactory”</td>
-<td>At most one section is marked “Satisfactory” or “Excellent” the remainder are marked “Progressing”</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section></section>
-<section id="grade-check-in-activity" class="title-slide slide level1 center">
-<h1><a href="../activity/week-8-grade-check.docx" title="Grade Check-in Activity">Grade Check-in Activity</a></h1>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

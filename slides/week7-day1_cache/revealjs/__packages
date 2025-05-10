@@ -10,7 +10,5 @@ forcats
 lubridate
 infer
 scales
-airports
-cherryblossom
-usdata
-openintro
+palmerpenguins
+RColorBrewer

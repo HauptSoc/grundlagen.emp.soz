@@ -1,790 +1,715 @@
 ---
-title: "🔬 Simulation-Based Methods versus Theory-Based Methods"
+title: "**AN**alysis **O**f **VA**riance"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
-```{r set-up}
+```{r}
+#| include: false
+#| label: set-up
+
 library(tidyverse)
-library(infer)
-library(moderndive)
-library(lterdatasampler)
 library(palmerpenguins)
+library(broom)
+library(ggridges)
+library(infer)
 
-my_theme <- theme(axis.title.x = element_text(size = 18), 
-                  axis.title.y = element_text(size = 18), 
-                  axis.text.x = element_text(size = 12), 
-                  axis.text.y = element_text(size = 12), 
-                  legend.text = element_text(size = 12), 
-                  legend.title = element_text(size = 18))
+evals_small <- moderndive::evals %>% 
+  group_by(prof_ID) %>% 
+  mutate(min_eval = min(score), 
+         age_cat = case_when(age < 37 ~ "young faculty",
+                             age >= 37 & age < 45 ~ "middle age", 
+                             age >= 45 & age < 60 ~ "older faculty", 
+                             age >= 60 ~ "nearly retired"),
+         age_cat = factor(age_cat, 
+                          levels = c("young faculty", "middle age",
+                                     "older faculty", "nearly retired")
+                          )
+         ) %>% 
+  distinct(prof_ID, .keep_all = TRUE) %>% 
+  ungroup()
 
-obs_slope <- evals %>% 
-  specify(response = score, 
-          explanatory = bty_avg) %>% 
-  calculate(stat = "slope")
+my_theme <- theme(axis.title = element_text(size = 72), 
+        axis.text.y = element_text(size = 18), 
+        axis.text.x = element_text(size = 16)
+        ) +
+  theme_bw()
 ```
 
-# Lab 7 Recap
+# Week 9
 
-## Common Mistakes
+## Final Project First Draft
 
-</br>
+**Step 1** - Due by tonight! 
 
-**Question 6** (Bootstrap Distribution):
+:::{.small}
+- Introduction (Data description, research questions)
+:::
+. . .
 
--   Did not use an informative axis label
+**Step 2** - Due by Thursday
 
-</br>
+:::{.small}
+- Methods (Data visualizations)
+- Findings (Data analysis)
+:::
 
-**Question 8** (Interpret Confidence Interval):
+. . .
 
--   Did not include population in interpretation
--   Stated interval was about "all marshes" (no geographical information)
+**Step 3** - Due by Sunday
 
-# Statistical Critique 2
+:::{.small}
+- Study Limitations
+- Conclusion
+:::
 
-## First Steps
+# One-Way ANOVA
 
-1.  Open the directions!
-2.  Copy the Statistical Critique template on Posit Cloud
-3.  Copy-and-paste code from your Midterm Project
-4.  Copy-and-paste your justification for why you chose the model you chose
+##
 
-## Next Steps
-
-4.  Fit the most complex model
-5.  Obtain an ANOVA table of your model
-6.  Use the p-values in the ANOVA table to decide what model is best
-
-## What is the "most complex" model?
-
-**For 1 numerical & 1 categorical explanatory variables**
-
--   Fit the **different slopes** (interaction) model
+::: {style="font-size: 2.5em; color: #000000;"}
+Before...
+:::
 
 ```{r}
-#| label: diff-slopes-fit
-#| echo: true
-#| code-line-numbers: false
+#| echo: false
+#| label: slr
 
-species_lm <- lm(bill_length_mm ~ bill_depth_mm * species, 
-                  data = penguins)
+ggplot(data = evals_small, 
+       mapping = aes(x = age, y = min_eval)) + 
+  geom_jitter() + 
+  geom_smooth(method = "lm") +
+  labs(x = "", 
+       y = "", 
+       title = "Relationship between faculty's age and their minimum evaluation score") +
+  my_theme +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
+```
+
+## 
+
+::: {style="font-size: 2.5em; color: #000000;"}
+Now...
+:::
+
+```{r}
+#| echo: false
+#| label: age-cat
+
+ggplot(data = evals_small, 
+       mapping = aes(x = age_cat, y = min_eval)) + 
+  geom_jitter(width = 0.1) + 
+  labs(x = "", 
+       y = "", 
+       title = "Minimum Evaluation Scores for Faculty of Different Age Groups") +
+  my_theme +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
+```
+
+# Why?
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 4em; color: #000000;"}
+Goal of an ANOVA
+:::
+
+Analysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different.
+
+## 
+
+::: {style="font-size: 4em; color: #B6CADA;"}
+**How???**
+:::
+
+-   Compare how different a group of means are
+-   Scale the differences relative to the variability of the groups
+-   Summarize the differences with one number
+
+# Visualizations for an ANOVA
+
+# Visualizations for an ANOVA
+
+We want visualizations that allow for us to easily compare:
+
+-   the center (mean) of the groups
+-   the spread (variability) of the groups
+
+## 
+
+```{r}
+#| echo: false
+#| out-width: 70%
+#| label: age-cat-density
+
+ggplot(data = evals_small, 
+       mapping = aes(y = age_cat, x = min_eval)) + 
+  geom_density_ridges() + 
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  my_theme +
+  scale_x_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
 . . .
 
-</br>
+::: {style="color: #34605f;"}
+::: columns
+::: {.column width="47%"}
+What can you say about the differences *between* the age groups?
+:::
 
-**For 2 numerical explanatory variables**
+::: {.column width="3%"}
+:::
 
--   Fit the model with **both** variables included:
+::: {.column width="47%"}
+What can you say about the variability *within* the age groups?
+:::
+:::
+:::
 
-```{r}
-#| label: mlr-fit
-#| echo: true
-#| code-line-numbers: false
+# Carrying out an ANOVA
 
-bill_lm <- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, 
-                  data = penguins)
-```
+## 
 
-## How do I know what model is "best" from the ANOVA table?
+::: {style="font-size: 2em; color: #000000;"}
+Step 1: Compare your groups
+:::
 
-**For 1 numerical & 1 categorical explanatory variables**
-
--   Look at the interaction line (e.g., `bill_depth_mm:species`), it is testing if the slopes are different!
-
-```{r}
-#| label: diff-slopes-anova
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-
-anova(species_lm)
-```
+<!-- ![](images/groups.png) -->
 
 ```{r}
-anova(species_lm) %>% 
-  broom::tidy() %>%
-  rename(`F value` = statistic, 
-         `Pr(>F)` = p.value, 
-         Df = df, 
-         `Sum Sq` = sumsq, 
-         `Mean Sq` = meansq) %>% 
-  gt::gt()
+#| echo: false
+#| out-width: 70%
+#| label: compare-groups
+
+ggplot(data = evals_small, 
+       mapping = aes(x = age_cat, y = min_eval)) + 
+  geom_jitter(width = 0.1) + 
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  my_theme +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
 ## 
 
 ::: {style="font-size: 2em; color: #000000;"}
-`bill_depth_mm:species`: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!
+Step 2: Find the overall mean
 :::
 
-## How do I know what model is "best" from the ANOVA table?
-
-**For 2 numerical explanatory variables**
-
--   Look at the p-value for each variable, it is testing if that variable has a relationship with the response (conditional on the other variable being in the model)!
-
 ```{r}
-#| label: mlr-anova
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
+#| echo: false
+#| out-width: 70%
+#| label: overall-mean
 
-anova(bill_lm)
+overall_mean <- summarise(evals_small, 
+                          mean = mean(min_eval)
+                          ) %>% 
+  pull()
+
+ggplot(data = evals_small, 
+       mapping = aes(y = min_eval, x = "c")) + 
+  geom_jitter(width = 0.2) + 
+  geom_hline(yintercept = overall_mean, color = "red", lwd = 2) +
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  my_theme +
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank()) +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
+<!-- ![](images/overall_mean.png) -->
+
+. . .
+
+::: {style="font-size: 1.25em; color: #ed8402;"}
+This ignores the groups and finds [one]{.underline} mean for every observation!
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Step 3: Find the group means
+:::
+
 ```{r}
-anova(bill_lm) %>% 
-  broom::tidy() %>%
-  rename(`F value` = statistic, 
-         `Pr(>F)` = p.value, 
-         Df = df, 
-         `Sum Sq` = sumsq, 
-         `Mean Sq` = meansq) %>% 
-  gt::gt()
+#| echo: false
+#| out-width: 70%
+#| label: group-means
+
+group_means <- evals_small %>% 
+  group_by(age_cat) %>% 
+  summarise(mean = mean(min_eval)
+                          ) %>% 
+  mutate(
+    position = c(1, 2, 3, 4)
+         )
+
+ggplot(data = evals_small, 
+       mapping = aes(x = age_cat, y = min_eval)) + 
+  geom_jitter(width = 0.1) + 
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  my_theme +
+  geom_segment(data = group_means, 
+               mapping = aes(y = mean,
+                             x = position - 0.25, 
+                             xend = position + 0.25), 
+               color = "purple", 
+               lwd = 1.5
+               ) +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
 ## 
 
-::: {style="font-size: 1.25em; color: #000000;"}
-`body_mass_g`: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!
+::: {style="font-size: 2em; color: #000000;"}
+Step 4: Calculate the sum of squares *between* groups
+:::
+
+```{r}
+#| echo: false
+#| out-width: 70%
+#| label: sum-of-squares
+
+ggplot(data = evals_small, 
+       mapping = aes(x = age_cat, y = min_eval)) + 
+  geom_jitter(width = 0.1) + 
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  my_theme +
+  geom_segment(data = group_means, 
+               mapping = aes(y = mean,
+                             x = position - 0.25, 
+                             xend = position + 0.25), 
+               color = "purple", 
+               lwd = 1.5
+               ) +
+  geom_hline(yintercept = overall_mean, 
+             color = "red", 
+             lwd = 1.5, 
+             lty = "dashed") +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
+```
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Step 5: Calculate the sum of squares *within* groups
+:::
+
+```{r}
+#| echo: false
+#| out-width: 70%
+#| label: sum-of-squares-2
+
+ggplot(data = evals_small, 
+       mapping = aes(x = age_cat, y = min_eval)) + 
+  geom_jitter(width = 0.1) + 
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  my_theme +
+  geom_segment(data = group_means, 
+               mapping = aes(y = mean,
+                             x = position - 0.25, 
+                             xend = position + 0.25), 
+               color = "purple", 
+               lwd = 1.5
+               ) +
+  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
+```
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Step 6: Calculate the F-statistic
+:::
+
+
+
+![](images/sum-of-squares.jpeg)
+
+<!-- ::: {style="color: #B6CADA;"} -->
+<!-- Can an F-statistic be negative? -->
+<!-- ::: -->
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Step 7: Find the p-value
+:::
+
+![](images/f_dist.png)
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+**F-distribution**
+:::
+
+An $F$-distribution is a variant of the $t$-distribution, and is also defined by degrees of freedom.
+
+. . .
+
+</br>
+
+This distribution is defined by **two** different degrees of freedom:
+
+:::{.small}
+1.  from the numerator (MSG) : $k$ (number of groups) $- 1$
+2.  from the denominator (MSE) : $n$ (number of observations) $- k$ 
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Two degrees of freedom!
 :::
 
 </br>
 
-::: {style="font-size: 1.25em; color: #000000;"}
-`bill_depth_mm`: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!
+::: columns
+::: {.column width="45%"}
+:::{.small}
+Changing the numerator degrees of freedom
 :::
 
-# Last week we covered confidence intervals, this week we're learning more about hypothesis tests.
-
-## Testing for a Population Slope ($\beta_1$)
-
-:::::: columns
-::: {.column width="35%"}
-$$H_0: \beta_1 = 0$$
-
-$$H_A: \beta_1 \neq 0$$
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="60%"}
-```{r evals-slr}
-#| message: false
-#| fig-align: center
-
-ggplot(data = evals, 
-       mapping = aes(x = bty_avg, y = score)) +
-  geom_jitter() + 
-  geom_smooth(method = "lm") +
-  labs(x = "Average Beauty Score", 
-       y = "Course Evaluation Score") +
-  my_theme
-```
-:::
-::::::
-
-. . .
-
-::: {style="font-size: 1em; color: #ed8402;"}
-What do these hypotheses mean *in words*?
-:::
-
-## What do you think?
-
-:::::: columns
-::: {.column width="50%"}
-$\widehat{score} = 3.88 + 0.066 \times \text{bty_avg}$
+![](images/f_num_df.png)
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="45%"}
-```{r}
-#| message: false
-#| fig-align: center
-
-ggplot(data = evals, 
-       mapping = aes(x = bty_avg, y = score)) +
-  geom_jitter() + 
-  geom_smooth(method = "lm") +
-  labs(x = "Average Beauty Score", 
-       y = "Course Evaluation Score") +
-  my_theme
-```
+:::{.small}
+Changing the denominator degrees of freedom
 :::
-::::::
+
+![](images/f_denom_df.png)
+:::
+:::
+
+##  
+
+::: {style="font-size: 3em; color: #000000;"}
+Do you always use an F-distribution to get the p-value?
+:::
 
 . . .
 
-::: {style="font-size: 1.5em; color: #b76352;"}
-Will we reject $H_0$?
+<center>
+
+::: {style="font-size: 3em; color: #0F4C81;"}
+NO!
 :::
 
-# How will we decide?
+</center>
 
-# How will we decide?
+## Conditions of an ANOVA
 
-::: midi
-by generating statistics that could have happened if $H_0$ was true and comparing our observed statistic to these statistics to see how unusual it is
+-   Independence of observations
+
+:::{.small}
+> Observations are independent *within* groups **and** *between* groups
 :::
 
-## If $H_0$ was true then...
+. . .
+
+-   Normality of the residuals
+
+:::{.small}
+> The distribution of residuals for each group is approximately normal
+:::
+
+. . .
+
+-   Equal variability of the groups
+
+:::{.small}
+> The spread of the distributions are similar across groups
+:::
+
+## Choosing a Method
 
 </br>
 
-$\beta_1$ = 0
+::: columns
+::: {.column width="47%"}
+::: {style="font-size: 1.25em; color: #000000;"}
+Which condition(s) are required to use "theory-based" methods?
+:::
 
 </br>
 
-which means...
+:::{.fragment}
+All three!
+:::
+:::
 
-# How do we generate statistics that could have happened if $H_0$ was true?
+::: {.column width="3%"}
+:::
 
-## One possible shuffle
+::: {.column width="47%"}
+:::{.fragment}
+::: {style="font-size: 1.25em; color: #000000;"}
+Which condition(s) are required to use "simulation-based" methods?
+:::
+:::
 
-::::::: columns
-::: {.column width="40%"}
+</br>
+
+:::{.fragment}
+All but normality!
+:::
+:::
+:::
+
+## 
+
 ```{r}
-#| label: shuffle-scores
 #| echo: false
-#| cache: true
+#| label: conditions
+#| fig-align: center
 
-evals_shuffle <- evals %>% 
-  select(score, bty_avg) %>% 
-  mutate(shuffled_score = sample(score, 
-                                size = nrow(evals), 
-                                replace = FALSE)
+ggplot(data = evals_small, 
+       mapping = aes(y = age_cat, x = min_eval)) + 
+  geom_density_ridges() + 
+  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+       y = "",
+       x = "") +
+  theme(axis.title = element_text(size = 72), 
+        axis.text.y = element_text(size = 16), 
+        axis.text.x = element_text(size = 14)
         )
-
-evals_shuffle %>% 
-  slice_sample(n = 25) %>% 
-  gt::gt()
 ```
+
+. . .
+
+::: {style="font-size: 1.5em; color: #34605f;"}
+What do you think? Which method should we use?
 :::
 
-::: {.column width="5%"}
-:::
+# Simulation-based Methods
 
-:::: {.column width="55%"}
-::: fragment
-Which results in a slope statistic of...
+## Step 1: Calculating the Observed F-statistic
 
 ```{r}
-lm(score ~ bty_avg, data = evals_shuffle) %>% 
-  broom::tidy() %>% 
-  filter(term == "bty_avg") %>% 
-  pull(estimate)
+#| echo: true
+#| label: obs-F
+
+obs_F <- evals_small %>% 
+  specify(response = min_eval, 
+          explanatory = age_cat) %>% 
+  calculate(stat = "F")
 ```
-:::
-::::
-:::::::
 
-# But that's just **one** statistic!
+</br>
 
-# But that's just **one** statistic!
-
-We want a sampling distribution of **lots** of statistics that could have happened if $H_0$ was true!
-
-## Lots of statistics that could have happened if $H_0$ was true
 
 ```{r}
-#| label: evals-permute
+#| label: obs-F-value
+
+obs_F
+```
+
+## Step 2: Simulating what could have happened under $H_0$
+
+. . .
+
+</br>
+
+::: {style="font-size: 1.25em; color: #34605f;"}
+How could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?
+:::
+
+## Another Permutation Distribution
+
+```{r null-dist}
+#| echo: true
 #| cache: true
-
-null_dist <- evals %>% 
-  specify(response = score, 
-          explanatory = bty_avg) %>% 
-  hypothesise(null = "independence") %>% 
-  generate(reps = 1000, type = "permute") %>% 
-  calculate(stat = "slope")
-
-visualise(null_dist) +
-  labs(x = "Slope Statistic", 
-       title = "") +
-  scale_x_continuous(breaks = seq(-0.08, 0.08, by = 0.01))
-```
-
-## Where does our observed statistic fall on this distribution?
-
-```{r}
 #| label: null-dist
 
+null_dist <- evals_small %>% 
+  specify(response = min_eval, 
+          explanatory = age_cat) %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 1000, type = "permute") %>% 
+  calculate(stat = "F")
+```
+
+## Another Permutation Distribution
+
+```{r}
+#| label: visualize-null-dist
+
 visualise(null_dist) +
-  labs(x = "Slope Statistic", 
-       title = "") +
-  xlim(-0.08, 0.08) +
-  scale_x_continuous(breaks = seq(-0.08, 0.08, by = 0.01))
-```
-
-## Is our observed statistic *likely* to happen if the null was true?
-
-. . .
-
-If it is unlikely to happen, then we should reject $H_0$!
-
-Why???
-
-. . .
-
-</br>
-
-The probability of observing a statistic as or more extreme than 0.0666 if $H_0$ was true is approximately 0%.
-
-. . .
-
-</br>
-
-So, it seems like $H_0$ is not a reasonable characterization of the relationship.
-
-# What conclusion would you reach about the relationship between professors' evaluation scores and their attractiveness?
-
-# The conclusion we reached depends on our p-value being reliable.
-
-# The conclusion we reached depends on our p-value being reliable.
-
-How can we know if our p-value is reliable?
-
-## Model Conditions
-
-For our p-value to be trustworthy, we need to know that the conditions of our model are not violated.
-
-. . .
-
-:::::: columns
-::: {.column width="40%"}
-For linear regression we are assuming...
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
-**L**inear relationship between $x$ and $y$
-
-</br>
-
-**I**ndependent observations
-
-</br>
-
-**N**ormality of residuals
-
-</br>
-
-**E**qual variance of residuals
-:::
-::::::
-
-## What happens if the conditions are violated?
-
-In general, when the conditions associated with these methods are violated, we will [underestimate]{.underline} the true standard error (spread) of the sampling distribution.
-
-. . .
-
--   Our p-values will be **too** small!
--   Our confidence intervals will be **too** narrow!
--   We will make more Type I errors than we expect!
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-**L**inear relationship between $x$ and $y$
-:::
-
-```{r}
-#| fig-align: center
-
-and_vertebrates %>%
-  filter(species != "Cascade torrent salamander") %>% 
-  ggplot(mapping = aes(x = length_1_mm, 
-                       y = weight_g, 
-                       color = species)) +
-  geom_point() + 
-  labs(x = "Length (mm)", 
-       y = "Weight (g)", 
-       color = "Species") +
-  my_theme
+  labs(x = "F-statistic", 
+       y = "",
+       title = "Simulation-based Null Distribution") +
+  theme(axis.title = element_text(size = 72), 
+        axis.text.y = element_text(size = 16), 
+        axis.text.x = element_text(size = 16), 
+        axis.title.x = element_text(size = 18)
+        )
+  
 ```
 
 . . .
 
-***What should we do?***
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Variable transformation!
+::: {style="font-size: 1.25em; color: #ed8402;"}
+Why doesn't the distribution have negative numbers?
 :::
 
-```{r transform}
-#| fig-align: center
-
-and_vertebrates %>%
-  filter(species != "Cascade torrent salamander") %>% 
-  ggplot(mapping = aes(x = length_1_mm, 
-                       y = weight_g, 
-                       color = species)) +
-  geom_jitter(alpha = 0.5) + 
-  labs(x = "Log Transformed Length (mm)", 
-       y = "Log Transformed Weight (g)", 
-       color = "Species") +
-  scale_x_log10() +
-  scale_y_log10() +
-  my_theme
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-**I**ndependence of observations
-:::
-
-::::::: columns
-::: {.column width="40%"}
-The `evals` dataset contains `r nrow(evals)` observations on `r distinct(evals, prof_ID) %>% nrow()` professors. Meaning, professors have **multiple** observations.
-
-</br>
-
-***What should we do?***
-:::
-
-::: {.column width="5%"}
-:::
-
-:::: {.column width="55%"}
-::: fragment
-**Best** -- use a random effects model
-
-**Reasonable** -- collapse the multiple scores into a single score
-:::
-::::
-:::::::
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-**E**qual variance of residuals
-:::
-
-```{r non-constant-variance}
-#| fig-align: center
-
-ggplot(data = hbr_maples, 
-       mapping = aes(x = stem_length, y = stem_dry_mass)
-       ) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  labs(
-    x = "Stem Length (mm)",
-    y = "Stem Dry Mass (g)"
-    ) +
-  theme_minimal() + 
-  my_theme
-```
-
-. . .
-
-***What should we do?***
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Variable transformation!
-:::
-
-```{r}
-ggplot(data = hbr_maples, 
-       mapping = aes(x = stem_length, y = stem_dry_mass)
-       ) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  labs(
-    x = "Stem Length (mm)",
-    y = "Log Transformed Stem Dry Mass (g)"
-  ) +
-  theme_minimal() + 
-  scale_y_log10() +
-  my_theme
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-**N**ormality of residuals
-:::
-
-```{r non-normal}
-
-fish <- and_vertebrates %>%
-  filter(!species %in% c("Cascade torrent salamander", "Coastal giant salamander")) 
-
-curved_lm <- lm(weight_g ~ length_1_mm, data = fish)
-
-get_regression_points(curved_lm) %>% 
-  ggplot(mapping = aes(x = residual)) + 
-  geom_histogram() + 
-  labs(x = "Residual") +
-  my_theme
-```
-
-. . .
-
-***What should we do?***
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Variable transformation!
-:::
-
-```{r normal}
-
-fish <- and_vertebrates %>%
-  filter(!species %in% c("Cascade torrent salamander", "Coastal giant salamander"))
-
-not_curved_lm <- lm(log(weight_g) ~ log(length_1_mm), data = fish)
-
-broom::augment(not_curved_lm) %>% 
-  mutate(.resid = `log(weight_g)` - `.fitted`) %>% 
-  ggplot(mapping = aes(x = .resid)) + 
-  geom_histogram(binwidth = 0.1) + 
-  labs(x = "Residual") +
-  xlim(c(-0.5, 0.5)) +
-  my_theme
-```
-
-## What if we can't fix a condition being violated?
-
-. . .
-
-::::::: columns
-::: {.column width="45%"}
-For the **L**, **I**, and **E** conditions...
-
-we need to ask for help!
-:::
-
-::: {.column width="5%"}
-:::
-
-:::: {.column width="45%"}
-::: fragment
-For the **N** condition...
-
-we need to use simulation instead of mathematical formulas to get our p-value and confidence interval.
-:::
-::::
-:::::::
-
-# Simulation-Based Methods versus Theory-Based Methods
-
-## Mathematical / Theory-based Methods
-
-::: incremental
--   Are a "simpler" approach
--   Use formulas instead of simulation to obtain standard error
--   Use $t$-distribution to get p-value and confidence interval
--   Require that the residuals are normally distributed
-:::
-
-## How does this look?
-
-:::: panel-tabset
-## Before
+## Visualizing the p-value
 
 ```{r}
 #| echo: true
-#| label: obs-slope-code
-#| code-line-numbers: false
+#| eval: false
+#| label: visualize-code
 
-obs_slope <- evals %>% 
-  specify(response = score, 
-          explanatory = bty_avg) %>% 
-  calculate(stat = "slope")
+visualise(null_dist) + 
+  shade_p_value(obs_stat = obs_F, 
+                direction = "greater")
 ```
+
+## Visualizing the p-value
 
 ```{r}
-#| label: obs-slope
-pull(obs_slope)
+#| label: p-value-visualization-annotated
+#| fig-align: center
+
+p_val <- get_p_value(null_dist, obs_stat = obs_F, direction = "greater") %>% 
+  pull()
+  
+null_dist %>% 
+  visualise() + 
+  shade_p_value(obs_stat = obs_F, direction = "greater") + 
+  annotate(x = pull(obs_F) + 2.5,
+           y = 100, 
+           geom = "text", 
+           label = stringr::str_c("p-value = ", p_val), 
+           size = 6) +
+  labs(x = "F-statistic", 
+       y = "",
+       title = "Simulation-based Null Distribution with 1000 Resamples") +
+  theme(axis.title = element_text(size = 72), 
+        axis.text.y = element_text(size = 16), 
+        axis.text.x = element_text(size = 16), 
+        axis.title.x = element_text(size = 18)
+        )
 ```
 
-## Now
 
-::: smaller
+## Making a Decision & Reaching a Conclusion
+
+::: columns
+::: {.column width="47%"}
+For a p-value of `r p_val`, what decision would you reach regarding your hypothesis test?
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+:::{.fragment}
+What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?
+:::
+:::
+:::
+
+## Large p-values $\neq$ evidence for the null hypothesis! 
+
+![](images/No evidence against the null.png)
+
+
+# What if we didn't believe the normality condition was violated?
+
+## Theory-based Methods
+
 ```{r}
 #| echo: true
-#| label: obs-t-code
-#| code-line-numbers: false
+#| eval: false
+#| label: aov-code
 
-evals_lm <- lm(score ~ bty_avg, data = evals)
-
-get_regression_table(evals_lm)
+aov(min_eval ~ age_cat, 
+    data = evals_small)  %>% 
+  tidy()
 ```
-:::
 
 ```{r}
-#| label: obs-t
-#| include: false
+#| label: aov-output
 
-evals_lm <- lm(score ~ bty_avg,
-               data = evals)
-
-coef_table <- get_regression_table(evals_lm)
-
-t_stat <- filter(coef_table, term == "bty_avg") %>% 
-  select(statistic)
-
-slope_stat <- filter(coef_table, term == "bty_avg") %>% 
-  select(estimate)
-
-t_stat
-```
-::::
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-How did R calculate the $t$-statistic?
-:::
-
-::::::: panel-tabset
-## Step 1: SE
-
-:::::: columns
-::: {.column width="40%"}
-$SE_{b_1} = \frac{\frac{s_y}{s_x} \cdot \sqrt{1 - r^2}}{\sqrt{n - 2}}$
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
-```{r}
-se_num <- ( sd(evals$score) / sd(evals$bty_avg) ) * 
-  sqrt(
-    1 - cor(evals$score, evals$bty_avg)
-    ) 
-
-se_denom <- sqrt(nrow(evals) - 2)
-
-se <- se_num / se_denom
-
-se
-```
-:::
-::::::
-
-## Step 2: t-statistic
-
-$t = \frac{b_1}{SE_{b_1}} = \frac{`r slope_stat`}{`r se`} = `r slope_stat / se`$
-
-## Proof!
-
-```{r}
-get_regression_table(evals_lm) 
-```
-:::::::
-
-## How does R calculate the p-value?
-
-. . .
-
-```{r}
-#| fig-align: center
-#| out-width: 50%
-
-ggplot(data = tibble(x = c(-5, 5)), 
-       mapping = aes(x)) +
-  stat_function(fun = dt, 
-                args = list(df = nrow(evals) - 2), 
-                color = "blue", 
-                linewidth = 1.5) +
-  labs(y = "", 
-       x = "t-statistic") +
-  scale_y_continuous(breaks = NULL) +
-  geom_vline(xintercept = pull(t_stat), color = "red", linewidth = 1.5) +
-  my_theme
-
+aov(min_eval ~ age_cat, 
+    data = evals_small)  %>% 
+  tidy()
 ```
 
 . . .
 
-::: callout-note
-# Different $t$-distributions
+</br>
 
-A $t$-distribution has a *slightly* different shape depending on the sample size. Technically, we are using a $t$-distribution with $n - 2$ degrees of freedom to get our p-value.
-:::
-
-# Did we get similar results between these methods?
-
-# Did we get similar results between these methods?
-
-Why do you think that is?
-
-## Approximating the permutation distribution
-
-:::::: columns
-::: {.column width="40%"}
-A $t$-distribution can be a reasonable approximation for the permutation distribution [if the normality condition is not violated]{.underline}.
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
-```{r t-distribution}
-plot(c(-5, 5),
-     c(0, dnorm(0)),
-      type = "n", 
-     ylab = "", 
-     xlab = "",
-     axes = FALSE
-     )
-
-at <- seq(-10, 10, 2)
-axis(1, at)
-axis(1, at - 1, rep("", length(at)), tcl = -0.1)
-abline(h = 0)
-COL. <- openintro::fadeColor(openintro::IMSCOL["blue", "full"], c("FF", "89", "68", "4C", "33"))
-COLt <- openintro::fadeColor(openintro::IMSCOL["blue", "full"], c("FF", "AA", "85", "60", "45"))
-DF <- c("normal", 8, 4, 2, 1)
-X <- seq(-10, 10, 0.02)
-Y <- dnorm(X)
-lines(X, Y, col = COL.[1])
-
-for (i in 2:5) {
-  Y <- dt(X, as.numeric(DF[i]))
-  lines(X, Y, col = COL.[i], lwd = 1.5)
-}
-legend(2.5, 0.4,
-  legend = c(
-    DF[1],
-    paste("t, df = ", DF[2:5], sep = "")
-  ),
-  col = COL.,
-  text.col = COLt,
-  lty = rep(1, 5),
-  lwd = 1.5
-)
-
-```
-:::
-::::::
-
-## ![](images/gapminder.png)
-
-> What is the relationship between life expectancy GDP per capita?
+How was the `statistic` calculated?
 
 . . .
 
--   Decide on a variable transformation
--   Assess model conditions (L, I, N, E)
--   Compare hypothesis test results between simulation-based methods and theory-based methods
+What distribution was used to calculate the `p.value`?
+
+. . .
+
+## Making a Decision & Reaching a Conclusion
+
+::: columns
+::: {.column width="47%"}
+For a p-value of 0.244, what decision would you reach regarding your hypothesis test?
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+:::{.fragment}
+What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?
+:::
+:::
+:::
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 3em; color: #0F4C81;"}
+Did the two methods yield different results?
+:::
+
+# Final Project Work Session
+
+## Introduction & Research Questions
+
+::: columns
+::: {.column width="47%"}
+In 4-6 sentences, introduce / describe your data. 
+
+- What is the context of the data?
+- For what purpose were these data collected?
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+:::{.fragment}
+Outline the [**two**]{.underline} questions your research seeks to address.
+
+- You will have one question for each one-way ANOVA model
+- Your question should be in terms of "differences in group means" not "relationships"
+:::
+:::
+:::

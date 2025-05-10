@@ -1,9 +1,9 @@
 ---
-title: "🧑🏽‍🔬 P-values & Hypothesis Tests"
+title: "🔬 Simulation-Based Methods versus Theory-Based Methods"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
 ```{r set-up}
@@ -11,282 +11,471 @@ library(tidyverse)
 library(infer)
 library(moderndive)
 library(lterdatasampler)
+library(palmerpenguins)
 
-null_dist <- hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  hypothesize(null = "independence") %>% 
-  generate(reps = 1000, type = "permute") %>% 
-  calculate(stat = "slope") 
+my_theme <- theme(axis.title.x = element_text(size = 18), 
+                  axis.title.y = element_text(size = 18), 
+                  axis.text.x = element_text(size = 12), 
+                  axis.text.y = element_text(size = 12), 
+                  legend.text = element_text(size = 12), 
+                  legend.title = element_text(size = 18))
+
+obs_slope <- evals %>% 
+  specify(response = score, 
+          explanatory = bty_avg) %>% 
+  calculate(stat = "slope")
 ```
 
-# Plan for the rest of the quarter
+# Lab 7 Recap
 
-## Weeks 8, 9, & 10
+## Common Mistakes
 
-::::::::: columns
-:::: {.column width="30%"}
-::: fragment
-**Week 8**
+</br>
 
--   Learn about hypothesis testing for SLR & MLR
--   Compare "visual" model selection with p-value model selection
-:::
-::::
+**Question 6** (Bootstrap Distribution):
 
-:::: {.column width="30%"}
-::: fragment
-**Week 9**
+-   Did not use an informative axis label
 
--   Learn about one-way ANOVA
--   Get started on first portion of Final Project
-:::
-::::
+</br>
 
-:::: {.column width="30%"}
-::: fragment
-**Week 10**
+**Question 8** (Interpret Confidence Interval):
 
--   Learn about two-way ANOVA
--   Finish Final Project
-:::
-::::
-:::::::::
+-   Did not include population in interpretation
+-   Stated interval was about "all marshes" (no geographical information)
 
-## Upcoming Deadlines
+# Statistical Critique 2
 
--   Lab 6 revisions are due on Wednesday (by midnight)
--   Statistical Critique 2 is due next Monday (at 5pm)
--   Final revisions on **all** assignments will be accepted until Sunday, March 17
+## First Steps
 
-::: callout-note
-# Revision Deadlines
+1.  Open the directions!
+2.  Copy the Statistical Critique template on Posit Cloud
+3.  Copy-and-paste code from your Midterm Project
+4.  Copy-and-paste your justification for why you chose the model you chose
 
-If you did not submit revisions by the deadline (or forgot to include your reflections), your assignment **is not** eligible for additional revisions.
-:::
+## Next Steps
 
-## 
+4.  Fit the most complex model
+5.  Obtain an ANOVA table of your model
+6.  Use the p-values in the ANOVA table to decide what model is best
 
-::: {style="font-size: 4em; color: #000000;"}
-you...
-:::
+## What is the "most complex" model?
 
-::: {style="font-size: 1.25em; color: #000000;"}
--   understand the importance of sampling variability
--   know about using confidence intervals to estimate a range of plausible values for the population parameter
--   want to know how p-values fit in
-:::
+**For 1 numerical & 1 categorical explanatory variables**
 
-##  {background-color="#B6CADA"}
+-   Fit the **different slopes** (interaction) model
 
-::: {style="font-size: 2.5em; color: #000000;"}
-What if I want to know if the population parameter differs from a specific value?
-:::
+```{r}
+#| label: diff-slopes-fit
+#| echo: true
+#| code-line-numbers: false
 
-. . .
-
-<center>
-
-::: {style="font-size: 3em; color: #0F4C81;"}
-Hypothesis test!
-:::
-
-</center>
-
-## 
-
-::: {style="font-size: 3em; color: #000000;"}
-Hypothesis test goal:
-:::
-
-::: {style="font-size: 1.5em; color: #000000;"}
-Assess how different what we saw in our data is from what could have happened if the null hypothesis was true\*
-:::
-
-. . .
-
-::: {style="font-size: 0.75em;"}
-\*For hypothesis tests, we live in an alternative universe where $H_0$ is true
-:::
-
-## How can we approximate what could have happened if the null was true?
-
-. . .
-
-::: {style="font-size: 2em; color: #ed8402;"}
-Permutation!
-:::
-
-## A Permutation Resample
-
-::: incremental
--   Assumes the original sample is "representative" of observations in the population
-
--   Uses the original sample to generate new samples that might have occurred if the null hypothesis was true.
-:::
-
-. . .
-
-::: {style="color: #34605f;"}
-We can use statistics from these resamples to approximate the true sampling distribution under the null!
-:::
-
-# Why do we want a sampling distribution?
-
-## Testing a Population Parameter
-
-::: incremental
--   Like before, we are interested in knowing how a statistic varies from sample to sample.
-
--   Knowing a statistic's behavior helps us make better / more informed decisions!
-
--   This helps us know what statistics are more or less likely to occur [if the null hypothesis is true]{style="color: #e28743"}.
-:::
-
-# p-values
-
-. . .
-
-::: {style="font-size: 1.5em; color: #000000;"}
-> Quantify how "surprising" what we saw in our data is, if the null hypothesis was true
-:::
-
-## How do I get a p-value?
-
-. . .
-
-<center>
-
-::: {style="font-size: 2em; color: #ed8402;"}
-Permuting!
-:::
-
-. . .
-
-::: small
-1.  From your original sample, separate the $x$ values from the $y$ values.
-
-2.  Create new ordered pairs by randomly pairing $x$ values with $y$ values (permuting the labels).
-:::
-
-. . .
-
-<center>
-
-::: {style="font-size: 0.75em; color: #ed8402;"}
-This is your permuted resample.
-:::
-
-</center>
-
-. . .
-
-::: small
-3.  Repeat this process many, many times.
-:::
-
-. . .
-
-::: small
-4.  Calculate a numerical summary (e.g., slope) for each permutation resample.
-:::
-
-. . .
-
-<center>
-
-::: {style="font-size: 0.75em; color: #ed8402;"}
-These are your permuted statistics.
-:::
-
-</center>
-
-## Permutation Distribution
-
-. . .
-
-> [*definition*: a distribution of the]{style="color: #000000;"} [*permuted statistics*]{style="color: #e28743;"} [from every]{style="color: #000000;"} [*permuted resample*]{style="color: #e28743;"}
-
-. . .
-
-Displays the variability in the statistic that could have happened with repeated sampling, **if the null hypothesis was true**.
-
-. . .
-
-::: {style="color: #e28743;"}
-Approximates the true sampling distribution under the null!
-:::
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-How do I get my p-value?
-:::
-
-. . .
-
-Compare the observed statistic with the statistics produced assuming the null hypothesis was true.
+species_lm <- lm(bill_length_mm ~ bill_depth_mm * species, 
+                  data = penguins)
+```
 
 . . .
 
 </br>
 
-::: {style="font-size: 1.25em;"}
-A p-value summarizes the [**probability**]{style="color: #76b5c5;"} of obtaining a sample statistic [as or more extreme than what we observed]{.underline}, [**if the null hypothesis was true**]{style="color: #76b5c5;"}.
-:::
+**For 2 numerical explanatory variables**
 
-<!-- add slides about HT decisions -->
+-   Fit the model with **both** variables included:
+
+```{r}
+#| label: mlr-fit
+#| echo: true
+#| code-line-numbers: false
+
+bill_lm <- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, 
+                  data = penguins)
+```
+
+## How do I know what model is "best" from the ANOVA table?
+
+**For 1 numerical & 1 categorical explanatory variables**
+
+-   Look at the interaction line (e.g., `bill_depth_mm:species`), it is testing if the slopes are different!
+
+```{r}
+#| label: diff-slopes-anova
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+
+anova(species_lm)
+```
+
+```{r}
+anova(species_lm) %>% 
+  broom::tidy() %>%
+  rename(`F value` = statistic, 
+         `Pr(>F)` = p.value, 
+         Df = df, 
+         `Sum Sq` = sumsq, 
+         `Mean Sq` = meansq) %>% 
+  gt::gt()
+```
 
 ## 
 
-::: {style="font-size: 3em; color: #000000;"}
-Your turn!
+::: {style="font-size: 2em; color: #000000;"}
+`bill_depth_mm:species`: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!
 :::
 
-::: {style="font-size: 1.5em; color: #000000;"}
-**What is one similarity and one difference between**
+## How do I know what model is "best" from the ANOVA table?
+
+**For 2 numerical explanatory variables**
+
+-   Look at the p-value for each variable, it is testing if that variable has a relationship with the response (conditional on the other variable being in the model)!
+
+```{r}
+#| label: mlr-anova
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+
+anova(bill_lm)
+```
+
+```{r}
+anova(bill_lm) %>% 
+  broom::tidy() %>%
+  rename(`F value` = statistic, 
+         `Pr(>F)` = p.value, 
+         Df = df, 
+         `Sum Sq` = sumsq, 
+         `Mean Sq` = meansq) %>% 
+  gt::gt()
+```
+
+## 
+
+::: {style="font-size: 1.25em; color: #000000;"}
+`body_mass_g`: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!
 :::
 
-:::::::: columns
-:::: {.column width="45%"}
-::: {style="font-size: 1.5em; color: #76b5c5;"}
-a permutation distribution
+</br>
+
+::: {style="font-size: 1.25em; color: #000000;"}
+`bill_depth_mm`: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!
 :::
-::::
+
+# Last week we covered confidence intervals, this week we're learning more about hypothesis tests.
+
+## Testing for a Population Slope ($\beta_1$)
+
+:::::: columns
+::: {.column width="35%"}
+$$H_0: \beta_1 = 0$$
+
+$$H_A: \beta_1 \neq 0$$
+:::
 
 ::: {.column width="5%"}
 :::
 
-:::: {.column width="45%"}
-::: {style="font-size: 1.5em; color: #e28743;"}
-a bootstrap distribution
+::: {.column width="60%"}
+```{r evals-slr}
+#| message: false
+#| fig-align: center
+
+ggplot(data = evals, 
+       mapping = aes(x = bty_avg, y = score)) +
+  geom_jitter() + 
+  geom_smooth(method = "lm") +
+  labs(x = "Average Beauty Score", 
+       y = "Course Evaluation Score") +
+  my_theme
+```
+:::
+::::::
+
+. . .
+
+::: {style="font-size: 1em; color: #ed8402;"}
+What do these hypotheses mean *in words*?
+:::
+
+## What do you think?
+
+:::::: columns
+::: {.column width="50%"}
+$\widehat{score} = 3.88 + 0.066 \times \text{bty_avg}$
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+```{r}
+#| message: false
+#| fig-align: center
+
+ggplot(data = evals, 
+       mapping = aes(x = bty_avg, y = score)) +
+  geom_jitter() + 
+  geom_smooth(method = "lm") +
+  labs(x = "Average Beauty Score", 
+       y = "Course Evaluation Score") +
+  my_theme
+```
+:::
+::::::
+
+. . .
+
+::: {style="font-size: 1.5em; color: #b76352;"}
+Will we reject $H_0$?
+:::
+
+# How will we decide?
+
+# How will we decide?
+
+::: midi
+by generating statistics that could have happened if $H_0$ was true and comparing our observed statistic to these statistics to see how unusual it is
+:::
+
+## If $H_0$ was true then...
+
+</br>
+
+$\beta_1$ = 0
+
+</br>
+
+which means...
+
+# How do we generate statistics that could have happened if $H_0$ was true?
+
+## One possible shuffle
+
+::::::: columns
+::: {.column width="40%"}
+```{r}
+#| label: shuffle-scores
+#| echo: false
+#| cache: true
+
+evals_shuffle <- evals %>% 
+  select(score, bty_avg) %>% 
+  mutate(shuffled_score = sample(score, 
+                                size = nrow(evals), 
+                                replace = FALSE)
+        )
+
+evals_shuffle %>% 
+  slice_sample(n = 25) %>% 
+  gt::gt()
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+:::: {.column width="55%"}
+::: fragment
+Which results in a slope statistic of...
+
+```{r}
+lm(score ~ bty_avg, data = evals_shuffle) %>% 
+  broom::tidy() %>% 
+  filter(term == "bty_avg") %>% 
+  pull(estimate)
+```
 :::
 ::::
-::::::::
+:::::::
 
-## Exploring the `hbr_maples` dataset!
+# But that's just **one** statistic!
+
+# But that's just **one** statistic!
+
+We want a sampling distribution of **lots** of statistics that could have happened if $H_0$ was true!
+
+## Lots of statistics that could have happened if $H_0$ was true
+
+```{r}
+#| label: evals-permute
+#| cache: true
+
+null_dist <- evals %>% 
+  specify(response = score, 
+          explanatory = bty_avg) %>% 
+  hypothesise(null = "independence") %>% 
+  generate(reps = 1000, type = "permute") %>% 
+  calculate(stat = "slope")
+
+visualise(null_dist) +
+  labs(x = "Slope Statistic", 
+       title = "") +
+  scale_x_continuous(breaks = seq(-0.08, 0.08, by = 0.01))
+```
+
+## Where does our observed statistic fall on this distribution?
+
+```{r}
+#| label: null-dist
+
+visualise(null_dist) +
+  labs(x = "Slope Statistic", 
+       title = "") +
+  xlim(-0.08, 0.08) +
+  scale_x_continuous(breaks = seq(-0.08, 0.08, by = 0.01))
+```
+
+## Is our observed statistic *likely* to happen if the null was true?
+
+. . .
+
+If it is unlikely to happen, then we should reject $H_0$!
+
+Why???
+
+. . .
+
+</br>
+
+The probability of observing a statistic as or more extreme than 0.0666 if $H_0$ was true is approximately 0%.
+
+. . .
+
+</br>
+
+So, it seems like $H_0$ is not a reasonable characterization of the relationship.
+
+# What conclusion would you reach about the relationship between professors' evaluation scores and their attractiveness?
+
+# The conclusion we reached depends on our p-value being reliable.
+
+# The conclusion we reached depends on our p-value being reliable.
+
+How can we know if our p-value is reliable?
+
+## Model Conditions
+
+For our p-value to be trustworthy, we need to know that the conditions of our model are not violated.
+
+. . .
 
 :::::: columns
 ::: {.column width="40%"}
-![](images/hbr_maples.jpg)
+For linear regression we are assuming...
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="55%"}
-`stem_length`: a number denoting the height of the seedling in millimeters
+**L**inear relationship between $x$ and $y$
 
-`stem_dry_mass`: a number denoting the dry mass of the stem in grams
+</br>
+
+**I**ndependent observations
+
+</br>
+
+**N**ormality of residuals
+
+</br>
+
+**E**qual variance of residuals
 :::
 ::::::
 
+## What happens if the conditions are violated?
+
+In general, when the conditions associated with these methods are violated, we will [underestimate]{.underline} the true standard error (spread) of the sampling distribution.
+
+. . .
+
+-   Our p-values will be **too** small!
+-   Our confidence intervals will be **too** narrow!
+-   We will make more Type I errors than we expect!
+
 ## 
 
-```{r seedlings-slr}
-#| echo: false
+::: {style="font-size: 2em; color: #000000;"}
+**L**inear relationship between $x$ and $y$
+:::
 
-library(lterdatasampler)
+```{r}
+#| fig-align: center
+
+and_vertebrates %>%
+  filter(species != "Cascade torrent salamander") %>% 
+  ggplot(mapping = aes(x = length_1_mm, 
+                       y = weight_g, 
+                       color = species)) +
+  geom_point() + 
+  labs(x = "Length (mm)", 
+       y = "Weight (g)", 
+       color = "Species") +
+  my_theme
+```
+
+. . .
+
+***What should we do?***
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Variable transformation!
+:::
+
+```{r transform}
+#| fig-align: center
+
+and_vertebrates %>%
+  filter(species != "Cascade torrent salamander") %>% 
+  ggplot(mapping = aes(x = length_1_mm, 
+                       y = weight_g, 
+                       color = species)) +
+  geom_jitter(alpha = 0.5) + 
+  labs(x = "Log Transformed Length (mm)", 
+       y = "Log Transformed Weight (g)", 
+       color = "Species") +
+  scale_x_log10() +
+  scale_y_log10() +
+  my_theme
+```
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+**I**ndependence of observations
+:::
+
+::::::: columns
+::: {.column width="40%"}
+The `evals` dataset contains `r nrow(evals)` observations on `r distinct(evals, prof_ID) %>% nrow()` professors. Meaning, professors have **multiple** observations.
+
+</br>
+
+***What should we do?***
+:::
+
+::: {.column width="5%"}
+:::
+
+:::: {.column width="55%"}
+::: fragment
+**Best** -- use a random effects model
+
+**Reasonable** -- collapse the multiple scores into a single score
+:::
+::::
+:::::::
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+**E**qual variance of residuals
+:::
+
+```{r non-constant-variance}
+#| fig-align: center
 
 ggplot(data = hbr_maples, 
        mapping = aes(x = stem_length, y = stem_dry_mass)
@@ -295,281 +484,307 @@ ggplot(data = hbr_maples,
   geom_smooth(method = "lm") +
   labs(
     x = "Stem Length (mm)",
-    y = "Stem Dry Mass (g)",
-    title = "Sugar Maple Seedlings in Hubbard Brook LTER"
+    y = "Stem Dry Mass (g)"
+    ) +
+  theme_minimal() + 
+  my_theme
+```
+
+. . .
+
+***What should we do?***
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Variable transformation!
+:::
+
+```{r}
+ggplot(data = hbr_maples, 
+       mapping = aes(x = stem_length, y = stem_dry_mass)
+       ) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Stem Length (mm)",
+    y = "Log Transformed Stem Dry Mass (g)"
   ) +
   theme_minimal() + 
-  theme(axis.title.x = element_text(size = 18),
-        axis.title.y = element_text(size = 18), 
-        axis.text.x = element_text(size = 12), 
-        axis.text.y = element_text(size = 12), 
-        plot.title = element_text(size = 24)
-        )
+  scale_y_log10() +
+  my_theme
 ```
 
-. . .
+## 
 
-::: {style="font-size: 1.5em; color: #76b5c5;"}
-**What condition do we need to be worried about?**
+::: {style="font-size: 2em; color: #000000;"}
+**N**ormality of residuals
 :::
 
-## In this sample of `r nrow(hbr_maples)` sugar maples...
+```{r non-normal}
 
-```{r lm-table}
-length_mass_lm <- lm(stem_dry_mass ~ stem_length, data = hbr_maples)
+fish <- and_vertebrates %>%
+  filter(!species %in% c("Cascade torrent salamander", "Coastal giant salamander")) 
 
-regression_table <- get_regression_table(length_mass_lm) 
+curved_lm <- lm(weight_g ~ length_1_mm, data = fish)
 
-intercept <- filter(regression_table, term == "intercept") %>% 
-  pull(estimate)
-
-slope <- filter(regression_table, term == "stem_length") %>% 
-  pull(estimate)
-
+get_regression_points(curved_lm) %>% 
+  ggplot(mapping = aes(x = residual)) + 
+  geom_histogram() + 
+  labs(x = "Residual") +
+  my_theme
 ```
-
-$$\widehat{\text{stem dry mass}} = `r round(intercept, digits = 3)` + `r round(slope, digits = 3)` \times \text{stem length}$$
 
 . . .
 
-</br>
+***What should we do?***
 
-::: {style="font-size: 1.5em;"}
-What slope could have happened if there was **no** relationship between stem length and stem dry mass?
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+Variable transformation!
 :::
 
-## Generating a permuted resample and calculating permuted statistics
+```{r normal}
 
-</br>
+fish <- and_vertebrates %>%
+  filter(!species %in% c("Cascade torrent salamander", "Coastal giant salamander"))
 
-. . .
+not_curved_lm <- lm(log(weight_g) ~ log(length_1_mm), data = fish)
 
-**Step 1:** `specify()` your response and explanatory variables
-
-. . .
-
-**Step 2:** `hypothesize()` what would happen under the null
-
-. . .
-
-**Step 3:** `generate()` permuted resamples
-
-. . .
-
-**Step 4:** `calculate()` the statistic of interest
-
-## Step 1: Specify your variables!
-
-```{r}
-#| eval: false
-#| label: specify
-#| echo: true
-
-hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length)
+broom::augment(not_curved_lm) %>% 
+  mutate(.resid = `log(weight_g)` - `.fitted`) %>% 
+  ggplot(mapping = aes(x = .resid)) + 
+  geom_histogram(binwidth = 0.1) + 
+  labs(x = "Residual") +
+  xlim(c(-0.5, 0.5)) +
+  my_theme
 ```
 
-## Step 2: State your hypothesis!
-
-```{r}
-#| eval: false
-#| label: hypothesize
-#| echo: true
-
-hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  hypothesize(null = "independence")
-```
-
-</br>
-
-`"independence"` -- the assumed relationship between the explanatory and response variables under the null hypothesis
+## What if we can't fix a condition being violated?
 
 . . .
 
-::: callout-tip
-# Independence of variables
-
-Note! This is different from assuming your observations are independent!
-:::
-
-## Step 3: Generate your resamples!
-
-```{r generate}
-#| echo: true
-#| eval: false
-
-hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  hypothesize(null = "independence") %>% 
-  generate(reps = 1000, type = "permute")
-```
-
-. . .
-
-</br>
-
-:::::: columns
+::::::: columns
 ::: {.column width="45%"}
-`reps` -- the number of resamples you want to generate
+For the **L**, **I**, and **E** conditions...
+
+we need to ask for help!
 :::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
-`"permute"` -- the method that should be used to generate the new samples
+:::: {.column width="45%"}
+::: fragment
+For the **N** condition...
+
+we need to use simulation instead of mathematical formulas to get our p-value and confidence interval.
 :::
-::::::
+::::
+:::::::
 
-## Don't worry,
+# Simulation-Based Methods versus Theory-Based Methods
 
-`infer` will let you know if you missed something!
+## Mathematical / Theory-based Methods
 
-```{r permute-error}
-#| eval: false
+::: incremental
+-   Are a "simpler" approach
+-   Use formulas instead of simulation to obtain standard error
+-   Use $t$-distribution to get p-value and confidence interval
+-   Require that the residuals are normally distributed
+:::
+
+## How does this look?
+
+:::: panel-tabset
+## Before
+
+```{r}
 #| echo: true
-hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  generate(reps = 1000, type = "permute")
+#| label: obs-slope-code
+#| code-line-numbers: false
+
+obs_slope <- evals %>% 
+  specify(response = score, 
+          explanatory = bty_avg) %>% 
+  calculate(stat = "slope")
 ```
-
-</br>
-
-```         
-Error: Permuting should be done only when doing independence hypothesis test. See `hypothesize()`.
-In addition: Warning message:
-You have given `type = "permute"`, but `type` is expected to be `"bootstrap"`.
-This workflow is untested and the results may not mean what you think they mean. 
-```
-
-## Step 4: Calculate your statistics!
-
-```{r calculate}
-#| eval: false
-#| echo: true
-
-hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  hypothesize(null = "independence") %>% 
-  generate(reps = 1000, type = "permute") %>% 
-  calculate(stat = "slope") 
-```
-
-## Your turn!
-
-Why is the `hypothesize()` function used to make a null distribution but not for a bootstrap distribution?
-
-</br>
-
-What does the `null = "independence"` input in `hypothesize()` mean? What is it assuming about the variables declared in the `specify()` step?
-
-## The final product
-
-```{r null-dist}
-#| out-width: 70%
-#| echo: true
-visualise(null_dist) + 
-  labs(x = "Permuted Slope Statistic")
-```
-
-## Is our observed statistic unlikely if the null hypothesis was true?
 
 ```{r}
 #| label: obs-slope
-
-obs_slope <- hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  calculate(stat = "slope") 
+pull(obs_slope)
 ```
 
+## Now
+
+::: smaller
 ```{r}
 #| echo: true
-#| label: null-dist-with-obs-slope
+#| label: obs-t-code
+#| code-line-numbers: false
 
-visualise(null_dist) +
-  shade_p_value(obs_stat = obs_slope, 
-                direction = "two-sided") +
-  labs(x = "Permuted Slope Statistic")
+evals_lm <- lm(score ~ bty_avg, data = evals)
+
+get_regression_table(evals_lm)
 ```
-
-## The p-value is...
+:::
 
 ```{r}
-#| echo: true
-#| label: p-value
-#| message: true
-#| warning: true
-get_p_value(null_dist, 
-            obs_stat = obs_slope, 
-            direction = "two-sided") 
+#| label: obs-t
+#| include: false
+
+evals_lm <- lm(score ~ bty_avg,
+               data = evals)
+
+coef_table <- get_regression_table(evals_lm)
+
+t_stat <- filter(coef_table, term == "bty_avg") %>% 
+  select(statistic)
+
+slope_stat <- filter(coef_table, term == "bty_avg") %>% 
+  select(estimate)
+
+t_stat
+```
+::::
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+How did R calculate the $t$-statistic?
+:::
+
+::::::: panel-tabset
+## Step 1: SE
+
+:::::: columns
+::: {.column width="40%"}
+$SE_{b_1} = \frac{\frac{s_y}{s_x} \cdot \sqrt{1 - r^2}}{\sqrt{n - 2}}$
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+```{r}
+se_num <- ( sd(evals$score) / sd(evals$bty_avg) ) * 
+  sqrt(
+    1 - cor(evals$score, evals$bty_avg)
+    ) 
+
+se_denom <- sqrt(nrow(evals) - 2)
+
+se <- se_num / se_denom
+
+se
+```
+:::
+::::::
+
+## Step 2: t-statistic
+
+$t = \frac{b_1}{SE_{b_1}} = \frac{`r slope_stat`}{`r se`} = `r slope_stat / se`$
+
+## Proof!
+
+```{r}
+get_regression_table(evals_lm) 
+```
+:::::::
+
+## How does R calculate the p-value?
+
+. . .
+
+```{r}
+#| fig-align: center
+#| out-width: 50%
+
+ggplot(data = tibble(x = c(-5, 5)), 
+       mapping = aes(x)) +
+  stat_function(fun = dt, 
+                args = list(df = nrow(evals) - 2), 
+                color = "blue", 
+                linewidth = 1.5) +
+  labs(y = "", 
+       x = "t-statistic") +
+  scale_y_continuous(breaks = NULL) +
+  geom_vline(xintercept = pull(t_stat), color = "red", linewidth = 1.5) +
+  my_theme
+
 ```
 
 . . .
 
-</br>
+::: callout-note
+# Different $t$-distributions
 
-::: {style="font-size: 1.5em; color: #ed8402;"}
-Why did we get a warning?
+A $t$-distribution has a *slightly* different shape depending on the sample size. Technically, we are using a $t$-distribution with $n - 2$ degrees of freedom to get our p-value.
 :::
 
-## How do we interpret a p-value?
+# Did we get similar results between these methods?
 
-. . .
+# Did we get similar results between these methods?
 
-Need:
+Why do you think that is?
 
--   probability of what we saw in the data
--   assuming the null hypothesis is true
+## Approximating the permutation distribution
 
-. . .
-
-> The probability of observing a slope statistic (for the relationship between stem length and stem dry mass) as or more extreme than what was observed is less than 1 in 1000, if there was no relationship between a sugar maple's stem length and stem dry mass.
-
-## Classic interpretation mistakes
-
-</br>
-
-> "The probability that the null hypothesis is true is about 0%."
-
-. . .
-
-::: {style="font-size: 1.25em; color: #ed8402;"}
-You assume the null is true when you calculate a p-value!
+:::::: columns
+::: {.column width="40%"}
+A $t$-distribution can be a reasonable approximation for the permutation distribution [if the normality condition is not violated]{.underline}.
 :::
 
-<!-- add slide about HT decision / conclusion -->
+::: {.column width="5%"}
+:::
 
-<!-- add slide about why we choose 0.05 versus 0.01 -->
+::: {.column width="55%"}
+```{r t-distribution}
+plot(c(-5, 5),
+     c(0, dnorm(0)),
+      type = "n", 
+     ylab = "", 
+     xlab = "",
+     axes = FALSE
+     )
 
-<!-- add slide about why we use != instead of > or < -->
+at <- seq(-10, 10, 2)
+axis(1, at)
+axis(1, at - 1, rep("", length(at)), tcl = -0.1)
+abline(h = 0)
+COL. <- openintro::fadeColor(openintro::IMSCOL["blue", "full"], c("FF", "89", "68", "4C", "33"))
+COLt <- openintro::fadeColor(openintro::IMSCOL["blue", "full"], c("FF", "AA", "85", "60", "45"))
+DF <- c("normal", 8, 4, 2, 1)
+X <- seq(-10, 10, 0.02)
+Y <- dnorm(X)
+lines(X, Y, col = COL.[1])
 
-# Grade Check-in
+for (i in 2:5) {
+  Y <- dt(X, as.numeric(DF[i]))
+  lines(X, Y, col = COL.[i], lwd = 1.5)
+}
+legend(2.5, 0.4,
+  legend = c(
+    DF[1],
+    paste("t, df = ", DF[2:5], sep = "")
+  ),
+  col = COL.,
+  text.col = COLt,
+  lty = rep(1, 5),
+  lwd = 1.5
+)
 
-## Midterm Projects -- Study Limitations
+```
+:::
+::::::
 
-</br>
+## ![](images/gapminder.png)
 
-You must **justify** why you believe you can infer onto a population larger than your sample!
+> What is the relationship between life expectancy GDP per capita?
 
 . . .
 
-</br>
-
-Causal statements **do not** come from random / representative samples!
-
-## Midterm Project Grades
-
-::: small
-| **Excellent Project** | **Satisfactory Project** | **Progressing Project** | **No Credit** |
-|----|----|----|----|
-| At most one section is marked "Satisfactory" the remainder are marked "Excellent" | At most one section is marked "Progressing" the remainder are marked "Satisfactory" or "Excellent" | At most two sections are marked "Progressing" the remainder are marked "Satisfactory" | At most one section is marked "Satisfactory" or "Excellent" the remainder are marked "Progressing" |
-:::
-
-# [Grade Check-in Activity](../activity/week-8-grade-check.qmd "Grade Check-in Activity")
+-   Decide on a variable transformation
+-   Assess model conditions (L, I, N, E)
+-   Compare hypothesis test results between simulation-based methods and theory-based methods

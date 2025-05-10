@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>STAT 313 / 513 – Sampling Variability – The Heart of Statistical Inference</title>
+  <title>STAT 313 / 513 – Confidence Intervals – Real Life Sampling Distributions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -194,336 +194,674 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Sampling Variability – The Heart of Statistical Inference</h1>
+  <h1 class="title">Confidence Intervals – Real Life Sampling Distributions</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
-
-<div style="font-size: 3em; color: #000000;">
-<p>Salaries of football coaches</p>
-</div>
-
-<img data-src="images/coach-salary.jpg" width="570" class="r-stretch"></section>
-<section>
-<section id="individual-samples" class="title-slide slide level1 center">
-<h1>Individual Samples</h1>
-
-</section>
-<section id="each-group-has-a-different-sample-of-25-uc-csu-coach-salaries." class="slide level2">
-<h2>Each group has a different sample of 25 UC &amp; CSU coach salaries.</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div style="font-size: 1.5em; color: #000000;">
-<p><strong>First</strong>…</p>
-</div>
+<section id="course-updates" class="slide level2">
+<h2>Course Updates</h2>
 <ul>
-<li>each person samples 10 salaries</li>
-<li>calculate the median</li>
-<li>write your median on a post-it note</li>
-<li>place your median on the class plot</li>
+<li>Lab 4 revisions are due tonight (May 15)</li>
+<li>Midterm Projects will be graded by Sunday (May 19)</li>
+<li>Lab 6 revisions will be due next Wednesday (May 22)</li>
 </ul>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:45%;">
-<div style="font-size: 1.5em; color: #000000;">
-<p><strong>Then</strong>…</p>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>everyone works together to calculate the median of all 25 salaries</p>
-</div></div>
+<p><strong>Don’t forget reflections!</strong></p>
+</div>
+<div class="callout-content">
+<p>If your reflections are not present by the deadline for revisions, your revisions <strong>are not</strong> eligible to be regraded. Please don’t forget your reflections!</p>
+</div>
+</div>
+</div>
 </section>
-<section id="section" class="slide level2" data-background-color="#B6CADA">
+<section>
+<section id="what-if-i-only-have-one-sample" class="title-slide slide level1 center">
+<h1>What if I only have one sample?</h1>
+
+</section>
+<section id="section" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Would you feel comfortable inferring that the median salary of your sample is close to the median salary of <strong><em>all</em></strong> UC &amp; CSU coaches?</p>
+<p>Approximate the variability you’d expect to see in other samples!</p>
 </div>
-<p><br></p>
+<div class="fragment">
 <center>
-<div style="font-size: 1.25em; color: #000000;">
-<p>Why or why not?</p>
+<div style="font-size: 3em; color: #0F4C81;">
+<p><strong>Bootstrapping!</strong></p>
 </div>
-</center></section>
-<section id="precision-accuracy" class="slide level2">
-<h2>Precision &amp; Accuracy</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p><img data-src="images/accuracy_vs_precision.jpg"></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:40%;">
-<ul>
-<li>Random sampling ensures our point estimates are accurate.</li>
-</ul>
-<p><br></p>
-<ul>
-<li>Larger sample sizes ensure our point estimates are precise.</li>
-</ul>
-</div></div>
-</section>
-<section id="statistical-inference" class="slide level2">
-<h2>Statistical Inference</h2>
-<p>There were 252 “Head Coaches” at University of California and California State Universities in 2021 (that satisfied my search criteria)</p>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:45%;">
-<p><strong>Median salary for all 252 coaches</strong></p>
-<p>$137,619</p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:45%;">
-<div class="fragment">
-<p>Was the median of your sample of 25 coaches a good estimate of the salary for all 252 coaches?</p>
-</div>
-</div></div>
-</section>
-<section id="sampling-framework" class="slide level2">
-<h2>Sampling Framework</h2>
-<p><em>population</em> – collection of observations / individuals we are interested in</p>
-<p><em>population parameter</em> – numerical summary about the population that is unknown but you wish you knew</p>
-<div class="fragment">
-<p><br></p>
-<p><em>sample</em> – a collection of observations from the population</p>
-<p><em>sample statistic</em> – a summary statistic computed from a sample that <em>estimates</em> the unknown population parameter.</p>
-</div>
+</center></div>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Statistical Inference Reasoning</p>
-</div>
-<div>
-<div class="small">
-<ul>
-<li class="fragment">If the sampling is done at random</li>
-<li class="fragment">then the sample should be representative of the population</li>
-<li class="fragment">any result based on the sample can generalize to the population</li>
-<li class="fragment">the point estimate is a “good guess” of the unknown population parameter</li>
-</ul>
-</div>
+<p>A Bootstrap Resample</p>
 </div>
 <div class="fragment">
-<div style="font-size: 1.25em; color: #ed8402;">
-<p>Every group had a random sample of 25 coach salaries, so why were some of the medians really far off?</p>
+<ul>
+<li>Assumes the original sample is “representative” of observations in the population.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Uses the original sample to generate new samples that might have occurred with additional sampling.</li>
+</ul>
+<p><br></p>
+</div>
+<div class="fragment">
+<div style="font-size: 1em; color: #0F4C81;">
+<p>We can use the statistics from these bootstrap resamples to approximate the true sampling distribution!</p>
 </div>
 </div>
 </section></section>
 <section>
-<section id="repeated-samples" class="title-slide slide level1 center">
-<h1>Repeated Samples</h1>
+<section id="why-do-we-want-a-sampling-distribution" class="title-slide slide level1 center">
+<h1>Why do we want a sampling distribution?</h1>
 
 </section>
-<section id="why-sample-more-than-once" class="slide level2">
-<h2>Why sample more than once?</h2>
-<div class="fragment">
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>What do we get when we take multiple samples?</p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:55%;">
-<div class="fragment">
-<p>A distribution of statistics!</p>
-</div>
-</div></div>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="fragment">
-<p>Why do we want a distribution of statistics?</p>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:55%;">
-<div class="fragment">
-<p>Understanding the <em>variability</em> of a statistic is the heart of statistical inference!</p>
-</div>
-</div></div>
-</div>
-</section>
-<section id="virtual-sampling" class="slide level2">
-<h2>Virtual Sampling</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">rep_sample_n</span>(coaches, </span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>             <span class="at">size =</span> <span class="dv">25</span>, </span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>             <span class="at">reps =</span> <span class="dv">1</span>, </span>
-<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>             <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<div style="font-size: 0.5em;">
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">Employee Name</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Job Title</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Total Pay &amp; Benefits</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Michael A Scholl</td>
-<td style="text-align: left;">HEAD COACH - 12 MONTH</td>
-<td style="text-align: right;">194850</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Shawn Palmer Gallup</td>
-<td style="text-align: left;">Asc Head Coach Crd 4</td>
-<td style="text-align: right;">34243</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Stacey Scott</td>
-<td style="text-align: left;">Head Coach 5</td>
-<td style="text-align: right;">12850</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Albert Martins</td>
-<td style="text-align: left;">Head Coach 5</td>
-<td style="text-align: right;">80318</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ryan Jorden</td>
-<td style="text-align: left;">Intercol Ath Head Coach Ex</td>
-<td style="text-align: right;">181065</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Clifton Trotter</td>
-<td style="text-align: left;">Head Coach 5</td>
-<td style="text-align: right;">4500</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-</div>
-<center>
-<p><span class="math inline">\(\vdots\)</span></p>
-</center></section>
-<section id="section-2" class="slide level2" data-background-color="#B6CADA">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Distribution of 1000 medians from samples of 25 coaches</p>
+<p>Estimating a population parameter</p>
 </div>
-
-<img data-src="week7-day1_files/figure-revealjs/samp-25-plot-1.png" style="width:60.0%" class="r-stretch"></section>
+<div class="fragment">
+<ul>
+<li>We are interested in knowing how a statistic varies from sample to sample.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Knowing a statistic’s behavior helps us make better / more informed decisions!</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>This helps us estimate what values are more or less likely for the population parameter to have.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="confidence-intervals" class="title-slide slide level1 center">
+<h1>Confidence Intervals</h1>
+<div class="fragment">
+<blockquote>
+<p>Capture a range of plausible values for the population parameter.</p>
+</blockquote>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>Are more likely to capture the population parameter than a <em>point estimate</em>.</p>
+</blockquote>
+</div>
+</section>
 <section id="section-3" class="slide level2">
 <h2></h2>
 <div style="font-size: 2em; color: #000000;">
-<p>Sampling Distributions</p>
+<p>How do I get this plausible range of values?</p>
 </div>
-<ul>
-<li>Visualize the effect of sampling variation on the distribution of any point estimate
-<ul>
-<li>In this case, the sample median!</li>
-</ul></li>
-<li>We can use sampling distributions to make statements about what values we can typically expect.</li>
-</ul>
 <div class="fragment">
-<div class="callout callout-caution callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<center>
+<div style="font-size: 1.25em; color: #0F4C81;">
+<p>Bootstrapping!</p>
 </div>
-<p><strong>Sampling distribution vs.&nbsp;Sample distribution</strong></p>
-</div>
-<div class="callout-content">
-<p>Be careful! A <strong>sampling distribution</strong> is different from a <em>sample’s distribution</em>!</p>
-</div>
-</div>
+</center></div>
+<div class="fragment">
+<div class="small">
+<ol type="1">
+<li>From your original sample, resample with replacement the same number of times as your original sample.</li>
+</ol>
 </div>
 </div>
-</section>
-<section id="section-4" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<div style="font-size: 1.5em; color: #000000;">
-<p>Distributions of 1000 medians from different sample sizes</p>
+<div class="fragment">
+<center>
+<div style="font-size: 0.75em; color: #0F4C81;">
+<p>This is your bootstrap resample.</p>
 </div>
-
-<img data-src="week7-day1_files/figure-revealjs/samp-plots-1.png" style="width:80.0%" class="r-stretch"><center>
-<p><strong>What differences do you see?</strong></p>
-</center></section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div style="font-size: 1.75em; color: #000000;">
-<p>Variability for Different Sample Sizes</p>
+</center>
 </div>
-<div style="font-size: 0.65em; color: #000000;">
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">Sample Size</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Standard Error of Median</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">25</td>
-<td style="text-align: right;">19408.079</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">50</td>
-<td style="text-align: right;">12459.358</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">100</td>
-<td style="text-align: right;">8279.311</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
+<div class="fragment">
+<div class="small">
+<ol start="2" type="1">
+<li>Repeat this process many, many times.</li>
+</ol>
 </div>
 </div>
 <div class="fragment">
 <div class="small">
-<ul>
-<li><p>Standard errors quantify the variability of point estimates</p></li>
-<li><p>As a general rule, as sample size increases, the standard error decreases.</p></li>
-</ul>
+<ol start="3" type="1">
+<li>Calculate a numerical summary (e.g., mean, median) for each bootstrap resample.</li>
+</ol>
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-caution callout-titled callout-style-default">
+<center>
+<div style="font-size: 0.75em; color: #0F4C81;">
+<p>These are your bootstrap statistics</p>
+</div>
+</center>
+</div>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Bootstrap Distribution</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>a distribution of the <strong>bootstrap statistics</strong> from every <strong>bootstrap resample</strong></p>
+</blockquote>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>Displays the variability in the statistic that could have happened with repeated sampling.</p>
+</div>
+<div class="fragment">
+<div style="font-size: 1em; color: #0F4C81;">
+<p>Approximates the true sampling distribution!</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="penguins" class="title-slide slide level1 center">
+<h1>Penguins!</h1>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><img data-src="images/adelie_penguin.jpg"></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p><img data-src="images/chinstrap_penguin.jpeg"></p>
+</div></div>
+</section>
+<section id="statistic-beta_1" class="slide level2">
+<h2>Statistic: <span class="math inline">\(\beta_1\)</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="week7-day1_files/figure-revealjs/scatterplot-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:25%;">
+<p>The relationship between penguin’s bill length and body mass for <strong>all</strong> penguins in the Palmer Archipelago</p>
+</div></div>
+</section>
+<section id="in-this-sample-of-344-penguins" class="slide level2">
+<h2>In this sample of 344 penguins…</h2>
+<p><span class="math display">\[\widehat{\text{bill length}} = 26.899 + 0.004 \times \text{body mass}\]</span></p>
+<div class="fragment">
+<p><br></p>
+<div style="font-size: 1.5em;">
+<p>What slope could have happened in a different sample of penguins?</p>
+</div>
+</div>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Generating bootstrap resamples and calculating bootstrap statistics</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><strong>Step 1:</strong> <code>specify()</code> your response and explanatory variables</p>
+</div>
+<div class="fragment">
+<p><strong>Step 2:</strong> <code>generate()</code> bootstrap resamples</p>
+</div>
+<div class="fragment">
+<p><strong>Step 3:</strong> <code>calculate()</code> the statistic of interest</p>
+</div>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 1: Specify your variables!</p>
+</div>
+
+<img data-src="images/specify_scatterplot.jpg" class="r-stretch"><div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2,3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm, </span>
+<span id="cb1-3"><a></a>          <span class="at">explanatory =</span> body_mass_g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 2: Generate your resamples!</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm, </span>
+<span id="cb2-3"><a></a>          <span class="at">explanatory =</span> body_mass_g) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><code>reps</code> – the number of resamples you want to generate</p>
+<p><br></p>
+<p><code>"bootstrap"</code> – the method that should be used to generate the new samples</p>
+</div>
+</section>
+<section id="section-8" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<div style="font-size: 3em; color: #000000;">
+<p>Your turn!</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>Why do we resample <em>with replacement</em> when creating a bootstrap distribution?</p>
+<p><br></p>
+<p>When we resample with replacement from our original sample what are we assuming about the original sample?</p>
+</div>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 3: Calculate your statistics!</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm, </span>
+<span id="cb3-3"><a></a>          <span class="at">explanatory =</span> body_mass_g) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, </span>
+<span id="cb3-5"><a></a>           <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><code>"slope"</code> – the <code>stat</code>istic of interest</p>
+</div>
+</section>
+<section id="section-10" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>The final product</p>
+</div>
+<div style="font-size: 0.85em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">visualize</span>(boot1) <span class="sc">+</span> </span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of 1,000 Bootstrap Resamples"</span>, </span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Slope Statistic"</span>, </span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+
+<img data-src="week7-day1_files/figure-revealjs/bootstrap-viz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>A plausible range of values for <span class="math inline">\(\beta_1\)</span></p>
+</div>
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">visualise</span>(boot1) <span class="sc">+</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_confidence_interval</span>(<span class="at">endpoints =</span> boot1_CI, </span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>                            <span class="at">color =</span> <span class="st">"red"</span>, </span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>                            <span class="at">fill =</span> <span class="st">"pink"</span>) <span class="sc">+</span>  </span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of 1,000 Bootstrap Resamples"</span>, </span>
+<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Slope Statistic"</span>, </span>
+<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</div>
+</section>
+<section id="section-11-output" class="slide level2 output-location-slide"><h2></h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="week7-day1_files/figure-revealjs/ci-viz-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div></section><section id="section-12" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>The 95% confidence interval is…</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">get_confidence_interval</span>(boot1, </span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>                        <span class="at">level =</span> <span class="fl">0.95</span>, </span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"percentile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower Bound</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.00355</td>
+<td style="text-align: right;">0.00451</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<p><strong>What do we hope is captured by this interval?</strong></p>
+</div>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>How do we interpret this interval?</p>
+</div>
+<div class="fragment">
+<div class="small">
+<blockquote>
+<p>“We are 95% confident the slope of the relationship between bill length and body mass for all penguins in the Palmer Archipelago is between 0.00355 and 0.00453</p>
+</blockquote>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<div class="small">
+<blockquote>
+<p>“For every 1 gram increase in a penguin’s body mass, we are 95% confident the length of the penguin’s bill will increase between 0.00355 and 0.00453mm.</p>
+</blockquote>
+</div>
+</div>
+</section>
+<section id="section-14" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Classic interpretation mistakes</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>“95% of the time the population parameter would fall between 0.00355 and 0.00453.”</p>
+</blockquote>
+<p><br></p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>“We are 95% confident the sample statistic is in our interval.”</p>
+</blockquote>
+</div>
+</section></section>
+<section>
+<section id="scaling-to-multiple-linear-regression" class="title-slide slide level1 center">
+<h1>Scaling to Multiple Linear Regression</h1>
+
+</section>
+<section id="how-does-the-relationship-between-bill-length-and-body-mass-change-based-on-a-penguins-sex" class="slide level2">
+<h2>How does the relationship between bill length and body mass change based on a penguin’s sex?</h2>
+
+<img data-src="week7-day1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="what-changes" class="slide level2">
+<h2>What changes?</h2>
+<p>The original sample of 344 penguins were broken down into the following groups (plus 11 <code>NA</code> values):</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Sex</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sample Size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">165</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">168</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<p>Before we resampled with replacement 344 times.</p>
+<blockquote>
+<p>If we resample with replacement 333 times, are we guaranteed to get 165 female penguins and 168 male penguins in each sample?</p>
+</blockquote>
+</div>
+</section>
+<section id="getting-our-observed-statistic" class="slide level2">
+<h2>Getting our Observed Statistic</h2>
+<p><strong>Step 1: Fitting our Model</strong></p>
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>observed_fit <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">specify</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> sex) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Standard error vs.&nbsp;Standard deviation</strong></p>
+<p><strong>Syntax changes</strong></p>
 </div>
 <div class="callout-content">
-<p>Careful! There are important differences between <strong>standard errors</strong> and <em>standard deviations</em>.</p>
-</div>
+<p>When we have <u><strong>multiple</strong></u> explanatory variables, we need to use the “tilde” (<code>~</code>) syntax to specify our model. We also use the <code>fit()</code> function instead of the <code>calculate()</code> function.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
+<section id="getting-our-observed-statistic-1" class="slide level2">
+<h2>Getting our Observed Statistic</h2>
+<p><strong>Step 2: Finding our Statistic</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">intercept</td>
+<td style="text-align: right;">25.5713814</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">body_mass_g</td>
+<td style="text-align: right;">0.0042787</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sexmale</td>
+<td style="text-align: right;">5.5160611</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">body_mass_g:sexmale</td>
+<td style="text-align: right;">-0.0010301</td>
+</tr>
+</tbody>
+</table>
 
-<img data-src="week7-day1_files/figure-revealjs/samp-plots-true-value-1.png" style="width:70.0%" class="r-stretch"><div class="fragment">
-<p>Does sample size change how accurate the estimate is?</p>
+
+</div>
+</div>
+<div style="font-size: 1.5em; color: #ed8402;">
+<p>What is our observed statistic for this investigation?</p>
+</div>
+</section>
+<section id="generating-bootstrap-fits" class="slide level2">
+<h2>Generating Bootstrap Fits</h2>
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>bootstrap_fits <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">specify</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> sex) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="obtaining-a-bootstrap-confidence-interval" class="slide level2">
+<h2>Obtaining a Bootstrap Confidence Interval</h2>
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">get_confidence_interval</span>(bootstrap_fits,</span>
+<span id="cb9-2"><a></a>                        <span class="at">point_estimate =</span> observed_fit,</span>
+<span id="cb9-3"><a></a>                        <span class="at">level =</span> <span class="fl">0.90</span>, </span>
+<span id="cb9-4"><a></a>                        <span class="at">type =</span> <span class="st">"percentile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  term                lower_ci  upper_ci
+  &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;
+1 body_mass_g          0.00365  0.00489 
+2 body_mass_g:sexmale -0.00198 -0.000118
+3 intercept           23.0     28.4     
+4 sexmale              1.23     9.88    </code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="how-do-we-interpret-this-interval" class="slide level2">
+<h2>How do we interpret this interval?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower Bound</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">-0.0019812</td>
+<td style="text-align: right;">-0.0001181</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
 </div>
 <div class="fragment">
-<p>Does sample size change how precise the estimate is?</p>
+<blockquote>
+<p>We are 90% confident that the for every 10,000 gram increase in a penguin’s body mass (~25lbs), the length of a <strong>male</strong> penguin’s bill is between 0.68 and 20.2mm <u>shorter</u> than a <strong>female</strong> penguin’s bill.</p>
+</blockquote>
 </div>
 </section>
-<section id="section-7" class="slide level2" data-background-color="#B6CADA">
-<h2></h2>
-<div style="font-size: 4em; color: #000000;">
-<p>Sampling Activity!</p>
+<section id="how-do-body-mass-and-flipper-length-influence-a-penguins-bill-length" class="slide level2">
+<h2>How do body mass and flipper length influence a penguin’s bill length?</h2>
+<div class="fragment">
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>observed_fit <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> flipper_length_mm) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>()</span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a>bootstrap_fits <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> flipper_length_mm) <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="visualizing-bootstrap-distributions" class="slide level2">
+<h2>Visualizing Bootstrap Distributions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">visualise</span>(bootstrap_fits)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week7-day1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="obtaining-and-interpreting-confidence-intervals" class="slide level2">
+<h2>Obtaining and Interpreting Confidence Intervals</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower Bound</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">body_mass_g</td>
+<td style="text-align: right;">-0.0002309</td>
+<td style="text-align: right;">0.0015479</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">flipper_length_mm</td>
+<td style="text-align: right;">0.1699044</td>
+<td style="text-align: right;">0.2735161</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">intercept</td>
+<td style="text-align: right;">-10.4519634</td>
+<td style="text-align: right;">4.0984996</td>
+</tr>
+</tbody>
+</table>
 
 
+</div>
+</div>
+<div class="fragment">
+<p>How would you interpret the confidence interval for <code>flipper_length_mm</code>? For <code>body_mass_g</code>?</p>
+</div>
+</section>
+<section id="holding-the-other-variables-constant" class="slide level2">
+<h2>Holding the Other Variable(s) Constant</h2>
+<blockquote>
+<p>Holding body mass constant, we are 95% confident that a 1mm increase in flipper length is associated with between a 0.173 and 0.266mm increase in a penguin’s bill length.</p>
+</blockquote>
+<div class="fragment">
+<blockquote>
+<p>Holding flipper length constant, we are 95% confident that a 100 gram increase in body mass is associated with between a 0.203mm decrease and a 0.157mm increase in a penguin’s bill length.</p>
+</blockquote>
+</div>
+</section></section>
+<section>
+<section id="lab-7" class="title-slide slide level1 center">
+<h1>Lab 7</h1>
+
+</section>
+<section id="water-temperature-and-latitude" class="slide level2">
+<h2>Water Temperature and Latitude</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<blockquote>
+<p>When including both water temperature and latitude in a multiple linear regression, we get coefficients that contradict the relationships seen in the visualizations. This only happens if the explanatory variables are highly correlated with each other.</p>
+</blockquote>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p><img data-src="images/maine-coastline.webp"></p>
+</div></div>
+<div class="fragment">
+<p>What is the relationship between water temperature and latitude for salt marshes along the Atlantic coast?</p>
+
+
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

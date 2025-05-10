@@ -1,7 +1,6 @@
 ---
 title: "Exploring Sampling Concepts (30-minutes)"
 format: html
-embed-resources: true
 editor: visual
 ---
 
@@ -56,7 +55,7 @@ Suppose we have a database of every professor at UT Austin, and are interested i
 
 Suppose we want to ensure that we have a representative proportion of faculty who are women and faculty of different ranks (e.g., teaching, tenure track, tenured). The table below summarizes the demographics of women and men faculty of different ranks:
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
 **Women make up approximately 40% of all UT Austin faculty**
 
@@ -75,7 +74,7 @@ Suppose we want to ensure that we have a representative proportion of faculty wh
 -   Men tenure track = 42%
 -   Men tenured = 38%
 :::
-:::
+::::::
 
 7.  Suppose we can reasonably collect data on 200 individuals. How could we go about collecting a representative sample that accounts for these demographic characteristics?
 
@@ -85,7 +84,7 @@ Suppose we want to ensure that we have a representative proportion of faculty wh
 
 In the `evals` data, the courses included in the dataset were only taught by 94 unique professors. If we were interested in making inferences about the relationship between eval scores and age for professors at UT Austin, a simpler approach would be to have **one** observation per professor!
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| echo: false
@@ -104,7 +103,7 @@ count(evals, prof_ID, sort = TRUE) %>%
 ::: {.column width="55%"}
 8.  How could you use sampling to remedy this situation?
 :::
-:::
+::::::
 
 \newpage
 

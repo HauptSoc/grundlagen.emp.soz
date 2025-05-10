@@ -227,6 +227,6 @@ hypothesis tests
 
 # R Tutorial -- Due Wednesday by the beginning of class
 
-[**Required Tutorial:** Randomization test for the slope](https://openintro.shinyapps.io/ims-06-model-infer-02/#section-simulation-based-inference)
+[**Required Tutorial:** Randomization Test for the Slope](https://openintro.shinyapps.io/ims-06-model-infer-02/#section-simulation-based-inference)
 
-[**Required Tutorial:** Practice the infer Workflow](https://openintro.shinyapps.io/ims-04-foundations-04/)
+[**Required Tutorial:** Parameters and Confidence Intervals](https://openintro.shinyapps.io/ims-04-foundations-04/)
