@@ -12,27 +12,44 @@ execute:
   message: false
 ---
 
-# Textbook Reading -- Part 1
+This week we are **finally** talking about p-values and confidence intervals! 
+There are two portions of the coursework. First, we will read about confidence
+intervals for multiple linear regression, connecting ideas from the sampling
+variability chapter we read last week. The second half of the coursework
+discusses the use of p-values for multiple linear regression, connecting to
+confidence intervals!
 
-[**Required Reading:** Confidence Intervals for the Slope](chapters/week7-reading1.html)
+# Textbook Reading -- Part 1 (Due Monday by the beginning of class)
+
+[**Required Reading:** Confidence Intervals for the Slope](chapters/week7-reading1.qmd)
 
 ::: callout-note
-## Reading Guide -- Due Monday by the beginning of class
+## Reading Guide
 
 [Download the Word Document](reading-guide/week7-reading1.docx)
 :::
 
-[**Required Reading:** Hypothesis Test for Slope & Inference Conditions](chapters/week7-reading2.html)
+[**Required Reading:** Hypothesis Test for Slope & Inference Conditions](chapters/week7-reading2.qmd)
 
-# Textbook Reading -- Part 2
+# Textbook Reading -- Part 2 (Due Wednesday by the start of class)
 
 ::: callout-note
-## Reading Guide -- Due Wednesday by the start of class
+## Reading Guide
 
 [Download the Word Document](reading-guide/week7-reading2.docx)
 :::
 
-# Concept Quiz -- Due Wednesday by the beginning of class (note the new time!)
+# Concept Quizes
+
+::: {.callout-important}
+# Note there are two concept quizzes this week! 
+:::
+
+## Confidence Intervals 
+
+::: {.callout-warning} 
+# Due Monday by the beginning of class
+:::
 
 **1. Match each item to it's respective analogy:**
 
@@ -108,6 +125,108 @@ fishing with a spear
 -   95%
 -   90%
 
+
+## Hypothesis Tests
+
+::: {.callout-warning} 
+# Due Wednesday by the beginning of class
+:::
+
+**1. Match each procedure to the question it addresses.**
+
+:::::: columns
+::: {.column width="40%"}
+confidence intervals
+
+hypothesis tests
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+-   What are plausible values for the population parameter?
+-   What are plausible values for the sample statistic?
+-   Is the population parameter different from 0?
+-   Is the value of the parameter different from a specified quantity?
+:::
+::::::
+
+**2. Which of the following are *always* true for hypothesis statements?**
+
+-   They are about sample statistics.
+-   They are about relationships between variables.
+-   They are about population parameters.
+-   They are about differences in groups.
+
+**3. To simulate what could have happened if the \[null hypothesis was true / alternative hypothesis was true\], we \[separate the (x, y) pairs / keep the (x, y) pairs together\] and \[resample with replacement / randomly reassign a new y to each x\].**
+
+**4. Which of the following are true about a null distribution?** (select all that apply)
+
+-   It is a distribution of statistics.
+-   The values on the distribution represent what might have happened if the null hypothesis was true.
+-   The values on the distribution represent what might have happened if the alternative hypothesis was true.
+-   It is a distribution of sample observations.
+
+**5. Name [one]{.underline} similarity between a permutation distribution and a bootstrap distribution.**
+
+**6. Name [one]{.underline} difference between a permutation distribution and a bootstrap distribution.**
+
+**7. For linear regression, the null distribution is always centered at \_\_\_\_.**
+
+**8. Which of the following are true about a p-value?** (select all that apply)
+
+-   It is calculated assuming the null hypothesis is true.
+-   It is the probability the null hypothesis is true.
+-   It quantifies how "surprising" our data are.
+-   It compares the observed statistic to a distribution of values that could have happened if the null was true.
+-   It is calculated assuming the alternative hypothesis is true.
+-   It is a probability.
+
+**9. Which of the following is true about a small p-value?**
+
+-   The sample statistic is unlikely to have happened by chance.
+-   The sample size was large.
+-   The sample statistic is unlikely to have happened if the null hypothesis was true.
+-   The sample statistic was large.
+
+**10. If you obtain a large p-value, what can you conclude about your hypotheses?**
+
+-   We cannot say the alternative hypothesis is false.
+-   We cannot say the null hypothesis is false.
+-   The null hypothesis is true.
+-   The alternative hypothesis is true.
+
+**11. If the probability of a Type I error goes down, what can you say about the probability of a Type II error?**
+
+-   The probability of a Type II error goes down.
+-   The probability of a Type II error stays the same.
+-   The probability of a Type II error goes up.
+
+**12. If you obtained a small p-value (e.g., 0.02), what could you say about what you would expect if you constructed a 95% confidence interval?**
+
+-   It would contain the null hypothesized value.
+-   It would not contain the null hypothesized value.
+-   It would contain the sample statistic.
+-   It would contain the true population parameter.
+
+**13. In a regression table, what is the "statistic" value associated with the slope?**
+
+-   a bootstrap statistic
+-   a z-statistic
+-   the sample slope statistic
+-   a t-statistic
+
+**14. In a regression table, how is the p-value calculated?**
+
+-   Using a permutation distribution with 1000 resamples
+-   Using a bootstrap distribution with 1000 samples
+-   Using a Normal distribution
+-   Using a t-distribution
+
+
 # R Tutorial -- Due Wednesday by the beginning of class
 
-[**Required Tutorial:** Practice the infer Workflow](https://rstudio.csm.calpoly.edu/infer_CI_tutorial/)
+[**Required Tutorial:** Randomization test for the slope](https://openintro.shinyapps.io/ims-06-model-infer-02/#section-simulation-based-inference)
+
+[**Required Tutorial:** Practice the infer Workflow](https://openintro.shinyapps.io/ims-04-foundations-04/)

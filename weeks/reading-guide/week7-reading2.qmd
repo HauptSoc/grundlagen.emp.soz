@@ -1,5 +1,5 @@
 ---
-title: "Week 8 Reading Guide: Hypothesis Tests & Model Conditions"
+title: "Week 7 Reading Guide Part 2: Hypothesis Tests & Model Conditions"
 format: docx 
 editor: visual
 ---
