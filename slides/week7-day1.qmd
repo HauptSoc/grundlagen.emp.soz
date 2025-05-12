@@ -19,14 +19,14 @@ options(scipen = 999)
 
 ## Course Updates
 
--   Lab 4 revisions are due tonight (May 15)
--   Midterm Projects will be graded by Sunday (May 19)
--   Lab 6 revisions will be due next Wednesday (May 22)
+-   Lab 4 revisions are due on Friday (May 16)
+-   Midterm Projects will be graded by Sunday (May 18)
 
 ::: callout-caution
 # Don't forget reflections!
 
-If your reflections are not present by the deadline for revisions, your revisions **are not** eligible to be regraded. Please don't forget your reflections!
+If your reflections are not present by the deadline for revisions, your
+revisions **are not** eligible to be regraded. Please don't forget your reflections!
 :::
 
 # What if I only have one sample?
@@ -177,14 +177,14 @@ Approximates the true sampling distribution!
 
 :::::: columns
 ::: {.column width="45%"}
-![](images/adelie_penguin.jpg)
+![](images/adelie_penguin.jpg){fig-alt="A picture of an Adelie penguin. An adult Adelie penguin is black on the head, throat and upper parts, with snowy white underparts. The penguin has a conspicuous white eye ring around a black iris. Its beak is largely covered with black feathers, leaving only the tip exposed; this is primarily black, though it can show indistinct reddish-brown markings. The upper surface of the wing is black with a white trailing edge, while the underside is white with a narrow black leading edge and a small black tip. The legs and feet, which are mostly unfeathered, are pinkish."}
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="45%"}
-![](images/chinstrap_penguin.jpeg)
+![](images/chinstrap_penguin.jpeg){fig-alt="A picture of a Chinstrap penguin. An adult Chinstrap penguin has flippers that are black with a white edge; the inner sides of the flippers are white. A Chinstrap penguin's face is white extending behind the eyes, which are reddish brown; the chin and throat are white, as well, while the short bill is black. Chinstrap penguins have strong legs and the webbed feet that are pink. Its short, stumpy legs give it a distinct waddle when it walks."}
 :::
 ::::::
 
@@ -458,7 +458,7 @@ How do we interpret this interval?
 . . .
 
 ::: small
-> "We are 95% confident the slope of the relationship between bill length and body mass for all penguins in the Palmer Archipelago is between 0.00355 and 0.00453
+> "We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453
 :::
 
 . . .
@@ -466,7 +466,9 @@ How do we interpret this interval?
 </br>
 
 ::: small
-> "For every 1 gram increase in a penguin's body mass, we are 95% confident the length of the penguin's bill will increase between 0.00355 and 0.00453mm.
+> "For every 1000 gram (~2.2lbs) increase in a penguin's body mass, we are
+> 95% confident the length of an Adelie, Chinstrap, or Gentoo penguins's bill
+> will increase between 3.55 and 4.53mm.
 :::
 
 ##  {background-color="#B6CADA"}
@@ -519,7 +521,10 @@ penguins %>%
 
 Before we resampled with replacement `r nrow(penguins)` times.
 
-> If we resample with replacement 333 times, are we guaranteed to get 165 female penguins and 168 male penguins in each sample?
+. . .
+
+> If we resample with replacement 333 times, are we guaranteed to get 165 female
+> penguins and 168 male penguins in each sample?
 
 ## Getting our Observed Statistic
 
@@ -554,8 +559,9 @@ observed_fit %>%
   kableExtra::kable_styling()
 ```
 
-::: {style="font-size: 1.5em; color: #ed8402;"}
-What is our observed statistic for this investigation?
+::: {style="color: #ed8402;"}
+Which statistic measures how different the slopes are between male and female
+penguins?
 :::
 
 ## Generating Bootstrap Fits
@@ -603,80 +609,60 @@ get_confidence_interval(bootstrap_fits,
 
 . . .
 
-> We are 90% confident that the for every 10,000 gram increase in a penguin's body mass (\~25lbs), the length of a **male** penguin's bill is between 0.68 and 20.2mm [shorter]{.underline} than a **female** penguin's bill.
+> We are 90% confident that the for every 1,000 gram increase in a penguin's
+> body mass (~2.2lbs), the length of a **male** penguin's bill is between 0.115
+> and 1.85mm [shorter]{.underline} than a **female** penguin's bill.
 
-## How do body mass and flipper length influence a penguin's bill length?
+<!-- ## How do body mass and flipper length influence a penguin's bill length? -->
 
-. . .
+<!-- . . . -->
 
-::: {style="font-size: 0.75em;"}
-```{r}
-#| echo: true
-#| code-line-numbers: false
-#| cache: true
+<!-- ::: {style="font-size: 0.75em;"} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-line-numbers: false -->
+<!-- #| cache: true -->
 
-observed_fit <- penguins %>%
-  specify(bill_length_mm ~ body_mass_g + flipper_length_mm) %>%
-  fit()
+<!-- observed_fit <- penguins %>% -->
+<!--   specify(bill_length_mm ~ body_mass_g + flipper_length_mm) %>% -->
+<!--   fit() -->
 
-bootstrap_fits <- penguins %>%
-  specify(bill_length_mm ~ body_mass_g + flipper_length_mm) %>%
-  generate(reps = 1000, type = "bootstrap") %>%
-  fit()
-```
-:::
+<!-- bootstrap_fits <- penguins %>% -->
+<!--   specify(bill_length_mm ~ body_mass_g + flipper_length_mm) %>% -->
+<!--   generate(reps = 1000, type = "bootstrap") %>% -->
+<!--   fit() -->
+<!-- ``` -->
+<!-- ::: -->
 
-## Visualizing Bootstrap Distributions
+<!-- ## Visualizing Bootstrap Distributions -->
 
-```{r}
-#| echo: true
-#| code-line-numbers: false
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-line-numbers: false -->
 
-visualise(bootstrap_fits)
-```
+<!-- visualise(bootstrap_fits) -->
+<!-- ``` -->
 
-## Obtaining and Interpreting Confidence Intervals
+<!-- ## Obtaining and Interpreting Confidence Intervals -->
 
-```{r}
-get_confidence_interval(bootstrap_fits,
-                        point_estimate = observed_fit,
-                        level = 0.90, 
-                        type = "percentile") %>% 
-  knitr::kable(col.names = c("term", "Lower Bound", "Upper Bound")) %>% 
-  kableExtra::kable_styling()
-```
+<!-- ```{r} -->
+<!-- get_confidence_interval(bootstrap_fits, -->
+<!--                         point_estimate = observed_fit, -->
+<!--                         level = 0.90,  -->
+<!--                         type = "percentile") %>%  -->
+<!--   knitr::kable(col.names = c("term", "Lower Bound", "Upper Bound")) %>%  -->
+<!--   kableExtra::kable_styling() -->
+<!-- ``` -->
 
-. . .
+<!-- . . . -->
 
-How would you interpret the confidence interval for `flipper_length_mm`? For `body_mass_g`?
+<!-- How would you interpret the confidence interval for `flipper_length_mm`? For `body_mass_g`? -->
 
-## Holding the Other Variable(s) Constant
+<!-- ## Holding the Other Variable(s) Constant -->
 
-> Holding body mass constant, we are 95% confident that a 1mm increase in flipper length is associated with between a 0.173 and 0.266mm increase in a penguin's bill length.
+<!-- > Holding body mass constant, we are 95% confident that a 1mm increase in flipper length is associated with between a 0.173 and 0.266mm increase in a penguin's bill length. -->
 
-. . .
+<!-- . . . -->
 
-> Holding flipper length constant, we are 95% confident that a 100 gram increase in body mass is associated with between a 0.203mm decrease and a 0.157mm increase in a penguin's bill length.
+<!-- > Holding flipper length constant, we are 95% confident that a 100 gram increase in body mass is associated with between a 0.203mm decrease and a 0.157mm increase in a penguin's bill length. -->
 
-# Lab 7
-
-## Water Temperature and Latitude
-
-::::::: columns
-:::: {.column width="50%"}
-::: small
-> When including both water temperature and latitude in a multiple linear regression, we get coefficients that contradict the relationships seen in the visualizations. This only happens if the explanatory variables are highly correlated with each other.
-:::
-::::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="45%"}
-![](images/maine-coastline.webp)
-:::
-:::::::
-
-. . .
-
-What is the relationship between water temperature and latitude for salt marshes along the Atlantic coast?
