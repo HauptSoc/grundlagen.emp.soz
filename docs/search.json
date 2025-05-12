@@ -5150,7 +5150,7 @@
     "href": "slides/week7-day1.html#course-updates",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "Course Updates",
-    "text": "Course Updates\n\nLab 4 revisions are due on Friday (May 16)\nMidterm Projects will be graded by Sunday (May 18)\n\n\n\n\n\n\n\nDon’t forget reflections!\n\n\nIf your reflections are not present by the deadline for revisions, your revisions are not eligible to be regraded. Please don’t forget your reflections!"
+    "text": "Course Updates\n\nLab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\nMidterm Projects will be graded by Sunday (May 18)\n\n\n\n\n\n\n\nDon’t forget reflections!\n\n\nIf your reflections are not present by the deadline for revisions, your revisions are not eligible to be regraded. Please don’t forget your reflections!"
   },
   {
     "objectID": "slides/week7-day1.html#section",
@@ -5255,7 +5255,7 @@
     "href": "slides/week7-day1.html#section-12",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "The 95% confidence interval is…\n\n\nget_confidence_interval(boot1, \n                        level = 0.95, \n                        type = \"percentile\")\n\n\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n0.00354\n0.00454\n\n\n\n\n\n\n\n\nWhat do we hope is captured by this interval?"
+    "text": "The 95% confidence interval is…\n\n\nget_confidence_interval(boot1, \n                        level = 0.95, \n                        type = \"percentile\")\n\n\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n0.0035\n0.00453\n\n\n\n\n\n\n\n\nWhat do we hope is captured by this interval?"
   },
   {
     "objectID": "slides/week7-day1.html#section-13",
@@ -5311,14 +5311,14 @@
     "href": "slides/week7-day1.html#obtaining-a-bootstrap-confidence-interval",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "Obtaining a Bootstrap Confidence Interval",
-    "text": "Obtaining a Bootstrap Confidence Interval\n\n\nget_confidence_interval(bootstrap_fits,\n                        point_estimate = observed_fit,\n                        level = 0.90, \n                        type = \"percentile\")\n\n# A tibble: 4 × 3\n  term                lower_ci  upper_ci\n  &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;\n1 body_mass_g          0.00373  0.00484 \n2 body_mass_g:sexmale -0.00185 -0.000115\n3 intercept           23.2     28.0     \n4 sexmale              1.01     9.56"
+    "text": "Obtaining a Bootstrap Confidence Interval\n\n\nget_confidence_interval(bootstrap_fits,\n                        point_estimate = observed_fit,\n                        level = 0.90, \n                        type = \"percentile\")\n\n# A tibble: 4 × 3\n  term                lower_ci  upper_ci\n  &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;\n1 body_mass_g          0.00365  0.00489 \n2 body_mass_g:sexmale -0.00198 -0.000118\n3 intercept           23.0     28.4     \n4 sexmale              1.23     9.88"
   },
   {
     "objectID": "slides/week7-day1.html#how-do-we-interpret-this-interval",
     "href": "slides/week7-day1.html#how-do-we-interpret-this-interval",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "How do we interpret this interval?",
-    "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0018457\n-0.0001145\n\n\n\n\n\n\n\n\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.115 and 1.85mm shorter than a female penguin’s bill."
+    "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0019812\n-0.0001181\n\n\n\n\n\n\n\n\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.115 and 1.85mm shorter than a female penguin’s bill."
   },
   {
     "objectID": "slides/week7-day1.html#how-do-body-mass-and-flipper-length-influence-a-penguins-bill-length",

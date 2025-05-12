@@ -20,6 +20,7 @@ options(scipen = 999)
 ## Course Updates
 
 -   Lab 4 revisions are due on Friday (May 16)
+-   Lab 3 second revisions are due on Friday (May 16)
 -   Midterm Projects will be graded by Sunday (May 18)
 
 ::: callout-caution
