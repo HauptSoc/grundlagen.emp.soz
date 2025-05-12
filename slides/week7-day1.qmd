@@ -459,7 +459,7 @@ How do we interpret this interval?
 . . .
 
 ::: small
-> "We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453
+> "We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453.
 :::
 
 . . .
@@ -482,7 +482,7 @@ Classic interpretation mistakes
 
 </br>
 
-> "95% of the time the population parameter would fall between 0.00355 and 0.00453."
+> "There is a 95% probability that $\beta_1$ is between 0.00355 and 0.00453."
 
 </br>
 
@@ -611,8 +611,8 @@ get_confidence_interval(bootstrap_fits,
 . . .
 
 > We are 90% confident that the for every 1,000 gram increase in a penguin's
-> body mass (~2.2lbs), the length of a **male** penguin's bill is between 0.115
-> and 1.85mm [shorter]{.underline} than a **female** penguin's bill.
+> body mass (~2.2lbs), the length of a **male** penguin's bill is between 0.118
+> and 1.98mm [shorter]{.underline} than a **female** penguin's bill.
 
 <!-- ## How do body mass and flipper length influence a penguin's bill length? -->
 
@@ -667,3 +667,9 @@ get_confidence_interval(bootstrap_fits,
 
 <!-- > Holding flipper length constant, we are 95% confident that a 100 gram increase in body mass is associated with between a 0.203mm decrease and a 0.157mm increase in a penguin's bill length. -->
 
+## To Do List by Wednesday
+
+-   Hypothesis test reading guide
+-   Hypothesis test concept quiz
+-   Confidence interval R tutorial
+-   Hypothesis test R tutorial

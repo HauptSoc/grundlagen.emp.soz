@@ -5255,21 +5255,21 @@
     "href": "slides/week7-day1.html#section-12",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "The 95% confidence interval is…\n\n\nget_confidence_interval(boot1, \n                        level = 0.95, \n                        type = \"percentile\")\n\n\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n0.0035\n0.00453\n\n\n\n\n\n\n\n\nWhat do we hope is captured by this interval?"
+    "text": "The 95% confidence interval is…\n\n\nget_confidence_interval(boot1, \n                        level = 0.95, \n                        type = \"percentile\")\n\n\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n0.00351\n0.00451\n\n\n\n\n\n\n\n\nWhat do we hope is captured by this interval?"
   },
   {
     "objectID": "slides/week7-day1.html#section-13",
     "href": "slides/week7-day1.html#section-13",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "How do we interpret this interval?\n\n\n\n\n“We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453\n\n\n\n\n\n\n\n“For every 1000 gram (~2.2lbs) increase in a penguin’s body mass, we are 95% confident the length of an Adelie, Chinstrap, or Gentoo penguins’s bill will increase between 3.55 and 4.53mm."
+    "text": "How do we interpret this interval?\n\n\n\n\n“We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453.\n\n\n\n\n\n\n\n“For every 1000 gram (~2.2lbs) increase in a penguin’s body mass, we are 95% confident the length of an Adelie, Chinstrap, or Gentoo penguins’s bill will increase between 3.55 and 4.53mm."
   },
   {
     "objectID": "slides/week7-day1.html#section-14",
     "href": "slides/week7-day1.html#section-14",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Classic interpretation mistakes\n\n\n\n\n“95% of the time the population parameter would fall between 0.00355 and 0.00453.”\n\n\n\n\n\n“We are 95% confident the sample statistic is in our interval.”"
+    "text": "Classic interpretation mistakes\n\n\n\n\n“There is a 95% probability that \\(\\beta_1\\) is between 0.00355 and 0.00453.”\n\n\n\n\n\n“We are 95% confident the sample statistic is in our interval.”"
   },
   {
     "objectID": "slides/week7-day1.html#how-does-the-relationship-between-bill-length-and-body-mass-change-based-on-a-penguins-sex",
@@ -5318,7 +5318,7 @@
     "href": "slides/week7-day1.html#how-do-we-interpret-this-interval",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "How do we interpret this interval?",
-    "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0019812\n-0.0001181\n\n\n\n\n\n\n\n\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.115 and 1.85mm shorter than a female penguin’s bill."
+    "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0019812\n-0.0001181\n\n\n\n\n\n\n\n\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.118 and 1.98mm shorter than a female penguin’s bill."
   },
   {
     "objectID": "slides/week7-day1.html#how-do-body-mass-and-flipper-length-influence-a-penguins-bill-length",
@@ -6108,5 +6108,12 @@
       "Weekly materials",
       "Week 8"
     ]
+  },
+  {
+    "objectID": "slides/week7-day1.html#to-do-list-by-wednesday",
+    "href": "slides/week7-day1.html#to-do-list-by-wednesday",
+    "title": "Confidence Intervals – Real Life Sampling Distributions",
+    "section": "To Do List by Wednesday",
+    "text": "To Do List by Wednesday\n\nHypothesis test reading guide\nHypothesis test concept quiz\nConfidence interval R tutorial\nHypothesis test R tutorial"
   }
 ]
