@@ -94,8 +94,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - theme.scss
+      light: [cosmo, style/stat331.scss]
+      dark: [cosmo, style/stat331.scss, style/dark.scss]
     mainfont: "Atkinson Hyperlegible"
     code-copy: true
     code-overflow: wrap

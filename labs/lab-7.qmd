@@ -177,7 +177,7 @@ Alright, now that we have the bootstrap slope statistics, let's see how it
 looks! 
 
 ```{r}
-#| label: visualize-null-dist
+#| label: visualize-bootstrap-dist
  
 visualise(bootstrap_dist) +
   labs(x = "Slope Statistic", 

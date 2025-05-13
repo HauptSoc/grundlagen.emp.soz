@@ -792,11 +792,11 @@
     "text": "How do I get my p-value?\n\n\nCompare the observed statistic with the statistics produced assuming the null hypothesis was true.\n\n\n\n\nA p-value summarizes the probability of obtaining a sample statistic as or more extreme than what we observed, if the null hypothesis was true."
   },
   {
-    "objectID": "slides/week7-day2.html#section-4",
-    "href": "slides/week7-day2.html#section-4",
+    "objectID": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
+    "href": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "",
-    "text": "What condition do we need to be worried about?"
+    "section": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?",
+    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
   },
   {
     "objectID": "slides/week7-day2.html#exploring-the-hbr_maples-dataset",
@@ -806,8 +806,8 @@
     "text": "Exploring the hbr_maples dataset!\n\n\n\n\n\n\nstem_length: a number denoting the height of the seedling in millimeters\nstem_dry_mass: a number denoting the dry mass of the stem in grams"
   },
   {
-    "objectID": "slides/week7-day2.html#section-5",
-    "href": "slides/week7-day2.html#section-5",
+    "objectID": "slides/week7-day2.html#section-4",
+    "href": "slides/week7-day2.html#section-4",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
     "text": "What condition do we need to be worried about?"
@@ -848,13 +848,6 @@
     "text": "Step 3: Generate your resamples!\n\nhbr_maples %&gt;% \n  specify(response = stem_dry_mass,\n          explanatory = stem_length) %&gt;% \n  hypothesize(null = \"independence\") %&gt;% \n  generate(reps = 1000, type = \"permute\")\n\n\n\n\n\nreps – the number of resamples you want to generate\n\n\n\n\"permute\" – the method that should be used to generate the new samples"
   },
   {
-    "objectID": "slides/week7-day2.html#dont-worry",
-    "href": "slides/week7-day2.html#dont-worry",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Don’t worry,",
-    "text": "Don’t worry,\ninfer will let you know if you missed something!\n\nhbr_maples %&gt;% \n  specify(response = stem_dry_mass,\n          explanatory = stem_length) %&gt;% \n  generate(reps = 1000, type = \"permute\")\n\n\nError: Permuting should be done only when doing independence hypothesis test. See `hypothesize()`.\nIn addition: Warning message:\nYou have given `type = \"permute\"`, but `type` is expected to be `\"bootstrap\"`.\nThis workflow is untested and the results may not mean what you think they mean."
-  },
-  {
     "objectID": "slides/week7-day2.html#step-4-calculate-your-statistics",
     "href": "slides/week7-day2.html#step-4-calculate-your-statistics",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
@@ -883,6 +876,13 @@
     "text": "Is our observed statistic unlikely if the null hypothesis was true?\n\nvisualise(null_dist) +\n  xlim(c(-0.0011, 0.0011)) +\n  shade_p_value(obs_stat = obs_slope, \n                direction = \"two-sided\") +\n  labs(x = \"Permuted Slope Statistic\")"
   },
   {
+    "objectID": "slides/week7-day2.html#two-sided-alternative",
+    "href": "slides/week7-day2.html#two-sided-alternative",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Two-sided Alternative",
+    "text": "Two-sided Alternative\nIf our alternative hypothesis is two-sided, what is missing from the plot?"
+  },
+  {
     "objectID": "slides/week7-day2.html#the-p-value-is",
     "href": "slides/week7-day2.html#the-p-value-is",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
@@ -897,25 +897,32 @@
     "text": "How do we interpret a p-value?\n\nNeed:\n\nprobability of what we saw in the data\nassuming the null hypothesis is true\n\n\n\n\nThe probability of observing a slope statistic (for the relationship between stem length and stem dry mass) as or more extreme than what was observed is less than 1 in 1000, if there was no relationship between a sugar maple’s stem length and stem dry mass."
   },
   {
-    "objectID": "slides/week7-day2.html#classic-interpretation-mistakes",
-    "href": "slides/week7-day2.html#classic-interpretation-mistakes",
+    "objectID": "slides/week7-day2.html#decision-versus-conclusion",
+    "href": "slides/week7-day2.html#decision-versus-conclusion",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Classic interpretation mistakes",
-    "text": "Classic interpretation mistakes\n\n\n“The probability that the null hypothesis is true is about 0%.”\n\n\n\nYou assume the null is true when you calculate a p-value!"
+    "section": "Decision versus Conclusion",
+    "text": "Decision versus Conclusion\n\n\nDecision\n\nAt an \\(\\alpha\\) of 0.05 and a p-value of less than 0.001, we would reject \\(H_0\\).\n\n\n\n\n\nConclusion\nWe conclude that there is a linear relationship between the stem length and stem dry mass for sugar maples in the Hubbard Brook Experimental Forest."
   },
   {
-    "objectID": "slides/week7-day2.html#midterm-projects-study-limitations",
-    "href": "slides/week7-day2.html#midterm-projects-study-limitations",
+    "objectID": "slides/week7-day2.html#todays-data",
+    "href": "slides/week7-day2.html#todays-data",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Midterm Projects – Study Limitations",
-    "text": "Midterm Projects – Study Limitations\n\nYou must justify why you believe you can infer onto a population larger than your sample!\n\n\nCausal statements do not come from random / representative samples!"
+    "section": "Today’s Data",
+    "text": "Today’s Data\n\n\n\n\n“One of the best-known patterns in biogeography is Bergmann’s rule. It predicts that organisms at higher latitudes are larger than ones at lower latitudes. Many organisms follow Bergmann’s rule, including insects, birds, snakes, marine invertebrates, and &gt; terrestrial and marine mammals. What drives Bergmann’s rule? Bergmann originally hypothesized that the organisms he studied, birds, were larger in the colder, higher latitudes due to heat-conservation. But the heat-conservation hypothesis relies on internal regulation of body temperature and therefore does not apply to ectotherms, some of which also follow Bergmann’s rule.”"
   },
   {
-    "objectID": "slides/week7-day2.html#midterm-project-grades",
-    "href": "slides/week7-day2.html#midterm-project-grades",
+    "objectID": "slides/week7-day2.html#research-question",
+    "href": "slides/week7-day2.html#research-question",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Midterm Project Grades",
-    "text": "Midterm Project Grades\n\n\n\n\n\n\n\n\n\n\nExcellent Project\nSatisfactory Project\nProgressing Project\nNo Credit\n\n\n\n\nAt most one section is marked “Satisfactory” the remainder are marked “Excellent”\nAt most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”\nAt most two sections are marked “Progressing” the remainder are marked “Satisfactory”\nAt most one section is marked “Satisfactory” or “Excellent” the remainder are marked “Progressing”"
+    "section": "Research Question",
+    "text": "Research Question\n \n\n\nWhat is the relationship between a Fiddler Crab’s body size (carapace width) and the latitude in which it lives?"
+  },
+  {
+    "objectID": "slides/week7-day2.html#accessing-lab-7",
+    "href": "slides/week7-day2.html#accessing-lab-7",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Accessing Lab 7",
+    "text": "Accessing Lab 7\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nYou will be trading off roles in the middle of the lab! One person will do the hypothesis test coding and one person will do the confidence interval coding!\n\n\n\n\n\n\n\nStep 2: One member of your group needs to follow these instructions to copy the Lab 7 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 7 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document.\n\n\n\n\n\n\n\n\nSource Editor\n\n\nYou need to be in the source editor (not the pretty one) to use collaborative editing!"
   },
   {
     "objectID": "slides/week6-day2.html#deadline-reminders",
@@ -3643,51 +3650,72 @@
   {
     "objectID": "labs/lab-7.html",
     "href": "labs/lab-7.html",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
     "section": "",
-    "text": "Today we will explore the pie_crab dataset contained in the lterdatasampler R package. The data is from a study by Johnson et al. at the Plum Island Ecosystem Long Term Ecological Research site, studying the relationship between the size (carapace width) of a Fiddler Crab and the geographical location of its habitat. These data can be used to investigate if Bergmann’s Rule applies to Fiddler Crabs, or specifically that the size of a crab increases as the distance from the equator increases.\n\n\nThe students who investigated this relationship for their Midterm Project found that when both latitude and water temperature are included as explanatory variables in the multiple regression model, the coefficient associated with water temperature doesn’t make sense. Namely, the model suggests warmer water temperatures are associated with larger crab sizes. However, we know that the water is warmer near the equator, which is where the crab sizes should be smaller. Rather perplexing!\nThe moral of the story is that water temperature and latitude are high correlated with each other, so including them both as explanatory variables leads to multicollinearity – something we do not want in our multiple linear regression.\n\n\n\nThe focus of this lab is on quantifying the relationship between water temperature (response) and latitude (explanatory) for marshes (sites) along the Atlantic coast."
+    "text": "Today we will explore the pie_crab dataset contained in the lterdatasampler R package. The data is from a study by Johnson et al. at the Plum Island Ecosystem Long Term Ecological Research site, studying the relationship between the size (carapace width) of a Fiddler Crab and the geographical location of its habitat. These data can be used to investigate if Bergmann’s Rule applies to Fiddler Crabs, or specifically that the size of a crab increases as the distance from the equator increases."
   },
   {
-    "objectID": "labs/lab-7.html#data",
-    "href": "labs/lab-7.html#data",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
-    "section": "",
-    "text": "Today we will explore the pie_crab dataset contained in the lterdatasampler R package. The data is from a study by Johnson et al. at the Plum Island Ecosystem Long Term Ecological Research site, studying the relationship between the size (carapace width) of a Fiddler Crab and the geographical location of its habitat. These data can be used to investigate if Bergmann’s Rule applies to Fiddler Crabs, or specifically that the size of a crab increases as the distance from the equator increases.\n\n\nThe students who investigated this relationship for their Midterm Project found that when both latitude and water temperature are included as explanatory variables in the multiple regression model, the coefficient associated with water temperature doesn’t make sense. Namely, the model suggests warmer water temperatures are associated with larger crab sizes. However, we know that the water is warmer near the equator, which is where the crab sizes should be smaller. Rather perplexing!\nThe moral of the story is that water temperature and latitude are high correlated with each other, so including them both as explanatory variables leads to multicollinearity – something we do not want in our multiple linear regression.\n\n\n\nThe focus of this lab is on quantifying the relationship between water temperature (response) and latitude (explanatory) for marshes (sites) along the Atlantic coast."
-  },
-  {
-    "objectID": "labs/lab-7.html#cleaning-the-data",
-    "href": "labs/lab-7.html#cleaning-the-data",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
-    "section": "Cleaning the Data",
-    "text": "Cleaning the Data\nThe data contains information on at total of 392 Fiddler Crabs caught at 13 marshes on the Atlantic coast of the United States in summer 2016. However, at each marsh, there is only one recorded water temperature. Meaning, we need to collapse our dataset to have only one observation per marsh.\n1. Fill in the code below to create a new dataset called marsh_info which has 13 observations – one per marsh.\n\nmarsh_info &lt;- pie_crab %&gt;% \n  group_by(____) %&gt;% \n  slice_sample(n = 1) %&gt;% \n  ungroup()\n\nFrom this point forward, you should use the marsh_info dataset for EVERY problem. Keep in mind that you are no longer analyzing data on crabs! The dataset you have is on marshes along the Atlantic coast!"
+    "objectID": "labs/lab-7.html#exploring-the-data",
+    "href": "labs/lab-7.html#exploring-the-data",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Exploring the Data",
+    "text": "Exploring the Data\n1. How many crabs were included in this study?"
   },
   {
     "objectID": "labs/lab-7.html#visualizing-relationships",
     "href": "labs/lab-7.html#visualizing-relationships",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
     "section": "Visualizing Relationships",
-    "text": "Visualizing Relationships\n2. Create a scatterplot modeling the relationship between latitude (explanatory) and water temperature (response) for these 13 marshes. Don’t forget to add descriptive axis labels!\n3. Describe the relationship you see in the scatterplot. Be sure to address the four aspects we discussed in class: form, direction, strength, and unusual points! Keep in mind that you are no longer analyzing data on crabs! The dataset you have is on marshes along the Atlantic coast!\n\nSummarizing the Relationship\nNow that you’ve visualized the relationship, let’s summarize this relationship with a statistic. Specifically, we are interested in the slope statistic, as it captures the relationship between latitude and water temperature.\n4. Fill in the code below to calculate the observed slope for the relationship between the water temperature (response) and latitude (explanatory).\nNote: Nothing will be output when you run this code!\n\nobs_slope &lt;- marsh_info %&gt;% \n  specify(response = ____, \n          explanatory = ____) %&gt;% \n  calculate(stat = ____)"
+    "text": "Visualizing Relationships\n2. Create a scatterplot modeling the relationship between latitude (explanatory) and the size of a fiddler crab (response). Don’t forget to add descriptive axis labels!\n3. Describe the relationship you see in the scatterplot. Be sure to address the four aspects we discussed in class: form, direction, strength, and unusual points!"
   },
   {
-    "objectID": "labs/lab-7.html#bootstrap-distribution",
-    "href": "labs/lab-7.html#bootstrap-distribution",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
-    "section": "Bootstrap Distribution",
-    "text": "Bootstrap Distribution\nNow that we have the observed slope statistic, let’s see what variability we might get in the slope statistic for other samples (marshes) we might have gotten from the population (the Atlantic coast of the US).\nAs a refresher, when we use resampling to obtain our bootstrap distribution, our steps look like the following:\nStep 1: specify() the response and explanatory variables\nStep 2: generate() lots of bootstrap resamples\nStep 3: calculate() for each of the generated() samples, calculate the statistic you are interested in\nLet’s give this a try!\n5. Fill in the code to generate 500 bootstrap slope statistics (from 500 bootstrap resamples).\n\nbootstrap &lt;- marsh_info %&gt;% \n  specify(response = ____, \n          explanatory = ____) %&gt;% \n  generate(reps = ____, \n           type = ____) %&gt;% \n  calculate(stat = ____)\n\nAlright, now that we have the bootstrap slope statistics, let’s see how it looks! Let’s use the visualize() function (not ggplot()!) to make a quick visualization of the statistics you calculated above.\n6. Use the visualize() function to create a simple histogram of your 500 bootstrap statistics. It would be nice to change the x-axis label to describe what statistic is being plotted!\n\n# Code to visualize bootstrap statistics"
+    "objectID": "labs/lab-7.html#step-1-summarizing-the-relationship",
+    "href": "labs/lab-7.html#step-1-summarizing-the-relationship",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 1: Summarizing the Relationship",
+    "text": "Step 1: Summarizing the Relationship\nSpecifically, we are interested in the slope statistic, as it captures the relationship between latitude and water temperature.\n4. Fill in the code below to calculate the observed slope for the relationship between the the size of a fiddler crab (response) and latitude (explanatory). Note: Nothing will be output when you run this code!\n\nobs_slope &lt;- pie_crab %&gt;% \n  specify(response = ____, \n          explanatory = ____) %&gt;% \n  calculate(stat = ____)"
   },
   {
-    "objectID": "labs/lab-7.html#confidence-interval",
-    "href": "labs/lab-7.html#confidence-interval",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
-    "section": "Confidence Interval",
-    "text": "Confidence Interval\nThe next step to obtain our confidence interval! First we need to determine what percentage of statistics we want to keep in the confidence interval. 90%? 95%? 99%? 80%?\nThis seems like a study where we care a bit less about our interval capturing the true value, at least compared to something like a medical study. So, I think this could be a great instance to use a 90% confidence interval.\n7. Use the get_confidence_interval() function to find the 90% confidence interval from your bootstrap distribution, using the percentile method!\n\n# Code to obtain a 90% PERCENTILE based confidence interval\n\n8. Interpret the confidence interval you obtained in #7. Make sure to include the context of the data and the population of interest!\nJust for fun, let’s compare the confidence we obtained using a percentile method with an interval found using the SE method.\n9. Use the get_confidence_interval() function to find the 90% confidence interval from your bootstrap distribution, using the SE method! Remember – with the SE method, you need to specify the point estimate!\n\n# Code to obtain a 90% SE based confidence interval\n\n10. How do your confidence intervals compare? Based on the shape of the bootstrap distribution, would you expect for these methods to yield similar results?\nHint: Think about the conditions for using the SE method to obtain a confidence interval!"
+    "objectID": "labs/lab-7.html#step-2-obtain-the-permuted-statistics",
+    "href": "labs/lab-7.html#step-2-obtain-the-permuted-statistics",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 2: Obtain the Permuted Statistics",
+    "text": "Step 2: Obtain the Permuted Statistics\nAfter you have calculated your observed statistic, you need to create a permutation distribution of statistics that might have occurred if the null hypothesis was true.\n5. Fill in the code below to generate 500 permuted statistics for the permutation distribution and save these statistics in an object named null_dist.\n\nnull_dist &lt;- pie_crab %&gt;% \n  specify(response = ____, \n          explanatory = ____) %&gt;% \n  hypothesize(null = ____) %&gt;% \n  generate(reps = ____, \n           type = \"permute\") %&gt;% \n  calculate(stat = ____)"
   },
   {
-    "objectID": "labs/lab-7.html#bootstrap-assumptions",
-    "href": "labs/lab-7.html#bootstrap-assumptions",
-    "title": "Lab 7: Confidence Intervals for Water Temperature and Latitude",
-    "section": "Bootstrap Assumptions",
-    "text": "Bootstrap Assumptions\nA bootstrap distribution aims to simulate the variability we’d get from other samples from our population. However, the accuracy of these samples relies on the quality of our original sample.\n11. Based on the information given, how do you feel about the assumption a bootstrap distribution makes about the original sample? What issues do you believe might prevent this assumption being appropriate?"
+    "objectID": "labs/lab-7.html#step-3-visualize-the-null-distribution",
+    "href": "labs/lab-7.html#step-3-visualize-the-null-distribution",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 3: Visualize the Null Distribution",
+    "text": "Step 3: Visualize the Null Distribution\nWe can visualize this null distribution by running the following code:\n\nvisualise(null_dist)"
+  },
+  {
+    "objectID": "labs/lab-7.html#step-4-obtain-the-p-value",
+    "href": "labs/lab-7.html#step-4-obtain-the-p-value",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 4: Obtain the p-value",
+    "text": "Step 4: Obtain the p-value\nNow that you have calculated the observed statistic and generated a permutation distribution, you can calculate the p-value for your hypothesis test using the get_p_value() function.\n6. Fill in the code below to calculate the p-value for the hypothesis test.\n\nget_p_value(null_dist, \n            obs_stat = ____, \n            direction = ____)\n\n7. Based on your p-value and an \\(\\alpha = 0.1\\), what decision would you reach regarding the null hypothesis?\n8. Based on your decision, what would you conclude about the relationship between these variables? Be specific!"
+  },
+  {
+    "objectID": "labs/lab-7.html#step-1-approximate-other-statistics-that-could-have-happened",
+    "href": "labs/lab-7.html#step-1-approximate-other-statistics-that-could-have-happened",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 1: Approximate Other Statistics that Could Have Happened",
+    "text": "Step 1: Approximate Other Statistics that Could Have Happened\nFirst, we’ll use bootstrapping to obtain statistics that might have happened if we went out and collected a different sample of fiddler crabs.\n9. Fill in the code to generate 500 bootstrap slope statistics (from 500 bootstrap resamples).\n\nbootstrap_dist &lt;- pie_crab %&gt;% \n  specify(response = ____, \n          explanatory = ____) %&gt;% \n  generate(reps = ____, \n           type = ____) %&gt;% \n  calculate(stat = ____)"
+  },
+  {
+    "objectID": "labs/lab-7.html#step-2-visualize-the-bootstrap-distribution",
+    "href": "labs/lab-7.html#step-2-visualize-the-bootstrap-distribution",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 2: Visualize the Bootstrap Distribution",
+    "text": "Step 2: Visualize the Bootstrap Distribution\nAlright, now that we have the bootstrap slope statistics, let’s see how it looks!\n\nvisualise(bootstrap_dist) +\n  labs(x = \"Slope Statistic\", \n       title = \"Bootstrap Distribution with 500 Resamples\")"
+  },
+  {
+    "objectID": "labs/lab-7.html#step-3-obtain-confidence-interval",
+    "href": "labs/lab-7.html#step-3-obtain-confidence-interval",
+    "title": "Lab 7: Investigating Bergmann’s Rule",
+    "section": "Step 3: Obtain Confidence Interval",
+    "text": "Step 3: Obtain Confidence Interval\nThe next step to obtain our confidence interval! First we need to determine what percentage of statistics we want to keep in the confidence interval. 90%? 95%? 99%? 80%?\nThis seems like a study where we care a bit less about our interval capturing the true value, at least compared to something like a medical study. So, I think this could be a great instance to use a 90% confidence interval.\n10. Use the get_confidence_interval() function to find the 90% confidence interval from your bootstrap distribution, using the percentile method!\n11. Interpret the confidence interval you obtained in #10. Make sure to include (1) your confidence level, (2) the statistic you are estimating, (3) the population of interest, and (4) your endpoints!\n12. Based on this interval, does Bergmann’s Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?"
   },
   {
     "objectID": "labs/lab-9.html",
@@ -5321,39 +5349,11 @@
     "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0019812\n-0.0001181\n\n\n\n\n\n\n\n\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.118 and 1.98mm shorter than a female penguin’s bill."
   },
   {
-    "objectID": "slides/week7-day1.html#how-do-body-mass-and-flipper-length-influence-a-penguins-bill-length",
-    "href": "slides/week7-day1.html#how-do-body-mass-and-flipper-length-influence-a-penguins-bill-length",
+    "objectID": "slides/week7-day1.html#to-do-list-by-wednesday",
+    "href": "slides/week7-day1.html#to-do-list-by-wednesday",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "How do body mass and flipper length influence a penguin’s bill length?",
-    "text": "How do body mass and flipper length influence a penguin’s bill length?\n\n\n\nobserved_fit &lt;- penguins %&gt;%\n  specify(bill_length_mm ~ body_mass_g + flipper_length_mm) %&gt;%\n  fit()\n\nbootstrap_fits &lt;- penguins %&gt;%\n  specify(bill_length_mm ~ body_mass_g + flipper_length_mm) %&gt;%\n  generate(reps = 1000, type = \"bootstrap\") %&gt;%\n  fit()"
-  },
-  {
-    "objectID": "slides/week7-day1.html#visualizing-bootstrap-distributions",
-    "href": "slides/week7-day1.html#visualizing-bootstrap-distributions",
-    "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "Visualizing Bootstrap Distributions",
-    "text": "Visualizing Bootstrap Distributions\n\nvisualise(bootstrap_fits)"
-  },
-  {
-    "objectID": "slides/week7-day1.html#obtaining-and-interpreting-confidence-intervals",
-    "href": "slides/week7-day1.html#obtaining-and-interpreting-confidence-intervals",
-    "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "Obtaining and Interpreting Confidence Intervals",
-    "text": "Obtaining and Interpreting Confidence Intervals\n\n\n\n\n\nterm\nLower Bound\nUpper Bound\n\n\n\n\nbody_mass_g\n-0.0002380\n0.0015837\n\n\nflipper_length_mm\n0.1701842\n0.2696596\n\n\nintercept\n-10.0512530\n3.6845668\n\n\n\n\n\n\n\n\nHow would you interpret the confidence interval for flipper_length_mm? For body_mass_g?"
-  },
-  {
-    "objectID": "slides/week7-day1.html#holding-the-other-variables-constant",
-    "href": "slides/week7-day1.html#holding-the-other-variables-constant",
-    "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "Holding the Other Variable(s) Constant",
-    "text": "Holding the Other Variable(s) Constant\n\nHolding body mass constant, we are 95% confident that a 1mm increase in flipper length is associated with between a 0.173 and 0.266mm increase in a penguin’s bill length.\n\n\n\nHolding flipper length constant, we are 95% confident that a 100 gram increase in body mass is associated with between a 0.203mm decrease and a 0.157mm increase in a penguin’s bill length."
-  },
-  {
-    "objectID": "slides/week7-day1.html#water-temperature-and-latitude",
-    "href": "slides/week7-day1.html#water-temperature-and-latitude",
-    "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "Water Temperature and Latitude",
-    "text": "Water Temperature and Latitude\n\n\n\n\nWhen including both water temperature and latitude in a multiple linear regression, we get coefficients that contradict the relationships seen in the visualizations. This only happens if the explanatory variables are highly correlated with each other.\n\n\n\n\n\n\n\n\nWhat is the relationship between water temperature and latitude for salt marshes along the Atlantic coast?"
+    "section": "To Do List by Wednesday",
+    "text": "To Do List by Wednesday\n\nHypothesis test reading guide\nHypothesis test concept quiz\nConfidence interval R tutorial\nHypothesis test R tutorial"
   },
   {
     "objectID": "slides/week7-sampling-variability.html#each-group-has-a-different-sample-of-25-uc-csu-coach-salaries.",
@@ -6108,54 +6108,5 @@
       "Weekly materials",
       "Week 8"
     ]
-  },
-  {
-    "objectID": "slides/week7-day1.html#to-do-list-by-wednesday",
-    "href": "slides/week7-day1.html#to-do-list-by-wednesday",
-    "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "To Do List by Wednesday",
-    "text": "To Do List by Wednesday\n\nHypothesis test reading guide\nHypothesis test concept quiz\nConfidence interval R tutorial\nHypothesis test R tutorial"
-  },
-  {
-    "objectID": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
-    "href": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?",
-    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
-  },
-  {
-    "objectID": "slides/week7-day2.html#decision-versus-conclusion",
-    "href": "slides/week7-day2.html#decision-versus-conclusion",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Decision versus Conclusion",
-    "text": "Decision versus Conclusion\n\n\nDecision\n\nAt an \\(\\alpha\\) of 0.05 and a p-value of less than 0.001, we would reject \\(H_0\\).\n\n\n\n\n\nConclusion\nWe conclude that there is a linear relationship between the stem length and stem dry mass for sugar maples in the Hubbard Brook Experimental Forest."
-  },
-  {
-    "objectID": "slides/week7-day2.html#two-sided-alternative",
-    "href": "slides/week7-day2.html#two-sided-alternative",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Two-sided Alternative",
-    "text": "Two-sided Alternative\nIf our alternative hypothesis is two-sided, what is missing from the plot?"
-  },
-  {
-    "objectID": "slides/week7-day2.html#todays-data",
-    "href": "slides/week7-day2.html#todays-data",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Today’s Data",
-    "text": "Today’s Data\n\n\n\n\n“One of the best-known patterns in biogeography is Bergmann’s rule. It predicts that organisms at higher latitudes are larger than ones at lower latitudes. Many organisms follow Bergmann’s rule, including insects, birds, snakes, marine invertebrates, and &gt; terrestrial and marine mammals. What drives Bergmann’s rule? Bergmann originally hypothesized that the organisms he studied, birds, were larger in the colder, higher latitudes due to heat-conservation. But the heat-conservation hypothesis relies on internal regulation of body temperature and therefore does not apply to ectotherms, some of which also follow Bergmann’s rule.”"
-  },
-  {
-    "objectID": "slides/week7-day2.html#research-question",
-    "href": "slides/week7-day2.html#research-question",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Research Question",
-    "text": "Research Question\n \n\n\nWhat is the relationship between a Fiddler Crab’s body size (carapace width) and the latitude in which it lives?"
-  },
-  {
-    "objectID": "slides/week7-day2.html#accessing-lab-7",
-    "href": "slides/week7-day2.html#accessing-lab-7",
-    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Accessing Lab 7",
-    "text": "Accessing Lab 7\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nYou will be trading off roles in the middle of the lab! One person will do the hypothesis test coding and one person will do the confidence interval coding!\n\n\n\n\n\n\n\nStep 2: One member of your group needs to follow these instructions to copy the Lab 7 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 7 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document.\n\n\n\n\n\n\n\n\nSource Editor\n\n\nYou need to be in the source editor (not the pretty one) to use collaborative editing!"
   }
 ]
