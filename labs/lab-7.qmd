@@ -1,5 +1,5 @@
 ---
-title: "Lab 7: Confidence Intervals for Water Temperature and Latitude"
+title: "Lab 7: Investigating Bergmann's Rule"
 author: "The names of your group members here!"
 format: html
 embed-resources: true
@@ -20,91 +20,150 @@ library(infer)
 library(lterdatasampler)
 
 set.seed(1234)
-# This is so you will get the SAME bootstrap distribution every time you run your code
-# So your confidence interval won't change. :) 
+# This is so you will get the SAME bootstrap and null distributions every time you run your code
+# So your confidence interval and p-value won't change. :) 
 ```
 
-## Data
+# Data
 
-Today we will explore the `pie_crab` dataset contained in the **lterdatasampler** R package. The data is from a study by Johnson et al. at the Plum Island Ecosystem Long Term Ecological Research site, studying the relationship between the size (carapace width) of a Fiddler Crab and the geographical location of its habitat. These data can be used to investigate if Bergmann's Rule applies to Fiddler Crabs, or specifically that the size of a crab increases as the distance from the equator increases.
+Today we will explore the `pie_crab` dataset contained in the **lterdatasampler**
+R package. The data is from a study by Johnson et al. at the Plum Island
+Ecosystem Long Term Ecological Research site, studying the relationship between
+the size (carapace width) of a Fiddler Crab and the geographical location of its
+habitat. These data can be used to investigate if Bergmann's Rule applies to
+Fiddler Crabs, or specifically that the size of a crab increases as the distance
+from the equator increases.
 
-### Motivation
+# Our Investigation
 
-The students who investigated this relationship for their Midterm Project found that when *both* latitude *and* water temperature are included as explanatory variables in the multiple regression model, the coefficient associated with water temperature doesn't make sense. Namely, the model suggests warmer water temperatures are associated with larger crab sizes. However, we know that the water is warmer near the equator, which is where the crab sizes should be **smaller**. Rather perplexing!
+The focus of this lab is on quantifying the relationship between the size of 
+fiddler crabs (response) and the environment in which they live (explanatory). 
 
-The moral of the story is that water temperature and latitude are high correlated with each other, so including them both as explanatory variables leads to *multicollinearity* -- something we **do not** want in our multiple linear regression.
+## Exploring the Data
 
-### Our Investigation
-
-The focus of this lab is on quantifying the relationship between water temperature (response) and latitude (explanatory) for marshes (sites) along the Atlantic coast.
-
-## Cleaning the Data
-
-The data contains information on at total of 392 Fiddler Crabs caught at 13 marshes on the Atlantic coast of the United States in summer 2016. However, at each marsh, there is only **one** recorded water temperature. Meaning, we need to collapse our dataset to have only **one** observation per marsh.
-
-**1. Fill in the code below to create a new dataset called `marsh_info` which has 13 observations -- one per marsh.**
+**1. How many crabs were included in this study?**
 
 ```{r}
-#| label: isolating-one-observation-per-site
+#| label: question-1
 
-marsh_info <- pie_crab %>% 
-  group_by(____) %>% 
-  slice_sample(n = 1) %>% 
-  ungroup()
+
 ```
 
-**From this point forward, you should use the `marsh_info` dataset for EVERY problem.** Keep in mind that you are no longer analyzing data on crabs! The dataset you have is on marshes along the Atlantic coast!
 
 ## Visualizing Relationships
 
-**2. Create a scatterplot modeling the relationship between latitude (explanatory) and water temperature (response) for these 13 marshes.** *Don't forget to add descriptive axis labels!*
+**2. Create a scatterplot modeling the relationship between latitude
+(explanatory) and the size of a fiddler crab (response).** 
+*Don't forget to add descriptive axis labels!*
 
 ```{r}
-#| label: scatterplot
+#| label: question-2
 
   
 ```
 
-**3. Describe the relationship you see in the scatterplot. Be sure to address the four aspects we discussed in class: form, direction, strength, and unusual points!** Keep in mind that you are no longer analyzing data on crabs! The dataset you have is on marshes along the Atlantic coast!
+**3. Describe the relationship you see in the scatterplot. Be sure to address the four aspects we discussed in class: form, direction, strength, and unusual points!**
 
-### Summarizing the Relationship
 
-Now that you've visualized the relationship, let's summarize this relationship with a statistic. Specifically, we are interested in the slope statistic, as it captures the relationship between latitude and water temperature.
+# Testing for a Relationship
 
-**4. Fill in the code below to calculate the observed slope for the relationship between the water temperature (response) and latitude (explanatory).**
+Frequently, the first step in a statistical analysis is to conduct a hypothesis
+test, testing if there is a relationship between the variables. Let's go through
+the four steps needed to determine whether there is a relationship between these
+variables.
 
+## Step 1: Summarizing the Relationship 
+
+Specifically, we are interested in the slope statistic, as it
+captures the relationship between latitude and water temperature.
+
+**4. Fill in the code below to calculate the observed slope for the relationship between the the size of a fiddler crab (response) and latitude (explanatory).**
 *Note: Nothing will be output when you run this code!*
 
 ```{r}
-#| label: calculate-slope
+#| label: question-4
 
-obs_slope <- marsh_info %>% 
+obs_slope <- pie_crab %>% 
   specify(response = ____, 
           explanatory = ____) %>% 
   calculate(stat = ____)
 ```
 
-## Bootstrap Distribution
+## Step 2: Obtain the Permuted Statistics
 
-Now that we have the observed slope statistic, let's see what variability we might get in the slope statistic for other samples (marshes) we might have gotten from the population (the Atlantic coast of the US).
+After you have calculated your observed statistic, you need to create a 
+permutation distribution of statistics that might have occurred if the null
+hypothesis was true.
 
-As a refresher, when we use resampling to obtain our bootstrap distribution, our steps look like the following:
-
-Step 1: `specify()` the response and explanatory variables
-
-Step 2: `generate()` lots of bootstrap resamples
-
-Step 3: `calculate()` for each of the `generated()` samples, calculate the statistic you are interested in
-
-Let's give this a try!
-
-**5. Fill in the code to generate 500 bootstrap slope statistics (from 500 bootstrap resamples).**
+**5. Fill in the code below to generate 500 permuted statistics for the permutation distribution and save these statistics in an object named `null_dist`.**
 
 ```{r}
-#| label: boot-dist
+#| label: question-5
+
+null_dist <- pie_crab %>% 
+  specify(response = ____, 
+          explanatory = ____) %>% 
+  hypothesize(null = ____) %>% 
+  generate(reps = ____, 
+           type = "permute") %>% 
+  calculate(stat = ____)
+
+```
+
+## Step 3: Visualize the Null Distribution
+
+We can visualize this null distribution by running the following code:
+
+```{r}
+#| label: visualize-null-dist
+ 
+visualise(null_dist) 
+```
+
+## Step 4: Obtain the p-value 
+
+Now that you have calculated the observed statistic and generated a
+permutation distribution, you can calculate the p-value for your hypothesis test
+using the `get_p_value()` function.
+
+**6. Fill in the code below to calculate the p-value for the hypothesis test.**
+
+```{r}
+#| label: question-6
+
+get_p_value(null_dist, 
+            obs_stat = ____, 
+            direction = ____)
+```
+
+**7. Based on your p-value and an** $\alpha = 0.1$, **what decision would you reach regarding the null hypothesis?**
+
+
+**8. Based on your decision, what would you conclude about the relationship between these variables? Be specific!**
+
+
+<!-- Now switch roles! -->
+
+# Quantifying the Relationship
+
+Now that you've confirmed that there is a relationship between these variables,
+let's summarize how large this relationship is! 
+
+Let's go through the four steps needed to determine whether there is a relationship between these
+variables.
+
+## Step 1: Approximate Other Statistics that Could Have Happened
+
+First, we'll use bootstrapping to obtain statistics that might have happened if
+we went out and collected a different sample of fiddler crabs. 
+
+**9. Fill in the code to generate 500 bootstrap slope statistics (from 500 bootstrap resamples).**
+
+```{r}
+#| label: question-9
 #| cache: true
 
-bootstrap <- marsh_info %>% 
+bootstrap_dist <- pie_crab %>% 
   specify(response = ____, 
           explanatory = ____) %>% 
   generate(reps = ____, 
@@ -112,50 +171,39 @@ bootstrap <- marsh_info %>%
   calculate(stat = ____)
 ```
 
-Alright, now that we have the bootstrap slope statistics, let's see how it looks! Let's use the `visualize()` function (not `ggplot()`!) to make a quick visualization of the statistics you calculated above.
+## Step 2: Visualize the Bootstrap Distribution
 
-**6. Use the `visualize()` function to create a simple histogram of your 500 bootstrap statistics.** *It would be nice to change the x-axis label to describe what statistic is being plotted!*
+Alright, now that we have the bootstrap slope statistics, let's see how it
+looks! 
 
 ```{r}
-#| label: visualize-boot-dist
-# Code to visualize bootstrap statistics
-
+#| label: visualize-null-dist
+ 
+visualise(bootstrap_dist) +
+  labs(x = "Slope Statistic", 
+       title = "Bootstrap Distribution with 500 Resamples")
 ```
 
-## Confidence Interval
+## Step 3: Obtain Confidence Interval
 
-The next step to obtain our confidence interval! First we need to determine what percentage of statistics we want to keep in the confidence interval. 90%? 95%? 99%? 80%?
+The next step to obtain our confidence interval! First we need to determine what
+percentage of statistics we want to keep in the confidence interval. 90%? 95%?
+99%? 80%?
 
-This seems like a study where we care a bit less about our interval capturing the true value, at least compared to something like a medical study. So, I think this could be a great instance to use a 90% confidence interval.
+This seems like a study where we care a bit less about our interval capturing
+the true value, at least compared to something like a medical study. So, I think
+this could be a great instance to use a 90% confidence interval.
 
-**7. Use the `get_confidence_interval()` function to find the 90% confidence interval from your bootstrap distribution, using the percentile method!**
-
-```{r}
-#| label: ci-percentile
-# Code to obtain a 90% PERCENTILE based confidence interval
-
-
-```
-
-**8. Interpret the confidence interval you obtained in #7. Make sure to include the context of the data and the population of interest!**
-
-Just for fun, let's compare the confidence we obtained using a percentile method with an interval found using the SE method.
-
-**9. Use the `get_confidence_interval()` function to find the 90% confidence interval from your bootstrap distribution, using the SE method!** *Remember -- with the SE method, you need to specify the point estimate!*
+**10. Use the `get_confidence_interval()` function to find the 90% confidence interval from your bootstrap distribution, using the percentile method!**
 
 ```{r}
-#| label: ci-se
-# Code to obtain a 90% SE based confidence interval
+#| label: question-10
 
 
 ```
 
-**10. How do your confidence intervals compare? Based on the shape of the bootstrap distribution, would you expect for these methods to yield similar results?**
+**11. Interpret the confidence interval you obtained in #10. Make sure to include (1) your confidence level, (2) the statistic you are estimating, (3) the population of interest, and (4) your endpoints!**
 
-*Hint: Think about the conditions for using the SE method to obtain a confidence interval!*
 
-## Bootstrap Assumptions
+**12. Based on this interval, does Bergmann's Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?**
 
-A bootstrap distribution aims to simulate the variability we'd get from other samples from our population. However, the accuracy of these samples relies on the quality of our original sample.
-
-**11. Based on the information given, how do you feel about the assumption a bootstrap distribution makes about the original sample? What issues do you believe might prevent this assumption being appropriate?**

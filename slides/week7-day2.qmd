@@ -29,8 +29,11 @@ null_dist <- hbr_maples %>%
 ::: fragment
 **Week 8**
 
--   Learn about hypothesis testing for SLR & MLR
--   Compare "visual" model selection with p-value model selection
+::: {.small}
+-   Dig deeper into model conditions
+-   Learn about One-Way ANOVA
+-   Compare "visual" model selection with p-value model selection (Stat Critique #2)
+:::
 :::
 ::::
 
@@ -38,8 +41,10 @@ null_dist <- hbr_maples %>%
 ::: fragment
 **Week 9**
 
--   Learn about one-way ANOVA
--   Get started on first portion of Final Project
+::: {.small}
+-   Learn about simulation-based and theory-based inference for one-way ANOVA
+-   First draft of Final Project
+:::
 :::
 ::::
 
@@ -47,22 +52,24 @@ null_dist <- hbr_maples %>%
 ::: fragment
 **Week 10**
 
+::: {.small}
 -   Learn about two-way ANOVA
--   Finish Final Project
+-   Finish Final Project (poster)
+:::
 :::
 ::::
 :::::::::
 
 ## Upcoming Deadlines
 
--   Lab 6 revisions are due on Wednesday (by midnight)
--   Statistical Critique 2 is due next Monday (at 5pm)
--   Final revisions on **all** assignments will be accepted until Sunday, March 17
+-   Lab 4 revisions are due on Friday (May 16)
+-   Lab 3 second revisions are due on Friday (May 16)
 
 ::: callout-note
 # Revision Deadlines
 
-If you did not submit revisions by the deadline (or forgot to include your reflections), your assignment **is not** eligible for additional revisions.
+If you did not submit revisions by the deadline (or forgot to include your
+reflections), your assignment **is not** eligible for additional revisions.
 :::
 
 ## 
@@ -237,20 +244,22 @@ A p-value summarizes the [**probability**]{style="color: #76b5c5;"} of obtaining
 
 <!-- add slides about HT decisions -->
 
-## 
-
-::: {style="font-size: 3em; color: #000000;"}
-Your turn!
-:::
-
-::: {style="font-size: 1.5em; color: #000000;"}
-**What is one similarity and one difference between**
-:::
+## What is one similarity and one difference between a permutation distribution and a bootstrap distribution?
 
 :::::::: columns
 :::: {.column width="45%"}
-::: {style="font-size: 1.5em; color: #76b5c5;"}
-a permutation distribution
+::: {style="font-size: 1.5em;"}
+Similarity
+:::
+
+::: {.small}
+Distributions of sample statistics
+
+Use resampling to see variability
+
+Approximate a sampling distribution
+
+Use observed data
 :::
 ::::
 
@@ -258,8 +267,16 @@ a permutation distribution
 :::
 
 :::: {.column width="45%"}
-::: {style="font-size: 1.5em; color: #e28743;"}
-a bootstrap distribution
+::: {.fragment}
+::: {style="font-size: 1.5em;"}
+Difference
+:::
+
+::: {.small}
+Permutation distributions assume $H_0$ is true
+
+Bootstrapping resamples with replacement
+:::
 :::
 ::::
 ::::::::
@@ -425,28 +442,6 @@ hbr_maples %>%
 :::
 ::::::
 
-## Don't worry,
-
-`infer` will let you know if you missed something!
-
-```{r permute-error}
-#| eval: false
-#| echo: true
-hbr_maples %>% 
-  specify(response = stem_dry_mass,
-          explanatory = stem_length) %>% 
-  generate(reps = 1000, type = "permute")
-```
-
-</br>
-
-```         
-Error: Permuting should be done only when doing independence hypothesis test. See `hypothesize()`.
-In addition: Warning message:
-You have given `type = "permute"`, but `type` is expected to be `"bootstrap"`.
-This workflow is untested and the results may not mean what you think they mean. 
-```
-
 ## Step 4: Calculate your statistics!
 
 ```{r calculate}
@@ -494,6 +489,23 @@ obs_slope <- hbr_maples %>%
 #| label: null-dist-with-obs-slope
 
 visualise(null_dist) +
+  xlim(c(-0.0011, 0.0011)) +
+  shade_p_value(obs_stat = obs_slope, 
+                direction = "two-sided") +
+  labs(x = "Permuted Slope Statistic")
+```
+
+## Two-sided Alternative
+
+If our alternative hypothesis is two-sided, what is missing from the plot?
+
+```{r}
+#| echo: false
+#| label: null-dist-with-obs-slope-2
+#| fig-align: center
+
+visualise(null_dist) +
+  xlim(c(-0.0011, 0.0011)) +
   shade_p_value(obs_stat = obs_slope, 
                 direction = "two-sided") +
   labs(x = "Permuted Slope Statistic")
@@ -532,44 +544,110 @@ Need:
 
 > The probability of observing a slope statistic (for the relationship between stem length and stem dry mass) as or more extreme than what was observed is less than 1 in 1000, if there was no relationship between a sugar maple's stem length and stem dry mass.
 
-## Classic interpretation mistakes
+## Decision versus Conclusion
 
-</br>
+::: columns
+::: {.column width="47%"}
+[**Decision**]{style="font-size: 1.5em;"}
 
-> "The probability that the null hypothesis is true is about 0%."
-
-. . .
-
-::: {style="font-size: 1.25em; color: #ed8402;"}
-You assume the null is true when you calculate a p-value!
+::: {.fragment}
+At an $\alpha$ of 0.05 and a p-value of less than 0.001, we would reject $H_0$.
+:::
 :::
 
-<!-- add slide about HT decision / conclusion -->
+::: {.column width="5%"}
+:::
+
+::: {.column width="47%"}
+::: {.fragment}
+[**Conclusion**]{style="font-size: 1.5em;"}
+
+We conclude that there is a linear relationship between the stem length and stem
+dry mass for sugar maples in the Hubbard Brook Experimental Forest. 
+:::
+:::
+:::
 
 <!-- add slide about why we choose 0.05 versus 0.01 -->
 
-<!-- add slide about why we use != instead of > or < -->
+# Lab 7
 
-# Grade Check-in
+## Today's Data
 
-## Midterm Projects -- Study Limitations
+::: columns
+::: {.column width="65%"}
+::: small
+> "One of the best-known patterns in biogeography is Bergmann’s rule. It
+> predicts that organisms at higher latitudes are larger than ones at lower
+> latitudes. Many organisms follow Bergmann’s rule, including insects, birds, 
+> snakes, marine invertebrates, and > terrestrial and marine mammals. What
+> drives Bergmann’s rule? Bergmann originally hypothesized that the organisms
+> he studied, birds, were larger in the colder, higher latitudes due to
+> heat-conservation. But the heat-conservation hypothesis relies on internal
+> regulation of body temperature and therefore 
+> [does not apply to ectotherms]{.underline}, some of which also follow
+> Bergmann’s rule."
+:::
 
-</br>
+:::
 
-You must **justify** why you believe you can infer onto a population larger than your sample!
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+![](images/fiddler-crab.jpg){fig-alt="A fiddler crab on wet, muddy ground. The crab has one large, pale claw and one much smaller claw, with a shiny carapace and stalked eyes."}
+:::
+:::
+
+## Research Question
+
+</br> </br>
+
+::: centered
+> What is the relationship between a Fiddler Crab's body size (carapace width)
+> and the latitude in which it lives?
+:::
+
+## Accessing Lab 7
+
+::: {.midi}
+**Step 1:** Both members of your group need to join your **group** workspace 
+(link posted in the Announcements of your group)
+:::
 
 . . .
 
-</br>
-
-Causal statements **do not** come from random / representative samples!
-
-## Midterm Project Grades
-
-::: small
-| **Excellent Project** | **Satisfactory Project** | **Progressing Project** | **No Credit** |
-|------------------|------------------|------------------|------------------|
-| At most one section is marked "Satisfactory" the remainder are marked "Excellent" | At most one section is marked "Progressing" the remainder are marked "Satisfactory" or "Excellent" | At most two sections are marked "Progressing" the remainder are marked "Satisfactory" | At most one section is marked "Satisfactory" or "Excellent" the remainder are marked "Progressing" |
+::: {.small}
+::: {.callout-note}
+# Roles
+You will be trading off roles in the middle of the lab! One person will do the 
+hypothesis test coding and one person will do the confidence interval coding! 
+:::
 :::
 
-# [Grade Check-in Activity](../activity/week-8-grade-check.qmd "Grade Check-in Activity")
+. . .
+
+::: {.midi}
+**Step 2:** One member of your group needs to [follow these instructions to copy the Lab 7 project into your group's workspace](https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA)
+:::
+
+. . .
+
+::: {.midi}
+**Step 3:** Both members open the Lab 7 assignment in your group workspace!
+:::
+
+. . .
+
+::: {.midi}
+**Step 4:** Follow the [final instructions](https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw) to activate collaborative editing in the document. 
+:::
+
+::: {.small}
+::: {.callout-important}
+# Source Editor
+
+You need to be in the source editor (not the pretty one) to use collaborative editing! 
+:::
+:::
+

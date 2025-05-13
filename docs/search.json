@@ -719,14 +719,14 @@
     "href": "slides/week7-day2.html#weeks-8-9-10",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Weeks 8, 9, & 10",
-    "text": "Weeks 8, 9, & 10\n\n\n\nWeek 8\n\nLearn about hypothesis testing for SLR & MLR\nCompare “visual” model selection with p-value model selection\n\n\n\n\nWeek 9\n\nLearn about one-way ANOVA\nGet started on first portion of Final Project\n\n\n\n\nWeek 10\n\nLearn about two-way ANOVA\nFinish Final Project"
+    "text": "Weeks 8, 9, & 10\n\n\n\nWeek 8\n\n\nDig deeper into model conditions\nLearn about One-Way ANOVA\nCompare “visual” model selection with p-value model selection (Stat Critique #2)\n\n\n\n\n\nWeek 9\n\n\nLearn about simulation-based and theory-based inference for one-way ANOVA\nFirst draft of Final Project\n\n\n\n\n\nWeek 10\n\n\nLearn about two-way ANOVA\nFinish Final Project (poster)"
   },
   {
     "objectID": "slides/week7-day2.html#upcoming-deadlines",
     "href": "slides/week7-day2.html#upcoming-deadlines",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 6 revisions are due on Wednesday (by midnight)\nStatistical Critique 2 is due next Monday (at 5pm)\nFinal revisions on all assignments will be accepted until Sunday, March 17\n\n\n\n\n\n\n\nRevision Deadlines\n\n\nIf you did not submit revisions by the deadline (or forgot to include your reflections), your assignment is not eligible for additional revisions."
+    "text": "Upcoming Deadlines\n\nLab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\n\n\n\n\n\n\n\nRevision Deadlines\n\n\nIf you did not submit revisions by the deadline (or forgot to include your reflections), your assignment is not eligible for additional revisions."
   },
   {
     "objectID": "slides/week7-day2.html#section",
@@ -796,7 +796,7 @@
     "href": "slides/week7-day2.html#section-4",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "Your turn!\n\n\nWhat is one similarity and one difference between\n\n\n\n\na permutation distribution\n\n\n\n\n\na bootstrap distribution"
+    "text": "What condition do we need to be worried about?"
   },
   {
     "objectID": "slides/week7-day2.html#exploring-the-hbr_maples-dataset",
@@ -880,7 +880,7 @@
     "href": "slides/week7-day2.html#is-our-observed-statistic-unlikely-if-the-null-hypothesis-was-true",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Is our observed statistic unlikely if the null hypothesis was true?",
-    "text": "Is our observed statistic unlikely if the null hypothesis was true?\n\nvisualise(null_dist) +\n  shade_p_value(obs_stat = obs_slope, \n                direction = \"two-sided\") +\n  labs(x = \"Permuted Slope Statistic\")"
+    "text": "Is our observed statistic unlikely if the null hypothesis was true?\n\nvisualise(null_dist) +\n  xlim(c(-0.0011, 0.0011)) +\n  shade_p_value(obs_stat = obs_slope, \n                direction = \"two-sided\") +\n  labs(x = \"Permuted Slope Statistic\")"
   },
   {
     "objectID": "slides/week7-day2.html#the-p-value-is",
@@ -6115,5 +6115,47 @@
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "To Do List by Wednesday",
     "text": "To Do List by Wednesday\n\nHypothesis test reading guide\nHypothesis test concept quiz\nConfidence interval R tutorial\nHypothesis test R tutorial"
+  },
+  {
+    "objectID": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
+    "href": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?",
+    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
+  },
+  {
+    "objectID": "slides/week7-day2.html#decision-versus-conclusion",
+    "href": "slides/week7-day2.html#decision-versus-conclusion",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Decision versus Conclusion",
+    "text": "Decision versus Conclusion\n\n\nDecision\n\nAt an \\(\\alpha\\) of 0.05 and a p-value of less than 0.001, we would reject \\(H_0\\).\n\n\n\n\n\nConclusion\nWe conclude that there is a linear relationship between the stem length and stem dry mass for sugar maples in the Hubbard Brook Experimental Forest."
+  },
+  {
+    "objectID": "slides/week7-day2.html#two-sided-alternative",
+    "href": "slides/week7-day2.html#two-sided-alternative",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Two-sided Alternative",
+    "text": "Two-sided Alternative\nIf our alternative hypothesis is two-sided, what is missing from the plot?"
+  },
+  {
+    "objectID": "slides/week7-day2.html#todays-data",
+    "href": "slides/week7-day2.html#todays-data",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Today’s Data",
+    "text": "Today’s Data\n\n\n\n\n“One of the best-known patterns in biogeography is Bergmann’s rule. It predicts that organisms at higher latitudes are larger than ones at lower latitudes. Many organisms follow Bergmann’s rule, including insects, birds, snakes, marine invertebrates, and &gt; terrestrial and marine mammals. What drives Bergmann’s rule? Bergmann originally hypothesized that the organisms he studied, birds, were larger in the colder, higher latitudes due to heat-conservation. But the heat-conservation hypothesis relies on internal regulation of body temperature and therefore does not apply to ectotherms, some of which also follow Bergmann’s rule.”"
+  },
+  {
+    "objectID": "slides/week7-day2.html#research-question",
+    "href": "slides/week7-day2.html#research-question",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Research Question",
+    "text": "Research Question\n \n\n\nWhat is the relationship between a Fiddler Crab’s body size (carapace width) and the latitude in which it lives?"
+  },
+  {
+    "objectID": "slides/week7-day2.html#accessing-lab-7",
+    "href": "slides/week7-day2.html#accessing-lab-7",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Accessing Lab 7",
+    "text": "Accessing Lab 7\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nYou will be trading off roles in the middle of the lab! One person will do the hypothesis test coding and one person will do the confidence interval coding!\n\n\n\n\n\n\n\nStep 2: One member of your group needs to follow these instructions to copy the Lab 7 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 7 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document.\n\n\n\n\n\n\n\n\nSource Editor\n\n\nYou need to be in the source editor (not the pretty one) to use collaborative editing!"
   }
 ]
