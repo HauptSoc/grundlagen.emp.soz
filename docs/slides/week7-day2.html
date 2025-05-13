@@ -209,35 +209,41 @@
 <div class="column" style="width:30%;">
 <div class="fragment">
 <p><strong>Week 8</strong></p>
+<div class="small">
 <ul>
-<li>Learn about hypothesis testing for SLR &amp; MLR</li>
-<li>Compare “visual” model selection with p-value model selection</li>
+<li>Dig deeper into model conditions</li>
+<li>Learn about One-Way ANOVA</li>
+<li>Compare “visual” model selection with p-value model selection (Stat Critique #2)</li>
 </ul>
+</div>
 </div>
 </div><div class="column" style="width:30%;">
 <div class="fragment">
 <p><strong>Week 9</strong></p>
+<div class="small">
 <ul>
-<li>Learn about one-way ANOVA</li>
-<li>Get started on first portion of Final Project</li>
+<li>Learn about simulation-based and theory-based inference for one-way ANOVA</li>
+<li>First draft of Final Project</li>
 </ul>
+</div>
 </div>
 </div><div class="column" style="width:30%;">
 <div class="fragment">
 <p><strong>Week 10</strong></p>
+<div class="small">
 <ul>
 <li>Learn about two-way ANOVA</li>
-<li>Finish Final Project</li>
+<li>Finish Final Project (poster)</li>
 </ul>
+</div>
 </div>
 </div></div>
 </section>
 <section id="upcoming-deadlines" class="slide level2">
 <h2>Upcoming Deadlines</h2>
 <ul>
-<li>Lab 6 revisions are due on Wednesday (by midnight)</li>
-<li>Statistical Critique 2 is due next Monday (at 5pm)</li>
-<li>Final revisions on <strong>all</strong> assignments will be accepted until Sunday, March 17</li>
+<li>Lab 4 revisions are due on Friday (May 16)</li>
+<li>Lab 3 second revisions are due on Friday (May 16)</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -418,24 +424,30 @@
 <!-- add slides about HT decisions -->
 </div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div style="font-size: 3em; color: #000000;">
-<p>Your turn!</p>
-</div>
-<div style="font-size: 1.5em; color: #000000;">
-<p><strong>What is one similarity and one difference between</strong></p>
-</div>
+<section id="what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution" class="slide level2">
+<h2>What is one similarity and one difference between a permutation distribution and a bootstrap distribution?</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
-<div style="font-size: 1.5em; color: #76b5c5;">
-<p>a permutation distribution</p>
+<div style="font-size: 1.5em;">
+<p>Similarity</p>
+</div>
+<div class="small">
+<p>Distributions of sample statistics</p>
+<p>Use resampling to see variability</p>
+<p>Approximate a sampling distribution</p>
+<p>Use observed data</p>
 </div>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:45%;">
-<div style="font-size: 1.5em; color: #e28743;">
-<p>a bootstrap distribution</p>
+<div class="fragment">
+<div style="font-size: 1.5em;">
+<p>Difference</p>
+</div>
+<div class="small">
+<p>Permutation distributions assume <span class="math inline">\(H_0\)</span> is true</p>
+<p>Bootstrapping resamples with replacement</p>
+</div>
 </div>
 </div></div>
 </section>
@@ -451,7 +463,7 @@
 <p><code>stem_dry_mass</code>: a number denoting the dry mass of the stem in grams</p>
 </div></div>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 
 <img data-src="week7-day2_files/figure-revealjs/seedlings-slr-1.png" width="960" class="r-stretch"><div class="fragment">
@@ -541,30 +553,15 @@
 </div></div>
 </div>
 </section>
-<section id="dont-worry" class="slide level2">
-<h2>Don’t worry,</h2>
-<p><code>infer</code> will let you know if you missed something!</p>
+<section id="step-4-calculate-your-statistics" class="slide level2">
+<h2>Step 4: Calculate your statistics!</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
 <span id="cb4-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
 <span id="cb4-3"><a></a>          <span class="at">explanatory =</span> stem_length) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-4"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<pre><code>Error: Permuting should be done only when doing independence hypothesis test. See `hypothesize()`.
-In addition: Warning message:
-You have given `type = "permute"`, but `type` is expected to be `"bootstrap"`.
-This workflow is untested and the results may not mean what you think they mean. </code></pre>
-</section>
-<section id="step-4-calculate-your-statistics" class="slide level2">
-<h2>Step 4: Calculate your statistics!</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>hbr_maples <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">specify</span>(<span class="at">response =</span> stem_dry_mass,</span>
-<span id="cb6-3"><a></a>          <span class="at">explanatory =</span> stem_length) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-6"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="your-turn" class="slide level2">
@@ -576,27 +573,33 @@ This workflow is untested and the results may not mean what you think they mean.
 <section id="the-final-product" class="slide level2">
 <h2>The final product</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span> </span>
-<span id="cb7-2"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Permuted Slope Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span> </span>
+<span id="cb5-2"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Permuted Slope Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="week7-day2_files/figure-revealjs/null-dist-1.png" style="width:70.0%" class="r-stretch"></section>
 <section id="is-our-observed-statistic-unlikely-if-the-null-hypothesis-was-true" class="slide level2">
 <h2>Is our observed statistic unlikely if the null hypothesis was true?</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span></span>
-<span id="cb8-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> obs_slope, </span>
-<span id="cb8-3"><a></a>                <span class="at">direction =</span> <span class="st">"two-sided"</span>) <span class="sc">+</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Permuted Slope Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.0011</span>, <span class="fl">0.0011</span>)) <span class="sc">+</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> obs_slope, </span>
+<span id="cb6-4"><a></a>                <span class="at">direction =</span> <span class="st">"two-sided"</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Permuted Slope Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="week7-day2_files/figure-revealjs/null-dist-with-obs-slope-1.png" width="960" class="r-stretch"></section>
+<section id="two-sided-alternative" class="slide level2">
+<h2>Two-sided Alternative</h2>
+<p>If our alternative hypothesis is two-sided, what is missing from the plot?</p>
+
+<img data-src="week7-day2_files/figure-revealjs/null-dist-with-obs-slope-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="the-p-value-is" class="slide level2">
 <h2>The p-value is…</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">get_p_value</span>(null_dist, </span>
-<span id="cb9-2"><a></a>            <span class="at">obs_stat =</span> obs_slope, </span>
-<span id="cb9-3"><a></a>            <span class="at">direction =</span> <span class="st">"two-sided"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">get_p_value</span>(null_dist, </span>
+<span id="cb7-2"><a></a>            <span class="at">obs_stat =</span> obs_slope, </span>
+<span id="cb7-3"><a></a>            <span class="at">direction =</span> <span class="st">"two-sided"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Please be cautious in reporting a p-value of 0. This result is an approximation
 based on the number of `reps` chosen in the `generate()` step.
@@ -631,69 +634,108 @@ based on the number of `reps` chosen in the `generate()` step.
 </blockquote>
 </div>
 </section>
-<section id="classic-interpretation-mistakes" class="slide level2">
-<h2>Classic interpretation mistakes</h2>
-<p><br></p>
-<blockquote>
-<p>“The probability that the null hypothesis is true is about 0%.”</p>
-</blockquote>
+<section id="decision-versus-conclusion" class="slide level2">
+<h2>Decision versus Conclusion</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p><span style="font-size: 1.5em;"><strong>Decision</strong></span></p>
 <div class="fragment">
-<div style="font-size: 1.25em; color: #ed8402;">
-<p>You assume the null is true when you calculate a p-value!</p>
+<p>At an <span class="math inline">\(\alpha\)</span> of 0.05 and a p-value of less than 0.001, we would reject <span class="math inline">\(H_0\)</span>.</p>
 </div>
-<!-- add slide about HT decision / conclusion -->
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p><span style="font-size: 1.5em;"><strong>Conclusion</strong></span></p>
+<p>We conclude that there is a linear relationship between the stem length and stem dry mass for sugar maples in the Hubbard Brook Experimental Forest.</p>
+</div>
+</div></div>
 <!-- add slide about why we choose 0.05 versus 0.01 -->
-<!-- add slide about why we use != instead of > or < -->
-</div>
 </section></section>
 <section>
-<section id="grade-check-in" class="title-slide slide level1 center">
-<h1>Grade Check-in</h1>
+<section id="lab-7" class="title-slide slide level1 center">
+<h1>Lab 7</h1>
 
 </section>
-<section id="midterm-projects-study-limitations" class="slide level2">
-<h2>Midterm Projects – Study Limitations</h2>
-<p><br></p>
-<p>You must <strong>justify</strong> why you believe you can infer onto a population larger than your sample!</p>
-<div class="fragment">
-<p><br></p>
-<p>Causal statements <strong>do not</strong> come from random / representative samples!</p>
+<section id="todays-data" class="slide level2">
+<h2>Today’s Data</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="small">
+<blockquote>
+<p>“One of the best-known patterns in biogeography is Bergmann’s rule. It predicts that organisms at higher latitudes are larger than ones at lower latitudes. Many organisms follow Bergmann’s rule, including insects, birds, snakes, marine invertebrates, and &gt; terrestrial and marine mammals. What drives Bergmann’s rule? Bergmann originally hypothesized that the organisms he studied, birds, were larger in the colder, higher latitudes due to heat-conservation. But the heat-conservation hypothesis relies on internal regulation of body temperature and therefore <u>does not apply to ectotherms</u>, some of which also follow Bergmann’s rule.”</p>
+</blockquote>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/fiddler-crab.jpg" alt="A fiddler crab on wet, muddy ground. The crab has one large, pale claw and one much smaller claw, with a shiny carapace and stalked eyes."></p>
+</div></div>
+</section>
+<section id="research-question" class="slide level2">
+<h2>Research Question</h2>
+<p><br> <br></p>
+<div class="centered">
+<blockquote>
+<p>What is the relationship between a Fiddler Crab’s body size (carapace width) and the latitude in which it lives?</p>
+</blockquote>
 </div>
 </section>
-<section id="midterm-project-grades" class="slide level2">
-<h2>Midterm Project Grades</h2>
+<section id="accessing-lab-7" class="slide level2">
+<h2>Accessing Lab 7</h2>
+<div class="midi">
+<p><strong>Step 1:</strong> Both members of your group need to join your <strong>group</strong> workspace (link posted in the Announcements of your group)</p>
+</div>
+<div class="fragment">
 <div class="small">
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Excellent Project</strong></th>
-<th><strong>Satisfactory Project</strong></th>
-<th><strong>Progressing Project</strong></th>
-<th><strong>No Credit</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>At most one section is marked “Satisfactory” the remainder are marked “Excellent”</td>
-<td>At most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”</td>
-<td>At most two sections are marked “Progressing” the remainder are marked “Satisfactory”</td>
-<td>At most one section is marked “Satisfactory” or “Excellent” the remainder are marked “Progressing”</td>
-</tr>
-</tbody>
-</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Roles</strong></p>
+</div>
+<div class="callout-content">
+<p>You will be trading off roles in the middle of the lab! One person will do the hypothesis test coding and one person will do the confidence interval coding!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="midi">
+<p><strong>Step 2:</strong> One member of your group needs to <a href="https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA">follow these instructions to copy the Lab 7 project into your group’s workspace</a></p>
+</div>
+</div>
+<div class="fragment">
+<div class="midi">
+<p><strong>Step 3:</strong> Both members open the Lab 7 assignment in your group workspace!</p>
+</div>
+</div>
+<div class="fragment">
+<div class="midi">
+<p><strong>Step 4:</strong> Follow the <a href="https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw">final instructions</a> to activate collaborative editing in the document.</p>
+</div>
+<div class="small">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Source Editor</strong></p>
+</div>
+<div class="callout-content">
+<p>You need to be in the source editor (not the pretty one) to use collaborative editing!</p>
+</div>
+</div>
+</div>
+</div>
+
+
 </div>
 </section></section>
-<section id="grade-check-in-activity" class="title-slide slide level1 center">
-<h1><a href="../activity/week-8-grade-check.docx" title="Grade Check-in Activity">Grade Check-in Activity</a></h1>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
