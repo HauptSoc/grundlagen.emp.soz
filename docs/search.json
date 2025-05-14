@@ -796,7 +796,7 @@
     "href": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?",
-    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\n\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
+    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\nAre bell shaped and symmetric\n\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
   },
   {
     "objectID": "slides/week7-day2.html#exploring-the-hbr_maples-dataset",

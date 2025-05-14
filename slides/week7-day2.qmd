@@ -223,6 +223,8 @@ Use resampling to see variability
 Approximate a sampling distribution
 
 Use observed data
+
+Are bell shaped and symmetric
 :::
 :::
 ::::
