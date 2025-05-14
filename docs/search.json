@@ -789,14 +789,14 @@
     "href": "slides/week7-day2.html#section-3",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "How do I get my p-value?\n\n\nCompare the observed statistic with the statistics produced assuming the null hypothesis was true.\n\n\n\n\nA p-value summarizes the probability of obtaining a sample statistic as or more extreme than what we observed, if the null hypothesis was true."
+    "text": "What are the null and alternative hypotheses for linear regression?"
   },
   {
     "objectID": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
     "href": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?",
-    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
+    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\n\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
   },
   {
     "objectID": "slides/week7-day2.html#exploring-the-hbr_maples-dataset",
@@ -810,7 +810,7 @@
     "href": "slides/week7-day2.html#section-4",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "What condition do we need to be worried about?"
+    "text": "Where is a null distribution centered?"
   },
   {
     "objectID": "slides/week7-day2.html#in-this-sample-of-359-sugar-maples",
@@ -887,7 +887,7 @@
     "href": "slides/week7-day2.html#the-p-value-is",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "The p-value is…",
-    "text": "The p-value is…\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\") \n\nWarning: Please be cautious in reporting a p-value of 0. This result is an approximation\nbased on the number of `reps` chosen in the `generate()` step.\nℹ See `get_p_value()` (`?infer::get_p_value()`) for more information.\n\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1       0\n\n\n\n\n\nWhy did we get a warning?"
+    "text": "The p-value is…\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\") \n\nWarning: Please be cautious in reporting a p-value of 0. This result is an approximation\nbased on the number of `reps` chosen in the `generate()` step.\nℹ See `get_p_value()` (`?infer::get_p_value()`) for more information.\n\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1       0\n\n\n\n\nWhy did we get a warning?"
   },
   {
     "objectID": "slides/week7-day2.html#how-do-we-interpret-a-p-value",
@@ -6108,5 +6108,33 @@
       "Weekly materials",
       "Week 8"
     ]
+  },
+  {
+    "objectID": "slides/week7-day2.html#simulating-what-could-have-happened-under-h_0",
+    "href": "slides/week7-day2.html#simulating-what-could-have-happened-under-h_0",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "Simulating what Could Have Happened Under \\(H_0\\)",
+    "text": "Simulating what Could Have Happened Under \\(H_0\\)\n\n\n\nFrom your original sample, separate the \\(x\\) values from the \\(y\\) values.\n\n\n\nCreate new ordered pairs by randomly pairing \\(x\\) values with \\(y\\) values (permuting the labels).\n\n\n\n\n\n\n\nThis is your permuted resample.\n\n\n\n\n\n\nRepeat this process many, many times.\n\n\n\n\n\n\nCalculate a numerical summary (e.g., slope) for each permutation resample.\n\n\n\n\n\n\nThese are your permuted statistics."
+  },
+  {
+    "objectID": "slides/week7-day2.html#section-5",
+    "href": "slides/week7-day2.html#section-5",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "",
+    "text": "How do I get my p-value?\n\n\nCompare the observed statistic with the statistics produced assuming the null hypothesis was true.\n\n\n\n\nA p-value summarizes the probability of obtaining a sample statistic as or more extreme than what we observed, if the null hypothesis was true."
+  },
+  {
+    "objectID": "slides/week7-day2.html#section-6",
+    "href": "slides/week7-day2.html#section-6",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "",
+    "text": "What condition do we need to be worried about?"
+  },
+  {
+    "objectID": "slides/week7-day2.html#section-7",
+    "href": "slides/week7-day2.html#section-7",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "",
+    "text": "If I were to make a confidence interval for \\(\\beta_1\\) would I expect it to contain 0?"
   }
 ]

@@ -107,13 +107,20 @@ Hypothesis test goal:
 :::
 
 ::: {style="font-size: 1.5em; color: #000000;"}
-Assess how different what we saw in our data is from what could have happened if the null hypothesis was true\*
+Assess how different what we saw in our data is from what could have happened if
+the null hypothesis was true\*
 :::
 
 . . .
 
 ::: {style="font-size: 0.75em;"}
 \*For hypothesis tests, we live in an alternative universe where $H_0$ is true
+:::
+
+##  {background-color="#B6CADA"}
+
+::: {style="font-size: 2.5em; color: #000000;"}
+What are the null and alternative hypotheses for linear regression?
 :::
 
 ## How can we approximate what could have happened if the null was true?
@@ -138,49 +145,24 @@ Permutation!
 We can use statistics from these resamples to approximate the true sampling distribution under the null!
 :::
 
-# Why do we want a sampling distribution?
 
-## Testing a Population Parameter
-
-::: incremental
--   Like before, we are interested in knowing how a statistic varies from sample to sample.
-
--   Knowing a statistic's behavior helps us make better / more informed decisions!
-
--   This helps us know what statistics are more or less likely to occur [if the null hypothesis is true]{style="color: #e28743"}.
-:::
-
-# p-values
-
-. . .
-
-::: {style="font-size: 1.5em; color: #000000;"}
-> Quantify how "surprising" what we saw in our data is, if the null hypothesis was true
-:::
-
-## How do I get a p-value?
-
-. . .
-
-<center>
-
-::: {style="font-size: 2em; color: #ed8402;"}
-Permuting!
-:::
+## Simulating what Could Have Happened Under $H_0$
 
 . . .
 
 ::: small
 1.  From your original sample, separate the $x$ values from the $y$ values.
 
+::: {.fragment}
 2.  Create new ordered pairs by randomly pairing $x$ values with $y$ values (permuting the labels).
+:::
 :::
 
 . . .
 
 <center>
 
-::: {style="font-size: 0.75em; color: #ed8402;"}
+::: {style="font-size: 0.8em; color: #ed8402;"}
 This is your permuted resample.
 :::
 
@@ -202,7 +184,7 @@ This is your permuted resample.
 
 <center>
 
-::: {style="font-size: 0.75em; color: #ed8402;"}
+::: {style="font-size: 0.8em; color: #ed8402;"}
 These are your permuted statistics.
 :::
 
@@ -224,30 +206,11 @@ Displays the variability in the statistic that could have happened with repeated
 Approximates the true sampling distribution under the null!
 :::
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-How do I get my p-value?
-:::
-
-. . .
-
-Compare the observed statistic with the statistics produced assuming the null hypothesis was true.
-
-. . .
-
-</br>
-
-::: {style="font-size: 1.25em;"}
-A p-value summarizes the [**probability**]{style="color: #76b5c5;"} of obtaining a sample statistic [as or more extreme than what we observed]{.underline}, [**if the null hypothesis was true**]{style="color: #76b5c5;"}.
-:::
-
-<!-- add slides about HT decisions -->
-
 ## What is one similarity and one difference between a permutation distribution and a bootstrap distribution?
 
 :::::::: columns
 :::: {.column width="45%"}
+::: {.fragment}
 ::: {style="font-size: 1.5em;"}
 Similarity
 :::
@@ -260,6 +223,7 @@ Use resampling to see variability
 Approximate a sampling distribution
 
 Use observed data
+:::
 :::
 ::::
 
@@ -280,6 +244,43 @@ Bootstrapping resamples with replacement
 :::
 ::::
 ::::::::
+
+##  {background-color="#B6CADA"}
+
+</br>
+</br>
+
+::: {style="font-size: 2.5em; color: #000000;"}
+Where is a null distribution centered?
+:::
+
+# p-values
+
+. . .
+
+::: {style="font-size: 1.5em; color: #000000;"}
+> Quantify how "surprising" what we saw in our data is, if the null hypothesis was true
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #000000;"}
+How do I get my p-value?
+:::
+
+. . .
+
+Compare the observed statistic with the statistics produced assuming the null hypothesis was true.
+
+. . .
+
+</br>
+
+::: {style="font-size: 1.25em;"}
+A p-value summarizes the [**probability**]{style="color: #76b5c5;"} of obtaining a sample statistic [as or more extreme than what we observed]{.underline}, [**if the null hypothesis was true**]{style="color: #76b5c5;"}.
+:::
+
+<!-- add slides about HT decisions -->
 
 ## Exploring the `hbr_maples` dataset!
 
@@ -456,14 +457,6 @@ hbr_maples %>%
   calculate(stat = "slope") 
 ```
 
-## Your turn!
-
-Why is the `hypothesize()` function used to make a null distribution but not for a bootstrap distribution?
-
-</br>
-
-What does the `null = "independence"` input in `hypothesize()` mean? What is it assuming about the variables declared in the `specify()` step?
-
 ## The final product
 
 ```{r null-dist}
@@ -525,9 +518,7 @@ get_p_value(null_dist,
 
 . . .
 
-</br>
-
-::: {style="font-size: 1.5em; color: #ed8402;"}
+::: {style="font-size: 0.75em; color: #ed8402;"}
 Why did we get a warning?
 :::
 
@@ -570,6 +561,16 @@ dry mass for sugar maples in the Hubbard Brook Experimental Forest.
 
 <!-- add slide about why we choose 0.05 versus 0.01 -->
 
+##  {background-color="#B6CADA"}
+
+</br>
+</br>
+
+::: {style="font-size: 2.5em; color: #000000;"}
+If I were to make a confidence interval for $\beta_1$ would I expect it to
+contain 0? 
+:::
+
 # Lab 7
 
 ## Today's Data
@@ -610,7 +611,7 @@ dry mass for sugar maples in the Hubbard Brook Experimental Forest.
 
 ## Accessing Lab 7
 
-::: {.midi}
+::: {.small}
 **Step 1:** Both members of your group need to join your **group** workspace 
 (link posted in the Announcements of your group)
 :::
@@ -627,19 +628,19 @@ hypothesis test coding and one person will do the confidence interval coding!
 
 . . .
 
-::: {.midi}
+::: {.small}
 **Step 2:** One member of your group needs to [follow these instructions to copy the Lab 7 project into your group's workspace](https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA)
 :::
 
 . . .
 
-::: {.midi}
+::: {.small}
 **Step 3:** Both members open the Lab 7 assignment in your group workspace!
 :::
 
 . . .
 
-::: {.midi}
+::: {.small}
 **Step 4:** Follow the [final instructions](https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw) to activate collaborative editing in the document. 
 :::
 

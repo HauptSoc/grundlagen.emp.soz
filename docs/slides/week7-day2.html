@@ -299,6 +299,12 @@
 </div>
 </div>
 </section>
+<section id="section-3" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<div style="font-size: 2.5em; color: #000000;">
+<p>What are the null and alternative hypotheses for linear regression?</p>
+</div>
+</section>
 <section id="how-can-we-approximate-what-could-have-happened-if-the-null-was-true" class="slide level2">
 <h2>How can we approximate what could have happened if the null was true?</h2>
 <div class="fragment">
@@ -320,52 +326,24 @@
 <p>We can use statistics from these resamples to approximate the true sampling distribution under the null!</p>
 </div>
 </div>
-</section></section>
-<section>
-<section id="why-do-we-want-a-sampling-distribution" class="title-slide slide level1 center">
-<h1>Why do we want a sampling distribution?</h1>
-
 </section>
-<section id="testing-a-population-parameter" class="slide level2">
-<h2>Testing a Population Parameter</h2>
-<div>
-<ul>
-<li class="fragment"><p>Like before, we are interested in knowing how a statistic varies from sample to sample.</p></li>
-<li class="fragment"><p>Knowing a statistic’s behavior helps us make better / more informed decisions!</p></li>
-<li class="fragment"><p>This helps us know what statistics are more or less likely to occur <span style="color: #e28743">if the null hypothesis is true</span>.</p></li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="p-values" class="title-slide slide level1 center">
-<h1>p-values</h1>
-<div class="fragment">
-<div style="font-size: 1.5em; color: #000000;">
-<blockquote>
-<p>Quantify how “surprising” what we saw in our data is, if the null hypothesis was true</p>
-</blockquote>
-</div>
-</div>
-</section>
-<section id="how-do-i-get-a-p-value" class="slide level2">
-<h2>How do I get a p-value?</h2>
-<div class="fragment">
-<center>
-<div style="font-size: 2em; color: #ed8402;">
-<p>Permuting!</p>
-</div>
-</center></div>
+<section id="simulating-what-could-have-happened-under-h_0" class="slide level2">
+<h2>Simulating what Could Have Happened Under <span class="math inline">\(H_0\)</span></h2>
 <div class="fragment">
 <div class="small">
 <ol type="1">
-<li><p>From your original sample, separate the <span class="math inline">\(x\)</span> values from the <span class="math inline">\(y\)</span> values.</p></li>
-<li><p>Create new ordered pairs by randomly pairing <span class="math inline">\(x\)</span> values with <span class="math inline">\(y\)</span> values (permuting the labels).</p></li>
+<li>From your original sample, separate the <span class="math inline">\(x\)</span> values from the <span class="math inline">\(y\)</span> values.</li>
 </ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Create new ordered pairs by randomly pairing <span class="math inline">\(x\)</span> values with <span class="math inline">\(y\)</span> values (permuting the labels).</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="fragment">
 <center>
-<div style="font-size: 0.75em; color: #ed8402;">
+<div style="font-size: 0.8em; color: #ed8402;">
 <p>This is your permuted resample.</p>
 </div>
 </center>
@@ -386,7 +364,7 @@
 </div>
 <div class="fragment">
 <center>
-<div style="font-size: 0.75em; color: #ed8402;">
+<div style="font-size: 0.8em; color: #ed8402;">
 <p>These are your permuted statistics.</p>
 </div>
 </center>
@@ -408,26 +386,11 @@
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div style="font-size: 2em; color: #000000;">
-<p>How do I get my p-value?</p>
-</div>
-<div class="fragment">
-<p>Compare the observed statistic with the statistics produced assuming the null hypothesis was true.</p>
-</div>
-<div class="fragment">
-<p><br></p>
-<div style="font-size: 1.25em;">
-<p>A p-value summarizes the <span style="color: #76b5c5;"><strong>probability</strong></span> of obtaining a sample statistic <u>as or more extreme than what we observed</u>, <span style="color: #76b5c5;"><strong>if the null hypothesis was true</strong></span>.</p>
-</div>
-<!-- add slides about HT decisions -->
-</div>
-</section>
 <section id="what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution" class="slide level2">
 <h2>What is one similarity and one difference between a permutation distribution and a bootstrap distribution?</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
+<div class="fragment">
 <div style="font-size: 1.5em;">
 <p>Similarity</p>
 </div>
@@ -436,6 +399,7 @@
 <p>Use resampling to see variability</p>
 <p>Approximate a sampling distribution</p>
 <p>Use observed data</p>
+</div>
 </div>
 </div><div class="column" style="width:5%;">
 
@@ -451,6 +415,40 @@
 </div>
 </div></div>
 </section>
+<section id="section-4" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<p><br> <br></p>
+<div style="font-size: 2.5em; color: #000000;">
+<p>Where is a null distribution centered?</p>
+</div>
+</section></section>
+<section>
+<section id="p-values" class="title-slide slide level1 center">
+<h1>p-values</h1>
+<div class="fragment">
+<div style="font-size: 1.5em; color: #000000;">
+<blockquote>
+<p>Quantify how “surprising” what we saw in our data is, if the null hypothesis was true</p>
+</blockquote>
+</div>
+</div>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>How do I get my p-value?</p>
+</div>
+<div class="fragment">
+<p>Compare the observed statistic with the statistics produced assuming the null hypothesis was true.</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="font-size: 1.25em;">
+<p>A p-value summarizes the <span style="color: #76b5c5;"><strong>probability</strong></span> of obtaining a sample statistic <u>as or more extreme than what we observed</u>, <span style="color: #76b5c5;"><strong>if the null hypothesis was true</strong></span>.</p>
+</div>
+<!-- add slides about HT decisions -->
+</div>
+</section>
 <section id="exploring-the-hbr_maples-dataset" class="slide level2">
 <h2>Exploring the <code>hbr_maples</code> dataset!</h2>
 <div class="columns">
@@ -463,7 +461,7 @@
 <p><code>stem_dry_mass</code>: a number denoting the dry mass of the stem in grams</p>
 </div></div>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 
 <img data-src="week7-day2_files/figure-revealjs/seedlings-slr-1.png" width="960" class="r-stretch"><div class="fragment">
@@ -564,12 +562,6 @@
 <span id="cb4-6"><a></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn!</h2>
-<p>Why is the <code>hypothesize()</code> function used to make a null distribution but not for a bootstrap distribution?</p>
-<p><br></p>
-<p>What does the <code>null = "independence"</code> input in <code>hypothesize()</code> mean? What is it assuming about the variables declared in the <code>specify()</code> step?</p>
-</section>
 <section id="the-final-product" class="slide level2">
 <h2>The final product</h2>
 <div class="cell">
@@ -613,8 +605,7 @@ based on the number of `reps` chosen in the `generate()` step.
 </div>
 </div>
 <div class="fragment">
-<p><br></p>
-<div style="font-size: 1.5em; color: #ed8402;">
+<div style="font-size: 0.75em; color: #ed8402;">
 <p>Why did we get a warning?</p>
 </div>
 </div>
@@ -651,6 +642,13 @@ based on the number of `reps` chosen in the `generate()` step.
 </div>
 </div></div>
 <!-- add slide about why we choose 0.05 versus 0.01 -->
+</section>
+<section id="section-7" class="slide level2" data-background-color="#B6CADA">
+<h2></h2>
+<p><br> <br></p>
+<div style="font-size: 2.5em; color: #000000;">
+<p>If I were to make a confidence interval for <span class="math inline">\(\beta_1\)</span> would I expect it to contain 0?</p>
+</div>
 </section></section>
 <section>
 <section id="lab-7" class="title-slide slide level1 center">
@@ -683,7 +681,7 @@ based on the number of `reps` chosen in the `generate()` step.
 </section>
 <section id="accessing-lab-7" class="slide level2">
 <h2>Accessing Lab 7</h2>
-<div class="midi">
+<div class="small">
 <p><strong>Step 1:</strong> Both members of your group need to join your <strong>group</strong> workspace (link posted in the Announcements of your group)</p>
 </div>
 <div class="fragment">
@@ -704,17 +702,17 @@ based on the number of `reps` chosen in the `generate()` step.
 </div>
 </div>
 <div class="fragment">
-<div class="midi">
+<div class="small">
 <p><strong>Step 2:</strong> One member of your group needs to <a href="https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA">follow these instructions to copy the Lab 7 project into your group’s workspace</a></p>
 </div>
 </div>
 <div class="fragment">
-<div class="midi">
+<div class="small">
 <p><strong>Step 3:</strong> Both members open the Lab 7 assignment in your group workspace!</p>
 </div>
 </div>
 <div class="fragment">
-<div class="midi">
+<div class="small">
 <p><strong>Step 4:</strong> Follow the <a href="https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw">final instructions</a> to activate collaborative editing in the document.</p>
 </div>
 <div class="small">
