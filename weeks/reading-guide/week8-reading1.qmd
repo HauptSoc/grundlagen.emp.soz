@@ -1,0 +1,30 @@
+---
+title: "Week 8 Reading Guide, Part 1: Model Conditions"
+---
+
+
+## Section 7 -- Checking model conditions
+
+**What are the four conditions that need to be evaluated for linear regression?**
+
+</br> </br>
+
+**What is a residual?**
+
+</br> </br>
+
+**What does it mean for the residuals to be independent?**
+
+</br> </br>
+
+**What distribution must the residuals look similar to?**
+
+</br> </br>
+
+**What does it mean for there to be "equal variance" in the residuals?**
+
+</br> </br>
+
+**What happens if one of these conditions is violated?**
+
+</br> </br>
