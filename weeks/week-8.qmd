@@ -14,15 +14,31 @@ execute:
 
 # Textbook Reading
 
-[**Required Reading:** Hypothesis Test for Slope & Inference Conditions](chapters/week8-reading.html)
+First, we are going to refresh on the conditions for linear regression. You 
+might want to reference last week's reading while completing the first reading
+guide: [**Model Conditions for Linear Regression**](chapters/week7-reading2.qmd)
 
 ::: callout-note
 ## Reading Guide -- Due Monday by the start of class
 
-[Download the Word Document](reading-guide/week8-reading.docx)
+[Download the Word Document](reading-guide/week8-reading1.docx)
 :::
 
-# Concept Quiz -- Due Monday by the start of class
+Now, let's read about how hypothesis testing extends into multiple linear
+regression. This allows us to connect to our new topic---ANOVA! 
+
+[**Required Reading:** Hypothesis Tests for Multiple Linear Regression](chapters/week8-reading-mlr.html)
+
+::: callout-important
+There is no reading guide for this chapter, just a concept quiz! 
+:::
+
+# Concept Quizzes
+
+We have two concept quizzes this week, one that is due by Monday (on model
+conditions) and one that is due by Wednesday (on ANOVA). 
+
+## Due Monday by the start of class
 
 **1. What are the required conditions for linear regression?** (select all that apply)
 
@@ -52,6 +68,11 @@ execute:
 
 **4. When conducting a hypothesis test (in general), we assume the \[observations / variables\] are independent. When conducting a hypothesis test for a linear regression, the conditions require that the \[observations / variables\] are independent.**
 
-# R Tutorial -- Due Wednesday by the start of class
+## Due Wednesday by the start of class
+
+
+# R Tutorial -- Due Monday by the start of class (note the new time!)
 
 [**Required Tutorial:** Evaluating the technical conditions in linear regression](https://openintro.shinyapps.io/ims-06-model-infer-04/)
+
+

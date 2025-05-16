@@ -2,29 +2,50 @@
 title: "Week 8 Reading Guide, Part 1: Model Conditions"
 ---
 
-
-## Section 7 -- Checking model conditions
+## Model Conditions for Linear Regression
 
 **What are the four conditions that need to be evaluated for linear regression?**
 
 </br> </br>
 
-**What is a residual?**
+<!-- **What is a residual?** -->
+
+<!-- </br> </br> -->
+
+<!-- **What does it mean for the residuals to be independent?** -->
+
+<!-- </br> </br> -->
+
+<!-- **What distribution must the residuals look similar to?** -->
+
+<!-- </br> </br> -->
+
+<!-- **What does it mean for there to be "equal variance" in the residuals?** -->
+
+<!-- </br> </br> -->
+
+**Do both methods for obtaining a p-value (simulation or theory) require these conditions?**
 
 </br> </br>
 
-**What does it mean for the residuals to be independent?**
+**What happens if these conditions are violated?**
 
 </br> </br>
 
-**What distribution must the residuals look similar to?**
+**For these next questions, I would like to see what ChatGPT suggests. So, copy the question into Chat and paste the FIRST answer you get. We'll compare these in class on Monday!**
+
+**What should you do if your linear regression violates the linearity condition?**
 
 </br> </br>
 
-**What does it mean for there to be "equal variance" in the residuals?**
+**What should you do if your linear regression violates the independence condition?**
 
 </br> </br>
 
-**What happens if one of these conditions is violated?**
+**What should you do if your linear regression violates the normality condition?**
+
+</br> </br>
+
+**What should you do if your linear regression violates the equal variance condition?**
 
 </br> </br>

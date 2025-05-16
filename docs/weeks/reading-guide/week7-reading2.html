@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 8 – Conditions for Inference &amp; One-Way ANOVA – STAT 313 / 513</title>
+<title>Week 7 Reading Guide Part 2: Hypothesis Tests – STAT 313 / 513</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../weeks/week-9.html" rel="next">
-<link href="../weeks/week-7.html" rel="prev">
-<link href="../images/favicon-2.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-be15a34e5484ed5d1c78596aa3517899.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ee533f522a3b3f274b8ffabb45ea43f7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon-2.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-be15a34e5484ed5d1c78596aa3517899.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee533f522a3b3f274b8ffabb45ea43f7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-0.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-8.html">Week 8</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Week 7 Reading Guide Part 2: Hypothesis Tests</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,8 +124,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/website-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/website-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/atheobold/stat-313-website" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -125,31 +152,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course-team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -166,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
+  <a href="../../computing-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
   </div>
 </li>
@@ -183,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Resources</span></a>
   </div>
 </li>
@@ -200,13 +227,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project/midterm-project/midterm-project-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/midterm-project/midterm-project-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm Project Description</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project/final-project/final-project-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/final-project/final-project-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final Project Description</span></a>
   </div>
 </li>
@@ -214,76 +241,76 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Weekly materials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-8.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks/week-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-9.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/week-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10</span></a>
   </div>
 </li>
@@ -299,22 +326,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#textbook-reading" id="toc-textbook-reading" class="nav-link active" data-scroll-target="#textbook-reading"><span class="header-section-number">1</span> Textbook Reading</a></li>
-  <li><a href="#concept-quizzes" id="toc-concept-quizzes" class="nav-link" data-scroll-target="#concept-quizzes"><span class="header-section-number">2</span> Concept Quizzes</a>
-  <ul class="collapse">
-  <li><a href="#due-monday-by-the-start-of-class" id="toc-due-monday-by-the-start-of-class" class="nav-link" data-scroll-target="#due-monday-by-the-start-of-class"><span class="header-section-number">2.1</span> Due Monday by the start of class</a></li>
-  <li><a href="#due-wednesday-by-the-start-of-class" id="toc-due-wednesday-by-the-start-of-class" class="nav-link" data-scroll-target="#due-wednesday-by-the-start-of-class"><span class="header-section-number">2.2</span> Due Wednesday by the start of class</a></li>
-  </ul></li>
-  <li><a href="#r-tutorial-due-monday-by-the-start-of-class-note-the-new-time" id="toc-r-tutorial-due-monday-by-the-start-of-class-note-the-new-time" class="nav-link" data-scroll-target="#r-tutorial-due-monday-by-the-start-of-class-note-the-new-time"><span class="header-section-number">3</span> R Tutorial – Due Monday by the start of class (note the new time!)</a></li>
+  <li><a href="#section-1-baby-birth-weights" id="toc-section-1-baby-birth-weights" class="nav-link active" data-scroll-target="#section-1-baby-birth-weights">Section 1 – Baby Birth Weights</a></li>
+  <li><a href="#section-2-hypothesis-tests" id="toc-section-2-hypothesis-tests" class="nav-link" data-scroll-target="#section-2-hypothesis-tests">Section 2 – Hypothesis tests</a></li>
+  <li><a href="#section-3-conducting-a-hypothesis-test" id="toc-section-3-conducting-a-hypothesis-test" class="nav-link" data-scroll-target="#section-3-conducting-a-hypothesis-test">Section 3 – Conducting a hypothesis test</a></li>
+  <li><a href="#section-4-interpreting-a-hypothesis-test" id="toc-section-4-interpreting-a-hypothesis-test" class="nav-link" data-scroll-target="#section-4-interpreting-a-hypothesis-test">Section 4 – Interpreting a hypothesis test</a></li>
+  <li><a href="#section-5-comparing-with-confidence-intervals" id="toc-section-5-comparing-with-confidence-intervals" class="nav-link" data-scroll-target="#section-5-comparing-with-confidence-intervals">Section 5 – Comparing with confidence intervals</a></li>
+  <li><a href="#section-6-theory-based-hypothesis-tests-confidence-intervals" id="toc-section-6-theory-based-hypothesis-tests-confidence-intervals" class="nav-link" data-scroll-target="#section-6-theory-based-hypothesis-tests-confidence-intervals">Section 6 – Theory-based hypothesis tests &amp; confidence intervals</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="week7-reading2.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-0.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-8.html">Week 8</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 8 – Conditions for Inference &amp; One-Way ANOVA</h1>
+<h1 class="title">Week 7 Reading Guide Part 2: Hypothesis Tests</h1>
 </div>
 
 
@@ -331,78 +357,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="textbook-reading" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Textbook Reading</h1>
-<p>First, we are going to refresh on the conditions for linear regression. You might want to reference last week’s reading while completing the first reading guide: <a href="../weeks/chapters/week7-reading2.html"><strong>Model Conditions for Linear Regression</strong></a></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Reading Guide – Due Monday by the start of class
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="reading-guide/week8-reading1.docx">Download the Word Document</a></p>
-</div>
-</div>
-<p>Now, let’s read about how hypothesis testing extends into multiple linear regression. This allows us to connect to our new topic—ANOVA!</p>
-<p><a href="chapters/week8-reading-mlr.html"><strong>Required Reading:</strong> Hypothesis Tests for Multiple Linear Regression</a></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>There is no reading guide for this chapter, just a concept quiz!</p>
-</div>
-</div>
+<section id="section-1-baby-birth-weights" class="level2">
+<h2 class="anchored" data-anchor-id="section-1-baby-birth-weights">Section 1 – Baby Birth Weights</h2>
+<p><strong>What is the process of obtaining one shuffled sample?</strong></p>
+<p><br> <br> <br></p>
+<p><strong>With a shuffled resample, once the values are written on the cards what happens? Why is this a necessary step?</strong></p>
+<p><br> <br></p>
+<p><strong>What process is used to shuffle the cards? Are the cards put back into the hat once they are drawn?</strong></p>
+<p><br> <br></p>
+<p><strong>How similar was the shuffled slope statistic (in Figure 2) to the original slope statistic found in the original data?</strong></p>
+<p><br> <br></p>
+<p><strong>Where was the distribution of 10 shuffled slope statistics (in Figure 3) centered? Why was it centered there?</strong></p>
+<p><br> <br></p>
+<p><strong>What does the word “permute” mean? How is this term related to the shuffling method that was used to obtain the slope statistic?</strong></p>
+<p><br> <br></p>
 </section>
-<section id="concept-quizzes" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Concept Quizzes</h1>
-<p>We have two concept quizzes this week, one that is due by Monday (on model conditions) and one that is due by Wednesday (on ANOVA).</p>
-<section id="due-monday-by-the-start-of-class" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="due-monday-by-the-start-of-class"><span class="header-section-number">2.1</span> Due Monday by the start of class</h2>
-<p><strong>1. What are the required conditions for linear regression?</strong> (select all that apply)</p>
-<ul>
-<li>a random sample was taken</li>
-<li>equal variance of residuals</li>
-<li>a large sample was collected</li>
-<li>linear relationship between x and y</li>
-<li>independence of observations</li>
-<li>independence of variables</li>
-<li>normality of residuals</li>
-<li>normality of observations</li>
-</ul>
-<p><strong>2. In the scatterplot of stem dry mass versus stem length, what condition appears to be violated?</strong> (select all that apply)</p>
-<ul>
-<li>equal variance of residuals</li>
-<li>linear relationship between x and y</li>
-<li>independence of observations</li>
-<li>normality of residuals</li>
-</ul>
-<p><strong>3. Which of the following would violate the condition of independence?</strong> (select all that apply)</p>
-<ul>
-<li>collecting a non-random sample</li>
-<li>observations related geographically (spatially)</li>
-<li>observations that are related in time (temporally)</li>
-<li>repeated observations on the same person</li>
-<li>observations related biologically</li>
-</ul>
-<p><strong>4. When conducting a hypothesis test (in general), we assume the [observations / variables] are independent. When conducting a hypothesis test for a linear regression, the conditions require that the [observations / variables] are independent.</strong></p>
+<section id="section-2-hypothesis-tests" class="level2">
+<h2 class="anchored" data-anchor-id="section-2-hypothesis-tests">Section 2 – Hypothesis tests</h2>
+<p><strong>What general form does a null hypothesis take? i.e.&nbsp;what does the null hypothesis generally assume?</strong></p>
+<p><br> <br></p>
+<p><strong>What is the difference between a one-sided and a two-sided alternative hypothesis? How do you decide which to use?</strong></p>
+<p><br> <br></p>
+<p><strong>What is a null distribution?</strong></p>
+<p><br> <br></p>
+<p><strong>How is a null distribution created?</strong></p>
+<p><br> <br></p>
+<p><strong>How is a p-value related to a null distribution? i.e.&nbsp;how is a p-value calculated?</strong></p>
+<p><br> <br></p>
 </section>
-<section id="due-wednesday-by-the-start-of-class" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="due-wednesday-by-the-start-of-class"><span class="header-section-number">2.2</span> Due Wednesday by the start of class</h2>
+<section id="section-3-conducting-a-hypothesis-test" class="level2">
+<h2 class="anchored" data-anchor-id="section-3-conducting-a-hypothesis-test">Section 3 – Conducting a hypothesis test</h2>
+<p><strong>When creating a null distribution, what are the sequence of functions you use?</strong></p>
+<p><br> <br></p>
+<p><strong>Why is the <code>hypothesize()</code> function used to make a null distribution but not for a bootstrap distribution?</strong></p>
+<p><br> <br></p>
+<p><strong>What does the <code>null = "independence"</code> input in <code>hypothesize()</code> mean? What is it assuming about the variables declared in the <code>specify()</code> step?</strong></p>
+<p><br> <br></p>
+<p><strong>What method is used to <code>generate()</code> new samples? i.e.&nbsp;what is input as the <code>type</code>?</strong></p>
+<p><br> <br></p>
+<p><strong>Why is the null distribution centered at 0?</strong></p>
+<p><br> <br></p>
+<p><strong>How was the p-value calculated using the null distribution?</strong></p>
+<p><br> <br></p>
+<p><strong>How was the significance threshold (</strong><span class="math inline">\(\alpha\)</span>) used to reach a hypothesis testing decision?</p>
+<p><br> <br></p>
 </section>
+<section id="section-4-interpreting-a-hypothesis-test" class="level2">
+<h2 class="anchored" data-anchor-id="section-4-interpreting-a-hypothesis-test">Section 4 – Interpreting a hypothesis test</h2>
+<p><strong>Why do we never accept the null hypothesis?</strong></p>
+<p><br> <br></p>
+<p><strong>What is a Type I error?</strong></p>
+<p><br> <br></p>
+<p><strong>What is a Type II error?</strong></p>
+<p><br> <br></p>
+<p><strong>If you choose a smaller value of</strong> <span class="math inline">\(\alpha\)</span> what happens to your Type I error rate?</p>
+<p><br> <br></p>
+<p><strong>If you choose a smaller value of</strong> <span class="math inline">\(\alpha\)</span> what happens to your Type II error rate?</p>
+<p><br> <br></p>
 </section>
-<section id="r-tutorial-due-monday-by-the-start-of-class-note-the-new-time" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> R Tutorial – Due Monday by the start of class (note the new time!)</h1>
-<p><a href="https://openintro.shinyapps.io/ims-06-model-infer-04/"><strong>Required Tutorial:</strong> Evaluating the technical conditions in linear regression</a></p>
+<section id="section-5-comparing-with-confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="section-5-comparing-with-confidence-intervals">Section 5 – Comparing with confidence intervals</h2>
+<p><strong>Why do we look for 0 in our confidence interval?</strong></p>
+<p><br> <br></p>
+<p><strong>If our confidence interval contains 0 what decision would we have made in our hypothesis test?</strong></p>
+<p><br> <br></p>
+<p><strong>What is the difference between statistical and practical significance?</strong></p>
+<p><br> <br></p>
+</section>
+<section id="section-6-theory-based-hypothesis-tests-confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="section-6-theory-based-hypothesis-tests-confidence-intervals">Section 6 – Theory-based hypothesis tests &amp; confidence intervals</h2>
+<p><strong>How is the <code>std_error</code> column in the regression table calculated?</strong></p>
+<p><br> <br></p>
+<p><strong>How is the <code>statistic</code> column in the regression table calculated? What type of statistic is it?</strong></p>
+<p><br> <br></p>
+<p><strong>How is the <code>p_value</code> column in the regression table calculated?</strong></p>
+<p><br> <br></p>
+<p><strong>How are the <code>lower_ci</code> and <code>upper_ci</code> columns in the regression table calculated?</strong></p>
+<p><br> <br></p>
+<p><strong>What is the relationship between theory-based methods and simulation-based methods?</strong></p>
+<p><strong>How is the <code>std_error</code> column in the regression table calculated?</strong></p>
+<p><br> <br></p>
 
 
 </section>
@@ -969,18 +1003,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../weeks/week-7.html" class="pagination-link" aria-label="Week 7">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 7</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../weeks/week-9.html" class="pagination-link" aria-label="Week 9">
-        <span class="nav-page-text">Week 9</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

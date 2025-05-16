@@ -13,3 +13,6 @@ scales
 palmerpenguins
 RColorBrewer
 moderndive
+broom
+viridisLite
+viridis

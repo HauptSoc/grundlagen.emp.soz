@@ -1,5 +1,5 @@
 ---
-title: "Week 8 -- Hypothesis Test for Slope & Inference Conditions"
+title: "Week 7 -- Hypothesis Test for Slope & Inference Conditions"
 format: 
   html:
     table-of-contents: true
@@ -60,11 +60,11 @@ This week we are going to connect these ideas to the framework of hypothesis tes
 
 This reading will walk you through the general framework for understanding hypothesis tests. By understanding this general framework, you'll be able to adapt it to many different scenarios. The same can be said for confidence intervals. There was one general framework that applies to all confidence intervals. I believe this focus on the conceptual framework is better for long-term learning than focusing on specific details for specific instances.
 
-::: column-margin
+:::: column-margin
 ::: callout-note
 This week's reading is a compilation of [Chapter 8](https://moderndive.com/8-confidence-intervals.html) from *ModernDive* [@kim2020], [Chapter 24](openintro-ims.netlify.app/inf-model-slr.html) from *Introduction to Modern Statistics* [@ims], with a smattering of my own ideas.
 :::
-:::
+::::
 
 ## Reading Guide
 
@@ -330,13 +330,13 @@ denom <- nrow(randomize_10)
 p_val <- round(num / denom, 3)
 ```
 
-::: column-margin
+:::: column-margin
 ::: callout-caution
 # Accepting the null
 
 Careful! Failing to reject the null hypothesis is not the same as accepting the null hypothesis! You cannot state that someone is innocent just because there was not sufficient evidence they were guilty.
 :::
-:::
+::::
 
 In this case, `r sum(randomize_10$stat >= obs_slope)` times out of `r nrow(randomize_10)`, we obtained a difference in proportion greater than or equal to the observed slope of `r obs_slope`. As I suggested before, this event doesn't seem that rare as it could occur 10% of the time. As our observed slope is not vastly different from what we would expect to occur if the null was true, we should *fail to reject* the hypothesized universe.
 
@@ -622,11 +622,11 @@ visualize(bootstrap_distribution) +
 
 Notice a key value that is not included in the 95% confidence interval for $\beta_1$: the value 0. In other words, a difference of 0 is not included in our net, suggesting that the slope of the regression line is not 0.
 
-::: column-margin
+:::: column-margin
 ::: callout-tip
 If there is no linear relationship between two variables, then as $x$ increases nothing should happen with $y$. This corresponds to the slope of the regression line being 0.
 :::
-:::
+::::
 
 Since the bootstrap distribution appears to be roughly normally shaped, we can also use the standard error method as we did last week. In this case, we must specify the `point_estimate` argument as the observed slope statistic of `r obs_slope`. This value acts as the center of the confidence interval.
 
@@ -723,11 +723,11 @@ Here, our *null hypothesis* $H_0$ assumes that the population slope $\beta_1$ is
 
 The *alternative hypothesis* $H_A$, on the other hand, assumes that the population slope $\beta_1$ is not 0, meaning it could be either positive or negative. This suggests either a positive or negative relationship between a baby's birth weight and a mother's age. Recall we called such alternative hypotheses *two-sided*.
 
-::: column-margin
+:::: column-margin
 ::: callout-caution
 By convention, all hypothesis testing for regression assumes two-sided alternatives.
 :::
-:::
+::::
 
 The `statistic` column in the regression table is a tricky one, however. It corresponds to a standardized *t-test statistic*. The *null distribution* can be mathematically proven to be a $t$-distribution, under specific conditions (described in @sec-conditions). R uses the following $t$-statistic as the test statistic for hypothesis testing:
 
