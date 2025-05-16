@@ -1,5 +1,7 @@
 ---
 title: "Week 8 Reading Guide, Part 1: Model Conditions"
+format: docx
+editor: visual
 ---
 
 ## Model Conditions for Linear Regression
