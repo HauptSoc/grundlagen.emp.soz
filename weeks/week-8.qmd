@@ -12,6 +12,19 @@ execute:
   message: false
 ---
 
+```{r}
+#| label: packages-data
+
+library(tidyverse)
+library(palmerpenguins)
+library(broom)
+library(moderndive)
+
+penguins_clean <- penguins %>% 
+  drop_na(sex)
+```
+
+
 # Textbook Reading
 
 First, we are going to refresh on the conditions for linear regression. You 
@@ -74,9 +87,81 @@ conditions) and one that is due by Wednesday (on ANOVA).
 
 ## Due Wednesday by the start of class
 
-::: {.callout-important}
-# Will be posted by Friday evening! I'm still putting together the questions! 
+```{r}
+#| label: species-lm-coefficient-table
+
+species_lm <- lm(bill_length_mm ~ body_mass_g * species, 
+             data = penguins_clean)
+
+get_regression_table(species_lm) %>% 
+  gt::gt()
+```
+
+1. In the coefficient table, the `body_mass_g:speciesChinstrap` line is testing if
+the [slope / intercept] (of the relationship between body mass and bill length)
+is different for [Adelie / Chinstrap / Gentoo] penguins as compared to 
+[Adelie / Chinstrap / Gentoo] penguins.
+
+2. In the coefficient table, the `body_mass_g:speciesGentoo` line is testing if
+the [slope / intercept] (of the relationship between body mass and bill length)
+is different for [Adelie / Chinstrap / Gentoo] penguins as compared to 
+[Adelie / Chinstrap / Gentoo] penguins.
+ 
+3. True or false, you can use the regression table to test if the slope for 
+Chinstrap and Gentoo penguins are different. 
+
+```{r}
+#| label: species-lm-anova-table
+
+anova(species_lm) %>% 
+  tidy() %>% 
+  mutate(p.value = round(p.value, digits = 8)) %>% 
+  gt::gt()
+```
+
+4. Match the appropriate null and alternative hypothesis being tested in the
+`body_mass_g:species` line of the ANOVA table.
+
+::: columns
+::: {.column width="40%"}
+**Null Hypothesis**
+
+</br> 
+
+**Alternative Hypothesis**
 :::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+
+- The relationship between body mass and bill length is the same for this sample
+of Adelie, Chinstrap, and Gentoo penguins
+
+- The relationship between body mass and bill length is the same for all Adelie,
+Chinstrap, and Gentoo penguins
+
+- The relationship between body mass and bill length is different for a least
+one species of penguins
+
+- The relationship between body mass and bill length is different for the Adelie
+penguins
+
+- The relationship between body mass and bill length is different for the
+Chinstrap penguins
+
+- The relationship between body mass and bill length is different for the Gentoo
+penguins
+:::
+:::
+
+5. The `species` line of the ANOVA table is testing if the [intercept / slope]
+is different for [every species / at least one species / at least two species]. 
+
+6. True or false, the `body_mass_g` line of the ANOVA table and the 
+`body_mass_g` line of the coefficient table are performing the same hypothesis
+test.
 
 # R Tutorial -- Due Monday by the start of class (note the new time!)
 
