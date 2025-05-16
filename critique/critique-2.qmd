@@ -110,7 +110,7 @@ found.
 statistical significance [and]{.underline} the Nature article on 
 "statistical significance.**
 
-## Part Four: Reflection
+# Part Four: Reflection
 
 Now that you have compared the model you would have selected using p-values
 instead of a visualization and the misuses of p-values, I would like you to 
