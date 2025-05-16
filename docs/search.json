@@ -501,8 +501,8 @@
     "objectID": "slides/week8-day1.html#common-mistakes",
     "href": "slides/week8-day1.html#common-mistakes",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\n\nQuestion 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+    "section": "",
+    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
   },
   {
     "objectID": "slides/week8-day1.html#first-steps",
@@ -523,7 +523,7 @@
     "href": "slides/week8-day1.html#what-is-the-most-complex-model",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What is the “most complex” model?",
-    "text": "What is the “most complex” model?\nFor 1 numerical & 1 categorical explanatory variables\n\nFit the different slopes (interaction) model\n\n\nspecies_lm &lt;- lm(bill_length_mm ~ bill_depth_mm * species, \n                  data = penguins)\n\n\n\nFor 2 numerical explanatory variables\n\nFit the model with both variables included:\n\n\nbill_lm &lt;- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, \n                  data = penguins)"
+    "text": "What is the “most complex” model?\nFor 1 numerical & 1 categorical explanatory variables\n\nFit the different slopes (interaction) model\n\n\nspecies_lm &lt;- lm(bill_length_mm ~ bill_depth_mm * species, \n                  data = penguins)\n\n. . .\n\nFor 2 numerical explanatory variables\n\nFit the model with both variables included:\n\n\nbill_lm &lt;- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, \n                  data = penguins)"
   },
   {
     "objectID": "slides/week8-day1.html#how-do-i-know-what-model-is-best-from-the-anova-table",
@@ -558,14 +558,14 @@
     "href": "slides/week8-day1.html#testing-for-a-population-slope-beta_1",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Testing for a Population Slope (\\(\\beta_1\\))",
-    "text": "Testing for a Population Slope (\\(\\beta_1\\))\n\n\n\\[H_0: \\beta_1 = 0\\]\n\\[H_A: \\beta_1 \\neq 0\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat do these hypotheses mean in words?"
+    "text": "Testing for a Population Slope (\\(\\beta_1\\))\n\n\n\\[H_0: \\beta_1 = 0\\]\n\\[H_A: \\beta_1 \\neq 0\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nWhat do these hypotheses mean in words?"
   },
   {
     "objectID": "slides/week8-day1.html#what-do-you-think",
     "href": "slides/week8-day1.html#what-do-you-think",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What do you think?",
-    "text": "What do you think?\n\n\n\\(\\widehat{score} = 3.88 + 0.066 \\times \\text{bty_avg}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWill we reject \\(H_0\\)?"
+    "text": "What do you think?\n\n\n\\(\\widehat{score} = 3.88 + 0.066 \\times \\text{bty_avg}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nWill we reject \\(H_0\\)?"
   },
   {
     "objectID": "slides/week8-day1.html#if-h_0-was-true-then",
@@ -600,28 +600,28 @@
     "href": "slides/week8-day1.html#is-our-observed-statistic-likely-to-happen-if-the-null-was-true",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Is our observed statistic likely to happen if the null was true?",
-    "text": "Is our observed statistic likely to happen if the null was true?\n\nIf it is unlikely to happen, then we should reject \\(H_0\\)!\nWhy???\n\n\n\nThe probability of observing a statistic as or more extreme than 0.0666 if \\(H_0\\) was true is approximately 0%.\n\n\n\nSo, it seems like \\(H_0\\) is not a reasonable characterization of the relationship."
+    "text": "Is our observed statistic likely to happen if the null was true?\n. . .\nIf it is unlikely to happen, then we should reject \\(H_0\\)!\nWhy???\n. . .\n\nThe probability of observing a statistic as or more extreme than 0.0666 if \\(H_0\\) was true is approximately 0%.\n. . .\n\nSo, it seems like \\(H_0\\) is not a reasonable characterization of the relationship."
   },
   {
     "objectID": "slides/week8-day1.html#model-conditions",
     "href": "slides/week8-day1.html#model-conditions",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Model Conditions",
-    "text": "Model Conditions\nFor our p-value to be trustworthy, we need to know that the conditions of our model are not violated.\n\n\n\nFor linear regression we are assuming…\n\n\n\nLinear relationship between \\(x\\) and \\(y\\)\n\nIndependent observations\n\nNormality of residuals\n\nEqual variance of residuals"
+    "text": "Model Conditions\nFor our p-value to be trustworthy, we need to know that the conditions of our model are not violated.\n. . .\n\n\nFor linear regression we are assuming…\n\n\n\nLinear relationship between \\(x\\) and \\(y\\)\n\nIndependent observations\n\nNormality of residuals\n\nEqual variance of residuals"
   },
   {
     "objectID": "slides/week8-day1.html#what-happens-if-the-conditions-are-violated",
     "href": "slides/week8-day1.html#what-happens-if-the-conditions-are-violated",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What happens if the conditions are violated?",
-    "text": "What happens if the conditions are violated?\nIn general, when the conditions associated with these methods are violated, we will underestimate the true standard error (spread) of the sampling distribution.\n\n\nOur p-values will be too small!\nOur confidence intervals will be too narrow!\nWe will make more Type I errors than we expect!"
+    "text": "What happens if the conditions are violated?\nIn general, when the conditions associated with these methods are violated, we will underestimate the true standard error (spread) of the sampling distribution.\n. . .\n\nOur p-values will be too small!\nOur confidence intervals will be too narrow!\nWe will make more Type I errors than we expect!"
   },
   {
     "objectID": "slides/week8-day1.html#section-2",
     "href": "slides/week8-day1.html#section-2",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Linear relationship between \\(x\\) and \\(y\\)\n\n\n\nWhat should we do?"
+    "text": "Linear relationship between \\(x\\) and \\(y\\)\n\n\n\n\n\n\n\n\n\n\n. . .\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#section-3",
@@ -642,7 +642,7 @@
     "href": "slides/week8-day1.html#section-5",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Equal variance of residuals\n\n\n\nWhat should we do?"
+    "text": "Equal variance of residuals\n\n\n\n\n\n\n\n\n\n\n. . .\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#section-6",
@@ -656,7 +656,7 @@
     "href": "slides/week8-day1.html#section-7",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Normality of residuals\n\n\n\nWhat should we do?"
+    "text": "Normality of residuals\n\n\n\n\n\n\n\n\n\n\n. . .\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#section-8",
@@ -670,7 +670,7 @@
     "href": "slides/week8-day1.html#what-if-we-cant-fix-a-condition-being-violated",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What if we can’t fix a condition being violated?",
-    "text": "What if we can’t fix a condition being violated?\n\n\n\nFor the L, I, and E conditions…\nwe need to ask for help!\n\n\n\n\nFor the N condition…\nwe need to use simulation instead of mathematical formulas to get our p-value and confidence interval."
+    "text": "What if we can’t fix a condition being violated?\n. . .\n\n\nFor the L, I, and E conditions…\nwe need to ask for help!\n\n\n\n\nFor the N condition…\nwe need to use simulation instead of mathematical formulas to get our p-value and confidence interval."
   },
   {
     "objectID": "slides/week8-day1.html#mathematical-theory-based-methods",
@@ -691,14 +691,14 @@
     "href": "slides/week8-day1.html#section-9",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\n\n[1] 0.01495204\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
+    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\n\n[1] 0.01495204\n\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#how-does-r-calculate-the-p-value",
     "href": "slides/week8-day1.html#how-does-r-calculate-the-p-value",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "How does R calculate the p-value?",
-    "text": "How does R calculate the p-value?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent \\(t\\)-distributions\n\n\nA \\(t\\)-distribution has a slightly different shape depending on the sample size. Technically, we are using a \\(t\\)-distribution with \\(n - 2\\) degrees of freedom to get our p-value."
+    "text": "How does R calculate the p-value?\n. . .\n\n\n\n\n\n\n\n\n\n. . .\n\n\n\n\n\n\nDifferent \\(t\\)-distributions\n\n\n\nA \\(t\\)-distribution has a slightly different shape depending on the sample size. Technically, we are using a \\(t\\)-distribution with \\(n - 2\\) degrees of freedom to get our p-value."
   },
   {
     "objectID": "slides/week8-day1.html#approximating-the-permutation-distribution",
@@ -712,21 +712,21 @@
     "href": "slides/week8-day1.html#section-10",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "What is the relationship between life expectancy GDP per capita?\n\n\n\nDecide on a variable transformation\nAssess model conditions (L, I, N, E)\nCompare hypothesis test results between simulation-based methods and theory-based methods"
+    "text": "What is the relationship between life expectancy GDP per capita?\n\n. . .\n\nDecide on a variable transformation\nAssess model conditions (L, I, N, E)\nCompare hypothesis test results between simulation-based methods and theory-based methods"
   },
   {
     "objectID": "slides/week7-day2.html#weeks-8-9-10",
     "href": "slides/week7-day2.html#weeks-8-9-10",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Weeks 8, 9, & 10",
-    "text": "Weeks 8, 9, & 10\n\n\n\nWeek 8\n\n\nDig deeper into model conditions\nLearn about One-Way ANOVA\nCompare “visual” model selection with p-value model selection (Stat Critique #2)\n\n\n\n\n\nWeek 9\n\n\nLearn about simulation-based and theory-based inference for one-way ANOVA\nFirst draft of Final Project\n\n\n\n\n\nWeek 10\n\n\nLearn about two-way ANOVA\nFinish Final Project (poster)"
+    "section": "",
+    "text": "Week 8\n\n\nDig deeper into model conditions\nLearn about One-Way ANOVA\nCompare “visual” model selection with p-value model selection (Stat Critique #2)\n\n\n\n\n\nWeek 9\n\n\nLearn about simulation-based and theory-based inference for one-way ANOVA\nFirst draft of Final Project\n\n\n\n\n\nWeek 10\n\n\nLearn about two-way ANOVA\nFinish Final Project (poster)"
   },
   {
     "objectID": "slides/week7-day2.html#upcoming-deadlines",
     "href": "slides/week7-day2.html#upcoming-deadlines",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\n\n\n\n\n\n\n\nRevision Deadlines\n\n\nIf you did not submit revisions by the deadline (or forgot to include your reflections), your assignment is not eligible for additional revisions."
+    "section": "",
+    "text": "Lab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\n\n\n\n\n\n\n\nRevision Deadlines\n\n\n\nIf you did not submit revisions by the deadline (or forgot to include your reflections), your assignment is not eligible for additional revisions."
   },
   {
     "objectID": "slides/week7-day2.html#section",
@@ -740,28 +740,28 @@
     "href": "slides/week7-day2.html#section-1",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "What if I want to know if the population parameter differs from a specific value?\n\n\n\n\nHypothesis test!"
+    "text": "What if I want to know if the population parameter differs from a specific value?\n\n. . .\n\n\nHypothesis test!"
   },
   {
     "objectID": "slides/week7-day2.html#section-2",
     "href": "slides/week7-day2.html#section-2",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "Hypothesis test goal:\n\n\nAssess how different what we saw in our data is from what could have happened if the null hypothesis was true*\n\n\n\n*For hypothesis tests, we live in an alternative universe where \\(H_0\\) is true"
+    "text": "Hypothesis test goal:\n\n\nAssess how different what we saw in our data is from what could have happened if the null hypothesis was true*\n\n. . .\n\n*For hypothesis tests, we live in an alternative universe where \\(H_0\\) is true"
   },
   {
     "objectID": "slides/week7-day2.html#how-can-we-approximate-what-could-have-happened-if-the-null-was-true",
     "href": "slides/week7-day2.html#how-can-we-approximate-what-could-have-happened-if-the-null-was-true",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "How can we approximate what could have happened if the null was true?",
-    "text": "How can we approximate what could have happened if the null was true?\n\n\nPermutation!"
+    "section": "",
+    "text": ". . .\n\nPermutation!"
   },
   {
     "objectID": "slides/week7-day2.html#a-permutation-resample",
     "href": "slides/week7-day2.html#a-permutation-resample",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "A Permutation Resample",
-    "text": "A Permutation Resample\n\n\nAssumes the original sample is “representative” of observations in the population\nUses the original sample to generate new samples that might have occurred if the null hypothesis was true.\n\n\n\n\nWe can use statistics from these resamples to approximate the true sampling distribution under the null!"
+    "section": "",
+    "text": "Assumes the original sample is “representative” of observations in the population\nUses the original sample to generate new samples that might have occurred if the null hypothesis was true.\n\n\n. . .\n\nWe can use statistics from these resamples to approximate the true sampling distribution under the null!"
   },
   {
     "objectID": "slides/week7-day2.html#testing-a-population-parameter",
@@ -781,8 +781,8 @@
     "objectID": "slides/week7-day2.html#permutation-distribution",
     "href": "slides/week7-day2.html#permutation-distribution",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Permutation Distribution",
-    "text": "Permutation Distribution\n\n\ndefinition: a distribution of the permuted statistics from every permuted resample\n\n\n\nDisplays the variability in the statistic that could have happened with repeated sampling, if the null hypothesis was true.\n\n\n\nApproximates the true sampling distribution under the null!"
+    "section": "",
+    "text": ". . .\n\ndefinition: a distribution of the permuted statistics from every permuted resample\n\n. . .\nDisplays the variability in the statistic that could have happened with repeated sampling, if the null hypothesis was true.\n. . .\n\nApproximates the true sampling distribution under the null!"
   },
   {
     "objectID": "slides/week7-day2.html#section-3",
@@ -795,8 +795,8 @@
     "objectID": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
     "href": "slides/week7-day2.html#what-is-one-similarity-and-one-difference-between-a-permutation-distribution-and-a-bootstrap-distribution",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?",
-    "text": "What is one similarity and one difference between a permutation distribution and a bootstrap distribution?\n\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\nAre bell shaped and symmetric\n\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
+    "section": "",
+    "text": "Similarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\nAre bell shaped and symmetric\n\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement"
   },
   {
     "objectID": "slides/week7-day2.html#exploring-the-hbr_maples-dataset",
@@ -817,14 +817,14 @@
     "href": "slides/week7-day2.html#in-this-sample-of-359-sugar-maples",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "In this sample of 359 sugar maples…",
-    "text": "In this sample of 359 sugar maples…\n\\[\\widehat{\\text{stem dry mass}} = -0.043 + 0.001 \\times \\text{stem length}\\]\n\n\n\nWhat slope could have happened if there was no relationship between stem length and stem dry mass?"
+    "text": "In this sample of 359 sugar maples…\n\\[\\widehat{\\text{stem dry mass}} = -0.043 + 0.001 \\times \\text{stem length}\\]\n. . .\n\n\nWhat slope could have happened if there was no relationship between stem length and stem dry mass?"
   },
   {
     "objectID": "slides/week7-day2.html#generating-a-permuted-resample-and-calculating-permuted-statistics",
     "href": "slides/week7-day2.html#generating-a-permuted-resample-and-calculating-permuted-statistics",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Generating a permuted resample and calculating permuted statistics",
-    "text": "Generating a permuted resample and calculating permuted statistics\n\n\nStep 1: specify() your response and explanatory variables\n\n\nStep 2: hypothesize() what would happen under the null\n\n\nStep 3: generate() permuted resamples\n\n\nStep 4: calculate() the statistic of interest"
+    "text": "Generating a permuted resample and calculating permuted statistics\n\n. . .\nStep 1: specify() your response and explanatory variables\n. . .\nStep 2: hypothesize() what would happen under the null\n. . .\nStep 3: generate() permuted resamples\n. . .\nStep 4: calculate() the statistic of interest"
   },
   {
     "objectID": "slides/week7-day2.html#step-1-specify-your-variables",
@@ -838,14 +838,14 @@
     "href": "slides/week7-day2.html#step-2-state-your-hypothesis",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Step 2: State your hypothesis!",
-    "text": "Step 2: State your hypothesis!\n\nhbr_maples %&gt;% \n  specify(response = stem_dry_mass,\n          explanatory = stem_length) %&gt;% \n  hypothesize(null = \"independence\")\n\n\n\"independence\" – the assumed relationship between the explanatory and response variables under the null hypothesis\n\n\n\n\n\n\n\nIndependence of variables\n\n\nNote! This is different from assuming your observations are independent!"
+    "text": "Step 2: State your hypothesis!\n\nhbr_maples %&gt;% \n  specify(response = stem_dry_mass,\n          explanatory = stem_length) %&gt;% \n  hypothesize(null = \"independence\")\n\n\n\"independence\" – the assumed relationship between the explanatory and response variables under the null hypothesis\n. . .\n\n\n\n\n\n\nIndependence of variables\n\n\n\nNote! This is different from assuming your observations are independent!"
   },
   {
     "objectID": "slides/week7-day2.html#step-3-generate-your-resamples",
     "href": "slides/week7-day2.html#step-3-generate-your-resamples",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Step 3: Generate your resamples!",
-    "text": "Step 3: Generate your resamples!\n\nhbr_maples %&gt;% \n  specify(response = stem_dry_mass,\n          explanatory = stem_length) %&gt;% \n  hypothesize(null = \"independence\") %&gt;% \n  generate(reps = 1000, type = \"permute\")\n\n\n\n\n\nreps – the number of resamples you want to generate\n\n\n\n\"permute\" – the method that should be used to generate the new samples"
+    "text": "Step 3: Generate your resamples!\n\nhbr_maples %&gt;% \n  specify(response = stem_dry_mass,\n          explanatory = stem_length) %&gt;% \n  hypothesize(null = \"independence\") %&gt;% \n  generate(reps = 1000, type = \"permute\")\n\n. . .\n\n\n\nreps – the number of resamples you want to generate\n\n\n\n\"permute\" – the method that should be used to generate the new samples"
   },
   {
     "objectID": "slides/week7-day2.html#step-4-calculate-your-statistics",
@@ -887,14 +887,14 @@
     "href": "slides/week7-day2.html#the-p-value-is",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "The p-value is…",
-    "text": "The p-value is…\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\") \n\nWarning: Please be cautious in reporting a p-value of 0. This result is an approximation\nbased on the number of `reps` chosen in the `generate()` step.\nℹ See `get_p_value()` (`?infer::get_p_value()`) for more information.\n\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1       0\n\n\n\n\nWhy did we get a warning?"
+    "text": "The p-value is…\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\") \n\nWarning: Please be cautious in reporting a p-value of 0. This result is an approximation\nbased on the number of `reps` chosen in the `generate()` step.\nℹ See `get_p_value()` (`?infer::get_p_value()`) for more information.\n\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1       0\n\n\n. . .\n\nWhy did we get a warning?"
   },
   {
     "objectID": "slides/week7-day2.html#how-do-we-interpret-a-p-value",
     "href": "slides/week7-day2.html#how-do-we-interpret-a-p-value",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "How do we interpret a p-value?",
-    "text": "How do we interpret a p-value?\n\nNeed:\n\nprobability of what we saw in the data\nassuming the null hypothesis is true\n\n\n\n\nThe probability of observing a slope statistic (for the relationship between stem length and stem dry mass) as or more extreme than what was observed is less than 1 in 1000, if there was no relationship between a sugar maple’s stem length and stem dry mass."
+    "text": "How do we interpret a p-value?\n. . .\nNeed:\n\nprobability of what we saw in the data\nassuming the null hypothesis is true\n\n. . .\n\nThe probability of observing a slope statistic (for the relationship between stem length and stem dry mass) as or more extreme than what was observed is less than 1 in 1000, if there was no relationship between a sugar maple’s stem length and stem dry mass."
   },
   {
     "objectID": "slides/week7-day2.html#decision-versus-conclusion",
@@ -922,7 +922,7 @@
     "href": "slides/week7-day2.html#accessing-lab-7",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "Accessing Lab 7",
-    "text": "Accessing Lab 7\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n\n\n\n\n\n\n\n\nRoles\n\n\nYou will be trading off roles in the middle of the lab! One person will do the hypothesis test coding and one person will do the confidence interval coding!\n\n\n\n\n\n\n\nStep 2: One member of your group needs to follow these instructions to copy the Lab 7 project into your group’s workspace\n\n\n\n\nStep 3: Both members open the Lab 7 assignment in your group workspace!\n\n\n\n\nStep 4: Follow the final instructions to activate collaborative editing in the document.\n\n\n\n\n\n\n\n\nSource Editor\n\n\nYou need to be in the source editor (not the pretty one) to use collaborative editing!"
+    "text": "Accessing Lab 7\n\nStep 1: Both members of your group need to join your group workspace (link posted in the Announcements of your group)\n\n. . .\n\n\n\n\n\n\n\nRoles\n\n\n\nYou will be trading off roles in the middle of the lab! One person will do the hypothesis test coding and one person will do the confidence interval coding!\n\n\n\n. . .\n\nStep 2: One member of your group needs to follow these instructions to copy the Lab 7 project into your group’s workspace\n\n. . .\n\nStep 3: Both members open the Lab 7 assignment in your group workspace!\n\n. . .\n\nStep 4: Follow the final instructions to activate collaborative editing in the document.\n\n\n\n\n\n\n\n\nSource Editor\n\n\n\nYou need to be in the source editor (not the pretty one) to use collaborative editing!"
   },
   {
     "objectID": "slides/week6-day2.html#deadline-reminders",
@@ -5177,43 +5177,43 @@
     "objectID": "slides/week7-day1.html#course-updates",
     "href": "slides/week7-day1.html#course-updates",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
-    "section": "Course Updates",
-    "text": "Course Updates\n\nLab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\nMidterm Projects will be graded by Sunday (May 18)\n\n\n\n\n\n\n\nDon’t forget reflections!\n\n\nIf your reflections are not present by the deadline for revisions, your revisions are not eligible to be regraded. Please don’t forget your reflections!"
+    "section": "",
+    "text": "Lab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\nMidterm Projects will be graded by Sunday (May 18)\n\n\n\n\n\n\n\nDon’t forget reflections!\n\n\n\nIf your reflections are not present by the deadline for revisions, your revisions are not eligible to be regraded. Please don’t forget your reflections!"
   },
   {
     "objectID": "slides/week7-day1.html#section",
     "href": "slides/week7-day1.html#section",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Approximate the variability you’d expect to see in other samples!\n\n\n\n\nBootstrapping!"
+    "text": "Approximate the variability you’d expect to see in other samples!\n\n. . .\n\n\nBootstrapping!"
   },
   {
     "objectID": "slides/week7-day1.html#section-1",
     "href": "slides/week7-day1.html#section-1",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "A Bootstrap Resample\n\n\n\nAssumes the original sample is “representative” of observations in the population.\n\n\n\n\nUses the original sample to generate new samples that might have occurred with additional sampling.\n\n\n\n\n\nWe can use the statistics from these bootstrap resamples to approximate the true sampling distribution!"
+    "text": "A Bootstrap Resample\n\n. . .\n\nAssumes the original sample is “representative” of observations in the population.\n\n. . .\n\nUses the original sample to generate new samples that might have occurred with additional sampling.\n\n\n. . .\n\nWe can use the statistics from these bootstrap resamples to approximate the true sampling distribution!"
   },
   {
     "objectID": "slides/week7-day1.html#section-2",
     "href": "slides/week7-day1.html#section-2",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Estimating a population parameter\n\n\n\nWe are interested in knowing how a statistic varies from sample to sample.\n\n\n\n\nKnowing a statistic’s behavior helps us make better / more informed decisions!\n\n\n\n\nThis helps us estimate what values are more or less likely for the population parameter to have."
+    "text": "Estimating a population parameter\n\n. . .\n\nWe are interested in knowing how a statistic varies from sample to sample.\n\n. . .\n\nKnowing a statistic’s behavior helps us make better / more informed decisions!\n\n. . .\n\nThis helps us estimate what values are more or less likely for the population parameter to have."
   },
   {
     "objectID": "slides/week7-day1.html#section-3",
     "href": "slides/week7-day1.html#section-3",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "How do I get this plausible range of values?\n\n\n\n\nBootstrapping!\n\n\n\n\n\nFrom your original sample, resample with replacement the same number of times as your original sample.\n\n\n\n\n\n\nThis is your bootstrap resample.\n\n\n\n\n\n\nRepeat this process many, many times.\n\n\n\n\n\n\nCalculate a numerical summary (e.g., mean, median) for each bootstrap resample.\n\n\n\n\n\n\nThese are your bootstrap statistics"
+    "text": "How do I get this plausible range of values?\n\n. . .\n\n\nBootstrapping!\n\n. . .\n\n\nFrom your original sample, resample with replacement the same number of times as your original sample.\n\n\n. . .\n\n\nThis is your bootstrap resample.\n\n\n. . .\n\n\nRepeat this process many, many times.\n\n\n. . .\n\n\nCalculate a numerical summary (e.g., mean, median) for each bootstrap resample.\n\n\n. . .\n\n\nThese are your bootstrap statistics"
   },
   {
     "objectID": "slides/week7-day1.html#section-4",
     "href": "slides/week7-day1.html#section-4",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Bootstrap Distribution\n\n\n\na distribution of the bootstrap statistics from every bootstrap resample\n\n\n\n\nDisplays the variability in the statistic that could have happened with repeated sampling.\n\n\n\nApproximates the true sampling distribution!"
+    "text": "Bootstrap Distribution\n\n. . .\n\na distribution of the bootstrap statistics from every bootstrap resample\n\n. . .\n\nDisplays the variability in the statistic that could have happened with repeated sampling.\n. . .\n\nApproximates the true sampling distribution!"
   },
   {
     "objectID": "slides/week7-day1.html#statistic-beta_1",
@@ -5227,14 +5227,14 @@
     "href": "slides/week7-day1.html#in-this-sample-of-344-penguins",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "In this sample of 344 penguins…",
-    "text": "In this sample of 344 penguins…\n\\[\\widehat{\\text{bill length}} = 26.899 + 0.004 \\times \\text{body mass}\\]\n\n\n\nWhat slope could have happened in a different sample of penguins?"
+    "text": "In this sample of 344 penguins…\n\\[\\widehat{\\text{bill length}} = 26.899 + 0.004 \\times \\text{body mass}\\]\n. . .\n\n\nWhat slope could have happened in a different sample of penguins?"
   },
   {
     "objectID": "slides/week7-day1.html#section-5",
     "href": "slides/week7-day1.html#section-5",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Generating bootstrap resamples and calculating bootstrap statistics\n\n\n\nStep 1: specify() your response and explanatory variables\n\n\nStep 2: generate() bootstrap resamples\n\n\nStep 3: calculate() the statistic of interest"
+    "text": "Generating bootstrap resamples and calculating bootstrap statistics\n\n. . .\n\nStep 1: specify() your response and explanatory variables\n. . .\nStep 2: generate() bootstrap resamples\n. . .\nStep 3: calculate() the statistic of interest"
   },
   {
     "objectID": "slides/week7-day1.html#section-6",
@@ -5248,21 +5248,21 @@
     "href": "slides/week7-day1.html#section-7",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Step 2: Generate your resamples!\n\n\npenguins %&gt;% \n  specify(response = bill_length_mm, \n          explanatory = body_mass_g) %&gt;% \n  generate(reps = 500, type = \"bootstrap\")\n\n\n\nreps – the number of resamples you want to generate\n\n\"bootstrap\" – the method that should be used to generate the new samples"
+    "text": "Step 2: Generate your resamples!\n\n\npenguins %&gt;% \n  specify(response = bill_length_mm, \n          explanatory = body_mass_g) %&gt;% \n  generate(reps = 500, type = \"bootstrap\")\n\n\n. . .\nreps – the number of resamples you want to generate\n\n\"bootstrap\" – the method that should be used to generate the new samples"
   },
   {
     "objectID": "slides/week7-day1.html#section-8",
     "href": "slides/week7-day1.html#section-8",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Your turn!\n\n\n\nWhy do we resample with replacement when creating a bootstrap distribution?\n\nWhen we resample with replacement from our original sample what are we assuming about the original sample?"
+    "text": "Your turn!\n\n. . .\n\nWhy do we resample with replacement when creating a bootstrap distribution?\n\nWhen we resample with replacement from our original sample what are we assuming about the original sample?"
   },
   {
     "objectID": "slides/week7-day1.html#section-9",
     "href": "slides/week7-day1.html#section-9",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Step 3: Calculate your statistics!\n\n\npenguins %&gt;% \n  specify(response = bill_length_mm, \n          explanatory = body_mass_g) %&gt;% \n  generate(reps = 1000, \n           type = \"bootstrap\") %&gt;% \n  calculate(stat = \"slope\")\n\n\n\n\"slope\" – the statistic of interest"
+    "text": "Step 3: Calculate your statistics!\n\n\npenguins %&gt;% \n  specify(response = bill_length_mm, \n          explanatory = body_mass_g) %&gt;% \n  generate(reps = 1000, \n           type = \"bootstrap\") %&gt;% \n  calculate(stat = \"slope\")\n\n\n. . .\n\"slope\" – the statistic of interest"
   },
   {
     "objectID": "slides/week7-day1.html#section-10",
@@ -5283,21 +5283,21 @@
     "href": "slides/week7-day1.html#section-12",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "The 95% confidence interval is…\n\n\nget_confidence_interval(boot1, \n                        level = 0.95, \n                        type = \"percentile\")\n\n\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n0.00351\n0.00451\n\n\n\n\n\n\n\n\nWhat do we hope is captured by this interval?"
+    "text": "The 95% confidence interval is…\n\n\nget_confidence_interval(boot1, \n                        level = 0.95, \n                        type = \"percentile\")\n\n\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n0.00351\n0.00451\n\n\n\n\n\n\n\n. . .\nWhat do we hope is captured by this interval?"
   },
   {
     "objectID": "slides/week7-day1.html#section-13",
     "href": "slides/week7-day1.html#section-13",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "How do we interpret this interval?\n\n\n\n\n“We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453.\n\n\n\n\n\n\n\n“For every 1000 gram (~2.2lbs) increase in a penguin’s body mass, we are 95% confident the length of an Adelie, Chinstrap, or Gentoo penguins’s bill will increase between 3.55 and 4.53mm."
+    "text": "How do we interpret this interval?\n\n. . .\n\n\n“We are 95% confident the slope of the relationship between bill length and body mass for all Adelie, Chinstrap, and Gentoo penguins in the Palmer Archipelago is between 0.00355 and 0.00453.\n\n\n. . .\n\n\n\n“For every 1000 gram (~2.2lbs) increase in a penguin’s body mass, we are 95% confident the length of an Adelie, Chinstrap, or Gentoo penguins’s bill will increase between 3.55 and 4.53mm."
   },
   {
     "objectID": "slides/week7-day1.html#section-14",
     "href": "slides/week7-day1.html#section-14",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "",
-    "text": "Classic interpretation mistakes\n\n\n\n\n“There is a 95% probability that \\(\\beta_1\\) is between 0.00355 and 0.00453.”\n\n\n\n\n\n“We are 95% confident the sample statistic is in our interval.”"
+    "text": "Classic interpretation mistakes\n\n. . .\n\n\n“There is a 95% probability that \\(\\beta_1\\) is between 0.00355 and 0.00453.”\n\n\n. . .\n\n“We are 95% confident the sample statistic is in our interval.”"
   },
   {
     "objectID": "slides/week7-day1.html#how-does-the-relationship-between-bill-length-and-body-mass-change-based-on-a-penguins-sex",
@@ -5311,14 +5311,14 @@
     "href": "slides/week7-day1.html#what-changes",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "What changes?",
-    "text": "What changes?\nThe original sample of 344 penguins were broken down into the following groups (plus 11 NA values):\n\n\n\n\n\nSex\nSample Size\n\n\n\n\nfemale\n165\n\n\nmale\n168\n\n\n\n\n\n\n\n\nBefore we resampled with replacement 344 times.\n\n\n\nIf we resample with replacement 333 times, are we guaranteed to get 165 female penguins and 168 male penguins in each sample?"
+    "text": "What changes?\nThe original sample of 344 penguins were broken down into the following groups (plus 11 NA values):\n\n\n\n\n\nSex\nSample Size\n\n\n\n\nfemale\n165\n\n\nmale\n168\n\n\n\n\n\n\n\n. . .\nBefore we resampled with replacement 344 times.\n. . .\n\nIf we resample with replacement 333 times, are we guaranteed to get 165 female penguins and 168 male penguins in each sample?"
   },
   {
     "objectID": "slides/week7-day1.html#getting-our-observed-statistic",
     "href": "slides/week7-day1.html#getting-our-observed-statistic",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "Getting our Observed Statistic",
-    "text": "Getting our Observed Statistic\nStep 1: Fitting our Model\n\n\nobserved_fit &lt;- penguins %&gt;%\n  specify(bill_length_mm ~ body_mass_g * sex) %&gt;%\n  fit()\n\n\n\n\n\n\n\n\nSyntax changes\n\n\nWhen we have multiple explanatory variables, we need to use the “tilde” (~) syntax to specify our model. We also use the fit() function instead of the calculate() function."
+    "text": "Getting our Observed Statistic\nStep 1: Fitting our Model\n\n\nobserved_fit &lt;- penguins %&gt;%\n  specify(bill_length_mm ~ body_mass_g * sex) %&gt;%\n  fit()\n\n\n\n\n\n\n\n\nSyntax changes\n\n\n\nWhen we have multiple explanatory variables, we need to use the “tilde” (~) syntax to specify our model. We also use the fit() function instead of the calculate() function."
   },
   {
     "objectID": "slides/week7-day1.html#getting-our-observed-statistic-1",
@@ -5346,7 +5346,7 @@
     "href": "slides/week7-day1.html#how-do-we-interpret-this-interval",
     "title": "Confidence Intervals – Real Life Sampling Distributions",
     "section": "How do we interpret this interval?",
-    "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0019812\n-0.0001181\n\n\n\n\n\n\n\n\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.118 and 1.98mm shorter than a female penguin’s bill."
+    "text": "How do we interpret this interval?\n\n\n\n\n\nLower Bound\nUpper Bound\n\n\n\n\n-0.0019812\n-0.0001181\n\n\n\n\n\n\n\n. . .\n\nWe are 90% confident that the for every 1,000 gram increase in a penguin’s body mass (~2.2lbs), the length of a male penguin’s bill is between 0.118 and 1.98mm shorter than a female penguin’s bill."
   },
   {
     "objectID": "slides/week7-day1.html#to-do-list-by-wednesday",
@@ -5388,21 +5388,21 @@
     "href": "slides/week7-sampling-variability.html#sampling-framework",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "Sampling Framework",
-    "text": "Sampling Framework\npopulation – collection of observations / individuals we are interested in\npopulation parameter – numerical summary about the population that is unknown but you wish you knew\n\n\nsample – a collection of observations from the population\nsample statistic – a summary statistic computed from a sample that estimates the unknown population parameter."
+    "text": "Sampling Framework\npopulation – collection of observations / individuals we are interested in\npopulation parameter – numerical summary about the population that is unknown but you wish you knew\n. . .\n\nsample – a collection of observations from the population\nsample statistic – a summary statistic computed from a sample that estimates the unknown population parameter."
   },
   {
     "objectID": "slides/week7-sampling-variability.html#section-1",
     "href": "slides/week7-sampling-variability.html#section-1",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "",
-    "text": "Statistical Inference Reasoning\n\n\n\n\nIf the sampling is done at random\nthen the sample should be representative of the population\nany result based on the sample can generalize to the population\nthe point estimate is a “good guess” of the unknown population parameter\n\n\n\n\n\nEvery group had a random sample of 25 coach salaries, so why were some of the medians really far off?"
+    "text": "Statistical Inference Reasoning\n\n\n\n\nIf the sampling is done at random\nthen the sample should be representative of the population\nany result based on the sample can generalize to the population\nthe point estimate is a “good guess” of the unknown population parameter\n\n\n\n. . .\n\nEvery group had a random sample of 25 coach salaries, so why were some of the medians really far off?"
   },
   {
     "objectID": "slides/week7-sampling-variability.html#why-sample-more-than-once",
     "href": "slides/week7-sampling-variability.html#why-sample-more-than-once",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "Why sample more than once?",
-    "text": "Why sample more than once?\n\n\n\n\nWhat do we get when we take multiple samples?\n\n\n\n\nA distribution of statistics!\n\n\n\n\n\n\nWhy do we want a distribution of statistics?\n\n\n\n\n\nUnderstanding the variability of a statistic is the heart of statistical inference!"
+    "text": "Why sample more than once?\n. . .\n\n\n\nWhat do we get when we take multiple samples?\n\n\n\n\nA distribution of statistics!\n\n\n\n\n\n\n\nWhy do we want a distribution of statistics?\n\n\n\n\n\nUnderstanding the variability of a statistic is the heart of statistical inference!"
   },
   {
     "objectID": "slides/week7-sampling-variability.html#virtual-sampling",
@@ -5423,28 +5423,28 @@
     "href": "slides/week7-sampling-variability.html#section-3",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "",
-    "text": "Sampling Distributions\n\n\nVisualize the effect of sampling variation on the distribution of any point estimate\n\nIn this case, the sample median!\n\nWe can use sampling distributions to make statements about what values we can typically expect.\n\n\n\n\n\n\n\n\nSampling distribution vs. Sample distribution\n\n\nBe careful! A sampling distribution is different from a sample’s distribution!"
+    "text": "Sampling Distributions\n\n\nVisualize the effect of sampling variation on the distribution of any point estimate\n\nIn this case, the sample median!\n\nWe can use sampling distributions to make statements about what values we can typically expect.\n\n. . .\n\n\n\n\n\n\nSampling distribution vs. Sample distribution\n\n\n\nBe careful! A sampling distribution is different from a sample’s distribution!"
   },
   {
     "objectID": "slides/week7-sampling-variability.html#section-4",
     "href": "slides/week7-sampling-variability.html#section-4",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "",
-    "text": "Distributions of 1000 medians from different sample sizes\n\n\n\nWhat differences do you see?"
+    "text": "Distributions of 1000 medians from different sample sizes\n\n\n\n\n\n\n\n\n\n\n\nWhat differences do you see?"
   },
   {
     "objectID": "slides/week7-sampling-variability.html#section-5",
     "href": "slides/week7-sampling-variability.html#section-5",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "",
-    "text": "Variability for Different Sample Sizes\n\n\n\n\n\n\n\nSample Size\nStandard Error of Median\n\n\n\n\n25\n18959.404\n\n\n50\n13171.387\n\n\n100\n8036.337\n\n\n\n\n\n\n\n\n\n\n\nStandard errors quantify the variability of point estimates\nAs a general rule, as sample size increases, the standard error decreases.\n\n\n\n\n\n\n\n\n\n\nStandard error vs. Standard deviation\n\n\nCareful! There are important differences between standard errors and standard deviations."
+    "text": "Variability for Different Sample Sizes\n\n\n\n\n\n\n\nSample Size\nStandard Error of Median\n\n\n\n\n25\n18959.404\n\n\n50\n13171.387\n\n\n100\n8036.337\n\n\n\n\n\n\n\n\n. . .\n\n\nStandard errors quantify the variability of point estimates\nAs a general rule, as sample size increases, the standard error decreases.\n\n\n. . .\n\n\n\n\n\n\nStandard error vs. Standard deviation\n\n\n\nCareful! There are important differences between standard errors and standard deviations."
   },
   {
     "objectID": "slides/week7-sampling-variability.html#section-6",
     "href": "slides/week7-sampling-variability.html#section-6",
     "title": "Sampling Variability – The Heart of Statistical Inference",
     "section": "",
-    "text": "Does sample size change how accurate the estimate is?\n\n\nDoes sample size change how precise the estimate is?"
+    "text": ". . .\nDoes sample size change how accurate the estimate is?\n. . .\nDoes sample size change how precise the estimate is?"
   },
   {
     "objectID": "slides/week7-sampling-variability.html#section-7",
@@ -5457,8 +5457,8 @@
     "objectID": "slides/week8-day2.html#final-project-first-draft",
     "href": "slides/week8-day2.html#final-project-first-draft",
     "title": "ANalysis Of VAriance",
-    "section": "Final Project First Draft",
-    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n\n\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+    "section": "",
+    "text": "Step 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
   },
   {
     "objectID": "slides/week8-day2.html#section",
@@ -5493,7 +5493,7 @@
     "href": "slides/week8-day2.html#section-4",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "What can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+    "text": ". . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
   },
   {
     "objectID": "slides/week8-day2.html#section-5",
@@ -5507,7 +5507,7 @@
     "href": "slides/week8-day2.html#section-6",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 2: Find the overall mean\n\n\n\n\n\nThis ignores the groups and finds one mean for every observation!"
+    "text": "Step 2: Find the overall mean\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nThis ignores the groups and finds one mean for every observation!"
   },
   {
     "objectID": "slides/week8-day2.html#section-7",
@@ -5549,7 +5549,7 @@
     "href": "slides/week8-day2.html#section-12",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
+    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n. . .\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
   },
   {
     "objectID": "slides/week8-day2.html#section-13",
@@ -5563,14 +5563,14 @@
     "href": "slides/week8-day2.html#section-14",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Do you always use an F-distribution to get the p-value?\n\n\n\n\nNO!"
+    "text": "Do you always use an F-distribution to get the p-value?\n\n. . .\n\n\nNO!"
   },
   {
     "objectID": "slides/week8-day2.html#conditions-of-an-anova",
     "href": "slides/week8-day2.html#conditions-of-an-anova",
     "title": "ANalysis Of VAriance",
     "section": "Conditions of an ANOVA",
-    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
+    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
   },
   {
     "objectID": "slides/week8-day2.html#choosing-a-method",
@@ -5584,7 +5584,7 @@
     "href": "slides/week8-day2.html#section-15",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "What do you think? Which method should we use?"
+    "text": ". . .\n\nWhat do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week8-day2.html#step-1-calculating-the-observed-f-statistic",
@@ -5598,7 +5598,7 @@
     "href": "slides/week8-day2.html#step-2-simulating-what-could-have-happened-under-h_0",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Simulating what could have happened under \\(H_0\\)",
-    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
+    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n. . .\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
   },
   {
     "objectID": "slides/week8-day2.html#another-permutation-distribution",
@@ -5612,7 +5612,7 @@
     "href": "slides/week8-day2.html#another-permutation-distribution-1",
     "title": "ANalysis Of VAriance",
     "section": "Another Permutation Distribution",
-    "text": "Another Permutation Distribution\n\n\n\nWhy doesn’t the distribution have negative numbers?"
+    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
   },
   {
     "objectID": "slides/week8-day2.html#visualizing-the-p-value",
@@ -5647,7 +5647,7 @@
     "href": "slides/week8-day2.html#theory-based-methods",
     "title": "ANalysis Of VAriance",
     "section": "Theory-based Methods",
-    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n\n\nHow was the statistic calculated?\n\n\nWhat distribution was used to calculate the p.value?"
+    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n. . .\n\nHow was the statistic calculated?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
   },
   {
     "objectID": "slides/week8-day2.html#making-a-decision-reaching-a-conclusion-1",
@@ -6113,22 +6113,22 @@
     "objectID": "slides/week7-day2.html#simulating-what-could-have-happened-under-h_0",
     "href": "slides/week7-day2.html#simulating-what-could-have-happened-under-h_0",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
-    "section": "Simulating what Could Have Happened Under \\(H_0\\)",
-    "text": "Simulating what Could Have Happened Under \\(H_0\\)\n\n\n\nFrom your original sample, separate the \\(x\\) values from the \\(y\\) values.\n\n\n\nCreate new ordered pairs by randomly pairing \\(x\\) values with \\(y\\) values (permuting the labels).\n\n\n\n\n\n\n\nThis is your permuted resample.\n\n\n\n\n\n\nRepeat this process many, many times.\n\n\n\n\n\n\nCalculate a numerical summary (e.g., slope) for each permutation resample.\n\n\n\n\n\n\nThese are your permuted statistics."
+    "section": "",
+    "text": ". . .\n\n\nFrom your original sample, separate the \\(x\\) values from the \\(y\\) values.\n\n\n\nCreate new ordered pairs by randomly pairing \\(x\\) values with \\(y\\) values (permuting the labels).\n\n\n\n. . .\n\n\nThis is your permuted resample.\n\n\n. . .\n\n\nRepeat this process many, many times.\n\n\n. . .\n\n\nCalculate a numerical summary (e.g., slope) for each permutation resample.\n\n\n. . .\n\n\nThese are your permuted statistics."
   },
   {
     "objectID": "slides/week7-day2.html#section-5",
     "href": "slides/week7-day2.html#section-5",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "How do I get my p-value?\n\n\nCompare the observed statistic with the statistics produced assuming the null hypothesis was true.\n\n\n\n\nA p-value summarizes the probability of obtaining a sample statistic as or more extreme than what we observed, if the null hypothesis was true."
+    "text": "How do I get my p-value?\n\n. . .\nCompare the observed statistic with the statistics produced assuming the null hypothesis was true.\n. . .\n\n\nA p-value summarizes the probability of obtaining a sample statistic as or more extreme than what we observed, if the null hypothesis was true."
   },
   {
     "objectID": "slides/week7-day2.html#section-6",
     "href": "slides/week7-day2.html#section-6",
     "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
     "section": "",
-    "text": "What condition do we need to be worried about?"
+    "text": ". . .\n\nWhat condition do we need to be worried about?"
   },
   {
     "objectID": "slides/week7-day2.html#section-7",
@@ -6298,5 +6298,47 @@
     "title": "Week 8 Reading Guide, Part 1: Model Conditions",
     "section": "",
     "text": "What are the four conditions that need to be evaluated for linear regression?\n \n\n\n\n\n\n\n\n\nDo both methods for obtaining a p-value (simulation or theory) require these conditions?\n \nWhat happens if these conditions are violated?\n \nFor these next questions, I would like to see what ChatGPT suggests. So, copy the question into Chat and paste the FIRST answer you get. We’ll compare these in class on Monday!\nWhat should you do if your linear regression violates the linearity condition?\n \nWhat should you do if your linear regression violates the independence condition?\n \nWhat should you do if your linear regression violates the normality condition?\n \nWhat should you do if your linear regression violates the equal variance condition?"
+  },
+  {
+    "objectID": "slides/week7-day1.html",
+    "href": "slides/week7-day1.html",
+    "title": "Confidence Intervals – Real Life Sampling Distributions",
+    "section": "",
+    "text": "Lab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\nMidterm Projects will be graded by Sunday (May 18)\n\n\n\n\n\n\n\nDon’t forget reflections!\n\n\n\nIf your reflections are not present by the deadline for revisions, your revisions are not eligible to be regraded. Please don’t forget your reflections!"
+  },
+  {
+    "objectID": "slides/week7-sampling-variability.html",
+    "href": "slides/week7-sampling-variability.html",
+    "title": "Sampling Variability – The Heart of Statistical Inference",
+    "section": "",
+    "text": "Salaries of football coaches"
+  },
+  {
+    "objectID": "slides/week7-day2.html",
+    "href": "slides/week7-day2.html",
+    "title": "🧑🏽‍🔬 P-values & Hypothesis Tests",
+    "section": "",
+    "text": "Week 8\n\n\nDig deeper into model conditions\nLearn about One-Way ANOVA\nCompare “visual” model selection with p-value model selection (Stat Critique #2)\n\n\n\n\n\nWeek 9\n\n\nLearn about simulation-based and theory-based inference for one-way ANOVA\nFirst draft of Final Project\n\n\n\n\n\nWeek 10\n\n\nLearn about two-way ANOVA\nFinish Final Project (poster)\n\n\n\n\n\n\n\n\n\nLab 4 revisions are due on Friday (May 16)\nLab 3 second revisions are due on Friday (May 16)\n\n\n\n\n\n\n\nRevision Deadlines\n\n\n\nIf you did not submit revisions by the deadline (or forgot to include your reflections), your assignment is not eligible for additional revisions.\n\n\n\n\n\n\nyou…\n\n\n\nunderstand the importance of sampling variability\nknow about using confidence intervals to estimate a range of plausible values for the population parameter\nwant to know how p-values fit in\n\n\n\n\n\n\nWhat if I want to know if the population parameter differs from a specific value?\n\n. . .\n\n\nHypothesis test!\n\n\n\n\n\n\nHypothesis test goal:\n\n\nAssess how different what we saw in our data is from what could have happened if the null hypothesis was true*\n\n. . .\n\n*For hypothesis tests, we live in an alternative universe where \\(H_0\\) is true\n\n\n\n\n\nWhat are the null and alternative hypotheses for linear regression?\n\n\n\n\n. . .\n\nPermutation!\n\n\n\n\n\n\nAssumes the original sample is “representative” of observations in the population\nUses the original sample to generate new samples that might have occurred if the null hypothesis was true.\n\n\n. . .\n\nWe can use statistics from these resamples to approximate the true sampling distribution under the null!\n\n\n\n\n. . .\n\n\nFrom your original sample, separate the \\(x\\) values from the \\(y\\) values.\n\n\n\nCreate new ordered pairs by randomly pairing \\(x\\) values with \\(y\\) values (permuting the labels).\n\n\n\n. . .\n\n\nThis is your permuted resample.\n\n\n. . .\n\n\nRepeat this process many, many times.\n\n\n. . .\n\n\nCalculate a numerical summary (e.g., slope) for each permutation resample.\n\n\n. . .\n\n\nThese are your permuted statistics.\n\n\n\n\n\n. . .\n\ndefinition: a distribution of the permuted statistics from every permuted resample\n\n. . .\nDisplays the variability in the statistic that could have happened with repeated sampling, if the null hypothesis was true.\n. . .\n\nApproximates the true sampling distribution under the null!\n\n\n\n\n\n\n\n\nSimilarity\n\n\nDistributions of sample statistics\nUse resampling to see variability\nApproximate a sampling distribution\nUse observed data\nAre bell shaped and symmetric\n\n\n\n\n\n\n\nDifference\n\n\nPermutation distributions assume \\(H_0\\) is true\nBootstrapping resamples with replacement\n\n\n\n\n\n\n\n \n\nWhere is a null distribution centered?"
+  },
+  {
+    "objectID": "slides/week8-day2.html",
+    "href": "slides/week8-day2.html",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+  },
+  {
+    "objectID": "slides/week8-day1.html",
+    "href": "slides/week8-day1.html",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "",
+    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+  },
+  {
+    "objectID": "critique/critique-2.html#part-four-reflection",
+    "href": "critique/critique-2.html#part-four-reflection",
+    "title": "Statistical Critique 2: Exploring p-values",
+    "section": "Part Four: Reflection",
+    "text": "Part Four: Reflection\nNow that you have compared the model you would have selected using p-values instead of a visualization and the misuses of p-values, I would like you to reflect on the benefits and drawbacks of using p-values.\n\nWhat are the benefits of using p-values to assess the strength of evidence in a study?\nWhat are some limitations or drawbacks of relying solely on p-values to determine whether a result is meaningful or important?\nWhat is something you’ve learned in this activity that you will take with you in your future courses / research?"
   }
 ]

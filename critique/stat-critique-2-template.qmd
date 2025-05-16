@@ -43,8 +43,25 @@ For the first part of this critique, you are going to revisit the model you sele
 
 ```
 
-**Based on the p-value(s) you obtained from the ANOVA, what model is the "best" model?**
+**Based on the p-value(s) you obtained from the ANOVA table, what model is the "best" model?**
 
 # Part Three: Learning More about Misuses of $p$-values
 
+**Read the American Statistical Association's statement on $p$-values and 
+statistical significance [and]{.underline} the Nature article on 
+"statistical significance.**
 
+## Part Four: Reflection
+
+Now that you have compared the model you would have selected using p-values
+instead of a visualization and the misuses of p-values, I would like you to 
+reflect on the benefits and drawbacks of using p-values. 
+
+1. What are the benefits of using p-values to assess the strength of evidence
+in a study? 
+
+2. What are some limitations or drawbacks of relying solely on p-values to
+determine whether a result is meaningful or important?
+
+3. What is something you've learned in this activity that you will take with you
+in your future courses / research?

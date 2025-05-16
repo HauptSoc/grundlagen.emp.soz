@@ -9,7 +9,7 @@ format:
 editor: source
 ---
 
-![](images/significant.jpeg)
+![](images/significant.jpeg){fig-alt="A black-and-white cartoon depicts several scientists, each saying a variation of the word 'significant' in different fonts and styles. Some speech bubbles say 'significant?', 'Significant.', 'significance.', 'significance', 'Significant!', and 'Significant.' in bold or stylized text. The image humorously illustrates the overuse and varied emphasis of the word 'significant' in scientific communication. "}
 
 ## Assignment Details
 
@@ -33,9 +33,10 @@ can be used in the context of multiple linear regression: [Extending to Multiple
 For the first part of this critique, you are going to revisit the model you
 selected for your Midterm Project. You need to copy-and-paste the code you wrote
 in your Midterm Project to create your two visualizations. After these
-visualizations, you should include the 2-3 sentences you wrote regarding *why*
-you chose the model you did in your Midterm Project. This should be copied from
-the "Statistical Model" section of your Midterm Project!
+visualizations, you should include the 2-3 sentences from your 
+*Statistical Methods* subsection where you described *why* you chose the model
+you did in your Midterm Project. Feel free to copy and paste from your 
+Midterm Project!
 
 # Part Two: Using p-values Instead
 
@@ -66,6 +67,9 @@ anova(my_model) |>
   tidy()
 ```
 
+**Based on the p-value(s) you obtained from the ANOVA table, what model is the "best"
+model?**
+
 # Part Three: Learning More about Misuses of $p$-values
 
 > "The p-value was never intended to be a substitute for scientific reasoning." 
@@ -79,34 +83,44 @@ $p$-value.
 
 [^1]: This is my professional organization.
 
-<!-- > "Over time it appears the p-value has become a gatekeeper for whether work is publishable. This apparent editorial bias leads to the 'file-drawer effect,' in which research with statistically significant outcomes are much more likely to get published, while other work that might well be just as important scientifically is never seen in print. It also leads to practices called by such names as 'p-hacking' and 'data dredging' that emphasize the search for small p-values over other statistical and scientific reasoning." -->
-
+<!-- > "Over time it appears the p-value has become a gatekeeper for whether work is -->
+<!-- > publishable. This apparent editorial bias leads to the 'file-drawer effect,' -->
+<!-- > in which research with statistically significant outcomes are much more likely -->
+<!-- > to get published, while other work that might well be just as important -->
+<!-- > scientifically is never seen in print. It also leads to practices called by -->
+<!-- > such names as 'p-hacking' and 'data dredging' that emphasize the search for -->
+<!-- > small p-values over other statistical and scientific reasoning." -->
 <!-- > -->
-
 <!-- > Jessica Utts, President of the American Statistical Association -->
 
-<!-- In March of 2019, Valentin Amrhein, Sander Greenland, Blake McShane and more -->
+In March of 2019, Valentin Amrhein, Sander Greenland, Blake McShane and more
+than 800 signatories published an article in Nature [calling for an end to "statistical significance"](https://www-nature-com.calpoly.idm.oclc.org/articles/d41586-019-00857-9). The article
+details how, on top of the many common misunderstandings about hypothesis
+testing and $p$-values, there is an incentive for researchers to "cherry pick"
+only the results that are "statistically significant" while dismissing those
+that aren't. There are two problems with this system:
 
-<!-- than 800 signatories published an article in Nature [calling for an end to "statistical significance"](https://www.nature.com/articles/d41586-019-00857-9). The article -->
+1.  It incentivizes researchers to do whatever it takes to obtain "significant"
+p-values, even through dishonest means.
 
-<!-- details how, on top of the many common misunderstandings about hypothesis -->
+2.  It dismisses the importance of results where no "significant" effects are
+found.
 
-<!-- testing and $p$-values, there is an incentive for researchers to "cherry pick" -->
+**Read the American Statistical Association's statement on $p$-values and 
+statistical significance [and]{.underline} the Nature article on 
+"statistical significance.**
 
-<!-- only the results that are "statistically significant" while dismissing those -->
+## Part Four: Reflection
 
-<!-- that aren't. There are two problems with this system: -->
+Now that you have compared the model you would have selected using p-values
+instead of a visualization and the misuses of p-values, I would like you to 
+reflect on the benefits and drawbacks of using p-values. 
 
-<!-- 1.  It incentivizes researchers to do whatever it takes to obtain "significant" -->
+1. What are the benefits of using p-values to assess the strength of evidence
+in a study? 
 
-<!-- p-values, even through dishonest means. -->
+2. What are some limitations or drawbacks of relying solely on p-values to
+determine whether a result is meaningful or important?
 
-<!-- 2.  It dismisses the importance of results where no "significant" effects are -->
-
-<!-- found. -->
-
-Read the American Statistical Association's statement on $p$-values and 
-statistical significance. 
-
-
-Now that you have explored the use of p-values for model selection and publication criteria, write down **two** things you have learned that you will take with you in your future courses / research.
+3. What is something you've learned in this activity that you will take with you
+in your future courses / research?
