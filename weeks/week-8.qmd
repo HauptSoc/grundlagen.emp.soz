@@ -21,13 +21,17 @@ guide: [**Model Conditions for Linear Regression**](chapters/week7-reading2.qmd)
 ::: callout-note
 ## Reading Guide -- Due Monday by the start of class
 
-[Download the Word Document](reading-guide/week8-reading1.docx)
+There are a few questions from this that are similar to the of last week's
+reading guide. Feel free to copy and paste your previous answers to this 
+reading guide! 
+
+[Download the Word Document](reading-guide/week8-reading1.qmd)
 :::
 
 Now, let's read about how hypothesis testing extends into multiple linear
 regression. This allows us to connect to our new topic---ANOVA! 
 
-[**Required Reading:** Hypothesis Tests for Multiple Linear Regression](chapters/week8-reading-mlr.html)
+[**Required Reading:** Hypothesis Tests for Multiple Linear Regression](chapters/week-8-reading-mlr.qmd)
 
 ::: callout-important
 There is no reading guide for this chapter, just a concept quiz! 
@@ -70,6 +74,9 @@ conditions) and one that is due by Wednesday (on ANOVA).
 
 ## Due Wednesday by the start of class
 
+::: {.callout-important}
+# Will be posted by Friday evening! I'm still putting together the questions! 
+:::
 
 # R Tutorial -- Due Monday by the start of class (note the new time!)
 
