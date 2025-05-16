@@ -31,9 +31,8 @@ For the first part of this critique, you are going to revisit the model you sele
 ```
 
 ## Model Justification
+
 <!-- Justify (in 2-3 sentences) why you chose this model! -->
-
-
 
 # Part Two: Using a p-value Instead
 
@@ -46,21 +45,6 @@ For the first part of this critique, you are going to revisit the model you sele
 
 **Based on the p-value(s) you obtained from the ANOVA, what model is the "best" model?**
 
-
-
 # Part Three: Learning More about Misuses of $p$-values
-
-<!-- Note which (if any) of the ASA's p-value misinterpretations apply to the  -->
-<!-- article by Tuan et al. -->
-<!-- Make sure to JUSTIFY why you do / do not believe the p-values are misinterpreted! -->
-
-
-
-
-## Part Four: Lessons Learned
-
-Now that you have explored the use of p-values for model selection and publication criteria, write down **two** things you have learned that you will take with you.
-
-
 
 
