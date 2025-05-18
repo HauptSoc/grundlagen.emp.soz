@@ -126,3 +126,20 @@ There should be **no** mention of p-values in your conclusion!
     about the relationship between the explanatory and response variables.
     Specifically, can cause-and-effect statements be made?
 
+# Submission
+
+You are expected to submit your rendered HTML file by the deadline. The entirety
+of the content for your project is expected to be included in your HTML file. 
+
+If you do not submit a first draft by the stated deadline, you will not receive
+feedback from Dr. Theobold. It is your responsibility to find a time to meet 
+with Dr. Theobold to discuss your project before you submit your final draft. 
+
+If you do not submit a final version of your project by the stated deadline, 
+your grade will be based on your first draft. If you did not submit a first 
+draft, your grade on the project will be an F. 
+
+If you do not submit an HTML for the final version of your project because you 
+were unable to render your project, you will receive a one letter grade 
+deduction. Meaning, if you submit a Google Doc or a Word file with your project, 
+you will receive a letter grade deduction in your project grade. 
