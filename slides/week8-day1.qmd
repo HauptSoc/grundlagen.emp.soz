@@ -19,11 +19,6 @@ my_theme <- theme(axis.title.x = element_text(size = 18),
                   axis.text.y = element_text(size = 12), 
                   legend.text = element_text(size = 12), 
                   legend.title = element_text(size = 18))
-
-obs_slope <- evals %>% 
-  specify(response = score, 
-          explanatory = bty_avg) %>% 
-  calculate(stat = "slope")
 ```
 
 # Lab 6 Recap
@@ -468,12 +463,3 @@ legend(2.5, 0.4,
 :::
 ::::::
 
-## ![](images/gapminder.png)
-
-> What is the relationship between life expectancy GDP per capita?
-
-. . .
-
--   Decide on a variable transformation
--   Assess model conditions (L, I, N, E)
--   Compare hypothesis test results between simulation-based methods and theory-based methods
