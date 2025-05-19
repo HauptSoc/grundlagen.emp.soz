@@ -12,8 +12,7 @@ editor: visual
 
 *If they use `group_by()`*
 
-> Careful! We don't need to make any groups to know how many penguins are in
-> these data! We only need to know the number of rows in the dataset! 
+> Careful! We don't need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!
 
 ## Question 2
 
@@ -31,9 +30,7 @@ They are not required to include a regression line, but if they do, great!
 
 *If they don't have axis labels with the units*:
 
-> It is important to include an axis label stating what the units of each
-> variable are! If you are wondering what the units of crab size are, you can 
-> look up the help file (using ?pie_crab)
+> It is important to include an axis label stating what the units of each variable are! If you are wondering what the units of crab size are, you can look up the help file (using ?pie_crab)
 
 ## Question 3
 
@@ -48,17 +45,11 @@ Description includes **all** of the following:
 
 *If they forget one of these*:
 
-> Careful! You were asked to describe the form, direction, strength, and unusual
-> points for the plot. Remember, it is important to explicitly state where you
-> believe the outliers are, so the reader knows where to look! I would also
-> encourage you to justify **why** you believe this is an outlier, since other
-> people might not think so!
+> Careful! You were asked to describe the form, direction, strength, and unusual points for the plot. Remember, it is important to explicitly state where you believe the outliers are, so the reader knows where to look! I would also encourage you to justify **why** you believe this is an outlier, since other people might not think so!
 
 *If they don't state [where]{.underline} the outlier is*:
 
-> It is important to explicitly state where you believe the outliers are, so
-> the reader knows where to look! I would also encourage you to justify **why**
-> you believe this is an outlier, since other people might not think so! 
+> It is important to explicitly state where you believe the outliers are, so the reader knows where to look! I would also encourage you to justify **why** you believe this is an outlier, since other people might not think so!
 
 ## Question 4
 
@@ -95,7 +86,7 @@ null_dist <- pie_crab %>%
   calculate(stat = "slope")
 ```
 
-If they chose `reps` larger than 500, that's okay! 
+If they chose `reps` larger than 500, that's okay!
 
 *If they chose `reps` smaller than 500*:
 
@@ -119,31 +110,27 @@ get_p_value(null_dist,
 
 *If they don't specify `"two-sided"`*:
 
-> Careful! How many tails are there in a "standard" hypothesis for the slope? 
+> Careful! How many tails are there in a "standard" hypothesis for the slope?
 
 ## Question 7
 
 **To earn a Success**: States they reject $H_0$ because the p-value is less than 0.1
 
-*If they do not state whether they reject or fail to reject $H_0$*: 
+*If they do not state whether they reject or fail to reject* $H_0$:
 
-> You were asked to make a decision regarding the hypotheses, which has two
-> possible options. Which option do you choose and why?
+> You were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?
 
-*If they say they fail to reject $H_0$*:
+*If they say they fail to reject* $H_0$:
 
-> Careful! What p-value did you get? Was it smaller than the alpha I specified?
-> The alpha stipulates how "unusual" the observed statistic needs to be in order
-> for us to reject $H_0$. Is your p-value smaller than this threshold?
+> Careful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how "unusual" the observed statistic needs to be in order for us to reject $H_0$. Is your p-value smaller than this threshold?
 
 ## Question 8
 
-**To earn a Success**: States there is a (linear) relationship between crab size
-and latitude. 
+**To earn a Success**: States there is a (linear) relationship between crab size and latitude.
 
-> Fill in response! 
+> Fill in response!
 
-## Question 9 
+## Question 9
 
 ```{r}
 #| eval: false
@@ -157,7 +144,7 @@ bootstrap_dist <- pie_crab %>%
   calculate(stat = "slope")
 ```
 
-If they chose `reps` larger than 500, that's okay! 
+If they chose `reps` larger than 500, that's okay!
 
 *If they chose `reps` smaller than 500*:
 
@@ -186,8 +173,7 @@ So, it is okay if they don't specify it!
 
 *If they use a `level` other than 0.90*:
 
-> Look back at the lab instructions, what percentage confidence interval were
-> you asked to construct?
+> Look back at the lab instructions, what percentage confidence interval were you asked to construct?
 
 ## Question 11
 
@@ -210,13 +196,11 @@ Note that every group will get a different interval, due to the randomness of bo
 
 *If they don't state the statistic in context*:
 
-> We need to be specific about the what parameter we believe is in our interval.
-> The slope statistic is measuring the relationship between which variables?
+> We need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?
 
 *If they don't include a population:*
 
-> What population does this interval apply to? Where were these crabs sampled 
-from? That is the population your interval applies to!
+> What population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!
 
 <!-- *If they have state an incorrect population*: -->
 

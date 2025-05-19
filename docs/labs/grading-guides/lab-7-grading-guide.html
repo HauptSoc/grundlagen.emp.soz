@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,12 +69,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-be15a34e5484ed5d1c78596aa3517899.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee533f522a3b3f274b8ffabb45ea43f7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,6 +103,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -342,6 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
   <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
   <li><a href="#question-11" id="toc-question-11" class="nav-link" data-scroll-target="#question-11">Question 11</a></li>
+  <li><a href="#question-12" id="toc-question-12" class="nav-link" data-scroll-target="#question-12">Question 12</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -371,11 +401,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <p><strong>To earn a Success</strong>:</p>
 <ul>
-<li>includes either <code>site</code> or <code>name</code> inside of <code>group_by()</code></li>
+<li>states the number of rows in the data frame</li>
 </ul>
-<p><em>If uses another variable (e.g., <code>latitude</code>, <code>water_temp</code>):</em></p>
+<p><em>If they use <code>group_by()</code></em></p>
 <blockquote class="blockquote">
-<p>Your approach works, since there was only one measurement per site. But what if there wasn’t? This variable doesn’t uniquely define the location of each marsh! What variable(s) do?</p>
+<p>Careful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!</p>
 </blockquote>
 </section>
 <section id="question-2" class="level2">
@@ -384,8 +414,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Creates scatterplot with:</p>
 <ul>
 <li><code>latitude</code> on x-axis</li>
-<li><code>water temperature</code> on y-axis</li>
-<li>axis labels include variable units (Celsius for water temp; degrees for latitude)</li>
+<li><code>size</code> on y-axis</li>
+<li>y-axis label includes units for <code>size</code> (millimeters)</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -402,11 +432,7 @@ Note
 </div>
 <p><em>If they don’t have axis labels with the units</em>:</p>
 <blockquote class="blockquote">
-<p>It is important to include an axis label stating what the units of each variable are! If you are wondering what the units of water temperature are, you can look up the help file (using ?pie_crab)</p>
-</blockquote>
-<p><em>If they only put temperature on their y-axis:</em></p>
-<blockquote class="blockquote">
-<p>What specific variable is being plotted on the y-axis? Air temperature? Ground temperature? Water temperature? Be specific!</p>
+<p>It is important to include an axis label stating what the units of each variable are! If you are wondering what the units of crab size are, you can look up the help file (using ?pie_crab)</p>
 </blockquote>
 </section>
 <section id="question-3" class="level2">
@@ -415,17 +441,17 @@ Note
 <p>Description includes <strong>all</strong> of the following:</p>
 <ul>
 <li>form of relationship (linear)</li>
-<li>direction of relationship (negative)</li>
-<li>strength of relationship (strong)</li>
-<li>location of any outliers (e.g., at a latitude of 45 degrees and 17.5 C temperature)</li>
+<li>direction of relationship (positive)</li>
+<li>strength of relationship (moderate)</li>
+<li>location of any outliers</li>
 </ul>
 <p><em>If they forget one of these</em>:</p>
 <blockquote class="blockquote">
-<p>Careful! You were asked to describe the form, direction, strength, and unusual points for the plot. Remember, it is important to explicitly state where you believe the outliers are, so the reader knows where to look!</p>
+<p>Careful! You were asked to describe the form, direction, strength, and unusual points for the plot. Remember, it is important to explicitly state where you believe the outliers are, so the reader knows where to look! I would also encourage you to justify <strong>why</strong> you believe this is an outlier, since other people might not think so!</p>
 </blockquote>
 <p><em>If they don’t state <u>where</u> the outlier is</em>:</p>
 <blockquote class="blockquote">
-<p>It is important to explicitly state where you believe the outliers are, so the reader knows where to look!</p>
+<p>It is important to explicitly state where you believe the outliers are, so the reader knows where to look! I would also encourage you to justify <strong>why</strong> you believe this is an outlier, since other people might not think so!</p>
 </blockquote>
 </section>
 <section id="question-4" class="level2">
@@ -434,7 +460,7 @@ Note
 <p>Code should look like the following:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>obs_slope <span class="ot">&lt;-</span> obs_slope <span class="ot">&lt;-</span> marsh_info <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> water_temp, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> size, </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> latitude) <span class="sc">%&gt;%</span> </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -444,44 +470,77 @@ Note
 <p><strong>To earn a Success:</strong></p>
 <p>Code should look like the following:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bootstrap_dist <span class="ot">&lt;-</span> marsh_info <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> water_temp, </span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>null_dist <span class="ot">&lt;-</span> pie_crab <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> size, </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> latitude) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>If they chose <code>reps</code> larger than 500, that’s okay!</p>
+<p><em>If they chose <code>reps</code> smaller than 500</em>:</p>
+<blockquote class="blockquote">
+<p>Careful! How many resamples (reps) were you asked to generate?</p>
+</blockquote>
 </section>
 <section id="question-6" class="level2">
 <h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
 <p><strong>To earn a Success:</strong></p>
 <p>Code should look like the following:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise</span>(bootstrap_dist) <span class="sc">+</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"&lt;SOME AXIS LABEL&gt;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_p_value</span>(null_dist, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">obs_stat =</span> obs_slope, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Their axis label <strong>must</strong> describe what is being plotted (e.g., slope statistics, sample slope, etc.)</p>
-<p><em>If they did not include an x-axis label</em>:</p>
+<p><em>If they don’t specify <code>"two-sided"</code></em>:</p>
 <blockquote class="blockquote">
-<p>It is important to include an axis label stating what is being plotted! What statistics are being plotted on this bootstrap distribution? Your axis label should tell the reader what statistics you are plotting!</p>
-</blockquote>
-<p><strong>If their x-axis label is not about the slope statistic:</strong></p>
-<blockquote class="blockquote">
-<p>What is being plotted in this distribution? What is it a distribution of? What statistics did you calculate in the previous step that are being plotted here?</p>
-</blockquote>
-<p><em>If their y-axis label is something other than number of resamples:</em></p>
-<blockquote class="blockquote">
-<p>Careful! This is a histogram of the bootstrap statistics that you found in #5. Think back to when we learned about histograms, what do the numbers (e.g., 25, 50, 75) represent? Hint: this is not a variable in the dataset!</p>
+<p>Careful! How many tails are there in a “standard” hypothesis for the slope?</p>
 </blockquote>
 </section>
 <section id="question-7" class="level2">
 <h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p><strong>To earn a Success</strong>: States they reject <span class="math inline">\(H_0\)</span> because the p-value is less than 0.1</p>
+<p><em>If they do not state whether they reject or fail to reject</em> <span class="math inline">\(H_0\)</span>:</p>
+<blockquote class="blockquote">
+<p>You were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?</p>
+</blockquote>
+<p><em>If they say they fail to reject</em> <span class="math inline">\(H_0\)</span>:</p>
+<blockquote class="blockquote">
+<p>Careful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how “unusual” the observed statistic needs to be in order for us to reject <span class="math inline">\(H_0\)</span>. Is your p-value smaller than this threshold?</p>
+</blockquote>
+</section>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<p><strong>To earn a Success</strong>: States there is a (linear) relationship between crab size and latitude.</p>
+<blockquote class="blockquote">
+<p>Fill in response!</p>
+</blockquote>
+</section>
+<section id="question-9" class="level2">
+<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bootstrap_dist <span class="ot">&lt;-</span> pie_crab <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> size, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> latitude) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"slope"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If they chose <code>reps</code> larger than 500, that’s okay!</p>
+<p><em>If they chose <code>reps</code> smaller than 500</em>:</p>
+<blockquote class="blockquote">
+<p>Careful! How many resamples (reps) were you asked to generate?</p>
+</blockquote>
+</section>
+<section id="question-10" class="level2">
+<h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
 <p><strong>To earn a Success:</strong></p>
 <p>Code should look like the following:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_confidence_interval</span>(bootstrap_dist, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">level =</span> <span class="fl">0.90</span>, </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"percentile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_confidence_interval</span>(bootstrap_dist, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">level =</span> <span class="fl">0.90</span>, </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"percentile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -501,13 +560,13 @@ Note
 <p>Look back at the lab instructions, what percentage confidence interval were you asked to construct?</p>
 </blockquote>
 </section>
-<section id="question-8" class="level2">
-<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<section id="question-11" class="level2">
+<h2 class="anchored" data-anchor-id="question-11">Question 11</h2>
 <p><strong>To earn a Success</strong>:</p>
 <p>The interpretation must state:</p>
 <ul>
 <li><strong>confidence</strong>: they are 90% confident</li>
-<li><strong>statistic</strong>: the slope between water temperature and latitude</li>
+<li><strong>statistic</strong>: the slope between crab size and latitude</li>
 <li><strong>population</strong>: for all marshes along the eastern US</li>
 <li><strong>interval</strong>: is between [lower bound] and [upper bound]</li>
 </ul>
@@ -534,92 +593,14 @@ Note
 </blockquote>
 <p><em>If they don’t include a population:</em></p>
 <blockquote class="blockquote">
-<p>What population does this interval apply to? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to!</p>
+<p>What population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!</p>
 </blockquote>
-<p><em>If they have state an incorrect population</em>:</p>
-<blockquote class="blockquote">
-<p>Careful! Are you analyzing data on crabs or on marshes? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to!</p>
-</blockquote>
+<!-- *If they have state an incorrect population*: -->
+<!-- > Careful! Are you analyzing data on crabs or on marshes? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to! -->
 </section>
-<section id="question-9" class="level2">
-<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
-<p><strong>To earn a Success:</strong></p>
-<p>Code should look like the following:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_confidence_interval</span>(bootstrap_dist, </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">level =</span> <span class="fl">0.90</span>, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">point_estimate =</span> obs_slope, </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"se"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><em>If they don’t have <code>type = "se"</code></em>:</p>
-<blockquote class="blockquote">
-<p>What method do you want the function to use when calculating your confidence interval? Percentile intervals are the default!</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If they type in the actual number for the estimated slope rather than using the <code>obs_slope</code> object, you can give them this reminder:</p>
-<blockquote class="blockquote">
-<p>It is better practice not to “hard-code” numbers in our code, but to reference values stored in objects. This makes our code more resistant to changes in the dataset.</p>
-</blockquote>
-</div>
-</div>
-</section>
-<section id="question-10" class="level2">
-<h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
-<p><strong>To earn a Success:</strong></p>
-<ul>
-<li>states the intervals are similar</li>
-<li>states similarity is due to the normality of the bootstrap distribution</li>
-</ul>
-<p><em>If they say the intervals are different</em>:</p>
-<blockquote class="blockquote">
-<p>Give these intervals another look, yes their endpoints differ by a bit, but are they vastly different intervals?</p>
-</blockquote>
-<p><em>If they don’t talk about the bootstrap distribution being approximately normal</em>:</p>
-<blockquote class="blockquote">
-<p>What condition do we need to check when using the SE method to construct confidence intervals? Hint: it is a condition about the shape of the bootstrap distribution</p>
-</blockquote>
-</section>
-<section id="question-11" class="level2">
-<h2 class="anchored" data-anchor-id="question-11">Question 11</h2>
-<p><strong>To earn a Success:</strong></p>
-<ul>
-<li>states whether they do / do not believe the sample of 13 marshes is representative of all marshes along the Atlantic coast</li>
-<li>justifies why using something something that is true</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I’m willing to be pretty flexible here, but the key aspect is that they need to <strong>justify</strong> their reasoning.</p>
-</div>
-</div>
-<p><em>If their justification is about crabs</em>:</p>
-<blockquote class="blockquote">
-<p>Careful! Are you analyzing data on crabs or on marshes? The population of marshes you define in #8 is what you should use to assess if the assumption of bootstrapping is reasonable.</p>
-</blockquote>
-<p><em>If their justification is not reasonable</em>:</p>
-<blockquote class="blockquote">
-<p>Bootstrapping assumes that the original sample is representative of the population from which the observations were sampled. Where were these 13 marshes located geographically? Do you believe that these 13 marshes are representative of the broader population they were sampled from?</p>
-</blockquote>
-<p><em>If their justification is about the shape of the bootstrap distribution</em>:</p>
-<blockquote class="blockquote">
-<p>You are on the right track, we need for the sample to be representative of the population from which it was sampled. However, we cannot assess the representativeness of a sample using a bootstrap distribution. This can only be assessed by inspecting how the data were collected.</p>
-</blockquote>
+<section id="question-12" class="level2">
+<h2 class="anchored" data-anchor-id="question-12">Question 12</h2>
+<p>Based on this interval, does Bergmann’s Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?</p>
 
 
 </section>
@@ -851,8 +832,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -963,7 +942,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
