@@ -8,11 +8,12 @@ editor: visual
 
 **To earn a Success**:
 
--   includes either `site` or `name` inside of `group_by()`
+-   states the number of rows in the data frame
 
-*If uses another variable (e.g., `latitude`, `water_temp`):*
+*If they use `group_by()`*
 
-> Your approach works, since there was only one measurement per site. But what if there wasn't? This variable doesn't uniquely define the location of each marsh! What variable(s) do?
+> Careful! We don't need to make any groups to know how many penguins are in
+> these data! We only need to know the number of rows in the dataset! 
 
 ## Question 2
 
@@ -21,8 +22,8 @@ editor: visual
 Creates scatterplot with:
 
 -   `latitude` on x-axis
--   `water temperature` on y-axis
--   axis labels include variable units (Celsius for water temp; degrees for latitude)
+-   `size` on y-axis
+-   y-axis label includes units for `size` (millimeters)
 
 ::: callout-note
 They are not required to include a regression line, but if they do, great!
@@ -30,11 +31,9 @@ They are not required to include a regression line, but if they do, great!
 
 *If they don't have axis labels with the units*:
 
-> It is important to include an axis label stating what the units of each variable are! If you are wondering what the units of water temperature are, you can look up the help file (using ?pie_crab)
-
-*If they only put temperature on their y-axis:*
-
-> What specific variable is being plotted on the y-axis? Air temperature? Ground temperature? Water temperature? Be specific!
+> It is important to include an axis label stating what the units of each
+> variable are! If you are wondering what the units of crab size are, you can 
+> look up the help file (using ?pie_crab)
 
 ## Question 3
 
@@ -43,17 +42,23 @@ They are not required to include a regression line, but if they do, great!
 Description includes **all** of the following:
 
 -   form of relationship (linear)
--   direction of relationship (negative)
--   strength of relationship (strong)
--   location of any outliers (e.g., at a latitude of 45 degrees and 17.5 C temperature)
+-   direction of relationship (positive)
+-   strength of relationship (moderate)
+-   location of any outliers
 
 *If they forget one of these*:
 
-> Careful! You were asked to describe the form, direction, strength, and unusual points for the plot. Remember, it is important to explicitly state where you believe the outliers are, so the reader knows where to look!
+> Careful! You were asked to describe the form, direction, strength, and unusual
+> points for the plot. Remember, it is important to explicitly state where you
+> believe the outliers are, so the reader knows where to look! I would also
+> encourage you to justify **why** you believe this is an outlier, since other
+> people might not think so!
 
 *If they don't state [where]{.underline} the outlier is*:
 
-> It is important to explicitly state where you believe the outliers are, so the reader knows where to look!
+> It is important to explicitly state where you believe the outliers are, so
+> the reader knows where to look! I would also encourage you to justify **why**
+> you believe this is an outlier, since other people might not think so! 
 
 ## Question 4
 
@@ -66,7 +71,7 @@ Code should look like the following:
 #| echo: true
 
 obs_slope <- obs_slope <- marsh_info %>% 
-  specify(response = water_temp, 
+  specify(response = size, 
           explanatory = latitude) %>% 
   calculate(stat = "slope")
 ```
@@ -81,13 +86,20 @@ Code should look like the following:
 #| eval: false
 #| echo: true
 
-bootstrap_dist <- marsh_info %>% 
-  specify(response = water_temp, 
+null_dist <- pie_crab %>% 
+  specify(response = size, 
           explanatory = latitude) %>% 
+  hypothesize(null = "independence") %>% 
   generate(reps = 500, 
-           type = "bootstrap") %>% 
+           type = "permute") %>% 
   calculate(stat = "slope")
 ```
+
+If they chose `reps` larger than 500, that's okay! 
+
+*If they chose `reps` smaller than 500*:
+
+> Careful! How many resamples (reps) were you asked to generate?
 
 ## Question 6
 
@@ -99,25 +111,59 @@ Code should look like the following:
 #| eval: false
 #| echo: true
 
-visualise(bootstrap_dist) + 
-  labs(x = "<SOME AXIS LABEL>")
+get_p_value(null_dist, 
+            obs_stat = obs_slope, 
+            direction = "two-sided")
+
 ```
 
-Their axis label **must** describe what is being plotted (e.g., slope statistics, sample slope, etc.)
+*If they don't specify `"two-sided"`*:
 
-*If they did not include an x-axis label*:
-
-> It is important to include an axis label stating what is being plotted! What statistics are being plotted on this bootstrap distribution? Your axis label should tell the reader what statistics you are plotting!
-
-**If their x-axis label is not about the slope statistic:**
-
-> What is being plotted in this distribution? What is it a distribution of? What statistics did you calculate in the previous step that are being plotted here?
-
-*If their y-axis label is something other than number of resamples:*
-
-> Careful! This is a histogram of the bootstrap statistics that you found in #5. Think back to when we learned about histograms, what do the numbers (e.g., 25, 50, 75) represent? Hint: this is not a variable in the dataset!
+> Careful! How many tails are there in a "standard" hypothesis for the slope? 
 
 ## Question 7
+
+**To earn a Success**: States they reject $H_0$ because the p-value is less than 0.1
+
+*If they do not state whether they reject or fail to reject $H_0$*: 
+
+> You were asked to make a decision regarding the hypotheses, which has two
+> possible options. Which option do you choose and why?
+
+*If they say they fail to reject $H_0$*:
+
+> Careful! What p-value did you get? Was it smaller than the alpha I specified?
+> The alpha stipulates how "unusual" the observed statistic needs to be in order
+> for us to reject $H_0$. Is your p-value smaller than this threshold?
+
+## Question 8
+
+**To earn a Success**: States there is a (linear) relationship between crab size
+and latitude. 
+
+> Fill in response! 
+
+## Question 9 
+
+```{r}
+#| eval: false
+#| echo: true
+
+bootstrap_dist <- pie_crab %>% 
+  specify(response = size, 
+          explanatory = latitude) %>% 
+  generate(reps = 500, 
+           type = "bootstrap") %>% 
+  calculate(stat = "slope")
+```
+
+If they chose `reps` larger than 500, that's okay! 
+
+*If they chose `reps` smaller than 500*:
+
+> Careful! How many resamples (reps) were you asked to generate?
+
+## Question 10
 
 **To earn a Success:**
 
@@ -140,16 +186,17 @@ So, it is okay if they don't specify it!
 
 *If they use a `level` other than 0.90*:
 
-> Look back at the lab instructions, what percentage confidence interval were you asked to construct?
+> Look back at the lab instructions, what percentage confidence interval were
+> you asked to construct?
 
-## Question 8
+## Question 11
 
 **To earn a Success**:
 
 The interpretation must state:
 
 -   **confidence**: they are 90% confident
--   **statistic**: the slope between water temperature and latitude
+-   **statistic**: the slope between crab size and latitude
 -   **population**: for all marshes along the eastern US
 -   **interval**: is between \[lower bound\] and \[upper bound\]
 
@@ -163,76 +210,18 @@ Note that every group will get a different interval, due to the randomness of bo
 
 *If they don't state the statistic in context*:
 
-> We need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?
+> We need to be specific about the what parameter we believe is in our interval.
+> The slope statistic is measuring the relationship between which variables?
 
 *If they don't include a population:*
 
-> What population does this interval apply to? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to!
+> What population does this interval apply to? Where were these crabs sampled 
+from? That is the population your interval applies to!
 
-*If they have state an incorrect population*:
+<!-- *If they have state an incorrect population*: -->
 
-> Careful! Are you analyzing data on crabs or on marshes? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to!
+<!-- > Careful! Are you analyzing data on crabs or on marshes? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to! -->
 
-## Question 9
+## Question 12
 
-**To earn a Success:**
-
-Code should look like the following:
-
-```{r}
-#| eval: false
-#| echo: true
-
-get_confidence_interval(bootstrap_dist, 
-                        level = 0.90, 
-                        point_estimate = obs_slope, 
-                        type = "se")
-```
-
-*If they don't have `type = "se"`*:
-
-> What method do you want the function to use when calculating your confidence interval? Percentile intervals are the default!
-
-::: callout-note
-If they type in the actual number for the estimated slope rather than using the `obs_slope` object, you can give them this reminder:
-
-> It is better practice not to "hard-code" numbers in our code, but to reference values stored in objects. This makes our code more resistant to changes in the dataset.
-:::
-
-## Question 10
-
-**To earn a Success:**
-
--   states the intervals are similar
--   states similarity is due to the normality of the bootstrap distribution
-
-*If they say the intervals are different*:
-
-> Give these intervals another look, yes their endpoints differ by a bit, but are they vastly different intervals?
-
-*If they don't talk about the bootstrap distribution being approximately normal*:
-
-> What condition do we need to check when using the SE method to construct confidence intervals? Hint: it is a condition about the shape of the bootstrap distribution
-
-## Question 11
-
-**To earn a Success:**
-
--   states whether they do / do not believe the sample of 13 marshes is representative of all marshes along the Atlantic coast
--   justifies why using something something that is true
-
-::: callout-note
-I'm willing to be pretty flexible here, but the key aspect is that they need to **justify** their reasoning.
-:::
-
-*If their justification is about crabs*:
-
-> Careful! Are you analyzing data on crabs or on marshes? The population of marshes you define in #8 is what you should use to assess if the assumption of bootstrapping is reasonable.
-
-*If their justification is not reasonable*:
-
-> Bootstrapping assumes that the original sample is representative of the population from which the observations were sampled. Where were these 13 marshes located geographically? Do you believe that these 13 marshes are representative of the broader population they were sampled from?
-
-*If their justification is about the shape of the bootstrap distribution*:
-
-> You are on the right track, we need for the sample to be representative of the population from which it was sampled. However, we cannot assess the representativeness of a sample using a bootstrap distribution. This can only be assessed by inspecting how the data were collected.
+Based on this interval, does Bergmann's Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?
