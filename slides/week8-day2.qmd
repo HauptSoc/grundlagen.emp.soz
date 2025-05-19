@@ -1,5 +1,5 @@
 ---
-title: "**AN**alysis **O**f **VA**riance"
+title: "Inference for One-way ANOVA"
 format: 
   revealjs:
     theme: style.scss
@@ -7,709 +7,160 @@ editor: source
 ---
 
 ```{r}
-#| include: false
 #| label: set-up
 
 library(tidyverse)
-library(palmerpenguins)
-library(broom)
-library(ggridges)
 library(infer)
+library(moderndive)
+library(lterdatasampler)
+library(palmerpenguins)
 
-evals_small <- moderndive::evals %>% 
-  group_by(prof_ID) %>% 
-  mutate(min_eval = min(score), 
-         age_cat = case_when(age < 37 ~ "young faculty",
-                             age >= 37 & age < 45 ~ "middle age", 
-                             age >= 45 & age < 60 ~ "older faculty", 
-                             age >= 60 ~ "nearly retired"),
-         age_cat = factor(age_cat, 
-                          levels = c("young faculty", "middle age",
-                                     "older faculty", "nearly retired")
-                          )
-         ) %>% 
-  distinct(prof_ID, .keep_all = TRUE) %>% 
-  ungroup()
-
-my_theme <- theme(axis.title = element_text(size = 72), 
-        axis.text.y = element_text(size = 18), 
-        axis.text.x = element_text(size = 16)
-        ) +
-  theme_bw()
+my_theme <- theme(axis.title.x = element_text(size = 18), 
+                  axis.title.y = element_text(size = 18), 
+                  axis.text.x = element_text(size = 12), 
+                  axis.text.y = element_text(size = 12), 
+                  legend.text = element_text(size = 12), 
+                  legend.title = element_text(size = 18))
 ```
 
-# Week 9
+## Lab 7 Recap
 
-## Final Project First Draft
+**Question 6** (Bootstrap Distribution):
 
-**Step 1** - Due by tonight! 
-
-:::{.small}
-- Introduction (Data description, research questions)
-:::
-. . .
-
-**Step 2** - Due by Thursday
-
-:::{.small}
-- Methods (Data visualizations)
-- Findings (Data analysis)
-:::
-
-. . .
-
-**Step 3** - Due by Sunday
-
-:::{.small}
-- Study Limitations
-- Conclusion
-:::
-
-# One-Way ANOVA
-
-##
-
-::: {style="font-size: 2.5em; color: #000000;"}
-Before...
-:::
-
-```{r}
-#| echo: false
-#| label: slr
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age, y = min_eval)) + 
-  geom_jitter() + 
-  geom_smooth(method = "lm") +
-  labs(x = "", 
-       y = "", 
-       title = "Relationship between faculty's age and their minimum evaluation score") +
-  my_theme +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-## 
-
-::: {style="font-size: 2.5em; color: #000000;"}
-Now...
-:::
-
-```{r}
-#| echo: false
-#| label: age-cat
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age_cat, y = min_eval)) + 
-  geom_jitter(width = 0.1) + 
-  labs(x = "", 
-       y = "", 
-       title = "Minimum Evaluation Scores for Faculty of Different Age Groups") +
-  my_theme +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-# Why?
-
-##  {background-color="#B6CADA"}
-
-::: {style="font-size: 4em; color: #000000;"}
-Goal of an ANOVA
-:::
-
-Analysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different.
-
-## 
-
-::: {style="font-size: 4em; color: #B6CADA;"}
-**How???**
-:::
-
--   Compare how different a group of means are
--   Scale the differences relative to the variability of the groups
--   Summarize the differences with one number
-
-# Visualizations for an ANOVA
-
-# Visualizations for an ANOVA
-
-We want visualizations that allow for us to easily compare:
-
--   the center (mean) of the groups
--   the spread (variability) of the groups
-
-## 
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: age-cat-density
-
-ggplot(data = evals_small, 
-       mapping = aes(y = age_cat, x = min_eval)) + 
-  geom_density_ridges() + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  scale_x_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-. . .
-
-::: {style="color: #34605f;"}
-::: columns
-::: {.column width="47%"}
-What can you say about the differences *between* the age groups?
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="47%"}
-What can you say about the variability *within* the age groups?
-:::
-:::
-:::
-
-# Carrying out an ANOVA
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 1: Compare your groups
-:::
-
-<!-- ![](images/groups.png) -->
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: compare-groups
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age_cat, y = min_eval)) + 
-  geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 2: Find the overall mean
-:::
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: overall-mean
-
-overall_mean <- summarise(evals_small, 
-                          mean = mean(min_eval)
-                          ) %>% 
-  pull()
-
-ggplot(data = evals_small, 
-       mapping = aes(y = min_eval, x = "c")) + 
-  geom_jitter(width = 0.2) + 
-  geom_hline(yintercept = overall_mean, color = "red", lwd = 2) +
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  theme(axis.text.x = element_blank(), 
-        axis.ticks.x = element_blank()) +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-<!-- ![](images/overall_mean.png) -->
-
-. . .
-
-::: {style="font-size: 1.25em; color: #ed8402;"}
-This ignores the groups and finds [one]{.underline} mean for every observation!
-:::
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 3: Find the group means
-:::
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: group-means
-
-group_means <- evals_small %>% 
-  group_by(age_cat) %>% 
-  summarise(mean = mean(min_eval)
-                          ) %>% 
-  mutate(
-    position = c(1, 2, 3, 4)
-         )
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age_cat, y = min_eval)) + 
-  geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  geom_segment(data = group_means, 
-               mapping = aes(y = mean,
-                             x = position - 0.25, 
-                             xend = position + 0.25), 
-               color = "purple", 
-               lwd = 1.5
-               ) +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 4: Calculate the sum of squares *between* groups
-:::
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: sum-of-squares
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age_cat, y = min_eval)) + 
-  geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  geom_segment(data = group_means, 
-               mapping = aes(y = mean,
-                             x = position - 0.25, 
-                             xend = position + 0.25), 
-               color = "purple", 
-               lwd = 1.5
-               ) +
-  geom_hline(yintercept = overall_mean, 
-             color = "red", 
-             lwd = 1.5, 
-             lty = "dashed") +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 5: Calculate the sum of squares *within* groups
-:::
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: sum-of-squares-2
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age_cat, y = min_eval)) + 
-  geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  geom_segment(data = group_means, 
-               mapping = aes(y = mean,
-                             x = position - 0.25, 
-                             xend = position + 0.25), 
-               color = "purple", 
-               lwd = 1.5
-               ) +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 6: Calculate the F-statistic
-:::
-
-
-
-![](images/sum-of-squares.jpeg)
-
-<!-- ::: {style="color: #B6CADA;"} -->
-<!-- Can an F-statistic be negative? -->
-<!-- ::: -->
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 7: Find the p-value
-:::
-
-![](images/f_dist.png)
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-**F-distribution**
-:::
-
-An $F$-distribution is a variant of the $t$-distribution, and is also defined by degrees of freedom.
-
-. . .
+-   Did not use an informative axis label
 
 </br>
 
-This distribution is defined by **two** different degrees of freedom:
+**Question 8** (Interpret Confidence Interval):
 
-:::{.small}
-1.  from the numerator (MSG) : $k$ (number of groups) $- 1$
-2.  from the denominator (MSE) : $n$ (number of observations) $- k$ 
-:::
+-   Did not include population in interpretation
+-   Stated interval was about "all marshes" (no geographical information)
 
-## 
 
-::: {style="font-size: 2em; color: #000000;"}
-Two degrees of freedom!
-:::
+# Statistical Critique 2
 
-</br>
+## First Steps
 
-::: columns
-::: {.column width="45%"}
-:::{.small}
-Changing the numerator degrees of freedom
-:::
+1.  Open the directions!
+2.  Copy the Statistical Critique template on Posit Cloud
+3.  Copy-and-paste code from your Midterm Project
+4.  Copy-and-paste your justification for why you chose the model you chose
 
-![](images/f_num_df.png)
-:::
+## Next Steps
 
-::: {.column width="5%"}
-:::
+4.  Fit the most complex model
+5.  Obtain an ANOVA table of your model
+6.  Use the p-values in the ANOVA table to decide what model is best
 
-::: {.column width="45%"}
-:::{.small}
-Changing the denominator degrees of freedom
-:::
+## What is the "most complex" model?
 
-![](images/f_denom_df.png)
-:::
-:::
+**For 1 numerical & 1 categorical explanatory variables**
 
-##  
-
-::: {style="font-size: 3em; color: #000000;"}
-Do you always use an F-distribution to get the p-value?
-:::
-
-. . .
-
-<center>
-
-::: {style="font-size: 3em; color: #0F4C81;"}
-NO!
-:::
-
-</center>
-
-## Conditions of an ANOVA
-
--   Independence of observations
-
-:::{.small}
-> Observations are independent *within* groups **and** *between* groups
-:::
-
-. . .
-
--   Normality of the residuals
-
-:::{.small}
-> The distribution of residuals for each group is approximately normal
-:::
-
-. . .
-
--   Equal variability of the groups
-
-:::{.small}
-> The spread of the distributions are similar across groups
-:::
-
-## Choosing a Method
-
-</br>
-
-::: columns
-::: {.column width="47%"}
-::: {style="font-size: 1.25em; color: #000000;"}
-Which condition(s) are required to use "theory-based" methods?
-:::
-
-</br>
-
-:::{.fragment}
-All three!
-:::
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="47%"}
-:::{.fragment}
-::: {style="font-size: 1.25em; color: #000000;"}
-Which condition(s) are required to use "simulation-based" methods?
-:::
-:::
-
-</br>
-
-:::{.fragment}
-All but normality!
-:::
-:::
-:::
-
-## 
+-   Fit the **different slopes** (interaction) model
 
 ```{r}
-#| echo: false
-#| label: conditions
-#| fig-align: center
-
-ggplot(data = evals_small, 
-       mapping = aes(y = age_cat, x = min_eval)) + 
-  geom_density_ridges() + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  theme(axis.title = element_text(size = 72), 
-        axis.text.y = element_text(size = 16), 
-        axis.text.x = element_text(size = 14)
-        )
-```
-
-. . .
-
-::: {style="font-size: 1.5em; color: #34605f;"}
-What do you think? Which method should we use?
-:::
-
-# Simulation-based Methods
-
-## Step 1: Calculating the Observed F-statistic
-
-```{r}
+#| label: diff-slopes-fit
 #| echo: true
-#| label: obs-F
+#| code-line-numbers: false
 
-obs_F <- evals_small %>% 
-  specify(response = min_eval, 
-          explanatory = age_cat) %>% 
-  calculate(stat = "F")
+species_lm <- lm(bill_length_mm ~ bill_depth_mm * species, 
+                  data = penguins)
 ```
-
-</br>
-
-
-```{r}
-#| label: obs-F-value
-
-obs_F
-```
-
-## Step 2: Simulating what could have happened under $H_0$
 
 . . .
 
 </br>
 
-::: {style="font-size: 1.25em; color: #34605f;"}
-How could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?
-:::
+**For 2 numerical explanatory variables**
 
-## Another Permutation Distribution
+-   Fit the model with **both** variables included:
 
-```{r null-dist}
+```{r}
+#| label: mlr-fit
 #| echo: true
-#| cache: true
-#| label: null-dist
+#| code-line-numbers: false
 
-null_dist <- evals_small %>% 
-  specify(response = min_eval, 
-          explanatory = age_cat) %>% 
-  hypothesize(null = "independence") %>% 
-  generate(reps = 1000, type = "permute") %>% 
-  calculate(stat = "F")
+bill_lm <- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, 
+                  data = penguins)
 ```
 
-## Another Permutation Distribution
+## How do I know what model is "best" from the ANOVA table?
+
+**For 1 numerical & 1 categorical explanatory variables**
+
+-   Look at the interaction line (e.g., `bill_depth_mm:species`), it is testing if the slopes are different!
 
 ```{r}
-#| label: visualize-null-dist
-
-visualise(null_dist) +
-  labs(x = "F-statistic", 
-       y = "",
-       title = "Simulation-based Null Distribution") +
-  theme(axis.title = element_text(size = 72), 
-        axis.text.y = element_text(size = 16), 
-        axis.text.x = element_text(size = 16), 
-        axis.title.x = element_text(size = 18)
-        )
-  
-```
-
-. . .
-
-::: {style="font-size: 1.25em; color: #ed8402;"}
-Why doesn't the distribution have negative numbers?
-:::
-
-## Visualizing the p-value
-
-```{r}
+#| label: diff-slopes-anova
 #| echo: true
 #| eval: false
-#| label: visualize-code
+#| code-line-numbers: false
 
-visualise(null_dist) + 
-  shade_p_value(obs_stat = obs_F, 
-                direction = "greater")
+anova(species_lm)
 ```
 
-## Visualizing the p-value
-
 ```{r}
-#| label: p-value-visualization-annotated
-#| fig-align: center
-
-p_val <- get_p_value(null_dist, obs_stat = obs_F, direction = "greater") %>% 
-  pull()
-  
-null_dist %>% 
-  visualise() + 
-  shade_p_value(obs_stat = obs_F, direction = "greater") + 
-  annotate(x = pull(obs_F) + 2.5,
-           y = 100, 
-           geom = "text", 
-           label = stringr::str_c("p-value = ", p_val), 
-           size = 6) +
-  labs(x = "F-statistic", 
-       y = "",
-       title = "Simulation-based Null Distribution with 1000 Resamples") +
-  theme(axis.title = element_text(size = 72), 
-        axis.text.y = element_text(size = 16), 
-        axis.text.x = element_text(size = 16), 
-        axis.title.x = element_text(size = 18)
-        )
+anova(species_lm) %>% 
+  broom::tidy() %>%
+  rename(`F value` = statistic, 
+         `Pr(>F)` = p.value, 
+         Df = df, 
+         `Sum Sq` = sumsq, 
+         `Mean Sq` = meansq) %>% 
+  gt::gt()
 ```
 
+## 
 
-## Making a Decision & Reaching a Conclusion
-
-::: columns
-::: {.column width="47%"}
-For a p-value of `r p_val`, what decision would you reach regarding your hypothesis test?
+::: {style="font-size: 2em; color: #000000;"}
+`bill_depth_mm:species`: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!
 :::
 
-::: {.column width="3%"}
-:::
+## How do I know what model is "best" from the ANOVA table?
 
-::: {.column width="47%"}
-:::{.fragment}
-What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?
-:::
-:::
-:::
+**For 2 numerical explanatory variables**
 
-## Large p-values $\neq$ evidence for the null hypothesis! 
-
-![](images/No evidence against the null.png)
-
-
-# What if we didn't believe the normality condition was violated?
-
-## Theory-based Methods
+-   Look at the p-value for each variable, it is testing if that variable has a relationship with the response (conditional on the other variable being in the model)!
 
 ```{r}
+#| label: mlr-anova
 #| echo: true
 #| eval: false
-#| label: aov-code
+#| code-line-numbers: false
 
-aov(min_eval ~ age_cat, 
-    data = evals_small)  %>% 
-  tidy()
+anova(bill_lm)
 ```
 
 ```{r}
-#| label: aov-output
-
-aov(min_eval ~ age_cat, 
-    data = evals_small)  %>% 
-  tidy()
+anova(bill_lm) %>% 
+  broom::tidy() %>%
+  rename(`F value` = statistic, 
+         `Pr(>F)` = p.value, 
+         Df = df, 
+         `Sum Sq` = sumsq, 
+         `Mean Sq` = meansq) %>% 
+  gt::gt()
 ```
 
-. . .
+## 
+
+::: {style="font-size: 1.25em; color: #000000;"}
+`body_mass_g`: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!
+:::
 
 </br>
 
-How was the `statistic` calculated?
+::: {style="font-size: 1.25em; color: #000000;"}
+`bill_depth_mm`: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!
+:::
+
+## ![](images/gapminder.png)
+
+> What is the relationship between life expectancy GDP per capita?
 
 . . .
 
-What distribution was used to calculate the `p.value`?
+-   Decide on a variable transformation
+-   Assess model conditions (L, I, N, E)
+-   Compare hypothesis test results between simulation-based methods and theory-based methods
 
-. . .
-
-## Making a Decision & Reaching a Conclusion
-
-::: columns
-::: {.column width="47%"}
-For a p-value of 0.244, what decision would you reach regarding your hypothesis test?
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="47%"}
-:::{.fragment}
-What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?
-:::
-:::
-:::
-
-##  {background-color="#B6CADA"}
-
-::: {style="font-size: 3em; color: #0F4C81;"}
-Did the two methods yield different results?
-:::
-
-# Final Project Work Session
-
-## Introduction & Research Questions
-
-::: columns
-::: {.column width="47%"}
-In 4-6 sentences, introduce / describe your data. 
-
-- What is the context of the data?
-- For what purpose were these data collected?
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="47%"}
-:::{.fragment}
-Outline the [**two**]{.underline} questions your research seeks to address.
-
-- You will have one question for each one-way ANOVA model
-- Your question should be in terms of "differences in group means" not "relationships"
-:::
-:::
-:::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Coding a One-way ANOVA – Final Project Work Day – STAT 313 / 513</title>
+<title>ANalysis Of VAriance – STAT 313 / 513</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Coding a One-way ANOVA – Final Project Work Day</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>AN</strong>alysis <strong>O</strong>f <strong>VA</strong>riance</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -360,34 +360,71 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#upcoming-deadlines" id="toc-upcoming-deadlines" class="nav-link active" data-scroll-target="#upcoming-deadlines">Upcoming Deadlines</a></li>
-  <li><a href="#lab-8-recap" id="toc-lab-8-recap" class="nav-link" data-scroll-target="#lab-8-recap">Lab 8 Recap</a>
+  <li><a href="#week-9" id="toc-week-9" class="nav-link active" data-scroll-target="#week-9">Week 9</a>
   <ul class="collapse">
-  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common Mistakes</a></li>
+  <li><a href="#final-project-first-draft" id="toc-final-project-first-draft" class="nav-link" data-scroll-target="#final-project-first-draft">Final Project First Draft</a></li>
   </ul></li>
-  <li><a href="#coding-a-one-way-anova" id="toc-coding-a-one-way-anova" class="nav-link" data-scroll-target="#coding-a-one-way-anova">Coding a One-way ANOVA</a>
+  <li><a href="#one-way-anova" id="toc-one-way-anova" class="nav-link" data-scroll-target="#one-way-anova">One-Way ANOVA</a>
   <ul class="collapse">
-  <li><a href="#visualizations-density-ridges" id="toc-visualizations-density-ridges" class="nav-link" data-scroll-target="#visualizations-density-ridges">Visualizations – Density Ridges</a></li>
-  <li><a href="#choosing-a-statistical-model" id="toc-choosing-a-statistical-model" class="nav-link" data-scroll-target="#choosing-a-statistical-model">Choosing a Statistical Model</a></li>
-  <li><a href="#theory-based-method" id="toc-theory-based-method" class="nav-link" data-scroll-target="#theory-based-method">Theory-based Method</a></li>
-  <li><a href="#simulation-based-method" id="toc-simulation-based-method" class="nav-link" data-scroll-target="#simulation-based-method">Simulation-based Method</a></li>
-  <li><a href="#model-validity" id="toc-model-validity" class="nav-link" data-scroll-target="#model-validity">Model Validity</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
   </ul></li>
-  <li><a href="#study-limitations" id="toc-study-limitations" class="nav-link" data-scroll-target="#study-limitations">Study Limitations</a></li>
-  <li><a href="#where-are-we-headed-next-week" id="toc-where-are-we-headed-next-week" class="nav-link" data-scroll-target="#where-are-we-headed-next-week">Where are we headed next week?</a>
+  <li><a href="#why" id="toc-why" class="nav-link" data-scroll-target="#why">Why?</a>
   <ul class="collapse">
-  <li><a href="#two-way-anova" id="toc-two-way-anova" class="nav-link" data-scroll-target="#two-way-anova">Two-way ANOVA</a></li>
-  <li><a href="#code-for-plot" id="toc-code-for-plot" class="nav-link" data-scroll-target="#code-for-plot">Code for Plot</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  </ul></li>
+  <li><a href="#visualizations-for-an-anova" id="toc-visualizations-for-an-anova" class="nav-link" data-scroll-target="#visualizations-for-an-anova">Visualizations for an ANOVA</a></li>
+  <li><a href="#visualizations-for-an-anova-1" id="toc-visualizations-for-an-anova-1" class="nav-link" data-scroll-target="#visualizations-for-an-anova-1">Visualizations for an ANOVA</a>
+  <ul class="collapse">
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  </ul></li>
+  <li><a href="#carrying-out-an-anova" id="toc-carrying-out-an-anova" class="nav-link" data-scroll-target="#carrying-out-an-anova">Carrying out an ANOVA</a>
+  <ul class="collapse">
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9"></a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10"></a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11"></a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12"></a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13"></a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14"></a></li>
+  <li><a href="#conditions-of-an-anova" id="toc-conditions-of-an-anova" class="nav-link" data-scroll-target="#conditions-of-an-anova">Conditions of an ANOVA</a></li>
+  <li><a href="#choosing-a-method" id="toc-choosing-a-method" class="nav-link" data-scroll-target="#choosing-a-method">Choosing a Method</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15"></a></li>
+  </ul></li>
+  <li><a href="#simulation-based-methods" id="toc-simulation-based-methods" class="nav-link" data-scroll-target="#simulation-based-methods">Simulation-based Methods</a>
+  <ul class="collapse">
+  <li><a href="#step-1-calculating-the-observed-f-statistic" id="toc-step-1-calculating-the-observed-f-statistic" class="nav-link" data-scroll-target="#step-1-calculating-the-observed-f-statistic">Step 1: Calculating the Observed F-statistic</a></li>
+  <li><a href="#step-2-simulating-what-could-have-happened-under-h_0" id="toc-step-2-simulating-what-could-have-happened-under-h_0" class="nav-link" data-scroll-target="#step-2-simulating-what-could-have-happened-under-h_0">Step 2: Simulating what could have happened under <span class="math inline">\(H_0\)</span></a></li>
+  <li><a href="#another-permutation-distribution" id="toc-another-permutation-distribution" class="nav-link" data-scroll-target="#another-permutation-distribution">Another Permutation Distribution</a></li>
+  <li><a href="#another-permutation-distribution-1" id="toc-another-permutation-distribution-1" class="nav-link" data-scroll-target="#another-permutation-distribution-1">Another Permutation Distribution</a></li>
+  <li><a href="#visualizing-the-p-value" id="toc-visualizing-the-p-value" class="nav-link" data-scroll-target="#visualizing-the-p-value">Visualizing the p-value</a></li>
+  <li><a href="#visualizing-the-p-value-1" id="toc-visualizing-the-p-value-1" class="nav-link" data-scroll-target="#visualizing-the-p-value-1">Visualizing the p-value</a></li>
+  <li><a href="#making-a-decision-reaching-a-conclusion" id="toc-making-a-decision-reaching-a-conclusion" class="nav-link" data-scroll-target="#making-a-decision-reaching-a-conclusion">Making a Decision &amp; Reaching a Conclusion</a></li>
+  <li><a href="#large-p-values-neq-evidence-for-the-null-hypothesis" id="toc-large-p-values-neq-evidence-for-the-null-hypothesis" class="nav-link" data-scroll-target="#large-p-values-neq-evidence-for-the-null-hypothesis">Large p-values <span class="math inline">\(\neq\)</span> evidence for the null hypothesis!</a></li>
+  </ul></li>
+  <li><a href="#what-if-we-didnt-believe-the-normality-condition-was-violated" id="toc-what-if-we-didnt-believe-the-normality-condition-was-violated" class="nav-link" data-scroll-target="#what-if-we-didnt-believe-the-normality-condition-was-violated">What if we didn’t believe the normality condition was violated?</a>
+  <ul class="collapse">
+  <li><a href="#theory-based-methods" id="toc-theory-based-methods" class="nav-link" data-scroll-target="#theory-based-methods">Theory-based Methods</a></li>
+  <li><a href="#making-a-decision-reaching-a-conclusion-1" id="toc-making-a-decision-reaching-a-conclusion-1" class="nav-link" data-scroll-target="#making-a-decision-reaching-a-conclusion-1">Making a Decision &amp; Reaching a Conclusion</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16"></a></li>
+  </ul></li>
+  <li><a href="#final-project-work-session" id="toc-final-project-work-session" class="nav-link" data-scroll-target="#final-project-work-session">Final Project Work Session</a>
+  <ul class="collapse">
+  <li><a href="#introduction-research-questions" id="toc-introduction-research-questions" class="nav-link" data-scroll-target="#introduction-research-questions">Introduction &amp; Research Questions</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="week9-day2.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="week9-day1.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Coding a One-way ANOVA – Final Project Work Day</h1>
+<h1 class="title"><strong>AN</strong>alysis <strong>O</strong>f <strong>VA</strong>riance</h1>
 </div>
 
 
@@ -404,230 +441,508 @@ window.Quarto = {
 </header>
 
 
-<section id="upcoming-deadlines" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-deadlines">Upcoming Deadlines</h2>
+<section id="week-9" class="level1">
+<h1>Week 9</h1>
+<section id="final-project-first-draft" class="level2">
+<h2 class="anchored" data-anchor-id="final-project-first-draft">Final Project First Draft</h2>
+<p><strong>Step 1</strong> - Due by tonight!</p>
+<div class="small">
 <ul>
-<li>Lab 7 revisions are due by Friday (by midnight)</li>
-<li>Lab 8 revisions are due next Wednesday</li>
-<li>Statistical Critique 2 revisions are due next Wednesday</li>
-<li>Final revisions on <strong>all</strong> assignments will be accepted until Sunday, June 9</li>
-</ul>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Don’t forget reflections!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</section>
-<section id="lab-8-recap" class="level1">
-<h1>Lab 8 Recap</h1>
-<section id="common-mistakes" class="level2">
-<h2 class="anchored" data-anchor-id="common-mistakes">Common Mistakes</h2>
-<p><br></p>
-<div class="small">
-<p><strong>Questions 1 &amp; 2</strong> – Your axis labels should contain units and indicate if your variables were transformed!</p>
-<p><br></p>
-<div class="fragment">
-<p><strong>Question 6</strong> – Equal variance is not about equal points above and below the line!</p>
-</div>
-<p><br></p>
-<div class="fragment">
-<p><strong>Question 11</strong> – Your hypothesis test decision should state what <span class="math inline">\(\alpha\)</span> was used!</p>
-</div>
-<p><br></p>
-<div class="fragment">
-<p><strong>Question 15</strong> – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="coding-a-one-way-anova" class="level1">
-<h1>Coding a One-way ANOVA</h1>
-<section id="visualizations-density-ridges" class="level2">
-<h2 class="anchored" data-anchor-id="visualizations-density-ridges">Visualizations – Density Ridges</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>NAME OF DATASET<span class="sc">&gt;</span>, </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">&lt;</span>NAME OF NUMERICAL VARIABLE<span class="sc">&gt;</span>, </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> <span class="sc">&lt;</span>NAME OF CATEGORICAL VARIABLE<span class="sc">&gt;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>       ) <span class="sc">+</span> </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>()<span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"&lt;TITLE FOR THE X-AXIS&gt;"</span>, </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"&lt;TITLE FOR THE Y-AXIS&gt;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Revisit the code you wrote for Question 8 of Lab 3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</section>
-<section id="choosing-a-statistical-model" class="level2">
-<h2 class="anchored" data-anchor-id="choosing-a-statistical-model">Choosing a Statistical Model</h2>
-<p><br></p>
-<p>Everyone will fit <strong>two</strong> one-way ANOVA models — one model for each explanatory variable!</p>
-<div class="incremental">
-<div class="small">
-<ul class="incremental">
-<li>You will need to choose whether to use a theory-based method or a simulation-based method.</li>
-<li>Your choice is based on the model conditions — specifically the normality condition.
-<ul class="incremental">
-<li>The density ridge plots can be used to check the normality and equal variance conditions.</li>
-<li>The study design should be used to check the independence condition.</li>
-</ul></li>
+<li>Introduction (Data description, research questions)</li>
 </ul>
 </div>
-</div>
-</section>
-<section id="theory-based-method" class="level2">
-<h2 class="anchored" data-anchor-id="theory-based-method">Theory-based Method</h2>
-<p><br></p>
-<p>To fit a theory-based ANOVA, you use the following code:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_model <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="sc">&lt;</span>NAME OF RESPONSE VARIABLE<span class="sc">&gt;</span> <span class="er">~</span> <span class="er">&lt;</span>NAME OF EXPLANATORY VARIABLE<span class="sc">&gt;</span>, </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> <span class="sc">&lt;</span>NAME OF DATASET<span class="sc">&gt;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
 <p>. . .</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Only use if normality is not violated!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you look at your density ridge plots and you believe the normality condition is violated, you <strong>should not</strong> use a theory-based method!</p>
-</div>
-</div>
-</section>
-<section id="simulation-based-method" class="level2">
-<h2 class="anchored" data-anchor-id="simulation-based-method">Simulation-based Method</h2>
+<p><strong>Step 2</strong> - Due by Thursday</p>
 <div class="small">
-<p>To fit a simulation-based ANOVA, you need to carry out the following steps:</p>
-<ol type="1">
-<li>find the observed statistic</li>
-<li>simulate statistics that could have happened if the null was true</li>
-<li>visualize the distribution of simulated statistics (your permutation distribution)</li>
-<li>calculate the p-value for your observed statistic</li>
-</ol>
+<ul>
+<li>Methods (Data visualizations)</li>
+<li>Findings (Data analysis)</li>
+</ul>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-2 levels versus 3 levels
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you categorical variable has <strong>two</strong> levels, you need to use a <code>"diff in means"</code> statistic, <strong>not</strong> an F-statistic!</p>
-</div>
-</div>
-</section>
-<section id="model-validity" class="level2">
-<h2 class="anchored" data-anchor-id="model-validity">Model Validity</h2>
-<blockquote class="blockquote">
-<p>Are your p-values trustworthy?</p>
-</blockquote>
-<p>Inspect the conditions of your model!</p>
 <p>. . .</p>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><strong>Independence of Observations</strong></p>
-<p>Look at how the data were collected!</p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:30%;">
-<div class="fragment">
-<p><strong>Normality of Residuals (Responses)</strong></p>
-<p>Use the density ridge plots!</p>
-</div>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:30%;">
-<div class="fragment">
-<p><strong>Equal Variances of Each Group</strong></p>
-<p>Use the density ridge plots!</p>
-</div>
-</div>
+<p><strong>Step 3</strong> - Due by Sunday</p>
+<div class="small">
+<ul>
+<li>Study Limitations</li>
+<li>Conclusion</li>
+</ul>
 </div>
 </section>
 </section>
-<section id="study-limitations" class="level1">
-<h1>Study Limitations</h1>
-<p><strong>Same questions as last project!</strong></p>
-<p><img src="images/Cause and effect.png" class="img-fluid"></p>
-</section>
-<section id="where-are-we-headed-next-week" class="level1">
-<h1>Where are we headed next week?</h1>
-<section id="two-way-anova" class="level2">
-<h2 class="anchored" data-anchor-id="two-way-anova">Two-way ANOVA</h2>
-<p><br></p>
+<section id="one-way-anova" class="level1">
+<h1>One-Way ANOVA</h1>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div style="font-size: 2.5em; color: #000000;">
+<p>Before…</p>
+</div>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Picking joint bandwidth of 0.25</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="week9-day2_files/figure-html/age-two-cat-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="week9-day1_files/figure-revealjs/slr-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="code-for-plot" class="level2">
-<h2 class="anchored" data-anchor-id="code-for-plot">Code for Plot</h2>
-<div class="small">
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<div style="font-size: 2.5em; color: #000000;">
+<p>Now…</p>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> evals_small, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> age_cat, <span class="at">x =</span> min_eval, <span class="at">fill =</span> gender)) <span class="sc">+</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"PRGn"</span>) <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Gaps between male and female faculty evaluation scores become more pronounced with age"</span>, </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">""</span>, </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Professor's Sex"</span>) <span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/age-cat-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Legend Positions
+</section>
+</section>
+<section id="why" class="level1">
+<h1>Why?</h1>
+<section id="section-2" class="level2" data-background-color="#B6CADA">
+<h2 data-background-color="#B6CADA" class="anchored" data-anchor-id="section-2"></h2>
+<div style="font-size: 4em; color: #000000;">
+<p>Goal of an ANOVA</p>
+</div>
+<p>Analysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different.</p>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
+<div style="font-size: 4em; color: #B6CADA;">
+<p><strong>How???</strong></p>
+</div>
+<ul>
+<li>Compare how different a group of means are</li>
+<li>Scale the differences relative to the variability of the groups</li>
+<li>Summarize the differences with one number</li>
+</ul>
+</section>
+</section>
+<section id="visualizations-for-an-anova" class="level1">
+<h1>Visualizations for an ANOVA</h1>
+</section>
+<section id="visualizations-for-an-anova-1" class="level1">
+<h1>Visualizations for an ANOVA</h1>
+<p>We want visualizations that allow for us to easily compare:</p>
+<ul>
+<li>the center (mean) of the groups</li>
+<li>the spread (variability) of the groups</li>
+</ul>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/age-cat-density-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
 </div>
 </div>
-<div class="callout-body-container callout-body">
+</div>
+<p>. . .</p>
+<div style="color: #34605f;">
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>What can you say about the differences <em>between</em> the age groups?</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<p>What can you say about the variability <em>within</em> the age groups?</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="carrying-out-an-anova" class="level1">
+<h1>Carrying out an ANOVA</h1>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 1: Compare your groups</p>
+</div>
+<!-- ![](images/groups.png) -->
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/compare-groups-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 2: Find the overall mean</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/overall-mean-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- ![](images/overall_mean.png) -->
+<p>. . .</p>
+<div style="font-size: 1.25em; color: #ed8402;">
+<p>This ignores the groups and finds <u>one</u> mean for every observation!</p>
+</div>
+</section>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 3: Find the group means</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/group-means-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-8" class="level2">
+<h2 class="anchored" data-anchor-id="section-8"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 4: Calculate the sum of squares <em>between</em> groups</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/sum-of-squares-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-9" class="level2">
+<h2 class="anchored" data-anchor-id="section-9"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 5: Calculate the sum of squares <em>within</em> groups</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/sum-of-squares-2-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-10" class="level2">
+<h2 class="anchored" data-anchor-id="section-10"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 6: Calculate the F-statistic</p>
+</div>
+<p><img src="images/sum-of-squares.jpeg" class="img-fluid"></p>
+<!-- ::: {style="color: #B6CADA;"} -->
+<!-- Can an F-statistic be negative? -->
+<!-- ::: -->
+</section>
+<section id="section-11" class="level2">
+<h2 class="anchored" data-anchor-id="section-11"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Step 7: Find the p-value</p>
+</div>
+<p><img src="images/f_dist.png" class="img-fluid"></p>
+</section>
+<section id="section-12" class="level2">
+<h2 class="anchored" data-anchor-id="section-12"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p><strong>F-distribution</strong></p>
+</div>
+<p>An <span class="math inline">\(F\)</span>-distribution is a variant of the <span class="math inline">\(t\)</span>-distribution, and is also defined by degrees of freedom.</p>
+<p>. . .</p>
+<p><br></p>
+<p>This distribution is defined by <strong>two</strong> different degrees of freedom:</p>
 <div class="small">
-<p>There are four options for <code>legend.position</code></p>
 <ol type="1">
-<li><code>"none"</code> (removes the legend)</li>
-<li><code>"left"</code> (difficult to read with the y-axis label)</li>
-<li><code>"right"</code> (the default position)</li>
-<li><code>"bottom"</code> (difficult to read with the x-axis label)</li>
-<li><code>"top"</code> (generally my preference)</li>
+<li>from the numerator (MSG) : <span class="math inline">\(k\)</span> (number of groups) <span class="math inline">\(- 1\)</span></li>
+<li>from the denominator (MSE) : <span class="math inline">\(n\)</span> (number of observations) <span class="math inline">\(- k\)</span></li>
 </ol>
+</div>
+</section>
+<section id="section-13" class="level2">
+<h2 class="anchored" data-anchor-id="section-13"></h2>
+<div style="font-size: 2em; color: #000000;">
+<p>Two degrees of freedom!</p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="small">
+<p>Changing the numerator degrees of freedom</p>
+</div>
+<p><img src="images/f_num_df.png" class="img-fluid"></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="small">
+<p>Changing the denominator degrees of freedom</p>
+</div>
+<p><img src="images/f_denom_df.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="section-14" class="level2">
+<h2 class="anchored" data-anchor-id="section-14"></h2>
+<div style="font-size: 3em; color: #000000;">
+<p>Do you always use an F-distribution to get the p-value?</p>
+</div>
+<p>. . .</p>
+<center>
+<div style="font-size: 3em; color: #0F4C81;">
+<p>NO!</p>
+</div>
+</center>
+</section>
+<section id="conditions-of-an-anova" class="level2">
+<h2 class="anchored" data-anchor-id="conditions-of-an-anova">Conditions of an ANOVA</h2>
+<ul>
+<li>Independence of observations</li>
+</ul>
+<div class="small">
+<blockquote class="blockquote">
+<p>Observations are independent <em>within</em> groups <strong>and</strong> <em>between</em> groups</p>
+</blockquote>
+</div>
+<p>. . .</p>
+<ul>
+<li>Normality of the residuals</li>
+</ul>
+<div class="small">
+<blockquote class="blockquote">
+<p>The distribution of residuals for each group is approximately normal</p>
+</blockquote>
+</div>
+<p>. . .</p>
+<ul>
+<li>Equal variability of the groups</li>
+</ul>
+<div class="small">
+<blockquote class="blockquote">
+<p>The spread of the distributions are similar across groups</p>
+</blockquote>
+</div>
+</section>
+<section id="choosing-a-method" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-method">Choosing a Method</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div style="font-size: 1.25em; color: #000000;">
+<p>Which condition(s) are required to use “theory-based” methods?</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>All three!</p>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<div style="font-size: 1.25em; color: #000000;">
+<p>Which condition(s) are required to use “simulation-based” methods?</p>
+</div>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>All but normality!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="level2">
+<h2 class="anchored" data-anchor-id="section-15"></h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/conditions-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div style="font-size: 1.5em; color: #34605f;">
+<p>What do you think? Which method should we use?</p>
+</div>
+</section>
+</section>
+<section id="simulation-based-methods" class="level1">
+<h1>Simulation-based Methods</h1>
+<section id="step-1-calculating-the-observed-f-statistic" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-calculating-the-observed-f-statistic">Step 1: Calculating the Observed F-statistic</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>obs_F <span class="ot">&lt;-</span> evals_small <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> min_eval, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> age_cat) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: min_eval (numeric)
+Explanatory: age_cat (factor)
+# A tibble: 1 × 1
+   stat
+  &lt;dbl&gt;
+1  1.41</code></pre>
+</div>
+</div>
+</section>
+<section id="step-2-simulating-what-could-have-happened-under-h_0" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-simulating-what-could-have-happened-under-h_0">Step 2: Simulating what could have happened under <span class="math inline">\(H_0\)</span></h2>
+<p>. . .</p>
+<p><br></p>
+<div style="font-size: 1.25em; color: #34605f;">
+<p>How could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?</p>
+</div>
+</section>
+<section id="another-permutation-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="another-permutation-distribution">Another Permutation Distribution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>null_dist <span class="ot">&lt;-</span> evals_small <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> min_eval, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> age_cat) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="another-permutation-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="another-permutation-distribution-1">Another Permutation Distribution</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/visualize-null-dist-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div style="font-size: 1.25em; color: #ed8402;">
+<p>Why doesn’t the distribution have negative numbers?</p>
+</div>
+</section>
+<section id="visualizing-the-p-value" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-the-p-value">Visualizing the p-value</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> obs_F, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">direction =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualizing-the-p-value-1" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-the-p-value-1">Visualizing the p-value</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week9-day1_files/figure-revealjs/p-value-visualization-annotated-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="making-a-decision-reaching-a-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="making-a-decision-reaching-a-conclusion">Making a Decision &amp; Reaching a Conclusion</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>For a p-value of 0.254, what decision would you reach regarding your hypothesis test?</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p>What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="large-p-values-neq-evidence-for-the-null-hypothesis" class="level2">
+<h2 class="anchored" data-anchor-id="large-p-values-neq-evidence-for-the-null-hypothesis">Large p-values <span class="math inline">\(\neq\)</span> evidence for the null hypothesis!</h2>
+<p><img src="images/No evidence against the null.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="what-if-we-didnt-believe-the-normality-condition-was-violated" class="level1">
+<h1>What if we didn’t believe the normality condition was violated?</h1>
+<section id="theory-based-methods" class="level2">
+<h2 class="anchored" data-anchor-id="theory-based-methods">Theory-based Methods</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(min_eval <span class="sc">~</span> age_cat, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> evals_small)  <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 6
+  term         df sumsq meansq statistic p.value
+  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 age_cat       3  1.24  0.414      1.41   0.244
+2 Residuals    90 26.4   0.293     NA     NA    </code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<p>How was the <code>statistic</code> calculated?</p>
+<p>. . .</p>
+<p>What distribution was used to calculate the <code>p.value</code>?</p>
+<p>. . .</p>
+</section>
+<section id="making-a-decision-reaching-a-conclusion-1" class="level2">
+<h2 class="anchored" data-anchor-id="making-a-decision-reaching-a-conclusion-1">Making a Decision &amp; Reaching a Conclusion</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>For a p-value of 0.244, what decision would you reach regarding your hypothesis test?</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p>What would you conclude regarding the mean minimum evaluation score for different age groups of faculty?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-16" class="level2" data-background-color="#B6CADA">
+<h2 data-background-color="#B6CADA" class="anchored" data-anchor-id="section-16"></h2>
+<div style="font-size: 3em; color: #0F4C81;">
+<p>Did the two methods yield different results?</p>
+</div>
+</section>
+</section>
+<section id="final-project-work-session" class="level1">
+<h1>Final Project Work Session</h1>
+<section id="introduction-research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-research-questions">Introduction &amp; Research Questions</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>In 4-6 sentences, introduce / describe your data.</p>
+<ul>
+<li>What is the context of the data?</li>
+<li>For what purpose were these data collected?</li>
+</ul>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<div class="fragment">
+<p>Outline the <u><strong>two</strong></u> questions your research seeks to address.</p>
+<ul>
+<li>You will have one question for each one-way ANOVA model</li>
+<li>Your question should be in terms of “differences in group means” not “relationships”</li>
+</ul>
 </div>
 </div>
 </div>
@@ -637,6 +952,44 @@ Legend Positions
 </section>
 
 </main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
