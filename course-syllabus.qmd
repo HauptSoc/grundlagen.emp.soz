@@ -271,7 +271,7 @@ Note, to qualify for the student subscription you **must** use your Cal Poly ema
 
 <!-- | (3 total)**                    |                             |                         |                         |                         | -->
 
-I will set + / - grades based on how close you are to the next higher (or lower) letter grade. For example, if you meet all the criteria for an A but only completed 8 satisfactory labs and critiques, you would earn an A-. Similarly, if you meet all the criteria for an A, but received a Satisfactory on a project you would earn an A-.
+I will set + / - grades based on how close you are to the next higher (or lower) letter grade. For example, if you meet all the criteria for an A (including two Excellent Projects) but only completed 8 satisfactory labs and critiques, you would earn an A-. Similarly, if you meet all the criteria for a B, but earned a Progressing on your Midterm Project, then your grade would be a B-. 
 
 ## What assessments will there be?
 
