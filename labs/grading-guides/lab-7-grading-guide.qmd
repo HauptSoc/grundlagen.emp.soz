@@ -14,6 +14,10 @@ editor: visual
 
 > Careful! We don't need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!
 
+*If they use something other than `glimpse()`* or `nrow()`
+
+> Technically, this function doesn't tell you the number of rows / observations in the dataset, which is what we need in order to know the number of crabs in the dataset.
+
 ## Question 2
 
 **To earn a Success**:
@@ -110,7 +114,7 @@ get_p_value(null_dist,
 
 *If they don't specify `"two-sided"`*:
 
-> Careful! How many tails are there in a "standard" hypothesis for the slope?
+> Careful! How many tails are there in a "standard" hypothesis test for the slope?
 
 ## Question 7
 
@@ -122,13 +126,37 @@ get_p_value(null_dist,
 
 *If they say they fail to reject* $H_0$:
 
-> Careful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how "unusual" the observed statistic needs to be in order for us to reject $H_0$. Is your p-value smaller than this threshold?
+> Careful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how "unusual" the observed statistic needs to be in order for us to reject the null hypothesis. Is your p-value smaller than this threshold?
 
 ## Question 8
 
-**To earn a Success**: States there is a (linear) relationship between crab size and latitude.
+**To earn a Success**:
 
-> Fill in response!
+-   Conclusion is consistent with your decision
+
+::: callout-note
+# Conclude the null is wrong
+
+If their conclusion says "we have evidence against there being no relationship"
+
+> Careful! Your conclusion tells me what you believe **is not** true about the relationship between these variables. It would be nice if you told me what you believe **is** true!
+:::
+
+*If they made the incorrect decision in Question 7:*
+
+> Your conclusion should change based on your revisions to Question 7. In general, we should always make conclusions in terms of the alternative hypothesis!
+
+*If their conclusion says that there is insufficient evidence that the variables are related:*
+
+> Think back to what the null and alternative hypotheses are for linear regression! If you decided to reject the null, what should you conclude about the relationship between these variables?
+
+If they conclude there is a positive relationship:
+
+> Think back to what the "standard" null and alternative hypotheses are for linear regression! What type of relationship are we testing for?
+
+*If they interpret the p-value but don't make a conclusion:*
+
+> You provided a really great interpretation of what the p-value means, but you have not told me what the p-value would lead you to conclude! What should you conclude about the relationship between these variables?
 
 ## Question 9
 
@@ -208,4 +236,12 @@ Note that every group will get a different interval, due to the randomness of bo
 
 ## Question 12
 
-Based on this interval, does Bergmann's Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?
+**To earn a Success**:
+
+-   Say "yes" Bergmann's rule applies
+
+-   Because the confidence interval is positive
+
+*If they say "yes" because the slope is positive:*
+
+> Technically, it is possible for a slope to be positive but have the confidence interval overlap 0. What values are included in your confidence interval? What does that imply about plausible values for the population slope?

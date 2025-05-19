@@ -1665,14 +1665,14 @@
     "href": "labs/grading-guides/lab-7-grading-guide.html",
     "title": "Lab 7 Grading Guide",
     "section": "",
-    "text": "To earn a Success:\n\nstates the number of rows in the data frame\n\nIf they use group_by()\n\nCareful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!"
+    "text": "To earn a Success:\n\nstates the number of rows in the data frame\n\nIf they use group_by()\n\nCareful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!\n\nIf they use something other than glimpse() or nrow()\n\nTechnically, this function doesn’t tell you the number of rows / observations in the dataset, which is what we need in order to know the number of crabs in the dataset."
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-1",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-1",
     "title": "Lab 7 Grading Guide",
     "section": "",
-    "text": "To earn a Success:\n\nstates the number of rows in the data frame\n\nIf they use group_by()\n\nCareful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!"
+    "text": "To earn a Success:\n\nstates the number of rows in the data frame\n\nIf they use group_by()\n\nCareful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!\n\nIf they use something other than glimpse() or nrow()\n\nTechnically, this function doesn’t tell you the number of rows / observations in the dataset, which is what we need in order to know the number of crabs in the dataset."
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-2",
@@ -1707,21 +1707,21 @@
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-6",
     "title": "Lab 7 Grading Guide",
     "section": "Question 6",
-    "text": "Question 6\nTo earn a Success:\nCode should look like the following:\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\")\n\nIf they don’t specify \"two-sided\":\n\nCareful! How many tails are there in a “standard” hypothesis for the slope?"
+    "text": "Question 6\nTo earn a Success:\nCode should look like the following:\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\")\n\nIf they don’t specify \"two-sided\":\n\nCareful! How many tails are there in a “standard” hypothesis test for the slope?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-7",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-7",
     "title": "Lab 7 Grading Guide",
     "section": "Question 7",
-    "text": "Question 7\nTo earn a Success: States they reject \\(H_0\\) because the p-value is less than 0.1\nIf they do not state whether they reject or fail to reject \\(H_0\\):\n\nYou were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?\n\nIf they say they fail to reject \\(H_0\\):\n\nCareful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how “unusual” the observed statistic needs to be in order for us to reject \\(H_0\\). Is your p-value smaller than this threshold?"
+    "text": "Question 7\nTo earn a Success: States they reject \\(H_0\\) because the p-value is less than 0.1\nIf they do not state whether they reject or fail to reject \\(H_0\\):\n\nYou were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?\n\nIf they say they fail to reject \\(H_0\\):\n\nCareful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how “unusual” the observed statistic needs to be in order for us to reject the null hypothesis. Is your p-value smaller than this threshold?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-8",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-8",
     "title": "Lab 7 Grading Guide",
     "section": "Question 8",
-    "text": "Question 8\nTo earn a Success: States there is a (linear) relationship between crab size and latitude.\n\nFill in response!"
+    "text": "Question 8\nTo earn a Success:\n\nConclusion is consistent with your decision\n\n\n\n\n\n\n\nConclude the null is wrong\n\n\n\nIf their conclusion says “we have evidence against there being no relationship”\n\nCareful! Your conclusion tells me what you believe is not true about the relationship between these variables. It would be nice if you told me what you believe is true!\n\n\n\nIf they made the incorrect decision in Question 7:\n\nYour conclusion should change based on your revisions to Question 7. In general, we should always make conclusions in terms of the alternative hypothesis!\n\nIf their conclusion says that there is insufficient evidence that the variables are related:\n\nThink back to what the null and alternative hypotheses are for linear regression! If you decided to reject the null, what should you conclude about the relationship between these variables?\n\nIf they conclude there is a positive relationship:\n\nThink back to what the “standard” null and alternative hypotheses are for linear regression! What type of relationship are we testing for?\n\nIf they interpret the p-value but don’t make a conclusion:\n\nYou provided a really great interpretation of what the p-value means, but you have not told me what the p-value would lead you to conclude! What should you conclude about the relationship between these variables?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-9",
@@ -6500,6 +6500,6 @@
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-12",
     "title": "Lab 7 Grading Guide",
     "section": "Question 12",
-    "text": "Question 12\nBased on this interval, does Bergmann’s Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?"
+    "text": "Question 12\nTo earn a Success:\n\nSay “yes” Bergmann’s rule applies\nBecause the confidence interval is positive\n\nIf they say “yes” because the slope is positive:\n\nTechnically, it is possible for a slope to be positive but have the confidence interval overlap 0. What values are included in your confidence interval? What does that imply about plausible values for the population slope?"
   }
 ]
