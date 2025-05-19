@@ -991,7 +991,7 @@
     "href": "labs/lab-7.html#step-3-visualize-the-null-distribution",
     "title": "Lab 7: Investigating Bergmann’s Rule",
     "section": "Step 3: Visualize the Null Distribution",
-    "text": "Step 3: Visualize the Null Distribution\nWe can visualize this null distribution by running the following code:\n\nvisualise(null_dist)"
+    "text": "Step 3: Visualize the Null Distribution\nWe can visualize this null distribution by running the following code:\n\nvisualise(null_dist) +\n  labs(x = \"Slope Statistic for Relationship Between Crab Size & Latitude\", \n       title = \"Simulated Null Distribution with 500 Reps\")"
   },
   {
     "objectID": "labs/lab-7.html#step-4-obtain-the-p-value",
@@ -1012,7 +1012,7 @@
     "href": "labs/lab-7.html#step-2-visualize-the-bootstrap-distribution",
     "title": "Lab 7: Investigating Bergmann’s Rule",
     "section": "Step 2: Visualize the Bootstrap Distribution",
-    "text": "Step 2: Visualize the Bootstrap Distribution\nAlright, now that we have the bootstrap slope statistics, let’s see how it looks!\n\nvisualise(bootstrap_dist) +\n  labs(x = \"Slope Statistic\", \n       title = \"Bootstrap Distribution with 500 Resamples\")"
+    "text": "Step 2: Visualize the Bootstrap Distribution\nAlright, now that we have the bootstrap slope statistics, let’s see how it looks!\n\nvisualise(bootstrap_dist) +\n  labs(x = \"Slope Statistic for Relationship Between Crab Size & Latitude\", \n       title = \"Bootstrap Distribution with 500 Resamples\")"
   },
   {
     "objectID": "labs/lab-7.html#step-3-obtain-confidence-interval",
@@ -1665,84 +1665,84 @@
     "href": "labs/grading-guides/lab-7-grading-guide.html",
     "title": "Lab 7 Grading Guide",
     "section": "",
-    "text": "To earn a Success:\n\nincludes either site or name inside of group_by()\n\nIf uses another variable (e.g., latitude, water_temp):\n\nYour approach works, since there was only one measurement per site. But what if there wasn’t? This variable doesn’t uniquely define the location of each marsh! What variable(s) do?"
+    "text": "To earn a Success:\n\nstates the number of rows in the data frame\n\nIf they use group_by()\n\nCareful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-1",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-1",
     "title": "Lab 7 Grading Guide",
     "section": "",
-    "text": "To earn a Success:\n\nincludes either site or name inside of group_by()\n\nIf uses another variable (e.g., latitude, water_temp):\n\nYour approach works, since there was only one measurement per site. But what if there wasn’t? This variable doesn’t uniquely define the location of each marsh! What variable(s) do?"
+    "text": "To earn a Success:\n\nstates the number of rows in the data frame\n\nIf they use group_by()\n\nCareful! We don’t need to make any groups to know how many penguins are in these data! We only need to know the number of rows in the dataset!"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-2",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-2",
     "title": "Lab 7 Grading Guide",
     "section": "Question 2",
-    "text": "Question 2\nTo earn a Success:\nCreates scatterplot with:\n\nlatitude on x-axis\nwater temperature on y-axis\naxis labels include variable units (Celsius for water temp; degrees for latitude)\n\n\n\n\n\n\n\nNote\n\n\n\nThey are not required to include a regression line, but if they do, great!\n\n\nIf they don’t have axis labels with the units:\n\nIt is important to include an axis label stating what the units of each variable are! If you are wondering what the units of water temperature are, you can look up the help file (using ?pie_crab)\n\nIf they only put temperature on their y-axis:\n\nWhat specific variable is being plotted on the y-axis? Air temperature? Ground temperature? Water temperature? Be specific!"
+    "text": "Question 2\nTo earn a Success:\nCreates scatterplot with:\n\nlatitude on x-axis\nsize on y-axis\ny-axis label includes units for size (millimeters)\n\n\n\n\n\n\n\nNote\n\n\n\nThey are not required to include a regression line, but if they do, great!\n\n\nIf they don’t have axis labels with the units:\n\nIt is important to include an axis label stating what the units of each variable are! If you are wondering what the units of crab size are, you can look up the help file (using ?pie_crab)"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-3",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-3",
     "title": "Lab 7 Grading Guide",
     "section": "Question 3",
-    "text": "Question 3\nTo earn a Success:\nDescription includes all of the following:\n\nform of relationship (linear)\ndirection of relationship (negative)\nstrength of relationship (strong)\nlocation of any outliers (e.g., at a latitude of 45 degrees and 17.5 C temperature)\n\nIf they forget one of these:\n\nCareful! You were asked to describe the form, direction, strength, and unusual points for the plot. Remember, it is important to explicitly state where you believe the outliers are, so the reader knows where to look!\n\nIf they don’t state where the outlier is:\n\nIt is important to explicitly state where you believe the outliers are, so the reader knows where to look!"
+    "text": "Question 3\nTo earn a Success:\nDescription includes all of the following:\n\nform of relationship (linear)\ndirection of relationship (positive)\nstrength of relationship (moderate)\nlocation of any outliers\n\nIf they forget one of these:\n\nCareful! You were asked to describe the form, direction, strength, and unusual points for the plot. Remember, it is important to explicitly state where you believe the outliers are, so the reader knows where to look! I would also encourage you to justify why you believe this is an outlier, since other people might not think so!\n\nIf they don’t state where the outlier is:\n\nIt is important to explicitly state where you believe the outliers are, so the reader knows where to look! I would also encourage you to justify why you believe this is an outlier, since other people might not think so!"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-4",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-4",
     "title": "Lab 7 Grading Guide",
     "section": "Question 4",
-    "text": "Question 4\nTo earn a Success:\nCode should look like the following:\n\nobs_slope &lt;- obs_slope &lt;- marsh_info %&gt;% \n  specify(response = water_temp, \n          explanatory = latitude) %&gt;% \n  calculate(stat = \"slope\")"
+    "text": "Question 4\nTo earn a Success:\nCode should look like the following:\n\nobs_slope &lt;- obs_slope &lt;- marsh_info %&gt;% \n  specify(response = size, \n          explanatory = latitude) %&gt;% \n  calculate(stat = \"slope\")"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-5",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-5",
     "title": "Lab 7 Grading Guide",
     "section": "Question 5",
-    "text": "Question 5\nTo earn a Success:\nCode should look like the following:\n\nbootstrap_dist &lt;- marsh_info %&gt;% \n  specify(response = water_temp, \n          explanatory = latitude) %&gt;% \n  generate(reps = 500, \n           type = \"bootstrap\") %&gt;% \n  calculate(stat = \"slope\")"
+    "text": "Question 5\nTo earn a Success:\nCode should look like the following:\n\nnull_dist &lt;- pie_crab %&gt;% \n  specify(response = size, \n          explanatory = latitude) %&gt;% \n  hypothesize(null = \"independence\") %&gt;% \n  generate(reps = 500, \n           type = \"permute\") %&gt;% \n  calculate(stat = \"slope\")\n\nIf they chose reps larger than 500, that’s okay!\nIf they chose reps smaller than 500:\n\nCareful! How many resamples (reps) were you asked to generate?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-6",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-6",
     "title": "Lab 7 Grading Guide",
     "section": "Question 6",
-    "text": "Question 6\nTo earn a Success:\nCode should look like the following:\n\nvisualise(bootstrap_dist) + \n  labs(x = \"&lt;SOME AXIS LABEL&gt;\")\n\nTheir axis label must describe what is being plotted (e.g., slope statistics, sample slope, etc.)\nIf they did not include an x-axis label:\n\nIt is important to include an axis label stating what is being plotted! What statistics are being plotted on this bootstrap distribution? Your axis label should tell the reader what statistics you are plotting!\n\nIf their x-axis label is not about the slope statistic:\n\nWhat is being plotted in this distribution? What is it a distribution of? What statistics did you calculate in the previous step that are being plotted here?\n\nIf their y-axis label is something other than number of resamples:\n\nCareful! This is a histogram of the bootstrap statistics that you found in #5. Think back to when we learned about histograms, what do the numbers (e.g., 25, 50, 75) represent? Hint: this is not a variable in the dataset!"
+    "text": "Question 6\nTo earn a Success:\nCode should look like the following:\n\nget_p_value(null_dist, \n            obs_stat = obs_slope, \n            direction = \"two-sided\")\n\nIf they don’t specify \"two-sided\":\n\nCareful! How many tails are there in a “standard” hypothesis for the slope?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-7",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-7",
     "title": "Lab 7 Grading Guide",
     "section": "Question 7",
-    "text": "Question 7\nTo earn a Success:\nCode should look like the following:\n\nget_confidence_interval(bootstrap_dist, \n                        level = 0.90, \n                        type = \"percentile\")\n\n\n\n\n\n\n\n\"percentile\" is the default\n\n\n\nSo, it is okay if they don’t specify it!\n\n\nIf they use a level other than 0.90:\n\nLook back at the lab instructions, what percentage confidence interval were you asked to construct?"
+    "text": "Question 7\nTo earn a Success: States they reject \\(H_0\\) because the p-value is less than 0.1\nIf they do not state whether they reject or fail to reject \\(H_0\\):\n\nYou were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?\n\nIf they say they fail to reject \\(H_0\\):\n\nCareful! What p-value did you get? Was it smaller than the alpha I specified? The alpha stipulates how “unusual” the observed statistic needs to be in order for us to reject \\(H_0\\). Is your p-value smaller than this threshold?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-8",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-8",
     "title": "Lab 7 Grading Guide",
     "section": "Question 8",
-    "text": "Question 8\nTo earn a Success:\nThe interpretation must state:\n\nconfidence: they are 90% confident\nstatistic: the slope between water temperature and latitude\npopulation: for all marshes along the eastern US\ninterval: is between [lower bound] and [upper bound]\n\n\n\n\n\n\n\nNote\n\n\n\nNote that every group will get a different interval, due to the randomness of bootstrapping!\n\n\nIf they don’t state their confidence:\n\nHow much confidence do you have in your interval?\n\nIf they don’t state the statistic in context:\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\nIf they don’t include a population:\n\nWhat population does this interval apply to? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to!\n\nIf they have state an incorrect population:\n\nCareful! Are you analyzing data on crabs or on marshes? Where were these marshes located? What population would you characterize these 13 marshes belonging to? That is the population your interval applies to!"
+    "text": "Question 8\nTo earn a Success: States there is a (linear) relationship between crab size and latitude.\n\nFill in response!"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-9",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-9",
     "title": "Lab 7 Grading Guide",
     "section": "Question 9",
-    "text": "Question 9\nTo earn a Success:\nCode should look like the following:\n\nget_confidence_interval(bootstrap_dist, \n                        level = 0.90, \n                        point_estimate = obs_slope, \n                        type = \"se\")\n\nIf they don’t have type = \"se\":\n\nWhat method do you want the function to use when calculating your confidence interval? Percentile intervals are the default!\n\n\n\n\n\n\n\nNote\n\n\n\nIf they type in the actual number for the estimated slope rather than using the obs_slope object, you can give them this reminder:\n\nIt is better practice not to “hard-code” numbers in our code, but to reference values stored in objects. This makes our code more resistant to changes in the dataset."
+    "text": "Question 9\n\nbootstrap_dist &lt;- pie_crab %&gt;% \n  specify(response = size, \n          explanatory = latitude) %&gt;% \n  generate(reps = 500, \n           type = \"bootstrap\") %&gt;% \n  calculate(stat = \"slope\")\n\nIf they chose reps larger than 500, that’s okay!\nIf they chose reps smaller than 500:\n\nCareful! How many resamples (reps) were you asked to generate?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-10",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-10",
     "title": "Lab 7 Grading Guide",
     "section": "Question 10",
-    "text": "Question 10\nTo earn a Success:\n\nstates the intervals are similar\nstates similarity is due to the normality of the bootstrap distribution\n\nIf they say the intervals are different:\n\nGive these intervals another look, yes their endpoints differ by a bit, but are they vastly different intervals?\n\nIf they don’t talk about the bootstrap distribution being approximately normal:\n\nWhat condition do we need to check when using the SE method to construct confidence intervals? Hint: it is a condition about the shape of the bootstrap distribution"
+    "text": "Question 10\nTo earn a Success:\nCode should look like the following:\n\nget_confidence_interval(bootstrap_dist, \n                        level = 0.90, \n                        type = \"percentile\")\n\n\n\n\n\n\n\n\"percentile\" is the default\n\n\n\nSo, it is okay if they don’t specify it!\n\n\nIf they use a level other than 0.90:\n\nLook back at the lab instructions, what percentage confidence interval were you asked to construct?"
   },
   {
     "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-11",
     "href": "labs/grading-guides/lab-7-grading-guide.html#question-11",
     "title": "Lab 7 Grading Guide",
     "section": "Question 11",
-    "text": "Question 11\nTo earn a Success:\n\nstates whether they do / do not believe the sample of 13 marshes is representative of all marshes along the Atlantic coast\njustifies why using something something that is true\n\n\n\n\n\n\n\nNote\n\n\n\nI’m willing to be pretty flexible here, but the key aspect is that they need to justify their reasoning.\n\n\nIf their justification is about crabs:\n\nCareful! Are you analyzing data on crabs or on marshes? The population of marshes you define in #8 is what you should use to assess if the assumption of bootstrapping is reasonable.\n\nIf their justification is not reasonable:\n\nBootstrapping assumes that the original sample is representative of the population from which the observations were sampled. Where were these 13 marshes located geographically? Do you believe that these 13 marshes are representative of the broader population they were sampled from?\n\nIf their justification is about the shape of the bootstrap distribution:\n\nYou are on the right track, we need for the sample to be representative of the population from which it was sampled. However, we cannot assess the representativeness of a sample using a bootstrap distribution. This can only be assessed by inspecting how the data were collected."
+    "text": "Question 11\nTo earn a Success:\nThe interpretation must state:\n\nconfidence: they are 90% confident\nstatistic: the slope between crab size and latitude\npopulation: for all marshes along the eastern US\ninterval: is between [lower bound] and [upper bound]\n\n\n\n\n\n\n\nNote\n\n\n\nNote that every group will get a different interval, due to the randomness of bootstrapping!\n\n\nIf they don’t state their confidence:\n\nHow much confidence do you have in your interval?\n\nIf they don’t state the statistic in context:\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\nIf they don’t include a population:\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!"
   },
   {
     "objectID": "project/final-project-help/twa-model-selection-process.html",
@@ -3842,7 +3842,7 @@
     "href": "weeks/week-8.html",
     "title": "Week 8 – Conditions for Inference & One-Way ANOVA",
     "section": "",
-    "text": "library(tidyverse)\nlibrary(palmerpenguins)\nlibrary(broom)\nlibrary(moderndive)\n\npenguins_clean &lt;- penguins %&gt;% \n  drop_na(sex)",
+    "text": "First, we are going to refresh on the conditions for linear regression. You might want to reference last week’s reading while completing the first reading guide: Model Conditions for Linear Regression\n\n\n\n\n\n\nReading Guide – Due Monday by the start of class\n\n\n\nThere are a few questions from this that are similar to the of last week’s reading guide. Feel free to copy and paste your previous answers to this reading guide!\nDownload the Word Document\n\n\nNow, let’s read about how hypothesis testing extends into multiple linear regression. This allows us to connect to our new topic—ANOVA!\nRequired Reading: Hypothesis Tests for Multiple Linear Regression\n\n\n\n\n\n\nImportant\n\n\n\nThere is no reading guide for this chapter, just a concept quiz!",
     "crumbs": [
       "Weekly materials",
       "Week 8"
@@ -3864,7 +3864,7 @@
     "href": "weeks/week-8.html#due-wednesday-by-the-start-of-class",
     "title": "Week 8 – Conditions for Inference & One-Way ANOVA",
     "section": "2.2 Due Wednesday by the start of class",
-    "text": "2.2 Due Wednesday by the start of class\n\nspecies_lm &lt;- lm(bill_length_mm ~ body_mass_g * species, \n             data = penguins_clean)\n\nget_regression_table(species_lm) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n27.113\n1.632\n16.609\n0.000\n23.902\n30.324\n\n\nbody_mass_g\n0.003\n0.000\n7.228\n0.000\n0.002\n0.004\n\n\nspecies: Chinstrap\n5.061\n3.310\n1.529\n0.127\n-1.451\n11.573\n\n\nspecies: Gentoo\n-0.575\n2.794\n-0.206\n0.837\n-6.072\n4.922\n\n\nbody_mass_g:speciesChinstrap\n0.001\n0.001\n1.475\n0.141\n0.000\n0.003\n\n\nbody_mass_g:speciesGentoo\n0.001\n0.001\n1.558\n0.120\n0.000\n0.002\n\n\n\n\n\n\n\n\nIn the coefficient table, the body_mass_g:speciesChinstrap line is testing if the [slope / intercept] (of the relationship between body mass and bill length) is different for [Adelie / Chinstrap / Gentoo] penguins as compared to [Adelie / Chinstrap / Gentoo] penguins.\nIn the coefficient table, the body_mass_g:speciesGentoo line is testing if the [slope / intercept] (of the relationship between body mass and bill length) is different for [Adelie / Chinstrap / Gentoo] penguins as compared to [Adelie / Chinstrap / Gentoo] penguins.\nTrue or false, you can use the regression table to test if the slope for Chinstrap and Gentoo penguins are different.\n\n\nanova(species_lm) %&gt;% \n  tidy() %&gt;% \n  mutate(p.value = round(p.value, digits = 8)) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nbody_mass_g\n1\n3449.82317\n3449.823171\n591.920719\n0.0000000\n\n\nspecies\n2\n4553.33934\n2276.669668\n390.631021\n0.0000000\n\n\nbody_mass_g:species\n2\n19.92386\n9.961928\n1.709268\n0.1826114\n\n\nResiduals\n327\n1905.81634\n5.828185\nNA\nNA\n\n\n\n\n\n\n\n\nMatch the appropriate null and alternative hypothesis being tested in the body_mass_g:species line of the ANOVA table.\n\n\n\nNull Hypothesis\n\nAlternative Hypothesis\n\n\n\n\nThe relationship between body mass and bill length is the same for this sample of Adelie, Chinstrap, and Gentoo penguins\nThe relationship between body mass and bill length is the same for all Adelie, Chinstrap, and Gentoo penguins\nThe relationship between body mass and bill length is different for a least one species of penguins\nThe relationship between body mass and bill length is different for the Adelie penguins\nThe relationship between body mass and bill length is different for the Chinstrap penguins\nThe relationship between body mass and bill length is different for the Gentoo penguins\n\n\n\n\nThe species line of the ANOVA table is testing if the [intercept / slope] is different for [every species / at least one species / at least two species].\nTrue or false, the body_mass_g line of the ANOVA table and the body_mass_g line of the coefficient table are performing the same hypothesis test.",
+    "text": "2.2 Due Wednesday by the start of class\n\n\n\n\n\n\n\n\nterm\nestimate\nstd_error\nstatistic\np_value\nlower_ci\nupper_ci\n\n\n\n\nintercept\n27.113\n1.632\n16.609\n0.000\n23.902\n30.324\n\n\nbody_mass_g\n0.003\n0.000\n7.228\n0.000\n0.002\n0.004\n\n\nspecies: Chinstrap\n5.061\n3.310\n1.529\n0.127\n-1.451\n11.573\n\n\nspecies: Gentoo\n-0.575\n2.794\n-0.206\n0.837\n-6.072\n4.922\n\n\nbody_mass_g:speciesChinstrap\n0.001\n0.001\n1.475\n0.141\n0.000\n0.003\n\n\nbody_mass_g:speciesGentoo\n0.001\n0.001\n1.558\n0.120\n0.000\n0.002\n\n\n\n\n\n\n\n\nIn the coefficient table, the body_mass_g:speciesChinstrap line is testing if the [slope / intercept] (of the relationship between body mass and bill length) is different for [Adelie / Chinstrap / Gentoo] penguins as compared to [Adelie / Chinstrap / Gentoo] penguins.\nIn the coefficient table, the body_mass_g:speciesGentoo line is testing if the [slope / intercept] (of the relationship between body mass and bill length) is different for [Adelie / Chinstrap / Gentoo] penguins as compared to [Adelie / Chinstrap / Gentoo] penguins.\nTrue or false, you can use the regression table to test if the slope for Chinstrap and Gentoo penguins are different.\n\n\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nbody_mass_g\n1\n3449.82317\n3449.823171\n591.920719\n0.0000000\n\n\nspecies\n2\n4553.33934\n2276.669668\n390.631021\n0.0000000\n\n\nbody_mass_g:species\n2\n19.92386\n9.961928\n1.709268\n0.1826114\n\n\nResiduals\n327\n1905.81634\n5.828185\nNA\nNA\n\n\n\n\n\n\n\n\nMatch the appropriate null and alternative hypothesis being tested in the body_mass_g:species line of the ANOVA table.\n\n\n\nNull Hypothesis\n\nAlternative Hypothesis\n\n\n\n\nThe relationship between body mass and bill length is the same for this sample of Adelie, Chinstrap, and Gentoo penguins\nThe relationship between body mass and bill length is the same for all Adelie, Chinstrap, and Gentoo penguins\nThe relationship between body mass and bill length is different for a least one species of penguins\nThe relationship between body mass and bill length is different for the Adelie penguins\nThe relationship between body mass and bill length is different for the Chinstrap penguins\nThe relationship between body mass and bill length is different for the Gentoo penguins\n\n\n\n\nThe species line of the ANOVA table is testing if the [intercept / slope] is different for [every species / at least one species / at least two species].\nTrue or false, the body_mass_g line of the ANOVA table and the body_mass_g line of the coefficient table are performing the same hypothesis test.",
     "crumbs": [
       "Weekly materials",
       "Week 8"
@@ -6494,5 +6494,12 @@
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Your next tasks…",
     "text": "Your next tasks…\n\nComplete the grade check-in activity\nLearn about ANOVA in the context of multiple linear regression\nUse an ANOVA to decide what model you would have chosen for the midterm project (Statistical Critique #2)\nRevise Lab 6"
+  },
+  {
+    "objectID": "labs/grading-guides/lab-7-grading-guide.html#question-12",
+    "href": "labs/grading-guides/lab-7-grading-guide.html#question-12",
+    "title": "Lab 7 Grading Guide",
+    "section": "Question 12",
+    "text": "Question 12\nBased on this interval, does Bergmann’s Rule apply to Fiddler Crabs? Specifically, does the size of a crab increases as its distance from the equator increases?"
   }
 ]
