@@ -17,21 +17,35 @@ Pull up your Canvas grades, we are going to check-in with your progress thus far
 
     </br>
 
-+--------------------+------------------------------+-------------------------+-----------------------------------------------------------------------+---------------------------+
-| **Concept Quizzes\ | **Reading Guides Completed** | **Tutorials Completed** | **Statistical Critiques & Lab Assignments Marked Complete / Success** | **Midterm Project Grade** |
-| Completed**        |                              |                         |                                                                       |                           |
-+====================+==============================+=========================+=======================================================================+===========================+
-| </br>              |                              |                         |                                                                       |                           |
-|                    |                              |                         |                                                                       |                           |
-| </br>              |                              |                         |                                                                       |                           |
-+--------------------+------------------------------+-------------------------+-----------------------------------------------------------------------+---------------------------+
++--------------------+------------------------------+-------------------------+-------------------------------------------------------------------------+---------------------------+
+| **Concept Quizzes\ | **Reading Guides Completed** | **Tutorials Completed** | **Statistical Critiques & Lab Assignments *Marked Complete / Success*** | **Midterm Project Grade** |
+| Completed**        |                              |                         |                                                                         |                           |
++====================+==============================+=========================+=========================================================================+===========================+
+| </br>              |                              |                         |                                                                         |                           |
+|                    |                              |                         |                                                                         |                           |
+| </br>              |                              |                         |                                                                         |                           |
++--------------------+------------------------------+-------------------------+-------------------------------------------------------------------------+---------------------------+
 
 </br>
 
-Now, check these totals against the grade break down for this class, found in the [course syllabus](https://atheobold.github.io/stat-313-website/course-syllabus.html#sec-grades).
+Now, check these totals against the grade break down for this class, found in the [course syllabus](https://atheobold.github.io/stat-313-website/course-syllabus.html#sec-grades). Here is how these recipes are baked into a cake:
 
--   Based on the grade table, what is the best grade you can expect to earn in STAT 313?
+-   The "universe" of possible letter grades you can earn is determined from the Midterm Project and Final Project grades.
 
--   Based on these criteria, what grade are you hoping to earn?
+    -   If you earned a B on the Midterm Project, the "universe" of possible grades ranges from A- (if you earn an Excellent on the Final Project) to an F (if you don't do the final project).
 
--   What will you do to ensure you earn you earn the grade you desire?
+    -   If you earned a C on the Midterm Project, the "universe" of possible grades ranges from B- (if you earn an Excellent on the Final Project) to an F (if you don't do the final project).
+
+**Based on this "universe" of grades, the remainder of the coursework is incorporated as follows:**
+
+-   If you had more labs completed than is required for your grade a + will be added to your grade.
+
+-   If you have fewer labs completed than was required, I consider the maximum grade you could earn with the number of labs / critiques you completed. 
+
+-   If you completed the number of preparatory assignments required for your grade, no change will be made to your grade.  
+
+-   If you did not complete the number of preparatory assignments required for your grade, a - will be added to your grade.
+
+**Based on the grade table and the process described above, what is the best grade you could earn in STAT 313?**
+
+**What will you do over the next three weeks to ensure you earn you earn this grade?**
