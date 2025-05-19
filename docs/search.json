@@ -88,7 +88,7 @@
     "href": "slides/week8-day1.html#common-mistakes",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Common Mistakes",
-    "text": "Common Mistakes\n\nQuestion 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+    "text": "Common Mistakes"
   },
   {
     "objectID": "slides/week8-day1.html#first-steps",
@@ -123,7 +123,7 @@
     "href": "slides/week8-day1.html#section",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "bill_depth_mm:species: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!"
+    "text": "Linear relationship between \\(x\\) and \\(y\\)\n\n\nand_vertebrates %&gt;%\n  filter(species != \"Cascade torrent salamander\") %&gt;% \n  ggplot(mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = species)) +\n  geom_point() + \n  labs(x = \"Length (mm)\", \n       y = \"Weight (g)\", \n       color = \"Species\") +\n  my_theme\n\nWarning: Removed 13270 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n. . .\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#how-do-i-know-what-model-is-best-from-the-anova-table-1",
@@ -137,7 +137,7 @@
     "href": "slides/week8-day1.html#section-1",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "body_mass_g: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!\n\n\n\nbill_depth_mm: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!"
+    "text": "Variable transformation!\n\n\nand_vertebrates %&gt;%\n  filter(species != \"Cascade torrent salamander\") %&gt;% \n  ggplot(mapping = aes(x = length_1_mm, \n                       y = weight_g, \n                       color = species)) +\n  geom_jitter(alpha = 0.5) + \n  labs(x = \"Log Transformed Length (mm)\", \n       y = \"Log Transformed Weight (g)\", \n       color = \"Species\") +\n  scale_x_log10() +\n  scale_y_log10() +\n  my_theme\n\nWarning: Removed 13270 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "slides/week8-day1.html#testing-for-a-population-slope-beta_1",
@@ -193,70 +193,70 @@
     "href": "slides/week8-day1.html#model-conditions",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Model Conditions",
-    "text": "Model Conditions\nFor our p-value to be trustworthy, we need to know that the conditions of our model are not violated.\n\n\n\nFor linear regression we are assuming…\n\n\n\nLinear relationship between \\(x\\) and \\(y\\)\n\nIndependent observations\n\nNormality of residuals\n\nEqual variance of residuals"
+    "text": "Model Conditions\nFor our p-value to be trustworthy, we need to know that the conditions of our model are not violated.\n. . .\n\n\nFor linear regression we are assuming…\n\n\n\nLinear relationship between \\(x\\) and \\(y\\)\n\nIndependent observations\n\nNormality of residuals\n\nEqual variance of residuals"
   },
   {
     "objectID": "slides/week8-day1.html#what-happens-if-the-conditions-are-violated",
     "href": "slides/week8-day1.html#what-happens-if-the-conditions-are-violated",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What happens if the conditions are violated?",
-    "text": "What happens if the conditions are violated?\nIn general, when the conditions associated with these methods are violated, we will underestimate the true standard error (spread) of the sampling distribution.\n\n\nOur p-values will be too small!\nOur confidence intervals will be too narrow!\nWe will make more Type I errors than we expect!"
+    "text": "What happens if the conditions are violated?\nIn general, when the conditions associated with these methods are violated, we will underestimate the true standard error (spread) of the sampling distribution.\n. . .\n\nOur p-values will be too small!\nOur confidence intervals will be too narrow!\nWe will make more Type I errors than we expect!"
   },
   {
     "objectID": "slides/week8-day1.html#section-2",
     "href": "slides/week8-day1.html#section-2",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Linear relationship between \\(x\\) and \\(y\\)\n\n\n\nWhat should we do?"
+    "text": "Independence of observations\n\n\n\nThe evals dataset contains 463 observations on 94 professors. Meaning, professors have multiple observations.\n\nWhat should we do?\n\n\n\n\nBest – use a random effects model\nReasonable – collapse the multiple scores into a single score"
   },
   {
     "objectID": "slides/week8-day1.html#section-3",
     "href": "slides/week8-day1.html#section-3",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Variable transformation!"
+    "text": "Equal variance of residuals\n\n\nggplot(data = hbr_maples, \n       mapping = aes(x = stem_length, y = stem_dry_mass)\n       ) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    x = \"Stem Length (mm)\",\n    y = \"Stem Dry Mass (g)\"\n    ) +\n  theme_minimal() + \n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n. . .\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#section-4",
     "href": "slides/week8-day1.html#section-4",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Independence of observations\n\n\n\nThe evals dataset contains 463 observations on 94 professors. Meaning, professors have multiple observations.\n\nWhat should we do?\n\n\n\n\nBest – use a random effects model\nReasonable – collapse the multiple scores into a single score"
+    "text": "Variable transformation!\n\n\nggplot(data = hbr_maples, \n       mapping = aes(x = stem_length, y = stem_dry_mass)\n       ) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    x = \"Stem Length (mm)\",\n    y = \"Log Transformed Stem Dry Mass (g)\"\n  ) +\n  theme_minimal() + \n  scale_y_log10() +\n  my_theme\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week8-day1.html#section-5",
     "href": "slides/week8-day1.html#section-5",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Equal variance of residuals\n\n\n\nWhat should we do?"
+    "text": "Normality of residuals\n\n\nfish &lt;- and_vertebrates %&gt;%\n  filter(!species %in% c(\"Cascade torrent salamander\", \"Coastal giant salamander\")) \n\ncurved_lm &lt;- lm(weight_g ~ length_1_mm, data = fish)\n\nget_regression_points(curved_lm) %&gt;% \n  ggplot(mapping = aes(x = residual)) + \n  geom_histogram() + \n  labs(x = \"Residual\") +\n  my_theme\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n. . .\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#section-6",
     "href": "slides/week8-day1.html#section-6",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Variable transformation!"
+    "text": "Variable transformation!\n\n\nfish &lt;- and_vertebrates %&gt;%\n  filter(!species %in% c(\"Cascade torrent salamander\", \"Coastal giant salamander\"))\n\nnot_curved_lm &lt;- lm(log(weight_g) ~ log(length_1_mm), data = fish)\n\nbroom::augment(not_curved_lm) %&gt;% \n  mutate(.resid = `log(weight_g)` - `.fitted`) %&gt;% \n  ggplot(mapping = aes(x = .resid)) + \n  geom_histogram(binwidth = 0.1) + \n  labs(x = \"Residual\") +\n  xlim(c(-0.5, 0.5)) +\n  my_theme\n\nWarning: Removed 73 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_bar()`)."
   },
   {
     "objectID": "slides/week8-day1.html#section-7",
     "href": "slides/week8-day1.html#section-7",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Normality of residuals\n\n\n\nWhat should we do?"
+    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\nse_num &lt;- ( sd(evals$score) / sd(evals$bty_avg) ) * \n  sqrt(\n    1 - cor(evals$score, evals$bty_avg)\n    ) \n\nse_denom &lt;- sqrt(nrow(evals) - 2)\n\nse &lt;- se_num / se_denom\n\nse\n\n[1] 0.01495204\n\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\nget_regression_table(evals_lm) \n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#section-8",
     "href": "slides/week8-day1.html#section-8",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Variable transformation!"
+    "text": "What is the relationship between life expectancy GDP per capita?\n\n. . .\n\nDecide on a variable transformation\nAssess model conditions (L, I, N, E)\nCompare hypothesis test results between simulation-based methods and theory-based methods"
   },
   {
     "objectID": "slides/week8-day1.html#what-if-we-cant-fix-a-condition-being-violated",
     "href": "slides/week8-day1.html#what-if-we-cant-fix-a-condition-being-violated",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What if we can’t fix a condition being violated?",
-    "text": "What if we can’t fix a condition being violated?\n\n\n\nFor the L, I, and E conditions…\nwe need to ask for help!\n\n\n\n\nFor the N condition…\nwe need to use simulation instead of mathematical formulas to get our p-value and confidence interval."
+    "text": "What if we can’t fix a condition being violated?\n. . .\n\n\nFor the L, I, and E conditions…\nwe need to ask for help!\n\n\n\n\nFor the N condition…\nwe need to use simulation instead of mathematical formulas to get our p-value and confidence interval."
   },
   {
     "objectID": "slides/week8-day1.html#mathematical-theory-based-methods",
@@ -270,7 +270,7 @@
     "href": "slides/week8-day1.html#how-does-this-look",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "How does this look?",
-    "text": "How does this look?\n\nBeforeNow\n\n\n\nobs_slope &lt;- evals %&gt;% \n  specify(response = score, \n          explanatory = bty_avg) %&gt;% \n  calculate(stat = \"slope\")\n\n\n\n   bty_avg \n0.06663704 \n\n\n\n\n\n\nevals_lm &lt;- lm(score ~ bty_avg, data = evals)\n\nget_regression_table(evals_lm)\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
+    "text": "How does this look?\n\nBeforeNow\n\n\n\nobs_slope &lt;- evals %&gt;% \n  specify(response = score, \n          explanatory = bty_avg) %&gt;% \n  calculate(stat = \"slope\")\n\n\npull(obs_slope)\n\n   bty_avg \n0.06663704 \n\n\n\n\n\n\nevals_lm &lt;- lm(score ~ bty_avg, data = evals)\n\nget_regression_table(evals_lm)\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#section-9",
@@ -284,14 +284,14 @@
     "href": "slides/week8-day1.html#how-does-r-calculate-the-p-value",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "How does R calculate the p-value?",
-    "text": "How does R calculate the p-value?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent \\(t\\)-distributions\n\n\nA \\(t\\)-distribution has a slightly different shape depending on the sample size. Technically, we are using a \\(t\\)-distribution with \\(n - 2\\) degrees of freedom to get our p-value."
+    "text": "How does R calculate the p-value?\n. . .\n\nggplot(data = tibble(x = c(-5, 5)), \n       mapping = aes(x)) +\n  stat_function(fun = dt, \n                args = list(df = nrow(evals) - 2), \n                color = \"blue\", \n                linewidth = 1.5) +\n  labs(y = \"\", \n       x = \"t-statistic\") +\n  scale_y_continuous(breaks = NULL) +\n  geom_vline(xintercept = pull(t_stat), color = \"red\", linewidth = 1.5) +\n  my_theme\n\n\n\n\n\n\n\n\n. . .\n\n\n\n\n\n\nDifferent \\(t\\)-distributions\n\n\n\nA \\(t\\)-distribution has a slightly different shape depending on the sample size. Technically, we are using a \\(t\\)-distribution with \\(n - 2\\) degrees of freedom to get our p-value."
   },
   {
     "objectID": "slides/week8-day1.html#approximating-the-permutation-distribution",
     "href": "slides/week8-day1.html#approximating-the-permutation-distribution",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Approximating the permutation distribution",
-    "text": "Approximating the permutation distribution\n\n\nA \\(t\\)-distribution can be a reasonable approximation for the permutation distribution if the normality condition is not violated."
+    "text": "Approximating the permutation distribution\n\n\nA \\(t\\)-distribution can be a reasonable approximation for the permutation distribution if the normality condition is not violated.\n\n\n\n\nplot(c(-5, 5),\n     c(0, dnorm(0)),\n      type = \"n\", \n     ylab = \"\", \n     xlab = \"\",\n     axes = FALSE\n     )\n\nat &lt;- seq(-10, 10, 2)\naxis(1, at)\naxis(1, at - 1, rep(\"\", length(at)), tcl = -0.1)\nabline(h = 0)\nCOL. &lt;- openintro::fadeColor(openintro::IMSCOL[\"blue\", \"full\"], c(\"FF\", \"89\", \"68\", \"4C\", \"33\"))\nCOLt &lt;- openintro::fadeColor(openintro::IMSCOL[\"blue\", \"full\"], c(\"FF\", \"AA\", \"85\", \"60\", \"45\"))\nDF &lt;- c(\"normal\", 8, 4, 2, 1)\nX &lt;- seq(-10, 10, 0.02)\nY &lt;- dnorm(X)\nlines(X, Y, col = COL.[1])\n\nfor (i in 2:5) {\n  Y &lt;- dt(X, as.numeric(DF[i]))\n  lines(X, Y, col = COL.[i], lwd = 1.5)\n}\nlegend(2.5, 0.4,\n  legend = c(\n    DF[1],\n    paste(\"t, df = \", DF[2:5], sep = \"\")\n  ),\n  col = COL.,\n  text.col = COLt,\n  lty = rep(1, 5),\n  lwd = 1.5\n)"
   },
   {
     "objectID": "slides/week8-day1.html#section-10",
@@ -310,16 +310,16 @@
   {
     "objectID": "slides/week8-day2.html#section",
     "href": "slides/week8-day2.html#section",
-    "title": "ANalysis Of VAriance",
+    "title": "Inference for One-way ANOVA",
     "section": "",
-    "text": "Before…"
+    "text": "bill_depth_mm:species: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!"
   },
   {
     "objectID": "slides/week8-day2.html#section-1",
     "href": "slides/week8-day2.html#section-1",
-    "title": "ANalysis Of VAriance",
+    "title": "Inference for One-way ANOVA",
     "section": "",
-    "text": "Now…"
+    "text": "body_mass_g: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!\n\n\n\nbill_depth_mm: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!"
   },
   {
     "objectID": "slides/week8-day2.html#section-2",
@@ -2677,7 +2677,7 @@
     "href": "index.html",
     "title": "STAT 313: Applied Experimental Design and Regression Models",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nLecture Slides\nActivity\nLab\nCritique\nProject\n\n\n\n\n0\nSun, March 31\nWelcome to Stat 313 Course Set-up\n📖\n\n\n\n\n\n\n\n1\nMon, March 31 (no class)\nCourse Structure & Statistics Review\n📖\n\n\n\n\n\n\n\n\nWed, April 2\nIntroduction to Data\n\n🖥\n🎥\n📋\n💻  Due April 7  Lab 1 Feedback\nLab 1 Solutions\n\n\n\n\n2\nMon, April 7\nVisualizing & Summarizing Numerical Variables\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, April 9\nExploring Flight Delays\n\n🖥\n\n💻  Due April 14  Lab 2 Feedback\n\n\n\n\n3\nMon, April 14\nIncorporating Categorical Variables\n📖\n🖥\n\n\n\n\n\n\n\nWed, April 16\nEthics & Categorical Variables\n\n🖥\n\n💻  Due April 21  Lab 3 Feedback\n✍Statistical Critique 1\n📖 Reading a Research Paper Pt. 1\n\n\n4\nMon, April 21\nIntroduction to Linear Regression\n📖\n🖥\n\n\nStatistical Critique 1 Due\n Statistical Critique 1 Feedback\nReading a Research Paper Pt. 1 Due\n\n\n\nWed, April 23\nThe Ugly History of Linear Regression\n\n🖥\n\n💻  Due April 28  Lab 4 Feedback\n\n📁 Midterm Project Proposal\n📖 Reading a Research Paper Pt. 2\n\n\n5\nMon, April 28\nIntroduction to Multiple Linear Regression\n📖\n🖥\n📋\n\n\nMidterm Project Proposal Due\nReading a Research Paper Pt. 2 Due\n\n\n\nWed, April 30\nWork Day – Coding a Multiple Linear Regression\n\n🖥\n📋\n\n\nMidterm Project Instructions\n\n\n\nSun, May 4\n\n\n\n\n\n\nMidterm Project First Draft Due\nGrading Rubric\n\n\n6\nMon, May 5\nVariable Selection in Multiple Linear Regression\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 7\nSampling Variability\n\n🖥\n📋\n💻  Due May 12  Lab 6 Feedback\n\n\n\n\n\nSun, May 11\n\n\n\n\n\n\nMidterm Project Final Version Due\n\n\n7\nMon, May 12\nConfidence Intervals\n📖\n🖥\n\n\n\n\n\n\n\nWed, May 14\np-values & Hypothesis Tests\n\n🖥\n📋\n💻  Due May 19  Lab 7 Feedback\n\n\n\n\n8\nMon, May 19\nSimulation-based Methods vs. Theory-based Methods\n📖\n🖥\n\n\n✍ Statistical Critique 2\n\n\n\n\nWed, May 21\nOne-Way Analysis of Variance\n\n🖥\n\n💻  Due May 26  Lab 8 Feedback\n\n\n\n\n9\nMon, May 26\nNo Class, School Holiday\n\n📖\n\n\n\n\nStatistical Critique 2 Due\n\n\n\n\nTues, May 27\nClasses follow a Monday Schedule\nInference for OWA\n\n🖥\nAssessing Independence: 📋\n\n\n📁 Final Project Instructions\n\n\n\nWed, May 28\nWork Day – Coding a OWA\n\n🖥\n\n\n\n\n\n\n\nSun, June 2\n\n\n\n\n\n\nFinal Project First Draft Due  Grading Rubric: ✅\n\n\n10\nMon, June 2\nTwo-Way ANOVA Models\n📖\n🖥\n\n\n\n\n\n\n\nWed, June 4\nLast Day of STAT 313\n\n🖥\n\n\n\nWhat should not be in your project: 📋\n\n\n\nSun, June 8\nFinal Project Final Version Due\n\n\n\n\n\nGrading Rubric: ✅\n\n\nPoster Presentations\nSaturday, June 7\nBuilding 38 Room 122\nSection 01 from 10:10am to 11:30am\nSection 02 from 11:40am to 1:00pm\n\n\n\n\nPresentation Instructions",
+    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nLecture Slides\nActivity\nLab\nCritique\nProject\n\n\n\n\n0\nSun, March 31\nWelcome to Stat 313 Course Set-up\n📖\n\n\n\n\n\n\n\n1\nMon, March 31 (no class)\nCourse Structure & Statistics Review\n📖\n\n\n\n\n\n\n\n\nWed, April 2\nIntroduction to Data\n\n🖥\n🎥\n📋\n💻  Due April 7  Lab 1 Feedback\nLab 1 Solutions\n\n\n\n\n2\nMon, April 7\nVisualizing & Summarizing Numerical Variables\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, April 9\nExploring Flight Delays\n\n🖥\n\n💻  Due April 14  Lab 2 Feedback\n\n\n\n\n3\nMon, April 14\nIncorporating Categorical Variables\n📖\n🖥\n\n\n\n\n\n\n\nWed, April 16\nEthics & Categorical Variables\n\n🖥\n\n💻  Due April 21  Lab 3 Feedback\n✍Statistical Critique 1\n📖 Reading a Research Paper Pt. 1\n\n\n4\nMon, April 21\nIntroduction to Linear Regression\n📖\n🖥\n\n\nStatistical Critique 1 Due\n Statistical Critique 1 Feedback\nReading a Research Paper Pt. 1 Due\n\n\n\nWed, April 23\nThe Ugly History of Linear Regression\n\n🖥\n\n💻  Due April 28  Lab 4 Feedback\n\n📁 Midterm Project Proposal\n📖 Reading a Research Paper Pt. 2\n\n\n5\nMon, April 28\nIntroduction to Multiple Linear Regression\n📖\n🖥\n📋\n\n\nMidterm Project Proposal Due\nReading a Research Paper Pt. 2 Due\n\n\n\nWed, April 30\nWork Day – Coding a Multiple Linear Regression\n\n🖥\n📋\n\n\nMidterm Project Instructions\n\n\n\nSun, May 4\n\n\n\n\n\n\nMidterm Project First Draft Due\nGrading Rubric\n\n\n6\nMon, May 5\nVariable Selection in Multiple Linear Regression\n📖\n🖥\n📋\n\n\n\n\n\n\nWed, May 7\nSampling Variability\n\n🖥\n📋\n💻  Due May 12  Lab 6 Feedback\n\n\n\n\n\nSun, May 11\n\n\n\n\n\n\nMidterm Project Final Version Due\n\n\n7\nMon, May 12\nConfidence Intervals\n📖\n🖥\n\n\n\n\n\n\n\nWed, May 14\np-values & Hypothesis Tests\n\n🖥\n\n💻  Due May 19  Lab 7 Feedback\n\n\n\n\n8\nMon, May 19\nSimulation-based Methods vs. Theory-based Methods\n📖\n🖥\n📋\n\n✍ Statistical Critique 2\n\n\n\n\nWed, May 21\nOne-Way Analysis of Variance\n\n🖥\n\n💻  Due May 26  Lab 8 Feedback\n\n\n\n\n9\nMon, May 26\nNo Class, School Holiday\n\n📖\n\n\n\n\nStatistical Critique 2 Due\n\n\n\n\nTues, May 27\nClasses follow a Monday Schedule\nInference for OWA\n\n🖥\nAssessing Independence: 📋\n\n\n📁 Final Project Instructions\n\n\n\nWed, May 28\nWork Day – Coding a OWA\n\n🖥\n\n\n\n\n\n\n\nSun, June 2\n\n\n\n\n\n\nFinal Project First Draft Due  Grading Rubric: ✅\n\n\n10\nMon, June 2\nTwo-Way ANOVA Models\n📖\n🖥\n\n\n\n\n\n\n\nWed, June 4\nLast Day of STAT 313\n\n🖥\n\n\n\nWhat should not be in your project: 📋\n\n\n\nSun, June 8\nFinal Project Final Version Due\n\n\n\n\n\nGrading Rubric: ✅\n\n\nPoster Presentations\nSaturday, June 7\nBuilding 38 Room 122\nSection 01 from 10:10am to 11:30am\nSection 02 from 11:40am to 1:00pm\n\n\n\n\nPresentation Instructions",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -4266,8 +4266,8 @@
     "objectID": "slides/week9-day2.html#upcoming-deadlines",
     "href": "slides/week9-day2.html#upcoming-deadlines",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 7 revisions are due today (by midnight)\nLab 8 revisions are due next Wednesday\nStatistical Critique 2 revisions are due next Wednesday\nFinal revisions on all assignments will be accepted until Sunday, June 9\n\n\n\n\n\n\n\nDon’t forget reflections!"
+    "section": "",
+    "text": "Lab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Wednesday\nStatistical Critique 2 revisions are due next Wednesday\nFinal revisions on all assignments will be accepted until Sunday, June 9\n\n\n\n\n\n\n\nDon’t forget reflections!"
   },
   {
     "objectID": "slides/week9-day2.html#common-mistakes",
@@ -4295,35 +4295,35 @@
     "href": "slides/week9-day2.html#theory-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Theory-based Method",
-    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- aov(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
+    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- aov(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\n\n. . .\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
   },
   {
     "objectID": "slides/week9-day2.html#simulation-based-method",
     "href": "slides/week9-day2.html#simulation-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Simulation-based Method",
-    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
+    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
   },
   {
     "objectID": "slides/week9-day2.html#model-validity",
     "href": "slides/week9-day2.html#model-validity",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Model Validity",
-    "text": "Model Validity\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
+    "text": "Model Validity\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n. . .\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
   },
   {
     "objectID": "slides/week9-day2.html#two-way-anova",
     "href": "slides/week9-day2.html#two-way-anova",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Two-way ANOVA",
-    "text": "Two-way ANOVA"
+    "text": "Two-way ANOVA\n\n\n\nPicking joint bandwidth of 0.25"
   },
   {
     "objectID": "slides/week9-day2.html#code-for-plot",
     "href": "slides/week9-day2.html#code-for-plot",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Code for Plot",
-    "text": "Code for Plot\n\n\nggplot(data = evals_small, \n       mapping = aes(y = age_cat, x = min_eval, fill = gender)) + \n  geom_density_ridges(alpha = 0.5) + \n  scale_fill_brewer(palette = \"PRGn\") +\n  labs(y = \"\",\n       title = \"Gaps between male and female faculty evaluation scores become more pronounced with age\", \n       x = \"\", \n       fill = \"Professor's Sex\") +\n  theme(legend.position = \"top\")\n\n\n\n\n\n\n\n\nLegend Positions\n\n\n\nThere are four options for legend.position\n\n\"none\" (removes the legend)\n\"left\" (difficult to read with the y-axis label)\n\"right\" (the default position)\n\"bottom\" (difficult to read with the x-axis label)\n\"top\" (generally my preference)"
+    "text": "Code for Plot\n\n\nggplot(data = evals_small, \n       mapping = aes(y = age_cat, x = min_eval, fill = gender)) + \n  geom_density_ridges(alpha = 0.5) + \n  scale_fill_brewer(palette = \"PRGn\") +\n  labs(y = \"\",\n       title = \"Gaps between male and female faculty evaluation scores become more pronounced with age\", \n       x = \"\", \n       fill = \"Professor's Sex\") +\n  theme(legend.position = \"top\")\n\n\n\n\n\n\n\n\nLegend Positions\n\n\n\n\nThere are four options for legend.position\n\n\"none\" (removes the legend)\n\"left\" (difficult to read with the y-axis label)\n\"right\" (the default position)\n\"bottom\" (difficult to read with the x-axis label)\n\"top\" (generally my preference)"
   },
   {
     "objectID": "weeks/week-3.html",
@@ -6137,5 +6137,292 @@
     "title": "Week 7 – Hypothesis Test for Slope & Inference Conditions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI prefer to use the term meaningful.↩︎\nmeaning they are bell shaped and symmetric↩︎\nTaking the mean of observations assumes they are inherently similar, so we shouldn’t calculate the mean of evaluation scores that are very different!↩︎"
+  },
+  {
+    "objectID": "slides/week9-day1.html",
+    "href": "slides/week9-day1.html",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+  },
+  {
+    "objectID": "slides/week9-day1.html#final-project-first-draft",
+    "href": "slides/week9-day1.html#final-project-first-draft",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section",
+    "href": "slides/week9-day1.html#section",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Before…"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-1",
+    "href": "slides/week9-day1.html#section-1",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Now…"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-2",
+    "href": "slides/week9-day1.html#section-2",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Goal of an ANOVA\n\nAnalysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different."
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-3",
+    "href": "slides/week9-day1.html#section-3",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "How???\n\n\nCompare how different a group of means are\nScale the differences relative to the variability of the groups\nSummarize the differences with one number"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-4",
+    "href": "slides/week9-day1.html#section-4",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": ". . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-5",
+    "href": "slides/week9-day1.html#section-5",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 1: Compare your groups"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-6",
+    "href": "slides/week9-day1.html#section-6",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 2: Find the overall mean\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nThis ignores the groups and finds one mean for every observation!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-7",
+    "href": "slides/week9-day1.html#section-7",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 3: Find the group means"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-8",
+    "href": "slides/week9-day1.html#section-8",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 4: Calculate the sum of squares between groups"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-9",
+    "href": "slides/week9-day1.html#section-9",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 5: Calculate the sum of squares within groups"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-10",
+    "href": "slides/week9-day1.html#section-10",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 6: Calculate the F-statistic"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-11",
+    "href": "slides/week9-day1.html#section-11",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Step 7: Find the p-value"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-12",
+    "href": "slides/week9-day1.html#section-12",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n. . .\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-13",
+    "href": "slides/week9-day1.html#section-13",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Two degrees of freedom!\n\n\n\n\n\nChanging the numerator degrees of freedom\n\n\n\n\n\n\nChanging the denominator degrees of freedom"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-14",
+    "href": "slides/week9-day1.html#section-14",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Do you always use an F-distribution to get the p-value?\n\n. . .\n\n\nNO!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#conditions-of-an-anova",
+    "href": "slides/week9-day1.html#conditions-of-an-anova",
+    "title": "ANalysis Of VAriance",
+    "section": "Conditions of an ANOVA",
+    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
+  },
+  {
+    "objectID": "slides/week9-day1.html#choosing-a-method",
+    "href": "slides/week9-day1.html#choosing-a-method",
+    "title": "ANalysis Of VAriance",
+    "section": "Choosing a Method",
+    "text": "Choosing a Method\n\n\n\n\nWhich condition(s) are required to use “theory-based” methods?\n\n\n\nAll three!\n\n\n\n\n\n\nWhich condition(s) are required to use “simulation-based” methods?\n\n\n\n\nAll but normality!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-15",
+    "href": "slides/week9-day1.html#section-15",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": ". . .\n\nWhat do you think? Which method should we use?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
+    "href": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
+    "title": "ANalysis Of VAriance",
+    "section": "Step 1: Calculating the Observed F-statistic",
+    "text": "Step 1: Calculating the Observed F-statistic\n\nobs_F &lt;- evals_small %&gt;% \n  specify(response = min_eval, \n          explanatory = age_cat) %&gt;% \n  calculate(stat = \"F\")\n\n\n\n\nResponse: min_eval (numeric)\nExplanatory: age_cat (factor)\n# A tibble: 1 × 1\n   stat\n  &lt;dbl&gt;\n1  1.41"
+  },
+  {
+    "objectID": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
+    "href": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
+    "title": "ANalysis Of VAriance",
+    "section": "Step 2: Simulating what could have happened under \\(H_0\\)",
+    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n. . .\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#another-permutation-distribution",
+    "href": "slides/week9-day1.html#another-permutation-distribution",
+    "title": "ANalysis Of VAriance",
+    "section": "Another Permutation Distribution",
+    "text": "Another Permutation Distribution\n\nnull_dist &lt;- evals_small %&gt;% \n  specify(response = min_eval, \n          explanatory = age_cat) %&gt;% \n  hypothesize(null = \"independence\") %&gt;% \n  generate(reps = 1000, type = \"permute\") %&gt;% \n  calculate(stat = \"F\")"
+  },
+  {
+    "objectID": "slides/week9-day1.html#another-permutation-distribution-1",
+    "href": "slides/week9-day1.html#another-permutation-distribution-1",
+    "title": "ANalysis Of VAriance",
+    "section": "Another Permutation Distribution",
+    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#visualizing-the-p-value",
+    "href": "slides/week9-day1.html#visualizing-the-p-value",
+    "title": "ANalysis Of VAriance",
+    "section": "Visualizing the p-value",
+    "text": "Visualizing the p-value\n\nvisualise(null_dist) + \n  shade_p_value(obs_stat = obs_F, \n                direction = \"greater\")"
+  },
+  {
+    "objectID": "slides/week9-day1.html#visualizing-the-p-value-1",
+    "href": "slides/week9-day1.html#visualizing-the-p-value-1",
+    "title": "ANalysis Of VAriance",
+    "section": "Visualizing the p-value",
+    "text": "Visualizing the p-value"
+  },
+  {
+    "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
+    "href": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
+    "title": "ANalysis Of VAriance",
+    "section": "Making a Decision & Reaching a Conclusion",
+    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.254, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#large-p-values-neq-evidence-for-the-null-hypothesis",
+    "href": "slides/week9-day1.html#large-p-values-neq-evidence-for-the-null-hypothesis",
+    "title": "ANalysis Of VAriance",
+    "section": "Large p-values \\(\\neq\\) evidence for the null hypothesis!",
+    "text": "Large p-values \\(\\neq\\) evidence for the null hypothesis!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#theory-based-methods",
+    "href": "slides/week9-day1.html#theory-based-methods",
+    "title": "ANalysis Of VAriance",
+    "section": "Theory-based Methods",
+    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n. . .\n\nHow was the statistic calculated?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
+  },
+  {
+    "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
+    "href": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
+    "title": "ANalysis Of VAriance",
+    "section": "Making a Decision & Reaching a Conclusion",
+    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.244, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#section-16",
+    "href": "slides/week9-day1.html#section-16",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Did the two methods yield different results?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#introduction-research-questions",
+    "href": "slides/week9-day1.html#introduction-research-questions",
+    "title": "ANalysis Of VAriance",
+    "section": "Introduction & Research Questions",
+    "text": "Introduction & Research Questions\n\n\nIn 4-6 sentences, introduce / describe your data.\n\nWhat is the context of the data?\nFor what purpose were these data collected?\n\n\n\n\n\nOutline the two questions your research seeks to address.\n\nYou will have one question for each one-way ANOVA model\nYour question should be in terms of “differences in group means” not “relationships”"
+  },
+  {
+    "objectID": "slides/week8-day2.html",
+    "href": "slides/week8-day2.html",
+    "title": "Inference for One-way ANOVA",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(infer)\nlibrary(moderndive)\nlibrary(lterdatasampler)\nlibrary(palmerpenguins)\n\nmy_theme &lt;- theme(axis.title.x = element_text(size = 18), \n                  axis.title.y = element_text(size = 18), \n                  axis.text.x = element_text(size = 12), \n                  axis.text.y = element_text(size = 12), \n                  legend.text = element_text(size = 12), \n                  legend.title = element_text(size = 18))"
+  },
+  {
+    "objectID": "slides/week8-day2.html#lab-7-recap",
+    "href": "slides/week8-day2.html#lab-7-recap",
+    "title": "Inference for One-way ANOVA",
+    "section": "Lab 7 Recap",
+    "text": "Lab 7 Recap\nQuestion 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+  },
+  {
+    "objectID": "slides/week8-day2.html#first-steps",
+    "href": "slides/week8-day2.html#first-steps",
+    "title": "Inference for One-way ANOVA",
+    "section": "First Steps",
+    "text": "First Steps\n\nOpen the directions!\nCopy the Statistical Critique template on Posit Cloud\nCopy-and-paste code from your Midterm Project\nCopy-and-paste your justification for why you chose the model you chose"
+  },
+  {
+    "objectID": "slides/week8-day2.html#next-steps",
+    "href": "slides/week8-day2.html#next-steps",
+    "title": "Inference for One-way ANOVA",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nFit the most complex model\nObtain an ANOVA table of your model\nUse the p-values in the ANOVA table to decide what model is best"
+  },
+  {
+    "objectID": "slides/week8-day2.html#what-is-the-most-complex-model",
+    "href": "slides/week8-day2.html#what-is-the-most-complex-model",
+    "title": "Inference for One-way ANOVA",
+    "section": "What is the “most complex” model?",
+    "text": "What is the “most complex” model?\nFor 1 numerical & 1 categorical explanatory variables\n\nFit the different slopes (interaction) model\n\n\nspecies_lm &lt;- lm(bill_length_mm ~ bill_depth_mm * species, \n                  data = penguins)\n\n. . .\n\nFor 2 numerical explanatory variables\n\nFit the model with both variables included:\n\n\nbill_lm &lt;- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, \n                  data = penguins)"
+  },
+  {
+    "objectID": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table",
+    "href": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table",
+    "title": "Inference for One-way ANOVA",
+    "section": "How do I know what model is “best” from the ANOVA table?",
+    "text": "How do I know what model is “best” from the ANOVA table?\nFor 1 numerical & 1 categorical explanatory variables\n\nLook at the interaction line (e.g., bill_depth_mm:species), it is testing if the slopes are different!\n\n\nanova(species_lm)\n\n\nanova(species_lm) %&gt;% \n  broom::tidy() %&gt;%\n  rename(`F value` = statistic, \n         `Pr(&gt;F)` = p.value, \n         Df = df, \n         `Sum Sq` = sumsq, \n         `Mean Sq` = meansq) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nbill_depth_mm\n1\n561.5708\n561.570850\n93.96508\n9.384795e-20\n\n\nspecies\n2\n7460.3201\n3730.160057\n624.15060\n7.116342e-114\n\n\nbill_depth_mm:species\n2\n134.2515\n67.125732\n11.23184\n1.897629e-05\n\n\nResiduals\n336\n2008.0631\n5.976378\nNA\nNA"
+  },
+  {
+    "objectID": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table-1",
+    "href": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table-1",
+    "title": "Inference for One-way ANOVA",
+    "section": "How do I know what model is “best” from the ANOVA table?",
+    "text": "How do I know what model is “best” from the ANOVA table?\nFor 2 numerical explanatory variables\n\nLook at the p-value for each variable, it is testing if that variable has a relationship with the response (conditional on the other variable being in the model)!\n\n\nanova(bill_lm)\n\n\nanova(bill_lm) %&gt;% \n  broom::tidy() %&gt;%\n  rename(`F value` = statistic, \n         `Pr(&gt;F)` = p.value, \n         Df = df, \n         `Sum Sq` = sumsq, \n         `Mean Sq` = meansq) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nbody_mass_g\n1\n3599.71136\n3599.71136\n186.673943\n3.685224e-34\n\n\nbill_depth_mm\n1\n27.41605\n27.41605\n1.421742\n2.339508e-01\n\n\nResiduals\n339\n6537.07813\n19.28342\nNA\nNA"
+  },
+  {
+    "objectID": "slides/week9-day2.html",
+    "href": "slides/week9-day2.html",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "",
+    "text": "Lab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Wednesday\nStatistical Critique 2 revisions are due next Wednesday\nFinal revisions on all assignments will be accepted until Sunday, June 9\n\n\n\n\n\n\n\nDon’t forget reflections!"
+  },
+  {
+    "objectID": "slides/week8-day1.html",
+    "href": "slides/week8-day1.html",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(infer)\nlibrary(moderndive)\nlibrary(lterdatasampler)\nlibrary(palmerpenguins)\n\nmy_theme &lt;- theme(axis.title.x = element_text(size = 18), \n                  axis.title.y = element_text(size = 18), \n                  axis.text.x = element_text(size = 12), \n                  axis.text.y = element_text(size = 12), \n                  legend.text = element_text(size = 12), \n                  legend.title = element_text(size = 18))\n\nobs_slope &lt;- evals %&gt;% \n  specify(response = score, \n          explanatory = bty_avg) %&gt;% \n  calculate(stat = \"slope\")"
   }
 ]
