@@ -6,19 +6,25 @@ format:
 editor: source
 ---
 
-```{r set-up}
+```{r}
+#| label: set-up
+
 library(tidyverse)
 library(infer)
 library(moderndive)
 library(lterdatasampler)
 library(palmerpenguins)
+library(gt)
 
-my_theme <- theme(axis.title.x = element_text(size = 18), 
-                  axis.title.y = element_text(size = 18), 
-                  axis.text.x = element_text(size = 12), 
-                  axis.text.y = element_text(size = 12), 
-                  legend.text = element_text(size = 12), 
-                  legend.title = element_text(size = 18))
+my_theme <- theme_bw() + 
+  theme(axis.title.x = element_text(size = 18), 
+        axis.title.y = element_text(size = 18), 
+        axis.text.x = element_text(size = 14), 
+        axis.text.y = element_text(size = 14), 
+        legend.text = element_text(size = 14), 
+        legend.title = element_text(size = 18)
+        ) 
+  
 ```
 
 # Lab 6 Recap
@@ -27,43 +33,54 @@ my_theme <- theme(axis.title.x = element_text(size = 18),
 
 </br>
 
+::: {.midi}
+> Technically, you told me the name of the object that contains the model you decided was best. I want you to tell me the name of the variable(s) included in that model!
 
+:::
+
+Stating what object had the best model (e.g., `one_credits`) but **not** stating
+what variable(s) were chosen (e.g., `cls_credits`). 
+
+. . .
+
+At every stage, you are required to state **every** variable included in your "best" model!
 
 
 # The conclusions we reach depend on our p-value and confidence intervale being reliable.
 
 # The conclusions we reach depend on our p-value and confidence intervale being reliable.
 
-How can we know if our p-value is reliable?
+How can we know if they are reliable?
 
 ## Model Conditions
 
-For our p-value to be trustworthy, we need to know that the conditions of our model are not violated.
+For our p-value and confidence interval to be trustworthy, we need to know that the conditions of our model are not violated.
 
 . . .
 
 :::::: columns
 ::: {.column width="40%"}
+::: {.fragment}
 For linear regression we are assuming...
+:::
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="55%"}
+::: {.fragment}
 **L**inear relationship between $x$ and $y$
 
-</br>
 
-**I**ndependent observations
+**I**ndependent observations (or residuals)
 
-</br>
 
 **N**ormality of residuals
 
-</br>
 
 **E**qual variance of residuals
+:::
 :::
 ::::::
 
@@ -77,14 +94,17 @@ In general, when the conditions associated with these methods are violated, we w
 -   Our confidence intervals will be **too** narrow!
 -   We will make more Type I errors than we expect!
 
-## 
+. . .
 
-::: {style="font-size: 2em; color: #000000;"}
-**L**inear relationship between $x$ and $y$
+::: {.callout-important}
+# What is a Type I error?
 :::
+
+## **L**inear relationship between $x$ and $y$
 
 ```{r}
 #| fig-align: center
+#| label: length-versus-weight-non-linear
 
 and_vertebrates %>%
   filter(species != "Cascade torrent salamander") %>% 
@@ -102,14 +122,11 @@ and_vertebrates %>%
 
 ***What should we do?***
 
-## 
+## Variable transformation!
 
-::: {style="font-size: 2em; color: #000000;"}
-Variable transformation!
-:::
-
-```{r transform}
+```{r}
 #| fig-align: center
+#| label: length-versus-weight-transformation
 
 and_vertebrates %>%
   filter(species != "Cascade torrent salamander") %>% 
@@ -125,11 +142,7 @@ and_vertebrates %>%
   my_theme
 ```
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-**I**ndependence of observations
-:::
+## **I**ndependence of observations
 
 ::::::: columns
 ::: {.column width="40%"}
@@ -152,11 +165,100 @@ The `evals` dataset contains `r nrow(evals)` observations on `r distinct(evals, 
 ::::
 :::::::
 
-## 
+## Collapsing Multiple Scores
 
-::: {style="font-size: 2em; color: #000000;"}
-**E**qual variance of residuals
+**Option 1:** Grab a Random Eval
+
+```{r}
+#| label: slice-sample-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+
+evals_small <- evals %>% 
+  group_by(prof_ID) %>% 
+  slice_sample(n = 1)
+```
+
+. . .
+
+::: {.small}
+```{r}
+#| label: slice-sample-glimpse
+#| echo: false
+#| eval: true
+#| 
+
+evals %>% 
+  group_by(prof_ID) %>% 
+  slice_sample(n = 1) %>% 
+  ungroup() %>% 
+  gt() %>% 
+  tab_style(
+    style = cell_text(size = px(14)),
+    locations = list(
+      cells_body(),
+      cells_column_labels()
+    )
+  ) %>% 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  )
+  
+```
 :::
+
+## Collapsing Multiple Scores
+
+**Option 2:** Summarize the Evals
+
+```{r}
+#| label: min-eval-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+
+evals %>% 
+  group_by(prof_ID) %>% 
+  mutate(min_score = min(score)) %>% 
+  distinct(prof_ID, .keep_all = TRUE)
+```
+
+. . .
+
+```{r}
+#| label: min-eval-glimpse
+#| echo: false
+#| eval: true
+#| code-line-numbers: false
+
+evals %>% 
+  group_by(prof_ID) %>% 
+  mutate(min_score = min(score)) %>% 
+  distinct(prof_ID, .keep_all = TRUE) %>% 
+  ungroup() %>% 
+  select(ID, 
+         prof_ID, 
+         min_score, 
+         age, 
+         bty_avg, 
+         gender, 
+         ethnicity, 
+         language, 
+         rank) %>% 
+  gt() %>% 
+  tab_style(
+    style = cell_text(size = px(14)),
+    locations = list(
+      cells_body(),
+      cells_column_labels()
+    )
+  )
+```
+
+
+## **E**qual variance of residuals
 
 ```{r non-constant-variance}
 #| fig-align: center
@@ -178,11 +280,7 @@ ggplot(data = hbr_maples,
 
 ***What should we do?***
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Variable transformation!
-:::
+## Variable transformation!
 
 ```{r}
 ggplot(data = hbr_maples, 
@@ -199,16 +297,15 @@ ggplot(data = hbr_maples,
   my_theme
 ```
 
-## 
+## **N**ormality of residuals
 
-::: {style="font-size: 2em; color: #000000;"}
-**N**ormality of residuals
-:::
-
-```{r non-normal}
+```{r}
+#| label: non-normal
 
 fish <- and_vertebrates %>%
-  filter(!species %in% c("Cascade torrent salamander", "Coastal giant salamander")) 
+  filter(!species %in% c("Cascade torrent salamander", 
+                         "Coastal giant salamander")
+         ) 
 
 curved_lm <- lm(weight_g ~ length_1_mm, data = fish)
 
@@ -223,11 +320,7 @@ get_regression_points(curved_lm) %>%
 
 ***What should we do?***
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Variable transformation!
-:::
+## Variable transformation!
 
 ```{r normal}
 
@@ -275,7 +368,7 @@ we need to use simulation instead of mathematical formulas to get our p-value an
 ::: incremental
 -   Are a "simpler" approach
 -   Use formulas instead of simulation to obtain standard error
--   Use $t$-distribution to get p-value and confidence interval
+-   Use a named distribution (e.g., $t$-distribution) to get p-value and confidence interval
 -   Require that the residuals are normally distributed
 :::
 
@@ -302,7 +395,7 @@ pull(obs_slope)
 
 ## Now
 
-::: smaller
+::: small
 ```{r}
 #| echo: true
 #| label: obs-t-code
@@ -372,9 +465,11 @@ $t = \frac{b_1}{SE_{b_1}} = \frac{`r slope_stat`}{`r se`} = `r slope_stat / se`$
 
 ## Proof!
 
+::: {.small}
 ```{r}
 get_regression_table(evals_lm) 
 ```
+:::
 :::::::
 
 ## How does R calculate the p-value?
@@ -404,7 +499,7 @@ ggplot(data = tibble(x = c(-5, 5)),
 ::: callout-note
 # Different $t$-distributions
 
-A $t$-distribution has a *slightly* different shape depending on the sample size. Technically, we are using a $t$-distribution with $n - 2$ degrees of freedom to get our p-value.
+A $t$-distribution has a *slightly* different shape depending on the sample size. In simple linear regression, we are using a $t$-distribution with $n - 2$ degrees of freedom to get our p-value. In multiple linear regression, this becomes $n - $ the # of unique slopes and intercepts.
 :::
 
 # Did we get similar results between these methods?
@@ -462,4 +557,12 @@ legend(2.5, 0.4,
 ```
 :::
 ::::::
+
+## Your next tasks...
+
+1. Complete the grade check-in activity
+2. Learn about ANOVA in the context of multiple linear regression
+3. Use an ANOVA to decide what model you would have chosen for the midterm 
+project (Statistical Critique #2)
+4. Revise Lab 6
 

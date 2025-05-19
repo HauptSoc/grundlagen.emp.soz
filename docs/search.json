@@ -88,7 +88,7 @@
     "href": "slides/week8-day1.html#common-mistakes",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Common Mistakes",
-    "text": "Common Mistakes"
+    "text": "Common Mistakes\n\n\n\nTechnically, you told me the name of the object that contains the model you decided was best. I want you to tell me the name of the variable(s) included in that model!\n\n\nStating what object had the best model (e.g., one_credits) but not stating what variable(s) were chosen (e.g., cls_credits).\n\nAt every stage, you are required to state every variable included in your “best” model!"
   },
   {
     "objectID": "slides/week8-day1.html#first-steps",
@@ -123,7 +123,7 @@
     "href": "slides/week8-day1.html#section",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Linear relationship between \\(x\\) and \\(y\\)\n\n\n\nWhat should we do?"
+    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\n\n[1] 0.01495204\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\n\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#how-do-i-know-what-model-is-best-from-the-anova-table-1",
@@ -137,7 +137,7 @@
     "href": "slides/week8-day1.html#section-1",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Variable transformation!"
+    "text": "Normality of residuals\n\n\n\nWhat should we do?"
   },
   {
     "objectID": "slides/week8-day1.html#testing-for-a-population-slope-beta_1",
@@ -193,42 +193,42 @@
     "href": "slides/week8-day1.html#model-conditions",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Model Conditions",
-    "text": "Model Conditions\nFor our p-value to be trustworthy, we need to know that the conditions of our model are not violated.\n\n\n\nFor linear regression we are assuming…\n\n\n\nLinear relationship between \\(x\\) and \\(y\\)\n\nIndependent observations\n\nNormality of residuals\n\nEqual variance of residuals"
+    "text": "Model Conditions\nFor our p-value and confidence interval to be trustworthy, we need to know that the conditions of our model are not violated.\n\n\n\n\nFor linear regression we are assuming…\n\n\n\n\n\nLinear relationship between \\(x\\) and \\(y\\)\nIndependent observations (or residuals)\nNormality of residuals\nEqual variance of residuals"
   },
   {
     "objectID": "slides/week8-day1.html#what-happens-if-the-conditions-are-violated",
     "href": "slides/week8-day1.html#what-happens-if-the-conditions-are-violated",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "What happens if the conditions are violated?",
-    "text": "What happens if the conditions are violated?\nIn general, when the conditions associated with these methods are violated, we will underestimate the true standard error (spread) of the sampling distribution.\n\n\nOur p-values will be too small!\nOur confidence intervals will be too narrow!\nWe will make more Type I errors than we expect!"
+    "text": "What happens if the conditions are violated?\nIn general, when the conditions associated with these methods are violated, we will underestimate the true standard error (spread) of the sampling distribution.\n\n\nOur p-values will be too small!\nOur confidence intervals will be too narrow!\nWe will make more Type I errors than we expect!\n\n\n\n\n\n\n\n\n\nWhat is a Type I error?"
   },
   {
     "objectID": "slides/week8-day1.html#section-2",
     "href": "slides/week8-day1.html#section-2",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Independence of observations\n\n\n\nThe evals dataset contains 463 observations on 94 professors. Meaning, professors have multiple observations.\n\nWhat should we do?\n\n\n\n\nBest – use a random effects model\nReasonable – collapse the multiple scores into a single score"
+    "text": "Variable transformation!"
   },
   {
     "objectID": "slides/week8-day1.html#section-3",
     "href": "slides/week8-day1.html#section-3",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Equal variance of residuals\n\n\n\nWhat should we do?"
+    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\n\n[1] 0.01495204\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#section-4",
     "href": "slides/week8-day1.html#section-4",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Variable transformation!"
+    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\n\n[1] 0.01495204\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#section-5",
     "href": "slides/week8-day1.html#section-5",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
-    "text": "Normality of residuals\n\n\n\nWhat should we do?"
+    "text": "How did R calculate the \\(t\\)-statistic?\n\n\nStep 1: SEStep 2: t-statisticProof!\n\n\n\n\n\\(SE_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1 - r^2}}{\\sqrt{n - 2}}\\)\n\n\n\n\n\n[1] 0.01495204\n\n\n\n\n\n\\(t = \\frac{b_1}{SE_{b_1}} = \\frac{0.067}{0.014952} = 4.4809947\\)\n\n\n\n\n# A tibble: 2 × 7\n  term      estimate std_error statistic p_value lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    3.88      0.076     51.0        0    3.73     4.03 \n2 bty_avg      0.067     0.016      4.09       0    0.035    0.099"
   },
   {
     "objectID": "slides/week8-day1.html#section-6",
@@ -263,7 +263,7 @@
     "href": "slides/week8-day1.html#mathematical-theory-based-methods",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "Mathematical / Theory-based Methods",
-    "text": "Mathematical / Theory-based Methods\n\n\nAre a “simpler” approach\nUse formulas instead of simulation to obtain standard error\nUse \\(t\\)-distribution to get p-value and confidence interval\nRequire that the residuals are normally distributed"
+    "text": "Mathematical / Theory-based Methods\n\n\nAre a “simpler” approach\nUse formulas instead of simulation to obtain standard error\nUse a named distribution (e.g., \\(t\\)-distribution) to get p-value and confidence interval\nRequire that the residuals are normally distributed"
   },
   {
     "objectID": "slides/week8-day1.html#how-does-this-look",
@@ -284,7 +284,7 @@
     "href": "slides/week8-day1.html#how-does-r-calculate-the-p-value",
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "How does R calculate the p-value?",
-    "text": "How does R calculate the p-value?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent \\(t\\)-distributions\n\n\nA \\(t\\)-distribution has a slightly different shape depending on the sample size. Technically, we are using a \\(t\\)-distribution with \\(n - 2\\) degrees of freedom to get our p-value."
+    "text": "How does R calculate the p-value?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent \\(t\\)-distributions\n\n\nA \\(t\\)-distribution has a slightly different shape depending on the sample size. In simple linear regression, we are using a \\(t\\)-distribution with \\(n - 2\\) degrees of freedom to get our p-value. In multiple linear regression, this becomes $n - $ the # of unique slopes and intercepts."
   },
   {
     "objectID": "slides/week8-day1.html#approximating-the-permutation-distribution",
@@ -6424,5 +6424,75 @@
     "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
     "section": "",
     "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(infer)\nlibrary(moderndive)\nlibrary(lterdatasampler)\nlibrary(palmerpenguins)\n\nmy_theme &lt;- theme(axis.title.x = element_text(size = 18), \n                  axis.title.y = element_text(size = 18), \n                  axis.text.x = element_text(size = 12), \n                  axis.text.y = element_text(size = 12), \n                  legend.text = element_text(size = 12), \n                  legend.title = element_text(size = 18))\n\nobs_slope &lt;- evals %&gt;% \n  specify(response = score, \n          explanatory = bty_avg) %&gt;% \n  calculate(stat = \"slope\")"
+  },
+  {
+    "objectID": "slides/week8-day1.html#linear-relationship-between-x-and-y",
+    "href": "slides/week8-day1.html#linear-relationship-between-x-and-y",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Linear relationship between \\(x\\) and \\(y\\)",
+    "text": "Linear relationship between \\(x\\) and \\(y\\)\n\n\nWhat should we do?"
+  },
+  {
+    "objectID": "slides/week8-day1.html#variable-transformation",
+    "href": "slides/week8-day1.html#variable-transformation",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Variable transformation!",
+    "text": "Variable transformation!"
+  },
+  {
+    "objectID": "slides/week8-day1.html#independence-of-observations",
+    "href": "slides/week8-day1.html#independence-of-observations",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Independence of observations",
+    "text": "Independence of observations\n\n\nThe evals dataset contains 463 observations on 94 professors. Meaning, professors have multiple observations.\n\nWhat should we do?\n\n\n\n\nBest – use a random effects model\nReasonable – collapse the multiple scores into a single score"
+  },
+  {
+    "objectID": "slides/week8-day1.html#collapsing-multiple-scores",
+    "href": "slides/week8-day1.html#collapsing-multiple-scores",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Collapsing Multiple Scores",
+    "text": "Collapsing Multiple Scores\nOption 1: Grab a Random Eval\n\nevals_small &lt;- evals %&gt;% \n  group_by(prof_ID) %&gt;% \n  slice_sample(n = 1)\n\n\n\n\n\n\n\n\n\n\n\nID\nprof_ID\nscore\nage\nbty_avg\ngender\nethnicity\nlanguage\nrank\npic_outfit\npic_color\ncls_did_eval\ncls_students\ncls_level\n\n\n\n\n4\n1\n4.8\n36\n5.000\nfemale\nminority\nenglish\ntenure track\nnot formal\ncolor\n77\n123\nupper\n\n\n7\n2\n2.8\n59\n3.000\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n39\n44\nupper\n\n\n8\n3\n4.1\n51\n3.333\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n55\n55\nupper\n\n\n15\n4\n3.9\n40\n3.167\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n37\n42\nupper\n\n\n19\n5\n4.6\n31\n7.333\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n40\n44\nupper\n\n\n24\n6\n4.4\n62\n5.500\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n182\n282\nupper\n\n\n33\n7\n4.1\n33\n4.167\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n37\n41\nupper\n\n\n40\n8\n2.5\n51\n4.000\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n24\n30\nlower\n\n\n44\n9\n4.8\n33\n4.667\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n29\n33\nupper\n\n\n51\n10\n4.3\n47\n5.500\nmale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n12\n16\nupper\n\n\n60\n11\n3.6\n35\n4.833\nmale\nminority\nnon-english\ntenure track\nnot formal\ncolor\n18\n25\nupper\n\n\n67\n12\n3.5\n37\n4.333\nmale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n25\n35\nupper\n\n\n70\n13\n4.0\n42\n4.833\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n28\n42\nupper\n\n\n78\n14\n3.6\n49\n4.000\nmale\nnot minority\nnon-english\ntenured\nnot formal\ncolor\n23\n27\nupper\n\n\n79\n15\n2.9\n37\n5.500\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n23\n28\nupper\n\n\n86\n16\n4.4\n45\n4.167\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n27\n32\nupper\n\n\n89\n17\n4.4\n56\n2.500\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n27\n41\nupper\n\n\n95\n18\n4.2\n48\n4.333\nmale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n20\n33\nupper\n\n\n105\n19\n4.8\n46\n4.333\nfemale\nnot minority\nenglish\ntenured\nnot formal\nblack&white\n23\n25\nupper\n\n\n113\n20\n4.0\n57\n4.333\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n15\n19\nupper\n\n\n126\n21\n4.4\n52\n4.833\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n23\n37\nupper\n\n\n127\n22\n3.4\n29\n2.833\nfemale\nminority\nnon-english\ntenure track\nnot formal\ncolor\n19\n26\nupper\n\n\n206\n23\n4.1\n62\n3.000\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n12\n13\nupper\n\n\n133\n24\n4.5\n64\n4.167\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n15\n24\nupper\n\n\n140\n25\n4.8\n34\n7.833\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n20\n26\nupper\n\n\n142\n26\n4.4\n58\n3.833\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n84\n159\nupper\n\n\n153\n27\n4.2\n52\n4.833\nmale\nminority\nnon-english\ntenured\nformal\ncolor\n18\n28\nupper\n\n\n157\n28\n4.3\n73\n3.000\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n13\n17\nupper\n\n\n161\n29\n3.6\n70\n3.000\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n24\n69\nupper\n\n\n162\n30\n2.3\n41\n5.167\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n10\n12\nupper\n\n\n168\n31\n3.8\n63\n4.333\nmale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n8\n10\nupper\n\n\n171\n32\n4.1\n47\n2.667\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n10\n14\nupper\n\n\n173\n33\n4.2\n39\n5.500\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n86\n246\nlower\n\n\n186\n34\n4.6\n47\n4.333\nfemale\nminority\nenglish\ntenure track\nnot formal\ncolor\n20\n21\nlower\n\n\n193\n35\n4.6\n54\n2.333\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n16\n17\nupper\n\n\n195\n36\n3.5\n44\n6.500\nfemale\nminority\nenglish\ntenured\nnot formal\ncolor\n35\n48\nupper\n\n\n201\n37\n3.8\n47\n2.333\nmale\nminority\nenglish\ntenured\nnot formal\ncolor\n13\n16\nupper\n\n\n211\n38\n4.6\n60\n3.667\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n11\n14\nupper\n\n\n217\n39\n3.3\n37\n6.167\nmale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n15\n17\nupper\n\n\n218\n40\n4.4\n42\n4.000\nmale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n13\n14\nupper\n\n\n226\n41\n4.7\n35\n4.833\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n44\n50\nlower\n\n\n228\n42\n4.7\n39\n8.167\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n18\n23\nupper\n\n\n231\n43\n4.0\n49\n6.500\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n28\n45\nupper\n\n\n236\n44\n4.8\n61\n4.833\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n19\n22\nlower\n\n\n240\n45\n3.7\n33\n7.000\nmale\nnot minority\nenglish\ntenure track\nformal\ncolor\n13\n15\nupper\n\n\n241\n46\n3.7\n58\n4.667\nfemale\nnot minority\nenglish\ntenured\nformal\nblack&white\n26\n34\nupper\n\n\n244\n47\n3.2\n56\n3.833\nfemale\nnot minority\nenglish\ntenured\nformal\ncolor\n17\n23\nupper\n\n\n248\n48\n3.9\n50\n3.167\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n23\n24\nupper\n\n\n260\n49\n4.2\n52\n3.167\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n78\n98\nupper\n\n\n267\n50\n4.9\n33\n5.833\nfemale\nnot minority\nenglish\ntenure track\nnot formal\nblack&white\n10\n11\nupper\n\n\n274\n51\n4.2\n57\n5.667\nmale\nnot minority\nenglish\ntenured\nnot formal\nblack&white\n63\n78\nupper\n\n\n275\n52\n4.8\n38\n6.500\nfemale\nnot minority\nenglish\ntenured\nformal\nblack&white\n46\n65\nupper\n\n\n284\n53\n4.0\n34\n1.667\nfemale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n53\n90\nlower\n\n\n288\n54\n3.5\n34\n6.667\nmale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n24\n36\nupper\n\n\n292\n55\n3.9\n32\n3.667\nmale\nnot minority\nenglish\ntenure track\nformal\nblack&white\n69\n168\nlower\n\n\n294\n56\n4.4\n32\n3.833\nmale\nnot minority\nenglish\ntenure track\nformal\nblack&white\n20\n22\nupper\n\n\n297\n57\n4.1\n42\n6.167\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n51\n82\nupper\n\n\n300\n58\n4.3\n43\n3.333\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n26\n34\nlower\n\n\n309\n59\n3.6\n35\n3.667\nmale\nnot minority\nnon-english\ntenure track\nnot formal\nblack&white\n22\n42\nlower\n\n\n312\n60\n2.9\n62\n3.500\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n14\n19\nupper\n\n\n313\n61\n4.2\n42\n2.667\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n45\n86\nupper\n\n\n314\n62\n4.5\n39\n5.667\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n22\n29\nupper\n\n\n315\n63\n3.8\n52\n6.000\nfemale\nnot minority\nenglish\ntenured\nformal\nblack&white\n64\n88\nupper\n\n\n318\n64\n4.0\n52\n6.500\nfemale\nnot minority\nenglish\ntenured\nnot formal\nblack&white\n49\n65\nupper\n\n\n320\n65\n4.5\n52\n2.333\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n59\n75\nupper\n\n\n330\n66\n4.0\n64\n2.333\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n5\n11\nupper\n\n\n333\n67\n4.5\n50\n7.167\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n15\n16\nupper\n\n\n336\n68\n3.1\n60\n1.667\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n7\n10\nupper\n\n\n338\n69\n3.0\n51\n5.167\nfemale\nnot minority\nenglish\ntenured\nformal\ncolor\n47\n67\nupper\n\n\n341\n70\n4.9\n43\n3.500\nmale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n18\n30\nlower\n\n\n357\n71\n4.5\n50\n3.333\nmale\nminority\nenglish\nteaching\nnot formal\ncolor\n19\n21\nlower\n\n\n361\n72\n3.9\n52\n5.833\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n34\n67\nupper\n\n\n366\n73\n4.8\n51\n6.167\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n343\n537\nlower\n\n\n369\n74\n4.2\n38\n3.333\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n44\n87\nlower\n\n\n374\n75\n3.6\n47\n5.167\nfemale\nnot minority\nenglish\ntenured\nformal\ncolor\n38\n67\nlower\n\n\n375\n76\n3.7\n43\n4.167\nfemale\nminority\nenglish\ntenured\nformal\ncolor\n47\n103\nlower\n\n\n379\n77\n3.9\n38\n2.500\nfemale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n29\n64\nlower\n\n\n385\n78\n4.1\n43\n4.333\nmale\nnot minority\nenglish\ntenured\nformal\ncolor\n12\n15\nupper\n\n\n389\n79\n3.7\n57\n3.000\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n58\n97\nupper\n\n\n391\n80\n4.0\n51\n6.333\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n67\n78\nupper\n\n\n394\n81\n4.8\n45\n3.333\nmale\nnot minority\nenglish\nteaching\nnot formal\ncolor\n12\n17\nlower\n\n\n403\n82\n3.8\n57\n2.833\nmale\nnot minority\nenglish\ntenured\nnot formal\nblack&white\n14\n16\nlower\n\n\n410\n83\n4.7\n47\n6.667\nfemale\nnot minority\nenglish\nteaching\nnot formal\nblack&white\n15\n17\nlower\n\n\n415\n84\n4.9\n54\n6.833\nfemale\nminority\nenglish\ntenured\nnot formal\nblack&white\n15\n16\nlower\n\n\n424\n85\n5.0\n58\n7.833\nmale\nnot minority\nenglish\nteaching\nnot formal\nblack&white\n11\n13\nlower\n\n\n429\n86\n3.9\n42\n7.833\nmale\nnot minority\nenglish\ntenured\nnot formal\nblack&white\n17\n20\nupper\n\n\n431\n87\n4.5\n33\n5.833\nmale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n67\n155\nlower\n\n\n432\n88\n3.3\n62\n2.000\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n11\n38\nlower\n\n\n439\n89\n3.3\n35\n7.833\nfemale\nminority\nenglish\ntenure track\nnot formal\ncolor\n60\n96\nlower\n\n\n442\n90\n3.6\n61\n3.333\nmale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n27\n39\nlower\n\n\n446\n91\n4.8\n52\n4.500\nfemale\nnot minority\nenglish\ntenured\nnot formal\ncolor\n19\n19\nlower\n\n\n451\n92\n4.4\n60\n4.333\nfemale\nnot minority\nnon-english\ntenure track\nformal\nblack&white\n11\n22\nupper\n\n\n457\n93\n4.6\n32\n6.833\nmale\nnot minority\nenglish\ntenure track\nnot formal\ncolor\n76\n101\nlower\n\n\n463\n94\n4.1\n42\n5.333\nfemale\nminority\nnon-english\ntenure track\nnot formal\ncolor\n28\n35\nlower"
+  },
+  {
+    "objectID": "slides/week8-day1.html#equal-variance-of-residuals",
+    "href": "slides/week8-day1.html#equal-variance-of-residuals",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Equal variance of residuals",
+    "text": "Equal variance of residuals\n\n\nWhat should we do?"
+  },
+  {
+    "objectID": "slides/week8-day1.html#collapsing-multiple-scores-1",
+    "href": "slides/week8-day1.html#collapsing-multiple-scores-1",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Collapsing Multiple Scores",
+    "text": "Collapsing Multiple Scores\nOption 2: Summarize the Evals\n\nevals %&gt;% \n  group_by(prof_ID) %&gt;% \n  mutate(min_score = min(score)) %&gt;% \n  distinct(prof_ID, .keep_all = TRUE)\n\n\n\n\n\n\n\n\n\n\nID\nprof_ID\nmin_score\nage\nbty_avg\ngender\nethnicity\nlanguage\nrank\n\n\n\n\n1\n1\n3.9\n36\n5.000\nfemale\nminority\nenglish\ntenure track\n\n\n5\n2\n2.8\n59\n3.000\nmale\nnot minority\nenglish\ntenured\n\n\n8\n3\n3.4\n51\n3.333\nmale\nnot minority\nenglish\ntenured\n\n\n10\n4\n3.8\n40\n3.167\nfemale\nnot minority\nenglish\ntenured\n\n\n18\n5\n4.5\n31\n7.333\nfemale\nnot minority\nenglish\ntenure track\n\n\n24\n6\n4.4\n62\n5.500\nmale\nnot minority\nenglish\ntenured\n\n\n31\n7\n3.5\n33\n4.167\nfemale\nnot minority\nenglish\ntenure track\n\n\n36\n8\n2.5\n51\n4.000\nfemale\nnot minority\nenglish\ntenured\n\n\n43\n9\n4.4\n33\n4.667\nfemale\nnot minority\nenglish\ntenure track\n\n\n50\n10\n4.0\n47\n5.500\nmale\nnot minority\nenglish\nteaching\n\n\n60\n11\n3.6\n35\n4.833\nmale\nminority\nnon-english\ntenure track\n\n\n63\n12\n3.5\n37\n4.333\nmale\nnot minority\nenglish\nteaching\n\n\n68\n13\n3.8\n42\n4.833\nmale\nnot minority\nenglish\ntenured\n\n\n75\n14\n3.5\n49\n4.000\nmale\nnot minority\nnon-english\ntenured\n\n\n79\n15\n2.9\n37\n5.500\nfemale\nnot minority\nenglish\ntenure track\n\n\n83\n16\n4.1\n45\n4.167\nmale\nnot minority\nenglish\ntenured\n\n\n89\n17\n3.6\n56\n2.500\nfemale\nnot minority\nenglish\nteaching\n\n\n94\n18\n4.0\n48\n4.333\nmale\nnot minority\nenglish\nteaching\n\n\n102\n19\n4.3\n46\n4.333\nfemale\nnot minority\nenglish\ntenured\n\n\n111\n20\n3.3\n57\n4.333\nfemale\nnot minority\nenglish\nteaching\n\n\n121\n21\n3.5\n52\n4.833\nfemale\nnot minority\nenglish\nteaching\n\n\n127\n22\n3.4\n29\n2.833\nfemale\nminority\nnon-english\ntenure track\n\n\n128\n23\n3.6\n62\n3.000\nmale\nnot minority\nenglish\ntenured\n\n\n133\n24\n4.3\n64\n4.167\nmale\nnot minority\nenglish\ntenured\n\n\n140\n25\n4.1\n34\n7.833\nfemale\nnot minority\nenglish\ntenure track\n\n\n142\n26\n3.6\n58\n3.833\nmale\nnot minority\nenglish\ntenured\n\n\n147\n27\n3.5\n52\n4.833\nmale\nminority\nnon-english\ntenured\n\n\n154\n28\n3.6\n73\n3.000\nmale\nnot minority\nenglish\ntenured\n\n\n158\n29\n3.6\n70\n3.000\nmale\nnot minority\nenglish\ntenured\n\n\n162\n30\n2.3\n41\n5.167\nfemale\nnot minority\nenglish\ntenure track\n\n\n163\n31\n3.4\n63\n4.333\nmale\nnot minority\nenglish\nteaching\n\n\n170\n32\n3.2\n47\n2.667\nmale\nnot minority\nenglish\ntenured\n\n\n173\n33\n3.9\n39\n5.500\nmale\nnot minority\nenglish\ntenured\n\n\n178\n34\n2.8\n47\n4.333\nfemale\nminority\nenglish\ntenure track\n\n\n191\n35\n4.1\n54\n2.333\nmale\nnot minority\nenglish\ntenured\n\n\n194\n36\n3.5\n44\n6.500\nfemale\nminority\nenglish\ntenured\n\n\n198\n37\n3.3\n47\n2.333\nmale\nminority\nenglish\ntenured\n\n\n209\n38\n4.4\n60\n3.667\nmale\nnot minority\nenglish\ntenured\n\n\n217\n39\n3.3\n37\n6.167\nmale\nnot minority\nenglish\ntenure track\n\n\n218\n40\n4.3\n42\n4.000\nmale\nnot minority\nenglish\ntenure track\n\n\n223\n41\n4.3\n35\n4.833\nmale\nnot minority\nenglish\ntenured\n\n\n227\n42\n3.3\n39\n8.167\nfemale\nnot minority\nenglish\nteaching\n\n\n231\n43\n4.0\n49\n6.500\nmale\nnot minority\nenglish\ntenured\n\n\n234\n44\n4.5\n61\n4.833\nmale\nnot minority\nenglish\ntenured\n\n\n238\n45\n3.1\n33\n7.000\nmale\nnot minority\nenglish\ntenure track\n\n\n241\n46\n3.7\n58\n4.667\nfemale\nnot minority\nenglish\ntenured\n\n\n242\n47\n3.2\n56\n3.833\nfemale\nnot minority\nenglish\ntenured\n\n\n245\n48\n3.4\n50\n3.167\nfemale\nnot minority\nenglish\nteaching\n\n\n252\n49\n3.5\n52\n3.167\nmale\nnot minority\nenglish\ntenured\n\n\n265\n50\n4.5\n33\n5.833\nfemale\nnot minority\nenglish\ntenure track\n\n\n271\n51\n4.2\n57\n5.667\nmale\nnot minority\nenglish\ntenured\n\n\n275\n52\n4.6\n38\n6.500\nfemale\nnot minority\nenglish\ntenured\n\n\n282\n53\n3.8\n34\n1.667\nfemale\nnot minority\nenglish\ntenure track\n\n\n288\n54\n3.5\n34\n6.667\nmale\nnot minority\nenglish\ntenure track\n\n\n291\n55\n3.8\n32\n3.667\nmale\nnot minority\nenglish\ntenure track\n\n\n294\n56\n4.4\n32\n3.833\nmale\nnot minority\nenglish\ntenure track\n\n\n296\n57\n3.8\n42\n6.167\nfemale\nnot minority\nenglish\ntenured\n\n\n298\n58\n3.0\n43\n3.333\nfemale\nnot minority\nenglish\ntenured\n\n\n308\n59\n3.6\n35\n3.667\nmale\nnot minority\nnon-english\ntenure track\n\n\n310\n60\n2.9\n62\n3.500\nfemale\nnot minority\nenglish\ntenured\n\n\n313\n61\n4.2\n42\n2.667\nmale\nnot minority\nenglish\ntenured\n\n\n314\n62\n4.5\n39\n5.667\nmale\nnot minority\nenglish\ntenured\n\n\n315\n63\n3.7\n52\n6.000\nfemale\nnot minority\nenglish\ntenured\n\n\n317\n64\n3.7\n52\n6.500\nfemale\nnot minority\nenglish\ntenured\n\n\n320\n65\n3.8\n52\n2.333\nfemale\nnot minority\nenglish\nteaching\n\n\n327\n66\n2.7\n64\n2.333\nmale\nnot minority\nenglish\ntenured\n\n\n333\n67\n3.7\n50\n7.167\nmale\nnot minority\nenglish\ntenured\n\n\n335\n68\n2.4\n60\n1.667\nmale\nnot minority\nenglish\ntenured\n\n\n338\n69\n3.0\n51\n5.167\nfemale\nnot minority\nenglish\ntenured\n\n\n339\n70\n4.4\n43\n3.500\nmale\nnot minority\nenglish\ntenure track\n\n\n348\n71\n4.5\n50\n3.333\nmale\nminority\nenglish\nteaching\n\n\n358\n72\n3.5\n52\n5.833\nmale\nnot minority\nenglish\ntenured\n\n\n364\n73\n4.8\n51\n6.167\nmale\nnot minority\nenglish\ntenured\n\n\n369\n74\n3.9\n38\n3.333\nmale\nnot minority\nenglish\ntenured\n\n\n373\n75\n3.6\n47\n5.167\nfemale\nnot minority\nenglish\ntenured\n\n\n375\n76\n2.7\n43\n4.167\nfemale\nminority\nenglish\ntenured\n\n\n377\n77\n3.6\n38\n2.500\nfemale\nnot minority\nenglish\nteaching\n\n\n383\n78\n3.7\n43\n4.333\nmale\nnot minority\nenglish\ntenured\n\n\n387\n79\n3.5\n57\n3.000\nmale\nnot minority\nenglish\ntenured\n\n\n390\n80\n3.1\n51\n6.333\nfemale\nnot minority\nenglish\ntenured\n\n\n394\n81\n4.2\n45\n3.333\nmale\nnot minority\nenglish\nteaching\n\n\n398\n82\n3.4\n57\n2.833\nmale\nnot minority\nenglish\ntenured\n\n\n409\n83\n3.3\n47\n6.667\nfemale\nnot minority\nenglish\nteaching\n\n\n414\n84\n3.8\n54\n6.833\nfemale\nminority\nenglish\ntenured\n\n\n419\n85\n4.6\n58\n7.833\nmale\nnot minority\nenglish\nteaching\n\n\n427\n86\n3.9\n42\n7.833\nmale\nnot minority\nenglish\ntenured\n\n\n430\n87\n4.5\n33\n5.833\nmale\nnot minority\nenglish\ntenure track\n\n\n432\n88\n2.8\n62\n2.000\nmale\nnot minority\nenglish\ntenured\n\n\n439\n89\n3.3\n35\n7.833\nfemale\nminority\nenglish\ntenure track\n\n\n442\n90\n3.6\n61\n3.333\nmale\nnot minority\nenglish\ntenured\n\n\n444\n91\n4.1\n52\n4.500\nfemale\nnot minority\nenglish\ntenured\n\n\n447\n92\n3.4\n60\n4.333\nfemale\nnot minority\nnon-english\ntenure track\n\n\n454\n93\n4.1\n32\n6.833\nmale\nnot minority\nenglish\ntenure track\n\n\n460\n94\n3.5\n42\n5.333\nfemale\nminority\nnon-english\ntenure track"
+  },
+  {
+    "objectID": "slides/week8-day1.html#variable-transformation-1",
+    "href": "slides/week8-day1.html#variable-transformation-1",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Variable transformation!",
+    "text": "Variable transformation!"
+  },
+  {
+    "objectID": "slides/week8-day1.html#normality-of-residuals",
+    "href": "slides/week8-day1.html#normality-of-residuals",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Normality of residuals",
+    "text": "Normality of residuals\n\n\nWhat should we do?"
+  },
+  {
+    "objectID": "slides/week8-day1.html#variable-transformation-2",
+    "href": "slides/week8-day1.html#variable-transformation-2",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Variable transformation!",
+    "text": "Variable transformation!"
+  },
+  {
+    "objectID": "slides/week8-day1.html#your-next-tasks",
+    "href": "slides/week8-day1.html#your-next-tasks",
+    "title": "🔬 Simulation-Based Methods versus Theory-Based Methods",
+    "section": "Your next tasks…",
+    "text": "Your next tasks…\n\nComplete the grade check-in activity\nLearn about ANOVA in the context of multiple linear regression\nUse an ANOVA to decide what model you would have chosen for the midterm project (Statistical Critique #2)\nRevise Lab 6"
   }
 ]
