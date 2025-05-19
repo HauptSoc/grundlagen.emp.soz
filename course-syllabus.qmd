@@ -245,10 +245,10 @@ Note, to qualify for the student subscription you **must** use your Cal Poly ema
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
 |                                | A-level                     | B-level                 | C-level                 | D-level                 |
 +================================+=============================+=========================+=========================+=========================+
-| **Reading Guides (12 total)**  | at least 11 completed       | at least 10 completed   | at least 8 completed    | 7 or fewer completed    |
+| **Reading Guides (13 total)**  | at least 12 completed       | at least 11 completed   | at least 9 completed    | 8 or fewer completed    |
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Concept Quizzes\             | at least 10 completed       | at least 9 completed    | at least 8 completed    | 7 or fewer completed    |
-| (11 total)**                   |                             |                         |                         |                         |
+| **Concept Quizzes\             | at least 12 completed       | at least 10 completed    | at least 9 completed    | 8 or fewer completed    |
+| (13 total)**                   |                             |                         |                         |                         |
 +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
 | **Tutorials\                   | at least 13 completed       | at least 11 completed   | at least 10 completed   | 8 or fewer completed    |
 | (14 total)**                   |                             |                         |                         |                         |

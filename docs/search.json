@@ -324,9 +324,9 @@
   {
     "objectID": "slides/week8-day2.html#section-2",
     "href": "slides/week8-day2.html#section-2",
-    "title": "ANalysis Of VAriance",
+    "title": "Inference for One-way ANOVA",
     "section": "",
-    "text": "Goal of an ANOVA\n\nAnalysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different."
+    "text": "What is the relationship between life expectancy GDP per capita?\n\n. . .\n\nDecide on a variable transformation\nAssess model conditions (L, I, N, E)\nCompare hypothesis test results between simulation-based methods and theory-based methods"
   },
   {
     "objectID": "slides/week8-day2.html#section-3",
