@@ -25,7 +25,9 @@ library(moderndive)
 
 You **cannot** request deadline extensions for the final version of your Midterm
 Project. The assignment portal closes at 11:59pm on Sunday. 
-**Do not ride the line. Submissions made after 11:59pm will not be accepted.**
+**Do not ride the line.** Give yourself sufficient time to render, download, and
+upload your document. Make sure you submit the correct document as 
+**submissions made after 11:59pm will not be accepted.**
 :::
 
 # Midterm Project Review

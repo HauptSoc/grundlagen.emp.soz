@@ -139,6 +139,9 @@ If you do not submit a final version of your project by the stated deadline,
 your grade will be based on your first draft. If you did not submit a first 
 draft, your grade on the project will be an F. 
 
+<!-- Please double check your  -->
+<!-- submission to ensure you've uploaded the correct file to be graded!  -->
+
 If you do not submit an HTML for the final version of your project because you 
 were unable to render your project, you will receive a one letter grade 
 deduction. Meaning, if you submit a Google Doc or a Word file with your project, 
