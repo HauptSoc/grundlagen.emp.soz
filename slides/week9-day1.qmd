@@ -38,6 +38,20 @@ my_theme <- theme(axis.title = element_text(size = 72),
   theme_bw()
 ```
 
+## Lab 7 Recap
+
+**Question 6** (Bootstrap Distribution):
+
+-   Did not use an informative axis label
+
+</br>
+
+**Question 8** (Interpret Confidence Interval):
+
+-   Did not include population in interpretation
+-   Stated interval was about "all marshes" (no geographical information)
+
+
 # Week 9
 
 ## Final Project First Draft
