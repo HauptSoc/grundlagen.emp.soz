@@ -310,16 +310,16 @@
   {
     "objectID": "slides/week8-day2.html#section",
     "href": "slides/week8-day2.html#section",
-    "title": "Inference for One-way ANOVA",
+    "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "",
-    "text": "bill_depth_mm:species: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!"
+    "text": "What is the relationship between life expectancy and GDP per capita?\n\n\n\nDecide on a variable transformation\nAssess model conditions (L, I, N, E)\nCompare hypothesis test results between simulation-based methods and theory-based methods"
   },
   {
     "objectID": "slides/week8-day2.html#section-1",
     "href": "slides/week8-day2.html#section-1",
-    "title": "Inference for One-way ANOVA",
+    "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "",
-    "text": "body_mass_g: With a p-value of approximately 0, I would conclude there is a relationship between body mass and bill length (after accounting for bill depth)!\n\n\n\nbill_depth_mm: With a p-value of 0.234, I would conclude there is not a relationship between bill depth and bill length (after accounting for body mass)!"
+    "text": "What is the relationship between life expectancy GDP per capita?\n\n\n\nDecide on a variable transformation\nAssess model conditions (L, I, N, E)\nCompare hypothesis test results between simulation-based methods and theory-based methods"
   },
   {
     "objectID": "slides/week8-day2.html#section-2",
@@ -6379,30 +6379,30 @@
   {
     "objectID": "slides/week8-day2.html#first-steps",
     "href": "slides/week8-day2.html#first-steps",
-    "title": "Inference for One-way ANOVA",
+    "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "First Steps",
-    "text": "First Steps\n\nOpen the directions!\nCopy the Statistical Critique template on Posit Cloud\nCopy-and-paste code from your Midterm Project\nCopy-and-paste your justification for why you chose the model you chose"
+    "text": "First Steps\n\n\nOpen the directions!\nCopy the Statistical Critique template on Posit Cloud\nCopy-and-paste code from your Midterm Project\n\n\nInsert the package to load in your data\nInsert the code to make the plots\n\n\nCopy-and-paste your justification for why you chose the model you chose"
   },
   {
     "objectID": "slides/week8-day2.html#next-steps",
     "href": "slides/week8-day2.html#next-steps",
-    "title": "Inference for One-way ANOVA",
+    "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "Next Steps",
-    "text": "Next Steps\n\nFit the most complex model\nObtain an ANOVA table of your model\nUse the p-values in the ANOVA table to decide what model is best"
+    "text": "Next Steps\n\nFit the most complex model\nObtain an ANOVA table of your model\nUse the p-values in the ANOVA table to decide what model is “best”"
   },
   {
     "objectID": "slides/week8-day2.html#what-is-the-most-complex-model",
     "href": "slides/week8-day2.html#what-is-the-most-complex-model",
-    "title": "Inference for One-way ANOVA",
+    "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "What is the “most complex” model?",
-    "text": "What is the “most complex” model?\nFor 1 numerical & 1 categorical explanatory variables\n\nFit the different slopes (interaction) model\n\n\nspecies_lm &lt;- lm(bill_length_mm ~ bill_depth_mm * species, \n                  data = penguins)\n\n. . .\n\nFor 2 numerical explanatory variables\n\nFit the model with both variables included:\n\n\nbill_lm &lt;- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, \n                  data = penguins)"
+    "text": "What is the “most complex” model?\nFit the different slopes (interaction) model\n\n\nspecies_lm &lt;- lm(bill_length_mm ~ bill_depth_mm * species, \n                  data = penguins)"
   },
   {
     "objectID": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table",
     "href": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table",
-    "title": "Inference for One-way ANOVA",
+    "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "How do I know what model is “best” from the ANOVA table?",
-    "text": "How do I know what model is “best” from the ANOVA table?\nFor 1 numerical & 1 categorical explanatory variables\n\nLook at the interaction line (e.g., bill_depth_mm:species), it is testing if the slopes are different!\n\n\nanova(species_lm)\n\n\nanova(species_lm) %&gt;% \n  broom::tidy() %&gt;%\n  rename(`F value` = statistic, \n         `Pr(&gt;F)` = p.value, \n         Df = df, \n         `Sum Sq` = sumsq, \n         `Mean Sq` = meansq) %&gt;% \n  gt::gt()\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nbill_depth_mm\n1\n561.5708\n561.570850\n93.96508\n9.384795e-20\n\n\nspecies\n2\n7460.3201\n3730.160057\n624.15060\n7.116342e-114\n\n\nbill_depth_mm:species\n2\n134.2515\n67.125732\n11.23184\n1.897629e-05\n\n\nResiduals\n336\n2008.0631\n5.976378\nNA\nNA"
+    "text": "How do I know what model is “best” from the ANOVA table?\n\n\\(H_0\\): the slopes for the relationship between bill length and bill depth is the same for all Gentoo, Adelie, and Chinstrap penguins\n\\(H_A\\): the slopes for the relationship between bill length and bill depth is different for at least one species of penguin"
   },
   {
     "objectID": "slides/week8-day2.html#how-do-i-know-what-model-is-best-from-the-anova-table-1",
@@ -6501,5 +6501,40 @@
     "title": "Lab 7 Grading Guide",
     "section": "Question 12",
     "text": "Question 12\nTo earn a Success:\n\nSay “yes” Bergmann’s rule applies\nBecause the confidence interval is positive\n\nIf they say “yes” because the slope is positive:\n\nTechnically, it is possible for a slope to be positive but have the confidence interval overlap 0. What values are included in your confidence interval? What does that imply about plausible values for the population slope?"
+  },
+  {
+    "objectID": "slides/week8-day2.html#look-at-the-interaction-line-of-the-anova-table",
+    "href": "slides/week8-day2.html#look-at-the-interaction-line-of-the-anova-table",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Look at the Interaction Line of the ANOVA Table",
+    "text": "Look at the Interaction Line of the ANOVA Table"
+  },
+  {
+    "objectID": "slides/week8-day2.html#get-the-anova-table",
+    "href": "slides/week8-day2.html#get-the-anova-table",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Get the ANOVA table",
+    "text": "Get the ANOVA table\n\nanova(species_lm)\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nbill_depth_mm\n1\n561.5708\n561.570850\n93.96508\n9.384795e-20\n\n\nspecies\n2\n7460.3201\n3730.160057\n624.15060\n7.116342e-114\n\n\nbill_depth_mm:species\n2\n134.2515\n67.125732\n11.23184\n1.897629e-05\n\n\nResiduals\n336\n2008.0631\n5.976378\nNA\nNA"
+  },
+  {
+    "objectID": "slides/week8-day2.html#how-do-i-know-what-model-is-best",
+    "href": "slides/week8-day2.html#how-do-i-know-what-model-is-best",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "How do I know what model is “best”?",
+    "text": "How do I know what model is “best”?\n\nThe interaction line of the ANOVA table is testing:\n\n\\(H_0\\): the slopes for the relationship between bill length and bill depth is the same for all Gentoo, Adelie, and Chinstrap penguins\n\\(H_A\\): the slopes for the relationship between bill length and bill depth is different for at least one species of penguin"
+  },
+  {
+    "objectID": "slides/week8-day2.html#how-do-i-know-what-model-is-best-1",
+    "href": "slides/week8-day2.html#how-do-i-know-what-model-is-best-1",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "How do I know what model is “best”?",
+    "text": "How do I know what model is “best”?\n\nbill_depth_mm:species: With a p-value of 0.0000189, I would reject the null hypothesis (that the slopes are all the same) and I would conclude that there is evidence that the slopes are different!"
+  },
+  {
+    "objectID": "slides/week8-day2.html#what-if-i-got-a-large-p-value",
+    "href": "slides/week8-day2.html#what-if-i-got-a-large-p-value",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "What if I got a “large” p-value?",
+    "text": "What if I got a “large” p-value?\nSuppose, the p-value for bill_depth_mm:species was 0.45.\n\n\nWhat model would be “best” in this scenario?"
   }
 ]

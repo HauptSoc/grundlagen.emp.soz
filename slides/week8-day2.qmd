@@ -1,5 +1,5 @@
 ---
-title: "Inference for One-way ANOVA"
+title: "One-way ANOVA & Multiple Linear Regression"
 format: 
   revealjs:
     theme: style.scss
@@ -14,36 +14,44 @@ library(infer)
 library(moderndive)
 library(lterdatasampler)
 library(palmerpenguins)
+library(gt)
 
-my_theme <- theme(axis.title.x = element_text(size = 18), 
-                  axis.title.y = element_text(size = 18), 
-                  axis.text.x = element_text(size = 12), 
-                  axis.text.y = element_text(size = 12), 
-                  legend.text = element_text(size = 12), 
-                  legend.title = element_text(size = 18))
+my_theme <- theme_bw() + 
+  theme(axis.title.x = element_text(size = 18), 
+        axis.title.y = element_text(size = 18), 
+        axis.text.x = element_text(size = 12), 
+        axis.text.y = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 18)
+        )
 ```
 
 # Statistical Critique 2
 
 ## First Steps
 
+::: {.incremental}
 1.  Open the directions!
 2.  Copy the Statistical Critique template on Posit Cloud
 3.  Copy-and-paste code from your Midterm Project
+
+- Insert the package to load in your data
+- Insert the code to make the plots
+
 4.  Copy-and-paste your justification for why you chose the model you chose
+:::
 
 ## Next Steps
 
 4.  Fit the most complex model
 5.  Obtain an ANOVA table of your model
-6.  Use the p-values in the ANOVA table to decide what model is best
+6.  Use the p-values in the ANOVA table to decide what model is "best"
 
 ## What is the "most complex" model?
 
-**For 1 numerical & 1 categorical explanatory variables**
+Fit the **different slopes** (interaction) model
 
--   Fit the **different slopes** (interaction) model
-
+::: {.midi}
 ```{r}
 #| label: diff-slopes-fit
 #| echo: true
@@ -52,29 +60,30 @@ my_theme <- theme(axis.title.x = element_text(size = 18),
 species_lm <- lm(bill_length_mm ~ bill_depth_mm * species, 
                   data = penguins)
 ```
-
-. . .
+:::
 
 </br>
 
-**For 2 numerical explanatory variables**
-
--   Fit the model with **both** variables included:
+. . .
 
 ```{r}
-#| label: mlr-fit
-#| echo: true
-#| code-line-numbers: false
+#| label: interaction-plot
+#| echo: false
+#| fig-align: center
 
-bill_lm <- lm(bill_length_mm ~ body_mass_g + bill_depth_mm, 
-                  data = penguins)
+ggplot(penguins, 
+       mapping = aes(x = bill_depth_mm, 
+                     y = bill_length_mm, 
+                     color = species)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(x = "Bill Depth (mm)", 
+       y = "Bill Length (mm)", 
+       color = "Species") +
+  my_theme
 ```
 
-## How do I know what model is "best" from the ANOVA table?
-
-**For 1 numerical & 1 categorical explanatory variables**
-
--   Look at the interaction line (e.g., `bill_depth_mm:species`), it is testing if the slopes are different!
+## Get the ANOVA table
 
 ```{r}
 #| label: diff-slopes-anova
@@ -85,7 +94,12 @@ bill_lm <- lm(bill_length_mm ~ body_mass_g + bill_depth_mm,
 anova(species_lm)
 ```
 
+</br> 
+
 ```{r}
+#| label: interaction-anova
+#| echo: false
+
 anova(species_lm) %>% 
   broom::tidy() %>%
   rename(`F value` = statistic, 
@@ -93,25 +107,70 @@ anova(species_lm) %>%
          Df = df, 
          `Sum Sq` = sumsq, 
          `Mean Sq` = meansq) %>% 
-  gt::gt()
+  gt() |> 
+  tab_style(
+    style = cell_text(size = px(24)),
+    locations = list(
+      cells_body(),
+      cells_column_labels()
+    )
+  ) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  )
 ```
 
-## 
+## Look at the Interaction Line of the ANOVA Table
 
-::: {style="font-size: 2em; color: #000000;"}
-`bill_depth_mm:species`: With a p-value of 0.0000189, I would conclude there is evidence that the slopes are different!
+![](images/anova-interaction.png){fig-alt="A table showing the results of an ANOVA test with four rows: 'bill_depth_mm', 'species', 'bill_depth_mm:species', and 'Residuals'. The columns are 'term', 'Df', 'Sum Sq', 'Mean Sq', 'F value', and 'Pr(>F)'. The interaction term 'bill_depth_mm:species' is highlighted with a purple border. It has 2 degrees of freedom, a sum of squares of 134.2515, a mean square of 67.125732, an F value of 11.23184, and a p-value of 1.897629e-05. The interaction is statistically significant."}
+
+
+## How do I know what model is "best"?
+
+![](images/anova-interaction.png){fig-alt="A table showing the results of an ANOVA test with four rows: 'bill_depth_mm', 'species', 'bill_depth_mm:species', and 'Residuals'. The columns are 'term', 'Df', 'Sum Sq', 'Mean Sq', 'F value', and 'Pr(>F)'. The interaction term 'bill_depth_mm:species' is highlighted with a purple border. It has 2 degrees of freedom, a sum of squares of 134.2515, a mean square of 67.125732, an F value of 11.23184, and a p-value of 1.897629e-05. The interaction is statistically significant."}
+
+The interaction line of the ANOVA table is testing:
+
+::: {.small}
+$H_0$: the slopes for the relationship between bill length and bill depth is
+**the same** for **all** Gentoo, Adelie, and Chinstrap penguins
+
+$H_A$: the slopes for the relationship between bill length and bill depth is
+**different** for **at least one** species of penguin
 :::
+
+## How do I know what model is "best"?
+
+::: {style="font-size: 1.5em; color: #000000;"}
+`bill_depth_mm:species`: With a p-value of 0.0000189, I would reject the null
+hypothesis (that the slopes are all the same) and I would conclude that there is
+evidence that the slopes are different!
+:::
+
+## What if I got a "large" p-value?
+
+[Suppose, the p-value for `bill_depth_mm:species` was 0.45.]{.large}
+
+. . .
+
+</br>
+
+[What model would be "best" in this scenario?]{.large}
+
+# Getting Started on Your Final Project
+
+
 
 # Lab 8 
 
 ## ![](images/gapminder.png)
 
-> What is the relationship between life expectancy GDP per capita?
+> What is the relationship between life expectancy and GDP per capita?
 
 . . .
 
 -   Decide on a variable transformation
 -   Assess model conditions (L, I, N, E)
--   Compare hypothesis test results between simulation-based methods and theory-based methods
-
-# Getting Started on Your Final Project
+-   Compare hypothesis test results between simulation-based methods and
+theory-based methods
