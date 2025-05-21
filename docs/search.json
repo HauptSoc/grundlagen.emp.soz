@@ -6536,5 +6536,47 @@
     "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "What if I got a “large” p-value?",
     "text": "What if I got a “large” p-value?\nSuppose, the p-value for bill_depth_mm:species was 0.45.\n\n\nWhat model would be “best” in this scenario?"
+  },
+  {
+    "objectID": "slides/week8-day2.html#first-step",
+    "href": "slides/week8-day2.html#first-step",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "First Step",
+    "text": "First Step\nDecide if you want to use the same dataset!\n\n\nYes\n\n\nChoose one numeric response variable\nChoose two categorical explanatory variables\nLearn about how these variables were collected / recorded\n\n\n\n\n\nNo\n\n\nFind a new dataset from the list of datasets.\nLearn about the dataset!\nChoose one numeric response variable\nChoose two categorical explanatory variables\nLearn about how these variables were collected / recorded"
+  },
+  {
+    "objectID": "slides/week8-day2.html#step-1-decide-if-you-want-to-use-the-same-dataset",
+    "href": "slides/week8-day2.html#step-1-decide-if-you-want-to-use-the-same-dataset",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Step 1: Decide if you want to use the same dataset",
+    "text": "Step 1: Decide if you want to use the same dataset\n\n\nYes\n\n\nChoose one numeric response variable\nChoose two categorical explanatory variables\nLearn about how these variables were collected / recorded\n\n\n\n\n\nNo\n\n\nFind a new dataset from the list of datasets.\nLearn about the dataset!\nChoose one numeric response variable\nChoose two categorical explanatory variables\nLearn about how these variables were collected / recorded"
+  },
+  {
+    "objectID": "slides/week8-day2.html#step-1-use-the-same-dataset",
+    "href": "slides/week8-day2.html#step-1-use-the-same-dataset",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Step 1: Use the same dataset?",
+    "text": "Step 1: Use the same dataset?\n\n\nYes\n\n\nChoose one numeric response variable\nChoose two categorical explanatory variables\nLearn about how these variables were collected / recorded\n\n\n\n\n\nNo\n\n\nFind a new dataset from the list of datasets.\nLearn about the dataset!\nChoose one numeric response variable\nChoose two categorical explanatory variables\nLearn about how these variables were collected / recorded"
+  },
+  {
+    "objectID": "slides/week8-day2.html#step-2-write-your-introduction",
+    "href": "slides/week8-day2.html#step-2-write-your-introduction",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Step 2: Write Your Introduction",
+    "text": "Step 2: Write Your Introduction\n\nYour Introduction should at a minimum address the following questions:\n\nWho collected the data?\nHow were the data collected?\nWhen were the data collected?\nWhy were the data collected?\nWhat question do these data address?\n\n\n\n\n\n\n\nResearch Question\n\n\nYou can hold off on a research question until we learn more about ANOVA next week!"
+  },
+  {
+    "objectID": "slides/week8-day2.html#step-3-make-a-copy-of-the-final-project-template",
+    "href": "slides/week8-day2.html#step-3-make-a-copy-of-the-final-project-template",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Step 3: Make a Copy of the Final Project Template",
+    "text": "Step 3: Make a Copy of the Final Project Template\nThis will be posted by Friday!"
+  },
+  {
+    "objectID": "slides/week8-day2.html#step-4-pick-out-a-poster-template",
+    "href": "slides/week8-day2.html#step-4-pick-out-a-poster-template",
+    "title": "One-way ANOVA & Multiple Linear Regression",
+    "section": "Step 4: Pick out a Poster Template",
+    "text": "Step 4: Pick out a Poster Template\nThese will be posted by Friday!"
   }
 ]

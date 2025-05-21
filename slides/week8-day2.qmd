@@ -160,11 +160,65 @@ evidence that the slopes are different!
 
 # Getting Started on Your Final Project
 
+## Step 1: Use the same dataset?
 
+::: columns
+::: {.column width="38%"}
+[**Yes**]{.large}
+
+::: {.midi}
+- Choose **one** numeric response variable
+- Choose **two** categorical explanatory variables
+- Learn about how these variables were collected / recorded
+:::
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="60%"}
+[**No**]{.large}
+
+::: {.midi}
+- Find a new dataset from the [list of datasets](../project/midterm-project/midterm-proposal-313.qmd).
+- Learn about the dataset! 
+- Choose **one** numeric response variable
+- Choose **two** categorical explanatory variables
+- Learn about how these variables were collected / recorded
+:::
+:::
+:::
+
+## Step 2: Write Your Introduction
+
+::: {.midi}
+Your Introduction should **at a minimum** address the following questions:
+
+1. Who collected the data?
+2. How were the data collected?
+3. When were the data collected?
+3. Why were the data collected? 
+4. What question do these data address? 
+
+::: {.callout-important}
+# Research Question
+
+You can hold off on a research question until we learn more about ANOVA next 
+week!
+:::
+:::
+
+## Step 3: Make a Copy of the Final Project Template
+
+This will be posted by Friday! 
+
+## Step 4: Pick out a Poster Template
+
+These will be posted by Friday! 
 
 # Lab 8 
 
-## ![](images/gapminder.png)
+## ![](images/gapminder.png){fig-alt="A yellow decal of the GAPMINDER organization, a non-profit venture registered in Stockholm, Sweden, that promotes sustainable global development and achievement of the United Nations Millennium Development Goals by increased use and understanding of statistics and other information about social, economic, and environmental development at local, national, and global levels."}
 
 > What is the relationship between life expectancy and GDP per capita?
 
