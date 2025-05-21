@@ -26,7 +26,21 @@ my_theme <- theme_bw() +
         )
 ```
 
-# Statistical Critique 2
+## Upcoming Deadlines
+
+-   Lab 6 revisions are due on Friday (May 23)
+-   Lab 4 second revisions are due on Friday (May 23)
+-   Lab 7 revisions will be due on Friday (May 30)
+
+::: callout-note
+# Revision Deadlines
+
+If you did not submit revisions by the deadline (or forgot to include your
+reflections), your assignment **is not** eligible for additional revisions.
+:::
+
+
+# Statistical Critique 2 (Due Tuesday at 8am)
 
 ## First Steps
 
@@ -158,7 +172,11 @@ evidence that the slopes are different!
 
 [What model would be "best" in this scenario?]{.large}
 
-# Getting Started on Your Final Project
+# Week 9 - Final Project Week
+
+# Week 9 - Final Project Week
+
+Complete these steps **before** Tuesday's class to be prepared!
 
 ## Step 1: Use the same dataset?
 
@@ -228,3 +246,38 @@ These will be posted by Friday!
 -   Assess model conditions (L, I, N, E)
 -   Compare hypothesis test results between simulation-based methods and
 theory-based methods
+
+## Accessing Lab 8
+
+::: {.small}
+**Step 1:** One member of your group needs to [follow these instructions to copy the Lab 8 project into your group's workspace](https://scribehow.com/shared/Copying_the_Lab_to_Your_Group_Workspace__Q3uBlpp_TBWRZzVJmCjbsA)
+:::
+
+. . .
+
+::: {.small}
+**Step 2:** Both members open the Lab 8 assignment in your group workspace!
+:::
+
+. . .
+
+::: {.small}
+**Step 4:** Follow the [final instructions](https://scribehow.com/shared/Enabling_Collaborative_Editing_in_Posit_Cloud__ylk0d72IQfipwem_lfynlw) to activate collaborative editing in the document. 
+:::
+
+::: {.small}
+::: {.callout-important}
+# Source Editor
+
+You need to be in the source editor (not the pretty one) to use collaborative editing! 
+:::
+:::
+
+::: {.small}
+::: {.callout-note}
+# Roles
+You will be trading off roles in the middle of the lab! One person will do the 
+model condition coding and one person will do the hypothesis test coding! 
+:::
+:::
+
