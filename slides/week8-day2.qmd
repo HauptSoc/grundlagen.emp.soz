@@ -39,7 +39,6 @@ If you did not submit revisions by the deadline (or forgot to include your
 reflections), your assignment **is not** eligible for additional revisions.
 :::
 
-
 # Statistical Critique 2 (Due Tuesday at 8am)
 
 ## First Steps
@@ -171,6 +170,12 @@ evidence that the slopes are different!
 </br>
 
 [What model would be "best" in this scenario?]{.large}
+
+# Do you have to use an ANOVA to test for different slopes?
+
+# Do you have to use an ANOVA to test for different slopes?
+
+No! Only if you have 3 or more groups! 
 
 # Week 9 - Final Project Week
 
