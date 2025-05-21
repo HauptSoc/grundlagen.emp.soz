@@ -28,15 +28,15 @@ Here is a description of the `gapminder` dataset as written by a past STAT 313 s
 
 > GDP data from years 1990 to 2019 come from the World Bank, which was published in May 2022. Data from previous years come from the Madison Project Database and the Penn World Table. The life expectancy data were compiled from three main sources: Mattias Lindgren and Klara Joahansson, gapminder version 7 (1800-1970), the Institute for Health Metrics and Evaluation (1970-2016), and the United Nations population data (2017-present). The geographical data for country and continent are based off of current borders as determined by the United Nations.
 
-> In total, there are 1704 observations and 6 variables, with the country variable being a factor containing 142 levels. The data were retrieved in 2008 and 2009 from [Gapminder](https://gapminder.org/), an organization that collects world data. The dataset was also manually cleaned by Dr. Jenny Bryan and her STAT 545 students.
-
 > Gapminder itself collected its GDP data from the World Bank, its life expectancy data from various studies published by the Institute for Health Metrics and Evaluation, and its population data from the US Census Bureau.
 
-## Question of Interest
+> These data were retrieved in 2008 and 2009 from [Gapminder](https://gapminder.org/), and manually cleaned by Dr. Jenny Bryan and her STAT 545 students.
+
+# Question of Interest
 
 The objective of this data analysis is to answer the question:
 
-> What is the relationship between life expectancy GDP per capita?
+> What is the relationship between life expectancy and GDP per capita?
 
 # Exploratory data analysis
 
@@ -85,11 +85,11 @@ You can explore if a log-transformation of the y-variable would make the relatio
 gapminder_lm <- lm(____ ~ ____, data = gapminder)
 ```
 
-## Assessing Model Conditions
+# Assessing Model Conditions
 
 The next step is to check the conditions of our statistical model, we do this by analyzing our residuals and how the data were collected.
 
-### Independence of Observations
+## Independence of Observations
 
 Each row of the `gapminder` dataset is an observation for one country for one year (from 1952 to 2007).
 
@@ -97,7 +97,7 @@ Each row of the `gapminder` dataset is an observation for one country for one ye
 
 *Hint: This condition says the rows* of the dataset are independent of each other. Look at the rows of the dataset, is there any reason to believe there are relationships between the rows?
 
-### Normality of Residuals
+## Normality of Residuals
 
 I've provided code to visualize the residuals from the model you fit in #3 below.
 
@@ -113,7 +113,7 @@ broom::augment(gapminder_lm) %>%
 
 **5. Based on the distribution of residuals, do you believe the condition of normality is violated? Why or why not?**
 
-### Equal Variance of Residuals
+## Equal Variance of Residuals
 
 I've provided code to visualize the residuals versus fitted values from the model you fit in #3 below. With this plot, we want to assess if the variability (spread) of the residuals changes based on the values of the explanatory variable.
 
@@ -130,6 +130,8 @@ broom::augment(gapminder_lm) %>%
 **6. Based on the plot above, do you believe the condition of equal variance is violated? Why or why not?**
 
 # Inference
+
+<!-- Switch roles! -->
 
 ## Stating the Hypotheses
 
@@ -171,7 +173,8 @@ We can visualize this null distribution with the following code:
 ```{r}
 #| label: visualize-null-dist
  
-visualise(null_dist) 
+visualise(null_dist) +
+  labs(x = "Permuted Slope Statistics")
 ```
 
 Now that you have calculated the observed statistic and generated a permutation distribution, you can calculate the p-value for your hypothesis test using the function `get_p_value()` from the infer package.
@@ -194,7 +197,7 @@ As we saw in the reading this week, the output from the `get_regression_table()`
 
 **12. Use the `get_regression_table()` function to obtain the theory-based p-value for your hypothesis test.**
 
-*Hint: You'll want to use the model you fit in #3.*
+*Hint: You'll want to use the `gapminder_lm` object (model) you fit in #3.*
 
 ```{r}
 #| label: t-test
