@@ -60,7 +60,7 @@ Frequently, the first step in a statistical analysis is to conduct a hypothesis 
 
 ## Step 1: Summarizing the Relationship
 
-Specifically, we are interested in the slope statistic, as it captures the relationship between latitude and water temperature.
+Specifically, we are interested in the slope statistic, as it captures the relationship between latitude and crab size.
 
 **4. Fill in the code below to calculate the observed slope for the relationship between the the size of a fiddler crab (response) and latitude (explanatory).** *Note: Nothing will be output when you run this code!*
 
