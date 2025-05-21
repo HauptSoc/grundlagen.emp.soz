@@ -4616,15 +4616,15 @@
     "objectID": "slides/week6-day2.html#deadline-reminders",
     "href": "slides/week6-day2.html#deadline-reminders",
     "title": "Midterm Project Feedback & Model Selection",
-    "section": "Deadline Reminders",
-    "text": "Deadline Reminders\n\nLab 3 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line. Give yourself sufficient time to render, download, and upload your document. Make sure you submit the correct document as submissions made after 11:59pm will not be accepted."
+    "section": "",
+    "text": "Lab 3 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line. Give yourself sufficient time to render, download, and upload your document. Make sure you submit the correct document as submissions made after 11:59pm will not be accepted."
   },
   {
     "objectID": "slides/week6-day2.html#data-descriptions",
     "href": "slides/week6-day2.html#data-descriptions",
     "title": "Midterm Project Feedback & Model Selection",
     "section": "Data Descriptions",
-    "text": "Data Descriptions\nYour Introduction should at a minimum address the following questions:\n\nWho collected the data?\nHow were the data collected?\nWhen were the data collected?\nWhy were the data collected?\nWhat question do these data address?\n\n\n\n\n\n\n\nAre your data associated with a publication?\n\n\nIf so, you should have a reference to this publication in your Introduction!"
+    "text": "Data Descriptions\nYour Introduction should at a minimum address the following questions:\n\nWho collected the data?\nHow were the data collected?\nWhen were the data collected?\nWhy were the data collected?\nWhat question do these data address?\n\n\n\n\n\n\n\nAre your data associated with a publication?\n\n\n\nIf so, you should have a reference to this publication in your Introduction!"
   },
   {
     "objectID": "slides/week6-day2.html#research-questions",
@@ -4708,7 +4708,7 @@
     "href": "slides/week6-day2.html#a-different-sample",
     "title": "Midterm Project Feedback & Model Selection",
     "section": "A Different Sample",
-    "text": "A Different Sample\nUsing a different sample of 1,000 births, the “best model” includes:\n\n\n\n\n\n\n\n\nChosen Variables\n\n\n\n\nfage\n\n\nweeks\n\n\nmarital\n\n\ngained\n\n\nlowbirthweight\n\n\ngender\n\n\nhabit\n\n\nwhitemom\n\n\n\n\n\n\n\n\nDid we get the same “best” model?"
+    "text": "A Different Sample\nUsing a different sample of 1,000 births, the “best model” includes:\n\n\n\n\n\n\n\n\nChosen Variables\n\n\n\n\nfage\n\n\nweeks\n\n\nmarital\n\n\ngained\n\n\nlowbirthweight\n\n\ngender\n\n\nhabit\n\n\nwhitemom\n\n\n\n\n\n\n\n. . .\nDid we get the same “best” model?"
   },
   {
     "objectID": "slides/week6-day2.html#should-you-always-use-model-selection",
@@ -4743,7 +4743,7 @@
     "href": "slides/week6-day2.html#accessing-lab-6",
     "title": "Midterm Project Feedback & Model Selection",
     "section": "Accessing Lab 6",
-    "text": "Accessing Lab 6\n\n\n\n\n\n\n\nRoles\n\n\nThe person who was the Recorder last week is the Resource Manager this week! The person who was the Resource Manager last week is the Recorder this week!\n\n\n\n\n\n\nStep 1: The Recorder follows these instructions to copy the Lab 6 project into your group’s workspace\n\n\n\n\nStep 2: Both members open the Lab 6 assignment in your group workspace!\n\n\n\n\nStep 3: Follow the final instructions to activate collaborative editing in the document."
+    "text": "Accessing Lab 6\n\n\n\n\n\n\n\nRoles\n\n\n\nThe person who was the Recorder last week is the Resource Manager this week! The person who was the Resource Manager last week is the Recorder this week!\n\n\n\n. . .\n\nStep 1: The Recorder follows these instructions to copy the Lab 6 project into your group’s workspace\n\n. . .\n\nStep 2: Both members open the Lab 6 assignment in your group workspace!\n\n. . .\n\nStep 3: Follow the final instructions to activate collaborative editing in the document."
   },
   {
     "objectID": "slides/week2-day1.html#section",
@@ -6143,21 +6143,21 @@
     "href": "slides/week9-day1.html",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
   },
   {
     "objectID": "slides/week9-day1.html#final-project-first-draft",
     "href": "slides/week9-day1.html#final-project-first-draft",
     "title": "ANalysis Of VAriance",
-    "section": "",
-    "text": "Step 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+    "section": "Final Project First Draft",
+    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
   },
   {
     "objectID": "slides/week9-day1.html#section",
     "href": "slides/week9-day1.html#section",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Before…"
+    "text": "Before…\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week9-day1.html#section-1",
@@ -6185,7 +6185,7 @@
     "href": "slides/week9-day1.html#section-4",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": ". . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+    "text": "Picking joint bandwidth of 0.248\n\n\n\n\n\n\n\n\n\n. . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
   },
   {
     "objectID": "slides/week9-day1.html#section-5",
@@ -6276,14 +6276,14 @@
     "href": "slides/week9-day1.html#section-15",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": ". . .\n\nWhat do you think? Which method should we use?"
+    "text": "Picking joint bandwidth of 0.248\n\n\n\n\n\n\n\n\n\n. . .\n\nWhat do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
     "href": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
     "title": "ANalysis Of VAriance",
     "section": "Step 1: Calculating the Observed F-statistic",
-    "text": "Step 1: Calculating the Observed F-statistic\n\nobs_F &lt;- evals_small %&gt;% \n  specify(response = min_eval, \n          explanatory = age_cat) %&gt;% \n  calculate(stat = \"F\")\n\n\n\n\nResponse: min_eval (numeric)\nExplanatory: age_cat (factor)\n# A tibble: 1 × 1\n   stat\n  &lt;dbl&gt;\n1  1.41"
+    "text": "Step 1: Calculating the Observed F-statistic\n\nobs_F &lt;- evals_small %&gt;% \n  specify(response = min_eval, \n          explanatory = age_cat) %&gt;% \n  calculate(stat = \"F\")\n\n\n\nobs_F\n\nResponse: min_eval (numeric)\nExplanatory: age_cat (factor)\n# A tibble: 1 × 1\n   stat\n  &lt;dbl&gt;\n1  1.41"
   },
   {
     "objectID": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
@@ -6304,7 +6304,7 @@
     "href": "slides/week9-day1.html#another-permutation-distribution-1",
     "title": "ANalysis Of VAriance",
     "section": "Another Permutation Distribution",
-    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
+    "text": "Another Permutation Distribution\n\nvisualise(null_dist) +\n  labs(x = \"F-statistic\", \n       y = \"\",\n       title = \"Simulation-based Null Distribution\") +\n  theme(axis.title = element_text(size = 72), \n        axis.text.y = element_text(size = 16), \n        axis.text.x = element_text(size = 16), \n        axis.title.x = element_text(size = 18)\n        )\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
   },
   {
     "objectID": "slides/week9-day1.html#visualizing-the-p-value",
@@ -6318,14 +6318,14 @@
     "href": "slides/week9-day1.html#visualizing-the-p-value-1",
     "title": "ANalysis Of VAriance",
     "section": "Visualizing the p-value",
-    "text": "Visualizing the p-value"
+    "text": "Visualizing the p-value\n\np_val &lt;- get_p_value(null_dist, obs_stat = obs_F, direction = \"greater\") %&gt;% \n  pull()\n  \nnull_dist %&gt;% \n  visualise() + \n  shade_p_value(obs_stat = obs_F, direction = \"greater\") + \n  annotate(x = pull(obs_F) + 2.5,\n           y = 100, \n           geom = \"text\", \n           label = stringr::str_c(\"p-value = \", p_val), \n           size = 6) +\n  labs(x = \"F-statistic\", \n       y = \"\",\n       title = \"Simulation-based Null Distribution with 1000 Resamples\") +\n  theme(axis.title = element_text(size = 72), \n        axis.text.y = element_text(size = 16), \n        axis.text.x = element_text(size = 16), \n        axis.title.x = element_text(size = 18)\n        )"
   },
   {
     "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
     "href": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
     "title": "ANalysis Of VAriance",
     "section": "Making a Decision & Reaching a Conclusion",
-    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.254, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
+    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.27, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
   },
   {
     "objectID": "slides/week9-day1.html#large-p-values-neq-evidence-for-the-null-hypothesis",
@@ -6339,7 +6339,7 @@
     "href": "slides/week9-day1.html#theory-based-methods",
     "title": "ANalysis Of VAriance",
     "section": "Theory-based Methods",
-    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n. . .\n\nHow was the statistic calculated?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
+    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n. . .\n\nHow was the statistic calculated?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
   },
   {
     "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
@@ -6578,5 +6578,19 @@
     "title": "One-way ANOVA & Multiple Linear Regression",
     "section": "Step 4: Pick out a Poster Template",
     "text": "Step 4: Pick out a Poster Template\nThese will be posted by Friday!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#lab-7-recap",
+    "href": "slides/week9-day1.html#lab-7-recap",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+  },
+  {
+    "objectID": "slides/week6-day2.html",
+    "href": "slides/week6-day2.html",
+    "title": "Midterm Project Feedback & Model Selection",
+    "section": "",
+    "text": "Lab 3 revisions are due tonight\nStatistical Critique 1 revisions are due tonight\nThe final version of your Midterm Project is due Sunday at midnight\n\n\n\n\n\n\n\nDeadline Extensions\n\n\n\nYou cannot request deadline extensions for the final version of your Midterm Project. The assignment portal closes at 11:59pm on Sunday. Do not ride the line. Give yourself sufficient time to render, download, and upload your document. Make sure you submit the correct document as submissions made after 11:59pm will not be accepted."
   }
 ]
