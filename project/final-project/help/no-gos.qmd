@@ -6,9 +6,12 @@ editor: visual
 
 -   Statements of hypotheses (e.g., $H_0$ or $H_A$)
 
+    -   I can infer what your null and alternative hypotheses were based on your conclusions!
+
 -   Statements that say your condition has been "met" 😡
 
     -   If you have no evidence that the condition is violated, simply state so.
+    -   "There is no evidence that the equal variance condition is violated."
 
 -   The s-word (significance) 😱
 
