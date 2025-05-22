@@ -6,6 +6,9 @@ format:
 editor: source
 ---
 
+<!-- change context to the regions in the gapminder dataset which we previously  -->
+<!-- did a regression on! -->
+
 ```{r}
 #| include: false
 #| label: set-up
