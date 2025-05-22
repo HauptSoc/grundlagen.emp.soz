@@ -5102,22 +5102,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#todays-data" id="toc-todays-data" class="nav-link active" data-scroll-target="#todays-data">Today’s Data</a>
-  <ul class="collapse">
+  <li><a href="#todays-data" id="toc-todays-data" class="nav-link active" data-scroll-target="#todays-data">Today’s Data</a></li>
   <li><a href="#question-of-interest" id="toc-question-of-interest" class="nav-link" data-scroll-target="#question-of-interest">Question of Interest</a></li>
-  </ul></li>
   <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory data analysis</a>
   <ul class="collapse">
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
   </ul></li>
-  <li><a href="#statistical-model" id="toc-statistical-model" class="nav-link" data-scroll-target="#statistical-model">Statistical Model</a>
-  <ul class="collapse">
+  <li><a href="#statistical-model" id="toc-statistical-model" class="nav-link" data-scroll-target="#statistical-model">Statistical Model</a></li>
   <li><a href="#assessing-model-conditions" id="toc-assessing-model-conditions" class="nav-link" data-scroll-target="#assessing-model-conditions">Assessing Model Conditions</a>
   <ul class="collapse">
   <li><a href="#independence-of-observations" id="toc-independence-of-observations" class="nav-link" data-scroll-target="#independence-of-observations">Independence of Observations</a></li>
   <li><a href="#normality-of-residuals" id="toc-normality-of-residuals" class="nav-link" data-scroll-target="#normality-of-residuals">Normality of Residuals</a></li>
   <li><a href="#equal-variance-of-residuals" id="toc-equal-variance-of-residuals" class="nav-link" data-scroll-target="#equal-variance-of-residuals">Equal Variance of Residuals</a></li>
-  </ul></li>
   </ul></li>
   <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a>
   <ul class="collapse">
@@ -5172,18 +5168,18 @@ window.Quarto = {
 <p>GDP data from years 1990 to 2019 come from the World Bank, which was published in May 2022. Data from previous years come from the Madison Project Database and the Penn World Table. The life expectancy data were compiled from three main sources: Mattias Lindgren and Klara Joahansson, gapminder version 7 (1800-1970), the Institute for Health Metrics and Evaluation (1970-2016), and the United Nations population data (2017-present). The geographical data for country and continent are based off of current borders as determined by the United Nations.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>In total, there are 1704 observations and 6 variables, with the country variable being a factor containing 142 levels. The data were retrieved in 2008 and 2009 from <a href="https://gapminder.org/">Gapminder</a>, an organization that collects world data. The dataset was also manually cleaned by Dr. Jenny Bryan and her STAT 545 students.</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>Gapminder itself collected its GDP data from the World Bank, its life expectancy data from various studies published by the Institute for Health Metrics and Evaluation, and its population data from the US Census Bureau.</p>
 </blockquote>
-<section id="question-of-interest" class="level2">
-<h2 class="anchored" data-anchor-id="question-of-interest">Question of Interest</h2>
-<p>The objective of this data analysis is to answer the question:</p>
 <blockquote class="blockquote">
-<p>What is the relationship between life expectancy GDP per capita?</p>
+<p>These data were retrieved in 2008 and 2009 from <a href="https://gapminder.org/">Gapminder</a>, and manually cleaned by Dr. Jenny Bryan and her STAT 545 students.</p>
 </blockquote>
 </section>
+<section id="question-of-interest" class="level1">
+<h1>Question of Interest</h1>
+<p>The objective of this data analysis is to answer the question:</p>
+<blockquote class="blockquote">
+<p>What is the relationship between life expectancy and GDP per capita?</p>
+</blockquote>
 </section>
 <section id="exploratory-data-analysis" class="level1">
 <h1>Exploratory data analysis</h1>
@@ -5208,17 +5204,18 @@ window.Quarto = {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gapminder_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(____ <span class="sc">~</span> ____, <span class="at">data =</span> gapminder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="assessing-model-conditions" class="level2">
-<h2 class="anchored" data-anchor-id="assessing-model-conditions">Assessing Model Conditions</h2>
+</section>
+<section id="assessing-model-conditions" class="level1">
+<h1>Assessing Model Conditions</h1>
 <p>The next step is to check the conditions of our statistical model, we do this by analyzing our residuals and how the data were collected.</p>
-<section id="independence-of-observations" class="level3">
-<h3 class="anchored" data-anchor-id="independence-of-observations">Independence of Observations</h3>
+<section id="independence-of-observations" class="level2">
+<h2 class="anchored" data-anchor-id="independence-of-observations">Independence of Observations</h2>
 <p>Each row of the <code>gapminder</code> dataset is an observation for one country for one year (from 1952 to 2007).</p>
 <p><strong>4. Do you believe is it reasonable to assume these observations are independent of one another?</strong></p>
 <p><em>Hint: This condition says the rows</em> of the dataset are independent of each other. Look at the rows of the dataset, is there any reason to believe there are relationships between the rows?</p>
 </section>
-<section id="normality-of-residuals" class="level3">
-<h3 class="anchored" data-anchor-id="normality-of-residuals">Normality of Residuals</h3>
+<section id="normality-of-residuals" class="level2">
+<h2 class="anchored" data-anchor-id="normality-of-residuals">Normality of Residuals</h2>
 <p>I’ve provided code to visualize the residuals from the model you fit in #3 below.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>broom<span class="sc">::</span><span class="fu">augment</span>(gapminder_lm) <span class="sc">%&gt;%</span> </span>
@@ -5228,8 +5225,8 @@ window.Quarto = {
 </div>
 <p><strong>5. Based on the distribution of residuals, do you believe the condition of normality is violated? Why or why not?</strong></p>
 </section>
-<section id="equal-variance-of-residuals" class="level3">
-<h3 class="anchored" data-anchor-id="equal-variance-of-residuals">Equal Variance of Residuals</h3>
+<section id="equal-variance-of-residuals" class="level2">
+<h2 class="anchored" data-anchor-id="equal-variance-of-residuals">Equal Variance of Residuals</h2>
 <p>I’ve provided code to visualize the residuals versus fitted values from the model you fit in #3 below. With this plot, we want to assess if the variability (spread) of the residuals changes based on the values of the explanatory variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>broom<span class="sc">::</span><span class="fu">augment</span>(gapminder_lm) <span class="sc">%&gt;%</span> </span>
@@ -5241,9 +5238,9 @@ window.Quarto = {
 <p><strong>6. Based on the plot above, do you believe the condition of equal variance is violated? Why or why not?</strong></p>
 </section>
 </section>
-</section>
 <section id="inference" class="level1">
 <h1>Inference</h1>
+<!-- Switch roles! -->
 <section id="stating-the-hypotheses" class="level2">
 <h2 class="anchored" data-anchor-id="stating-the-hypotheses">Stating the Hypotheses</h2>
 <p>Now that you’ve decided which regression appears the most linear, let’s perform a hypothesis test for the slope coefficient.</p>
@@ -5267,7 +5264,8 @@ window.Quarto = {
 </div>
 <p>We can visualize this null distribution with the following code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise</span>(null_dist) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise</span>(null_dist) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Permuted Slope Statistics&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now that you have calculated the observed statistic and generated a permutation distribution, you can calculate the p-value for your hypothesis test using the function <code>get_p_value()</code> from the infer package.</p>
 <p><strong>10. Fill in the code below to calculate the p-value for the hypothesis test you stated in #7.</strong></p>
@@ -5282,7 +5280,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="obtaining-a-p-value-using-theory">Obtaining a p-value Using Theory</h2>
 <p>As we saw in the reading this week, the output from the <code>get_regression_table()</code> function provides us with theory-based estimates of our standard error, <span class="math inline">\(t\)</span>-statistic, and p-value.</p>
 <p><strong>12. Use the <code>get_regression_table()</code> function to obtain the theory-based p-value for your hypothesis test.</strong></p>
-<p><em>Hint: You’ll want to use the model you fit in #3.</em></p>
+<p><em>Hint: You’ll want to use the <code>gapminder_lm</code> object (model) you fit in #3.</em></p>
 <p><strong>13. How does this p-value compare to what you obtained in #11?</strong></p>
 <p><strong>14. Based on your answers to #4-6, which p-value do you believe is the most reliable? Why?</strong> <em>Note: If you believe neither are reliable, say so and state why.</em></p>
 
