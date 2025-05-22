@@ -1,9 +1,11 @@
 {
-  "hash": "5cd4f7172cab41a3b99ebd5375a1e4f0",
+  "hash": "892135357eba81165bd41090f4a45819",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Your Title Goes Here! Make it fun!\"\nauthor: \"Your Name Here!\"\nformat: \n  html:\n    code-tools: true\neditor: visual\nembed-resources: true\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n\n# Introduction\n\n## Data Description\n\n## Research Question(s)\n\n# Methods\n\n## Variables\n\n## Data Visualizations\n\n\n::: {.cell layout-nrow=\"2\" layout-align=\"center\"}\n\n:::\n\n\n## Description of Relationships\n\n# Findings\n\n## One-Way ANOVA of <RESPONSE VARIABLE> and <EXPLANATORY VARIABLE>\n\n\n::: {.cell}\n\n:::\n\n\n## One-Way ANOVA of <RESPONSE VARIABLE> and <EXPLANATORY VARIABLE>\n\n\n::: {.cell}\n\n:::\n\n\n## Additive Two-Way ANOVA of <RESPONSE VARIABLE>, <EXPLANATORY VARIABLE>, AND <EXPLANATORY VARIABLE>\n\n\n::: {.cell}\n\n:::\n\n\n## Model Validity\n\n# Study Limitations\n\n# Conclusions\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Your Title Goes Here! Make it fun!\"\nauthor: \"Your Name Here!\"\nformat: \n  html:\n    code-tools: true\neditor: visual\nembed-resources: true\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Introduction\n\n## Methods\n\n### Variables\n\n### Visualizations\n\n\n\n\n\n::: {.cell layout-nrow=\"1\" layout-align=\"center\"}\n\n:::\n\n\n\n\n\n<!-- Descriptions of visualizations go here! -->\n\n\n### Statistical Methods\n\n<!-- What model did you choose and why? -->\n\n\n# Findings\n\n## One-Way ANOVA of <RESPONSE VARIABLE> and <EXPLANATORY VARIABLE>\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## One-Way ANOVA of <RESPONSE VARIABLE> and <EXPLANATORY VARIABLE>\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n# Discussion\n\n<!-- 1. Model interpretations -->\n\n<!-- 2. How trustworthy are your findings -->\n\n\n# Conclusion\n\n<!-- 1. Connecting findings back to original research question -->\n\n<!-- 2. How does the study design influence what can / cannot be said about the relationships you found in your analysis? -->\n\n<!-- 3. How does the study design influence what population you can / cannot infer your results onto? -->\n\n",
+    "supporting": [
+      "final_project_template-313_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
