@@ -329,14 +329,12 @@ window.Quarto = {
    
   <ul>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes"><span class="header-section-number">0.1</span> Learning Outcomes</a></li>
-  <li><a href="#prepare" id="toc-prepare" class="nav-link" data-scroll-target="#prepare"><span class="header-section-number">1</span> Prepare</a>
+  <li><a href="#textbook-reading" id="toc-textbook-reading" class="nav-link" data-scroll-target="#textbook-reading"><span class="header-section-number">1</span> Textbook Reading</a></li>
+  <li><a href="#concept-quizzes" id="toc-concept-quizzes" class="nav-link" data-scroll-target="#concept-quizzes"><span class="header-section-number">2</span> Concept Quizzes</a>
   <ul class="collapse">
-  <li><a href="#textbook-reading" id="toc-textbook-reading" class="nav-link" data-scroll-target="#textbook-reading"><span class="header-section-number">1.1</span> Textbook Reading</a>
-  <ul class="collapse">
-  <li><a href="#reading-guide-due-monday-by-the-start-of-class" id="toc-reading-guide-due-monday-by-the-start-of-class" class="nav-link" data-scroll-target="#reading-guide-due-monday-by-the-start-of-class">Reading Guide – Due Monday by the start of class</a></li>
-  </ul></li>
-  <li><a href="#concept-quiz-due-monday-by-the-start-of-class" id="toc-concept-quiz-due-monday-by-the-start-of-class" class="nav-link" data-scroll-target="#concept-quiz-due-monday-by-the-start-of-class"><span class="header-section-number">1.2</span> Concept Quiz – Due Monday by the start of class</a></li>
-  <li><a href="#r-tutorial-due-wednesday-by-the-start-of-class" id="toc-r-tutorial-due-wednesday-by-the-start-of-class" class="nav-link" data-scroll-target="#r-tutorial-due-wednesday-by-the-start-of-class"><span class="header-section-number">1.3</span> R Tutorial – Due Wednesday by the start of class</a></li>
+  <li><a href="#due-tuesday-by-the-start-of-class" id="toc-due-tuesday-by-the-start-of-class" class="nav-link" data-scroll-target="#due-tuesday-by-the-start-of-class"><span class="header-section-number">2.1</span> Due Tuesday by the start of class</a></li>
+  <li><a href="#due-wednesday-by-the-start-of-class" id="toc-due-wednesday-by-the-start-of-class" class="nav-link" data-scroll-target="#due-wednesday-by-the-start-of-class"><span class="header-section-number">2.2</span> Due Wednesday by the start of class</a></li>
+  <li><a href="#r-tutorial-due-wednesday-by-the-start-of-class" id="toc-r-tutorial-due-wednesday-by-the-start-of-class" class="nav-link" data-scroll-target="#r-tutorial-due-wednesday-by-the-start-of-class"><span class="header-section-number">2.3</span> R Tutorial – Due Wednesday by the start of class</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -363,38 +361,6 @@ window.Quarto = {
 </header>
 
 
-<!-- Add Study Design Chapter from IMS to this week! -->
-<!-- By the end of this coursework you should be able to: -->
-<!-- -   delineate the difference between a population and a sample -->
-<!-- -   compare and contrast different sampling methods -->
-<!-- -   outline what is necessary to make an experiment an "experiment" -->
-<!-- -   characterize the differences between observational studies and experiments -->
-<!-- [**Required Tutorial:** Sampling Strategies & Experimental Design](https://openintro.shinyapps.io/ims-01-data-03/#section-sampling-in-r) -->
-<!-- 📖 [**Required Reading:** *Introduction to Modern Statistics* -- Study Design](https://openintro-ims.netlify.app/data-design.html) -->
-<!-- **3. Which of the following statements are true about observational studies and experiments? Select all that apply!** -->
-<!-- -   Experiments randomly assign the explanatory variable -->
-<!-- -   Observational studies randomly assign the explanatory variable -->
-<!-- -   Observational studies can make causal statements about the relationship between the explanatory and response variables -->
-<!-- -   Experiments can make causal statements about the relationship between the explanatory and response variables -->
-<!-- **4. What are different methods for sampling from a population? Select all that apply!** -->
-<!-- -   simple random sampling -->
-<!-- -   stratified random sampling -->
-<!-- -   cluster sampling -->
-<!-- -   multistage sampling -->
-<!-- -   convenience sampling -->
-<!-- **5. Cluster sampling and stratified sampling both rely on grouping observations, but have important differences. Match each method to how observations are randomly sampled.** -->
-<!-- ::::: columns -->
-<!-- ::: {.column width="35%"} -->
-<!-- **stratified sampling** -->
-<!-- **cluster sampling** -->
-<!-- ::: -->
-<!-- ::: {.column width="35%"} -->
-<!-- *groups of observations are created, groups are randomly selected, every observation in the selected group is sampled* -->
-<!-- *groups of observations are created, observations within a group are randomly sampled* -->
-<!-- ::: -->
-<!-- ::::: -->
-<!-- Types of Studies R tutorial: https://openintro.shinyapps.io/ims-01-data-02/ -->
-<!-- Sampling Strategies and Experimental Design: https://openintro.shinyapps.io/ims-01-data-03/ -->
 <p>Welcome!</p>
 <p>In this week’s coursework we are transitioning into our last topic of the quarter—comparing multiple means. These comparisons have a specific name, ANalysis of VAriance (ANOVA).</p>
 <p>We are going to use all of the simulation-based methods we learned previously for this new context. An ANOVA relies on a new statistic, the <span class="math inline">\(F\)</span>-statistic, to summarize how different 3 or more means are from each other.</p>
@@ -403,21 +369,21 @@ window.Quarto = {
 <h2 data-number="0.1" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">0.1</span> Learning Outcomes</h2>
 <p>By the end of this coursework you should be able to:</p>
 <ul>
-<li><p>describe what an ANOVA tests for</p></li>
-<li><p>use a visualization to outline how the following are calculated:</p>
+<li>describe what an ANOVA tests for</li>
+<li>use a visualization to outline how the following are calculated:
 <ul>
 <li>total sum of squares</li>
 <li>group sum of squares</li>
 <li>residual sum of squares</li>
 </ul></li>
-<li><p>describe why the mean squares of groups is called the “between group variability”</p></li>
-<li><p>describe why the mean square error is called the “within group variability”</p></li>
-<li><p>outline how an F-statistic is calculated</p></li>
-<li><p>explain what a “large” or a “small” F-statistic indicates</p></li>
-<li><p>describe the conditions for performing an ANOVA procedure</p></li>
-<li><p>outline when it is appropriate to use an <span class="math inline">\(F\)</span>-distribution in an ANOVA</p></li>
-<li><p>explain the similarities and differences between parametric (<span class="math inline">\(F\)</span>-based) methods and non-parametric (simulation-based) methods</p></li>
-<li><p>use R to:</p>
+<li>describe why the mean squares of groups is called the “between group variability”</li>
+<li>describe why the mean square error is called the “within group variability”</li>
+<li>outline how an F-statistic is calculated</li>
+<li>explain what a “large” or a “small” F-statistic indicates</li>
+<li>describe the conditions for performing an ANOVA procedure</li>
+<li>outline when it is appropriate to use an <span class="math inline">\(F\)</span>-distribution in an ANOVA</li>
+<li>explain the similarities and differences between parametric (<span class="math inline">\(F\)</span>-based) methods and non-parametric (simulation-based) methods</li>
+<li>use R to:
 <ul>
 <li>generate a permutation distribution for F-statistics</li>
 <li>visualize the permutation distribution</li>
@@ -426,10 +392,9 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="prepare" class="level1 page-columns page-full" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Prepare</h1>
-<section id="textbook-reading" class="level2 page-columns page-full" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="textbook-reading"><span class="header-section-number">1.1</span> Textbook Reading</h2>
+<section id="textbook-reading" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Textbook Reading</h1>
+<p>First, we are going to learn about one-way ANOVA!</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
@@ -442,13 +407,40 @@ window.Quarto = {
 </div>
 </div>
 </div></div><p><a href="https://openintro-ims.netlify.app/inference-many-means.html"><strong>Required Reading:</strong> Inference for Comparing Many Means</a></p>
-<section id="reading-guide-due-monday-by-the-start-of-class" class="level3">
-<h3 class="anchored" data-anchor-id="reading-guide-due-monday-by-the-start-of-class">Reading Guide – Due Monday by the start of class</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reading Guide – Due Tuesday by the start of class (Monday is a holiday!)
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><a href="reading-guide/week9-reading.docx">Download the Word Document</a></p>
+</div>
+</div>
+<p>Next, we’re going to do a refresher on experimental design.</p>
+<p><a href="https://tuos-bio-data-skills.github.io/intro-stats-book/principles-experimental-design.html"><strong>Required Reading:</strong> Principles of Experimental Design</a></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is no reading guide for this chapter, just a concept quiz that is due on Wednesday!</p>
+</div>
+</div>
 </section>
-</section>
-<section id="concept-quiz-due-monday-by-the-start-of-class" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="concept-quiz-due-monday-by-the-start-of-class"><span class="header-section-number">1.2</span> Concept Quiz – Due Monday by the start of class</h2>
+<section id="concept-quizzes" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Concept Quizzes</h1>
+<p>We have two concept quizzes this week, one that is due by Tuesday (on one-way ANOVA) and one that is due by Wednesday (on experimental design).</p>
+<section id="due-tuesday-by-the-start-of-class" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="due-tuesday-by-the-start-of-class"><span class="header-section-number">2.1</span> Due Tuesday by the start of class</h2>
 <ol type="1">
 <li>Which of the following are true about the mean squares between groups? (Select all that apply)</li>
 </ol>
@@ -492,25 +484,600 @@ window.Quarto = {
 <li>small variability in the observations within each group</li>
 </ul>
 <ol start="5" type="1">
-<li>If the null hypothesis that the means of four groups are all the same is rejected using ANOVA at a 5% significance level, then… (select all that apply)</li>
+<li>If the null hypothesis that the means of four groups are all the same is rejected using ANOVA at a 5% significance level, then… (Select all that apply)</li>
 </ol>
 <ul>
-<li><p>we can then conclude that all the means are different from one another.</p></li>
-<li><p>the variability between groups is higher than the variability within groups.</p></li>
-<li><p>we can then conclude that at least one mean is different from the others.</p></li>
-<li><p>the pairwise analysis will identify at least one pair of means that are significantly different.</p></li>
-<li><p>an appropriate <span class="math inline">\(\alpha\)</span> to be used in pairwise comparisons is <span class="math inline">\(\frac{0.05}{4} = 0.0125\)</span> since there are four groups.</p></li>
+<li>we can then conclude that all the means are different from one another.</li>
+<li>the variability between groups is higher than the variability within groups.</li>
+<li>we can then conclude that at least one mean is different from the others.</li>
+<li>the pairwise analysis will identify at least one pair of means that are significantly different.</li>
 </ul>
 <ol start="6" type="1">
 <li><p>True or false, as the total sample size increases, the degrees of freedom for the residuals increases.</p></li>
-<li><p>True or false, the constant variance condition can be somewhat relaxed when the sample sizes are large.</p></li>
+<li><p>True or false, the constant variance condition is very important when the sample sizes of each group are different.</p></li>
 <li><p>True or false, the independence assumption can be relaxed when the total sample size is large.</p></li>
 <li><p>True or false, the normality condition is very important when the sample sizes of each group are small.</p></li>
 </ol>
 </section>
-<section id="r-tutorial-due-wednesday-by-the-start-of-class" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="r-tutorial-due-wednesday-by-the-start-of-class"><span class="header-section-number">1.3</span> R Tutorial – Due Wednesday by the start of class</h2>
+<section id="due-wednesday-by-the-start-of-class" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="due-wednesday-by-the-start-of-class"><span class="header-section-number">2.2</span> Due Wednesday by the start of class</h2>
+<p><strong>1. Which of the following statements are true about observational studies and experiments? </strong> (Select all that apply)</p>
+<ul>
+<li>Experiments randomly assign the explanatory variable</li>
+<li>Observational studies randomly assign the explanatory variable</li>
+<li>Observational studies can make causal statements about the relationship between the explanatory and response variables</li>
+<li>Experiments can make causal statements about the relationship between the explanatory and response variables</li>
+</ul>
+<p><strong>2. Suppose we wanted to compare cattle weight gain on four different dietary supplements to determine which is the most effective. We conducted an experiment in which groups of eight cows are given a particular supplement for one month. A fifth group serves as the control group—they do not receive any supplements. At the end of the experiment, we measure how much weight each cow has gained over the month.</strong></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Experimental Units</strong></p>
+<p><strong>Treatments</strong></p>
+<p><strong>Control Group</strong></p>
+<p><strong>Factor Levels</strong></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<p>Eight Cows</p>
+<p>Cows</p>
+<p>No Supplement</p>
+<p>Four Supplement Types &amp; No Supplement</p>
+<p>Dietary Supplements</p>
+</div>
+</div>
+<p><strong>3. Below are two brief descriptions of experimental designs, one represents replication, and the other represents pseudoreplication. Match each description to the correct design.</strong></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Pseudoreplication</strong></p>
+<p><br></p>
+<p><strong>Replication</strong></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<p>A researcher applies a fertilizer treatment to five separate pots, each containing a different plant, and compare their growth to five control pots without fertilizer.</p>
+<p>A researcher applies a fertilizer treatment to one large pot containing five plants and compares their growth to five plants in a single control pot without fertilizer.</p>
+</div>
+</div>
+<p><strong>4. Randomization means that every experimental unit has equal probability of being assigned to a treatment.</strong></p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<!-- **4. What are different methods for sampling from a population? Select all that apply!** -->
+<!-- -   simple random sampling -->
+<!-- -   stratified random sampling -->
+<!-- -   cluster sampling -->
+<!-- -   multistage sampling -->
+<!-- -   convenience sampling -->
+<!-- **5. Cluster sampling and stratified sampling both rely on grouping observations, but have important differences. Match each method to how observations are randomly sampled.** -->
+<!-- ::::: columns -->
+<!-- ::: {.column width="35%"} -->
+<!-- **stratified sampling** -->
+<!-- **cluster sampling** -->
+<!-- ::: -->
+<!-- ::: {.column width="35%"} -->
+<!-- *groups of observations are created, groups are randomly selected, every observation in the selected group is sampled* -->
+<!-- *groups of observations are created, observations within a group are randomly sampled* -->
+<!-- ::: -->
+<!-- ::::: -->
+<p><strong>5. A good variable to include as a blocking variable would have [small / large] variation within a block, and [small / large] variation between blocks.</strong></p>
+<p><strong>6. The table below summarizes the number of channel types (unittype) in each section of the HJ Andrews Experimental Forest. Based on this table, it would be reasonable to block on the section of the forest (CC, OG).</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="ymksgiezfy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ymksgiezfy table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ymksgiezfy thead, #ymksgiezfy tbody, #ymksgiezfy tfoot, #ymksgiezfy tr, #ymksgiezfy td, #ymksgiezfy th {
+  border-style: none;
+}
+
+#ymksgiezfy p {
+  margin: 0;
+  padding: 0;
+}
+
+#ymksgiezfy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ymksgiezfy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ymksgiezfy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ymksgiezfy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ymksgiezfy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ymksgiezfy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ymksgiezfy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ymksgiezfy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ymksgiezfy .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ymksgiezfy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ymksgiezfy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ymksgiezfy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ymksgiezfy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ymksgiezfy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ymksgiezfy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ymksgiezfy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ymksgiezfy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ymksgiezfy .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ymksgiezfy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ymksgiezfy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ymksgiezfy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ymksgiezfy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ymksgiezfy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ymksgiezfy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ymksgiezfy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ymksgiezfy .gt_left {
+  text-align: left;
+}
+
+#ymksgiezfy .gt_center {
+  text-align: center;
+}
+
+#ymksgiezfy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ymksgiezfy .gt_font_normal {
+  font-weight: normal;
+}
+
+#ymksgiezfy .gt_font_bold {
+  font-weight: bold;
+}
+
+#ymksgiezfy .gt_font_italic {
+  font-style: italic;
+}
+
+#ymksgiezfy .gt_super {
+  font-size: 65%;
+}
+
+#ymksgiezfy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ymksgiezfy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ymksgiezfy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ymksgiezfy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ymksgiezfy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ymksgiezfy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ymksgiezfy .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ymksgiezfy .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ymksgiezfy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="unittype" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">unittype</th>
+<th id="CC" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CC</th>
+<th id="OG" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">OG</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="unittype">C</td>
+<td class="gt_row gt_right" headers="CC">10199</td>
+<td class="gt_row gt_right" headers="OG">8917</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="unittype">P</td>
+<td class="gt_row gt_right" headers="CC">3339</td>
+<td class="gt_row gt_right" headers="OG">4076</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="unittype">R</td>
+<td class="gt_row gt_right" headers="CC">97</td>
+<td class="gt_row gt_right" headers="OG">395</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="unittype">S</td>
+<td class="gt_row gt_right" headers="CC">11</td>
+<td class="gt_row gt_right" headers="OG">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="unittype">SC</td>
+<td class="gt_row gt_right" headers="CC">2461</td>
+<td class="gt_row gt_right" headers="OG">1925</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="unittype">I</td>
+<td class="gt_row gt_right" headers="CC">0</td>
+<td class="gt_row gt_right" headers="OG">23</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="unittype">IP</td>
+<td class="gt_row gt_right" headers="CC">0</td>
+<td class="gt_row gt_right" headers="OG">155</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>7. The use of a placebo pill in an experiment does which of the following?</strong> (Select all that apply)</p>
+<ul>
+<li>Acts as a procedural control</li>
+<li>Acts as a blocking variable</li>
+<li>Allows researchers to measure the changes in patients resulting from simply being treated.</li>
+<li>Fools the participants so they don’t know what treatment they received.</li>
+<li>Gives researchers a baseline “no effect” comparison.</li>
+</ul>
+</section>
+<section id="r-tutorial-due-wednesday-by-the-start-of-class" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="r-tutorial-due-wednesday-by-the-start-of-class"><span class="header-section-number">2.3</span> R Tutorial – Due Wednesday by the start of class</h2>
 <p><a href="https://openintro.shinyapps.io/ims-05-infer-08/"><strong>Required Tutorial:</strong> Comparing many means with ANOVA</a></p>
+<!-- Types of Studies R tutorial: https://openintro.shinyapps.io/ims-01-data-02/ -->
+<!-- Sampling Strategies and Experimental Design: https://openintro.shinyapps.io/ims-01-data-03/ -->
 
 
 </section>
