@@ -553,15 +553,15 @@
     "objectID": "slides/week9-day1.html#lab-7-recap",
     "href": "slides/week9-day1.html#lab-7-recap",
     "title": "ANalysis Of VAriance",
-    "section": "Lab 7 Recap",
-    "text": "Lab 7 Recap\nQuestion 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+    "section": "",
+    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
   },
   {
     "objectID": "slides/week9-day1.html#final-project-first-draft",
     "href": "slides/week9-day1.html#final-project-first-draft",
     "title": "ANalysis Of VAriance",
     "section": "Final Project First Draft",
-    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n\n\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
   },
   {
     "objectID": "slides/week9-day1.html#section",
@@ -596,7 +596,7 @@
     "href": "slides/week9-day1.html#section-4",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "What can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+    "text": ". . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
   },
   {
     "objectID": "slides/week9-day1.html#section-5",
@@ -610,7 +610,7 @@
     "href": "slides/week9-day1.html#section-6",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 2: Find the overall mean\n\n\n\n\n\nThis ignores the groups and finds one mean for every observation!"
+    "text": "Step 2: Find the overall mean\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nThis ignores the groups and finds one mean for every observation!"
   },
   {
     "objectID": "slides/week9-day1.html#section-7",
@@ -652,7 +652,7 @@
     "href": "slides/week9-day1.html#section-12",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
+    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n. . .\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
   },
   {
     "objectID": "slides/week9-day1.html#section-13",
@@ -666,14 +666,14 @@
     "href": "slides/week9-day1.html#section-14",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Do you always use an F-distribution to get the p-value?\n\n\n\n\nNO!"
+    "text": "Do you always use an F-distribution to get the p-value?\n\n. . .\n\n\nNO!"
   },
   {
     "objectID": "slides/week9-day1.html#conditions-of-an-anova",
     "href": "slides/week9-day1.html#conditions-of-an-anova",
     "title": "ANalysis Of VAriance",
     "section": "Conditions of an ANOVA",
-    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
+    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
   },
   {
     "objectID": "slides/week9-day1.html#choosing-a-method",
@@ -687,7 +687,7 @@
     "href": "slides/week9-day1.html#section-15",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "What do you think? Which method should we use?"
+    "text": ". . .\n\nWhat do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
@@ -701,7 +701,7 @@
     "href": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Simulating what could have happened under \\(H_0\\)",
-    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
+    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n. . .\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
   },
   {
     "objectID": "slides/week9-day1.html#another-permutation-distribution",
@@ -715,7 +715,7 @@
     "href": "slides/week9-day1.html#another-permutation-distribution-1",
     "title": "ANalysis Of VAriance",
     "section": "Another Permutation Distribution",
-    "text": "Another Permutation Distribution\n\n\n\nWhy doesn’t the distribution have negative numbers?"
+    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
   },
   {
     "objectID": "slides/week9-day1.html#visualizing-the-p-value",
@@ -750,7 +750,7 @@
     "href": "slides/week9-day1.html#theory-based-methods",
     "title": "ANalysis Of VAriance",
     "section": "Theory-based Methods",
-    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n\n\nHow was the statistic calculated?\n\n\nWhat distribution was used to calculate the p.value?"
+    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n. . .\n\nHow was the statistic calculated?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
   },
   {
     "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
@@ -5854,5 +5854,61 @@
       "Weekly materials",
       "Week 8"
     ]
+  },
+  {
+    "objectID": "slides/week9-day1.html",
+    "href": "slides/week9-day1.html",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-reading.html",
+    "href": "weeks/reading-guide/week9-reading.html",
+    "title": "Week 9 Reading Guide: Comparing Many Means (ANOVA)",
+    "section": "",
+    "text": "What does ANOVA stand for?\n \nWhat is the null hypothesis for an ANOVA?\n \nWhat is the alternative hypothesis for an ANOVA?\n \nWhat are the conditions for an ANOVA?\n \n\n\n\n\nWhat are ways to assess the equal variability condition?\n \nIf it appears that the variability between groups is similar can we say that the equal variance condition is met?\n \n\n\n\nWhy should we compare every mean rather than only the means that look the most different?\n \n\n\n\n\nWhat is the statistic used in an ANOVA?\n \nHow is this statistic calculated?\n \n\n\n\nLast week, we used cards to simulate what could have happened if \\(H_0\\) was true by ripping the cards in half to separate the \\(x\\) and \\(y\\) values. We then shuffled the cards and created new (\\(x\\), \\(y\\)) pairs by resampling from the data without replacement.\nHow do we simulate what could have happened if \\(H_0\\) was true for an ANOVA?\n \nWhat tail do we use to calculate the p-value for an ANOVA?\n \nIf you reject \\(H_0\\) in an ANOVA what can you conclude?\n \n\n\n\nWhat distribution do we use to calculate the p-value for a theory-based ANOVA?\n \n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\ngender\n1\n2.260213\n2.2602134\n7.753005\n0.005583\n\n\nResiduals\n461\n134.394128\n0.2915274\nNA\nNA\n\n\n\n\n\nIn the ANOVA table above, what does the statistic column represent?\n \nHow was that statistic calculated? Specifically, what values from the table were used to obtain it?\n \nWhat distribution was used to calculate the p.value?"
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-reading.html#section-2-randomization-test-for-comparing-many-means",
+    "href": "weeks/reading-guide/week9-reading.html#section-2-randomization-test-for-comparing-many-means",
+    "title": "Week 9 Reading Guide: Comparing Many Means (ANOVA)",
+    "section": "",
+    "text": "What are ways to assess the equal variability condition?\n \nIf it appears that the variability between groups is similar can we say that the equal variance condition is met?\n \n\n\n\nWhy should we compare every mean rather than only the means that look the most different?"
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-reading.html#test-statistic",
+    "href": "weeks/reading-guide/week9-reading.html#test-statistic",
+    "title": "Week 9 Reading Guide: Comparing Many Means (ANOVA)",
+    "section": "",
+    "text": "What is the statistic used in an ANOVA?\n \nHow is this statistic calculated?"
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-reading.html#creating-a-permuted-sample",
+    "href": "weeks/reading-guide/week9-reading.html#creating-a-permuted-sample",
+    "title": "Week 9 Reading Guide: Comparing Many Means (ANOVA)",
+    "section": "",
+    "text": "Last week, we used cards to simulate what could have happened if \\(H_0\\) was true by ripping the cards in half to separate the \\(x\\) and \\(y\\) values. We then shuffled the cards and created new (\\(x\\), \\(y\\)) pairs by resampling from the data without replacement.\nHow do we simulate what could have happened if \\(H_0\\) was true for an ANOVA?\n \nWhat tail do we use to calculate the p-value for an ANOVA?\n \nIf you reject \\(H_0\\) in an ANOVA what can you conclude?"
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-reading.html#section-3-mathematical-model",
+    "href": "weeks/reading-guide/week9-reading.html#section-3-mathematical-model",
+    "title": "Week 9 Reading Guide: Comparing Many Means (ANOVA)",
+    "section": "",
+    "text": "What distribution do we use to calculate the p-value for a theory-based ANOVA?\n \n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\ngender\n1\n2.260213\n2.2602134\n7.753005\n0.005583\n\n\nResiduals\n461\n134.394128\n0.2915274\nNA\nNA\n\n\n\n\n\nIn the ANOVA table above, what does the statistic column represent?\n \nHow was that statistic calculated? Specifically, what values from the table were used to obtain it?\n \nWhat distribution was used to calculate the p.value?"
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-extra-reading.html",
+    "href": "weeks/reading-guide/week9-extra-reading.html",
+    "title": "Week 6 Reading Guide Part 2 – Study Design",
+    "section": "",
+    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
+  },
+  {
+    "objectID": "weeks/reading-guide/week9-extra-reading.html#chapter-2-sampling-experimental-design",
+    "href": "weeks/reading-guide/week9-extra-reading.html#chapter-2-sampling-experimental-design",
+    "title": "Week 6 Reading Guide Part 2 – Study Design",
+    "section": "",
+    "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Final Project Guidelines – STAT 313 / 513</title>
+<title>Week 6 Reading Guide Part 2 – Study Design – STAT 313 / 513</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../weeks/week-0.html" rel="next">
-<link href="../../project/midterm-project/midterm-project-directions.html" rel="prev">
 <link href="../../images/favicon-2.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -71,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -112,7 +81,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../project/midterm-project/midterm-project-directions.html">Projects</a></li><li class="breadcrumb-item"><a href="../../project/final-project/final-project-directions.html">Final Project Description</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Week 6 Reading Guide Part 2 – Study Design</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -220,13 +189,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../project/midterm-project/midterm-project-directions.html" class="sidebar-item-text sidebar-link">
@@ -235,7 +204,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/final-project/final-project-directions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../project/final-project/final-project-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final Project Description</span></a>
   </div>
 </li>
@@ -328,22 +297,26 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#your-task" id="toc-your-task" class="nav-link active" data-scroll-target="#your-task"><span class="header-section-number">0.1</span> Your Task</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">2</span> Methods</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">5</span> Conclusions</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">6</span> Submission</a></li>
+  <li><a href="#chapter-2-sampling-experimental-design" id="toc-chapter-2-sampling-experimental-design" class="nav-link active" data-scroll-target="#chapter-2-sampling-experimental-design">Chapter 2: Sampling &amp; Experimental Design</a>
+  <ul class="collapse">
+  <li><a href="#section-2.1.1-populations-samples" id="toc-section-2.1.1-populations-samples" class="nav-link" data-scroll-target="#section-2.1.1-populations-samples">Section 2.1.1: Populations &amp; Samples</a></li>
+  <li><a href="#section-2.1.2-parameters-statistics" id="toc-section-2.1.2-parameters-statistics" class="nav-link" data-scroll-target="#section-2.1.2-parameters-statistics">Section 2.1.2: Parameters &amp; Statistics</a></li>
+  <li><a href="#section-2.1.3-anecdotal-evidence" id="toc-section-2.1.3-anecdotal-evidence" class="nav-link" data-scroll-target="#section-2.1.3-anecdotal-evidence">Section 2.1.3: Anecdotal Evidence</a></li>
+  <li><a href="#section-2.1.4-sampling-from-a-population" id="toc-section-2.1.4-sampling-from-a-population" class="nav-link" data-scroll-target="#section-2.1.4-sampling-from-a-population">Section 2.1.4: Sampling from a Population</a></li>
+  <li><a href="#section-2.1.5-four-sampling-methods" id="toc-section-2.1.5-four-sampling-methods" class="nav-link" data-scroll-target="#section-2.1.5-four-sampling-methods">Section 2.1.5: Four Sampling Methods</a></li>
+  <li><a href="#section-2.2.1-principles-of-experimental-design" id="toc-section-2.2.1-principles-of-experimental-design" class="nav-link" data-scroll-target="#section-2.2.1-principles-of-experimental-design">Section 2.2.1: Principles of Experimental Design</a></li>
+  <li><a href="#section-2.2.2-reducing-bias-in-human-experiments" id="toc-section-2.2.2-reducing-bias-in-human-experiments" class="nav-link" data-scroll-target="#section-2.2.2-reducing-bias-in-human-experiments">Section 2.2.2: Reducing Bias in Human Experiments</a></li>
+  <li><a href="#section-2.3-observational-studies" id="toc-section-2.3-observational-studies" class="nav-link" data-scroll-target="#section-2.3-observational-studies">Section 2.3: Observational Studies</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/atheobold/stat-313-website/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../project/midterm-project/midterm-project-directions.html">Projects</a></li><li class="breadcrumb-item"><a href="../../project/final-project/final-project-directions.html">Final Project Description</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Final Project Guidelines</h1>
+<h1 class="title">Week 6 Reading Guide Part 2 – Study Design</h1>
 </div>
 
 
@@ -360,303 +333,135 @@ window.Quarto = {
 </header>
 
 
-<section id="your-task" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="your-task"><span class="header-section-number">0.1</span> Your Task</h2>
-<p>For this project, you are expected to use a two-way ANOVA to investigate the relationship between <strong>one</strong> <u>numerical</u> response variable and <strong>two</strong> <u>categorical</u> explanatory variables. You are permitted to use the same dataset as your Midterm Project, so long as there are at least two categorical variables to choose from.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Discretizing numerical variables
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you would like to analyze a discrete numerical variable (e.g., year) as a categorical variable, you will need to convert that variable into a categorical variable in <code>R</code> as <code>R</code> assumes all variables with numbers should be numerical.</p>
-<p>You will need Dr.&nbsp;Theobold’s help to perform this task. Dr.&nbsp;Theobold will work with you to convert your variable as long as you request help <em>before</em> <strong>Friday, May 30 at 4pm.</strong></p>
-</div>
-</div>
+<section id="chapter-2-sampling-experimental-design" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-sampling-experimental-design">Chapter 2: Sampling &amp; Experimental Design</h2>
+<section id="section-2.1.1-populations-samples" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.1.1-populations-samples">Section 2.1.1: Populations &amp; Samples</h3>
+<p>What is a population?</p>
+<p><br></p>
+<p>If a census was performed, how were observations sampled?</p>
+<p><br></p>
+<p>How is a sample different from a population?</p>
+<p><br></p>
 </section>
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<ul>
-<li>In <strong>no fewer than six (6)</strong> sentences describe how the data were collected, the context of the data. Your description should address the following questions:
-<ul>
-<li>Are these data from a study or a publication?</li>
-<li>What question do these data address?</li>
-<li>Why were the data collected?</li>
-<li>How were the data collected?</li>
-</ul></li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You may need to look up the publication(s) the data are associated with to obtain information on how they were collected.</p>
-</div>
-</div>
-<ul>
-<li>State the question(s) of interest you will address with your statistical analysis. The more specific you define the question of interest here, the easier the rest of the analysis and report will be. The research questions should start with, “Are there differences in…” and should be as specific as possible. Your <strong>Conclusion</strong> section should directly address the question(s) you pose here.</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Multiple research questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You will be fitting <strong>two</strong> one-way ANOVA models, so you have a research question for each model!</p>
-</div>
-</div>
+<section id="section-2.1.2-parameters-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.1.2-parameters-statistics">Section 2.1.2: Parameters &amp; Statistics</h3>
+<p>What is a statistic?</p>
+<p><br></p>
+<p>What is a parameter?</p>
+<p><br></p>
+<p>What is the relationship between a statistic and a parameter?</p>
+<p><br></p>
 </section>
-<section id="methods" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
-<p>This section should lay out the steps, decisions, and logic leading to the statistical model you will use to answer the research question of interest.</p>
-<ul>
-<li>Describe the response and explanatory variables, how they were measured and their associated units. For categorical variables, describe the levels of the categorical variable.</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:48%;">
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You may need to look up the publication(s) the data are associated with to obtain information on how each variable was measured by the researchers.</p>
-</div>
-</div>
-</div><div class="column" style="width:3%;">
-
-</div><div class="column" style="width:48%;">
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If the levels of your variable are abbreviations, you are expected to state exactly what each abbreviation means (e.g., <code>CC</code> represents the “clear cut” section of the forest).</p>
-</div>
-</div>
-</div>
-</div>
-<ul>
-<li><p>Produce data visualizations exploring the relationship(s) you are interested in investigating. For your project everyone will have <strong>two</strong> visualizations:</p>
-<ul>
-<li>a visualization of the relationship between your response variable and <strong>explanatory variable 1</strong></li>
-<li>a visualization of the relationship between your response variable and <strong>explanatory variable 2</strong></li>
-</ul></li>
-</ul>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Ridge plots
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In Lab 3 you learned how to make density ridge plots, the most recommended visualization for numerical and categorical variables. <strong>For your project you are required to use density ridge plots</strong>, boxplots will not be accepted. If you are unsure how to accomplish this task, look back over Lab 3 and the <a href="../../resources/week3.docx">Week 3 R resources</a>.</p>
-<p>Keep in mind, every visualization should have nicely formatted axis labels (with units)!</p>
-</div>
-</div>
-<ul>
-<li><p>Describe what you see in the visualizations, making direct references to the plots!</p></li>
-<li><p>Outline the appropriate statistical method (simulation-based / theory-based) you will use for your analysis. Your justification should make direct reference to the visualizations.</p></li>
-</ul>
-<div class="columns">
-<div class="column" style="width:32%;">
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Which model to choose?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you’re not sure which model to choose, I would recommend you review the <a href="https://openintro-ims.netlify.app/inference-many-means">chapter on ANOVA from the <em>Introduction to Modern Statistics</em> textbook</a>.</p>
-</div>
-</div>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:66%;">
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Different methods for each question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You are allowed to use different methods to address each research question. Meaning, if you choose to use a simulation-based method for one question, that does not mean you <strong>must</strong> use a simulation-based method for the second question. You could choose to use a theory-based method for the second question.</p>
-</div>
-</div>
-</div>
-</div>
+<section id="section-2.1.3-anecdotal-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.1.3-anecdotal-evidence">Section 2.1.3: Anecdotal Evidence</h3>
+<p>What is anecdotal evidence?</p>
+<p><br></p>
 </section>
-<section id="results" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Results</h1>
-<p>In this section you will fit your statistical models and display the results.</p>
+<section id="section-2.1.4-sampling-from-a-population" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.1.4-sampling-from-a-population">Section 2.1.4: Sampling from a Population</h3>
+<p>What does it mean for something to be biased?</p>
+<p><br></p>
+<p>How can a sample be biased?</p>
+<p><br></p>
+<p>How are observations sampled when a researcher uses a simple random sample?</p>
+<p><br></p>
+<p>What does it mean for a sample to be “representative” of the population?</p>
+<p><br></p>
+<p>What does it mean for a study to have non-response bias?</p>
+<p><br></p>
+<p>What does it mean for a study to have response bias?</p>
+<p><br></p>
+<p>How are observations sampled when a researcher uses a convenience sample?</p>
+<p><br></p>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes</h4>
 <ul>
-<li>Fit <strong>two</strong> one-way ANOVA models – one model for each categorical explanatory variable.
-<ul>
-<li>These models should use the methods stated in the <strong>Statistical Methods</strong> section.</li>
-</ul></li>
-<li>Obtain the p-value for each hypothesis test.</li>
+<li><p>Someone must first be <em>chosen</em> to be in a study and refuse to participate in order to have <strong>non-response bias</strong>.</p></li>
+<li><p>There must be a valid reason for someone to lie or be untruthful to justify saying <strong>response bias</strong> is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are <strong>predictable</strong> and <strong>systematic</strong> based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.</p></li>
 </ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Simulation-based Method</strong></p>
-<p>This section needs to include:</p>
-<ul>
-<li>a plot of the null distribution (with a nice x-axis label!)</li>
-<li>the computed p-value</li>
-</ul>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:45%;">
-<p><strong>Theory-based Method</strong></p>
-<p>This section needs to include:</p>
-<ul>
-<li>the ANOVA table</li>
-</ul>
-</div>
-</div>
+<p><br></p>
+<p>True or False: Convenience sampling tends to result in non-response bias.</p>
+<p><br></p>
+<p>True or False: Volunteer sampling tends to result in response bias.</p>
+<p><br></p>
 </section>
-<section id="discussion" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Discussion</h1>
-<p>In this section you will write up your findings for your question of interest.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="math inline">\(\alpha\)</span> threshold
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>At the beginning of your analysis</strong>, you must state what <span class="math inline">\(\alpha\)</span> threshold was used to make decisions regarding your hypothesis tests.</p>
-</div>
-</div>
-<ul>
-<li>Based on the p-value from your ANOVA, <strong>state what decision was reached</strong> for the hypothesis in the one-way ANOVA model.</li>
-<li>Based on the decision you made, <strong>state what you can conclude</strong> regarding the relationship between your variables.</li>
-<li>Propose a possible explanation for why these results were observed.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-External Research
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You might need to do a bit of independent research on <em>why</em> you obtained the results you did.</p>
-</div>
-</div>
-<ul>
-<li>Describe whether you believe the tests you performed are “reliable.”
-<ul>
-<li>The trustworthiness of these models depends on the model conditions! You need to check each of the model conditions.</li>
-</ul></li>
-</ul>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Condition violations
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you find through the study design and / or your visualizations that certain model conditions are violated, you are expected to do your best to remedy these violations. If you need help figuring out how to do this, email Dr.&nbsp;Theobold <strong>before</strong> <strong>Friday, May 30 at 4pm</strong>!</p>
-</div>
-</div>
 </section>
-<section id="conclusions" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Conclusions</h1>
-<p>In this section, you will provide a short summary of the key findings of your analysis, and their connection to the broader scientific community.</p>
-<ul>
-<li><p>Based on your visualizations <strong>and</strong> the ANOVA model, what is your conclusion for each of your research questions?</p></li>
-<li><p>What are the implications of this research for science in general?</p>
-<ul>
-<li><p>Based on the sampling methods used, what larger population can you infer the results or your analysis onto?</p></li>
-<li><p>Based on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables. Specifically, can cause-and-effect statements be made?</p></li>
-</ul></li>
-</ul>
-<div class="columns">
-<div class="column" style="width:48%;">
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-What population to infer onto?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your statement needs to include a description of (1) how the data were collected, and (2) the population to whom the results can be applied. You must justify your reasoning for #2 using information from the design of the study.</p>
-<p>Generic statements (e.g., “these observations were representative so we can infer onto the entire population”) are not sufficient. Your description should include a description of <em>why</em> the sample is / is not representative of the population and <em>how</em> that influences the population you can infer the results onto.</p>
-</div>
-</div>
-</div><div class="column" style="width:3%;">
-
-</div><div class="column" style="width:48%;">
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Relationships between Variables
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your statement needs to include a description of (1) how the study was designed, and (2) what statements can be made about the relationship between the variables. You must justify your reasoning for #2 by making direct reference to the variables included in the study.</p>
-<p>Generic statements (e.g., “this was an observational study so we can’t make causal statements”) are not sufficient. Your description should include a description of <em>why</em> the study was observational and <em>why</em> you cannot make causal statements for observational studies.</p>
-</div>
-</div>
-</div>
-</div>
+<section id="section-2.1.5-four-sampling-methods" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.1.5-four-sampling-methods">Section 2.1.5: Four Sampling Methods</h3>
+<p>How are observations sampled when a researcher uses a stratified sampling method?</p>
+<p><br></p>
+<p>What is a strata and how is it used in stratified sampling?</p>
+<p><br></p>
+<p>How are observations sampled when a researcher uses a cluster sampling method?</p>
+<p><br></p>
+<p>How are clusters made in cluster sampling?</p>
+<p><br></p>
+<p>How are clusters similar to and different from strata?</p>
+<p><br></p>
+<p>How are observations sampled when a researcher uses a multistage sampling method?</p>
+<p><br></p>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes</h4>
+<p>Ideally, how should we sample cases from our target population? Using what sampling method?</p>
+<p><br></p>
+<p>True or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.</p>
+<p><br></p>
 </section>
-<section id="submission" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Submission</h1>
-<p>You are expected to submit your rendered HTML file by the deadline. The entirety of the content for your project is expected to be included in your HTML file.</p>
-<p>If you do not submit a first draft by the stated deadline, you will not receive feedback from Dr.&nbsp;Theobold. It is your responsibility to find a time to meet with Dr.&nbsp;Theobold to discuss your project before you submit your final draft.</p>
-<p>If you do not submit a final version of your project by the stated deadline, your grade will be based on your first draft. If you did not submit a first draft, your grade on the project will be an F.</p>
-<!-- Please double check your  -->
-<!-- submission to ensure you've uploaded the correct file to be graded!  -->
-<p>If you do not submit an HTML for the final version of your project because you were unable to render your project, you will receive a one letter grade deduction. Meaning, if you submit a Google Doc or a Word file with your project, you will receive a letter grade deduction in your project grade.</p>
+</section>
+<section id="section-2.2.1-principles-of-experimental-design" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.2.1-principles-of-experimental-design">Section 2.2.1: Principles of Experimental Design</h3>
+<p>What does it me for an experiment to control for a specific variable?</p>
+<p><br></p>
+<p>What is a control and how is it used in an experiment?</p>
+<p><br></p>
+<p>What is randomization and how is it used in an experiment?</p>
+<p><br></p>
+<p>What is a confounding variable?</p>
+<p><br></p>
+<p>What does it mean for an experiment to have replication?</p>
+<p><br></p>
+<p>What is a replicate?</p>
+<p><br></p>
+<p>What is blocking and how is it used in an experiment?</p>
+<p><br></p>
+<p>What are blocks?</p>
+<p><br></p>
+</section>
+<section id="section-2.2.2-reducing-bias-in-human-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.2.2-reducing-bias-in-human-experiments">Section 2.2.2: Reducing Bias in Human Experiments</h3>
+<p>In an experiment, what is a treatment group?</p>
+<p><br></p>
+<p>In an experiment, what is a control group?</p>
+<p><br></p>
+<p>What does it mean for an experiment to be blind?</p>
+<p><br></p>
+<p>What does it mean for an experiment to be double blind?</p>
+<p><br></p>
+<p>What is a placebo effect?</p>
+<p><br></p>
+</section>
+<section id="section-2.3-observational-studies" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.3-observational-studies">Section 2.3: Observational Studies</h3>
+<p>What is a prospective study?</p>
+<p><br></p>
+<p>What is a retrospective study?</p>
+<p><br></p>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes</h4>
+<p>What are the four principles of a well-designed randomized experiment?</p>
+<p><br></p>
+<p>True or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.</p>
+<p><br></p>
+<p>True or False: In order for an experiment to be valid, a placebo must be used.</p>
+<p><br></p>
+<p>True or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.</p>
+<p><br></p>
+<p>True or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1224,18 +1029,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../project/midterm-project/midterm-project-directions.html" class="pagination-link" aria-label="Midterm Project Description">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Midterm Project Description</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../weeks/week-0.html" class="pagination-link" aria-label="Week 0">
-        <span class="nav-page-text">Week 0</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
