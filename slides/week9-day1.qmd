@@ -750,6 +750,18 @@ Did the two methods yield different results?
 What does that imply about the normality condition?
 :::
 
+# Assessing Independence Activity
+
+## With other students analyzing the same data...
+
+- evaluate the *within* group independence condition
+
+- evaluate the *between* group independence condition
+
+</br> 
+
+[Link to activity](../project/final-project/help/assess_independence.qmd)
+
 # Final Project Work Session
 
 ## Introduction & Research Questions
