@@ -710,23 +710,7 @@ Did the two methods yield different results?
 
 ## Introduction & Research Questions
 
-::: columns
-::: {.column width="47%"}
-In 4-6 sentences, introduce / describe your data. 
-
-- What is the context of the data?
-- For what purpose were these data collected?
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="47%"}
-:::{.fragment}
 Outline the [**two**]{.underline} questions your research seeks to address.
 
 - You will have one question for each one-way ANOVA model
 - Your question should be in terms of "differences in group means" not "relationships"
-:::
-:::
-:::

@@ -34,9 +34,10 @@ evals_small <- moderndive::evals %>%
 ## Upcoming Deadlines
 
 -   Lab 7 revisions are due by Friday (by midnight)
--   Lab 8 revisions are due next Wednesday
--   Statistical Critique 2 revisions are due next Wednesday
--   Final revisions on **all** assignments will be accepted until Sunday, June 9
+-   Lab 8 revisions are due next Friday
+-   Statistical Critique 2 revisions are due next Friday
+
+<!-- 1 Additional revision if it was missed? -->
 
 ::: callout-caution
 # Don't forget reflections!
