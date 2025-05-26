@@ -6,9 +6,6 @@ format:
 editor: source
 ---
 
-<!-- change context to the regions in the gapminder dataset which we previously  -->
-<!-- did a regression on! -->
-
 ```{r}
 #| include: false
 #| label: set-up
@@ -18,6 +15,8 @@ library(palmerpenguins)
 library(broom)
 library(ggridges)
 library(infer)
+library(gapminder)
+library(gt)
 
 evals_small <- moderndive::evals %>% 
   group_by(prof_ID) %>% 
@@ -34,11 +33,12 @@ evals_small <- moderndive::evals %>%
   distinct(prof_ID, .keep_all = TRUE) %>% 
   ungroup()
 
-my_theme <- theme(axis.title = element_text(size = 72), 
-        axis.text.y = element_text(size = 18), 
-        axis.text.x = element_text(size = 16)
-        ) +
-  theme_bw()
+my_theme <- theme_bw() + 
+  theme(axis.text.y = element_text(size = 18), 
+        axis.text.x = element_text(size = 16), 
+        plot.title = element_text(size = 24), 
+        axis.title.x = element_text(size = 18)
+        ) 
 ```
 
 ## Lab 7 Recap
@@ -70,7 +70,7 @@ my_theme <- theme(axis.title = element_text(size = 72),
 
 :::{.small}
 - Methods (Data visualizations)
-- Findings (Data analysis)
+- Results (Data analysis)
 :::
 
 . . .
@@ -78,38 +78,128 @@ my_theme <- theme(axis.title = element_text(size = 72),
 **Step 3** - Due by Sunday
 
 :::{.small}
-- Study Limitations
+- Discussion
 - Conclusion
 :::
 
 # One-Way ANOVA
 
-##
+. . .
 
-::: {style="font-size: 2.5em; color: #000000;"}
-Before...
+Compares the means of three of more groups to detect if the means of the groups
+are different.
+
+## Two "Flavors" of ANOVA
+
+In my mind, there are two different options for incorporating an ANOVA into 
+your analysis. 
+
+. . .
+
+::: columns
+::: {.column width="40%"}
+**Option 1:**
+
+::: {.midi}
+There is a *categorical* variable with 3+ groups that you would like to use for
+your regression. 
 :::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+::: {.fragment}
+**Option 2:**
+
+::: {.midi}
+There is a *numerical* variable that you would like to use to create 3+ groups
+to incorporate into your regression. 
+:::
+:::
+:::
+:::
+
+. . .
+
+</br> 
+
+Let's check out what I mean! 
+
+<!-- change context to the regions in the gapminder dataset which we previously  -->
+<!-- did a regression on! -->
+
+## Categorical Variable 
+
+::: {.midi}
+```{r}
+#| echo: true
+#| label: gapminder-filter
+#| code-line-numbers: false
+
+gapminder2007 <- gapminder %>%
+  filter(year == 2007) %>%
+  select(country, lifeExp, continent, gdpPercap)
+```
+:::
+
+::: {.small}
+::: {.callout-tip}
+# Independence Violations
+
+In Lab 8 you should have found that each country has *multiple* observations, 
+which [are not]{.underline} independent. One way to get around this is to 
+`filter()` the data to only use *one* year. 
+:::
+:::
+
+. . .
+
+::: {.midi}
+```{r}
+#| echo: true
+#| label: gapminder-countries
+#| code-line-numbers: false
+#| output-location: column
+
+distinct(gapminder2007, 
+         continent)
+```
+:::
+
+## Discretizing a Continuous Variable
+
 
 ```{r}
 #| echo: false
 #| label: slr
+#| fig-align: center
 
 ggplot(data = evals_small, 
        mapping = aes(x = age, y = min_eval)) + 
   geom_jitter() + 
   geom_smooth(method = "lm") +
-  labs(x = "", 
+  labs(x = "Age of Faculty Member", 
        y = "", 
-       title = "Relationship between faculty's age and their minimum evaluation score") +
+       title = "Minimum Evaluation Scores Decrease as Faculty Age") +
   my_theme +
   scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
-## 
+. . .
 
-::: {style="font-size: 2.5em; color: #000000;"}
-Now...
+::: {.small}
+::: {.callout-tip}
+# Independence Violations
+
+Last week we noticed that there are *multiple* observations for each faculty
+member which [are not]{.underline} independent. One way to get around this is to
+*collapse* these multiple observations into a *single* number. 
 :::
+:::
+
+## Now...
 
 ```{r}
 #| echo: false
@@ -120,30 +210,18 @@ ggplot(data = evals_small,
   geom_jitter(width = 0.1) + 
   labs(x = "", 
        y = "", 
-       title = "Minimum Evaluation Scores for Faculty of Different Age Groups") +
+       title = "Minimum Evaluation Scores Across Faculty Ages") +
   my_theme +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
+  scale_y_continuous(breaks = seq(from = 1.5, to = 5, by = 0.5))
 ```
 
-# Why?
+# Carrying out an ANOVA
 
-##  {background-color="#B6CADA"}
-
-::: {style="font-size: 4em; color: #000000;"}
-Goal of an ANOVA
-:::
-
-Analysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different.
-
-## 
-
-::: {style="font-size: 4em; color: #B6CADA;"}
-**How???**
-:::
+## Steps for an ANOVA
 
 -   Compare how different a group of means are
 -   Scale the differences relative to the variability of the groups
--   Summarize the differences with one number
+-   Summarize the differences with one number (an F-statistic)
 
 # Visualizations for an ANOVA
 
@@ -154,17 +232,18 @@ We want visualizations that allow for us to easily compare:
 -   the center (mean) of the groups
 -   the spread (variability) of the groups
 
-## 
+## Step 1: Compare your groups
 
 ```{r}
 #| echo: false
 #| out-width: 70%
 #| label: age-cat-density
+#| fig-align: center
 
 ggplot(data = evals_small, 
        mapping = aes(y = age_cat, x = min_eval)) + 
   geom_density_ridges() + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+  labs(title = "Minimum Evaluation Scores Across Faculty Ages", 
        y = "",
        x = "") +
   my_theme +
@@ -188,41 +267,13 @@ What can you say about the variability *within* the age groups?
 :::
 :::
 
-# Carrying out an ANOVA
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 1: Compare your groups
-:::
-
-<!-- ![](images/groups.png) -->
-
-```{r}
-#| echo: false
-#| out-width: 70%
-#| label: compare-groups
-
-ggplot(data = evals_small, 
-       mapping = aes(x = age_cat, y = min_eval)) + 
-  geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
-       y = "",
-       x = "") +
-  my_theme +
-  scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
-```
-
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 2: Find the overall mean
-:::
+## Step 2: Find the overall mean
 
 ```{r}
 #| echo: false
 #| out-width: 70%
 #| label: overall-mean
+#| fig-align: center
 
 overall_mean <- summarise(evals_small, 
                           mean = mean(min_eval)
@@ -233,7 +284,7 @@ ggplot(data = evals_small,
        mapping = aes(y = min_eval, x = "c")) + 
   geom_jitter(width = 0.2) + 
   geom_hline(yintercept = overall_mean, color = "red", lwd = 2) +
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+  labs(title = "Minimum Evaluation Scores Across Faculty Ages", 
        y = "",
        x = "") +
   my_theme +
@@ -242,24 +293,19 @@ ggplot(data = evals_small,
   scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
-<!-- ![](images/overall_mean.png) -->
-
 . . .
 
 ::: {style="font-size: 1.25em; color: #ed8402;"}
 This ignores the groups and finds [one]{.underline} mean for every observation!
 :::
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 3: Find the group means
-:::
+## Step 3: Find the group means
 
 ```{r}
 #| echo: false
 #| out-width: 70%
 #| label: group-means
+#| fig-align: center
 
 group_means <- evals_small %>% 
   group_by(age_cat) %>% 
@@ -272,7 +318,7 @@ group_means <- evals_small %>%
 ggplot(data = evals_small, 
        mapping = aes(x = age_cat, y = min_eval)) + 
   geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+  labs(title = "Minimum Evaluation Scores Across Faculty Ages", 
        y = "",
        x = "") +
   my_theme +
@@ -286,21 +332,18 @@ ggplot(data = evals_small,
   scale_y_continuous(breaks = seq(from = 2, to = 5, by = 0.5))
 ```
 
-## 
-
-::: {style="font-size: 2em; color: #000000;"}
-Step 4: Calculate the sum of squares *between* groups
-:::
+## Step 4: Calculate the sum of squares *between* groups
 
 ```{r}
 #| echo: false
 #| out-width: 70%
 #| label: sum-of-squares
+#| fig-align: center
 
 ggplot(data = evals_small, 
        mapping = aes(x = age_cat, y = min_eval)) + 
   geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+  labs(title = "Minimum Evaluation Scores Across Faculty Ages", 
        y = "",
        x = "") +
   my_theme +
@@ -328,11 +371,12 @@ Step 5: Calculate the sum of squares *within* groups
 #| echo: false
 #| out-width: 70%
 #| label: sum-of-squares-2
+#| fig-align: center
 
 ggplot(data = evals_small, 
        mapping = aes(x = age_cat, y = min_eval)) + 
   geom_jitter(width = 0.1) + 
-  labs(title = "Minimum Evaluation Scores for Faculty of Different Age Groups", 
+  labs(title = "Minimum Evaluation Scores Across Faculty Ages", 
        y = "",
        x = "") +
   my_theme +
@@ -374,7 +418,8 @@ Step 7: Find the p-value
 **F-distribution**
 :::
 
-An $F$-distribution is a variant of the $t$-distribution, and is also defined by degrees of freedom.
+An $F$-distribution is a variant of the $t$-distribution, and is also defined by
+degrees of freedom.
 
 . . .
 
@@ -383,38 +428,18 @@ An $F$-distribution is a variant of the $t$-distribution, and is also defined by
 This distribution is defined by **two** different degrees of freedom:
 
 :::{.small}
-1.  from the numerator (MSG) : $k$ (number of groups) $- 1$
-2.  from the denominator (MSE) : $n$ (number of observations) $- k$ 
+1.  from the numerator (MSG) : $k$ (number of groups)  $- 1$
+2.  from the denominator (MSE) : $n$ (number of observations)  $- k$ 
 :::
 
-## 
+## Exploring Different F-distributions
 
-::: {style="font-size: 2em; color: #000000;"}
-Two degrees of freedom!
-:::
+Let's play around and see how these two degrees of freedom change the shape of
+the F-distribution:
 
-</br>
+</br> 
 
-::: columns
-::: {.column width="45%"}
-:::{.small}
-Changing the numerator degrees of freedom
-:::
-
-![](images/f_num_df.png)
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="45%"}
-:::{.small}
-Changing the denominator degrees of freedom
-:::
-
-![](images/f_denom_df.png)
-:::
-:::
+[Link to Applet on F-distributions](https://dcmpdatatools.utdanacenter.org/fdist/#:~:text=Explore%20how%20the%20shape%20of,Download%20Graph) 
 
 ##  
 
@@ -553,7 +578,6 @@ How could we use cards to simulate what minimum evaluation score a professor wou
 
 ```{r null-dist}
 #| echo: true
-#| cache: true
 #| label: null-dist
 
 null_dist <- evals_small %>% 
@@ -646,7 +670,7 @@ What would you conclude regarding the mean minimum evaluation score for differen
 
 ## Large p-values $\neq$ evidence for the null hypothesis! 
 
-![](images/No evidence against the null.png)
+![](images/simpsons-p-value.jpeg){fig-alt="Four-panel meme from The Simpsons. In the first panel, a character says 'If p-value is greater than significance level, you can't reject the null hypothesis'. In the second panel, Principal Skinner replies 'yes'. In the third panel, the first character asks 'So you accept it'. In the fourth panel, Skinner responds with a firm 'no'. The meme highlights the common misunderstanding that failing to reject the null hypothesis means accepting it."}
 
 
 # What if we didn't believe the normality condition was violated?
@@ -656,26 +680,40 @@ What would you conclude regarding the mean minimum evaluation score for differen
 ```{r}
 #| echo: true
 #| eval: false
-#| label: aov-code
+#| label: anova-code
 
-aov(min_eval ~ age_cat, 
-    data = evals_small)  %>% 
+eval_lm <- lm(min_eval ~ age_cat, data = evals_small)
+
+anova(eval_lm) |> 
   tidy()
 ```
 
 ```{r}
-#| label: aov-output
+#| label: anova-output
 
-aov(min_eval ~ age_cat, 
-    data = evals_small)  %>% 
-  tidy()
+eval_lm <- lm(min_eval ~ age_cat, data = evals_small)
+
+anova(eval_lm) |> 
+  tidy() |> 
+  gt() |> 
+  tab_style(
+    style = cell_text(size = px(24)),
+    locations = list(
+      cells_body(),
+      cells_column_labels()
+    )
+  ) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  )
 ```
 
 . . .
 
 </br>
 
-How was the `statistic` calculated?
+Is this the same `statistic` as before? 
 
 . . .
 
@@ -702,8 +740,14 @@ What would you conclude regarding the mean minimum evaluation score for differen
 
 ##  {background-color="#B6CADA"}
 
-::: {style="font-size: 3em; color: #0F4C81;"}
+::: {style="font-size: 2.5em; color: #0F4C81;"}
 Did the two methods yield different results?
+:::
+
+. . .
+
+::: {style="font-size: 1.5em;"}
+What does that imply about the normality condition?
 :::
 
 # Final Project Work Session
@@ -713,4 +757,5 @@ Did the two methods yield different results?
 Outline the [**two**]{.underline} questions your research seeks to address.
 
 - You will have one question for each one-way ANOVA model
-- Your question should be in terms of "differences in group means" not "relationships"
+- Your question should be in terms of "differences in group means" not 
+"relationships"

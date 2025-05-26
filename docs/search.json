@@ -553,127 +553,127 @@
     "objectID": "slides/week9-day1.html#lab-7-recap",
     "href": "slides/week9-day1.html#lab-7-recap",
     "title": "ANalysis Of VAriance",
-    "section": "",
-    "text": "Question 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
+    "section": "Lab 7 Recap",
+    "text": "Lab 7 Recap\nQuestion 6 (Bootstrap Distribution):\n\nDid not use an informative axis label\n\n\nQuestion 8 (Interpret Confidence Interval):\n\nDid not include population in interpretation\nStated interval was about “all marshes” (no geographical information)"
   },
   {
     "objectID": "slides/week9-day1.html#final-project-first-draft",
     "href": "slides/week9-day1.html#final-project-first-draft",
     "title": "ANalysis Of VAriance",
     "section": "Final Project First Draft",
-    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nFindings (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nStudy Limitations\nConclusion"
+    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nResults (Data analysis)\n\n\n\n\nStep 3 - Due by Sunday\n\n\nDiscussion\nConclusion"
   },
   {
     "objectID": "slides/week9-day1.html#section",
     "href": "slides/week9-day1.html#section",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Before…"
+    "text": "Step 5: Calculate the sum of squares within groups"
   },
   {
     "objectID": "slides/week9-day1.html#section-1",
     "href": "slides/week9-day1.html#section-1",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Now…"
+    "text": "Step 6: Calculate the F-statistic"
   },
   {
     "objectID": "slides/week9-day1.html#section-2",
     "href": "slides/week9-day1.html#section-2",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Goal of an ANOVA\n\nAnalysis of variance (ANOVA) compares the means of three of more groups to detect if the means of the groups are different."
+    "text": "Step 7: Find the p-value"
   },
   {
     "objectID": "slides/week9-day1.html#section-3",
     "href": "slides/week9-day1.html#section-3",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "How???\n\n\nCompare how different a group of means are\nScale the differences relative to the variability of the groups\nSummarize the differences with one number"
+    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
   },
   {
     "objectID": "slides/week9-day1.html#section-4",
     "href": "slides/week9-day1.html#section-4",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": ". . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+    "text": "Do you always use an F-distribution to get the p-value?\n\n\n\n\nNO!"
   },
   {
     "objectID": "slides/week9-day1.html#section-5",
     "href": "slides/week9-day1.html#section-5",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 1: Compare your groups"
+    "text": "What do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#section-6",
     "href": "slides/week9-day1.html#section-6",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 2: Find the overall mean\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nThis ignores the groups and finds one mean for every observation!"
+    "text": "Did the two methods yield different results?\n\n\n\nWhat does that imply about the normality condition?"
   },
   {
     "objectID": "slides/week9-day1.html#section-7",
     "href": "slides/week9-day1.html#section-7",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 3: Find the group means"
+    "text": "Did the two methods yield different results?"
   },
   {
     "objectID": "slides/week9-day1.html#section-8",
     "href": "slides/week9-day1.html#section-8",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 4: Calculate the sum of squares between groups"
+    "text": "What do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#section-9",
     "href": "slides/week9-day1.html#section-9",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 5: Calculate the sum of squares within groups"
+    "text": "Did the two methods yield different results?"
   },
   {
     "objectID": "slides/week9-day1.html#section-10",
     "href": "slides/week9-day1.html#section-10",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 6: Calculate the F-statistic"
+    "text": "Two degrees of freedom!\n\n\n\n\n\nChanging the numerator degrees of freedom\n\n\n\n\n\n\nChanging the denominator degrees of freedom"
   },
   {
     "objectID": "slides/week9-day1.html#section-11",
     "href": "slides/week9-day1.html#section-11",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Step 7: Find the p-value"
+    "text": "Do you always use an F-distribution to get the p-value?\n\n\n\n\nNO!"
   },
   {
     "objectID": "slides/week9-day1.html#section-12",
     "href": "slides/week9-day1.html#section-12",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n. . .\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
+    "text": "What do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#section-13",
     "href": "slides/week9-day1.html#section-13",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Two degrees of freedom!\n\n\n\n\n\nChanging the numerator degrees of freedom\n\n\n\n\n\n\nChanging the denominator degrees of freedom"
+    "text": "Did the two methods yield different results?"
   },
   {
     "objectID": "slides/week9-day1.html#section-14",
     "href": "slides/week9-day1.html#section-14",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Do you always use an F-distribution to get the p-value?\n\n. . .\n\n\nNO!"
+    "text": "What do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#conditions-of-an-anova",
     "href": "slides/week9-day1.html#conditions-of-an-anova",
     "title": "ANalysis Of VAriance",
     "section": "Conditions of an ANOVA",
-    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
+    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
   },
   {
     "objectID": "slides/week9-day1.html#choosing-a-method",
@@ -687,7 +687,7 @@
     "href": "slides/week9-day1.html#section-15",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": ". . .\n\nWhat do you think? Which method should we use?"
+    "text": "Did the two methods yield different results?"
   },
   {
     "objectID": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
@@ -701,7 +701,7 @@
     "href": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Simulating what could have happened under \\(H_0\\)",
-    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n. . .\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
+    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
   },
   {
     "objectID": "slides/week9-day1.html#another-permutation-distribution",
@@ -715,7 +715,7 @@
     "href": "slides/week9-day1.html#another-permutation-distribution-1",
     "title": "ANalysis Of VAriance",
     "section": "Another Permutation Distribution",
-    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
+    "text": "Another Permutation Distribution\n\n\n\nWhy doesn’t the distribution have negative numbers?"
   },
   {
     "objectID": "slides/week9-day1.html#visualizing-the-p-value",
@@ -736,7 +736,7 @@
     "href": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
     "title": "ANalysis Of VAriance",
     "section": "Making a Decision & Reaching a Conclusion",
-    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.255, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
+    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.231, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
   },
   {
     "objectID": "slides/week9-day1.html#large-p-values-neq-evidence-for-the-null-hypothesis",
@@ -750,7 +750,7 @@
     "href": "slides/week9-day1.html#theory-based-methods",
     "title": "ANalysis Of VAriance",
     "section": "Theory-based Methods",
-    "text": "Theory-based Methods\n\naov(min_eval ~ age_cat, \n    data = evals_small)  %&gt;% \n  tidy()\n\n\n\n# A tibble: 2 × 6\n  term         df sumsq meansq statistic p.value\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 age_cat       3  1.24  0.414      1.41   0.244\n2 Residuals    90 26.4   0.293     NA     NA    \n\n\n. . .\n\nHow was the statistic calculated?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
+    "text": "Theory-based Methods\n\neval_lm &lt;- lm(min_eval ~ age_cat, data = evals_small)\n\nanova(eval_lm) |&gt; \n  tidy()\n\n\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nage_cat\n3\n1.24198\n0.4139932\n1.412556\n0.2443174\n\n\nResiduals\n90\n26.37728\n0.2930808\nNA\nNA\n\n\n\n\n\n\n\n\n\nIs this the same statistic as before?\n\n\nWhat distribution was used to calculate the p.value?"
   },
   {
     "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
@@ -771,7 +771,7 @@
     "href": "slides/week9-day1.html#introduction-research-questions",
     "title": "ANalysis Of VAriance",
     "section": "Introduction & Research Questions",
-    "text": "Introduction & Research Questions\n\n\nIn 4-6 sentences, introduce / describe your data.\n\nWhat is the context of the data?\nFor what purpose were these data collected?\n\n\n\n\n\nOutline the two questions your research seeks to address.\n\nYou will have one question for each one-way ANOVA model\nYour question should be in terms of “differences in group means” not “relationships”"
+    "text": "Introduction & Research Questions\nOutline the two questions your research seeks to address.\n\nYou will have one question for each one-way ANOVA model\nYour question should be in terms of “differences in group means” not “relationships”"
   },
   {
     "objectID": "slides/week8-day1.html#common-mistakes",
@@ -5910,5 +5910,75 @@
     "title": "Week 6 Reading Guide Part 2 – Study Design",
     "section": "",
     "text": "What is a population?\n\nIf a census was performed, how were observations sampled?\n\nHow is a sample different from a population?\n\n\n\n\nWhat is a statistic?\n\nWhat is a parameter?\n\nWhat is the relationship between a statistic and a parameter?\n\n\n\n\nWhat is anecdotal evidence?\n\n\n\n\nWhat does it mean for something to be biased?\n\nHow can a sample be biased?\n\nHow are observations sampled when a researcher uses a simple random sample?\n\nWhat does it mean for a sample to be “representative” of the population?\n\nWhat does it mean for a study to have non-response bias?\n\nWhat does it mean for a study to have response bias?\n\nHow are observations sampled when a researcher uses a convenience sample?\n\n\n\n\nSomeone must first be chosen to be in a study and refuse to participate in order to have non-response bias.\nThere must be a valid reason for someone to lie or be untruthful to justify saying response bias is present. Yes, anyone could lie at any time to any question. Response bias is when those lies are predictable and systematic based on outside influences. An example would be surveying Cal Poly students and asking them if they have ever driven drunk.\n\n\nTrue or False: Convenience sampling tends to result in non-response bias.\n\nTrue or False: Volunteer sampling tends to result in response bias.\n\n\n\n\n\nHow are observations sampled when a researcher uses a stratified sampling method?\n\nWhat is a strata and how is it used in stratified sampling?\n\nHow are observations sampled when a researcher uses a cluster sampling method?\n\nHow are clusters made in cluster sampling?\n\nHow are clusters similar to and different from strata?\n\nHow are observations sampled when a researcher uses a multistage sampling method?\n\n\n\nIdeally, how should we sample cases from our target population? Using what sampling method?\n\nTrue or False: Random sampling helps to resolve selection bias, but has no impact on non-response or response bias.\n\n\n\n\n\nWhat does it me for an experiment to control for a specific variable?\n\nWhat is a control and how is it used in an experiment?\n\nWhat is randomization and how is it used in an experiment?\n\nWhat is a confounding variable?\n\nWhat does it mean for an experiment to have replication?\n\nWhat is a replicate?\n\nWhat is blocking and how is it used in an experiment?\n\nWhat are blocks?\n\n\n\n\nIn an experiment, what is a treatment group?\n\nIn an experiment, what is a control group?\n\nWhat does it mean for an experiment to be blind?\n\nWhat does it mean for an experiment to be double blind?\n\nWhat is a placebo effect?\n\n\n\n\nWhat is a prospective study?\n\nWhat is a retrospective study?\n\n\n\nWhat are the four principles of a well-designed randomized experiment?\n\nTrue or False: Observational studies can show an association between two variables, but cannot determine a causal relationship.\n\nTrue or False: In order for an experiment to be valid, a placebo must be used.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias is suspected, results from the sample can be generalized to the entire target population.\n\nTrue or False: If random sampling of the target population is used, and no other types of bias are suspected, results from the sample can be inferred as a causal relationship between the explanatory and response variables."
+  },
+  {
+    "objectID": "slides/week9-day1.html#two-flavors-of-anova",
+    "href": "slides/week9-day1.html#two-flavors-of-anova",
+    "title": "ANalysis Of VAriance",
+    "section": "Two “Flavors” of ANOVA",
+    "text": "Two “Flavors” of ANOVA\nIn my mind, there are two different options for incorporating an ANOVA into your analysis.\n\n\n\nOption 1:\n\nThere is a categorical variable with 3+ groups that you would like to use for your regression.\n\n\n\n\n\nOption 2:\n\nThere is a numerical variable that you would like to use to create 3+ groups to incorporate into your regression.\n\n\n\n\n\n\nLet’s check out what I mean!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#discretizing-a-continuous-variable",
+    "href": "slides/week9-day1.html#discretizing-a-continuous-variable",
+    "title": "ANalysis Of VAriance",
+    "section": "Discretizing a Continuous Variable",
+    "text": "Discretizing a Continuous Variable\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\nLast week we noticed that there are multiple observations for each faculty member which are not independent. One way to get around this is to collapse these multiple observations into a single number."
+  },
+  {
+    "objectID": "slides/week9-day1.html#categorical-variable",
+    "href": "slides/week9-day1.html#categorical-variable",
+    "title": "ANalysis Of VAriance",
+    "section": "Categorical Variable",
+    "text": "Categorical Variable\n\n\ngapminder2007 &lt;- gapminder %&gt;%\n  filter(year == 2007) %&gt;%\n  select(country, lifeExp, continent, gdpPercap)\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\nIn Lab 8 you should have found that each country has multiple observations, which are not independent. One way to get around this is to filter() the data to only use one year.\n\n\n\n\n\n\n\n\ndistinct(gapminder2007, \n         continent)\n\n\n# A tibble: 5 × 1\n  continent\n  &lt;fct&gt;    \n1 Asia     \n2 Europe   \n3 Africa   \n4 Americas \n5 Oceania"
+  },
+  {
+    "objectID": "slides/week9-day1.html#steps-for-an-anova",
+    "href": "slides/week9-day1.html#steps-for-an-anova",
+    "title": "ANalysis Of VAriance",
+    "section": "Steps for an ANOVA",
+    "text": "Steps for an ANOVA\n\nCompare how different a group of means are\nScale the differences relative to the variability of the groups\nSummarize the differences with one number (an F-statistic)"
+  },
+  {
+    "objectID": "slides/week9-day1.html#now",
+    "href": "slides/week9-day1.html#now",
+    "title": "ANalysis Of VAriance",
+    "section": "Now…",
+    "text": "Now…"
+  },
+  {
+    "objectID": "slides/week9-day1.html#step-1-compare-your-groups",
+    "href": "slides/week9-day1.html#step-1-compare-your-groups",
+    "title": "ANalysis Of VAriance",
+    "section": "Step 1: Compare your groups",
+    "text": "Step 1: Compare your groups\n\n\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#step-2-find-the-overall-mean",
+    "href": "slides/week9-day1.html#step-2-find-the-overall-mean",
+    "title": "ANalysis Of VAriance",
+    "section": "Step 2: Find the overall mean",
+    "text": "Step 2: Find the overall mean\n\n\n\nThis ignores the groups and finds one mean for every observation!"
+  },
+  {
+    "objectID": "slides/week9-day1.html#step-3-find-the-group-means",
+    "href": "slides/week9-day1.html#step-3-find-the-group-means",
+    "title": "ANalysis Of VAriance",
+    "section": "Step 3: Find the group means",
+    "text": "Step 3: Find the group means"
+  },
+  {
+    "objectID": "slides/week9-day1.html#step-4-calculate-the-sum-of-squares-between-groups",
+    "href": "slides/week9-day1.html#step-4-calculate-the-sum-of-squares-between-groups",
+    "title": "ANalysis Of VAriance",
+    "section": "Step 4: Calculate the sum of squares between groups",
+    "text": "Step 4: Calculate the sum of squares between groups"
+  },
+  {
+    "objectID": "slides/week9-day1.html#exploring-different-f-distributions",
+    "href": "slides/week9-day1.html#exploring-different-f-distributions",
+    "title": "ANalysis Of VAriance",
+    "section": "Exploring Different F-distributions",
+    "text": "Exploring Different F-distributions\nLet’s play around and see how these two degrees of freedom change the shape of the F-distribution:\n\nLink to Applet on F-distributions"
   }
 ]
