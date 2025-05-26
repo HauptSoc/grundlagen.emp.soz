@@ -5469,7 +5469,7 @@
     "href": "slides/week9-day2.html#upcoming-deadlines",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Wednesday\nStatistical Critique 2 revisions are due next Wednesday\nFinal revisions on all assignments will be accepted until Sunday, June 9\n\n\n\n\n\n\n\nDon’t forget reflections!"
+    "text": "Upcoming Deadlines\n\nLab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
   },
   {
     "objectID": "slides/week9-day2.html#common-mistakes",
@@ -5490,14 +5490,14 @@
     "href": "slides/week9-day2.html#choosing-a-statistical-model",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Choosing a Statistical Model",
-    "text": "Choosing a Statistical Model\n\nEveryone will fit two one-way ANOVA models — one model for each explanatory variable!\n\n\n\nYou will need to choose whether to use a theory-based method or a simulation-based method.\nYour choice is based on the model conditions — specifically the normality condition.\n\nThe density ridge plots can be used to check the normality and equal variance conditions.\nThe study design should be used to check the independence condition."
+    "text": "Choosing a Statistical Model\n\nEveryone will fit two one-way ANOVA models — one model for each explanatory variable!\n\n\n\nYou will need to choose whether to use a theory-based method or a simulation-based method.\nYour choice is based on the normality condition."
   },
   {
     "objectID": "slides/week9-day2.html#theory-based-method",
     "href": "slides/week9-day2.html#theory-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Theory-based Method",
-    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- aov(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
+    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- lm(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\nanova(my_model) %&gt;%\n  tidy()\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
   },
   {
     "objectID": "slides/week9-day2.html#simulation-based-method",
@@ -5518,7 +5518,7 @@
     "href": "slides/week9-day2.html#two-way-anova",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Two-way ANOVA",
-    "text": "Two-way ANOVA\n\n\n\nPicking joint bandwidth of 0.25"
+    "text": "Two-way ANOVA"
   },
   {
     "objectID": "slides/week9-day2.html#code-for-plot",
@@ -5980,5 +5980,40 @@
     "title": "ANalysis Of VAriance",
     "section": "Exploring Different F-distributions",
     "text": "Exploring Different F-distributions\nLet’s play around and see how these two degrees of freedom change the shape of the F-distribution:\n\nLink to Applet on F-distributions"
+  },
+  {
+    "objectID": "slides/week9-day2.html#discussion-a-new-component",
+    "href": "slides/week9-day2.html#discussion-a-new-component",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Discussion – A New Component",
+    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
+  },
+  {
+    "objectID": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
+    "href": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Do you want to know the sample size in each group?",
+    "text": "Do you want to know the sample size in each group?\n\n\nevals_small %&gt;%\n  count(age_cat) \n\n\n# A tibble: 4 × 2\n  age_cat            n\n  &lt;fct&gt;          &lt;int&gt;\n1 Young faculty     18\n2 Middle age        22\n3 Older faculty     40\n4 Nearly retired    14\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nThe constant variance condition is really important when the sample sizes of each group are quite different."
+  },
+  {
+    "objectID": "slides/week9-day2.html#do-you-want-to-change-the-grey-background-of-your-plots",
+    "href": "slides/week9-day2.html#do-you-want-to-change-the-grey-background-of-your-plots",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Do you want to change the grey background of your plots?",
+    "text": "Do you want to change the grey background of your plots?\n\nggplot(data = evals_small, \n       mapping = aes(y = age_cat, x = min_eval)) + \n  geom_density_ridges() + \n  labs(title = \"Minimum Evaluation Scores Across Faculty Ages\", \n       y = \"\",\n       x = \"\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/week9-day2.html#do-you-want-to-know-the-variances-for-each-group",
+    "href": "slides/week9-day2.html#do-you-want-to-know-the-variances-for-each-group",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Do you want to know the variances for each group?",
+    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
+  },
+  {
+    "objectID": "slides/week9-day2.html#do-you-want-to-change-the-grey-background-of-your-plots-output",
+    "href": "slides/week9-day2.html#do-you-want-to-change-the-grey-background-of-your-plots-output",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Do you want to change the grey background of your plots?",
+    "text": "Do you want to change the grey background of your plots?"
   }
 ]

@@ -3,7 +3,7 @@ title: "Week 10: Two-way ANOVA"
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
 ```{r}
@@ -35,6 +35,34 @@ hbr_maples_small <- bind_rows(hbr_maples_w1,
   mutate(year_cat = as.factor(year)
          ) 
 ```
+
+# Lab 8 Recap
+
+## Common Mistakes
+
+</br>
+
+:::{.small}
+**Questions 1 & 2** -- Your axis labels should contain units and indicate if your variables were transformed! 
+
+</br>
+
+:::{.fragment}
+**Question 6** -- Equal variance is not about equal points above and below the line! 
+:::
+
+</br>
+
+:::{.fragment}
+**Question 11** -- Your hypothesis test decision should state what $\alpha$ was used!
+:::
+
+</br>
+
+:::{.fragment}
+**Question 15** -- Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions. 
+:::
+:::
 
 # Week 10
 
@@ -74,8 +102,8 @@ Assess if [multiple]{.underline} categorical variables have a relationship with 
 
 ## Modeling Options
 
-::: columns
-::: {.column width="50%"}
+::::::::: columns
+::::: {.column width="50%"}
 ::: {style="font-size: 1.25em; color: #ed8402;"}
 Additive Model
 :::
@@ -83,9 +111,9 @@ Additive Model
 ::: fragment
 Each explanatory variable has a meaningful relationship with the response, conditional on the variable(s) included in the model.
 :::
-:::
+:::::
 
-::: {.column width="50%"}
+::::: {.column width="50%"}
 ::: {style="font-size: 1.25em; color: #0F4C81;"}
 Interaction Model
 :::
@@ -93,8 +121,8 @@ Interaction Model
 ::: fragment
 The relationship between one categorical explanatory variable and the response **differs** based on the values of another categorical variable.
 :::
-:::
-:::
+:::::
+:::::::::
 
 ## What are we looking for?
 
@@ -351,13 +379,13 @@ Did we get the same p-values as before?
 
 Similar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.
 
-::: incremental
+:::: incremental
 ::: small
 -   The p-value for each variable is conditional on the variable(s) that came *before* it.
 -   The p-value for `elevation` is conditional on `watershed` being included in the model
 -   The p-value for `watershed` is conditional on...nothing.
 :::
-:::
+::::
 
 . . .
 
@@ -424,13 +452,13 @@ Anova(water_elev_lm, type = "III") %>%
 
 </br>
 
-::: {style="text-align: center;"}
+:::: {style="text-align: center;"}
 **What do you think the is the `elevation` line testing?**
 
 ::: fragment
 **What would you decide?**
 :::
-:::
+::::
 
 ## Keeping "Non-significant" Variables
 
@@ -450,29 +478,29 @@ Even "non-significant" variables explain some amount of the variation in the res
 
 ## Hypothesis Test Steps
 
-::: columns
-::: {.column width="35%"}
+:::::::::: columns
+:::: {.column width="35%"}
 ::: {style="font-size: 1.25em;"}
 Step 1: Fit a one-way ANOVA model for each categorical variable
 :::
-:::
+::::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="60%"}
-::: fragment
+:::::: {.column width="60%"}
+:::: fragment
 ::: {style="font-size: 1.25em; color: #0F4C81;"}
 Step 2: Decide if each explanatory variable has a meaningful relationship with the response variable
 :::
-:::
+::::
 
 ::: fragment
 -   If yes, then go to Step 3!
 -   If no, then report which variable (if any) has the strongest relationship with the response.
 :::
-:::
-:::
+::::::
+::::::::::
 
 ## Step 3 -- Fit an Additive Two-way ANOVA
 

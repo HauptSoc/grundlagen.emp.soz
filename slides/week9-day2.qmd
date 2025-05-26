@@ -13,8 +13,8 @@ editor: source
 library(tidyverse)
 library(broom)
 library(ggridges)
-library(RColorBrewer)
 library(lterdatasampler)
+library(gt)
 
 evals_small <- moderndive::evals %>% 
   group_by(prof_ID) %>% 
@@ -28,7 +28,8 @@ evals_small <- moderndive::evals %>%
                                      "Older faculty", "Nearly retired")
                           )
          ) %>% 
-  distinct(prof_ID, .keep_all = TRUE) 
+  distinct(prof_ID, .keep_all = TRUE) |> 
+  ungroup()
 ```
 
 ## Upcoming Deadlines
@@ -40,35 +41,13 @@ evals_small <- moderndive::evals %>%
 <!-- 1 Additional revision if it was missed? -->
 
 ::: callout-caution
-# Don't forget reflections!
-:::
+# One Round of Revisions
 
-# Lab 8 Recap
+There is only time for **one** round of revisions for Lab 8 and Stat Critique 
+#2, so please make sure you feel confident in your revisions! Feel free to 
+stop by my office or schedule a time to chat about your revisions! 
 
-## Common Mistakes
-
-</br>
-
-:::{.small}
-**Questions 1 & 2** -- Your axis labels should contain units and indicate if your variables were transformed! 
-
-</br>
-
-:::{.fragment}
-**Question 6** -- Equal variance is not about equal points above and below the line! 
-:::
-
-</br>
-
-:::{.fragment}
-**Question 11** -- Your hypothesis test decision should state what $\alpha$ was used!
-:::
-
-</br>
-
-:::{.fragment}
-**Question 15** -- Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions. 
-:::
+Also, please **don't forget reflections**!
 :::
 
 # Coding a One-way ANOVA
@@ -103,9 +82,7 @@ Everyone will fit **two** one-way ANOVA models --- one model for each explanator
 :::{.incremental}
 :::{.small}
 - You will need to choose whether to use a theory-based method or a simulation-based method. 
-- Your choice is based on the model conditions --- specifically the normality condition. 
-  * The density ridge plots can be used to check the normality and equal variance conditions. 
-  * The study design should be used to check the independence condition. 
+- Your choice is based on the normality condition. 
 :::
 :::
 
@@ -121,8 +98,12 @@ To fit a theory-based ANOVA, you use the following code:
 #| echo: true
 #| code-line-numbers: false
 
-my_model <- aov(<NAME OF RESPONSE VARIABLE> ~ <NAME OF EXPLANATORY VARIABLE>, 
+my_model <- lm(<NAME OF RESPONSE VARIABLE> ~ <NAME OF EXPLANATORY VARIABLE>, 
                 data = <NAME OF DATASET>)
+
+anova(my_model) %>%
+  tidy()
+  
 ```
 
 </br>
@@ -152,7 +133,7 @@ To fit a simulation-based ANOVA, you need to carry out the following steps:
 If you categorical variable has **two** levels, you need to use a `"diff in means"` statistic, **not** an F-statistic!
 :::
 
-## Model Validity
+## Discussion -- A New Component
 
 > Are your p-values trustworthy?
 
@@ -196,62 +177,94 @@ Use the density ridge plots!
 
 **Same questions as last project!**
 
-![](images/Cause and effect.png)
+![](images/Cause and effect.png){fig-alt="A four-panel meme featuring characters from Star Wars. In the first panel, Anakin confidently states that the p-value is small and he will conclude cause and effect. In the second panel, Padmé smiles and asks if the study was a randomized experiment. In the third panel, Anakin stares blankly without responding. In the fourth panel, Padmé looks concerned and repeats her question. The meme humorously highlights the mistake of inferring causality from statistical significance without proper experimental design."}
 
-# Where are we headed next week? 
+# Extra Features
 
-## Two-way ANOVA
-
-</br>
+## Do you want to know the sample size in each group?
 
 ```{r}
-#| echo: false
-#| label: age-two-cat
+#| echo: true
+#| label: sample-size
+#| output-location: column
 
-ggplot(data = evals_small, 
-       mapping = aes(y = age_cat, x = min_eval, fill = gender)) + 
-  geom_density_ridges(alpha = 0.5) + 
-  scale_fill_brewer(palette = "PRGn") +
-  labs(y = "",
-       title = "Gaps between male and female faculty evaluation scores become more pronounced with age", 
-       x = "", 
-       fill = "Professor's Sex") +
-  theme(axis.title = element_text(size = 24), 
-        axis.text.y = element_text(size = 16), 
-        axis.text.x = element_text(size = 14),
-        legend.position = "top")
+evals_small %>%
+  count(age_cat) 
 ```
 
-## Code for Plot
+::: {.midi}
+::: {.callout-tip}
+# Constant Variance
 
-:::{.small}
+The constant variance condition is really important when the sample sizes of 
+each group are quite different. 
+:::
+:::
+
+## Do you want to change the grey background of your plots?
+
 ```{r}
-#| label: density-ridge-code
-#| eval: false
 #| echo: true
+#| code-line-numbers: "|7"
+#| label: change-theme
+#| output-location: slide
 
 ggplot(data = evals_small, 
-       mapping = aes(y = age_cat, x = min_eval, fill = gender)) + 
-  geom_density_ridges(alpha = 0.5) + 
-  scale_fill_brewer(palette = "PRGn") +
-  labs(y = "",
-       title = "Gaps between male and female faculty evaluation scores become more pronounced with age", 
-       x = "", 
-       fill = "Professor's Sex") +
-  theme(legend.position = "top")
+       mapping = aes(y = age_cat, x = min_eval)) + 
+  geom_density_ridges() + 
+  labs(title = "Minimum Evaluation Scores Across Faculty Ages", 
+       y = "",
+       x = "") +
+  theme_bw()
+```
+
+## Do you want to know the variances for each group?
+
+::: {.midi}
+```{r}
+#| echo: true
+#| label: variance-table-code
+#| eval: false
+
+evals_small %>% 
+  group_by(age_cat) %>% 
+  summarize(
+    var = var(min_eval, na.rm = TRUE)
+            ) 
 ```
 :::
 
-:::{.callout-tip}
-# Legend Positions
+```{r}
+#| echo: false
+#| label: variance-table
+#| eval: true
 
-:::{.small}
-There are four options for `legend.position` 
+evals_small %>% 
+  group_by(age_cat) %>% 
+  summarize(
+    var = var(min_eval, na.rm = TRUE)
+            ) %>% 
+  gt::gt() |> 
+  tab_style(
+    style = cell_text(size = px(24)),
+    locations = list(
+      cells_body(),
+      cells_column_labels()
+    )
+  ) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  )
 
-1. `"none"` (removes the legend)
-2. `"left"` (difficult to read with the y-axis label)
-3. `"right"` (the default position)
-4. `"bottom"` (difficult to read with the x-axis label)
-5. `"top"` (generally my preference)
+```
+
+::: {.small}
+::: {.callout-tip}
+# Constant Variance
+
+A rule that is sometimes used is if the largest variance (0.461) divided by 
+the smallest variance (0.211) is more than 3, then there is evidence of 
+non-equal variance. 
 :::
 :::
