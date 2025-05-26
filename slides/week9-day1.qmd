@@ -41,19 +41,70 @@ my_theme <- theme_bw() +
         ) 
 ```
 
-## Lab 7 Recap
+# Lab 7 Recap
 
-**Question 6** (Bootstrap Distribution):
+## Common Mistakes
 
--   Did not use an informative axis label
+**Question 8** (Hypothesis Test Conclusion)
+
+::: {.midi}
+*If you rejected the null hypothesis*, there is evidence of a linear
+relationship between the size of a crab and the latitude in which it lives. 
+:::
+
+::: {.midi}
+*If you failed to reject the null hypothesis*, there is insufficient evidence
+of a linear relationship between the size of a crab and the latitude in which it
+lives. 
+:::
+
+. . .
+
+::: {.small}
+::: {.callout-tip}
+# Notice how both interpretations are in terms of the alternative hypothesis?
+
+If you *always* write your conclusion in terms of $H_A$, then you will never 
+accidentally "accept" the null hypothesis. 
+:::
+:::
+
+## Common Mistakes
+
+**Question 11** (Interpret Confidence Interval):
+
+::: {.small}
+> We need to be specific about the what parameter we believe is in our interval.
+The slope statistic is measuring the relationship between which variables?
+:::
+
+::: {.midi}
+We're analyzing the linear relationship between the size of a crab and the 
+latitude in which it lives!
+:::
+
+. . .
+
+::: {.small}
+> What population does this interval apply to? Where were these crabs sampled
+from? That is the population your interval applies to!
+:::
+
+::: {.midi}
+The fiddler crabs were sampled from 13 salt marshes, but where were these salt
+marshes located? What population might they belong to?
+:::
+
+## Common Mistakes
+
+**Question 12** (Apply Confidence Interval)
 
 </br>
 
-**Question 8** (Interpret Confidence Interval):
+Bergmann's Rule suggests that organisms are larger in larger latitudes (further
+from the equator). 
 
--   Did not include population in interpretation
--   Stated interval was about "all marshes" (no geographical information)
-
+> Does your interval suggest this is true for fiddler crabs?
 
 # Week 9
 

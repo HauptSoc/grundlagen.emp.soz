@@ -5643,7 +5643,7 @@
     "href": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
     "title": "ANalysis Of VAriance",
     "section": "Making a Decision & Reaching a Conclusion",
-    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.245, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
+    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.247, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
   },
   {
     "objectID": "slides/week9-day1.html#large-p-values-neq-evidence-for-the-null-hypothesis",
@@ -5875,5 +5875,26 @@
     "title": "ANalysis Of VAriance",
     "section": "With other students analyzing the same data…",
     "text": "With other students analyzing the same data…\n\nevaluate the within group independence condition\nevaluate the between group independence condition\n\n\nLink to activity"
+  },
+  {
+    "objectID": "slides/week9-day1.html#common-mistakes",
+    "href": "slides/week9-day1.html#common-mistakes",
+    "title": "ANalysis Of VAriance",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\nQuestion 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis."
+  },
+  {
+    "objectID": "slides/week9-day1.html#common-mistakes-1",
+    "href": "slides/week9-day1.html#common-mistakes-1",
+    "title": "ANalysis Of VAriance",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\nQuestion 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?"
+  },
+  {
+    "objectID": "slides/week9-day1.html#common-mistakes-2",
+    "href": "slides/week9-day1.html#common-mistakes-2",
+    "title": "ANalysis Of VAriance",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\nQuestion 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
   }
 ]
