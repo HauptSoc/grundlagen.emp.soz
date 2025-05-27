@@ -4088,8 +4088,8 @@
     "objectID": "slides/week9-day2.html#upcoming-deadlines",
     "href": "slides/week9-day2.html#upcoming-deadlines",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
+    "section": "",
+    "text": "Lab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
   },
   {
     "objectID": "slides/week9-day2.html#visualizations-density-ridges",
@@ -4110,28 +4110,28 @@
     "href": "slides/week9-day2.html#theory-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Theory-based Method",
-    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- lm(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\nanova(my_model) %&gt;%\n  tidy()\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
+    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- lm(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\nanova(my_model) %&gt;%\n  tidy()\n\n\n. . .\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
   },
   {
     "objectID": "slides/week9-day2.html#simulation-based-method",
     "href": "slides/week9-day2.html#simulation-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Simulation-based Method",
-    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
+    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
   },
   {
     "objectID": "slides/week9-day2.html#discussion-a-new-component",
     "href": "slides/week9-day2.html#discussion-a-new-component",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Discussion – A New Component",
-    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
+    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n. . .\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
   },
   {
     "objectID": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
     "href": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Do you want to know the sample size in each group?",
-    "text": "Do you want to know the sample size in each group?\n\n\nevals_small %&gt;%\n  count(age_cat) \n\n\n# A tibble: 4 × 2\n  age_cat            n\n  &lt;fct&gt;          &lt;int&gt;\n1 Young faculty     18\n2 Middle age        22\n3 Older faculty     40\n4 Nearly retired    14\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nThe constant variance condition is really important when the sample sizes of each group are quite different."
+    "text": "Do you want to know the sample size in each group?\n\nevals_small %&gt;%\n  count(age_cat) \n\n# A tibble: 4 × 2\n  age_cat            n\n  &lt;fct&gt;          &lt;int&gt;\n1 Young faculty     18\n2 Middle age        22\n3 Older faculty     40\n4 Nearly retired    14\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\n\nThe constant variance condition is really important when the sample sizes of each group are quite different."
   },
   {
     "objectID": "slides/week9-day2.html#do-you-want-to-change-the-grey-background-of-your-plots",
@@ -4152,7 +4152,7 @@
     "href": "slides/week9-day2.html#do-you-want-to-know-the-variances-for-each-group",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Do you want to know the variances for each group?",
-    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
+    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
   },
   {
     "objectID": "slides/week6-day2.html#deadline-reminders",
@@ -5061,15 +5061,15 @@
     "objectID": "slides/week10-day1.html#common-mistakes",
     "href": "slides/week10-day1.html#common-mistakes",
     "title": "Week 10: Two-way ANOVA",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\n\n\nQuestions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 6 – Equal variance is not about equal points above and below the line!\n\n\n\nQuestion 11 – Your hypothesis test decision should state what \\(\\alpha\\) was used!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
+    "section": "",
+    "text": "Questions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 6 – Equal variance is not about equal points above and below the line!\n\n\n\nQuestion 11 – Your hypothesis test decision should state what \\(\\alpha\\) was used!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
   },
   {
     "objectID": "slides/week10-day1.html#wrapping-up-revisions",
     "href": "slides/week10-day1.html#wrapping-up-revisions",
     "title": "Week 10: Two-way ANOVA",
     "section": "Wrapping Up Revisions",
-    "text": "Wrapping Up Revisions\nThe final round of revisions on all assignments are due by Sunday, June 9.\n\n\n\n\n\n\n\nOne round of revisions\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions."
+    "text": "Wrapping Up Revisions\nThe final round of revisions on all assignments are due by Sunday, June 9.\n. . .\n\n\n\n\n\n\nOne round of revisions\n\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions."
   },
   {
     "objectID": "slides/week10-day1.html#final-project",
@@ -5111,35 +5111,35 @@
     "href": "slides/week10-day1.html#research-question",
     "title": "Week 10: Two-way ANOVA",
     "section": "Research Question",
-    "text": "Research Question\n\nDoes the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the treatment was applied?\n\n\n\nOr, because the study was an experiment…\n\nDoes the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year of the treatment?"
+    "text": "Research Question\n\nDoes the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the treatment was applied?\n\n. . .\n\nOr, because the study was an experiment…\n\nDoes the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year of the treatment?"
   },
   {
     "objectID": "slides/week10-day1.html#conditions",
     "href": "slides/week10-day1.html#conditions",
     "title": "Week 10: Two-way ANOVA",
     "section": "Conditions",
-    "text": "Conditions\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups\n\n\n\n\n\nNormality of the residuals / responses\n\n\n\nThe distribution of responses for each group is approximately normal"
+    "text": "Conditions\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups\n\n\n. . .\n\nNormality of the residuals / responses\n\n\n\nThe distribution of responses for each group is approximately normal"
   },
   {
     "objectID": "slides/week10-day1.html#theory-based-two-way-anova",
     "href": "slides/week10-day1.html#theory-based-two-way-anova",
     "title": "Week 10: Two-way ANOVA",
     "section": "Theory-based Two-Way ANOVA",
-    "text": "Theory-based Two-Way ANOVA\n\naov(stem_dry_mass ~ watershed * year_cat, \n    data = hbr_maples_small)\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.011493301\n0.011493301\n54.39585\n3.265267e-12\n\n\nyear_cat\n1\n0.116414825\n0.116414825\n550.97168\n5.985573e-62\n\n\nwatershed:year_cat\n1\n0.002635442\n0.002635442\n12.47310\n5.024567e-04\n\n\nResiduals\n221\n0.046695097\n0.000211290\nNA\nNA\n\n\n\n\n\n\n\n\n\nThe watershed:year_cat line is testing if the relationship between the calcium treatment (watershed) and mean stem dry mass differs between 2003 and 2004.\n\n\n\n\n\nDoes it?"
+    "text": "Theory-based Two-Way ANOVA\n\naov(stem_dry_mass ~ watershed * year_cat, \n    data = hbr_maples_small)\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.011493301\n0.011493301\n54.39585\n3.265267e-12\n\n\nyear_cat\n1\n0.116414825\n0.116414825\n550.97168\n5.985573e-62\n\n\nwatershed:year_cat\n1\n0.002635442\n0.002635442\n12.47310\n5.024567e-04\n\n\nResiduals\n221\n0.046695097\n0.000211290\nNA\nNA\n\n\n\n\n\n\n\n. . .\n\nThe watershed:year_cat line is testing if the relationship between the calcium treatment (watershed) and mean stem dry mass differs between 2003 and 2004.\n\n. . .\n\n\nDoes it?"
   },
   {
     "objectID": "slides/week10-day1.html#how-are-those-p-values-calculated",
     "href": "slides/week10-day1.html#how-are-those-p-values-calculated",
     "title": "Week 10: Two-way ANOVA",
     "section": "How are those p-values calculated?",
-    "text": "How are those p-values calculated?\nThe p-values in the previous table use Type I sums of squares.\n\nType I sums of squares are “sequential,” meaning variables are tested in the order they are listed.\n\n\n\nSo, the p-value for watershed:year_cat is conditional on including watershed and year_cat as explanatory variables.\n\n\n\nIs that what we want????"
+    "text": "How are those p-values calculated?\nThe p-values in the previous table use Type I sums of squares.\n\nType I sums of squares are “sequential,” meaning variables are tested in the order they are listed.\n\n. . .\n\nSo, the p-value for watershed:year_cat is conditional on including watershed and year_cat as explanatory variables.\n. . .\n\nIs that what we want????"
   },
   {
     "objectID": "slides/week10-day1.html#testing-main-effects",
     "href": "slides/week10-day1.html#testing-main-effects",
     "title": "Week 10: Two-way ANOVA",
     "section": "Testing “main effects”",
-    "text": "Testing “main effects”\nIf there is evidence of an interaction, we do not test if the main effects are “significant.”\n\n\nWhy?\n\n\n\nThe interactions depend on these variables, so they should be included in the model!"
+    "text": "Testing “main effects”\nIf there is evidence of an interaction, we do not test if the main effects are “significant.”\n. . .\n\nWhy?\n. . .\n\nThe interactions depend on these variables, so they should be included in the model!"
   },
   {
     "objectID": "slides/week10-day1.html#interpreting-main-effects",
@@ -5160,7 +5160,7 @@
     "href": "slides/week10-day1.html#testing-for-a-relationship-for-each-variable",
     "title": "Week 10: Two-way ANOVA",
     "section": "Testing for a relationship for each variable",
-    "text": "Testing for a relationship for each variable\n\naov(stem_dry_mass ~ elevation + watershed, \n    data = hbr_maples_small) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nelevation\n1\n0.0003628227\n3.628227e-04\n6.599149\n1.123469e-02\n\n\nwatershed\n1\n0.0026119904\n2.611990e-03\n47.507808\n1.651260e-10\n\n\nResiduals\n142\n0.0078071933\n5.498023e-05\nNA\nNA\n\n\n\n\n\n\n\n\n\n\nDo you think it matters which variable comes first?"
+    "text": "Testing for a relationship for each variable\n\naov(stem_dry_mass ~ elevation + watershed, \n    data = hbr_maples_small) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nelevation\n1\n0.0003628227\n3.628227e-04\n6.599149\n1.123469e-02\n\n\nwatershed\n1\n0.0026119904\n2.611990e-03\n47.507808\n1.651260e-10\n\n\nResiduals\n142\n0.0078071933\n5.498023e-05\nNA\nNA\n\n\n\n\n\n\n\n\n. . .\n\nDo you think it matters which variable comes first?"
   },
   {
     "objectID": "slides/week10-day1.html#lets-see",
@@ -5174,14 +5174,14 @@
     "href": "slides/week10-day1.html#sequential-versus-partial-sums-of-squares",
     "title": "Week 10: Two-way ANOVA",
     "section": "Sequential Versus Partial Sums of Squares",
-    "text": "Sequential Versus Partial Sums of Squares\nSimilar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.\n\n\n\nThe p-value for each variable is conditional on the variable(s) that came before it.\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on…nothing.\n\n\n\n\n\nIf we want the p-value for each explanatory variable to be conditional on every variable included in the model, then we need to use a different type of sums of squares!"
+    "text": "Sequential Versus Partial Sums of Squares\nSimilar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.\n\n\n\nThe p-value for each variable is conditional on the variable(s) that came before it.\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on…nothing.\n\n\n\n. . .\n\nIf we want the p-value for each explanatory variable to be conditional on every variable included in the model, then we need to use a different type of sums of squares!"
   },
   {
     "objectID": "slides/week10-day1.html#partial-sums-of-squares",
     "href": "slides/week10-day1.html#partial-sums-of-squares",
     "title": "Week 10: Two-way ANOVA",
     "section": "Partial Sums of Squares",
-    "text": "Partial Sums of Squares\n\nType III sums of squares are “partial,” meaning every term in the model is tested in light of the other terms in the model.\n\n\n\n\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on elevation being included in the model\n\n\n\n\n\n\n\n\n\n\nOnly different for variables that were not first\n\n\nWe could have used Type III sums of squares for the interaction model and would have gotten the same p-value!"
+    "text": "Partial Sums of Squares\n\nType III sums of squares are “partial,” meaning every term in the model is tested in light of the other terms in the model.\n\n. . .\n\n\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on elevation being included in the model\n\n\n. . .\n\n\n\n\n\n\nOnly different for variables that were not first\n\n\n\nWe could have used Type III sums of squares for the interaction model and would have gotten the same p-value!"
   },
   {
     "objectID": "slides/week10-day1.html#getting-the-conditional-tests-for-every-variable",
@@ -5202,7 +5202,7 @@
     "href": "slides/week10-day1.html#keeping-non-significant-variables",
     "title": "Week 10: Two-way ANOVA",
     "section": "Keeping “Non-significant” Variables",
-    "text": "Keeping “Non-significant” Variables\n\nShould you always remove variables with “large” p-values from an ANOVA?\n\n\nNo!\nEven “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!"
+    "text": "Keeping “Non-significant” Variables\n\nShould you always remove variables with “large” p-values from an ANOVA?\n. . .\n\nNo!\nEven “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!"
   },
   {
     "objectID": "slides/week10-day1.html#hypothesis-test-steps",
@@ -5468,28 +5468,28 @@
     "href": "slides/week9-day1.html#final-project-first-draft",
     "title": "ANalysis Of VAriance",
     "section": "Final Project First Draft",
-    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nResults (Data analysis)\n\n\n\n\nStep 3 - Due by Sunday\n\n\nDiscussion\nConclusion"
+    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nResults (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nDiscussion\nConclusion"
   },
   {
     "objectID": "slides/week9-day1.html#two-flavors-of-anova",
     "href": "slides/week9-day1.html#two-flavors-of-anova",
     "title": "ANalysis Of VAriance",
     "section": "Two “Flavors” of ANOVA",
-    "text": "Two “Flavors” of ANOVA\nIn my mind, there are two different options for incorporating an ANOVA into your analysis.\n\n\n\nOption 1:\n\nThere is a categorical variable with 3+ groups that you would like to use for your regression.\n\n\n\n\n\nOption 2:\n\nThere is a numerical variable that you would like to use to create 3+ groups to incorporate into your regression.\n\n\n\n\n\n\nLet’s check out what I mean!"
+    "text": "Two “Flavors” of ANOVA\nIn my mind, there are two different options for incorporating an ANOVA into your analysis.\n. . .\n\n\nOption 1:\n\nThere is a categorical variable with 3+ groups that you would like to use for your regression.\n\n\n\n\n\nOption 2:\n\nThere is a numerical variable that you would like to use to create 3+ groups to incorporate into your regression.\n\n\n\n\n. . .\n\nLet’s check out what I mean!"
   },
   {
     "objectID": "slides/week9-day1.html#categorical-variable",
     "href": "slides/week9-day1.html#categorical-variable",
     "title": "ANalysis Of VAriance",
     "section": "Categorical Variable",
-    "text": "Categorical Variable\n\n\ngapminder2007 &lt;- gapminder %&gt;%\n  filter(year == 2007) %&gt;%\n  select(country, lifeExp, continent, gdpPercap)\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\nIn Lab 8 you should have found that each country has multiple observations, which are not independent. One way to get around this is to filter() the data to only use one year.\n\n\n\n\n\n\n\n\ndistinct(gapminder2007, \n         continent)\n\n\n# A tibble: 5 × 1\n  continent\n  &lt;fct&gt;    \n1 Asia     \n2 Europe   \n3 Africa   \n4 Americas \n5 Oceania"
+    "text": "Categorical Variable\n\n\ngapminder2007 &lt;- gapminder %&gt;%\n  filter(year == 2007) %&gt;%\n  select(country, lifeExp, continent, gdpPercap)\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\n\nIn Lab 8 you should have found that each country has multiple observations, which are not independent. One way to get around this is to filter() the data to only use one year.\n\n\n\n. . .\n\n\ndistinct(gapminder2007, \n         continent)\n\n# A tibble: 5 × 1\n  continent\n  &lt;fct&gt;    \n1 Asia     \n2 Europe   \n3 Africa   \n4 Americas \n5 Oceania"
   },
   {
     "objectID": "slides/week9-day1.html#discretizing-a-continuous-variable",
     "href": "slides/week9-day1.html#discretizing-a-continuous-variable",
     "title": "ANalysis Of VAriance",
     "section": "Discretizing a Continuous Variable",
-    "text": "Discretizing a Continuous Variable\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\nLast week we noticed that there are multiple observations for each faculty member which are not independent. One way to get around this is to collapse these multiple observations into a single number."
+    "text": "Discretizing a Continuous Variable\n\n\n\n\n\n\n\n\n\n. . .\n\n\n\n\n\n\n\nIndependence Violations\n\n\n\nLast week we noticed that there are multiple observations for each faculty member which are not independent. One way to get around this is to collapse these multiple observations into a single number."
   },
   {
     "objectID": "slides/week9-day1.html#now",
@@ -5510,14 +5510,14 @@
     "href": "slides/week9-day1.html#step-1-compare-your-groups",
     "title": "ANalysis Of VAriance",
     "section": "Step 1: Compare your groups",
-    "text": "Step 1: Compare your groups\n\n\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+    "text": "Step 1: Compare your groups\n\n\n\n\n\n\n\n\n\n. . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
   },
   {
     "objectID": "slides/week9-day1.html#step-2-find-the-overall-mean",
     "href": "slides/week9-day1.html#step-2-find-the-overall-mean",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Find the overall mean",
-    "text": "Step 2: Find the overall mean\n\n\n\nThis ignores the groups and finds one mean for every observation!"
+    "text": "Step 2: Find the overall mean\n\n\n\n\n\n\n\n\n\n. . .\n\nThis ignores the groups and finds one mean for every observation!"
   },
   {
     "objectID": "slides/week9-day1.html#step-3-find-the-group-means",
@@ -5559,7 +5559,7 @@
     "href": "slides/week9-day1.html#section-3",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
+    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n. . .\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
   },
   {
     "objectID": "slides/week9-day1.html#exploring-different-f-distributions",
@@ -5573,14 +5573,14 @@
     "href": "slides/week9-day1.html#section-4",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Do you always use an F-distribution to get the p-value?\n\n\n\n\nNO!"
+    "text": "Do you always use an F-distribution to get the p-value?\n\n. . .\n\n\nNO!"
   },
   {
     "objectID": "slides/week9-day1.html#conditions-of-an-anova",
     "href": "slides/week9-day1.html#conditions-of-an-anova",
     "title": "ANalysis Of VAriance",
     "section": "Conditions of an ANOVA",
-    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
+    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
   },
   {
     "objectID": "slides/week9-day1.html#choosing-a-method",
@@ -5594,7 +5594,7 @@
     "href": "slides/week9-day1.html#section-5",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "What do you think? Which method should we use?"
+    "text": ". . .\n\nWhat do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
@@ -5608,7 +5608,7 @@
     "href": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Simulating what could have happened under \\(H_0\\)",
-    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
+    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n. . .\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
   },
   {
     "objectID": "slides/week9-day1.html#another-permutation-distribution",
@@ -5622,7 +5622,7 @@
     "href": "slides/week9-day1.html#another-permutation-distribution-1",
     "title": "ANalysis Of VAriance",
     "section": "Another Permutation Distribution",
-    "text": "Another Permutation Distribution\n\n\n\nWhy doesn’t the distribution have negative numbers?"
+    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
   },
   {
     "objectID": "slides/week9-day1.html#visualizing-the-p-value",
@@ -5657,7 +5657,7 @@
     "href": "slides/week9-day1.html#theory-based-methods",
     "title": "ANalysis Of VAriance",
     "section": "Theory-based Methods",
-    "text": "Theory-based Methods\n\neval_lm &lt;- lm(min_eval ~ age_cat, data = evals_small)\n\nanova(eval_lm) |&gt; \n  tidy()\n\n\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nage_cat\n3\n1.24198\n0.4139932\n1.412556\n0.2443174\n\n\nResiduals\n90\n26.37728\n0.2930808\nNA\nNA\n\n\n\n\n\n\n\n\n\nIs this the same statistic as before?\n\n\nWhat distribution was used to calculate the p.value?"
+    "text": "Theory-based Methods\n\neval_lm &lt;- lm(min_eval ~ age_cat, data = evals_small)\n\nanova(eval_lm) |&gt; \n  tidy()\n\n\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nage_cat\n3\n1.24198\n0.4139932\n1.412556\n0.2443174\n\n\nResiduals\n90\n26.37728\n0.2930808\nNA\nNA\n\n\n\n\n\n\n\n. . .\n\nIs this the same statistic as before?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
   },
   {
     "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
@@ -5671,7 +5671,7 @@
     "href": "slides/week9-day1.html#section-6",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Did the two methods yield different results?\n\n\n\nWhat does that imply about the normality condition?"
+    "text": "Did the two methods yield different results?\n\n. . .\n\nWhat does that imply about the normality condition?"
   },
   {
     "objectID": "slides/week9-day1.html#introduction-research-questions",
@@ -5880,21 +5880,42 @@
     "objectID": "slides/week9-day1.html#common-mistakes",
     "href": "slides/week9-day1.html#common-mistakes",
     "title": "ANalysis Of VAriance",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\nQuestion 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis."
+    "section": "",
+    "text": "Question 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n. . .\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis."
   },
   {
     "objectID": "slides/week9-day1.html#common-mistakes-1",
     "href": "slides/week9-day1.html#common-mistakes-1",
     "title": "ANalysis Of VAriance",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\nQuestion 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?"
+    "section": "",
+    "text": "Question 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n. . .\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?"
   },
   {
     "objectID": "slides/week9-day1.html#common-mistakes-2",
     "href": "slides/week9-day1.html#common-mistakes-2",
     "title": "ANalysis Of VAriance",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\nQuestion 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
+    "section": "",
+    "text": "Question 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
+  },
+  {
+    "objectID": "slides/week9-day2.html",
+    "href": "slides/week9-day2.html",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "",
+    "text": "Lab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
+  },
+  {
+    "objectID": "slides/week10-day1.html",
+    "href": "slides/week10-day1.html",
+    "title": "Week 10: Two-way ANOVA",
+    "section": "",
+    "text": "Questions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 6 – Equal variance is not about equal points above and below the line!\n\n\n\nQuestion 11 – Your hypothesis test decision should state what \\(\\alpha\\) was used!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
+  },
+  {
+    "objectID": "slides/week9-day1.html",
+    "href": "slides/week9-day1.html",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Question 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n. . .\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis.\n\n\n\n\n\n\nQuestion 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n. . .\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?\n\n\n\n\nQuestion 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
   }
 ]

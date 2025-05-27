@@ -33,7 +33,7 @@ editor: visual
 
 *If they log transform life expectancy (y)*:
 
-> Similar to the Principle of Parsimony, we want to transform as few variables as is necessary. Look back at the plot with just x log transformed. Is log transforming y and x notably better?
+> Similar to the Principle of Parsimony, we want to transform as few variables as is necessary. Look back at the plot with just x log transformed. Is log transforming y *and* x notably better?
 
 *If their x-axis doesn't indicate the log was taken*:
 
@@ -85,7 +85,7 @@ gapminder_lm <- lm(lifeExp ~ log(gdpPercap), data = gapminder)
 
 **To earn a Success**:
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
 -   Says the condition is violated
 -   Justifies with the left skew of the distribution
@@ -98,7 +98,7 @@ gapminder_lm <- lm(lifeExp ~ log(gdpPercap), data = gapminder)
 -   Says the condition is not violated
 -   Justifies with characteristics of the distribution
 :::
-:::
+::::::
 
 **Growing:**
 
@@ -218,8 +218,8 @@ If they said the relationship was positive in the alternative, then their `direc
 
 > You were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?
 
-**\
-Growing:**
+<!-- I'm not sure if I want to keep this... -->
+**Growing:**
 
 *If they don't reference their significance level:*
 
@@ -249,7 +249,7 @@ This doesn't need to be consistent, since we aren't making a confidence interval
 
 **To earn a Success**: Answer must agree with what they said in #4-6
 
-::: columns
+:::::::: columns
 ::: {.column width="30%"}
 If they said equal variance and / or independence was violated, they must say that **neither** p-value is reliable.
 :::
@@ -267,7 +267,7 @@ If they said normality **was** violated but equal variance and independence **we
 ::: {.column width="30%"}
 If they said none of the conditions were violated, they must say that **both** p-values are reliable.
 :::
-:::
+::::::::
 
 **Growing:**
 
