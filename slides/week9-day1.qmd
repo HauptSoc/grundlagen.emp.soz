@@ -490,7 +490,7 @@ the F-distribution:
 
 </br> 
 
-[Link to Applet on F-distributions](https://dcmpdatatools.utdanacenter.org/fdist/#:~:text=Explore%20how%20the%20shape%20of,Download%20Graph) 
+[Link to Applet on F-distributions](https://dcmpdatatools.utdanacenter.org/fdist/) 
 
 ##  
 

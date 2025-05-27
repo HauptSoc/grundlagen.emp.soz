@@ -764,7 +764,7 @@
     "href": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion",
     "title": "ANalysis Of VAriance",
     "section": "Making a Decision & Reaching a Conclusion",
-    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.247, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
+    "text": "Making a Decision & Reaching a Conclusion\n\n\nFor a p-value of 0.24, what decision would you reach regarding your hypothesis test?\n\n\n\n\nWhat would you conclude regarding the mean minimum evaluation score for different age groups of faculty?"
   },
   {
     "objectID": "slides/week9-day1.html#large-p-values-neq-evidence-for-the-null-hypothesis",
