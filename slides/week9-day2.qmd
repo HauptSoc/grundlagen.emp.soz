@@ -34,11 +34,9 @@ evals_small <- moderndive::evals %>%
 
 ## Upcoming Deadlines
 
--   Lab 7 revisions are due by Friday (by midnight)
+-   Lab 7 revisions are due by this Friday (by midnight)
 -   Lab 8 revisions are due next Friday
 -   Statistical Critique 2 revisions are due next Friday
-
-<!-- 1 Additional revision if it was missed? -->
 
 ::: callout-caution
 # One Round of Revisions
@@ -49,6 +47,16 @@ stop by my office or schedule a time to chat about your revisions!
 
 Also, please **don't forget reflections**!
 :::
+
+## Additional Revision
+
+If you missed the deadline for the revisions on *any* assignment, I'm reopening
+the revisions. 
+
+</br>
+
+You are permitted to submit **one** additional assignment for revisions, if
+you missed the original deadline for the revisions. 
 
 # Coding a One-way ANOVA
 
@@ -147,7 +155,7 @@ Inspect the conditions of your model!
 ::: {.column width="30%"}
 **Independence of Observations**
 
-Look at how the data were collected!
+Consider how the data were collected!
 :::
 
 ::: {.column width="2%"}
@@ -234,6 +242,9 @@ evals_small %>%
 ```
 :::
 
+::: columns
+::: {.column width="40%"}
+
 ```{r}
 #| echo: false
 #| label: variance-table
@@ -259,12 +270,21 @@ evals_small %>%
 
 ```
 
-::: {.small}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+::: {.midi}
 ::: {.callout-tip}
 # Constant Variance
 
 A rule that is sometimes used is if the largest variance (0.461) divided by 
 the smallest variance (0.211) is more than 3, then there is evidence of 
 non-equal variance. 
+:::
+:::
+
 :::
 :::

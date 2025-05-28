@@ -5511,7 +5511,7 @@
     "href": "slides/week9-day2.html#upcoming-deadlines",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 7 revisions are due by Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
+    "text": "Upcoming Deadlines\n\nLab 7 revisions are due by this Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
   },
   {
     "objectID": "slides/week9-day2.html#visualizations-density-ridges",
@@ -5546,7 +5546,7 @@
     "href": "slides/week9-day2.html#discussion-a-new-component",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Discussion – A New Component",
-    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nLook at how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
+    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nConsider how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
   },
   {
     "objectID": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
@@ -5574,7 +5574,7 @@
     "href": "slides/week9-day2.html#do-you-want-to-know-the-variances-for-each-group",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Do you want to know the variances for each group?",
-    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
+    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
   },
   {
     "objectID": "weeks/chapters/week-6-reading2.html",
@@ -5896,5 +5896,12 @@
     "title": "Final Project Rubric",
     "section": "Overall Project Grade",
     "text": "Overall Project Grade\n\n\n\n\n\n\n\n\n\nExcellent (A)\nSatisfactory (B)\nProgressing (C)\nNovice (D)\n\n\n\n\nAt most one section is marked “Satisfactory” the remainder are marked “Excellent”\n\nPresentation is Completed\nAt most one section is marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”\n\nNo sections are marked “Novice”\n\nPresentation is Completed\nAt most three sections are marked “Progressing” the remainder are marked “Satisfactory” or “Excellent”\n\nNo sections are marked “Novice”\n\nPresentation is not Completed\nAt most one section is marked “Satisfactory” or “Excellent” the remainder are marked either “Progressing” or “Novice”\n\nNo sections are marked “Novice”\n\nPresentation is not Completed"
+  },
+  {
+    "objectID": "slides/week9-day2.html#additional-revision",
+    "href": "slides/week9-day2.html#additional-revision",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "Additional Revision",
+    "text": "Additional Revision\nIf you missed the deadline for the revisions on any assignment, I’m reopening the revisions.\n\nYou are permitted to submit one additional assignment for revisions, if you missed the original deadline for the revisions."
   }
 ]
