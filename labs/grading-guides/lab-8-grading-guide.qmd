@@ -206,7 +206,7 @@ If they said the relationship was positive in the alternative, then their `direc
 
 **Growing:**
 
-\*If they don't use a direction that is consistent with what they said in their alternative (`"two-sided"` or `"greater"`):
+*If they don't use a direction that is consistent with what they said in their alternative (`"two-sided"` or `"greater"`):*
 
 > How many tails are there in the hypotheses stated in #7?
 
@@ -217,13 +217,6 @@ If they said the relationship was positive in the alternative, then their `direc
 *It is okay if they do not make a decision but conclude that there is a relationship, but give the following feedback*:
 
 > You were asked to make a decision regarding the hypotheses, which has two possible options. Which option do you choose and why?
-
-<!-- I'm not sure if I want to keep this... -->
-**Growing:**
-
-*If they don't reference their significance level:*
-
-> Careful! Hypothesis test decisions can differ based on the significance threshold that was used. What threshold did you use?
 
 ## Question 12
 
