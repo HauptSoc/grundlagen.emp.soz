@@ -567,50 +567,50 @@
     "objectID": "slides/week9-day1.html#common-mistakes",
     "href": "slides/week9-day1.html#common-mistakes",
     "title": "ANalysis Of VAriance",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\nQuestion 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis."
+    "section": "",
+    "text": "Question 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n. . .\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis."
   },
   {
     "objectID": "slides/week9-day1.html#common-mistakes-1",
     "href": "slides/week9-day1.html#common-mistakes-1",
     "title": "ANalysis Of VAriance",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\nQuestion 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?"
+    "section": "",
+    "text": "Question 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n. . .\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?"
   },
   {
     "objectID": "slides/week9-day1.html#common-mistakes-2",
     "href": "slides/week9-day1.html#common-mistakes-2",
     "title": "ANalysis Of VAriance",
-    "section": "Common Mistakes",
-    "text": "Common Mistakes\nQuestion 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
+    "section": "",
+    "text": "Question 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
   },
   {
     "objectID": "slides/week9-day1.html#final-project-first-draft",
     "href": "slides/week9-day1.html#final-project-first-draft",
     "title": "ANalysis Of VAriance",
     "section": "Final Project First Draft",
-    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nResults (Data analysis)\n\n\n\n\nStep 3 - Due by Sunday\n\n\nDiscussion\nConclusion"
+    "text": "Final Project First Draft\nStep 1 - Due by tonight!\n\n\nIntroduction (Data description, research questions)\n\n\n. . .\nStep 2 - Due by Thursday\n\n\nMethods (Data visualizations)\nResults (Data analysis)\n\n\n. . .\nStep 3 - Due by Sunday\n\n\nDiscussion\nConclusion"
   },
   {
     "objectID": "slides/week9-day1.html#two-flavors-of-anova",
     "href": "slides/week9-day1.html#two-flavors-of-anova",
     "title": "ANalysis Of VAriance",
     "section": "Two “Flavors” of ANOVA",
-    "text": "Two “Flavors” of ANOVA\nIn my mind, there are two different options for incorporating an ANOVA into your analysis.\n\n\n\nOption 1:\n\nThere is a categorical variable with 3+ groups that you would like to use for your regression.\n\n\n\n\n\nOption 2:\n\nThere is a numerical variable that you would like to use to create 3+ groups to incorporate into your regression.\n\n\n\n\n\n\nLet’s check out what I mean!"
+    "text": "Two “Flavors” of ANOVA\nIn my mind, there are two different options for incorporating an ANOVA into your analysis.\n. . .\n\n\nOption 1:\n\nThere is a categorical variable with 3+ groups that you would like to use for your regression.\n\n\n\n\n\nOption 2:\n\nThere is a numerical variable that you would like to use to create 3+ groups to incorporate into your regression.\n\n\n\n\n. . .\n\nLet’s check out what I mean!"
   },
   {
     "objectID": "slides/week9-day1.html#categorical-variable",
     "href": "slides/week9-day1.html#categorical-variable",
     "title": "ANalysis Of VAriance",
     "section": "Categorical Variable",
-    "text": "Categorical Variable\n\n\ngapminder2007 &lt;- gapminder %&gt;%\n  filter(year == 2007) %&gt;%\n  select(country, lifeExp, continent, gdpPercap)\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\nIn Lab 8 you should have found that each country has multiple observations, which are not independent. One way to get around this is to filter() the data to only use one year.\n\n\n\n\n\n\n\n\ndistinct(gapminder2007, \n         continent)\n\n\n# A tibble: 5 × 1\n  continent\n  &lt;fct&gt;    \n1 Asia     \n2 Europe   \n3 Africa   \n4 Americas \n5 Oceania"
+    "text": "Categorical Variable\n\n\ngapminder2007 &lt;- gapminder %&gt;%\n  filter(year == 2007) %&gt;%\n  select(country, lifeExp, continent, gdpPercap)\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\n\nIn Lab 8 you should have found that each country has multiple observations, which are not independent. One way to get around this is to filter() the data to only use one year.\n\n\n\n. . .\n\n\ndistinct(gapminder2007, \n         continent)\n\n# A tibble: 5 × 1\n  continent\n  &lt;fct&gt;    \n1 Asia     \n2 Europe   \n3 Africa   \n4 Americas \n5 Oceania"
   },
   {
     "objectID": "slides/week9-day1.html#discretizing-a-continuous-variable",
     "href": "slides/week9-day1.html#discretizing-a-continuous-variable",
     "title": "ANalysis Of VAriance",
     "section": "Discretizing a Continuous Variable",
-    "text": "Discretizing a Continuous Variable\n\n\n\n\n\n\n\n\n\nIndependence Violations\n\n\nLast week we noticed that there are multiple observations for each faculty member which are not independent. One way to get around this is to collapse these multiple observations into a single number."
+    "text": "Discretizing a Continuous Variable\n\n\n\n\n\n\n\n\n\n. . .\n\n\n\n\n\n\n\nIndependence Violations\n\n\n\nLast week we noticed that there are multiple observations for each faculty member which are not independent. One way to get around this is to collapse these multiple observations into a single number."
   },
   {
     "objectID": "slides/week9-day1.html#now",
@@ -631,14 +631,14 @@
     "href": "slides/week9-day1.html#step-1-compare-your-groups",
     "title": "ANalysis Of VAriance",
     "section": "Step 1: Compare your groups",
-    "text": "Step 1: Compare your groups\n\n\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
+    "text": "Step 1: Compare your groups\n\n\n\n\n\n\n\n\n\n. . .\n\n\n\nWhat can you say about the differences between the age groups?\n\n\n\nWhat can you say about the variability within the age groups?"
   },
   {
     "objectID": "slides/week9-day1.html#step-2-find-the-overall-mean",
     "href": "slides/week9-day1.html#step-2-find-the-overall-mean",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Find the overall mean",
-    "text": "Step 2: Find the overall mean\n\n\n\nThis ignores the groups and finds one mean for every observation!"
+    "text": "Step 2: Find the overall mean\n\n\n\n\n\n\n\n\n\n. . .\n\nThis ignores the groups and finds one mean for every observation!"
   },
   {
     "objectID": "slides/week9-day1.html#step-3-find-the-group-means",
@@ -680,7 +680,7 @@
     "href": "slides/week9-day1.html#section-3",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
+    "text": "F-distribution\n\nAn \\(F\\)-distribution is a variant of the \\(t\\)-distribution, and is also defined by degrees of freedom.\n. . .\n\nThis distribution is defined by two different degrees of freedom:\n\n\nfrom the numerator (MSG) : \\(k\\) (number of groups) \\(- 1\\)\nfrom the denominator (MSE) : \\(n\\) (number of observations) \\(- k\\)"
   },
   {
     "objectID": "slides/week9-day1.html#exploring-different-f-distributions",
@@ -694,14 +694,14 @@
     "href": "slides/week9-day1.html#section-4",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Do you always use an F-distribution to get the p-value?\n\n\n\n\nNO!"
+    "text": "Do you always use an F-distribution to get the p-value?\n\n. . .\n\n\nNO!"
   },
   {
     "objectID": "slides/week9-day1.html#conditions-of-an-anova",
     "href": "slides/week9-day1.html#conditions-of-an-anova",
     "title": "ANalysis Of VAriance",
     "section": "Conditions of an ANOVA",
-    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
+    "text": "Conditions of an ANOVA\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nNormality of the residuals\n\n\n\nThe distribution of residuals for each group is approximately normal\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups"
   },
   {
     "objectID": "slides/week9-day1.html#choosing-a-method",
@@ -715,7 +715,7 @@
     "href": "slides/week9-day1.html#section-5",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "What do you think? Which method should we use?"
+    "text": ". . .\n\nWhat do you think? Which method should we use?"
   },
   {
     "objectID": "slides/week9-day1.html#step-1-calculating-the-observed-f-statistic",
@@ -729,7 +729,7 @@
     "href": "slides/week9-day1.html#step-2-simulating-what-could-have-happened-under-h_0",
     "title": "ANalysis Of VAriance",
     "section": "Step 2: Simulating what could have happened under \\(H_0\\)",
-    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
+    "text": "Step 2: Simulating what could have happened under \\(H_0\\)\n. . .\n\n\nHow could we use cards to simulate what minimum evaluation score a professor would have gotten, if their score was independent from their age?"
   },
   {
     "objectID": "slides/week9-day1.html#another-permutation-distribution",
@@ -743,7 +743,7 @@
     "href": "slides/week9-day1.html#another-permutation-distribution-1",
     "title": "ANalysis Of VAriance",
     "section": "Another Permutation Distribution",
-    "text": "Another Permutation Distribution\n\n\n\nWhy doesn’t the distribution have negative numbers?"
+    "text": "Another Permutation Distribution\n\n\n\n\n\n\n\n\n\n. . .\n\nWhy doesn’t the distribution have negative numbers?"
   },
   {
     "objectID": "slides/week9-day1.html#visualizing-the-p-value",
@@ -778,7 +778,7 @@
     "href": "slides/week9-day1.html#theory-based-methods",
     "title": "ANalysis Of VAriance",
     "section": "Theory-based Methods",
-    "text": "Theory-based Methods\n\neval_lm &lt;- lm(min_eval ~ age_cat, data = evals_small)\n\nanova(eval_lm) |&gt; \n  tidy()\n\n\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nage_cat\n3\n1.24198\n0.4139932\n1.412556\n0.2443174\n\n\nResiduals\n90\n26.37728\n0.2930808\nNA\nNA\n\n\n\n\n\n\n\n\n\nIs this the same statistic as before?\n\n\nWhat distribution was used to calculate the p.value?"
+    "text": "Theory-based Methods\n\neval_lm &lt;- lm(min_eval ~ age_cat, data = evals_small)\n\nanova(eval_lm) |&gt; \n  tidy()\n\n\n\n\n\n\n\n\n\nterm\ndf\nsumsq\nmeansq\nstatistic\np.value\n\n\n\n\nage_cat\n3\n1.24198\n0.4139932\n1.412556\n0.2443174\n\n\nResiduals\n90\n26.37728\n0.2930808\nNA\nNA\n\n\n\n\n\n\n\n. . .\n\nIs this the same statistic as before?\n. . .\nWhat distribution was used to calculate the p.value?\n. . ."
   },
   {
     "objectID": "slides/week9-day1.html#making-a-decision-reaching-a-conclusion-1",
@@ -792,7 +792,7 @@
     "href": "slides/week9-day1.html#section-6",
     "title": "ANalysis Of VAriance",
     "section": "",
-    "text": "Did the two methods yield different results?\n\n\n\nWhat does that imply about the normality condition?"
+    "text": "Did the two methods yield different results?\n\n. . .\n\nWhat does that imply about the normality condition?"
   },
   {
     "objectID": "slides/week9-day1.html#with-other-students-analyzing-the-same-data",
@@ -5510,8 +5510,8 @@
     "objectID": "slides/week9-day2.html#upcoming-deadlines",
     "href": "slides/week9-day2.html#upcoming-deadlines",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
-    "section": "Upcoming Deadlines",
-    "text": "Upcoming Deadlines\n\nLab 7 revisions are due by this Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
+    "section": "",
+    "text": "Lab 7 revisions are due by this Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
   },
   {
     "objectID": "slides/week9-day2.html#visualizations-density-ridges",
@@ -5532,28 +5532,28 @@
     "href": "slides/week9-day2.html#theory-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Theory-based Method",
-    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- lm(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\nanova(my_model) %&gt;%\n  tidy()\n\n\n\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
+    "text": "Theory-based Method\n\nTo fit a theory-based ANOVA, you use the following code:\n\nmy_model &lt;- lm(&lt;NAME OF RESPONSE VARIABLE&gt; ~ &lt;NAME OF EXPLANATORY VARIABLE&gt;, \n                data = &lt;NAME OF DATASET&gt;)\n\nanova(my_model) %&gt;%\n  tidy()\n\n\n. . .\n\n\n\n\n\n\nOnly use if normality is not violated!\n\n\n\nIf you look at your density ridge plots and you believe the normality condition is violated, you should not use a theory-based method!"
   },
   {
     "objectID": "slides/week9-day2.html#simulation-based-method",
     "href": "slides/week9-day2.html#simulation-based-method",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Simulation-based Method",
-    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
+    "text": "Simulation-based Method\n\nTo fit a simulation-based ANOVA, you need to carry out the following steps:\n\nfind the observed statistic\nsimulate statistics that could have happened if the null was true\nvisualize the distribution of simulated statistics (your permutation distribution)\ncalculate the p-value for your observed statistic\n\n\n\n\n\n\n\n\n2 levels versus 3 levels\n\n\n\nIf you categorical variable has two levels, you need to use a \"diff in means\" statistic, not an F-statistic!"
   },
   {
     "objectID": "slides/week9-day2.html#discussion-a-new-component",
     "href": "slides/week9-day2.html#discussion-a-new-component",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Discussion – A New Component",
-    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n\n\n\n\nIndependence of Observations\nConsider how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
+    "text": "Discussion – A New Component\n\nAre your p-values trustworthy?\n\nInspect the conditions of your model!\n. . .\n\n\n\nIndependence of Observations\nConsider how the data were collected!\n\n\n\n\nNormality of Residuals (Responses)\nUse the density ridge plots!\n\n\n\n\n\nEqual Variances of Each Group\nUse the density ridge plots!"
   },
   {
     "objectID": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
     "href": "slides/week9-day2.html#do-you-want-to-know-the-sample-size-in-each-group",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Do you want to know the sample size in each group?",
-    "text": "Do you want to know the sample size in each group?\n\n\nevals_small %&gt;%\n  count(age_cat) \n\n\n# A tibble: 4 × 2\n  age_cat            n\n  &lt;fct&gt;          &lt;int&gt;\n1 Young faculty     18\n2 Middle age        22\n3 Older faculty     40\n4 Nearly retired    14\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nThe constant variance condition is really important when the sample sizes of each group are quite different."
+    "text": "Do you want to know the sample size in each group?\n\nevals_small %&gt;%\n  count(age_cat) \n\n# A tibble: 4 × 2\n  age_cat            n\n  &lt;fct&gt;          &lt;int&gt;\n1 Young faculty     18\n2 Middle age        22\n3 Older faculty     40\n4 Nearly retired    14\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\n\nThe constant variance condition is really important when the sample sizes of each group are quite different."
   },
   {
     "objectID": "slides/week9-day2.html#do-you-want-to-change-the-grey-background-of-your-plots",
@@ -5574,7 +5574,7 @@
     "href": "slides/week9-day2.html#do-you-want-to-know-the-variances-for-each-group",
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Do you want to know the variances for each group?",
-    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
+    "text": "Do you want to know the variances for each group?\n\n\nevals_small %&gt;% \n  group_by(age_cat) %&gt;% \n  summarize(\n    var = var(min_eval, na.rm = TRUE)\n            ) \n\n\n\n\n\n\n\n\n\n\n\n\nage_cat\nvar\n\n\n\n\nYoung faculty\n0.2111438\n\n\nMiddle age\n0.3425974\n\n\nOlder faculty\n0.2461282\n\n\nNearly retired\n0.4610989\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant Variance\n\n\n\nA rule that is sometimes used is if the largest variance (0.461) divided by the smallest variance (0.211) is more than 3, then there is evidence of non-equal variance."
   },
   {
     "objectID": "weeks/chapters/week-6-reading2.html",
@@ -5921,5 +5921,19 @@
     "title": "Week 10 – Two-Way ANOVA",
     "section": "",
     "text": "Answers in different color text\n\n\n\nIt is really helpful for me if you make your answers in a different color, so I can easily pick them out!\n\n\nIn a completely randomized design (CRD), how are the treatments assigned?\n \nWhat is a nuisance factor?\n \nWhy would you want to block based on a nuisance factor?\n \nIn the example of fertilizer application on wheat fields, why is each fertilizer rate applied only once within each field?\n \nIn a randomized complete block design (RCBD), how are the treatments assigned?\n \nWhy should you expect for a “good” blocking variable to have a small p-value in the ANOVA table?\n \nWhat can you say about the blocking variable if its p-value (from the ANOVA table) is large?\n \nWhat happens to the error (residual) sum of squares if you ignore a blocking variable? Why is this bad?\n \nSuppose you’re part of a research team investigating the efficacy of a newly designed beta blocker. What are two variables you believe would be important to block on?\n \nHow are treatments assigned in a Latin square design?"
+  },
+  {
+    "objectID": "slides/week9-day1.html",
+    "href": "slides/week9-day1.html",
+    "title": "ANalysis Of VAriance",
+    "section": "",
+    "text": "Question 8 (Hypothesis Test Conclusion)\n\nIf you rejected the null hypothesis, there is evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n\nIf you failed to reject the null hypothesis, there is insufficient evidence of a linear relationship between the size of a crab and the latitude in which it lives.\n\n. . .\n\n\n\n\n\n\n\nNotice how both interpretations are in terms of the alternative hypothesis?\n\n\n\nIf you always write your conclusion in terms of \\(H_A\\), then you will never accidentally “accept” the null hypothesis.\n\n\n\n\n\n\nQuestion 11 (Interpret Confidence Interval):\n\n\nWe need to be specific about the what parameter we believe is in our interval. The slope statistic is measuring the relationship between which variables?\n\n\n\nWe’re analyzing the linear relationship between the size of a crab and the latitude in which it lives!\n\n. . .\n\n\nWhat population does this interval apply to? Where were these crabs sampled from? That is the population your interval applies to!\n\n\n\nThe fiddler crabs were sampled from 13 salt marshes, but where were these salt marshes located? What population might they belong to?\n\n\n\n\nQuestion 12 (Apply Confidence Interval)\n\nBergmann’s Rule suggests that organisms are larger in larger latitudes (further from the equator).\n\nDoes your interval suggest this is true for fiddler crabs?"
+  },
+  {
+    "objectID": "slides/week9-day2.html",
+    "href": "slides/week9-day2.html",
+    "title": "Coding a One-way ANOVA – Final Project Work Day",
+    "section": "",
+    "text": "Lab 7 revisions are due by this Friday (by midnight)\nLab 8 revisions are due next Friday\nStatistical Critique 2 revisions are due next Friday\n\n\n\n\n\n\n\nOne Round of Revisions\n\n\n\nThere is only time for one round of revisions for Lab 8 and Stat Critique #2, so please make sure you feel confident in your revisions! Feel free to stop by my office or schedule a time to chat about your revisions!\nAlso, please don’t forget reflections!"
   }
 ]

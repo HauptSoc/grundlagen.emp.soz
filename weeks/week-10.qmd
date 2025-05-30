@@ -34,7 +34,7 @@ other explanatory variable.
 
 ### Reading Guide -- Due Monday by the start of Class
 
-[Download the Word Document](reading-guide/week10-reading.docx)
+[Download the Word Document](reading-guide/week10-reading.qmd)
 
 ## Concept Quiz -- There is no quiz this week, only the reading guide!
 
