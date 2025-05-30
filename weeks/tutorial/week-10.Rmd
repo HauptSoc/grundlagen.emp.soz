@@ -143,19 +143,19 @@ For both categorical variables:
 
 **Equal Variance**: the variability of each group is similar to the others.
 
-::: callout-note
-# Intersectional groups
+<!-- ::: callout-note -->
+<!-- # Intersectional groups -->
 
-This is an assumption about the groups at the intersection of each categorical variable (e.g. Gentoo penguins captured in 2007). This assumption is fairly robust, but large differences in variability will cause issues.
-:::
+<!-- This is an assumption about the groups at the intersection of each categorical variable (e.g. Gentoo penguins captured in 2007). This assumption is fairly robust, but large differences in variability will cause issues. -->
+<!-- ::: -->
 
-**Normal Distribution**: the responses of each group need to be approximately Normal.
+<!-- **Normal Distribution**: the responses of each group need to be approximately Normal. -->
 
-::: callout-note
-# Intersectional distributions
+<!-- ::: callout-note -->
+<!-- # Intersectional distributions -->
 
-This is an assumption about the groups at the intersection of each categorical variable (e.g. Gentoo penguins captured in 2007). This assumption is also fairly robust, but influential outliers and the sample sizes of the groups should be noted when assessing.
-:::
+<!-- This is an assumption about the groups at the intersection of each categorical variable (e.g. Gentoo penguins captured in 2007). This assumption is also fairly robust, but influential outliers and the sample sizes of the groups should be noted when assessing. -->
+<!-- ::: -->
 
 ## 
 

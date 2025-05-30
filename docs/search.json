@@ -246,7 +246,7 @@
     "href": "weeks/week-10.html#r-tutorial-due-wednesday-by-the-start-of-class",
     "title": "Week 10: Two-Way ANOVA",
     "section": "1.2 R Tutorial – Due Wednesday by the start of class",
-    "text": "1.2 R Tutorial – Due Wednesday by the start of class\nThis week’s R tutorial is a short guide stepping you through model selection starting with a two-way ANOVA interaction model.\nClick here to access this week’s R tutorial\n\n\n\n\n\n\nSubmission\n\n\n\nSubmit a screenshot of the completion page at the end of the tutorial.",
+    "text": "1.2 R Tutorial – Due Wednesday by the start of class\nClick here to access this week’s R tutorial\n\n\n\n\n\n\nSubmission\n\n\n\nThe layout of this tutorial is a bit different from the others. When you are done with the tutorial, you can submit a screenshot of the completion page at the end!",
     "crumbs": [
       "Weekly materials",
       "Week 10"
@@ -5903,5 +5903,23 @@
     "title": "Coding a One-way ANOVA – Final Project Work Day",
     "section": "Additional Revision",
     "text": "Additional Revision\nIf you missed the deadline for the revisions on any assignment, I’m reopening the revisions.\n\nYou are permitted to submit one additional assignment for revisions, if you missed the original deadline for the revisions."
+  },
+  {
+    "objectID": "weeks/week-10.html#concept-quiz-there-is-no-quiz-this-week-only-the-reading-guide",
+    "href": "weeks/week-10.html#concept-quiz-there-is-no-quiz-this-week-only-the-reading-guide",
+    "title": "Week 10: Two-Way ANOVA",
+    "section": "1.1 Concept Quiz – There is no quiz this week, only the reading guide!",
+    "text": "1.1 Concept Quiz – There is no quiz this week, only the reading guide!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/reading-guide/week10-reading.html",
+    "href": "weeks/reading-guide/week10-reading.html",
+    "title": "Week 10 – Two-Way ANOVA",
+    "section": "",
+    "text": "Answers in different color text\n\n\n\nIt is really helpful for me if you make your answers in a different color, so I can easily pick them out!\n\n\nIn a completely randomized design (CRD), how are the treatments assigned?\n \nWhat is a nuisance factor?\n \nWhy would you want to block based on a nuisance factor?\n \nIn the example of fertilizer application on wheat fields, why is each fertilizer rate applied only once within each field?\n \nIn a randomized complete block design (RCBD), how are the treatments assigned?\n \nWhy should you expect for a “good” blocking variable to have a small p-value in the ANOVA table?\n \nWhat can you say about the blocking variable if its p-value (from the ANOVA table) is large?\n \nWhat happens to the error (residual) sum of squares if you ignore a blocking variable? Why is this bad?\n \nSuppose you’re part of a research team investigating the efficacy of a newly designed beta blocker. What are two variables you believe would be important to block on?\n \nHow are treatments assigned in a Latin square design?"
   }
 ]
