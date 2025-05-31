@@ -7,7 +7,7 @@ title-slide-attributes:
 format: 
   revealjs:
     theme: style.scss
-editor: visual
+editor: source
 ---
 
 ```{r}
@@ -31,11 +31,9 @@ trout <- filter(and_vertebrates,
 
 # Deadlines
 
-. . .
-
 ::: incremental
--   Final revisions are due by Sunday at midnight
--   Final Project is due by Sunday at midnight
+-   Final revisions are due by Sunday at midnight.
+-   Final Project is due by the beginning of Saturday's poster session (10:10am).
 :::
 
 . . .
@@ -43,35 +41,14 @@ trout <- filter(and_vertebrates,
 ::: callout-important
 # Deadline Extensions
 
-You **cannot** request deadline extensions for the final version of your Final Project. The assignment portal closes at 11:59pm on Sunday. **Do not ride the line.**
+You **cannot** request deadline extensions for the final version of your Final
+Project. The assignment portal closes at 10:10am on Saturday. 
+**Do not ride the line.**
 :::
 
 # Peer Review Session (45-minutes)
 
 # Structure of Final Projects
-
-## Findings
-
-The results of each hypothesis test go **directly below** the test.
-
-</br>
-
-::: columns
-::: {.column width="47%"}
-[**Theory-based Methods**]{.underline}
-
-Your decision & conclusion for your hypothesis test *go directly below your ANOVA table*.
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="47%"}
-[**Simulation-based Methods**]{.underline}
-
-Your decision & conclusion for your hypothesis test *go directly below your permutation distribution and p-value*.
-:::
-:::
 
 ## Hypothesis Test Conclusions
 
@@ -79,7 +56,7 @@ Your decision & conclusion for your hypothesis test *go directly below your perm
 
 </br>
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
 **Did you reject the null hypothesis?**
 
@@ -94,17 +71,18 @@ Then you have evidence that at least one group has a different mean!
 
 Then you have [insufficient evidence](https://critical-inference.com/the-problem-with-no-evidence-and-is-it-enough-to-bust-a-myth/) that at least one group has a different mean!
 :::
+::::::
+
+## Discussion
+
+::: {.midi}
+> Describe whether you believe the tests you performed are "reliable.
 :::
-
-## Model Validity
-
-> In this section you discuss the **reliability** of the p-values you obtained based on the model conditions.
 
 ::: small
 -   Independence
     -   *within* groups
     -   *between* groups
-
 -   Normality of the distributions for each group
 -   Equal variance of the distributions for each group
 :::
@@ -131,28 +109,28 @@ Just like we never say "I accept the null hypothesis," we never say a condition 
 
 This section summarizes your understanding of the foundational aspects of experimental design.
 
-::: columns
-::: {.column width="40%"}
+:::::::: columns
+:::: {.column width="40%"}
 ::: small
 > Based on the sampling method used, what larger population can you infer the results or your analysis onto?
 
 -   What were the inclusion criteria of the observations?
 -   How does that influence the population you can infer your findings onto?
 :::
-:::
+::::
 
 ::: {.column width="3%"}
 :::
 
-::: {.column width="55%"}
+:::: {.column width="55%"}
 ::: small
 > Based on the design of the study, what type of statements can be made about the relationship between the explanatory and response variables?
 
 -   Were the explanatory variables randomly assigned to control for confounding variables?
     -   How does that influence what you can and cannot say about the relationships between the variables?
 :::
-:::
-:::
+::::
+::::::::
 
 ## Overall Conclusions
 
@@ -164,43 +142,105 @@ This section summarizes your understanding of the foundational aspects of experi
 
 . . .
 
-::: columns
-::: {.column width="30%"}
+::::::::::::: columns
+:::: {.column width="30%"}
 ::: small
 Did you distributions look similar but your hypothesis test said at least one group was different?
 
 Think about how sample size effects p-values!
 :::
-:::
+::::
 
 ::: {.column width="3%"}
 :::
 
-::: {.column width="30%"}
-::: small
+::::: {.column width="30%"}
+:::: small
 ::: fragment
 Did you reject the null hypothesis for your one-way ANOVA?
 
 Look back at your visualizations -- which group(s) look the most different?
 :::
-:::
-:::
+::::
+:::::
 
 ::: {.column width="3%"}
 :::
 
-::: {.column width="30%"}
-::: small
+::::: {.column width="30%"}
+:::: small
 ::: fragment
 Did you fail to reject the null hypothesis for your one-way ANOVA?
 
 Look back at your visualizations -- do all of the groups look relatively similar?
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::::::
 
 # Remedying Condition Violations
+
+## Do you have multiple observations that are related?
+
+You should have only **one** observation per observational unit (e.g., fish, 
+salamander, teacher). 
+
+::: columns
+::: {.column width="47%"}
+`and_vertebrates`
+
+::: {.small}
+```{r}
+#| label: independence-vertebrates
+#| echo: true
+#| code-line-numbers: false
+
+vertebrates_small <- and_vertebrates %>%
+  group_by(pitnumber) %>% 
+  slice_sample(n = 1) %>%
+  ungroup()
+```
+:::
+
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+`evals`
+
+::: {.small}
+```{r}
+#| label: independence-evals-1
+#| echo: true
+#| code-line-numbers: false
+
+evals_small <- evals %>% 
+  group_by(prof_ID) %>% 
+  slice_sample(n = 1) %>% 
+  ungroup()
+```
+:::
+
+OR 
+
+::: {.small}
+```{r}
+#| label: independence-evals-2
+#| echo: true
+#| code-line-numbers: false
+
+evals_small <- evals %>% 
+  group_by(prof_ID) %>% 
+  mutate(min_score = min(score)) %>%
+  distinct(prof_ID, 
+           .keep_all = TRUE) %>%
+  ungroup()
+```
+:::
+:::
+:::
 
 ## Do you have really skewed data?
 
@@ -221,7 +261,7 @@ trout %>%
 
 ## Try using a log transformation!
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 **Un-transformed Variances**
 
@@ -236,7 +276,7 @@ trout %>%
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ::: fragment
 **Log Transformed Variances**
 
@@ -249,8 +289,8 @@ trout %>%
   gt()
 ```
 :::
-:::
-:::
+::::
+::::::
 
 . . .
 
@@ -258,34 +298,21 @@ trout %>%
 
 <center>What do you think? Did it work?</center>
 
-# Final Presentations
+# Final Poster Presentations
 
 ## Presentation Structure
 
-> You will give a 3-minute presentation on **one** aspect of your final project you found the most interesting. Notice, you need to pick one aspect, since your presentation is so short.
+Each section will have an 80-minute poster presentation session. 
+
+- Section 01: 10:10am to 11:30am 
+- Section 02: 11:40am to 1:00pm
 
 . . .
 
-Here are some examples of what you could choose:
+</br> 
 
--   The relationships you saw in the visualizations
--   The design of the study
--   The model you found best represents the relationships between variables you selected
-
-## Presentation Slides
-
-For your presentation you are allowed to make **two** slides:
-
-1.  A title slide (make it fun!) with your name
-2.  A content slide
-
-Your slides **must be submitted as a PDF**.
-
-::: callout-warning
-# Deadline for slides
-
-Slides are due by [5pm the night before your final exam timeslot]{.underline}. If you do not submit slides by the deadline, you will not be allowed to present.
-:::
+Bring your laptop so you can plug into the monitor to display your poster. There
+are no computers in the presentation room!
 
 # Some Closing Thoughts...
 
@@ -337,7 +364,7 @@ The field of Statistics was developed to evaluate evidence obtained from data. O
 
 ## 
 
-::: columns
+::::::: columns
 ::: {.column width="40%"}
 ![](images/happy-cat.webp)
 :::
@@ -345,9 +372,9 @@ The field of Statistics was developed to evaluate evidence obtained from data. O
 ::: {.column width="5%"}
 :::
 
-::: {.column width="45%"}
+:::: {.column width="45%"}
 ::: {style="font-size: 2.75em; color: #000000;"}
 Remember to give yourself praise!
 :::
-:::
-:::
+::::
+:::::::
