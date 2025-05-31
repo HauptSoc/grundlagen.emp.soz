@@ -428,7 +428,7 @@
 </section>
 <section id="wrapping-up-revisions" class="slide level2">
 <h2>Wrapping Up Revisions</h2>
-<p>The final round of revisions on <strong>all</strong> assignments are due by Sunday, June 9.</p>
+<p>The final round of revisions on <strong>all</strong> assignments are due by Sunday, June 8.</p>
 <div class="fragment">
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
@@ -448,10 +448,10 @@
 <section id="final-project" class="slide level2">
 <h2>Final Project</h2>
 <ul>
-<li>Feedback (from me) will be provided no later than Thursday evening</li>
+<li>Feedback (from me) will be provided by Wednesday’s class</li>
 <li>Peer feedback on Wednesday
 <ul>
-<li>Print your report!</li>
+<li>Come with a poster outline!</li>
 </ul></li>
 </ul>
 </section></section>
@@ -471,6 +471,56 @@
 </div>
 <p>Assess if <u>multiple</u> categorical variables have a relationship with the response.</p>
 </section>
+<section id="hbr-maples" class="slide level2">
+<h2>HBR Maples</h2>
+<div class="midi">
+<p>The <code>hbr_maples</code> dataset contains observations on sugar maple seedlings in untreated and calcium-amended watersheds at Hubbard Brook Experimental Forest in New Hampshire.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="small">
+<div>
+<ul>
+<li class="fragment">Both watersheds are located on the south-facing slope (average slope angle 20-30%) of the Hubbard Brook valley.</li>
+<li class="fragment">These watersheds were chosen to minimize differences in site characteristics between treatment and reference sites.</li>
+<li class="fragment">In October 1999, 55 Mg of powdered and pelletized wollastonite (CaSi03) was applied by helicopter to W1, while no treatment was applied to the reference watershed.</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/hbr-maples-watersheds.png" alt="A Google Maps image of the two watersheds studied in the HBR maples dataset. Each watershed is outlined in a yellow rectangle, where the rectangles have a moderate amount of area between them. This is presumably so that the calcuium treatment from one watershed did not transport to the adjacent watershed."></p>
+</div></div>
+</section>
+<section id="experimental-design" class="slide level2">
+<h2>Experimental Design</h2>
+<div class="small">
+<blockquote>
+<p>Sugar maple germinants were collected in early August 2003 (first-year germinants) and 2004 (second-year germinants) from randomly placed transects in the treated watershed (W1) and in the reference plots located adjacent to W1. In 2003, sampling was stratified by elevation, with 120 seedlings each collected from treated and reference areas in the low- and mid-elevation zones of the watersheds.</p>
+</blockquote>
+</div>
+<div>
+<div class="small">
+<ul>
+<li class="fragment">What are the treatments?</li>
+<li class="fragment">What are the experimental units? (i.e., to whom was the treatment applied?)</li>
+<li class="fragment">Is there replication in this study?</li>
+<li class="fragment">Is there pseudoreplication in this study?</li>
+<li class="fragment">What confounding variables did the researchers attempt to control?</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="two-way-anova" class="slide level2">
+<h2>Two-Way ANOVA</h2>
+<p>There seem to be three “key” variables in this study:</p>
+<ul>
+<li>treatment (calcium, reference)</li>
+<li>elevation (low, medium)</li>
+<li>year of collection (2003, 2004)</li>
+</ul>
+</section>
 <section id="modeling-options" class="slide level2">
 <h2>Modeling Options</h2>
 <div class="columns">
@@ -489,15 +539,7 @@
 <p>The relationship between one categorical explanatory variable and the response <strong>differs</strong> based on the values of another categorical variable.</p>
 </div>
 </div></div>
-</section>
-<section id="what-are-we-looking-for" class="slide level2">
-<h2>What are we looking for?</h2>
-
-<img data-src="week10-day1_files/figure-revealjs/twa-plot-year-1.png" width="960" class="r-stretch"></section>
-<section id="another-way-to-think-about-it" class="slide level2">
-<h2>Another way to think about it…</h2>
-
-<img data-src="week10-day1_files/figure-revealjs/twa-facet-maples-1.png" width="960" class="r-stretch"></section></section>
+</section></section>
 <section>
 <section id="interaction-two-way-anova" class="title-slide slide level1 center">
 <h1>Interaction Two-way ANOVA</h1>
@@ -506,16 +548,39 @@
 <section id="research-question" class="slide level2">
 <h2>Research Question</h2>
 <blockquote>
-<p>Does the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the treatment was applied?</p>
+<p>Does the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the seedling was sampled?</p>
 </blockquote>
 <div class="fragment">
 <p><br></p>
 <p>Or, because the study was an experiment…</p>
 <blockquote>
-<p>Does the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year of the treatment?</p>
+<p>Does the <em>effect</em> of calcium treatment on the stem dry mass of sugar maples differ based on the year the seedling was sampled?</p>
 </blockquote>
 </div>
 </section>
+<section id="what-are-we-looking-for" class="slide level2">
+<h2>What are we looking for?</h2>
+
+<!-- ## Another way to think about it... -->
+<!-- ```{r} -->
+<!-- #| label: twa-facet-maples -->
+<!-- #| echo: false -->
+<!-- hbr_maples_small %>%  -->
+<!--   ggplot(aes(y = year_cat, x = stem_dry_mass)) +  -->
+<!--   geom_density_ridges(alpha = 0.5, scale = 1) + -->
+<!--   facet_wrap(~ watershed) + -->
+<!--   labs(y = "", -->
+<!--        title = "Effect of Calcium Treatment on Sugar Maples Across Different Years", -->
+<!--        x = "Stem Dry Mass (g)",  -->
+<!--        fill = "") +  -->
+<!--   theme(axis.title = element_text(size = 18),  -->
+<!--         axis.text = element_text(size = 16),  -->
+<!--         legend.text = element_text(size = 16), -->
+<!--         legend.title = element_text(size = 18),  -->
+<!--         plot.title = element_text(size = 18), -->
+<!--         legend.position = "top") -->
+<!-- ``` -->
+<img data-src="week10-day1_files/figure-revealjs/twa-plot-year-1.png" width="960" class="r-stretch"></section>
 <section id="conditions" class="slide level2">
 <h2>Conditions</h2>
 <ul>
@@ -550,29 +615,30 @@
 <section id="theory-based-two-way-anova" class="slide level2">
 <h2>Theory-based Two-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(stem_dry_mass <span class="sc">~</span> watershed <span class="sc">*</span> year_cat, </span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> hbr_maples_small)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>maple_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(stem_dry_mass <span class="sc">~</span> watershed <span class="sc">*</span> year_cat, </span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>               <span class="at">data =</span> hbr_maples_small)</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(maple_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ezphhyanqc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ezphhyanqc table {
+<div id="oahfkpmeyg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oahfkpmeyg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ezphhyanqc thead, #ezphhyanqc tbody, #ezphhyanqc tfoot, #ezphhyanqc tr, #ezphhyanqc td, #ezphhyanqc th {
+#oahfkpmeyg thead, #oahfkpmeyg tbody, #oahfkpmeyg tfoot, #oahfkpmeyg tr, #oahfkpmeyg td, #oahfkpmeyg th {
   border-style: none;
 }
 
-#ezphhyanqc p {
+#oahfkpmeyg p {
   margin: 0;
   padding: 0;
 }
 
-#ezphhyanqc .gt_table {
+#oahfkpmeyg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -598,12 +664,12 @@
   border-left-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_caption {
+#oahfkpmeyg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ezphhyanqc .gt_title {
+#oahfkpmeyg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -615,7 +681,7 @@
   border-bottom-width: 0;
 }
 
-#ezphhyanqc .gt_subtitle {
+#oahfkpmeyg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -627,7 +693,7 @@
   border-top-width: 0;
 }
 
-#ezphhyanqc .gt_heading {
+#oahfkpmeyg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -639,13 +705,13 @@
   border-right-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_bottom_border {
+#oahfkpmeyg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_col_headings {
+#oahfkpmeyg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -660,7 +726,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_col_heading {
+#oahfkpmeyg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -680,7 +746,7 @@
   overflow-x: hidden;
 }
 
-#ezphhyanqc .gt_column_spanner_outer {
+#oahfkpmeyg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -692,15 +758,15 @@
   padding-right: 4px;
 }
 
-#ezphhyanqc .gt_column_spanner_outer:first-child {
+#oahfkpmeyg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ezphhyanqc .gt_column_spanner_outer:last-child {
+#oahfkpmeyg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ezphhyanqc .gt_column_spanner {
+#oahfkpmeyg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -712,11 +778,11 @@
   width: 100%;
 }
 
-#ezphhyanqc .gt_spanner_row {
+#oahfkpmeyg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ezphhyanqc .gt_group_heading {
+#oahfkpmeyg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -742,7 +808,7 @@
   text-align: left;
 }
 
-#ezphhyanqc .gt_empty_group_heading {
+#oahfkpmeyg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -757,15 +823,15 @@
   vertical-align: middle;
 }
 
-#ezphhyanqc .gt_from_md > :first-child {
+#oahfkpmeyg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ezphhyanqc .gt_from_md > :last-child {
+#oahfkpmeyg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ezphhyanqc .gt_row {
+#oahfkpmeyg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -784,7 +850,7 @@
   overflow-x: hidden;
 }
 
-#ezphhyanqc .gt_stub {
+#oahfkpmeyg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -797,7 +863,7 @@
   padding-right: 5px;
 }
 
-#ezphhyanqc .gt_stub_row_group {
+#oahfkpmeyg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -811,15 +877,15 @@
   vertical-align: top;
 }
 
-#ezphhyanqc .gt_row_group_first td {
+#oahfkpmeyg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ezphhyanqc .gt_row_group_first th {
+#oahfkpmeyg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ezphhyanqc .gt_summary_row {
+#oahfkpmeyg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -829,16 +895,16 @@
   padding-right: 5px;
 }
 
-#ezphhyanqc .gt_first_summary_row {
+#oahfkpmeyg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_first_summary_row.thick {
+#oahfkpmeyg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ezphhyanqc .gt_last_summary_row {
+#oahfkpmeyg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -848,7 +914,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_grand_summary_row {
+#oahfkpmeyg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -858,7 +924,7 @@
   padding-right: 5px;
 }
 
-#ezphhyanqc .gt_first_grand_summary_row {
+#oahfkpmeyg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -868,7 +934,7 @@
   border-top-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_last_grand_summary_row_top {
+#oahfkpmeyg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -878,11 +944,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_striped {
+#oahfkpmeyg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ezphhyanqc .gt_table_body {
+#oahfkpmeyg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -891,7 +957,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_footnotes {
+#oahfkpmeyg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -905,7 +971,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_footnote {
+#oahfkpmeyg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -914,7 +980,7 @@
   padding-right: 5px;
 }
 
-#ezphhyanqc .gt_sourcenotes {
+#oahfkpmeyg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -928,7 +994,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ezphhyanqc .gt_sourcenote {
+#oahfkpmeyg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -936,72 +1002,72 @@
   padding-right: 5px;
 }
 
-#ezphhyanqc .gt_left {
+#oahfkpmeyg .gt_left {
   text-align: left;
 }
 
-#ezphhyanqc .gt_center {
+#oahfkpmeyg .gt_center {
   text-align: center;
 }
 
-#ezphhyanqc .gt_right {
+#oahfkpmeyg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ezphhyanqc .gt_font_normal {
+#oahfkpmeyg .gt_font_normal {
   font-weight: normal;
 }
 
-#ezphhyanqc .gt_font_bold {
+#oahfkpmeyg .gt_font_bold {
   font-weight: bold;
 }
 
-#ezphhyanqc .gt_font_italic {
+#oahfkpmeyg .gt_font_italic {
   font-style: italic;
 }
 
-#ezphhyanqc .gt_super {
+#oahfkpmeyg .gt_super {
   font-size: 65%;
 }
 
-#ezphhyanqc .gt_footnote_marks {
+#oahfkpmeyg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ezphhyanqc .gt_asterisk {
+#oahfkpmeyg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ezphhyanqc .gt_indent_1 {
+#oahfkpmeyg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ezphhyanqc .gt_indent_2 {
+#oahfkpmeyg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ezphhyanqc .gt_indent_3 {
+#oahfkpmeyg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ezphhyanqc .gt_indent_4 {
+#oahfkpmeyg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ezphhyanqc .gt_indent_5 {
+#oahfkpmeyg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ezphhyanqc .katex-display {
+#oahfkpmeyg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ezphhyanqc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oahfkpmeyg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1021,32 +1087,32 @@
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">watershed</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.011493301</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.011493301</td>
-<td class="gt_row gt_right" headers="F value">54.39585</td>
-<td class="gt_row gt_right" headers="Pr(>F)">3.265267e-12</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.007644249</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0076442491</td>
+<td class="gt_row gt_right" headers="F value">43.59178</td>
+<td class="gt_row gt_right" headers="Pr(>F)">2.965697e-10</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">year_cat</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.116414825</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.116414825</td>
-<td class="gt_row gt_right" headers="F value">550.97168</td>
-<td class="gt_row gt_right" headers="Pr(>F)">5.985573e-62</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.092017516</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0920175156</td>
+<td class="gt_row gt_right" headers="F value">524.73531</td>
+<td class="gt_row gt_right" headers="Pr(>F)">2.751024e-60</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">watershed:year_cat</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.002635442</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.002635442</td>
-<td class="gt_row gt_right" headers="F value">12.47310</td>
-<td class="gt_row gt_right" headers="Pr(>F)">5.024567e-04</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.002274872</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0022748721</td>
+<td class="gt_row gt_right" headers="F value">12.97259</td>
+<td class="gt_row gt_right" headers="Pr(>F)">3.903622e-04</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">Residuals</td>
 <td class="gt_row gt_right" headers="Df">221</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.046695097</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.000211290</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.038754531</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0001753599</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -1063,9 +1129,9 @@
 </div>
 <div class="fragment">
 <p><br></p>
-<center>
-Does it?
-</center>
+<div class="centered">
+<p>Does it? <span class="fragment">Does that make sense?</span></p>
+</div>
 </div>
 </section>
 <section id="how-are-those-p-values-calculated" class="slide level2">
@@ -1080,7 +1146,9 @@ Does it?
 </div>
 <div class="fragment">
 <p><br></p>
+<div class="centered">
 <p>Is that what we want????</p>
+</div>
 </div>
 </section>
 <section id="testing-main-effects" class="slide level2">
@@ -1088,7 +1156,9 @@ Does it?
 <p>If there is evidence of an interaction, we <strong>do not</strong> test if the main effects are “significant.”</p>
 <div class="fragment">
 <p><br></p>
+<div class="centered">
 <p>Why?</p>
+</div>
 </div>
 <div class="fragment">
 <p><br></p>
@@ -1098,7 +1168,7 @@ Does it?
 <section id="interpreting-main-effects" class="slide level2">
 <h2>Interpreting “main effects”</h2>
 <p>When interaction effects are present, an interpretation of main effects is incomplete or misleading</p>
-<div class="center">
+<div class="centered">
 <p><img data-src="images/car-interaction.png"></p>
 </div>
 </section></section>
@@ -1111,33 +1181,70 @@ Does it?
 <h2>What if our analysis found no evidence of an interaction?</h2>
 
 <img data-src="week10-day1_files/figure-revealjs/twa-plot-watershed-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="why-would-there-be-no-interaction-with-elevation" class="slide level2">
+<h2>Why would there be no interaction with <code>elevation</code>?</h2>
+<div class="small">
+<blockquote>
+<p>For most of these measurements, sampling was stratified by elevation zone. There were three elevation zones designated within the northern hardwood-dominated forest in and adjacent to W1: low (500-550m), middle (550-600 m), and high (600-700 m).</p>
+</blockquote>
+</div>
+<div class="small">
+<div>
+<ul>
+<li class="fragment">What role does <code>elevation</code> play in this experiment?</li>
+<li class="fragment">Should a blocking variable have an interaction with the treatment?</li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<div class="small">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>If there is a significant interaction between the block and the treatment, it means the treatment’s effect changes depending on the block. That would violate the basic idea of blocking: the block adds noise (i.e., shifts means up or down), but doesn’t interfere with how the treatment works.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="testing-for-a-relationship-for-each-variable" class="slide level2">
 <h2>Testing for a relationship for each variable</h2>
+<div class="midi">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(stem_dry_mass <span class="sc">~</span> elevation <span class="sc">+</span> watershed, </span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> hbr_maples_small) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>additive_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(stem_dry_mass <span class="sc">~</span> elevation <span class="sc">+</span> watershed, </span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> hbr_maples_small) </span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(additive_lm) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <p><br></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="cyizjnleas" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cyizjnleas table {
+<div id="mbitlmmutw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mbitlmmutw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cyizjnleas thead, #cyizjnleas tbody, #cyizjnleas tfoot, #cyizjnleas tr, #cyizjnleas td, #cyizjnleas th {
+#mbitlmmutw thead, #mbitlmmutw tbody, #mbitlmmutw tfoot, #mbitlmmutw tr, #mbitlmmutw td, #mbitlmmutw th {
   border-style: none;
 }
 
-#cyizjnleas p {
+#mbitlmmutw p {
   margin: 0;
   padding: 0;
 }
 
-#cyizjnleas .gt_table {
+#mbitlmmutw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1163,12 +1270,12 @@ Does it?
   border-left-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_caption {
+#mbitlmmutw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cyizjnleas .gt_title {
+#mbitlmmutw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1180,7 +1287,7 @@ Does it?
   border-bottom-width: 0;
 }
 
-#cyizjnleas .gt_subtitle {
+#mbitlmmutw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1192,7 +1299,7 @@ Does it?
   border-top-width: 0;
 }
 
-#cyizjnleas .gt_heading {
+#mbitlmmutw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1204,13 +1311,13 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_bottom_border {
+#mbitlmmutw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_col_headings {
+#mbitlmmutw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1225,7 +1332,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_col_heading {
+#mbitlmmutw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1245,7 +1352,7 @@ Does it?
   overflow-x: hidden;
 }
 
-#cyizjnleas .gt_column_spanner_outer {
+#mbitlmmutw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1257,15 +1364,15 @@ Does it?
   padding-right: 4px;
 }
 
-#cyizjnleas .gt_column_spanner_outer:first-child {
+#mbitlmmutw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cyizjnleas .gt_column_spanner_outer:last-child {
+#mbitlmmutw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cyizjnleas .gt_column_spanner {
+#mbitlmmutw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1277,11 +1384,11 @@ Does it?
   width: 100%;
 }
 
-#cyizjnleas .gt_spanner_row {
+#mbitlmmutw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cyizjnleas .gt_group_heading {
+#mbitlmmutw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1307,7 +1414,7 @@ Does it?
   text-align: left;
 }
 
-#cyizjnleas .gt_empty_group_heading {
+#mbitlmmutw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1322,15 +1429,15 @@ Does it?
   vertical-align: middle;
 }
 
-#cyizjnleas .gt_from_md > :first-child {
+#mbitlmmutw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cyizjnleas .gt_from_md > :last-child {
+#mbitlmmutw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cyizjnleas .gt_row {
+#mbitlmmutw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1349,7 +1456,7 @@ Does it?
   overflow-x: hidden;
 }
 
-#cyizjnleas .gt_stub {
+#mbitlmmutw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1362,7 +1469,7 @@ Does it?
   padding-right: 5px;
 }
 
-#cyizjnleas .gt_stub_row_group {
+#mbitlmmutw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1376,15 +1483,15 @@ Does it?
   vertical-align: top;
 }
 
-#cyizjnleas .gt_row_group_first td {
+#mbitlmmutw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cyizjnleas .gt_row_group_first th {
+#mbitlmmutw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cyizjnleas .gt_summary_row {
+#mbitlmmutw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1394,16 +1501,16 @@ Does it?
   padding-right: 5px;
 }
 
-#cyizjnleas .gt_first_summary_row {
+#mbitlmmutw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_first_summary_row.thick {
+#mbitlmmutw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cyizjnleas .gt_last_summary_row {
+#mbitlmmutw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1413,7 +1520,7 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_grand_summary_row {
+#mbitlmmutw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1423,7 +1530,7 @@ Does it?
   padding-right: 5px;
 }
 
-#cyizjnleas .gt_first_grand_summary_row {
+#mbitlmmutw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1433,7 +1540,7 @@ Does it?
   border-top-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_last_grand_summary_row_top {
+#mbitlmmutw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1443,11 +1550,11 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_striped {
+#mbitlmmutw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cyizjnleas .gt_table_body {
+#mbitlmmutw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1456,7 +1563,7 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_footnotes {
+#mbitlmmutw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1470,7 +1577,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_footnote {
+#mbitlmmutw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1479,7 +1586,7 @@ Does it?
   padding-right: 5px;
 }
 
-#cyizjnleas .gt_sourcenotes {
+#mbitlmmutw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1493,7 +1600,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#cyizjnleas .gt_sourcenote {
+#mbitlmmutw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1501,72 +1608,72 @@ Does it?
   padding-right: 5px;
 }
 
-#cyizjnleas .gt_left {
+#mbitlmmutw .gt_left {
   text-align: left;
 }
 
-#cyizjnleas .gt_center {
+#mbitlmmutw .gt_center {
   text-align: center;
 }
 
-#cyizjnleas .gt_right {
+#mbitlmmutw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cyizjnleas .gt_font_normal {
+#mbitlmmutw .gt_font_normal {
   font-weight: normal;
 }
 
-#cyizjnleas .gt_font_bold {
+#mbitlmmutw .gt_font_bold {
   font-weight: bold;
 }
 
-#cyizjnleas .gt_font_italic {
+#mbitlmmutw .gt_font_italic {
   font-style: italic;
 }
 
-#cyizjnleas .gt_super {
+#mbitlmmutw .gt_super {
   font-size: 65%;
 }
 
-#cyizjnleas .gt_footnote_marks {
+#mbitlmmutw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cyizjnleas .gt_asterisk {
+#mbitlmmutw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cyizjnleas .gt_indent_1 {
+#mbitlmmutw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cyizjnleas .gt_indent_2 {
+#mbitlmmutw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cyizjnleas .gt_indent_3 {
+#mbitlmmutw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cyizjnleas .gt_indent_4 {
+#mbitlmmutw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cyizjnleas .gt_indent_5 {
+#mbitlmmutw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cyizjnleas .katex-display {
+#mbitlmmutw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cyizjnleas div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mbitlmmutw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1586,24 +1693,24 @@ Does it?
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">elevation</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0003628227</td>
-<td class="gt_row gt_right" headers="Mean Sq">3.628227e-04</td>
-<td class="gt_row gt_right" headers="F value">6.599149</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.123469e-02</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0001751458</td>
+<td class="gt_row gt_right" headers="Mean Sq">1.751458e-04</td>
+<td class="gt_row gt_right" headers="F value">2.36367</td>
+<td class="gt_row gt_right" headers="Pr(>F)">1.261900e-01</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">watershed</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0026119904</td>
-<td class="gt_row gt_right" headers="Mean Sq">2.611990e-03</td>
-<td class="gt_row gt_right" headers="F value">47.507808</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.651260e-10</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0047819744</td>
+<td class="gt_row gt_right" headers="Mean Sq">4.781974e-03</td>
+<td class="gt_row gt_right" headers="F value">64.53485</td>
+<td class="gt_row gt_right" headers="Pr(>F)">2.059588e-13</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Df">142</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0078071933</td>
-<td class="gt_row gt_right" headers="Mean Sq">5.498023e-05</td>
+<td class="gt_row gt_right" headers="Df">158</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0117076587</td>
+<td class="gt_row gt_right" headers="Mean Sq">7.409911e-05</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -1622,31 +1729,35 @@ Does it?
 </section>
 <section id="lets-see" class="slide level2">
 <h2>Let’s see…</h2>
+<div class="midi">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(stem_dry_mass <span class="sc">~</span> watershed <span class="sc">+</span> elevation, </span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> hbr_maples) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>additive_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(stem_dry_mass <span class="sc">~</span> watershed <span class="sc">+</span> elevation, </span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> hbr_maples_small) </span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(additive_lm) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <p><br></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="pylzozremw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pylzozremw table {
+<div id="wfazhqkajy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wfazhqkajy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pylzozremw thead, #pylzozremw tbody, #pylzozremw tfoot, #pylzozremw tr, #pylzozremw td, #pylzozremw th {
+#wfazhqkajy thead, #wfazhqkajy tbody, #wfazhqkajy tfoot, #wfazhqkajy tr, #wfazhqkajy td, #wfazhqkajy th {
   border-style: none;
 }
 
-#pylzozremw p {
+#wfazhqkajy p {
   margin: 0;
   padding: 0;
 }
 
-#pylzozremw .gt_table {
+#wfazhqkajy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1672,12 +1783,12 @@ Does it?
   border-left-color: #D3D3D3;
 }
 
-#pylzozremw .gt_caption {
+#wfazhqkajy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pylzozremw .gt_title {
+#wfazhqkajy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1689,7 +1800,7 @@ Does it?
   border-bottom-width: 0;
 }
 
-#pylzozremw .gt_subtitle {
+#wfazhqkajy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1701,7 +1812,7 @@ Does it?
   border-top-width: 0;
 }
 
-#pylzozremw .gt_heading {
+#wfazhqkajy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1713,13 +1824,13 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#pylzozremw .gt_bottom_border {
+#wfazhqkajy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pylzozremw .gt_col_headings {
+#wfazhqkajy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1734,7 +1845,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#pylzozremw .gt_col_heading {
+#wfazhqkajy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1754,7 +1865,7 @@ Does it?
   overflow-x: hidden;
 }
 
-#pylzozremw .gt_column_spanner_outer {
+#wfazhqkajy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1766,15 +1877,15 @@ Does it?
   padding-right: 4px;
 }
 
-#pylzozremw .gt_column_spanner_outer:first-child {
+#wfazhqkajy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pylzozremw .gt_column_spanner_outer:last-child {
+#wfazhqkajy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pylzozremw .gt_column_spanner {
+#wfazhqkajy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1786,11 +1897,11 @@ Does it?
   width: 100%;
 }
 
-#pylzozremw .gt_spanner_row {
+#wfazhqkajy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pylzozremw .gt_group_heading {
+#wfazhqkajy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1816,7 +1927,7 @@ Does it?
   text-align: left;
 }
 
-#pylzozremw .gt_empty_group_heading {
+#wfazhqkajy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1831,15 +1942,15 @@ Does it?
   vertical-align: middle;
 }
 
-#pylzozremw .gt_from_md > :first-child {
+#wfazhqkajy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pylzozremw .gt_from_md > :last-child {
+#wfazhqkajy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pylzozremw .gt_row {
+#wfazhqkajy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1858,7 +1969,7 @@ Does it?
   overflow-x: hidden;
 }
 
-#pylzozremw .gt_stub {
+#wfazhqkajy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1871,7 +1982,7 @@ Does it?
   padding-right: 5px;
 }
 
-#pylzozremw .gt_stub_row_group {
+#wfazhqkajy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1885,15 +1996,15 @@ Does it?
   vertical-align: top;
 }
 
-#pylzozremw .gt_row_group_first td {
+#wfazhqkajy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pylzozremw .gt_row_group_first th {
+#wfazhqkajy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pylzozremw .gt_summary_row {
+#wfazhqkajy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1903,16 +2014,16 @@ Does it?
   padding-right: 5px;
 }
 
-#pylzozremw .gt_first_summary_row {
+#wfazhqkajy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pylzozremw .gt_first_summary_row.thick {
+#wfazhqkajy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pylzozremw .gt_last_summary_row {
+#wfazhqkajy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1922,7 +2033,7 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#pylzozremw .gt_grand_summary_row {
+#wfazhqkajy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1932,7 +2043,7 @@ Does it?
   padding-right: 5px;
 }
 
-#pylzozremw .gt_first_grand_summary_row {
+#wfazhqkajy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1942,7 +2053,7 @@ Does it?
   border-top-color: #D3D3D3;
 }
 
-#pylzozremw .gt_last_grand_summary_row_top {
+#wfazhqkajy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1952,11 +2063,11 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#pylzozremw .gt_striped {
+#wfazhqkajy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pylzozremw .gt_table_body {
+#wfazhqkajy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1965,7 +2076,7 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#pylzozremw .gt_footnotes {
+#wfazhqkajy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1979,7 +2090,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#pylzozremw .gt_footnote {
+#wfazhqkajy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1988,7 +2099,7 @@ Does it?
   padding-right: 5px;
 }
 
-#pylzozremw .gt_sourcenotes {
+#wfazhqkajy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2002,7 +2113,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#pylzozremw .gt_sourcenote {
+#wfazhqkajy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2010,72 +2121,72 @@ Does it?
   padding-right: 5px;
 }
 
-#pylzozremw .gt_left {
+#wfazhqkajy .gt_left {
   text-align: left;
 }
 
-#pylzozremw .gt_center {
+#wfazhqkajy .gt_center {
   text-align: center;
 }
 
-#pylzozremw .gt_right {
+#wfazhqkajy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pylzozremw .gt_font_normal {
+#wfazhqkajy .gt_font_normal {
   font-weight: normal;
 }
 
-#pylzozremw .gt_font_bold {
+#wfazhqkajy .gt_font_bold {
   font-weight: bold;
 }
 
-#pylzozremw .gt_font_italic {
+#wfazhqkajy .gt_font_italic {
   font-style: italic;
 }
 
-#pylzozremw .gt_super {
+#wfazhqkajy .gt_super {
   font-size: 65%;
 }
 
-#pylzozremw .gt_footnote_marks {
+#wfazhqkajy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pylzozremw .gt_asterisk {
+#wfazhqkajy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pylzozremw .gt_indent_1 {
+#wfazhqkajy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pylzozremw .gt_indent_2 {
+#wfazhqkajy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pylzozremw .gt_indent_3 {
+#wfazhqkajy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pylzozremw .gt_indent_4 {
+#wfazhqkajy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pylzozremw .gt_indent_5 {
+#wfazhqkajy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#pylzozremw .katex-display {
+#wfazhqkajy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#pylzozremw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wfazhqkajy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2095,24 +2206,24 @@ Does it?
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">watershed</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0065062507</td>
-<td class="gt_row gt_right" headers="Mean Sq">6.506251e-03</td>
-<td class="gt_row gt_right" headers="F value">86.658504</td>
-<td class="gt_row gt_right" headers="Pr(>F)">9.073535e-18</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0047451038</td>
+<td class="gt_row gt_right" headers="Mean Sq">4.745104e-03</td>
+<td class="gt_row gt_right" headers="F value">64.037262</td>
+<td class="gt_row gt_right" headers="Pr(>F)">2.464494e-13</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">elevation</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0005821935</td>
-<td class="gt_row gt_right" headers="Mean Sq">5.821935e-04</td>
-<td class="gt_row gt_right" headers="F value">7.754392</td>
-<td class="gt_row gt_right" headers="Pr(>F)">5.791052e-03</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0002120163</td>
+<td class="gt_row gt_right" headers="Mean Sq">2.120163e-04</td>
+<td class="gt_row gt_right" headers="F value">2.861254</td>
+<td class="gt_row gt_right" headers="Pr(>F)">9.270818e-02</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Df">237</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0177937692</td>
-<td class="gt_row gt_right" headers="Mean Sq">7.507919e-05</td>
+<td class="gt_row gt_right" headers="Df">158</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0117076587</td>
+<td class="gt_row gt_right" headers="Mean Sq">7.409911e-05</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -2123,7 +2234,9 @@ Does it?
 </div>
 </div>
 <p><br></p>
+<div class="centered">
 <p>Did we get the same p-values as before?</p>
+</div>
 </section>
 <section id="sequential-versus-partial-sums-of-squares" class="slide level2">
 <h2>Sequential Versus Partial Sums of Squares</h2>
@@ -2132,7 +2245,7 @@ Does it?
 <div class="small">
 <ul>
 <li class="fragment">The p-value for each variable is conditional on the variable(s) that came <em>before</em> it.</li>
-<li class="fragment">The p-value for <code>elevation</code> is conditional on <code>watershed</code> being included in the model</li>
+<li class="fragment">The p-value for <code>elevation</code> is conditional on <code>watershed</code> being included in the model.</li>
 <li class="fragment">The p-value for <code>watershed</code> is conditional on…nothing.</li>
 </ul>
 </div>
@@ -2166,7 +2279,7 @@ Does it?
 <p><strong>Only different for variables that <em>were not</em> first</strong></p>
 </div>
 <div class="callout-content">
-<p>We could have used Type III sums of squares for the interaction model and would have gotten the same p-value!</p>
+<p>We will get the same p-value for every variable that wasn’t first, since they were already conditional on the previous variables!</p>
 </div>
 </div>
 </div>
@@ -2187,6 +2300,7 @@ Does it?
 </div>
 </div>
 </div>
+<div class="midi">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
 <span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
@@ -2195,28 +2309,29 @@ Does it?
 <span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(water_elev_lm, <span class="at">type =</span> <span class="st">"III"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 </section>
 <section id="additive-model-hypothesis-tests" class="slide level2">
 <h2>Additive Model Hypothesis Tests</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="yvnpjlhztx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yvnpjlhztx table {
+<div id="ryueqnumxz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ryueqnumxz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yvnpjlhztx thead, #yvnpjlhztx tbody, #yvnpjlhztx tfoot, #yvnpjlhztx tr, #yvnpjlhztx td, #yvnpjlhztx th {
+#ryueqnumxz thead, #ryueqnumxz tbody, #ryueqnumxz tfoot, #ryueqnumxz tr, #ryueqnumxz td, #ryueqnumxz th {
   border-style: none;
 }
 
-#yvnpjlhztx p {
+#ryueqnumxz p {
   margin: 0;
   padding: 0;
 }
 
-#yvnpjlhztx .gt_table {
+#ryueqnumxz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2242,12 +2357,12 @@ Does it?
   border-left-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_caption {
+#ryueqnumxz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yvnpjlhztx .gt_title {
+#ryueqnumxz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2259,7 +2374,7 @@ Does it?
   border-bottom-width: 0;
 }
 
-#yvnpjlhztx .gt_subtitle {
+#ryueqnumxz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2271,7 +2386,7 @@ Does it?
   border-top-width: 0;
 }
 
-#yvnpjlhztx .gt_heading {
+#ryueqnumxz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2283,13 +2398,13 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_bottom_border {
+#ryueqnumxz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_col_headings {
+#ryueqnumxz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2304,7 +2419,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_col_heading {
+#ryueqnumxz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2324,7 +2439,7 @@ Does it?
   overflow-x: hidden;
 }
 
-#yvnpjlhztx .gt_column_spanner_outer {
+#ryueqnumxz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2336,15 +2451,15 @@ Does it?
   padding-right: 4px;
 }
 
-#yvnpjlhztx .gt_column_spanner_outer:first-child {
+#ryueqnumxz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yvnpjlhztx .gt_column_spanner_outer:last-child {
+#ryueqnumxz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yvnpjlhztx .gt_column_spanner {
+#ryueqnumxz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2356,11 +2471,11 @@ Does it?
   width: 100%;
 }
 
-#yvnpjlhztx .gt_spanner_row {
+#ryueqnumxz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yvnpjlhztx .gt_group_heading {
+#ryueqnumxz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2386,7 +2501,7 @@ Does it?
   text-align: left;
 }
 
-#yvnpjlhztx .gt_empty_group_heading {
+#ryueqnumxz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2401,15 +2516,15 @@ Does it?
   vertical-align: middle;
 }
 
-#yvnpjlhztx .gt_from_md > :first-child {
+#ryueqnumxz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yvnpjlhztx .gt_from_md > :last-child {
+#ryueqnumxz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yvnpjlhztx .gt_row {
+#ryueqnumxz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2428,7 +2543,7 @@ Does it?
   overflow-x: hidden;
 }
 
-#yvnpjlhztx .gt_stub {
+#ryueqnumxz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2441,7 +2556,7 @@ Does it?
   padding-right: 5px;
 }
 
-#yvnpjlhztx .gt_stub_row_group {
+#ryueqnumxz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2455,15 +2570,15 @@ Does it?
   vertical-align: top;
 }
 
-#yvnpjlhztx .gt_row_group_first td {
+#ryueqnumxz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yvnpjlhztx .gt_row_group_first th {
+#ryueqnumxz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yvnpjlhztx .gt_summary_row {
+#ryueqnumxz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2473,16 +2588,16 @@ Does it?
   padding-right: 5px;
 }
 
-#yvnpjlhztx .gt_first_summary_row {
+#ryueqnumxz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_first_summary_row.thick {
+#ryueqnumxz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yvnpjlhztx .gt_last_summary_row {
+#ryueqnumxz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2492,7 +2607,7 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_grand_summary_row {
+#ryueqnumxz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2502,7 +2617,7 @@ Does it?
   padding-right: 5px;
 }
 
-#yvnpjlhztx .gt_first_grand_summary_row {
+#ryueqnumxz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2512,7 +2627,7 @@ Does it?
   border-top-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_last_grand_summary_row_top {
+#ryueqnumxz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2522,11 +2637,11 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_striped {
+#ryueqnumxz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yvnpjlhztx .gt_table_body {
+#ryueqnumxz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2535,7 +2650,7 @@ Does it?
   border-bottom-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_footnotes {
+#ryueqnumxz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2549,7 +2664,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_footnote {
+#ryueqnumxz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2558,7 +2673,7 @@ Does it?
   padding-right: 5px;
 }
 
-#yvnpjlhztx .gt_sourcenotes {
+#ryueqnumxz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2572,7 +2687,7 @@ Does it?
   border-right-color: #D3D3D3;
 }
 
-#yvnpjlhztx .gt_sourcenote {
+#ryueqnumxz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2580,72 +2695,72 @@ Does it?
   padding-right: 5px;
 }
 
-#yvnpjlhztx .gt_left {
+#ryueqnumxz .gt_left {
   text-align: left;
 }
 
-#yvnpjlhztx .gt_center {
+#ryueqnumxz .gt_center {
   text-align: center;
 }
 
-#yvnpjlhztx .gt_right {
+#ryueqnumxz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yvnpjlhztx .gt_font_normal {
+#ryueqnumxz .gt_font_normal {
   font-weight: normal;
 }
 
-#yvnpjlhztx .gt_font_bold {
+#ryueqnumxz .gt_font_bold {
   font-weight: bold;
 }
 
-#yvnpjlhztx .gt_font_italic {
+#ryueqnumxz .gt_font_italic {
   font-style: italic;
 }
 
-#yvnpjlhztx .gt_super {
+#ryueqnumxz .gt_super {
   font-size: 65%;
 }
 
-#yvnpjlhztx .gt_footnote_marks {
+#ryueqnumxz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yvnpjlhztx .gt_asterisk {
+#ryueqnumxz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yvnpjlhztx .gt_indent_1 {
+#ryueqnumxz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yvnpjlhztx .gt_indent_2 {
+#ryueqnumxz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yvnpjlhztx .gt_indent_3 {
+#ryueqnumxz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yvnpjlhztx .gt_indent_4 {
+#ryueqnumxz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yvnpjlhztx .gt_indent_5 {
+#ryueqnumxz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#yvnpjlhztx .katex-display {
+#ryueqnumxz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#yvnpjlhztx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ryueqnumxz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2663,29 +2778,29 @@ Does it?
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">(Intercept)</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0307423392</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0380277163</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="F value">559.152566</td>
-<td class="gt_row gt_right" headers="Pr(>F)">4.297271e-51</td>
+<td class="gt_row gt_right" headers="F value">513.200746</td>
+<td class="gt_row gt_right" headers="Pr(>F)">1.705859e-51</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">watershed</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0026119904</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0047819744</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="F value">47.507808</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.651260e-10</td>
+<td class="gt_row gt_right" headers="F value">64.534846</td>
+<td class="gt_row gt_right" headers="Pr(>F)">2.059588e-13</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">elevation</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0001219892</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0002120163</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="F value">2.218782</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.385583e-01</td>
+<td class="gt_row gt_right" headers="F value">2.861254</td>
+<td class="gt_row gt_right" headers="Pr(>F)">9.270818e-02</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0078071933</td>
-<td class="gt_row gt_right" headers="Df">142</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0117076587</td>
+<td class="gt_row gt_right" headers="Df">158</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -2699,84 +2814,46 @@ Does it?
 <div style="text-align: center;">
 <p><strong>What do you think the is the <code>elevation</code> line testing?</strong></p>
 <div class="fragment">
+<blockquote>
+<p>Is there a difference in the mean stem dry mass between low and high elevation, <strong>conditional</strong> on the watershed the seedling was grown in.</p>
+</blockquote>
+</div>
+<div class="fragment">
 <p><strong>What would you decide?</strong></p>
 </div>
 </div>
 </section>
-<section id="keeping-non-significant-variables" class="slide level2">
-<h2>Keeping “Non-significant” Variables</h2>
+<section id="should-a-blocking-variable-have-a-significant-effect" class="slide level2">
+<h2>Should a blocking variable have a “significant” effect?</h2>
+<div class="midi">
+<p>In the previous ANOVA table, we saw that <code>elevation</code> had a “significant” effect on the mean stem dry mass.</p>
+</div>
 <p><br></p>
-<p>Should you always remove variables with “large” p-values from an ANOVA?</p>
+<div class="midi">
+<div class="fragment">
+<p>Should a blocking variable have a “significant” effect on the response?</p>
+</div>
+</div>
+<p><br></p>
+<div class="midi">
+<div class="fragment">
+<p>What happened if the blocking variable did not have a “significant” effect?</p>
+</div>
+</div>
+</section>
+<section id="if-the-blocking-variable-is-not-significant-should-you-delete-it" class="slide level2">
+<h2>If the blocking variable is not “significant” should you delete it?</h2>
 <div class="fragment">
 <p><br></p>
+<div class="centered">
 <p>No!</p>
+</div>
+<p><br></p>
+</div>
+<div class="fragment">
 <p>Even “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!</p>
 </div>
 </section></section>
-<section>
-<section id="steps-for-final-project" class="title-slide slide level1 center">
-<h1>Steps for Final Project</h1>
-
-</section>
-<section id="hypothesis-test-steps" class="slide level2">
-<h2>Hypothesis Test Steps</h2>
-<div class="columns">
-<div class="column" style="width:35%;">
-<div style="font-size: 1.25em;">
-<p>Step 1: Fit a one-way ANOVA model for each categorical variable</p>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:60%;">
-<div class="fragment">
-<div style="font-size: 1.25em; color: #0F4C81;">
-<p>Step 2: Decide if each explanatory variable has a meaningful relationship with the response variable</p>
-</div>
-</div>
-<div class="fragment">
-<ul>
-<li>If yes, then go to Step 3!</li>
-<li>If no, then report which variable (if any) has the strongest relationship with the response.</li>
-</ul>
-</div>
-</div></div>
-</section>
-<section id="step-3-fit-an-additive-two-way-anova" class="slide level2">
-<h2>Step 3 – Fit an Additive Two-way ANOVA</h2>
-<p>If there is evidence that <strong><em>both</em></strong> variables have a relationship with the response variable, then you fit an <em>additive</em> two-way ANOVA.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) </span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>my_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="sc">&lt;</span>NAME OF RESPONSE VARIABLE<span class="sc">&gt;</span> <span class="er">~</span> <span class="er">&lt;</span>NAME OF EXPLANATORY VARIABLE <span class="dv">1</span><span class="sc">&gt;</span> <span class="sc">+</span> <span class="er">&lt;</span>NAME OF EXPLANATORY VARIABLE <span class="dv">2</span><span class="sc">&gt;</span>,</span>
-<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>               <span class="at">data =</span> <span class="sc">&lt;</span>NAME OF DATASET<span class="sc">&gt;</span>) </span>
-<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(my_model, <span class="at">type =</span> “III”) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Don’t forget to load in the <code>car</code> package!</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-</section>
-<section id="what-about-interaction-models" class="slide level2">
-<h2>What about interaction models?</h2>
-<p><br> <br></p>
-<p>For the sake of time, we <strong>are not</strong> fitting interaction models for the Final Project.</p>
-</section></section>
-<section id="do-you-always-expect-your-main-effects-to-be-significant-in-a-two-way-anova" class="title-slide slide level1 center">
-<h1>Do you always expect your main effects to be “significant” in a two-way ANOVA?</h1>
-
-</section>
-
 <section>
 <section id="work-session" class="title-slide slide level1 center">
 <h1>Work Session</h1>
@@ -2787,8 +2864,7 @@ Does it?
 <ol type="1">
 <li>Complete your revisions on Lab 8</li>
 <li>Complete your revisions on Statistical Critique 2</li>
-<li>Fit your two-way ANOVA model for your Final Project and interpret the results</li>
-<li>Finish any remaining revisions on labs</li>
+<li>Start moving your Final Project over to your poster</li>
 </ol>
 
 <div class="quarto-auto-generated-content">

@@ -68,21 +68,22 @@ hbr_maples_small <- bind_rows(hbr_maples_w1,
 
 ## Wrapping Up Revisions
 
-The final round of revisions on **all** assignments are due by Sunday, June 9.
+The final round of revisions on **all** assignments are due by Sunday, June 8.
 
 . . .
 
 ::: callout-caution
 # One round of revisions
 
-You will only have time for ***one*** round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions.
+You will only have time for ***one*** round of revisions on Lab 8 and
+Statistical Critique 2, so make sure you feel confident about your revisions.
 :::
 
 ## Final Project
 
--   Feedback (from me) will be provided no later than Thursday evening
+-   Feedback (from me) will be provided by Wednesday's class
 -   Peer feedback on Wednesday
-    -   Print your report!
+    -   Come with a poster outline!
 
 # Two-Way ANOVA Models
 
@@ -99,6 +100,67 @@ Goal:
 :::
 
 Assess if [multiple]{.underline} categorical variables have a relationship with the response.
+
+## HBR Maples
+
+:::{.midi}
+The `hbr_maples` dataset contains observations on sugar maple seedlings in
+untreated and calcium-amended watersheds at Hubbard Brook Experimental Forest in
+New Hampshire.
+:::
+
+::: columns
+::: {.column width="60%"}
+::: {.small}
+::: {.incremental}
+- Both watersheds are located on the south-facing slope (average slope angle
+20-30%) of the Hubbard Brook valley.
+- These watersheds were chosen to minimize differences in site characteristics
+between treatment and reference sites. 
+- In October 1999, 55 Mg of powdered and pelletized wollastonite (CaSi03) was 
+applied by helicopter to W1, while no treatment was applied to the reference 
+watershed. 
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="35%"}
+![](images/hbr-maples-watersheds.png){fig-alt="A Google Maps image of the two watersheds studied in the HBR maples dataset. Each watershed is outlined in a yellow rectangle, where the rectangles have a moderate amount of area between them. This is presumably so that the calcuium treatment from one watershed did not transport to the adjacent watershed."}
+:::
+:::
+
+## Experimental Design
+
+::: {.small}
+> Sugar maple germinants were collected in early August 2003 (first-year
+> germinants) and 2004 (second-year germinants) from randomly placed transects
+> in the treated watershed (W1) and in the reference plots located adjacent to
+> W1. In 2003, sampling was stratified by elevation, with 120 seedlings each
+> collected from treated and reference areas in the low- and mid-elevation zones
+> of the watersheds.
+
+:::
+
+::: {.incremental}
+::: {.small}
+- What are the treatments?
+- What are the experimental units? (i.e., to whom was the treatment applied?)
+- Is there replication in this study?
+- Is there pseudoreplication in this study?
+- What confounding variables did the researchers attempt to control?
+:::
+:::
+
+## Two-Way ANOVA
+
+There seem to be three "key" variables in this study:
+
+- treatment (calcium, reference)
+- elevation (low, medium)
+- year of collection (2003, 2004)
 
 ## Modeling Options
 
@@ -124,6 +186,22 @@ The relationship between one categorical explanatory variable and the response *
 :::::
 :::::::::
 
+# Interaction Two-way ANOVA
+
+## Research Question
+
+> Does the relationship between mean stem dry mass and calcium treatment for
+> sugar maples differ based on the year the seedling was sampled?
+
+. . .
+
+</br>
+
+Or, because the study was an experiment...
+
+> Does the *effect* of calcium treatment on the stem dry mass of sugar maples
+differ based on the year the seedling was sampled?
+
 ## What are we looking for?
 
 ```{r}
@@ -136,6 +214,7 @@ hbr_maples_small %>%
        title = "Effect of Calcium Treatment on Sugar Maples Across Different Years",
        x = "Stem Dry Mass (g)", 
        fill = "") + 
+  theme_bw() +
   theme(axis.title = element_text(size = 18), 
         axis.text = element_text(size = 16), 
         legend.text = element_text(size = 16),
@@ -144,41 +223,27 @@ hbr_maples_small %>%
         legend.position = "top")
 ```
 
-## Another way to think about it...
+<!-- ## Another way to think about it... -->
 
-```{r}
-#| label: twa-facet-maples
-#| echo: false
+<!-- ```{r} -->
+<!-- #| label: twa-facet-maples -->
+<!-- #| echo: false -->
 
-hbr_maples_small %>% 
-  ggplot(aes(y = year_cat, x = stem_dry_mass)) + 
-  geom_density_ridges(alpha = 0.5, scale = 1) +
-  facet_wrap(~ watershed) +
-  labs(y = "",
-       title = "Effect of Calcium Treatment on Sugar Maples Across Different Years",
-       x = "Stem Dry Mass (g)", 
-       fill = "") + 
-  theme(axis.title = element_text(size = 18), 
-        axis.text = element_text(size = 16), 
-        legend.text = element_text(size = 16),
-        legend.title = element_text(size = 18), 
-        plot.title = element_text(size = 18),
-        legend.position = "top")
-```
-
-# Interaction Two-way ANOVA
-
-## Research Question
-
-> Does the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the treatment was applied?
-
-. . .
-
-</br>
-
-Or, because the study was an experiment...
-
-> Does the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year of the treatment?
+<!-- hbr_maples_small %>%  -->
+<!--   ggplot(aes(y = year_cat, x = stem_dry_mass)) +  -->
+<!--   geom_density_ridges(alpha = 0.5, scale = 1) + -->
+<!--   facet_wrap(~ watershed) + -->
+<!--   labs(y = "", -->
+<!--        title = "Effect of Calcium Treatment on Sugar Maples Across Different Years", -->
+<!--        x = "Stem Dry Mass (g)",  -->
+<!--        fill = "") +  -->
+<!--   theme(axis.title = element_text(size = 18),  -->
+<!--         axis.text = element_text(size = 16),  -->
+<!--         legend.text = element_text(size = 16), -->
+<!--         legend.title = element_text(size = 18),  -->
+<!--         plot.title = element_text(size = 18), -->
+<!--         legend.position = "top") -->
+<!-- ``` -->
 
 ## Conditions
 
@@ -212,17 +277,20 @@ Or, because the study was an experiment...
 #| label: twa-interaction-code
 #| code-line-numbers: false
 
-aov(stem_dry_mass ~ watershed * year_cat, 
-    data = hbr_maples_small)
-```
+maple_lm <- lm(stem_dry_mass ~ watershed * year_cat, 
+               data = hbr_maples_small)
 
-</br>
+anova(maple_lm)
+```
 
 ```{r}
 #| label: twa-interaction-table
 
-aov(stem_dry_mass ~ watershed * year_cat, 
-    data = hbr_maples_small) %>% 
+maple_lm <- lm(stem_dry_mass ~ watershed * year_cat, 
+               data = hbr_maples_small)
+
+anova(maple_lm) %>% 
+  
   tidy() %>% 
   rename(`Sum Sq` = sumsq, 
           Df = df, 
@@ -242,7 +310,9 @@ The `watershed:year_cat` line is testing if the relationship between the calcium
 
 </br>
 
-<center>Does it?</center>
+::: {.centered}
+Does it? [Does that make sense?]{.fragment}
+:::
 
 ## How are those p-values calculated?
 
@@ -260,7 +330,9 @@ So, the p-value for `watershed:year_cat` is **conditional** on including `waters
 
 </br>
 
+::: {.centered}
 Is that what we want????
+:::
 
 ## Testing "main effects"
 
@@ -270,7 +342,9 @@ If there is evidence of an interaction, we **do not** test if the main effects a
 
 </br>
 
+::: {.centered}
 Why?
+:::
 
 . . .
 
@@ -282,7 +356,7 @@ The interactions depend on these variables, so they should be included in the mo
 
 When interaction effects are present, an interpretation of main effects is incomplete or misleading
 
-::: center
+::: centered
 ![](images/car-interaction.png)
 :::
 
@@ -311,23 +385,61 @@ hbr_maples_small %>%
         legend.position = "top")
 ```
 
+## Why would there be no interaction with `elevation`?
+
+::: {.small}
+> For most of these measurements, sampling was stratified by elevation zone. 
+> There were three elevation zones designated within the northern
+> hardwood-dominated forest in and adjacent to W1: low (500-550m), middle
+> (550-600 m), and high (600-700 m).
+
+:::
+
+::: {.small}
+::: {.incremental}
+- What role does `elevation` play in this experiment?
+- Should a blocking variable have an interaction with the treatment?
+:::
+:::
+
+::: {.fragment}
+::: {.small}
+::: {.callout-tip}
+If there is a significant interaction between the block and the treatment, it
+means the treatment's effect changes depending on the block. That would violate
+the basic idea of blocking: the block adds noise (i.e., shifts means up or
+down), but doesn’t interfere with how the treatment works. 
+:::
+:::
+:::
+
 ## Testing for a relationship for each variable
 
+::: {.midi}
 ```{r}
 #| echo: true
 #| eval: false
-#| label: aov-elevation-first
+#| label: anova-elevation-first-code
 #| code-line-numbers: false
-aov(stem_dry_mass ~ elevation + watershed, 
-    data = hbr_maples_small) %>% 
+
+additive_lm <- lm(stem_dry_mass ~ elevation + watershed, 
+    data = hbr_maples_small) 
+
+anova(additive_lm) %>% 
   tidy()
 ```
+:::
 
 </br>
 
 ```{r}
 #| echo: false
-aov(stem_dry_mass ~ elevation + watershed, data = hbr_maples_small) %>% 
+#| label: anova-elevation-first
+
+additive_lm <- lm(stem_dry_mass ~ elevation + watershed, 
+    data = hbr_maples_small) 
+
+anova(additive_lm) %>% 
   tidy() %>% 
   rename(`Sum Sq` = sumsq, 
           Df = df, 
@@ -347,21 +459,31 @@ Do you think it matters which variable comes first?
 
 ## Let's see...
 
+::: {.midi}
 ```{r}
 #| echo: true
 #| eval: false
 #| code-line-numbers: false
-#| label: aov-watershed-first
-aov(stem_dry_mass ~ watershed + elevation, 
-    data = hbr_maples) %>% 
+#| label: anov-watershed-first-code
+
+additive_lm <- lm(stem_dry_mass ~ watershed + elevation, 
+    data = hbr_maples_small) 
+
+anova(additive_lm) %>% 
   tidy()
 ```
+:::
 
 </br>
 
 ```{r}
 #| echo: false
-aov(stem_dry_mass ~ watershed + elevation, data = hbr_maples) %>% 
+#| label: anov-watershed-first
+
+additive_lm <- lm(stem_dry_mass ~ watershed + elevation, 
+    data = hbr_maples_small) 
+
+anova(additive_lm) %>% 
   tidy() %>% 
   rename(`Sum Sq` = sumsq, 
           Df = df, 
@@ -373,7 +495,9 @@ aov(stem_dry_mass ~ watershed + elevation, data = hbr_maples) %>%
 
 </br>
 
+::: {.centered}
 Did we get the same p-values as before?
+:::
 
 ## Sequential Versus Partial Sums of Squares
 
@@ -382,7 +506,7 @@ Similar to before, the p-values in the ANOVA table use Type I (sequential) sums 
 :::: incremental
 ::: small
 -   The p-value for each variable is conditional on the variable(s) that came *before* it.
--   The p-value for `elevation` is conditional on `watershed` being included in the model
+-   The p-value for `elevation` is conditional on `watershed` being included in the model.
 -   The p-value for `watershed` is conditional on...nothing.
 :::
 ::::
@@ -409,7 +533,8 @@ If we want the p-value for each explanatory variable to be conditional on **ever
 ::: callout-tip
 # Only different for variables that *were not* first
 
-We could have used Type III sums of squares for the interaction model and would have gotten the same p-value!
+We will get the same p-value for every variable that wasn't first, since they
+were already conditional on the previous variables!
 :::
 
 ## Getting the Conditional Tests for Every Variable
@@ -418,6 +543,7 @@ We could have used Type III sums of squares for the interaction model and would 
 # Load in the `car` package!
 :::
 
+::: {.midi}
 ```{r}
 #| echo: true
 #| eval: false
@@ -431,6 +557,7 @@ water_elev_lm <- lm(stem_dry_mass ~ watershed + elevation,
 
 Anova(water_elev_lm, type = "III")
 ```
+:::
 
 ## Additive Model Hypothesis Tests
 
@@ -455,84 +582,56 @@ Anova(water_elev_lm, type = "III") %>%
 :::: {style="text-align: center;"}
 **What do you think the is the `elevation` line testing?**
 
+::: {.fragment}
+> Is there a difference in the mean stem dry mass between low and high elevation, 
+> **conditional** on the watershed the seedling was grown in. 
+
+:::
+
 ::: fragment
 **What would you decide?**
 :::
 ::::
 
-## Keeping "Non-significant" Variables
+## Should a blocking variable have a "significant" effect?
+
+::: {.midi}
+In the previous ANOVA table, we saw that `elevation` had a "significant" 
+effect on the mean stem dry mass. 
+:::
 
 </br>
 
-Should you always remove variables with "large" p-values from an ANOVA?
+::: {.midi}
+::: {.fragment}
+Should a blocking variable have a "significant" effect on the response?
+:::
+:::
+
+</br>
+
+::: {.midi}
+::: {.fragment}
+What happened if the blocking variable did not have a "significant" effect?
+:::
+:::
+
+## If the blocking variable is not "significant" should you delete it?
 
 . . .
 
 </br>
 
+::: {.centered}
 No!
-
-Even "non-significant" variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!
-
-# Steps for Final Project
-
-## Hypothesis Test Steps
-
-:::::::::: columns
-:::: {.column width="35%"}
-::: {style="font-size: 1.25em;"}
-Step 1: Fit a one-way ANOVA model for each categorical variable
-:::
-::::
-
-::: {.column width="5%"}
 :::
 
-:::::: {.column width="60%"}
-:::: fragment
-::: {style="font-size: 1.25em; color: #0F4C81;"}
-Step 2: Decide if each explanatory variable has a meaningful relationship with the response variable
-:::
-::::
+</br>
 
-::: fragment
--   If yes, then go to Step 3!
--   If no, then report which variable (if any) has the strongest relationship with the response.
-:::
-::::::
-::::::::::
+. . .
 
-## Step 3 -- Fit an Additive Two-way ANOVA
-
-If there is evidence that ***both*** variables have a relationship with the response variable, then you fit an *additive* two-way ANOVA.
-
-```{r}
-#| label: twa-additive-template
-#| eval: false
-#| code-line-numbers: false
-#| echo: true
-
-library(car) 
-
-my_model <- lm(<NAME OF RESPONSE VARIABLE> ~ <NAME OF EXPLANATORY VARIABLE 1> + <NAME OF EXPLANATORY VARIABLE 2>,
-               data = <NAME OF DATASET>) 
-
-Anova(my_model, type = “III”) %>% 
-  tidy()
-
-```
-
-::: callout-tip
-# Don't forget to load in the `car` package!
-:::
-
-## What about interaction models?
-
-</br> </br>
-
-For the sake of time, we **are not** fitting interaction models for the Final Project.
-
-# Do you always expect your main effects to be "significant" in a two-way ANOVA?
+Even "non-significant" variables explain some amount of the variation in the
+response. Which makes your estimates of a treatment effect more precise!
 
 # Work Session
 
@@ -540,5 +639,4 @@ For the sake of time, we **are not** fitting interaction models for the Final Pr
 
 1.  Complete your revisions on Lab 8
 2.  Complete your revisions on Statistical Critique 2
-3.  Fit your two-way ANOVA model for your Final Project and interpret the results
-4.  Finish any remaining revisions on labs
+3.  Start moving your Final Project over to your poster
