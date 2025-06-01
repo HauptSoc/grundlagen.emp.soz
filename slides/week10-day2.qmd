@@ -21,7 +21,6 @@ library(moderndive)
 library(infer)
 library(ggridges)
 library(broom)
-library(emo)
 library(gt)
 library(RColorBrewer)
 
