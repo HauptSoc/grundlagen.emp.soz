@@ -47,14 +47,17 @@ hbr_maples_small <- bind_rows(hbr_maples_w1,
 </br>
 
 :::{.fragment}
-**Question 6** -- Equal variance is not about equal points above and below the line! 
+**Question 4** -- Each country has 12 observations! Is it reasonable to assume that these observations share no information?
+
 :::
 
 </br>
 
 :::{.fragment}
-**Question 11** -- Your hypothesis test decision should state what $\alpha$ was used!
+**Question 6** -- Equal variance requires that there is no trend in the residuals versus fitted plot! 
 :::
+
+
 
 </br>
 
@@ -477,7 +480,7 @@ anova(additive_lm) %>%
 
 ```{r}
 #| echo: false
-#| label: anov-watershed-first
+#| label: anova-watershed-first
 
 additive_lm <- lm(stem_dry_mass ~ watershed + elevation, 
     data = hbr_maples_small) 
