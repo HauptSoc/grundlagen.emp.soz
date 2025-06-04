@@ -32,7 +32,8 @@ trout <- filter(and_vertebrates,
 
 ::: incremental
 -   Final revisions are due by Sunday at midnight.
--   Final Project is due by the beginning of Saturday's poster session (10:10am).
+-   Final Projects (poster submissions) are due by the beginning of Saturday's
+poster session (10:10am).
 :::
 
 . . .
@@ -45,7 +46,47 @@ Project. The assignment portal closes at 10:10am on Saturday.
 **Do not ride the line.**
 :::
 
-# Peer Review Session (45-minutes)
+# Peer Review Session (20-minutes)
+
+## Advice on Poster Formatting
+
+::: {.midi}
+You will likely need to cut down some of the content from your report to fit 
+on your poster! 
+
+For people to be able to read your poster, your font size ***should not be any smaller than 24pt.***
+:::
+
+. . .
+
+::: {.small}
+- You are expected to include **all** the required components in your poster.
+  * To fit everything, your writing needs to be clear and concise. 
+:::
+
+. . .
+
+::: {.small}
+::: {.callout-tip}
+# Getting Help from Generative AI
+
+Humans tend to be very wordy in their writing, so this might be a good place 
+to ask Generative AI for some help making your writing more concise. 
+
+Be sure to read the suggested edits so nothing important gets cut!
+:::
+:::
+
+## More Advice 
+
+- I don't need to see statements of hypotheses (e.g., $H_0$ or $H_A$)
+  * I can infer what your null and alternative hypotheses were based on your 
+  conclusions!
+
+. . .
+
+- Please don't use the s-word (significance). 😱
+  * Provide a more descriptive summary of your findings!
 
 # Structure of Final Projects
 
@@ -179,10 +220,12 @@ Look back at your visualizations -- do all of the groups look relatively similar
 
 # Remedying Condition Violations
 
-## Do you have multiple observations that are related?
+## Is independence violated?
 
+::: {.small}
 You should have only **one** observation per observational unit (e.g., fish, 
 salamander, teacher). 
+:::
 
 ::: columns
 ::: {.column width="47%"}
@@ -190,7 +233,7 @@ salamander, teacher).
 
 ::: {.small}
 ```{r}
-#| label: independence-vertebrates
+#| label: independence-vertebrates-1
 #| echo: true
 #| code-line-numbers: false
 
@@ -198,6 +241,21 @@ vertebrates_small <- and_vertebrates %>%
   group_by(pitnumber) %>% 
   slice_sample(n = 1) %>%
   ungroup()
+```
+:::
+
+OR
+
+::: {.small}
+```{r}
+#| label: independence-vertebrates-2
+#| echo: true
+#| code-line-numbers: false
+
+vertebrates_small <- filter(and_vertebrates, 
+                            year > 2007, 
+                            is.na(pitnumber)
+                            )
 ```
 :::
 
@@ -313,39 +371,59 @@ Each section will have an 80-minute poster presentation session.
 Bring your laptop so you can plug into the monitor to display your poster. There
 are no computers in the presentation room!
 
-# Some Closing Thoughts...
+# Work Sesssion
 
-## I hope you leave this class understanding...
+## Order of Priorities
 
--   Reproducibility is a foundational aspect to scientific research.
+1. Fix your code (if needed)
 
--   Data visualizations tell you a story, where statistical tests only tell you a summary.
+2. Copy content over to your poster
 
--   Multiple regression and ANOVA are powerful tools to explore multivariate relationships.
+3. Modify the original content based on Dr. Theobold's feedback
 
--   A well thought out study is more powerful than any statistical analysis.
 
-## The Discipline of Statistics
+::: {.callout-important}
+# Assistance from Dr. Theobold
 
-The field of Statistics was developed to evaluate evidence obtained from data. Over the last century, the use of statistics has become embedded as a component of the scientific process for many disciplines.
-
-. . .
-
-::: {style="font-size: 0.75em;"}
-> "Significance, the new s-word, is overused and underdefined in the realm of connecting statistical results to the underlying science." [(Higgs, 2013)](https://www.americanscientist.org/article/do-we-really-need-the-s-word)
+My priority is helping students who need to repair their code for their 
+analysis. Once everyone has been helped, I'm happy to answer additional 
+questions.
 :::
 
-. . .
 
-::: {style="font-size: 0.75em;"}
-> "I advocate a simple solution: Replace the s-word with words describing what you actually mean by it."
-:::
+<!-- # Some Closing Thoughts... -->
 
-## Foundational ideas taught in statistics courses were invented by:
+<!-- ## I hope you leave this class understanding... -->
 
--   Francis Galton
--   Karl Pearson
--   Ronald Fisher
+<!-- -   Reproducibility is a foundational aspect to scientific research. -->
+
+<!-- -   Data visualizations tell you a story, where statistical tests only tell you a summary. -->
+
+<!-- -   Multiple regression and ANOVA are powerful tools to explore multivariate relationships. -->
+
+<!-- -   A well thought out study is more powerful than any statistical analysis. -->
+
+<!-- ## The Discipline of Statistics -->
+
+<!-- The field of Statistics was developed to evaluate evidence obtained from data. Over the last century, the use of statistics has become embedded as a component of the scientific process for many disciplines. -->
+
+<!-- . . . -->
+
+<!-- ::: {style="font-size: 0.75em;"} -->
+<!-- > "Significance, the new s-word, is overused and underdefined in the realm of connecting statistical results to the underlying science." [(Higgs, 2013)](https://www.americanscientist.org/article/do-we-really-need-the-s-word) -->
+<!-- ::: -->
+
+<!-- . . . -->
+
+<!-- ::: {style="font-size: 0.75em;"} -->
+<!-- > "I advocate a simple solution: Replace the s-word with words describing what you actually mean by it." -->
+<!-- ::: -->
+
+<!-- ## Foundational ideas taught in statistics courses were invented by: -->
+
+<!-- -   Francis Galton -->
+<!-- -   Karl Pearson -->
+<!-- -   Ronald Fisher -->
 
 <!-- ::: {style="font-size: 2em; color: #000000;"} -->
 
@@ -361,19 +439,19 @@ The field of Statistics was developed to evaluate evidence obtained from data. O
 
 <!-- [How Eugenics Shaped Statistics](https://nautil.us/issue/92/frontiers/how-eugenics-shaped-statistics) -->
 
-## 
+<!-- ##  -->
 
-::::::: columns
-::: {.column width="40%"}
-![](images/happy-cat.webp)
-:::
+<!-- ::::::: columns -->
+<!-- ::: {.column width="40%"} -->
+<!-- ![](images/happy-cat.webp) -->
+<!-- ::: -->
 
-::: {.column width="5%"}
-:::
+<!-- ::: {.column width="5%"} -->
+<!-- ::: -->
 
-:::: {.column width="45%"}
-::: {style="font-size: 2.75em; color: #000000;"}
-Remember to give yourself praise!
-:::
-::::
-:::::::
+<!-- :::: {.column width="45%"} -->
+<!-- ::: {style="font-size: 2.75em; color: #000000;"} -->
+<!-- Remember to give yourself praise! -->
+<!-- ::: -->
+<!-- :::: -->
+<!-- ::::::: -->
