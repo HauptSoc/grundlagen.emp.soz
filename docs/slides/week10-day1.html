@@ -7,8 +7,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.42">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
 
   <title>STAT 313 / 513 – Week 10: Two-way ANOVA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -94,11 +95,209 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-69e77072cdc3ddff2609503aa4bba997.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -423,23 +622,23 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="llxgsxfclc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#llxgsxfclc table {
+<div id="bpipvifohe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bpipvifohe table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#llxgsxfclc thead, #llxgsxfclc tbody, #llxgsxfclc tfoot, #llxgsxfclc tr, #llxgsxfclc td, #llxgsxfclc th {
+#bpipvifohe thead, #bpipvifohe tbody, #bpipvifohe tfoot, #bpipvifohe tr, #bpipvifohe td, #bpipvifohe th {
   border-style: none;
 }
 
-#llxgsxfclc p {
+#bpipvifohe p {
   margin: 0;
   padding: 0;
 }
 
-#llxgsxfclc .gt_table {
+#bpipvifohe .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -465,12 +664,12 @@
   border-left-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_caption {
+#bpipvifohe .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#llxgsxfclc .gt_title {
+#bpipvifohe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -482,7 +681,7 @@
   border-bottom-width: 0;
 }
 
-#llxgsxfclc .gt_subtitle {
+#bpipvifohe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -494,7 +693,7 @@
   border-top-width: 0;
 }
 
-#llxgsxfclc .gt_heading {
+#bpipvifohe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -506,13 +705,13 @@
   border-right-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_bottom_border {
+#bpipvifohe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_col_headings {
+#bpipvifohe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -527,7 +726,7 @@
   border-right-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_col_heading {
+#bpipvifohe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -547,7 +746,7 @@
   overflow-x: hidden;
 }
 
-#llxgsxfclc .gt_column_spanner_outer {
+#bpipvifohe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -559,15 +758,15 @@
   padding-right: 4px;
 }
 
-#llxgsxfclc .gt_column_spanner_outer:first-child {
+#bpipvifohe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#llxgsxfclc .gt_column_spanner_outer:last-child {
+#bpipvifohe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#llxgsxfclc .gt_column_spanner {
+#bpipvifohe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -579,11 +778,11 @@
   width: 100%;
 }
 
-#llxgsxfclc .gt_spanner_row {
+#bpipvifohe .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#llxgsxfclc .gt_group_heading {
+#bpipvifohe .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -609,7 +808,7 @@
   text-align: left;
 }
 
-#llxgsxfclc .gt_empty_group_heading {
+#bpipvifohe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -624,15 +823,15 @@
   vertical-align: middle;
 }
 
-#llxgsxfclc .gt_from_md > :first-child {
+#bpipvifohe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#llxgsxfclc .gt_from_md > :last-child {
+#bpipvifohe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#llxgsxfclc .gt_row {
+#bpipvifohe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -651,7 +850,7 @@
   overflow-x: hidden;
 }
 
-#llxgsxfclc .gt_stub {
+#bpipvifohe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -664,7 +863,7 @@
   padding-right: 5px;
 }
 
-#llxgsxfclc .gt_stub_row_group {
+#bpipvifohe .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -678,15 +877,15 @@
   vertical-align: top;
 }
 
-#llxgsxfclc .gt_row_group_first td {
+#bpipvifohe .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#llxgsxfclc .gt_row_group_first th {
+#bpipvifohe .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#llxgsxfclc .gt_summary_row {
+#bpipvifohe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -696,16 +895,16 @@
   padding-right: 5px;
 }
 
-#llxgsxfclc .gt_first_summary_row {
+#bpipvifohe .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_first_summary_row.thick {
+#bpipvifohe .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#llxgsxfclc .gt_last_summary_row {
+#bpipvifohe .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -715,7 +914,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_grand_summary_row {
+#bpipvifohe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -725,7 +924,7 @@
   padding-right: 5px;
 }
 
-#llxgsxfclc .gt_first_grand_summary_row {
+#bpipvifohe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -735,7 +934,7 @@
   border-top-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_last_grand_summary_row_top {
+#bpipvifohe .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -745,11 +944,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_striped {
+#bpipvifohe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#llxgsxfclc .gt_table_body {
+#bpipvifohe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -758,7 +957,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_footnotes {
+#bpipvifohe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -772,7 +971,7 @@
   border-right-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_footnote {
+#bpipvifohe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -781,7 +980,7 @@
   padding-right: 5px;
 }
 
-#llxgsxfclc .gt_sourcenotes {
+#bpipvifohe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -795,7 +994,7 @@
   border-right-color: #D3D3D3;
 }
 
-#llxgsxfclc .gt_sourcenote {
+#bpipvifohe .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -803,117 +1002,117 @@
   padding-right: 5px;
 }
 
-#llxgsxfclc .gt_left {
+#bpipvifohe .gt_left {
   text-align: left;
 }
 
-#llxgsxfclc .gt_center {
+#bpipvifohe .gt_center {
   text-align: center;
 }
 
-#llxgsxfclc .gt_right {
+#bpipvifohe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#llxgsxfclc .gt_font_normal {
+#bpipvifohe .gt_font_normal {
   font-weight: normal;
 }
 
-#llxgsxfclc .gt_font_bold {
+#bpipvifohe .gt_font_bold {
   font-weight: bold;
 }
 
-#llxgsxfclc .gt_font_italic {
+#bpipvifohe .gt_font_italic {
   font-style: italic;
 }
 
-#llxgsxfclc .gt_super {
+#bpipvifohe .gt_super {
   font-size: 65%;
 }
 
-#llxgsxfclc .gt_footnote_marks {
+#bpipvifohe .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#llxgsxfclc .gt_asterisk {
+#bpipvifohe .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#llxgsxfclc .gt_indent_1 {
+#bpipvifohe .gt_indent_1 {
   text-indent: 5px;
 }
 
-#llxgsxfclc .gt_indent_2 {
+#bpipvifohe .gt_indent_2 {
   text-indent: 10px;
 }
 
-#llxgsxfclc .gt_indent_3 {
+#bpipvifohe .gt_indent_3 {
   text-indent: 15px;
 }
 
-#llxgsxfclc .gt_indent_4 {
+#bpipvifohe .gt_indent_4 {
   text-indent: 20px;
 }
 
-#llxgsxfclc .gt_indent_5 {
+#bpipvifohe .gt_indent_5 {
   text-indent: 25px;
 }
 
-#llxgsxfclc .katex-display {
+#bpipvifohe .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#llxgsxfclc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bpipvifohe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
 <th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
-<th id="Sum-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
-<th id="Mean-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
-<th id="F-value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
-<th id="Pr(>F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
+<th id="Sum Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
+<th id="Mean Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
+<th id="F value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
+<th id="Pr(&amp;gt;F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">watershed</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.008754291</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.0087542912</td>
-<td class="gt_row gt_right" headers="F value">38.54916</td>
-<td class="gt_row gt_right" headers="Pr(>F)">2.611570e-09</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.022460695</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0224606948</td>
+<td class="gt_row gt_right" headers="F value">95.47172</td>
+<td class="gt_row gt_right" headers="Pr(>F)">5.667924e-19</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">year_cat</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.111208014</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.1112080142</td>
-<td class="gt_row gt_right" headers="F value">489.69993</td>
-<td class="gt_row gt_right" headers="Pr(>F)">5.665909e-58</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.117159143</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.1171591433</td>
+<td class="gt_row gt_right" headers="F value">497.99817</td>
+<td class="gt_row gt_right" headers="Pr(>F)">1.566999e-58</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">watershed:year_cat</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.002586878</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.0025868782</td>
-<td class="gt_row gt_right" headers="F value">11.39121</td>
-<td class="gt_row gt_right" headers="Pr(>F)">8.715303e-04</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.004054933</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0040549331</td>
+<td class="gt_row gt_right" headers="F value">17.23595</td>
+<td class="gt_row gt_right" headers="Pr(>F)">4.714524e-05</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">Residuals</td>
 <td class="gt_row gt_right" headers="Df">221</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.050187819</td>
-<td class="gt_row gt_right" headers="Mean Sq">0.0002270942</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.051992502</td>
+<td class="gt_row gt_right" headers="Mean Sq">0.0002352602</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -1029,23 +1228,23 @@
 <p><br></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="befmbnwugg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#befmbnwugg table {
+<div id="vahgfksmym" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vahgfksmym table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#befmbnwugg thead, #befmbnwugg tbody, #befmbnwugg tfoot, #befmbnwugg tr, #befmbnwugg td, #befmbnwugg th {
+#vahgfksmym thead, #vahgfksmym tbody, #vahgfksmym tfoot, #vahgfksmym tr, #vahgfksmym td, #vahgfksmym th {
   border-style: none;
 }
 
-#befmbnwugg p {
+#vahgfksmym p {
   margin: 0;
   padding: 0;
 }
 
-#befmbnwugg .gt_table {
+#vahgfksmym .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1071,12 +1270,12 @@
   border-left-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_caption {
+#vahgfksmym .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#befmbnwugg .gt_title {
+#vahgfksmym .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1088,7 +1287,7 @@
   border-bottom-width: 0;
 }
 
-#befmbnwugg .gt_subtitle {
+#vahgfksmym .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1100,7 +1299,7 @@
   border-top-width: 0;
 }
 
-#befmbnwugg .gt_heading {
+#vahgfksmym .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1112,13 +1311,13 @@
   border-right-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_bottom_border {
+#vahgfksmym .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_col_headings {
+#vahgfksmym .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1133,7 +1332,7 @@
   border-right-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_col_heading {
+#vahgfksmym .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1153,7 +1352,7 @@
   overflow-x: hidden;
 }
 
-#befmbnwugg .gt_column_spanner_outer {
+#vahgfksmym .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1165,15 +1364,15 @@
   padding-right: 4px;
 }
 
-#befmbnwugg .gt_column_spanner_outer:first-child {
+#vahgfksmym .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#befmbnwugg .gt_column_spanner_outer:last-child {
+#vahgfksmym .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#befmbnwugg .gt_column_spanner {
+#vahgfksmym .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1185,11 +1384,11 @@
   width: 100%;
 }
 
-#befmbnwugg .gt_spanner_row {
+#vahgfksmym .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#befmbnwugg .gt_group_heading {
+#vahgfksmym .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1215,7 +1414,7 @@
   text-align: left;
 }
 
-#befmbnwugg .gt_empty_group_heading {
+#vahgfksmym .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1230,15 +1429,15 @@
   vertical-align: middle;
 }
 
-#befmbnwugg .gt_from_md > :first-child {
+#vahgfksmym .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#befmbnwugg .gt_from_md > :last-child {
+#vahgfksmym .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#befmbnwugg .gt_row {
+#vahgfksmym .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1257,7 +1456,7 @@
   overflow-x: hidden;
 }
 
-#befmbnwugg .gt_stub {
+#vahgfksmym .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1270,7 +1469,7 @@
   padding-right: 5px;
 }
 
-#befmbnwugg .gt_stub_row_group {
+#vahgfksmym .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1284,15 +1483,15 @@
   vertical-align: top;
 }
 
-#befmbnwugg .gt_row_group_first td {
+#vahgfksmym .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#befmbnwugg .gt_row_group_first th {
+#vahgfksmym .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#befmbnwugg .gt_summary_row {
+#vahgfksmym .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1302,16 +1501,16 @@
   padding-right: 5px;
 }
 
-#befmbnwugg .gt_first_summary_row {
+#vahgfksmym .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_first_summary_row.thick {
+#vahgfksmym .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#befmbnwugg .gt_last_summary_row {
+#vahgfksmym .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1321,7 +1520,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_grand_summary_row {
+#vahgfksmym .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1331,7 +1530,7 @@
   padding-right: 5px;
 }
 
-#befmbnwugg .gt_first_grand_summary_row {
+#vahgfksmym .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1341,7 +1540,7 @@
   border-top-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_last_grand_summary_row_top {
+#vahgfksmym .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1351,11 +1550,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_striped {
+#vahgfksmym .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#befmbnwugg .gt_table_body {
+#vahgfksmym .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1364,7 +1563,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_footnotes {
+#vahgfksmym .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1378,7 +1577,7 @@
   border-right-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_footnote {
+#vahgfksmym .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1387,7 +1586,7 @@
   padding-right: 5px;
 }
 
-#befmbnwugg .gt_sourcenotes {
+#vahgfksmym .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1401,7 +1600,7 @@
   border-right-color: #D3D3D3;
 }
 
-#befmbnwugg .gt_sourcenote {
+#vahgfksmym .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1409,109 +1608,109 @@
   padding-right: 5px;
 }
 
-#befmbnwugg .gt_left {
+#vahgfksmym .gt_left {
   text-align: left;
 }
 
-#befmbnwugg .gt_center {
+#vahgfksmym .gt_center {
   text-align: center;
 }
 
-#befmbnwugg .gt_right {
+#vahgfksmym .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#befmbnwugg .gt_font_normal {
+#vahgfksmym .gt_font_normal {
   font-weight: normal;
 }
 
-#befmbnwugg .gt_font_bold {
+#vahgfksmym .gt_font_bold {
   font-weight: bold;
 }
 
-#befmbnwugg .gt_font_italic {
+#vahgfksmym .gt_font_italic {
   font-style: italic;
 }
 
-#befmbnwugg .gt_super {
+#vahgfksmym .gt_super {
   font-size: 65%;
 }
 
-#befmbnwugg .gt_footnote_marks {
+#vahgfksmym .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#befmbnwugg .gt_asterisk {
+#vahgfksmym .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#befmbnwugg .gt_indent_1 {
+#vahgfksmym .gt_indent_1 {
   text-indent: 5px;
 }
 
-#befmbnwugg .gt_indent_2 {
+#vahgfksmym .gt_indent_2 {
   text-indent: 10px;
 }
 
-#befmbnwugg .gt_indent_3 {
+#vahgfksmym .gt_indent_3 {
   text-indent: 15px;
 }
 
-#befmbnwugg .gt_indent_4 {
+#vahgfksmym .gt_indent_4 {
   text-indent: 20px;
 }
 
-#befmbnwugg .gt_indent_5 {
+#vahgfksmym .gt_indent_5 {
   text-indent: 25px;
 }
 
-#befmbnwugg .katex-display {
+#vahgfksmym .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#befmbnwugg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vahgfksmym div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
 <th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
-<th id="Sum-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
-<th id="Mean-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
-<th id="F-value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
-<th id="Pr(>F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
+<th id="Sum Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
+<th id="Mean Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
+<th id="F value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
+<th id="Pr(&amp;gt;F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">elevation</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0004536649</td>
-<td class="gt_row gt_right" headers="Mean Sq">4.536649e-04</td>
-<td class="gt_row gt_right" headers="F value">8.654744</td>
-<td class="gt_row gt_right" headers="Pr(>F)">3.784000e-03</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0001229132</td>
+<td class="gt_row gt_right" headers="Mean Sq">1.229132e-04</td>
+<td class="gt_row gt_right" headers="F value">2.092967</td>
+<td class="gt_row gt_right" headers="Pr(>F)">1.501669e-01</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">watershed</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0032308041</td>
-<td class="gt_row gt_right" headers="Mean Sq">3.230804e-03</td>
-<td class="gt_row gt_right" headers="F value">61.635325</td>
-<td class="gt_row gt_right" headers="Pr(>F)">7.482954e-13</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0036184453</td>
+<td class="gt_row gt_right" headers="Mean Sq">3.618445e-03</td>
+<td class="gt_row gt_right" headers="F value">61.614916</td>
+<td class="gt_row gt_right" headers="Pr(>F)">8.952666e-13</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Df">149</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0078102907</td>
-<td class="gt_row gt_right" headers="Mean Sq">5.241806e-05</td>
+<td class="gt_row gt_right" headers="Df">143</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0083979289</td>
+<td class="gt_row gt_right" headers="Mean Sq">5.872678e-05</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -1542,23 +1741,23 @@
 <p><br></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="stmcteiykg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#stmcteiykg table {
+<div id="ajzgpcwttl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ajzgpcwttl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#stmcteiykg thead, #stmcteiykg tbody, #stmcteiykg tfoot, #stmcteiykg tr, #stmcteiykg td, #stmcteiykg th {
+#ajzgpcwttl thead, #ajzgpcwttl tbody, #ajzgpcwttl tfoot, #ajzgpcwttl tr, #ajzgpcwttl td, #ajzgpcwttl th {
   border-style: none;
 }
 
-#stmcteiykg p {
+#ajzgpcwttl p {
   margin: 0;
   padding: 0;
 }
 
-#stmcteiykg .gt_table {
+#ajzgpcwttl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1584,12 +1783,12 @@
   border-left-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_caption {
+#ajzgpcwttl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#stmcteiykg .gt_title {
+#ajzgpcwttl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1601,7 +1800,7 @@
   border-bottom-width: 0;
 }
 
-#stmcteiykg .gt_subtitle {
+#ajzgpcwttl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1613,7 +1812,7 @@
   border-top-width: 0;
 }
 
-#stmcteiykg .gt_heading {
+#ajzgpcwttl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1625,13 +1824,13 @@
   border-right-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_bottom_border {
+#ajzgpcwttl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_col_headings {
+#ajzgpcwttl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1646,7 +1845,7 @@
   border-right-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_col_heading {
+#ajzgpcwttl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1666,7 +1865,7 @@
   overflow-x: hidden;
 }
 
-#stmcteiykg .gt_column_spanner_outer {
+#ajzgpcwttl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1678,15 +1877,15 @@
   padding-right: 4px;
 }
 
-#stmcteiykg .gt_column_spanner_outer:first-child {
+#ajzgpcwttl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#stmcteiykg .gt_column_spanner_outer:last-child {
+#ajzgpcwttl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#stmcteiykg .gt_column_spanner {
+#ajzgpcwttl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1698,11 +1897,11 @@
   width: 100%;
 }
 
-#stmcteiykg .gt_spanner_row {
+#ajzgpcwttl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#stmcteiykg .gt_group_heading {
+#ajzgpcwttl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1728,7 +1927,7 @@
   text-align: left;
 }
 
-#stmcteiykg .gt_empty_group_heading {
+#ajzgpcwttl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1743,15 +1942,15 @@
   vertical-align: middle;
 }
 
-#stmcteiykg .gt_from_md > :first-child {
+#ajzgpcwttl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#stmcteiykg .gt_from_md > :last-child {
+#ajzgpcwttl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#stmcteiykg .gt_row {
+#ajzgpcwttl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1770,7 +1969,7 @@
   overflow-x: hidden;
 }
 
-#stmcteiykg .gt_stub {
+#ajzgpcwttl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1783,7 +1982,7 @@
   padding-right: 5px;
 }
 
-#stmcteiykg .gt_stub_row_group {
+#ajzgpcwttl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1797,15 +1996,15 @@
   vertical-align: top;
 }
 
-#stmcteiykg .gt_row_group_first td {
+#ajzgpcwttl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#stmcteiykg .gt_row_group_first th {
+#ajzgpcwttl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#stmcteiykg .gt_summary_row {
+#ajzgpcwttl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1815,16 +2014,16 @@
   padding-right: 5px;
 }
 
-#stmcteiykg .gt_first_summary_row {
+#ajzgpcwttl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_first_summary_row.thick {
+#ajzgpcwttl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#stmcteiykg .gt_last_summary_row {
+#ajzgpcwttl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1834,7 +2033,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_grand_summary_row {
+#ajzgpcwttl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1844,7 +2043,7 @@
   padding-right: 5px;
 }
 
-#stmcteiykg .gt_first_grand_summary_row {
+#ajzgpcwttl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1854,7 +2053,7 @@
   border-top-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_last_grand_summary_row_top {
+#ajzgpcwttl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1864,11 +2063,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_striped {
+#ajzgpcwttl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#stmcteiykg .gt_table_body {
+#ajzgpcwttl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1877,7 +2076,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_footnotes {
+#ajzgpcwttl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1891,7 +2090,7 @@
   border-right-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_footnote {
+#ajzgpcwttl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1900,7 +2099,7 @@
   padding-right: 5px;
 }
 
-#stmcteiykg .gt_sourcenotes {
+#ajzgpcwttl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1914,7 +2113,7 @@
   border-right-color: #D3D3D3;
 }
 
-#stmcteiykg .gt_sourcenote {
+#ajzgpcwttl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1922,109 +2121,109 @@
   padding-right: 5px;
 }
 
-#stmcteiykg .gt_left {
+#ajzgpcwttl .gt_left {
   text-align: left;
 }
 
-#stmcteiykg .gt_center {
+#ajzgpcwttl .gt_center {
   text-align: center;
 }
 
-#stmcteiykg .gt_right {
+#ajzgpcwttl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#stmcteiykg .gt_font_normal {
+#ajzgpcwttl .gt_font_normal {
   font-weight: normal;
 }
 
-#stmcteiykg .gt_font_bold {
+#ajzgpcwttl .gt_font_bold {
   font-weight: bold;
 }
 
-#stmcteiykg .gt_font_italic {
+#ajzgpcwttl .gt_font_italic {
   font-style: italic;
 }
 
-#stmcteiykg .gt_super {
+#ajzgpcwttl .gt_super {
   font-size: 65%;
 }
 
-#stmcteiykg .gt_footnote_marks {
+#ajzgpcwttl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#stmcteiykg .gt_asterisk {
+#ajzgpcwttl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#stmcteiykg .gt_indent_1 {
+#ajzgpcwttl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#stmcteiykg .gt_indent_2 {
+#ajzgpcwttl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#stmcteiykg .gt_indent_3 {
+#ajzgpcwttl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#stmcteiykg .gt_indent_4 {
+#ajzgpcwttl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#stmcteiykg .gt_indent_5 {
+#ajzgpcwttl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#stmcteiykg .katex-display {
+#ajzgpcwttl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#stmcteiykg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ajzgpcwttl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
 <th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
-<th id="Sum-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
-<th id="Mean-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
-<th id="F-value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
-<th id="Pr(>F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
+<th id="Sum Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
+<th id="Mean Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Sq</th>
+<th id="F value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
+<th id="Pr(&amp;gt;F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">watershed</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0031633603</td>
-<td class="gt_row gt_right" headers="Mean Sq">3.163360e-03</td>
-<td class="gt_row gt_right" headers="F value">60.348674</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.189679e-12</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0035633126</td>
+<td class="gt_row gt_right" headers="Mean Sq">3.563313e-03</td>
+<td class="gt_row gt_right" headers="F value">60.676115</td>
+<td class="gt_row gt_right" headers="Pr(>F)">1.250221e-12</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">elevation</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0005211087</td>
-<td class="gt_row gt_right" headers="Mean Sq">5.211087e-04</td>
-<td class="gt_row gt_right" headers="F value">9.941396</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.954556e-03</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0001780459</td>
+<td class="gt_row gt_right" headers="Mean Sq">1.780459e-04</td>
+<td class="gt_row gt_right" headers="F value">3.031767</td>
+<td class="gt_row gt_right" headers="Pr(>F)">8.379968e-02</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Df">149</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0078102907</td>
-<td class="gt_row gt_right" headers="Mean Sq">5.241806e-05</td>
+<td class="gt_row gt_right" headers="Df">143</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0083979289</td>
+<td class="gt_row gt_right" headers="Mean Sq">5.872678e-05</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -2116,23 +2315,23 @@
 <h2>Additive Model Hypothesis Tests</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="aqvbveavzg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aqvbveavzg table {
+<div id="nedsfztmoj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nedsfztmoj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aqvbveavzg thead, #aqvbveavzg tbody, #aqvbveavzg tfoot, #aqvbveavzg tr, #aqvbveavzg td, #aqvbveavzg th {
+#nedsfztmoj thead, #nedsfztmoj tbody, #nedsfztmoj tfoot, #nedsfztmoj tr, #nedsfztmoj td, #nedsfztmoj th {
   border-style: none;
 }
 
-#aqvbveavzg p {
+#nedsfztmoj p {
   margin: 0;
   padding: 0;
 }
 
-#aqvbveavzg .gt_table {
+#nedsfztmoj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2158,12 +2357,12 @@
   border-left-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_caption {
+#nedsfztmoj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aqvbveavzg .gt_title {
+#nedsfztmoj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2175,7 +2374,7 @@
   border-bottom-width: 0;
 }
 
-#aqvbveavzg .gt_subtitle {
+#nedsfztmoj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2187,7 +2386,7 @@
   border-top-width: 0;
 }
 
-#aqvbveavzg .gt_heading {
+#nedsfztmoj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2199,13 +2398,13 @@
   border-right-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_bottom_border {
+#nedsfztmoj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_col_headings {
+#nedsfztmoj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2220,7 +2419,7 @@
   border-right-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_col_heading {
+#nedsfztmoj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2240,7 +2439,7 @@
   overflow-x: hidden;
 }
 
-#aqvbveavzg .gt_column_spanner_outer {
+#nedsfztmoj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2252,15 +2451,15 @@
   padding-right: 4px;
 }
 
-#aqvbveavzg .gt_column_spanner_outer:first-child {
+#nedsfztmoj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aqvbveavzg .gt_column_spanner_outer:last-child {
+#nedsfztmoj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aqvbveavzg .gt_column_spanner {
+#nedsfztmoj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2272,11 +2471,11 @@
   width: 100%;
 }
 
-#aqvbveavzg .gt_spanner_row {
+#nedsfztmoj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aqvbveavzg .gt_group_heading {
+#nedsfztmoj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2302,7 +2501,7 @@
   text-align: left;
 }
 
-#aqvbveavzg .gt_empty_group_heading {
+#nedsfztmoj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2317,15 +2516,15 @@
   vertical-align: middle;
 }
 
-#aqvbveavzg .gt_from_md > :first-child {
+#nedsfztmoj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aqvbveavzg .gt_from_md > :last-child {
+#nedsfztmoj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aqvbveavzg .gt_row {
+#nedsfztmoj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2344,7 +2543,7 @@
   overflow-x: hidden;
 }
 
-#aqvbveavzg .gt_stub {
+#nedsfztmoj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2357,7 +2556,7 @@
   padding-right: 5px;
 }
 
-#aqvbveavzg .gt_stub_row_group {
+#nedsfztmoj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2371,15 +2570,15 @@
   vertical-align: top;
 }
 
-#aqvbveavzg .gt_row_group_first td {
+#nedsfztmoj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aqvbveavzg .gt_row_group_first th {
+#nedsfztmoj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aqvbveavzg .gt_summary_row {
+#nedsfztmoj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2389,16 +2588,16 @@
   padding-right: 5px;
 }
 
-#aqvbveavzg .gt_first_summary_row {
+#nedsfztmoj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_first_summary_row.thick {
+#nedsfztmoj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aqvbveavzg .gt_last_summary_row {
+#nedsfztmoj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2408,7 +2607,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_grand_summary_row {
+#nedsfztmoj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2418,7 +2617,7 @@
   padding-right: 5px;
 }
 
-#aqvbveavzg .gt_first_grand_summary_row {
+#nedsfztmoj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2428,7 +2627,7 @@
   border-top-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_last_grand_summary_row_top {
+#nedsfztmoj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2438,11 +2637,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_striped {
+#nedsfztmoj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aqvbveavzg .gt_table_body {
+#nedsfztmoj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2451,7 +2650,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_footnotes {
+#nedsfztmoj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2465,7 +2664,7 @@
   border-right-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_footnote {
+#nedsfztmoj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2474,7 +2673,7 @@
   padding-right: 5px;
 }
 
-#aqvbveavzg .gt_sourcenotes {
+#nedsfztmoj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2488,7 +2687,7 @@
   border-right-color: #D3D3D3;
 }
 
-#aqvbveavzg .gt_sourcenote {
+#nedsfztmoj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2496,112 +2695,112 @@
   padding-right: 5px;
 }
 
-#aqvbveavzg .gt_left {
+#nedsfztmoj .gt_left {
   text-align: left;
 }
 
-#aqvbveavzg .gt_center {
+#nedsfztmoj .gt_center {
   text-align: center;
 }
 
-#aqvbveavzg .gt_right {
+#nedsfztmoj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aqvbveavzg .gt_font_normal {
+#nedsfztmoj .gt_font_normal {
   font-weight: normal;
 }
 
-#aqvbveavzg .gt_font_bold {
+#nedsfztmoj .gt_font_bold {
   font-weight: bold;
 }
 
-#aqvbveavzg .gt_font_italic {
+#nedsfztmoj .gt_font_italic {
   font-style: italic;
 }
 
-#aqvbveavzg .gt_super {
+#nedsfztmoj .gt_super {
   font-size: 65%;
 }
 
-#aqvbveavzg .gt_footnote_marks {
+#nedsfztmoj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aqvbveavzg .gt_asterisk {
+#nedsfztmoj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aqvbveavzg .gt_indent_1 {
+#nedsfztmoj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aqvbveavzg .gt_indent_2 {
+#nedsfztmoj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aqvbveavzg .gt_indent_3 {
+#nedsfztmoj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aqvbveavzg .gt_indent_4 {
+#nedsfztmoj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aqvbveavzg .gt_indent_5 {
+#nedsfztmoj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#aqvbveavzg .katex-display {
+#nedsfztmoj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#aqvbveavzg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nedsfztmoj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
 <table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">term</th>
-<th id="Sum-Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
+<th id="Sum Sq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Sum Sq</th>
 <th id="Df" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Df</th>
-<th id="F-value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
-<th id="Pr(>F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
+<th id="F value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">F value</th>
+<th id="Pr(&amp;gt;F)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Pr(&gt;F)</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">(Intercept)</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0356004547</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0326978635</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="F value">679.163929</td>
-<td class="gt_row gt_right" headers="Pr(>F)">2.289666e-57</td>
+<td class="gt_row gt_right" headers="F value">556.779479</td>
+<td class="gt_row gt_right" headers="Pr(>F)">3.665950e-51</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">watershed</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0032308041</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0036184453</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="F value">61.635325</td>
-<td class="gt_row gt_right" headers="Pr(>F)">7.482954e-13</td>
+<td class="gt_row gt_right" headers="F value">61.614916</td>
+<td class="gt_row gt_right" headers="Pr(>F)">8.952666e-13</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="term">elevation</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0005211087</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0001780459</td>
 <td class="gt_row gt_right" headers="Df">1</td>
-<td class="gt_row gt_right" headers="F value">9.941396</td>
-<td class="gt_row gt_right" headers="Pr(>F)">1.954556e-03</td>
+<td class="gt_row gt_right" headers="F value">3.031767</td>
+<td class="gt_row gt_right" headers="Pr(>F)">8.379968e-02</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="term">Residuals</td>
-<td class="gt_row gt_right" headers="Sum Sq">0.0078102907</td>
-<td class="gt_row gt_right" headers="Df">149</td>
+<td class="gt_row gt_right" headers="Sum Sq">0.0083979289</td>
+<td class="gt_row gt_right" headers="Df">143</td>
 <td class="gt_row gt_right" headers="F value">NA</td>
 <td class="gt_row gt_right" headers="Pr(>F)">NA</td>
 </tr>
@@ -2668,14 +2867,14 @@
 <li>Start moving your Final Project over to your poster</li>
 </ol>
 
-
-</section></section>
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
-</div></div>
+</div>
+</section></section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../site_libs/revealjs/dist/reveal.js"></script>
@@ -2704,8 +2903,7 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -2859,7 +3057,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -3002,6 +3200,8 @@
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')

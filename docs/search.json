@@ -5075,15 +5075,15 @@
     "objectID": "slides/week10-day1.html#common-mistakes",
     "href": "slides/week10-day1.html#common-mistakes",
     "title": "Week 10: Two-way ANOVA",
-    "section": "",
-    "text": "Questions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 4 – Each country has 12 observations! Is it reasonable to assume that these observations share no information?\n\n\n\nQuestion 6 – Equal variance requires that there is no trend in the residuals versus fitted plot!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\n\n\nQuestions 1 & 2 – Your axis labels should contain units and indicate if your variables were transformed!\n\n\nQuestion 4 – Each country has 12 observations! Is it reasonable to assume that these observations share no information?\n\n\n\nQuestion 6 – Equal variance requires that there is no trend in the residuals versus fitted plot!\n\n\n\nQuestion 15 – Both theory-based and simulation-based methods have conditions and the reliability of a p-value depends on those conditions."
   },
   {
     "objectID": "slides/week10-day1.html#wrapping-up-revisions",
     "href": "slides/week10-day1.html#wrapping-up-revisions",
     "title": "Week 10: Two-way ANOVA",
     "section": "Wrapping Up Revisions",
-    "text": "Wrapping Up Revisions\nThe final round of revisions on all assignments are due by Sunday, June 8.\n. . .\n\n\n\n\n\n\nOne round of revisions\n\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions."
+    "text": "Wrapping Up Revisions\nThe final round of revisions on all assignments are due by Sunday, June 8.\n\n\n\n\n\n\n\nOne round of revisions\n\n\nYou will only have time for one round of revisions on Lab 8 and Statistical Critique 2, so make sure you feel confident about your revisions."
   },
   {
     "objectID": "slides/week10-day1.html#final-project",
@@ -5125,35 +5125,35 @@
     "href": "slides/week10-day1.html#research-question",
     "title": "Week 10: Two-way ANOVA",
     "section": "Research Question",
-    "text": "Research Question\n\nDoes the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the seedling was sampled?\n\n. . .\n\nOr, because the study was an experiment…\n\nDoes the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year the seedling was sampled?"
+    "text": "Research Question\n\nDoes the relationship between mean stem dry mass and calcium treatment for sugar maples differ based on the year the seedling was sampled?\n\n\n\nOr, because the study was an experiment…\n\nDoes the effect of calcium treatment on the stem dry mass of sugar maples differ based on the year the seedling was sampled?"
   },
   {
     "objectID": "slides/week10-day1.html#conditions",
     "href": "slides/week10-day1.html#conditions",
     "title": "Week 10: Two-way ANOVA",
     "section": "Conditions",
-    "text": "Conditions\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n. . .\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups\n\n\n. . .\n\nNormality of the residuals / responses\n\n\n\nThe distribution of responses for each group is approximately normal"
+    "text": "Conditions\n\nIndependence of observations\n\n\n\nObservations are independent within groups and between groups\n\n\n\n\nEqual variability of the groups\n\n\n\nThe spread of the distributions are similar across groups\n\n\n\n\n\nNormality of the residuals / responses\n\n\n\nThe distribution of responses for each group is approximately normal"
   },
   {
     "objectID": "slides/week10-day1.html#theory-based-two-way-anova",
     "href": "slides/week10-day1.html#theory-based-two-way-anova",
     "title": "Week 10: Two-way ANOVA",
     "section": "Theory-based Two-Way ANOVA",
-    "text": "Theory-based Two-Way ANOVA\n\nmaple_lm &lt;- lm(stem_dry_mass ~ watershed * year_cat, \n               data = hbr_maples_small)\n\nanova(maple_lm)\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.008754291\n0.0087542912\n38.54916\n2.611570e-09\n\n\nyear_cat\n1\n0.111208014\n0.1112080142\n489.69993\n5.665909e-58\n\n\nwatershed:year_cat\n1\n0.002586878\n0.0025868782\n11.39121\n8.715303e-04\n\n\nResiduals\n221\n0.050187819\n0.0002270942\nNA\nNA\n\n\n\n\n\n\n\n. . .\n\nThe watershed:year_cat line is testing if the relationship between the calcium treatment (watershed) and mean stem dry mass differs between 2003 and 2004.\n\n. . .\n\n\nDoes it? Does that make sense?"
+    "text": "Theory-based Two-Way ANOVA\n\nmaple_lm &lt;- lm(stem_dry_mass ~ watershed * year_cat, \n               data = hbr_maples_small)\n\nanova(maple_lm)\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.022460695\n0.0224606948\n95.47172\n5.667924e-19\n\n\nyear_cat\n1\n0.117159143\n0.1171591433\n497.99817\n1.566999e-58\n\n\nwatershed:year_cat\n1\n0.004054933\n0.0040549331\n17.23595\n4.714524e-05\n\n\nResiduals\n221\n0.051992502\n0.0002352602\nNA\nNA\n\n\n\n\n\n\n\n\n\nThe watershed:year_cat line is testing if the relationship between the calcium treatment (watershed) and mean stem dry mass differs between 2003 and 2004.\n\n\n\n\n\nDoes it? Does that make sense?"
   },
   {
     "objectID": "slides/week10-day1.html#how-are-those-p-values-calculated",
     "href": "slides/week10-day1.html#how-are-those-p-values-calculated",
     "title": "Week 10: Two-way ANOVA",
     "section": "How are those p-values calculated?",
-    "text": "How are those p-values calculated?\nThe p-values in the previous table use Type I sums of squares.\n\nType I sums of squares are “sequential,” meaning variables are tested in the order they are listed.\n\n. . .\n\nSo, the p-value for watershed:year_cat is conditional on including watershed and year_cat as explanatory variables.\n. . .\n\n\nIs that what we want????"
+    "text": "How are those p-values calculated?\nThe p-values in the previous table use Type I sums of squares.\n\nType I sums of squares are “sequential,” meaning variables are tested in the order they are listed.\n\n\n\nSo, the p-value for watershed:year_cat is conditional on including watershed and year_cat as explanatory variables.\n\n\n\n\nIs that what we want????"
   },
   {
     "objectID": "slides/week10-day1.html#testing-main-effects",
     "href": "slides/week10-day1.html#testing-main-effects",
     "title": "Week 10: Two-way ANOVA",
     "section": "Testing “main effects”",
-    "text": "Testing “main effects”\nIf there is evidence of an interaction, we do not test if the main effects are “significant.”\n. . .\n\n\nWhy?\n\n. . .\n\nThe interactions depend on these variables, so they should be included in the model!"
+    "text": "Testing “main effects”\nIf there is evidence of an interaction, we do not test if the main effects are “significant.”\n\n\n\nWhy?\n\n\n\n\nThe interactions depend on these variables, so they should be included in the model!"
   },
   {
     "objectID": "slides/week10-day1.html#interpreting-main-effects",
@@ -5174,28 +5174,28 @@
     "href": "slides/week10-day1.html#testing-for-a-relationship-for-each-variable",
     "title": "Week 10: Two-way ANOVA",
     "section": "Testing for a relationship for each variable",
-    "text": "Testing for a relationship for each variable\n\n\nadditive_lm &lt;- lm(stem_dry_mass ~ elevation + watershed, \n    data = hbr_maples_small) \n\nanova(additive_lm) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nelevation\n1\n0.0004536649\n4.536649e-04\n8.654744\n3.784000e-03\n\n\nwatershed\n1\n0.0032308041\n3.230804e-03\n61.635325\n7.482954e-13\n\n\nResiduals\n149\n0.0078102907\n5.241806e-05\nNA\nNA\n\n\n\n\n\n\n\n\n. . .\n\nDo you think it matters which variable comes first?"
+    "text": "Testing for a relationship for each variable\n\n\nadditive_lm &lt;- lm(stem_dry_mass ~ elevation + watershed, \n    data = hbr_maples_small) \n\nanova(additive_lm) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nelevation\n1\n0.0001229132\n1.229132e-04\n2.092967\n1.501669e-01\n\n\nwatershed\n1\n0.0036184453\n3.618445e-03\n61.614916\n8.952666e-13\n\n\nResiduals\n143\n0.0083979289\n5.872678e-05\nNA\nNA\n\n\n\n\n\n\n\n\n\n\nDo you think it matters which variable comes first?"
   },
   {
     "objectID": "slides/week10-day1.html#lets-see",
     "href": "slides/week10-day1.html#lets-see",
     "title": "Week 10: Two-way ANOVA",
     "section": "Let’s see…",
-    "text": "Let’s see…\n\n\nadditive_lm &lt;- lm(stem_dry_mass ~ watershed + elevation, \n    data = hbr_maples_small) \n\nanova(additive_lm) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.0031633603\n3.163360e-03\n60.348674\n1.189679e-12\n\n\nelevation\n1\n0.0005211087\n5.211087e-04\n9.941396\n1.954556e-03\n\n\nResiduals\n149\n0.0078102907\n5.241806e-05\nNA\nNA\n\n\n\n\n\n\n\n\n\nDid we get the same p-values as before?"
+    "text": "Let’s see…\n\n\nadditive_lm &lt;- lm(stem_dry_mass ~ watershed + elevation, \n    data = hbr_maples_small) \n\nanova(additive_lm) %&gt;% \n  tidy()\n\n\n\n\n\n\n\n\n\n\n\nterm\nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\nwatershed\n1\n0.0035633126\n3.563313e-03\n60.676115\n1.250221e-12\n\n\nelevation\n1\n0.0001780459\n1.780459e-04\n3.031767\n8.379968e-02\n\n\nResiduals\n143\n0.0083979289\n5.872678e-05\nNA\nNA\n\n\n\n\n\n\n\n\n\nDid we get the same p-values as before?"
   },
   {
     "objectID": "slides/week10-day1.html#sequential-versus-partial-sums-of-squares",
     "href": "slides/week10-day1.html#sequential-versus-partial-sums-of-squares",
     "title": "Week 10: Two-way ANOVA",
     "section": "Sequential Versus Partial Sums of Squares",
-    "text": "Sequential Versus Partial Sums of Squares\nSimilar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.\n\n\n\nThe p-value for each variable is conditional on the variable(s) that came before it.\nThe p-value for elevation is conditional on watershed being included in the model.\nThe p-value for watershed is conditional on…nothing.\n\n\n\n. . .\n\nIf we want the p-value for each explanatory variable to be conditional on every variable included in the model, then we need to use a different type of sums of squares!"
+    "text": "Sequential Versus Partial Sums of Squares\nSimilar to before, the p-values in the ANOVA table use Type I (sequential) sums of squares.\n\n\n\nThe p-value for each variable is conditional on the variable(s) that came before it.\nThe p-value for elevation is conditional on watershed being included in the model.\nThe p-value for watershed is conditional on…nothing.\n\n\n\n\n\nIf we want the p-value for each explanatory variable to be conditional on every variable included in the model, then we need to use a different type of sums of squares!"
   },
   {
     "objectID": "slides/week10-day1.html#partial-sums-of-squares",
     "href": "slides/week10-day1.html#partial-sums-of-squares",
     "title": "Week 10: Two-way ANOVA",
     "section": "Partial Sums of Squares",
-    "text": "Partial Sums of Squares\n\nType III sums of squares are “partial,” meaning every term in the model is tested in light of the other terms in the model.\n\n. . .\n\n\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on elevation being included in the model\n\n\n. . .\n\n\n\n\n\n\nOnly different for variables that were not first\n\n\n\nWe will get the same p-value for every variable that wasn’t first, since they were already conditional on the previous variables!"
+    "text": "Partial Sums of Squares\n\nType III sums of squares are “partial,” meaning every term in the model is tested in light of the other terms in the model.\n\n\n\n\nThe p-value for elevation is conditional on watershed being included in the model\nThe p-value for watershed is conditional on elevation being included in the model\n\n\n\n\n\n\n\n\n\n\nOnly different for variables that were not first\n\n\nWe will get the same p-value for every variable that wasn’t first, since they were already conditional on the previous variables!"
   },
   {
     "objectID": "slides/week10-day1.html#getting-the-conditional-tests-for-every-variable",
@@ -5209,7 +5209,7 @@
     "href": "slides/week10-day1.html#additive-model-hypothesis-tests",
     "title": "Week 10: Two-way ANOVA",
     "section": "Additive Model Hypothesis Tests",
-    "text": "Additive Model Hypothesis Tests\n\n\n\n\n\n\n\n\nterm\nSum Sq\nDf\nF value\nPr(&gt;F)\n\n\n\n\n(Intercept)\n0.0356004547\n1\n679.163929\n2.289666e-57\n\n\nwatershed\n0.0032308041\n1\n61.635325\n7.482954e-13\n\n\nelevation\n0.0005211087\n1\n9.941396\n1.954556e-03\n\n\nResiduals\n0.0078102907\n149\nNA\nNA\n\n\n\n\n\n\n\n\n\nWhat do you think the is the elevation line testing?\n\n\nIs there a difference in the mean stem dry mass between low and high elevation, conditional on the watershed the seedling was grown in.\n\n\n\nWhat would you decide?"
+    "text": "Additive Model Hypothesis Tests\n\n\n\n\n\n\n\n\nterm\nSum Sq\nDf\nF value\nPr(&gt;F)\n\n\n\n\n(Intercept)\n0.0326978635\n1\n556.779479\n3.665950e-51\n\n\nwatershed\n0.0036184453\n1\n61.614916\n8.952666e-13\n\n\nelevation\n0.0001780459\n1\n3.031767\n8.379968e-02\n\n\nResiduals\n0.0083979289\n143\nNA\nNA\n\n\n\n\n\n\n\n\n\nWhat do you think the is the elevation line testing?\n\n\nIs there a difference in the mean stem dry mass between low and high elevation, conditional on the watershed the seedling was grown in.\n\n\n\nWhat would you decide?"
   },
   {
     "objectID": "slides/week10-day1.html#keeping-non-significant-variables",
@@ -5930,7 +5930,7 @@
     "href": "slides/week10-day1.html#why-would-there-be-no-interaction-with-elevation",
     "title": "Week 10: Two-way ANOVA",
     "section": "Why would there be no interaction with elevation?",
-    "text": "Why would there be no interaction with elevation?\n\n\nFor most of these measurements, sampling was stratified by elevation zone. There were three elevation zones designated within the northern hardwood-dominated forest in and adjacent to W1: low (500-550m), middle (550-600 m), and high (600-700 m).\n\n\n\n\n\nWhat role does elevation play in this experiment?\nShould a blocking variable have an interaction with the treatment?\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf there is a significant interaction between the block and the treatment, it means the treatment’s effect changes depending on the block. That would violate the basic idea of blocking: the block adds noise (i.e., shifts means up or down), but doesn’t interfere with how the treatment works."
+    "text": "Why would there be no interaction with elevation?\n\n\nFor most of these measurements, sampling was stratified by elevation zone. There were three elevation zones designated within the northern hardwood-dominated forest in and adjacent to W1: low (500-550m), middle (550-600 m), and high (600-700 m).\n\n\n\n\n\nWhat role does elevation play in this experiment?\nShould a blocking variable have an interaction with the treatment?\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nIf there is a significant interaction between the block and the treatment, it means the treatment’s effect changes depending on the block. That would violate the basic idea of blocking: the block adds noise (i.e., shifts means up or down), but doesn’t interfere with how the treatment works."
   },
   {
     "objectID": "slides/week10-day1.html#should-a-blocking-variable-have-a-significant-effect",
@@ -5944,7 +5944,7 @@
     "href": "slides/week10-day1.html#if-the-blocking-variable-is-not-significant-should-you-delete-it",
     "title": "Week 10: Two-way ANOVA",
     "section": "If the blocking variable is not “significant” should you delete it?",
-    "text": "If the blocking variable is not “significant” should you delete it?\n. . .\n\n\nNo!\n\n\n. . .\nEven “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!"
+    "text": "If the blocking variable is not “significant” should you delete it?\n\n\n\nNo!\n\n\n\n\nEven “non-significant” variables explain some amount of the variation in the response. Which makes your estimates of a treatment effect more precise!"
   },
   {
     "objectID": "slides/week10-day2.html#discussion",
