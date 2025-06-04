@@ -359,17 +359,31 @@ trout %>%
 
 ## Presentation Structure
 
+::: {.midi}
 Each section will have an 80-minute poster presentation session. 
+:::
 
+::: {.small}
 - Section 01: 10:10am to 11:30am 
+  * Session 1: 10:10am to 10:50am 
+  * Session 2: 10:50am to 11:30am
 - Section 02: 11:40am to 1:00pm
+  * Session 1: 11:40am to 12:20pm 
+  * Session 2: 12:20am to 1:00pm
+:::
+
+::: {.midi}
+You can find what "Session" you are in on Canvas in the Final Presentation group. 
+:::
 
 . . .
 
-</br> 
-
-Bring your laptop so you can plug into the monitor to display your poster. There
-are no computers in the presentation room!
+::: {.midi}
+::: {.callout-important}
+# Bring Your Laptop!
+There are no computers in the presentation room!
+:::
+:::
 
 # Work Sesssion
 
