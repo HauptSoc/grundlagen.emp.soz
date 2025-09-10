@@ -1,0 +1,22 @@
+---
+title: "Ziele Methoden"
+tbl-colwidths: [10,35,10]
+---
+
+## Vorlesung Winter: Gute Unterscheidungen
+
+|  Ziel | Anforderung | Konzept |
+|-----------------|--------------------------------------|-----------------|
+| Konzeptuelle Klarheit | Klar definierte Eigenschaften der Untersuchungseinheiten | Konzeptspezifikation |
+| Sinnvolle Unterscheidungen | Nutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können | Validität |
+| Trennscharfe Unterscheidungen | Untersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können | Sensitivität |
+| Relevante Unterscheidungen | Die genutzten Unterschiede sollen in klaren, theoretisch postulierten Zusammenhang mit anderen Unterschieden stehen | Erklärungskraft |
+
+## Vorlesung Sommer: Gute Vergleiche
+
+| Ziel | Anforderung | Konzepte |
+|-------------------|----------------------------------|-------------------|
+| Vergleichbare Messung über verschiedene Gruppen | Ist die Eigenschaft, die verglichen werden soll, in beiden Gruppen gleich gut erfasst? | Messinvarianz, gruppenspezifische Messfehler, Non-response |
+| Angemessenes statistisches Maß für den Vergleich | Welche Information der Gruppen ist für meine Forschungsfrage informativ? | Lage- und Streuungs-maße |
+| Berücksichtigung unterschiedlicher Gruppenzusammensetzungen | Hinsichtlich welcher relevanten Eigenschaften unterscheiden sich die zu vergleichenden Gruppen? | Kompositionseffekte |
+| Isolation des interessierenden Effekts | Welche Vorgehensweise ist geeignet, um einzelne Einflüsse aus einem Zusammenhang von Einflüssen zu isolieren? | multivariate Modellierung |
