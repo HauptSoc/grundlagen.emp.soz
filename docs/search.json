@@ -2291,8 +2291,8 @@
     "section": "",
     "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n✍\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n\n\n\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n\n\n\n\n\n7\n11.12.\nItemkonstruktion\n📖\n🖥\n\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n\n📋",
     "crumbs": [
-      "Course information",
-      "Schedule"
+      "Wissenswertes",
+      "Was, wann, welche Reihenfolge?"
     ]
   },
   {
@@ -2354,12 +2354,12 @@
   {
     "objectID": "course-team.html",
     "href": "course-team.html",
-    "title": "Course Instructor",
+    "title": "Das sind wir",
     "section": "",
-    "text": "Dr. Allison Theobold (she / they) is an Assistant Professor of Statistics at Cal Poly in beautiful San Luis Obispo, California. Allison received her doctorate in Statistics, with an emphasis in Statistics Education, from Montana State University. Allison’s work focuses on innovation in statistics and data science education, with an emphasis on equitable pedagogy and learning trajectories. Allison is also interested in exploring pedagogical approaches for enhancing retention of under-represented students in STEM, including creating inclusive discoursive spaces and equitable group collaborations.",
+    "text": "Dr. Andreas Haupt ist Soziologe am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Er wird bezahlt, um Ihre Fragen nach bestem Wissen zu beantworten. Er erzählt im Wintersemester im Geb. 30.41 (HS2) von 9:45-11:15 etwas von der Analyse der Gesellschaft und hört Ihnen montags von 9:45-11:15 in der Übung zu (Geb. 20.30, SR 0.016).\n\n\n\nSophia Horn, M.A. ist Soziologin am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Sie ist schlauer als Herr Haupt und leitet die Übung am Dienstag, 14-15:30, im Geb. 30.91, Raum 012.",
     "crumbs": [
       "Course information",
-      "Teaching team"
+      "Das Team"
     ]
   },
   {
@@ -2527,12 +2527,12 @@
   {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
-    "title": "Ziele Methoden",
+    "title": "Ziele des Moduls",
     "section": "",
     "text": "Das Treffen sinnvoller Unterscheidungen und Vergleiche ist das grundlegende Handwerkszeug der Sozialstruktur- und Ungleichheitsforschung. Beschreibungen, Erklärungen, das Verstehen von gruppenspezifischen Handlungsweisen, explorative oder überprüfende Forschungsdesigns – alles das setzt mindestens das Unterscheiden von Konzepten voraus, mit deren Hilfe beschrieben, erklärt oder verstanden wird. Was ein guter Unterschied ist, lässt sich jedoch erst im Vergleich erkennen. Vergleichbarkeit ist darüber hinaus eines der wichtigsten Qualitätsmerkmale soziologischer Erklärungen von Gruppenunterschieden und für die Isolation sozialer Einflüsse.\nWährend wir im Alltag auf Unterscheidungen zurückgreifen, ohne diese typischerweise kritisch zu hinterfragen, sind wissenschaftliche Unterscheidungen und Vergleiche mit besonderen Anforderungen verbunden. Für die Sozialstrukturanalyse und Ungleichheitsforschung gilt dies besonders. Erstens sind zentrale Konzepte dieses Forschungsfeldes wie soziale Klassen, Milieus, sozialer Status oder Wohlfahrtsregime komplex und nur indirekt beobachtbar. Dies führt nicht nur zu theoretischen, sondern auch zu methodischen Herausforderungen. Zweitens haben Selektionsprozesse in Gruppen oder Positionen für die typischen Forschungsgegenstände eine erhebliche Bedeutung und die sozialen Prozesse, die typischerweise studiert werden, sind stark mit anderen Prozessen verwoben. Dies erschwert den Vergleich von Gruppen.",
     "crumbs": [
       "Course information",
-      "Overview"
+      "Ziele"
     ]
   },
   {
@@ -6775,23 +6775,45 @@
   {
     "objectID": "course-overview.html#vorlesung-winter-gute-unterscheidungen",
     "href": "course-overview.html#vorlesung-winter-gute-unterscheidungen",
-    "title": "Ziele Methoden",
+    "title": "Ziele des Moduls",
     "section": "Vorlesung Winter: Gute Unterscheidungen",
     "text": "Vorlesung Winter: Gute Unterscheidungen\n\n\n\n\n\n\n\n\nZiel\nAnforderung\nKonzept\n\n\n\n\nKonzeptuelle Klarheit\nKlar definierte Eigenschaften der Untersuchungseinheiten\nKonzeptspezifikation\n\n\nSinnvolle Unterscheidungen\nNutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können\nValidität\n\n\nTrennscharfe Unterscheidungen\nUntersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können\nSensitivität\n\n\nRelevante Unterscheidungen\nDie genutzten Unterschiede sollen in klaren, theoretisch postulierten Zusammenhang mit anderen Unterschieden stehen\nErklärungskraft",
     "crumbs": [
       "Course information",
-      "Overview"
+      "Ziele"
     ]
   },
   {
     "objectID": "course-overview.html#vorlesung-sommer-gute-vergleiche",
     "href": "course-overview.html#vorlesung-sommer-gute-vergleiche",
-    "title": "Ziele Methoden",
+    "title": "Ziele des Moduls",
     "section": "Vorlesung Sommer: Gute Vergleiche",
     "text": "Vorlesung Sommer: Gute Vergleiche\n\n\n\n\n\n\n\n\nZiel\nAnforderung\nKonzepte\n\n\n\n\nVergleichbare Messung über verschiedene Gruppen\nIst die Eigenschaft, die verglichen werden soll, in beiden Gruppen gleich gut erfasst?\nMessinvarianz, gruppenspezifische Messfehler, Non-response\n\n\nAngemessenes statistisches Maß für den Vergleich\nWelche Information der Gruppen ist für meine Forschungsfrage informativ?\nLage- und Streuungs-maße\n\n\nBerücksichtigung unterschiedlicher Gruppenzusammensetzungen\nHinsichtlich welcher relevanten Eigenschaften unterscheiden sich die zu vergleichenden Gruppen?\nKompositionseffekte\n\n\nIsolation des interessierenden Effekts\nWelche Vorgehensweise ist geeignet, um einzelne Einflüsse aus einem Zusammenhang von Einflüssen zu isolieren?\nmultivariate Modellierung",
     "crumbs": [
       "Course information",
-      "Overview"
+      "Ziele"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#bücherempfehlungen",
+    "href": "course-syllabus.html#bücherempfehlungen",
+    "title": "Grundlagen empirischer Sozialforschung",
+    "section": "2.1 Bücherempfehlungen",
+    "text": "2.1 Bücherempfehlungen\n\n\n\n\n\nÇetinkaya-Rundel and Hardin, Introduction to Modern Statistics. https://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\nIsmay & Kim, Modern Dive: Statistical Inference via Data Science. https://moderndive.com",
+    "crumbs": [
+      "Wissenswertes",
+      "Das Kleingedruckte"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#multimedia",
+    "href": "course-syllabus.html#multimedia",
+    "title": "Grundlagen empirischer Sozialforschung",
+    "section": "2.2 Multimedia",
+    "text": "2.2 Multimedia",
+    "crumbs": [
+      "Wissenswertes",
+      "Das Kleingedruckte"
     ]
   }
 ]

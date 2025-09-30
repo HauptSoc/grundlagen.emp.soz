@@ -1,1 +1,1 @@
-Sitemap: https://atheobold.github.io/stat-313-website/sitemap.xml
+Sitemap: https://methoden.empirischer.sozialforschung.netlify.com/sitemap.xml

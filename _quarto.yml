@@ -9,15 +9,15 @@ project:
 website:
   page-navigation: true
   favicon: images/favicon-2.png
-  title: "STAT 313 / 513"
-  description: "Homepage for STAT 313 / 513 - Applied Experimental Design and Regression Models at Cal Poly"
-  site-url: "https://atheobold.github.io/stat-313-website"
-  repo-url: https://github.com/atheobold/stat-313-website
+  title: "Methoden empirischer Sozialforschung"
+  description: "Webpage für das Modul 'Sozialwissenschaftliche Methoden I'"
+  site-url: "https://methoden.empirischer.sozialforschung.netlify.com"
+  repo-url: https://github.com/HauptSoc/grundlagen.emp.soz
   repo-actions: [issue]
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2023, Allison Theobold"
+    left: "&copy; Copyright 2025, Andreas Haupt"
     background: "#D9E3E4"
 
   sidebar:
@@ -27,69 +27,29 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/atheobold/stat-313-website
+        href: https://github.com/HauptSoc/grundlagen.emp.soz
         text: "GitHub organization"
       - icon: cloud-fill
         href: https://posit.cloud/
         aria-label: RStudio Cloud
       - icon: person-fill
-        href: https://canvas.calpoly.edu
-        text: "Cal Poly Canvas"
+        href: https://campus.kit.edu
+        text: "ILIAS KIT"
 
     style: "docked"
     search: true
     collapse-level: 1
     contents:
-      - section: "Course information"
+      - section: "Wissenswertes"
         contents:
           - href: course-overview.qmd
-            text: Overview
-          - href: course-syllabus.qmd
-            text: Syllabus
-          - href: course-support.qmd
-            text: Support
-          - href: course-team.qmd
-            text: Teaching team
+            text: Ziele
           - href: index.qmd
-            text: Schedule
-      - section: "Computing"
-        contents:
-          - href: computing-access.qmd
-            text: Access
-      - section: "R Resources"
-        contents:
-          - href: course_resources.qmd
-            text: R Resources
-      - section: "Projects"
-        contents:
-          - href: project/midterm-project/midterm-project-directions.qmd
-            text: Midterm Project Description
-          - href: project/final-project/final-project-directions.qmd
-            text: Final Project Description
-      - section: "Weekly materials"
-        contents:
-          - href: weeks/week-0.qmd
-            text: "Week 0"
-          - href: weeks/week-1.qmd
-            text: "Week 1"
-          - href: weeks/week-2.qmd
-            text: "Week 2"
-          - href: weeks/week-3.qmd
-            text: "Week 3"
-          - href: weeks/week-4.qmd
-            text: "Week 4"
-          - href: weeks/week-5.qmd
-            text: "Week 5"
-          - href: weeks/week-6.qmd
-            text: "Week 6"
-          - href: weeks/week-7.qmd
-            text: "Week 7"
-          - href: weeks/week-8.qmd
-            text: "Week 8"
-          - href: weeks/week-9.qmd
-            text: "Week 9"
-          - href: weeks/week-10.qmd
-            text: "Week 10"
+            text: Was, wann, welche Reihenfolge?
+          - href: course-team.qmd
+            text: Das Team
+          - href: course-syllabus.qmd
+            text: Das Kleingedruckte
 
 format:
   html:

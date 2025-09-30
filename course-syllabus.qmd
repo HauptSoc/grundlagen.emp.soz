@@ -1,6 +1,6 @@
 ---
-title: 'STAT 313: Applied Experimental Design and Regression Models'
-subtitle: "Spring 2024"
+title: 'Grundlagen empirischer Sozialforschung'
+subtitle: "WS 2025/26"
 format: 
   html: 
     self-contained: true
@@ -25,92 +25,43 @@ execute:
 
 :::::: columns
 ::: {.column width="50%"}
-**Instructor: Dr. Allison Theobold** -- you can call me [**Dr. Theobold**](https://docs.google.com/document/d/1m4e-2l76luAd9WrxiwCVf8-yf-co82dDSe1jHYf-NBo/edit?usp=sharing) or [**Dr. T**](https://docs.google.com/document/d/1m4e-2l76luAd9WrxiwCVf8-yf-co82dDSe1jHYf-NBo/edit?usp=sharing)! I use **they / she** pronouns (that is my order of preference). 😊
+**Leitung: Dr. Andreas Haupt**
 
-**Email**: atheobol\@calpoly.edu[^1]  
-**Office**: Building 25, Office 105
+**Email**: andreas.haupt\@kit.edu
 
-[^1]: See @sec-help for information on what you can expect when you email me.
+**Büro**: ITZ, Douglasstraße 24, 3.OG
+
+**Sekretariat**: Anja Reinke, anja.reinke\@kit.edu
+
 :::
 
 ::: {.column width="10%"}
 :::
 
 ::: {.column width="40%"}
-![](images/headshot.jpg){fig-alt="A headshot of Dr. Theobold, in a pink blazer at the top floor of Building 25, overlooking Bishop Peak" width="60%"}
+![](images/Haupt.jpg){fig-alt="Andreas Haupt" width="60%"}
 :::
 ::::::
 
-# Class meetings
+# Wann wir uns treffen
 
-**Room:** Baker Science (Building 180), Room 272
+**Vorlesung**: Geb. 30.41 (HS2) von 9:45-11:15
 
-**Times:**
-
--   Stat 313, Section 01: 12:10 - 2:00pm
--   Stat 313, Section 02: 4:10 - 6:00pm
-
-# Student Hours {#sec-OH}
-
-Student hours (more commonly referred to as office hours) are times I have set aside to meet with you outside of class. I like the name "student hours," as I feel it more clearly communicates the intention of this time -- talking with students. During student hours, you can ask questions about *any* course material you find challenging, are confused about, or would like to talk through with someone. You can also ask about the expectations for certain assignments or for expectations for the course. It is also possible for you to come to office hours with your peers, even if you don't have any questions of your own! Hearing other students’ questions may bring up questions you have and can help you practice applying your knowledge and skills by helping other students.
-
-Some general tips for coming to student hours:
-
--   introduce yourself early in the term -- this helps me learn your name faster!
--   don't be afraid that you are inconveniencing me -- I love talking to you!
--   ask thoughtful questions -- it is easier for me to help you if you come with specific questions
--   be aware of how much you are speaking -- when there are multiple students in my office I ask for everyone to take turns asking questions
--   be honest with me -- if I explained something and it still doesn't make sense to you, tell me!
-
-Another use for student hours is to talk with me about your interests, your own research or opportunities for research, or asking for a letter of recommendation. I love getting to know my students better, and office hours are a great time for you just to drop by and say 👋 ! I am also happy to talk with you about tough things going on in your life. I care a lot about you and want to help you in any way I can. ❤️
-
-This quarter I will be holding student hours on Mondays, Tuesdays, Wednesdays, 
-and Thursdays at the same time---so it is easy to remember!
-
-+-----------------+--------------------------------------------------+
-| Day             | Time                                             |
-+=================+==================================================+
-| Mondays         | 12:10pm -- 1:00pm (in-person)                    |
-+-----------------+--------------------------------------------------+
-| Tuesdays        | 12:10pm -- 1:00pm (on Zoom)                      |
-+-----------------+--------------------------------------------------+
-| Wednesdays      | 12:10pm -- 1:00pm (in-person)                    |
-+-----------------+--------------------------------------------------+
-| Thursdays       | 12:10 pm - 1:00 pm (on Zoom)                     |
-+-----------------+--------------------------------------------------+
-
-I will typically hold student hours in my office (25-105), but may choose to
-move to the outside vestibule between wings of the building (where all the
-whiteboards are) or the Statistics department conference room. If we're meeting
-somewhere other than my office, I will leave a sign on the door indicating where
-we're meeting!
-
-# Personal Meetings 
-
-If you would like to talk with me one-on-one about anything (e.g., grades,
-research), I've reserved time on Tuesdays and Thursdays from 12:10pm to 1:00pm
-for individual appointments. You can make 10-minute appointments through the
-following link: <https://calendly.com/allisontheobold>
-
-I do request that you make appointments at least 3-hours ahead of time, so I
-don't accidentally miss our meeting!
-
-If you need to meet, but none of the student hours work for you please let me
-know! It is possible we can communicate asynchronously through Discord or email,
-but I am happy to schedule a meeting during another time if necessary.
-
-# Welcoming Classroom
-
-I value diversity, inclusion and equity in this (and every) class. I hold the fundamental belief that everyone is fully capable of learning and doing statistics. There is more than one way to address a statistical problem, and our learning will be richer by being open to different ideas, rejecting stereotypes, and being aware of---in order to minimize---our biases. I look forward to getting to know you all as individuals and as a learning community.
+**Übungen**: 
+  + Sophia Horn: Dienstag, 14:00-15:30, im Geb. 30.91, Raum 012
+  + Andreas Haupt: Montag, 09:45-11:15 im Geb. 20.30, SR 0.016
+  
 :::
 
 ------------------------------------------------------------------------
 
-# Required Materials
+# Was sollten Sie mitbringen
 
 For this course we will be using one main textbook, accompanied by additional resources. The textbooks we are using are free, but have the option to obtain a printed copy if you wish.
 
-## Textbooks
+# Was macht Ihre Erfahrung reicher?
+
+## Bücherempfehlungen
 
 :::::: columns
 ::: {.column width="45%"}
@@ -126,376 +77,4 @@ For this course we will be using one main textbook, accompanied by additional re
 :::
 ::::::
 
-## Required Technology
-
-:::::::: columns
-::: {.column width="28%"}
-![`R` is the statistical software we will be using in this course (<https://cran.r-project.org/>)](images/R.jpeg){width="50%"}
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="30%"}
-![RStudio is the most popular way to interact with the `R` software. We will be interacting with RStudio through [Posit Cloud](https://posit.cloud/) (Posit is the company that owns RStudio). You will join the Stat 313 workspace, and then be able to access the course homework and lab assignments. We will be walking through this in the first week of lab!](images/rstudio.png){width="75%"}
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="28%"}
-![For questions of general interest, such as course clarifications or conceptual questions, please use the Class Discord Server. Refer to the Day One Class Setup materials for more information on how to effectively use this server.](images/discord.jpeg){width="50%"}
-:::
-::::::::
-
-::: callout-caution
-# Posit Cloud Student Subscription
-
-For this course, you will be required to enroll in the [Cloud Student](https://posit.cloud/plans/student), which costs \$5 per month. The subscription plan gives you access to the STAT 313 workspace, 75-hours of computing time each month, and collaborative editing.
-
-Note, to qualify for the student subscription you **must** use your Cal Poly email address for your account.
-:::
-
-# What is this class?
-
-*Catalog Description*: Applications of statistics for students not majoring in statistics or mathematics. Analysis of variance including one-way classification, randomized blocks, and factorial designs; multiple regression, model diagnostics, and model comparison. Prerequisite: Stat 217, Stat 218, Stat 221 or Stat 312
-
-## My course goals
-
-:::::: columns
-::: {.column width="45%"}
-**Data Visualization & Summarization**
-
--   create visualizations for one and two numerical variables
-
--   use facets and / or color to include additional variables into a visualization
-
--   calculate numerical summaries of variables
-
--   find summaries of variables across multiple groups
-
-**Working with Data & Reproducibility**
-
--   select necessary columns from a dataset
-
--   filter rows from a dataset for numerical and categorical variables
-
--   modify existing numerical and categorical variables and / or create new variables
-
--   create professional-looking, reproducible analyses using Posit projects, Quarto documents, and the **here** package
-
-**Linear Models & Model Selection**
-
--   identify which linear model is appropriate for a given research question
-
--   describe the conditions required to obtain reliable estimates from linear models
-
--   use visualizations, summary statistics, and critical thinking to evaluate if linear model conditions are violated
-
--   identify methods to remedy condition violations
-
--   fit additive and interactive linear models in R
-
--   interpret the coefficient estimates of a linear model
-
--   use visualizations and model selection techniques to determine if a specific variable should be included in a linear model
-:::
-
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="45%"}
-**Study Design**
-
--   distinguish between an experiment and an observational study
-
--   identify sources of variation and describe how to account for them
-
--   argue what population a given sample is representative of
-
-**Fundamentals of Statistical Inference**
-
--   identify the parameter of interest for a given linear model and associated research question
-
--   outline the null ($H_0$) and alternative ($H_A$) hypotheses for a given research question
-
--   describe what a null distribution is and how it is used to obtain a p-value
-
--   interpret a p-value in the context of a research question
-
--   use a p-value to make a decision about a hypothesis test and reach a conclusion about a research question
-
--   distinguish between Type I and Type II errors
-
--   describe how sample size and significance level effect Type I and Type II errors
-
--   outline the strengths and weaknesses of significance testing
-
--   describe what a bootstrap distribution is and how it is used to obtain a confidence interval
-
--   interpret a confidence interval in the context of the parameter of interest
-
--   describe the connection between confidence intervals and hypothesis testing
-:::
-::::::
-
-# Grade Breakdown {#sec-grades}
-
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-|                                | A-level                     | B-level                 | C-level                 | D-level                 |
-+================================+=============================+=========================+=========================+=========================+
-| **Reading Guides (13 total)**  | at least 12 completed       | at least 11 completed   | at least 9 completed    | 8 or fewer completed    |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Concept Quizzes\             | at least 12 completed       | at least 10 completed    | at least 9 completed    | 8 or fewer completed    |
-| (13 total)**                   |                             |                         |                         |                         |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Tutorials\                   | at least 13 completed       | at least 11 completed   | at least 10 completed   | 8 or fewer completed    |
-| (14 total)**                   |                             |                         |                         |                         |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Critiques & Lab Assignments\ | at least 8 Satisfactory[^2] | at least 7 Satisfactory | at least 6 Satisfactory | 5 or fewer Satisfactory |
-| (9 total)**                    |                             |                         |                         |                         |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Peer Evaluations (7 total)** | all 7 completed             | at least 6 completed    | at least 5 completed    | 4 or fewer completed    |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Midterm Project**            | Excellent                   | Satisfactory            | Progressing             | Novice                  |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-| **Final Project**              | Excellent                   | Satisfactory            | Progressing             | Novice                  |
-+--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+
-
-[^2]: A "Satisfactory" lab or critique occurs when **every** problem has been marked *Satisfactory.*
-
-<!-- +--------------------------------+-----------------------------+-------------------------+-------------------------+-------------------------+ -->
-
-<!-- | **Peer Evaluations\            | 2 completed                 | at least 1 completed    | at least 1 completed    | none completed          | -->
-
-<!-- | (3 total)**                    |                             |                         |                         |                         | -->
-
-I will set + / - grades based on how close you are to the next higher (or lower) letter grade. For example, if you meet all the criteria for an A (including two Excellent Projects) but only completed 8 satisfactory labs and critiques, you would earn an A-. Similarly, if you meet all the criteria for a B, but earned a Progressing on your Midterm Project, then your grade would be a B-. 
-
-## What assessments will there be?
-
-The main idea of assessment in this course is communication and feedback. There are several different types of assessments or assignments in this class, but they will all allow you to check your own understanding and progress towards the learning goals, get in-depth feedback from me, and let me know where to spend more time or approach something differently.
-
-Each one is described briefly here, grouped into categories by course goal. See @sec-grades for an explanation of how these contribute to your final grade. Our class schedule with topics is in @sec-schedule.
-
-## Interpret and use statistical concepts
-
-### Readings and videos (every week)
-
-I favor a "flipped classroom," as it gives you more time to clarify and solidify statistical concepts through hands-on exercises. Each week, you will read the required chapter(s), completing a required reading guide to walk you through the central concepts for each week. You are required to submit your completed reading guides by the start of class on Monday.
-
-### Concept quizzes (every week)
-
-Each week there will be a short (\~10 questions) quiz over the reading and videos from the week. These quizzes are intended to ensure that you grasped the key concepts from the week's readings. The quizzes are not timed, so you can feel free to check your answers with the textbook and / or videos if you so wish. The quizzes are **marked on completion** as complete or incomplete. You are required to complete the concept quiz by the start of class on Monday.
-
-### Tutorials (every week)
-
-You can think of the tutorials as an "interactive" textbook, as they interweave statistical ideas alongside examples of how to work with data in `R` and hands-on exercises writing the `R` code necessary to complete a given task. Each exercise has hints available if you get stuck!
-
-The tutorials are work at your own pace, so you can complete them all at once or slowly throughout the week. The lab assignments will require for you to put the skills you learned in the tutorials to work, so you are required to complete each week's tutorial **before** Wednesday's lab.
-
-The tutorials are **marked on completion** as complete or incomplete. You will submit a screenshot of the completion page at the end of the tutorial to confirm that you completed the tutorial for the week. You are required to complete the tutorial by the start of class on Thursday.
-
-## Critically evaluate the use of Statistics
-
-### Statistical critiques (every 4-weeks)
-
-These assignments are case studies in which you will evaluate a data visualization or statistical analysis, determining how well-performed and presented the analysis was and making recommendations for improving or using the analysis. Critiques are due roughly 1-week after they are assigned and should take **1-2 hours**. You will **receive feedback** and a mark of **Success** or **Growing** (elaborated more on later), and you will be able to revise based on that feedback. There will be **two** total critiques.
-
-## Perform statistical analyses to answer research questions
-
-### Lab Assignments (every week)
-
-Labs will be assigned on Thursday every week, providing the opportunity to explore the course concepts in the context of real data. Lab assignments will require for you to work through the tutorial for the week, thus the tutorials are due before the start of class on Wednesday.
-
-You will complete the lab assignments in the same teams you collaborate with in class. You will access the lab assignment through Posit Cloud, which you will be walked through during the first lab. Your group will be expected to submit your completed lab on Canvas. You will need to submit **only** the HTML document (not the Quarto document). The individual assigned as the Report Manager (described below) will submit the team's completed Lab assignment by **Monday at 5pm.**
-
-#### Success / Growing Grading
-
-I expect that you will approach each lab assignment seriously, investing the necessary time and energy to prepare your responses. Different from what you may have experienced, lab assignments are graded for "proficiency" of specific learning targets, which describe what you should be able to do after taking this course. You'll receive a score for each problem on an assignment according to the **Success** / **Not Yet** rubric below, as well as feedback to help you improve.
-
-+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Score   | Justification                                                                                                                                                                      |
-+=========+====================================================================================================================================================================================+
-| Success | The solution to the problem is correct, legible, and easy to follow, with all reasoning provided. Any error does not bring into question your understanding of the topic.          |
-+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Growing | The solution shows growth toward mastering the topic; however, elements of the solution bring into question your understanding of the topic, and thus further attention is needed. |
-+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-#### Completing Revisions
-
-Every week, your Lab assignment and / or Statistical Critique from the previous week will be graded and returned to you no later than Wednesday at 9am. Meaning, Lab 2 (completed in Week 2) will be graded and returned to you by Wednesday of Week 3. After the first submission of your Lab or Critique you will have the option to retry any problems for which you scored a **Growing (G)**. A written reflection on how your understanding of the problem changed will accompany any revision.
-
-Revisions for a Lab or Critique are **due on Wednesdays at 5pm**, [one week]{.underline} from when they were returned. If you do not complete your revision within one week of when it was returned, you are no longer permitted to submit a revision. If you don't earn a **Success** by your second revision, you are expected to make an appointment with me to meet during my office hours (or another agreed-upon time) to create a reassessment strategy.
-
-#### Reflections on Your Learning
-
-Revisions **must** include a reflection describing how you revised your thinking when completing your revision. It's not enough to say "\[x\] was wrong, so I fixed it"---you have to talk about why you got \[x\] wrong in the first place and what you learned that changed your mind. What do you know now that you didn't know before? Who or what helped you learn?
-
--   If your revision does not include reflections, I'll ask you to add them.
--   See some examples of really good reflections [here](https://docs.google.com/document/d/1JNR3cVONeEPwe7umURI1gv0w9qbMz5fyC_S2_qXkHII/edit?usp=sharing) -- they're (mostly) from an introductory statistics class, but I think you'll get the idea.
-
-**Submit your revision to the same assignment box on Canvas as your original. This helps me keep track of who has outstanding revisions.**
-
-### Peer Evaluations
-
-For quite some time I have been interested in what we, as your professors, can do to make group collaborations better for *every* student.
-
-Following the lab assignment each week you are required to complete a short (4-question) survey regarding your experiences collaborating with your partner. I use these evaluations to gauge people's collaborative experiences and to identify any instances where it would be beneficial to change groups or meet 1-1 with group members.
-
-On Wednesdays, I will bring personalized paper evaluation slips (with your name on it) to class. Once your group has finished the lab, you can come up and grab your evaluation slip. I ask that you take 3-minutes to *thoughtfully* respond to each of the questions. Your responses do not influence your grade or your partner's grade, but I ask that you take them seriously.
-
-## Synthesize statistical ideas
-
-### Midterm & Final Projects
-
-There will be two projects throughout the quarter, where you will be asked to synthesize the statistical concepts you have learned in a formal statistical report. Your critiques will help guide you toward how you do / don't want your report to look. Each project will be done independently, and requires you to submit a project proposal and draft report before the final deadline. You are encouraged to use the feedback received on these assignments to improve your final report. The final reports will be graded as Excellent, Satisfactory, Progressing, or No Credit based on a rubric that will be shared with the initial assignment.
-
-------------------------------------------------------------------------
-
-# Classroom community and policies
-
-### Weekly expectations
-
-The module for each week will be released on Friday by 5pm, so you can look over the content and see what the plan is for the week.
-
-### Getting help {#sec-help}
-
-This quarter, I am instating a policy that **I do not respond to emails with questions of general interest**, such as deadline clarifications or conceptual questions. If you have one of these questions, please ask your question on our course Discord server.
-
-**Discord:** We will use Discord to manage questions and responses regarding course content. There are channels for the different components of each week (e.g., Week 1 Lab Assignment). Please **do not** send an email about homework questions or questions about the course material. It is incredibly helpful for others in the course to see the questions you have and the responses to those questions. I will try to answer any questions posted to Discord within 3-4 hours (unless it is posted at midnight). If you think you can answer another student's question, please respond!
-
-::: {callout-note}
-# Responding to Private Messages
-
-If you use private email or messaging to ask a question that should be public, I may simply answer it in Discord instead. Please don't take this personally! It just means that you asked a good question, and I think the rest of the class could benefit from seeing the answer.
-:::
-
-Of course, if your question is truly private, such as a grade inquiry or a personal concern, you may send me a private email. To help both you and me, here are some specific expectations about emails:
-
--   Please tell me what course and section (by time or number) you are in!
--   If you email me between 9am and 4pm on Monday through Friday, I'll try my best to reply to you on the *same* day.
--   If you email me outside of those hours, I will do my best to respond to you by the *next working* day. For my own mental health, I **do not** respond to email on the weekend. Thus, if you send an email after 4pm on Friday or during the weekend, you will not receive a response until Monday morning.
--   If your question is much easier to discuss face-to-face, I may ask you to meet with me in my office or on Discord (at a time that works for both of us) rather than answering directly in an email.
--   Include any relevant photos / screenshots / error messages / PDFs / links with your email.
-
-# Well-being, Access, and Accommodations
-
-## What if I have accommodations or feel that accommodations would be beneficial to my learning?
-
-I enthusiastically support the mission of Disability Resource Center to make education accessible to all. I design all my courses with accessibility at the forefront of my thinking, but if you have any suggestions for ways I can make things more accessible, please let me know. Come talk to me if you need accommodation for your disabilities. I honor self-diagnosis: let's talk to each other about how we can make the course as accessible as possible. See also the standard syllabus statements, which include more information about formal processes.
-
-## I'm having difficulty paying for food and rent, what can I do?
-
-If you have difficulty affording groceries or accessing sufficient food to eat every day, or if you lack a safe and stable place to live, and you believe this may affect your performance in the course, I urge you to contact the Dean of Students for support. Furthermore, please notify me if you are comfortable in doing so. This will enable me to advocate for you and to connect you with other campus resources.
-
-## My mental health is impairing my ability to engage in my classes, what should I do?
-
-National surveys of college students have consistently found that stress, sleep problems, anxiety, depression, interpersonal concerns, death of a significant other and alcohol use are among the top ten health impediments to academic performance. If you are experiencing any mental health issues, I and Cal Poly are here to help you. Cal Poly's Counseling Services (805-756-2511) is a free and confidential resource for assistance, support and advocacy.
-
-## Someone is threatening me, what can I do?
-
-I will listen and believe you if someone is threatening you. I will help you get the help you need. I commit to changing campus culture that responds poorly to dating violence and stalking.
-
-## What if I can't arrange for childcare?
-
-If you are responsible for childcare on short notice, you are welcome to bring children to class with you. If you are a lactating parent, you many take breaks to feed your infant or express milk as needed. If I can support yo in navigating parenting, coursework, and other obligations in any way, please let me know.
-
-# Attendance, Extensions, and Technology
-
-## What if I need to miss class?
-
-I encourage you to attend every class session, but policies are for narcs. I put a great deal of time into making each class session engaging and worth your time. Attendance in this course is not explicitly required, but it degrades your team's trust in you when they don't see you in class.
-
-Here's what you should do if you do miss a class:
-
--   Talk to a classmate to figure out what information you missed
--   Check Canvas for any necessary handouts or changes to assignments
--   Email me with any questions you have after reviewing notes and handouts
-
-If you miss a bunch of classes, please come talk to me. I'm working from the assumption that you care and are trying, but something is getting in your way (health issues? depression / anxiety? college stress?); let's figure out what that is and how I can help.
-
-## What if I need to turn something in late?
-
-Assignments are expected to be submitted on time. However, every student will be permitted to submit up to **three** individual assignments up to 2-days late, by completing a deadline extension form. Similar to the "real world," deadline extensions must be requested **before** an assignment is due.
-
-When you complete the deadline extension form you will be required to state (1) what assignment you need an extension for, and (2) your proposed new deadline. **Your new deadline must be within 2-days of the original deadline.**
-
-**All** deadline extensions must be done through the form, so I can keep track of who has used their allotment of extensions. If you are registered with DRC to have deadline extensions, you are required to complete a deadline extension request and make a note if your extension is related to a need related to DRC accommodations.
-
-Any late work is required to have a deadline extension request, meaning if you do not complete a deadline extension request for an assignment you **are not** permitted to turn it in late.
-
-The link to the deadline extension form can be found in Canvas in the Course Information module (at the top of the page).
-
-::: callout-warning
-# Deadline extensions are not permitted for the "final version" of the Midterm Project and Final Project
-:::
-
-## Do I need to bring a computer to class?
-
-You are allowed to use technology in the classroom! In fact, we will often do so as part of in-class activities. However, our class is held in a computer laboratory, so bringing a laptop is not required. You are permitted to use the lab computers, but if you would like to take notes on your computer / surface you are welcome to bring it to class.
-
-# Expectations, Respect, and Integrity
-
-## How can I expect to be treated in this course?
-
-Following Ihab Hassan, I strive to teach statistics so that people will stop killing each other. In my classroom, diversity and individual differences are a sources of strength. One of the greatest failures of Statistics, historically and in the present, has been the exclusion of voices from the field. **Everyone here can learn from each other, and doing so is vital to the structure of the course.** Significant portions of this course involve group work and discussion in class. Some discussions will touch on sensitive topics. **So that everyone feels comfortable participating in these activities, we must listen to each other and treat each other with respect.** Any attitude or belief that espouses the superiority of one group of people over another is not welcome in my classroom. Such beliefs are directly destructive to the sense of community that we strive to create, and will sabotage our ability to learn from each other (and thus sabotage the entire structure of the course).
-
-In summary: Be good to each other.
-
-## Working in teams
-
-When completing lab assignments, you will work in a team of two students. In Week 2, you will be assigned to a group and you will work in this same group for two weeks (Weeks 2 & 3). Then, in Week 4 you will be assigned to a new group of two students, with whom you will collaborate with for the next two weeks (Weeks 4 & 5). This process will continue for Weeks 6 & 7, and Weeks 8 & 9. You will work with four different partners by the end of STAT 313.
-
-## What constitutes plagiarism in a statistics class?
-
-Paraphrasing or quoting another's work without citing the source is a form of academic misconduct. This included the `R` code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.
-
-Even inadvertent or unintentional misuse or appropriation of another's work (such as relying heavily on generative AI) is considered plagiarism. If you are struggling with writing the `R` code for an assignment, please reach out to me. I would prefer that I get to help you rather than you spending hours Googling things and get nowhere!
-
-Any incident of dishonesty, copying or plagiarism will be reported to the Office of Student Rights and Responsibilities. Cheating or plagiarism will earn you an "Incomplete" grade on the assignment and you **will not** be able to submit revisions for that assignment.
-
-If you have any questions about using and citing sources, you are expected to ask for clarification.
-
-For more information about what constitutes cheating and plagiarism, please see <https://academicprograms.calpoly.edu/content/academicpolicies/Cheating>.
-
-# Course Organization {#sec-schedule}
-
-This class is organized into six units. The skills learned at the beginning of the course will carry throughout the remainder of the course. I hope that you are able to see the connections between the topics of the different units, since they are all part of one big family---the regression family!
-
-## Unit 1: Foundations of Statistics (Week 1)
-
-This introductory unit has three big tasks, (1) review statistical and data oriented concepts you have (likely) seen before, (2) think critically about **why** statistics is used in science, and (3) think about **how** (historically) statistics has been used for inference.
-
-Reading: Chapters 1 and 2 in *Introduction to Modern Statistics* (*IMS*)
-
-## Unit 2: Exploratory Data Analysis (Weeks 2 & 3)
-
-This unit focuses on building skills for working with and visualizing different types of data. First, we will focus on numerical data--calculating summary statistics, histograms, scatterplots, and linegraphs. Next, we incorporate categorical variables into these summarizes (with groups) and visualizations (with colors and facets)!
-
-Reading: Chapters 4 & 5 in *IMS* and Chapter 2 in *Modern Dive*
-
-## Unit 3: Regression Modeling (Weeks 4 & 5)
-
-In this unit we begin exploring formal statistical methods. You will put the tools you learned for wrangling and visualizing to work in the context of linear regression. We will start in a familiar context---linear regression. Once we've explored the concepts of "simple" / basic regression we will turn up the heat and add some additional explanatory variables using multiple linear regression.
-
-Reading: Chapters 5 & 6 in *Modern Dive*
-
-## Unit 4: Model Selection & Inference for Regression (Weeks 6 & 7)
-
-This unit focuses on how we decide what variables should be included in our regression models and what we can say about the final models we obtain. We will explore these ideas using concepts you have seen before: hypothesis tests and confidence intervals. We will visit the ideas of p-values and significance testing, with a emphasis on making (and justifying) sound scientific decisions with the intention of obtaining the *best* regression model we can.
-
-Reading: Supplementary resources written / compiled by Dr. Theobold
-
-## Unit 5: Condition Violations (Week 8)
-
-There are occasions where the conditions required for linear regression are violated. Rather than throwing up our hands and saying "Oh, well!", we can use variable transformations to lessen condition violations. This unit will explore the use of log transformations to remedy non-linear relationships and non-constant variance.
-
-Reading: Supplementary resources written / compiled by Dr. Theobold
-
-## Unit 6: ANOVA (Weeks 9 & 10)
-
-To wrap up the quarter, we will look at a special case of linear regression--ANOVA. In this special case, our regression will include **only** categorical variables as explanatory variables. We will first review how we compare the means of two groups and then connect with what we learned about categorical variables in multiple linear to conceptualize how we can compare the means of three or more groups.
-
-This unit will explore Chapter 22 in *IMS*, with supplementary materials created by Dr. Theobold.
+## Multimedia

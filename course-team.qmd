@@ -1,7 +1,9 @@
 ---
-title: "Course Instructor"
+title: "Das sind wir"
+tbl-colwidths: [35,20]
 ---
 
-![](images/theobold.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Allison Theobold" width="200"}
-
-[**Dr. Allison Theobold**](hhttps://statistics.calpoly.edu/allison-theobold) (she / they) is an Assistant Professor of Statistics at Cal Poly in beautiful San Luis Obispo, California. Allison received her doctorate in Statistics, with an emphasis in Statistics Education, from Montana State University. Allison's work focuses on innovation in statistics and data science education, with an emphasis on equitable pedagogy and learning trajectories. Allison is also interested in exploring pedagogical approaches for enhancing retention of under-represented students in STEM, including creating inclusive discoursive spaces and equitable group collaborations.
+|  |  |
+|--------------------------------------------------------|----------------|
+| [**Dr. Andreas Haupt**](www.andreas-haupt.com) ist Soziologe am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Er wird bezahlt, um Ihre Fragen nach bestem Wissen zu beantworten. Er erzählt im Wintersemester im Geb. 30.41 (HS2) von 9:45-11:15 etwas von der Analyse der Gesellschaft und hört Ihnen montags von 9:45-11:15 in der Übung zu (Geb. 20.30, SR 0.016). | ![Dr. Andreas Haupt](images/clipboard-1909326803.jpeg){width="400"} |
+| **Sophia Horn, M.A.** ist Soziologin am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Sie ist schlauer als Herr Haupt und leitet die Übung am Dienstag, 14-15:30, im Geb. 30.91, Raum 012. |  |

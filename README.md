@@ -1,10 +1,10 @@
-# Website for STAT 313 at Cal Poly
+# Website für Grundlagen empirischer Sozialforschung am KIT
 
 🔗 https://atheobold.github.io/stat-313-website/
 
-## Inspiration for Website
+## Auf den Schultern von Riesinnen
 
-This website is a derivation of STA 201 at Duke 
+Diese Seite baut auf Arbeiten von [**Allision Theobold**](https://statistics.calpoly.edu/allison-theobold) und [**Allison Horst**](https://allisonhorst.com) auf.
 
 <hr> 
 
