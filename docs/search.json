@@ -2527,9 +2527,9 @@
   {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
-    "title": "STAT 313: Applied Experimental Design and Regression Models",
+    "title": "Ziele Methoden",
     "section": "",
-    "text": "A deep dive into linear models for analyzing multivariate data sets. In this course, you will learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models. Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data. This class emphasizes data analysis over mathematical theory.",
+    "text": "Das Treffen sinnvoller Unterscheidungen und Vergleiche ist das grundlegende Handwerkszeug der Sozialstruktur- und Ungleichheitsforschung. Beschreibungen, Erklärungen, das Verstehen von gruppenspezifischen Handlungsweisen, explorative oder überprüfende Forschungsdesigns – alles das setzt mindestens das Unterscheiden von Konzepten voraus, mit deren Hilfe beschrieben, erklärt oder verstanden wird. Was ein guter Unterschied ist, lässt sich jedoch erst im Vergleich erkennen. Vergleichbarkeit ist darüber hinaus eines der wichtigsten Qualitätsmerkmale soziologischer Erklärungen von Gruppenunterschieden und für die Isolation sozialer Einflüsse.\nWährend wir im Alltag auf Unterscheidungen zurückgreifen, ohne diese typischerweise kritisch zu hinterfragen, sind wissenschaftliche Unterscheidungen und Vergleiche mit besonderen Anforderungen verbunden. Für die Sozialstrukturanalyse und Ungleichheitsforschung gilt dies besonders. Erstens sind zentrale Konzepte dieses Forschungsfeldes wie soziale Klassen, Milieus, sozialer Status oder Wohlfahrtsregime komplex und nur indirekt beobachtbar. Dies führt nicht nur zu theoretischen, sondern auch zu methodischen Herausforderungen. Zweitens haben Selektionsprozesse in Gruppen oder Positionen für die typischen Forschungsgegenstände eine erhebliche Bedeutung und die sozialen Prozesse, die typischerweise studiert werden, sind stark mit anderen Prozessen verwoben. Dies erschwert den Vergleich von Gruppen.",
     "crumbs": [
       "Course information",
       "Overview"
@@ -6749,7 +6749,7 @@
     "href": "slides/01-WissenschaftlicheSpielregeln.html#brandolini-in-action-the-alpha-wolf",
     "title": "Wissenschaftliche Spielregeln",
     "section": "Brandolini in action: The alpha wolf",
-    "text": "Brandolini in action: The alpha wolf\n\n\n\n\nDas Konzept eines Alpha-Wolfs und einer “pack order” wurde in den 1970er aufgrund der selektiven Beobachtung von Wölfen in Gefangenschaft entwickelt, die kaum familiäre Bindungen hatten.\nNatürliche Wolfsrudel sind aber schlicht Familienverbände aus Vaterwolf, Mamawolf und ihren Kindern.\nDavid Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert, versuchte bis 2020 vergeblich, sein eigenes Buch aus dem Verkehr zu ziehen (mehr hier)."
+    "text": "Brandolini in action: The alpha wolf\n\n\n\n\n\nDas Konzept eines Alpha-Wolfs und einer “pack order” wurde in den 1970er aufgrund der selektiven Beobachtung von Wölfen in Gefangenschaft entwickelt, die kaum familiäre Bindungen hatten.\nNatürliche Wolfsrudel sind aber schlicht Familienverbände aus Vaterwolf, Mamawolf und ihren Kindern.\nDavid Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert, versuchte bis 2020 vergeblich, sein eigenes Buch aus dem Verkehr zu ziehen (mehr hier)."
   },
   {
     "objectID": "slides/01-WissenschaftlicheSpielregeln.html#section",
@@ -6770,6 +6770,28 @@
     "href": "slides/01-WissenschaftlicheSpielregeln.html#brandolini-in-action-myers-briggs-test",
     "title": "Wissenschaftliche Spielregeln",
     "section": "Brandolini in action: Myers-Briggs-Test",
-    "text": "Brandolini in action: Myers-Briggs-Test\n\n\n\n\nDer Myers-Briggs-Test ist ein sehr populärer Persönlichkeitstest in vielen Organisationen zur Einordnung von Kandidaten oder Teammitgliedern.\nFührt man mit Personen diesen Test aber wiederholt aus, verändert sich die Einstufung der Persönlichkeit zum Teil drastisch.\nDie Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mit Verhaltensweisen und Leistungen von Personen in Organisationen (ausführlicher)."
+    "text": "Brandolini in action: Myers-Briggs-Test\n\n\n\n\n\nDer Myers-Briggs-Test ist ein sehr populärer Persönlichkeitstest in vielen Organisationen zur Einordnung von Kandidaten oder Teammitgliedern.\nFührt man mit Personen diesen Test aber wiederholt aus, verändert sich die Einstufung der Persönlichkeit zum Teil drastisch.\nDie Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mit Verhaltensweisen und Leistungen von Personen in Organisationen (ausführlicher)."
+  },
+  {
+    "objectID": "course-overview.html#vorlesung-winter-gute-unterscheidungen",
+    "href": "course-overview.html#vorlesung-winter-gute-unterscheidungen",
+    "title": "Ziele Methoden",
+    "section": "Vorlesung Winter: Gute Unterscheidungen",
+    "text": "Vorlesung Winter: Gute Unterscheidungen\n\n\n\n\n\n\n\n\nZiel\nAnforderung\nKonzept\n\n\n\n\nKonzeptuelle Klarheit\nKlar definierte Eigenschaften der Untersuchungseinheiten\nKonzeptspezifikation\n\n\nSinnvolle Unterscheidungen\nNutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können\nValidität\n\n\nTrennscharfe Unterscheidungen\nUntersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können\nSensitivität\n\n\nRelevante Unterscheidungen\nDie genutzten Unterschiede sollen in klaren, theoretisch postulierten Zusammenhang mit anderen Unterschieden stehen\nErklärungskraft",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#vorlesung-sommer-gute-vergleiche",
+    "href": "course-overview.html#vorlesung-sommer-gute-vergleiche",
+    "title": "Ziele Methoden",
+    "section": "Vorlesung Sommer: Gute Vergleiche",
+    "text": "Vorlesung Sommer: Gute Vergleiche\n\n\n\n\n\n\n\n\nZiel\nAnforderung\nKonzepte\n\n\n\n\nVergleichbare Messung über verschiedene Gruppen\nIst die Eigenschaft, die verglichen werden soll, in beiden Gruppen gleich gut erfasst?\nMessinvarianz, gruppenspezifische Messfehler, Non-response\n\n\nAngemessenes statistisches Maß für den Vergleich\nWelche Information der Gruppen ist für meine Forschungsfrage informativ?\nLage- und Streuungs-maße\n\n\nBerücksichtigung unterschiedlicher Gruppenzusammensetzungen\nHinsichtlich welcher relevanten Eigenschaften unterscheiden sich die zu vergleichenden Gruppen?\nKompositionseffekte\n\n\nIsolation des interessierenden Effekts\nWelche Vorgehensweise ist geeignet, um einzelne Einflüsse aus einem Zusammenhang von Einflüssen zu isolieren?\nmultivariate Modellierung",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
   }
 ]

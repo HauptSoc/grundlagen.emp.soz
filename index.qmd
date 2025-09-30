@@ -6,7 +6,7 @@ tbl-colwidths: [5,10,35,5,5,5,5,5]
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
 |:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") | [✍](/critique/critique-2.qmd "Statistical Critique 2 Instructions") |  | [📁](project/final-project/final-project-directions.qmd "Final Project Instructions") |
-| 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
+| 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-WissenschaftlicheSpielregeln.qmd) |  |  |  |
 |  |  | **I. Unterschiede messen** |  |  |  |  |  |
 | 3 | 13.11. | Grundlagen guten Unterscheidens | [📖](https://flowingdata.com/2016/07/20/modern-family-structure/ "Welche unterschiedlichen Haushaltsformen gibt es da draußen?") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
 | 4 | 20.11. | Dimensionen, Typen, Ausprägungen | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |

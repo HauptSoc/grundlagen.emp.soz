@@ -1,7 +1,26 @@
 ---
-title: "STAT 313: Applied Experimental Design and Regression Models"
+title: "Ziele des Moduls"
+tbl-colwidths: [10,35,10]
 ---
 
-A deep dive into linear models for analyzing multivariate data sets. In this course, you will learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models. Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data. This class emphasizes data analysis over mathematical theory.
+Das Treffen sinnvoller Unterscheidungen und Vergleiche ist das grundlegende Handwerkszeug der Sozialstruktur- und Ungleichheitsforschung. Beschreibungen, Erklärungen, das Verstehen von gruppenspezifischen Handlungsweisen, explorative oder überprüfende Forschungsdesigns – alles das setzt mindestens das Unterscheiden von Konzepten voraus, mit deren Hilfe beschrieben, erklärt oder verstanden wird. Was ein guter Unterschied ist, lässt sich jedoch erst im Vergleich erkennen. Vergleichbarkeit ist darüber hinaus eines der wichtigsten Qualitätsmerkmale soziologischer Erklärungen von Gruppenunterschieden und für die Isolation sozialer Einflüsse.
 
-![](images/course-logo.png){fig-alt="A series of three, generic data visualizations: a scatterplot with a single black trend line, a density plot with three ridges stacked on top of each other, and another scatterplot with three different trend lines." width="700"}
+Während wir im Alltag auf Unterscheidungen zurückgreifen, ohne diese typischerweise kritisch zu hinterfragen, sind wissenschaftliche Unterscheidungen und Vergleiche mit besonderen Anforderungen verbunden. Für die Sozialstrukturanalyse und Ungleichheitsforschung gilt dies besonders. Erstens sind zentrale Konzepte dieses Forschungsfeldes wie soziale Klassen, Milieus, sozialer Status oder Wohlfahrtsregime komplex und nur indirekt beobachtbar. Dies führt nicht nur zu theoretischen, sondern auch zu methodischen Herausforderungen. Zweitens haben Selektionsprozesse in Gruppen oder Positionen für die typischen Forschungsgegenstände eine erhebliche Bedeutung und die sozialen Prozesse, die typischerweise studiert werden, sind stark mit anderen Prozessen verwoben. Dies erschwert den Vergleich von Gruppen.
+
+## Vorlesung Winter: Gute Unterscheidungen
+
+| Ziel | Anforderung | Konzept |
+|------------------|-------------------------------------|------------------|
+| Konzeptuelle Klarheit | Klar definierte Eigenschaften der Untersuchungseinheiten | Konzeptspezifikation |
+| Sinnvolle Unterscheidungen | Nutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können | Validität |
+| Trennscharfe Unterscheidungen | Untersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können | Sensitivität |
+| Relevante Unterscheidungen | Die genutzten Unterschiede sollen in klaren, theoretisch postulierten Zusammenhang mit anderen Unterschieden stehen | Erklärungskraft |
+
+## Vorlesung Sommer: Gute Vergleiche
+
+| Ziel | Anforderung | Konzepte |
+|-------------------|----------------------------------|-------------------|
+| Vergleichbare Messung über verschiedene Gruppen | Ist die Eigenschaft, die verglichen werden soll, in beiden Gruppen gleich gut erfasst? | Messinvarianz, gruppenspezifische Messfehler, Non-response |
+| Angemessenes statistisches Maß für den Vergleich | Welche Information der Gruppen ist für meine Forschungsfrage informativ? | Lage- und Streuungs-maße |
+| Berücksichtigung unterschiedlicher Gruppenzusammensetzungen | Hinsichtlich welcher relevanten Eigenschaften unterscheiden sich die zu vergleichenden Gruppen? | Kompositionseffekte |
+| Isolation des interessierenden Effekts | Welche Vorgehensweise ist geeignet, um einzelne Einflüsse aus einem Zusammenhang von Einflüssen zu isolieren? | multivariate Modellierung |

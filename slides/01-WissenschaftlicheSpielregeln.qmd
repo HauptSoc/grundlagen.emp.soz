@@ -122,6 +122,8 @@ Wir haben daher auf zwei Arten eine Verantwortung:
 
 ## Brandolini in action: The alpha wolf  {.midi}
 
+::: {.fragment fragment-index=1}
+
 ::::::{.columns}
 ::::{.column width="30%"}
 ![](images/alphawolf.png)
@@ -135,8 +137,15 @@ Natürliche Wolfsrudel sind aber schlicht Familienverbände aus Vaterwolf, Mamaw
 David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert, versuchte bis 2020 vergeblich, sein eigenes Buch aus dem Verkehr zu ziehen ([mehr hier](https://sciencenorway.no/ulv/wolf-packs-dont-actually-have-alpha-males-and-alpha-females-the-idea-is-based-on-a-misunderstanding/1850514)).
 ::::
 ::::::
+:::
+
+::: {.fragment fragment-index=2}
+![](images/StempelSelection.png){.absolute bottom=0 left=0 width="300" height="300"}
+:::
+
 
 ## Brandolini in action: Myers-Briggs-Test {.midi}
+::: {.fragment fragment-index=1}
 ::::::{.columns}
 ::::{.column width="30%"}
 ![](images/MyersBriggs.png)
@@ -149,5 +158,12 @@ Führt man mit Personen diesen Test aber wiederholt aus, verändert sich die Ein
 
 Die Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mit Verhaltensweisen und Leistungen von Personen in Organisationen ([ausführlicher](https://www.theswaddle.com/myers-briggs-test-has-been-debunked-time-and-again-why-do-companies-still-use-it)). 
 ::::
+:::
+
 ::::::
+::: {.fragment fragment-index=2}
+![](images/StempelValide.png){.absolute bottom=0 left=0 width="300" height="300"}
+:::
+
+
 

@@ -5,8 +5,8 @@ tbl-colwidths: [10,35,10]
 
 ## Vorlesung Winter: Gute Unterscheidungen
 
-|  Ziel | Anforderung | Konzept |
-|-----------------|--------------------------------------|-----------------|
+| Ziel | Anforderung | Konzept |
+|------------------|-------------------------------------|------------------|
 | Konzeptuelle Klarheit | Klar definierte Eigenschaften der Untersuchungseinheiten | Konzeptspezifikation |
 | Sinnvolle Unterscheidungen | Nutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können | Validität |
 | Trennscharfe Unterscheidungen | Untersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können | Sensitivität |
