@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../images/favicon-2.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.30">
+
+  <title>STAT 313 / 513 – Wissenschaftliche Spielregeln</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-da308dc606942ef5cbc74096b44a5537.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Wissenschaftliche Spielregeln</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="wissenschaft-heißt-wissen-schaffen" class="slide level2 midi">
+<h2>Wissenschaft heißt Wissen schaffen</h2>
+<blockquote>
+<p>Science writing that isn’t credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility.</p>
+</blockquote>
+<p>Josha Schimel: Writing Science (2011, 23) (<a href="https://schimelwritingscience.wordpress.com/">Website des Autors</a>)</p>
+</section>
+<section id="werden-sie-ein-produktives-mitglied" class="slide level2">
+<h2>Werden Sie ein produktives Mitglied</h2>
+<p>Wie werden Sie ein produktives Mitglied der wissenschaftlichen Gemeinschaft:</p>
+<ol type="1">
+<li><p>nehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;</p></li>
+<li><p>suchen Sie nach Dingen, um die Debatte zu bereichern;</p></li>
+<li><p>nutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;</p></li>
+<li><p>überzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war.</p></li>
+</ol>
+</section>
+<section id="überzeugend-sein" class="slide level2">
+<h2>Überzeugend sein</h2>
+<p>Sie überzeugen andere Teilnehmer:innen, wenn</p>
+<ol type="1">
+<li><p>Sie die gleiche Sprache sprechen wie die Debattenteilnehmer:innen, d.h. die gleichen oder verständliche Begriffe benutzen.</p></li>
+<li><p>Sie bessere und/oder neue Argumente nutzen.</p></li>
+<li><p>Sie Daten und Methoden benutzen, die Ihre Argumente oder Behauptungen stützen.</p></li>
+</ol>
+</section>
+<section id="überzeugend-sein-mit-daten-methoden" class="slide level2">
+<h2>Überzeugend sein mit Daten &amp; Methoden</h2>
+<p>Um empirisch überzeugend sein zu können, brauchen Sie</p>
+<ol type="1">
+<li><p>gute Daten &amp;</p></li>
+<li><p>angemessene Methoden &amp;</p></li>
+<li><p>die Kompetenz, das Verhältnis von Daten, Methoden und Ihren Aussagen zu klären.</p></li>
+</ol>
+</section>
+<section id="wissenschaftliche-überzeugungen" class="slide level2">
+<h2>Wissenschaftliche Überzeugungen</h2>
+<p>Wissenschaftliche Debatten sind kumulativ, d.h. sie bauen auf vorherigen wissenschaftlichen Inhalten auf. Daraus folgen wichtige Konsequenzen:</p>
+<ul>
+<li><p>Eine laufende Debatte wird (typischerweise) nicht durch eine einzige Studie völlig anders laufen, denn viele Wissenschaftler:innen sind sehr überzeugt von den Inhalten, die Sie vertreten.</p></li>
+<li><p>Zeigt eine kritische Masse von Debattenteilnehmer:innen gegenteilige Inhalte zu den bisher vertretenen Inhalten, wird das typischerweise die anderen Teilnehmer:innen überzeugen.</p></li>
+</ul>
+</section>
+<section id="testen-sie-sich-selbst" class="slide level2">
+<h2>Testen Sie sich selbst</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Fragen Sie sich selbst:</p>
+<ol type="1">
+<li><p>Welche (wissenschaftliche) Überzeugung würden Sie immer noch behalten, selbst wenn mehrere neue Studie erscheinen, die das Gegenteil behaupten?</p></li>
+<li><p>Welche (wissenschaftliche) Überzeugung haben Sie aufgrund gegenteiliger (wissenschaftlicher) Evidenz aufgegeben?</p></li>
+<li><p>Suchen Sie für beide Punkte Evidenz oder Gegenevidenz.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="erwarten-sie-keine-revolutionen" class="slide level2">
+<h2>Erwarten Sie keine Revolutionen!</h2>
+<div class="center">
+
+</div>
+
+<img data-src="images/priors-minimumwage.jpg" class="r-stretch quarto-figure-center"><p class="caption">Die Veränderungen der Vorannahmen über die Wirkung des Mindeslohns; <a href="https://twitter.com/arindube/status/1315857681148596224">Quelle</a></p><div class="center">
+
+</div>
+</section>
+<section id="verkannte-genies" class="slide level2">
+<h2>Verkannte Genies?</h2>
+<ul>
+<li>Gerade in Deutschland gibt es eine gewisse “Gier” nach Genies und eine starke Erzählung darüber, dass einige von ihnen verkannt oder sogar unterdrückt werden/wurden.</li>
+<li>Das ist in der Vielzahl aller Fälle falsch und auch schädlich .</li>
+<li>Diese Erzählung führt zu “false balancing” in den Medien und zu Beschreibung von wissenschaftlichem Konsens als “umstritten”.</li>
+</ul>
+</section>
+<section id="gibt-es-ein-gesundes-maß-von-rauchverhalten" class="slide level2 small">
+<h2>Gibt es ein gesundes Maß von Rauchverhalten?</h2>
+<div class="quarto-layout-panel" data-layout="[[1,1], [1,1]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img data-src="images/Smoking1.png"> <img data-src="images/Smoking2.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img data-src="images/Smoking3.png"> <img data-src="images/Smoking4.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="war-das-schon-immer-so-klar" class="slide level2 midi">
+<h2>War das schon immer so klar?</h2>
+<ul>
+<li>Der Nachweis, dass Rauchen Krebs <strong>verursacht</strong>, war ein wichtiger Beschleuniger für verbesserte Methoden und Daten in den Gesundheitswissenschafte (siehe: <a href="https://archive.illc.uva.nl/cil/uploaded_files/inlineitem/Pearl_Mackenzie_2018_The_Book_of_Why.pdf">Pearl &amp; Mackenzie (2018)</a>).</li>
+<li>Diese Debatte war hoch umkämpft, da unsere Beobachtungen “nur” einen Zusammenhang zwischen dem Rauchverhalten einer Bevölkerung und dem Ausmaß von Lungenkrebs erlauben (siehe: <a href="https://www.nature.com/articles/465686a">Oreskes &amp; Conaway (2010)</a> ).</li>
+<li>Andere Faktoren (u.a.: Genetik, Umweltverschmutzung, Sporen) verursachen auch Lungenkrebs. Wie können wir uns daher sicher sein, dass Rauchen eine wesentliche Ursache ist?</li>
+</ul>
+</section>
+<section>
+<section id="wissenschaftliche-verantwortung" class="title-slide slide level1 center">
+<h1>Wissenschaftliche Verantwortung</h1>
+
+</section>
+<section id="wissenschaftliche-verantwortung-1" class="slide level2">
+<h2>Wissenschaftliche Verantwortung</h2>
+<p>In den vergangenen Jahren hat sich die Verbreitung von Missinformation, fake news und Halbwahrheiten verstärkt. Es ist unsere Verantwortung diese Ausbreitung einzudämmen und nicht aktiv daran teilzunehmen.</p>
+<p>Es ist stets schwerer, Missinformation und Unwahrheiten aus der Welt zu bekommen, als sie in die Welt zu setzen. Das wird auch als <strong>Brandolinis Gesetz</strong> bezeichnet.</p>
+</section>
+<section id="wissenschaftliche-verantwortung-2" class="slide level2">
+<h2>Wissenschaftliche Verantwortung</h2>
+<p>Wir haben daher auf zwei Arten eine Verantwortung:</p>
+<ol type="1">
+<li><p>Calling bullshit: Wir müssen nach bestem Wissen und Gewissen Aufklärungsarbeit leisten. Dazu müssen wir methodisch gesichertes Wissen aufbauen.</p></li>
+<li><p>Keinen bullshit in die Welt setzen! Dazu müssen wir unsere eigene wissenschaftliche Praxis methodisch so gut wie möglich absichern und wir müssen stets demütig bleiben.</p></li>
+</ol>
+</section>
+<section id="brandolini-in-action-the-alpha-wolf" class="slide level2 midi">
+<h2>Brandolini in action: The alpha wolf</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/alphawolf.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Das Konzept eines Alpha-Wolfs und einer “pack order” wurde in den 1970er aufgrund der selektiven Beobachtung von Wölfen in Gefangenschaft entwickelt, die kaum familiäre Bindungen hatten.</p>
+<p>Natürliche Wolfsrudel sind aber schlicht Familienverbände aus Vaterwolf, Mamawolf und ihren Kindern.</p>
+<p>David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert, versuchte bis 2020 vergeblich, sein eigenes Buch aus dem Verkehr zu ziehen (<a href="https://sciencenorway.no/ulv/wolf-packs-dont-actually-have-alpha-males-and-alpha-females-the-idea-is-based-on-a-misunderstanding/1850514">mehr hier</a>).</p>
+</div></div>
+</section>
+<section id="brandolini-in-action-myers-briggs-test" class="slide level2 midi">
+<h2>Brandolini in action: Myers-Briggs-Test</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/MyersBriggs.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Der Myers-Briggs-Test ist ein sehr populärer Persönlichkeitstest in vielen Organisationen zur Einordnung von Kandidaten oder Teammitgliedern.</p>
+<p>Führt man mit Personen diesen Test aber wiederholt aus, verändert sich die Einstufung der Persönlichkeit zum Teil drastisch.</p>
+<p>Die Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mit Verhaltensweisen und Leistungen von Personen in Organisationen (<a href="https://www.theswaddle.com/myers-briggs-test-has-been-debunked-time-and-again-why-do-companies-still-use-it">ausführlicher</a>).</p>
+</div></div>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/atheobold\.github\.io\/stat-313-website");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
