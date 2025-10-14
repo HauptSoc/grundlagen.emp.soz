@@ -10,7 +10,7 @@ Während wir im Alltag auf Unterscheidungen zurückgreifen, ohne diese typischer
 ## Vorlesung Winter: Gute Unterscheidungen
 
 | Ziel | Anforderung | Konzept |
-|------------------|-------------------------------------|------------------|
+|------------------|------------------------------------|------------------|
 | Konzeptuelle Klarheit | Klar definierte Eigenschaften der Untersuchungseinheiten | Konzeptspezifikation |
 | Sinnvolle Unterscheidungen | Nutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können | Validität |
 | Trennscharfe Unterscheidungen | Untersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können | Sensitivität |

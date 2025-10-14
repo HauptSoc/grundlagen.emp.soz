@@ -4,6 +4,6 @@ tbl-colwidths: [35,20]
 ---
 
 |  |  |
-|--------------------------------------------------------|----------------|
-| [**Dr. Andreas Haupt**](www.andreas-haupt.com) ist Soziologe am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Er wird bezahlt, um Ihre Fragen nach bestem Wissen zu beantworten. Er erzählt im Wintersemester im Geb. 30.41 (HS2) von 9:45-11:15 etwas von der Analyse der Gesellschaft und hört Ihnen montags von 9:45-11:15 in der Übung zu (Geb. 20.30, SR 0.016). | ![Dr. Andreas Haupt](images/clipboard-1909326803.jpeg){width="400"} |
-| **Sophia Horn, M.A.** ist Soziologin am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Sie ist schlauer als Herr Haupt und leitet die Übung am Dienstag, 14-15:30, im Geb. 30.91, Raum 012. |  |
+|----------------------------------------------------|--------------------|
+| [**Prof. Dr. Andreas Haupt**](www.andreas-haupt.com) ist Soziologe am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Er wird bezahlt, um Ihre Fragen nach bestem Wissen zu beantworten. Er erzählt im Wintersemester im Geb. 30.41 (HS2) von 9:45-11:15 etwas von der Analyse der Gesellschaft und hört Ihnen montags von 9:45-11:15 in der Übung zu (Geb. 20.30, SR 0.016). | ![Dr. Andreas Haupt](images/clipboard-1909326803.jpeg){width="400"} |
+| **Sophia Horn, M.A.** ist Soziologin am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Sie leitet die Übung am Dienstag, 14-15:30, im Geb. 30.91, Raum 012. | ![Frau Sophia Horn](images/Horn.jpg) |

@@ -2356,9 +2356,9 @@
     "href": "course-team.html",
     "title": "Das sind wir",
     "section": "",
-    "text": "Dr. Andreas Haupt ist Soziologe am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Er wird bezahlt, um Ihre Fragen nach bestem Wissen zu beantworten. Er erzählt im Wintersemester im Geb. 30.41 (HS2) von 9:45-11:15 etwas von der Analyse der Gesellschaft und hört Ihnen montags von 9:45-11:15 in der Übung zu (Geb. 20.30, SR 0.016).\n\n\n\nSophia Horn, M.A. ist Soziologin am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Sie ist schlauer als Herr Haupt und leitet die Übung am Dienstag, 14-15:30, im Geb. 30.91, Raum 012.",
+    "text": "Prof. Dr. Andreas Haupt ist Soziologe am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Er wird bezahlt, um Ihre Fragen nach bestem Wissen zu beantworten. Er erzählt im Wintersemester im Geb. 30.41 (HS2) von 9:45-11:15 etwas von der Analyse der Gesellschaft und hört Ihnen montags von 9:45-11:15 in der Übung zu (Geb. 20.30, SR 0.016).\n\n\n\nSophia Horn, M.A. ist Soziologin am Karlsruher Institut für Technologie, Abteilung für Computational Social Science. Sie leitet die Übung am Dienstag, 14-15:30, im Geb. 30.91, Raum 012.",
     "crumbs": [
-      "Course information",
+      "Wissenswertes",
       "Das Team"
     ]
   },
@@ -2531,7 +2531,7 @@
     "section": "",
     "text": "Das Treffen sinnvoller Unterscheidungen und Vergleiche ist das grundlegende Handwerkszeug der Sozialstruktur- und Ungleichheitsforschung. Beschreibungen, Erklärungen, das Verstehen von gruppenspezifischen Handlungsweisen, explorative oder überprüfende Forschungsdesigns – alles das setzt mindestens das Unterscheiden von Konzepten voraus, mit deren Hilfe beschrieben, erklärt oder verstanden wird. Was ein guter Unterschied ist, lässt sich jedoch erst im Vergleich erkennen. Vergleichbarkeit ist darüber hinaus eines der wichtigsten Qualitätsmerkmale soziologischer Erklärungen von Gruppenunterschieden und für die Isolation sozialer Einflüsse.\nWährend wir im Alltag auf Unterscheidungen zurückgreifen, ohne diese typischerweise kritisch zu hinterfragen, sind wissenschaftliche Unterscheidungen und Vergleiche mit besonderen Anforderungen verbunden. Für die Sozialstrukturanalyse und Ungleichheitsforschung gilt dies besonders. Erstens sind zentrale Konzepte dieses Forschungsfeldes wie soziale Klassen, Milieus, sozialer Status oder Wohlfahrtsregime komplex und nur indirekt beobachtbar. Dies führt nicht nur zu theoretischen, sondern auch zu methodischen Herausforderungen. Zweitens haben Selektionsprozesse in Gruppen oder Positionen für die typischen Forschungsgegenstände eine erhebliche Bedeutung und die sozialen Prozesse, die typischerweise studiert werden, sind stark mit anderen Prozessen verwoben. Dies erschwert den Vergleich von Gruppen.",
     "crumbs": [
-      "Course information",
+      "Wissenswertes",
       "Ziele"
     ]
   },
@@ -2824,12 +2824,12 @@
   {
     "objectID": "course-syllabus.html#footnotes",
     "href": "course-syllabus.html#footnotes",
-    "title": "STAT 313: Applied Experimental Design and Regression Models",
+    "title": "Grundlagen empirischer Sozialforschung",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nSee Section 4.0.2 for information on what you can expect when you email me.↩︎\nA “Satisfactory” lab or critique occurs when every problem has been marked Satisfactory.↩︎",
+    "text": "Footnotes\n\n\nBitte genießen Sie das mit Vorsicht. Diese Profis besprechen auch sehr viele Dinge, die weit entfernt von unseren Inhalten sind. Filtern Sie die wesentlichen Dinge aus dem Angebot heraus.↩︎",
     "crumbs": [
-      "Course information",
-      "Syllabus"
+      "Wissenswertes",
+      "Das Kleingedruckte"
     ]
   },
   {
@@ -6779,7 +6779,7 @@
     "section": "Vorlesung Winter: Gute Unterscheidungen",
     "text": "Vorlesung Winter: Gute Unterscheidungen\n\n\n\n\n\n\n\n\nZiel\nAnforderung\nKonzept\n\n\n\n\nKonzeptuelle Klarheit\nKlar definierte Eigenschaften der Untersuchungseinheiten\nKonzeptspezifikation\n\n\nSinnvolle Unterscheidungen\nNutzung geeigneter empirischer Indikatoren, die die theoretisch erwarteten Unterschiede abbilden können\nValidität\n\n\nTrennscharfe Unterscheidungen\nUntersuchungseinheiten sollen ein-eindeutig für jeden Typ oder für jede Ausprägung eingeordnet werden können\nSensitivität\n\n\nRelevante Unterscheidungen\nDie genutzten Unterschiede sollen in klaren, theoretisch postulierten Zusammenhang mit anderen Unterschieden stehen\nErklärungskraft",
     "crumbs": [
-      "Course information",
+      "Wissenswertes",
       "Ziele"
     ]
   },
@@ -6790,7 +6790,7 @@
     "section": "Vorlesung Sommer: Gute Vergleiche",
     "text": "Vorlesung Sommer: Gute Vergleiche\n\n\n\n\n\n\n\n\nZiel\nAnforderung\nKonzepte\n\n\n\n\nVergleichbare Messung über verschiedene Gruppen\nIst die Eigenschaft, die verglichen werden soll, in beiden Gruppen gleich gut erfasst?\nMessinvarianz, gruppenspezifische Messfehler, Non-response\n\n\nAngemessenes statistisches Maß für den Vergleich\nWelche Information der Gruppen ist für meine Forschungsfrage informativ?\nLage- und Streuungs-maße\n\n\nBerücksichtigung unterschiedlicher Gruppenzusammensetzungen\nHinsichtlich welcher relevanten Eigenschaften unterscheiden sich die zu vergleichenden Gruppen?\nKompositionseffekte\n\n\nIsolation des interessierenden Effekts\nWelche Vorgehensweise ist geeignet, um einzelne Einflüsse aus einem Zusammenhang von Einflüssen zu isolieren?\nmultivariate Modellierung",
     "crumbs": [
-      "Course information",
+      "Wissenswertes",
       "Ziele"
     ]
   },
@@ -6799,7 +6799,7 @@
     "href": "course-syllabus.html#bücherempfehlungen",
     "title": "Grundlagen empirischer Sozialforschung",
     "section": "2.1 Bücherempfehlungen",
-    "text": "2.1 Bücherempfehlungen\n\n\n\n\n\nÇetinkaya-Rundel and Hardin, Introduction to Modern Statistics. https://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\nIsmay & Kim, Modern Dive: Statistical Inference via Data Science. https://moderndive.com",
+    "text": "2.1 Bücherempfehlungen\n\n\n\n\n\nNick Huntington-Klein, The Effect: An Introduction to Research Design and Causality. https://theeffectbook.net\n\n\n\n\n\n\n\n\nBaur, N. & Blasius, J. (Hrsg.) (2022), Handbuch Methoden der empirischen Sozialforschung. https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4",
     "crumbs": [
       "Wissenswertes",
       "Das Kleingedruckte"
