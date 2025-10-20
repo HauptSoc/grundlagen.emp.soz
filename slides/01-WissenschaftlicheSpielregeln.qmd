@@ -165,5 +165,22 @@ Die Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mi
 ![](images/StempelValide.png){.absolute bottom=0 left=0 width="300" height="300"}
 :::
 
+## Brandolini in action: Dunning-Kruger-Effekt {.midi}
+::: {.fragment fragment-index=1}
+::::::{.columns}
+::::{.column width="30%"}
+![](images/dunning-kruger.png)
+::::
 
+::::{.column width="70%"} 
+[Kruger & Dunning (1999)](https://doi.org/10.1037/0022-3514.77.6.1121) postulierten aufgrund eines (!) Experiments, dass vor allem Personen, die geringe Fähigkeiten haben, die Ausprägung dieser Fähigkeiten bei sich selbst überschätzen. 
+
+Die wissenschaftliche Evidenz für diese Behauptung ist **extrem** dünn ([Gignac & Zajenkowski (2020)](https://doi.org/10.1016/j.intell.2020.101449)). 
+::::
+:::
+
+::::::
+::: {.fragment fragment-index=2}
+![](images/StempelOverconfidence.png){.absolute bottom=0 left=0 width="300" height="300"}
+:::
 

@@ -1,0 +1,142 @@
+---
+title: "Unterscheiden: Grundlagen"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+format: 
+  revealjs:
+    theme: style.scss
+    margin: 0.05
+editor: source
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+## Unterschiede, die Unterschiede machen {.midi}
+
+![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
+
+## Stereotype {.midi}
+
+::::: columns
+::: {.column width="30%"}
+![](images/licensing-toddlers.jpg)
+:::
+
+::: {.column width="70%"}
+Menschen teilen ihre Mitmenschen in unterschiedliche Kategorien ein, was z.T. erhebliche Konsequenzen hat.
+
+Normativ stellt sich bei solchen Typisierungen immer die Frage, ob dies berechtigt ist und wie stark man Einzelpersonen damit schaden kann.
+
+Aus einer wissenschaftlichen Perspektive müssen wir uns fragen, inwieweit die getroffenen Unterscheidungen hilfreich sind, um individuelles Handeln und/oder soziale Prozesse zu erklären.
+:::
+:::::
+
+## Gesellschaft zu verstehen, bedeutet, Unterschiede zu verstehen.
+
+-   Wie unterschiedlich sind Personen nach Kulturen, Nationen, Generationen, Lebenslagen, Prägungen, Verhaltensweisen, Denkweisen?
+-   Wie können wir diese Unterschiede methodisch sicher erfassen?
+-   Welche Unterschiede sind mit anderen Unterschieden *systematisch* verbunden?
+
+
+## Ziele {.midi}
+
+  1. **Klare Unterscheidungen**: Wir benötigen Klar definierte Abgrenzungen von Eigenschaften und ihren relevanten Ausprägungen.
+
+  2. **Sinnvolle Unterscheidungen**: Wir nutzen geeignete Daten, die die erwarteten Ausprägungen zuverlässig abbilden können.
+
+  3. **Trennscharfe Unterscheidungen**: Beobachtungen sollen ein-eindeutig einer Ausprägung einer Eigenschaft zugeordnet werden können.
+  
+  4. **Relevante Unterscheidungen**: Die genutzten Unterschiede sollen zur Erklärung der (sozialen) Welt nützlich sein.
+
+## Klare Unterscheidungen
+
+-   Frage: Wie haben sich Familienformen in den vergangenen 30 Jahren entwickelt?
+
+-   Abgrenzung Familie von anderen Lebensformen: dyadisch (Ehe, Nichteheliche Lebensgemeinschaft), geteilte Wohnung (WGs, Heimgemeinschaften), Singles
+
+-   Abgrenzung der Ausprägungen familiärer Lebensformen: Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
+
+## Familie, Paare, Haushalte
+
+![Das Lebensformkonzept des Deutschen Mikrozensus](images/familienformen-schaubild.png)
+
+# Konzeptspezifikation
+
+##  {#section-1 .unnumbered}
+
+## Was ist ein Konzept?
+
+Ein Konzept ist eine Menge von Informationen über Objekte, Merkmale oder Relationen. Die Information kann die *Extension* oder die *Intension* spezifizieren oder festlegen.
+
+Die **Extension** eines Konzepts sind alle Dinge, die das Konzept umfasst.
+
+1.  Die Extension des Konzepts *Familie* sind alle Familien.
+
+Die **Intension** eines Konzepts sind alle Eigenschaften, die den Einheiten innerhalb einer Extension gemeinsam sind.
+
+1.  Die Intension des Konzepts *Familie* ist: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
+
+## Konzepte und Unterscheidungen
+
+::: callout-note
+Wenn Sie *A* von *B* *unterscheiden* wollen, müssen Sie spezifizieren, welche Eigenschaft *A* hat, die *B* nicht hat.\
+
+-   Auf Ebene der generellen Untersuchungseinheit:
+
+    -   In Alleinerzieherfamilien lebt im Gegesatz zu Single-Haushalten mindestens ein Kind.\
+
+-   Auf Ebene der Ausprägungen der Untersuchungseinheiten:
+
+    -   In Großfamilien leben im Gegensatz zu Kleinfamilien mindestens drei Kinder.
+:::
+
+## Konzepte und Unterscheidungen
+
+Manchmal ist es unklar, von was wir eigentlich unterscheiden wollen (siehe *Mental Load*).
+
+Wenn es nicht bereits klar ist, von was das theoretische Konzept abgegrenzt werden soll, ist es meist hilfreich, das am nächsten verwandte Konzept zu suchen, und dieses vom eigenen abzugrenzen.
+
+-   Familie $\leftrightarrow$ Lebensgemeinschaft
+
+-   Macht $\leftrightarrow$ Herrschaft
+
+-   Bildung $\leftrightarrow$ Fähigkeiten
+
+-   strukturelle Benachteiligung $\leftrightarrow$ Diskriminierung
+
+## Unterschiede festlegen ist Aufgabe von Definitionen
+
+Eine Definition legt die Extension eines Konzepts mittels einer Menge von intensionalen Merkmalen fest. D. h.: Mit einer Definition wird festgelegt, welche Untersuchungseinheiten oder Ausprägungen zu einem Konzept gehören. Die Festlegung erfolgt durch mindestens ein Merkmal, das allen Gegenständen gemeinsam ist und das eine definierte Menge von anderen Mengen unterscheidet.
+
+Der Zweck einer Definition innerhalb der Wissenschaft ist es daher, Mengen von Gegenständen zu konstruieren, die sich gegenseitig ausschließen. Bei einer Definition handelt es sich *nur* um eine sprachliche Regel. Mit Definitionen können keine empirischen Aussagen getroffen werden. Sie sind weder richtig noch falsch sondern nur nützlich oder weniger nützlich.
+
+## Was unterscheidet Definitionen von Beschreibungen?
+
+Eine Beschreibung ist die die Identifikation eines Objekts unter mindestens ein Konzept. Die Beschreibung eines gleichen Objekts unterscheidet sich daher, wenn für sie unterschiedliche Konzepte verwendet werden.
+
+Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern sie wenden die (definitorischen) Regeln zur Einordnung von Dingen an.
+
+## Gebräuchliche Definitionen
+
+-   Eine *Grey Divorce* ist die Scheidung einer Ehe, in der beide Partner mindestens 50 Jahre alt sind.\
+
+-   *Arbeitslose* sind Personen, die
+
+    -   vorübergehend nicht in einem Beschäftigungsverhältnis stehen,
+
+    -   eine versicherungspflichtige Beschäftigung suchen und dabei den Vermittlungsbemühungen der Agentur für Arbeit zur Verfügung stehen und
+
+    -   sich bei der Agentur für Arbeit arbeitslos gemeldet haben.
+
+## Mögliche Probleme für Definitionen
+
+::: center
+| Mögliche Definition | Umformulierung | (Mögliches) Problem |
+|:-----------------------|:-----------------------|:-----------------------|
+| Arbeitslos sind alle Personen, die zu einem bestimmten Zeitpunkt keinen gülten Arbeitsvertrag haben. | Die Menge aller arbeitslosen Personen unterscheidet sich von der Menge aller nicht arbeitslosen Personen durch das Vorliegen eines gülten Arbeitsvertrages. | Die damit definierte Extension des Begriffs schließt viele Gruppe ein, die ggf. nicht in die Extension fallen sollen, u.a.: Studierende, Schüler, Renter:innen, Hausfrauen & -männer |
+| Verhaltensauffällige Kinder können sich nicht konzentrieren und sind aggressiv. | Die Menge aller verhaltensauffälligen Kinder unterscheidet sich von der Menge aller nicht verhaltensauffälligen Kinder durch das gemeinsame Vorliegen von Konzentrationsmangel und Aggressivität. | Die Verbindung von Aggressivität und Konzentrationsmangel ist nicht mehr überprüfbar. |
+:::
+
+Sie können sich nie über die Wahrheit oder Gültigkeit, sondern nur um die Nützlichkeit von Definitionen streiten.
