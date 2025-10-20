@@ -17,6 +17,10 @@ execute:
 
 ![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
 
+## Forschung - wie geht das? {.nostretch}
+
+![Ein idealisierter Forschungsablauf](images/Forschungsablauf.jpg){width="70%"}
+
 ## Stereotype {.midi}
 
 ::::: columns
@@ -50,21 +54,43 @@ Aus einer wissenschaftlichen Perspektive müssen wir uns fragen, inwieweit die g
   
   4. **Relevante Unterscheidungen**: Die genutzten Unterschiede sollen zur Erklärung der (sozialen) Welt nützlich sein.
 
-## Klare Unterscheidungen
+## Klare Unterscheidungen: Familien und andere Lebensformen {.midi}
 
--   Frage: Wie haben sich Familienformen in den vergangenen 30 Jahren entwickelt?
+  - Wie haben sich Familienformen in den vergangenen Jahren entwickelt?
 
--   Abgrenzung Familie von anderen Lebensformen: dyadisch (Ehe, Nichteheliche Lebensgemeinschaft), geteilte Wohnung (WGs, Heimgemeinschaften), Singles
+  $\rightarrow$ Wir wollen dazu nur Familien **untereinander** abgrenzen. 
+  
+    Dazu müssen wir allerdings Familien von anderen  Lebensformen abgrenzen. Dazu zählen dyadische Lebensformen (Ehe, Nichteheliche Lebensgemeinschaft), geteiltes Wohnen (WGs, Heimgemeinschaften), Alleinlebende
 
--   Abgrenzung der Ausprägungen familiärer Lebensformen: Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
+  $\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander abgrenzen, wie z.B. Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
+  
 
 ## Familie, Paare, Haushalte
 
 ![Das Lebensformkonzept des Deutschen Mikrozensus](images/familienformen-schaubild.png)
 
-# Konzeptspezifikation
+## Unterschiede familiärer Lebensformen {.nostretch}
 
-##  {#section-1 .unnumbered}
+![Trends der relativen Anteile von Familienformen](images/trend-familien.png){width="50%"}
+
+## Am Anfang ist das Wort {.midi}
+
+:::::{.columns}
+::::{.column width="30%"}
+  ![](images/perception_prop.png)
+::::
+::::{.column width="70%"}
+Wir alle nutzen Schemata, um die Welt einzuteilen und miteinander zu kommunizieren. Wir verstehen uns, weil wir ähnliche Schemata aktivieren, wenn wir miteinander sprechen.
+
+Allerdings gibt es auch eine erhebliche Variation bei der Aktivierung von gleichen Schemata (siehe Abb. links), was zu Missverständnissen führen kann. 
+
+Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wissenschaftlichen Studie gilt es diese Missverständnisse dringend zu vermeiden. 
+::::
+::::: 
+
+## Konzeptspezifikation {.nostretch}
+![Operationalisierung und Konzeptspezifikation Quelle: [Wonka (2022)](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
+
 
 ## Was ist ein Konzept?
 
