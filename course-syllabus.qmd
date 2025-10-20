@@ -19,20 +19,14 @@ execute:
   message: false
 ---
 
-::: {.panel-tabset}
-
-# Instructor Info 
+::::::::::: panel-tabset
+# Andreas Haupt
 
 :::::: columns
 ::: {.column width="50%"}
-**Leitung: Dr. Andreas Haupt**
-
-**Email**: andreas.haupt\@kit.edu
-
-**Büro**: ITZ, Douglasstraße 24, 3.OG
-
+**Email**: andreas.haupt\@kit.edu\
+**Büro**: ITZ, Douglasstraße 24, 3.OG\
 **Sekretariat**: Anja Reinke, anja.reinke\@kit.edu
-
 :::
 
 ::: {.column width="10%"}
@@ -43,21 +37,36 @@ execute:
 :::
 ::::::
 
+# Sophia Horn
+
+:::::: columns
+::: {.column width="50%"}
+**Email**: sophia.horn\@kit.edu\
+**Büro**: ITZ, Douglasstraße 24, 3.OG
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="40%"}
+![](images/Horn.jpg){fig-alt="Sophia Horn" width="60%"}
+:::
+::::::
+
 # Wann wir uns treffen
 
-**Vorlesung**: Geb. 30.41 (HS2) von 9:45-11:15
+**Vorlesung**: Geb. 30.41 (HS2) von 9:45-11:15\
 
 **Übungen**: 
   + Sophia Horn: Dienstag, 14:00-15:30, im Geb. 30.91, Raum 012
   + Andreas Haupt: Montag, 09:45-11:15 im Geb. 20.30, SR 0.016
-  
-:::
+:::::::::::
 
 ------------------------------------------------------------------------
 
 # Was sollten Sie mitbringen
 
-For this course we will be using one main textbook, accompanied by additional resources. The textbooks we are using are free, but have the option to obtain a printed copy if you wish.
+Neugier, Aufgeschlossenheit und die Bereitschaft, eventuellen Balast aus Schulzeit abzuwerfen.
 
 # Was macht Ihre Erfahrung reicher?
 
@@ -65,7 +74,7 @@ For this course we will be using one main textbook, accompanied by additional re
 
 :::::: columns
 ::: {.column width="45%"}
-![Çetinkaya-Rundel and Hardin, **Introduction to Modern Statistics**. <https://openintro-ims.netlify.app/>](images/ims.png)
+![Nick Huntington-Klein, **The Effect: An Introduction to Research Design and Causality**. <https://theeffectbook.net>](images/the-effect.png)
 :::
 
 ::: {.column width="5%"}
@@ -73,8 +82,17 @@ For this course we will be using one main textbook, accompanied by additional re
 :::
 
 ::: {.column width="45%"}
-![Ismay & Kim, **Modern Dive: Statistical Inference via Data Science**. <https://moderndive.com>](images/modern_dive_cover.png)
+![Baur, N. & Blasius, J. (Hrsg.) (2022), **Handbuch Methoden der empirischen Sozialforschung**. [https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4](https://link.springer.com/book/10.1007\%2F978-3-658-21308-4){.uri}](images/handbuch-methoden.png)
 :::
 ::::::
 
 ## Multimedia
+
+Viele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.[^1] Unter anderem empfehle ich Ihnen: 
+
+  + Richard McElreath: <https://www.youtube.com/@rmcelreath> 
+  + Josh Starmer: <https://www.youtube.com/@statquest>
+  + Grant Sanderson: <https://www.youtube.com/@3blue1brown>
+  + Julia M. Rohrer: <https://juliarohrer.com/resources>
+  
+[^1]: Bitte genießen Sie das mit Vorsicht. Diese Profis besprechen auch sehr viele Dinge, die weit entfernt von unseren Inhalten sind. Filtern Sie die wesentlichen Dinge aus dem Angebot heraus. 
