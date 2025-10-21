@@ -65,9 +65,9 @@ Aus einer wissenschaftlichen Perspektive müssen wir uns fragen, inwieweit die g
   $\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander abgrenzen, wie z.B. Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
   
 
-## Familie, Paare, Haushalte
+## Familie, Paare, Haushalte {.nostretch}
 
-![Das Lebensformkonzept des Deutschen Mikrozensus](images/familienformen-schaubild.png)
+![Das Lebensformkonzept des Deutschen Mikrozensus](images/familienformen-schaubild.png){width="60%"}
 
 ## Unterschiede familiärer Lebensformen {.nostretch}
 
@@ -92,49 +92,45 @@ Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wisse
 ![Operationalisierung und Konzeptspezifikation Quelle: [Wonka (2022)](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
 
 
-## Was ist ein Konzept?
+## Was ist ein Konzept? {.midi}
 
 Ein Konzept ist eine Menge von Informationen über Objekte, Merkmale oder Relationen. Die Information kann die *Extension* oder die *Intension* spezifizieren oder festlegen.
 
 Die **Extension** eines Konzepts sind alle Dinge, die das Konzept umfasst.
 
-1.  Die Extension des Konzepts *Familie* sind alle Familien.
+    Die Extension des Konzepts *Familie* sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.
 
 Die **Intension** eines Konzepts sind alle Eigenschaften, die den Einheiten innerhalb einer Extension gemeinsam sind.
 
-1.  Die Intension des Konzepts *Familie* ist: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
+     Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
+
+## Warum das alles? {.midi}
+
+Wir möchten klare Unterscheidungen u.a. von:
+
+- Untersuchungseinheiten 
+  
+      In einer Untersuchung über Familien sollten daher keine Paare ohne Kinder auftauchen. Aber gelten getrennt lebende Ehepaare mit Kindern als eine Familie oder zwei? Was ist mit Patchwork-Familien oder Personen, die mehrere Haushalte aber nur eine Familie führen? 
+    
+- Eigenschaften 
+    
+      Versuchen Sie es mal: ADHS & Hochsensibilität; Mental Load & Stress; Zufriedenheit & Glück
+    
+- Ausprägungen von Eigenschaften 
+
+      Wie viele Familienformen, Geschlechter, Bildungsformen, Organisationstypen und Regierungsformen müssen/sollten wir unterscheiden? 
 
 ## Konzepte und Unterscheidungen
 
-::: callout-note
-Wenn Sie *A* von *B* *unterscheiden* wollen, müssen Sie spezifizieren, welche Eigenschaft *A* hat, die *B* nicht hat.\
+Wenn wir von Konzepten sprechen, beziehen wir uns daher typischerweise auf Schemata über Untersuchungseinheiten, Eigenschaften oder Ausprägungen. 
 
--   Auf Ebene der generellen Untersuchungseinheit:
-
-    -   In Alleinerzieherfamilien lebt im Gegesatz zu Single-Haushalten mindestens ein Kind.\
-
--   Auf Ebene der Ausprägungen der Untersuchungseinheiten:
-
-    -   In Großfamilien leben im Gegensatz zu Kleinfamilien mindestens drei Kinder.
-:::
-
-## Konzepte und Unterscheidungen
-
-Manchmal ist es unklar, von was wir eigentlich unterscheiden wollen (siehe *Mental Load*).
-
-Wenn es nicht bereits klar ist, von was das theoretische Konzept abgegrenzt werden soll, ist es meist hilfreich, das am nächsten verwandte Konzept zu suchen, und dieses vom eigenen abzugrenzen.
-
--   Familie $\leftrightarrow$ Lebensgemeinschaft
-
--   Macht $\leftrightarrow$ Herrschaft
-
--   Bildung $\leftrightarrow$ Fähigkeiten
-
--   strukturelle Benachteiligung $\leftrightarrow$ Diskriminierung
+Zwei Konzepte A und B voneinander zu unterscheiden, bedeutet daher zu beschreiben, welches intensionale Merkmal A hat aber B nicht. Das ist die Aufgabe von Definitionen. 
 
 ## Unterschiede festlegen ist Aufgabe von Definitionen
 
-Eine Definition legt die Extension eines Konzepts mittels einer Menge von intensionalen Merkmalen fest. D. h.: Mit einer Definition wird festgelegt, welche Untersuchungseinheiten oder Ausprägungen zu einem Konzept gehören. Die Festlegung erfolgt durch mindestens ein Merkmal, das allen Gegenständen gemeinsam ist und das eine definierte Menge von anderen Mengen unterscheidet.
+Eine Definition legt die Extension eines Konzepts mittels einer Menge von intensionalen Merkmalen fest. D.h.: Mit einer Definition wird festgelegt, welche Untersuchungseinheiten oder Ausprägungen zu einem Konzept gehören. Die Festlegung erfolgt durch mindestens ein Merkmal, das allen Gegenständen gemeinsam ist und das eine definierte Menge von anderen Mengen unterscheidet.
+
+## Der Zweck von Definitionen
 
 Der Zweck einer Definition innerhalb der Wissenschaft ist es daher, Mengen von Gegenständen zu konstruieren, die sich gegenseitig ausschließen. Bei einer Definition handelt es sich *nur* um eine sprachliche Regel. Mit Definitionen können keine empirischen Aussagen getroffen werden. Sie sind weder richtig noch falsch sondern nur nützlich oder weniger nützlich.
 
@@ -142,7 +138,7 @@ Der Zweck einer Definition innerhalb der Wissenschaft ist es daher, Mengen von G
 
 Eine Beschreibung ist die die Identifikation eines Objekts unter mindestens ein Konzept. Die Beschreibung eines gleichen Objekts unterscheidet sich daher, wenn für sie unterschiedliche Konzepte verwendet werden.
 
-Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern sie wenden die (definitorischen) Regeln zur Einordnung von Dingen an.
+Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern sie wenden (definitorische) Regeln zur Einordnung von Dingen an.
 
 ## Gebräuchliche Definitionen
 
@@ -155,14 +151,3 @@ Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern s
     -   eine versicherungspflichtige Beschäftigung suchen und dabei den Vermittlungsbemühungen der Agentur für Arbeit zur Verfügung stehen und
 
     -   sich bei der Agentur für Arbeit arbeitslos gemeldet haben.
-
-## Mögliche Probleme für Definitionen
-
-::: center
-| Mögliche Definition | Umformulierung | (Mögliches) Problem |
-|:-----------------------|:-----------------------|:-----------------------|
-| Arbeitslos sind alle Personen, die zu einem bestimmten Zeitpunkt keinen gülten Arbeitsvertrag haben. | Die Menge aller arbeitslosen Personen unterscheidet sich von der Menge aller nicht arbeitslosen Personen durch das Vorliegen eines gülten Arbeitsvertrages. | Die damit definierte Extension des Begriffs schließt viele Gruppe ein, die ggf. nicht in die Extension fallen sollen, u.a.: Studierende, Schüler, Renter:innen, Hausfrauen & -männer |
-| Verhaltensauffällige Kinder können sich nicht konzentrieren und sind aggressiv. | Die Menge aller verhaltensauffälligen Kinder unterscheidet sich von der Menge aller nicht verhaltensauffälligen Kinder durch das gemeinsame Vorliegen von Konzentrationsmangel und Aggressivität. | Die Verbindung von Aggressivität und Konzentrationsmangel ist nicht mehr überprüfbar. |
-:::
-
-Sie können sich nie über die Wahrheit oder Gültigkeit, sondern nur um die Nützlichkeit von Definitionen streiten.

@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>messen_latente_eigenschaften – Methoden empirischer Sozialforschung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-2.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bd31ea7a368d575a5b58f0149f103d6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-32b2f8c509c655343757e496d1414fa7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-bd31ea7a368d575a5b58f0149f103d6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/mindmap-logoV2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/HauptSoc/grundlagen.emp.soz" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
+    <a href="https://campus.kit.edu" title="ILIAS KIT" class="quarto-navigation-tool px-1" aria-label="ILIAS KIT"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Wissenswertes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ziele</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Was, wann, welche Reihenfolge?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Kleingedruckte</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ohne-titel" id="toc-ohne-titel" class="nav-link active" data-scroll-target="#ohne-titel">(ohne Titel)</a></li>
+  <li><a href="#latente-eigenschaften" id="toc-latente-eigenschaften" class="nav-link" data-scroll-target="#latente-eigenschaften">Latente Eigenschaften</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#die-messung-latenter-eigenschaften" id="toc-die-messung-latenter-eigenschaften" class="nav-link" data-scroll-target="#die-messung-latenter-eigenschaften">Die Messung latenter Eigenschaften</a></li>
+  <li><a href="#die-messung-latenter-eigenschaften-1" id="toc-die-messung-latenter-eigenschaften-1" class="nav-link" data-scroll-target="#die-messung-latenter-eigenschaften-1">Die Messung latenter Eigenschaften</a></li>
+  <li><a href="#die-messung-latenter-eigenschaften-2" id="toc-die-messung-latenter-eigenschaften-2" class="nav-link" data-scroll-target="#die-messung-latenter-eigenschaften-2">Die Messung latenter Eigenschaften</a></li>
+  <li><a href="#latente-eigenschaften-misantrophie" id="toc-latente-eigenschaften-misantrophie" class="nav-link" data-scroll-target="#latente-eigenschaften-misantrophie">Latente Eigenschaften: Misantrophie</a></li>
+  </ul></li>
+  <li><a href="#auswahl-von-indikatoren" id="toc-auswahl-von-indikatoren" class="nav-link" data-scroll-target="#auswahl-von-indikatoren">Auswahl von Indikatoren</a>
+  <ul class="collapse">
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#auswahl-von-indikatoren-1" id="toc-auswahl-von-indikatoren-1" class="nav-link" data-scroll-target="#auswahl-von-indikatoren-1">Auswahl von Indikatoren</a></li>
+  <li><a href="#thurstone-skalierung" id="toc-thurstone-skalierung" class="nav-link" data-scroll-target="#thurstone-skalierung">Thurstone-Skalierung</a></li>
+  <li><a href="#thurstone-skalierung-1" id="toc-thurstone-skalierung-1" class="nav-link" data-scroll-target="#thurstone-skalierung-1">Thurstone-Skalierung</a></li>
+  <li><a href="#thurstone-skalierung-2" id="toc-thurstone-skalierung-2" class="nav-link" data-scroll-target="#thurstone-skalierung-2">Thurstone-Skalierung</a></li>
+  <li><a href="#thurstone-skalierung-3" id="toc-thurstone-skalierung-3" class="nav-link" data-scroll-target="#thurstone-skalierung-3">Thurstone-Skalierung</a></li>
+  <li><a href="#guttman-skalierung" id="toc-guttman-skalierung" class="nav-link" data-scroll-target="#guttman-skalierung">Guttman-Skalierung</a></li>
+  <li><a href="#guttman-skalierung-1" id="toc-guttman-skalierung-1" class="nav-link" data-scroll-target="#guttman-skalierung-1">Guttman-Skalierung</a></li>
+  <li><a href="#guttman-skalierung-antisemitismus" id="toc-guttman-skalierung-antisemitismus" class="nav-link" data-scroll-target="#guttman-skalierung-antisemitismus">Guttman-Skalierung: Antisemitismus</a></li>
+  <li><a href="#guttman-skalierung-grad-der-körperlichen-behinderung" id="toc-guttman-skalierung-grad-der-körperlichen-behinderung" class="nav-link" data-scroll-target="#guttman-skalierung-grad-der-körperlichen-behinderung">Guttman-Skalierung: Grad der körperlichen Behinderung</a></li>
+  <li><a href="#unterschiede-zwischen-guttman-und-thurstone-skalierungen" id="toc-unterschiede-zwischen-guttman-und-thurstone-skalierungen" class="nav-link" data-scroll-target="#unterschiede-zwischen-guttman-und-thurstone-skalierungen">Unterschiede zwischen Guttman und Thurstone Skalierungen</a></li>
+  <li><a href="#likert-skalierung" id="toc-likert-skalierung" class="nav-link" data-scroll-target="#likert-skalierung">Likert-Skalierung</a></li>
+  <li><a href="#likert-skalierung-1" id="toc-likert-skalierung-1" class="nav-link" data-scroll-target="#likert-skalierung-1">Likert-Skalierung</a></li>
+  <li><a href="#likert-skalierung-2" id="toc-likert-skalierung-2" class="nav-link" data-scroll-target="#likert-skalierung-2">Likert-Skalierung</a></li>
+  <li><a href="#dimensionen-beruflicher-selbstregulation" id="toc-dimensionen-beruflicher-selbstregulation" class="nav-link" data-scroll-target="#dimensionen-beruflicher-selbstregulation">Dimensionen beruflicher Selbstregulation</a></li>
+  <li><a href="#die-messung-der-ausprägungen-einer-dimension" id="toc-die-messung-der-ausprägungen-einer-dimension" class="nav-link" data-scroll-target="#die-messung-der-ausprägungen-einer-dimension">Die Messung der Ausprägungen einer Dimension</a></li>
+  <li><a href="#berufliche-selbstregulation" id="toc-berufliche-selbstregulation" class="nav-link" data-scroll-target="#berufliche-selbstregulation">Berufliche Selbstregulation</a></li>
+  <li><a href="#berufliche-selbstregulation-1" id="toc-berufliche-selbstregulation-1" class="nav-link" data-scroll-target="#berufliche-selbstregulation-1">Berufliche Selbstregulation</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="ohne-titel" class="level2">
+<h2 class="anchored" data-anchor-id="ohne-titel">(ohne Titel)</h2>
+</section>
+<section id="latente-eigenschaften" class="level1 unnumbered">
+<h1 class="unnumbered">Latente Eigenschaften</h1>
+<section id="section" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section"></h2>
+</section>
+<section id="die-messung-latenter-eigenschaften" class="level2">
+<h2 class="anchored" data-anchor-id="die-messung-latenter-eigenschaften">Die Messung latenter Eigenschaften</h2>
+<div class="center">
+
+</div>
+</section>
+<section id="die-messung-latenter-eigenschaften-1" class="level2">
+<h2 class="anchored" data-anchor-id="die-messung-latenter-eigenschaften-1">Die Messung latenter Eigenschaften</h2>
+<ul>
+<li><p>Wir können Unterschiede in den Ausprägungen latenter Eigenschaften durch mehrere Beobachtungen erfassen.</p></li>
+<li><p>Die zugrunde liegende, latente Eigenschaft führt zu unterschiedlichem Verhalten/Zuständen der Untersuchungseinheiten.</p></li>
+<li><p>Die Kombination der unterschiedlichen Verhaltensweisen oder Zustände kann uns einen Rückschluss auf die latente Eigenschaft ermöglichen.</p></li>
+<li><p>Wenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen, können wir für die latente Eigenschaft eine/n Skala/Index erstellen.</p></li>
+</ul>
+</section>
+<section id="die-messung-latenter-eigenschaften-2" class="level2">
+<h2 class="anchored" data-anchor-id="die-messung-latenter-eigenschaften-2">Die Messung latenter Eigenschaften</h2>
+<div class="columns">
+<div class="column">
+<p>0.5</p>
+<div class="center">
+
+</div>
+</div><div class="column">
+<p>0.5 Dieses Meßmodell beruht auf wichtigen Annahmen:</p>
+<ol type="1">
+<li><p>Die Beobachtungen werden nur von einem einzigen latenten Faktor beeinflusst.</p></li>
+<li><p>Da die beobachteten Verhaltensweisen oder Zustände auf einer latenten Eigenschaft beruhen, sollten die Ausprägungen in systematischen Zusammenhang miteinander und zu der latenten Eigenschaft stehen.</p></li>
+<li><p>Die Störfaktoren sind voneinander unabhängig und treten zufällig auf.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="latente-eigenschaften-misantrophie" class="level2">
+<h2 class="anchored" data-anchor-id="latente-eigenschaften-misantrophie">Latente Eigenschaften: Misantrophie</h2>
+<div class="columns">
+<div class="column">
+<p>0.3<br>
+<a href="https://cdn.clipart.email/f0c8e108edaa7257a31d03c3682427cf_sketch-girls_236-272.jpeg">Quelle</a></p>
+</div><div class="column">
+<p>0.7 <strong>Misantrophy Scale</strong></p>
+<ol type="1">
+<li><p>Humans are by nature basically corrupt.</p></li>
+<li><p>Both history and current events show that human beings are basically wicked.</p></li>
+<li><p>Planet earth would be better off if humans would just disappear from it.</p></li>
+<li><p>Most people are basically good natured.</p></li>
+<li><p>I am proud to be a member of the human race.</p></li>
+</ol>
+<p><br>
+</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">strongly disagree</th>
+<th style="text-align: center;">disagree</th>
+<th style="text-align: center;">no opinion</th>
+<th style="text-align: center;">agree</th>
+<th style="text-align: center;">strongly agree</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="auswahl-von-indikatoren" class="level1 unnumbered">
+<h1 class="unnumbered">Auswahl von Indikatoren</h1>
+<section id="section-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-1"></h2>
+</section>
+<section id="auswahl-von-indikatoren-1" class="level2">
+<h2 class="anchored" data-anchor-id="auswahl-von-indikatoren-1">Auswahl von Indikatoren</h2>
+<p>Die beobachteten Unterschiede in den Verhaltensweisen oder Zustände der Untersuchungseinheinten (= Indikatoren) müssen mehrere Anforderungen erfüllen, damit eine sinnvolle Erfassung der latenten Eigenschaft erfolgen kann:</p>
+<ol type="1">
+<li><p>Die Indikatoren müssen die volle <strong>Bandbreite</strong> der (theoretisch postulierten) Unterschiede erfassen können.</p>
+<ol type="1">
+<li><p>Dazu wird in der Regel ein <strong>Indikatorenpool</strong> angelegt, der im Rahmen einer Befragung auch als <strong>Itempool</strong> bezeichnet wird.</p></li>
+<li><p>Aus diesem Pool müssen die geeignetsten Indikatoren oder Items <strong>selektiert</strong> werden.</p></li>
+</ol></li>
+<li><p>Die beobachteten Unterschiede müssen so <strong>kombinierbar</strong> sein, dass damit jeder Untersuchungseinheit ein spezifischer Wert zugeordnet werden kann und somit alle Untersuchungseinheiten nach ihrer Unterschiedlichkeit sortiert werden können.</p></li>
+</ol>
+</section>
+<section id="thurstone-skalierung" class="level2">
+<h2 class="anchored" data-anchor-id="thurstone-skalierung">Thurstone-Skalierung</h2>
+<div class="columns">
+<div class="column">
+<p>0.3</p>
+<div class="center">
+<p><br>
+<a href="https://www.biografiasyvidas.com/biografia/t/thurstone.htm">Louis Leon Thurstone (1887-1955)</a></p>
+</div>
+</div><div class="column">
+<p>0.7 Eine Möglichkeit, latente Eigenschaften durch Befragungen oder psychologische Tests zu erfassen, wurde von Louis Leon Thurstone entwickelt.<br>
+</p>
+<p>Die Methode wird insbesondere für Intelligenztests und die Erfassung von Einstellungen angewandt.<br>
+</p>
+<p>Sie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarchie haben (also mindestens ordinal skaliert sind).</p>
+</div>
+</div>
+</section>
+<section id="thurstone-skalierung-1" class="level2">
+<h2 class="anchored" data-anchor-id="thurstone-skalierung-1">Thurstone-Skalierung</h2>
+<ol type="1">
+<li><p>Anlage eines großen Itempools, der das gesamte Spektrum aller Reaktionen/Einstellungen/Verhaltensweisen enthalten soll, das theoretisch erfasst werden soll.</p></li>
+<li><p>Die Items werden Expert:innen zum bewerten (engl.: <em>rating</em>) vorgelegt. Die Bewertungen orientieren sich an der Hierarchie der Ausprägungen der latenten Eigenschaft.</p></li>
+<li><p>Items, bei denen Uneinigkeit zwischen den Expert:innen besteht, werden ausgechlossen.</p></li>
+<li><p>Jedes Item erhält den Durchschnittsbewertung aller Expert:innen. Dadurch lassen sich die Items in eine Ordnung bringen, die die “Position” des Items in der Hierarchie der latenten Eigenschaft darstellt.</p></li>
+<li><p>Die Items werden Probanten vorgelegt. Als Antwortkategorien sind nur binäre Kategorien zugelassen: ja (= 1)/nein (= 0); Aufgabe gelöst (= 1)/nicht gelöst (= 0); Reaktion gezeigt (= 1) / nicht gezeigt (= 0).</p></li>
+<li><p>Für jeden Probant wird die Summe aus allen ja/gelöst/Reaktion gezeigt (= 1) Itemscores gebildet. Mit diesem Wert lassen sich die Personen nach ihrer Ausprägung der latenten Eigenschaft unterscheiden.</p></li>
+</ol>
+</section>
+<section id="thurstone-skalierung-2" class="level2">
+<h2 class="anchored" data-anchor-id="thurstone-skalierung-2">Thurstone-Skalierung</h2>
+<div class="center">
+
+</div>
+</section>
+<section id="thurstone-skalierung-3" class="level2">
+<h2 class="anchored" data-anchor-id="thurstone-skalierung-3">Thurstone-Skalierung</h2>
+<p>Skala für die Kontaktsituation in Wohnsiedlungen (durchschnittliche Expertenwertung von -5 bis +5 in Klammern):<br>
+</p>
+<ol type="1">
+<li><p>Ich komme mir in dieser Siedlung oft vor wie ein Fremder. (<span class="math inline">\(-2,00\)</span>)</p></li>
+<li><p>Keinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (<span class="math inline">\(-3,05\)</span>)</p></li>
+<li><p>Hier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (<span class="math inline">\(+3,30\)</span>)</p></li>
+<li><p>Ich habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (<span class="math inline">\(-0,53\)</span>)</p></li>
+<li><p>Ich kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. ( <span class="math inline">\(-0,33\)</span>)</p></li>
+<li><p>In diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. ( <span class="math inline">\(+1,79\)</span>)</p></li>
+<li><p>Ich kenne hier in der Nachbarschaft fast jeden mit Namen. (<span class="math inline">\(+0,90\)</span>)</p></li>
+</ol>
+</section>
+<section id="guttman-skalierung" class="level2">
+<h2 class="anchored" data-anchor-id="guttman-skalierung">Guttman-Skalierung</h2>
+<div class="columns">
+<div class="column">
+<p>0.3</p>
+<div class="center">
+<p><br>
+<a href="https://doritalt80.wixsite.com/ftas">Louis E. Guttman (1916-1987)</a></p>
+</div>
+</div><div class="column">
+<p>0.7 Ein weiteres Verfahren zur Erfassung latenter Eigenschaften wurde von Louis E. Guttman entwickelt.<br>
+</p>
+<p>Diese Art der Skalierung setzt voraus, dass die latente Eigenschaft Ausprägungen (in überschauberer Anzahl) hat, die streng hierarchisch geordnet sind.</p>
+</div>
+</div>
+</section>
+<section id="guttman-skalierung-1" class="level2">
+<h2 class="anchored" data-anchor-id="guttman-skalierung-1">Guttman-Skalierung</h2>
+<p>Grundlegende Idee:</p>
+<ol type="1">
+<li><p>Entwickle eine Liste von Items, die alle Ausprägungen des Merkmals erfassen. Die Items müssen sich streng nach der Hierarchie der Ausprägungen sortieren lassen (z.B.: von nicht hilfsbedürftig bis stark hilfsbedürftig) und dürfen sich nicht überschneiden.</p></li>
+<li><p>Lege die Liste Personen vor, die binär reagieren müssen: z.B.: ablehnen oder zustimmen / lösen oder nicht lösen.</p></li>
+<li><p>Die Anzahl aller positiven Reaktionen pro Person bildet eine Rangfolge, die die Ausprägung der latenten Eigenschaft wiedergibt.</p></li>
+</ol>
+</section>
+<section id="guttman-skalierung-antisemitismus" class="level2">
+<h2 class="anchored" data-anchor-id="guttman-skalierung-antisemitismus">Guttman-Skalierung: Antisemitismus</h2>
+<p>Würden Sie es begrüßen, wenn</p>
+<ol type="1">
+<li><p>Juden Deutschland besuchen.</p></li>
+<li><p>Juden sich in Deutschland niederlassen.</p></li>
+<li><p>Sie einen Juden als Arbeitskollegen haben.</p></li>
+<li><p>Sie einen Juden als Freund haben.</p></li>
+<li><p>Sie einen Juden heiraten würden.</p></li>
+</ol>
+</section>
+<section id="guttman-skalierung-grad-der-körperlichen-behinderung" class="level2">
+<h2 class="anchored" data-anchor-id="guttman-skalierung-grad-der-körperlichen-behinderung">Guttman-Skalierung: Grad der körperlichen Behinderung</h2>
+<p>Die Person kann nicht ohne Hilfe:</p>
+<ol type="1">
+<li><p>baden.</p></li>
+<li><p>außer Haus laufen.</p></li>
+<li><p>im Haus laufen.</p></li>
+<li><p>sich anziehen.</p></li>
+<li><p>aus dem Bett aufstehen.</p></li>
+<li><p>sitzen oder stehen.</p></li>
+<li><p>auf die Toilette gehen.</p></li>
+<li><p>die Hände und das Gesicht waschen.</p></li>
+<li><p>essen.</p></li>
+</ol>
+</section>
+<section id="unterschiede-zwischen-guttman-und-thurstone-skalierungen" class="level2">
+<h2 class="anchored" data-anchor-id="unterschiede-zwischen-guttman-und-thurstone-skalierungen">Unterschiede zwischen Guttman und Thurstone Skalierungen</h2>
+<ul>
+<li><p>Positive und negative Reaktionen können sich bei einer Thurstone-Skala gegenseitig aufheben, aber nicht bei einer Guttman-Skala.</p></li>
+<li><p>Bei der Guttman-Skala gibt es (offiziell) keine Expert:innen, die für die Vorselektion sorgen.</p></li>
+<li><p>Guttman-Skalen sind praktisch auf Eigenschaften mit überschaubaren Ausprägungen begrenzt.</p></li>
+</ul>
+</section>
+<section id="likert-skalierung" class="level2">
+<h2 class="anchored" data-anchor-id="likert-skalierung">Likert-Skalierung</h2>
+<div class="columns">
+<div class="column">
+<p>0.3</p>
+<div class="center">
+<p><br>
+<a href="https://doritalt80.wixsite.com/ftas">Rensis Likert (1903-1981)</a></p>
+</div>
+</div><div class="column">
+<p>0.7 Die von Louis Thurstone oder Louis Guttman entwickelten Skalierungen nutzen die Unterschiedlichkeit der Items (über Scores oder ihre Position in einer Ausprägungshierachie) um Unterschiede der Ausprägungen zu erfassen. Das ist allerdings nicht immer praktikabel. Thurstone-Skalierungen können darüber hinaus sehr aufwändig und teuer sein.<br>
+</p>
+<p>Rensis Likert entwickelte eine Alternative, die besonders (aber nicht nur!) über die Antwortkategorien der Items die Unterschiedlichkeit von latenten Ausprägungen erfassen soll.</p>
+<p>Diese Art der Skalierung setzt voraus, dass Personen in der Lage sind, sich durch ihre Reaktionen konsitent in Bezug auf eine Eigenschaft zu positionieren.</p>
+</div>
+</div>
+</section>
+<section id="likert-skalierung-1" class="level2">
+<h2 class="anchored" data-anchor-id="likert-skalierung-1">Likert-Skalierung</h2>
+<p>Grundlegende Idee:</p>
+<ol type="1">
+<li><p>Entwickle eine Liste von Items, die Variationen oder Aspekte des zugrunde liegenden Merkmals darstellen.</p></li>
+<li><p>Lege die Liste der Items Personen vor, die auf die Items mit unterschiedlichen Graden positiv, neutral oder negativ reagieren können.</p></li>
+<li><p>Personen mit einer Ausprägung im unteren Bereich der Eigenschaft sollten daher sehr oft negativ auf die Items reagieren und Personen mit einer hohen Ausprägung der Eigenschaft sollten sehr oft positiv reagieren.</p></li>
+<li><p>Die Summe aus allen Reaktionen ist der Meßwert für jede Person.</p></li>
+</ol>
+</section>
+<section id="likert-skalierung-2" class="level2">
+<h2 class="anchored" data-anchor-id="likert-skalierung-2">Likert-Skalierung</h2>
+<div class="columns">
+<div class="column">
+<p>0.5</p>
+<div class="center">
+
+</div>
+</div><div class="column">
+<p>0.5</p>
+<ul>
+<li><p>Die verschiedenen Items rufen unterschiedliche Reaktionen hervor.</p></li>
+<li><p>Die Summe der unterschiedlichen Reaktionen ist die Messung für die zugrunde liegende, latente Ausprägung.</p></li>
+<li><p>Items für Likert-Skalen müssen daher stets unterschiedliche Reaktion hervorrufen. Items, die in hohem Maße eine Form der Reaktion hervorrufen, sind ungeeignet.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="dimensionen-beruflicher-selbstregulation" class="level2">
+<h2 class="anchored" data-anchor-id="dimensionen-beruflicher-selbstregulation">Dimensionen beruflicher Selbstregulation</h2>
+<div class="center">
+<div class="minipage">
+<div class="center">
+
+</div>
+</div>
+<div class="minipage">
+<ul>
+<li><p>Likert-Skalierungen eignen sich zur Messung von ein- und mehrdimensionalen Konstrukten.</p></li>
+<li><p>Bei mehrdimensionalen Konstrukten wird pro Dimension eine eigene Likert-Skala mit eigenen Items gebildet.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="die-messung-der-ausprägungen-einer-dimension" class="level2">
+<h2 class="anchored" data-anchor-id="die-messung-der-ausprägungen-einer-dimension">Die Messung der Ausprägungen einer Dimension</h2>
+<div class="center">
+<div class="minipage">
+<div class="center">
+
+</div>
+</div>
+<div class="minipage">
+<ul>
+<li><p>Befragten werden für die Messung der Unterdimension <em>Bedeutsamkeit der Arbeit</em> folgende Aussagen vorgelegt:</p>
+<ul>
+<li><p>Die Arbeit ist für mich der wichtigste Lebensinhalt.</p></li>
+<li><p>Die Arbeit ist mein Ein und Alles.</p></li>
+<li><p>Ich brauche die Arbeit wie die Luft zum Atmen.</p></li>
+</ul></li>
+<li><p>Die Befragten konnten Angaben auf einer 5er-Skala machen: 1 “trifft gar nicht zu”; 2 “trifft eher nicht zu”; 3 “teils/teils”; 4 “trifft eher zu”; 5 “trifft völlig zu”.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="berufliche-selbstregulation" class="level2">
+<h2 class="anchored" data-anchor-id="berufliche-selbstregulation">Berufliche Selbstregulation</h2>
+<div class="center">
+
+</div>
+</section>
+<section id="berufliche-selbstregulation-1" class="level2">
+<h2 class="anchored" data-anchor-id="berufliche-selbstregulation-1">Berufliche Selbstregulation</h2>
+<div class="center">
+
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/methoden\.empirischer\.sozialforschung\.netlify\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Andreas Haupt</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

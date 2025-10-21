@@ -1,0 +1,226 @@
+## (ohne Titel)
+
+# Itemkonstruktion {#itemkonstruktion .unnumbered}
+
+##  {#section .unnumbered}
+
+## Gute und schlechte Indikatoren
+
+:::::: columns
+:::: column
+0.5
+
+::: center
+:::
+::::
+
+::: column
+0.5 In vielen Fällen fragen wir Personen nach etwas, wir legen ihnen Aussagen vor oder geben ihnen Anweisungen, um etwas über Eigenschaften, die ihren Reaktionen zu grunde liegen.\
+
+Indikatoren können mehr oder weniger störanfällig sein. Wir müssen versuchen, von Anfang an, so wenig Störungen wie möglich zuzulassen. Dazu müssen wir meist verstehen, wie Personen unsere Items (=Fragen/Aussagen/Anweisungen) verarbeiten.
+:::
+::::::
+
+## Frageformulierung: Die 10 Gebote nach Porst
+
+1.  Du sollst einfache, unzweideutige Begriffe verwenden, die von allen Befragten in gleicher Weise verstanden werden!
+
+2.  Du sollst lange und komplexe Fragen vermeiden.
+
+3.  Du sollst hypothetische Frage vermeiden!
+
+4.  Du sollst doppelte Stimuli und Verneinungen vermeiden!
+
+5.  Du sollst Unterstellungen und suggestive Fragen vermeiden!
+
+## Frageformulierung: Die 10 Gebote nach Porst
+
+6.  Du sollst Fragen vermeiden, die auf Informationen abzielen, über die viele Befragte mutmaßlich nicht verfügen!
+
+7.  Du sollst Fragen mit eindeutigem zeitlichen Bezug verwenden!
+
+8.  Du sollst Antwortkategorien verwenden, die erschöpfend und überschneidungsfrei sind!
+
+9.  Du sollst sicherstellen, dass der Kontext einer Frage sich nicht (unkontrolliert) auf deren Beantwortung auswirkt!
+
+10. Du sollst unklare Begriffe definieren!
+
+## Kognitionspsychologische Grundlagen
+
+Im Rahmen eines Experiments oder einer Befragung stellen eine Frage oder machen eine Aussage und wollen eine Antwort/Reaktion. Dazu müssen Befragte in folgender Weise "arbeiten".
+
+1.  das Item verstehen,
+
+2.  relevante Informationen aus dem Gedächtnis abrufen,
+
+3.  auf der Basis der Informationen ein Urteil bilden,
+
+4.  das Urteil in ein Verhältnis zum Antwortformat bringen,
+
+5.  die erwarteten Konsequenzen der "Veröffentlichung" des Urteils abwägen und ggf. das "öffentliche Urteil" im Hinblick auf erwartete Konsequenzen modifizieren.
+
+## Das Item verstehen.
+
+Wie wir wissen, verstehen wir dann etwas, wenn wir das "etwas" als eine Ausprägung eines Konzepts beschreiben können. Wir verstehen die Kombination von Dingen dann, wenn wir für alle Elemente der Kombination und auch für das gesamte Ding Konzepte haben. Wir verstehen deshalb ein Item genau dann, wenn wir
+
+1.  für jedes Element des Items ein Konzept aktivieren und im Kurzzeitgedächtnis behalten können;
+
+2.  für die Frage selbst, d.h.: für die spezifische Interaktion in der Befragungssituation, ein Konzept haben.
+
+Befragte verstehen deshalb Fragen entweder gar nicht oder unterschiedlich, wenn
+
+1.  ihnen Konzepte fehlen, sie andere Konzepte aktivieren oder die Konzepte nicht in Kombination bringen können (semantisches Verstehen).
+
+2.  Sie zwar die Frage verstehen, aber nicht wissen, wie sie diese im Hinblick auf die Interaktion interpretieren sollen (pragmatisches Verstehen).
+
+## Feministen sind wir alle, oder?
+
+::: center
+:::
+
+## Lands of the free
+
+In verschiedenen Erhebungen wurde innerhalb von verschiedenen Ländern zufällig zugeteilt, ob die Frage in Variante 1 oder in Variante 2 gestellt wurde.
+
+1.  There are some people who are against all churches and religion. If such a person wanted to make a speech in your (city/town/community) against churches and religion, should he be allowed to speak, or not?
+
+2.  There are some people who are against all churches and religion. If such a person wanted to make a speech in your (city/town/community) against churches and religion, should he be allowed **the freedom** to speak, or not?
+
+## Lands of the free
+
+:::::: columns
+:::: column
+0.7
+
+::: center
+:::
+::::
+
+::: column
+0.3 Die Aktivierung von "Freiheit" erhöht die Wahrscheinlichkeit, dass Befragte mit "Ja" antworten.\
+
+Dieser Effekt ist abhängig von der Bedeutsamkeit von "Freiheit" in der jeweiligen Landeskultur.\
+
+[Quelle](https://academic.oup.com/jssam/article/10/5/1121/6355346)
+:::
+::::::
+
+## Pragmatisches Verstehen
+
+Befragte gehen i.d.R. davon aus, dass sie sich in einer *kooperativen Kommunikationssituation* befinden und sich selbst auch so verhalten sollten, dass die Kooperation aufrechterhalten bleibt. Die Aufrechterhaltung kommunikativer Kooperation benötigt typischerweise vier Regeln:
+
+1.  Gib (nur) so viele Informationen wie nötig.
+
+2.  Sage die Wahrheit.
+
+3.  Gib (nur) relevante Informationen.
+
+4.  Sei eindeutig.
+
+Typischerweise werden Befragte auf Ihre Fragen so reagieren, *als ob* alle Bedingungen vorliegen und sie werden versuchen, sich selbst an diese Regeln zu halten.
+
+## Was wollen die wissen?
+
+## Kooperative Erwartungen lenken unser Verständnis
+
+::: center
+:::
+
+## Suggestion
+
+Die Art der Itemformulierung kann dazu führen, dass
+
+1.  implizit etwas unterstellt wird oder
+
+2.  eine Erwartungshaltung einer "richtigen" Antwort aufgebaut wird.
+
+Beide Aspekte sind Teil des pragmatischen Verstehens eines Items.
+
+## Suggestion
+
+::: center
+:::
+
+## Suggestion
+
+::: center
+:::
+
+## Informationen aus dem Gedächtnis abrufen
+
+Nur in wenigen Fällen können Personen Informationen aus dem Gedächtnis unmittelbar (also "ohne großes Nachdenken") abrufen. Das ist dann der Fall, wenn diese Information für den Alltag der Person Relevanz hat:
+
+- Wie viele Kinder haben Sie?
+
+- Sind sie befristet oder unbefristet beschäftigt?
+
+Je anstrengender es für Personen ist, Gedächtnisinhalte zu aktivieren und in Bezug zueinander zu bringen, desto eher brechen Sie die Antwort ab oder beginnen zu raten. Sie müssen außerdem immer mit Erinnerungslücken und -verfälschungen rechnen.
+
+- Mit wie vielen unterschiedlichen Personen haben Sie im vergangenen Monat persönlich Kontakt gehabt?
+
+- Wieviel Zeit haben Sie im Verlauf dieser Woche damit verbracht, Einkäufe **zu planen**?
+
+## Informationen aus dem Gedächtnis abrufen
+
+- Sie sollten nur nach Informationen fragen, die Personen auch tatsächlich verfügbar haben.
+
+  - Potentiell problematisch: Schüler:innen nach Einkommen oder Beruf der Eltern fragen; lang zurückliegende Ereignisse; große Zeitspannen
+
+- Gruppen können sich danach unterscheiden, wie gut sie Informationen aus dem Gedächtnis abrufen können. Ihre Information ist daher nach Gruppen störanfällig.
+
+  - Arbeitsteilung im Haushalt (Differenz von Männern und Frauen); Einkommensangaben bei Mehrfachbefragungen
+
+- Hypothetische Fragen sind meist zu komplex, um von Personen im Gedächtnis gespeichert werden zu können und eine Antwort aus dem Gedächtnis heraus zu formulieren.
+
+## Ein Urteil bilden
+
+In den meisten Fällen müssen Befragte Informationen bewerten:
+
+- Ist die Sache selbst wünschenswert oder nicht?
+
+- Ist die Information relevant?
+
+- Ist meine Antwort richtig?
+
+Jeder dieser Schritte kann mit Unsicherheit einhergehen oder auch von den Umständen der Befragung abhängen.
+
+- Was ist ihr höchster Bildungsabschluss?
+
+- Wurden Sie als deutscher Staatsbürger geboren?
+
+## Die Frage ins Verhältnis zum Antwortformat bringen
+
+## Die Frage ins Verhältnis zum Antwortformat bringen
+
+::: center
+:::
+
+## Ein Urteil öffentlich machen
+
+Bevor Befragte antworten, können sie sich fragen, ob sie diese Antwort tatsächlich geben möchten. Sie können typischerweise aufgrund von drei Gründen ihre "öffentliche" Antwort verweigern oder sie verändern:
+
+1.  Sie erwarten eine negative Konsequenz aus der Umwelt ("Das kann ich doch nicht so sagen!").
+
+2.  Sie möchten Inkohärenz vermeiden ("Ich kann eigentlich nicht A sagen und nun B").
+
+3.  Das Antwortverhalten unterliegt spezifischen Normen, an die sich der/die Befragte/r gebunden fühlt ("Über A spricht man nicht!").
+
+## Ein Urteil öffentlich machen
+
+Fall 1 bezieht sich auf Interviewereffekte, soziale Erwünschtheit und Angst vor Problemen mit Anonymität.
+
+1.  Wie oft hatten Sie im letzten Jahr außerehelichen Geschlechtsverkehr?
+
+2.  Wie viele Sexualpartner hatten Sie bisher?
+
+Fall 2 bezieht sich auf Bewertungskonflikte:
+
+1.  Welche Partei würden Sie wählen, wenn heute Bundestagswahl wäre?
+
+2.  Würden Sie zur Wahl gehen, wenn heute Bundestagswahl wäre?
+
+Fall 3 bezieht sich auf Antworten, die entweder einen Gesetz- oder Normenverstoß erkennen lassen:
+
+1.  Wie oft haben Sie in der letzten Woche Kokain konsumiert?
+
+2.  Haben Sie schon einmal wissenschaftliche Ergebnisse manipuliert, um publiziert zu werden?

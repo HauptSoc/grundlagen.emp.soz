@@ -57,9 +57,11 @@ execute:
 
 **Vorlesung**: Geb. 30.41 (HS2) von 9:45-11:15\
 
-**Übungen**: 
-  + Sophia Horn: Dienstag, 14:00-15:30, im Geb. 30.91, Raum 012
-  + Andreas Haupt: Montag, 09:45-11:15 im Geb. 20.30, SR 0.016
+**Übungen**:
+
+-    Sophia Horn: Dienstag, 14:00-15:30, im Geb. 30.91, Raum 012
+
+-   Andreas Haupt: Montag, 09:45-11:15 im Geb. 20.30, SR 0.016
 :::::::::::
 
 ------------------------------------------------------------------------
@@ -82,17 +84,17 @@ Neugier, Aufgeschlossenheit und die Bereitschaft, eventuellen Balast aus Schulze
 :::
 
 ::: {.column width="45%"}
-![Baur, N. & Blasius, J. (Hrsg.) (2022), **Handbuch Methoden der empirischen Sozialforschung**. [https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4](https://link.springer.com/book/10.1007\%2F978-3-658-21308-4){.uri}](images/handbuch-methoden.png)
+![Baur, N. & Blasius, J. (Hrsg.) (2022), **Handbuch Methoden der empirischen Sozialforschung**. [https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4](https://link.springer.com/book/10.1007%2F978-3-658-21308-4){.uri}](images/handbuch-methoden.png)
 :::
 ::::::
 
 ## Multimedia
 
-Viele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.[^1] Unter anderem empfehle ich Ihnen: 
+Viele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.[^1] Unter anderem empfehle ich Ihnen:
 
-  + Richard McElreath: <https://www.youtube.com/@rmcelreath> 
-  + Josh Starmer: <https://www.youtube.com/@statquest>
-  + Grant Sanderson: <https://www.youtube.com/@3blue1brown>
-  + Julia M. Rohrer: <https://juliarohrer.com/resources>
-  
-[^1]: Bitte genießen Sie das mit Vorsicht. Diese Profis besprechen auch sehr viele Dinge, die weit entfernt von unseren Inhalten sind. Filtern Sie die wesentlichen Dinge aus dem Angebot heraus. 
+[^1]: Bitte genießen Sie das mit Vorsicht. Diese Profis besprechen auch sehr viele Dinge, die weit entfernt von unseren Inhalten sind. Filtern Sie die wesentlichen Dinge aus dem Angebot heraus.
+
+-   Richard McElreath: [https://www.youtube.com/\@rmcelreath](https://www.youtube.com/@rmcelreath){.uri}
+-   Josh Starmer: [https://www.youtube.com/\@statquest](https://www.youtube.com/@statquest){.uri}
+-   Grant Sanderson: [https://www.youtube.com/\@3blue1brown](https://www.youtube.com/@3blue1brown){.uri}
+-   Julia M. Rohrer: <https://juliarohrer.com/resources>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>unterschiedeerheben-stichprobentypen – Methoden empirischer Sozialforschung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-2.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bd31ea7a368d575a5b58f0149f103d6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-32b2f8c509c655343757e496d1414fa7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-bd31ea7a368d575a5b58f0149f103d6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/mindmap-logoV2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/HauptSoc/grundlagen.emp.soz" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
+    <a href="https://campus.kit.edu" title="ILIAS KIT" class="quarto-navigation-tool px-1" aria-label="ILIAS KIT"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Wissenswertes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ziele</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Was, wann, welche Reihenfolge?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Kleingedruckte</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ohne-titel" id="toc-ohne-titel" class="nav-link active" data-scroll-target="#ohne-titel">(ohne Titel)</a></li>
+  <li><a href="#stichprobendesigns" id="toc-stichprobendesigns" class="nav-link" data-scroll-target="#stichprobendesigns">Stichprobendesigns</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#ausprägungen-und-ihre-empirische-verteilung" id="toc-ausprägungen-und-ihre-empirische-verteilung" class="nav-link" data-scroll-target="#ausprägungen-und-ihre-empirische-verteilung">Ausprägungen und ihre empirische Verteilung</a></li>
+  <li><a href="#ausprägungen-und-ihre-empirische-verteilung-1" id="toc-ausprägungen-und-ihre-empirische-verteilung-1" class="nav-link" data-scroll-target="#ausprägungen-und-ihre-empirische-verteilung-1">Ausprägungen und ihre empirische Verteilung</a></li>
+  <li><a href="#verteilungen-in-speziellen-populationen" id="toc-verteilungen-in-speziellen-populationen" class="nav-link" data-scroll-target="#verteilungen-in-speziellen-populationen">Verteilungen in speziellen Populationen</a></li>
+  <li><a href="#wichtige-begriffe" id="toc-wichtige-begriffe" class="nav-link" data-scroll-target="#wichtige-begriffe">Wichtige Begriffe</a></li>
+  <li><a href="#theoretische-populationgrundgesamtheit" id="toc-theoretische-populationgrundgesamtheit" class="nav-link" data-scroll-target="#theoretische-populationgrundgesamtheit">Theoretische Population/Grundgesamtheit</a></li>
+  <li><a href="#theoretische-populationgrundgesamtheit-1" id="toc-theoretische-populationgrundgesamtheit-1" class="nav-link" data-scroll-target="#theoretische-populationgrundgesamtheit-1">Theoretische Population/Grundgesamtheit</a></li>
+  <li><a href="#sampling-frame-studienpopulation" id="toc-sampling-frame-studienpopulation" class="nav-link" data-scroll-target="#sampling-frame-studienpopulation">Sampling Frame &amp; Studienpopulation</a></li>
+  <li><a href="#sampling-frame-studienpopulation-abdeckung" id="toc-sampling-frame-studienpopulation-abdeckung" class="nav-link" data-scroll-target="#sampling-frame-studienpopulation-abdeckung">Sampling Frame, Studienpopulation &amp; Abdeckung</a></li>
+  <li><a href="#stichprobendesigns-1" id="toc-stichprobendesigns-1" class="nav-link" data-scroll-target="#stichprobendesigns-1">Stichprobendesigns</a></li>
+  <li><a href="#repräsentativität" id="toc-repräsentativität" class="nav-link" data-scroll-target="#repräsentativität">Repräsentativität</a></li>
+  <li><a href="#repräsentativität-1" id="toc-repräsentativität-1" class="nav-link" data-scroll-target="#repräsentativität-1">Repräsentativität</a></li>
+  <li><a href="#zufallsauswahlstrategien-einfache-zufallsstichprobe" id="toc-zufallsauswahlstrategien-einfache-zufallsstichprobe" class="nav-link" data-scroll-target="#zufallsauswahlstrategien-einfache-zufallsstichprobe">Zufallsauswahlstrategien: Einfache Zufallsstichprobe</a></li>
+  <li><a href="#zufallsauswahlstrategien-geschichtete-zufallsstichprobe" id="toc-zufallsauswahlstrategien-geschichtete-zufallsstichprobe" class="nav-link" data-scroll-target="#zufallsauswahlstrategien-geschichtete-zufallsstichprobe">Zufallsauswahlstrategien: Geschichtete Zufallsstichprobe</a></li>
+  <li><a href="#zufallsauswahlstrategien-klumpenstichprobe" id="toc-zufallsauswahlstrategien-klumpenstichprobe" class="nav-link" data-scroll-target="#zufallsauswahlstrategien-klumpenstichprobe">Zufallsauswahlstrategien: Klumpenstichprobe</a></li>
+  <li><a href="#sampling-pisa-studie-in-deutschland" id="toc-sampling-pisa-studie-in-deutschland" class="nav-link" data-scroll-target="#sampling-pisa-studie-in-deutschland">Sampling: PISA Studie in Deutschland</a></li>
+  <li><a href="#sampling-national-educational-panel-study-neps" id="toc-sampling-national-educational-panel-study-neps" class="nav-link" data-scroll-target="#sampling-national-educational-panel-study-neps">Sampling: National Educational Panel Study (NEPS)</a></li>
+  <li><a href="#nicht-zufällige-stichprobenziehung-quoten-stichprobe" id="toc-nicht-zufällige-stichprobenziehung-quoten-stichprobe" class="nav-link" data-scroll-target="#nicht-zufällige-stichprobenziehung-quoten-stichprobe">Nicht zufällige Stichprobenziehung: Quoten-Stichprobe</a></li>
+  <li><a href="#nicht-zufällige-stichprobenziehung-quoten-stichprobe-1" id="toc-nicht-zufällige-stichprobenziehung-quoten-stichprobe-1" class="nav-link" data-scroll-target="#nicht-zufällige-stichprobenziehung-quoten-stichprobe-1">Nicht zufällige Stichprobenziehung: Quoten-Stichprobe</a></li>
+  <li><a href="#nicht-zufällige-stichprobenziehung-convience-stichprobe" id="toc-nicht-zufällige-stichprobenziehung-convience-stichprobe" class="nav-link" data-scroll-target="#nicht-zufällige-stichprobenziehung-convience-stichprobe">Nicht zufällige Stichprobenziehung: Convience Stichprobe</a></li>
+  <li><a href="#nicht-zufällige-stichprobenziehung-selektive-stichprobe" id="toc-nicht-zufällige-stichprobenziehung-selektive-stichprobe" class="nav-link" data-scroll-target="#nicht-zufällige-stichprobenziehung-selektive-stichprobe">Nicht zufällige Stichprobenziehung: Selektive Stichprobe</a></li>
+  <li><a href="#nicht-zufällige-stichprobenziehung-schneeball-verfahren" id="toc-nicht-zufällige-stichprobenziehung-schneeball-verfahren" class="nav-link" data-scroll-target="#nicht-zufällige-stichprobenziehung-schneeball-verfahren">Nicht zufällige Stichprobenziehung: Schneeball-Verfahren</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="ohne-titel" class="level2">
+<h2 class="anchored" data-anchor-id="ohne-titel">(ohne Titel)</h2>
+</section>
+<section id="stichprobendesigns" class="level1 unnumbered">
+<h1 class="unnumbered">Stichprobendesigns</h1>
+<section id="section" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section"></h2>
+</section>
+<section id="ausprägungen-und-ihre-empirische-verteilung" class="level2">
+<h2 class="anchored" data-anchor-id="ausprägungen-und-ihre-empirische-verteilung">Ausprägungen und ihre empirische Verteilung</h2>
+<div class="columns">
+<div class="column">
+<p>.5</p>
+</div><div class="column">
+<p>.5</p>
+<ul>
+<li><p>Die Ausprägungen (<span class="math inline">\(\tau\)</span>) einer Eigenschaft (<span class="math inline">\(F\)</span>) können in einer Population unterschiedlich verteilt sein.</p></li>
+<li><p>Die Ausprägungen können gruppenspezifisch verteilt sein.</p></li>
+<li><p>Die Ausprägungen können mit den denen einer anderen Eigenschaft systematisch in Zusammenhang stehen.</p></li>
+<li><p><span class="math inline">\(\rightarrow\)</span> Wir benötigen Daten (= Beobachtungen von Untersuchungseinheiten), um dies zu erforschen.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ausprägungen-und-ihre-empirische-verteilung-1" class="level2">
+<h2 class="anchored" data-anchor-id="ausprägungen-und-ihre-empirische-verteilung-1">Ausprägungen und ihre empirische Verteilung</h2>
+<div class="center">
+<figure class="figure">
+<figcaption>
+Die Verteilung von Frauen und Männern nach ihrer Körpergröße <a href="https://news.mit.edu/2019/genetic-study-takes-sex-differences-research-to-new-heights-0718">(Quelle)</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="verteilungen-in-speziellen-populationen" class="level2">
+<h2 class="anchored" data-anchor-id="verteilungen-in-speziellen-populationen">Verteilungen in speziellen Populationen</h2>
+<div class="center">
+<figure class="figure">
+<figcaption>
+Die Verteilung von professionellen, männlichen Basketballspielern der NBA in der Saison 2021/22 <a href="https://www.thehoopsgeek.com/average-nba-height/">(Quelle)</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="wichtige-begriffe" class="level2">
+<h2 class="anchored" data-anchor-id="wichtige-begriffe">Wichtige Begriffe</h2>
+<div class="center">
+
+</div>
+</section>
+<section id="theoretische-populationgrundgesamtheit" class="level2">
+<h2 class="anchored" data-anchor-id="theoretische-populationgrundgesamtheit">Theoretische Population/Grundgesamtheit</h2>
+<p>Alle Untersuchungseinheiten, über die Sie eine Aussage machen wollen, bilden Ihre theoretische Population oder Grundgesamtheit.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Die folgende Hypothese macht eine Aussage über alle Menschen in allen Kulturen über alle Zeitpunkte:</p>
+<ul>
+<li>Frauen präferieren größere Männer und Männer präferieren kleinere Frauen als Partner:innen.</li>
+</ul>
+<p>Bisherige Forschung stützt diese These und auch, dass sie global gilt <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ajhb.22917">(hier)</a> und über eine sehr lange Zeit der menschlichen Entwicklung gilt <a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/sex-differences-in-human-mate-preferences-evolutionary-hypotheses-tested-in-37-cultures/0E112ACEB2E7BC877805E3AC11ABC889">(hier)</a>.</p>
+</section>
+<section id="theoretische-populationgrundgesamtheit-1" class="level2">
+<h2 class="anchored" data-anchor-id="theoretische-populationgrundgesamtheit-1">Theoretische Population/Grundgesamtheit</h2>
+<p>Was die theoretische Population sein soll, ist eine explizite Entscheidung von Forscher:innen.<br>
+</p>
+<p>Mögliche theoretische Populationen:</p>
+<ol type="1">
+<li><p>Jugendliche im Alter von 14-18 in BW im Jahr 2023</p></li>
+<li><p>Bewohner:innen von Altersheimen in deutschsprachigen Ländern</p></li>
+<li><p>die allgemeinbildenden Schulen in Deutschland</p></li>
+<li><p>alle multi-nationalen Konzerne</p></li>
+</ol>
+<p>Es ist möglich, eine Stichprobe auf eine Untergruppe zu fokussieren und somit die theoretische Population zu ändern. Sie könnten z.B. eine gesamtdeutsche Stichprobe nach Ost- und Westdeutschland unterteilen.</p>
+</section>
+<section id="sampling-frame-studienpopulation" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-frame-studienpopulation">Sampling Frame &amp; Studienpopulation</h2>
+<p>Bevor eine Stichprobe gezogen werden kann, muss sie aus “etwas” gezogen werden. Was dieses “etwas” ist, ist eine bedeutsame und begründungspflichtige Entscheidung! Dieses “etwas” wird als Sampling Frame (deutsch: Stichprobenrahmen) bezeichnet. In den Sozialwissenschaften ist dies meist eine Liste von Kontaktdaten:</p>
+<ol type="1">
+<li><p>Telefonbuch</p></li>
+<li><p>Einwohnermelderegister</p></li>
+<li><p>Kontaktpools kommerzieller Anbieter</p></li>
+<li><p>Crowdarbeitsanbieter (u.a.: Mechanical turk, Clickworker, Appen)</p></li>
+<li><p>E-Mail-Adressen innerhalb von Organisationen (Universitäten, Firmen)</p></li>
+<li><p>Twitter-Daten</p></li>
+<li><p>Online-Foren</p></li>
+</ol>
+<p>Alle Untersuchungseinheiten innerhalb des Stichprobenrahmens bilden die Studienpopulation.</p>
+</section>
+<section id="sampling-frame-studienpopulation-abdeckung" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-frame-studienpopulation-abdeckung">Sampling Frame, Studienpopulation &amp; Abdeckung</h2>
+<p>In einer perfekten Studie sind die theoretische und die Studienpopulation identisch. Meist ist dies jedoch nicht der Fall und es kommt zu Abdeckungsfehlern (Coverage errors).</p>
+<ol type="1">
+<li><p>Mit Hilfe des Mikrozensus wollen wir Aussagen über die gesamte deutsche Bevölkerung zu einem Zeitpunkt machen.</p></li>
+<li><p>Der Sampling Frame des Mikrozensus bilden die Einwohnermelderegister. Personen ohne gemeldeten Wohnsitz sind dort aber nicht enthalten.</p></li>
+<li><p>Mit Twitter-Daten wollen wir studieren, wie sich Meinungsdynamiken in verschiedenen Ländern über die Population von Erwachsenen und Jugendlichen entwickeln.</p></li>
+<li><p>Es ist sehr selektiv, wer Twitter nutzt(e); Personen können mehrere Accounts haben; Daten können von Bots generiert werden.</p></li>
+</ol>
+</section>
+<section id="stichprobendesigns-1" class="level2">
+<h2 class="anchored" data-anchor-id="stichprobendesigns-1">Stichprobendesigns</h2>
+<p>Wenn Sie die theoretische Population und den Sampling Frame geklärt haben, müssen Sie aus dem Sampling Frame eine Stichprobe ziehen. Sie können dabei grundsätzlich zwischen zufallsbasierten und nicht zufallsbasierten Stichprobenziehungen unterscheiden (probability based / non-probability based sampling). Beide Formen der Stichprobenziehung haben ihre Berechtigung. Es ist daher <em>nicht</em> so, dass nicht zufallsbasierte Stichproben per se unwissenschaftlich sind. Unwissenschaftlich ist die Verwendung der Stichprobe für Ziele, die sie nicht leisten kann.</p>
+<ul>
+<li><p>Mit zufallsbasierten Stichproben können Sie mit einer gewissen Sicherheit Aussagen über die theoretische Population treffen. Dies setzt aber einen verfügbaren und oft auch günstigen Sampling Frame voraus.</p></li>
+<li><p>Mit nicht zufallsbasierten Stichproben können Sie einen Zugang zu Untersuchungseinheiten schaffen, die Messungen testen und ggf. einen ersten Sampling Frame aufbauen. Sie können <em>meist</em> nicht mit hoher Sicherheit Aussagen über die theoretische Population treffen.</p></li>
+</ul>
+</section>
+<section id="repräsentativität" class="level2">
+<h2 class="anchored" data-anchor-id="repräsentativität">Repräsentativität</h2>
+<p>Wenn Sie mit ihrer Stichprobe Aussagen über die theoretische Population machen wollen, muss diese ein hohes Maß an Repräsentatitivität haben. Eine Stichprobe ist völlig repräsentativ, wenn jede Person der Population die gleiche Wahrscheinlichkeit hatte, Teil der (analytischen) Stichprobe zu werden. Völlige Repräsentativität ist daher die <strong>Abwesenheit von Selektivität</strong>. Je selektiver die Stichprobe zusammengesetzt ist, desto geringer ist ihre Repräsentativität.</p>
+<p>Aus dieser Definition folgt, dass</p>
+<ol type="1">
+<li><p>eine Stichprobe auch dann repräsentativ ist, wenn sie nicht alle Ausprägungen einer Eigenschaft innerhalb der Population enthält;</p></li>
+<li><p>Stichprobengröße kein Maß für die Repräsentativität ist (wohl aber für die Fähigkeit, mit Sicherheit Aussagen über die theoretische Population zu machen);</p></li>
+<li><p>nur dann von (vollständiger) Repräsentativität der Stichprobe gesprochen werden kann, wenn die Stichprobenziehung auf einer Zufallsauswahl beruht und kein Abdeckungsfehler besteht.</p></li>
+</ol>
+</section>
+<section id="repräsentativität-1" class="level2">
+<h2 class="anchored" data-anchor-id="repräsentativität-1">Repräsentativität</h2>
+<div class="columns">
+<div class="column">
+<p>.35</p>
+</div><div class="column">
+<p>.6 Angenommen, die Ausprägung <span class="math inline">\(\tau_1\)</span> kommt in einer Population mit einer relativen Häufigkeit von 10% vor und <span class="math inline">\(\tau_2\)</span> mit 20%. Wir wissen, dass die Ausprägungen sich über die Gruppen A/B unterscheiden. Gruppe A: <span class="math inline">\(\tau_1\)</span> = 15% und <span class="math inline">\(\tau_2\)</span> = 15%, sodass die Differenz in den Ausprägungen -5% und +5% ist.<br>
+</p>
+<p>Wenn die Stichprobe repräsentativ ist, sollte sie in etwa die relativen Häufigkeiten für die Ausprägungen über alle Gruppen und die Differenzen der Ausprägungen zwischen den Gruppen erfassen.<br>
+</p>
+<p>Unterschiede zwischen den Verteilungen der Ausprägung in der Population und der Stichprobe sind bei einer repräsentativen Stichprobenziehung <strong>rein zufällig</strong> und daher ignorierbar. Selektive Stichproben führen zu systematischen Unterschieden zwischen den Verteilungen in der Population und der Stichprobe.</p>
+</div>
+</div>
+</section>
+<section id="zufallsauswahlstrategien-einfache-zufallsstichprobe" class="level2">
+<h2 class="anchored" data-anchor-id="zufallsauswahlstrategien-einfache-zufallsstichprobe">Zufallsauswahlstrategien: Einfache Zufallsstichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.35</p>
+</div><div class="column">
+<p>.6 Einfache Zufallsstichprobe: Die Untersuchungseinheiten werden unabhängig voneinander und ohne Austausch aus einem Sampling Frame in die Stichprobe gezogen.</p>
+<ul>
+<li><p>Zufallsziehung von Haushalten aus dem Einwohnermelderegister</p></li>
+<li><p>Zufallsziehung von Emails aus einer Organisationseinheit</p></li>
+<li><p>Zufallsziehung von Patienten in eine Studie</p></li>
+</ul>
+<p>Wichtig: Zufallsziehungen führen <em>notwendigerweise</em> zu zufälligen Schwankungen (z.B. 48% Männer &amp; 52% Frauen). Diese dürfen <em>nicht</em> “ausgeglichen” werden.</p>
+</div>
+</div>
+</section>
+<section id="zufallsauswahlstrategien-geschichtete-zufallsstichprobe" class="level2">
+<h2 class="anchored" data-anchor-id="zufallsauswahlstrategien-geschichtete-zufallsstichprobe">Zufallsauswahlstrategien: Geschichtete Zufallsstichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.35</p>
+</div><div class="column">
+<p>.6 Geschichte Zufallsstichprobe (stratified sampling): Bei einer geschichteten Auswahl wird die Population in einzelne Untergruppen (Schichten) aufgeteilt. Die Schichten können unterschiedlich groß sein. Aus jeder (weitgehend homogenen) Schicht werden unabhängige zufällige Stichproben gezogen.</p>
+<ul>
+<li><p>Zufallsziehung von Haushalten innerhalb von Bundesländern</p></li>
+<li><p>Zufallsziehung von Emails nach Untereinheiten</p></li>
+<li><p>Zufallsziehung von Patienten mit unterschiedlichen körperlichen Zuständen in eine Studie</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="zufallsauswahlstrategien-klumpenstichprobe" class="level2">
+<h2 class="anchored" data-anchor-id="zufallsauswahlstrategien-klumpenstichprobe">Zufallsauswahlstrategien: Klumpenstichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.35</p>
+</div><div class="column">
+<p>.6 Klumpenstichprobe (cluster sampling): Die Population wird in verschiede Klumpen/Cluster eingeteilt, von denen ausgegangen wird, dass diese die Grundgesamtheit oder einer ihrer Schichten im Kleinen repräsentieren. Es werden einige Klumpen zufällig ausgewählt und dann alle Einheiten innerhalb des Klumpens befragt.</p>
+<ul>
+<li><p>Zufallsziehung von Haushalten als Cluster, dann Befragung von allen Haushaltsmitgliedern</p></li>
+<li><p>Zufallsziehung von Firmen als Cluster, dann Befragung aller Mitarbeiter:innen</p></li>
+</ul>
+<p>Wichtig: Die Informationen innerhalb der Cluster sind voneinander mehr oder weniger abhängig, weil sich die Untersuchungseinheiten in die Cluster selektieren.</p>
+</div>
+</div>
+</section>
+<section id="sampling-pisa-studie-in-deutschland" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-pisa-studie-in-deutschland">Sampling: PISA Studie in Deutschland</h2>
+<div class="columns">
+<div class="column">
+<p>.35 <a href="https://www.pisa.tum.de/fileadmin/w00bgi/www/Berichtsbaende_und_Zusammenfassungungen/Technische_Hintergrundinformationen_PISA_2018.pdf">Quelle</a></p>
+</div><div class="column">
+<p>.6 Die PISA-Studie ist ein Mix aus Cluster und geschichteter Zufallsauswahl.<br>
+</p>
+<p>Es werden Schichten nach Schultyp gebildet. Innerhalb der allgemeinbildenden Schulen wird nochmals nach Bundesländern geschichtet. Somit gibt es 18 Schultypschichten.<br>
+</p>
+<p>Innerhalb einer Schultypschicht werden Schulen gezogen.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Innerhalb der gezogenen Schule werden 30 Fünfzehnjährige zufällig gezogen (Schulcluster) und zusätzlich eine 9. Klasse als Cluster gezogen und daraus 15 Fünfzehnjährige gezogen (Klassencluster).</p>
+</div>
+</div>
+</section>
+<section id="sampling-national-educational-panel-study-neps" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-national-educational-panel-study-neps">Sampling: National Educational Panel Study (NEPS)</h2>
+<div class="columns">
+<div class="column">
+<p>.35 <a href="https://link.springer.com/referenceworkentry/10.1007/978-3-531-20002-6_31-1">Quelle</a></p>
+</div><div class="column">
+<p>.6</p>
+<p>Das Nationale Bildungspanel (NEPS) ist eine Panelstudie im Multi-Kohorten-Sequenz-Design:</p>
+<ul>
+<li><p>Zwischen 2009 und 2012 wurden sechs Startkohorten als Schichten gezogen: Neugeborene, Kindergartenkinder, Klasse 5, Klasse 9, Studierende und Erwachsene. Die Kohorten sind Gruppen von Befragten, die in einer ähnlichen Bildungsübergangs- oder Arbeitsmarktsituation stehen.</p></li>
+<li><p>Die Kohorten werden jährlich erneut befragt, u.a. um unterschiedliche Übergänge innerhalb des Bildungs-, Ausbildungssystems sowie des Arbeitsmarktes zu studieren.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="nicht-zufällige-stichprobenziehung-quoten-stichprobe" class="level2">
+<h2 class="anchored" data-anchor-id="nicht-zufällige-stichprobenziehung-quoten-stichprobe">Nicht zufällige Stichprobenziehung: Quoten-Stichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.25</p>
+<div class="center">
+
+</div>
+<p><a href="https://www.geeksforgeeks.org/non-probability-sampling/">Quelle</a></p>
+</div><div class="column">
+<p>.7 Quotenstichprobe: Aus der Population sind spezifische Verteilungen von Merkmalen (Quoten) bekannt. Der Stichprobenplan beinhaltet nun Kontingente von Unterstichproben, aus denen solange gezogen wird, bis die Quoten in der Stichprobe denen der Population entsprechen.</p>
+<ul>
+<li><p>Für eine Studie zum “Sozialen Zusammenhalt in Baden-Württemberg 2022” wurde eine Quotenstichprobe mit Quoten für Geschlecht, Alter, Einkommen, Bildungsstand und Haushaltsgröße gezogen.</p></li>
+<li><p>Marktforschungsstudien ziehen typischerweise Quotenstichproben nach Alter, Geschlecht und Bildung.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="nicht-zufällige-stichprobenziehung-quoten-stichprobe-1" class="level2">
+<h2 class="anchored" data-anchor-id="nicht-zufällige-stichprobenziehung-quoten-stichprobe-1">Nicht zufällige Stichprobenziehung: Quoten-Stichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.25</p>
+<div class="center">
+
+</div>
+<p><a href="https://www.geeksforgeeks.org/non-probability-sampling/">Quelle</a></p>
+</div><div class="column">
+<p>.7</p>
+<ul>
+<li><p>Vorteile:</p>
+<ul>
+<li><p>Kosteneffizient</p></li>
+<li><p>schneller</p></li>
+<li><p>auch kleine Gruppen sind mit Sicherheit in der Stichprobe</p></li>
+</ul></li>
+<li><p>Nachteile:</p>
+<ul>
+<li><p>Sampling ist abhängig von ihren Konzepten (z.B.: Transgender/Transsexuelle bei Geschlechtskategorie)</p></li>
+<li><p>Wenn die Gruppen unterschiedliche unit- oder item-nonresponse haben, wird die Stichprobe durch die Quote selektiv</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="nicht-zufällige-stichprobenziehung-convience-stichprobe" class="level2">
+<h2 class="anchored" data-anchor-id="nicht-zufällige-stichprobenziehung-convience-stichprobe">Nicht zufällige Stichprobenziehung: Convience Stichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.25</p>
+<div class="center">
+
+</div>
+<p><a href="https://www.geeksforgeeks.org/non-probability-sampling/">Quelle</a></p>
+</div><div class="column">
+<p>.7 Convience Stichprobe: Die Teilnehmer der Stichprobe sind leicht erreichbare Personen, die sich an einem bestimmten Ort aufhalten.</p>
+<ul>
+<li><p>Teilnehmer:innen der meisten Psychologiestudien stammen aus Einführungskursen in die Psychologie.</p></li>
+<li><p>Spieltheoretische Forschung basiert zu einem hohen Teil auf Stichproben von Ökonomie-Studierenden.</p></li>
+<li><p>Ein großer Teil der medizinische Forschung basiert auf den Zugang zu aktuellen Patienten der behandelnden Ärzte:innen.</p></li>
+</ul>
+<p>Convenience Stichproben sind immer selektiv. Allerdings können innerhalb von Convenience Stichproben zufällig Gruppen gebildet werden (Placebo/Treatment; Versuchs-/Kontrollgruppe), was zu einer hohen internen Validität aber ggf. zu einer niedrigen externen Validität führen kann.</p>
+</div>
+</div>
+</section>
+<section id="nicht-zufällige-stichprobenziehung-selektive-stichprobe" class="level2">
+<h2 class="anchored" data-anchor-id="nicht-zufällige-stichprobenziehung-selektive-stichprobe">Nicht zufällige Stichprobenziehung: Selektive Stichprobe</h2>
+<div class="columns">
+<div class="column">
+<p>.25</p>
+<div class="center">
+
+</div>
+<p><a href="https://www.geeksforgeeks.org/non-probability-sampling/">Quelle</a></p>
+</div><div class="column">
+<p>.7 Selektive Stichproben (purpose sampling): Die Teilnehmer der Stichprobe werden gezielt nach ihren Eigenschaften ausgewählt.</p>
+<ul>
+<li><p>Expert:innen-Interviews zu einem bestimmten Thema (siehe Thurstone-Skala)</p></li>
+<li><p>Mitglieder sehr kleiner Gruppen (Regenbogenfamilien, seltene Krankheiten)</p></li>
+</ul>
+<p>Eine (leider verbreitete) Unterform dieser Stichprobenziehung ist <em>sampling on the dependent variable</em>. In diesem Fall selektieren Sie die Untersuchungseinheiten in die Stichprobe aufgrund der Eigenschaft, die Sie mit anderen Faktoren erklären wollen.</p>
+<ul>
+<li><p>Befragung von erfolgreichen Personen nach dem “Geheimnis” ihres Erfolgs</p></li>
+<li><p>Auswirkung von Erziehungsstilen bei Kindern in Theraphie</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="nicht-zufällige-stichprobenziehung-schneeball-verfahren" class="level2">
+<h2 class="anchored" data-anchor-id="nicht-zufällige-stichprobenziehung-schneeball-verfahren">Nicht zufällige Stichprobenziehung: Schneeball-Verfahren</h2>
+<div class="columns">
+<div class="column">
+<p>.25</p>
+<div class="center">
+
+</div>
+<p><a href="https://www.geeksforgeeks.org/non-probability-sampling/">Quelle</a></p>
+</div><div class="column">
+<p>.7 Schneeballverfahren: Die Stichprobe beginnt mit einigen Personen, die den Studienkriterien entsprechen. Diese werden befragt und gebeten, andere Personen zu benennen, die den Studienkriterien entsprechen oder diese zu rekrutieren.</p>
+<p>Manchmal haben wir kein Wissen über den Sampling Frame und der Zugang zu den jeweiligen Populationen ist schwierig (Vertrauensprobleme, Illegalität). In diesem Fall können wir über die sozialen Netzwerke einzelner Kontaktpersonen (sog. “seeds”) versuchen, Vertrauen zu gewinnen und Informationen über die jeweilige Population zu sammeln.</p>
+<ul>
+<li><p>Befragung von ausländischen Haushaltshilfen</p></li>
+<li><p>Befragung innerhalb von (kleinen) Gruppen von Flüchtlingen</p></li>
+</ul>
+</div>
+</div>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Der Begriff “Population” ist in den Sozial- und Lebenswissenschaften üblich. Der Begriff “Grundgesamtheit” kommt aus der Statistik. Beide Begriffe sind synonym.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Auch nicht ganz zufällig! Größere Schulen werden wahrscheinlicher gezogen als kleine.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/methoden\.empirischer\.sozialforschung\.netlify\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Andreas Haupt</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

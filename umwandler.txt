@@ -1,0 +1,3 @@
+python .\frame_macro_to_env.py -i .\17-Vignettendesigns.tex -o .\17-Vignettendesigns.pre.tex --in-enc cp1252 --out-enc utf-8
+
+pandoc 17-Vignettendesigns.pre.tex -f latex -t markdown+tex_math_dollars+fenced_divs+pipe_tables+link_attributes --wrap=none  --citeproc --lua-filter=beamer2qmd.lua -o 15-Vignettendesigns.qmd

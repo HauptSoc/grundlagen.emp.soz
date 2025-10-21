@@ -1,0 +1,173 @@
+## (ohne Titel)
+
+## Gütekriterien der Messung
+
+Eine perfekte Messung ordnet einer (wahren) Ausprägung einer Eigenschaft einen Zahlenwert zu. Die gleiche Ausprägung der Eigenschaft von verschiedenen Personen bei einem Messzeitpunkt oder von der gleichen Person über verschiedene Messzeitpunkte würde bei einer perfekten Messung den identischen Zahlenwert erhalten.
+
+In der Praxis ist es jederzeit möglich, dass
+
+1.  eine Messung unterschiedliche Ergebnisse bei gleicher Ausprägung einer Eigenschaft liefert, weil die Messung durch **zufällige** Störfaktoren beeinflusst wird (= Problem der Reliabilität).
+
+2.  eine Messung nur in Teilen das misst, was sie messen soll oder **systematische** Einflüsse als Störfaktoren auftreten (= Problem der Validität).
+
+# Reliabilität {#reliabilität .unnumbered}
+
+##  {#section .unnumbered}
+
+## Reliabilität
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 Das Messergebnis $y_i$ (= Beobachteter Wert der Variable $Y$ einer Untersuchungseinheit $i$) wird mindestens von zwei Komponenten bestimmt:
+
+1.  die (wahre) Ausprägung eines Merkmals $\tau$ (sprich: tau) sowie
+
+2.  einen Störfaktor $\epsilon$ (sprich: epsilon), den wir zunächst als zufällig betrachten.
+
+Wir gehen davon aus, dass sich beide Komponenten *additiv* verhalten und damit gilt: $$y_i = \tau_i + \epsilon_i$$
+:::
+:::::
+
+## Reliabilität - systematische und unsystematische Variation
+
+Wenn wir Untersuchungseinheiten mehrfach testen oder verschiedene Untersuchungseinheiten mit gleichen Ausprägungen testen, müssen wir praktischerweise davon ausgehen, dass die Messergebnisse ($y_i$) über die verschiedenen Messungen *variieren*.
+
+- Diese Variation - oder auch: Varianz - kürzen wir mit $Var()$ ab.
+
+- Die Varianz der Messergebnisse einer Eigenschaft $Y$ ist daher $Var(y)$.
+
+- Die Varianz der zugrunde liegenden Ausprägungen ist $Var(\tau)$. Diese Varianz ist die durch die Eigenschaft systematisch bedingte Varianz unserer Messergebnisse.
+
+- Die Varianz der Störfaktoren ist $Var(\epsilon)$. Wir gehen (zunächst) davon aus, dass diese Störfaktoren *zufällig* sind und die damit verbundene Varianz daher unsystematisch mit den Messergebnissen verbunden ist.
+
+## Reliabilität = Verhältnis von systematischer und unsystematischer Variation
+
+Wir können die Reliabilität einer Messung $Rel()$ definieren als den relativen Anteil der *systematischen* Varianz an der Varianz der Messergebnisse. Wenn die Ausprägungen einer Eigenschaft $\tau$ stark variieren, sollten auch unsere Messergebnisse stark variieren. Untersuchungseinheiten mit gleichen Ausprägungen sollten bei (wiederholten) Messungen nur eine kleine Varianz der Messergebnisse aufweisen.
+
+$$Rel(y) = \frac{Var(\tau)}{Var(y)}.$$
+
+Da die Reliabilität ein relativer Anteil ist, liegt ihr Wertebereich stets zwischen 0 und 1.
+
+## Reliabilität = Verhältnis von systematischer und unsystematischer Variation
+
+Da wir davon ausgehen, dass sich die Messergebnisse additiv aus $\tau$ und $\epsilon$ zusammensetzen, können wir die Gleichung umschreiben zu:
+
+$$Rel(y) = \frac{Var(\tau)}{Var(\tau) + Var(\epsilon)} .$$
+
+Ist der Störfaktor groß, ist die Reliabilität der Messung klein. Reliabilität ist daher in Maß für die *Zuverlässigkeit* von Messungen. Ist die Messung stark beeinflusst von zufälligen Schwankungen der Reaktion oder der Zustände der Untersuchungseinheiten, ist sie nicht reliabel.
+
+## Covarianz von Items bei Mehrfachmessungen
+
+:::::: columns
+:::: column
+.5
+
+::: center
+:::
+::::
+
+::: column
+.5 Messen wir *eine* Ausprägung einer Untersuchungseinheit durch mehrere Items, ist dies eine Form der Messwiederholung. Jede Reaktion ist daher ein eigener Messwert $y_i$, der durch den zugrunde liegenden wahren Wert $\tau_i$ und Item-spezifische Störfaktoren gebildet wird.\
+Wenn die Reaktion auf die Items systematisch durch die zugrunde liegende Ausprägung hervorgerufen wird, müssen die Messergebnisse der einzelnen Items in systematischen Zusammenhang stehen. Dies bezeichnen wir ab sofort als *Covarianz* und kürzen sie mit $Cov()$ ab.
+:::
+::::::
+
+## Covarianz von Items bei Mehrfachmessungen
+
+:::::: columns
+:::: column
+.5
+
+::: center
+:::
+::::
+
+::: column
+.5 Eine reliable Skalierung mit mehreren Items basiert daher auf einem sehr hohen Anteil von systematischer Covarianz zwischen den Reaktionen auf Items.\
+Wir gehen im links dargestellten Model davon aus, dass es keine Covarianz zwischen den Störfaktoren gibt.\
+Eine Skala ist wenig reliabel, wenn einzelne oder mehrere Items ein hohes Maß an unsystematischer Varianz in die Messung einführen. In diesem Fall würden wir vielen Untersuchungseinheiten mit gleicher Ausprägung eines Merkmals unterschiedliche Messergebnisse zuweisen.
+:::
+::::::
+
+## Möglichkeiten Reliabilität zu testen
+
+1.  Einfache Messwiederholung (Re-Test Korrelation)
+
+    - Personen erhalten zu zwei (oder mehr) Messzeitpunkten das gleiche Messinstrument. Ist die Messung reliabel (und die Eigenschaft wenig variabel über die Zeit!), sollten zwischen den Messungen stark vergleichbare Ergebnisse erhalten werden.
+
+2.  Parallel-Test
+
+    - Leicht unterschiedliche Varianten eines Items werden parallel eingesetzt. Sind die Störfaktoren klein und unsystematisch, sollten stark vergleichbare Messergebnisse vorliegen.
+
+## Möglichkeiten Reliabilität von Skalierungen zu testen
+
+1.  Split-Half Korrelation
+
+    - Die Menge aller Items wird in zwei Hälften geteilt. Wenn die Skalierung reliabel ist, müssten die beiden Hälften untereinader und in Bezug auf die gesamte Skalierung ähnliche Ergebnisse liefern.
+
+2.  interne Konsistenz
+
+    - Wenn (!!) die Reaktion auf Items nur durch einen Faktor hervorgerufen werden und die Störfaktoren voneinander unabhängig und klein sind, ist die Varianz der Skalenwerte in hohem Maße durch die Varianz über alle Itemreaktionen zu erklären. Befragte reagieren daher wiederholt systematisch (=konsistent) auf die Items und nicht in hohem Maße unsystematisch.
+
+## Die Messung von Schmerzniveaus
+
+:::::: columns
+:::: column
+.6
+
+::: center
+:::
+::::
+
+::: column
+.4
+
+1.  Visual Analog Scale (VAS)
+
+2.  The Numerical Rating Scale (NRS)
+
+3.  Verbal Rating Scale (VRS)
+
+4.  FACES Pain Rating Scale
+:::
+::::::
+
+[Quelle](https://www.sciencedirect.com/science/article/pii/S0735675718300081#f0005)
+
+## Die Messung von Mental Load
+
+::::: columns
+::: column
+.6 During my daily activities **at home**:
+
+1.  I have a lot on my mind.
+
+2.  I need to think about different things at the same time.
+
+3.  I feel overwhelmed.
+
+4.  I can concentrate on one thing at a time.
+
+Responses: strongly agree, disagree, neither agree/nor disagree, agree, strongly agree
+:::
+
+::: column
+.4 Zusammenhänge der Antworten auf die Items:\
+\
+
+          I1       I2       I3     I4
+  ---- -------- -------- -------- ----
+  I1      1                       
+  I2    0.6966     1              
+  I3    0.5860   0.4600     1     
+  I4    0.1885   0.1872   0.2195   1
+:::
+:::::
+
+\
+\
+$\rightarrow$ Item 4 hat nur schwache und theoretisch unerwartete Korrelationen zu den anderen Items. Das spricht für eine intern nicht konsistente Messung.

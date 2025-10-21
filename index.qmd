@@ -4,22 +4,22 @@ tbl-colwidths: [5,10,35,5,5,5,5,5]
 ---
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:--:|----|----|:--:|:--:|:--:|:--:|:--:|
-| 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") | [✍](/critique/critique-2.qmd "Statistical Critique 2 Instructions") |  | [📁](project/final-project/final-project-directions.qmd "Final Project Instructions") |
+|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
+| 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | 🖥 | ✍ |  | 📁 |
 | 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-WissenschaftlicheSpielregeln.qmd) |  |  |  |
 |  |  | **I. Unterschiede messen** |  |  |  |  |  |
-| 3 | 13.11. | Grundlagen guten Unterscheidens | [📖](https://flowingdata.com/2016/07/20/modern-family-structure/ "Welche unterschiedlichen Haushaltsformen gibt es da draußen?") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 4 | 20.11. | Dimensionen, Typen, Ausprägungen | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 5 | 27.11. | Messtheoretische Grundlagen | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_107.pdf "Blasius (2019): Skalierung") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 6 | 04.12. | Skalierung | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_62.pdf "Latcheva & Davidov (2019)") | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 7 | 11.12. | Itemkonstruktion | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 8 | 18.12. | Reaktionen erfassen | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 9 | 08.01. | Reliabilität und Validität | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  | [📋](https://bit.ly/week-2-code-along "Code Along Activity") |  |
+| 3 | 13.11. | Grundlagen guten Unterscheidens | [📖](https://flowingdata.com/2016/07/20/modern-family-structure/ "Welche unterschiedlichen Haushaltsformen gibt es da draußen?") | [🖥](slides/02-Unterscheiden_Grundlagen.qmd "Folien 02 - Grundlagen guten Unterscheidens") |  |  |  |
+| 4 | 20.11. | Dimensionen, Typen, Ausprägungen | 📖 | 🖥 |  |  |  |
+| 5 | 27.11. | Messtheoretische Grundlagen | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_107.pdf "Blasius (2019): Skalierung") | 🖥 |  |  |  |
+| 6 | 04.12. | Skalierung | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_62.pdf "Latcheva & Davidov (2019)") | 🖥 |  |  |  |
+| 7 | 11.12. | Itemkonstruktion | 📖 | 🖥 |  |  |  |
+| 8 | 18.12. | Reaktionen erfassen | 📖 | 🖥 |  |  |  |
+| 9 | 08.01. | Reliabilität und Validität | 📖 | 🖥 |  | 📋 |  |
 |  |  | **II. Unterschiede erheben** |  |  |  |  |  |
-| 10 | 15.01. | Stichprobenziehung | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 11 | 22.01. | Teilnahmeselektion | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 12 | 29.01. | Antwortverweigerung | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  | [📋](https://bit.ly/week-2-code-along "Code Along Activity") |  |
+| 10 | 15.01. | Stichprobenziehung | 📖 | 🖥 |  |  |  |
+| 11 | 22.01. | Teilnahmeselektion | 📖 | 🖥 |  |  |  |
+| 12 | 29.01. | Antwortverweigerung | 📖 | 🖥 |  | 📋 |  |
 |  |  | **III. Die richtigen Unterschiede erfassen** |  |  |  |  |  |
-| 13 | 05.02. | Untersuchungsdesigns | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 14 | 12.02. | Experimentaldesigns | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  |  |  |
-| 15 | 19.02. | Grundlagen des Fragebogendesigns | 📖 | [🖥](slides/week2-day1.qmd "Week 2 Review Lecture Slides") |  | [📋](https://bit.ly/week-2-code-along "Code Along Activity") |  |
+| 13 | 05.02. | Untersuchungsdesigns | 📖 | 🖥 |  |  |  |
+| 14 | 12.02. | Experimentaldesigns | 📖 | 🖥 |  |  |  |
+| 15 | 19.02. | Grundlagen des Fragebogendesigns | 📖 | 🖥 |  | 📋 |  |

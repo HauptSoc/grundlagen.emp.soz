@@ -1,0 +1,100 @@
+## (ohne Titel)
+
+# Reaktionsskalen {#reaktionsskalen .unnumbered}
+
+##  {#section .unnumbered}
+
+## offene, halboffene, geschlossene Antwortvorgaben
+
+- offen: Sie wissen über das Thema nichts oder die möglichen Reaktionen sind nicht überschaubar.
+
+- halboffen: Sie sind sich unsicher, ob Sie nicht eine potentiell wichtige Kategorie übersehen haben.
+
+- geschlossen: Sie haben ein Reaktionsmuster definiert, das aus überschaubaren Varianten besteht.
+
+## offene, halboffene, geschlossene Antwortvorgaben
+
+## nominale, ordinale und metrische Antwortabstände
+
+- **nominal**: Die Befragten können oder sollen nur Fallunterscheidungen machen, die in keiner Rangfolge zueinander stehen.
+
+- **ordinal**: Die Befragten sollen etwas bewerten, ordnen oder in eine sonstige Rangfolge bringen oder sich selbst in Relation zu anderen in eine Rangfolge sortieren. Sie vermuten, dass die Befragten die Verhältnisse unterschiedlicher Reaktionen nicht gleichabständig äußern können.
+
+- **metrisch**: Die Befragten sind in der Lage, Unterschiede der Reaktion mindestens in gleichen Abständen angeben zu können.
+
+## nominale, ordinale und metrische Antwortabstände
+
+Wie zufrieden sind Sie mit Ihrem neuen Laptop?
+
+- nominal: $\boxtimes$ $\medsquare$
+
+- ordinal: $\medsquare$ 1 $\boxtimes$ 2 $\medsquare$ 3 $\medsquare$ 4 $\medsquare$ 5 $\medsquare$ 6 (Schulnoten)
+
+- metrisch: 0% ------------------------------------x----- 100%
+
+## verbalisierte vs. endpunktbenannte Antwortvorgaben
+
+- Bei verbalisierten Antwortvorgaben wird jede Kategorie einzeln bezeichnet.
+
+  - **Vorteil**: Keine Unsicherheit/Unschärfe, was die Kategorien bedeuten sollen.
+
+  - **Nachteil**: Mittelkategorie meist semantisch schwierig. Gleichabständigkeit semantisch oft nicht ausdrückbar. Je mehr Antwortvorgaben, desto schwieriger die Wortfindung.
+
+- Bei endpunktbenannten Skalen werden nur die beiden Extreme bezeichnet.
+
+  1.  **Vorteil**: Leichte Verbalisierung. Antwortvorgaben können beliebig breit sein.
+
+  2.  **Nachteil**: Unschärfe/Unsicherheit, was die einzelne Kategorie zu bedeuten hat.
+
+## verbalisierte vs. endpunktbenannte Antwortvorgaben
+
+::: center
+  -------------- -------------- -----------------
+    trifft zu      weder noch    trifft nicht zu
+   $\medsquare$   $\medsquare$    $\medsquare$
+  -------------- -------------- -----------------
+:::
+
+## gerade oder ungerade Anzahl von Antwortkategorien
+
+- **ungerade**: Die Skala hat einen Mittelpunkt. Diese Mitte muss allerdings technisch gesehen nicht der mittlere Punkt sein, d.h.: die mittlere Reaktionsstärke.
+
+  - Vorteil: Personen, mit mittlerer Ausprägung können sich einordnen.
+
+  - Nachteil: Die Mitte wird *manchmal* als Fluchtkategorie verwendet.
+
+- **gerade**: Die Vorgaben zwingen den Befragten zu einer Einordnung in eine obere oder untere Hälfte.
+
+  - Vorteil: Die "Flucht durch die Mitte" wird verhindert.[^1]
+
+  - Nachteil: Personen mit mittlerer Einstellung können sich nicht einordnen.
+
+## die Anzahl von Kategorien
+
+Die Breite von Antwortvorgaben bezieht sich auf die Anzahl der vom Fragenden vorgeschlagenen Antwortkategorien. Die Breite von Antwortvorgaben hängt von mehreren Faktoren ab:
+
+- Welche Reaktionsmuster wollen Sie erfassen?
+
+- Wie hoch ist die verlangte Abstraktionsfähigkeit, die zur Unterscheidung einzelner Kategorien nötig ist?
+
+- Wie viele Unterschiede der Merkmalsausprägungen sollen erfasst werden?
+
+Empfehlung ($\neq$ Anweisung!): 5-9 Kategorien.
+
+## Die Skalenrichtung
+
+Die Skalenrichtung gibt vor, ob die Reihenfolge der "niedrigsten" zur "höchsten" Ausprägung von links nach rechts bzw. von Anfang zu Ende verläuft oder vice versa.
+
+- Im Fall optischer Präsentation: Optisch präsentierte Skalen suggerieren einen Verlauf. Verläufe werden meist als von links nach rechts ordnend interpretiert. Daher: Der kleinste Wert nach links, der höchste nach rechts.
+
+- Im Fall akustischer Präsentation: Bei verbalisierten Reihenfolgen kann es von Bedeutung sein, welcher Pol zuerst gewählt wird. Typischerweise kommt das Positive/Höchste zuerst.
+
+## Uni- und bipolare Antwortvorgaben
+
+Skalen können entweder zwischen zwei Extremen oder zwischen einem "Nullpunkt" und einem Endpunkt pendeln. Ein Nullpunkt kann auch Indifferenz bedeuten. In vielen Fällen bedeutet er **nicht** das Gegenteil des Endpunkts.
+
+## Uni- und bipolare Antwortvorgaben
+
+Quelle: Helfried Moosbrugger & Holger Brandt (2020): Itemkonstruktion und Antwortverhalten. In: Helfried Moosbrugger & Augustin Kelava (Hrsg): Testtheorie und Fragebogenkonstruktion, S. 109.
+
+[^1]: Bitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen.

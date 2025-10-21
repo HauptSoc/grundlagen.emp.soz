@@ -1,0 +1,187 @@
+## (ohne Titel)
+
+## Erweiterungen der Werkzeugkiste
+
+- Das Verhalten oder der soziale Prozess, den wir studieren wollen, kann selten, sehr schwer zu beobachten oder nur unter unethischen Forschungsdesigns experimentell zu studieren sein.
+
+- Manchmal haben wir auch nur Zugriff auf selektive Stichproben, wollen aber dennoch eine hohe interne Validität unserer Studie gewährleisten.
+
+- Selbst mit qualitativ sehr hochwertigen Querschnittsstudien können wir meist nicht alle unbeobachteten Faktoren als Einflüsse ausschließen.
+
+*Eine* Möglichkeit, mit diesen Herausforderungen umzugehen, sind Vignettendesigns (im Englischen: Factorial Surveys).
+
+# Bewertung einer Vignette
+
+##  {#section .unnumbered}
+
+## Was wird als sexuelle Belästigung wahrgenommen?
+
+1.  Richter:innen unterscheiden sich vom Rest der Bevölkerung in Bezug auf Ihre Urteile, ob eine Handlung eine sexuelle Belästigung ist.
+
+    1.  Richter sind aber auch (etwas) konservativer als die Bevölkerung. Konservative Einstellungen können beeinflussen, was als sexuelle Belästigung wahrgenommen wird.
+
+2.  Die Machtkonstellation zwischen Täter und Opfer hat einen Einfluss darauf, ob die selbe Handlung als eine sexuelle Belästigung wahrgenommen wird.
+
+    1.  Es gibt eine starke Korrelation zwischen Macht- und Geschlechterkonstellationen. Männer sind mit höherer Wahrscheinlichkeit innerhalb von Firmen und Organisationen in den machtvolleren Positionen. Die Geschlechterkonstellation der Situation selbst hat einen Einfluss darauf, ob die selbe Handlung als sexuelle Belästigung wahrgenommen wird.
+
+Quelle: Weinberg, Jill D., and Laura Beth Nielsen. 2017. "What Is Sexual Harassment: An Empirical Study of Perceptions of Ordinary People and Judges." *Saint Louis University Law Review* 36: 39--58
+
+## Was wollen wir wissen?
+
+Welche Unterschiede in der Einstufung einer Handlung als sexuelle Belästigung können wir darauf zurückführen,
+
+- dass Personen Richter:innen sind oder nicht - *unabhängig* davon, ob sie auch konservativer eingestellt sind.
+
+  - Dazu müssen wir die Urteile von Richter:innen und Bürger:innen vergleichen, die sich in Bezug auf ihre konservativen Einstellungen nicht unterscheiden.
+
+- dass die Machtverhältnisse zwischen Täter und Opfer unterschiedlich sind - *unabhängig* von der Geschlechterkonstellation zwischen Täter und Opfer.
+
+  - Dazu müssen wir Urteile über Handlungen in Situationen vergleichen, die in Bezug auf die Geschlechterkonstellation identisch sind (der Mann agiert in Bezug auf die Frau), sich aber bezüglich der Machtkonstellation unterscheiden (der Mann ist: Chef/Untergebener/Kollege).
+
+## Pfaddiagramm der Vermutungen
+
+::: center
+:::
+
+## Was brauchen wir für Daten?
+
+1.  Situationsdaten: Wir brauchen Beschreibungen über Fälle, die die entsprechenden Informationen enthalten, über die wir Hypothesen gebildet haben.
+
+    - Wir brauchen aber sehr viele Fälle, denn wir möchten Fälle vergleichen, die in allen beschriebenen Eigenschaften - außer einer! - gleich sind.
+
+    - Die Fälle müssen außerdem auch in Bezug auf nicht-beschriebene Eigenschaften gleich sein oder es darf diese Eigenschaften nicht geben.[^1]
+
+2.  Personendaten: Wir brauchen zwei Typen von Auskünften über Personen: Welche Eigenschaften haben sie selbst und wie bewerten sie bestimmte Fälle.
+
+    - Auch hier gilt: Wir möchten Personen vergleichen, die in allen (nicht) beobachteten Eigenschaften - außer einer! - gleich sind.
+
+## Was wäre ein perfektes Untersuchungsdesign?
+
+- Ein Experiment mit Richter:innen und Bürger:innen als Beobachter:innen unterschiedlicher Situationen?
+
+  - Es wäre extrem unethisch, Personen innerhalb verschiedener Situationen (potentiell) sexuell zu belästigen und Beobachter:innen dies anschauen zu lassen.\
+
+- Eine große Befragung (Panel/Querschnitt) durchführen und nach Erfahrungen fragen?
+
+  - Höchstwahrscheinlich sind die Situationen, auf denen diese Erfahrungen beruhen, nicht gut miteinander vergleichbar.\
+
+- Reale Fälle (z.B. Gerichtsakten) nehmen und Richter:innen sowie Bürger:innen vorlegen?\
+
+  - Reale Fälle sind meist sehr komplex und daher auch schwer miteinander zu vergleichen.
+
+## Vignettendesigns (=Faktorieller Survey)
+
+1.  Wir erstellen die Beschreibung einer grundlegenden, fiktiven (!) Situation (= **Basisvignette**).
+
+2.  Diese Beschreibung kann an spezifischen Stellen variiert werden. Zum Beispiel kann das Opfer einen männlichen oder weiblichen Namen erhalten.
+
+3.  Dies führen wir mit allen Eigenschaften durch, die wir in der Situation variieren lassen wollen.
+
+4.  Wir erstellen daher so viele Vignetten, wie *Ausprägungskombinationen* vorhanden sind. Das ist unser Vignettenuniversum.
+
+5.  Wir ziehen *zufällig* eine bestimmte Anzahl von Vignetten aus dem Vignettenuniversum und legen diese unseren Befragten zur Beurteilung vor.
+
+## Vignettendesigns (=Faktorieller Survey)
+
+D.h. wir führen für Personen eine wiederholte Messung der Beurteilungen über zufällig gezogene Vignetten durch. Um diese Forschungsfrage beantworten zu können, nehmen wir daher die Stärken aus allen Untersuchungsdesigns:
+
+1.  Mit Personen führen wir eine Querschnittserhebung durch und fragen diese nach bestimmten Personeneigenschaften (z.B. konservative Einstellungen).
+
+2.  Wir ziehen zufällig aus dem Vignettenuniversum Fälle und schaffen daher eine Randomisierung wie bei einem Experiment. Jede einzelne Vignette bildet daher ein Treatment, die untereinander sowie von den Personeneigenschaften unabhängig sind.
+
+3.  Wir lassen Personen mehrfach mit der gleichen Frage Fälle bewerten und bilden damit ein Panel von Urteilen nach Personen.
+
+## Vignettendesigns (künstlerische Darstellung)
+
+Dadurch können wir untersuchen,
+
+- was unterschiedliche Falleigenschaften bei gleichen Personen für unterschiedliche Bewertungen verursachen,
+
+- was unterschiedliche Personeneigenschaften bei gleichen Fällen für unterschiedliche Bewertungen verursachen.
+
+## Die Situationsdarstellung
+
+Cartwell & Downing is a magazine publishing house. The largest department within its company involves work on Indulgent, a cooking magazine. This department is comprised of 12 editors (9 male) and 27 support staff (22 female).\
+Steve is Jane's boss. One day, Steve said how attractive Jane looked in her outfit. Jane left the company because of what happened. There are no policies or procedures to address these matters.
+
+## Die Unterschiede der Situation
+
+::::::: center
+:::: minipage
+::: center
+:::
+::::
+
+:::: minipage
+::: flushleft
+- Alle Eigenschaften haben genau drei Ausprägungen. Somit besteht das Vignettenuniversum aus 3 x 3 x 3 x 3 = 81 Fällen.
+
+- Die Basisvignette wird mit diesen Ausprägungen variiert.
+
+- Befragte bekommen nie alle Fälle, sondern immer nur eine Stichprobe.
+
+- Nach jeder Vignette die gleiche Frage: Liegt hier eine sexuelle Belästigung vor? (Ja/Nein)
+:::
+::::
+:::::::
+
+## Ergebnisse
+
+::: center
+:::
+
+# Vignetten Paare
+
+##  {#section-1 .unnumbered}
+
+## Vignetten Paare (=Conjoint Experiment)
+
+Vignetten müssen nicht einzeln eingesetzt werden. Eine weitere Möglichkeit ist, zwei oder mehrere Vignetten den Befragten gleichzeitig vorzulegen und sie anzuweisen, eine auszuwählen. Auf diese Weise kann man studieren, welche Merkmale oder Merkmalskombinationen Befragte besonders präferieren.
+
+Es ist für solche Vergleiche auch möglich, nach einer generellen Beschreibung der Basisvignette, die Unterschiede zwischen den jeweiligen Fällen als Tabelle darzustellen.
+
+Es hat sich außerdem etabliert, dass die Befragten eine Wahl treffen müssen (= forced choice selection).
+
+## Priorisierung von Impfungen
+
+[Schaeffer & Larsen (2023)](https://academic.oup.com/esr/article/39/1/1/6599219) haben für Dänemark analysiert, welche Merkmale dazu führen, dass Befragte anderen Personen eine höhere Priorisierung für (Erst)Impfungen gegen Covid-19 einräumen.
+
+::: callout-note
+Einleitung Once one or several COVID-19 vaccines have been approved by the European Medicines Agency, vaccination can start in Denmark. However, an initially limited batch of doses means that it is necessary to prioritize those groups of society who shall get vaccinated within the first phase, until the end of June 2021.
+
+On each of the following three pages, we describe two fictitious persons. All these persons have diabetes and therefore face a high risk of severe illness from COVID-19. We would like to ask you, who of these two persons you think should get vaccinated first.
+:::
+
+## Priorisierung von Impfungen: Basisvignette
+
+::: callout-note
+Basisvignette \[Name\] is 55 years old and works as a cashier in a supermarket. He \[Length of residence\]. Over the past half year, he has \[Good citizen\] careful to follow the guidelines on facemask wearing and social distancing. \[Name\] has diabetes \[Healthy lifestyle\].
+:::
+
+Konstanthaltung: Geschlecht, medizinische Dringlichkeit (Diabetes ist hoher Risikofaktor).
+
+## Priorisierung von Impfungen: Dimensionen
+
+Es ergeben sich daher 2 × 2 × 2 × 2 = 16 unterschiedliche Vignetten.
+
+## Priorisierung von Impfungen: Vignettenauswahl
+
+::::: columns
+::: column
+.45 *Mustafa* is 55 years old and works as a cashier in a supermarket. He *was born in Denmark*. Over the past half year, he has *not been* careful to follow the guidelines on facemask wearing and social distancing. *Mustafa* has diabetes despite his healthy lifestyle; he does not smoke and exercises regularly.
+:::
+
+::: column
+.45 *Erik* is 55 years old and works as a cashier in a supermarket. He *was born in Denmark*. Over the past half year, he has *been* careful to follow the guidelines on facemask wearing and social distancing. *Erik* has diabetes despite his healthy lifestyle; he does not smoke and exercises regularly.
+:::
+:::::
+
+\
+Die Vignetten haben zwei Unterschiede: Die kulturellen Assoziationen durch den Namen und die Einhaltung von Infektionsschutzmaßnahmen. Wir wissen im Einzelfall nicht, ob eine von beiden oder die Kombination von beiden zu einer Auswahl führt. Wir können dies aber auf Populationsebene erkennen.
+
+## Priorisierung von Impfungen: Resultate
+
+::: center
+:::
+
+[^1]: Unterschiedlichkeit in nicht beobachteten Eigenschaften wird *unbeobachtete Heterogenität* genannt und wird uns vor einige Herausforderungen stellen, da sie die *Ignorierbarkeits*-Annahme verletzt.

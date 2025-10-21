@@ -1,0 +1,363 @@
+## (ohne Titel)
+
+# Stichprobendesigns {#stichprobendesigns .unnumbered}
+
+##  {#section .unnumbered}
+
+## Ausprägungen und ihre empirische Verteilung
+
+::::: columns
+::: column
+.5
+:::
+
+::: column
+.5
+
+- Die Ausprägungen ($\tau$) einer Eigenschaft ($F$) können in einer Population unterschiedlich verteilt sein.
+
+- Die Ausprägungen können gruppenspezifisch verteilt sein.
+
+- Die Ausprägungen können mit den denen einer anderen Eigenschaft systematisch in Zusammenhang stehen.
+
+- $\rightarrow$ Wir benötigen Daten (= Beobachtungen von Untersuchungseinheiten), um dies zu erforschen.
+:::
+:::::
+
+## Ausprägungen und ihre empirische Verteilung
+
+::: center
+<figure>
+
+<figcaption>Die Verteilung von Frauen und Männern nach ihrer Körpergröße <a href="https://news.mit.edu/2019/genetic-study-takes-sex-differences-research-to-new-heights-0718">(Quelle)</a></figcaption>
+</figure>
+:::
+
+## Verteilungen in speziellen Populationen
+
+::: center
+<figure>
+
+<figcaption>Die Verteilung von professionellen, männlichen Basketballspielern der NBA in der Saison 2021/22 <a href="https://www.thehoopsgeek.com/average-nba-height/">(Quelle)</a></figcaption>
+</figure>
+:::
+
+## Wichtige Begriffe
+
+::: center
+:::
+
+## Theoretische Population/Grundgesamtheit
+
+Alle Untersuchungseinheiten, über die Sie eine Aussage machen wollen, bilden Ihre theoretische Population oder Grundgesamtheit.[^1]
+
+Die folgende Hypothese macht eine Aussage über alle Menschen in allen Kulturen über alle Zeitpunkte:
+
+- Frauen präferieren größere Männer und Männer präferieren kleinere Frauen als Partner:innen.
+
+Bisherige Forschung stützt diese These und auch, dass sie global gilt [(hier)](https://onlinelibrary.wiley.com/doi/full/10.1002/ajhb.22917) und über eine sehr lange Zeit der menschlichen Entwicklung gilt [(hier)](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/sex-differences-in-human-mate-preferences-evolutionary-hypotheses-tested-in-37-cultures/0E112ACEB2E7BC877805E3AC11ABC889).
+
+## Theoretische Population/Grundgesamtheit
+
+Was die theoretische Population sein soll, ist eine explizite Entscheidung von Forscher:innen.\
+
+Mögliche theoretische Populationen:
+
+1.  Jugendliche im Alter von 14-18 in BW im Jahr 2023
+
+2.  Bewohner:innen von Altersheimen in deutschsprachigen Ländern
+
+3.  die allgemeinbildenden Schulen in Deutschland
+
+4.  alle multi-nationalen Konzerne
+
+Es ist möglich, eine Stichprobe auf eine Untergruppe zu fokussieren und somit die theoretische Population zu ändern. Sie könnten z.B. eine gesamtdeutsche Stichprobe nach Ost- und Westdeutschland unterteilen.
+
+## Sampling Frame & Studienpopulation
+
+Bevor eine Stichprobe gezogen werden kann, muss sie aus "etwas" gezogen werden. Was dieses "etwas" ist, ist eine bedeutsame und begründungspflichtige Entscheidung! Dieses "etwas" wird als Sampling Frame (deutsch: Stichprobenrahmen) bezeichnet. In den Sozialwissenschaften ist dies meist eine Liste von Kontaktdaten:
+
+1.  Telefonbuch
+
+2.  Einwohnermelderegister
+
+3.  Kontaktpools kommerzieller Anbieter
+
+4.  Crowdarbeitsanbieter (u.a.: Mechanical turk, Clickworker, Appen)
+
+5.  E-Mail-Adressen innerhalb von Organisationen (Universitäten, Firmen)
+
+6.  Twitter-Daten
+
+7.  Online-Foren
+
+Alle Untersuchungseinheiten innerhalb des Stichprobenrahmens bilden die Studienpopulation.
+
+## Sampling Frame, Studienpopulation & Abdeckung
+
+In einer perfekten Studie sind die theoretische und die Studienpopulation identisch. Meist ist dies jedoch nicht der Fall und es kommt zu Abdeckungsfehlern (Coverage errors).
+
+1.  Mit Hilfe des Mikrozensus wollen wir Aussagen über die gesamte deutsche Bevölkerung zu einem Zeitpunkt machen.
+
+2.  Der Sampling Frame des Mikrozensus bilden die Einwohnermelderegister. Personen ohne gemeldeten Wohnsitz sind dort aber nicht enthalten.
+
+3.  Mit Twitter-Daten wollen wir studieren, wie sich Meinungsdynamiken in verschiedenen Ländern über die Population von Erwachsenen und Jugendlichen entwickeln.
+
+4.  Es ist sehr selektiv, wer Twitter nutzt(e); Personen können mehrere Accounts haben; Daten können von Bots generiert werden.
+
+## Stichprobendesigns
+
+Wenn Sie die theoretische Population und den Sampling Frame geklärt haben, müssen Sie aus dem Sampling Frame eine Stichprobe ziehen. Sie können dabei grundsätzlich zwischen zufallsbasierten und nicht zufallsbasierten Stichprobenziehungen unterscheiden (probability based / non-probability based sampling). Beide Formen der Stichprobenziehung haben ihre Berechtigung. Es ist daher *nicht* so, dass nicht zufallsbasierte Stichproben per se unwissenschaftlich sind. Unwissenschaftlich ist die Verwendung der Stichprobe für Ziele, die sie nicht leisten kann.
+
+- Mit zufallsbasierten Stichproben können Sie mit einer gewissen Sicherheit Aussagen über die theoretische Population treffen. Dies setzt aber einen verfügbaren und oft auch günstigen Sampling Frame voraus.
+
+- Mit nicht zufallsbasierten Stichproben können Sie einen Zugang zu Untersuchungseinheiten schaffen, die Messungen testen und ggf. einen ersten Sampling Frame aufbauen. Sie können *meist* nicht mit hoher Sicherheit Aussagen über die theoretische Population treffen.
+
+## Repräsentativität
+
+Wenn Sie mit ihrer Stichprobe Aussagen über die theoretische Population machen wollen, muss diese ein hohes Maß an Repräsentatitivität haben. Eine Stichprobe ist völlig repräsentativ, wenn jede Person der Population die gleiche Wahrscheinlichkeit hatte, Teil der (analytischen) Stichprobe zu werden. Völlige Repräsentativität ist daher die **Abwesenheit von Selektivität**. Je selektiver die Stichprobe zusammengesetzt ist, desto geringer ist ihre Repräsentativität.
+
+Aus dieser Definition folgt, dass
+
+1.  eine Stichprobe auch dann repräsentativ ist, wenn sie nicht alle Ausprägungen einer Eigenschaft innerhalb der Population enthält;
+
+2.  Stichprobengröße kein Maß für die Repräsentativität ist (wohl aber für die Fähigkeit, mit Sicherheit Aussagen über die theoretische Population zu machen);
+
+3.  nur dann von (vollständiger) Repräsentativität der Stichprobe gesprochen werden kann, wenn die Stichprobenziehung auf einer Zufallsauswahl beruht und kein Abdeckungsfehler besteht.
+
+## Repräsentativität
+
+::::: columns
+::: column
+.35
+:::
+
+::: column
+.6 Angenommen, die Ausprägung $\tau_1$ kommt in einer Population mit einer relativen Häufigkeit von 10% vor und $\tau_2$ mit 20%. Wir wissen, dass die Ausprägungen sich über die Gruppen A/B unterscheiden. Gruppe A: $\tau_1$ = 15% und $\tau_2$ = 15%, sodass die Differenz in den Ausprägungen -5% und +5% ist.\
+
+Wenn die Stichprobe repräsentativ ist, sollte sie in etwa die relativen Häufigkeiten für die Ausprägungen über alle Gruppen und die Differenzen der Ausprägungen zwischen den Gruppen erfassen.\
+
+Unterschiede zwischen den Verteilungen der Ausprägung in der Population und der Stichprobe sind bei einer repräsentativen Stichprobenziehung **rein zufällig** und daher ignorierbar. Selektive Stichproben führen zu systematischen Unterschieden zwischen den Verteilungen in der Population und der Stichprobe.
+:::
+:::::
+
+## Zufallsauswahlstrategien: Einfache Zufallsstichprobe
+
+::::: columns
+::: column
+.35
+:::
+
+::: column
+.6 Einfache Zufallsstichprobe: Die Untersuchungseinheiten werden unabhängig voneinander und ohne Austausch aus einem Sampling Frame in die Stichprobe gezogen.
+
+- Zufallsziehung von Haushalten aus dem Einwohnermelderegister
+
+- Zufallsziehung von Emails aus einer Organisationseinheit
+
+- Zufallsziehung von Patienten in eine Studie
+
+Wichtig: Zufallsziehungen führen *notwendigerweise* zu zufälligen Schwankungen (z.B. 48% Männer & 52% Frauen). Diese dürfen *nicht* "ausgeglichen" werden.
+:::
+:::::
+
+## Zufallsauswahlstrategien: Geschichtete Zufallsstichprobe
+
+::::: columns
+::: column
+.35
+:::
+
+::: column
+.6 Geschichte Zufallsstichprobe (stratified sampling): Bei einer geschichteten Auswahl wird die Population in einzelne Untergruppen (Schichten) aufgeteilt. Die Schichten können unterschiedlich groß sein. Aus jeder (weitgehend homogenen) Schicht werden unabhängige zufällige Stichproben gezogen.
+
+- Zufallsziehung von Haushalten innerhalb von Bundesländern
+
+- Zufallsziehung von Emails nach Untereinheiten
+
+- Zufallsziehung von Patienten mit unterschiedlichen körperlichen Zuständen in eine Studie
+:::
+:::::
+
+## Zufallsauswahlstrategien: Klumpenstichprobe
+
+::::: columns
+::: column
+.35
+:::
+
+::: column
+.6 Klumpenstichprobe (cluster sampling): Die Population wird in verschiede Klumpen/Cluster eingeteilt, von denen ausgegangen wird, dass diese die Grundgesamtheit oder einer ihrer Schichten im Kleinen repräsentieren. Es werden einige Klumpen zufällig ausgewählt und dann alle Einheiten innerhalb des Klumpens befragt.
+
+- Zufallsziehung von Haushalten als Cluster, dann Befragung von allen Haushaltsmitgliedern
+
+- Zufallsziehung von Firmen als Cluster, dann Befragung aller Mitarbeiter:innen
+
+Wichtig: Die Informationen innerhalb der Cluster sind voneinander mehr oder weniger abhängig, weil sich die Untersuchungseinheiten in die Cluster selektieren.
+:::
+:::::
+
+## Sampling: PISA Studie in Deutschland
+
+::::: columns
+::: column
+.35 [Quelle](https://www.pisa.tum.de/fileadmin/w00bgi/www/Berichtsbaende_und_Zusammenfassungungen/Technische_Hintergrundinformationen_PISA_2018.pdf)
+:::
+
+::: column
+.6 Die PISA-Studie ist ein Mix aus Cluster und geschichteter Zufallsauswahl.\
+
+Es werden Schichten nach Schultyp gebildet. Innerhalb der allgemeinbildenden Schulen wird nochmals nach Bundesländern geschichtet. Somit gibt es 18 Schultypschichten.\
+
+Innerhalb einer Schultypschicht werden Schulen gezogen.[^2] Innerhalb der gezogenen Schule werden 30 Fünfzehnjährige zufällig gezogen (Schulcluster) und zusätzlich eine 9. Klasse als Cluster gezogen und daraus 15 Fünfzehnjährige gezogen (Klassencluster).
+:::
+:::::
+
+## Sampling: National Educational Panel Study (NEPS)
+
+::::: columns
+::: column
+.35 [Quelle](https://link.springer.com/referenceworkentry/10.1007/978-3-531-20002-6_31-1)
+:::
+
+::: column
+.6
+
+Das Nationale Bildungspanel (NEPS) ist eine Panelstudie im Multi-Kohorten-Sequenz-Design:
+
+- Zwischen 2009 und 2012 wurden sechs Startkohorten als Schichten gezogen: Neugeborene, Kindergartenkinder, Klasse 5, Klasse 9, Studierende und Erwachsene. Die Kohorten sind Gruppen von Befragten, die in einer ähnlichen Bildungsübergangs- oder Arbeitsmarktsituation stehen.
+
+- Die Kohorten werden jährlich erneut befragt, u.a. um unterschiedliche Übergänge innerhalb des Bildungs-, Ausbildungssystems sowie des Arbeitsmarktes zu studieren.
+:::
+:::::
+
+## Nicht zufällige Stichprobenziehung: Quoten-Stichprobe
+
+:::::: columns
+:::: column
+.25
+
+::: center
+:::
+
+[Quelle](https://www.geeksforgeeks.org/non-probability-sampling/)
+::::
+
+::: column
+.7 Quotenstichprobe: Aus der Population sind spezifische Verteilungen von Merkmalen (Quoten) bekannt. Der Stichprobenplan beinhaltet nun Kontingente von Unterstichproben, aus denen solange gezogen wird, bis die Quoten in der Stichprobe denen der Population entsprechen.
+
+- Für eine Studie zum "Sozialen Zusammenhalt in Baden-Württemberg 2022" wurde eine Quotenstichprobe mit Quoten für Geschlecht, Alter, Einkommen, Bildungsstand und Haushaltsgröße gezogen.
+
+- Marktforschungsstudien ziehen typischerweise Quotenstichproben nach Alter, Geschlecht und Bildung.
+:::
+::::::
+
+## Nicht zufällige Stichprobenziehung: Quoten-Stichprobe
+
+:::::: columns
+:::: column
+.25
+
+::: center
+:::
+
+[Quelle](https://www.geeksforgeeks.org/non-probability-sampling/)
+::::
+
+::: column
+.7
+
+- Vorteile:
+
+  - Kosteneffizient
+
+  - schneller
+
+  - auch kleine Gruppen sind mit Sicherheit in der Stichprobe
+
+- Nachteile:
+
+  - Sampling ist abhängig von ihren Konzepten (z.B.: Transgender/Transsexuelle bei Geschlechtskategorie)
+
+  - Wenn die Gruppen unterschiedliche unit- oder item-nonresponse haben, wird die Stichprobe durch die Quote selektiv
+:::
+::::::
+
+## Nicht zufällige Stichprobenziehung: Convience Stichprobe
+
+:::::: columns
+:::: column
+.25
+
+::: center
+:::
+
+[Quelle](https://www.geeksforgeeks.org/non-probability-sampling/)
+::::
+
+::: column
+.7 Convience Stichprobe: Die Teilnehmer der Stichprobe sind leicht erreichbare Personen, die sich an einem bestimmten Ort aufhalten.
+
+- Teilnehmer:innen der meisten Psychologiestudien stammen aus Einführungskursen in die Psychologie.
+
+- Spieltheoretische Forschung basiert zu einem hohen Teil auf Stichproben von Ökonomie-Studierenden.
+
+- Ein großer Teil der medizinische Forschung basiert auf den Zugang zu aktuellen Patienten der behandelnden Ärzte:innen.
+
+Convenience Stichproben sind immer selektiv. Allerdings können innerhalb von Convenience Stichproben zufällig Gruppen gebildet werden (Placebo/Treatment; Versuchs-/Kontrollgruppe), was zu einer hohen internen Validität aber ggf. zu einer niedrigen externen Validität führen kann.
+:::
+::::::
+
+## Nicht zufällige Stichprobenziehung: Selektive Stichprobe
+
+:::::: columns
+:::: column
+.25
+
+::: center
+:::
+
+[Quelle](https://www.geeksforgeeks.org/non-probability-sampling/)
+::::
+
+::: column
+.7 Selektive Stichproben (purpose sampling): Die Teilnehmer der Stichprobe werden gezielt nach ihren Eigenschaften ausgewählt.
+
+- Expert:innen-Interviews zu einem bestimmten Thema (siehe Thurstone-Skala)
+
+- Mitglieder sehr kleiner Gruppen (Regenbogenfamilien, seltene Krankheiten)
+
+Eine (leider verbreitete) Unterform dieser Stichprobenziehung ist *sampling on the dependent variable*. In diesem Fall selektieren Sie die Untersuchungseinheiten in die Stichprobe aufgrund der Eigenschaft, die Sie mit anderen Faktoren erklären wollen.
+
+- Befragung von erfolgreichen Personen nach dem "Geheimnis" ihres Erfolgs
+
+- Auswirkung von Erziehungsstilen bei Kindern in Theraphie
+:::
+::::::
+
+## Nicht zufällige Stichprobenziehung: Schneeball-Verfahren
+
+:::::: columns
+:::: column
+.25
+
+::: center
+:::
+
+[Quelle](https://www.geeksforgeeks.org/non-probability-sampling/)
+::::
+
+::: column
+.7 Schneeballverfahren: Die Stichprobe beginnt mit einigen Personen, die den Studienkriterien entsprechen. Diese werden befragt und gebeten, andere Personen zu benennen, die den Studienkriterien entsprechen oder diese zu rekrutieren.
+
+Manchmal haben wir kein Wissen über den Sampling Frame und der Zugang zu den jeweiligen Populationen ist schwierig (Vertrauensprobleme, Illegalität). In diesem Fall können wir über die sozialen Netzwerke einzelner Kontaktpersonen (sog. "seeds") versuchen, Vertrauen zu gewinnen und Informationen über die jeweilige Population zu sammeln.
+
+- Befragung von ausländischen Haushaltshilfen
+
+- Befragung innerhalb von (kleinen) Gruppen von Flüchtlingen
+:::
+::::::
+
+[^1]: Der Begriff "Population" ist in den Sozial- und Lebenswissenschaften üblich. Der Begriff "Grundgesamtheit" kommt aus der Statistik. Beide Begriffe sind synonym.
+
+[^2]: Auch nicht ganz zufällig! Größere Schulen werden wahrscheinlicher gezogen als kleine.
