@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 8d284274-b129-4c47-aaf2-643f5af5e517
+      url: https://radiant-truffle-9eacf0.netlify.app

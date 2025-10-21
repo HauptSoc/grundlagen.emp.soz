@@ -1,0 +1,452 @@
+## (ohne Titel)
+
+# Untersuchungsdesigns {#untersuchungsdesigns .unnumbered}
+
+##  {#section .unnumbered}
+
+## (ohne Titel)
+
+Als Sozialwissenschaftler:in können Sie sehr unterschiedliche Forschungsfragen stellen, die unterschiedliche Untersuchungsdesigns zur Folge haben (müssen):
+
+1.  Nach welchen Symptomen suchen Ärzt:innen bei gleicher zugrundeliegender Krankheit über verschiedene Gruppen?
+
+2.  Gibt es einen Zusammenhang zwischen dem Beruf und der Lebenszufriedenheit?
+
+3.  Führt die Einnahme eines Medikaments im Gegensatz zu einem Placebo zu einer Besserung?
+
+4.  Führt ein türkischer Name zu einer geringeren Wahrscheinlichkeit für ein Bewerbungsgespräch eingeladen zu werden?
+
+5.  Führt ein Umzug in eine Nachbarschaft mit höherem Akademikeranteil zu besseren Noten für Jugendliche?
+
+6.  Steigt der relative Anteil von sexuell nicht aufgeklärten aber sexuell aktiven Jugendlichen zwischen 13-15 Jahren?
+
+## Untersuchungsdesigns
+
+Bezüglich unterschiedlicher Untersuchungsdesigns können vier zentrale Fragen unterschieden werden:
+
+1.  Gibt es eine randomisierte und kontrollierte Aussetzung eines Faktors auf Untersuchungseinheiten?
+
+    1.  experimentelle vs. nicht-experimentelle Designs
+
+2.  Wird nur einmal oder wiederholt erhoben?
+
+    1.  Querschnitt- vs. Längsschnitt-Design
+
+3.  Findet die Messwiederholung aufgrund einer identischen oder aufgrund mehrerer Stichproben statt?
+
+    1.  Panel vs. Trend-Design
+
+Es ist möglich, alle Varianten zu kombinieren!
+
+## Untersuchungsdesigns & Datenstrukturen
+
+:::::: columns
+:::: column
+.4
+
+::: center
+:::
+
+[Quelle](https://www.frontiersin.org/articles/10.3389/feduc.2019.00071/full)
+::::
+
+::: column
+.6
+
+- Experimente weißen Werte des Treatment-Status über Spalten zufällig zu. Nicht-experimentelle Designs erfassen diese Werte über Beobachtungen.
+
+- Querschnittsuntersuchungen konzentrieren sich auf Unterschiede zwischen Untersuchungseinheiten zu einem Zeitpunkt.
+
+- Paneluntersuchungen studieren Veränderungen von Merkmalen über die Zeit. Dazu müssen diese für die gleichen Untersuchungseinheiten über die Zeit beobachtet werden.
+:::
+::::::
+
+# Experimente
+
+##  {#section-1 .unnumbered}
+
+## Experimente
+
+:::::: columns
+:::: column
+.4
+
+::: center
+:::
+::::
+
+::: column
+.6 Für experimentelle Designs müssen folgende Bedingungen vorliegen:
+
+1.  Es werden durch die Forschenden mindestens zwei Gruppen gebildet (Versuchs- und Kotrollgruppe).
+
+2.  Die Untersuchungseinheiten werden den Gruppen zufällig zugewiesen (Randomisierung).
+
+3.  Der Faktor, von dem vermutet wird, dass er das Phänomen systematisch beeinflusst, wird kontrolliert verändert (Veränderung des Treatments).
+
+4.  Nur Untersuchungseinheiten der Versuchsgruppe werdem dem Treatment ausgesetzt.
+:::
+::::::
+
+## Experimentallogik
+
+- Sie vermuten, dass eine Eigenschaft $X$ für ein Outcome $Y$ eine notwendige oder hinreichende Bedingung ist.
+
+  - $\rightarrow$ Ohne X tritt Y nicht auf. Oder: Eine Veränderung von X verändert Y.
+
+- Sie untersuchen N Personen. Sie würfeln aus, wer in die Kontroll- und in die Versuchsgruppe kommt.
+
+  - $\rightarrow$ Dadurch unterscheiden sich die Gruppen bisher **nur** durch einen **Zufallsprozess**.
+
+- Sie verändern X nur in der Versuchsgruppe.
+
+  - $\rightarrow$ Auf diese Weise müsste sich $Y$ in der Versuchsgruppe verändern, während es in der Kontrollgruppe nur zu "Baseline"-Veränderungen kommt.
+
+- Sie vergleichen $Y$ zwischen den beiden Gruppen. Wenn alles korrekt abgelaufen ist, sind Unterschiede im Outcome nur auf Unterschiede im Treatment zurückzuführen.
+
+## Randomisierung & random sampling
+
+:::::: columns
+:::: column
+.4
+
+::: center
+:::
+::::
+
+::: column
+.6 Bei einer Zufallsstichprobe (random sampling) hat jede Untersuchungseinheit die gleiche Wahrscheinlichkeit, Teil der Nettostichprobe zu werden.\
+Bei einer Randomisierung hat jede Untersuchungseinheit der Nettostichprobe die gleiche Wahrscheinlichkeit, Teil der Versuchs- oder Kontrollgruppe(n) zu werden.\
+Randomisierung ist **unabhängig** von random sampling. Sie können auch innerhalb eines Schneeball- oder Convienence Samples randomisieren.
+:::
+::::::
+
+## Randomisierung & Ignorierbarkeit (un)beobachteter Faktoren
+
+Wenn innerhalb einer Nettostichprobe Gruppen randomisiert zugewiesen werden, *unterscheiden* sich die *Zusammensetzungen* der Gruppen in Bezug auf alle beobachteten und unbeobachteten Faktoren zufällig.\
+Wenn zwischen dem Einfluss des Treatments und Einflüssen der (un)beobachteten Faktoren keine Abhängigkeit besteht, können wir durch Randomisierung daher alle weiteren Einflüsse ignorieren. In diesem Fall bieten Experimente die höchstmögliche interne Validität zur Untersuchung von Einflüssen eines Treatments.
+
+## Weihnachtslotterie & Zufriedenheit
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 In einem großen Unternehmen gibt es eine Weihnachtslotterie, an der man durch den Besuch der Weihnachtsfeier teilnehmen kann. Wir wollen studieren, wie sich ein Gewinn bei dieser Lotterie auf die Zufriedenheit der Beschäftigten auswirkt. Wir wissen:
+
+- Je höher das Einkommen ist, desto zufriedener sind Beschäftigte.
+
+- Vollzeitbeschäftigte sind etwas weniger zufrieden als Teilzeitbeschäftigte.
+
+- Personen, die sich in einem "Es ist kompliziert"-Beziehungsstatus befinden, sind deutlich weniger zufrieden. Diese Eigenschaft ist (eigentlich) unbeobachtet.
+
+- Alle drei Eigenschaften wirken sich negativ auf die Teilnahme zur Weihnachtsfeier aus.
+:::
+:::::
+
+## Randomisierung & zufällige Differenzen
+
+Wir erheben Daten vor der Lotterie ($t_0$) und nach der Lotterie ($t_1$). Die Gruppenzusammensetzungen zwischen den Personen mit und ohne Losglück unterscheiden sich nur zufällig (aber sie unterscheiden sich!). Personen mit Losglück haben eine durchschnittliche Zufriedenheit von 6.15 und Personen ohne Losglück einen Wert von 5.68. Die Differenz von 0.47 Punkten können wir auf die Weihnachtslotterie zurückführen, da kein anderer Faktor sich zwischen den Gruppen unterscheidet.
+
+::: center
+                                      Alle $t_0$   Kein Losglück $t_1$   Losglück $t_1$   Alle $t_1$
+  --------------------------------- ------------ --------------------- ---------------- ------------
+  Lohn                                     14.40                 14.38            14.42        14.40
+  \% Vollzeit                               80.7                  80.9             80.5         80.7
+  \% Beziehungstatus: kompliziert           20.5                  20.3             20.7         20.5
+  Zufriedenheit                             5.67                  5.68             6.15         5.91
+:::
+
+## Annahmen und Interpretation von Experimenten
+
+1.  Das Treatment wirkt sich nur in den Versuchsgruppen aus.
+
+    - Dazu dürfen zwischen den Gruppen keine Informations- oder Austauschbeziehungen bestehen.
+
+2.  In der Kontrollgruppe kommt es lediglich zu Baseline-Veränderungen.
+
+    - Auch in der Kontrollgruppe kommt es typischerweise zu Veränderungen - vor allem bei Experimenten über lange Zeiträume. Darunter fallen u.a. Placebo-Effekte, Reaktionen des Immunsystems, Langeweile, Frustration, verändertes Verhalten.
+
+    - Der Einfluss eines Treatments ist daher stets die Differenz der Versuchsgruppen zum Baseline-Effekt, der durch die Kontrollgruppe erfasst wird. Er ist nicht die Differenz von Versuchsgruppe zu "keinem Effekt".
+
+    - Diese Veränderungen dürfen jedoch nicht mit dem Treatment-Status verbunden sein.
+
+3.  Das Treatment wirkt für alle gleich.
+
+    - Wir nehmen aktuell an, dass durch ein Treatment die Versuchsgruppen von der Kontrollgruppe im Niveau verschoben werden.
+
+    - Personen können jedoch auch systematisch unterschiedlich auf Treatments reagieren.
+
+## Experimente
+
+::: center
+:::
+
+## Komplexere Experimente
+
+::::: columns
+::: column
+.4 [Quelle](https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-15-364)
+:::
+
+::: column
+.6
+
+- Experimente müssen nicht nur eine Kontroll- oder eine Versuchsgruppe haben. Sie können mehrere Versuchs- und Kontrollgruppen haben, um u.a. die unterschiedliche Stärke eines Treatments zu studieren oder über verschiedene Kontrollgruppen Baseline-Veränderungen gut zu erfassen.
+
+- Treatments müssen nicht nur ein Stimulus enthalten, sondern können eine Kombination von Stimuli sein.
+:::
+:::::
+
+## Arten von Experimenten: Laborexperiment
+
+::::: columns
+::: column
+.3 [Quelle](https://www.ub.edu/school-economics/the-ub-school-of-economics-has-inaugurated-the-behavioral-experimental-science-laboratory/)
+:::
+
+::: column
+.7 Laborexperimente sind eine der wichtigesten Quellen wissenschaftlicher Erkenntnis über die meisten Wissenschaftsdisziplinen. In den Sozialwissenschaften werden sie auch zunehmend über PC-Labore eingesetzt.
+
+- Vorteile: Kein Informationsaustausch zwischen Gruppen; Treatment kann gezielt und klar gesetzt werden; kaum Verweigerung oder Ignorieren des Treatments
+
+- Nachteile: Starke Selektion in die Nettostichprobe; Umfeld des Labors kann sich auf Verhalten auswirken
+:::
+:::::
+
+## Arten von Experimenten: Feldexperiment
+
+::::: columns
+::: column
+.2 [Quelle](https://slate.com/human-interest/2009/11/psychologists-have-been-watching-us-on-the-subway-here-s-what-they-ve-learned.html)
+:::
+
+::: column
+.8 Feldexperimente nutzen Untersuchungseinheiten in ihrer "natürlichen" Umgebung, um Einflüsse von Treatments über Versuchs- und Kontrollgruppen zu studieren. Meist ist den untersuchten Personen nicht klar, dass sie Teil eines Experiments sind.
+
+- Vorteile: Kein Einfluss einer Laborumgebung; Erhebung von konkreten Verhaltensdaten
+
+- Nachteile: Einteilung in Versuchs- und Kontrollgruppen kann schwierig sein; Austauschs- und Informationsbeziehungen sind nur äußerst schwer zu kontrollieren.
+:::
+:::::
+
+## Rechts stehen, links gehen!
+
+::::: columns
+::: column
+.5 [Quelle](https://www.degruyter.com/document/doi/10.1515/zfsoz-2013-0305/html?lang=de)
+:::
+
+::: column
+.5 Wolbring et al. (2013) führten ein Feldexperiment in der Münchner U-Bahn durch. Sie wollten wissen, ob Normverstöße gegen die Regel "Rechts stehen, links gehen" auf Rolltreppen nach Geschlecht und sozialem Status der normverstoßenden Person anders sanktioniert werden.
+
+Dazu varriierten Sie die Kleidung von Personen, die ansonsten ähnliche Körpermaße hatten.
+:::
+:::::
+
+## Rechts stehen, links gehen!
+
+::::: columns
+::: column
+.5 [Quelle](https://www.degruyter.com/document/doi/10.1515/zfsoz-2013-0305/html?lang=de)
+:::
+
+::: column
+.5
+
+Männer und status niedriger gekleidete Personen wurden schneller und heftiger sanktioniert als Frauen und status höher gekleidete Personen.
+:::
+:::::
+
+## Was hilft gegen Armut?
+
+:::::: center
+:::: minipage
+::: center
+:::
+::::
+
+::: minipage
+- Banerjee, Abhijit, et al. *A multifaceted program causes lasting progress for the very poor: Evidence from six countries*. Science 348.6236 (2015): 1260799.
+
+- Hier Ghana; eine Region; Auswahl von Haushalten; 25% sind Teil eines Programms
+
+- Program: Anlage eines Giro-Kontos, Gesundheits- und Ernährungsbildung, Ziegen / Hühner / Mais / Shea-Nüsse, Geldüberweisungen bei Trockenperiode; wöchentliche Besuche einer NGO
+:::
+::::::
+
+## Was hilft gegen Armut?
+
+::::: columns
+::: column
+.6
+:::
+
+::: column
+.4
+
+Das Experiment verdeutlicht auch, dass Haushalte unterschiedlich auf das Treatment reagierten. Je höher die Sparneigung eines Haushalts ist, desto stärker ist auch der Treatment-Effekt des Armutsreduktionsprogramms. Ein Vergleich der durschschnittlichen Spareinlagen zwischen Treatment und Kontrollgruppe erfasst diese Unterschiedlichkeit nicht.
+:::
+:::::
+
+## Arten von Experimenten: Natürliche Experimente
+
+Manchmal treten (unvorhergesehene) Ereignisse auf, die das Verhalten oder die Einstellungen von Personen verändern. Dazu zählen u.a.:
+
+1.  Katastrophen (Hurrikane, Flut, Pandemie, Kriege)
+
+2.  Technische/Medizinische Innovationen (Mobilfunkausbau, Verhütung, Infrastruktur)
+
+3.  politische Reformen (Wiedervereinigung, Elterngeldreformen)
+
+**Wenn** diese Ereignisse so erfolgt sind, dass Untersuchungseinheiten von ihnen (im Zeitverlauf) zufällig betroffen waren oder sich die betroffenen Gruppen nicht unterscheiden, können wir betroffene und nicht betroffene Gruppen vergleichen, um den Einfluss diese Ereignisse zu studieren.
+
+## Terror und Einstellung zu Immigration
+
+::::: columns
+::: column
+.6 [Quelle](https://www.journals.uchicago.edu/doi/abs/10.1086/669605)
+:::
+
+::: column
+.4 Im Jahr 2002 wurde in neun europäischen Ländern der European Social Survey erhoben, der u.a. Einstellungen zu Immigration nutzt. *Während* der Erhebungsphase fand in Bali eine große Terrorattacke statt. Damit können wir Gruppen der Befragten direkt vor und direkt nach der Terror-Attacke einteilen, um zu studieren, ob solche Ereignisse Einstellungen zu Immigration verändern.
+:::
+:::::
+
+## Terror und Einstellung zu Immigration
+
+::::: columns
+::: column
+.3 [Quelle](https://www.journals.uchicago.edu/doi/abs/10.1086/669605)
+:::
+
+::: column
+.7 Terror erhöht in einigen Ländern negative Einstellung zu Immigration. Dies ist vor allem dann der Fall, wenn die (wahrgenommene) Gruppe der Immigraten groß und der Arbeitsmarkt im Land herausfordernd ist.
+
+Der Einfluss nimmt ab, je länger das Ereignis von der Befragung entfernt ist.
+:::
+:::::
+
+# Querschnittuntersuchungen
+
+##  {#section-2 .unnumbered}
+
+## Querschnittuntersuchungen
+
+Bei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Zum Beispiel werden Personen aus einer Stichprobe zu einem Zeitpunkt unterschiedliche Fragen zu unterschiedlichen Merkmalen gestellt. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals (z.B. dem Lohn) zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.
+
+- Vorteile: Kostengünstig & weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen, viele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar
+
+- Nachteile: Selektionseffekte (in die Stichprobe & in das "Treatment"), Verzerrung durch unbeobachtete Faktoren
+
+## Querschnitt = alle Einflüsse auf einmal!
+
+Beispiel: Der Einfluss, Schüler einer Klasse mit hohem/niedrigen sozio-ökonomischen Status zu sein, auf den Gymnasialübergang.
+
+::: center
+:::
+
+## Die Aufteilung kognitiver Tätigkeiten und Erschöpfung
+
+::: center
+:::
+
+## Der Zusammenhang von Intelligenz und Einkommen
+
+::: center
+:::
+
+[Quelle](https://academic.oup.com/esr/article/39/5/820/7008955)
+
+# Trenddesign
+
+##  {#section-3 .unnumbered}
+
+## Trenddesign: Sonntagsfrage
+
+Bei einem Trenddesign werden über die Zeit mehrere Stichproben gezogen, bei dem das gleiche Item genutzt wird.\
+Wichtig: Veränderungen im Trend können sowohl auf veränderte Reaktionen auf das Item als auch auf veränderte Zusammensetzungen der Stichproben über die Zeit zurückzuführen sein. Ändern sich z.B. Selektionseffekte über die Zeit, führt dies zu unterschiedlichen Zusammensetzungen und somit auch zu verzerrten Einschätzungen des Trends.
+
+## Trenddesign: Sonntagsfrage
+
+Item: Welche Partei würden Sie wählen, wenn heute Bundestagswahl wäre?
+
+::: center
+:::
+
+[Quelle](https://www.dkriesel.com/sonntagsfrage)
+
+## Was macht die Jugend so?
+
+:::::: center
+:::: minipage
+::: center
+:::
+::::
+
+::: minipage
+- Anteil U.S. amerikanischer 12.-Klässler:innen, die auf folgende Fragen mit "Ja" antworten:
+
+  - Hast du eine Fahrerlaubnis?
+
+  - Hast du jemals Alkohol probiert?
+
+  - Hast du jemals ein Date gehabt?
+
+  - Arbeitest du für Geld?
+
+\
+:::
+::::::
+
+## Trenddesign: Ökonomomische Abhängigkeit der Frau
+
+Item: Wie hoch ist der relative Anteil des Einkommens der Frau am Paareinkommen?
+
+::: center
+:::
+
+# Paneldesign
+
+##  {#section-4 .unnumbered}
+
+## Paneldesign
+
+Bei einer Panel-Untersuchung wird mittels einer **konstanten** Stichprobe zu **unterschiedlichen** Zeitpunkten mindestens eine Eigenschaft (typischerweise aber viele) gemessen. Mit einem Paneldesign können Sie den Zusammenhang einer zeitlichen *Veränderungen* eines Merkmals auf *Veränderungen* eines Outcomes studieren.
+
+## Paneldesign & Teilnahmeselektion
+
+::::: columns
+::: column
+.4 [Quelle](https://thomasklausch.wordpress.com/2015/10/13/attrition-in-the-liss-panel-most-severe-in-the-first-two-years/)
+:::
+
+::: column
+.6 Panel haben ein besonders Problem: Die Teilnahmewahrscheinlichkeit über Befragungszeitpunkte nimmt ab und ist meist selektiv. Daher verändert sich die Zusammensetzung des Panels über die Zeit. Dies wird auch als *Panel-Attrition* bezeichnet. Das ist dann ein Problem, wenn unbeobachtete Faktoren eine große Rolle dabei spielen, die mit Merkmalen innerhalb einer Analyse verknüpft sind.
+
+Es sind daher meist Auffrischungsstichproben nötig. Dies sind neue Stichproben, die regelmäßig in das Panel hinzugegeben werden.
+:::
+:::::
+
+## Paneldesign: Kinder (sie geben einem viel zurück!)
+
+::: center
+:::
+
+[Quelle](https://onlinelibrary.wiley.com/doi/full/10.1111/jomf.12531)
+
+## Paneldesign: Kinder (sie geben einem viel zurück!)
+
+::: center
+:::
+
+[Quelle](https://onlinelibrary.wiley.com/doi/full/10.1111/jomf.12531)
+
+## Paneldesign: Trauer
+
+::: center
+:::
+
+[Quelle](https://sociologicalscience.com/articles-v10-29-830/)

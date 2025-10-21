@@ -1,0 +1,120 @@
+---
+title: "Data Visualization Principles"
+format: revealjs
+---
+
+```{r set-up}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+::: columns
+::: {.column width="45%"}
+[Edward Tufte](https://thedoublethink.com/tuftes-principles-for-visualizing-quantitative-information/) ![](images/tufte.gif)
+
+*Minimalism*
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 0.75em; color: #FFFFFF;"}
+> One of Tufte's ideas is data-to-ink ratio, generally stating that when creating a visualization, you should try to maximize the amount of "ink" (physical or digital) used to represent the data, and minimize the amount used to represent everything else not important to understanding.
+:::
+:::
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+`theme_classic()` in `ggplot()`
+:::
+
+```{r minimal}
+#| echo: false
+#| fig-align: center
+
+ggplot(data = penguins, 
+       mapping = aes(x = bill_length_mm, 
+                     y = bill_depth_mm, 
+                     color = species)) + 
+  geom_point() +
+  labs(y = "Bill Depth (mm)", 
+       x = "Bill Length (mm)", 
+       color = "Penguin Species") +
+  theme_classic()
+```
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+Gestalt Principles
+:::
+
+::: columns
+::: {.column width="40%"}
+[Gestalt psychology](https://en.wikipedia.org/wiki/Gestalt_psychology) is a theory of perception that believes humans are inclined to understand objects as an entire structure rather than the sum of its parts.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+[Gestalt Principles for Data Visualization](https://medium.com/nightingale/how-to-apply-gestalt-psychology-principles-in-data-visualization-6242f4f1a3de)
+
+::: {style="font-size: 0.75em; color: #FFFFFF;"}
+> The Figure and Ground Principle describes the capacity to perceive the relationship between form and surrounding space to create meaning. A sense of wholeness or unity depends on how you perceive the relationship between an object and the area in which it is contained. The 'figure' is the focus element, while the 'ground' is the figure's background.
+:::
+:::
+:::
+
+## 
+
+::: {style="font-size: 2em; color: #FFFFFF;"}
+`theme_bw()` in `ggplot()`
+:::
+
+```{r classic}
+#| echo: false
+#| fig-align: center
+
+ggplot(data = penguins, 
+       mapping = aes(x = bill_length_mm, 
+                     y = bill_depth_mm, 
+                     color = species)) + 
+  geom_point() +
+  labs(y = "Bill Depth (mm)", 
+       x = "Bill Length (mm)", 
+       color = "Penguin Species") +
+  theme_bw()
+```
+
+<center>[List of all `ggplot()` themes](https://ggplot2.tidyverse.org/reference/ggtheme.html)</center>
+
+## 
+
+::: {style="font-size: 2.5em;"}
+An aura objectivity
+:::
+
+```{r}
+#| echo: false
+#| out-width: 40%
+#| out-height: 20%
+knitr::include_graphics("images/active_shooters.PNG")
+```
+
+::: {style="font-size: 0.75em;"}
+> "We focus on four conventions which imbue visualizations with a sense of objectivity, transparency and facticity. These include: (a) two-dimensional viewpoints, (b) clean layouts, (c) geometric shapes and lines, (d) the inclusion of data sources."
+>
+> *The work that visualization communications do*
+:::
+
+## 
+
+::: {style="font-size: 3em;"}
+Elevate emotion
+:::
+
+<https://guns.periscopic.com/>

@@ -1,0 +1,269 @@
+## (ohne Titel)
+
+# Item Nonresponse {#item-nonresponse .unnumbered}
+
+##  {#section .unnumbered}
+
+## Verweigerung
+
+Personen können Teil der Nettostichprobe sein, aber auf bestimmte Items nicht reagieren. Mögliche Reaktionen:
+
+- komplette Verweigerung der Auskunft
+
+- "weiß nicht"
+
+- Versuchsteilnahme wird verweigert
+
+- Teilnahme wird abgebrochen
+
+Jede diese Reaktionen bezeichen wir im Folgenden als *Item nonresponse*.
+
+## Verweigerung
+
+In einer Befragungssituation gibt es typische Kandidaten, von denen wir wissen, dass sie ein hohes Risiko haben, item nonresponse zu generieren:
+
+- Items über "Heikle" Themen: Einkommen, Sexualität, Illegale Handlungen
+
+- Items über Informationen, die schwer zu prozessieren sind: nicht alltägliche Informationen über Befragte über lange Zeitspannen oder über Informationen über Dritte (Eltern, Verwandschaft, Freunde),
+
+In Experimenten gibt es zum Teil unangenehme Treatments, die non-response hervorrufen. In Feldexperimenten oder sozialpolitischen Pilotprojekten gibt es Anreize oder Angebote, die ignoriert werden können.
+
+## Verweigerung
+
+::::: columns
+::: column
+.6
+
+                               \% Verweigerung
+  -------------------------- -----------------
+  Höchster Abschluss                       0.2
+  Note des Abschlusses                     5.6
+  Einkommen (gesamt)                      16.9
+  Einkommen (weiß nicht)                   3.2
+  Einkommen (Verweigerung)                13.7
+  Beruf des Vaters                        19.9
+
+\
+Quelle: BIBB/BAuA-Erwerbstätigenbefragung 2018
+:::
+
+::: column
+.4 An einer repräsentativen Befragung der deutschen Erwerbsbevökerung nahmen 20.012 Personen teil. Sie wurden u.a. nach ihrem Abschluss, ihrer Abschlussnote, ihrem Einkommen und dem Beruf der Eltern befragt.\
+
+Der Item nonresponse schwankt zwischen 0 und 20%. Er kann zufällig auftreten oder sowohl durch beobachtete Eigenschaften (wie das Alter) als auch durch unbeobachtete Eigenschaften (Einstellungen zu Finanzinformationen) bedingt sein.
+:::
+:::::
+
+## Selektiver Item nonresponse
+
+::::: columns
+::: column
+.5
+:::
+
+::: column
+.5 Auszug aus der BIBB-BAuA Erwerbstätigenbefragung 2018.\
+
+- Spalte 1: Höchster Schulabschluss
+
+- Spalte 2: Abschlussnote
+
+- Spalte 3: Einkommen
+:::
+:::::
+
+## Selektiver Item nonresponse
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 Wir führen in die Simulation zwei neue Selektionsprozesse ein
+
+- Ostdeutsche haben im Durchschnitt eine um 20 PP niedrigere Neigung, auf das Item zu antworten
+
+- Frauen haben im Durchschnittt 10 PP höhere Neigung, auf das Item zu antworten
+:::
+:::::
+
+## Selektivität der Stichprobenzusammensetzung
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Bruttostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      37.5   37.8    75.4
+  Ost       12.3   12.3    24.6
+  Total     49.9   50.1   100.0
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      40.6   51.5    92.0
+  Ost        2.1    5.9     8.0
+  Total     42.6   57.4   100.0
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Analytische Stichprobe               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      37.4   56.1    93.5
+  Ost        1.3    5.1     6.5
+  Total     38.8   61.2   100.0
+:::
+::::::
+
+Insgesamt verweigern circa 17% der Befragten[^1] die Antwort auf das Item. Da die Antwortverweigerung und die Teilnahmeverweigerung mit der Region und dem Geschlecht zusammenhängt, wird die Zusammensetzung über die Stichproben zunehmend selektiver.
+
+## Selektivität der Zustimmungsraten
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Bruttostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      33.9   43.5    38.7
+  Ost       79.5   88.9    84.2
+  Total     45.1   54.7    49.9
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      32.6   43.1    38.5
+  Ost       77.9   89.9    86.8
+  Total     34.8   47.9    42.3
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Analytische Stichprobe               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      31.6   43.4    38.7
+  Ost       77.0   91.6    88.6
+  Total     33.1   47.5    41.9
+:::
+::::::
+
+Da die Eigenschaften, die die Antwortverweigerung und Teilnahmeverweigerung bedingen, auch mit der Verteilung der Meinung zur frühkindlichen Betreuung verbunden ist, senken sich die Zustimmungsraten bei den Gruppen, die über die Stichproben zunehmend unterrepräsentiert werden. Es ist nicht zufällig, wer aus der Stichprobe fällt, es sind vor allem ostdeutsche Männer, die hohe Zustimmungsraten haben.
+
+## Der Geist in der Maschine
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 Wir haben bisher so getan, als hätten wir alle Faktoren, die zu item nonresponse führen, beobachtet. Wie bei der Teilnahmeverweigerung ist dies aber praktisch nie der Fall. Dies ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!
+
+Problematisch wird es, wenn der unbeobachtete Faktor eine Dreifachverbindung hat:
+
+- er ist mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)
+
+- er ist mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)
+
+- er ist mit der Antwort- oder Teilnahmeselektion verbunden
+:::
+:::::
+
+## Zusammenfassung: Probleme durch Selektivität
+
+Durch systematische Teilnahmeverweigerung (unit oder item nonresponse) durch einen Faktor Z entseht Selektivität, die die Zusammensetzung der Stichprobe und die Differenzen von Y über X betreffen kann.
+
+- Wenn Z mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.
+
+- Wenn Z mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.
+
+- Wenn Z sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv.
+
+## Lösungsmöglichkeit: Imputation
+
+::::: columns
+::: column
+.4 Quelle: BIBB-BAuA-Erwerbstätigenbefragung 2018
+:::
+
+::: column
+.6 Wenn wir gut wissen, welche Faktoren den item nonresponse bedingen, können wir schätzen, welche Werte in Y die Analyseeinheiten mit einem Set von Merkmalen X *typischerweise* haben. Wir können dann diesen typischen Wert mit einem gewissen Maß an Zufallsfluktation in den Datensatz einführen.\
+
+Dieses Verfahren wird *multiple Impuation* genannt [(Lektüre dazu hier)](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_6). Wir werden dieses Verfahren im nächsten Semester im Rahmen der multiplen Regression genauer besprechen.
+:::
+:::::
+
+## Lösungsmöglichkeit: Item Sum/Count Technique
+
+Es gibt Items, die ein sehr hohes Risiko von Antwortverweigerung aufweisen *und* mit vielen unbeobachteten Merkmalen verknüpft sind. Dazu zählen u.a. illegale Praktiken (Schwarzarbeit, Datenfälschung, Drogen, Doping) oder ethische Normenverstöße, die nicht zwingend illegal sein müssen.\
+
+Oft wissen wir nicht, wie hoch die Rate dieser Verhaltensweisen in der Population überhaupt ist. Hierfür können wir die *Item Sum/Count Technique*[^2] benutzen (Trappmann et al. 2014).
+
+## Lösungsmöglichkeit: Item Sum/Count Technique
+
+Sie basiert auf folgender Idee:
+
+1.  Teile die Befragten zufällig in zwei Gruppen ein.
+
+2.  Lege einer Gruppe eine kurze Liste mit Items vor, die nur harmlose Fragen enthält.
+
+3.  Der anderen Gruppe wird eine lange Liste mit Items vorgelegt, die zusätzlich zu den harmlosen Fragen, auch eine "heikle" Frage enthält.
+
+4.  Die Antwortskalen aller Items sind identisch.
+
+5.  Die Befragten werden gebeten, lediglich die Summe der Antwortwerte zu benennen.
+
+6.  Aus der Differenz der durchschnittlichen Summen (LL - KL) beider Gruppen kann ein typischer Antwortwert der heiklen Frage geschätzt werden.
+
+## Lösungsmöglichkeit: Item Sum/Count Technique
+
+::::: columns
+::: column
+.5 [Quelle](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13137)
+:::
+
+::: column
+.5 Diese Technik ist nicht auf eine Liste beschränkt (Standard Variante links im Bild). Sie können auch mehrere Listen nutzen ("Double list") oder die Variation eines Merkmals nutzen, von dem wir wissen, dass es (annährend) zufällig in der Population verteilt ist (letzte Nummer der Telefonnummer ist gerade/ungerade).\
+
+Wir können diese Technik auch dazu nutzen, um zu studieren, wie stark selektiv die bisherigen Erhebungen waren, die das Item direkt abgefragt haben ("direct questioning").
+:::
+:::::
+
+## Lösungsmöglichkeit: Item Sum/Count Technique
+
+Wichtig für die Anwendung
+
+- Alle Items auf allen Listen müssen die gleiche Antwortskala haben.
+
+- Die kurze Liste sollte Items enthalten, die thematisch zum "heiklen" Item passt.
+
+- Die kurze Liste sollte Items enthalten, die zu wenig Antwortverweigerung führt.
+
+- Die Summierung der Antworten sollte einfach sein und muss gut erklärt werden.
+
+## Item Sum Technique
+
+In einer Studie von [Wolter et al. (2022)](https://journals.sagepub.com/doi/pdf/10.1177/23780231221094749) wurde untersucht, ob es im Bezug auf den Covid-19 Impfstatus soziale Erwünschtheitseffekte gibt.
+
+## Item Sum Technique
+
+[^1]: Bitte beachten: Ich musste aus technischen Gründen die Simulation verändern, sodass die Zahlen von der letzten Sitzung nicht mit diesen vergleichbar sind.
+
+[^2]: Item Sum = metrische Antwortskalen; Item Count = nominale Antwortskalen

@@ -1,0 +1,503 @@
+## (ohne Titel)
+
+# Unit Nonresponse {#unit-nonresponse .unnumbered}
+
+##  {#section .unnumbered}
+
+## Brutto- und Nettostichprobe
+
+Mit einem Stichprobendesign wird festgelegt, wie Untersuchungseinheiten in die Stichprobe gelangen sollen. Diese Zielstichprobe wird auch als "Bruttostichprobe" bezeichnet. Allerdings kann während der Datenerhebungsphase passieren, dass Untersuchungseinheiten
+
+- gar nicht erreichbar sind (Komplettausfall)
+
+- die Teilnahme ganz verweigern (Unit nonresponse)
+
+- die Teilnahme an einzelnen Items verweigern (Item nonresponse)
+
+Die Personen, die an der Untersuchung teilnehmen, bilden die Nettostichprobe (Bruttostichprobe - Teilnahmeverweigerung.) Alle Personen, von denen Daten erhalten wurde, mit denen Sie arbeiten können, bilden die analytische Stichprobe (Bruttostichprobe - Teilnahmeverweigerung - Antwortverweigerung)
+
+## Ausschöpfungsquote (response rate)
+
+Der relative Anteil der Netto- zur Bruttostichprobe ist die *Ausschöpfungsquote* oder auch *response rate*.
+
+Diese können Sie bestimmen, indem zum Beispiel
+
+- das Verhältnis verschickter zu ausgefüllter Fragebögen berechnet wird;
+
+- eine Liste mit Telefonnummern angelegt, diese abtelefoniert und der Anteil erreichter Personen notiert wird;
+
+- eine "Strichliste" geführt wird, wie viele Personen angesprochen wurden und wie viele geantwortet haben.
+
+## Houston, we have a problem
+
+::: center
+:::
+
+## Ausschöpfung und Repräsentativität
+
+- Eine geringe Ausschöpfungsrate führt nicht zwingend zu einer geringen Repräsentativität.
+
+- Entscheidend ist, ob die Teilnahme - und damit die Ausschöpfung - selektiv ist (selective unit nonresponse).
+
+- Wenn die Teilnahme nach Merkmalen selektiv ist, die wir beobachtet haben, können wir die Selektion korrigieren (Gewichtungsverfahren).
+
+- Wenn die Teilnahme nach Merkmalen selektiv ist, die wir nicht beobachtet haben, sind unsere Ergebnisse sehr wahrscheinlich unter- oder überschätzt.
+
+## Selektion in die Stichprobe
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6
+
+Wir betrachten im Folgenden ein Beispiel mit *simulierten* Daten von 10.000 Befragten in der Bruttostichprobe.
+
+- Das zentrale Item ist eine Ja/Nein Antwort auf die Frage: Glauben Sie, dass es für Kinder förderlich ist, wenn sie mit unter drei Jahren eine frühkindliche Betreuung besuchen?
+
+- Wir unterscheiden nach den Regionen Ost- und Westdeutschland. In Ostdeutschland liegt die Zustimmung um 40 Prozentpunkte (PP) höher und die Teilnahmewahrscheinlichkeit liegt *im Durchschnitt* um 40 PP niedriger.
+
+- Wir unterscheiden nach Frauen und Männern. Frauen stimmen um 10 PP mehr zu und haben *im Durchschnitt* eine um 20 PP höhere Teilnahmewahrscheinlichkeit.
+:::
+:::::
+
+## Verteilung in der theoretischen Population
+
+::::: columns
+::: column
+.4
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      37.5   37.5      75
+  Ost       12.5   12.5      25
+  Total       50     50     100
+:::
+
+::: column
+.6
+
+- Laut Simulation gibt es in der theoretischen Population folgende Zustimmungsraten pro Gruppe:
+
+  - Westdeutsche Männer: 20%
+
+  - Westdeutsche Frauen: 30%
+
+  - Ostdeutsche Männer: 60%
+
+  - Ostdeutsche Frauen: 70%
+
+- Westdeutschland macht 75% der Bruttostichprobe aus. Männer und Frauen kommen zu gleichen Anteilen vor.
+
+- Die Gesamtzustimmungsrate ist eine **gewichtete** Summe über die Zustimmungsraten aller Gruppen. $$\dfrac{37.5}{100} \cdot 20 + \dfrac{37.5}{100} \cdot 30 + \dfrac{12.5}{100} \cdot 60 + \dfrac{12.5}{100} \cdot 70 = 35$$
+:::
+:::::
+
+## Verteilung in der Bruttostichprobe
+
+Die Bruttostichprobe ist eine Stichprobe aus dem Sampling Frame! Daher bestehen bei einer Zufallsziehung ohne Abdeckungsfehler auch zufällige Abweichungen.[^1] Die Zustimmungsrate in der Bruttostichprobe liegt bei 34.6%.
+
+::::: columns
+::: column
+.5
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      37.5   37.8    75.4
+  Ost       12.3   12.3    24.6
+  Total     49.9   50.1   100.0
+
+\
+\
+Zusammensetzung der Bruttostichprobe
+:::
+
+::: column
+.5 Verteilung der Zustimmungsraten in der Bruttostichprobe
+:::
+:::::
+
+## Selektion in die Stichprobe
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Bruttostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      37.5   37.8    75.4
+  Ost       12.3   12.3    24.6
+  Total     49.9   50.1   100.0
+:::
+
+::: column
+.33 **Durchschnittliche\
+Teilnahmewahrscheinlichkeiten**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      0.56   0.69    0.62
+  Ost       0.32   0.44    0.38
+  Total     0.50   0.63    0.56
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      36.7   50.6    87.3
+  Ost        4.2    8.5    12.7
+  Total     40.9   59.1   100.0
+:::
+::::::
+
+Personen benötigen eine Teilnahmewahrscheinlichkeit von 50%, um Teil der Nettostichprobe zu werden. Da bei ostdeutschen Männern und Frauen die Teilnahmewahrscheinlichkeit im Durchschnitt niedriger liegt, werden sie weniger häufig Teil der Nettostichprobe. Aber auch in allen anderen Gruppen gibt es Personen mit niedriger Teilnahmebereitschaft. Wir nehmen aktuell an, dass die Unterschiede der Teilnahmebereitschaft *innerhalb* der Gruppen durch keine Eigenschaft systematisch beeinflusst werden.
+
+Durch die Selektion in die Stichprobe ist diese nun von 10.000 Personen auf 6.077 geschrumpft. Damit besteht eine Ausschöpfungsrate von 60%.
+
+## Folgen der Selektion in die Stichprobe
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 Mit der Nettostichprobe unterschätzen wir die Zustimmungsrate über alle Gruppen.
+
+Beobachtete Zustimmung pro Gruppe:
+
+- Westdeutsche Männer: 18.2%
+
+- Westdeutsche Frauen: 29.9%
+
+- Ostdeutsche Männer: 62.5%
+
+- Ostdeutsche Frauen: 70.4%
+
+Somit ist die allgemeine, beobachtete Zustimmung:
+
+$$\dfrac{36.7}{100} \cdot 18.2 + \dfrac{50.6}{100} \cdot 29.9 + \dfrac{4.2}{100} \cdot 62.5 + \dfrac{8.5}{100} \cdot 70.4 = 30.4$$
+:::
+:::::
+
+## Gewichtung als Lösung für selektive Stichprobenzusammensetzungen
+
+**Wenn** wir wissen, wie sich die theoretische Population zusammensetzt und damit abschätzen können, wie die Differenzen zwischen beobachteter und theoretisch erwarteter Zusammensetzung ist, können wir die Differenzen hinzufügen, um die Selektivität der Nettostichprobe zu kompensieren.
+
+$$\dfrac{36.5 \, \textcolor{red}{+ 1}}{100} \cdot 18.2 + \dfrac{50.6 \, \textcolor{red}{-13.1}}{100} \cdot 29.9 + \dfrac{4.2 \, \textcolor{red}{+ 8.3}}{100} \cdot 62.5 + \dfrac{8.5 \, \textcolor{red}{+ 4}}{100} \cdot 70.4 = 34.6$$ Das ist allerdings nur dann eine Lösung, wenn sich die Zustimmungsraten *innerhalb* der Gruppen mit denen wir gewichten, nur zufällig danach unterscheiden, ob sie Teil der Stichprobe sind oder nicht.
+
+## Zufällige Schwankungen der Zustimmung innerhalb der Gruppen innerhalb und außerhalb der Stichprobe
+
+::::: columns
+::: column
+.6
+:::
+
+::: column
+.4
+
+- Die Zustimmungsraten innerhalb der Gruppen unterscheiden sich danach, ob die Personen Teil der Stichprobe sind oder nicht.
+
+- Im Fall rechts gehen wir davon aus, dass diese Schwankungen zufällig sind (das ist korrekt, weil die Simulation so geschrieben wurde).
+:::
+:::::
+
+## Gruppenspezifische Differenzen der Zustimmung
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Bruttostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      19.7   30.1    24.9
+  Ost       59.8   69.0    64.4
+  Total     29.6   39.6    34.6
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      18.2   29.9    25.0
+  Ost       62.5   70.4    67.8
+  Total     22.7   35.7    30.4
+:::
+
+::: column
+.33 **Nicht Teil der\
+Nettostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      21.8   30.9    24.7
+  Ost       59.1   68.0    62.8
+  Total     36.4   49.4    41.1
+:::
+::::::
+
+Ost/West Differenzen: 40 in der theoretischen Population; 39.5 in der Bruttostichprobe; 42.8 in der Nettostichprobe und 38.1 in Teil der Bruttostichprobe, die nicht Teil der Nettostichprobe wurde. Frau/Mann Differenzen: 10 (theor. Population & Bruttostichprobe); 13 (Nettostichprobe); 13 (Nicht Teil der Nettostichprobe)
+
+## Selektion in die Stichprobe - unbeobachteter Faktor
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 Oftmals wird die Teilnahmebereitschaft von unbeobachteten Faktoren beeinflusst. Dazu gehören u.a.:
+
+- situativer Stress
+
+- Interesse am Thema
+
+- Vertrauen in die Institution, die befragt
+
+- Einstellungen gegenüber Befragungen generell
+
+In der Simulation gibt es nun den Faktor "Interesse", das ein generelles Interesse erfasst, an Befragungen jeder Art teilzunehmen. Je höher das Interesse am Thema, desto eher nehmen Personen teil. In der Simulation haben Ostdeutsche ein niedrigeres Interesse.
+
+In *diesem* Setting besteht *kein* Zusammenhang zwischen dem generellen Interesse und der Einstellung zu frühkindlicher Betreuung.
+:::
+:::::
+
+## Selektion in die Stichprobe - unbeobachteter Faktor
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Bruttostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      37.5   37.8    75.4
+  Ost       12.3   12.3    24.6
+  Total     49.9   50.1   100.0
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe A               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      36.7   50.6    87.3
+  Ost        4.2    8.5    12.7
+  Total     40.9   59.1   100.0
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe B               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      40.6   51.5    92.1
+  Ost        2.2    5.7     7.9
+  Total     42.8   57.2   100.0
+:::
+::::::
+
+Stichprobe B umfasst 6482 Personen und hat somit eine höhere Ausschöpfungsquote als Stichprobe A (64% vs 60%). Der Faktor "Interesse" ist ein kompensierendes Merkmal für eine ansonsten niedrige Teilnahmewahrscheinlichkeit. Da das Interesse aber auch mit dem Merkmal "Region" zusammenhängt, ist Stichprobe B nach Region selektiver zusammengesetzt.
+
+## Selektion in die Stichprobe - unbeobachteter Faktor
+
+:::::: columns
+:::: column
+.6
+
+::: center
+:::
+::::
+
+::: column
+.4 Personen in Stichprobe B unterscheiden sich systematisch von denen außerhalb der Stichprobe in ihrem höheren Interesse.
+:::
+::::::
+
+## Selektion in die Stichprobe - unbeobachteter Faktor
+
+:::::: columns
+:::: column
+.4
+
+::: center
+:::
+::::
+
+::: column
+.6 Durch die regional selektivere Stichprobenzusammensetzung liegt die *generelle* Zustimmungsrate auf 28.5%. In der ersten Stichprobe (ohne regionen-spezifische Interessenunterschiede) lag sie bei 30.4%.
+:::
+::::::
+
+## Selektion in die Stichprobe - unbeobachteter Faktor
+
+Die Zustimmungsraten zur frühkindlichen Bildung innerhalb der jeweiligen Gruppen weichen jedoch nur zufällig voneinander ab:
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Bruttostichprobe**
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      19.7   30.1    24.9
+  Ost       59.8   69.0    64.4
+  Total     29.6   39.6    34.6
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe A               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      18.2   29.9    25.0
+  Ost       62.5   70.4    67.8
+  Total     22.7   35.7    30.4
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe B               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      18.8   30.2    25.1
+  Ost       58.9   71.4    67.9
+  Total     20.8   34.3    28.5
+:::
+::::::
+
+Je kleiner gruppen-spezifische Fallzahlen werden, desto stärker haben zufallsbedingte Schwankungen Einfluss auf das Ergebnis. Aus diesem Grund wollen wir nicht nur repräsentative Stichproben, sondern auch ausreichend große. Eine Quotierung nach Gruppen *kann* eine Lösung sein, *wenn* die Teilnahme nicht selektiv ist *oder* die Bedingungen der Selektion (hier: Interesse) nicht mit der Eigenschaft verbunden ist, die man erklären möchte.
+
+## Selektion - unbeobachteter, korrelierter Faktor
+
+::::: columns
+::: column
+.4
+:::
+
+::: column
+.6 Die Annahme, dass unbeobachtete Faktoren die zu erklärende Eigenschaft nicht direkt beeinflussen, kann falsch sein. Es ist oft so, dass Personen mit stark positiven oder negativen Einstellungen zu einem Thema teilnehmen (siehe Kommentarspalten von Zeitungen oder Social Media).\
+
+Im abschließenden Setting gibt es einen Zusammenhang des generellen Befragungsinteresses mit den Einstellungen zu frühkindlicher Betreuung.[^2] Das generelle Teilnahmeinteresse ist mit einer *verringerten* Zustimmung zu frühkindlicher Betreuung verbunden.
+:::
+:::::
+
+## Selektion - unbeobachteter, korrelierter Faktor
+
+Stichprobenzusammensetzungen:
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe A               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      36.7   50.6    87.3
+  Ost        4.2    8.5    12.7
+  Total     40.9   59.1   100.0
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe B               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      40.6   51.5    92.1
+  Ost        2.2    5.7     7.9
+  Total     42.8   57.2   100.0
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe C               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      40.8   51.5    92.3
+  Ost        2.0    5.6     7.7
+  Total     42.9   57.1   100.0
+:::
+::::::
+
+Stichprobe C unterscheidet sich in ihrer *Zusammensetzung* nur zufällig von Stichprobe B, da an der Teilnahmeselektion nichts geändert wurde.
+
+## Selektion in die Stichprobe - unbeobachteter Faktor
+
+Die Zustimmungsraten zur frühkindlichen Betreuung weichen zwischen Stichprobe B und C systematisch voneinander ab:
+
+:::::: columns
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe A               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      18.2   29.9    25.0
+  Ost       62.5   70.4    67.8
+  Total     22.7   35.7    30.4
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe B               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      18.8   30.2    25.1
+  Ost       58.9   71.4    67.9
+  Total     20.8   34.3    28.5
+:::
+
+::: column
+.33 **[Space]{style="color: white"}\
+Nettostichprobe C               **
+
+            Mann   Frau   Total
+  ------- ------ ------ -------
+  West      13.2   24.3    19.4
+  Ost       48.1   55.2    55.2
+  Total     14.9   27.6    22.2
+:::
+::::::
+
+Da die Teilnahme mit niedrigeren Zustimmungsraten verbunden ist, reduzieren sich die Zustimmungsraten über alle Gruppen. Dies senkt die allgemeine Zustimmungsrate auf 22.2%.\
+Mit Stichprobe C unterschätzen wir die Differenzen zwischen Ost und West (35.8 PP statt 40 PP) und überschätzen die Geschlechterunterschiede (12.7 PP statt 10 PP).
+
+## Selektion - unbeobachteter, korrelierter Faktor
+
+::::: columns
+::: column
+.5
+:::
+
+::: column
+.5
+:::
+:::::
+
+## Gewichtung als Lösung?
+
+Liegt ein unbeobachteter, korrelierter Faktor vor, ist Gewichtung eine begrenzte Lösung (aber besser als nichts!).
+
+$$\dfrac{40.8 \, \textcolor{red}{- 3.3}}{100} \cdot 13.2 + \dfrac{51.5 \, \textcolor{red}{-14}}{100} \cdot 24.3 + \dfrac{2 \, \textcolor{red}{+ 11.5}}{100} \cdot 48.1 + \dfrac{5.6 \, \textcolor{red}{+ 6.9}}{100} \cdot 57.8 = 27.3$$
+
+Quotierung ist hingegen eine Verschärfung des Problems, da die selektive und mit der Zustimmung korrelierte Teilnahmebereitschaft, die Verteilung der Zustimmung über die Gruppen immer selektiver wird.
+
+[^1]: It's not a bug, it's a feature.
+
+[^2]: Dies könnte u.a. durch politisches Interesse vermittelt werden. Personen mit hohem politischen Interesse könnten interessiert sein, durch die Äußerung ihrer Meinung Dinge zu verändern. Gleichzeitig könnten unterschiedliche politische Interessen mit Unterschieden in der Einstellung zu frühkindlicher Betreuung verbunden sein.

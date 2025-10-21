@@ -1,1 +1,1 @@
-Sitemap: https://methoden.empirischer.sozialforschung.netlify.com/sitemap.xml
+Sitemap: https://radiant-truffle-9eacf0.netlify.app/sitemap.xml
