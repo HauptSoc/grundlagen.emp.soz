@@ -1,0 +1,7 @@
+---
+title: "Wissenschaftliche Spielregeln"
+author: "Andreas Haupt"
+format: html
+---
+  
+  {{< revealjs file="01-WissenschaftlicheSpielregeln.html" height="500px" width="50%" class="ratio ratio-16x9" >}}

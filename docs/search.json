@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "Grundlagen empirischer Sozialforschung",
     "section": "",
-    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n✍\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n\n\n\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n\n\n\n\n\n7\n11.12.\nItemkonstruktion\n📖\n🖥\n\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n\n📋",
+    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n7\n11.12.\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n✍\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
     "crumbs": [
       "Wissenswertes",
       "Was, wann, welche Reihenfolge?"
@@ -408,5 +408,166 @@
     "title": "Wissenschaftliche Spielregeln",
     "section": "Brandolini in action: Dunning-Kruger-Effekt",
     "text": "Brandolini in action: Dunning-Kruger-Effekt\n\n\n\n\n\nKruger & Dunning (1999) postulierten aufgrund eines (!) Experiments, dass vor allem Personen, die geringe Fähigkeiten haben, die Ausprägung dieser Fähigkeiten bei sich selbst überschätzen.\nDie wissenschaftliche Evidenz für diese Behauptung ist extrem dünn (Gignac & Zajenkowski (2020))."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ein-empirisches-problem-einsamkeit-und-gesellschaft",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#ein-empirisches-problem-einsamkeit-und-gesellschaft",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Ein empirisches Problem: Einsamkeit und Gesellschaft",
+    "text": "Ein empirisches Problem: Einsamkeit und Gesellschaft\n\n\n \n\n\n27% junger Frauen und 21% junger Männer gab in der 19. Shell-Jugendstudie an, sich oft einsam zu fühlen (Albert et al. 2024).\nInsgesamt steigt der Anteil der einsamer Personen in der Bevölkerung; Abb. links; Quelle: Einsamkeitsbarometer (2024).\nEs ist jedoch bis jetzt unklar, wie Einsamkeit adäquat erfasst werden kann (Walsch et al., 2025)."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Dimensionen",
+    "text": "Dimensionen\n\nNehmen wir an, dass eine Eigenschaft nur aus einem Element aufgebaut ist, das sich auch nicht in kleinere Bestandteile zerlegen lässt, dann bezeichnen wir diese als eindimensional (Alter, Geschlecht, Arbeitsstunden).\nEigenschaften können jedoch auch auf einer Kombination von Elementen basieren, die für sich jeweils eigene Wirkungen oder Bedeutungen haben und sich ggf. auch unabhängig voneinander verändern oder sich gegenseitig kompensieren können. In diesem Fall liegt eine mehrdimensionale Eigenschaft vor (sozialer Status, Persönlichkeitsstruktur)."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#was-ist-einsamkeit-konzeptspezifikation",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#was-ist-einsamkeit-konzeptspezifikation",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Was ist Einsamkeit? Konzeptspezifikation",
+    "text": "Was ist Einsamkeit? Konzeptspezifikation\nWir übernehmen die Definition von Walsch et al. (2025, 175).\n\nLoneliness is typically defined as the subjective state associated with deficits in social connection, characterized by perceived discrepancies between one’s desired and objective social relationships."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit---konzeptspezifikation",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit---konzeptspezifikation",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Einsamkeit - Konzeptspezifikation",
+    "text": "Einsamkeit - Konzeptspezifikation\nWir übernehmen die Definition von Walsch et al. (2025, 175).\n\nLoneliness is typically defined as the subjective state associated with deficits in social connection, characterized by perceived discrepancies between one’s desired and objective social relationships.\n\nDie Autoren grenzen dieses Konzept dann von Isolation wie folgt ab:\n\nLoneliness is distinct from isolation, which is the objective lack of social or emotional connections. Loneliness encompasses more than just physical isolation, reflecting an individual’s relational preferences, cognitions, and desires."
+  },
+  {
+    "objectID": "slides/03-slides.html",
+    "href": "slides/03-slides.html",
+    "title": "Gutes Unterscheiden - Dimensionaltität",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/01-WissenschaftlicheSpielregeln.html",
+    "href": "slides/01-WissenschaftlicheSpielregeln.html",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "",
+    "text": "Science writing that isn’t credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility.\n\nJosha Schimel: Writing Science (2011, 23) (Website des Autors)"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit-alles-nicht-so-einfach",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit-alles-nicht-so-einfach",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Einsamkeit – alles nicht so einfach…",
+    "text": "Einsamkeit – alles nicht so einfach…\n\n\n\n\n\nFreunds- und Feindesbeziehungen in sechs ausgewählten Dörfern in Honduras. Quelle: Isakov et al. (2019)\n\n\n\nWenn Einsamkeit ein unerfülltes Bedürfnis nach Verbindung ist, dann helfen uns die Netzwerkstrukturen, Einbettungen in Organsisationen, oder quantitative Erfassungen sozialer Kontakte nur sehr bedingt weiter.\nIn den Abbildungen links können Sie nicht erkennen, wer von den Personen (=Punkte) sich einsamer fühlt als andere. Wir können damit Isolation studieren, aber nicht Einsamkeit."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit-als-unerfülltes-bedürfnis",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit-als-unerfülltes-bedürfnis",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Einsamkeit als unerfülltes Bedürfnis",
+    "text": "Einsamkeit als unerfülltes Bedürfnis\n\n\n\n\nDas Bedürfnis nach sozialen Verbindungen kann auf zwei Arten nicht erfüllt sein:\n\nEine Person fühlt sich innerhalb ihrer sozialen Umgebung emotional nicht verbunden (emotionale Einsamkeit).\nEine Person sieht ihr persönliches Mindestmaß sozialer Verbindungen nicht erfüllt (soziale Einsamkeit)."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#keep-it-simple",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#keep-it-simple",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Keep it simple?",
+    "text": "Keep it simple?\nWarum fragen wir nicht einfach “Wie oft fühlen Sie sich einsam?”\n\n\n\n\n\n\nTipps aus der Praxis\n\n\nKann man machen (Halvorson et al., 2024)!\nAber:\n\nWir können dann verschiedene Fälle von Einsamkeit nicht mehr unterscheiden - wenn uns das wichtig ist (Walsch et al., 2025).\nSehr wahrscheinlich verneinen viele Personen diese Frage, obwohl sie sich einsam fühlen. van den Broek et al. (2024) zeigen experimentell, dass sich bei der “einfachen” Messung von Einsamkeit circa 6% der Befragten und bei der “komplexen” Messung 13% der Befragten als einsam einstuften."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen-von-einsamkeit",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen-von-einsamkeit",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Ausprägungen von Einsamkeit",
+    "text": "Ausprägungen von Einsamkeit\nDurch Unterscheidung von emotionaler und sozialer Einsamkeit können wir mindestens (!) vier Ausprägungen von Einsamkeit unterscheiden:\n\n\n\n\n\n\n\n\n\n\n\nSozial einsam\n\n\n\n\n\n\n\nja\nnein\n\n\nEmotional einsam\nja\n\n\n\n\nnein"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#grundsätzliche-fragen-zur-erfassung-von-eigenschaften",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#grundsätzliche-fragen-zur-erfassung-von-eigenschaften",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Grundsätzliche Fragen zur Erfassung von Eigenschaften",
+    "text": "Grundsätzliche Fragen zur Erfassung von Eigenschaften\n\nAus wie vielen Elementen besteht die Eigenschaft, die erfasst werden soll (Dimensionalität)?\nWie lassen sich die Ausprägungen der Eigenschaft und/oder seiner Elemente adäquat erfassen (Messung/Skalierung)."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Dimensionen & Ausprägungen",
+    "text": "Dimensionen & Ausprägungen\n\n\n\n\nKonstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.\nAusprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.\nDie Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen)."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-1",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-1",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Dimensionen & Ausprägungen",
+    "text": "Dimensionen & Ausprägungen\nAusprägungen und verschiedene Dimensionen sind nicht das Gleiche! In der Tabelle werden vier verschiedene Ausprägungen von Gesamteinsamkeit erfasst, die auf zwei verschiedene Dimensionen von Einsamkeit mit jeweils zwei Ausprägungen beruhen.\n\n\n\n\n\n\n\n\n\n\n\nSozial einsam\n\n\n\n\n\n\n\nja\nnein\n\n\nEmotional einsam\nja\n\n\n\n\nnein"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-2",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-2",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Dimensionen & Ausprägungen",
+    "text": "Dimensionen & Ausprägungen\n\n\n\n\nDimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.\nDie Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#beispiel-intelligenzmessung",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#beispiel-intelligenzmessung",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Beispiel: Intelligenzmessung",
+    "text": "Beispiel: Intelligenzmessung\n\n\n\nMessmodell für allgmeine Intelligenz g; Quelle: Deary, 2013"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#beispiel-berufliche-selbstregulation",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#beispiel-berufliche-selbstregulation",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Beispiel: berufliche Selbstregulation",
+    "text": "Beispiel: berufliche Selbstregulation\n\n\n\nModell für berufliche Selbstregulierung; Quelle: Menge & Schaeper, 2019"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#unterschiedlichkeit-von-ausprägungen",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#unterschiedlichkeit-von-ausprägungen",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Unterschiedlichkeit von Ausprägungen",
+    "text": "Unterschiedlichkeit von Ausprägungen\nPersonen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer relevanten Ausprägungen1 erfassen.\n\n\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#unterschiedlichkeit-von-eigenschaften-und-ausprägungen",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#unterschiedlichkeit-von-eigenschaften-und-ausprägungen",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Unterschiedlichkeit von Eigenschaften und Ausprägungen",
+    "text": "Unterschiedlichkeit von Eigenschaften und Ausprägungen\nPersonen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer relevanten Ausprägungen1 erfassen.\nAusprägungen sind keine Beobachtungen, sondern wie wir uns die Unterschiedlichkeit von Eigenschaften vorstellen (siehe u.a. die “Debatten” um Gender).\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Ausprägungen",
+    "text": "Ausprägungen\nWir können Ausprägungen spezifische Informationen zuschreiben. Die für uns relevanteste Information ist, wie die Abstände zwischen den Ausprägungen strukturiert sind.\n\n\n\nAusprägungen, sortiert nach Art ihrer Abstandsinformation; (Bildquelle)"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ja-das-ist-eine-theoriefrage.-nicht-jede-art-des-bildungsabschlusses-ist-für-jede-forschungsfrage-relevant.-manchmal-sind-nur-grobe-unterschiede-relevant-manchmal-müssen-es-sehr-feine-unterschiede-sein.-oft-geht-es-aber-auch-ums-geld.-learn-to-love-it",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#ja-das-ist-eine-theoriefrage.-nicht-jede-art-des-bildungsabschlusses-ist-für-jede-forschungsfrage-relevant.-manchmal-sind-nur-grobe-unterschiede-relevant-manchmal-müssen-es-sehr-feine-unterschiede-sein.-oft-geht-es-aber-auch-ums-geld.-learn-to-love-it",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "[^1]: Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Oft geht es aber auch ums Geld. Learn to love it!",
+    "text": "[^1]: Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Oft geht es aber auch ums Geld. Learn to love it!"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen-1",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen-1",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Ausprägungen",
+    "text": "Ausprägungen\nEine etwas detaillierete Unterscheidung der festgelegten Eigenschaften ermöglicht darüber hinaus folgende Differenzierung:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFestgelegte Eigenschaft\n\n\n\n\n\n\nSkalenniveau\nSubtyp\nIdentität\nRänge\nAbstände\nNullpunkt\nBeispiel\n\n\nNominal\n\nja\nnein\nnein\nnein\nFamilienstand, Länder\n\n\nOrdinal\n\nja\nja\nnein\nnein\nSchulnoten, Machtpositionen\n\n\nMetrisch\nIntervall\nja\nja\nja\nnein\nPrestige, IQ-Scores\n\n\n\nRatio\nja\nja\nja\nja\nAlter, Arbeitslosigkeitsdauer"
+  },
+  {
+    "objectID": "slides/01-slides.html",
+    "href": "slides/01-slides.html",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/02-slides.html",
+    "href": "slides/02-slides.html",
+    "title": "Gutes Unterscheiden - Grundlagen",
+    "section": "",
+    "text": "View slides in full screen"
   }
 ]

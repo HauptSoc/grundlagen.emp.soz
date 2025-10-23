@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="Einsamkeit.svg">
+   sodipodi:docname="Einsamkeit.svg"
+   inkscape:export-filename="C:\GIT\Grundlagen EmpSoz\slides\images\einsamkeit.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="240.81108"
-     inkscape:cy="136.56124"
+     inkscape:zoom="1.4"
+     inkscape:cx="295.66557"
+     inkscape:cy="80.520151"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -56,9 +59,10 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-36.797168,-32.266665)">
+     transform="translate(-68.602242,97.626325)">
     <g
-       id="g824">
+       id="g824"
+       transform="translate(31.805074,-129.89299)">
       <ellipse
          ry="13.79613"
          rx="26.836309"
@@ -80,7 +84,7 @@
     </g>
     <g
        id="g903"
-       transform="translate(10.86681,6.6145859)">
+       transform="translate(42.671884,-123.27841)">
       <ellipse
          ry="9.6383924"
          rx="20.977678"
@@ -91,28 +95,28 @@
       <text
          id="text845"
          y="75.573608"
-         x="35.110447"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:12.92999983%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="46.644627"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:12.92999983%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
            id="tspan859"
-           style="font-size:4.23333311px;line-height:12.92999983%;text-align:start;text-anchor:start;stroke-width:0.26458332"
+           style="font-size:4.23333311px;line-height:12.92999983%;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="75.573608"
-           x="35.110447"
+           x="46.644627"
            sodipodi:role="line">Emotionale</tspan><tspan
            id="tspan863"
-           style="font-size:4.23333311px;line-height:12.92999983%;text-align:start;text-anchor:start;stroke-width:0.26458332"
+           style="font-size:4.23333311px;line-height:12.92999983%;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="78.356056"
-           x="35.110447"
+           x="46.644627"
            sodipodi:role="line" /><tspan
            id="tspan865"
-           style="font-size:4.23333311px;line-height:12.92999983%;text-align:start;text-anchor:start;stroke-width:0.26458332"
+           style="font-size:4.23333311px;line-height:12.92999983%;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="79.72448"
-           x="35.110447"
+           x="46.644627"
            sodipodi:role="line">Einsamkeit</tspan></text>
     </g>
     <g
        id="g896"
-       transform="translate(10.86681)">
+       transform="translate(42.671884,-129.89299)">
       <ellipse
          ry="9.6383924"
          rx="20.977678"
@@ -123,28 +127,28 @@
       <text
          id="text845-6"
          y="82.188194"
-         x="120.46545"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:12.92999983%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="131.8911"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:12.92999983%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
            id="tspan859-9"
-           style="font-size:4.23333311px;line-height:12.92999983%;text-align:start;text-anchor:start;stroke-width:0.26458332"
+           style="font-size:4.23333311px;line-height:12.92999983%;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="82.188194"
-           x="120.46545"
-           sodipodi:role="line">Strukturelle</tspan><tspan
+           x="131.8911"
+           sodipodi:role="line">Soziale</tspan><tspan
            id="tspan863-4"
-           style="font-size:4.23333311px;line-height:12.92999983%;text-align:start;text-anchor:start;stroke-width:0.26458332"
+           style="font-size:4.23333311px;line-height:12.92999983%;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="84.970642"
-           x="120.46545"
+           x="131.8911"
            sodipodi:role="line" /><tspan
            id="tspan865-1"
-           style="font-size:4.23333311px;line-height:12.92999983%;text-align:start;text-anchor:start;stroke-width:0.26458332"
+           style="font-size:4.23333311px;line-height:12.92999983%;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="86.339066"
-           x="120.46545"
+           x="131.8911"
            sodipodi:role="line">Einsamkeit</tspan></text>
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 87.011931,58.011423 67.914893,74.212427"
+       d="m 118.817,-71.881567 -19.097028,16.201"
        id="path931"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -152,7 +156,7 @@
        inkscape:connection-end="#g903" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 114.82735,58.011423 19.09704,16.201004"
+       d="m 146.63242,-71.881567 19.09704,16.201004"
        id="path933"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"

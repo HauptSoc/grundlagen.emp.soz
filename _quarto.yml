@@ -5,6 +5,7 @@ project:
     - "*.qmd"
   resources:
     - "*.docx"
+    - docs/slides/*
 
 website:
   page-navigation: true

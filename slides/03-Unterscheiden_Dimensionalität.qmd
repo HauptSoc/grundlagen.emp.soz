@@ -1,0 +1,205 @@
+---
+title: "Unterscheiden: Dimensionen, Ausprägungen, Typen"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+format: 
+  revealjs:
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+editor: source
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
+
+## Ein empirisches Problem: Einsamkeit und Gesellschaft {.midi}
+
+::::: columns
+::: {.column width="30%"}
+![](images/soep-einsam1.png) ![](images/soep-einsam2.png)
+:::
+
+::: {.column width="70%"}
+-   27% junger Frauen und 21% junger Männer gab in der 19. Shell-Jugendstudie an, sich oft einsam zu fühlen [(Albert et al. 2024)](https://www.shell.de/ueber-uns/initiativen/shell-jugendstudie-2024.html).
+-   Insgesamt steigt der Anteil der einsamer Personen in der Bevölkerung; Abb. links; Quelle: [Einsamkeitsbarometer (2024)](https://www.bmbfsfj.bund.de/bmbfsfj/service/publikationen/einsamkeitsbarometer-2024-237576).
+-   Es ist jedoch bis jetzt unklar, wie Einsamkeit adäquat erfasst werden kann [(Walsch et al., 2025)](https://www.nature.com/articles/s44220-024-00382-3).
+:::
+:::::
+
+## Einsamkeit - Konzeptspezifikation {.midi}
+
+Wir übernehmen die Definition von [Walsch et al. (2025, 175)](https://www.nature.com/articles/s44220-024-00382-3).
+
+> Loneliness is typically defined as the subjective state associated with deficits in social connection, characterized by perceived discrepancies between one’s desired and objective social relationships.
+
+Die Autoren grenzen dieses Konzept dann von *Isolation* wie folgt ab:
+
+> Loneliness is distinct from isolation, which is the objective lack of social or emotional connections. Loneliness encompasses more than just physical isolation, reflecting an individual’s relational preferences, cognitions, and desires.
+
+## Einsamkeit -- alles nicht so einfach... {.midi}
+
+::::: columns
+::: {.column width="30%"}
+![Freunds- und Feindesbeziehungen in sechs ausgewählten Dörfern in Honduras. Quelle: [Isakov et al. (2019)](https://sociologicalscience.com/articles-v6-8-197/)](images/village-networks.png)
+:::
+
+::: {.column width="70%"}
+Wenn Einsamkeit ein unerfülltes Bedürfnis nach Verbindung ist, dann helfen uns die Netzwerkstrukturen, Einbettungen in Organsisationen, oder quantitative Erfassungen sozialer Kontakte nur sehr bedingt weiter.
+
+In den Abbildungen links können Sie nicht erkennen, wer von den Personen (=Punkte) sich einsamer fühlt als andere. Wir können damit Isolation studieren, aber nicht Einsamkeit.
+:::
+:::::
+
+## Einsamkeit als unerfülltes Bedürfnis
+
+::::: columns
+::: {.column width="40%"}
+![](images/einsamkeit.png)
+:::
+
+::: {.column width="60%"}
+Das Bedürfnis nach sozialen Verbindungen kann auf zwei Arten nicht erfüllt sein:
+
+1.  Eine Person fühlt sich innerhalb ihrer sozialen Umgebung emotional nicht verbunden (emotionale Einsamkeit).
+2.  Eine Person sieht ihr persönliches Mindestmaß sozialer Verbindungen nicht erfüllt (soziale Einsamkeit).
+:::
+:::::
+
+## Ausprägungen von Einsamkeit
+
+Durch Unterscheidung von emotionaler und sozialer Einsamkeit können wir mindestens (!) vier Ausprägungen von Einsamkeit unterscheiden:
+
++------------------+------+---------------+
+|                  |      | Sozial einsam |
++==================+======+======+========+
+|                  |      | ja   | nein   |
++------------------+------+------+--------+
+| Emotional einsam | ja   |      |        |
+|                  +------+------+--------+
+|                  | nein |      |        |
++==================+======+======+========+
+
+
+## Keep it simple?
+
+Warum fragen wir nicht einfach "Wie oft fühlen Sie sich einsam?"
+
+::: {.callout-note appearance="simple"}
+## Tipps aus der Praxis
+
+Kann man machen ([Halvorson et al., 2024](10.1037/tps0000438))!
+
+Aber:
+
+-   Wir können dann verschiedene Fälle von Einsamkeit nicht mehr unterscheiden - wenn uns das wichtig ist ([Walsch et al., 2025](https://www.nature.com/articles/s44220-024-00382-3)).
+-   Sehr wahrscheinlich verneinen viele Personen diese Frage, obwohl sie sich einsam fühlen. [van den Broek et al. (2024)](https://doi.org/10.1007/s10433-024-00826-w) zeigen experimentell, dass sich bei der "einfachen" Messung von Einsamkeit circa 6% der Befragten und bei der "komplexen" Messung 13% der Befragten als einsam einstuften.
+:::
+
+## Grundsätzliche Fragen zur Erfassung von Eigenschaften
+
+1.  Aus wie vielen Elementen besteht die Eigenschaft, die erfasst werden soll (Dimensionalität)?
+2.  Wie lassen sich die Ausprägungen der Eigenschaft und/oder seiner Elemente adäquat erfassen (Messung/Skalierung).
+
+## Dimensionen {.midi}
+
+-   Nehmen wir an, dass eine Eigenschaft nur aus einem Element aufgebaut ist, das sich auch nicht in kleinere Bestandteile zerlegen lässt, dann bezeichnen wir diese als **eindimensional** (Alter, Geschlecht, Arbeitsstunden).
+
+-   Eigenschaften können jedoch auch auf einer Kombination von Elementen basieren, die für sich jeweils eigene Wirkungen oder Bedeutungen haben und sich ggf. auch unabhängig voneinander verändern oder sich gegenseitig kompensieren können. In diesem Fall liegt eine **mehrdimensionale** Eigenschaft vor (sozialer Status, Persönlichkeitsstruktur).
+
+## Dimensionen & Ausprägungen {.midi}
+
+::::: columns
+::: {.column width="40%"}
+![](images/Konstrukte-eindim.png)
+:::
+
+::: {.column width="60%"}
+Konstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.
+
+Ausprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.
+
+Die Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen).
+:::
+:::::
+
+## Dimensionen & Ausprägungen {.midi}
+
+Ausprägungen und verschiedene Dimensionen sind nicht das Gleiche! In der Tabelle werden vier verschiedene Ausprägungen von Gesamteinsamkeit erfasst, die auf zwei verschiedene Dimensionen von Einsamkeit mit jeweils zwei Ausprägungen beruhen.
+
++------------------+------+---------------+
+|                  |      | Sozial einsam |
++==================+======+======+========+
+|                  |      | ja   | nein   |
++------------------+------+------+--------+
+| Emotional einsam | ja   |      |        |
+|                  +------+------+--------+
+|                  | nein |      |        |
++==================+======+======+========+
+
+## Dimensionen & Ausprägungen
+
+::::: columns
+::: {.column width="30%"}
+![](images/SozialerStatus.svg)
+:::
+
+::: {.column width="70%"}
+Dimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.
+
+Die Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit.
+:::
+:::::
+
+## Beispiel: Intelligenzmessung
+
+![Messmodell für allgmeine Intelligenz g; Quelle: [Deary, 2013](https://www.sciencedirect.com/science/article/pii/S0960982213008440)](images\intelligence-meassure.jpg)
+
+## Beispiel: berufliche Selbstregulation
+
+![Modell für berufliche Selbstregulierung; Quelle: [Menge & Schaeper, 2019](https://link.springer.com/article/10.1007/s11618-018-0851-x)](images/beruflicheselbstregul-dim.png)
+
+## Unterschiedlichkeit von Eigenschaften und Ausprägungen {.midi}
+
+Personen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer **relevanten Ausprägungen**[^1] erfassen.
+
+[^1]: Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!
+
+Ausprägungen sind **keine** Beobachtungen, sondern wie wir uns die Unterschiedlichkeit von Eigenschaften **vorstellen** (siehe u.a. die "Debatten" um Gender).
+
+------------------------------------------------------------------------
+
+## Ausprägungen
+
+Wir können Ausprägungen spezifische Informationen zuschreiben. Die für uns relevanteste Information ist, wie die Abstände zwischen den Ausprägungen strukturiert sind.
+
+![Ausprägungen, sortiert nach Art ihrer Abstandsinformation; ([Bildquelle](https://datatab.de/tutorial/skalenniveau))](images/skalenniveaus.png)
+
+## Ausprägungen
+
+Eine etwas detaillierete Unterscheidung der festgelegten Eigenschaften ermöglicht darüber hinaus folgende Differenzierung: 
+
+::: custom-small
++--------------+-----------+-----------+-------+----------+-------------------------+
+|              |           |   Festgelegte Eigenschaft                              |
++==============+===========+===========+=======+==========+=========================+===============================+
+| Skalenniveau | Subtyp    | Identität | Ränge | Abstände | Nullpunkt               | Beispiel                      |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+| Nominal      |           | ja        | nein  | nein     | nein                    | Familienstand, Länder         |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+| Ordinal      |           | ja        | ja    | nein     | nein                    | Schulnoten, Machtpositionen   |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+| Metrisch     | Intervall | ja        | ja    | ja       | nein                    | Prestige, IQ-Scores           |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+|              | Ratio     | ja        | ja    | ja       | ja                      | Alter, Arbeitslosigkeitsdauer |
++==============+===========+===========+=======+==========+=========================+===============================+
+:::

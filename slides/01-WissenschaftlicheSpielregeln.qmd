@@ -5,6 +5,7 @@ format:
   revealjs:
     theme: style.scss
     margin: 0.05
+    slideNumber: true
 editor: source
 execute: 
   echo: false
@@ -14,7 +15,7 @@ execute:
 
 ## Wissenschaft heißt Wissen schaffen {.midi}
 
-> Science writing that isn't credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility.
+> Science writing that isn't credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility. 
 
 Josha Schimel: Writing Science (2011, 23) ([Website des Autors](https://schimelwritingscience.wordpress.com/))
 
