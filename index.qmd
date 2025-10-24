@@ -4,7 +4,7 @@ tbl-colwidths: [5,10,35,5,5,5,5,5]
 ---
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|:--:|----|----|:--:|:--:|:--:|:--:|:--:|
 | 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | 🖥 |  |  | 📁 |
 | 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-slides.qmd "Wissenschaftliche Spielregeln") |  |  |  |
 |  |  | **I. Unterschiede messen** |  |  |  |  |  |
