@@ -1,6 +1,6 @@
 # Website für Grundlagen empirischer Sozialforschung am KIT
 
-🔗 https://atheobold.github.io/stat-313-website/
+🔗 unterscheiden-und-vergleichen.netlify.app
 
 ## Auf den Schultern von Riesinnen
 
