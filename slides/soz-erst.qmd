@@ -1,0 +1,57 @@
+---
+title: "Soziologie -- Wie geht das, wer macht das, was macht man da?"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+format: 
+  revealjs:
+    width: 1200
+    height: 700
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+editor: source
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
+
+## Gesellschaftliche Entwicklungen verstehen
+
+![Relativer Anteil von Befragten in "Dispair". Q: "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Dispair = 30/30 Tage [(Blanchflower et al. 2025)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327858) ](images/age_dispair.png){width=50%}
+
+## Unterschiede zwischen Gesellschaften verstehen
+
+Warum ist die Anzahl der durchschnittlichen Geschlechtspartner:innen zwischen Ländern unterschiedlich hoch? 
+
+<https://www.datapandas.org/ranking/average-number-of-sexual-partners-by-country>
+
+## Menschliches Handeln verstehen
+
+Hikikomori[^1]  - warum machen die das?
+
+![](images/hikikomori.png){width=50%}
+
+
+[^1]: hiku: sich zurückziehen, komoru: sich verschließen
+
+---
+
+## Verstehen, wie Menschen Gesellschaft machen
+
+
+Versuchen Sie sich mal als Designer eines neues Social Networks und sehen Sie, was passiert: <https://sociology.itz.kit.edu/twony/> 
+![](images/twonderland.png) 
+---
+
+## Soziologie Ergänzungsfach
+
+<iframe width="1200" height="600" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiCpi-YEhCI1Y15zMb9m2Uud0zoVupGBpA088mqEfIUE1dwthVUGo4Bx7eqWmQTCSmaSRD791PZ2r4/pubhtml?widget=true&amp;headers=false"></iframe>
