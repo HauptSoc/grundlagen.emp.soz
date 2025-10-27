@@ -12,6 +12,8 @@ format:
     section-divs: true
     code-block-bg: "#76b5c5"
     highlight-style: monochrome
+    mermaid:
+      theme: neutral
 editor: source
 execute: 
   echo: false
@@ -65,6 +67,31 @@ execute:
 :::::::::::
 
 ------------------------------------------------------------------------
+
+# Wie stehen Vorlesungen, Übungen, Arbeitsblätter und die Klausur im Verhältnis? 
+
+```{mermaid}
+flowchart LR
+%%| deviceScaleFactor: 2
+%%| fig-width: 6.5
+ subgraph Sommersemester["**Sommersemester**"]
+        B["V: Datenanalyse"]
+        B1["Übungen"]
+        AB2["Arbeitsblätter"]
+  end
+   subgraph Wintersemester["**Wintersemester**"]
+        A["V: Grundlagen"]
+        A1["Übungen"]
+        AB1["Arbeitsblätter"]
+  end
+ subgraph Modulprüfung["Modulprüfung"]
+        K["Klausur"]
+  end
+    A --> AB1 & A1
+    B --> AB2 & B1
+    AB1 -- bestanden --> K
+    AB2 -- bestanden --> K
+```
 
 # Was sollten Sie mitbringen
 

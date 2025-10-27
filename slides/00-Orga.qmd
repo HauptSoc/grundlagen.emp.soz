@@ -1,0 +1,71 @@
+---
+title: "Methoden - Was soll das?"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+format: 
+  revealjs:
+    width: 1200
+    height: 700
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+    mermaid:
+      theme: neutral
+      layout: elk
+editor: source
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
+
+## Unsere Homebase
+
+Alle Informationen und Unterlagen für alle Lehrveranstaltungen des Moduls (Vorlesungen & Übungen) für dieses und nächstes Semester werden gebündelt auf einer Website dargestellt:
+
+::: {.callout-note appearance="simple"}
+## Homebase
+<https://unterscheiden-und-vergleichen.netlify.app>
+:::
+
+Bitte nutzen Sie diese Webpage als erste Anlaufstelle.
+
+## Aufbau des Moduls
+
+```{mermaid}
+flowchart LR
+%%| deviceScaleFactor: 2
+%%| fig-width: 6.5
+ subgraph Sommersemester["**Sommersemester**"]
+        B["V: Datenanalyse"]
+        B1["Übungen"]
+        AB2["Arbeitsblätter"]
+  end
+   subgraph Wintersemester["**Wintersemester**"]
+        A["V: Grundlagen"]
+        A1["Übungen"]
+        AB1["Arbeitsblätter"]
+  end
+ subgraph Modulprüfung["Modulprüfung"]
+        K["Klausur"]
+  end
+    A --> AB1 & A1
+    B --> AB2 & B1
+    AB1 -- bestanden --> K
+    AB2 -- bestanden --> K
+```
+
+## Soziologie Ergänzungsfach
+
+<iframe width="1200" height="700" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiCpi-YEhCI1Y15zMb9m2Uud0zoVupGBpA088mqEfIUE1dwthVUGo4Bx7eqWmQTCSmaSRD791PZ2r4/pubhtml?widget=true&amp;headers=false">
+
+</iframe>
+

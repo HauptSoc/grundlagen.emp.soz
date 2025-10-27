@@ -10,3 +10,4 @@ staging/
 .Ruserdata
 
 /.quarto/
+**/*.quarto_ipynb
