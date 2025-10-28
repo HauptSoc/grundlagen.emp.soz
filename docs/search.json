@@ -667,5 +667,117 @@
     "title": "Unterscheiden: Grundlagen",
     "section": "",
     "text": "Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
+    "href": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Beobachten und nach Ausprägungen unterscheiden",
+    "text": "Beobachten und nach Ausprägungen unterscheiden\n\n\n\nPlakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
+    "href": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Messen = Ausprägungen einer Eigenschaft unterscheiden",
+    "text": "Messen = Ausprägungen einer Eigenschaft unterscheiden\n\n\n Bildquelle\n\nWir wollen Personen[^1] hinsichtlich ihrer Ausprägungen von Eigenschaften unterscheiden. Dazu brauchen wir ein Symbol für jede (relevante) Ausprägung, die wir einer Beobachtung dieser Ausprägung zuordnen. In den meisten Fällen ist dieses Symbol eine Zahl. Die Anordnung dieser Zahlen/Symbole ist eine Skala."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unterschiede-auf-eine-skala-bringen-berufsprestige",
+    "href": "slides/04-Messen_Grundlagen.html#unterschiede-auf-eine-skala-bringen-berufsprestige",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unterschiede auf eine Skala bringen: Berufsprestige",
+    "text": "Unterschiede auf eine Skala bringen: Berufsprestige\n\n\n\n\n\nBerufsprestigeskala von Ebner & Rohrbach-Schmidt (2022)\n\n\n\nEbner & Rohrbach-Schmidt (2022) haben eine Skala für das soziale Ansehen von Berufen entwickelt.\nDamit lassen sich Berufe nach ihrem Prestige unterscheiden und anhand einer Skala sortieren (links am Beispiel von Ausbildungsberufen)."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
+    "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
+    "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nBeachten Sie bitte auch die Richtung der Pfeile im Graph!\nDie Eigenschaft (oder wie wir sie konzeptualisieren) bestimmt die Anzahl und Art der Ausprägungen.\nPro Untersuchungseinheit ist eine Ausprägung einer Eigenschaft vorhanden.\nDiese Ausprägung lässt sich beobachten und mit einem Symbol belegen.\nDiese Beobachtung wird aber von einer Störquelle beeinflusst."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#latente-und-manifeste-eigenschaften",
+    "href": "slides/04-Messen_Grundlagen.html#latente-und-manifeste-eigenschaften",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Latente und manifeste Eigenschaften",
+    "text": "Latente und manifeste Eigenschaften\nWir können Eigenschaften danach unterscheiden, ob wir bei der Beobachtung ihrer Ausprägungen Störquellen annehmen oder nicht:\n\n\n\n\n\nflowchart TB\n    E[\"Eigenschaften\"] -- Störquelle ausgeschlossen --&gt; M[\"Manifest\"]\n    E -- Störquelle angenommen --&gt; L[\"Latent\"]\n    M --- M1[\"Alter\"] & M2[\"Torvorlagen\"] & M3[\"Blutgruppe\"]\n    L --- L1[\"Einstellungen\"] & L2[\"Armut\"] & L3[\"Einsamkeit\"]\n\n\n\n\n\n\n\nDas ist eine pragmatische Unterscheidung, die wir bei jeder Eigenschaft so oder so treffen können (siehe: Fühlen Sie sich öfter einsam?)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#alles-fliest---vor-allem-pragmatische-unterschiede",
+    "href": "slides/04-Messen_Grundlagen.html#alles-fliest---vor-allem-pragmatische-unterschiede",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Alles fliest - vor allem pragmatische Unterschiede",
+    "text": "Alles fliest - vor allem pragmatische Unterschiede\n\n\n\n\n\nflowchart TB\n\nB([Biologisches &lt;br&gt; Alter])\nA[Angegebenes &lt;br&gt; Alter]\nE1((Erinnerungsfehler)) \nE2((Keine &lt;br&gt; Geburtsurkunde))\nE3((Vordatierung))\nE4((Rückdatierung))\n\nE1@{ shape: text}\nE2@{ shape: text}\nE3@{ shape: text}\nE4@{ shape: text}\n\nB --&gt; A ~~~ E1 & E2 & E3 & E4\nE1 & E2 & E3 & E4 --&gt; A"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#warum-das-alles",
+    "href": "slides/04-Messen_Grundlagen.html#warum-das-alles",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Warum das alles?",
+    "text": "Warum das alles?\n\nUnser Ziel ist es, soziale Prozesse besser zu verstehen.\nSoziale Prozesse sind Verbindungen von Eigenschaften über Untersuchungseinheiten.\nDazu müssen wir verstehen, wie Unterschiede der Eigenschaft A mit Unterschieden der Eigenschaft B zusammenhängen.\nWenn wir in einem der erfassten Unterschiede auch einen großen Anteil von Störfaktoren/Messfehlern haben, ist unsere Untersuchung problematisch."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#alter-und-gesundheit",
+    "href": "slides/04-Messen_Grundlagen.html#alter-und-gesundheit",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Alter und Gesundheit",
+    "text": "Alter und Gesundheit"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#alter-und-gesundheit-1",
+    "href": "slides/04-Messen_Grundlagen.html#alter-und-gesundheit-1",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Alter und Gesundheit",
+    "text": "Alter und Gesundheit"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#alter-und-mentale-gesundheit",
+    "href": "slides/04-Messen_Grundlagen.html#alter-und-mentale-gesundheit",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Alter und mentale Gesundheit",
+    "text": "Alter und mentale Gesundheit\n\n\n\nRelativer Anteil von Befragten in “Dispair”. Q: “Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?” Dispair = 30/30 Tage (Blanchflower et al. 2025)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#fehlerquellen-unterscheiden",
+    "href": "slides/04-Messen_Grundlagen.html#fehlerquellen-unterscheiden",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Fehlerquellen unterscheiden",
+    "text": "Fehlerquellen unterscheiden\n\n\n\n\n\nDie Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al. (2015)\n\n\n\n\nMütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.\nMütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unterschiede-erfassen-wozu-nochmal",
+    "href": "slides/04-Messen_Grundlagen.html#unterschiede-erfassen-wozu-nochmal",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unterschiede erfassen: wozu nochmal?",
+    "text": "Unterschiede erfassen: wozu nochmal?\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; einsamer Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Einsamkeit &lt;br&gt; und sportlicher &lt;br&gt; Aktivität?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je einsamer Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#eigenschaften-und-variablen",
+    "href": "slides/04-Messen_Grundlagen.html#eigenschaften-und-variablen",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Eigenschaften und Variablen",
+    "text": "Eigenschaften und Variablen\n\n\n\n\nEine Variable ist das Ergebnis der Erfassung von Ausprägungen.\nEine Variable ist nicht die Eigenschaft selbst, sondern unsere symbolisch protokollierte Beobachtungen von individuellen Ausprägungen, die durchaus große Anteile von Störfaktoren haben kann."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#wie-sieht-das-in-der-praxis-aus",
+    "href": "slides/04-Messen_Grundlagen.html#wie-sieht-das-in-der-praxis-aus",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Wie sieht das in der Praxis aus?",
+    "text": "Wie sieht das in der Praxis aus?\n\nWie oft haben Sie das Gefühl,\n\ndass Ihnen die Gesellschaft anderer fehlt? [plj0587]\ndass Sie sozial isoliert sind? [plj0588]\naußen vor zu sein? [plj0589]"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#einsamkeit-in-deutschland-2017",
+    "href": "slides/04-Messen_Grundlagen.html#einsamkeit-in-deutschland-2017",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Einsamkeit in Deutschland (2017)",
+    "text": "Einsamkeit in Deutschland (2017)"
   }
 ]

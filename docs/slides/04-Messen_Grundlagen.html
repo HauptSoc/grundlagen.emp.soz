@@ -13,7 +13,7 @@
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Methoden empirischer Sozialforschung – Soziologie – Wie geht das, wer macht das, was macht man da?</title>
+  <title>Methoden empirischer Sozialforschung – Unterscheiden: Messtheoretische Grundlagen</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -124,6 +124,10 @@
       margin-right: 0; 
     }
   </style>
+  <meta name="mermaid-theme" content="neutral">
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
     .custom-small table {
       font-size: .6em
@@ -135,39 +139,222 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Soziologie – Wie geht das, wer macht das, was macht man da?</h1>
+  <h1 class="title">Unterscheiden: Messtheoretische Grundlagen</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="gesellschaftliche-entwicklungen-verstehen" class="slide level2">
-<h2>Gesellschaftliche Entwicklungen verstehen</h2>
+<section id="beobachten-und-nach-ausprägungen-unterscheiden" class="slide level2">
+<h2>Beobachten und nach Ausprägungen unterscheiden</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/age_dispair.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Relativer Anteil von Befragten in “Dispair”. Q: “Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?” Dispair = 30/30 Tage (Blanchflower et al.&nbsp;2025)"><img data-src="images/age_dispair.png" style="width:50.0%" alt="Relativer Anteil von Befragten in “Dispair”. Q: “Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?” Dispair = 30/30 Tage (Blanchflower et al.&nbsp;2025)"></a></p>
+<p><a href="images/steffen_depressiv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."><img data-src="images/steffen_depressiv.png" style="width:60.0%" alt="Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."></a></p>
+<figcaption>Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention.</figcaption>
+</figure>
+</div>
+</section>
+<section id="messen-ausprägungen-einer-eigenschaft-unterscheiden" class="slide level2 midi">
+<h2>Messen = Ausprägungen einer Eigenschaft unterscheiden</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/meassurement-simple.jpg"> <a href="https://www.splashlearn.com/math-vocabulary/measurements/measurement">Bildquelle</a></p>
+</div><div class="column" style="width:70%;">
+<p>Wir wollen Personen[^1] hinsichtlich ihrer Ausprägungen von Eigenschaften unterscheiden. Dazu brauchen wir ein Symbol für jede (relevante) Ausprägung, die wir einer Beobachtung dieser Ausprägung zuordnen. In den meisten Fällen ist dieses Symbol eine Zahl. Die Anordnung dieser Zahlen/Symbole ist eine Skala.</p>
+</div></div>
+</section>
+<section id="unterschiede-auf-eine-skala-bringen-berufsprestige" class="slide level2">
+<h2>Unterschiede auf eine Skala bringen: Berufsprestige</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/prestige-ausbildungsberufe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Berufsprestigeskala von Ebner &amp; Rohrbach-Schmidt (2022)"><img data-src="images/prestige-ausbildungsberufe.png" alt="Berufsprestigeskala von Ebner &amp; Rohrbach-Schmidt (2022)"></a></p>
+<figcaption>Berufsprestigeskala von <a href="https://www.degruyter.com/document/doi/10.1515/zfsoz-2021-0026/html">Ebner &amp; Rohrbach-Schmidt (2022)</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><a href="https://www.degruyter.com/document/doi/10.1515/zfsoz-2021-0026/html">Ebner &amp; Rohrbach-Schmidt (2022)</a> haben eine Skala für das soziale Ansehen von Berufen entwickelt.</p>
+<p>Damit lassen sich Berufe nach ihrem Prestige unterscheiden und anhand einer Skala sortieren (links am Beispiel von Ausbildungsberufen).</p>
+</div></div>
+</section>
+<section id="verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern" class="slide level2 midi">
+<h2>Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><a href="images/faktor-beabachtung-error-auspr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/faktor-beabachtung-error-auspr.png"></a></p>
+</div><div class="column" style="width:70%;">
+<p>Die Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit <em>F</em> abgekürzen.<sup>1</sup> Unterschiedliche Ausprägungen der Eigenschaft werden mit <span class="math inline">\(\tau_1 \dots \tau_n\)</span> (sprich: Tau) abgekürzt. Die Beobachtung einer <strong>Ausprägung</strong> wird mit <em>I</em> abgekürzt.<sup>2</sup> Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit <em>e</em> ab (old school auch <span class="math inline">\(\epsilon\)</span>, sprich: Epsilon.)</p>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Kommt aus Großvaters Zeiten, in der alles ein <em>F</em>aktor war.</p></li><li id="fn2"><p>Die Großväter (ja, es waren alles Männer) haben das <em>I</em>ndikator genannt.</p></li></ol></aside></section>
+<section id="verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1" class="slide level2 midi">
+<h2>Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><a href="images/faktor-beabachtung-error-auspr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/faktor-beabachtung-error-auspr.png"></a></p>
+</div><div class="column" style="width:70%;">
+<p>Beachten Sie bitte auch die Richtung der Pfeile im Graph!</p>
+<p>Die Eigenschaft (oder wie wir sie konzeptualisieren) bestimmt die Anzahl und Art der Ausprägungen.</p>
+<p>Pro Untersuchungseinheit ist eine Ausprägung einer Eigenschaft vorhanden.</p>
+<p>Diese Ausprägung lässt sich beobachten und mit einem Symbol belegen.</p>
+<p>Diese Beobachtung wird aber von einer Störquelle beeinflusst.</p>
+</div></div>
+</section>
+<section id="latente-und-manifeste-eigenschaften" class="slide level2">
+<h2>Latente und manifeste Eigenschaften</h2>
+<p>Wir können Eigenschaften danach unterscheiden, ob wir bei der Beobachtung ihrer Ausprägungen Störquellen annehmen oder nicht:</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    E["Eigenschaften"] -- Störquelle ausgeschlossen --&gt; M["Manifest"]
+    E -- Störquelle angenommen --&gt; L["Latent"]
+    M --- M1["Alter"] &amp; M2["Torvorlagen"] &amp; M3["Blutgruppe"]
+    L --- L1["Einstellungen"] &amp; L2["Armut"] &amp; L3["Einsamkeit"]
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Das ist eine <em>pragmatische</em> Unterscheidung, die wir bei jeder Eigenschaft so oder so treffen können (siehe: Fühlen Sie sich öfter einsam?)</p>
+</section>
+<section id="alles-fliest---vor-allem-pragmatische-unterschiede" class="slide level2">
+<h2>Alles fliest - vor allem pragmatische Unterschiede</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+
+B([Biologisches &lt;br&gt; Alter])
+A[Angegebenes &lt;br&gt; Alter]
+E1((Erinnerungsfehler)) 
+E2((Keine &lt;br&gt; Geburtsurkunde))
+E3((Vordatierung))
+E4((Rückdatierung))
+
+E1@{ shape: text}
+E2@{ shape: text}
+E3@{ shape: text}
+E4@{ shape: text}
+
+B --&gt; A ~~~ E1 &amp; E2 &amp; E3 &amp; E4
+E1 &amp; E2 &amp; E3 &amp; E4 --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="warum-das-alles" class="slide level2">
+<h2>Warum das alles?</h2>
+<ul>
+<li>Unser Ziel ist es, soziale Prozesse besser zu verstehen.</li>
+<li>Soziale Prozesse sind Verbindungen von Eigenschaften über Untersuchungseinheiten.</li>
+<li>Dazu müssen wir verstehen, wie <strong>Unterschiede</strong> der Eigenschaft A mit <strong>Unterschieden</strong> der Eigenschaft B zusammenhängen.</li>
+<li>Wenn wir in einem der erfassten Unterschiede auch einen großen Anteil von Störfaktoren/Messfehlern haben, ist unsere Untersuchung problematisch.</li>
+</ul>
+</section>
+<section id="alter-und-gesundheit" class="slide level2">
+<h2>Alter und Gesundheit</h2>
+<p><a href="images/alter-gesundheit.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images/alter-gesundheit.svg"></a></p>
+</section>
+<section id="alter-und-gesundheit-1" class="slide level2">
+<h2>Alter und Gesundheit</h2>
+<p><a href="images/alter-gesundheit-soep.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/alter-gesundheit-soep.png" style="width:70.0%"></a></p>
+</section>
+<section id="alter-und-mentale-gesundheit" class="slide level2">
+<h2>Alter und mentale Gesundheit</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/age_dispair.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Relativer Anteil von Befragten in “Dispair”. Q: “Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?” Dispair = 30/30 Tage (Blanchflower et al.&nbsp;2025)"><img data-src="images/age_dispair.png" style="width:50.0%" alt="Relativer Anteil von Befragten in “Dispair”. Q: “Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?” Dispair = 30/30 Tage (Blanchflower et al.&nbsp;2025)"></a></p>
 <figcaption>Relativer Anteil von Befragten in “Dispair”. Q: “Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?” Dispair = 30/30 Tage <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327858">(Blanchflower et al.&nbsp;2025)</a></figcaption>
 </figure>
 </div>
 </section>
-<section id="unterschiede-zwischen-gesellschaften-verstehen" class="slide level2">
-<h2>Unterschiede zwischen Gesellschaften verstehen</h2>
-<p>Warum ist die Anzahl der durchschnittlichen Geschlechtspartner:innen zwischen Ländern unterschiedlich hoch?</p>
-<p><a href="https://www.datapandas.org/ranking/average-number-of-sexual-partners-by-country" class="uri">https://www.datapandas.org/ranking/average-number-of-sexual-partners-by-country</a></p>
+<section id="fehlerquellen-unterscheiden" class="slide level2">
+<h2>Fehlerquellen unterscheiden</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/path-impulsivity-externalizing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al.&nbsp;(2015)"><img data-src="images/path-impulsivity-externalizing.png" alt="Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al.&nbsp;(2015)"></a></p>
+<figcaption>Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full">Papa et al.&nbsp;(2015)</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.</li>
+<li>Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.</li>
+</ul>
+</div></div>
 </section>
-<section id="menschliches-handeln-verstehen" class="slide level2">
-<h2>Menschliches Handeln verstehen</h2>
-<p>Hikikomori<sup>1</sup> - warum machen die das?</p>
-<p><a href="images/hikikomori.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/hikikomori.png" style="width:50.0%"></a></p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>hiku: sich zurückziehen, komoru: sich verschließen</p></li></ol></aside></section>
-<section id="verstehen-wie-menschen-gesellschaft-machen" class="slide level2">
-<h2>Verstehen, wie Menschen Gesellschaft machen</h2>
-<p>Versuchen Sie sich mal als Designer eines neues Social Networks und sehen Sie, was passiert: <a href="https://sociology.itz.kit.edu/twony/" class="uri">https://sociology.itz.kit.edu/twony/</a> <img data-src="images/twonderland.png"> —</p>
+<section id="unterschiede-erfassen-wozu-nochmal" class="slide level2">
+<h2>Unterschiede erfassen: wozu nochmal?</h2>
+<div class="centering">
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+        A(["Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?"])
+        DE([Deskription])
+        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])
+        EX([Exploration])
+        HT([Hypothese])
+        
+        DE1["Wie groß ist die Gruppe &lt;br&gt; einsamer Personen &lt;br&gt; in Deutschland?"]
+        DE1@{ shape: text}
+        
+        EX1["Gibt es einen Zusammenhang &lt;br&gt; zwischen Einsamkeit &lt;br&gt; und sportlicher &lt;br&gt; Aktivität?"]
+        EX1@{ shape: text}       
+        
+        HT1["Je einsamer Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko."]
+        HT1@{ shape: text}       
+
+        A --&gt;|nein| DE --- DE1
+        A --&gt;|ja| T
+        T --&gt;|nein| EX --- EX1
+        T --&gt;|ja| HT --- HT1
+        
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="soziologie-ergänzungsfach" class="slide level2">
-<h2>Soziologie Ergänzungsfach</h2>
-<iframe width="1200" height="600" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiCpi-YEhCI1Y15zMb9m2Uud0zoVupGBpA088mqEfIUE1dwthVUGo4Bx7eqWmQTCSmaSRD791PZ2r4/pubhtml?widget=true&amp;headers=false">
-</iframe>
+<section id="eigenschaften-und-variablen" class="slide level2">
+<h2>Eigenschaften und Variablen</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="images/faktor-ausprägung-verteilung.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/faktor-ausprägung-verteilung.svg" style="width:80.0%"></a></p>
+</div><div class="column" style="width:50%;">
+<p>Eine Variable ist das <em>Ergebnis</em> der Erfassung von Ausprägungen.</p>
+<p>Eine Variable ist <strong>nicht</strong> die Eigenschaft selbst, sondern unsere symbolisch protokollierte Beobachtungen von individuellen Ausprägungen, die durchaus große Anteile von Störfaktoren haben kann.</p>
+</div></div>
+</section>
+<section id="wie-sieht-das-in-der-praxis-aus" class="slide level2 midi">
+<h2>Wie sieht das in der Praxis aus?</h2>
+<p><a href="images/soep-einsamkeit-variablen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="images/soep-einsamkeit-variablen.png" style="width:70.0%"></a></p>
+<p>Wie oft haben Sie das Gefühl,</p>
+<ul>
+<li>dass Ihnen die Gesellschaft anderer fehlt? [plj0587]</li>
+<li>dass Sie sozial isoliert sind? [plj0588]</li>
+<li>außen vor zu sein? [plj0589]</li>
+</ul>
+</section>
+<section id="einsamkeit-in-deutschland-2017" class="slide level2">
+<h2>Einsamkeit in Deutschland (2017)</h2>
+<p><a href="images/soep-einsamkeit-bar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="images/soep-einsamkeit-bar.png" style="width:80.0%"></a></p>
 
 
 </section>

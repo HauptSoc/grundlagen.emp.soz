@@ -1,0 +1,7 @@
+---
+title: "Gutes Unterscheiden - Messtheoretische Grundlagen"
+author: "Andreas Haupt"
+format: html
+---
+
+{{< revealjs file="04-Messen_Grundlagen.html" height="600px" width="50%" class="ratio ratio-16x9" >}}

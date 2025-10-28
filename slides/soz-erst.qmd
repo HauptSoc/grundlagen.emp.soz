@@ -4,6 +4,7 @@ slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
 format: 
   revealjs:
+    fig-format: svg
     width: 1200
     height: 700
     auto-stretch: false
