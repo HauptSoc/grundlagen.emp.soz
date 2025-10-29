@@ -4,4 +4,4 @@ author: "Andreas Haupt"
 format: html
 ---
   
-  {{< revealjs file="00-Orga.html" height="500px" width="50%" class="ratio ratio-16x9" >}}
+{{< revealjs file="00-Orga.html" height="500px" width="50%" class="ratio ratio-16x9" >}}
