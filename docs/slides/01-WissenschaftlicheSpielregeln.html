@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.30">
 
   <title>Methoden empirischer Sozialforschung – Wissenschaftliche Spielregeln</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d17402779cb860955dfb2638498e4ce5.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-da308dc606942ef5cbc74096b44a5537.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -215,6 +215,23 @@
 <li>Diese Erzählung führt zu “false balancing” in den Medien und zu Beschreibung von wissenschaftlichem Konsens als “umstritten”.</li>
 </ul>
 </section>
+<section id="überzeugungen-verändern" class="slide level2">
+<h2>Überzeugungen verändern</h2>
+<p>Wenn Sie eine Behauptung aufstellen, die bei anderen eine Überzeugung verändern soll<sup>1</sup>, dann gilt folgende goldene Regel:</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Die goldene Regel der empirischen Wissenschaften</strong></p>
+</div>
+<div class="callout-content">
+<p>Lege dar, wie Daten aussehen müssen, die im Widerspruch zur Behauptung stehen.</p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Ausgenommen sind religiöse, verschwörungstheoretische, mathematische und aussagenlogische Behauptungen.</p></li></ol></aside></section>
 <section id="gibt-es-ein-gesundes-maß-von-rauchverhalten" class="slide level2 small">
 <h2>Gibt es ein gesundes Maß von Rauchverhalten?</h2>
 <div class="quarto-layout-panel" data-layout="[[1,1], [1,1]]">
@@ -256,7 +273,7 @@
 </section>
 <section id="brandolini-in-action-the-alpha-wolf" class="slide level2 midi">
 <h2>Brandolini in action: The alpha wolf</h2>
-<div class="fragment" data-fragment-index="1">
+<div class="fragment" data-fragment-index="0">
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img data-src="images/alphawolf.png"></p>
@@ -266,7 +283,7 @@
 <p>David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert, versuchte bis 2020 vergeblich, sein eigenes Buch aus dem Verkehr zu ziehen (<a href="https://sciencenorway.no/ulv/wolf-packs-dont-actually-have-alpha-males-and-alpha-females-the-idea-is-based-on-a-misunderstanding/1850514">mehr hier</a>).</p>
 </div></div>
 </div>
-<div class="fragment" data-fragment-index="2">
+<div class="fragment" data-fragment-index="1">
 <p><img data-src="images/StempelSelection.png" class="absolute" style="left: 0px; bottom: 0px; width: 300px; height: 300px; "></p>
 </div>
 </section>
@@ -303,6 +320,7 @@
 
 
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -492,7 +510,7 @@
         margin: 5.0e-2,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -566,14 +584,13 @@
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

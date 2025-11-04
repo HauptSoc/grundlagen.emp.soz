@@ -51,6 +51,7 @@ Um empirisch überzeugend sein zu können, brauchen Sie
 
   3.  die Kompetenz, das Verhältnis von Daten, Methoden und Ihren Aussagen zu klären.
 
+
 ## Wissenschaftliche Überzeugungen
 
 Wissenschaftliche Debatten sind kumulativ, d.h. sie bauen auf vorherigen wissenschaftlichen Inhalten auf. Daraus folgen wichtige Konsequenzen:
@@ -87,6 +88,20 @@ Fragen Sie sich selbst:
   - Gerade in Deutschland gibt es eine gewisse "Gier" nach Genies und eine starke Erzählung darüber, dass einige von ihnen verkannt oder sogar unterdrückt werden/wurden. 
   - Das ist in der Vielzahl aller Fälle falsch und auch schädlich . 
   - Diese Erzählung führt zu "false balancing" in den Medien und zu Beschreibung von wissenschaftlichem Konsens als "umstritten".
+  
+## Überzeugungen verändern
+
+Wenn Sie eine Behauptung aufstellen, die bei anderen eine Überzeugung verändern soll[^1], dann gilt folgende goldene Regel: 
+
+::: {.callout-note appearance="default"}
+## Die goldene Regel der empirischen Wissenschaften 
+
+Lege dar, wie Daten aussehen müssen, die im Widerspruch zur Behauptung stehen. 
+:::
+
+[^1]: Ausgenommen sind religiöse, verschwörungstheoretische, mathematische und aussagenlogische Behauptungen. 
+
+---
 
 ## Gibt es ein gesundes Maß von Rauchverhalten? {.small}
 
@@ -104,7 +119,6 @@ Fragen Sie sich selbst:
     ). 
   - Andere Faktoren (u.a.: Genetik, Umweltverschmutzung, Sporen) verursachen auch Lungenkrebs. Wie können wir uns daher sicher sein, dass Rauchen eine wesentliche Ursache ist? 
   
-
 # Wissenschaftliche Verantwortung
 
 ## Wissenschaftliche Verantwortung
@@ -123,7 +137,7 @@ Wir haben daher auf zwei Arten eine Verantwortung:
 
 ## Brandolini in action: The alpha wolf  {.midi}
 
-::: {.fragment fragment-index=1}
+::: {.fragment fragment-index=0}
 
 ::::::{.columns}
 ::::{.column width="30%"}
@@ -140,7 +154,7 @@ David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert
 ::::::
 :::
 
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index=1}
 ![](images/StempelSelection.png){.absolute bottom=0 left=0 width="300" height="300"}
 :::
 
