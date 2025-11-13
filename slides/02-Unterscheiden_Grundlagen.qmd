@@ -44,27 +44,27 @@ Aus einer wissenschaftlichen Perspektive müssen wir uns fragen, inwieweit die g
 -   Wie können wir diese Unterschiede methodisch sicher erfassen?
 -   Welche Unterschiede sind mit anderen Unterschieden *systematisch* verbunden?
 
-
 ## Ziele {.midi}
 
-  1. **Klare Unterscheidungen**: Wir benötigen Klar definierte Abgrenzungen von Eigenschaften und ihren relevanten Ausprägungen.
+1.  **Klare Unterscheidungen**: Wir benötigen Klar definierte Abgrenzungen von Eigenschaften und ihren relevanten Ausprägungen.
 
-  2. **Sinnvolle Unterscheidungen**: Wir nutzen geeignete Daten, die die erwarteten Ausprägungen zuverlässig abbilden können.
+2.  **Sinnvolle Unterscheidungen**: Wir nutzen geeignete Daten, die die erwarteten Ausprägungen zuverlässig abbilden können.
 
-  3. **Trennscharfe Unterscheidungen**: Beobachtungen sollen ein-eindeutig einer Ausprägung einer Eigenschaft zugeordnet werden können.
-  
-  4. **Relevante Unterscheidungen**: Die genutzten Unterschiede sollen zur Erklärung der (sozialen) Welt nützlich sein.
+3.  **Trennscharfe Unterscheidungen**: Beobachtungen sollen ein-eindeutig einer Ausprägung einer Eigenschaft zugeordnet werden können.
+
+4.  **Relevante Unterscheidungen**: Die genutzten Unterschiede sollen zur Erklärung der (sozialen) Welt nützlich sein.
 
 ## Klare Unterscheidungen: Familien und andere Lebensformen {.midi}
 
-  - Wie haben sich Familienformen in den vergangenen Jahren entwickelt?
+-   Wie haben sich Familienformen in den vergangenen Jahren entwickelt?
 
-  $\rightarrow$ Wir wollen dazu nur Familien **untereinander** abgrenzen. 
-  
-    Dazu müssen wir allerdings Familien von anderen  Lebensformen abgrenzen. Dazu zählen dyadische Lebensformen (Ehe, Nichteheliche Lebensgemeinschaft), geteiltes Wohnen (WGs, Heimgemeinschaften), Alleinlebende
+$\rightarrow$ Wir wollen dazu nur Familien **untereinander** abgrenzen.
 
-  $\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander abgrenzen, wie z.B. Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
-  
+```         
+Dazu müssen wir allerdings Familien von anderen  Lebensformen abgrenzen. Dazu zählen dyadische Lebensformen (Ehe, Nichteheliche Lebensgemeinschaft), geteiltes Wohnen (WGs, Heimgemeinschaften), Alleinlebende
+```
+
+$\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander abgrenzen, wie z.B. Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
 
 ## Familie, Paare, Haushalte {.nostretch}
 
@@ -76,22 +76,23 @@ Aus einer wissenschaftlichen Perspektive müssen wir uns fragen, inwieweit die g
 
 ## Am Anfang ist das Wort {.midi}
 
-:::::{.columns}
-::::{.column width="30%"}
-  ![](images/perception_prop.png)
-::::
-::::{.column width="70%"}
+::::: columns
+::: {.column width="30%"}
+![](images/perception_prop.png)
+:::
+
+::: {.column width="70%"}
 Wir alle nutzen Schemata, um die Welt einzuteilen und miteinander zu kommunizieren. Wir verstehen uns, weil wir ähnliche Schemata aktivieren, wenn wir miteinander sprechen.
 
-Allerdings gibt es auch eine erhebliche Variation bei der Aktivierung von gleichen Schemata (siehe Abb. links), was zu Missverständnissen führen kann. 
+Allerdings gibt es auch eine erhebliche Variation bei der Aktivierung von gleichen Schemata (siehe Abb. links), was zu Missverständnissen führen kann.
 
-Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wissenschaftlichen Studie gilt es diese Missverständnisse dringend zu vermeiden. 
-::::
-::::: 
+Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wissenschaftlichen Studie gilt es diese Missverständnisse dringend zu vermeiden.
+:::
+:::::
 
 ## Konzeptspezifikation {.nostretch}
-![Operationalisierung und Konzeptspezifikation Quelle: [Wonka (2022)](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
 
+![Operationalisierung und Konzeptspezifikation Quelle: [Wonka (2022)](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
 
 ## Was ist ein Konzept? {.midi}
 
@@ -99,33 +100,43 @@ Ein Konzept ist eine Menge von Informationen über Objekte, Merkmale oder Relati
 
 Die **Extension** eines Konzepts sind alle Dinge, die das Konzept umfasst.
 
-    Die Extension des Konzepts *Familie* sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.
+```         
+Die Extension des Konzepts *Familie* sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.
+```
 
 Die **Intension** eines Konzepts sind alle Eigenschaften, die den Einheiten innerhalb einer Extension gemeinsam sind.
 
-     Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
+```         
+ Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
+```
 
 ## Warum das alles? {.midi}
 
 Wir möchten klare Unterscheidungen u.a. von:
 
-- Untersuchungseinheiten 
-  
-      In einer Untersuchung über Familien sollten daher keine Paare ohne Kinder auftauchen. Aber gelten getrennt lebende Ehepaare mit Kindern als eine Familie oder zwei? Was ist mit Patchwork-Familien oder Personen, die mehrere Haushalte aber nur eine Familie führen? 
-    
-- Eigenschaften 
-    
-      Versuchen Sie es mal: ADHS & Hochsensibilität; Mental Load & Stress; Zufriedenheit & Glück
-    
-- Ausprägungen von Eigenschaften 
+-   Untersuchungseinheiten
 
-      Wie viele Familienformen, Geschlechter, Bildungsformen, Organisationstypen und Regierungsformen müssen/sollten wir unterscheiden? 
+    ```         
+    In einer Untersuchung über Familien sollten daher keine Paare ohne Kinder auftauchen. Aber gelten getrennt lebende Ehepaare mit Kindern als eine Familie oder zwei? Was ist mit Patchwork-Familien oder Personen, die mehrere Haushalte aber nur eine Familie führen? 
+    ```
+
+-   Eigenschaften
+
+    ```         
+    Versuchen Sie es mal: ADHS & Hochsensibilität; Mental Load & Stress; Zufriedenheit & Glück
+    ```
+
+-   Ausprägungen von Eigenschaften
+
+    ```         
+    Wie viele Familienformen, Geschlechter, Bildungsformen, Organisationstypen und Regierungsformen müssen/sollten wir unterscheiden? 
+    ```
 
 ## Konzepte und Unterscheidungen
 
-Wenn wir von Konzepten sprechen, beziehen wir uns daher typischerweise auf Schemata über Untersuchungseinheiten, Eigenschaften oder Ausprägungen. 
+Wenn wir von Konzepten sprechen, beziehen wir uns daher typischerweise auf Schemata über Untersuchungseinheiten, Eigenschaften oder Ausprägungen.
 
-Zwei Konzepte A und B voneinander zu unterscheiden, bedeutet daher zu beschreiben, welches intensionale Merkmal A hat aber B nicht. Das ist die Aufgabe von Definitionen. 
+Zwei Konzepte A und B voneinander zu unterscheiden, bedeutet daher zu beschreiben, welches intensionale Merkmal A hat aber B nicht. Das ist die Aufgabe von Definitionen.
 
 ## Unterschiede festlegen ist Aufgabe von Definitionen
 
@@ -141,6 +152,10 @@ Eine Beschreibung ist die die Identifikation eines Objekts unter mindestens ein 
 
 Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern sie wenden (definitorische) Regeln zur Einordnung von Dingen an.
 
+## Ist das ein Auto?
+
+![Der Fiat Topolino. Bildquelle: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/d7/Fiat_Topolino_%282023%29_IMG_0749.jpg){width="70%"}
+
 ## Gebräuchliche Definitionen
 
 -   Eine *Grey Divorce* ist die Scheidung einer Ehe, in der beide Partner mindestens 50 Jahre alt sind.\
@@ -152,3 +167,11 @@ Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern s
     -   eine versicherungspflichtige Beschäftigung suchen und dabei den Vermittlungsbemühungen der Agentur für Arbeit zur Verfügung stehen und
 
     -   sich bei der Agentur für Arbeit arbeitslos gemeldet haben.
+
+## Armut und der Reichtum an Begriffen {.midi}
+
+![Konzepte von Armut im internationalen Vergleich. Quelle: Our World in Data](https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/63d8e4f5-b1f3-4847-7981-b9de18260500/w=850){width=70%}
+
+## Macht es einen Unterschied? 
+
+<iframe src="https://ourworldindata.org/explorers/poverty-explorer?Indicator=Share+in+poverty&Poverty+line=%243+per+day%3A+International+Poverty+Line&Household+survey+data+type=Show+data+from+both+income+and+consumption+surveys&Show+breaks+between+less+comparable+surveys=false&country=BGD~BOL~KEN~MOZ~NGA~ZMB&tab=map&hideControls=false" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>

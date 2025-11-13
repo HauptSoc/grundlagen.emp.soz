@@ -7,11 +7,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.7.30">
 
   <title>Methoden empirischer Sozialforschung – Unterscheiden: Grundlagen</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d17402779cb860955dfb2638498e4ce5.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-da308dc606942ef5cbc74096b44a5537.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -267,6 +267,15 @@
 <p>Eine Beschreibung ist die die Identifikation eines Objekts unter mindestens ein Konzept. Die Beschreibung eines gleichen Objekts unterscheidet sich daher, wenn für sie unterschiedliche Konzepte verwendet werden.</p>
 <p>Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern sie wenden (definitorische) Regeln zur Einordnung von Dingen an.</p>
 </section>
+<section id="ist-das-ein-auto" class="slide level2">
+<h2>Ist das ein Auto?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Fiat_Topolino_%282023%29_IMG_0749.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Der Fiat Topolino. Bildquelle: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Fiat_Topolino_%282023%29_IMG_0749.jpg" style="width:70.0%" alt="Der Fiat Topolino. Bildquelle: Wikipedia"></a></p>
+<figcaption>Der Fiat Topolino. Bildquelle: Wikipedia</figcaption>
+</figure>
+</div>
+</section>
 <section id="gebräuchliche-definitionen" class="slide level2">
 <h2>Gebräuchliche Definitionen</h2>
 <ul>
@@ -279,6 +288,20 @@
 <li><p>sich bei der Agentur für Arbeit arbeitslos gemeldet haben.</p></li>
 </ul></li>
 </ul>
+</section>
+<section id="armut-und-der-reichtum-an-begriffen" class="slide level2 midi">
+<h2>Armut und der Reichtum an Begriffen</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/63d8e4f5-b1f3-4847-7981-b9de18260500/w=850.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Konzepte von Armut im internationalen Vergleich. Quelle: Our World in Data"><img data-src="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/63d8e4f5-b1f3-4847-7981-b9de18260500/w=850.png" style="width:70.0%" alt="Konzepte von Armut im internationalen Vergleich. Quelle: Our World in Data"></a></p>
+<figcaption>Konzepte von Armut im internationalen Vergleich. Quelle: Our World in Data</figcaption>
+</figure>
+</div>
+</section>
+<section id="macht-es-einen-unterschied" class="slide level2">
+<h2>Macht es einen Unterschied?</h2>
+<iframe src="https://ourworldindata.org/explorers/poverty-explorer?Indicator=Share+in+poverty&amp;Poverty+line=%243+per+day%3A+International+Poverty+Line&amp;Household+survey+data+type=Show+data+from+both+income+and+consumption+surveys&amp;Show+breaks+between+less+comparable+surveys=false&amp;country=BGD~BOL~KEN~MOZ~NGA~ZMB&amp;tab=map&amp;hideControls=false" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
 
 
 </section>
@@ -471,7 +494,7 @@
         margin: 5.0e-2,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -545,14 +568,13 @@
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
