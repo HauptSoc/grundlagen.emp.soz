@@ -152,6 +152,42 @@ Eine Beschreibung ist die die Identifikation eines Objekts unter mindestens ein 
 
 Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern sie wenden (definitorische) Regeln zur Einordnung von Dingen an.
 
+## Die Bedeutung guter Konzepte
+
+ - Klare Beschreibungen benötigen klare Konzepte, da eine Beschreibung die Einordnung einer Beobachtung *B* unter ein Konzept *K* der Form "B ist eine Realisation von K" ist. 
+  -  Wenn Sie Eigenschaften oder Ausprägungen *A* und *B*  voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension *A* hat, die *B* nicht hat. Dazu müssen wir *A* und *B* nicht erschöpfend beschreiben. Wir benötigen "nur" eine klare Trenn-Eigenschaft. 
+  
+  
+## Beschreibung von Dingen
+
+![Ein Zeitschriftenständer](https://fintabo.de/images/product_images/popup_images/prospektstaender_880_0.webp)
+
+## Beschreibung von Dingen
+
+![Ein römischer Dodekaeder](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pentagon-dodeca%C3%ABder_in_brons%2C_150_tot_400_NC%2C_vindplaats-_Tongeren%2C_Leopoldwal%2C_1939%2C_collectie_Gallo-Romeins_Museum_Tongeren%2C_4002.jpg/1024px-Pentagon-dodeca%C3%ABder_in_brons%2C_150_tot_400_NC%2C_vindplaats-_Tongeren%2C_Leopoldwal%2C_1939%2C_collectie_Gallo-Romeins_Museum_Tongeren%2C_4002.jpg){width=50%}
+
+## Beschreiben und Unterscheiden
+
+:::::{.columns}
+
+::::{.column width="50%"}
+ ![](images/hikikomori.png)
+::::
+
+::::{.column width="50%"}
+Hikikomori[^1] - ist das eine Form von Isolation, Zurückgezogenheit, (maximale) Introvertiertheit, Depression?
+
+::::
+::::: 
+
+[^1]: hiku: sich zurückziehen, komoru: sich verschließen
+
+---
+
+## Die (soziale) Welt ist bunt
+
+![](images/cohen-single-family.png){width=120%}
+
 ## Ist das ein Auto?
 
 ![Der Fiat Topolino. Bildquelle: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/d7/Fiat_Topolino_%282023%29_IMG_0749.jpg){width="70%"}
