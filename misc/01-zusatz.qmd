@@ -1,0 +1,12 @@
+---
+title: "Wissenschaftliche Spielregeln"
+author: "Andreas Haupt"
+format: html
+---
+
+- Kahneman über mangelnde Evidenz in seinem Buch "Thinking fast and slow": [Link](https://retractionwatch.com/2017/02/20/placed-much-faith-underpowered-studies-nobel-prize-winner-admits-mistakes/).
+
+- Ein [Beitrag](https://www.npr.org/2018/09/22/650019038/how-the-myers-briggs-personality-test-began-in-a-mothers-living-room-lab) zur Geschichte des Myers-Briggs-Tests. 
+
+- Ein [Überblick](https://www.test.de/gruener-Tee-Wirkung-5864603-0/) über die Wirkungen von grünem Tee (Grüße an die Flohsamencommunity!). 
+

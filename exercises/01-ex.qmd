@@ -1,0 +1,64 @@
+---
+title: "Übung: Grundlagen guten Unterscheidens"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Die Fragestellung
+
+Einsamkeit wird zunehmend als gesundheitliches Risiko aufgefasst, dass immer größere Teile der Bevölkerung erfassen könnte. Wir möchten wissen: Auf welche Art und Weise sind Unterschiede im Einsamkeitserleben mit gesundheitlichen Unterschieden in der Bevölkerung verbunden?
+
+```{mermaid}
+flowchart LR
+E[Einsamkeit] --> G[Gesundheit]
+```
+
+## Erste Schritte
+
+1. Um die Ausbreitung von Einsamkeit zu erfassen und seinen negativen Wirkungen vorzubeugen, hat die Bundesregierung das Einsamkeitsbarometer erstellt. Recherieren Sie, wie das Einsamkeitsbarometer Unterschiede in der Einsamkeit von Personen erfasst. 
+
+2. Trennen Sie **Einsamkeit** von **Isolation** ab. 
+
+3. Unterscheiden Sie mindestens drei Ausprägungen der Eigenschaft **Einsamkeit** und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen. 
+
+4. Unterscheiden Sie mindestens drei Ausprügungen der Eigenschaft **Gesundheit** und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.
+
+5. Diskutieren Sie, auf welche Art und Weise, die von Ihnen getroffenen Unterschiede von Einsamkeit mit gesundheitlichen Unterschieden verbunden sind? Benötigen wir ggf. mehr Eigenschaften, um diese Verbindung zu verstehen? 
+
+
+```{mermaid}
+flowchart LR
+
+E[Einsamkeit] --> BB[?] --> G[Gesundheit]
+```
+
+```{mermaid}
+flowchart LR
+E[Einsamkeit]  --> G[Gesundheit]
+BB[?] --> E & G 
+
+```
+
+```{mermaid}
+flowchart LR
+E[Einsamkeit]  --> G[Gesundheit]
+E --> BB[?] 
+BB --> G
+```
