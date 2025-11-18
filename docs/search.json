@@ -154,8 +154,8 @@
     "objectID": "course-syllabus.html#bücherempfehlungen",
     "href": "course-syllabus.html#bücherempfehlungen",
     "title": "Grundlagen empirischer Sozialforschung",
-    "section": "3.1 Bücherempfehlungen",
-    "text": "3.1 Bücherempfehlungen\n\n\n\n\n\nNick Huntington-Klein, The Effect: An Introduction to Research Design and Causality. https://theeffectbook.net\n\n\n\n\n\n\n\n\nBaur, N. & Blasius, J. (Hrsg.) (2022), Handbuch Methoden der empirischen Sozialforschung. https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4",
+    "section": "4.1 Bücherempfehlungen",
+    "text": "4.1 Bücherempfehlungen\n\n\n\n\n\nNick Huntington-Klein, The Effect: An Introduction to Research Design and Causality. https://theeffectbook.net\n\n\n\n\n\n\n\n\nBaur, N. & Blasius, J. (Hrsg.) (2022), Handbuch Methoden der empirischen Sozialforschung. https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4",
     "crumbs": [
       "Wissenswertes",
       "Das Kleingedruckte"
@@ -165,8 +165,8 @@
     "objectID": "course-syllabus.html#multimedia",
     "href": "course-syllabus.html#multimedia",
     "title": "Grundlagen empirischer Sozialforschung",
-    "section": "3.2 Multimedia",
-    "text": "3.2 Multimedia\nViele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.1 Unter anderem empfehle ich Ihnen:\n\nRichard McElreath: https://www.youtube.com/@rmcelreath\nJosh Starmer: https://www.youtube.com/@statquest\nGrant Sanderson: https://www.youtube.com/@3blue1brown\nJulia M. Rohrer: https://juliarohrer.com/resources",
+    "section": "4.2 Multimedia",
+    "text": "4.2 Multimedia\nViele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.1 Unter anderem empfehle ich Ihnen:\n\nRichard McElreath: https://www.youtube.com/@rmcelreath\nJosh Starmer: https://www.youtube.com/@statquest\nGrant Sanderson: https://www.youtube.com/@3blue1brown\nJulia M. Rohrer: https://juliarohrer.com/resources",
     "crumbs": [
       "Wissenswertes",
       "Das Kleingedruckte"
@@ -589,7 +589,7 @@
     "href": "slides/soz-erst.html#menschliches-handeln-verstehen",
     "title": "Soziologie – Wie geht das, wer macht das, was macht man da?",
     "section": "Menschliches Handeln verstehen",
-    "text": "Menschliches Handeln verstehen\nHikikomori1 - warum machen die das?\n\nhiku: sich zurückziehen, komoru: sich verschließen"
+    "text": "Menschliches Handeln verstehen\nHikikomori1 - warum machen die das?"
   },
   {
     "objectID": "slides/soz-erst.html#hiku-sich-zurückziehen-komoru-sich-verschließen",
@@ -623,8 +623,8 @@
     "objectID": "slides/00-Orga.html#unsere-homebase",
     "href": "slides/00-Orga.html#unsere-homebase",
     "title": "Methoden - Was soll das?",
-    "section": "Unsere Homebase",
-    "text": "Unsere Homebase\nAlle Informationen und Unterlagen für alle Lehrveranstaltungen des Moduls (Vorlesungen & Übungen) für dieses und nächstes Semester werden gebündelt auf einer Website dargestellt:\n\n\n\n\n\n\nHomebase\n\n\nhttps://unterscheiden-und-vergleichen.netlify.app\n\n\n\nBitte nutzen Sie diese Webpage als erste Anlaufstelle."
+    "section": "",
+    "text": "Alle Informationen und Unterlagen für alle Lehrveranstaltungen des Moduls (Vorlesungen & Übungen) für dieses und nächstes Semester werden gebündelt auf einer Website dargestellt:\n\n\n\n\n\n\nHomebase\n\n\n\nhttps://unterscheiden-und-vergleichen.netlify.app\n\n\nBitte nutzen Sie diese Webpage als erste Anlaufstelle."
   },
   {
     "objectID": "slides/00-Orga.html#aufbau-des-moduls",
@@ -672,8 +672,8 @@
     "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "href": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
-    "section": "Beobachten und nach Ausprägungen unterscheiden",
-    "text": "Beobachten und nach Ausprägungen unterscheiden\n\n\n\nPlakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+    "section": "",
+    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
@@ -694,7 +694,7 @@
     "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
-    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
@@ -891,5 +891,47 @@
     "title": "Unterscheiden: Grundlagen",
     "section": "Beschreiben und Unterscheiden",
     "text": "Beschreiben und Unterscheiden\n\n\n\n\nHikikomori1 - ist das eine Form von Isolation, Zurückgezogenheit, (maximale) Introvertiertheit, Depression?\n\nhiku: sich zurückziehen, komoru: sich verschließen"
+  },
+  {
+    "objectID": "slides/soz-erst.html",
+    "href": "slides/soz-erst.html",
+    "title": "Soziologie – Wie geht das, wer macht das, was macht man da?",
+    "section": "",
+    "text": "\\[\\begin{equation*}\n  \\eqnmark[purple]{node1}{GEBV}\n  \\tikzmarknode{node2}{=}\n  \\eqnmark[black]{node3}{\\sum_{i}^{n}}\n  \\eqnmarkbox[blue]{node4}{X_{i}}\n  \\eqnmarkbox[red]{node5}{b_{i}}\n\\end{equation*}\\]"
+  },
+  {
+    "objectID": "slides/soz-erst.html#formeln",
+    "href": "slides/soz-erst.html#formeln",
+    "title": "Soziologie – Wie geht das, wer macht das, was macht man da?",
+    "section": "",
+    "text": "\\[\\begin{equation*}\n  \\eqnmark[purple]{node1}{GEBV}\n  \\tikzmarknode{node2}{=}\n  \\eqnmark[black]{node3}{\\sum_{i}^{n}}\n  \\eqnmarkbox[blue]{node4}{X_{i}}\n  \\eqnmarkbox[red]{node5}{b_{i}}\n\\end{equation*}\\]"
+  },
+  {
+    "objectID": "slides/soz-erst.html#footnotes",
+    "href": "slides/soz-erst.html#footnotes",
+    "title": "Soziologie – Wie geht das, wer macht das, was macht man da?",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhiku: sich zurückziehen, komoru: sich verschließen↩︎"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html",
+    "href": "slides/04-Messen_Grundlagen.html",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "",
+    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#footnotes",
+    "href": "slides/04-Messen_Grundlagen.html#footnotes",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.↩︎\nDie Großväter (ja, es waren alles Männer) haben das Indikator genannt.↩︎"
+  },
+  {
+    "objectID": "slides/00-Orga.html",
+    "href": "slides/00-Orga.html",
+    "title": "Methoden - Was soll das?",
+    "section": "",
+    "text": "Alle Informationen und Unterlagen für alle Lehrveranstaltungen des Moduls (Vorlesungen & Übungen) für dieses und nächstes Semester werden gebündelt auf einer Website dargestellt:\n\n\n\n\n\n\nHomebase\n\n\n\nhttps://unterscheiden-und-vergleichen.netlify.app\n\n\nBitte nutzen Sie diese Webpage als erste Anlaufstelle."
   }
 ]
