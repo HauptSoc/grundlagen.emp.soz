@@ -25,6 +25,22 @@ include-in-header:
     </style>
 ---
 
+## Formeln
+
+
+\begin{equation*}
+  \eqnmark[purple]{node1}{GEBV}
+  \tikzmarknode{node2}{=}
+  \eqnmark[black]{node3}{\sum_{i}^{n}}
+  \eqnmarkbox[blue]{node4}{X_{i}}
+  \eqnmarkbox[red]{node5}{b_{i}}
+\end{equation*}
+\annotate[yshift=1em]{left}{node3}{sum across n loci} 
+\annotate[yshift=-1em]{below,left}{node1}{Genomic Estimated Breeding Value} 
+\annotate[yshift=-1em]{below,right}{node5}{effect at locus i} 
+\annotate[yshift=-2.5em]{below,right}{node4}{genotype at locus i}
+
+
 ## Gesellschaftliche Entwicklungen verstehen
 
 ![Relativer Anteil von Befragten in "Dispair". Q: "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Dispair = 30/30 Tage [(Blanchflower et al. 2025)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327858) ](images/age_dispair.png){width=50%}
