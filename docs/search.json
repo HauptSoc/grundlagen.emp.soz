@@ -491,7 +491,7 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Dimensionen & Ausprägungen",
-    "text": "Dimensionen & Ausprägungen\n\n\n\n\nKonstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.\nAusprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.\nDie Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen)."
+    "text": "Dimensionen & Ausprägungen\n\n\n\nKonstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.\nAusprägungen sind alle Varianten eines bestimmten Konzepts.1\nAusprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.\nDie Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen).\nIn der Sprachphilosophie und Linguistik wird dies auch als type/token Unterscheidung genutzt."
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-1",
@@ -505,7 +505,7 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-2",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Dimensionen & Ausprägungen",
-    "text": "Dimensionen & Ausprägungen\n\n\n\n\nDimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.\nDie Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit."
+    "text": "Dimensionen & Ausprägungen\n\n\n\nDimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.\nDie Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit."
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#beispiel-intelligenzmessung",
@@ -533,14 +533,14 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#unterschiedlichkeit-von-eigenschaften-und-ausprägungen",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Unterschiedlichkeit von Eigenschaften und Ausprägungen",
-    "text": "Unterschiedlichkeit von Eigenschaften und Ausprägungen\nPersonen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer relevanten Ausprägungen1 erfassen.\nAusprägungen sind keine Beobachtungen, sondern wie wir uns die Unterschiedlichkeit von Eigenschaften vorstellen (siehe u.a. die “Debatten” um Gender).\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!"
+    "text": "Unterschiedlichkeit von Eigenschaften und Ausprägungen\nPersonen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer relevanten Ausprägungen1 erfassen.\nAusprägungen sind daher Wahrnehmungen unter zu Hilfe Nahme von Konzepten (das haben wir als “Beobachtung” definiert).\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!"
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen",
     "href": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Ausprägungen",
-    "text": "Ausprägungen\nWir können Ausprägungen spezifische Informationen zuschreiben. Die für uns relevanteste Information ist, wie die Abstände zwischen den Ausprägungen strukturiert sind.\n\n\n\nAusprägungen, sortiert nach Art ihrer Abstandsinformation; (Bildquelle)"
+    "text": "Ausprägungen\nWir können Ausprägungen spezifische Informationen zuschreiben. Die für uns relevanteste Information ist, wie die Abstände zwischen den Ausprägungen strukturiert sind.\n\n\n\nAusprägungen, sortiert nach Art ihrer Abstandsinformation (Bildquelle)"
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ja-das-ist-eine-theoriefrage.-nicht-jede-art-des-bildungsabschlusses-ist-für-jede-forschungsfrage-relevant.-manchmal-sind-nur-grobe-unterschiede-relevant-manchmal-müssen-es-sehr-feine-unterschiede-sein.-oft-geht-es-aber-auch-ums-geld.-learn-to-love-it",
@@ -926,5 +926,68 @@
     "title": "Übung: Grundlagen guten Unterscheidens",
     "section": "2 Erste Schritte",
     "text": "2 Erste Schritte\n\nUm die Ausbreitung von Einsamkeit zu erfassen und seinen negativen Wirkungen vorzubeugen, hat die Bundesregierung das Einsamkeitsbarometer erstellt. Recherieren Sie, wie das Einsamkeitsbarometer Unterschiede in der Einsamkeit von Personen erfasst.\nTrennen Sie Einsamkeit von Isolation ab.\nUnterscheiden Sie mindestens drei Ausprägungen der Eigenschaft Einsamkeit und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.\nUnterscheiden Sie mindestens drei Ausprügungen der Eigenschaft Gesundheit und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.\nDiskutieren Sie, auf welche Art und Weise, die von Ihnen getroffenen Unterschiede von Einsamkeit mit gesundheitlichen Unterschieden verbunden sind? Benötigen wir ggf. mehr Eigenschaften, um diese Verbindung zu verstehen?\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nE --&gt; BB[?] \nBB --&gt; G"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#augenfarben",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#augenfarben",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Augenfarben",
+    "text": "Augenfarben\n\n\n\nEinordnung von Augenfarben in unterschiedliche Ausprägungsschemata; Quelle: Meyer et al. 2019"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#augenfarben-1",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#augenfarben-1",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Augenfarben",
+    "text": "Augenfarben\n\n\n\nDie Verteilung von bläulichen und leicht grünlichen Augen; Quelle: Wikipedia"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#wo-ist-jetzt-der-beef",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#wo-ist-jetzt-der-beef",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Wo ist jetzt der beef?",
+    "text": "Wo ist jetzt der beef?"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-1-eindimensional---manifest",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-1-eindimensional---manifest",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Variante 1: Eindimensional - manifest",
+    "text": "Variante 1: Eindimensional - manifest\n\n\n\n\n\nflowchart LR\n\nE([Einsamkeit]) --&gt; I1[\"`Wie oft fühlen \nSie sich einsam?`\"]"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-2-eindimensional---latent",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-2-eindimensional---latent",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Variante 2: Eindimensional - latent",
+    "text": "Variante 2: Eindimensional - latent\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; \nend \n\nE --&gt; I1 & I2 & I3"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-3-zweidimensional-a",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-3-zweidimensional-a",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Variante 3: Zweidimensional A",
+    "text": "Variante 3: Zweidimensional A\n\n\n\n\n\nflowchart TB\n\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Gesellschaftlich einsam`\"])\nIE([\"`Intim einsam`\"])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; I4;\nend \n\nE --&gt; GE & IE\nGE --&gt; I1 & I2\nIE --&gt; I3 & I4"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-3-zweidimensional",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-3-zweidimensional",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Variante 3: Zweidimensional",
+    "text": "Variante 3: Zweidimensional\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\"Dimensionen\"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; I4;\nend \n\nE --&gt; GE & IE\nGE --&gt; I1 & I2\nIE --&gt; I3 & I4"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-4-dreidimensional-a",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-4-dreidimensional-a",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Variante 4: Dreidimensional A",
+    "text": "Variante 4: Dreidimensional A\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\"Dimensionen\"]\nE([Einsamkeit])\nIS([\"`Isoliertheit`\"])\nRV([\"`Relationale Verbundenheit`\"])\nKV([\"`Kollektive Verbundenheit`\"])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; I4; I5; I6\nend \n\n\nE --&gt; IS & RV & KV\nIS --&gt; I1 & I2\nRV --&gt; I3 & I4\nKV --&gt; I5 & I6"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-5-dreidimensional-b",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-5-dreidimensional-b",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Variante 5: Dreidimensional B",
+    "text": "Variante 5: Dreidimensional B\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nAE([\"`Affiliativ einsam`\"])\nend \n\nE --&gt; GE & IE & AE\nGE --&gt; I1 & I2\nIE --&gt; I3 & I4\nAE --&gt; I5 & I6"
   }
 ]

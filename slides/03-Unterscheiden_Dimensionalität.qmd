@@ -4,10 +4,16 @@ slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
 format: 
   revealjs:
+    css: global.css
     auto-stretch: false
     theme: style.scss
     margin: 0.05
     slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+      htmlLabels: true
 editor: source
 execute: 
   echo: false
@@ -20,6 +26,8 @@ include-in-header:
         font-size: .6em
       }
     </style>
+    
+    <style>.plot-padding {width=80%; padding: 0em 0em 0em 0em; }</style
 ---
 
 ## Ein empirisches Problem: Einsamkeit und Gesellschaft {.midi}
@@ -75,21 +83,6 @@ Das Bedürfnis nach sozialen Verbindungen kann auf zwei Arten nicht erfüllt sei
 :::
 :::::
 
-## Ausprägungen von Einsamkeit
-
-Durch Unterscheidung von emotionaler und sozialer Einsamkeit können wir mindestens (!) vier Ausprägungen von Einsamkeit unterscheiden:
-
-+------------------+------+---------------+
-|                  |      | Sozial einsam |
-+==================+======+======+========+
-|                  |      | ja   | nein   |
-+------------------+------+------+--------+
-| Emotional einsam | ja   |      |        |
-|                  +------+------+--------+
-|                  | nein |      |        |
-+==================+======+======+========+
-
-
 ## Keep it simple?
 
 Warum fragen wir nicht einfach "Wie oft fühlen Sie sich einsam?"
@@ -116,21 +109,121 @@ Aber:
 
 -   Eigenschaften können jedoch auch auf einer Kombination von Elementen basieren, die für sich jeweils eigene Wirkungen oder Bedeutungen haben und sich ggf. auch unabhängig voneinander verändern oder sich gegenseitig kompensieren können. In diesem Fall liegt eine **mehrdimensionale** Eigenschaft vor (sozialer Status, Persönlichkeitsstruktur).
 
+## Variante 1: Eindimensional - manifest
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+
+E([Einsamkeit]) --> I1["`Wie oft fühlen 
+Sie sich einsam?`"]
+
+```
+
+## Variante 2: Eindimensional - latent
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+
+subgraph K[" "]
+E([Einsamkeit])
+end 
+
+subgraph I["Indikatoren"]
+I1; I2; I3; 
+end 
+
+E --> I1 & I2 & I3
+
+```
+
+## Variante 3: Zweidimensional 
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+
+
+subgraph K["Dimensionen"]
+E([Einsamkeit])
+GE(["`Sozial einsam`"])
+IE(["`Emotional einsam`"])
+end 
+
+subgraph I["Indikatoren"]
+I1; I2; I3; I4;
+end 
+
+E --> GE & IE
+GE --> I1 & I2
+IE --> I3 & I4
+```
+
+## Variante 4: Dreidimensional A
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+
+
+subgraph K["Dimensionen"]
+E([Einsamkeit])
+IS(["`Isoliertheit`"])
+RV(["`Relationale Verbundenheit`"])
+KV(["`Kollektive Verbundenheit`"])
+end 
+
+subgraph I["Indikatoren"]
+I1; I2; I3; I4; I5; I6
+end 
+
+
+E --> IS & RV & KV
+IS --> I1 & I2
+RV --> I3 & I4
+KV --> I5 & I6
+
+```
+
+## Variante 5: Dreidimensional B
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+
+
+subgraph K[" "]
+E([Einsamkeit])
+GE(["`Sozial einsam`"])
+IE(["`Emotional einsam`"])
+AE(["`Affiliativ einsam`"])
+end 
+
+E --> GE & IE & AE
+GE --> I1 & I2
+IE --> I3 & I4
+AE --> I5 & I6
+```
+
+
 ## Dimensionen & Ausprägungen {.midi}
 
-::::: columns
-::: {.column width="40%"}
-![](images/Konstrukte-eindim.png)
+::: {style="float: left"}
+![](images/Konstrukte-eindim.png){.plot-padding}
 :::
 
-::: {.column width="60%"}
-Konstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.
+Konstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben. 
+
+Ausprägungen sind alle Varianten eines bestimmten Konzepts.[^1] 
 
 Ausprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.
 
 Die Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen).
-:::
-:::::
+
+[^1]: In der Sprachphilosophie und Linguistik wird dies auch als type/token Unterscheidung genutzt. 
+
+---
 
 ## Dimensionen & Ausprägungen {.midi}
 
@@ -148,17 +241,15 @@ Ausprägungen und verschiedene Dimensionen sind nicht das Gleiche! In der Tabell
 
 ## Dimensionen & Ausprägungen
 
-::::: columns
-::: {.column width="30%"}
-![](images/SozialerStatus.svg)
+::: {style="float: left"}
+![](images/SozialerStatus.svg){.plot-padding}
 :::
 
-::: {.column width="70%"}
 Dimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.
 
 Die Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit.
-:::
-:::::
+
+
 
 ## Beispiel: Intelligenzmessung
 
@@ -170,19 +261,28 @@ Die Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der g
 
 ## Unterschiedlichkeit von Eigenschaften und Ausprägungen {.midi}
 
-Personen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer **relevanten Ausprägungen**[^1] erfassen.
+Personen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer **relevanten Ausprägungen**[^2] erfassen.
 
-[^1]: Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!
+Ausprägungen sind daher Wahrnehmungen unter zu Hilfe Nahme von Konzepten (das haben wir als "Beobachtung" definiert).  
 
-Ausprägungen sind **keine** Beobachtungen, sondern wie wir uns die Unterschiedlichkeit von Eigenschaften **vorstellen** (siehe u.a. die "Debatten" um Gender).
+[^2]: Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!
 
 ------------------------------------------------------------------------
+
+## Augenfarben 
+
+![Einordnung von Augenfarben in unterschiedliche Ausprägungsschemata; Quelle: [Meyer et al. 2019](https://www.fsigeneticssup.com/article/S1875-1768(19)30386-5/fulltext)](https://www.fsigeneticssup.com/cms/10.1016/j.fsigss.2019.10.057/asset/21029312-8360-46c0-9f4e-4040e21bdca3/main.assets/gr1_lrg.jpg){width=90%}
+
+## Augenfarben
+
+![Die Verteilung von bläulichen und leicht grünlichen Augen; Quelle: [Wikipedia](https://commons.wikimedia.org/wiki/File:Eye_colors_map_of_Europe.png)](https://upload.wikimedia.org/wikipedia/commons/a/a7/Eye_colors_map_of_Europe.png){width=50%}
+
 
 ## Ausprägungen
 
 Wir können Ausprägungen spezifische Informationen zuschreiben. Die für uns relevanteste Information ist, wie die Abstände zwischen den Ausprägungen strukturiert sind.
 
-![Ausprägungen, sortiert nach Art ihrer Abstandsinformation; ([Bildquelle](https://datatab.de/tutorial/skalenniveau))](images/skalenniveaus.png)
+![Ausprägungen, sortiert nach Art ihrer Abstandsinformation ([Bildquelle](https://datatab.de/tutorial/skalenniveau))](images/skalenniveaus.png)
 
 ## Ausprägungen
 

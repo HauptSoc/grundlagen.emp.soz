@@ -33,6 +33,7 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d17402779cb860955dfb2638498e4ce5.css">
+  <link rel="stylesheet" href="global.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -124,13 +125,18 @@
       margin-right: 0; 
     }
   </style>
+  <meta name="mermaid-theme" content="neutral">
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
     .custom-small table {
       font-size: .6em
     }
   </style>
-</head>
-<body class="quarto-light">
+
+  <style>.plot-padding {width=80%; padding: 0em 0em 0em 0em; }</style>
+</head><body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -193,46 +199,6 @@
 </ol>
 </div></div>
 </section>
-<section id="ausprägungen-von-einsamkeit" class="slide level2">
-<h2>Ausprägungen von Einsamkeit</h2>
-<p>Durch Unterscheidung von emotionaler und sozialer Einsamkeit können wir mindestens (!) vier Ausprägungen von Einsamkeit unterscheiden:</p>
-<table class="caption-top" style="width:58%;">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th></th>
-<th colspan="2">Sozial einsam</th>
-</tr>
-</thead>
-<tbody>
-</tbody><tfoot>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>ja</td>
-<td>nein</td>
-</tr>
-<tr class="even">
-<td rowspan="2">Emotional einsam</td>
-<td>ja</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>nein</td>
-<td></td>
-<td></td>
-</tr>
-</tfoot>
-
-</table>
-</section>
 <section id="keep-it-simple" class="slide level2">
 <h2>Keep it simple?</h2>
 <p>Warum fragen wir nicht einfach “Wie oft fühlen Sie sich einsam?”</p>
@@ -269,17 +235,153 @@
 <li><p>Eigenschaften können jedoch auch auf einer Kombination von Elementen basieren, die für sich jeweils eigene Wirkungen oder Bedeutungen haben und sich ggf. auch unabhängig voneinander verändern oder sich gegenseitig kompensieren können. In diesem Fall liegt eine <strong>mehrdimensionale</strong> Eigenschaft vor (sozialer Status, Persönlichkeitsstruktur).</p></li>
 </ul>
 </section>
+<section id="variante-1-eindimensional---manifest" class="slide level2">
+<h2>Variante 1: Eindimensional - manifest</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+E([Einsamkeit]) --&gt; I1["`Wie oft fühlen 
+Sie sich einsam?`"]
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="variante-2-eindimensional---latent" class="slide level2">
+<h2>Variante 2: Eindimensional - latent</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+subgraph K[" "]
+E([Einsamkeit])
+end 
+
+subgraph I["Indikatoren"]
+I1; I2; I3; 
+end 
+
+E --&gt; I1 &amp; I2 &amp; I3
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="variante-3-zweidimensional" class="slide level2">
+<h2>Variante 3: Zweidimensional</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+
+subgraph K["Dimensionen"]
+E([Einsamkeit])
+GE(["`Sozial einsam`"])
+IE(["`Emotional einsam`"])
+end 
+
+subgraph I["Indikatoren"]
+I1; I2; I3; I4;
+end 
+
+E --&gt; GE &amp; IE
+GE --&gt; I1 &amp; I2
+IE --&gt; I3 &amp; I4
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="variante-4-dreidimensional-a" class="slide level2">
+<h2>Variante 4: Dreidimensional A</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+
+subgraph K["Dimensionen"]
+E([Einsamkeit])
+IS(["`Isoliertheit`"])
+RV(["`Relationale Verbundenheit`"])
+KV(["`Kollektive Verbundenheit`"])
+end 
+
+subgraph I["Indikatoren"]
+I1; I2; I3; I4; I5; I6
+end 
+
+
+E --&gt; IS &amp; RV &amp; KV
+IS --&gt; I1 &amp; I2
+RV --&gt; I3 &amp; I4
+KV --&gt; I5 &amp; I6
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="variante-5-dreidimensional-b" class="slide level2">
+<h2>Variante 5: Dreidimensional B</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+
+subgraph K[" "]
+E([Einsamkeit])
+GE(["`Sozial einsam`"])
+IE(["`Emotional einsam`"])
+AE(["`Affiliativ einsam`"])
+end 
+
+E --&gt; GE &amp; IE &amp; AE
+GE --&gt; I1 &amp; I2
+IE --&gt; I3 &amp; I4
+AE --&gt; I5 &amp; I6
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
 <section id="dimensionen-ausprägungen" class="slide level2 midi">
 <h2>Dimensionen &amp; Ausprägungen</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><a href="images/Konstrukte-eindim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/Konstrukte-eindim.png"></a></p>
-</div><div class="column" style="width:60%;">
+<div style="float: left">
+<p><a href="images/Konstrukte-eindim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/Konstrukte-eindim.png" class="plot-padding"></a></p>
+</div>
 <p>Konstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.</p>
+<p>Ausprägungen sind alle Varianten eines bestimmten Konzepts.<sup>1</sup></p>
 <p>Ausprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.</p>
 <p>Die Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen).</p>
-</div></div>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>In der Sprachphilosophie und Linguistik wird dies auch als type/token Unterscheidung genutzt.</p></li></ol></aside></section>
 <section id="dimensionen-ausprägungen-1" class="slide level2 midi">
 <h2>Dimensionen &amp; Ausprägungen</h2>
 <p>Ausprägungen und verschiedene Dimensionen sind nicht das Gleiche! In der Tabelle werden vier verschiedene Ausprägungen von Gesamteinsamkeit erfasst, die auf zwei verschiedene Dimensionen von Einsamkeit mit jeweils zwei Ausprägungen beruhen.</p>
@@ -322,13 +424,11 @@
 </section>
 <section id="dimensionen-ausprägungen-2" class="slide level2">
 <h2>Dimensionen &amp; Ausprägungen</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><a href="images/SozialerStatus.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/SozialerStatus.svg"></a></p>
-</div><div class="column" style="width:70%;">
+<div style="float: left">
+<p><a href="images/SozialerStatus.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/SozialerStatus.svg" class="plot-padding"></a></p>
+</div>
 <p>Dimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.</p>
 <p>Die Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit.</p>
-</div></div>
 </section>
 <section id="beispiel-intelligenzmessung" class="slide level2">
 <h2>Beispiel: Intelligenzmessung</h2>
@@ -351,15 +451,33 @@
 <section id="unterschiedlichkeit-von-eigenschaften-und-ausprägungen" class="slide level2 midi">
 <h2>Unterschiedlichkeit von Eigenschaften und Ausprägungen</h2>
 <p>Personen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer <strong>relevanten Ausprägungen</strong><sup>1</sup> erfassen.</p>
-<p>Ausprägungen sind <strong>keine</strong> Beobachtungen, sondern wie wir uns die Unterschiedlichkeit von Eigenschaften <strong>vorstellen</strong> (siehe u.a. die “Debatten” um Gender).</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!</p></li></ol></aside></section>
+<p>Ausprägungen sind daher Wahrnehmungen unter zu Hilfe Nahme von Konzepten (das haben wir als “Beobachtung” definiert).</p>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!</p></li></ol></aside></section>
+<section id="augenfarben" class="slide level2">
+<h2>Augenfarben</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.fsigeneticssup.com/cms/10.1016/j.fsigss.2019.10.057/asset/21029312-8360-46c0-9f4e-4040e21bdca3/main.assets/gr1_lrg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Einordnung von Augenfarben in unterschiedliche Ausprägungsschemata; Quelle: Meyer et al.&nbsp;2019"><img data-src="https://www.fsigeneticssup.com/cms/10.1016/j.fsigss.2019.10.057/asset/21029312-8360-46c0-9f4e-4040e21bdca3/main.assets/gr1_lrg.jpg" style="width:90.0%" alt="Einordnung von Augenfarben in unterschiedliche Ausprägungsschemata; Quelle: Meyer et al.&nbsp;2019"></a></p>
+<figcaption>Einordnung von Augenfarben in unterschiedliche Ausprägungsschemata; Quelle: <a href="https://www.fsigeneticssup.com/article/S1875-1768(19)30386-5/fulltext">Meyer et al.&nbsp;2019</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="augenfarben-1" class="slide level2">
+<h2>Augenfarben</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/a/a7/Eye_colors_map_of_Europe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Die Verteilung von bläulichen und leicht grünlichen Augen; Quelle: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Eye_colors_map_of_Europe.png" style="width:50.0%" alt="Die Verteilung von bläulichen und leicht grünlichen Augen; Quelle: Wikipedia"></a></p>
+<figcaption>Die Verteilung von bläulichen und leicht grünlichen Augen; Quelle: <a href="https://commons.wikimedia.org/wiki/File:Eye_colors_map_of_Europe.png">Wikipedia</a></figcaption>
+</figure>
+</div>
+</section>
 <section id="ausprägungen" class="slide level2">
 <h2>Ausprägungen</h2>
 <p>Wir können Ausprägungen spezifische Informationen zuschreiben. Die für uns relevanteste Information ist, wie die Abstände zwischen den Ausprägungen strukturiert sind.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/skalenniveaus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Ausprägungen, sortiert nach Art ihrer Abstandsinformation; (Bildquelle)"><img data-src="images/skalenniveaus.png" alt="Ausprägungen, sortiert nach Art ihrer Abstandsinformation; (Bildquelle)"></a></p>
-<figcaption>Ausprägungen, sortiert nach Art ihrer Abstandsinformation; (<a href="https://datatab.de/tutorial/skalenniveau">Bildquelle</a>)</figcaption>
+<p><a href="images/skalenniveaus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Ausprägungen, sortiert nach Art ihrer Abstandsinformation (Bildquelle)"><img data-src="images/skalenniveaus.png" alt="Ausprägungen, sortiert nach Art ihrer Abstandsinformation (Bildquelle)"></a></p>
+<figcaption>Ausprägungen, sortiert nach Art ihrer Abstandsinformation (<a href="https://datatab.de/tutorial/skalenniveau">Bildquelle</a>)</figcaption>
 </figure>
 </div>
 </section>
