@@ -2,6 +2,7 @@
 title: "Unterscheiden: Messtheoretische Grundlagen"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
+css: global.css
 format: 
   revealjs:
     fig-format: svg
@@ -97,6 +98,26 @@ Diese Beobachtung wird aber von einer Störquelle beeinflusst.
 :::
 :::::
 
+## Konzeptspezifikation - reminder {.midi}
+
+:::::{.columns}
+
+::::{.column width="40%"}
+![Operationalisierung und Konzeptspezifikation Quelle: [Wonka (2022)](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="90%"}
+::::
+
+::::{.column width="60%"}
+Operationalisierung ist die Darlegung, wie wir Konzepte über Indikatoren messbar machen können. 
+
+Die Messung durch diese Indikatoren sollen
+
+  - möglichst geringe Fehler beeinhalten;
+  - mit **anderen** (Sub)Konzepten möglichst wenig korrelieren;
+  - zuverlässig mit Konzepten, die gemessen werden sollen, korrelieren. 
+::::
+::::: 
+
+
 ## Latente und manifeste Eigenschaften
 
 Wir können Eigenschaften danach unterscheiden, ob wir bei der Beobachtung ihrer Ausprägungen Störquellen annehmen oder nicht: 
@@ -141,33 +162,8 @@ E1 & E2 & E3 & E4 --> A
  - Dazu müssen wir verstehen, wie **Unterschiede** der Eigenschaft A mit **Unterschieden** der Eigenschaft B zusammenhängen.
  - Wenn wir in einem der erfassten Unterschiede auch einen großen Anteil von Störfaktoren/Messfehlern haben, ist unsere Untersuchung problematisch. 
  
-## Alter und Gesundheit
-
-![](images/alter-gesundheit.svg)
-
-
-## Alter und Gesundheit
-
-![](images/alter-gesundheit-soep.png){width=70%}
-
-## Alter und mentale Gesundheit
-
-![Relativer Anteil von Befragten in "Dispair". Q: "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Dispair = 30/30 Tage [(Blanchflower et al. 2025)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327858) ](images/age_dispair.png){width=50%}
-
-
-## Fehlerquellen unterscheiden
-::::: {.columns}
-:::: {.column width="50%"}
-![Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: [Papa et al. (2015)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full)](images/path-impulsivity-externalizing.png)
-::::
-
-:::: {.column width="50%"}
-- Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.
-- Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.
-::::
-:::::
-
-## Unterschiede erfassen: wozu nochmal?
+ 
+## Warum das alles? 
 
 ::: {.centering}
 ```{mermaid}
@@ -195,6 +191,34 @@ flowchart TD
         
 ```
 :::
+ 
+## Alter und Gesundheit
+
+![](images/alter-gesundheit.svg)
+
+
+## Alter und Gesundheit
+
+![](images/alter-gesundheit-soep.png){width=70%}
+
+## Alter und mentale Gesundheit
+
+![Relativer Anteil von Befragten in "Dispair". Q: "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Dispair = 30/30 Tage [(Blanchflower et al. 2025)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327858) ](images/age_dispair.png){width=50%}
+
+
+## Fehlerquellen unterscheiden
+::::: {.columns}
+:::: {.column width="50%"}
+![Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: [Papa et al. (2015)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full)](images/path-impulsivity-externalizing.png)
+::::
+
+:::: {.column width="50%"}
+- Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.
+- Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.
+::::
+:::::
+
+
 
 ## Eigenschaften und Variablen
 

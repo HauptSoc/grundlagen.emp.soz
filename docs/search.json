@@ -989,5 +989,19 @@
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Variante 5: Dreidimensional B",
     "text": "Variante 5: Dreidimensional B\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nAE([\"`Affiliativ einsam`\"])\nend \n\nE --&gt; GE & IE & AE\nGE --&gt; I1 & I2\nIE --&gt; I3 & I4\nAE --&gt; I5 & I6"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#konzeptspezifikation---reminder",
+    "href": "slides/04-Messen_Grundlagen.html#konzeptspezifikation---reminder",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Konzeptspezifikation - reminder",
+    "text": "Konzeptspezifikation - reminder\n\n\n\n\n\nOperationalisierung und Konzeptspezifikation Quelle: Wonka (2022)\n\n\n\nOperationalisierung ist die Darlegung, wie wir Konzepte über Indikatoren messbar machen können.\nDie Messung durch diese Indikatoren sollen\n\nmöglichst geringe Fehler beeinhalten;\nmit anderen (Sub)Konzepten möglichst wenig korrelieren;\nzuverlässig mit Konzepten, die gemessen werden sollen, korrelieren."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#warum-das-alles-1",
+    "href": "slides/04-Messen_Grundlagen.html#warum-das-alles-1",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Warum das alles?",
+    "text": "Warum das alles?\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; einsamer Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Einsamkeit &lt;br&gt; und sportlicher &lt;br&gt; Aktivität?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je einsamer Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
   }
 ]
