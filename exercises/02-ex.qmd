@@ -38,7 +38,7 @@ E[Einsamkeit] --> BB[?]
 ```{mermaid}
 flowchart LR
 
-E[Einsamkeit] --> BB[?] 
+BB[?] --> E[Einsamkeit]
 ```
 
 - eine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt, 
