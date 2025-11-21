@@ -1,0 +1,66 @@
+---
+title: "Übung: Dimensionen und Ausprägungen"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Ein wenig Theorie
+
+Einigen Sie sich[^1] in Ihren Gruppen auf ein Merkmal für: 
+
+- die Folge von Einsamkeit, 
+
+```{mermaid}
+flowchart LR
+
+E[Einsamkeit] --> BB[?] 
+```
+
+- die Ursache von Einsamkeit, 
+
+```{mermaid}
+flowchart LR
+
+E[Einsamkeit] --> BB[?] 
+```
+
+- eine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt, 
+
+
+```{mermaid}
+flowchart LR
+
+E[Einsamkeit] --> BB[?] --> G[Gesundheit]
+```
+
+- eine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst. 
+
+```{mermaid}
+flowchart LR
+E[Einsamkeit]  --> G[Gesundheit]
+BB[?] --> E & G 
+
+```
+
+Führen Sie für jede Eigenschaft eine Konzeptspezifikation durch.[^2] 
+
+[^1]: Alles über 5 Minuten pro Eigenschaft gilt als gescheitert. Sie bekommen dann von uns eine Eigenschaft diktatorisch zugeteilt. Gesundheit als Eigenschaft zu wählen ist verboten.
+
+[^2]: Das heißt: a) Dimensionalität klären; b) Ausprägungen pro (Sub)Dimension klären; c) Art der Ausprägungen klären; d) ggf.: Relation der Subdimensionen zum Gesamtkonzept klären.

@@ -413,8 +413,8 @@
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ein-empirisches-problem-einsamkeit-und-gesellschaft",
     "href": "slides/03-Unterscheiden_Dimensionalität.html#ein-empirisches-problem-einsamkeit-und-gesellschaft",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
-    "section": "Ein empirisches Problem: Einsamkeit und Gesellschaft",
-    "text": "Ein empirisches Problem: Einsamkeit und Gesellschaft\n\n\n \n\n\n27% junger Frauen und 21% junger Männer gab in der 19. Shell-Jugendstudie an, sich oft einsam zu fühlen (Albert et al. 2024).\nInsgesamt steigt der Anteil der einsamer Personen in der Bevölkerung; Abb. links; Quelle: Einsamkeitsbarometer (2024).\nEs ist jedoch bis jetzt unklar, wie Einsamkeit adäquat erfasst werden kann (Walsch et al., 2025)."
+    "section": "",
+    "text": "27% junger Frauen und 21% junger Männer gab in der 19. Shell-Jugendstudie an, sich oft einsam zu fühlen (Albert et al. 2024).\nInsgesamt steigt der Anteil der einsamer Personen in der Bevölkerung; Abb. links; Quelle: Einsamkeitsbarometer (2024).\nEs ist jedoch bis jetzt unklar, wie Einsamkeit adäquat erfasst werden kann (Walsch et al., 2025)."
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen",
@@ -470,7 +470,7 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#keep-it-simple",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Keep it simple?",
-    "text": "Keep it simple?\nWarum fragen wir nicht einfach “Wie oft fühlen Sie sich einsam?”\n\n\n\n\n\n\nTipps aus der Praxis\n\n\nKann man machen (Halvorson et al., 2024)!\nAber:\n\nWir können dann verschiedene Fälle von Einsamkeit nicht mehr unterscheiden - wenn uns das wichtig ist (Walsch et al., 2025).\nSehr wahrscheinlich verneinen viele Personen diese Frage, obwohl sie sich einsam fühlen. van den Broek et al. (2024) zeigen experimentell, dass sich bei der “einfachen” Messung von Einsamkeit circa 6% der Befragten und bei der “komplexen” Messung 13% der Befragten als einsam einstuften."
+    "text": "Keep it simple?\nWarum fragen wir nicht einfach “Wie oft fühlen Sie sich einsam?”\n\n\n\n\n\n\nTipps aus der Praxis\n\n\n\nKann man machen (Halvorson et al., 2024)!\nAber:\n\nWir können dann verschiedene Fälle von Einsamkeit nicht mehr unterscheiden - wenn uns das wichtig ist (Walsch et al., 2025).\nSehr wahrscheinlich verneinen viele Personen diese Frage, obwohl sie sich einsam fühlen. van den Broek et al. (2024) zeigen experimentell, dass sich bei der “einfachen” Messung von Einsamkeit circa 6% der Befragten und bei der “komplexen” Messung 13% der Befragten als einsam einstuften."
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen-von-einsamkeit",
@@ -491,7 +491,7 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Dimensionen & Ausprägungen",
-    "text": "Dimensionen & Ausprägungen\n\n\n\nKonstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.\nAusprägungen sind alle Varianten eines bestimmten Konzepts.1\nAusprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.\nDie Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen).\nIn der Sprachphilosophie und Linguistik wird dies auch als type/token Unterscheidung genutzt."
+    "text": "Dimensionen & Ausprägungen\n\n\n\nKonstrukte bestehen immer aus Dimensionen, die wiederum Ausprägungen haben.\nAusprägungen sind alle Varianten eines bestimmten Konzepts.1\nAusprägungen sind theoriegeleitet und nicht notwendigerweise erschöpfende Beschreibungen der Vielfalt eines Phänomens.\nDie Ausprägungen können unterschiedlich strukturiert sein (Nullpunkt, gleiche Abstände, Ränge, Typen)."
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#dimensionen-ausprägungen-1",
@@ -533,7 +533,7 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#unterschiedlichkeit-von-eigenschaften-und-ausprägungen",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Unterschiedlichkeit von Eigenschaften und Ausprägungen",
-    "text": "Unterschiedlichkeit von Eigenschaften und Ausprägungen\nPersonen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer relevanten Ausprägungen1 erfassen.\nAusprägungen sind daher Wahrnehmungen unter zu Hilfe Nahme von Konzepten (das haben wir als “Beobachtung” definiert).\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!"
+    "text": "Unterschiedlichkeit von Eigenschaften und Ausprägungen\nPersonen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher müssen wir für jede Dimension diese Unterschiedlichkeit hinsichtlich ihrer relevanten Ausprägungen2 erfassen.\nAusprägungen sind daher Wahrnehmungen unter zu Hilfe Nahme von Konzepten (das haben wir als “Beobachtung” definiert)."
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#ausprägungen",
@@ -659,7 +659,7 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#footnotes",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!↩︎"
+    "text": "Footnotes\n\n\nIn der Sprachphilosophie und Linguistik wird dies auch als type/token Unterscheidung genutzt.↩︎\nJa, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!↩︎"
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html",
@@ -1003,5 +1003,26 @@
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Warum das alles?",
     "text": "Warum das alles?\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; einsamer Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Einsamkeit &lt;br&gt; und sportlicher &lt;br&gt; Aktivität?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je einsamer Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
+  },
+  {
+    "objectID": "exercises/02-ex.html",
+    "href": "exercises/02-ex.html",
+    "title": "Übung: Dimensionen und Ausprägungen",
+    "section": "",
+    "text": "Einigen Sie sich1 in Ihren Gruppen auf ein Merkmal für:\n\ndie Folge von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\ndie Ursache von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\neine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\neine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst.\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\nFühren Sie für jede Eigenschaft eine Konzeptspezifikation durch.2"
+  },
+  {
+    "objectID": "exercises/02-ex.html#ein-wenig-theorie",
+    "href": "exercises/02-ex.html#ein-wenig-theorie",
+    "title": "Übung: Dimensionen und Ausprägungen",
+    "section": "",
+    "text": "Einigen Sie sich1 in Ihren Gruppen auf ein Merkmal für:\n\ndie Folge von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\ndie Ursache von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\neine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\neine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst.\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\nFühren Sie für jede Eigenschaft eine Konzeptspezifikation durch.2"
+  },
+  {
+    "objectID": "exercises/02-ex.html#footnotes",
+    "href": "exercises/02-ex.html#footnotes",
+    "title": "Übung: Dimensionen und Ausprägungen",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAlles über 5 Minuten pro Eigenschaft gilt als gescheitert. Sie bekommen dann von uns eine Eigenschaft diktatorisch zugeteilt. Gesundheit als Eigenschaft zu wählen ist verboten.↩︎\nDas heißt: a) Dimensionalität klären; b) Ausprägungen pro (Sub)Dimension klären; c) Art der Ausprägungen klären; d) ggf.: Relation der Subdimensionen zum Gesamtkonzept klären.↩︎"
   }
 ]
