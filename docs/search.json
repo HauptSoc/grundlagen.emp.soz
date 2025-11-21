@@ -1009,14 +1009,14 @@
     "href": "exercises/02-ex.html",
     "title": "Übung: Dimensionen und Ausprägungen",
     "section": "",
-    "text": "Einigen Sie sich1 in Ihren Gruppen auf ein Merkmal für:\n\ndie Folge von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\ndie Ursache von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\neine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\neine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst.\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\nFühren Sie für jede Eigenschaft eine Konzeptspezifikation durch.2"
+    "text": "Einigen Sie sich1 in Ihren Gruppen auf ein Merkmal für:\n\ndie Folge von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\ndie Ursache von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nBB[?] --&gt; E[Einsamkeit]\n\n\n\n\n\n\n\neine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\neine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst.\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\nFühren Sie für jede Eigenschaft eine Konzeptspezifikation durch.2"
   },
   {
     "objectID": "exercises/02-ex.html#ein-wenig-theorie",
     "href": "exercises/02-ex.html#ein-wenig-theorie",
     "title": "Übung: Dimensionen und Ausprägungen",
     "section": "",
-    "text": "Einigen Sie sich1 in Ihren Gruppen auf ein Merkmal für:\n\ndie Folge von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\ndie Ursache von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\neine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\neine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst.\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\nFühren Sie für jede Eigenschaft eine Konzeptspezifikation durch.2"
+    "text": "Einigen Sie sich1 in Ihren Gruppen auf ein Merkmal für:\n\ndie Folge von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] \n\n\n\n\n\n\n\ndie Ursache von Einsamkeit,\n\n\n\n\n\n\nflowchart LR\n\nBB[?] --&gt; E[Einsamkeit]\n\n\n\n\n\n\n\neine Eigenschaft, die die Wirkung von Einsamkeit auf Gesundheit vermittelt,\n\n\n\n\n\n\nflowchart LR\n\nE[Einsamkeit] --&gt; BB[?] --&gt; G[Gesundheit]\n\n\n\n\n\n\n\neine Eigenschaft, die sowohl Einsamkeit als auch Gesundheit beeinflusst.\n\n\n\n\n\n\nflowchart LR\nE[Einsamkeit]  --&gt; G[Gesundheit]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\nFühren Sie für jede Eigenschaft eine Konzeptspezifikation durch.2"
   },
   {
     "objectID": "exercises/02-ex.html#footnotes",
