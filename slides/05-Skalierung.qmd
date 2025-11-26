@@ -99,28 +99,27 @@ Die beobachteten Unterschiede in den Verhaltensweisen oder Zustände der Untersu
 
 [^1]: Das bedeutet nicht, dass wir alle möglichen Ausprägungen mit Indikatoren erfassen müssen, sondern nur, dass wir nicht systematisch einen Teil der zugrunde liegenden Unterschiede ignorieren. 
 
+## Ein Itempool
+
+
 ## Thurstone-Skalierung
+:::::{.columns}
 
-:::::: columns
-:::: column
-0.3
-
-::: center
-\
-[Louis Leon Thurstone (1887-1955)](https://www.biografiasyvidas.com/biografia/t/thurstone.htm)
-:::
+::::{.column width="20%"}
+[Louis Leon Thurstone (1887-1955)](https://www.biografiasyvidas.com/biografia/t/fotos/thurstone.jpg)
 ::::
 
-::: column
-0.7 Eine Möglichkeit, latente Eigenschaften durch Befragungen oder psychologische Tests zu erfassen, wurde von Louis Leon Thurstone entwickelt.\
+::::{.column width="80%"}
+Eine Möglichkeit, latente Eigenschaften durch Befragungen oder psychologische Tests zu erfassen, wurde von Louis Leon Thurstone entwickelt.
 
-Die Methode wird insbesondere für Intelligenztests und die Erfassung von Einstellungen angewandt.\
+Die Methode wird insbesondere für Intelligenztests und die Erfassung von Einstellungen angewandt.
 
 Sie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarchie haben (also mindestens ordinal skaliert sind).
-:::
-::::::
+::::
+::::: 
 
-## Thurstone-Skalierung
+
+## Thurstone-Skalierung 
 
 1.  Anlage eines großen Itempools, der das gesamte Spektrum aller Reaktionen/Einstellungen/Verhaltensweisen enthalten soll, das theoretisch erfasst werden soll.
 
@@ -128,16 +127,23 @@ Sie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarc
 
 3.  Items, bei denen Uneinigkeit zwischen den Expert:innen besteht, werden ausgechlossen.
 
+## Thurstone-Skalierung 
+
 4.  Jedes Item erhält den Durchschnittsbewertung aller Expert:innen. Dadurch lassen sich die Items in eine Ordnung bringen, die die "Position" des Items in der Hierarchie der latenten Eigenschaft darstellt.
 
 5.  Die Items werden Probanten vorgelegt. Als Antwortkategorien sind nur binäre Kategorien zugelassen: ja (= 1)/nein (= 0); Aufgabe gelöst (= 1)/nicht gelöst (= 0); Reaktion gezeigt (= 1) / nicht gezeigt (= 0).
 
 6.  Für jeden Probant wird die Summe aus allen ja/gelöst/Reaktion gezeigt (= 1) Itemscores gebildet. Mit diesem Wert lassen sich die Personen nach ihrer Ausprägung der latenten Eigenschaft unterscheiden.
 
+## Thurstone Skalierung
+
+![](images/skalierung-thurstone.svg)
+
+
 ## Thurstone-Skalierung
 
-::: center
-:::
+![Wahrscheinlichkeitsverteilungen von zwei Personen über vier Punkte einer latenten Skala. Quelle: ![Lee et al. (2014)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0096431) ](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0096431.g001)
+
 
 ## Thurstone-Skalierung
 
@@ -247,7 +253,7 @@ Die Person kann nicht ohne Hilfe:
 
 Rensis Likert entwickelte eine Alternative, die besonders (aber nicht nur!) über die Antwortkategorien der Items die Unterschiedlichkeit von latenten Ausprägungen erfassen soll.
 
-Diese Art der Skalierung setzt voraus, dass Personen in der Lage sind, sich durch ihre Reaktionen konsitent in Bezug auf eine Eigenschaft zu positionieren.
+Diese Art der Skalierung setzt voraus, dass Personen in der Lage sind, sich durch ihre Reaktionen **konsitent** in Bezug auf eine Eigenschaft zu positionieren.
 :::
 ::::::
 
