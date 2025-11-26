@@ -1024,5 +1024,222 @@
     "title": "Übung: Dimensionen und Ausprägungen",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nAlles über 5 Minuten pro Eigenschaft gilt als gescheitert. Sie bekommen dann von uns eine Eigenschaft diktatorisch zugeteilt. Gesundheit als Eigenschaft zu wählen ist verboten.↩︎\nDas heißt: a) Dimensionalität klären; b) Ausprägungen pro (Sub)Dimension klären; c) Art der Ausprägungen klären; d) ggf.: Relation der Subdimensionen zum Gesamtkonzept klären.↩︎"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#wann-benötigen-wir-mehrere-items-zur-messung",
+    "href": "slides/04-Messen_Grundlagen.html#wann-benötigen-wir-mehrere-items-zur-messung",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Wann benötigen wir mehrere Items zur Messung?",
+    "text": "Wann benötigen wir mehrere Items zur Messung?\n\n\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nAE([\"`Affiliativ einsam`\"])\nend \n\nE --&gt; GE & IE & AE\nGE --&gt; I1 \nIE --&gt; I2 \nAE --&gt; I3\n\n\n\n\n\n\n\nDas Konzept ist mehrdimensional.\n\n\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nGE([\"`Sozial einsam`\"])\nend \n\nGE --&gt; I1 & I2\n\n\n\n\n\n\n\n\nDie Eigenschaft ist latent und daher durch Beobachtungen nur mit Fehlern zu messen."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#die-messung-latenter-eigenschaften",
+    "href": "slides/04-Messen_Grundlagen.html#die-messung-latenter-eigenschaften",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Die Messung latenter Eigenschaften",
+    "text": "Die Messung latenter Eigenschaften\n\nDie zugrunde liegende, latente Eigenschaft führt zu unterschiedlichem Verhalten/Zuständen der Untersuchungseinheiten.\nDie Kombination der unterschiedlichen Verhaltensweisen oder Zustände kann uns einen Rückschluss auf die latente Eigenschaft ermöglichen.\nWenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen."
+  },
+  {
+    "objectID": "surveys/survey.html",
+    "href": "surveys/survey.html",
+    "title": "Methoden empirischer Sozialforschung",
+    "section": "",
+    "text": "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStimme voll zu\nStimme zu\nKeine Meinung\nLehne ab\nLehne stark ab\n\n\n\n\nMenschen sind von Natur aus korrupt.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Erde ist besser dran, wenn Menschen von ihr verschwinden.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie meisten Menschen sind grundsätzlich gut.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nIch bin stolz, ein Teil der Menschheit zu sein\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nPlease indicate your agreement with the following statements.\n\n\n\n\n\n\n\n\n\n\n\n\nDisagree\nNeutral\nAgree\n\n\n\n\nI would buy a gasoline car.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\nI would buy an EV.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nExit Survey"
+  },
+  {
+    "objectID": "surveys/survey.html#end",
+    "href": "surveys/survey.html#end",
+    "title": "Default Template",
+    "section": "End",
+    "text": "End\nThis is the last page in the survey.\n\n\n\n\nExit Survey"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html",
+    "href": "slides/05-Skalierung.html",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "",
+    "text": "Besteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#skalierung-und-typisierung",
+    "href": "slides/05-Skalierung.html#skalierung-und-typisierung",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "",
+    "text": "Besteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#misanthrophie",
+    "href": "slides/05-Skalierung.html#misanthrophie",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Misanthrophie",
+    "text": "Misanthrophie\n\nHumans are by nature basically corrupt.\nBoth history and current events show that human beings are basically wicked.\nPlanet earth would be better off if humans would just disappear from it.\nMost people are basically good natured.\nI am proud to be a member of the human race."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#die-messung-latenter-eigenschaften",
+    "href": "slides/05-Skalierung.html#die-messung-latenter-eigenschaften",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Die Messung latenter Eigenschaften",
+    "text": "Die Messung latenter Eigenschaften\n\nWir können Unterschiede in den Ausprägungen latenter Eigenschaften durch mehrere Beobachtungen erfassen.\nDie zugrunde liegende, latente Eigenschaft führt zu unterschiedlichem Verhalten/Zuständen der Untersuchungseinheiten.\nDie Kombination der unterschiedlichen Verhaltensweisen oder Zustände kann uns einen Rückschluss auf die latente Eigenschaft ermöglichen.\nWenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen, können wir für die latente Eigenschaft eine/n Skala/Index erstellen."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#die-messung-latenter-eigenschaften-1",
+    "href": "slides/05-Skalierung.html#die-messung-latenter-eigenschaften-1",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Die Messung latenter Eigenschaften",
+    "text": "Die Messung latenter Eigenschaften\n\n\n\n\n\n\n\nAnnahmen:\n\nDie die Ausprägungen in systematischen Zusammenhang miteinander und zu der latenten Eigenschaft stehen.\nDie Störfaktoren sind voneinander unabhängig und treten zufällig auf."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#misantrophie",
+    "href": "slides/05-Skalierung.html#misantrophie",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Misantrophie",
+    "text": "Misantrophie\n\n\n0.3\nQuelle\n\n0.7 Misantrophy Scale\n\nHumans are by nature basically corrupt.\nBoth history and current events show that human beings are basically wicked.\nPlanet earth would be better off if humans would just disappear from it.\nMost people are basically good natured.\nI am proud to be a member of the human race.\n\n\n\n\n\n\n\nstrongly disagree\ndisagree\nno opinion\nagree\nstrongly agree\n\n\n\n\n\n1\n\n\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n\n\n5"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#auswahl-von-indikatoren-1",
+    "href": "slides/05-Skalierung.html#auswahl-von-indikatoren-1",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Auswahl von Indikatoren",
+    "text": "Auswahl von Indikatoren\nDie beobachteten Unterschiede in den Verhaltensweisen oder Zustände der Untersuchungseinheinten (= Indikatoren) müssen mehrere Anforderungen erfüllen, damit eine sinnvolle Erfassung der latenten Eigenschaft erfolgen kann:\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede erfassen können.\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden.\n\nDie beobachteten Unterschiede müssen so kombinierbar sein, dass damit jeder Untersuchungseinheit ein spezifischer Wert zugeordnet werden kann und somit alle Untersuchungseinheiten nach ihrer Unterschiedlichkeit sortiert werden können."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#thurstone-skalierung",
+    "href": "slides/05-Skalierung.html#thurstone-skalierung",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Thurstone-Skalierung",
+    "text": "Thurstone-Skalierung\n\n\n0.3\n\n\nLouis Leon Thurstone (1887-1955)\n\n\n0.7 Eine Möglichkeit, latente Eigenschaften durch Befragungen oder psychologische Tests zu erfassen, wurde von Louis Leon Thurstone entwickelt.\n\nDie Methode wird insbesondere für Intelligenztests und die Erfassung von Einstellungen angewandt.\n\nSie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarchie haben (also mindestens ordinal skaliert sind)."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#thurstone-skalierung-1",
+    "href": "slides/05-Skalierung.html#thurstone-skalierung-1",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Thurstone-Skalierung",
+    "text": "Thurstone-Skalierung\n\nAnlage eines großen Itempools, der das gesamte Spektrum aller Reaktionen/Einstellungen/Verhaltensweisen enthalten soll, das theoretisch erfasst werden soll.\nDie Items werden Expert:innen zum bewerten (engl.: rating) vorgelegt. Die Bewertungen orientieren sich an der Hierarchie der Ausprägungen der latenten Eigenschaft.\nItems, bei denen Uneinigkeit zwischen den Expert:innen besteht, werden ausgechlossen.\nJedes Item erhält den Durchschnittsbewertung aller Expert:innen. Dadurch lassen sich die Items in eine Ordnung bringen, die die “Position” des Items in der Hierarchie der latenten Eigenschaft darstellt.\nDie Items werden Probanten vorgelegt. Als Antwortkategorien sind nur binäre Kategorien zugelassen: ja (= 1)/nein (= 0); Aufgabe gelöst (= 1)/nicht gelöst (= 0); Reaktion gezeigt (= 1) / nicht gezeigt (= 0).\nFür jeden Probant wird die Summe aus allen ja/gelöst/Reaktion gezeigt (= 1) Itemscores gebildet. Mit diesem Wert lassen sich die Personen nach ihrer Ausprägung der latenten Eigenschaft unterscheiden."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#thurstone-skalierung-2",
+    "href": "slides/05-Skalierung.html#thurstone-skalierung-2",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Thurstone-Skalierung",
+    "text": "Thurstone-Skalierung"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#thurstone-skalierung-3",
+    "href": "slides/05-Skalierung.html#thurstone-skalierung-3",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Thurstone-Skalierung",
+    "text": "Thurstone-Skalierung\nSkala für die Kontaktsituation in Wohnsiedlungen (durchschnittliche Expertenwertung von -5 bis +5 in Klammern):\n\n\nIch komme mir in dieser Siedlung oft vor wie ein Fremder. (\\(-2,00\\))\nKeinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (\\(-3,05\\))\nHier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (\\(+3,30\\))\nIch habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (\\(-0,53\\))\nIch kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. ( \\(-0,33\\))\nIn diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. ( \\(+1,79\\))\nIch kenne hier in der Nachbarschaft fast jeden mit Namen. (\\(+0,90\\))"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#guttman-skalierung",
+    "href": "slides/05-Skalierung.html#guttman-skalierung",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Guttman-Skalierung",
+    "text": "Guttman-Skalierung\n\n\n0.3\n\n\nLouis E. Guttman (1916-1987)\n\n\n0.7 Ein weiteres Verfahren zur Erfassung latenter Eigenschaften wurde von Louis E. Guttman entwickelt.\n\nDiese Art der Skalierung setzt voraus, dass die latente Eigenschaft Ausprägungen (in überschauberer Anzahl) hat, die streng hierarchisch geordnet sind."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#guttman-skalierung-1",
+    "href": "slides/05-Skalierung.html#guttman-skalierung-1",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Guttman-Skalierung",
+    "text": "Guttman-Skalierung\nGrundlegende Idee:\n\nEntwickle eine Liste von Items, die alle Ausprägungen des Merkmals erfassen. Die Items müssen sich streng nach der Hierarchie der Ausprägungen sortieren lassen (z.B.: von nicht hilfsbedürftig bis stark hilfsbedürftig) und dürfen sich nicht überschneiden.\nLege die Liste Personen vor, die binär reagieren müssen: z.B.: ablehnen oder zustimmen / lösen oder nicht lösen.\nDie Anzahl aller positiven Reaktionen pro Person bildet eine Rangfolge, die die Ausprägung der latenten Eigenschaft wiedergibt."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#guttman-skalierung-antisemitismus",
+    "href": "slides/05-Skalierung.html#guttman-skalierung-antisemitismus",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Guttman-Skalierung: Antisemitismus",
+    "text": "Guttman-Skalierung: Antisemitismus\nWürden Sie es begrüßen, wenn\n\nJuden Deutschland besuchen.\nJuden sich in Deutschland niederlassen.\nSie einen Juden als Arbeitskollegen haben.\nSie einen Juden als Freund haben.\nSie einen Juden heiraten würden."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#guttman-skalierung-grad-der-körperlichen-behinderung",
+    "href": "slides/05-Skalierung.html#guttman-skalierung-grad-der-körperlichen-behinderung",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Guttman-Skalierung: Grad der körperlichen Behinderung",
+    "text": "Guttman-Skalierung: Grad der körperlichen Behinderung\nDie Person kann nicht ohne Hilfe:\n\nbaden.\naußer Haus laufen.\nim Haus laufen.\nsich anziehen.\naus dem Bett aufstehen.\nsitzen oder stehen.\nauf die Toilette gehen.\ndie Hände und das Gesicht waschen.\nessen."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#unterschiede-zwischen-guttman-und-thurstone-skalierungen",
+    "href": "slides/05-Skalierung.html#unterschiede-zwischen-guttman-und-thurstone-skalierungen",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Unterschiede zwischen Guttman und Thurstone Skalierungen",
+    "text": "Unterschiede zwischen Guttman und Thurstone Skalierungen\n\nPositive und negative Reaktionen können sich bei einer Thurstone-Skala gegenseitig aufheben, aber nicht bei einer Guttman-Skala.\nBei der Guttman-Skala gibt es (offiziell) keine Expert:innen, die für die Vorselektion sorgen.\nGuttman-Skalen sind praktisch auf Eigenschaften mit überschaubaren Ausprägungen begrenzt."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#likert-skalierung",
+    "href": "slides/05-Skalierung.html#likert-skalierung",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Likert-Skalierung",
+    "text": "Likert-Skalierung\n\n\n0.3\n\n\nRensis Likert (1903-1981)\n\n\n0.7 Die von Louis Thurstone oder Louis Guttman entwickelten Skalierungen nutzen die Unterschiedlichkeit der Items (über Scores oder ihre Position in einer Ausprägungshierachie) um Unterschiede der Ausprägungen zu erfassen. Das ist allerdings nicht immer praktikabel. Thurstone-Skalierungen können darüber hinaus sehr aufwändig und teuer sein.\n\nRensis Likert entwickelte eine Alternative, die besonders (aber nicht nur!) über die Antwortkategorien der Items die Unterschiedlichkeit von latenten Ausprägungen erfassen soll.\nDiese Art der Skalierung setzt voraus, dass Personen in der Lage sind, sich durch ihre Reaktionen konsitent in Bezug auf eine Eigenschaft zu positionieren."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#likert-skalierung-1",
+    "href": "slides/05-Skalierung.html#likert-skalierung-1",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Likert-Skalierung",
+    "text": "Likert-Skalierung\nGrundlegende Idee:\n\nEntwickle eine Liste von Items, die Variationen oder Aspekte des zugrunde liegenden Merkmals darstellen.\nLege die Liste der Items Personen vor, die auf die Items mit unterschiedlichen Graden positiv, neutral oder negativ reagieren können.\nPersonen mit einer Ausprägung im unteren Bereich der Eigenschaft sollten daher sehr oft negativ auf die Items reagieren und Personen mit einer hohen Ausprägung der Eigenschaft sollten sehr oft positiv reagieren.\nDie Summe aus allen Reaktionen ist der Meßwert für jede Person."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#likert-skalierung-2",
+    "href": "slides/05-Skalierung.html#likert-skalierung-2",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Likert-Skalierung",
+    "text": "Likert-Skalierung\n\n\n0.5\n\n\n\n\n0.5\n\nDie verschiedenen Items rufen unterschiedliche Reaktionen hervor.\nDie Summe der unterschiedlichen Reaktionen ist die Messung für die zugrunde liegende, latente Ausprägung.\nItems für Likert-Skalen müssen daher stets unterschiedliche Reaktion hervorrufen. Items, die in hohem Maße eine Form der Reaktion hervorrufen, sind ungeeignet."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#dimensionen-beruflicher-selbstregulation",
+    "href": "slides/05-Skalierung.html#dimensionen-beruflicher-selbstregulation",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Dimensionen beruflicher Selbstregulation",
+    "text": "Dimensionen beruflicher Selbstregulation\n\n\n\n\n\n\n\n\nLikert-Skalierungen eignen sich zur Messung von ein- und mehrdimensionalen Konstrukten.\nBei mehrdimensionalen Konstrukten wird pro Dimension eine eigene Likert-Skala mit eigenen Items gebildet."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#die-messung-der-ausprägungen-einer-dimension",
+    "href": "slides/05-Skalierung.html#die-messung-der-ausprägungen-einer-dimension",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Die Messung der Ausprägungen einer Dimension",
+    "text": "Die Messung der Ausprägungen einer Dimension\n\n\n\n\n\n\n\n\nBefragten werden für die Messung der Unterdimension Bedeutsamkeit der Arbeit folgende Aussagen vorgelegt:\n\nDie Arbeit ist für mich der wichtigste Lebensinhalt.\nDie Arbeit ist mein Ein und Alles.\nIch brauche die Arbeit wie die Luft zum Atmen.\n\nDie Befragten konnten Angaben auf einer 5er-Skala machen: 1 “trifft gar nicht zu”; 2 “trifft eher nicht zu”; 3 “teils/teils”; 4 “trifft eher zu”; 5 “trifft völlig zu”."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#berufliche-selbstregulation",
+    "href": "slides/05-Skalierung.html#berufliche-selbstregulation",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Berufliche Selbstregulation",
+    "text": "Berufliche Selbstregulation"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#berufliche-selbstregulation-1",
+    "href": "slides/05-Skalierung.html#berufliche-selbstregulation-1",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Berufliche Selbstregulation",
+    "text": "Berufliche Selbstregulation"
+  },
+  {
+    "objectID": "surveys/survey.html#misantrophie",
+    "href": "surveys/survey.html#misantrophie",
+    "title": "Methoden empirischer Sozialforschung",
+    "section": "",
+    "text": "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStimme voll zu\nStimme zu\nKeine Meinung\nLehne ab\nLehne stark ab\n\n\n\n\nMenschen sind von Natur aus korrupt.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Erde ist besser dran, wenn Menschen von ihr verschwinden.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie meisten Menschen sind grundsätzlich gut.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nIch bin stolz, ein Teil der Menschheit zu sein\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nPlease indicate your agreement with the following statements.\n\n\n\n\n\n\n\n\n\n\n\n\nDisagree\nNeutral\nAgree\n\n\n\n\nI would buy a gasoline car.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\nI would buy an EV.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nExit Survey"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#ausprägungen-und-indikatoren",
+    "href": "slides/05-Skalierung.html#ausprägungen-und-indikatoren",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Ausprägungen und Indikatoren",
+    "text": "Ausprägungen und Indikatoren"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#auswahl-von-indikatoren",
+    "href": "slides/05-Skalierung.html#auswahl-von-indikatoren",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Auswahl von Indikatoren",
+    "text": "Auswahl von Indikatoren\nDie beobachteten Unterschiede in den Verhaltensweisen oder Zustände der Untersuchungseinheinten (= Indikatoren) müssen mehrere Anforderungen erfüllen, damit eine sinnvolle Erfassung der latenten Eigenschaft erfolgen kann:\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede (= Dimensionen + Ausprägungen) erfassen können.1\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden.\n\nDie beobachteten Unterschiede müssen so kombinierbar sein, dass damit jeder Untersuchungseinheit ein spezifischer Wert zugeordnet werden kann und somit alle Untersuchungseinheiten nach ihrer Unterschiedlichkeit sortiert werden können."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#footnotes",
+    "href": "slides/05-Skalierung.html#footnotes",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDas bedeutet nicht, dass wir alle möglichen Ausprägungen mit Indikatoren erfassen müssen, sondern nur, dass wir nicht systematisch einen Teil der zugrunde liegenden Unterschiede ignorieren.↩︎"
   }
 ]

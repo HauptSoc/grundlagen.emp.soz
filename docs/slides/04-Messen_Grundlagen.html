@@ -336,28 +336,75 @@ E1 &amp; E2 &amp; E3 &amp; E4 --&gt; A
 </figure>
 </div>
 </section>
-<section id="fehlerquellen-unterscheiden" class="slide level2">
-<h2>Fehlerquellen unterscheiden</h2>
+<section id="wann-benötigen-wir-mehrere-items-zur-messung" class="slide level2 midi">
+<h2>Wann benötigen wir mehrere Items zur Messung?</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/path-impulsivity-externalizing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al.&nbsp;(2015)"><img data-src="images/path-impulsivity-externalizing.png" alt="Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al.&nbsp;(2015)"></a></p>
-<figcaption>Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full">Papa et al.&nbsp;(2015)</a></figcaption>
-</figure>
+<div class="column" style="width:45%;">
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+subgraph K[" "]
+E([Einsamkeit])
+GE(["`Sozial einsam`"])
+IE(["`Emotional einsam`"])
+AE(["`Affiliativ einsam`"])
+end 
+
+E --&gt; GE &amp; IE &amp; AE
+GE --&gt; I1 
+IE --&gt; I2 
+AE --&gt; I3
+</pre>
 </div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.</li>
-<li>Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.</li>
-</ul>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Das Konzept ist mehrdimensional.</li>
+</ol>
+</div><div class="column" style="width:45%;">
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+subgraph K[" "]
+GE(["`Sozial einsam`"])
+end 
+
+GE --&gt; I1 &amp; I2
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Die Eigenschaft ist latent und daher durch Beobachtungen nur mit Fehlern zu messen.</li>
+</ol>
 </div></div>
+</section>
+<section id="die-messung-latenter-eigenschaften" class="slide level2">
+<h2>Die Messung latenter Eigenschaften</h2>
+<ul>
+<li><p>Die zugrunde liegende, latente Eigenschaft führt zu unterschiedlichem Verhalten/Zuständen der Untersuchungseinheiten.</p></li>
+<li><p>Die Kombination der unterschiedlichen Verhaltensweisen oder Zustände kann uns einen Rückschluss auf die latente Eigenschaft ermöglichen.</p></li>
+<li><p>Wenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen.</p></li>
+</ul>
 </section>
 <section id="eigenschaften-und-variablen" class="slide level2">
 <h2>Eigenschaften und Variablen</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><a href="images/faktor-ausprägung-verteilung.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="images/faktor-ausprägung-verteilung.svg" style="width:80.0%"></a></p>
+<p><a href="images/faktor-ausprägung-verteilung.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/faktor-ausprägung-verteilung.svg" style="width:80.0%"></a></p>
 </div><div class="column" style="width:50%;">
 <p>Eine Variable ist das <em>Ergebnis</em> der Erfassung von Ausprägungen.</p>
 <p>Eine Variable ist <strong>nicht</strong> die Eigenschaft selbst, sondern unsere symbolisch protokollierte Beobachtungen von individuellen Ausprägungen, die durchaus große Anteile von Störfaktoren haben kann.</p>
@@ -365,7 +412,7 @@ E1 &amp; E2 &amp; E3 &amp; E4 --&gt; A
 </section>
 <section id="wie-sieht-das-in-der-praxis-aus" class="slide level2 midi">
 <h2>Wie sieht das in der Praxis aus?</h2>
-<p><a href="images/soep-einsamkeit-variablen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="images/soep-einsamkeit-variablen.png" style="width:70.0%"></a></p>
+<p><a href="images/soep-einsamkeit-variablen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="images/soep-einsamkeit-variablen.png" style="width:70.0%"></a></p>
 <p>Wie oft haben Sie das Gefühl,</p>
 <ul>
 <li>dass Ihnen die Gesellschaft anderer fehlt? [plj0587]</li>
@@ -375,7 +422,7 @@ E1 &amp; E2 &amp; E3 &amp; E4 --&gt; A
 </section>
 <section id="einsamkeit-in-deutschland-2017" class="slide level2">
 <h2>Einsamkeit in Deutschland (2017)</h2>
-<p><a href="images/soep-einsamkeit-bar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="images/soep-einsamkeit-bar.png" style="width:80.0%"></a></p>
+<p><a href="images/soep-einsamkeit-bar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="images/soep-einsamkeit-bar.png" style="width:80.0%"></a></p>
 
 
 </section>

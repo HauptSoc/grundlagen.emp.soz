@@ -1,0 +1,63 @@
+---
+format: html
+echo: false
+warning: false
+---
+
+```{r}
+library(surveydown)
+```
+
+
+
+## Misantrophie
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "misantro",
+  label  = "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.",
+  row    = c(
+    "Menschen sind von Natur aus korrupt." = "korrupt",
+    "Die Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind."  = "boese", 
+    "Die Erde ist besser dran, wenn Menschen von ihr verschwinden." = "erde", 
+    "Die meisten Menschen sind grundsätzlich gut." = "gut", 
+    "Ich bin stolz, ein Teil der Menschheit zu sein" = "stolz"
+  ),
+  direction = "horizontal",
+  options = c(
+    "Stimme voll zu" = "1",
+    "Stimme zu"  = "2",
+    "Keine Meinung"  = "3",
+    "Lehne ab" = "4", 
+    "Lehne stark ab" = "5"
+  )
+)
+```
+
+
+```{r}
+
+  sd_question(
+    type   = "matrix",
+    id     = "car_preference",
+    label  = "Please indicate your agreement with the following statements.",
+    row    = c(
+      "I would buy a gasoline car." = "buy_gasoline",
+      "I would buy an EV."          = "buy_ev"
+    ),
+    option = c(
+      "Disagree" = "disagree",
+      "Neutral"  = "neutral",
+      "Agree"    = "agree"
+    )
+  )
+
+```
+
+
+```{r}
+sd_close()
+```
+
+

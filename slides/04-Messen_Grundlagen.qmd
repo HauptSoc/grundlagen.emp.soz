@@ -205,18 +205,52 @@ flowchart TD
 
 ![Relativer Anteil von Befragten in "Dispair". Q: "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?" Dispair = 30/30 Tage [(Blanchflower et al. 2025)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327858) ](images/age_dispair.png){width=50%}
 
+## Wann benötigen wir mehrere Items zur Messung? {.midi}
 
-## Fehlerquellen unterscheiden
-::::: {.columns}
-:::: {.column width="50%"}
-![Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: [Papa et al. (2015)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full)](images/path-impulsivity-externalizing.png)
+:::::{.columns}
+
+::::{.column width="45%"}
+```{mermaid}
+flowchart LR
+
+subgraph K[" "]
+E([Einsamkeit])
+GE(["`Sozial einsam`"])
+IE(["`Emotional einsam`"])
+AE(["`Affiliativ einsam`"])
+end 
+
+E --> GE & IE & AE
+GE --> I1 
+IE --> I2 
+AE --> I3
+```
+1. Das Konzept ist mehrdimensional.
 ::::
 
-:::: {.column width="50%"}
-- Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.
-- Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.
+::::{.column width="45%"}
+```{mermaid}
+flowchart LR
+
+subgraph K[" "]
+GE(["`Sozial einsam`"])
+end 
+
+GE --> I1 & I2
+
+```
+2. Die Eigenschaft ist latent und daher durch Beobachtungen nur mit Fehlern zu messen. 
 ::::
-:::::
+::::: 
+
+
+## Die Messung latenter Eigenschaften
+
+- Die zugrunde liegende, latente Eigenschaft führt zu unterschiedlichem Verhalten/Zuständen der Untersuchungseinheiten.
+
+- Die Kombination der unterschiedlichen Verhaltensweisen oder Zustände kann uns einen Rückschluss auf die latente Eigenschaft ermöglichen.
+
+- Wenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen.
 
 
 
