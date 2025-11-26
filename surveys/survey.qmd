@@ -2,17 +2,17 @@
 format: html
 echo: false
 warning: false
+theme: simplex
 ---
 
 ```{r}
 library(surveydown)
 ```
 
-
-
 ## Misantrophie
 
 ```{r}
+
 sd_question(
   type   = "matrix",
   id     = "misantro",
@@ -35,7 +35,6 @@ sd_question(
 )
 ```
 
-
 ```{r}
 
   sd_question(
@@ -55,9 +54,6 @@ sd_question(
 
 ```
 
-
 ```{r}
 sd_close()
 ```
-
-
