@@ -1,0 +1,7 @@
+---
+title: "Messtheoretische Grundlagen"
+author: "Andreas Haupt"
+format: html
+---
+
+-   !(Spiegelhalter)[https://medium.com/wintoncentre/the-risks-of-alcohol-again-2ae8cb006a4a] über die Veränderung der WHO-Empfehlung zur Wirkung von "moderatem Alkoholkonsum".

@@ -1,0 +1,59 @@
+---
+title: "Übung: Messtheorie"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+
+## Ausprägungen 
+
+Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal oder metrisch sind: 
+
+1. Alben einer Plattensammlung
+2. Geldvermögen
+3. Sprachkompetenz
+4. Diskriminierung
+5. Einstellung zu Smartphonenutzung 
+6. Autonomie am Arbeitsplatz 
+
+
+
+## Stress an der Arbeit 
+
+Im Folgenden finden Sie einige Indikatoren, mit dem Frese & Zapf (1987) Stress am Arbeitsplatz messen wollen. Ihre Aufgabe ist es, diese Indikatoren zu prüfen, sie zu Subdimensionen zuzuordnen, unnötige/nicht passende/problematische Indikatoren zu entfernen und ggf. neue hinzuzufügen, wenn Sie der Meinung sind, dass die aktuelle Arbeitswelt neue Indikatoren und/oder Subdimensionen benötigt. 
+
+1. Mit einigen Kollegen hat man oft Streit.
+1. Einige Kollegen sind unangenehme Mitarbeiter.
+1. Hier wird man wegen jeder Kleinigkeit gleich fertiggemacht.
+1. Hier gibt es immer nur Kritik, was man gut macht sieht keiner.
+1. Man muss mit unfreundlichen Leuten zusammenarbeiten.
+1. Der normale Arbeitsrhythmus wird von manchen Kollegen immer wieder unterbrochen.
+1. Man muss mit Leuten zusammenarbeiten, die keinen Spaß verstehen.
+1. Mein Vorgesetzter treibt einen an.
+1. Mein Vorgesetzter spielt die Kollegen gegeneinander aus.
+1. Wenn ein Fehler passiert, findet der Vorgesetzte ihn immer bei uns, nie bei sich.
+1. Mein Vorgesetzter lässt seine Leute im Stich, wenn sie kritisiert werden.
+1. Mein Vorgesetzter teilt die angenehme Arbeit immer bestimmten Leuten zu.
+1. Mein Vorgesetzter hat keine Ahnung.
+1. Es gibt Schwierigkeiten bei der Abstimmung mit Kollegen.
+1. Es  ist unklar, was die Vorgesetzten von einem wollen.
+1. Man muss ausbaden, was die anderen falsch machen.
+1. Der Vorgesetzte erschwert einem das Arbeiten durch seine Anweisungen.
+

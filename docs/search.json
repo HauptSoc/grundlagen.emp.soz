@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "Grundlagen empirischer Sozialforschung",
     "section": "",
-    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n7\n11.12.\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n✍\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
+    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n📁\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n7\n11.12.\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n✍\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
     "crumbs": [
       "Wissenswertes",
       "Was, wann, welche Reihenfolge?"
@@ -1297,5 +1297,40 @@
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Thurstone-Skalierung",
     "text": "Thurstone-Skalierung\nSkala für die Kontaktsituation in Wohnsiedlungen (durchschnittliche Expertenwertung von -5 bis +5 in Klammern):\n\n\nIch komme mir in dieser Siedlung oft vor wie ein Fremder. (\\(-2,00\\))\nKeinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (\\(-3,05\\))\nHier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (\\(+3,30\\))\nIch habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (\\(-0,53\\))\nIch kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. ( \\(-0,33\\))\nIn diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. ( \\(+1,79\\))\nIch kenne hier in der Nachbarschaft fast jeden mit Namen. (\\(+0,90\\))"
+  },
+  {
+    "objectID": "exercises/03-ex.html",
+    "href": "exercises/03-ex.html",
+    "title": "Übung: Messtheorie",
+    "section": "",
+    "text": "Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal oder metrisch sind:\n\nAlben einer Plattensammlung\nGeldvermögen\nSprachkompetenz\nDiskriminierung\nEinstellung zu Smartphonenutzung\nAutonomie am Arbeitsplatz"
+  },
+  {
+    "objectID": "exercises/03-ex.html#ausprägungen",
+    "href": "exercises/03-ex.html#ausprägungen",
+    "title": "Übung: Messtheorie",
+    "section": "",
+    "text": "Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal oder metrisch sind:\n\nAlben einer Plattensammlung\nGeldvermögen\nSprachkompetenz\nDiskriminierung\nEinstellung zu Smartphonenutzung\nAutonomie am Arbeitsplatz"
+  },
+  {
+    "objectID": "exercises/03-ex.html#stress-an-der-arbeit",
+    "href": "exercises/03-ex.html#stress-an-der-arbeit",
+    "title": "Übung: Messtheorie",
+    "section": "2 Stress an der Arbeit",
+    "text": "2 Stress an der Arbeit\nIm Folgenden finden Sie einige Indikatoren, mit dem Frese & Zapf (1987) Stress am Arbeitsplatz messen wollen. Ihre Aufgabe ist es, diese Indikatoren zu prüfen, unnötige zu entfernen und ggf. neue hinzuzufügen, wenn Sie der Meinung sind, dass die aktuelle Arbeitswelt neue Indikatoren benötigt.\n\nMit einigen Kollegen hat man oft Streit.\nEinige Kollegen sind unangenehme Mitarbeiter.\nHier wird man wegen jeder Kleinigkeit gleich fertiggemacht.\nHier gibt es immer nur Kritik, was man gut macht sieht keiner.\nMan muss mit unfreundlichen Leuten zusammenarbeiten.\nDer normale Arbeitsrhythmus wird von manchen Kollegen immer wieder unterbrochen.\nMan muss mit Leuten zusammenarbeiten, die keinen Spaß verstehen.\nMein Vorgesetzter treibt einen an.\nMein Vorgesetzter spielt die Kollegen gegeneinander aus.\nWenn ein Fehler passiert, findet der Vorgesetzte ihn immer bei uns, nie bei sich.\nMein Vorgesetzter lässt seine Leute im Stich, wenn sie kritisiert werden.\nMein Vorgesetzter teilt die angenehme Arbeit immer bestimmten Leuten zu.\nMein Vorgesetzter hat keine Ahnung.\nEs gibt Schwierigkeiten bei der Abstimmung mit Kollegen.\nEs ist unklar, was die Vorgesetzten von einem wollen.\nMan muss ausbaden, was die anderen falsch machen.\nDer Vorgesetzte erschwert einem das Arbeiten durch seine Anweisungen."
+  },
+  {
+    "objectID": "misc/05-zusatz.html",
+    "href": "misc/05-zusatz.html",
+    "title": "Messtheoretische Grundlagen",
+    "section": "",
+    "text": "über die Veränderung der WHO-Empfehlung zur Wirkung von “moderatem Alkoholkonsum”."
+  },
+  {
+    "objectID": "misc/04-zusatz.html",
+    "href": "misc/04-zusatz.html",
+    "title": "Messtheoretische Grundlagen",
+    "section": "",
+    "text": "Spiegelhalter über die Veränderung der WHO-Empfehlung zur Wirkung von “moderatem Alkoholkonsum”: https://medium.com/wintoncentre/the-risks-of-alcohol-again-2ae8cb006a4a"
   }
 ]
