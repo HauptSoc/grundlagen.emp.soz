@@ -250,7 +250,7 @@ GE --> I1 & I2
 
 - Die Kombination der unterschiedlichen Verhaltensweisen oder Zustände kann uns einen Rückschluss auf die latente Eigenschaft ermöglichen.
 
-- Wenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen.
+- Wenn wir jeder beobachteten Verhaltensweise oder Zustand einen Zahlenwert zuweisen, können wir diese Werte so kombinieren, dass wir zugrunde liegende Unterschiede der Ausprägungen der latenten Eigenschaft erfassen können. 
 
 
 
