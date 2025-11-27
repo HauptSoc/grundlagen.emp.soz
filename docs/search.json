@@ -672,8 +672,8 @@
     "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "href": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
-    "section": "",
-    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+    "section": "Beobachten und nach Ausprägungen unterscheiden",
+    "text": "Beobachten und nach Ausprägungen unterscheiden\n\n\n\nPlakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
@@ -694,7 +694,7 @@
     "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
-    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)"
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
@@ -1107,28 +1107,28 @@
     "href": "slides/05-Skalierung.html#thurstone-skalierung",
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Thurstone-Skalierung",
-    "text": "Thurstone-Skalierung\n\n\n0.3\n\n\nLouis Leon Thurstone (1887-1955)\n\n\n0.7 Eine Möglichkeit, latente Eigenschaften durch Befragungen oder psychologische Tests zu erfassen, wurde von Louis Leon Thurstone entwickelt.\n\nDie Methode wird insbesondere für Intelligenztests und die Erfassung von Einstellungen angewandt.\n\nSie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarchie haben (also mindestens ordinal skaliert sind)."
+    "text": "Thurstone-Skalierung\n\n\nLouis Leon Thurstone (1887-1955)\n\nEine Möglichkeit, latente Eigenschaften durch Befragungen oder psychologische Tests zu erfassen, wurde von Louis Leon Thurstone entwickelt.\nDie Methode wird insbesondere für Intelligenztests und die Erfassung von Einstellungen angewandt.\nSie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarchie haben (also mindestens ordinal skaliert sind)."
   },
   {
     "objectID": "slides/05-Skalierung.html#thurstone-skalierung-1",
     "href": "slides/05-Skalierung.html#thurstone-skalierung-1",
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Thurstone-Skalierung",
-    "text": "Thurstone-Skalierung\n\nAnlage eines großen Itempools, der das gesamte Spektrum aller Reaktionen/Einstellungen/Verhaltensweisen enthalten soll, das theoretisch erfasst werden soll.\nDie Items werden Expert:innen zum bewerten (engl.: rating) vorgelegt. Die Bewertungen orientieren sich an der Hierarchie der Ausprägungen der latenten Eigenschaft.\nItems, bei denen Uneinigkeit zwischen den Expert:innen besteht, werden ausgechlossen.\nJedes Item erhält den Durchschnittsbewertung aller Expert:innen. Dadurch lassen sich die Items in eine Ordnung bringen, die die “Position” des Items in der Hierarchie der latenten Eigenschaft darstellt.\nDie Items werden Probanten vorgelegt. Als Antwortkategorien sind nur binäre Kategorien zugelassen: ja (= 1)/nein (= 0); Aufgabe gelöst (= 1)/nicht gelöst (= 0); Reaktion gezeigt (= 1) / nicht gezeigt (= 0).\nFür jeden Probant wird die Summe aus allen ja/gelöst/Reaktion gezeigt (= 1) Itemscores gebildet. Mit diesem Wert lassen sich die Personen nach ihrer Ausprägung der latenten Eigenschaft unterscheiden."
+    "text": "Thurstone-Skalierung\n\nAnlage eines großen Itempools, der das gesamte Spektrum aller Reaktionen/Einstellungen/Verhaltensweisen enthalten soll, das theoretisch erfasst werden soll.\nDie Items werden Expert:innen zum bewerten (engl.: rating) vorgelegt. Die Bewertungen orientieren sich an der Hierarchie der Ausprägungen der latenten Eigenschaft.\nItems, bei denen Uneinigkeit zwischen den Expert:innen besteht, werden ausgechlossen."
   },
   {
     "objectID": "slides/05-Skalierung.html#thurstone-skalierung-2",
     "href": "slides/05-Skalierung.html#thurstone-skalierung-2",
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Thurstone-Skalierung",
-    "text": "Thurstone-Skalierung"
+    "text": "Thurstone-Skalierung\n\nJedes Item erhält den Durchschnittsbewertung aller Expert:innen. Dadurch lassen sich die Items in eine Ordnung bringen, die die “Position” des Items in der Hierarchie der latenten Eigenschaft darstellt.\nDie Items werden Probanten vorgelegt. Als Antwortkategorien sind nur binäre Kategorien zugelassen: ja (= 1)/nein (= 0); Aufgabe gelöst (= 1)/nicht gelöst (= 0); Reaktion gezeigt (= 1) / nicht gezeigt (= 0).\nFür jeden Probant wird die Summe aus allen ja/gelöst/Reaktion gezeigt (= 1) Itemscores gebildet. Mit diesem Wert lassen sich die Personen nach ihrer Ausprägung der latenten Eigenschaft unterscheiden."
   },
   {
     "objectID": "slides/05-Skalierung.html#thurstone-skalierung-3",
     "href": "slides/05-Skalierung.html#thurstone-skalierung-3",
     "title": "Unterscheiden: Skalierung & Typisierung",
-    "section": "Thurstone-Skalierung",
-    "text": "Thurstone-Skalierung\nSkala für die Kontaktsituation in Wohnsiedlungen (durchschnittliche Expertenwertung von -5 bis +5 in Klammern):\n\n\nIch komme mir in dieser Siedlung oft vor wie ein Fremder. (\\(-2,00\\))\nKeinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (\\(-3,05\\))\nHier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (\\(+3,30\\))\nIch habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (\\(-0,53\\))\nIch kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. ( \\(-0,33\\))\nIn diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. ( \\(+1,79\\))\nIch kenne hier in der Nachbarschaft fast jeden mit Namen. (\\(+0,90\\))"
+    "section": "Thurstone Skalierung",
+    "text": "Thurstone Skalierung"
   },
   {
     "objectID": "slides/05-Skalierung.html#guttman-skalierung",
@@ -1276,5 +1276,26 @@
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.↩︎\nDie Großväter (ja, es waren alles Männer) haben das Indikator genannt.↩︎"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#ein-itempool",
+    "href": "slides/05-Skalierung.html#ein-itempool",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Ein Itempool",
+    "text": "Ein Itempool"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#thurstone-skalierung-4",
+    "href": "slides/05-Skalierung.html#thurstone-skalierung-4",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Thurstone-Skalierung",
+    "text": "Thurstone-Skalierung\n\n\n\nWahrscheinlichkeitsverteilungen von zwei Personen über vier Punkte einer latenten Skala. Quelle:"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#thurstone-skalierung-5",
+    "href": "slides/05-Skalierung.html#thurstone-skalierung-5",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Thurstone-Skalierung",
+    "text": "Thurstone-Skalierung\nSkala für die Kontaktsituation in Wohnsiedlungen (durchschnittliche Expertenwertung von -5 bis +5 in Klammern):\n\n\nIch komme mir in dieser Siedlung oft vor wie ein Fremder. (\\(-2,00\\))\nKeinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (\\(-3,05\\))\nHier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (\\(+3,30\\))\nIch habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (\\(-0,53\\))\nIch kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. ( \\(-0,33\\))\nIn diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. ( \\(+1,79\\))\nIch kenne hier in der Nachbarschaft fast jeden mit Namen. (\\(+0,90\\))"
   }
 ]
