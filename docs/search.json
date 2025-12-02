@@ -672,8 +672,8 @@
     "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "href": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
-    "section": "Beobachten und nach Ausprägungen unterscheiden",
-    "text": "Beobachten und nach Ausprägungen unterscheiden\n\n\n\nPlakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+    "section": "",
+    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
@@ -694,7 +694,7 @@
     "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
-    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
@@ -1044,7 +1044,7 @@
     "href": "surveys/survey.html",
     "title": "Methoden empirischer Sozialforschung",
     "section": "",
-    "text": "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStimme voll zu\nStimme zu\nKeine Meinung\nLehne ab\nLehne stark ab\n\n\n\n\nMenschen sind von Natur aus korrupt.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Erde ist besser dran, wenn Menschen von ihr verschwinden.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie meisten Menschen sind grundsätzlich gut.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nIch bin stolz, ein Teil der Menschheit zu sein\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nPlease indicate your agreement with the following statements.\n\n\n\n\n\n\n\n\n\n\n\n\nDisagree\nNeutral\nAgree\n\n\n\n\nI would buy a gasoline car.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\nI would buy an EV.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nExit Survey"
+    "text": "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStimme voll zu\nStimme zu\nKeine Meinung\nLehne ab\nLehne stark ab\n\n\n\n\nMenschen sind von Natur aus korrupt.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Erde ist besser dran, wenn Menschen von ihr verschwinden.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie meisten Menschen sind grundsätzlich gut.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nIch bin stolz, ein Teil der Menschheit zu sein\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nExit Survey"
   },
   {
     "objectID": "surveys/survey.html#end",
@@ -1064,15 +1064,15 @@
     "objectID": "slides/05-Skalierung.html#skalierung-und-typisierung",
     "href": "slides/05-Skalierung.html#skalierung-und-typisierung",
     "title": "Unterscheiden: Skalierung & Typisierung",
-    "section": "",
-    "text": "Besteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
+    "section": "Skalierung und Typisierung",
+    "text": "Skalierung und Typisierung\nBesteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
   },
   {
     "objectID": "slides/05-Skalierung.html#misanthrophie",
     "href": "slides/05-Skalierung.html#misanthrophie",
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Misanthrophie",
-    "text": "Misanthrophie\n\nHumans are by nature basically corrupt.\nBoth history and current events show that human beings are basically wicked.\nPlanet earth would be better off if humans would just disappear from it.\nMost people are basically good natured.\nI am proud to be a member of the human race."
+    "text": "Misanthrophie\n\n\n\n\nBitte diesem Link folgen oder"
   },
   {
     "objectID": "slides/05-Skalierung.html#die-messung-latenter-eigenschaften",
@@ -1086,7 +1086,7 @@
     "href": "slides/05-Skalierung.html#die-messung-latenter-eigenschaften-1",
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Die Messung latenter Eigenschaften",
-    "text": "Die Messung latenter Eigenschaften\n\n\n\n\n\n\n\nAnnahmen:\n\nDie die Ausprägungen in systematischen Zusammenhang miteinander und zu der latenten Eigenschaft stehen.\nDie Störfaktoren sind voneinander unabhängig und treten zufällig auf."
+    "text": "Die Messung latenter Eigenschaften\n\n\n\n\nAnnahmen:\n\nDie die Ausprägungen in systematischen Zusammenhang miteinander und zu der latenten Eigenschaft stehen.\nDie Störfaktoren sind voneinander unabhängig und treten zufällig auf."
   },
   {
     "objectID": "slides/05-Skalierung.html#misantrophie",
@@ -1219,7 +1219,7 @@
     "href": "surveys/survey.html#misantrophie",
     "title": "Methoden empirischer Sozialforschung",
     "section": "",
-    "text": "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStimme voll zu\nStimme zu\nKeine Meinung\nLehne ab\nLehne stark ab\n\n\n\n\nMenschen sind von Natur aus korrupt.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Erde ist besser dran, wenn Menschen von ihr verschwinden.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie meisten Menschen sind grundsätzlich gut.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nIch bin stolz, ein Teil der Menschheit zu sein\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nPlease indicate your agreement with the following statements.\n\n\n\n\n\n\n\n\n\n\n\n\nDisagree\nNeutral\nAgree\n\n\n\n\nI would buy a gasoline car.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\nI would buy an EV.\n\n\n\n\n\n  Disagree \n\n\n  Neutral \n\n\n  Agree \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nExit Survey"
+    "text": "Bitte kreuzen Sie an, wie stark Sie folgenden Aussagen zustimmen oder sie ablehnen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStimme voll zu\nStimme zu\nKeine Meinung\nLehne ab\nLehne stark ab\n\n\n\n\nMenschen sind von Natur aus korrupt.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Geschichte und aktuelle Ereignisse zeigen, dass Menschen von Grund auf böse sind.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie Erde ist besser dran, wenn Menschen von ihr verschwinden.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nDie meisten Menschen sind grundsätzlich gut.\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\nIch bin stolz, ein Teil der Menschheit zu sein\n\n\n\n\n\n  Stimme voll zu \n\n\n  Stimme zu \n\n\n  Keine Meinung \n\n\n  Lehne ab \n\n\n  Lehne stark ab \n\n\n\n*\n\n\n\n\n\n\n*\n\n\n\n\n\n\n\nExit Survey"
   },
   {
     "objectID": "slides/05-Skalierung.html#ausprägungen-und-indikatoren",
@@ -1233,7 +1233,7 @@
     "href": "slides/05-Skalierung.html#auswahl-von-indikatoren",
     "title": "Unterscheiden: Skalierung & Typisierung",
     "section": "Auswahl von Indikatoren",
-    "text": "Auswahl von Indikatoren\nDie beobachteten Unterschiede in den Verhaltensweisen oder Zustände der Untersuchungseinheinten (= Indikatoren) müssen mehrere Anforderungen erfüllen, damit eine sinnvolle Erfassung der latenten Eigenschaft erfolgen kann:\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede (= Dimensionen + Ausprägungen) erfassen können.1\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden.\n\nDie beobachteten Unterschiede müssen so kombinierbar sein, dass damit jeder Untersuchungseinheit ein spezifischer Wert zugeordnet werden kann und somit alle Untersuchungseinheiten nach ihrer Unterschiedlichkeit sortiert werden können."
+    "text": "Auswahl von Indikatoren\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede (= Dimensionen + Ausprägungen) erfassen können.1\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden.\n\nDie beobachteten Unterschiede müssen so kombinierbar sein, dass damit jeder Untersuchungseinheit ein spezifischer Wert zugeordnet werden kann und somit alle Untersuchungseinheiten nach ihrer Unterschiedlichkeit sortiert werden können.\n\nDas bedeutet nicht, dass wir alle möglichen Ausprägungen mit Indikatoren erfassen müssen, sondern nur, dass wir nicht systematisch einen Teil der zugrunde liegenden Unterschiede ignorieren."
   },
   {
     "objectID": "slides/05-Skalierung.html#footnotes",
@@ -1317,14 +1317,14 @@
     "href": "exercises/03-ex.html#stress-an-der-arbeit",
     "title": "Übung: Messtheorie",
     "section": "2 Stress an der Arbeit",
-    "text": "2 Stress an der Arbeit\nIm Folgenden finden Sie einige Indikatoren, mit dem Frese & Zapf (1987) Stress am Arbeitsplatz messen wollen. Ihre Aufgabe ist es, diese Indikatoren zu prüfen, unnötige zu entfernen und ggf. neue hinzuzufügen, wenn Sie der Meinung sind, dass die aktuelle Arbeitswelt neue Indikatoren benötigt.\n\nMit einigen Kollegen hat man oft Streit.\nEinige Kollegen sind unangenehme Mitarbeiter.\nHier wird man wegen jeder Kleinigkeit gleich fertiggemacht.\nHier gibt es immer nur Kritik, was man gut macht sieht keiner.\nMan muss mit unfreundlichen Leuten zusammenarbeiten.\nDer normale Arbeitsrhythmus wird von manchen Kollegen immer wieder unterbrochen.\nMan muss mit Leuten zusammenarbeiten, die keinen Spaß verstehen.\nMein Vorgesetzter treibt einen an.\nMein Vorgesetzter spielt die Kollegen gegeneinander aus.\nWenn ein Fehler passiert, findet der Vorgesetzte ihn immer bei uns, nie bei sich.\nMein Vorgesetzter lässt seine Leute im Stich, wenn sie kritisiert werden.\nMein Vorgesetzter teilt die angenehme Arbeit immer bestimmten Leuten zu.\nMein Vorgesetzter hat keine Ahnung.\nEs gibt Schwierigkeiten bei der Abstimmung mit Kollegen.\nEs ist unklar, was die Vorgesetzten von einem wollen.\nMan muss ausbaden, was die anderen falsch machen.\nDer Vorgesetzte erschwert einem das Arbeiten durch seine Anweisungen."
+    "text": "2 Stress an der Arbeit\nIm Folgenden finden Sie einige Indikatoren, mit dem Frese & Zapf (1987) Stress am Arbeitsplatz messen wollen. Ihre Aufgabe ist es, diese Indikatoren zu prüfen, sie zu Subdimensionen zuzuordnen, unnötige/nicht passende/problematische Indikatoren zu entfernen und ggf. neue hinzuzufügen, wenn Sie der Meinung sind, dass die aktuelle Arbeitswelt neue Indikatoren und/oder Subdimensionen benötigt.\n\nMit einigen Kollegen hat man oft Streit.\nEinige Kollegen sind unangenehme Mitarbeiter.\nHier wird man wegen jeder Kleinigkeit gleich fertiggemacht.\nHier gibt es immer nur Kritik, was man gut macht sieht keiner.\nMan muss mit unfreundlichen Leuten zusammenarbeiten.\nDer normale Arbeitsrhythmus wird von manchen Kollegen immer wieder unterbrochen.\nMan muss mit Leuten zusammenarbeiten, die keinen Spaß verstehen.\nMein Vorgesetzter treibt einen an.\nMein Vorgesetzter spielt die Kollegen gegeneinander aus.\nWenn ein Fehler passiert, findet der Vorgesetzte ihn immer bei uns, nie bei sich.\nMein Vorgesetzter lässt seine Leute im Stich, wenn sie kritisiert werden.\nMein Vorgesetzter teilt die angenehme Arbeit immer bestimmten Leuten zu.\nMein Vorgesetzter hat keine Ahnung.\nEs gibt Schwierigkeiten bei der Abstimmung mit Kollegen.\nEs ist unklar, was die Vorgesetzten von einem wollen.\nMan muss ausbaden, was die anderen falsch machen.\nDer Vorgesetzte erschwert einem das Arbeiten durch seine Anweisungen."
   },
   {
     "objectID": "misc/05-zusatz.html",
     "href": "misc/05-zusatz.html",
     "title": "Messtheoretische Grundlagen",
     "section": "",
-    "text": "über die Veränderung der WHO-Empfehlung zur Wirkung von “moderatem Alkoholkonsum”."
+    "text": "!(Spiegelhalter)[https://medium.com/wintoncentre/the-risks-of-alcohol-again-2ae8cb006a4a] über die Veränderung der WHO-Empfehlung zur Wirkung von “moderatem Alkoholkonsum”."
   },
   {
     "objectID": "misc/04-zusatz.html",
@@ -1332,5 +1332,19 @@
     "title": "Messtheoretische Grundlagen",
     "section": "",
     "text": "Spiegelhalter über die Veränderung der WHO-Empfehlung zur Wirkung von “moderatem Alkoholkonsum”: https://medium.com/wintoncentre/the-risks-of-alcohol-again-2ae8cb006a4a"
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#auswahl-von-indikatoren-bandbreite",
+    "href": "slides/05-Skalierung.html#auswahl-von-indikatoren-bandbreite",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Auswahl von Indikatoren: Bandbreite",
+    "text": "Auswahl von Indikatoren: Bandbreite\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede (= Dimensionen + Ausprägungen) erfassen können.1\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden.\n\n\nDas bedeutet nicht, dass wir alle möglichen Ausprägungen mit Indikatoren erfassen müssen, sondern nur, dass wir nicht systematisch einen Teil der zugrunde liegenden Unterschiede ignorieren."
+  },
+  {
+    "objectID": "slides/05-Skalierung.html#auswahl-von-indikatoren-ein-eindeutigkeit",
+    "href": "slides/05-Skalierung.html#auswahl-von-indikatoren-ein-eindeutigkeit",
+    "title": "Unterscheiden: Skalierung & Typisierung",
+    "section": "Auswahl von Indikatoren: Ein-Eindeutigkeit",
+    "text": "Auswahl von Indikatoren: Ein-Eindeutigkeit\n\nDie resultierenden numerischen Unterschiede (pro Subdimension) müssen so sein erhoben werden, dass jeder Untersuchungseinheit ein spezifischer Wert zugeordnet werden kann.\n- Dadurch können alle Untersuchungseinheiten nach ihrer Unterschiedlichkeit sortiert werden können (sofern ordinale oder metrische Ausprägungen vorliegen).\n\n- Ausprägungen von Subdimensionen müssen so kombinierbar sein, dass ebenfalls eine ein-eindeutige Zuordnung von Gesamtwert zur Gesamtausprägung möglich ist."
   }
 ]

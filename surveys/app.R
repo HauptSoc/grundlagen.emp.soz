@@ -26,11 +26,10 @@ library(surveydown)
 # doing local testing. Once you're ready to collect survey responses, set
 # ignore = FALSE or just delete this argument.
 
+##setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-
-db <- sd_db_connect(ignore = TRUE)
+db <- sd_db_connect(ignore = FALSE)
 
 # UI setup --------------------------------------------------------------------
 
@@ -39,11 +38,22 @@ ui <- sd_ui()
 # Server setup ----------------------------------------------------------------
 
 server <- function(input, output, session) {
-  # Define any conditional skip logic here (skip to page if a condition is true)
-  sd_skip_forward()
 
-  # Define any conditional display logic here (show a question if a condition is true)
-  sd_show_if()
+  data <- sd_get_data(db, refresh_interval = 5)
+  
+  # Render the plot
+  output$misanthro_plot <- renderPlot({
+    data() |> # Note the () here, as this is a reactive expression
+      count(penguins) |>
+      mutate(
+        penguins = ifelse(penguins == '', 'No response', penguins)
+      ) |>
+      ggplot() +
+      geom_col(aes(x = n, y = reorder(penguins, n)), width = 0.7) +
+      theme_minimal() +
+      labs(x = "Count", y = "Penguin Type", title = "Penguin Count")
+  })
+  
 
   # Run surveydown server and define database
   sd_server(db = db)

@@ -9,6 +9,8 @@ theme: simplex
 library(surveydown)
 ```
 
+:::{.sd-page}
+
 ## Misantrophie
 
 ```{r}
@@ -36,24 +38,7 @@ sd_question(
 ```
 
 ```{r}
-
-  sd_question(
-    type   = "matrix",
-    id     = "car_preference",
-    label  = "Please indicate your agreement with the following statements.",
-    row    = c(
-      "I would buy a gasoline car." = "buy_gasoline",
-      "I would buy an EV."          = "buy_ev"
-    ),
-    option = c(
-      "Disagree" = "disagree",
-      "Neutral"  = "neutral",
-      "Agree"    = "agree"
-    )
-  )
-
-```
-
-```{r}
 sd_close()
 ```
+
+:::
