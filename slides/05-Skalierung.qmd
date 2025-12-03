@@ -1,5 +1,5 @@
 ---
-title: "Unterscheiden: Skalierung & Typisierung"
+title: "Unterscheiden: Skalierung"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
 css: global.css
@@ -101,8 +101,6 @@ Annahmen:
     - Ausprägungen von Subdimensionen müssen so kombinierbar sein, dass ebenfalls eine ein-eindeutige Zuordnung von Gesamtwert zur Gesamtausprägung möglich ist. 
     ```
 
-## Ein Itempool
-
 ## Thurstone-Skalierung
 
 ::::: columns
@@ -137,26 +135,136 @@ Sie setzt voraus, dass die Ausprägungen der latenten Eigenschaften eine Hierarc
 
 ## Thurstone Skalierung
 
-![](images/skalierung-thurstone.svg)
+![](images/skalierung-thurston.svg)
 
 ## Thurstone-Skalierung
 
-![Wahrscheinlichkeitsverteilungen von zwei Personen über vier Punkte einer latenten Skala. Quelle: ![Lee et al. (2014)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0096431)](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0096431.g001)
+![Wahrscheinlichkeitsverteilungen von zwei Personen über vier Punkten einer latenten Skala. Quelle: [Lee et al. (2014)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0096431)](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0096431.g001){width="50%"}
 
-## Thurstone-Skalierung
+## Thurstone-Skalierung {.midi}
 
-Skala für die Kontaktsituation in Wohnsiedlungen (durchschnittliche Expertenwertung von -5 bis +5 in Klammern):\
+:::{.callout}
 
-1.  Ich komme mir in dieser Siedlung oft vor wie ein Fremder. ($-2,00$)
+## Skala für die Kontaktsituation in Wohnsiedlungen
 
-2.  Keinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. ($-3,05$)
+1.  Ich komme mir in dieser Siedlung oft vor wie ein Fremder. (-2,00)
 
-3.  Hier in der Siedlung haben die Menschen keine Geheimnisse voreinander. ($+3,30$)
+2.  Keinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (-3,05)
 
-4.  Ich habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. ($-0,53$)
+3.  Hier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (+3,30)
 
-5.  Ich kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. ( $-0,33$)
+4.  Ich habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (-0,53)
 
-6.  In diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. ( $+1,79$)
+5.  Ich kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. (-0,33)
 
-7.  Ich kenne hier in der Nachbarschaft fast jeden mit Namen. ($+0,90$)
+6.  In diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. (+1,79)
+
+7.  Ich kenne hier in der Nachbarschaft fast jeden mit Namen. (+0,90)
+:::
+
+## Guttman-Skalierung
+
+::::: columns
+::: {.column width="30%"}
+![[Louis E. Guttman (1916-1987)](https://doritalt80.wixsite.com/ftas)](https://static.wixstatic.com/media/c8a426_46aa46baed894860ba6a15675c613d04~mv2.jpg/v1/fill/w_120,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c8a426_46aa46baed894860ba6a15675c613d04~mv2.jpg){width="130%"}
+:::
+
+::: {.column width="70%"}
+Ein weiteres Verfahren zur Erfassung latenter Eigenschaften wurde von Louis E. Guttman entwickelt.
+
+Diese Art der Skalierung setzt voraus, dass die latente Eigenschaft Ausprägungen (in überschauberer Anzahl) hat, die streng hierarchisch geordnet sind.
+:::
+:::::
+
+## Guttman-Skalierung
+
+1.  Entwickle eine Liste von Items, die alle Ausprägungen des Merkmals erfassen. Die Items müssen sich streng nach der Hierarchie der Ausprägungen sortieren lassen (z.B.: von nicht hilfsbedürftig bis stark hilfsbedürftig) und dürfen sich nicht überschneiden.
+
+2.  Lege die Liste Personen vor, die binär reagieren müssen: z.B.: ablehnen oder zustimmen / lösen oder nicht lösen.
+
+3.  Die Anzahl aller positiven Reaktionen pro Person bildet eine Rangfolge, die die Ausprägung der latenten Eigenschaft wiedergibt.
+
+## Guttman-Skalierung: Antisemitismus {.midi}
+
+:::::: columns
+::: {.column .callout width="50%"}
+## Würden Sie es begrüßen, wenn
+
+1.  Juden Deutschland besuchen.
+
+2.  Juden sich in Deutschland niederlassen.
+
+3.  Sie einen Juden als Arbeitskollegen haben.
+
+4.  Sie einen Juden als Freund haben.
+
+5.  Sie einen Juden heiraten würden.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+Für eine Skala von Antisemitismus können wir eine Hierarchie sozialer Beziehungen nach "persönlicher Nähe" aufstellen.
+
+Wir können dann Personen danach unterscheiden, wie nah sie jüdische Personen an sich heranlassen.
+:::
+::::::
+
+## Grad der körperlichen Behinderung
+
+::::: columns
+::: {.column width="50%"}
+![](images/guttmann-behinderung.svg)
+:::
+
+::: {.column width="50%"}
+Gesundheitsfachkräfte wollen pflegebedürftige Personen nach dem Grad ihrer Beeinträchtigung unterscheiden.
+
+Eine Möglichkeit ist, eine Guttman-Skala zu bilden, die verschiedene Tätigkeiten in der Hierarchie ihrer motorischen Komplexität bringt und zu erheben, ob Personen diese Motorik noch aufbringen können.
+:::
+:::::
+
+## Unterschiede zwischen Guttman und Thurstone Skalierungen
+
+-   Positive und negative Reaktionen können sich bei einer Thurstone-Skala gegenseitig aufheben, aber nicht bei einer Guttman-Skala.
+
+-   Bei der Guttman-Skala gibt es (offiziell) keine Expert:innen, die für die Vorselektion sorgen.
+
+-   Guttman-Skalen sind praktisch auf Eigenschaften mit überschaubaren Ausprägungen begrenzt.
+
+## Likert-Skalierung {.midi}
+
+::::: columns
+::: {.column width="15%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Rensis_Likert_-_ISR_-_December_1961.jpg/250px-Rensis_Likert_-_ISR_-_December_1961.jpg)
+
+[Rensis Likert (1903-1981)](https://de.wikipedia.org/wiki/Rensis_Likert)
+:::
+
+::: {.column width="85%"}
+Die von Louis Thurstone oder Louis Guttman entwickelten Skalierungen nutzen die Unterschiedlichkeit der Items (über Scores oder ihre Position in einer Ausprägungshierachie) um Unterschiede der Ausprägungen zu erfassen. Das ist allerdings nicht immer praktikabel. Thurstone-Skalierungen können darüber hinaus sehr aufwändig und teuer sein.
+
+Rensis Likert entwickelte eine Alternative, die besonders (aber nicht nur!) über die Antwortkategorien der Items die Unterschiedlichkeit von latenten Ausprägungen erfassen soll.
+
+Diese Art der Skalierung setzt voraus, dass Personen in der Lage sind, sich durch ihre Reaktionen **konsitent** in Bezug auf eine Eigenschaft zu positionieren.
+:::
+:::::
+
+## Likert-Skalierung
+
+1.  Entwickle eine Liste von Items, die Variationen oder Aspekte des zugrunde liegenden Merkmals darstellen.
+
+2.  Lege die Liste der Items Personen vor, die auf die Items mit unterschiedlichen Graden positiv, neutral oder negativ reagieren können. Die Ausprägungen der Reaktionen sind daher stets ordinal!
+
+3.  Personen mit einer Ausprägung im unteren Bereich der Eigenschaft sollten daher sehr oft negativ auf Items reagieren und Personen mit einer hohen Ausprägung der Eigenschaft sollten sehr oft positiv reagieren.
+
+4.  Ein Wert aus allen Reaktionen ist der Meßwert für jede Person.
+
+## Likert-Skalierung
+
+![Das Verhältnis der Verteilung der latenten Ausprägungen in der Population und der ordinalen Likert-Antworten. Quelle: [Taylor et al. (2023)](https://link.springer.com/article/10.3758/s13428-022-01814-7)](images/likert-latent1.png){width=40%}
+
+## Likert-Skalierung
+
+![Wahrscheinlichkeitsverteilung pro Antwortkategorie auf der zugrunde liegenden mentalen Gesundheitsausprägung; Quelle: [Reeve (2008)](https://methods.sagepub.com/ency/edvol/encyclopedia-of-survey-research-methods/chpt/item-response-theory)](images/IRT-mentalhealth.jpg){width=50%}

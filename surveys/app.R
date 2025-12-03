@@ -41,19 +41,6 @@ server <- function(input, output, session) {
 
   data <- sd_get_data(db, refresh_interval = 5)
   
-  # Render the plot
-  output$misanthro_plot <- renderPlot({
-    data() |> # Note the () here, as this is a reactive expression
-      count(penguins) |>
-      mutate(
-        penguins = ifelse(penguins == '', 'No response', penguins)
-      ) |>
-      ggplot() +
-      geom_col(aes(x = n, y = reorder(penguins, n)), width = 0.7) +
-      theme_minimal() +
-      labs(x = "Count", y = "Penguin Type", title = "Penguin Count")
-  })
-  
 
   # Run surveydown server and define database
   sd_server(db = db)

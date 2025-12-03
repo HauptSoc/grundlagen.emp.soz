@@ -1,0 +1,7 @@
+---
+title: "Unterschiede messen: Skalierung"
+author: "Andreas Haupt"
+format: html
+---
+
+{{< revealjs file="05-Skalierung.html" height="700px" width="50%" class="ratio ratio-16x9" >}}

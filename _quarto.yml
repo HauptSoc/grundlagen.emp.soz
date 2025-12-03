@@ -9,7 +9,6 @@ project:
 
 website:
   page-navigation: true
-  favicon: images/favicon-2.png
   title: "Methoden empirischer Sozialforschung"
   description: "Webpage für das Modul 'Sozialwissenschaftliche Methoden I'"
   site-url: "https://methoden.empirischer.sozialforschung.netlify.com"
