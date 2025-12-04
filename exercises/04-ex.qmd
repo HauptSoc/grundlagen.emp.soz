@@ -1,0 +1,49 @@
+---
+title: "Übung: Skalierung"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+
+## Das Stigma "Einsamkeit"
+
+Personen können sich nicht nur einsam fühlen, sie können auch Einsamkeit als soziales Phänomen bei sich oder anderen bewerten. Im folgenden finden Sie Items der "Stigma of Lonelines Scale" von [Ko et al. (2022)](https://journals.sagepub.com/doi/full/10.1177/00110000211048000). 
+
+
+ - If I were lonely, I would feel ashamed
+ - Being lonely would be embarrassing
+ - I would judge myself negatively if I were lonely
+ - Being lonely would mean something is wrong with me
+ - I would never tell another person that I am lonely because I would feel ashamed. 
+ -  Others would assume that I am not very good at talking to people if I were lonely
+ - If I were lonely, others would assume that I had not made enough of an effort to not feel this way
+ - If I were lonely, others would assume that I do not have social skills 
+ - Others would assume it was my fault if I were lonely
+ - Others would assume that I do not have any friends if I were lonely
+ 
+1. Übersetzen Sie diese Items und diskutieren Sie, ob die deutschen Übersetzungen die Bedeutung der Items verändern. 
+2. Ordnen Sie die Items zu Subdimensionen zu. 
+3. Formulieren Sie für beide Dimensionen je mindestens fünf weitere Items, um einen Item-Pool aufzubauen.
+4. Diskutieren Sie, welche Reaktionsmöglichkeiten im Rahmen einer Befragung für diese Items sinnvoll sind. 
+
+## Eltern-Kind Bindung 
+
+Entwickeln Sie eine Guttman-Skala für die Eltern-Kind Bindung zwischen erwachsenen Kindern und ihren Eltern. 
+

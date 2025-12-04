@@ -1056,7 +1056,7 @@
   {
     "objectID": "slides/05-Skalierung.html",
     "href": "slides/05-Skalierung.html",
-    "title": "Unterscheiden: Skalierung & Typisierung",
+    "title": "Unterscheiden: Skalierung",
     "section": "",
     "text": "Besteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
   },
@@ -1064,8 +1064,8 @@
     "objectID": "slides/05-Skalierung.html#skalierung-und-typisierung",
     "href": "slides/05-Skalierung.html#skalierung-und-typisierung",
     "title": "Unterscheiden: Skalierung",
-    "section": "Skalierung und Typisierung",
-    "text": "Skalierung und Typisierung\nBesteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
+    "section": "",
+    "text": "Besteht das Konstrukt aus verschiedenen Subdimensionen, müssen die Ausprägungen jeder einzelnen Dimension in Kombination gesetzt werden.\n\nIst das Resultat dieser Kombination eine metrische Unterscheidung, wird dies auch als Skala oder Index bezeichnet.\nIst das Resultat eine ordinale oder nominale Unterscheidung, wird dies auch als Typisierung bezeichnet."
   },
   {
     "objectID": "slides/05-Skalierung.html#misanthrophie",
@@ -1149,7 +1149,7 @@
     "href": "slides/05-Skalierung.html#guttman-skalierung-antisemitismus",
     "title": "Unterscheiden: Skalierung",
     "section": "Guttman-Skalierung: Antisemitismus",
-    "text": "Guttman-Skalierung: Antisemitismus\n\n\n\n\n\nWürden Sie es begrüßen, wenn\n\n\n\nJuden Deutschland besuchen.\nJuden sich in Deutschland niederlassen.\nSie einen Juden als Arbeitskollegen haben.\nSie einen Juden als Freund haben.\nSie einen Juden heiraten würden.\n\n\n\n\n\n\n\nFür eine Skala von Antisemitismus können wir eine Hierarchie sozialer Beziehungen nach “persönlicher Nähe” aufstellen.\nWir können dann Personen danach unterscheiden, wie nah sie jüdische Personen an sich heranlassen."
+    "text": "Guttman-Skalierung: Antisemitismus\n\n\n\n\n\n\n\nNoneWürden Sie es begrüßen, wenn\n\n\n\n\nJuden Deutschland besuchen.\nJuden sich in Deutschland niederlassen.\nSie einen Juden als Arbeitskollegen haben.\nSie einen Juden als Freund haben.\nSie einen Juden heiraten würden.\n\n\n\n\n\nFür eine Skala von Antisemitismus können wir eine Hierarchie sozialer Beziehungen nach “persönlicher Nähe” aufstellen.\nWir können dann Personen danach unterscheiden, wie nah sie jüdische Personen an sich heranlassen."
   },
   {
     "objectID": "slides/05-Skalierung.html#guttman-skalierung-grad-der-körperlichen-behinderung",
@@ -1238,7 +1238,7 @@
   {
     "objectID": "slides/05-Skalierung.html#footnotes",
     "href": "slides/05-Skalierung.html#footnotes",
-    "title": "Unterscheiden: Skalierung & Typisierung",
+    "title": "Unterscheiden: Skalierung",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nDas bedeutet nicht, dass wir alle möglichen Ausprägungen mit Indikatoren erfassen müssen, sondern nur, dass wir nicht systematisch einen Teil der zugrunde liegenden Unterschiede ignorieren.↩︎"
   },
@@ -1296,7 +1296,7 @@
     "href": "slides/05-Skalierung.html#thurstone-skalierung-5",
     "title": "Unterscheiden: Skalierung",
     "section": "Thurstone-Skalierung",
-    "text": "Thurstone-Skalierung\n\n\n\nSkala für die Kontaktsituation in Wohnsiedlungen\n\n\n\nIch komme mir in dieser Siedlung oft vor wie ein Fremder. (-2,00)\nKeinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (-3,05)\nHier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (+3,30)\nIch habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (-0,53)\nIch kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. (-0,33)\nIn diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. (+1,79)\nIch kenne hier in der Nachbarschaft fast jeden mit Namen. (+0,90)"
+    "text": "Thurstone-Skalierung\n\n\n\n\n\n\nNoneSkala für die Kontaktsituation in Wohnsiedlungen\n\n\n\n\nIch komme mir in dieser Siedlung oft vor wie ein Fremder. (-2,00)\nKeinem Menschen in der Nachbarschaft würde es auffallen, wenn mir etwas zustieße. (-3,05)\nHier in der Siedlung haben die Menschen keine Geheimnisse voreinander. (+3,30)\nIch habe oft den Eindruck, dass sich die Menschen in meinem Wohnbezirk nur flüchtig kennen. (-0,53)\nIch kenne kaum jemanden in meinem Wohnbezirk, mit dem ich über private Dinge reden könnte. (-0,33)\nIn diesem Wohnbezirk ist es kaum möglich, sich auch nur für kurze Zeit von den anderen zurückzuziehen. (+1,79)\nIch kenne hier in der Nachbarschaft fast jeden mit Namen. (+0,90)"
   },
   {
     "objectID": "exercises/03-ex.html",
@@ -1338,7 +1338,7 @@
     "href": "slides/05-Skalierung.html#auswahl-von-indikatoren-bandbreite",
     "title": "Unterscheiden: Skalierung",
     "section": "Auswahl von Indikatoren: Bandbreite",
-    "text": "Auswahl von Indikatoren: Bandbreite\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede (= Dimensionen + Ausprägungen) erfassen können.1\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden.\n\n\nDas bedeutet nicht, dass wir alle möglichen Ausprägungen mit Indikatoren erfassen müssen, sondern nur, dass wir nicht systematisch einen Teil der zugrunde liegenden Unterschiede ignorieren."
+    "text": "Auswahl von Indikatoren: Bandbreite\n\nDie Indikatoren müssen die volle Bandbreite der (theoretisch postulierten) Unterschiede (= Dimensionen + Ausprägungen) erfassen können.1\n\nDazu wird in der Regel ein Indikatorenpool angelegt, der im Rahmen einer Befragung auch als Itempool bezeichnet wird.\nAus diesem Pool müssen die geeignetsten Indikatoren oder Items selektiert werden."
   },
   {
     "objectID": "slides/05-Skalierung.html#auswahl-von-indikatoren-ein-eindeutigkeit",
@@ -1367,5 +1367,26 @@
     "title": "Unterschiede messen: Skalierung",
     "section": "",
     "text": "View slides in full screen"
+  },
+  {
+    "objectID": "exercises/04-ex.html",
+    "href": "exercises/04-ex.html",
+    "title": "Übung: Skalierung",
+    "section": "",
+    "text": "Personen können sich nicht nur einsam fühlen, sie können auch Einsamkeit als soziales Phänomen bei sich oder anderen bewerten. Im folgenden finden Sie Items der “Stigma of Lonelines Scale” von Ko et al. (2022).\n\nIf I were lonely, I would feel ashamed\nBeing lonely would be embarrassing\nI would judge myself negatively if I were lonely\nBeing lonely would mean something is wrong with me\nI would never tell another person that I am lonely because I would feel ashamed.\nOthers would assume that I am not very good at talking to people if I were lonely\nIf I were lonely, others would assume that I had not made enough of an effort to not feel this way\nIf I were lonely, others would assume that I do not have social skills\nOthers would assume it was my fault if I were lonely\nOthers would assume that I do not have any friends if I were lonely\n\n\nÜbersetzen Sie diese Items und diskutieren Sie, ob die deutschen Übersetzungen die Bedeutung der Items verändern.\nOrdnen Sie die Items Subdimensionen zu.\nDiskutieren Sie, welche Reaktionsmöglichkeiten sinnvoll sind."
+  },
+  {
+    "objectID": "exercises/04-ex.html#das-stigma-einsamkeit",
+    "href": "exercises/04-ex.html#das-stigma-einsamkeit",
+    "title": "Übung: Skalierung",
+    "section": "",
+    "text": "Personen können sich nicht nur einsam fühlen, sie können auch Einsamkeit als soziales Phänomen bei sich oder anderen bewerten. Im folgenden finden Sie Items der “Stigma of Lonelines Scale” von Ko et al. (2022).\n\nIf I were lonely, I would feel ashamed\nBeing lonely would be embarrassing\nI would judge myself negatively if I were lonely\nBeing lonely would mean something is wrong with me\nI would never tell another person that I am lonely because I would feel ashamed.\nOthers would assume that I am not very good at talking to people if I were lonely\nIf I were lonely, others would assume that I had not made enough of an effort to not feel this way\nIf I were lonely, others would assume that I do not have social skills\nOthers would assume it was my fault if I were lonely\nOthers would assume that I do not have any friends if I were lonely\n\n\nÜbersetzen Sie diese Items und diskutieren Sie, ob die deutschen Übersetzungen die Bedeutung der Items verändern.\nOrdnen Sie die Items Subdimensionen zu.\nDiskutieren Sie, welche Reaktionsmöglichkeiten sinnvoll sind."
+  },
+  {
+    "objectID": "exercises/04-ex.html#eltern-kind-bindung",
+    "href": "exercises/04-ex.html#eltern-kind-bindung",
+    "title": "Übung: Skalierung",
+    "section": "2 Eltern-Kind Bindung",
+    "text": "2 Eltern-Kind Bindung\nEntwickeln Sie eine Guttman-Skala für die Eltern-Kind Bindung zwischen erwachsenen Kindern und ihren Eltern."
   }
 ]
