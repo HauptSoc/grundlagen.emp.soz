@@ -1,0 +1,52 @@
+---
+title: "How I want to stress myself in the next years"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+##server: shiny
+format: 
+  revealjs:
+    fig-format: svg
+    width: 1200
+    height: 700
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
+
+
+## The big picture: Why should we think about stress as social scientists? 
+
+
+Managing and avoiding stress are central in shaping the social life and as a consequence social structures. 
+
+## test
+
+![](https://ars.els-cdn.com/content/image/1-s2.0-S0277953621007371-gr2_lrg.jpg)
+
+## test 2
+
+![Gerard van der Leuen: Sysiphos](https://live.staticflickr.com/7059/7150456391_25b9907ecf_w.jpg)
+
+## test 3
+
+![](https://www.greekmyths-greekmythology.com/wp-content/uploads/2024/12/sisyphus-rock-01-1280X720.webp)
+
+
