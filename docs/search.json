@@ -1416,5 +1416,250 @@
     "title": "How I want to stress myself in the next years",
     "section": "test 3",
     "text": "test 3"
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#indexbildung",
+    "href": "slides/06-Ausprägungen_kombinieren.html#indexbildung",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Indexbildung",
+    "text": "Indexbildung\nWerden die Ausprägungen (der verschiedenen Dimensionen) eines Merkmals metrisch gemessen, lässt sich mit ihnen ein Index konstruieren. Manche Indexbildungen beruhen auf der Annahme, dass sich alle Werte gleichwertig zu seinem Gesamtwert (=Index) aufsummieren. Das muss aber nicht der Fall sein. Wir können drei Formen der Indexbildung unterscheiden und müssen stets begründen, warum wir welche Form benutzen.\n\nAdditive Indizes: \\(I= X_1 + X_2 + X_3\\)\nGewichtete Indizes: \\(I= a \\cdot X_1 + b \\cdot X_2 + c \\cdot X_3\\)\nMultiplikative Indizes: \\(I = X_1 \\cdot X_2 \\cdot X_3\\)\n\nEinen gewichteten Index benötigen wir, wenn verschiedene Items oder Dimensionen für das Endergebnis unterschiedlich bedeutsam sind. Einen multiplikativen Index benötigen wir, wenn alle Items sich auf notwendige Bedingungen einer Eigenschaft beziehen."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#die-perfekte-pasta-form",
+    "href": "slides/06-Ausprägungen_kombinieren.html#die-perfekte-pasta-form",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Die perfekte Pasta-Form",
+    "text": "Die perfekte Pasta-Form\n\n\n A) Sauceability: Wie gut verbindet sich die Nudel mit der Soße?\n\n B) Forkability: Wie leicht lässt sich die Nudel auf die Gabel spießen/legen?\n\n C) Toothsinkability: Wie gut fühlt es sich an, in die Nudel zu beißen?"
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#dont-ask-what-the-pasta-can-do-for-you",
+    "href": "slides/06-Ausprägungen_kombinieren.html#dont-ask-what-the-pasta-can-do-for-you",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Don’t ask what the pasta can do for you…",
+    "text": "Don’t ask what the pasta can do for you…\n\nIhre Aufgabe:\n\nEntwickeln Sie über die Feiertage einen Nudel-Qualitäts-Index.\nWelche Ausprägungen haben die einzelnen Sub-Dimensionen der Nudel-Qualität?\nWie kombinieren Sie die die einzelnen Ausprägungen zu einem Gesamt-Nudel-Qualitäts-Wert?\nErheben Sie Qualitätswerte zu mindestens drei unterschiedlichen Nudelformen und protokollieren Sie Ihre Ergebnisse."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#german-index-of-multiple-deprivation",
+    "href": "slides/06-Ausprägungen_kombinieren.html#german-index-of-multiple-deprivation",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "German Index of Multiple Deprivation",
+    "text": "German Index of Multiple Deprivation"
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#german-index-of-multiple-deprivation-1",
+    "href": "slides/06-Ausprägungen_kombinieren.html#german-index-of-multiple-deprivation-1",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "German Index of Multiple Deprivation",
+    "text": "German Index of Multiple Deprivation"
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#theoretische-differenzen-zwischen-additiven-und-multiplikativen-indizes",
+    "href": "slides/06-Ausprägungen_kombinieren.html#theoretische-differenzen-zwischen-additiven-und-multiplikativen-indizes",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Theoretische Differenzen zwischen additiven und multiplikativen Indizes",
+    "text": "Theoretische Differenzen zwischen additiven und multiplikativen Indizes\n\nDie oben dargestellten additiven Indizes beruhen auf der Annahme, dass Ausprägungen in einer Dimension Nullwerte in einer anderen Dimension ausgleichen können.\nSie nehmen außerdem an, dass Kombinationen von sehr hohen oder sehr niedrigen Ausprägungen gleichabständig zu anderen Kombinationen sind.\nWir können aber jede Dimension als notwendige Bedingung ansehen, in denen Ausprägungen jenseits von null vorliegen müssen, damit wir in einem Gesamtindex oder einem Gesamttypus Ausprägungen weiter unterscheiden.\nKombination von hohen Werten können uns außerdem besonders bedeutsam sein."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#bechdel-test",
+    "href": "slides/06-Ausprägungen_kombinieren.html#bechdel-test",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Bechdel Test",
+    "text": "Bechdel Test\n \nDer Bechdel-Test soll messen, ob ein Film nicht einseitig Männer orientiert ist.\nEr ist es genau dann, wenn:\n\nmindestens zwei Frauen vorkommen, die\nmiteinander reden und\ndieses Gespräch nicht einen Mann zum Gegenstand hat.\n\nAlle drei Eigenschaften sind notwendig, damit der Test “positiv” ist."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#bechdel-2025",
+    "href": "slides/06-Ausprägungen_kombinieren.html#bechdel-2025",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Bechdel 2025",
+    "text": "Bechdel 2025\n\n\n\n\n\n\n\n\n\n\n\nmind. zwei Frauen\nreden miteinander\nnicht nur übereinander\nGesamt\n\n\nPredator: Badlands\n1\n1\n1\n1\n\n\nSuperman1\n1\n1\n0\n0\n\n\nThe Fantastic Four: First Steps\n1\n0\n0\n0\n\n\nWish You Were Here\n1\n1\n1\n1\n\n\n\nZwei Frauen sprechen circa 30 Sekunden miteinander über Männer."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#personalauswahl",
+    "href": "slides/06-Ausprägungen_kombinieren.html#personalauswahl",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Personalauswahl",
+    "text": "Personalauswahl\n\nEine Personalabteilung soll Kandidat:innen nach ihrem Potential für das Unternehmen sortieren.\nDazu erfassen sie die Fachkompetenz, die Erfahrung und die Teamfähigkeit der Kanditat:innen in drei Ausprägungen:\n\n0 = nicht vorhanden,\n1 = in Ordnung,\n2 = exzellent.\n\n\nWir können drei Indizes erstellen: Index 1 ist additiv, Index 2 ist gewichtet-additiv (Gewichte in Klammern) und Index 3 ist multiplikativ."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#personalauswahl-1",
+    "href": "slides/06-Ausprägungen_kombinieren.html#personalauswahl-1",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Personalauswahl",
+    "text": "Personalauswahl\n\n\n\nKandidat:in\nFachkompetenz (2)\nErfahrung (1.5)\nTeamfähigkeit (1)\nIndex 1\nIndex 2\nIndex 3\n\n\n\n\n1\n2\n1\n0\n3\n5.5\n0\n\n\n2\n1\n2\n0\n3\n5.0\n0\n\n\n3\n0\n1\n2\n3\n3.5\n0\n\n\n4\n1\n1\n1\n3\n4.5\n1\n\n\n5\n1\n2\n2\n5\n7.0\n4\n\n\n6\n2\n2\n2\n6\n9.0\n8\n\n\n\n\nIndex 1 unterscheidet die ersten vier Kanditat:innen gar nicht, weil sich die Schwächen gegenseitig kompensieren. Kandidat:in 5 & 6 unterscheiden sich in Bezug auf ihre Gesamtpassung nur gering.\nIndex 2 bringt Kanditat:in 6, 5 und 1 auf die ersten drei Plätze.\nIndex 3 sortiert die ersten drei Kandidat:innen aus und differenziert die letzten drei Kandidat:innen stark aus."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#personalauswahl-2",
+    "href": "slides/06-Ausprägungen_kombinieren.html#personalauswahl-2",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Personalauswahl",
+    "text": "Personalauswahl"
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#kombination-von-ausprägungen-nach-subdimensionen",
+    "href": "slides/06-Ausprägungen_kombinieren.html#kombination-von-ausprägungen-nach-subdimensionen",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Kombination von Ausprägungen nach Subdimensionen",
+    "text": "Kombination von Ausprägungen nach Subdimensionen\n\n\n\nZusammenhänge zwischen Items und Subdimensionen für ein zwei-dimensionales Einsamkeitskonzept. Linke Werte: Verheiratete; Rechte Werte: Getrennte. Quelle: Liu & Rook (2013)"
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#typenbildung",
+    "href": "slides/06-Ausprägungen_kombinieren.html#typenbildung",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Typenbildung",
+    "text": "Typenbildung\n\n\n\n\nManchmal sind nicht alle Ausprägungskombinationen von mindestens zwei Eigenschaften gleich wichtig (im Beispiel links sind es 81 Kombinationen). In diesem Fall werden die Ausprägungskombinationen auf wenige typische oder theoretisch relevante reduziert."
+  },
+  {
+    "objectID": "slides/06-Ausprägungen_kombinieren.html#typen-neq-ausprägungen-von-eigenschaften-sondern-kombinationen",
+    "href": "slides/06-Ausprägungen_kombinieren.html#typen-neq-ausprägungen-von-eigenschaften-sondern-kombinationen",
+    "title": "Unterscheiden: Ausprägungen kombinieren",
+    "section": "Typen \\(\\neq\\) Ausprägungen von Eigenschaften sondern Kombinationen",
+    "text": "Typen \\(\\neq\\) Ausprägungen von Eigenschaften sondern Kombinationen\n\n\n\nVerschiedene Ausprägungen der Eigenschaft “Generation”"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#gute-und-schlechte-indikatoren",
+    "href": "slides/07-Itemkonstruktion.html#gute-und-schlechte-indikatoren",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Gute und schlechte Indikatoren",
+    "text": "Gute und schlechte Indikatoren\n\nIn vielen Fällen fragen wir Personen nach etwas, wir legen ihnen Aussagen vor oder geben ihnen Anweisungen, um etwas über Eigenschaften, die ihren Reaktionen zu grunde liegen.\nIndikatoren können mehr oder weniger störanfällig sein. Wir müssen versuchen, von Anfang an, so wenig Störungen wie möglich zuzulassen.\nDazu müssen wir verstehen, wie Personen unsere Items (=Fragen/Aussagen/Anweisungen) verarbeiten."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#frageformulierung-die-10-gebote-nach-porst",
+    "href": "slides/07-Itemkonstruktion.html#frageformulierung-die-10-gebote-nach-porst",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Frageformulierung: Die 10 Gebote nach Porst",
+    "text": "Frageformulierung: Die 10 Gebote nach Porst\n\nDu sollst einfache, unzweideutige Begriffe verwenden, die von allen Befragten in gleicher Weise verstanden werden!\nDu sollst lange und komplexe Fragen vermeiden.\nDu sollst hypothetische Frage vermeiden!\nDu sollst doppelte Stimuli und Verneinungen vermeiden!\nDu sollst Unterstellungen und suggestive Fragen vermeiden!\nDu sollst Fragen vermeiden, die auf Informationen abzielen, über die viele Befragte mutmaßlich nicht verfügen!\nDu sollst Fragen mit eindeutigem zeitlichen Bezug verwenden!\nDu sollst Antwortkategorien verwenden, die erschöpfend und überschneidungsfrei sind!\nDu sollst sicherstellen, dass der Kontext einer Frage sich nicht (unkontrolliert) auf deren Beantwortung auswirkt!\nDu sollst unklare Begriffe definieren!"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#frageformulierung-die-10-gebote-nach-porst-1",
+    "href": "slides/07-Itemkonstruktion.html#frageformulierung-die-10-gebote-nach-porst-1",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Frageformulierung: Die 10 Gebote nach Porst",
+    "text": "Frageformulierung: Die 10 Gebote nach Porst\n\nDu sollst Fragen vermeiden, die auf Informationen abzielen, über die viele Befragte mutmaßlich nicht verfügen!\nDu sollst Fragen mit eindeutigem zeitlichen Bezug verwenden!\nDu sollst Antwortkategorien verwenden, die erschöpfend und überschneidungsfrei sind!\nDu sollst sicherstellen, dass der Kontext einer Frage sich nicht (unkontrolliert) auf deren Beantwortung auswirkt!\nDu sollst unklare Begriffe definieren!"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#kognitionspsychologische-grundlagen",
+    "href": "slides/07-Itemkonstruktion.html#kognitionspsychologische-grundlagen",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Kognitionspsychologische Grundlagen",
+    "text": "Kognitionspsychologische Grundlagen\nIm Rahmen eines Experiments oder einer Befragung stellen eine Frage oder machen eine Aussage und wollen eine Antwort/Reaktion.\n\nDazu müssen Befragte in folgender Weise “arbeiten”.\n\ndas Item verstehen,\nrelevante Informationen aus dem Gedächtnis abrufen,\nauf der Basis der Informationen ein Urteil bilden,\ndas Urteil in ein Verhältnis zum Antwortformat bringen,\ndie erwarteten Konsequenzen der “Veröffentlichung” des Urteils abwägen und ggf. das “öffentliche Urteil” im Hinblick auf erwartete Konsequenzen modifizieren."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#das-item-verstehen.",
+    "href": "slides/07-Itemkonstruktion.html#das-item-verstehen.",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Das Item verstehen.",
+    "text": "Das Item verstehen.\nWie wir wissen, verstehen wir dann etwas, wenn wir das “etwas” als eine Ausprägung eines Konzepts beschreiben können. Wir verstehen die Kombination von Dingen dann, wenn wir für alle Elemente der Kombination und auch für das gesamte Ding Konzepte haben. Wir verstehen deshalb ein Item genau dann, wenn wir\n\nfür jedes Element des Items ein Konzept aktivieren und im Kurzzeitgedächtnis behalten können;\nfür die Frage selbst, d.h.: für die spezifische Interaktion in der Befragungssituation, ein Konzept haben.\n\nBefragte verstehen deshalb Fragen entweder gar nicht oder unterschiedlich, wenn\n\nihnen Konzepte fehlen, sie andere Konzepte aktivieren oder die Konzepte nicht in Kombination bringen können (semantisches Verstehen).\nSie zwar die Frage verstehen, aber nicht wissen, wie sie diese im Hinblick auf die Interaktion interpretieren sollen (pragmatisches Verstehen)."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#feministen-sind-wir-alle-oder",
+    "href": "slides/07-Itemkonstruktion.html#feministen-sind-wir-alle-oder",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Feministen sind wir alle, oder?",
+    "text": "Feministen sind wir alle, oder?"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#lands-of-the-free",
+    "href": "slides/07-Itemkonstruktion.html#lands-of-the-free",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Lands of the free",
+    "text": "Lands of the free\nIn verschiedenen Erhebungen wurde innerhalb von verschiedenen Ländern zufällig zugeteilt, ob die Frage in Variante 1 oder in Variante 2 gestellt wurde.\n\nThere are some people who are against all churches and religion. If such a person wanted to make a speech in your (city/town/community) against churches and religion, should he be allowed to speak, or not?\nThere are some people who are against all churches and religion. If such a person wanted to make a speech in your (city/town/community) against churches and religion, should he be allowed the freedom to speak, or not?"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#lands-of-the-free-1",
+    "href": "slides/07-Itemkonstruktion.html#lands-of-the-free-1",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Lands of the free",
+    "text": "Lands of the free\n\n\n\n\n\nDie Veränderung von Zustimmungsraten zur Redefreiheit nach Item-Wording. Quelle: Silber et al. (2023)\n\n\n\nDie Aktivierung von “Freiheit” erhöht die Wahrscheinlichkeit, dass Befragte mit “Ja” antworten.\nDieser Effekt ist abhängig von der Bedeutsamkeit von “Freiheit” in der jeweiligen Landeskultur."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#pragmatisches-verstehen",
+    "href": "slides/07-Itemkonstruktion.html#pragmatisches-verstehen",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Pragmatisches Verstehen",
+    "text": "Pragmatisches Verstehen\nBefragte gehen i.d.R. davon aus, dass sie sich in einer kooperativen Kommunikationssituation befinden und sich selbst auch so verhalten sollten, dass die Kooperation aufrechterhalten bleibt. Die Aufrechterhaltung kommunikativer Kooperation benötigt typischerweise vier Regeln:\n\nGib (nur) so viele Informationen wie nötig.\nSage die Wahrheit.\nGib (nur) relevante Informationen.\nSei eindeutig.\n\nTypischerweise werden Befragte auf Ihre Fragen so reagieren, als ob alle Bedingungen vorliegen und sie werden versuchen, sich selbst an diese Regeln zu halten."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#was-wollen-die-wissen",
+    "href": "slides/07-Itemkonstruktion.html#was-wollen-die-wissen",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Was wollen die wissen?",
+    "text": "Was wollen die wissen?"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#kooperative-erwartungen-lenken-unser-verständnis",
+    "href": "slides/07-Itemkonstruktion.html#kooperative-erwartungen-lenken-unser-verständnis",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Kooperative Erwartungen lenken unser Verständnis",
+    "text": "Kooperative Erwartungen lenken unser Verständnis"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#suggestion",
+    "href": "slides/07-Itemkonstruktion.html#suggestion",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Suggestion",
+    "text": "Suggestion\nDie Art der Itemformulierung kann dazu führen, dass\n\nimplizit etwas unterstellt wird oder\neine Erwartungshaltung einer “richtigen” Antwort aufgebaut wird.\n\nBeide Aspekte sind Teil des pragmatischen Verstehens eines Items."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#suggestion-1",
+    "href": "slides/07-Itemkonstruktion.html#suggestion-1",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Suggestion",
+    "text": "Suggestion\nUnterstellung: Hat der mangelnde Respekt der Schüler vor ihren Lehrern Ihrer Ansicht nach Einfluss auf die tägliche Unterrichtsgestaltung in den Schulen?\nRed flags:\n\nFinden Sie nicht auch, dass\nFührende Wissenschaftler sind der Ansicht, dass\nEine Mehrheit …"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#suggestion-2",
+    "href": "slides/07-Itemkonstruktion.html#suggestion-2",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Suggestion",
+    "text": "Suggestion"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#informationen-aus-dem-gedächtnis-abrufen",
+    "href": "slides/07-Itemkonstruktion.html#informationen-aus-dem-gedächtnis-abrufen",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Informationen aus dem Gedächtnis abrufen",
+    "text": "Informationen aus dem Gedächtnis abrufen\nNur in wenigen Fällen können Personen Informationen aus dem Gedächtnis unmittelbar (also “ohne großes Nachdenken”) abrufen. Das ist dann der Fall, wenn diese Information für den Alltag der Person Relevanz hat:\n\nWie viele Kinder haben Sie?\nSind sie befristet oder unbefristet beschäftigt?\n\nJe anstrengender es für Personen ist, Gedächtnisinhalte zu aktivieren und in Bezug zueinander zu bringen, desto eher brechen Sie die Antwort ab oder beginnen zu raten. Sie müssen außerdem immer mit Erinnerungslücken und -verfälschungen rechnen.\n\nMit wie vielen unterschiedlichen Personen haben Sie im vergangenen Monat persönlich Kontakt gehabt?\nWieviel Zeit haben Sie im Verlauf dieser Woche damit verbracht, Einkäufe zu planen?"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#informationen-aus-dem-gedächtnis-abrufen-1",
+    "href": "slides/07-Itemkonstruktion.html#informationen-aus-dem-gedächtnis-abrufen-1",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Informationen aus dem Gedächtnis abrufen",
+    "text": "Informationen aus dem Gedächtnis abrufen\n\nSie sollten nur nach Informationen fragen, die Personen auch tatsächlich verfügbar haben.\n\nPotentiell problematisch: Schüler:innen nach Einkommen oder Beruf der Eltern fragen; lang zurückliegende Ereignisse; große Zeitspannen\n\nGruppen können sich danach unterscheiden, wie gut sie Informationen aus dem Gedächtnis abrufen können. Ihre Information ist daher nach Gruppen störanfällig.\n\nArbeitsteilung im Haushalt (Differenz von Männern und Frauen); Einkommensangaben bei Mehrfachbefragungen\n\nHypothetische Fragen sind meist zu komplex, um von Personen im Gedächtnis gespeichert werden zu können und eine Antwort aus dem Gedächtnis heraus zu formulieren."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#ein-urteil-bilden",
+    "href": "slides/07-Itemkonstruktion.html#ein-urteil-bilden",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Ein Urteil bilden",
+    "text": "Ein Urteil bilden\nIn den meisten Fällen müssen Befragte Informationen bewerten:\n\nIst die Sache selbst wünschenswert oder nicht?\nIst die Information relevant?\nIst meine Antwort richtig?\n\nJeder dieser Schritte kann mit Unsicherheit einhergehen oder auch von den Umständen der Befragung abhängen.\n\nWas ist ihr höchster Bildungsabschluss?\nWurden Sie als deutscher Staatsbürger geboren?"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#die-frage-ins-verhältnis-zum-antwortformat-bringen",
+    "href": "slides/07-Itemkonstruktion.html#die-frage-ins-verhältnis-zum-antwortformat-bringen",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Die Frage ins Verhältnis zum Antwortformat bringen",
+    "text": "Die Frage ins Verhältnis zum Antwortformat bringen"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#die-frage-ins-verhältnis-zum-antwortformat-bringen-1",
+    "href": "slides/07-Itemkonstruktion.html#die-frage-ins-verhältnis-zum-antwortformat-bringen-1",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Die Frage ins Verhältnis zum Antwortformat bringen",
+    "text": "Die Frage ins Verhältnis zum Antwortformat bringen"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#ein-urteil-öffentlich-machen",
+    "href": "slides/07-Itemkonstruktion.html#ein-urteil-öffentlich-machen",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Ein Urteil öffentlich machen",
+    "text": "Ein Urteil öffentlich machen\nBevor Befragte antworten, können sie sich fragen, ob sie diese Antwort tatsächlich geben möchten. Sie können typischerweise aufgrund von drei Gründen ihre “öffentliche” Antwort verweigern oder sie verändern:\n\nSie erwarten eine negative Konsequenz aus der Umwelt (“Das kann ich doch nicht so sagen!”).\nSie möchten Inkohärenz vermeiden (“Ich kann eigentlich nicht A sagen und nun B”).\nDas Antwortverhalten unterliegt spezifischen Normen, an die sich der/die Befragte/r gebunden fühlt (“Über A spricht man nicht!”)."
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html#ein-urteil-öffentlich-machen-1",
+    "href": "slides/07-Itemkonstruktion.html#ein-urteil-öffentlich-machen-1",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "Ein Urteil öffentlich machen",
+    "text": "Ein Urteil öffentlich machen\nFall 1 bezieht sich auf Interviewereffekte, soziale Erwünschtheit und Angst vor Problemen mit Anonymität.\n\nWie oft hatten Sie im letzten Jahr außerehelichen Geschlechtsverkehr?\nWie viele Sexualpartner hatten Sie bisher?\n\nFall 2 bezieht sich auf Bewertungskonflikte:\n\nWelche Partei würden Sie wählen, wenn heute Bundestagswahl wäre?\nWürden Sie zur Wahl gehen, wenn heute Bundestagswahl wäre?\n\nFall 3 bezieht sich auf Antworten, die entweder einen Gesetz- oder Normenverstoß erkennen lassen:\n\nWie oft haben Sie in der letzten Woche Kokain konsumiert?\nHaben Sie schon einmal wissenschaftliche Ergebnisse manipuliert, um publiziert zu werden?"
   }
 ]
