@@ -1,0 +1,7 @@
+---
+title: "Unterschiede messen: Ausprägungen kombinieren"
+author: "Andreas Haupt"
+format: html
+---
+
+{{< revealjs file="06-Ausprägungen_kombinieren.html" height="px" width="50%" class="ratio ratio-16x9" >}}

@@ -1,0 +1,7 @@
+---
+title: "Unterschiede messen: Itemkonstruktion"
+author: "Andreas Haupt"
+format: html
+---
+
+{{< revealjs file="07-Itemkonstruktion.html" height="950px" width="50%" class="ratio ratio-16x9" >}}
