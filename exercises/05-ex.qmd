@@ -1,0 +1,36 @@
+---
+title: "Übung: Ausprägungen kombinieren & Items formulieren"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Grundlagen für eine Befragung zu Ursachen, Verbreitung und Folgen von Einsamkeit unter Studierenden {.unnumbered}
+
+Es wird ernst.[^1] Holen Sie alle bisherigen Messvorschläge, die wir bisher erarbeitet haben, zusammen. 
+
+1. Diskutieren Sie, wie diese Eigenschaften in Beziehung stehen. Was ist von was Ursache oder Wirkung?[^2] 
+2. Bauen Sie aus den Items einen vorläufigen Fragebogen. Ignorieren Sie vorerst Antwortvorgaben. Legen Sie jedes Item auf die Goldwaage und überprüfen Sie die Itemqualität.
+3. Was fehlt? Was ist zuviel? 
+
+
+[^1]: Haha, Spaß!
+[^2]: Pfaddiagramme (die Dinger mit Boxen und Pfeilen) helfen!
+
+

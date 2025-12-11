@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "Grundlagen empirischer Sozialforschung",
     "section": "",
-    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n\n\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n\n\n\n\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n📁\n\n\n\n\n\n\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n7\n11.12.\nAusprägungen kombinieren\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n\n\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n\nab. 14.1.\n\n\n\n📋\n\n\n\n\n\n\n\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\n\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n\n\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
+    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n📁\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n7\n11.12.\nAusprägungen kombinieren\n📖\n🖥\n\n\n\n\n\n\n\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n✍\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n\n\n\n\n\nab. 14.1.\n\n\n\n\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
     "crumbs": [
       "Wissenswertes",
       "Was, wann, welche Reihenfolge?"
@@ -1696,5 +1696,33 @@
     "title": "Unterschiede messen: Ausprägungen kombinieren",
     "section": "",
     "text": "View slides in full screen"
+  },
+  {
+    "objectID": "exercises/05-ex.html",
+    "href": "exercises/05-ex.html",
+    "title": "Übung: Ausprägungen kombinieren & Items formulieren",
+    "section": "",
+    "text": "Es wird ernst.1 Holen Sie alle bisherigen Messvorschläge, die wir bisher erarbeitet haben, zusammen.\n\nDiskutieren Sie, wie diese Eigenschaften in Beziehung stehen. Was ist von was Ursache oder Wirkung?2\nBauen Sie aus den Items einen vorläufigen Fragebogen. Ignorieren Sie vorerst Antwortvorgaben. Legen Sie jedes Item auf die Goldwaage und überprüfen Sie die Itemqualität.\nWas fehlt? Was ist zuviel?"
+  },
+  {
+    "objectID": "exercises/05-ex.html#aufbau-einer-befragung-zu-ursachen-verbreitung-und-folgen-von-einsamkeit-unter-studierenden",
+    "href": "exercises/05-ex.html#aufbau-einer-befragung-zu-ursachen-verbreitung-und-folgen-von-einsamkeit-unter-studierenden",
+    "title": "Übung: Ausprägungen kombinieren & Items formulieren",
+    "section": "",
+    "text": "Es wird ernst.1 Holen Sie alle bisherigen Messvorschläge, die wir bisher erarbeitet haben, zusammen.\n\nDiskutieren Sie, wie diese Eigenschaften in Beziehung stehen. Was ist von was Ursache oder Wirkung?\nBauen Sie aus den Items einen vorläufigen Fragebogen. Ignorieren Sie vorerst Antwortvorgaben.\nWas fehlt? Was ist zuviel?"
+  },
+  {
+    "objectID": "exercises/05-ex.html#footnotes",
+    "href": "exercises/05-ex.html#footnotes",
+    "title": "Übung: Ausprägungen kombinieren & Items formulieren",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHaha, Spaß!↩︎\nPfaddiagramme (die Dinger mit Boxen und Pfeilen) helfen!↩︎"
+  },
+  {
+    "objectID": "exercises/05-ex.html#grundlagen-für-eine-befragung-zu-ursachen-verbreitung-und-folgen-von-einsamkeit-unter-studierenden",
+    "href": "exercises/05-ex.html#grundlagen-für-eine-befragung-zu-ursachen-verbreitung-und-folgen-von-einsamkeit-unter-studierenden",
+    "title": "Übung: Ausprägungen kombinieren & Items formulieren",
+    "section": "",
+    "text": "Es wird ernst.1 Holen Sie alle bisherigen Messvorschläge, die wir bisher erarbeitet haben, zusammen.\n\nDiskutieren Sie, wie diese Eigenschaften in Beziehung stehen. Was ist von was Ursache oder Wirkung?2\nBauen Sie aus den Items einen vorläufigen Fragebogen. Ignorieren Sie vorerst Antwortvorgaben. Legen Sie jedes Item auf die Goldwaage und überprüfen Sie die Itemqualität.\nWas fehlt? Was ist zuviel?"
   }
 ]
