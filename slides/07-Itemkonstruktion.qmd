@@ -7,8 +7,8 @@ css: global.css
 format: 
   revealjs:
     fig-format: svg
-    width: 1600
-    height: 900
+    width: 1280
+    height: 800
     auto-stretch: false
     theme: style.scss
     margin: 0.05
@@ -55,6 +55,8 @@ include-in-header:
 
 6.  Du sollst Fragen vermeiden, die auf Informationen abzielen, über die viele Befragte mutmaßlich nicht verfügen!
 
+## Frageformulierung: Die 10 Gebote nach Porst {.midi}
+
 7.  Du sollst Fragen mit eindeutigem zeitlichen Bezug verwenden!
 
 8.  Du sollst Antwortkategorien verwenden, die erschöpfend und überschneidungsfrei sind!
@@ -88,6 +90,8 @@ Wie wir wissen, verstehen wir dann etwas, wenn wir das "etwas" als eine Auspräg
 1.  für jedes Element des Items ein Konzept aktivieren und im Kurzzeitgedächtnis behalten können;
 
 2.  für die Frage selbst, d.h.: für die spezifische Interaktion in der Befragungssituation, ein Konzept haben.
+
+## Das Item verstehen.
 
 Befragte verstehen deshalb Fragen entweder gar nicht oder unterschiedlich, wenn
 
@@ -144,7 +148,7 @@ Typischerweise werden Befragte auf Ihre Fragen so reagieren, *als ob* alle Bedin
 
 ## Kooperative Erwartungen lenken unser Verständnis
 
-![](images/badsurveyquestion-health.png)
+![](images/badsurveyquestion-health.png){width=40%}
 
 ## Suggestion
 
@@ -167,7 +171,7 @@ Red flags:
 - Eine Mehrheit ... 
 
 
-## Informationen aus dem Gedächtnis abrufen
+## Informationen aus dem Gedächtnis abrufen {.midi}
 
 Nur in wenigen Fällen können Personen Informationen aus dem Gedächtnis unmittelbar (also "ohne großes Nachdenken") abrufen. Das ist dann der Fall, wenn diese Information für den Alltag der Person Relevanz hat:
 
@@ -181,7 +185,7 @@ Je anstrengender es für Personen ist, Gedächtnisinhalte zu aktivieren und in B
 
 - Wieviel Zeit haben Sie im Verlauf dieser Woche damit verbracht, Einkäufe **zu planen**?
 
-## Informationen aus dem Gedächtnis abrufen
+## Informationen aus dem Gedächtnis abrufen {.midi}
 
 - Sie sollten nur nach Informationen fragen, die Personen auch tatsächlich verfügbar haben.
 
@@ -193,7 +197,8 @@ Je anstrengender es für Personen ist, Gedächtnisinhalte zu aktivieren und in B
 
 - Hypothetische Fragen sind meist zu komplex, um von Personen im Gedächtnis gespeichert werden zu können und eine Antwort aus dem Gedächtnis heraus zu formulieren.
 
-## Ein Urteil bilden
+## Ein Urteil bilden {.midi}
+
 
 In den meisten Fällen müssen Befragte Informationen bewerten:
 
@@ -217,7 +222,8 @@ Jeder dieser Schritte kann mit Unsicherheit einhergehen oder auch von den Umstä
 
 ![](images/badsurveyquestion-religion.png)
 
-## Ein Urteil öffentlich machen
+## Ein Urteil öffentlich machen {.midi}
+
 
 Bevor Befragte antworten, können sie sich fragen, ob sie diese Antwort tatsächlich geben möchten. Sie können typischerweise aufgrund von drei Gründen ihre "öffentliche" Antwort verweigern oder sie verändern:
 
@@ -227,7 +233,8 @@ Bevor Befragte antworten, können sie sich fragen, ob sie diese Antwort tatsäch
 
 3.  Das Antwortverhalten unterliegt spezifischen Normen, an die sich der/die Befragte/r gebunden fühlt ("Über A spricht man nicht!").
 
-## Ein Urteil öffentlich machen
+## Ein Urteil öffentlich machen {.midi}
+
 
 Fall 1 bezieht sich auf Interviewereffekte, soziale Erwünschtheit und Angst vor Problemen mit Anonymität.
 
