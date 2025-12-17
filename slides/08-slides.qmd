@@ -1,0 +1,7 @@
+---
+title: "Unterschiede messen: Reaktionsvorgaben"
+author: "Andreas Haupt"
+format: html
+---
+
+{{< revealjs file="08-Reaktionsvorgaben.html" height="950px" width="50%" class="ratio ratio-16x9" >}}

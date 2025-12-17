@@ -1793,7 +1793,7 @@
     "href": "slides/08-Reaktionsvorgaben.html#uni--und-bipolare-antwortvorgaben",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "Uni- und bipolare Antwortvorgaben",
-    "text": "Uni- und bipolare Antwortvorgaben\nSkalen können entweder zwischen zwei Extremen oder zwischen einem “Nullpunkt” und einem Endpunkt pendeln. Ein Nullpunkt kann auch Indifferenz bedeuten. In vielen Fällen bedeutet er nicht das Gegenteil des Endpunkts."
+    "text": "Uni- und bipolare Antwortvorgaben\nSkalen können entweder zwischen zwei Extremen oder zwischen einem “Nullpunkt” und einem Endpunkt pendeln. Ein Nullpunkt kann auch Indifferenz bedeuten. In vielen Fällen bedeutet er nicht das Gegenteil des Endpunkts.\n\n\n\nQuelle: Moosbrugger & Brandt (2020: 109)"
   },
   {
     "objectID": "slides/08-Reaktionsvorgaben.html#uni--und-bipolare-antwortvorgaben-1",
@@ -1821,7 +1821,7 @@
     "href": "slides/08-Reaktionsvorgaben.html#was-wollen-wir-messen",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "Was wollen wir messen?",
-    "text": "Was wollen wir messen?\n\nZur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben."
+    "text": "Was wollen wir messen?\n\nZur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln, **außer*: die Reaktionsmöglichkeiten müssen erschöpfend1 und überschneidungsfrei sein.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben.\n\nBitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen."
   },
   {
     "objectID": "slides/07-Itemkonstruktion.html#das-item-verstehen.-1",
@@ -1878,5 +1878,243 @@
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "verbalisierte vs. endpunktbenannte Vorgaben",
     "text": "verbalisierte vs. endpunktbenannte Vorgaben\n\nBei verbalisierten Antwortvorgaben wird jede Kategorie einzeln bezeichnet.\n\nVorteil: Keine Unsicherheit/Unschärfe, was die Kategorien bedeuten sollen.\nNachteil: Mittelkategorie meist semantisch schwierig. Gleichabständigkeit semantisch oft nicht ausdrückbar. Je mehr Antwortvorgaben, desto schwieriger die Wortfindung.\n\nBei endpunktbenannten Skalen werden nur die beiden Extreme bezeichnet.\n\nVorteil: Leichte Verbalisierung. Antwortvorgaben können beliebig breit sein.\nNachteil: Unschärfe/Unsicherheit, was die einzelne Kategorie zu bedeuten hat."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#es-könnt-vieles-so-einfach-sein-isses-aber-nicht",
+    "href": "slides/09-Reliabilität_Validität.html#es-könnt-vieles-so-einfach-sein-isses-aber-nicht",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Es könnt’ vieles so einfach sein (isses aber nicht…)",
+    "text": "Es könnt’ vieles so einfach sein (isses aber nicht…)\nEine perfekte Messung ordnet einer (wahren) Ausprägung einer Eigenschaft ein-eindeutig einen (Zahlen)Wert zu. Die gleiche Ausprägung der Eigenschaft von verschiedenen Personen bei einem Messzeitpunkt oder von der gleichen Person über verschiedene Messzeitpunkte würde bei einer perfekten Messung den identischen Zahlenwert erhalten.\nIn der Praxis ist es jederzeit möglich, dass\n\neine Messung unterschiedliche Ergebnisse bei gleicher Ausprägung einer Eigenschaft liefert, weil die Messung durch starke, aber zufällige Störfaktoren beeinflusst wird (= Problem der Reliabilität).\neine Messung nur in Teilen das misst, was sie messen soll oder systematische Einflüsse als Störfaktoren auftreten (= Problem der Validität)."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität",
+    "text": "Reliabilität\n\n\n\n\nDas Messergebnis \\(y_i\\) (= Beobachteter Wert der Variable \\(Y\\) einer Untersuchungseinheit \\(i\\)) wird mindestens von zwei Komponenten bestimmt:\n\ndie (wahre) Ausprägung eines Merkmals \\(\\tau\\) (sprich: tau) sowie\neinen Störfaktor \\(\\epsilon\\) (sprich: epsilon), den wir zunächst als zufällig betrachten.\n\nWir gehen davon aus, dass sich beide Komponenten additiv verhalten und damit gilt: \\(y_i = \\tau_i + \\epsilon_i\\)"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität---systematische-und-unsystematische-variation",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität---systematische-und-unsystematische-variation",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität - systematische und unsystematische Variation",
+    "text": "Reliabilität - systematische und unsystematische Variation\nWenn wir Untersuchungseinheiten mehrfach testen oder verschiedene Untersuchungseinheiten mit gleichen Ausprägungen testen, müssen wir praktischerweise davon ausgehen, dass die Messergebnisse (\\(y_i\\)) über die verschiedenen Messungen variieren.\n\nDiese Variation - oder auch: Varianz - kürzen wir mit \\(Var()\\) ab.\nDie Varianz der Messergebnisse einer Eigenschaft \\(Y\\) ist daher \\(Var(y)\\).\nDie Varianz der zugrunde liegenden Ausprägungen ist \\(Var(\\tau)\\). Diese Varianz ist die durch die Eigenschaft systematisch bedingte Unterschiedlichkeit unserer Messergebnisse.\nDie Varianz der Störfaktoren ist \\(Var(\\epsilon)\\). Wir gehen (zunächst) davon aus, dass diese Störfaktoren zufällig sind und die damit verbundene Varianz daher unsystematisch mit den Messergebnissen verbunden ist."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität-verhältnis-von-systematischer-und-unsystematischer-variation",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität-verhältnis-von-systematischer-und-unsystematischer-variation",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität = Verhältnis von systematischer und unsystematischer Variation",
+    "text": "Reliabilität = Verhältnis von systematischer und unsystematischer Variation\nWir können die Reliabilität einer Messung \\(Rel()\\) definieren als den relativen Anteil der systematischen Varianz an der Varianz der Messergebnisse. Wenn die Ausprägungen einer Eigenschaft \\(\\tau\\) stark variieren, sollten auch unsere Messergebnisse stark variieren. Untersuchungseinheiten mit gleichen Ausprägungen sollten bei (wiederholten) Messungen nur eine kleine Varianz der Messergebnisse aufweisen.\n\\[Rel(y) = \\frac{Var(\\tau)}{Var(y)}.\\]\nDa die Reliabilität ein relativer Anteil ist, liegt ihr Wertebereich stets zwischen 0 und 1."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität-verhältnis-von-systematischer-und-unsystematischer-variation-1",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität-verhältnis-von-systematischer-und-unsystematischer-variation-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität = Verhältnis von systematischer und unsystematischer Variation",
+    "text": "Reliabilität = Verhältnis von systematischer und unsystematischer Variation\nDa wir davon ausgehen, dass sich die Messergebnisse additiv aus \\(\\tau\\) und \\(\\epsilon\\) zusammensetzen, können wir die Gleichung umschreiben zu:\n\\[Rel(y) = \\frac{Var(\\tau)}{Var(\\tau) + Var(\\epsilon)} .\\]\nIst der Störfaktor groß, ist die Reliabilität der Messung klein. Reliabilität ist daher in Maß für die Zuverlässigkeit von Messungen. Ist die Messung stark beeinflusst von zufälligen Schwankungen der Reaktion oder der Zustände der Untersuchungseinheiten, ist sie nicht reliabel."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#covarianz-von-items-bei-mehrfachmessungen",
+    "href": "slides/09-Reliabilität_Validität.html#covarianz-von-items-bei-mehrfachmessungen",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Covarianz von Items bei Mehrfachmessungen",
+    "text": "Covarianz von Items bei Mehrfachmessungen\n\n\n\n\nMessen wir eine Ausprägung einer Untersuchungseinheit durch mehrere Items, ist dies eine Form der Messwiederholung. Jede Reaktion ist daher ein eigener Messwert \\(y_i\\), der durch den zugrunde liegenden wahren Wert \\(\\tau_i\\) und Item-spezifische Störfaktoren gebildet wird.\nWenn die Reaktion auf die Items systematisch durch die zugrunde liegende Ausprägung hervorgerufen wird, müssen die Messergebnisse der einzelnen Items in systematischen Zusammenhang stehen. Dies bezeichnen wir ab sofort als Covarianz und kürzen sie mit \\(Cov()\\) ab."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#covarianz-von-items-bei-mehrfachmessungen-1",
+    "href": "slides/09-Reliabilität_Validität.html#covarianz-von-items-bei-mehrfachmessungen-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Covarianz von Items bei Mehrfachmessungen",
+    "text": "Covarianz von Items bei Mehrfachmessungen\n\n\n\n\nEine reliable Skalierung mit mehreren Items basiert daher auf einem sehr hohen Anteil von systematischer Covarianz zwischen den Reaktionen auf Items.\nWir gehen im links dargestellten Model davon aus, dass es keine Covarianz zwischen den Störfaktoren gibt.\nEine Skala ist wenig reliabel, wenn einzelne oder mehrere Items ein hohes Maß an unsystematischer Varianz in die Messung einführen. In diesem Fall würden wir vielen Untersuchungseinheiten mit gleicher Ausprägung eines Merkmals unterschiedliche Messergebnisse zuweisen."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#möglichkeiten-reliabilität-zu-testen",
+    "href": "slides/09-Reliabilität_Validität.html#möglichkeiten-reliabilität-zu-testen",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Möglichkeiten Reliabilität zu testen",
+    "text": "Möglichkeiten Reliabilität zu testen\n\nEinfache Messwiederholung (Re-Test Korrelation)\n\nPersonen erhalten zu zwei (oder mehr) Messzeitpunkten das gleiche Messinstrument. Ist die Messung reliabel (und die Eigenschaft wenig variabel über die Zeit!), sollten zwischen den Messungen stark vergleichbare Ergebnisse erhalten werden.\n\nParallel-Test\n\nLeicht unterschiedliche Varianten eines Items werden parallel eingesetzt. Sind die Störfaktoren klein und unsystematisch, sollten stark vergleichbare Messergebnisse vorliegen."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#möglichkeiten-reliabilität-von-skalierungen-zu-testen",
+    "href": "slides/09-Reliabilität_Validität.html#möglichkeiten-reliabilität-von-skalierungen-zu-testen",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Möglichkeiten Reliabilität von Skalierungen zu testen",
+    "text": "Möglichkeiten Reliabilität von Skalierungen zu testen\n\nSplit-Half Korrelation\n\nDie Menge aller Items wird in zwei Hälften geteilt. Wenn die Skalierung reliabel ist, müssten die beiden Hälften untereinader und in Bezug auf die gesamte Skalierung ähnliche Ergebnisse liefern.\n\ninterne Konsistenz\n\nWenn (!!) die Reaktion auf Items nur durch einen Faktor hervorgerufen werden und die Störfaktoren voneinander unabhängig und klein sind, ist die Varianz der Skalenwerte in hohem Maße durch die Varianz über alle Itemreaktionen zu erklären. Befragte reagieren daher wiederholt systematisch (=konsistent) auf die Items und nicht in hohem Maße unsystematisch."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität-von-einsamkeitsitems",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität-von-einsamkeitsitems",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität von Einsamkeitsitems",
+    "text": "Reliabilität von Einsamkeitsitems\nDie einzelnen Items korrelieren konsistent mit dem latenten Faktor (vierte Spalte).\n\n\n\n\n\n\n\n\n\n\nItem\nM\nSD\n\\(r_{it}\\)\n\\(p_i\\)\n\n\n\n\n1. Ich fühle mich in Übereinstimmung mit den Menschen um mich herum.\n1.76\n.70\n.45\n.25\n\n\n2. Ich habe nicht genügend Gesellschaft.\n2.06\n.88\n.48\n.35\n\n\n3. Es gibt niemanden, zu dem ich mich hinwenden kann.\n1.46\n.70\n.50\n.16\n\n\n4. Ich fühle mich nicht allein.\n0.61\n.93\n.39\n.20\n\n\n5. Ich fühle mich als Mitglied einer Freundesgruppe.\n1.54\n.79\n.50\n.18\n\n\n6. Ich habe viel gemeinsam mit den Menschen um mich herum.\n1.91\n.79\n.52\n.30\n\n\n7. Ich bin mit niemandem mehr eng zusammen.\n1.63\n.91\n.39\n.21\n\n\n8. Meine Interessen und Ideen werden von den Leuten um mich herum nicht geteilt.\n2.13\n.85\n.51\n.38\n\n\n9. Ich bin eine kontaktfreudige Person.\n1.67\n.77\n.42\n.22\n\n\n10. Es gibt Menschen, denen ich mich eng verbunden fühle.\n1.31\n.60\n.50\n.10\n\n\n11. Ich fühle mich ausgeschlossen.\n1.62\n.77\n.53\n.21\n\n\n12. Meine sozialen Beziehungen sind oberflächlich.\n2.00\n.86\n.42\n.34\n\n\n13. Niemand kennt mich wirklich.\n1.96\n.94\n.55\n.32\n\n\n14. Ich fühle mich von anderen isoliert.\n1.58\n.75\n.68\n.20\n\n\n15. Ich kann Gesellschaft finden, wenn ich das wünsche.\n1.54\n.72\n.44\n.18\n\n\n16. Es gibt Menschen, die mich wirklich verstehen.\n1.55\n.72\n.53\n.18\n\n\n17. So zurückgezogen, wie ich bin, fühle ich mich unglücklich.\n1.50\n.77\n.60\n.17\n\n\n18. Menschen sind zwar um mich herum, jedoch nicht bei mir.\n2.05\n.95\n.57\n.35\n\n\n19. Es gibt Menschen, mit denen ich sprechen kann.\n1.26\n.56\n.48\n.09\n\n\n20. Es gibt Menschen, zu denen ich mich hinwenden kann.\n1.30\n.58\n.55\n.10\n\n\n\nAnmerkungen. M = Mittelwert, SD = Standardabweichung, \\(r_{it}\\) = Trennschärfe, \\(p_i\\) = Itemschwierigkeit."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität-von-einsamkeitsitems-tbl-colwidths-204444",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität-von-einsamkeitsitems-tbl-colwidths-204444",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität von Einsamkeitsitems {tbl-colwidths: [20,4,4,4,4]}",
+    "text": "Reliabilität von Einsamkeitsitems {tbl-colwidths: [20,4,4,4,4]}\n\n\n\n\n\n\n\n\n\n\nItem\nM\nSD\nrit\npi\n\n\n\n\n1. Ich fühle mich in Übereinstimmung mit den Menschen um mich herum.\n1.76\n.70\n.45\n.25\n\n\n2. Ich habe nicht genügend Gesellschaft.\n2.06\n.88\n.48\n.35\n\n\n3. Es gibt niemanden, zu dem ich mich hinwenden kann.\n1.46\n.70\n.50\n.16\n\n\n4. Ich fühle mich nicht allein.\n0.61\n.93\n.39\n.20\n\n\n5. Ich fühle mich als Mitglied einer Freundesgruppe.\n1.54\n.79\n.50\n.18\n\n\n6. Ich habe viel gemeinsam mit den Menschen um mich herum.\n1.91\n.79\n.52\n.30\n\n\n7. Ich bin mit niemandem mehr eng zusammen.\n1.63\n.91\n.39\n.21\n\n\n8. Meine Interessen und Ideen werden von den Leuten um mich herum nicht geteilt.\n2.13\n.85\n.51\n.38\n\n\n9. Ich bin eine kontaktfreudige Person.\n1.67\n.77\n.42\n.22\n\n\n10. Es gibt Menschen, denen ich mich eng verbunden fühle.\n1.31\n.60\n.50\n.10\n\n\n11. Ich fühle mich ausgeschlossen.\n1.62\n.77\n.53\n.21\n\n\n12. Meine sozialen Beziehungen sind oberflächlich.\n2.00\n.86\n.42\n.34\n\n\n13. Niemand kennt mich wirklich.\n1.96\n.94\n.55\n.32\n\n\n14. Ich fühle mich von anderen isoliert.\n1.58\n.75\n.68\n.20\n\n\n15. Ich kann Gesellschaft finden, wenn ich das wünsche.\n1.54\n.72\n.44\n.18\n\n\n16. Es gibt Menschen, die mich wirklich verstehen.\n1.55\n.72\n.53\n.18\n\n\n17. So zurückgezogen, wie ich bin, fühle ich mich unglücklich.\n1.50\n.77\n.60\n.17\n\n\n18. Menschen sind zwar um mich herum, jedoch nicht bei mir.\n2.05\n.95\n.57\n.35\n\n\n19. Es gibt Menschen, mit denen ich sprechen kann.\n1.26\n.56\n.48\n.09\n\n\n20. Es gibt Menschen, zu denen ich mich hinwenden kann.\n1.30\n.58\n.55\n.10\n\n\n\nAnmerkungen. M = Mittelwert, SD = Standardabweichung, rit = Trennschärfe, pi = Itemschwierigkeit."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#reliabilität-von-einsamkeitsitems-.tbl-colwidths-204444",
+    "href": "slides/09-Reliabilität_Validität.html#reliabilität-von-einsamkeitsitems-.tbl-colwidths-204444",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Reliabilität von Einsamkeitsitems {.tbl-colwidths: [20,4,4,4,4]}",
+    "text": "Reliabilität von Einsamkeitsitems {.tbl-colwidths: [20,4,4,4,4]}\n\n\n\n\n\n\n\n\n\n\nItem\nM\nSD\nrit\npi\n\n\n\n\n1. Ich fühle mich in Übereinstimmung mit den Menschen um mich herum.\n1.76\n.70\n.45\n.25\n\n\n2. Ich habe nicht genügend Gesellschaft.\n2.06\n.88\n.48\n.35\n\n\n3. Es gibt niemanden, zu dem ich mich hinwenden kann.\n1.46\n.70\n.50\n.16\n\n\n4. Ich fühle mich nicht allein.\n0.61\n.93\n.39\n.20\n\n\n5. Ich fühle mich als Mitglied einer Freundesgruppe.\n1.54\n.79\n.50\n.18\n\n\n6. Ich habe viel gemeinsam mit den Menschen um mich herum.\n1.91\n.79\n.52\n.30\n\n\n7. Ich bin mit niemandem mehr eng zusammen.\n1.63\n.91\n.39\n.21\n\n\n8. Meine Interessen und Ideen werden von den Leuten um mich herum nicht geteilt.\n2.13\n.85\n.51\n.38\n\n\n9. Ich bin eine kontaktfreudige Person.\n1.67\n.77\n.42\n.22\n\n\n10. Es gibt Menschen, denen ich mich eng verbunden fühle.\n1.31\n.60\n.50\n.10\n\n\n11. Ich fühle mich ausgeschlossen.\n1.62\n.77\n.53\n.21\n\n\n12. Meine sozialen Beziehungen sind oberflächlich.\n2.00\n.86\n.42\n.34\n\n\n13. Niemand kennt mich wirklich.\n1.96\n.94\n.55\n.32\n\n\n14. Ich fühle mich von anderen isoliert.\n1.58\n.75\n.68\n.20\n\n\n15. Ich kann Gesellschaft finden, wenn ich das wünsche.\n1.54\n.72\n.44\n.18\n\n\n16. Es gibt Menschen, die mich wirklich verstehen.\n1.55\n.72\n.53\n.18\n\n\n17. So zurückgezogen, wie ich bin, fühle ich mich unglücklich.\n1.50\n.77\n.60\n.17\n\n\n18. Menschen sind zwar um mich herum, jedoch nicht bei mir.\n2.05\n.95\n.57\n.35\n\n\n19. Es gibt Menschen, mit denen ich sprechen kann.\n1.26\n.56\n.48\n.09\n\n\n20. Es gibt Menschen, zu denen ich mich hinwenden kann.\n1.30\n.58\n.55\n.10\n\n\n\nAnmerkungen. M = Mittelwert, SD = Standardabweichung, rit = Trennschärfe, pi = Itemschwierigkeit."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#test",
+    "href": "slides/09-Reliabilität_Validität.html#test",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Test",
+    "text": "Test\n\n\n\n\n\n\n\n\ndescription\n\n\n\n\nborder-bottom-right-radius\nDefines the shape of the bottom-right"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#interne-konsistenz-der-erfassung-von-mental-load",
+    "href": "slides/09-Reliabilität_Validität.html#interne-konsistenz-der-erfassung-von-mental-load",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Interne Konsistenz der Erfassung von Mental Load",
+    "text": "Interne Konsistenz der Erfassung von Mental Load\n\n\nDuring my daily activities at home:\n\nI have a lot on my mind.\nI need to think about different things at the same time.\nI feel overwhelmed.\nI can concentrate on one thing at a time.\n\nResponses: strongly agree, disagree, neither agree/nor disagree, agree, strongly agree\n\n\n\n\nKorrelationen der Items untereinander\n\n\n\n\n\n\n\n\n\n\nI1\nI2\nI3\nI4\n\n\n\n\nI1\n1\n\n\n\n\n\nI2\n0.69\n1\n\n\n\n\nI3\n0.59\n0.46\n1\n\n\n\nI4\n0.19\n0.19\n0.22\n1\n\n\n\n\n\\[\\bar{r} = \\dfrac{0.69 + 0.59 + 0.46 + 0.19 + 0.19 + 0.22}{6} = 0.39 \\]\n\n\\[\\rho_{T} = \\dfrac{4 \\cdot 0.39}{1 + (4-1)\\cdot 0.39} = 0.72 \\]"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#überall-fehler",
+    "href": "slides/09-Reliabilität_Validität.html#überall-fehler",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Überall Fehler",
+    "text": "Überall Fehler\n\n\n\n\nDas Messergebnis \\(y_i\\) (= Beobachteter Wert der Variable \\(Y\\) einer Untersuchungseinheit \\(i\\)) wird mindestens von zwei Komponenten bestimmt:\n\ndie (wahre) Ausprägung eines Merkmals \\(\\tau\\) (sprich: tau) sowie\neinen Störfaktor \\(\\epsilon\\) (sprich: epsilon), den wir zunächst als zufällig betrachten.\n\nWir gehen davon aus, dass sich beide Komponenten additiv verhalten und damit gilt: \\(y_i = \\tau_i + \\epsilon_i\\)"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#validität-1",
+    "href": "slides/09-Reliabilität_Validität.html#validität-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Validität",
+    "text": "Validität\nEin Merkmal wird valide gemessen, wenn das Messinstrument tatsächlich das Merkmal misst – und nicht systematisch etwas anderes als man möchte.\nIm Unterschied zur Reliabilität beziehen sich Probleme der Validität auf systematische Fehler bei der Messung. Theoretisch kann ein Messinstrument sehr reliabel aber nicht valide sein. Wir können zum Beispiel systematisch eine Subdimension bei der Messung nicht einbeziehen, die anderen Subdimensionen eines Merkmals aber sehr reliabel messen."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#systematische-störungen-von-messungen",
+    "href": "slides/09-Reliabilität_Validität.html#systematische-störungen-von-messungen",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Systematische Störungen von Messungen",
+    "text": "Systematische Störungen von Messungen\n\n\n\n\nProblem 1: Ein Teil der Messung bezieht sich systematisch auf einen anderen Faktor.\nIm linken Modell soll \\(F_1\\) mit vier Items gemessen werden. Reaktionen auf \\(I_4\\) werden aber systematisch von einem anderen Faktor \\(F_2\\) verursacht, der mit \\(F_1\\) korreliert ist. Nur deshalb besteht auch eine Korrelation zwischen \\(I_4\\) und \\(F_1\\).\nBsp: Wir wollen Leistungsfähigkeit u.a. durch schulische Hausaufgaben messen und messen dadurch systematisch auch den Einfluss des elterlichen Umfelds."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#systematische-störungen-von-messungen-1",
+    "href": "slides/09-Reliabilität_Validität.html#systematische-störungen-von-messungen-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Systematische Störungen von Messungen",
+    "text": "Systematische Störungen von Messungen\n\n\n\n\nProblem 2: Die Störfaktoren sind nicht zufällig.\nWir haben bisher angenommen, dass die Störfaktoren zufällig sind. Allerdings können diese auch systematisch sein. Im Modell werden die Störfaktoren von \\(I_2\\) und \\(I_3\\) von einem (nicht erfassten) Faktor \\(F_3\\) beeinflusst. Da die beiden Störfaktoren systematisch von der gleichen Eigenschaft beeinflusst werden, sind diese auch nicht mehr voneinander unabhängig, sondern miteinander korreliert.\nBsp: Die Angabe von Schmerz durch Schmerzskalen ist u.a. davon abhängig, in welcher Geschlechter-Relation Befragte und Fragende zueinander stehen."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#arten-von-validität",
+    "href": "slides/09-Reliabilität_Validität.html#arten-von-validität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Arten von Validität",
+    "text": "Arten von Validität\nIn der Literatur werden verschiedene Formen von Validität diskutiert, die im Kern verschiedene Facetten der Gültigkeit der wissenschaftlichen Untersuchung darstellen.\nHistorisch wurden viele verschiedene Formen von Validiät eingeführt. Mittlerweile werden für Messungen vor allem zwei Formen verwendet:\n\nKonstruktvalidität\nKriteriumsvalidität\n\nDarüber hinaus gibt es noch zwei weitere Formen von Validität, die sich auf die Gültigkeit der gesamten Untersuchung beziehen.\n\ninterne Validität\nexterne Validität"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#möglichkeiten-reliabilität-zu-testen-1",
+    "href": "slides/09-Reliabilität_Validität.html#möglichkeiten-reliabilität-zu-testen-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Möglichkeiten Reliabilität zu testen",
+    "text": "Möglichkeiten Reliabilität zu testen\n\nSplit-Half Korrelation\n\nDie Menge aller Items wird in zwei Hälften geteilt. Wenn die Skalierung reliabel ist, müssten die beiden Hälften untereinader und in Bezug auf die gesamte Skalierung ähnliche Ergebnisse liefern.\n\ninterne Konsistenz\n\nWenn (!!) die Reaktion auf Items nur durch einen Faktor hervorgerufen werden und die Störfaktoren voneinander unabhängig und klein sind, ist die Varianz der Skalenwerte in hohem Maße durch die Varianz über alle Itemreaktionen zu erklären. Befragte reagieren daher wiederholt systematisch (=konsistent) auf die Items und nicht in hohem Maße unsystematisch."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#berechnung-der-internen-konsistenz-auch-tau-äquivalente-reliabilität-oder-cronbachs-alpha-bei-mehrfachmessungen",
+    "href": "slides/09-Reliabilität_Validität.html#berechnung-der-internen-konsistenz-auch-tau-äquivalente-reliabilität-oder-cronbachs-alpha-bei-mehrfachmessungen",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Berechnung der internen Konsistenz (auch: tau-äquivalente Reliabilität oder Cronbachs Alpha) bei Mehrfachmessungen",
+    "text": "Berechnung der internen Konsistenz (auch: tau-äquivalente Reliabilität oder Cronbachs Alpha) bei Mehrfachmessungen\nInterne Konsistenz lässt sich feststellen, wenn die Antworten auf die verschiedenen Items miteinander korrelieren. Die Maßzahl \\(\\rho_{T}\\) ist dafür ein Maß, das auch als Maß der internen Konsitenz bezeichnet wird.\n\\[ \\rho_{T} = \\frac{N\\cdot \\bar{r}}{1 + (N-1)\\cdot \\bar{r}} \\]\n\\(N\\) ist dabei die Anzahl der benutzten Items und \\(\\bar{r}\\) ist die durschschnittliche Korrelation aller Items untereinander.  \nAls Faustregel (!!!) gilt: Eine Skala ist ab 0.7 intern konsistent."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#konstruktvalidität",
+    "href": "slides/09-Reliabilität_Validität.html#konstruktvalidität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Konstruktvalidität",
+    "text": "Konstruktvalidität\nWurden alle Dimensionen des Merkmals gemessen oder weniger oder Dimensionen, die nicht zum Merkmal gehören?\n\nDiese Frage können Sie nur dann sinnvoll beantworten, wenn Sie vorher eine klare Konzeptspezifikation durchgeführt haben und es damit auch von anderen Konzepte, die potentiell in Zusammenhang mit Ihrem Konzept stehen könnten, abgegrenzt haben.\nTypischerweise diskutieren Forschende bei der Konstruktvalidität die Fragen, ob ein Konstrukt uni- oder mehrdimensional ist oder ob man eine Subdimension vergessen hat."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#kriteriumsvalidität",
+    "href": "slides/09-Reliabilität_Validität.html#kriteriumsvalidität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Kriteriumsvalidität",
+    "text": "Kriteriumsvalidität\nSteht das gemessene Konstrukt empirisch in erwarteten Zusammenhängen zu anderen Konstrukten?\n\nBei dieser Form von Validität geht es darum, ob ein Konstrukt\n\nin Zusammenhang mit Konstrukten steht, mit denen es bekanntermaßen einen Zusammenhang bildet (Einsamkeit \\(\\leftrightarrow\\) Depression).\nin Zusammenhang mit Konstrukten steht, die neu theoretisch erwartet werden (Einsamkeit \\(\\rightarrow\\) Ausbildungsabbruch).\nnicht oder nur in begrenztem Maß in Zusammenhang mit Konzepten steht, die etwas anderes messen (Einsamkeit \\(\\not\\leftrightarrow\\) Familienform)."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#interne-validität",
+    "href": "slides/09-Reliabilität_Validität.html#interne-validität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "interne Validität",
+    "text": "interne Validität\nMaximale interne Validität liegt vor, wenn der studierte Zusammenhang zwischen den Eigenschaften nicht durch weitere (unbeobachtete) Einflussgrößen zurückzuführen ist.\n\nInterne Validität bezieht sich auf die Isolation von Einflüssen. Dies kann durch die Art des Untersuchungsdesigns geschehen (siehe: Randomisierung) oder durch explizite Modellierung aller korrelierter Einflüsse (siehe: Drittvariablenkontrolle).\nWenn Sie für die interne Validität Ihrer Untersuchung plädieren, müssen Sie Zweifel ausräumen, dass Eigenschaften “im Hintergrund” für (einen Teil) der Ergebnisse verantwortlich sind.\nStudien, die Diskriminierung im Arbeitsmarkt messen wollen, müssen klar machen, dass die Differenzen zwischen Gruppen nicht auch durch unterschiedliche Präferenzen oder unterschiedliches Verhalten verursacht wird."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#externe-validität",
+    "href": "slides/09-Reliabilität_Validität.html#externe-validität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "externe Validität",
+    "text": "externe Validität\nMaximale externe Validität liegt dann vor, wenn die Ergebnisse der Untersuchung nicht nur für den Kontext der Untersuchung, sondern für die gesamte Population gelten.\n\nExterne Validitität bezieht sich auf die Generalisierbarkeit Ihrer Mess- und Untersuchungsergebnisse (siehe: Inferenzstatistik).\nSelektive Stichproben (z.B. Untersuchungen mit Studierenden) können Zusammenhänge zeigen, die in der gesamten Population anders sind.\nErgebnisse von Untersuchungen innerhalb spezifischer Kontexte (Berufsbildungssysteme, Kulturen, Organisationsformen) können auch auf andere Kontexte teilweise übertragbar sein."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#selbst--und-fremdeinstufungen",
+    "href": "slides/09-Reliabilität_Validität.html#selbst--und-fremdeinstufungen",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Selbst- und Fremdeinstufungen",
+    "text": "Selbst- und Fremdeinstufungen"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#konstruktion-einer-microaggression-skala",
+    "href": "slides/09-Reliabilität_Validität.html#konstruktion-einer-microaggression-skala",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Konstruktion einer Microaggression Skala",
+    "text": "Konstruktion einer Microaggression Skala\nDouds & Hout (2020) haben eine Skala für die Betroffenheit von Mikroaggression erstellt und getestet.\n\n\nDefinition:\nMicroaggressions are defined as the everyday verbal, nonverbal, and environmental slights, snubs, or insults, whether intentional or unintentional, that communicate hostile, derogatory, or negative messages to target persons based solely upon their marginalized group membership.\n\nTheoretisch postulierte Unterschiedlichkeit\nDie zugrunde liegende Charakteristik hat Ausprägungen, die - metrisch sind (= Frequenz der Mikroaggressionen) - einen natürlichen Nullpunkt haben (nie einer Mikroaggression ausgesetzt) - zwischen nie Mikroaggressionen ausgesetzt und dauerhaft Mikroaggressionen ausgesetzt uni-polar pendeln."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#konstruktion-einer-microaggression-skala-1",
+    "href": "slides/09-Reliabilität_Validität.html#konstruktion-einer-microaggression-skala-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Konstruktion einer Microaggression Skala",
+    "text": "Konstruktion einer Microaggression Skala\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlmost every day (5)\nAt least once a week (4)\nA few times a month (3)\nA few times a year (2)\nLess than once a year (1)\nNever (0)\n\n\n\n\n1) You are treated with less respect than other people?\n\n\n\n\n\n\n\n\n2) You are treated unfairly at restaurants or stores?\n\n\n\n\n\n\n\n\n3) People act as if they think you are not smart?\n\n\n\n\n\n\n\n\n4) People act as if they are afraid of you?\n\n\n\n\n\n\n\n\n5) You are threatened or harassed?"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#konstruktion-einer-microaggression-skala-2",
+    "href": "slides/09-Reliabilität_Validität.html#konstruktion-einer-microaggression-skala-2",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Konstruktion einer Microaggression Skala",
+    "text": "Konstruktion einer Microaggression Skala\nTheoretisch wären nach Aufsummierung Ausprägungen zwischen 0 und 25 möglich. Empirisch ergibt sich:"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#microaggressions-in-the-usa---reliabilität",
+    "href": "slides/09-Reliabilität_Validität.html#microaggressions-in-the-usa---reliabilität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Microaggressions in the USA - Reliabilität",
+    "text": "Microaggressions in the USA - Reliabilität\n\nKorrelationen der Items untereinander\n\n\n\n\n\n\n\n\n\n\nVariables\n(1)\n(2)\n(3)\n(4)\n(5)\n\n\n\n\n(1) Disrepect\n1.000\n\n\n\n\n\n\n(2) Poor Service\n0.481\n1.000\n\n\n\n\n\n(3) Not Smart\n0.526\n0.446\n1.000\n\n\n\n\n(4) Afraid of me\n0.350\n0.324\n0.384\n1.000\n\n\n\n(5) Threaten\n0.390\n0.340\n0.356\n0.294\n1.000\n\n\n\n\n\\[\\bar{r} = \\dfrac{0.4812 + 0.5259 + 0.3503 + 0.3905  + 0.4457 + 0.3242 +  0.3403 + 0.3837 +  0.3561 + 0.2937}{10} = 0.3892\\]\n\\[\\rho_{\\tau} = \\dfrac{5 \\cdot 0.3892}{1 + 4 \\cdot 0.3892} = 0.761 \\]"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#microaggressions-in-the-usa---validität",
+    "href": "slides/09-Reliabilität_Validität.html#microaggressions-in-the-usa---validität",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Microaggressions in the USA - Validität",
+    "text": "Microaggressions in the USA - Validität\nTheoretisch sollten Schwarze und Latinos stärker Mikroaggressionen erfahren als Weiße Amerikaner:innen."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#microaggressions-in-the-usa---validität-1",
+    "href": "slides/09-Reliabilität_Validität.html#microaggressions-in-the-usa---validität-1",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Microaggressions in the USA - Validität",
+    "text": "Microaggressions in the USA - Validität\nTheoretisch sollten Microaggressions Stress hervorrufen, der sich negativ auf die physische und psychische Gesundheit auswirkt."
+  },
+  {
+    "objectID": "slides/08-Reaktionsvorgaben.html#antwortanker-bei-geschlossenen-vorgaben",
+    "href": "slides/08-Reaktionsvorgaben.html#antwortanker-bei-geschlossenen-vorgaben",
+    "title": "Unterscheiden: Reaktionsvorgaben",
+    "section": "Antwortanker bei geschlossenen Vorgaben",
+    "text": "Antwortanker bei geschlossenen Vorgaben\nBefragte müssen ihre Reaktion ins Verhältnis zur Vorgabe bringen können. Es ist daher bedeutsam, welche inhaltliche Referenz Sie vorgeben (Vagias 2014)."
+  },
+  {
+    "objectID": "slides/08-slides.html",
+    "href": "slides/08-slides.html",
+    "title": "Unterschiede messen: Reaktionsvorgaben",
+    "section": "",
+    "text": "View slides in full screen"
   }
 ]

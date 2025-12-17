@@ -2,6 +2,8 @@
 title: "Unterscheiden: Reaktionsvorgaben"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
+filters:
+  - pdf-to-image
 css: global.css
 ##server: shiny
 format: 
