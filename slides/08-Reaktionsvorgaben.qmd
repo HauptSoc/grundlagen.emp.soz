@@ -34,7 +34,7 @@ include-in-header:
 ## Was wollen wir messen?
 
 -   Zur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.
--   Es gibt diesbezüglich keine "festen" Regeln, **außer*: die Reaktionsmöglichkeiten müssen erschöpfend[^1] und überschneidungsfrei sein.
+-   Es gibt diesbezüglich keine "festen" Regeln, **außer**: die Reaktionsmöglichkeiten müssen erschöpfend[^1], überschneidungsfrei und sinnvoll sein.
 -   Alles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben.
 
 [^1]: Deshalb muss stets klar sein, ob Mehrfachantworten möglich sind.
@@ -179,11 +179,11 @@ Wie zufrieden sind Sie mit Ihrem neuen Laptop?
 
 -   **gerade**: Die Vorgaben zwingen den Befragten zu einer Einordnung in eine obere oder untere Hälfte.
 
-    -   Vorteil: Die "Flucht durch die Mitte" wird verhindert.[^1]
+    -   Vorteil: Die "Flucht durch die Mitte" wird verhindert.[^2]
 
     -   Nachteil: Personen mit mittlerer Einstellung können sich nicht einordnen.
 
-[^1]: Bitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen.
+[^2]: Bitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist bei unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen.
 
 ## die Anzahl von Kategorien
 

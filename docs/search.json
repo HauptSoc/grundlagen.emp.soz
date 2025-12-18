@@ -1772,7 +1772,7 @@
     "href": "slides/08-Reaktionsvorgaben.html#gerade-oder-ungerade-anzahl-von-antwortkategorien",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "gerade oder ungerade Anzahl von Antwortkategorien",
-    "text": "gerade oder ungerade Anzahl von Antwortkategorien\n\nungerade: Die Skala hat einen Mittelpunkt. Diese Mitte muss allerdings technisch gesehen nicht der mittlere Punkt sein, d.h.: die mittlere Reaktionsstärke.\n\nVorteil: Personen, mit mittlerer Ausprägung können sich einordnen.\nNachteil: Die Mitte wird manchmal als Fluchtkategorie verwendet.\n\ngerade: Die Vorgaben zwingen den Befragten zu einer Einordnung in eine obere oder untere Hälfte.\n\nVorteil: Die “Flucht durch die Mitte” wird verhindert.1\nNachteil: Personen mit mittlerer Einstellung können sich nicht einordnen.\n\n\nBitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen."
+    "text": "gerade oder ungerade Anzahl von Antwortkategorien\n\nungerade: Die Skala hat einen Mittelpunkt. Diese Mitte muss allerdings technisch gesehen nicht der mittlere Punkt sein, d.h.: die mittlere Reaktionsstärke.\n\nVorteil: Personen, mit mittlerer Ausprägung können sich einordnen.\nNachteil: Die Mitte wird manchmal als Fluchtkategorie verwendet.\n\ngerade: Die Vorgaben zwingen den Befragten zu einer Einordnung in eine obere oder untere Hälfte.\n\nVorteil: Die “Flucht durch die Mitte” wird verhindert.1\nNachteil: Personen mit mittlerer Einstellung können sich nicht einordnen.\n\n\nBitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist bei unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen."
   },
   {
     "objectID": "slides/08-Reaktionsvorgaben.html#die-anzahl-von-kategorien",
@@ -1821,7 +1821,7 @@
     "href": "slides/08-Reaktionsvorgaben.html#was-wollen-wir-messen",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "Was wollen wir messen?",
-    "text": "Was wollen wir messen?\n\nZur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln, **außer*: die Reaktionsmöglichkeiten müssen erschöpfend1 und überschneidungsfrei sein.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben.\n\nBitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen."
+    "text": "Was wollen wir messen?\n\nZur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln, außer: die Reaktionsmöglichkeiten müssen erschöpfend1, überschneidungsfrei und sinnvoll sein.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben.\n\nDeshalb muss stets klar sein, ob Mehrfachantworten möglich sind."
   },
   {
     "objectID": "slides/07-Itemkonstruktion.html#das-item-verstehen.-1",
