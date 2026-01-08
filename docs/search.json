@@ -1519,8 +1519,8 @@
     "objectID": "slides/07-Itemkonstruktion.html#gute-und-schlechte-indikatoren",
     "href": "slides/07-Itemkonstruktion.html#gute-und-schlechte-indikatoren",
     "title": "Unterscheiden: Itemkonstruktion",
-    "section": "Gute und schlechte Indikatoren",
-    "text": "Gute und schlechte Indikatoren\n\nIn vielen Fällen fragen wir Personen nach etwas, wir legen ihnen Aussagen vor oder geben ihnen Anweisungen, um etwas über Eigenschaften, die ihren Reaktionen zu grunde liegen.\nIndikatoren können mehr oder weniger störanfällig sein. Wir müssen versuchen, von Anfang an, so wenig Störungen wie möglich zuzulassen.\nDazu müssen wir verstehen, wie Personen unsere Items (=Fragen/Aussagen/Anweisungen) verarbeiten."
+    "section": "",
+    "text": "In vielen Fällen fragen wir Personen nach etwas, wir legen ihnen Aussagen vor oder geben ihnen Anweisungen, um etwas über Eigenschaften, die ihren Reaktionen zu grunde liegen.\nIndikatoren können mehr oder weniger störanfällig sein. Wir müssen versuchen, von Anfang an, so wenig Störungen wie möglich zuzulassen.\nDazu müssen wir verstehen, wie Personen unsere Items (=Fragen/Aussagen/Anweisungen) verarbeiten."
   },
   {
     "objectID": "slides/07-Itemkonstruktion.html#frageformulierung-die-10-gebote-nach-porst",
@@ -1772,7 +1772,7 @@
     "href": "slides/08-Reaktionsvorgaben.html#gerade-oder-ungerade-anzahl-von-antwortkategorien",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "gerade oder ungerade Anzahl von Antwortkategorien",
-    "text": "gerade oder ungerade Anzahl von Antwortkategorien\n\nungerade: Die Skala hat einen Mittelpunkt. Diese Mitte muss allerdings technisch gesehen nicht der mittlere Punkt sein, d.h.: die mittlere Reaktionsstärke.\n\nVorteil: Personen, mit mittlerer Ausprägung können sich einordnen.\nNachteil: Die Mitte wird manchmal als Fluchtkategorie verwendet.\n\ngerade: Die Vorgaben zwingen den Befragten zu einer Einordnung in eine obere oder untere Hälfte.\n\nVorteil: Die “Flucht durch die Mitte” wird verhindert.1\nNachteil: Personen mit mittlerer Einstellung können sich nicht einordnen.\n\n\nBitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist bei unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen."
+    "text": "gerade oder ungerade Anzahl von Antwortkategorien\n\nungerade: Die Skala hat einen Mittelpunkt. Diese Mitte muss allerdings technisch gesehen nicht der mittlere Punkt sein, d.h.: die mittlere Reaktionsstärke.\n\nVorteil: Personen, mit mittlerer Ausprägung können sich einordnen.\nNachteil: Die Mitte wird manchmal als Fluchtkategorie verwendet.\n\ngerade: Die Vorgaben zwingen den Befragten zu einer Einordnung in eine obere oder untere Hälfte.\n\nVorteil: Die “Flucht durch die Mitte” wird verhindert.2\nNachteil: Personen mit mittlerer Einstellung können sich nicht einordnen."
   },
   {
     "objectID": "slides/08-Reaktionsvorgaben.html#die-anzahl-von-kategorien",
@@ -1820,8 +1820,8 @@
     "objectID": "slides/08-Reaktionsvorgaben.html#was-wollen-wir-messen",
     "href": "slides/08-Reaktionsvorgaben.html#was-wollen-wir-messen",
     "title": "Unterscheiden: Reaktionsvorgaben",
-    "section": "Was wollen wir messen?",
-    "text": "Was wollen wir messen?\n\nZur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln, außer: die Reaktionsmöglichkeiten müssen erschöpfend1, überschneidungsfrei und sinnvoll sein.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben.\n\nDeshalb muss stets klar sein, ob Mehrfachantworten möglich sind."
+    "section": "",
+    "text": "Zur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln, außer: die Reaktionsmöglichkeiten müssen erschöpfend1, überschneidungsfrei und sinnvoll sein.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben."
   },
   {
     "objectID": "slides/07-Itemkonstruktion.html#das-item-verstehen.-1",
@@ -1863,14 +1863,14 @@
     "href": "slides/08-Reaktionsvorgaben.html#trade-offs-offene-reaktionsvorgaben",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "Trade-offs: Offene Reaktionsvorgaben",
-    "text": "Trade-offs: Offene Reaktionsvorgaben\n\n\nVorteile\n\nAntworten sind unbeeinflusst\nJede/r Befragte antwortet innerhalb seines „Referenzsystems“\nBesser geeignet, um theoretisch postulierte Unterschiedlichkeit zu messen\nKann motivierend auf die Befragten wirken\n\n\n\n\nNachteile\n\nSprachliches Ausdrucksvermögen ist sehr unterschiedlich ausgeprägt\nAnalyseaufwand der Daten ist deutlich höher, fehleranfälliger und subjektiv"
+    "text": "Trade-offs: Offene Reaktionsvorgaben\n\n\n\nVorteile\n\nAntworten sind unbeeinflusst\nJede/r Befragte antwortet innerhalb seines „Referenzsystems“\nBesser geeignet, um theoretisch postulierte Unterschiedlichkeit zu messen\nKann motivierend auf die Befragten wirken\n\n\n\n\n\n\nNachteile\n\nSprachliches Ausdrucksvermögen ist sehr unterschiedlich ausgeprägt\nAnalyseaufwand der Daten ist deutlich höher, fehleranfälliger und subjektiv"
   },
   {
     "objectID": "slides/08-Reaktionsvorgaben.html#trade-offs-geschlossene-reaktionsvorgaben",
     "href": "slides/08-Reaktionsvorgaben.html#trade-offs-geschlossene-reaktionsvorgaben",
     "title": "Unterscheiden: Reaktionsvorgaben",
     "section": "Trade-offs: Geschlossene Reaktionsvorgaben",
-    "text": "Trade-offs: Geschlossene Reaktionsvorgaben\n\n\nVorteile\n\nKognitive Anforderungen an Befrage geringer\nDeutlich höhere Vergleichbarkeit der Antworten\nKann zu Antworten ermuntern, auf die die Befragten von selbst nicht gekommen wären\nAnalyse der Daten mit statistischen Methoden/Software\n\n\n\n\nNachteile\n\nVorgabe der Antworten sind auf theoretisch postulierte Unterschiedlichkeit beschränkt\nKann zu oberflächlichen und schnellem antworten führen\nverhindert originelle/unerwartete Antworten"
+    "text": "Trade-offs: Geschlossene Reaktionsvorgaben\n\n\n\nVorteile\n\nKognitive Anforderungen an Befrage geringer\nDeutlich höhere Vergleichbarkeit der Antworten\nKann zu Antworten ermuntern, auf die die Befragten von selbst nicht gekommen wären\nAnalyse der Daten mit statistischen Methoden/Software\n\n\n\n\n\n\nNachteile\n\nVorgabe der Antworten sind auf theoretisch postulierte Unterschiedlichkeit beschränkt\nKann zu oberflächlichen und schnellem antworten führen\nverhindert originelle/unerwartete Antworten"
   },
   {
     "objectID": "slides/08-Reaktionsvorgaben.html#verbalisierte-vs.-endpunktbenannte-vorgaben",
@@ -2116,5 +2116,33 @@
     "title": "Unterschiede messen: Reaktionsvorgaben",
     "section": "",
     "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/09-slides.html",
+    "href": "slides/09-slides.html",
+    "title": "Unterschiede messen: Reliabilität & Validität",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/08-Reaktionsvorgaben.html",
+    "href": "slides/08-Reaktionsvorgaben.html",
+    "title": "Unterscheiden: Reaktionsvorgaben",
+    "section": "",
+    "text": "Zur Operationalisierung eines Konzepts gehört nicht nur die Itemformulierung und -auswahl sondern auch die Vorgabe der Reaktionen.\nEs gibt diesbezüglich keine “festen” Regeln, außer: die Reaktionsmöglichkeiten müssen erschöpfend1, überschneidungsfrei und sinnvoll sein.\nAlles kommt darauf an, was Sie messen wollen und welche Möglichkeiten Sie im Rahmen der Datenerhebung haben."
+  },
+  {
+    "objectID": "slides/08-Reaktionsvorgaben.html#footnotes",
+    "href": "slides/08-Reaktionsvorgaben.html#footnotes",
+    "title": "Unterscheiden: Reaktionsvorgaben",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDeshalb muss stets klar sein, ob Mehrfachantworten möglich sind.↩︎\nBitte ordnen Sie dieses Problem in seiner Relevanz korrekt ein: Es ist bei unmotivierten Befragten moderat vorhanden, bei allen anderen Befragten können Sie es als Randphänomen ansehen.↩︎"
+  },
+  {
+    "objectID": "slides/07-Itemkonstruktion.html",
+    "href": "slides/07-Itemkonstruktion.html",
+    "title": "Unterscheiden: Itemkonstruktion",
+    "section": "",
+    "text": "In vielen Fällen fragen wir Personen nach etwas, wir legen ihnen Aussagen vor oder geben ihnen Anweisungen, um etwas über Eigenschaften, die ihren Reaktionen zu grunde liegen.\nIndikatoren können mehr oder weniger störanfällig sein. Wir müssen versuchen, von Anfang an, so wenig Störungen wie möglich zuzulassen.\nDazu müssen wir verstehen, wie Personen unsere Items (=Fragen/Aussagen/Anweisungen) verarbeiten."
   }
 ]
