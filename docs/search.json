@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "Grundlagen empirischer Sozialforschung",
     "section": "",
-    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n📁\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n7\n11.12.\nAusprägungen kombinieren\n📖\n🖥\n\n\n\n\n\n\n\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n✍\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n\n\n\n\n\nab. 14.1.\n\n\n\n\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
+    "text": "Woche\nTermin\nThema\nLektüre\nFolien\nÜbungen\nAufgabenblätter\nVertiefungen\n\n\n\n\n1\n30.10.\nMethoden - Was soll das?\n📖\n🖥\n\n\n📁\n\n\n2\n06.11.\nWissenschaftliche Spielregeln\n📖\n🖥\n\n\n\n\n\n\n\nI. Unterschiede messen\n\n\n\n\n\n\n\n3\n13.11.\nGrundlagen guten Unterscheidens\n📖\n🖥\n✍\n\n\n\n\n4\n20.11.\nDimensionen, Typen, Ausprägungen\n📖\n🖥\n✍\n\n\n\n\n5\n27.11.\nMesstheoretische Grundlagen\n📖\n🖥\n✍\n\n📁\n\n\n6\n04.12.\nSkalierung\n📖\n🖥\n✍\n\n\n\n\n7\n11.12.\nAusprägungen kombinieren\n📖\n🖥\n\n\n\n\n\n\n\nItemkonstruktion\n📖\n🖥\n✍\n\n\n\n\n8\n18.12.\nReaktionen erfassen\n📖\n🖥\n\n\n\n\n\n9\n08.01.\nReliabilität und Validität\n📖\n🖥\n✍\n\n\n\n\n\nab. 14.1.\n\n\n\n\n📋\n\n\n\n\n\nII. Unterschiede erheben\n\n\n\n\n\n\n\n10\n15.01.\nStichprobenziehung\n📖\n🖥\n✍\n\n\n\n\n11\n22.01.\nTeilnahmeselektion\n📖\n🖥\n✍\n\n\n\n\n12\n29.01.\nAntwortverweigerung\n📖\n🖥\n✍\n📋\n\n\n\n\n\nIII. Die richtigen Unterschiede erfassen\n\n\n\n\n\n\n\n13\n05.02.\nUntersuchungsdesigns\n📖\n🖥\n✍\n\n\n\n\n14\n12.02.\nExperimentaldesigns\n📖\n🖥\n✍\n\n\n\n\n15\n19.02.\nGrundlagen des Fragebogendesigns\n📖\n🖥\n✍\n📋",
     "crumbs": [
       "Wissenswertes",
       "Was, wann, welche Reihenfolge?"
@@ -2144,5 +2144,40 @@
     "title": "Unterscheiden: Itemkonstruktion",
     "section": "",
     "text": "In vielen Fällen fragen wir Personen nach etwas, wir legen ihnen Aussagen vor oder geben ihnen Anweisungen, um etwas über Eigenschaften, die ihren Reaktionen zu grunde liegen.\nIndikatoren können mehr oder weniger störanfällig sein. Wir müssen versuchen, von Anfang an, so wenig Störungen wie möglich zuzulassen.\nDazu müssen wir verstehen, wie Personen unsere Items (=Fragen/Aussagen/Anweisungen) verarbeiten."
+  },
+  {
+    "objectID": "exercises/06-ex.html",
+    "href": "exercises/06-ex.html",
+    "title": "Übung: Reliabilität & Validität",
+    "section": "",
+    "text": "Nutzen Sie die folgenden Items für eine Messung von Einsamkeit als Item-Pool. Wie können Sie mit Hilfe dieser Items die Reliabilität Ihrer Messung von Einsamkeit testen?\n\n\n\n\n\n\nItem\n\n\n\n\n1. Ich fühle mich in Übereinstimmung mit den Menschen um mich herum.\n\n\n2. Ich habe nicht genügend Gesellschaft.\n\n\n3. Es gibt niemanden, zu dem ich mich hinwenden kann.\n\n\n4. Ich fühle mich nicht allein.\n\n\n5. Ich fühle mich als Mitglied einer Freundesgruppe.\n\n\n6. Ich habe viel gemeinsam mit den Menschen um mich herum.\n\n\n7. Ich bin mit niemandem mehr eng zusammen.\n\n\n8. Meine Interessen und Ideen werden von den Leuten um mich herum nicht geteilt.\n\n\n9. Ich bin eine kontaktfreudige Person.\n\n\n10. Es gibt Menschen, denen ich mich eng verbunden fühle.\n\n\n11. Ich fühle mich ausgeschlossen.\n\n\n12. Meine sozialen Beziehungen sind oberflächlich.\n\n\n13. Niemand kennt mich wirklich.\n\n\n14. Ich fühle mich von anderen isoliert.\n\n\n15. Ich kann Gesellschaft finden, wenn ich das wünsche.\n\n\n16. Es gibt Menschen, die mich wirklich verstehen.\n\n\n17. So zurückgezogen, wie ich bin, fühle ich mich unglücklich.\n\n\n18. Menschen sind zwar um mich herum, jedoch nicht bei mir.\n\n\n19. Es gibt Menschen, mit denen ich sprechen kann.\n\n\n20. Es gibt Menschen, zu denen ich mich hinwenden kann."
+  },
+  {
+    "objectID": "exercises/06-ex.html#reliabilität-von-einsamkeitsmessungen",
+    "href": "exercises/06-ex.html#reliabilität-von-einsamkeitsmessungen",
+    "title": "Übung: Reliabilität & Validität",
+    "section": "",
+    "text": "Nutzen Sie die folgenden Items für eine Messung von Einsamkeit als Item-Pool. Wie können Sie mit Hilfe dieser Items die Reliabilität Ihrer Messung von Einsamkeit testen?\n\n\n\n\n\n\nItem\n\n\n\n\n1. Ich fühle mich in Übereinstimmung mit den Menschen um mich herum.\n\n\n2. Ich habe nicht genügend Gesellschaft.\n\n\n3. Es gibt niemanden, zu dem ich mich hinwenden kann.\n\n\n4. Ich fühle mich nicht allein.\n\n\n5. Ich fühle mich als Mitglied einer Freundesgruppe.\n\n\n6. Ich habe viel gemeinsam mit den Menschen um mich herum.\n\n\n7. Ich bin mit niemandem mehr eng zusammen.\n\n\n8. Meine Interessen und Ideen werden von den Leuten um mich herum nicht geteilt.\n\n\n9. Ich bin eine kontaktfreudige Person.\n\n\n10. Es gibt Menschen, denen ich mich eng verbunden fühle.\n\n\n11. Ich fühle mich ausgeschlossen.\n\n\n12. Meine sozialen Beziehungen sind oberflächlich.\n\n\n13. Niemand kennt mich wirklich.\n\n\n14. Ich fühle mich von anderen isoliert.\n\n\n15. Ich kann Gesellschaft finden, wenn ich das wünsche.\n\n\n16. Es gibt Menschen, die mich wirklich verstehen.\n\n\n17. So zurückgezogen, wie ich bin, fühle ich mich unglücklich.\n\n\n18. Menschen sind zwar um mich herum, jedoch nicht bei mir.\n\n\n19. Es gibt Menschen, mit denen ich sprechen kann.\n\n\n20. Es gibt Menschen, zu denen ich mich hinwenden kann."
+  },
+  {
+    "objectID": "exercises/06-ex.html#ein-fall-für-profis",
+    "href": "exercises/06-ex.html#ein-fall-für-profis",
+    "title": "Übung: Reliabilität & Validität",
+    "section": "2 Ein Fall für Profis?",
+    "text": "2 Ein Fall für Profis?\nLisa und ihre Band sind überzeugt: Sie können mindestens genauso gut erkennen, ob sich jemand einsam fühlt, wie ausgebildete Psychotherapheuten. Wie können Sie (als hervorragend geschulte Wissenschaftler:innen in Methodenangelegenheiten) diese Behauptung testen?"
+  },
+  {
+    "objectID": "exercises/06-ex.html#meet-your-nemesis1-soziale-erwünschtheit",
+    "href": "exercises/06-ex.html#meet-your-nemesis1-soziale-erwünschtheit",
+    "title": "Übung: Reliabilität & Validität",
+    "section": "3 Meet your Nemesis1: Soziale Erwünschtheit",
+    "text": "3 Meet your Nemesis1: Soziale Erwünschtheit\nSie wollen eine Erhebung zu sportlicher Aktivität und Ernährungsverhalten durchführen. Es ist Ihnen wichtig, zwischen Absichten und Verhalten zu unterscheiden. Es ist Januar.2 Wie schaffen Sie es, den “Störfaktor” Soziale Erwünschtheit in ihrer Erhebung so weit wie möglich unter Kontrolle zu bekommen (und damit meinen wir: die Eigenschaften möglichst reliabel und valide zu messen)?"
+  },
+  {
+    "objectID": "exercises/06-ex.html#footnotes",
+    "href": "exercises/06-ex.html#footnotes",
+    "title": "Übung: Reliabilität & Validität",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nOk, eine von vielen.↩︎\nJeder kennt.↩︎"
   }
 ]

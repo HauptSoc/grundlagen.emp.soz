@@ -1,0 +1,62 @@
+---
+title: "Übung: Reliabilität & Validität"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Reliabilität von Einsamkeitsmessungen
+
+Nutzen Sie die folgenden Items für eine Messung von Einsamkeit als Item-Pool. Wie können Sie mit Hilfe dieser Items die Reliabilität Ihrer Messung von Einsamkeit testen?
+
+| Item |
+|------------------------------------------------------------------------|
+| 1\. Ich fühle mich in Übereinstimmung mit den Menschen um mich herum. |
+| 2\. Ich habe nicht genügend Gesellschaft. |
+| 3\. Es gibt niemanden, zu dem ich mich hinwenden kann. |
+| 4\. Ich fühle mich nicht allein. |
+| 5\. Ich fühle mich als Mitglied einer Freundesgruppe. |
+| 6\. Ich habe viel gemeinsam mit den Menschen um mich herum. |
+| 7\. Ich bin mit niemandem mehr eng zusammen. |
+| 8\. Meine Interessen und Ideen werden von den Leuten um mich herum nicht geteilt. |
+| 9\. Ich bin eine kontaktfreudige Person. |
+| 10\. Es gibt Menschen, denen ich mich eng verbunden fühle. |
+| 11\. Ich fühle mich ausgeschlossen. |
+| 12\. Meine sozialen Beziehungen sind oberflächlich. |
+| 13\. Niemand kennt mich wirklich. |
+| 14\. Ich fühle mich von anderen isoliert. |
+| 15\. Ich kann Gesellschaft finden, wenn ich das wünsche. |
+| 16\. Es gibt Menschen, die mich wirklich verstehen. |
+| 17\. So zurückgezogen, wie ich bin, fühle ich mich unglücklich. |
+| 18\. Menschen sind zwar um mich herum, jedoch nicht bei mir. |
+| 19\. Es gibt Menschen, mit denen ich sprechen kann. |
+| 20\. Es gibt Menschen, zu denen ich mich hinwenden kann. |
+: {.striped .hover}
+
+## Ein Fall für Profis? 
+
+Lisa und ihre Band sind überzeugt: Sie können mindestens genauso gut erkennen, ob sich jemand einsam fühlt, wie ausgebildete Psychotherapheuten. Wie können Sie (als hervorragend geschulte Wissenschaftler:innen in Methodenangelegenheiten) diese Behauptung testen? 
+
+## Meet your Nemesis[^1]: Soziale Erwünschtheit
+
+Sie wollen eine Erhebung zu sportlicher Aktivität und Ernährungsverhalten durchführen. Es ist Ihnen wichtig, zwischen Absichten und Verhalten zu unterscheiden. Es ist Januar.[^2] Wie schaffen Sie es, den "Störfaktor" *Soziale Erwünschtheit* in ihrer Erhebung so weit wie möglich unter Kontrolle zu bekommen (und damit meinen wir: die Eigenschaften möglichst reliabel *und* valide zu messen)?
+
+
+[^1]: Ok, eine von vielen. 
+[^2]: Jeder kennt.

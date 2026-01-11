@@ -14,8 +14,8 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 | 6 | 04.12. | Skalierung | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_62.pdf "Latcheva & Davidov (2019)") | [🖥](slides\05-slides.qmd) | [✍](exercises/04-ex.qmd) |  |  |
 | 7 | 11.12. | Ausprägungen kombinieren | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_62) | [🖥](slides\06-slides.qmd) |  |  |  |
 |  |  | Itemkonstruktion | [📖](https://link.springer.com/chapter/10.1007/978-3-658-37985-8_64) | [🖥](slides\07-slides.qmd) | [✍](exercises/05-ex.qmd) |  |  |
-| 8 | 18.12. | Reaktionen erfassen | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_58) | [🖥](slides\08-slides.qmd) | ✍ |  |  |
-| 9 | 08.01. | Reliabilität und Validität | [📖](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_11) | [🖥](slides\09-slides.qmd) | ✍ |  |  |
+| 8 | 18.12. | Reaktionen erfassen | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_58) | [🖥](slides\08-slides.qmd) |  |  |  |
+| 9 | 08.01. | Reliabilität und Validität | [📖](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_11) | [🖥](slides\09-slides.qmd) | [✍](exercises/06-ex.qmd) |  |  |
 |  | ab. 14.1. |  |  |  |  | 📋 |  |
 |  |  | **II. Unterschiede erheben** |  |  |  |  |  |
 | 10 | 15.01. | Stichprobenziehung | 📖 | 🖥 | ✍ |  |  |
