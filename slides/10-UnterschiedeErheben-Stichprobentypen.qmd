@@ -1,46 +1,106 @@
-## (ohne Titel)
+---
+title: "Unterschiede erheben: Stichprobendesign"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+##server: shiny
+format: 
+  revealjs:
+    fig-format: svg
+    width: 1280
+    height: 800
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
 
-# Stichprobendesigns {#stichprobendesigns .unnumbered}
-
-##  {#section .unnumbered}
 
 ## Ausprägungen und ihre empirische Verteilung
 
-::::: columns
-::: column
-.5
-:::
+::::: {.columns}
+:::: {.column width="30%"}
+![](images/faktor-ausprägung-verteilung.svg)
+::::
 
-::: column
-.5
-
+:::: {.column width="70%"}
 - Die Ausprägungen ($\tau$) einer Eigenschaft ($F$) können in einer Population unterschiedlich verteilt sein.
 
 - Die Ausprägungen können gruppenspezifisch verteilt sein.
 
 - Die Ausprägungen können mit den denen einer anderen Eigenschaft systematisch in Zusammenhang stehen.
 
-- $\rightarrow$ Wir benötigen Daten (= Beobachtungen von Untersuchungseinheiten), um dies zu erforschen.
-:::
+::::
 :::::
 
-## Ausprägungen und ihre empirische Verteilung
 
-::: center
-<figure>
+## Was bedeutet es, wenn Ausprägungen "verteilt" sind?
 
-<figcaption>Die Verteilung von Frauen und Männern nach ihrer Körpergröße <a href="https://news.mit.edu/2019/genetic-study-takes-sex-differences-research-to-new-heights-0718">(Quelle)</a></figcaption>
-</figure>
-:::
+![Die Verteilung von Frauen und Männern nach ihrer Körpergröße (Quelle: [MIT](https://news.mit.edu/2019/genetic-study-takes-sex-differences-research-to-new-heights-0718) )>(Quelle)</a></figcaption>](images/male-female-height.jpeg)
 
-## Verteilungen in speziellen Populationen
+## Was bedeutet es, wenn Ausprägungen "verteilt" sind?
 
-::: center
-<figure>
+![Die Verteilung von Optimismus über verschiedene Länder. Quelle: [Our World in Data](https://ourworldindata.org/data-insights/most-people-are-fairly-optimistic-that-their-lives-will-improve)](images/most-people-think-life-will-improve.png)
 
-<figcaption>Die Verteilung von professionellen, männlichen Basketballspielern der NBA in der Saison 2021/22 <a href="https://www.thehoopsgeek.com/average-nba-height/">(Quelle)</a></figcaption>
-</figure>
-:::
+## Verteilung von Zufriedenheit über Nationen
+
+<iframe src="https://ourworldindata.org/grapher/happiness-cantril-ladder?tab=table&time=earliest..2024&country=DEU~FIN~DNK~ISL~SWE" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+## Verteilungen in speziellen Populationen: ADHS Symptome 
+
+Die *Weiss Functional Impairment Rating Scale* besteht aus 70 Items, die auf sieben Dimensionen laden. Eine Sub-Dimension betrifft *Arbeit*:
+
+| Item number | Item                                             |
+| ----------- | ------------------------------------------------ |
+| #1          | Problems performing required duties              |
+| #2          | Problems with getting your work done efficiently |
+| #3          | Problems with your supervisor                    |
+| #4          | Problems keeping a job                           |
+| #5          | Getting fired from work                          |
+| #6          | Problems working in a team                       |
+| #7          | Problems with your attendance                    |
+| #8          | Problems with being late                         |
+| #9          | Problems taking on new tasks                     |
+| #10         | Problems working to your potential               |
+| #11         | Poor performance evaluations                     |
+
+## Verteilungen in speziellen Populationen: ADHS Symptome 
+
+![Verteilung von typischen ADHS-Symptomen im Arbeitsplatz zwischen diagnostizierten Personen mit ADHS und der "Normalbevölkerung". Quelle: [Fuermaier et al. (2012)](https://link.springer.com/article/10.1007/s00702-021-02309)](images/adhd-work.png)
+
+## Verteilungen in speziellen Populationen: ADHS Symptome 
+
+| Number of _Work_ impairments | Patients with ADHD (_n_ = 134) | Community comparison group (_n_ = 268) |
+| ---------------------------- | ------------------------------ | -------------------------------------- |
+| 0                            | 19.4                           | 72.4                                   |
+| 1                            | 31.3                           | 82.8                                   |
+| 2                            | 44.8                           | 85.1                                   |
+| 3                            | 59.7                           | 88.4                                   |
+| 4                            | 70.1                           | 90.7                                   |
+| 5                            | 79.1                           | 91.8                                   |
+| 6                            | 84.3                           | 92.9                                   |
+| 7                            | 90.3                           | 94.0                                   |
+| 8                            | 93.3                           | 96.3                                   |
+| 9                            | 96.3                           | 97.4                                   |
+| 10                           | 99.3                           | 98.9                                   |
+| 11                           | 100                            | 100                                    |
+: {.hover}
 
 ## Wichtige Begriffe
 
