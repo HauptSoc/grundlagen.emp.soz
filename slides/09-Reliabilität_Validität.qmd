@@ -65,6 +65,19 @@ Wir gehen davon aus, dass sich beide Komponenten *additiv* verhalten und damit g
 
 :::::
 
+## Was ist eigentlich eine "Störung"? 
+
+- Erinnerungsfehler
+- Falsch gesetzte Kreuze 
+- Auf- und Abrundungen von Angaben
+- (unbewusst) falsche Angaben
+
+- Zwischenzeitliches Geschehen
+- Reifungs- und Lernprozesse über den Verlauf der Beobachtung
+- Interviewereffekte 
+- 
+
+
 ## Reliabilität - systematische und unsystematische Variation {.midi}
 
 Wenn wir Untersuchungseinheiten mehrfach testen oder verschiedene Untersuchungseinheiten mit gleichen Ausprägungen testen, müssen wir praktischerweise davon ausgehen, dass die Messergebnisse ($y_i$) über die verschiedenen Messungen *variieren*.
