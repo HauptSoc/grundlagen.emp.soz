@@ -1883,8 +1883,8 @@
     "objectID": "slides/09-Reliabilität_Validität.html#es-könnt-vieles-so-einfach-sein-isses-aber-nicht",
     "href": "slides/09-Reliabilität_Validität.html#es-könnt-vieles-so-einfach-sein-isses-aber-nicht",
     "title": "Unterscheiden: Reliabilität & Validität",
-    "section": "Es könnt’ vieles so einfach sein (isses aber nicht…)",
-    "text": "Es könnt’ vieles so einfach sein (isses aber nicht…)\nEine perfekte Messung ordnet einer (wahren) Ausprägung einer Eigenschaft ein-eindeutig einen (Zahlen)Wert zu. Die gleiche Ausprägung der Eigenschaft von verschiedenen Personen bei einem Messzeitpunkt oder von der gleichen Person über verschiedene Messzeitpunkte würde bei einer perfekten Messung den identischen Zahlenwert erhalten.\nIn der Praxis ist es jederzeit möglich, dass\n\neine Messung unterschiedliche Ergebnisse bei gleicher Ausprägung einer Eigenschaft liefert, weil die Messung durch starke, aber zufällige Störfaktoren beeinflusst wird (= Problem der Reliabilität).\neine Messung nur in Teilen das misst, was sie messen soll oder systematische Einflüsse als Störfaktoren auftreten (= Problem der Validität)."
+    "section": "",
+    "text": "Eine perfekte Messung ordnet einer (wahren) Ausprägung einer Eigenschaft ein-eindeutig einen (Zahlen)Wert zu. Die gleiche Ausprägung der Eigenschaft von verschiedenen Personen bei einem Messzeitpunkt oder von der gleichen Person über verschiedene Messzeitpunkte würde bei einer perfekten Messung den identischen Zahlenwert erhalten.\nIn der Praxis ist es jederzeit möglich, dass\n\neine Messung unterschiedliche Ergebnisse bei gleicher Ausprägung einer Eigenschaft liefert, weil die Messung durch starke, aber zufällige Störfaktoren beeinflusst wird (= Problem der Reliabilität).\neine Messung nur in Teilen das misst, was sie messen soll oder systematische Einflüsse als Störfaktoren auftreten (= Problem der Validität)."
   },
   {
     "objectID": "slides/09-Reliabilität_Validität.html#reliabilität",
@@ -2179,5 +2179,264 @@
     "title": "Übung: Reliabilität & Validität",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nOk, eine von vielen.↩︎\nJeder kennt.↩︎"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#ausprägungen-und-ihre-empirische-verteilung",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#ausprägungen-und-ihre-empirische-verteilung",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Ausprägungen und ihre empirische Verteilung",
+    "text": "Ausprägungen und ihre empirische Verteilung\n\n\n\n\n\nDie Ausprägungen (\\(\\tau\\)) einer Eigenschaft (\\(F\\)) können in einer Population unterschiedlich verteilt sein.\nDie Ausprägungen können gruppenspezifisch verteilt sein.\nDie Ausprägungen können mit den denen einer anderen Eigenschaft systematisch in Zusammenhang stehen."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#was-bedeutet-es-wenn-ausprägungen-verteilt-sind",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#was-bedeutet-es-wenn-ausprägungen-verteilt-sind",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Was bedeutet es, wenn Ausprägungen “verteilt” sind?",
+    "text": "Was bedeutet es, wenn Ausprägungen “verteilt” sind?\n\n\n\nDie Verteilung von Frauen und Männern nach ihrer Körpergröße (Quelle: MIT)"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#was-bedeutet-es-wenn-ausprägungen-verteilt-sind-1",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#was-bedeutet-es-wenn-ausprägungen-verteilt-sind-1",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Was bedeutet es, wenn Ausprägungen “verteilt” sind?",
+    "text": "Was bedeutet es, wenn Ausprägungen “verteilt” sind?\n\n\n\nDie Verteilung von Optimismus über verschiedene Länder. Quelle: Our World in Data"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilung-von-zufriedenheit-über-nationen",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilung-von-zufriedenheit-über-nationen",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilung von Zufriedenheit über Nationen",
+    "text": "Verteilung von Zufriedenheit über Nationen"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-in-speziellen-populationen-adhs-symptome",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-in-speziellen-populationen-adhs-symptome",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilungen in speziellen Populationen: ADHS Symptome",
+    "text": "Verteilungen in speziellen Populationen: ADHS Symptome\n\n\n\nVerteilung von typischen ADHS-Symptomen im Arbeitsplatz zwischen diagnostizierten Personen mit ADHS und der “Normalbevölkerung”. Quelle: Fuermaier et al. (2012)"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-in-speziellen-populationen-adhs-symptome-1",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-in-speziellen-populationen-adhs-symptome-1",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilungen in speziellen Populationen: ADHS Symptome",
+    "text": "Verteilungen in speziellen Populationen: ADHS Symptome\n\n\n\n\n\n\n\n\nNumber of Work impairments\nPatients with ADHD (n = 134)\nCommunity comparison group (n = 268)\n\n\n\n\n0\n19.4\n72.4\n\n\n1\n31.3\n82.8\n\n\n2\n44.8\n85.1\n\n\n3\n59.7\n88.4\n\n\n4\n70.1\n90.7\n\n\n5\n79.1\n91.8\n\n\n6\n84.3\n92.9\n\n\n7\n90.3\n94.0\n\n\n8\n93.3\n96.3\n\n\n9\n96.3\n97.4\n\n\n10\n99.3\n98.9\n\n\n11\n100\n100"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-in-speziellen-populationen-adhs-symptome-2",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-in-speziellen-populationen-adhs-symptome-2",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilungen in speziellen Populationen: ADHS Symptome",
+    "text": "Verteilungen in speziellen Populationen: ADHS Symptome\n\n\n\n\n\n\n\n\nNumber of Work impairments\nPatients with ADHD (n = 134)\nCommunity comparison group (n = 268)\n\n\n\n\n0\n19.4\n72.4\n\n\n1\n31.3\n82.8\n\n\n2\n44.8\n85.1\n\n\n3\n59.7\n88.4\n\n\n4\n70.1\n90.7\n\n\n5\n79.1\n91.8\n\n\n6\n84.3\n92.9\n\n\n7\n90.3\n94.0\n\n\n8\n93.3\n96.3\n\n\n9\n96.3\n97.4\n\n\n10\n99.3\n98.9\n\n\n11\n100\n100"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#wichtige-begriffe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#wichtige-begriffe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Wichtige Begriffe",
+    "text": "Wichtige Begriffe"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#theoretische-populationgrundgesamtheit",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#theoretische-populationgrundgesamtheit",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Theoretische Population/Grundgesamtheit",
+    "text": "Theoretische Population/Grundgesamtheit\nAlle Untersuchungseinheiten, über die Sie eine Aussage machen wollen, bilden Ihre theoretische Population oder Grundgesamtheit.1\nDie folgende Hypothese macht eine Aussage über alle Menschen in allen Kulturen über alle Zeitpunkte:\n\nFrauen präferieren größere Männer und Männer präferieren kleinere Frauen als Partner:innen.\n\nBisherige Forschung stützt diese These. Sie scheint global (hier) und über eine sehr lange Zeit der menschlichen Entwicklung zu gelten (hier).\nDer Begriff “Population” ist in den Sozial- und Lebenswissenschaften üblich. Der Begriff “Grundgesamtheit” kommt aus der Statistik. Beide Begriffe sind synonym."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#theoretische-populationgrundgesamtheit-1",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#theoretische-populationgrundgesamtheit-1",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Theoretische Population/Grundgesamtheit",
+    "text": "Theoretische Population/Grundgesamtheit\nWas die theoretische Population sein soll, ist eine explizite Entscheidung von Forscher:innen.\nMögliche theoretische Populationen:\n\nJugendliche im Alter von 14-18 in BW im Jahr 2023\nBewohner:innen von Altersheimen in deutschsprachigen Ländern\ndie allgemeinbildenden Schulen in Deutschland\nalle multi-nationalen Konzerne\n\nEs ist möglich, eine Stichprobe auf eine Untergruppe zu fokussieren und somit die theoretische Population zu ändern. Sie könnten z.B. eine gesamtdeutsche Stichprobe nach Ost- und Westdeutschland unterteilen."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sampling-frame-studienpopulation",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sampling-frame-studienpopulation",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Sampling Frame & Studienpopulation",
+    "text": "Sampling Frame & Studienpopulation\nBevor eine Stichprobe gezogen werden kann, muss sie einem Pool gezogen werden. Was dieser Pool ist, ist eine bedeutsame und begründungspflichtige Entscheidung! Dieser Pool wird als Sampling Frame (deutsch: Stichprobenrahmen) bezeichnet. In den Sozialwissenschaften ist dies meist eine Liste von Kontaktdaten:\n\n\n\nTelefonbuch\nEinwohnermelderegister\nKontaktpools kommerzieller Anbieter\nCrowdarbeitsanbieter (u.a.: Mechanical turk, Clickworker)\n\n\n\n\n\nE-Mail-Adressen innerhalb von Organisationen (Universitäten, Firmen)\nTwitter-Daten\nOnline-Foren\n\n\nAlle Untersuchungseinheiten innerhalb des Stichprobenrahmens bilden die Studienpopulation."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sampling-frame-studienpopulation-abdeckung",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sampling-frame-studienpopulation-abdeckung",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Sampling Frame, Studienpopulation & Abdeckung",
+    "text": "Sampling Frame, Studienpopulation & Abdeckung\nIn einer perfekten Studie sind die theoretische und die Studienpopulation identisch. Meist ist dies jedoch nicht der Fall und es kommt zu Abdeckungsfehlern (Coverage errors).\n\nMit Hilfe des Mikrozensus wollen wir Aussagen über die gesamte deutsche Bevölkerung zu einem Zeitpunkt machen.\n\\(\\rightarrow\\) Den Sampling Frame des Mikrozensus bilden die Einwohnermelderegister. Personen ohne gemeldeten Wohnsitz sind dort aber nicht enthalten.\nMit Twitter-Daten wollen wir studieren, wie sich Meinungsdynamiken in verschiedenen Ländern über die Population von Erwachsenen und Jugendlichen entwickeln.\n\\(\\rightarrow\\) Es ist sehr selektiv, wer Twitter nutzt(e); Personen können mehrere Accounts haben; Daten können von Bots generiert werden."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#stichprobendesigns",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#stichprobendesigns",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Stichprobendesigns",
+    "text": "Stichprobendesigns\nEine Stichprobe wird immer aus einem Sampling Frame gezogen. Sie können dabei grundsätzlich zwischen zufallsbasierten und nicht zufallsbasierten Stichprobenziehungen unterscheiden (probability based / non-probability based sampling).\nBeide Formen der Stichprobenziehung haben ihre Berechtigung. Es ist daher nicht so, dass nicht zufallsbasierte Stichproben per se unwissenschaftlich sind.\nUnwissenschaftlich (oder einfach unbedacht) ist die Verwendung der Stichprobe für Ziele, die sie nicht leisten kann."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufall-und-auswahl",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufall-und-auswahl",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Zufall und Auswahl",
+    "text": "Zufall und Auswahl\n\nMit zufallsbasierten Stichproben können Sie mit einer gewissen Sicherheit Aussagen über die theoretische Population treffen. Dies setzt aber einen verfügbaren und oft auch günstigen1 Sampling Frame voraus.\nMit nicht zufallsbasierten Stichproben können Sie einen Zugang zu Untersuchungseinheiten schaffen, die Messungen testen und ggf. einen ersten Sampling Frame aufbauen. Sie können meist nicht mit hoher Sicherheit Aussagen über die theoretische Population treffen.\n\nGünstig sowohl im ökonomischen als auch im Sinne eines einfachen Zugriffs auf Daten."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#repräsentativität",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#repräsentativität",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Repräsentativität",
+    "text": "Repräsentativität\nWenn Sie mit ihrer Stichprobe Aussagen über die theoretische Population machen wollen, muss diese ein hohes Maß an Repräsentatitivität haben.\nEine Stichprobe ist völlig repräsentativ, wenn jede Person der Population die gleiche Wahrscheinlichkeit hatte, Teil der (analytischen) Stichprobe zu werden. Völlige Repräsentativität ist daher die Abwesenheit von Selektivität.\nJe selektiver die Stichprobe zusammengesetzt ist, desto geringer ist ihre Repräsentativität."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#repräsentativität-1",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#repräsentativität-1",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Repräsentativität",
+    "text": "Repräsentativität\nAus dieser Definition folgt, dass\n\neine Stichprobe auch dann repräsentativ ist, wenn sie nicht alle Ausprägungen einer Eigenschaft innerhalb der Population enthält;\nStichprobengröße kein Maß für die Repräsentativität ist (wohl aber für die Fähigkeit, mit Sicherheit1 Aussagen über die theoretische Population zu machen);\nnur dann von (vollständiger) Repräsentativität der Stichprobe gesprochen werden kann, wenn die Stichprobenziehung auf einer Zufallsauswahl beruht und kein Abdeckungsfehler besteht.\n\nMerken: Die Sicherheit mit der wir von einer Stichprobe auf eine Population schließen können, ist eine Kombination aus Repräsentativität und Stichprobengröße."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sicherheit-des-schlusses-von-stichprobe-auf-population-ignorierbarkeit-von-unterschieden-zwischen-stichprobe-und-population",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sicherheit-des-schlusses-von-stichprobe-auf-population-ignorierbarkeit-von-unterschieden-zwischen-stichprobe-und-population",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Sicherheit des Schlusses von Stichprobe auf Population = Ignorierbarkeit von Unterschieden zwischen Stichprobe und Population",
+    "text": "Sicherheit des Schlusses von Stichprobe auf Population = Ignorierbarkeit von Unterschieden zwischen Stichprobe und Population\nAngenommen, die Ausprägung \\(\\tau_1\\) kommt in einer Population mit einer relativen Häufigkeit von 10% vor und \\(\\tau_2\\) mit 20%. Wir wissen, dass die Ausprägungen sich über die Gruppen A/B unterscheiden. Gruppe A: \\(\\tau_1\\) = 15% und \\(\\tau_2\\) = 15%, sodass die Differenz in den Ausprägungen -5% und +5% ist.\nWenn die Stichprobe repräsentativ (und hinreichend groß ist) ist, sollte sie in etwa die relativen Häufigkeiten für die Ausprägungen über alle Gruppen und die Differenzen der Ausprägungen zwischen den Gruppen erfassen.\nUnterschiede zwischen den Verteilungen der Ausprägung in der Population und der Stichprobe sind bei einer repräsentativen Stichprobenziehung rein zufällig und daher ignorierbar. Selektive Stichproben führen zu systematischen Unterschieden zwischen den Verteilungen in der Population und der Stichprobe."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-einfache-zufallsstichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-einfache-zufallsstichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Zufallsauswahlstrategien: Einfache Zufallsstichprobe",
+    "text": "Zufallsauswahlstrategien: Einfache Zufallsstichprobe\n\n\n\n\nDie Untersuchungseinheiten werden unabhängig voneinander und ohne Austausch aus einem Sampling Frame in die Stichprobe gezogen.\n\nZufallsziehung von Haushalten aus dem Einwohnermelderegister\nZufallsziehung von Emails aus einer Organisationseinheit\nZufallsziehung von Patienten in eine Studie\n\nWichtig: Zufallsziehungen führen notwendigerweise zu zufälligen Schwankungen (z.B. 48% Männer & 52% Frauen). Diese dürfen nicht “ausgeglichen” werden."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-geschichtete-zufallsstichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-geschichtete-zufallsstichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Zufallsauswahlstrategien: Geschichtete Zufallsstichprobe",
+    "text": "Zufallsauswahlstrategien: Geschichtete Zufallsstichprobe\n\n\n\n\nBei einer geschichteten Auswahl wird die Population in einzelne Untergruppen (Schichten) aufgeteilt. Die Schichten können unterschiedlich groß sein. Aus jeder (weitgehend homogenen) Schicht werden unabhängige zufällige Stichproben gezogen.\n\nZufallsziehung von Haushalten innerhalb von Bundesländern\nZufallsziehung von Emails nach Untereinheiten\nZufallsziehung von Patienten mit unterschiedlichen körperlichen Zuständen in eine Studie"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#anwendungsfall-allbus-2023",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#anwendungsfall-allbus-2023",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Anwendungsfall: ALLBUS 2023",
+    "text": "Anwendungsfall: ALLBUS 2023\nDie ALlgemeine BevölkerungsUmfrage der Sozialwissenschaften wird alle vier Jahre erhoben.\n\nIn der ersten Auswahlstufe wurden Gemeinden in Westdeutschland und in Ostdeutschland mit einer Wahrscheinlichkeit proportional zur Zahl ihrer erwachsenen Einwohner ausgewählt.\nIn der zweiten Auswahlstufe wurden Personen aus den Einwohnermeldekarteien zufällig gezogen."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#und-was-kann-man-damit-machen",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#und-was-kann-man-damit-machen",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Und was kann man damit machen?",
+    "text": "Und was kann man damit machen?\n\n\n\nDer Zusammenhang von physischer Attraktivität mit dem Einkommen. Quelle: Althans et al. (2023)"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-cluster-stichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-cluster-stichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Zufallsauswahlstrategien: Cluster-Stichprobe",
+    "text": "Zufallsauswahlstrategien: Cluster-Stichprobe\n\n\n\n\nDie Population wird in verschiede Cluster eingeteilt, von denen ausgegangen wird, dass diese die Grundgesamtheit oder einer ihrer Schichten im Kleinen repräsentieren. Es werden einige Cluster zufällig ausgewählt und dann alle Einheiten innerhalb des Clusters befragt.\n\nZufallsziehung von Haushalten als Cluster, dann Befragung von allen Haushaltsmitgliedern\nZufallsziehung von Firmen als Cluster, dann Befragung aller Mitarbeiter:innen\n\nWichtig: Die Informationen innerhalb der Cluster sind voneinander mehr oder weniger abhängig, weil sich die Untersuchungseinheiten in die Cluster selektieren."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#anwendungsfall-pisa-2022-studie-in-deutschland",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#anwendungsfall-pisa-2022-studie-in-deutschland",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Anwendungsfall: PISA 2022 Studie in Deutschland",
+    "text": "Anwendungsfall: PISA 2022 Studie in Deutschland\n\n\n\n\nDie PISA-Studie ist ein Mix aus Cluster und geschichteter Zufallsauswahl.\nEs werden Schichten nach Schultyp gebildet. Innerhalb der allgemeinbildenden Schulen wird nochmals nach Bundesländern geschichtet. Somit gibt es 18 Schultypschichten.\nInnerhalb einer Schultypschicht werden Schulen gezogen. Innerhalb der gezogenen Schule werden 30 Fünfzehnjährige zufällig gezogen (Schulcluster) und zusätzlich zwei 9. Klassen als Cluster gezogen (Klassencluster). Daraus werden zufällig 15 Fünfzehnjährige gezogen."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#und-was-macht-man-damit",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#und-was-macht-man-damit",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Und was macht man damit?",
+    "text": "Und was macht man damit?\n\n\n\nDer Zusammenhang von schulischen Fehlzeiten mit vier ausgewählten Eigenschaften. Quelle: Feldhaus et al. (2025)"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-quoten-stichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-quoten-stichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Nicht zufällige Stichprobenziehung: Quoten-Stichprobe",
+    "text": "Nicht zufällige Stichprobenziehung: Quoten-Stichprobe\n\n\n\n\n\nQuelle\n\n\n\nAus der Population sind spezifische Verteilungen von Merkmalen (Quoten) bekannt. Der Stichprobenplan beinhaltet nun Kontingente von Unterstichproben, aus denen solange gezogen wird, bis die Quoten in der Stichprobe denen der Population entsprechen.\n\nFür eine Studie zum “Sozialen Zusammenhalt in Baden-Württemberg 2022” wurde eine Quotenstichprobe mit Quoten für Geschlecht, Alter, Einkommen, Bildungsstand und Haushaltsgröße gezogen.\nMarktforschungsstudien ziehen typischerweise Quotenstichproben nach Alter, Geschlecht und Bildung."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#quoten-stichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#quoten-stichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Quoten-Stichprobe",
+    "text": "Quoten-Stichprobe\n\n\n\n\n\nQuelle\n\n\n\n\nVorteile:\n\nKosteneffizient\nschneller\nauch kleine Gruppen sind mit Sicherheit in der Stichprobe\n\nNachteile:\n\nSampling ist abhängig von theoretischen Konzepten und ihren Ausprägungen (z.B.: Transgender/Transsexuelle bei Geschlechtskategorie, Bildungskategorien, Krankheitsgrade)\nWenn die Gruppen unterschiedliche unit- oder item-nonresponse haben, wird die Stichprobe durch die Quote selektiv"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-convience-stichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-convience-stichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Nicht zufällige Stichprobenziehung: Convience Stichprobe",
+    "text": "Nicht zufällige Stichprobenziehung: Convience Stichprobe\n\n\n\n\n\nQuelle\n\n\n\nDie Teilnehmer der Stichprobe sind leicht erreichbare Personen, die sich an einem bestimmten Ort aufhalten.\n\nTeilnehmer:innen der meisten Psychologiestudien stammen aus Einführungskursen in die Psychologie.\nSpieltheoretische Forschung basiert zu einem hohen Teil auf Stichproben von Ökonomie-Studierenden.\nEin großer Teil der medizinische Forschung basiert auf den Zugang zu aktuellen Patienten der behandelnden Ärzte:innen.\n\nConvenience Stichproben sind immer selektiv. Allerdings können innerhalb von Convenience Stichproben zufällig Gruppen gebildet werden (Placebo/Treatment; Versuchs-/Kontrollgruppe), was zu einer hohen internen Validität aber ggf. zu einer niedrigen externen Validität führen kann."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-target-auswahl",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-target-auswahl",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Nicht zufällige Stichprobenziehung: Target-Auswahl",
+    "text": "Nicht zufällige Stichprobenziehung: Target-Auswahl\n\n\n\n\nDie Teilnehmer der Stichprobe werden gezielt nach ihren Eigenschaften ausgewählt.\n\nExpert:innen-Interviews zu einem bestimmten Thema (siehe Thurstone-Skala)\nMitglieder sehr kleiner Gruppen (Regenbogenfamilien, seltene Krankheiten)\n\nEine (leider verbreitete) Unterform dieser Stichprobenziehung ist sampling on the dependent variable. In diesem Fall selektieren Sie die Untersuchungseinheiten in die Stichprobe aufgrund der Eigenschaft, die Sie mit anderen Faktoren erklären wollen.\n\nBefragung von erfolgreichen Personen nach dem “Geheimnis” ihres Erfolgs\nAuswirkung von Erziehungsstilen bei Kindern in Theraphie"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-schneeball-verfahren",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#nicht-zufällige-stichprobenziehung-schneeball-verfahren",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Nicht zufällige Stichprobenziehung: Schneeball-Verfahren",
+    "text": "Nicht zufällige Stichprobenziehung: Schneeball-Verfahren\n\n\n\n\nDie Stichprobe beginnt mit einigen Personen, die den Studienkriterien entsprechen. Diese werden befragt und gebeten, andere Personen zu benennen, die den Studienkriterien entsprechen oder diese zu rekrutieren.\nManchmal haben wir kein Wissen über den Sampling Frame und der Zugang zu den jeweiligen Populationen ist schwierig (Vertrauensprobleme, Illegalität). In diesem Fall können wir über die sozialen Netzwerke einzelner Kontaktpersonen (sog. “seeds”) versuchen, Vertrauen zu gewinnen und Informationen über die jeweilige Population zu sammeln.\n\nBefragung von ausländischen Haushaltshilfen\nBefragung innerhalb von (kleinen) Gruppen von Flüchtlingen"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-über-gruppen-adhs-symptome",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-über-gruppen-adhs-symptome",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilungen über Gruppen: ADHS Symptome",
+    "text": "Verteilungen über Gruppen: ADHS Symptome\nDie Weiss Functional Impairment Rating Scale besteht aus 70 Items, die auf sieben Dimensionen laden. Eine Sub-Dimension betrifft Arbeit:\n\n\n\nItem number\nItem\n\n\n\n\n#1\nProblems performing required duties\n\n\n#2\nProblems with getting your work done efficiently\n\n\n#3\nProblems with your supervisor\n\n\n#4\nProblems keeping a job\n\n\n#5\nGetting fired from work\n\n\n#6\nProblems working in a team\n\n\n#7\nProblems with your attendance\n\n\n#8\nProblems with being late\n\n\n#9\nProblems taking on new tasks\n\n\n#10\nProblems working to your potential\n\n\n#11\nPoor performance evaluations"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#convience-stichprobe",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#convience-stichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Convience Stichprobe",
+    "text": "Convience Stichprobe\n\n\n\n\n\nQuelle\n\n\n\nDie Teilnehmer der Stichprobe sind leicht erreichbare Personen, die sich an einem bestimmten Ort aufhalten.\n\nTeilnehmer:innen der meisten Psychologiestudien stammen aus Einführungskursen in die Psychologie.\nSpieltheoretische Forschung basiert zu einem hohen Teil auf Stichproben von Ökonomie-Studierenden.\nEin großer Teil der medizinische Forschung basiert auf den Zugang zu aktuellen Patienten der behandelnden Ärzte:innen.\n\nConvenience Stichproben sind immer selektiv. Allerdings können innerhalb von Convenience Stichproben zufällig Gruppen gebildet werden (Placebo/Treatment; Versuchs-/Kontrollgruppe), was zu einer hohen internen Validität aber ggf. zu einer niedrigen externen Validität führen kann."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#target-auswahl",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#target-auswahl",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Target-Auswahl",
+    "text": "Target-Auswahl\n\n\n\n\nDie Teilnehmer der Stichprobe werden gezielt nach ihren Eigenschaften ausgewählt.\n\nExpert:innen-Interviews zu einem bestimmten Thema (siehe Thurstone-Skala)\nMitglieder sehr kleiner Gruppen (Regenbogenfamilien, seltene Krankheiten)"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#the-evil-sister-of-target-auswahl",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#the-evil-sister-of-target-auswahl",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "The evil sister of Target-Auswahl",
+    "text": "The evil sister of Target-Auswahl\nEine Unterform dieser Stichprobenziehung ist sampling on the dependent variable. In diesem Fall selektieren Sie die Untersuchungseinheiten in die Stichprobe aufgrund der Eigenschaft, die Sie mit anderen Faktoren erklären wollen.1\n\nBefragung von erfolgreichen Personen nach dem “Geheimnis” ihres Erfolgs\nAuswirkung von Erziehungsstilen bei Kindern in Theraphie\n\nDas ist sehr schlecht. Also: Wirklich schlecht."
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#schneeball-verfahren",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#schneeball-verfahren",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Schneeball-Verfahren",
+    "text": "Schneeball-Verfahren\n\n\n\n\nDie Stichprobe beginnt mit einigen Personen, die den Studienkriterien entsprechen. Diese werden befragt und gebeten, andere Personen zu benennen, die den Studienkriterien entsprechen oder diese zu rekrutieren.\nManchmal haben wir kein Wissen über den Sampling Frame und der Zugang zu den jeweiligen Populationen ist schwierig (Vertrauensprobleme, Illegalität). In diesem Fall können wir über die sozialen Netzwerke einzelner Kontaktpersonen (sog. “seeds”) versuchen, Vertrauen zu gewinnen und Informationen über die jeweilige Population zu sammeln.\n\nBefragung von ausländischen Haushaltshilfen\nBefragung innerhalb von (kleinen) Gruppen von Flüchtlingen"
+  },
+  {
+    "objectID": "slides/10-slides.html",
+    "href": "slides/10-slides.html",
+    "title": "Unterschiede erheben: Stichprobentypen",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html",
+    "href": "slides/09-Reliabilität_Validität.html",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "",
+    "text": "Eine perfekte Messung ordnet einer (wahren) Ausprägung einer Eigenschaft ein-eindeutig einen (Zahlen)Wert zu. Die gleiche Ausprägung der Eigenschaft von verschiedenen Personen bei einem Messzeitpunkt oder von der gleichen Person über verschiedene Messzeitpunkte würde bei einer perfekten Messung den identischen Zahlenwert erhalten.\nIn der Praxis ist es jederzeit möglich, dass\n\neine Messung unterschiedliche Ergebnisse bei gleicher Ausprägung einer Eigenschaft liefert, weil die Messung durch starke, aber zufällige Störfaktoren beeinflusst wird (= Problem der Reliabilität).\neine Messung nur in Teilen das misst, was sie messen soll oder systematische Einflüsse als Störfaktoren auftreten (= Problem der Validität)."
+  },
+  {
+    "objectID": "slides/09-Reliabilität_Validität.html#was-ist-eigentlich-eine-störung",
+    "href": "slides/09-Reliabilität_Validität.html#was-ist-eigentlich-eine-störung",
+    "title": "Unterscheiden: Reliabilität & Validität",
+    "section": "Was ist eigentlich eine “Störung”?",
+    "text": "Was ist eigentlich eine “Störung”?\n\nErinnerungsfehler\nFalsch gesetzte Kreuze\nAuf- und Abrundungen von Angaben\n(unbewusst) falsche Angaben\nZwischenzeitliches Geschehen\nReifungs- und Lernprozesse über den Verlauf der Beobachtung\nInterviewereffekte"
   }
 ]
