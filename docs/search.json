@@ -2297,7 +2297,7 @@
     "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#sicherheit-des-schlusses-von-stichprobe-auf-population-ignorierbarkeit-von-unterschieden-zwischen-stichprobe-und-population",
     "title": "Unterschiede erheben: Stichprobendesign",
     "section": "Sicherheit des Schlusses von Stichprobe auf Population = Ignorierbarkeit von Unterschieden zwischen Stichprobe und Population",
-    "text": "Sicherheit des Schlusses von Stichprobe auf Population = Ignorierbarkeit von Unterschieden zwischen Stichprobe und Population\nAngenommen, die Ausprägung \\(\\tau_1\\) kommt in einer Population mit einer relativen Häufigkeit von 10% vor und \\(\\tau_2\\) mit 20%. Wir wissen, dass die Ausprägungen sich über die Gruppen A/B unterscheiden. Gruppe A: \\(\\tau_1\\) = 15% und \\(\\tau_2\\) = 15%, sodass die Differenz in den Ausprägungen -5% und +5% ist.\nWenn die Stichprobe repräsentativ (und hinreichend groß ist) ist, sollte sie in etwa die relativen Häufigkeiten für die Ausprägungen über alle Gruppen und die Differenzen der Ausprägungen zwischen den Gruppen erfassen.\nUnterschiede zwischen den Verteilungen der Ausprägung in der Population und der Stichprobe sind bei einer repräsentativen Stichprobenziehung rein zufällig und daher ignorierbar. Selektive Stichproben führen zu systematischen Unterschieden zwischen den Verteilungen in der Population und der Stichprobe."
+    "text": "Sicherheit des Schlusses von Stichprobe auf Population = Ignorierbarkeit von Unterschieden zwischen Stichprobe und Population\nAngenommen, die Ausprägung \\(\\tau_1\\) kommt in einer Population mit einer relativen Häufigkeit von 10% vor und \\(\\tau_2\\) mit 20%.\nWenn Stichproben repräsentativ (und hinreichend groß) sind, sollte sie vergleichbare (= “wahrer Wert” plus “Zufallsfehler”) relativen Häufigkeiten erfassen.\nUnterschiede zwischen den Verteilungen der Ausprägung in der Population und der Stichprobe sind bei einer repräsentativen Stichprobenziehung rein zufällig und daher ignorierbar. Selektive Stichproben führen zu systematischen Unterschieden zwischen den Verteilungen in der Population und der Stichprobe."
   },
   {
     "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#zufallsauswahlstrategien-einfache-zufallsstichprobe",
@@ -2438,5 +2438,19 @@
     "title": "Unterscheiden: Reliabilität & Validität",
     "section": "Was ist eigentlich eine “Störung”?",
     "text": "Was ist eigentlich eine “Störung”?\n\nErinnerungsfehler\nFalsch gesetzte Kreuze\nAuf- und Abrundungen von Angaben\n(unbewusst) falsche Angaben\nZwischenzeitliches Geschehen\nReifungs- und Lernprozesse über den Verlauf der Beobachtung\nInterviewereffekte"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-über-gruppen-adhs-symptome-1",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-über-gruppen-adhs-symptome-1",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilungen über Gruppen: ADHS Symptome",
+    "text": "Verteilungen über Gruppen: ADHS Symptome\n\n\n\nVerteilung von typischen ADHS-Symptomen im Arbeitsplatz zwischen diagnostizierten Personen mit ADHS und der “Normalbevölkerung”. Quelle: Fuermaier et al. (2012)"
+  },
+  {
+    "objectID": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-über-gruppen-adhs-symptome-2",
+    "href": "slides/10-UnterschiedeErheben-Stichprobentypen.html#verteilungen-über-gruppen-adhs-symptome-2",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilungen über Gruppen: ADHS Symptome",
+    "text": "Verteilungen über Gruppen: ADHS Symptome\n\n\n\n\n\n\n\n\nNumber of Work impairments\nPatients with ADHD (n = 134)\nCommunity comparison group (n = 268)\n\n\n\n\n0\n19.4\n72.4\n\n\n1\n31.3\n82.8\n\n\n2\n44.8\n85.1\n\n\n3\n59.7\n88.4\n\n\n4\n70.1\n90.7\n\n\n5\n79.1\n91.8\n\n\n6\n84.3\n92.9\n\n\n7\n90.3\n94.0\n\n\n8\n93.3\n96.3\n\n\n9\n96.3\n97.4\n\n\n10\n99.3\n98.9\n\n\n11\n100\n100"
   }
 ]

@@ -81,11 +81,11 @@ Die *Weiss Functional Impairment Rating Scale* besteht aus 70 Items, die auf sie
 | #11         | Poor performance evaluations                     |
 : {.midi .hover .stripped}
 
-## Verteilungen in speziellen Populationen: ADHS Symptome 
+## Verteilungen über Gruppen: ADHS Symptome 
 
 ![Verteilung von typischen ADHS-Symptomen im Arbeitsplatz zwischen diagnostizierten Personen mit ADHS und der "Normalbevölkerung". Quelle: [Fuermaier et al. (2012)](https://link.springer.com/article/10.1007/s00702-021-02309)](images/adhd-work.png){width=80%}
 
-## Verteilungen in speziellen Populationen: ADHS Symptome {.midi .scrollable}
+## Verteilungen über Gruppen: ADHS Symptome {.midi .scrollable}
 
 | Number of _Work_ impairments | Patients with ADHD (_n_ = 134) | Community comparison group (_n_ = 268) |
 | ---------------------------- | ------------------------------ | -------------------------------------- |
@@ -219,9 +219,9 @@ Aus dieser Definition folgt, dass
 
 ## Sicherheit des Schlusses von Stichprobe auf Population = Ignorierbarkeit von Unterschieden zwischen Stichprobe und Population {.midi}
 
-Angenommen, die Ausprägung $\tau_1$ kommt in einer Population mit einer relativen Häufigkeit von 10% vor und $\tau_2$ mit 20%. Wir wissen, dass die Ausprägungen sich über die Gruppen A/B unterscheiden. Gruppe A: $\tau_1$ = 15% und $\tau_2$ = 15%, sodass die Differenz in den Ausprägungen -5% und +5% ist.
+Angenommen, die Ausprägung $\tau_1$ kommt in einer Population mit einer relativen Häufigkeit von 10% vor und $\tau_2$ mit 20%. 
 
-Wenn die Stichprobe repräsentativ (und hinreichend groß ist) ist, sollte sie in etwa die relativen Häufigkeiten für die Ausprägungen über alle Gruppen und die Differenzen der Ausprägungen zwischen den Gruppen erfassen.
+Wenn Stichproben repräsentativ (und hinreichend groß) sind, sollte sie vergleichbare (= "wahrer Wert" plus "Zufallsfehler") relativen Häufigkeiten erfassen.
 
 Unterschiede zwischen den Verteilungen der Ausprägung in der Population und der Stichprobe sind bei einer repräsentativen Stichprobenziehung **rein zufällig** und daher ignorierbar. Selektive Stichproben führen zu systematischen Unterschieden zwischen den Verteilungen in der Population und der Stichprobe.
 
