@@ -2452,5 +2452,40 @@
     "title": "Unterschiede erheben: Stichprobendesign",
     "section": "Verteilungen über Gruppen: ADHS Symptome",
     "text": "Verteilungen über Gruppen: ADHS Symptome\n\n\n\n\n\n\n\n\nNumber of Work impairments\nPatients with ADHD (n = 134)\nCommunity comparison group (n = 268)\n\n\n\n\n0\n19.4\n72.4\n\n\n1\n31.3\n82.8\n\n\n2\n44.8\n85.1\n\n\n3\n59.7\n88.4\n\n\n4\n70.1\n90.7\n\n\n5\n79.1\n91.8\n\n\n6\n84.3\n92.9\n\n\n7\n90.3\n94.0\n\n\n8\n93.3\n96.3\n\n\n9\n96.3\n97.4\n\n\n10\n99.3\n98.9\n\n\n11\n100\n100"
+  },
+  {
+    "objectID": "exercises/07-ex.html",
+    "href": "exercises/07-ex.html",
+    "title": "Übung: Stichprobendesigns",
+    "section": "",
+    "text": "Sie wollen/sollen folgenden Zusammenhang studieren:\n\n\n\n\n\nflowchart LR\nE[Einsamkeit] --&gt; A[Ausbildungsabbruch]\n\n\n\n\n\n\n\nWas ist Ihre theoretische Population?\nPlanen Sie eine Stichprobe zur Analyse dieses Zusammenhangs. Klären Sie dabei:\n\nWas ist Ihr Sampling Frame?\nAuf welche Weise wollen Sie aus dem Sampling Frame die Stichprobe ziehen?\nErwarten Sie Teilnahmeselektion? Wenn ja, aufgrund welcher Eigenschaften?"
+  },
+  {
+    "objectID": "exercises/07-ex.html#einsamkeit-und-ausbildungsabbruch",
+    "href": "exercises/07-ex.html#einsamkeit-und-ausbildungsabbruch",
+    "title": "Übung: Stichprobendesigns",
+    "section": "",
+    "text": "Sie wollen/sollen folgenden Zusammenhang studieren:\n\n\n\n\n\nflowchart LR\nE[Einsamkeit] --&gt; A[Ausbildungsabbruch]\n\n\n\n\n\n\n\nWas ist Ihre theoretische Population?\nPlanen Sie eine Stichprobe zur Analyse dieses Zusammenhangs. Klären Sie dabei:\n\nWas ist Ihr Sampling Frame?\nAuf welche Weise wollen Sie aus dem Sampling Frame die Stichprobe ziehen?\nErwarten Sie Teilnahmeselektion? Wenn ja, aufgrund welcher Eigenschaften?"
+  },
+  {
+    "objectID": "exercises/07-ex.html#section",
+    "href": "exercises/07-ex.html#section",
+    "title": "Übung: Stichprobendesigns",
+    "section": "2 ",
+    "text": "2"
+  },
+  {
+    "objectID": "exercises/07-ex.html#wer-schaut-wem-in-die-augen",
+    "href": "exercises/07-ex.html#wer-schaut-wem-in-die-augen",
+    "title": "Übung: Stichprobendesigns",
+    "section": "2 Wer schaut wem in die Augen?",
+    "text": "2 Wer schaut wem in die Augen?\nIn einer experimentellen Studie untersuchte Aranguren (2025), ob Frauen mit Kopftuch mit höherer Wahrscheinlichkeit der Augenkontakt verweigert wird als Frauen ohne Kopftuch.\nIn Bezug auf die Stichprobenziehung erfahren wir folgendes:\n\n\n\n\n\n\nSampling\n\n\n\nData collection proceeded between 6 May and 21 June 2019. To approximate a random sample, the sampling technique combines random selection of participants from the pool of all passengers present on platforms at a given point in time, on the one hand, with systematic assignment of the experimental condition, on the other. Before reaching the platform, passengers have no information about departure or arrival times. When they enter the platform, the train is either absent or present. Passengers selected themselves at random for participation in the experiment by the time at which they happened to arrive in the platform. The target passenger was the first person to enter the platform after the departure of the last train. If the passenger refused to participate in the research, then the next target was the first incoming passenger who could not have witnessed the previous refusal, and so on. To ensure equal representation of men and women among participants, the first passenger was recruited regardless of gender, the second by considering only passengers of the opposite gender, the third again regardless of gender, and so on. Experimenters used their commonsensical understanding of gender to distinguish men from women in a binary manner.\nExperimental sessions unfolded on weekdays between 12 and 2pm. The experimental condition was assigned systematically by dividing the total sampling time into one-hour slots devoted to either condition.\n\n\nDas Treatment wird wie folgt beschrieben:\n\n\n\n\n\n\nTreatment\n\n\n\nThe field team was composed of two experimenters and one tester. Experimenter A was in charge of recruiting passengers as they arrived to the platform, inviting them to participate in an experiment on decision making. If the passenger accepted, they were told that they would be playing an ultimatum game1 with another passenger (actually, the tester). […] In one condition, the tester wore an Islamic headscarf or hijab. In the other, she appeared with uncovered hair. The rest of the clothing was identical between the conditions.”\n\n\n\nBeschreiben Sie in eigenen Worten den experimentellen Aufbau dieser Studie. Was wird hier in welcher Art und Weise zufällig eingeteilt?\nBeschreiben Sie in eigenen Worten das Stichprobenverfahren: Was ist die theoretische Population? Welche Form von Stichprobenziehung findet statt?\nErwarten Sie Teilnahmeselektion? Wenn ja, in welcher Weise?"
+  },
+  {
+    "objectID": "exercises/07-ex.html#footnotes",
+    "href": "exercises/07-ex.html#footnotes",
+    "title": "Übung: Stichprobendesigns",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDas ist ein spieltheoretisches Setting, wo Spieler:in A einen Betrag von X € bekommt, der mit Spieler:in B geteilt werden soll. A darf aber darüber entscheiden, wie geteilt wird. Wenn B die Teilung ablehnt, gehen beide leer aus.↩︎"
   }
 ]

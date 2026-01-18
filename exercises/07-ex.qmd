@@ -1,0 +1,68 @@
+---
+title: "Übung: Stichprobendesigns"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Einsamkeit und Ausbildungsabbruch
+
+Sie wollen/sollen folgenden Zusammenhang studieren:
+
+```{mermaid}
+flowchart LR
+E[Einsamkeit] --> A[Ausbildungsabbruch]
+```
+  
+1.  Was ist Ihre theoretische Population?
+2.  Planen Sie eine Stichprobe zur Analyse dieses Zusammenhangs. Klären Sie dabei: 
+    i) Was ist Ihr Sampling Frame? 
+    ii) Auf welche Weise wollen Sie aus dem Sampling Frame die Stichprobe ziehen? 
+    iii) Erwarten Sie Teilnahmeselektion? Wenn ja, aufgrund welcher Eigenschaften?
+    
+    
+## Wer schaut wem in die Augen? 
+
+In einer experimentellen Studie untersuchte [Aranguren (2025)](https://doi.org/10.1093/esr/jcaf047), ob Frauen mit Kopftuch mit höherer Wahrscheinlichkeit der Augenkontakt verweigert wird als Frauen ohne Kopftuch. 
+
+In Bezug auf die Stichprobenziehung erfahren wir folgendes: 
+
+::: {.callout-tip}
+### Sampling
+
+Data collection proceeded between 6 May and 21 June 2019. To approximate a random sample, the sampling technique combines random selection of participants from the pool of all passengers present on platforms at a given point in time, on the one hand, with systematic assignment of the experimental condition, on the other. Before reaching the platform, passengers have no information about departure or arrival times. When they enter the platform, the train is either absent or present. Passengers selected themselves at random for participation in the experiment by the time at which they happened to arrive in the platform. The target passenger was the first person to enter the platform after the departure of the last train. If the passenger refused to participate in the research, then the next target was the first incoming passenger who could not have witnessed the previous refusal, and so on. To ensure equal representation of men and women among participants, the first passenger was recruited regardless of gender, the second by considering only passengers of the opposite gender, the third again regardless of gender, and so on. Experimenters used their commonsensical understanding of gender to distinguish men from women in a binary manner.
+
+Experimental sessions unfolded on weekdays between 12 and 2pm. The experimental condition was assigned systematically by dividing the total sampling time into one-hour slots devoted to either condition.
+:::
+
+Das Treatment wird wie folgt beschrieben: 
+
+::: {.callout-tip}
+### Treatment 
+
+The field team was composed of two experimenters and one tester. Experimenter A was in charge of recruiting passengers as they arrived to the platform, inviting them to participate in an experiment on decision making. If the passenger accepted, they were told that they would be playing an ultimatum game[^1] with another passenger (actually, the tester). [...] In one condition, the tester wore an Islamic headscarf or hijab. In the other, she appeared with uncovered hair. The rest of the clothing was identical between the conditions."
+:::
+
+1. Beschreiben Sie in eigenen Worten den experimentellen Aufbau dieser Studie. Was wird hier in welcher Art und Weise zufällig eingeteilt?
+2. Beschreiben Sie in eigenen Worten das Stichprobenverfahren: Was ist die theoretische Population? Welche Form von Stichprobenziehung findet statt?
+3. Erwarten Sie Teilnahmeselektion? Wenn ja, in welcher Weise? 
+
+
+
+[^1]: Das ist ein spieltheoretisches Setting, wo Spieler:in A einen Betrag von X € bekommt, der mit Spieler:in B geteilt werden soll. A darf aber darüber entscheiden, wie geteilt wird. Wenn B die Teilung ablehnt, gehen beide leer aus.  

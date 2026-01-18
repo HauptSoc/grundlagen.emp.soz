@@ -18,7 +18,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 | 9 | 08.01. | Reliabilität und Validität | [📖](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_11) | [🖥](slides\09-slides.qmd) | [✍](exercises/06-ex.qmd) |  |  |
 |  | ab. 14.1. |  |  |  |  | [📋](https://ilias.studium.kit.edu/goto.php/crs/2757061) |  |
 |  |  | **II. Unterschiede erheben** |  |  |  |  |  |
-| 10 | 15.01. | Stichprobenziehung | 📖 | [🖥](slides\10-slides.qmd) | ✍ |  |  |
+| 10 | 15.01. | Stichprobenziehung | [📖](https://link.springer.com/chapter/10.1007/978-3-658-37985-8_27) | [🖥](slides\10-slides.qmd) | [✍](exercises/07-ex.qmd) |  |  |
 | 11 | 22.01. | Teilnahmeselektion | 📖 | 🖥 | ✍ |  |  |
 | 12 | 29.01. | Antwortverweigerung | 📖 | 🖥 | ✍ | 📋 |  |
 |  |  | **III. Die richtigen Unterschiede erfassen** |  |  |  |  |  |
