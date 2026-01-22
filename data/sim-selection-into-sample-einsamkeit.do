@@ -153,7 +153,7 @@ graph export sim-hist-antifem.png, replace
 graph bar antifem, over(frau) over(bildung) ytitle("Antifeministische Einstellungen")
 graph export sim-bar-antifem-gender-bildung.png, replace 
 
-
+gen einsam2 = einsam - 1*antifem 
 
 cap drop netto2 
 gen netto2 = netto1 
@@ -161,13 +161,13 @@ gen netto2 = netto1
 replace netto2 = 0 if (netto1 == 1 & antifem > r(p75)) 
 
 
-qui sum einsam if frau == 0 & netto2 == 1
+qui sum einsam2 if frau == 0 & netto2 == 1
 local m = r(mean)
-qui sum einsam if frau == 1 & netto2 == 1
+qui sum einsam2 if frau == 1 & netto2 == 1
 local w = r(mean)
-graph hbar einsam if netto2 == 1, over(frau) over(bildung) blabel(bar, format(%8.1f)) ytitle("Einsamkeit") ylabel(, nogrid) ///
+graph hbar einsam2 if netto2 == 1, over(frau) over(bildung) blabel(bar, format(%8.1f)) ytitle("Einsamkeit") ylabel(, nogrid) ///
 yline(`m', lpat(solid)) yline(`w') 
-graph export sim-bar-einsamkeit-geschlecht-bildung-netto2.png, replace 
+graph export sim-bar-einsamkeit2-geschlecht-bildung-netto2.png, replace 
 
 catplot frau bildung if netto2 == 1, title("Nettostichprobe (+ Antifem. Selektion)") percent(frau) ytitle("Relativer Anteil") blabel(bar, format(%8.1f)) ylabel(, nogrid)
 graph export sim-bar-geschlecht-bildung-netto2.png, replace 
