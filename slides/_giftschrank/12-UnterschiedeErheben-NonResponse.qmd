@@ -28,21 +28,6 @@ Diese können Sie bestimmen, indem zum Beispiel
 
 - eine "Strichliste" geführt wird, wie viele Personen angesprochen wurden und wie viele geantwortet haben.
 
-## Houston, we have a problem
-
-::: center
-:::
-
-## Ausschöpfung und Repräsentativität
-
-- Eine geringe Ausschöpfungsrate führt nicht zwingend zu einer geringen Repräsentativität.
-
-- Entscheidend ist, ob die Teilnahme - und damit die Ausschöpfung - selektiv ist (selective unit nonresponse).
-
-- Wenn die Teilnahme nach Merkmalen selektiv ist, die wir beobachtet haben, können wir die Selektion korrigieren (Gewichtungsverfahren).
-
-- Wenn die Teilnahme nach Merkmalen selektiv ist, die wir nicht beobachtet haben, sind unsere Ergebnisse sehr wahrscheinlich unter- oder überschätzt.
-
 ## Selektion in die Stichprobe
 
 ::::: columns
@@ -190,7 +175,8 @@ $$\dfrac{36.7}{100} \cdot 18.2 + \dfrac{50.6}{100} \cdot 29.9 + \dfrac{4.2}{100}
 
 **Wenn** wir wissen, wie sich die theoretische Population zusammensetzt und damit abschätzen können, wie die Differenzen zwischen beobachteter und theoretisch erwarteter Zusammensetzung ist, können wir die Differenzen hinzufügen, um die Selektivität der Nettostichprobe zu kompensieren.
 
-$$\dfrac{36.5 \, \textcolor{red}{+ 1}}{100} \cdot 18.2 + \dfrac{50.6 \, \textcolor{red}{-13.1}}{100} \cdot 29.9 + \dfrac{4.2 \, \textcolor{red}{+ 8.3}}{100} \cdot 62.5 + \dfrac{8.5 \, \textcolor{red}{+ 4}}{100} \cdot 70.4 = 34.6$$ Das ist allerdings nur dann eine Lösung, wenn sich die Zustimmungsraten *innerhalb* der Gruppen mit denen wir gewichten, nur zufällig danach unterscheiden, ob sie Teil der Stichprobe sind oder nicht.
+$$\dfrac{36.5 \, \textcolor{red}{+ 1}}{100} \cdot 18.2 + \dfrac{50.6 \, \textcolor{red}{-13.1}}{100} \cdot 29.9 + \dfrac{4.2 \, \textcolor{red}{+ 8.3}}{100} \cdot 62.5 + \dfrac{8.5 \, \textcolor{red}{+ 4}}{100} \cdot 70.4 = 34.6$$
+Das ist allerdings nur dann eine Lösung, wenn sich die Zustimmungsraten *innerhalb* der Gruppen mit denen wir gewichten, nur zufällig danach unterscheiden, ob sie Teil der Stichprobe sind oder nicht.
 
 ## Zufällige Schwankungen der Zustimmung innerhalb der Gruppen innerhalb und außerhalb der Stichprobe
 

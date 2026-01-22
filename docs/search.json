@@ -2452,5 +2452,222 @@
     "title": "Unterschiede erheben: Stichprobendesign",
     "section": "Verteilungen über Gruppen: ADHS Symptome",
     "text": "Verteilungen über Gruppen: ADHS Symptome\n\n\n\n\n\n\n\n\nNumber of Work impairments\nPatients with ADHD (n = 134)\nCommunity comparison group (n = 268)\n\n\n\n\n0\n19.4\n72.4\n\n\n1\n31.3\n82.8\n\n\n2\n44.8\n85.1\n\n\n3\n59.7\n88.4\n\n\n4\n70.1\n90.7\n\n\n5\n79.1\n91.8\n\n\n6\n84.3\n92.9\n\n\n7\n90.3\n94.0\n\n\n8\n93.3\n96.3\n\n\n9\n96.3\n97.4\n\n\n10\n99.3\n98.9\n\n\n11\n100\n100"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#brutto--und-nettostichprobe",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#brutto--und-nettostichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Brutto- und Nettostichprobe",
+    "text": "Brutto- und Nettostichprobe\nMit einem Stichprobendesign wird festgelegt, wie Untersuchungseinheiten in die Stichprobe gelangen sollen. Diese Zielstichprobe wird auch als “Bruttostichprobe” bezeichnet. Allerdings kann während der Datenerhebungsphase passieren, dass Untersuchungseinheiten\n\ngar nicht erreichbar sind (Komplettausfall)\ndie Teilnahme ganz verweigern (Unit nonresponse)\ndie Teilnahme an einzelnen Items verweigern (Item nonresponse)\n\nDie Personen, die an der Untersuchung teilnehmen, bilden die Nettostichprobe (Bruttostichprobe - Teilnahmeverweigerung.) Alle Personen, von denen Daten erhalten wurde, mit denen Sie arbeiten können, bilden die analytische Stichprobe (Bruttostichprobe - Teilnahmeverweigerung - Antwortverweigerung)"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#ausschöpfungsquote-response-rate",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#ausschöpfungsquote-response-rate",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Ausschöpfungsquote (response rate)",
+    "text": "Ausschöpfungsquote (response rate)\nDer relative Anteil der Netto- zur Bruttostichprobe ist die Ausschöpfungsquote oder auch response rate.\nDiese können Sie bestimmen, indem zum Beispiel\n\ndas Verhältnis verschickter zu ausgefüllter Fragebögen berechnet wird;\neine Liste mit Telefonnummern angelegt, diese abtelefoniert und der Anteil erreichter Personen notiert wird;\neine “Strichliste” geführt wird, wie viele Personen angesprochen wurden und wie viele geantwortet haben."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#houston-we-have-a-problem",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#houston-we-have-a-problem",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Houston, we have a problem",
+    "text": "Houston, we have a problem"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#ausschöpfung-und-repräsentativität",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#ausschöpfung-und-repräsentativität",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Ausschöpfung und Repräsentativität",
+    "text": "Ausschöpfung und Repräsentativität\n\nEine geringe Ausschöpfungsrate führt nicht zwingend zu einer geringen Repräsentativität.\nEntscheidend ist, ob die Teilnahme - und damit die Ausschöpfung - selektiv ist (selective unit nonresponse).\nWenn die Teilnahme nach Merkmalen selektiv ist, die wir beobachtet haben, können wir die Selektion korrigieren (Gewichtungsverfahren).\nWenn die Teilnahme nach Merkmalen selektiv ist, die wir nicht beobachtet haben, sind unsere Ergebnisse sehr wahrscheinlich unter- oder überschätzt."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#teilnahmeselektion-bei-der-bundestagswahl-2025",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#teilnahmeselektion-bei-der-bundestagswahl-2025",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Teilnahmeselektion bei der Bundestagswahl 2025",
+    "text": "Teilnahmeselektion bei der Bundestagswahl 2025"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#zugang-zum-problem-simulation-von-daten",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#zugang-zum-problem-simulation-von-daten",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Zugang zum Problem: Simulation von Daten",
+    "text": "Zugang zum Problem: Simulation von Daten\n\n\n\n\n\n\n\nflowchart TB\n\nG[Geschlecht] --&gt; E[Einsamkeit]\nB[Bildung] --&gt; E\nG --&gt; B\n\n\n\n\n\n\n\n\n\nIm Folgenden werden wir studieren, wie die Erfassung des “gender loneliness gap” durch Teilnahmeselektion beeinflusst wird.\nFür die Simulation nehmen wir folgendes an:\n\nFrauen sind im Durchschnitt etwas einsamer als Männer;\nBildung reduziert Einsamkeit für Männer und steigert sie für Frauen\n\nhochgebildete Frauen bekommen einen Einsamkeitsmalus\ngering gebildete Männer bekommen einen Einsamkeitsmalus"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#anwendungsfall-der-gender-loneliness-gap",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#anwendungsfall-der-gender-loneliness-gap",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Anwendungsfall: Der gender loneliness gap",
+    "text": "Anwendungsfall: Der gender loneliness gap"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-bruttostichprobe",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-bruttostichprobe",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die “Bruttostichprobe”",
+    "text": "Die “Bruttostichprobe”\nDurch die Datensimulation können wir eine “Bruttostichprobe” simulieren, d.h. eine Stichprobe ohne jegliche Teilnahmeselektion."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#verteilung-von-einsamkeit",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#verteilung-von-einsamkeit",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Verteilung von Einsamkeit",
+    "text": "Verteilung von Einsamkeit"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#gender-loneliness-gap-in-der-simulation-aka-die-wahrheit",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#gender-loneliness-gap-in-der-simulation-aka-die-wahrheit",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "gender loneliness gap in der Simulation (aka “Die Wahrheit”)",
+    "text": "gender loneliness gap in der Simulation (aka “Die Wahrheit”)"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#geschlecht-und-die-verteilung-von-einsamkeit",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#geschlecht-und-die-verteilung-von-einsamkeit",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Geschlecht und die Verteilung von Einsamkeit",
+    "text": "Geschlecht und die Verteilung von Einsamkeit"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#teilnahmeselektion-nach-geschlecht-und-bildung",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#teilnahmeselektion-nach-geschlecht-und-bildung",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Teilnahmeselektion nach Geschlecht und Bildung",
+    "text": "Teilnahmeselektion nach Geschlecht und Bildung\n\n\n\n\n\n\n\nflowchart TB\n\nG[Geschlecht] --&gt; E[Einsamkeit]\nB[Bildung] --&gt; E\nG --&gt; B\nT[Teilnahme]\nG --&gt; T \nB --&gt; T\n\n\n\n\n\n\n\nWir nutzen ab sofort die Teilnahme an einer Stichprobe als eine Eigenschaft, deren Unterschiedlichkeit von anderen Eigenschaften abhängt.\nWir wissen, dass an Umfragen eher\n\nFrauen teilnehmen;\nPersonen teilnehmen, je höher gebildet sie sind.\n\nDas Problem verstärkt sich, weil Frauen seit einigen Jahren im Durchschnitt höhere Abschlüsse erwerben als Männer."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#teilnahmewahrscheinlichkeiten",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#teilnahmewahrscheinlichkeiten",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Teilnahmewahrscheinlichkeit(en)",
+    "text": "Teilnahmewahrscheinlichkeit(en)\nDie Teilnahmewahrscheinlichkeit einer Person können wir als eine (latente) Ausprägung verstehen: Personen sind mehr oder weniger bereit, an einer Stichprobe teilzunehmen. Wir gehen davon aus, dass ab einer Wahrscheinlichkeit von über 50% die Personen teilnehmen."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die Stichprobe nach Teilnahmeselektion",
+    "text": "Die Stichprobe nach Teilnahmeselektion\n\n\n\n\nBrutto\nNetto\n\n\nMann\n57.9\n26.5\n\n\nFrau\n42.1\n73.5\n\n\n\nDer Einfluss der Teilnahmeselektion auf die Stichprobenzusammensetzung nach Geschlecht"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#test",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#test",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Test",
+    "text": "Test\nGeschlecht | Niedrig | Mittel | Hoch | Total |\nMann | 35.68 | 28.17 | 36.15 | 100.00 |\nFrau | 25.32 | 29.68 | 45.00 | 100.00 |\nTotal | 31.32 | 28.80 | 39.88 | 100.00 |"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion-1",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion-1",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die Stichprobe nach Teilnahmeselektion",
+    "text": "Die Stichprobe nach Teilnahmeselektion\n\n\n\n\n\n\nBruttostichprobe\n\n\n\nBildung\n\n\n\n\n\nNiedrig\nMittel\nHoch\n\n\nMann\n35.68\n28.17\n36.15\n\n\nFrau\n25.32\n29.68\n45.00\n\n\nTotal\n31.32\n28.80\n39.88\n\n\n\n\n\n\nNach Teilnahmeselektion\n\n\n\nBildung\n\n\n\n\n\nNiedrig\nMittel\nHoch\n\n\nMann\n9.29\n32.14\n58.57\n\n\nFrau\n8.51\n31.70\n59.79\n\n\nTotal\n8.71\n31.82\n59.47\n\n\n\n\n\n\n\nTable 1: Einfluss der Teilnahmeselektion auf die Stichprobenzusammensetzung nach Bildung und Geschlecht"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion-geschlecht",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion-geschlecht",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die Stichprobe nach Teilnahmeselektion: Geschlecht",
+    "text": "Die Stichprobe nach Teilnahmeselektion: Geschlecht\n\n\n\n\n\n\nBrutto\nNetto\n\n\nMann\n49.6\n27.0\n\n\nFrau\n50.4\n73.0\n\n\n\n\n\nDurch Teilnahmeselektion verstärkt sich die Zusammensetzung zu Gunsten der Frauen.\nDas liegt vor allem am kombinierten Bildungs- und Geschlechtsmalus gering gebildeter Männer."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion-bildung",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-stichprobe-nach-teilnahmeselektion-bildung",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die Stichprobe nach Teilnahmeselektion: Bildung",
+    "text": "Die Stichprobe nach Teilnahmeselektion: Bildung"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#auswirkungen-auf-durschnittswerte",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#auswirkungen-auf-durschnittswerte",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Auswirkungen auf Durschnittswerte",
+    "text": "Auswirkungen auf Durschnittswerte\n\n\nBruttostichprobe \n\nNettostichprobe \n\nDie Mittelwerte der einzelnen Gruppen unterscheiden sich nicht erheblich. Allerdings ist der gesamte “loneliness gap” deutlich größer, weil die Gruppengrößen sich stark verändert haben."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#auswirkung-auf-verteilungen",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#auswirkung-auf-verteilungen",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Auswirkung auf Verteilungen",
+    "text": "Auswirkung auf Verteilungen"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#gewichtung-als-lösung-für-selektive-stichprobenzusammensetzungen",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#gewichtung-als-lösung-für-selektive-stichprobenzusammensetzungen",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Gewichtung als Lösung für selektive Stichprobenzusammensetzungen",
+    "text": "Gewichtung als Lösung für selektive Stichprobenzusammensetzungen\nWenn wir wissen, wie sich die theoretische Population zusammensetzt und damit abschätzen können, wie die Differenzen zwischen beobachteter und theoretisch erwarteter Zusammensetzung ist, können wir die Differenzen hinzufügen, um die Selektivität der Nettostichprobe zu kompensieren.\nDas ist allerdings nur dann eine Lösung, wenn sich die Zustimmungsraten innerhalb der Gruppen, mit denen wir gewichten, nur zufällig danach unterscheiden, ob sie Teil der Stichprobe sind oder nicht."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#was-bedeutet-gewichtung",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#was-bedeutet-gewichtung",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Was bedeutet Gewichtung?",
+    "text": "Was bedeutet Gewichtung?\n\n\nLink zum Sheet."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#the-same-old-song-es-könnt-sovieles-einfach-sein",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#the-same-old-song-es-könnt-sovieles-einfach-sein",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "The same old song: Es könnt’ sovieles einfach sein…",
+    "text": "The same old song: Es könnt’ sovieles einfach sein…\nBisher haben wir angenommen, dass wir alle Eigenschaften, die für Teilnahmeselektion verantwortlich sind, beobachtet haben. Das ist aber sehr oft nicht der Fall.\n\n\n\n\n\n\n\nflowchart TB\n\nsubgraph one\nG[Geschlecht] --&gt; E[Einsamkeit]\nB[Bildung] --&gt; E\nG --&gt; B\nT[Teilnahme]\nG --&gt; T \nB --&gt; T\nend \n\nsubgraph 2\nA[Antifeminismus] \nA --&gt; T \nA --&gt; E\nend\n\n\n\n\n\n\n\nWir nutzen ab sofort die Teilnahme an einer Stichprobe als eine Eigenschaft, deren Unterschiedlichkeit von anderen Eigenschaften abhängt.\nWir wissen, dass an Umfragen eher\n\nFrauen teilnehmen;\nPersonen teilnehmen, je höher gebildet sie sind.\n\nDas Problem verstärkt sich, weil Frauen seit einigen Jahren im Durchschnitt höhere Abschlüsse erwerben als Männer."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#the-same-old-song-es-könnt-so-vieles-einfach-sein",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#the-same-old-song-es-könnt-so-vieles-einfach-sein",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "The same old song: Es könnt’ so vieles einfach sein…",
+    "text": "The same old song: Es könnt’ so vieles einfach sein…\nBisher haben wir angenommen, dass wir alle Eigenschaften, die für Teilnahmeselektion verantwortlich sind, beobachtet haben. Das ist aber sehr oft nicht der Fall.\nTeilnahmeselektion ist ein sehr komplexer sozialer Prozess, den Sie für jede Stichprobe durchdringen müssen. Wir können sehr oft aus pragmatischen, ökonomischen oder rechtlichen Gründen nicht alle Eigenschaften erheben, die bei der Teilnahmeselektion eine Rolle spielen.\nFür die Beurteilung der Aussagekräftigkeit von Ergebnissen ist das aber von ganz erheblicher Bedeutung!"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-rolle-antifeministischer-einstellungen",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-rolle-antifeministischer-einstellungen",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die Rolle antifeministischer Einstellungen",
+    "text": "Die Rolle antifeministischer Einstellungen\n\n\n\n\n\n\n\nflowchart TB\n\nsubgraph beobachtet\ndirection LR\nG[Geschlecht] --&gt; E[Einsamkeit]\nB[Bildung] --&gt; E\nG --&gt; B\nT[Teilnahme]\nG --&gt; T \nB --&gt; T\nend \n\nsubgraph unbeobachtet\nA[Antifeminismus] \nT ~~~ A \nA --&gt; T\nend\n\n\n\n\n\n\n\nJe höher die Ausprägung einer antifeministischen Einstellung bei einer Person ist, desto geringer ist ihre Teilnahmebereitschaft.\nNicht verzeichnet im Graph (da sonst zu hässlich…):\n\nFrauen haben deutlich geringere antifem. Einstellungen;\nantifem. Einstellungen machen einsam;\nje höher die Bildung, desto geringer sind die antifem. Einstellungen."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#exkurs-die-messung-antifeministischer-einstellungen",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#exkurs-die-messung-antifeministischer-einstellungen",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Exkurs: Die Messung antifeministischer Einstellungen",
+    "text": "Exkurs: Die Messung antifeministischer Einstellungen\nHöcker et a. (2025) entwickelten eine Kurzskala zur Erfassung antifeministischer Einstellungen mit folgenden Items:\n\n\n\n\n\n\n\nItem\n\n\n\n\n\nAF_PO\nFrauen machen sich in der Politik häufig lächerlich.\n\n\nAF_DE\nFrauen, die mit ihren Forderungen zu weit gehen, müssen sich nicht wundern, wenn sie wieder in ihre Schranken gewiesen werden.\n\n\nAF_SE\nFrauen übertreiben ihre Schilderungen über sexualisierte Gewalt häufig, um Vorteile aus der Situation zu schlagen.\n\n\nAF_HA\nDurch den Feminismus werden die gesellschaftliche Harmonie und Ordnung gestört.\n\n\n\nAntworten sind auf einer 4er-Likert-Antwortskala von “lehne völlig ab” zu “stimme völlig zu” möglich."
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#exkurs-die-validität-der-skala",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#exkurs-die-validität-der-skala",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Exkurs: Die Validität der Skala",
+    "text": "Exkurs: Die Validität der Skala\n\nKorrelation der Antifeminismus Ausprägungen mit verwandten Konzepten\n\n\n\n\n\n\n\nScale\nAntifeminism\nGender role sexism\n\n\n\n\nRight-wing extremism\n0.51\n0.39\n\n\nRight-wing dictatorship\n0.40\n0.34\n\n\nChauvinism\n0.42\n0.31\n\n\nXenophobia\n0.44\n0.28\n\n\nAntisemitism\n0.44\n0.38\n\n\nSocial Darwinism\n0.44\n0.38\n\n\nBelittling the crimes of National Socialism\n0.37\n0.25\n\n\nAuthoritarianism\n0.35\n0.32\n\n\nAuthoritarian aggression\n0.27\n0.23\n\n\nAuthoritarian submission\n0.27\n0.26\n\n\nAuthoritarian conventionalism\n0.31\n0.28\n\n\nGender role sexism\n0.53\n–"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-verteilung-von-antifeminismus-in-der-simulation",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#die-verteilung-von-antifeminismus-in-der-simulation",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Die Verteilung von Antifeminismus in der Simulation",
+    "text": "Die Verteilung von Antifeminismus in der Simulation"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#einfluss-auf-die-stichprobenzusammensetzung",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#einfluss-auf-die-stichprobenzusammensetzung",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Einfluss auf die Stichprobenzusammensetzung",
+    "text": "Einfluss auf die Stichprobenzusammensetzung"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#einfluss-auf-einsamkeitswerte",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#einfluss-auf-einsamkeitswerte",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Einfluss auf Einsamkeitswerte",
+    "text": "Einfluss auf Einsamkeitswerte\n\n\nNettostichprobe \n\n“+” Einfluss von Antifeminismus"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#gewichtung-hilft-nur-noch-bedingt",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html#gewichtung-hilft-nur-noch-bedingt",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "Gewichtung hilft nur noch bedingt",
+    "text": "Gewichtung hilft nur noch bedingt\n\nIm Gegensatz zur Teilnahmeselektion mit beobachteten Faktoren haben wir mit dem Antifeminismus einen unbeobachteten Faktor, der sog. unbeobachtete Heterogenität in die Gruppen bringt.\n\nD.h.: Innerhalb der Geschlechts/Bildungsgruppen müssten wir eigentlich nach dem Grad des Antifeminismus unterscheiden, können es aber nicht.\nDer Einfluss des Antifeminismus verändert nicht nur die relativen Gruppenanteile sondern auch die Einsamkeitswerte.\nMit einer Gewichtung nach Geschlecht und Bildung können wir aber weder die Selektion nach Antifeminismus in die Stichprobe noch den Einfluss des Antifeminismus auf Einsamkeit ausgleichen."
   }
 ]
