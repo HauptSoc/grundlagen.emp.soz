@@ -2669,5 +2669,19 @@
     "title": "Unterschiede erheben: Stichprobendesign",
     "section": "Gewichtung hilft nur noch bedingt",
     "text": "Gewichtung hilft nur noch bedingt\n\nIm Gegensatz zur Teilnahmeselektion mit beobachteten Faktoren haben wir mit dem Antifeminismus einen unbeobachteten Faktor, der sog. unbeobachtete Heterogenität in die Gruppen bringt.\n\nD.h.: Innerhalb der Geschlechts/Bildungsgruppen müssten wir eigentlich nach dem Grad des Antifeminismus unterscheiden, können es aber nicht.\nDer Einfluss des Antifeminismus verändert nicht nur die relativen Gruppenanteile sondern auch die Einsamkeitswerte.\nMit einer Gewichtung nach Geschlecht und Bildung können wir aber weder die Selektion nach Antifeminismus in die Stichprobe noch den Einfluss des Antifeminismus auf Einsamkeit ausgleichen."
+  },
+  {
+    "objectID": "slides/11-slides.html",
+    "href": "slides/11-slides.html",
+    "title": "Unterschiede erheben: Teilnahmeselektion",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html",
+    "href": "slides/11-UnterschiedeErheben-Teilnahmeselektion.html",
+    "title": "Unterschiede erheben: Stichprobendesign",
+    "section": "",
+    "text": "Mit einem Stichprobendesign wird festgelegt, wie Untersuchungseinheiten in die Stichprobe gelangen sollen. Diese Zielstichprobe wird auch als “Bruttostichprobe” bezeichnet. Allerdings kann während der Datenerhebungsphase passieren, dass Untersuchungseinheiten\n\ngar nicht erreichbar sind (Komplettausfall)\ndie Teilnahme ganz verweigern (Unit nonresponse)\ndie Teilnahme an einzelnen Items verweigern (Item nonresponse)\n\nDie Personen, die an der Untersuchung teilnehmen, bilden die Nettostichprobe (Bruttostichprobe - Teilnahmeverweigerung.) Alle Personen, von denen Daten erhalten wurde, mit denen Sie arbeiten können, bilden die analytische Stichprobe (Bruttostichprobe - Teilnahmeverweigerung - Antwortverweigerung)"
   }
 ]

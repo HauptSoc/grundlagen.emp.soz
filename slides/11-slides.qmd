@@ -1,5 +1,5 @@
 ---
-title: "Unterschiede erheben: Teilnaheselektion"
+title: "Unterschiede erheben: Teilnahmeselektion"
 author: "Andreas Haupt"
 format: html
 ---
