@@ -1,0 +1,7 @@
+---
+title: "Unterschiede erheben: Antwortverweigerung"
+author: "Andreas Haupt"
+format: html
+---
+  
+  {{< revealjs file="12-UnterschiedeErheben-Item_Nonresponse.html" height="950px" width="50%" class="ratio ratio-16x9" >}}

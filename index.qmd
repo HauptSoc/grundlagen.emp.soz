@@ -4,7 +4,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 ---
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:--:|----|----|:--:|:--:|:--:|:--:|:--:|
+|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | [🖥](slides/00-slides.qmd) |  |  | [📁](misc\01-zusatz.qmd) |
 | 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-slides.qmd "Wissenschaftliche Spielregeln") |  |  |  |
 |  |  | **I. Unterschiede messen** |  |  |  |  |  |
@@ -20,7 +20,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 |  |  | **II. Unterschiede erheben** |  |  |  |  |  |
 | 10 | 15.01. | Stichprobenziehung | 📖 | [🖥](slides\10-slides.qmd) | [✍](exercises/07-ex.qmd) |  |  |
 | 11 | 22.01. | Teilnahmeselektion | 📖 | [🖥](slides\11-slides.qmd) | [✍](exercises/08-ex.qmd) |  |  |
-| 12 | 29.01. | Antwortverweigerung | 📖 | 🖥 | ✍ | 📋 |  |
+| 12 | 29.01. | Antwortverweigerung | 📖 | [🖥](slides\12-slides.qmd) | ✍ | 📋 |  |
 |  |  | **III. Die richtigen Unterschiede erfassen** |  |  |  |  |  |
 | 13 | 05.02. | Untersuchungsdesigns | 📖 | 🖥 | ✍ |  |  |
 | 14 | 12.02. | Experimentaldesigns | 📖 | 🖥 | ✍ |  |  |

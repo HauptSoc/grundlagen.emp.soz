@@ -100,65 +100,39 @@ Auszug aus der BIBB-BAuA Erwerbstätigenbefragung 2018.
 :::
 :::::
 
-## Eine Insel mit zwei Bergen...
-
-::::: columns
-::: {.column width="50%"}
-```{mermaid}
-flowchart TB
-
-subgraph beobachtet
-direction LR
-G[Geschlecht] --> E[Einsamkeit]
-B[Bildung] --> E
-G --> B
-E --> M[Einnahme von Anti-Depressiva]
-E -.-> M
-
-linkStyle 4 stroke:#FF3333,stroke-width:4px,color:red;
-
-end
-
-
-subgraph unbeobachtet
-A[Scham] 
-M ~~~ A 
-A -.-> M
-linkStyle 6 stroke:#FF3333,stroke-width:4px,color:red;
-end
-```
-:::
-
-::: {.column width="50%"}
-Right column
-:::
-:::::
-
-## Ergebnisse der Simulation
 
 ## Führen Löcher im Käse zu schlechtem Käse?
 
-Wir haben bisher so getan, als hätten wir alle Faktoren, die zu item nonresponse führen, beobachtet. Wie bei der Teilnahmeverweigerung ist dies aber praktisch nie der Fall. Dies ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!
+Item nonresponse ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!
 
-Problematisch wird es, wenn der unbeobachtete Faktor eine Dreifachverbindung hat:
+Problematisch wird es, wenn die (unbeobachtete) Eigenschaft, die zur Verweigerung führt, eine Dreifachverbindung hat:
 
--   er ist mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)
+-    mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)
 
--   er ist mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)
+-    mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)
 
--   er ist mit der Antwort- oder Teilnahmeselektion verbunden
+-    mit Teilnahmeselektion verbunden
 
-## Zusammenfassung: Probleme durch Selektivität
+## Probleme durch Non-response (NR)
 
-Durch systematische Teilnahmeverweigerung (unit oder item nonresponse) durch einen Faktor Z entseht Selektivität, die die Zusammensetzung der Stichprobe und die Differenzen von Y über X betreffen kann.
+-   Wenn NR mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.
 
--   Wenn Z mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.
+-   Wenn NR mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.
 
--   Wenn Z mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.
+-   Wenn NR sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv.
 
--   Wenn Z sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv.
 
-## Lösungsmöglichkeit: Imputation
+## Sneak-Preview: Verheimlichung des 🥦 {.midi}
+
+|                   |Indirect survey (95% CI)    | Traditional survey (95% CI) |
+| --------------------------------- | --------------------------- | ------------------------- |
+| Gender                                                                                                      |
+| Men                                                                                                        | 26.5% (23.2%; 29.7%)        | 12.0% (9.2%; 15.2%)      |
+| Women                                                                                                      | 13.4% (11.0%; 15.9%)        | 9.1% (7.1%; 11.6%)       |
+
+
+
+## Lösungsmöglichkeit: Imputation {.midi}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -172,6 +146,11 @@ Dieses Verfahren wird *multiple Impuation* genannt [(Lektüre dazu hier)](https:
 :::
 :::::
 
+
+## Ist das Hexerei? 
+
+![Quelle: Paul. R. Johnson (2024)](https://paulrjohnson.net/blog/2024-03-26-missing-data-solutions/index_files/figure-html/multiple-imputation-1.png){width=70%}
+
 ## Lösungsmöglichkeit: Item Sum/Count Technique
 
 Es gibt Items, die ein sehr hohes Risiko von Antwortverweigerung aufweisen *und* mit vielen unbeobachteten Merkmalen verknüpft sind. Dazu zählen u.a. illegale Praktiken (Schwarzarbeit, Datenfälschung, Drogen, Doping) oder ethische Normenverstöße, die nicht zwingend illegal sein müssen.
@@ -180,7 +159,7 @@ Oft wissen wir nicht, wie hoch die Rate dieser Verhaltensweisen in der Populatio
 
 [^1]: Item Sum = metrische Antwortskalen; Item Count = nominale Antwortskalen
 
-## Lösungsmöglichkeit: Item Sum/Count Technique
+## Lösungsmöglichkeit: Item Sum/Count Technique {.midi}
 
 Sie basiert auf folgender Idee:
 
@@ -196,11 +175,11 @@ Sie basiert auf folgender Idee:
 
 6.  Aus der Differenz der durchschnittlichen Summen (LL - KL) beider Gruppen kann ein typischer Antwortwert der heiklen Frage geschätzt werden.
 
-## Ein Blick in die Praxis
+## Ein Blick in die Praxis (Orchideen Mafia)
 
-![](https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg)
+![](https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg){width=70%}
 
-## Item Sum/Count Technique - Varianten
+## Item Sum/Count Technique - Varianten {.midi}
 
 ::::: columns
 ::: {.column width="50%"}

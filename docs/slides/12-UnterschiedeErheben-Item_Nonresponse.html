@@ -124,10 +124,6 @@
       margin-right: 0; 
     }
   </style>
-  <meta name="mermaid-theme" content="neutral">
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
     .custom-small table {
       font-size: .6em
@@ -225,69 +221,59 @@
 </ul>
 </div></div>
 </section>
-<section id="eine-insel-mit-zwei-bergen" class="slide level2">
-<h2>Eine Insel mit zwei Bergen…</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-subgraph beobachtet
-direction LR
-G[Geschlecht] --&gt; E[Einsamkeit]
-B[Bildung] --&gt; E
-G --&gt; B
-E --&gt; M[Einnahme von Anti-Depressiva]
-E -.-&gt; M
-
-linkStyle 4 stroke:#FF3333,stroke-width:4px,color:red;
-
-end
-
-
-subgraph unbeobachtet
-A[Scham] 
-M ~~~ A 
-A -.-&gt; M
-linkStyle 6 stroke:#FF3333,stroke-width:4px,color:red;
-end
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Right column</p>
-</div></div>
-</section>
-<section id="ergebnisse-der-simulation" class="slide level2">
-<h2>Ergebnisse der Simulation</h2>
-</section>
 <section id="führen-löcher-im-käse-zu-schlechtem-käse" class="slide level2">
 <h2>Führen Löcher im Käse zu schlechtem Käse?</h2>
-<p>Wir haben bisher so getan, als hätten wir alle Faktoren, die zu item nonresponse führen, beobachtet. Wie bei der Teilnahmeverweigerung ist dies aber praktisch nie der Fall. Dies ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!</p>
-<p>Problematisch wird es, wenn der unbeobachtete Faktor eine Dreifachverbindung hat:</p>
+<p>Item nonresponse ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!</p>
+<p>Problematisch wird es, wenn die (unbeobachtete) Eigenschaft, die zur Verweigerung führt, eine Dreifachverbindung hat:</p>
 <ul>
-<li><p>er ist mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)</p></li>
-<li><p>er ist mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)</p></li>
-<li><p>er ist mit der Antwort- oder Teilnahmeselektion verbunden</p></li>
+<li><p>mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)</p></li>
+<li><p>mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)</p></li>
+<li><p>mit Teilnahmeselektion verbunden</p></li>
 </ul>
 </section>
-<section id="zusammenfassung-probleme-durch-selektivität" class="slide level2">
-<h2>Zusammenfassung: Probleme durch Selektivität</h2>
-<p>Durch systematische Teilnahmeverweigerung (unit oder item nonresponse) durch einen Faktor Z entseht Selektivität, die die Zusammensetzung der Stichprobe und die Differenzen von Y über X betreffen kann.</p>
+<section id="probleme-durch-non-response-nr" class="slide level2">
+<h2>Probleme durch Non-response (NR)</h2>
 <ul>
-<li><p>Wenn Z mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.</p></li>
-<li><p>Wenn Z mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.</p></li>
-<li><p>Wenn Z sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv.</p></li>
+<li><p>Wenn NR mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.</p></li>
+<li><p>Wenn NR mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.</p></li>
+<li><p>Wenn NR sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv.</p></li>
 </ul>
 </section>
-<section id="lösungsmöglichkeit-imputation" class="slide level2">
+<section id="sneak-preview-verheimlichung-des" class="slide level2 midi">
+<h2>Sneak-Preview: Verheimlichung des 🥦</h2>
+<table>
+<colgroup>
+<col style="width: 38%">
+<col style="width: 31%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Indirect survey (95% CI)</th>
+<th>Traditional survey (95% CI)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gender</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Men</td>
+<td>26.5% (23.2%; 29.7%)</td>
+<td>12.0% (9.2%; 15.2%)</td>
+</tr>
+<tr class="odd">
+<td>Women</td>
+<td>13.4% (11.0%; 15.9%)</td>
+<td>9.1% (7.1%; 11.6%)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lösungsmöglichkeit-imputation" class="slide level2 midi">
 <h2>Lösungsmöglichkeit: Imputation</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -297,12 +283,21 @@ end
 <p>Dieses Verfahren wird <em>multiple Impuation</em> genannt <a href="https://link.springer.com/chapter/10.1007/978-3-531-92038-2_6">(Lektüre dazu hier)</a>. Wir werden dieses Verfahren im nächsten Semester im Rahmen der <em>multiplen Regression</em> genauer besprechen.</p>
 </div></div>
 </section>
+<section id="ist-das-hexerei" class="slide level2">
+<h2>Ist das Hexerei?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://paulrjohnson.net/blog/2024-03-26-missing-data-solutions/index_files/figure-html/multiple-imputation-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Quelle: Paul. R. Johnson (2024)"><img data-src="https://paulrjohnson.net/blog/2024-03-26-missing-data-solutions/index_files/figure-html/multiple-imputation-1.png" style="width:70.0%" alt="Quelle: Paul. R. Johnson (2024)"></a></p>
+<figcaption>Quelle: Paul. R. Johnson (2024)</figcaption>
+</figure>
+</div>
+</section>
 <section id="lösungsmöglichkeit-item-sumcount-technique" class="slide level2">
 <h2>Lösungsmöglichkeit: Item Sum/Count Technique</h2>
 <p>Es gibt Items, die ein sehr hohes Risiko von Antwortverweigerung aufweisen <em>und</em> mit vielen unbeobachteten Merkmalen verknüpft sind. Dazu zählen u.a. illegale Praktiken (Schwarzarbeit, Datenfälschung, Drogen, Doping) oder ethische Normenverstöße, die nicht zwingend illegal sein müssen.</p>
 <p>Oft wissen wir nicht, wie hoch die Rate dieser Verhaltensweisen in der Population überhaupt ist. Hierfür können wir die <em>Item Sum/Count Technique</em><sup>1</sup> benutzen (Trappmann et al.&nbsp;2014).</p>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Item Sum = metrische Antwortskalen; Item Count = nominale Antwortskalen</p></li></ol></aside></section>
-<section id="lösungsmöglichkeit-item-sumcount-technique-1" class="slide level2">
+<section id="lösungsmöglichkeit-item-sumcount-technique-1" class="slide level2 midi">
 <h2>Lösungsmöglichkeit: Item Sum/Count Technique</h2>
 <p>Sie basiert auf folgender Idee:</p>
 <ol type="1">
@@ -314,15 +309,15 @@ end
 <li><p>Aus der Differenz der durchschnittlichen Summen (LL - KL) beider Gruppen kann ein typischer Antwortwert der heiklen Frage geschätzt werden.</p></li>
 </ol>
 </section>
-<section id="ein-blick-in-die-praxis" class="slide level2">
-<h2>Ein Blick in die Praxis</h2>
-<p><a href="https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg"></a></p>
+<section id="ein-blick-in-die-praxis-orchideen-mafia" class="slide level2">
+<h2>Ein Blick in die Praxis (Orchideen Mafia)</h2>
+<p><a href="https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg" style="width:70.0%"></a></p>
 </section>
-<section id="item-sumcount-technique---varianten" class="slide level2">
+<section id="item-sumcount-technique---varianten" class="slide level2 midi">
 <h2>Item Sum/Count Technique - Varianten</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><a href="https://besjournals.onlinelibrary.wiley.com/cms/asset/2e2ad742-3c40-4e51-b538-9491d3c9b22c/mee313137-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="https://besjournals.onlinelibrary.wiley.com/cms/asset/2e2ad742-3c40-4e51-b538-9491d3c9b22c/mee313137-fig-0002-m.jpg"></a></p>
+<p><a href="https://besjournals.onlinelibrary.wiley.com/cms/asset/2e2ad742-3c40-4e51-b538-9491d3c9b22c/mee313137-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="https://besjournals.onlinelibrary.wiley.com/cms/asset/2e2ad742-3c40-4e51-b538-9491d3c9b22c/mee313137-fig-0002-m.jpg"></a></p>
 </div><div class="column" style="width:50%;">
 <p>Diese Technik ist nicht auf eine Liste beschränkt (Standard Variante links im Bild). Sie können auch mehrere Listen nutzen (“Double list”) oder die Variation eines Merkmals nutzen, von dem wir wissen, dass es (annährend) zufällig in der Population verteilt ist (letzte Nummer der Telefonnummer ist gerade/ungerade).</p>
 <p>Wir können diese Technik auch dazu nutzen, um zu studieren, wie stark selektiv die bisherigen Erhebungen waren, die das Item direkt abgefragt haben (“direct questioning”)</p>
@@ -489,7 +484,7 @@ end
 <h2>The magic sauce</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><a href="images\crosswise-explanation.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images\crosswise-explanation.svg"></a></p>
+<p><a href="images\crosswise-explanation.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images\crosswise-explanation.svg"></a></p>
 </div><div class="column" style="width:50%;">
 <p>Mit ein wenig Mathe-Voodoo <a href="https://link.springer.com/article/10.1007/s00184-007-0131-x">(Yu et al.&nbsp;2008)</a>, können wir die Wahrscheinlichkeit, auf die heikle Frage mit “Ja” zu antworten von allen anderen Pfaden isolieren. Das ist deshalb möglich, weil wir <span class="math inline">\(P(\text{Fall A})\)</span> beobachtet haben und <span class="math inline">\(P(\text{Ja | Nicht-heikel})\)</span> <strong>kennen müssen</strong>.</p>
 </div></div>
@@ -497,11 +492,11 @@ end
 </section>
 <section id="studentische-plagiate" class="slide level2">
 <h2>Studentische Plagiate</h2>
-<p><a href="images/jann-crosswise.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/jann-crosswise.png"></a></p>
+<p><a href="images/jann-crosswise.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="images/jann-crosswise.png"></a></p>
 </section>
 <section id="studentische-plagiate-1" class="slide level2">
 <h2>Studentische Plagiate</h2>
-<p><a href="images/jann-plagiate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="images/jann-plagiate.png"></a></p>
+<p><a href="images/jann-plagiate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="images/jann-plagiate.png"></a></p>
 </section>
 <section id="verheimlichung-des" class="slide level2">
 <h2>Verheimlichung des 🥦</h2>
@@ -509,7 +504,7 @@ end
 <div class="column" style="width:30%;">
 <p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/add.16219">Andersson et al.&nbsp;(2023)</a> studierten, ob Personen unterschiedliche Angaben zum Cannabis-Konsum machten, je nachdem, ob sie direkt oder indirekt befragt wurden.</p>
 </div><div class="column" style="width:70%;">
-<p><a href="images/crosswise-cannabis.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="images/crosswise-cannabis.png"></a></p>
+<p><a href="images/crosswise-cannabis.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/crosswise-cannabis.png"></a></p>
 </div></div>
 </section>
 <section id="verheimlichung-des-1" class="slide level2 midi scrollable">

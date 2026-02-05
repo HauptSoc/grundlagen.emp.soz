@@ -2752,7 +2752,7 @@
     "href": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#führen-löcher-im-käse-zu-schlechtem-käse",
     "title": "Unterschiede erheben: Item Non-Response",
     "section": "Führen Löcher im Käse zu schlechtem Käse?",
-    "text": "Führen Löcher im Käse zu schlechtem Käse?\nWir haben bisher so getan, als hätten wir alle Faktoren, die zu item nonresponse führen, beobachtet. Wie bei der Teilnahmeverweigerung ist dies aber praktisch nie der Fall. Dies ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!\nProblematisch wird es, wenn der unbeobachtete Faktor eine Dreifachverbindung hat:\n\ner ist mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)\ner ist mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)\ner ist mit der Antwort- oder Teilnahmeselektion verbunden"
+    "text": "Führen Löcher im Käse zu schlechtem Käse?\nItem nonresponse ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!\nProblematisch wird es, wenn die (unbeobachtete) Eigenschaft, die zur Verweigerung führt, eine Dreifachverbindung hat:\n\nmit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)\nmit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)\nmit Teilnahmeselektion verbunden"
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#zusammenfassung-probleme-durch-selektivität",
@@ -2886,5 +2886,54 @@
     "title": "Unterschiede erheben: Item Non-Response",
     "section": "Verheimlichung des 🥦",
     "text": "Verheimlichung des 🥦\n\n\n\n\n\n\n\n\n\nIndirect survey (95% CI)\nTraditional survey (95% CI)\n\n\n\n\nGender\n\n\n\n\nMen\n26.5% (23.2%; 29.7%)\n12.0% (9.2%; 15.2%)\n\n\nWomen\n13.4% (11.0%; 15.9%)\n9.1% (7.1%; 11.6%)\n\n\nBirth year\n\n\n\n\n1992–95\n17.5% (14.2%; 20.7%)\n8.7% (6.2%; 11.9%)\n\n\n1996–99\n21.3% (17.7%; 24.9%)\n12.2% (9.0%; 16.1%)\n\n\n2000–03\n18.8% (15.2%; 22.4%)\n10.4% (7.6%; 13.8%)\n\n\nEducation\n\n\n\n\nCompulsory (9 years)\n25.3% (18.7%; 31.9%)\n10.2% (6.0%; 15.8%)\n\n\nHigh school (11–12 years)\n19.3% (16.6%; 22.1%)\n10.2% (7.9%; 12.9%)\n\n\nUniversity (&gt; 12 years)\n16.5% (13.1%; 19.8%)\n9.6% (6.8%; 13.2%)\n\n\nOther\n24.1% (14.0%; 34.2%)\n17.2% (8.6%; 29.4%)\n\n\nOccupational status\n\n\n\n\nEmployed\n16.2% (13.5%; 19.0%)\n9.0% (6.7%; 11.7%)\n\n\nStudying or internship\n20.4% (17.3%; 23.5%)\n10.8% (8.3%; 13.8%)\n\n\nUnemployed\n32.0% (22.8%; 41.2%)\n11.3% (4.3%; 23.0%)\n\n\nCohabitation\n\n\n\n\nYes\n17.4% (15.1%; 19.6%)\n9.1% (7.3%; 11.1%)\n\n\nNo\n25.2% (20.8%; 29.5%)\n15.0% (10.8%; 20.0%)\n\n\nCountry of birth\n\n\n\n\nSweden\n18.4% (16.2%; 20.5%)\n10.6% (8.8%; 12.6%)\n\n\nOther Nordic\n−1.6% (−16.3%; 13.1%)\n9.1% (0.2%; 41.3%)\n\n\nOther European\n26.8% (16.4%; 37.1%)\n13.9% (4.7%; 29.5%)\n\n\nNon-European\n23.8% (17.3%; 30.4%)\n7.6% (3.3%; 14.5%)\n\n\nHealth status—general\n\n\n\n\nGood\n17.8% (15.7%; 19.9%)\n10.2% (8.3%; 12.2%)\n\n\nAverage\n25.4% (19.5%; 31.3%)\n10.3% (6.0%; 16.2%)\n\n\nBad\n36.1% (21.9%; 50.3%)\n16.7% (6.4%; 32.8%)\n\n\nHealth status—mental\n\n\n\n\nGood\n16.8% (14.4%; 19.1%)\n8.8% (6.9%; 10.9%)\n\n\nAverage\n21.3% (16.9%; 25.6%)\n13.6% (9.6%; 18.4%)\n\n\nBad\n32.1% (24.9%; 39.4%)\n14.0% (8.5%; 21.2%)\n\n\nHealth status—physical\n\n\n\n\nGood\n18.6% (16.3%; 20.8%)\n10.5% (8.6%; 12.7%)\n\n\nAverage\n21.0% (16.3%; 25.6%)\n10.1% (6.5%; 14.9%)\n\n\nBad\n23.9% (13.2%; 34.5%)\n8.6% (2.9%; 19.0%)"
+  },
+  {
+    "objectID": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#sneak-preview-verheimlichung-des",
+    "href": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#sneak-preview-verheimlichung-des",
+    "title": "Unterschiede erheben: Item Non-Response",
+    "section": "Sneak-Preview: Verheimlichung des 🥦",
+    "text": "Sneak-Preview: Verheimlichung des 🥦\n\n\n\n\n\n\n\n\n\nIndirect survey (95% CI)\nTraditional survey (95% CI)\n\n\n\n\nGender\n\n\n\n\nMen\n26.5% (23.2%; 29.7%)\n12.0% (9.2%; 15.2%)\n\n\nWomen\n13.4% (11.0%; 15.9%)\n9.1% (7.1%; 11.6%)"
+  },
+  {
+    "objectID": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#ist-das-hexerei",
+    "href": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#ist-das-hexerei",
+    "title": "Unterschiede erheben: Item Non-Response",
+    "section": "Ist das Hexerei?",
+    "text": "Ist das Hexerei?\n\n\n\nQuelle: Paul. R. Johnson (2024)"
+  },
+  {
+    "objectID": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#probleme-durch-non-response-nr",
+    "href": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#probleme-durch-non-response-nr",
+    "title": "Unterschiede erheben: Item Non-Response",
+    "section": "Probleme durch Non-response (NR)",
+    "text": "Probleme durch Non-response (NR)\n\nWenn NR mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.\nWenn NR mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.\nWenn NR sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv."
+  },
+  {
+    "objectID": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#ein-blick-in-die-praxis-orchideen-mafia",
+    "href": "slides/12-UnterschiedeErheben-Item_Nonresponse.html#ein-blick-in-die-praxis-orchideen-mafia",
+    "title": "Unterschiede erheben: Item Non-Response",
+    "section": "Ein Blick in die Praxis (Orchideen Mafia)",
+    "text": "Ein Blick in die Praxis (Orchideen Mafia)"
+  },
+  {
+    "objectID": "slides/12-slides.html",
+    "href": "slides/12-slides.html",
+    "title": "Unterschiede erheben: Antwortverweigerung",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/graveyard.html",
+    "href": "slides/graveyard.html",
+    "title": "Graveyard",
+    "section": "",
+    "text": "Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al. (2015)\n\n\n\n\nMütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.\nMütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz."
+  },
+  {
+    "objectID": "slides/graveyard.html#fehlerquellen-unterscheiden",
+    "href": "slides/graveyard.html#fehlerquellen-unterscheiden",
+    "title": "Graveyard",
+    "section": "",
+    "text": "Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al. (2015)\n\n\n\n\nMütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.\nMütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz."
   }
 ]
