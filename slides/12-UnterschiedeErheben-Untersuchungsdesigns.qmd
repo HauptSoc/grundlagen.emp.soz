@@ -36,7 +36,7 @@ include-in-header:
 
 Als Sozialwissenschaftler:in können Sie sehr unterschiedliche Forschungsfragen stellen, die unterschiedliche Untersuchungsdesigns zur Folge haben (müssen):
 
-1.  Nach welchen Symptomen suchen Ärzt:innen bei gleicher zugrundeliegender Krankheit über verschiedene Gruppen?
+1.  Erkennen Lehrer:innen Depressionen bei Mädchen mit höherer Wahrscheinlichkeit als bei Jungen?
 
 2.  Gibt es einen Zusammenhang zwischen dem Beruf und der Lebenszufriedenheit?
 
@@ -48,9 +48,132 @@ Als Sozialwissenschaftler:in können Sie sehr unterschiedliche Forschungsfragen 
 
 6.  Steigt der relative Anteil von sexuell nicht aufgeklärten aber sexuell aktiven Jugendlichen zwischen 13-15 Jahren?
 
+
+## Was wollen wir da eigentlich wissen? 
+
+Frage 1: Wie erfassen Lehrer:innen Symptome? 
+
+```{mermaid}
+flowchart TB
+
+subgraph Mädchen 
+direction LR
+SM1([Symptom A]) 
+SM2([Symptom B])
+SM3([Symptom C])
+
+DM[Depression] 
+
+DM --> SM1 & SM2 & SM3
+
+end 
+
+subgraph Jungen
+direction LR
+SJ1([Symptom B]) 
+SJ2([Symptom D])
+
+DJ[Depression] 
+
+DJ --> SJ1 & SJ2
+end 
+
+L[Lehrer:innen] --> SM1 & SM3 & SJ2
+
+```
+
+## Was wollen wir da eigentlich wissen? 
+
+Frage 2: Gibt es (irgend)einen Zusammenhang zwischen Beruf & Lebenszufriedenheit? 
+
+```{mermaid}
+flowchart LR
+
+B[Beruf] --> L[Lebenszufriedenheit]
+X[?] <--> B & L
+
+```
+
+
+## Was wollen wir da eigentlich wissen? 
+
+Frage 3a: Ist ein Medikament wirksam? Frage 3b: Wirkt ein türkischer Name anders als ein deutscher?
+
+```{mermaid}
+flowchart TB
+
+subgraph Medikament 
+Z1[Zustand $t_1$] 
+Z2[Zustand $t_2$]
+MJ[Medikament genommen]
+MN[Medikament nicht genommen]
+
+Z1 --> MJ --> Z2
+Z1 --> MN --> Z2
+end
+
+subgraph Diskriminierung 
+
+P[Musterperson]
+DN[Deutscher Name]
+TN[Türkischer Name]
+E[Einladung zur Besichtigung]
+
+P --> DN & TN
+DN & TN --> E
+
+end 
+
+```
+
+## Was wollen wir da eigentlich wissen? 
+
+Frage 4a: Führt eine Veränderung in X (Umzug) zu einer Veränderung von Y (Noten)?
+
+```{mermaid}
+flowchart LR
+    X1["X t_1"] --> Y1["Y t_1"]
+    X2["X t_2"] --> Y2["Y t_2"]
+    Y1 ~~~ X2
+    X1 -.- X2
+    Y1 -.- Y2
+
+```
+
+## Was wollen wir da eigentlich wissen? 
+
+Frage 4a: Wie verändert sich in der Population die Verteilung der Ausprägung von Eigenschaften?
+
+```{mermaid}
+flowchart LR
+    X1["X t_1"] 
+    Y1["Y t_1"]
+    X2["X t_2"]
+    Y2["Y t_2"]
+  
+    X1 -.- X2
+    Y1 -.- Y2
+
+```
+
+## Was wollen wir da eigentlich wissen? 
+
+Frage 4b: Führt eine Veränderung in X (Umzug) zu einer Veränderung von Y (Noten)?
+
+```{mermaid}
+flowchart LR
+    X1["X t_1"] --> Y1["Y t_1"]
+    X2["X t_2"] --> Y2["Y t_2"]
+    Y1 ~~~ X2
+    X1 -.- X2
+    Y1 -.- Y2
+
+```
+
+
 ## Untersuchungsdesigns
 
-Bezüglich unterschiedlicher Untersuchungsdesigns können vier zentrale Fragen unterschieden werden:
+Bezüglich unterschiedlicher (quantitativer) Untersuchungsdesigns können drei zentrale Fragen unterschieden werden:
 
 1.  Gibt es eine randomisierte und kontrollierte Aussetzung eines Faktors auf Untersuchungseinheiten?
 
@@ -66,128 +189,178 @@ Bezüglich unterschiedlicher Untersuchungsdesigns können vier zentrale Fragen u
 
 Es ist möglich, alle Varianten zu kombinieren!
 
+
 ## Untersuchungsdesigns & Datenstrukturen
 
-:::::: columns
-:::: column
-.4
-
-::: center
-:::
-
-[Quelle](https://www.frontiersin.org/articles/10.3389/feduc.2019.00071/full)
+::::: {.columns}
+:::: {.column width="50%"}
+![](https://www.frontiersin.org/files/Articles/437667/feduc-04-00071-HTML/image_m/feduc-04-00071-g001.jpg)
 ::::
 
-::: column
-.6
+:::: {.column width="50%"}
+![](https://www.frontiersin.org/files/Articles/437667/feduc-04-00071-HTML/image_m/feduc-04-00071-g002.jpg)
+::::
+:::::
+
+## Die wesentlichen Unterschiede
 
 - Experimente weißen Werte des Treatment-Status über Spalten zufällig zu. Nicht-experimentelle Designs erfassen diese Werte über Beobachtungen.
 
 - Querschnittsuntersuchungen konzentrieren sich auf Unterschiede zwischen Untersuchungseinheiten zu einem Zeitpunkt.
 
 - Paneluntersuchungen studieren Veränderungen von Merkmalen über die Zeit. Dazu müssen diese für die gleichen Untersuchungseinheiten über die Zeit beobachtet werden.
-:::
-::::::
 
-# Experimente
+## Das ganz dicke Brett: Ursache & Wirkung
 
-##  {#section-1 .unnumbered}
+::::: {.columns}
+:::: {.column width="50%"}
+![The ladder of causation (Pearl 2018:28)](images/ladder_of_causation.png)
+::::
+
+:::: {.column width="50%"}
+Nach Judea Pearl können wir drei Ebenen der Kausalanalyse unterscheiden: 
+
+1. Welche Zusammenhänge kann ich studieren? 
+2. Wenn ich etwas *verändere*, was passiert dann? 
+3. Da ich weiß, dass X eine Wirkung auf Y hat, kann ich mir vorstellen, was passieren *würde*, wenn X nicht vorliegt. 
+::::
+:::::
+
+## Ursachen, Wirkungen und kontrafaktische Zustände
+
+::::: {.columns}
+:::: {.column width="50%"}
+![Talebi (2022)](https://towardsdatascience.com/wp-content/uploads/2022/08/1qitkBMtGK-rStrlnXXVzHg.png)
+::::
+
+:::: {.column width="50%"}
+In der linken Grafik werden zwei Szenarien für eine Person abgebildet. 
+
+Wir können aber pro Person immer nur ein Szenario beobachten. 
+::::
+:::::
+
+
+## Wirksamkeit 
+
+Wir wollen wissen, ob ein Medikament den systolischen Blutdruck[^1] senkt. Wir haben Daten von drei vier Personen: 
+            
+  |Person |    Medikament  |         kein Medikament|
+  |--------|:--------------------:|:-----------------:|
+  |Max           |       120        |              ? |
+ | Birte         |        ?         |             100 |
+ | Clara         |       149         |             ? |
+ | Tom           |        ?           |           160 |
+
+[^1]: Der systolische Blutdruck entsteht, wenn Ihr Herz durch Anspannung
+    Blut in den Körper drückt. Das ist immer der größere von zwei Werten
+    bei Blutdruckmessungen.
+
+## Dann halt Panel! {.midi}
+
+::::: {.columns}
+:::: {.column width="60%"}
+|Person     |    Medikament  |         kein Medikament|
+|-------------------|:-------:|:--------:|
+|Max $t_1$          |       120        |              ? |
+|Max $t_2$           |       ?        |              140 |
+|Birte $t_1$        |        ?         |             100 |
+|Birte  $t_2$       |        100         |             ? |
+|Clara $t_1$         |       149         |             ? |
+|Clara  $t_2$       |      ?         |             151 |
+|Tom   $t_1$        |        ?           |           160 |
+|Tom    $t_2$       |        100         |           ? |
+::::
+
+:::: {.column width="40%"}
+Wir können immer nur beobachten, ob bei Untersuchungseinheiten *zu einem bestimmten Zeitpunkt* Eigenschaften vorliegen oder nicht. Eine Person hat zu einem bestimmenten Zeitpunkt ein Medikament genommen oder nicht. Wir können nicht beides beobachten. Dieses grundsätzliche Problem löst sich auch nicht einfach durch Mehrfachbeobachtung. 
+::::
+:::::
+          
+## Wir bohren dicke Bretter, Folge 2. {.midi}
+
+$T$ ist absofort die Abkürzung für ein experimentelles Treatment. Wenn wir Personen unter $Y | T = \text{ja}$ \& $Y | T = \text{nein}$  zeitgleich beobachten könnten, müssten wir einfach nur die Differenz zwischen beiden Werten bilden und hätten einen individuellen Kausaleffekt (ICE):
+
+$$ \text{ICE} =   (Y | T = \text{ja}) - (Y | T = \text{nein}) $$
+
+Wir haben aber immer nur den Wert unter einer Bedingung beobachtet, der andere Wert ist ein **kontrafaktischer** Wert oder auch **potential outcome**. 
+
+\begin{equation}
+Y | T = \text{ja} \begin{cases} 	
+Y_0 & \, \text{kontrafaktisch}\\
+Y_1 & \, \text{beobachtet} 
+\end{cases} 
+\end{equation}
+
+\begin{equation}
+Y | T = \text{nein} \begin{cases} 	
+Y_0 & \, \text{beobachtet}\\
+Y_1 & \, \text{kontrafaktisch} 
+\end{cases}
+\end{equation}
+
+## Wir bohren dicke Bretter, Folge 3
+
+Wir kommen bei individuellen Differenzen (siehe ICE) nicht weiter, wenn wir Kausalbehauptungen testen wollen. Wir müssen stets \textit{Erwartungen} über mehrere Untersuchungseinheiten (sprich: Gruppen) bilden. Diese Erwartung kürzen wir mit $E[]$ ab. 
+
+$E[Y | T = \text{ja}]$ ist daher der erwartete Wert des Blutdrucks über alle Personen, die das Medikament erhalten haben.
+
+
+$E[Y | T = \text{nein}]$ ist der erwartete Wert des Blutdrucks über alle Personen, die das Medikament nicht erhalten haben.
+
+
+## Übertragbarkeit von Erwartungen {.midi .scrollable}
+
+Wenn wir Kausalbehauptungen testen wollen, müssen wir zwei Aussagen plausibel machen können: 
+
+1.  Der erwartete Wert des beobachteten Outcomes für Personen unter dem Einfluss des Treatments ist gleich mit dem erwarteten Wert des kontrafaktischen Outcomes für Personen ohne Treatment. 
+Formaler: $$ E[Y_1 | T = \text{ja}] = E[Y_1 | T = \text{nein}] = E[Y_1]  $$ 
+2. Der erwartete Wert des beobachteten Outcomes für Personen ohne Einfluss des Treatments ist gleich mit dem erwarteten Wert des kontrafaktischen Outcomes für Personen unter Einfluss des Treatments.
+Formaler: $$ E[Y_0 | T = \text{nein}] = E[Y_0 | T = \text{ja}] = E[Y_0]  $$ 
+Nur dann können wir behaupten: 
+$$ E[Y_1 | T = \text{ja}] - E[Y_0 | T = \text{nein}] = E[Y_1] - E[Y_0] $$
+
+
 
 ## Experimente
 
-:::::: columns
-:::: column
-.4
+Für experimentelle Designs müssen folgende Bedingungen vorliegen:
 
-::: center
-:::
-::::
-
-::: column
-.6 Für experimentelle Designs müssen folgende Bedingungen vorliegen:
-
-1.  Es werden durch die Forschenden mindestens zwei Gruppen gebildet (Versuchs- und Kotrollgruppe).
+1.  Es werden durch die Forschenden mindestens zwei Gruppen gebildet: Versuchsgruppe ($E[Y_1 | T = \text{ja}]$) und Kotrollgruppe ($E[Y_0 | T = \text{nein}]$).
 
 2.  Die Untersuchungseinheiten werden den Gruppen zufällig zugewiesen (Randomisierung).
 
 3.  Der Faktor, von dem vermutet wird, dass er das Phänomen systematisch beeinflusst, wird kontrolliert verändert (Veränderung des Treatments).
 
 4.  Nur Untersuchungseinheiten der Versuchsgruppe werdem dem Treatment ausgesetzt.
-:::
-::::::
+
 
 ## Experimentallogik
 
 - Sie vermuten, dass eine Eigenschaft $X$ für ein Outcome $Y$ eine notwendige oder hinreichende Bedingung ist.
 
-  - $\rightarrow$ Ohne X tritt Y nicht auf. Oder: Eine Veränderung von X verändert Y.
+  - Ohne X tritt Y nicht auf. Oder: Eine Veränderung von X verändert Y.
 
 - Sie untersuchen N Personen. Sie würfeln aus, wer in die Kontroll- und in die Versuchsgruppe kommt.
 
-  - $\rightarrow$ Dadurch unterscheiden sich die Gruppen bisher **nur** durch einen **Zufallsprozess**.
+  - Dadurch unterscheiden sich die Gruppen bisher **nur** durch einen **Zufallsprozess**.
+  - Das bedeutet auch, dass sich die Verteilung aller weiteren Eigenschaften zwischen den Gruppen nur **zufällig** unterscheiden. 
+  
+## Experimentallogik  
 
-- Sie verändern X nur in der Versuchsgruppe.
+- Es ist ihnen möglich X kontrolliert zu verändern und nur die Versuchsgruppe damit zu exponieren[^2].
 
-  - $\rightarrow$ Auf diese Weise müsste sich $Y$ in der Versuchsgruppe verändern, während es in der Kontrollgruppe nur zu "Baseline"-Veränderungen kommt.
+  - Auf diese Weise müsste sich $Y$ in der Versuchsgruppe verändern, während es in der Kontrollgruppe nur zu "Baseline"-Veränderungen kommt.
 
-- Sie vergleichen $Y$ zwischen den beiden Gruppen. Wenn alles korrekt abgelaufen ist, sind Unterschiede im Outcome nur auf Unterschiede im Treatment zurückzuführen.
+- Sie vergleichen $Y$ zwischen den beiden Gruppen. Wenn alles korrekt abgelaufen ist, sind Unterschiede im Outcome nur auf Unterschiede in X zurückzuführen.
 
-## Randomisierung & random sampling
+[^2]: Dadurch wird eine Eigenschaft $X$ zu einem Treatment $T$. 
 
-:::::: columns
-:::: column
-.4
+## Experimente - Blaupause
 
-::: center
-:::
-::::
+![](images/methoden-experiment.svg){width=100%}
 
-::: column
-.6 Bei einer Zufallsstichprobe (random sampling) hat jede Untersuchungseinheit die gleiche Wahrscheinlichkeit, Teil der Nettostichprobe zu werden.\
-Bei einer Randomisierung hat jede Untersuchungseinheit der Nettostichprobe die gleiche Wahrscheinlichkeit, Teil der Versuchs- oder Kontrollgruppe(n) zu werden.\
-Randomisierung ist **unabhängig** von random sampling. Sie können auch innerhalb eines Schneeball- oder Convienence Samples randomisieren.
-:::
-::::::
-
-## Randomisierung & Ignorierbarkeit (un)beobachteter Faktoren
-
-Wenn innerhalb einer Nettostichprobe Gruppen randomisiert zugewiesen werden, *unterscheiden* sich die *Zusammensetzungen* der Gruppen in Bezug auf alle beobachteten und unbeobachteten Faktoren zufällig.\
-Wenn zwischen dem Einfluss des Treatments und Einflüssen der (un)beobachteten Faktoren keine Abhängigkeit besteht, können wir durch Randomisierung daher alle weiteren Einflüsse ignorieren. In diesem Fall bieten Experimente die höchstmögliche interne Validität zur Untersuchung von Einflüssen eines Treatments.
-
-## Weihnachtslotterie & Zufriedenheit
-
-::::: columns
-::: column
-.4
-:::
-
-::: column
-.6 In einem großen Unternehmen gibt es eine Weihnachtslotterie, an der man durch den Besuch der Weihnachtsfeier teilnehmen kann. Wir wollen studieren, wie sich ein Gewinn bei dieser Lotterie auf die Zufriedenheit der Beschäftigten auswirkt. Wir wissen:
-
-- Je höher das Einkommen ist, desto zufriedener sind Beschäftigte.
-
-- Vollzeitbeschäftigte sind etwas weniger zufrieden als Teilzeitbeschäftigte.
-
-- Personen, die sich in einem "Es ist kompliziert"-Beziehungsstatus befinden, sind deutlich weniger zufrieden. Diese Eigenschaft ist (eigentlich) unbeobachtet.
-
-- Alle drei Eigenschaften wirken sich negativ auf die Teilnahme zur Weihnachtsfeier aus.
-:::
-:::::
-
-## Randomisierung & zufällige Differenzen
-
-Wir erheben Daten vor der Lotterie ($t_0$) und nach der Lotterie ($t_1$). Die Gruppenzusammensetzungen zwischen den Personen mit und ohne Losglück unterscheiden sich nur zufällig (aber sie unterscheiden sich!). Personen mit Losglück haben eine durchschnittliche Zufriedenheit von 6.15 und Personen ohne Losglück einen Wert von 5.68. Die Differenz von 0.47 Punkten können wir auf die Weihnachtslotterie zurückführen, da kein anderer Faktor sich zwischen den Gruppen unterscheidet.
-
-::: center
-                                      Alle $t_0$   Kein Losglück $t_1$   Losglück $t_1$   Alle $t_1$
-  --------------------------------- ------------ --------------------- ---------------- ------------
-  Lohn                                     14.40                 14.38            14.42        14.40
-  \% Vollzeit                               80.7                  80.9             80.5         80.7
-  \% Beziehungstatus: kompliziert           20.5                  20.3             20.7         20.5
-  Zufriedenheit                             5.67                  5.68             6.15         5.91
-:::
-
-## Annahmen und Interpretation von Experimenten
+## Annahmen und Interpretation von Experimenten {.midi }
 
 1.  Das Treatment wirkt sich nur in den Versuchsgruppen aus.
 
@@ -200,6 +373,8 @@ Wir erheben Daten vor der Lotterie ($t_0$) und nach der Lotterie ($t_1$). Die Gr
     - Der Einfluss eines Treatments ist daher stets die Differenz der Versuchsgruppen zum Baseline-Effekt, der durch die Kontrollgruppe erfasst wird. Er ist nicht die Differenz von Versuchsgruppe zu "keinem Effekt".
 
     - Diese Veränderungen dürfen jedoch nicht mit dem Treatment-Status verbunden sein.
+    
+## Annahmen und Interpretation von Experimenten {.midi }
 
 3.  Das Treatment wirkt für alle gleich.
 
@@ -207,52 +382,66 @@ Wir erheben Daten vor der Lotterie ($t_0$) und nach der Lotterie ($t_1$). Die Gr
 
     - Personen können jedoch auch systematisch unterschiedlich auf Treatments reagieren.
 
-## Experimente
+4. Untersuchungseinheiten der Versuchs- und Kontrollgruppe haben die gleiche Wahrscheinlichkeit, Teil der analytischen Stichprobe zu sein. 
 
-::: center
-:::
+    - Personen können durch ein Treatment verschreckt werden. 
+    - Personen der Kontrollgruppe können gelangweilt oder enttäuscht sein. 
+    
+## Randomisierung & random sampling
+
+:::::{.columns}
+
+::::{.column width="30%"}
+  ![](images/randomization-random-sampling.png)
+::::
+
+::::{.column width="70%"}
+Bei einer Zufallsstichprobe (random sampling) hat jede Untersuchungseinheit die gleiche Wahrscheinlichkeit, Teil der Nettostichprobe zu werden.
+Bei einer Randomisierung hat jede Untersuchungseinheit der Nettostichprobe die gleiche Wahrscheinlichkeit, Teil der Versuchs- oder Kontrollgruppe(n) zu werden.
+Randomisierung ist **unabhängig** von random sampling. Sie können auch innerhalb eines Schneeball- oder Convienence Samples randomisieren.
+::::
+::::: 
+
 
 ## Komplexere Experimente
 
-::::: columns
-::: column
-.4 [Quelle](https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-15-364)
-:::
+::::: {.columns}
+:::: {.column width="50%"}
+![[Quelle](https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-15-364)](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-6215-15-364/MediaObjects/13063_2014_Article_2233_Fig1_HTML.jpg?as=webp) 
+::::
 
-::: column
-.6
+:::: {.column width="50%"}
 
 - Experimente müssen nicht nur eine Kontroll- oder eine Versuchsgruppe haben. Sie können mehrere Versuchs- und Kontrollgruppen haben, um u.a. die unterschiedliche Stärke eines Treatments zu studieren oder über verschiedene Kontrollgruppen Baseline-Veränderungen gut zu erfassen.
 
 - Treatments müssen nicht nur ein Stimulus enthalten, sondern können eine Kombination von Stimuli sein.
-:::
+
+::::
 :::::
+
 
 ## Arten von Experimenten: Laborexperiment
 
-::::: columns
-::: column
-.3 [Quelle](https://www.ub.edu/school-economics/the-ub-school-of-economics-has-inaugurated-the-behavioral-experimental-science-laboratory/)
-:::
+:::::{.columns}
 
-::: column
-.7 Laborexperimente sind eine der wichtigesten Quellen wissenschaftlicher Erkenntnis über die meisten Wissenschaftsdisziplinen. In den Sozialwissenschaften werden sie auch zunehmend über PC-Labore eingesetzt.
+::::{.column width="30%"}
+  ![[Quelle](https://www.ub.edu/school-economics/the-ub-school-of-economics-has-inaugurated-the-behavioral-experimental-science-laboratory/)](https://www.ub.edu/school-economics/wp-content/uploads/2022/09/MicrosoftTeams-image-50.jpg)
+::::
+
+::::{.column width="70%"}
+Laborexperimente sind eine der wichtigesten Quellen wissenschaftlicher Erkenntnis über die meisten Wissenschaftsdisziplinen. In den Sozialwissenschaften werden sie auch zunehmend über PC-Labore eingesetzt.
 
 - Vorteile: Kein Informationsaustausch zwischen Gruppen; Treatment kann gezielt und klar gesetzt werden; kaum Verweigerung oder Ignorieren des Treatments
 
-- Nachteile: Starke Selektion in die Nettostichprobe; Umfeld des Labors kann sich auf Verhalten auswirken
-:::
-:::::
+- Nachteile: Starke Selektion in die Bruttostichprobe; Umfeld des Labors kann sich auf Verhalten auswirken
+
+::::
+::::: 
+
 
 ## Arten von Experimenten: Feldexperiment
 
-::::: columns
-::: column
-.2 [Quelle](https://slate.com/human-interest/2009/11/psychologists-have-been-watching-us-on-the-subway-here-s-what-they-ve-learned.html)
-:::
-
-::: column
-.8 Feldexperimente nutzen Untersuchungseinheiten in ihrer "natürlichen" Umgebung, um Einflüsse von Treatments über Versuchs- und Kontrollgruppen zu studieren. Meist ist den untersuchten Personen nicht klar, dass sie Teil eines Experiments sind.
+ Feldexperimente nutzen Untersuchungseinheiten in ihrer "natürlichen" Umgebung, um Einflüsse von Treatments über Versuchs- und Kontrollgruppen zu studieren. Meist ist den untersuchten Personen nicht klar, dass sie Teil eines Experiments sind.
 
 - Vorteile: Kein Einfluss einer Laborumgebung; Erhebung von konkreten Verhaltensdaten
 
@@ -357,9 +546,7 @@ Der Einfluss nimmt ab, je länger das Ereignis von der Befragung entfernt ist.
 :::
 :::::
 
-# Querschnittuntersuchungen
 
-##  {#section-2 .unnumbered}
 
 ## Querschnittuntersuchungen
 
