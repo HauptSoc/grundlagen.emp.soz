@@ -1,0 +1,17 @@
+---
+title: "Graveyard"
+format: html
+---
+
+## Fehlerquellen unterscheiden
+::::: {.columns}
+:::: {.column width="50%"}
+![Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: [Papa et al. (2015)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full)](images/path-impulsivity-externalizing.png)
+::::
+
+:::: {.column width="50%"}
+- Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.
+- Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.
+::::
+:::::
+

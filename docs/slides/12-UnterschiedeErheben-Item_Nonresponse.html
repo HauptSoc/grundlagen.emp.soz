@@ -6,13 +6,13 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.30">
+  <meta name="generator" content="quarto-1.8.27">
 
-  <title>Methoden empirischer Sozialforschung – Unterschiede erheben: Stichprobendesign</title>
+  <title>Methoden empirischer Sozialforschung – Unterschiede erheben: Item Non-Response</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-da308dc606942ef5cbc74096b44a5537.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d17402779cb860955dfb2638498e4ce5.css">
   <link rel="stylesheet" href="global.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -124,10 +124,6 @@
       margin-right: 0; 
     }
   </style>
-  <meta name="mermaid-theme" content="neutral">
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
     .custom-small table {
       font-size: .6em
@@ -139,412 +135,580 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Unterschiede erheben: Stichprobendesign</h1>
+  <h1 class="title">Unterschiede erheben: Item Non-Response</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="brutto--und-nettostichprobe" class="slide level2 midi">
-<h2>Brutto- und Nettostichprobe</h2>
-<p>Mit einem Stichprobendesign wird festgelegt, wie Untersuchungseinheiten in die Stichprobe gelangen sollen. Diese Zielstichprobe wird auch als “Bruttostichprobe” bezeichnet. Allerdings kann während der Datenerhebungsphase passieren, dass Untersuchungseinheiten</p>
+<section id="verweigerung" class="slide level2">
+<h2>Verweigerung</h2>
+<p>Personen können Teil der Nettostichprobe sein, aber auf bestimmte Items nicht reagieren. Mögliche Reaktionen:</p>
 <ul>
-<li><p>gar nicht erreichbar sind (Komplettausfall)</p></li>
-<li><p>die Teilnahme ganz verweigern (Unit nonresponse)</p></li>
-<li><p>die Teilnahme an einzelnen Items verweigern (Item nonresponse)</p></li>
+<li><p>komplette Verweigerung der Auskunft</p></li>
+<li><p>“weiß nicht”</p></li>
+<li><p>Medikamente werden unregelmäßig oder gar nicht eingenommen</p></li>
+<li><p>die Teilnahme wird während der Erhebung abgebrochen</p></li>
 </ul>
-<p>Die Personen, die an der Untersuchung teilnehmen, bilden die Nettostichprobe (Bruttostichprobe - Teilnahmeverweigerung.) Alle Personen, von denen Daten erhalten wurde, mit denen Sie arbeiten können, bilden die analytische Stichprobe (Bruttostichprobe - Teilnahmeverweigerung - Antwortverweigerung)</p>
+<p>Jede diese Reaktionen bezeichen wir im Folgenden als <em>Item nonresponse</em>.</p>
 </section>
-<section id="ausschöpfungsquote-response-rate" class="slide level2 midi">
-<h2>Ausschöpfungsquote (response rate)</h2>
-<p>Der relative Anteil der Netto- zur Bruttostichprobe ist die <em>Ausschöpfungsquote</em> oder auch <em>response rate</em>.</p>
-<p>Diese können Sie bestimmen, indem zum Beispiel</p>
+<section id="verweigerung-1" class="slide level2">
+<h2>Verweigerung</h2>
+<p>In einer Befragungssituation gibt es typische Kandidaten, von denen wir wissen, dass sie ein hohes Risiko haben, item nonresponse zu generieren:</p>
 <ul>
-<li><p>das Verhältnis verschickter zu ausgefüllter Fragebögen berechnet wird;</p></li>
-<li><p>eine Liste mit Telefonnummern angelegt, diese abtelefoniert und der Anteil erreichter Personen notiert wird;</p></li>
-<li><p>eine “Strichliste” geführt wird, wie viele Personen angesprochen wurden und wie viele geantwortet haben.</p></li>
+<li><p>Items über “heikle” Themen: Einkommen, Sexualität, Illegale Handlungen</p></li>
+<li><p>Items über Informationen, die schwer zu prozessieren sind: nicht alltägliche Informationen über Befragte über lange Zeitspannen oder über Informationen über Dritte (Eltern, Verwandschaft, Freunde),</p></li>
 </ul>
+<p>In Experimenten gibt es zum Teil unangenehme Treatments, die non-response hervorrufen. In Feldexperimenten oder sozialpolitischen Pilotprojekten gibt es Anreize oder Angebote, die ignoriert werden können.</p>
 </section>
-<section id="houston-we-have-a-problem" class="slide level2">
-<h2>Houston, we have a problem</h2>
-<p><a href="images/ruecklauf-allbus.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/ruecklauf-allbus.jpeg" style="width:70.0%"></a></p>
-</section>
-<section id="ausschöpfung-und-repräsentativität" class="slide level2">
-<h2>Ausschöpfung und Repräsentativität</h2>
-<ul>
-<li><p>Eine geringe Ausschöpfungsrate führt nicht zwingend zu einer geringen Repräsentativität.</p></li>
-<li><p>Entscheidend ist, ob die Teilnahme - und damit die Ausschöpfung - selektiv ist (selective unit nonresponse).</p></li>
-<li><p>Wenn die Teilnahme nach Merkmalen selektiv ist, die wir beobachtet haben, können wir die Selektion korrigieren (Gewichtungsverfahren).</p></li>
-<li><p>Wenn die Teilnahme nach Merkmalen selektiv ist, die wir nicht beobachtet haben, sind unsere Ergebnisse sehr wahrscheinlich unter- oder überschätzt.</p></li>
-</ul>
-</section>
-<section id="teilnahmeselektion-bei-der-bundestagswahl-2025" class="slide level2">
-<h2>Teilnahmeselektion bei der Bundestagswahl 2025</h2>
-<p><a href="images\wahlbeteiligung2025.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images\wahlbeteiligung2025.png" style="width:70.0%"></a></p>
-</section>
-<section id="anwendungsfall-der-gender-loneliness-gap" class="slide level2">
-<h2>Anwendungsfall: Der gender loneliness gap</h2>
-<p><a href="images\einsamkeitsbarometer-geschlecht.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images\einsamkeitsbarometer-geschlecht.png"></a></p>
-</section>
-<section id="zugang-zum-problem-simulation-von-daten" class="slide level2 midi">
-<h2>Zugang zum Problem: Simulation von Daten</h2>
+<section id="wie-sieht-das-in-echt-aus" class="slide level2 midi">
+<h2>Wie sieht das in echt aus?</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-G[Geschlecht] --&gt; E[Einsamkeit]
-B[Bildung] --&gt; E
-G --&gt; B
-
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:60%;">
-<ul>
-<li><p>Im Folgenden werden wir studieren, wie die Erfassung des “gender loneliness gap” durch Teilnahmeselektion beeinflusst wird.</p></li>
-<li><p>Für die Simulation nehmen wir folgendes an:</p>
-<ul>
-<li>Frauen sind im Durchschnitt etwas einsamer als Männer;</li>
-<li>Bildung reduziert Einsamkeit für Männer und steigert sie für Frauen
-<ul>
-<li>hochgebildete Frauen bekommen einen Einsamkeitsmalus</li>
-<li>gering gebildete Männer bekommen einen Einsamkeitsmalus</li>
-</ul></li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="die-bruttostichprobe" class="slide level2">
-<h2>Die “Bruttostichprobe”</h2>
-<p>Durch die Datensimulation können wir eine “Bruttostichprobe” simulieren, d.h. eine Stichprobe ohne jegliche Teilnahmeselektion.</p>
-<p><a href="images/sim-bar-geschlecht-bildung-brutto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/sim-bar-geschlecht-bildung-brutto.png" style="width:80.0%"></a></p>
-</section>
-<section id="verteilung-von-einsamkeit" class="slide level2">
-<h2>Verteilung von Einsamkeit</h2>
-<p><a href="images/sim-histo-einsam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images/sim-histo-einsam.png" style="width:80.0%"></a></p>
-</section>
-<section id="gender-loneliness-gap-in-der-simulation-aka-die-wahrheit" class="slide level2 midi">
-<h2>gender loneliness gap in der Simulation (aka “Die Wahrheit”)</h2>
-<p><a href="images/sim-bar-einsamkeit-geschlecht-bildung-brutto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/sim-bar-einsamkeit-geschlecht-bildung-brutto.png" style="width:75.0%"></a></p>
-</section>
-<section id="geschlecht-und-die-verteilung-von-einsamkeit" class="slide level2">
-<h2>Geschlecht und die Verteilung von Einsamkeit</h2>
-<p><a href="images/sim-histo-einsam-geschlecht.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="images/sim-histo-einsam-geschlecht.png" style="width:75.0%"></a></p>
-</section>
-<section id="teilnahmeselektion-nach-geschlecht-und-bildung" class="slide level2 midi">
-<h2>Teilnahmeselektion nach Geschlecht und Bildung</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-G[Geschlecht] --&gt; E[Einsamkeit]
-B[Bildung] --&gt; E
-G --&gt; B
-T[Teilnahme]
-G --&gt; T 
-B --&gt; T
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:60%;">
-<p>Wir nutzen ab sofort die Teilnahme an einer Stichprobe als eine Eigenschaft, deren Unterschiedlichkeit von anderen Eigenschaften abhängt.</p>
-<p>Wir wissen, dass an Umfragen eher</p>
-<ul>
-<li>Frauen teilnehmen;</li>
-<li>Personen teilnehmen, je höher gebildet sie sind.</li>
-</ul>
-<p>Das Problem verstärkt sich, weil Frauen seit einigen Jahren im Durchschnitt höhere Abschlüsse erwerben als Männer.</p>
-</div></div>
-</section>
-<section id="teilnahmewahrscheinlichkeiten" class="slide level2">
-<h2>Teilnahmewahrscheinlichkeit(en)</h2>
-<p>Die Teilnahmewahrscheinlichkeit einer Person können wir als eine (latente) Ausprägung verstehen: Personen sind mehr oder weniger bereit, an einer Stichprobe teilzunehmen. Wir gehen davon aus, dass ab einer Wahrscheinlichkeit von über 50% die Personen teilnehmen.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="images/sim-histo-teilnahme.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="images/sim-histo-teilnahme.png"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="images/sim-histo-teilnahme-geschlecht.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/sim-histo-teilnahme-geschlecht.png"></a></p>
-</div></div>
-</section>
-<section id="die-stichprobe-nach-teilnahmeselektion-geschlecht" class="slide level2 midi">
-<h2>Die Stichprobe nach Teilnahmeselektion: Geschlecht</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:45%;">
 <table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Eigenschaft</th>
+<th style="text-align: right;">% Missing</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td>Brutto</td>
-<td>Netto</td>
+<td style="text-align: left;">Höchster Abschluss</td>
+<td style="text-align: right;">0.2</td>
 </tr>
 <tr class="even">
-<td>Mann</td>
-<td>49.6</td>
-<td>27.0</td>
+<td style="text-align: left;">Note des Abschlusses</td>
+<td style="text-align: right;">5.6</td>
 </tr>
 <tr class="odd">
-<td>Frau</td>
-<td>50.4</td>
-<td>73.0</td>
+<td style="text-align: left;">Einkommen (gesamt)</td>
+<td style="text-align: right;">16.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Einkommen (weiß nicht)</td>
+<td style="text-align: right;">3.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Einkommen (Verweigerung)</td>
+<td style="text-align: right;">13.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beruf des Vaters</td>
+<td style="text-align: right;">19.9</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
+<p>BIBB-BAuA Erwerbstätigenbefragung 2018</p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<p>An einer repräsentativen Befragung der deutschen Erwerbsbevökerung nahmen 20.012 Personen teil. Sie wurden u.a. nach ihrem Abschluss, ihrer Abschlussnote, ihrem Einkommen und dem Beruf der Eltern befragt.</p>
+<p>Der Item nonresponse schwankt zwischen 0 und 20%. Er kann zufällig auftreten oder sowohl durch beobachtete Eigenschaften (wie das Alter) als auch durch unbeobachtete Eigenschaften (Einstellungen zu Finanzinformationen) bedingt sein.</p>
+</div></div>
+</section>
+<section id="ein-blick-in-den-datensatz" class="slide level2">
+<h2>Ein Blick in den Datensatz</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><a href="images/bibb-nonresponse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/bibb-nonresponse.png"></a></p>
+</div><div class="column" style="width:40%;">
+<p>Auszug aus der BIBB-BAuA Erwerbstätigenbefragung 2018.</p>
 <ul>
-<li>Durch Teilnahmeselektion verstärkt sich die Zusammensetzung zu Gunsten der Frauen.</li>
-<li>Das liegt vor allem am kombinierten Bildungs- und Geschlechtsmalus gering gebildeter Männer.</li>
+<li><p>Spalte 1: Höchster Schulabschluss</p></li>
+<li><p>Spalte 2: Abschlussnote</p></li>
+<li><p>Spalte 3: Einkommen</p></li>
 </ul>
 </div></div>
 </section>
-<section id="die-stichprobe-nach-teilnahmeselektion-bildung" class="slide level2 midi">
-<h2>Die Stichprobe nach Teilnahmeselektion: Bildung</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="images/sim-bar-geschlecht-bildung-brutto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="images/sim-bar-geschlecht-bildung-brutto.png"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="images/sim-bar-geschlecht-bildung-netto1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="images/sim-bar-geschlecht-bildung-netto1.png"></a></p>
-</div></div>
-</section>
-<section id="auswirkungen-auf-durschnittswerte" class="slide level2 midi">
-<h2>Auswirkungen auf Durschnittswerte</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Bruttostichprobe <img data-src="images/sim-bar-einsamkeit-geschlecht-bildung-brutto.png"></p>
-</div><div class="column" style="width:50%;">
-<p>Nettostichprobe <img data-src="images/sim-bar-einsamkeit-geschlecht-bildung-netto1.png"></p>
-</div></div>
-<p>Die Mittelwerte der einzelnen Gruppen unterscheiden sich nicht erheblich. Allerdings ist der gesamte “loneliness gap” deutlich größer, weil die Gruppengrößen sich stark verändert haben.</p>
-</section>
-<section id="gewichtung-als-lösung-für-selektive-stichprobenzusammensetzungen" class="slide level2">
-<h2>Gewichtung als Lösung für selektive Stichprobenzusammensetzungen</h2>
-<p><strong>Wenn</strong> wir wissen, wie sich die theoretische Population zusammensetzt und damit abschätzen können, wie die Differenzen zwischen beobachteter und theoretisch erwarteter Zusammensetzung ist, können wir die Differenzen hinzufügen, um die Selektivität der Nettostichprobe zu kompensieren.</p>
-<p>Das ist allerdings nur dann eine Lösung, wenn sich die Zustimmungsraten <strong>innerhalb</strong> der Gruppen, mit denen wir gewichten, nur zufällig danach unterscheiden, ob sie Teil der Stichprobe sind oder nicht.</p>
-</section>
-<section id="was-bedeutet-gewichtung" class="slide level2">
-<h2>Was bedeutet Gewichtung?</h2>
-<iframe iframe="" width="1200" height="600" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSJQe0cCnhXcy4_BNgiI_qm0k4YTkjUlwIbQs-7y59cMurHJf1ZmtRtkiM-tZRopZBlm5exj7YVwfVu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false">
-</iframe>
-<p><a href="https://docs.google.com/spreadsheets/d/11PHa4iRb6AgwYbzEuWCpfbk9JYulFIraM17G495cErk/edit?usp=sharing">Link</a> zum Sheet.</p>
-</section>
-<section id="the-same-old-song-es-könnt-so-vieles-einfach-sein" class="slide level2">
-<h2>The same old song: Es könnt’ so vieles einfach sein…</h2>
-<p>Bisher haben wir angenommen, dass wir alle Eigenschaften, die für Teilnahmeselektion verantwortlich sind, beobachtet haben. Das ist aber sehr oft nicht der Fall.</p>
-<p>Teilnahmeselektion ist ein sehr komplexer sozialer Prozess, den Sie für jede Stichprobe durchdringen müssen. Wir können sehr oft aus pragmatischen, ökonomischen oder rechtlichen Gründen nicht alle Eigenschaften erheben, die bei der Teilnahmeselektion eine Rolle spielen.</p>
-<p>Für die Beurteilung der Aussagekräftigkeit von Ergebnissen ist das aber von ganz erheblicher Bedeutung!</p>
-</section>
-<section id="die-rolle-antifeministischer-einstellungen" class="slide level2 midi">
-<h2>Die Rolle antifeministischer Einstellungen</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-subgraph beobachtet
-direction LR
-G[Geschlecht] --&gt; E[Einsamkeit]
-B[Bildung] --&gt; E
-G --&gt; B
-T[Teilnahme]
-G --&gt; T 
-B --&gt; T
-end 
-
-subgraph unbeobachtet
-A[Antifeminismus] 
-T ~~~ A 
-A --&gt; T
-end
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Je höher die Ausprägung einer antifeministischen Einstellung bei einer Person ist, desto geringer ist ihre Teilnahmebereitschaft.</p>
-<p>Nicht verzeichnet im Graph (da sonst zu hässlich…):</p>
+<section id="führen-löcher-im-käse-zu-schlechtem-käse" class="slide level2">
+<h2>Führen Löcher im Käse zu schlechtem Käse?</h2>
+<p>Item nonresponse ist nicht immer ein Problem - wir müssen nicht alles erfasst haben, um gute Antworten durch die Daten zu erhalten!</p>
+<p>Problematisch wird es, wenn die (unbeobachtete) Eigenschaft, die zur Verweigerung führt, eine Dreifachverbindung hat:</p>
 <ul>
-<li>Frauen haben deutlich geringere antifem. Einstellungen;</li>
-<li>antifem. Einstellungen machen einsam;</li>
-<li>je höher die Bildung, desto geringer sind die antifem. Einstellungen.</li>
+<li><p>mit Y verbunden (= das Merkmal, dessen unterschiedliche Ausprägung erklärt werden soll)</p></li>
+<li><p>mit X verbunden (= die Unterschiede, mit denen Y erklärt werden sollen)</p></li>
+<li><p>mit Teilnahmeselektion verbunden</p></li>
 </ul>
-</div></div>
 </section>
-<section id="exkurs-die-messung-antifeministischer-einstellungen" class="slide level2 midi scrollable">
-<h2>Exkurs: Die Messung antifeministischer Einstellungen</h2>
-<p><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1596397/full">Höcker et a. (2025)</a> entwickelten eine Kurzskala zur Erfassung antifeministischer Einstellungen mit folgenden Items:</p>
+<section id="probleme-durch-non-response-nr" class="slide level2">
+<h2>Probleme durch Non-response (NR)</h2>
+<ul>
+<li><p>Wenn NR mit Teilnahmeselektion verbunden ist, ohne mit Y und X verbunden zu sein, verkleinert sich die Stichprobe.</p></li>
+<li><p>Wenn NR mit der Teilnahmeselektion und X verbunden ist, ist die Verteilung von X durch Z selektiv aber nicht die Verteilung von Y über alle X.</p></li>
+<li><p>Wenn NR sowohl mit der Teilnahmeselektion als auch mit Y und X verbunden ist, ist die Stichprobe sowohl in ihrer Zusammensetzung nach X als auch in der Zusammensetzung nach Y über alle X selektiv.</p></li>
+</ul>
+</section>
+<section id="sneak-preview-verheimlichung-des" class="slide level2 midi">
+<h2>Sneak-Preview: Verheimlichung des 🥦</h2>
 <table>
 <colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
+<col style="width: 38%">
+<col style="width: 31%">
+<col style="width: 29%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Item</th>
 <th></th>
+<th>Indirect survey (95% CI)</th>
+<th>Traditional survey (95% CI)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>AF_PO</td>
-<td>Frauen machen sich in der Politik häufig lächerlich.</td>
+<td>Gender</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>AF_DE</td>
-<td>Frauen, die mit ihren Forderungen zu weit gehen, müssen sich nicht wundern, wenn sie wieder in ihre Schranken gewiesen werden.</td>
+<td>Men</td>
+<td>26.5% (23.2%; 29.7%)</td>
+<td>12.0% (9.2%; 15.2%)</td>
 </tr>
 <tr class="odd">
-<td>AF_SE</td>
-<td>Frauen übertreiben ihre Schilderungen über sexualisierte Gewalt häufig, um Vorteile aus der Situation zu schlagen.</td>
-</tr>
-<tr class="even">
-<td>AF_HA</td>
-<td>Durch den Feminismus werden die gesellschaftliche Harmonie und Ordnung gestört.</td>
+<td>Women</td>
+<td>13.4% (11.0%; 15.9%)</td>
+<td>9.1% (7.1%; 11.6%)</td>
 </tr>
 </tbody>
 </table>
-<p>Antworten sind auf einer 4er-Likert-Antwortskala von “lehne völlig ab” zu “stimme völlig zu” möglich.</p>
 </section>
-<section id="exkurs-die-validität-der-skala" class="slide level2 midi scrollable">
-<h2>Exkurs: Die Validität der Skala</h2>
-<table>
-<caption>Korrelation der Antifeminismus Ausprägungen mit verwandten Konzepten</caption>
+<section id="lösungsmöglichkeit-imputation" class="slide level2 midi">
+<h2>Lösungsmöglichkeit: Imputation</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="images/imputation-bibb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/imputation-bibb.png"></a></p>
+</div><div class="column" style="width:50%;">
+<p>Wenn wir gut wissen, welche Faktoren den item nonresponse bedingen, können wir schätzen, welche Werte in Y die Analyseeinheiten mit einem Set von Merkmalen X <em>typischerweise</em> haben. Wir können dann diesen typischen Wert mit einem gewissen Maß an Zufallsfluktation in den Datensatz einführen.</p>
+<p>Dieses Verfahren wird <em>multiple Impuation</em> genannt <a href="https://link.springer.com/chapter/10.1007/978-3-531-92038-2_6">(Lektüre dazu hier)</a>. Wir werden dieses Verfahren im nächsten Semester im Rahmen der <em>multiplen Regression</em> genauer besprechen.</p>
+</div></div>
+</section>
+<section id="ist-das-hexerei" class="slide level2">
+<h2>Ist das Hexerei?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://paulrjohnson.net/blog/2024-03-26-missing-data-solutions/index_files/figure-html/multiple-imputation-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Quelle: Paul. R. Johnson (2024)"><img data-src="https://paulrjohnson.net/blog/2024-03-26-missing-data-solutions/index_files/figure-html/multiple-imputation-1.png" style="width:70.0%" alt="Quelle: Paul. R. Johnson (2024)"></a></p>
+<figcaption>Quelle: Paul. R. Johnson (2024)</figcaption>
+</figure>
+</div>
+</section>
+<section id="lösungsmöglichkeit-item-sumcount-technique" class="slide level2">
+<h2>Lösungsmöglichkeit: Item Sum/Count Technique</h2>
+<p>Es gibt Items, die ein sehr hohes Risiko von Antwortverweigerung aufweisen <em>und</em> mit vielen unbeobachteten Merkmalen verknüpft sind. Dazu zählen u.a. illegale Praktiken (Schwarzarbeit, Datenfälschung, Drogen, Doping) oder ethische Normenverstöße, die nicht zwingend illegal sein müssen.</p>
+<p>Oft wissen wir nicht, wie hoch die Rate dieser Verhaltensweisen in der Population überhaupt ist. Hierfür können wir die <em>Item Sum/Count Technique</em><sup>1</sup> benutzen (Trappmann et al.&nbsp;2014).</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Item Sum = metrische Antwortskalen; Item Count = nominale Antwortskalen</p></li></ol></aside></section>
+<section id="lösungsmöglichkeit-item-sumcount-technique-1" class="slide level2 midi">
+<h2>Lösungsmöglichkeit: Item Sum/Count Technique</h2>
+<p>Sie basiert auf folgender Idee:</p>
+<ol type="1">
+<li><p>Teile die Befragten zufällig in zwei Gruppen ein.</p></li>
+<li><p>Lege einer Gruppe eine kurze Liste mit Items vor, die nur harmlose Fragen enthält.</p></li>
+<li><p>Der anderen Gruppe wird eine lange Liste mit Items vorgelegt, die zusätzlich zu den harmlosen Fragen, auch eine “heikle” Frage enthält.</p></li>
+<li><p>Die Antwortskalen aller Items sind identisch.</p></li>
+<li><p>Die Befragten werden gebeten, lediglich die Summe der Antwortwerte zu benennen.</p></li>
+<li><p>Aus der Differenz der durchschnittlichen Summen (LL - KL) beider Gruppen kann ein typischer Antwortwert der heiklen Frage geschätzt werden.</p></li>
+</ol>
+</section>
+<section id="ein-blick-in-die-praxis-orchideen-mafia" class="slide level2">
+<h2>Ein Blick in die Praxis (Orchideen Mafia)</h2>
+<p><a href="https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="https://besjournals.onlinelibrary.wiley.com/cms/asset/e6da14e0-5808-45ca-9252-539eca2b14a9/mee313137-fig-0001-m.jpg" style="width:70.0%"></a></p>
+</section>
+<section id="item-sumcount-technique---varianten" class="slide level2 midi">
+<h2>Item Sum/Count Technique - Varianten</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://besjournals.onlinelibrary.wiley.com/cms/asset/2e2ad742-3c40-4e51-b538-9491d3c9b22c/mee313137-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="https://besjournals.onlinelibrary.wiley.com/cms/asset/2e2ad742-3c40-4e51-b538-9491d3c9b22c/mee313137-fig-0002-m.jpg"></a></p>
+</div><div class="column" style="width:50%;">
+<p>Diese Technik ist nicht auf eine Liste beschränkt (Standard Variante links im Bild). Sie können auch mehrere Listen nutzen (“Double list”) oder die Variation eines Merkmals nutzen, von dem wir wissen, dass es (annährend) zufällig in der Population verteilt ist (letzte Nummer der Telefonnummer ist gerade/ungerade).</p>
+<p>Wir können diese Technik auch dazu nutzen, um zu studieren, wie stark selektiv die bisherigen Erhebungen waren, die das Item direkt abgefragt haben (“direct questioning”)</p>
+</div></div>
+</section>
+<section id="item-sumcount-technique" class="slide level2">
+<h2>Item Sum/Count Technique</h2>
+<p>Wichtig für die Anwendung</p>
+<ul>
+<li><p>Alle Items auf allen Listen müssen die gleiche Antwortskala haben.</p></li>
+<li><p>Die kurze Liste sollte Items enthalten, die thematisch zum “heiklen” Item passt.</p></li>
+<li><p>Die kurze Liste sollte Items enthalten, die zu wenig Antwortverweigerung führt.</p></li>
+<li><p>Die Summierung der Antworten sollte einfach sein und muss gut erklärt werden.</p></li>
+</ul>
+</section>
+<section id="item-sum-technique" class="slide level2 midi scrollable">
+<h2>Item Sum Technique</h2>
+<p>In einer Studie von <a href="https://journals.sagepub.com/doi/pdf/10.1177/23780231221094749">Wolter et al.&nbsp;(2022)</a> wurde untersucht, ob es im Bezug auf den Covid-19 Impfstatus soziale Erwünschtheitseffekte gibt.</p>
+<table class="medium">
 <colgroup>
-<col style="width: 58%">
-<col style="width: 16%">
-<col style="width: 24%">
+<col style="width: 4%">
+<col style="width: 93%">
+<col style="width: 1%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Scale</th>
-<th>Antifeminism</th>
-<th>Gender role sexism</th>
+<th>Group</th>
+<th>Items</th>
+<th><em>n</em></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Right-wing extremism</td>
-<td>0.51</td>
-<td>0.39</td>
+<td>DQ</td>
+<td>“I have received at least one dose of vaccination against COVID-19.” (yes/no)</td>
+<td>526</td>
 </tr>
 <tr class="even">
-<td>Right-wing dictatorship</td>
-<td>0.40</td>
-<td>0.34</td>
+<td>ICT short list</td>
+<td>“I was treated by a physician last week.”<br>“I have never been diagnosed with cancer.”<br>“Private health insurance should be abolished.”<br>“Alternative medicine like homeopathy is helpful.”</td>
+<td>1,085</td>
 </tr>
 <tr class="odd">
-<td>Chauvinism</td>
-<td>0.42</td>
-<td>0.31</td>
-</tr>
-<tr class="even">
-<td>Xenophobia</td>
-<td>0.44</td>
-<td>0.28</td>
-</tr>
-<tr class="odd">
-<td>Antisemitism</td>
-<td>0.44</td>
-<td>0.38</td>
-</tr>
-<tr class="even">
-<td>Social Darwinism</td>
-<td>0.44</td>
-<td>0.38</td>
-</tr>
-<tr class="odd">
-<td>Belittling the crimes of National Socialism</td>
-<td>0.37</td>
-<td>0.25</td>
-</tr>
-<tr class="even">
-<td>Authoritarianism</td>
-<td>0.35</td>
-<td>0.32</td>
-</tr>
-<tr class="odd">
-<td>Authoritarian aggression</td>
-<td>0.27</td>
-<td>0.23</td>
-</tr>
-<tr class="even">
-<td>Authoritarian submission</td>
-<td>0.27</td>
-<td>0.26</td>
-</tr>
-<tr class="odd">
-<td>Authoritarian conventionalism</td>
-<td>0.31</td>
-<td>0.28</td>
-</tr>
-<tr class="even">
-<td>Gender role sexism</td>
-<td>0.53</td>
-<td>–</td>
+<td>ICT long list</td>
+<td>“I was treated by a physician last week.”<br>“I have never been diagnosed with cancer.”<br>“Private health insurance should be abolished.”<br>“Alternative medicine like homeopathy is helpful.”<br>“I have received at least one dose of vaccination against COVID-19.”</td>
+<td>1,030</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="die-verteilung-von-antifeminismus-in-der-simulation" class="slide level2">
-<h2>Die Verteilung von Antifeminismus in der Simulation</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="images/sim-hist-antifem.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="images/sim-hist-antifem.png"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="images/sim-bar-antifem-gender-bildung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="images/sim-bar-antifem-gender-bildung.png"></a></p>
-</div></div>
+<section id="die-wahrheit-teil-1" class="slide level2">
+<h2>Die Wahrheit – Teil 1</h2>
+<table>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 43%">
+<col style="width: 20%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question Type</th>
+<th>Estimated Vaccination Coverage</th>
+<th>Standard Error</th>
+<th><em>n</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Direct questioning</td>
+<td>84.8%</td>
+<td>1.6</td>
+<td>526</td>
+</tr>
+<tr class="even">
+<td>Item count technique</td>
+<td>75.0%</td>
+<td>4.3</td>
+<td>2,115</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="einfluss-auf-die-stichprobenzusammensetzung" class="slide level2">
-<h2>Einfluss auf die Stichprobenzusammensetzung</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="images\sim-bar-geschlecht-bildung-netto1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="images\sim-bar-geschlecht-bildung-netto1.png"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="images\sim-bar-geschlecht-bildung-netto2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="images\sim-bar-geschlecht-bildung-netto2.png"></a></p>
-</div></div>
+<section id="die-wahrheit-teil-2" class="slide level2 midi scrollable">
+<h2>Die Wahrheit – Teil 2</h2>
+<table>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 24%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>DQ</th>
+<th>ICT</th>
+<th>Difference</th>
+<th><em>p</em> (Difference)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Western Germany</td>
+<td>86.3%<br>(1.6)</td>
+<td>78.4%<br>(4.6)</td>
+<td>7.9</td>
+<td>.106</td>
+</tr>
+<tr class="even">
+<td>Eastern Germany</td>
+<td>75.3%<br>(5.0)</td>
+<td>55.0%<br>(11.8)</td>
+<td>20.4</td>
+<td>.112</td>
+</tr>
+<tr class="odd">
+<td>Male</td>
+<td>88.9%<br>(2.0)</td>
+<td>81.6%<br>(6.2)</td>
+<td>7.3</td>
+<td>.258</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>81.0%<br>(2.4)</td>
+<td>67.9%<br>(6.1)</td>
+<td>13.1</td>
+<td>.044</td>
+</tr>
+<tr class="odd">
+<td>Lower education</td>
+<td>83.6%<br>(1.9)</td>
+<td>79.8%<br>(5.1)</td>
+<td>3.8</td>
+<td>.479</td>
+</tr>
+<tr class="even">
+<td>Higher education</td>
+<td>88.5%<br>(2.8)</td>
+<td>61.7%<br>(8.3)</td>
+<td>26.8</td>
+<td>.002</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="einfluss-auf-einsamkeitswerte" class="slide level2">
-<h2>Einfluss auf Einsamkeitswerte</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Nettostichprobe <img data-src="images\sim-bar-einsamkeit-geschlecht-bildung-netto1.png"></p>
-</div><div class="column" style="width:50%;">
-<p>“+” Einfluss von Antifeminismus <img data-src="images\sim-bar-einsamkeit-geschlecht-bildung-netto2.png"></p>
-</div></div>
-</section>
-<section id="gewichtung-hilft-nur-noch-bedingt" class="slide level2">
-<h2>Gewichtung hilft nur noch bedingt</h2>
+<section id="noch-eine-lösung-crossswise-modell" class="slide level2">
+<h2>Noch eine Lösung: Crossswise Modell</h2>
+<ol type="1">
+<li>Man stellt eine heikle und eine nicht-heikle Frage zusammen.</li>
+<li>Befrage sollen angeben, ob die Antwort
 <ul>
-<li>Im Gegensatz zur Teilnahmeselektion mit beobachteten Faktoren haben wir mit dem Antifeminismus einen unbeobachteten Faktor, der sog. <em>unbeobachtete Heterogenität</em> in die Gruppen bringt.
-<ul>
-<li>D.h.: Innerhalb der Geschlechts/Bildungsgruppen müssten wir eigentlich nach dem Grad des Antifeminismus unterscheiden, können es aber nicht.</li>
-<li>Der Einfluss des Antifeminismus verändert nicht nur die relativen Gruppenanteile sondern auch die Einsamkeitswerte.</li>
-<li>Mit einer Gewichtung nach Geschlecht und Bildung können wir aber weder die Selektion nach Antifeminismus in die Stichprobe noch den Einfluss des Antifeminismus auf Einsamkeit ausgleichen.</li>
+<li>auf <strong>beide</strong> Fragen ”ja“ oder ”nein“ ist (Fall A)</li>
+<li>auf nur eine Frage “ja” ist (Fall B).</li>
 </ul></li>
-</ul>
+</ol>
+<p>In beiden Fällen bleibt unklar, ob die Antwort auf die heikle Frage pro Befragten ”ja“ oder ”nein“ ist.</p>
+<p>Der ”Ja“-Anteil der nicht-heiklen Frage muss ungleich 0.5 und bekannt sein.</p>
+<p>Die Antworten auf beide Fragen müssen unabhängig (= unkorreliert) sein.</p>
+</section>
+<section id="the-magic-sauce" class="slide level2">
+<h2>The magic sauce</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="images\crosswise-explanation.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images\crosswise-explanation.svg"></a></p>
+</div><div class="column" style="width:50%;">
+<p>Mit ein wenig Mathe-Voodoo <a href="https://link.springer.com/article/10.1007/s00184-007-0131-x">(Yu et al.&nbsp;2008)</a>, können wir die Wahrscheinlichkeit, auf die heikle Frage mit “Ja” zu antworten von allen anderen Pfaden isolieren. Das ist deshalb möglich, weil wir <span class="math inline">\(P(\text{Fall A})\)</span> beobachtet haben und <span class="math inline">\(P(\text{Ja | Nicht-heikel})\)</span> <strong>kennen müssen</strong>.</p>
+</div></div>
+<p><span class="math display">\[ P(\text{Ja | Heikel}) = \dfrac{P(\text{Fall A}) + P(\text{Ja | Nicht-heikel}) -1}{2P(\text{Ja | Nicht-heikel}) -1} \]</span></p>
+</section>
+<section id="studentische-plagiate" class="slide level2">
+<h2>Studentische Plagiate</h2>
+<p><a href="images/jann-crosswise.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="images/jann-crosswise.png"></a></p>
+</section>
+<section id="studentische-plagiate-1" class="slide level2">
+<h2>Studentische Plagiate</h2>
+<p><a href="images/jann-plagiate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="images/jann-plagiate.png"></a></p>
+</section>
+<section id="verheimlichung-des" class="slide level2">
+<h2>Verheimlichung des 🥦</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/add.16219">Andersson et al.&nbsp;(2023)</a> studierten, ob Personen unterschiedliche Angaben zum Cannabis-Konsum machten, je nachdem, ob sie direkt oder indirekt befragt wurden.</p>
+</div><div class="column" style="width:70%;">
+<p><a href="images/crosswise-cannabis.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/crosswise-cannabis.png"></a></p>
+</div></div>
+</section>
+<section id="verheimlichung-des-1" class="slide level2 midi scrollable">
+<h2>Verheimlichung des 🥦</h2>
+<table>
+<colgroup>
+<col style="width: 38%">
+<col style="width: 31%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Indirect survey (95% CI)</th>
+<th>Traditional survey (95% CI)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gender</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Men</td>
+<td>26.5% (23.2%; 29.7%)</td>
+<td>12.0% (9.2%; 15.2%)</td>
+</tr>
+<tr class="odd">
+<td>Women</td>
+<td>13.4% (11.0%; 15.9%)</td>
+<td>9.1% (7.1%; 11.6%)</td>
+</tr>
+<tr class="even">
+<td>Birth year</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1992–95</td>
+<td>17.5% (14.2%; 20.7%)</td>
+<td>8.7% (6.2%; 11.9%)</td>
+</tr>
+<tr class="even">
+<td>1996–99</td>
+<td>21.3% (17.7%; 24.9%)</td>
+<td>12.2% (9.0%; 16.1%)</td>
+</tr>
+<tr class="odd">
+<td>2000–03</td>
+<td>18.8% (15.2%; 22.4%)</td>
+<td>10.4% (7.6%; 13.8%)</td>
+</tr>
+<tr class="even">
+<td>Education</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Compulsory (9 years)</td>
+<td>25.3% (18.7%; 31.9%)</td>
+<td>10.2% (6.0%; 15.8%)</td>
+</tr>
+<tr class="even">
+<td>High school (11–12 years)</td>
+<td>19.3% (16.6%; 22.1%)</td>
+<td>10.2% (7.9%; 12.9%)</td>
+</tr>
+<tr class="odd">
+<td>University (&gt; 12 years)</td>
+<td>16.5% (13.1%; 19.8%)</td>
+<td>9.6% (6.8%; 13.2%)</td>
+</tr>
+<tr class="even">
+<td>Other</td>
+<td>24.1% (14.0%; 34.2%)</td>
+<td>17.2% (8.6%; 29.4%)</td>
+</tr>
+<tr class="odd">
+<td>Occupational status</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Employed</td>
+<td>16.2% (13.5%; 19.0%)</td>
+<td>9.0% (6.7%; 11.7%)</td>
+</tr>
+<tr class="odd">
+<td>Studying or internship</td>
+<td>20.4% (17.3%; 23.5%)</td>
+<td>10.8% (8.3%; 13.8%)</td>
+</tr>
+<tr class="even">
+<td>Unemployed</td>
+<td>32.0% (22.8%; 41.2%)</td>
+<td>11.3% (4.3%; 23.0%)</td>
+</tr>
+<tr class="odd">
+<td>Cohabitation</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Yes</td>
+<td>17.4% (15.1%; 19.6%)</td>
+<td>9.1% (7.3%; 11.1%)</td>
+</tr>
+<tr class="odd">
+<td>No</td>
+<td>25.2% (20.8%; 29.5%)</td>
+<td>15.0% (10.8%; 20.0%)</td>
+</tr>
+<tr class="even">
+<td>Country of birth</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sweden</td>
+<td>18.4% (16.2%; 20.5%)</td>
+<td>10.6% (8.8%; 12.6%)</td>
+</tr>
+<tr class="even">
+<td>Other Nordic</td>
+<td>−1.6% (−16.3%; 13.1%)</td>
+<td>9.1% (0.2%; 41.3%)</td>
+</tr>
+<tr class="odd">
+<td>Other European</td>
+<td>26.8% (16.4%; 37.1%)</td>
+<td>13.9% (4.7%; 29.5%)</td>
+</tr>
+<tr class="even">
+<td>Non-European</td>
+<td>23.8% (17.3%; 30.4%)</td>
+<td>7.6% (3.3%; 14.5%)</td>
+</tr>
+<tr class="odd">
+<td>Health status—general</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Good</td>
+<td>17.8% (15.7%; 19.9%)</td>
+<td>10.2% (8.3%; 12.2%)</td>
+</tr>
+<tr class="odd">
+<td>Average</td>
+<td>25.4% (19.5%; 31.3%)</td>
+<td>10.3% (6.0%; 16.2%)</td>
+</tr>
+<tr class="even">
+<td>Bad</td>
+<td>36.1% (21.9%; 50.3%)</td>
+<td>16.7% (6.4%; 32.8%)</td>
+</tr>
+<tr class="odd">
+<td>Health status—mental</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Good</td>
+<td>16.8% (14.4%; 19.1%)</td>
+<td>8.8% (6.9%; 10.9%)</td>
+</tr>
+<tr class="odd">
+<td>Average</td>
+<td>21.3% (16.9%; 25.6%)</td>
+<td>13.6% (9.6%; 18.4%)</td>
+</tr>
+<tr class="even">
+<td>Bad</td>
+<td>32.1% (24.9%; 39.4%)</td>
+<td>14.0% (8.5%; 21.2%)</td>
+</tr>
+<tr class="odd">
+<td>Health status—physical</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Good</td>
+<td>18.6% (16.3%; 20.8%)</td>
+<td>10.5% (8.6%; 12.7%)</td>
+</tr>
+<tr class="odd">
+<td>Average</td>
+<td>21.0% (16.3%; 25.6%)</td>
+<td>10.1% (6.5%; 14.9%)</td>
+</tr>
+<tr class="even">
+<td>Bad</td>
+<td>23.9% (13.2%; 34.5%)</td>
+<td>8.6% (2.9%; 19.0%)</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -734,7 +898,7 @@ end
         margin: 5.0e-2,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -808,13 +972,14 @@ end
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

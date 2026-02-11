@@ -198,17 +198,20 @@ Durch systematische Teilnahmeverweigerung (unit oder item nonresponse) durch ein
 
 ## Lösungsmöglichkeit: Imputation
 
-::::: columns
-::: column
-.4 Quelle: BIBB-BAuA-Erwerbstätigenbefragung 2018
-:::
+::::: {.columns}
+:::: {.column width="50%"}
+![](/images/imputation-bibb.png)
+::::
 
-::: column
-.6 Wenn wir gut wissen, welche Faktoren den item nonresponse bedingen, können wir schätzen, welche Werte in Y die Analyseeinheiten mit einem Set von Merkmalen X *typischerweise* haben. Wir können dann diesen typischen Wert mit einem gewissen Maß an Zufallsfluktation in den Datensatz einführen.\
+:::: {.column width="50%"}
+ Wenn wir gut wissen, welche Faktoren den item nonresponse bedingen, können wir schätzen, welche Werte in Y die Analyseeinheiten mit einem Set von Merkmalen X *typischerweise* haben. Wir können dann diesen typischen Wert mit einem gewissen Maß an Zufallsfluktation in den Datensatz einführen.
 
-Dieses Verfahren wird *multiple Impuation* genannt [(Lektüre dazu hier)](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_6). Wir werden dieses Verfahren im nächsten Semester im Rahmen der multiplen Regression genauer besprechen.
-:::
+Dieses Verfahren wird *multiple Impuation* genannt [(Lektüre dazu hier)](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_6). Wir werden dieses Verfahren im nächsten Semester im Rahmen der *multiplen Regression* genauer besprechen.
+
+::::
 :::::
+
+
 
 ## Lösungsmöglichkeit: Item Sum/Count Technique
 

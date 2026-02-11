@@ -1,0 +1,41 @@
+---
+title: "Übung: Antwortverweigerung"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+
+## Out in the Wild
+
+Nutzen Sie folgende Fragen in einem Cross-Wise Design.
+
+1. Sind Sie Linkshänder? 
+2. Haben Sie in diesem Semester mindestens einmal verschreibungspflichtige Substanzen zur Leistungssteigerung eingenommen? 
+
+Fragen Sie (als Übungsgruppe) insgesamt mindestens 30 Personen. Gehen Sie davon aus, dass die Rate von Linkshändern 20% ist. Berechnen Sie die Wahrscheinlichkeit, dass leistungssteigernde Substanzen eingenommen wurden. 
+
+## Leistung!! 
+
+Sie w(s)ollen untersuchen, ob Berufsausübende verschreibungspflichtige Substanzen zur Leistungssteigerung einnehmen. 
+
+1. Untersuchen Sie diese Frage mit Hilfe der Item Sum/Count Technik. 
+2. Formulieren Sie in Bezug auf die generelle Forschungsfrage eine Hypothese. 
+3. Legen Sie ein Stichprobendesign vor, mit dessen Hilfe die von Ihnen gestellte Forschungsfrage beantwortet werden kann. 
+
