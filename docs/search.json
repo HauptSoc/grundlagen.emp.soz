@@ -2969,7 +2969,7 @@
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Was wollen wir da eigentlich wissen?",
-    "text": "Was wollen wir da eigentlich wissen?\nFrage 1: Wie erfassen Lehrer:innen Symptome?\n\n\n\n\n\nflowchart TB\n\nsubgraph Mädchen \ndirection LR\nSM1([Symptom A]) \nSM2([Symptom B])\nSM3([Symptom C])\n\nDM[Depression] \n\nDM --&gt; SM1 & SM2 & SM3\n\nend \n\nsubgraph Jungen\ndirection LR\nSJ1([Symptom B]) \nSJ2([Symptom D])\n\nDJ[Depression] \n\nDJ --&gt; SJ1 & SJ2\nend \n\nL[Lehrer:innen] --&gt; SM1 & SM3 & SJ2"
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 1: Wie erfassen Lehrer:innen Symptome?\n\n\n\n\n\nflowchart LR\n\nsubgraph Mädchen \ndirection LR\nSM1([Symptom A]) \nSM2([Symptom B])\nSM3([Symptom C])\n\nDM[Depression] \n\nDM --&gt; SM1 & SM2 & SM3\n\nend \n\nsubgraph Jungen\ndirection LR\nSJ1([Symptom B]) \nSJ2([Symptom D])\n\nDJ[Depression] \n\nDJ --&gt; SJ1 & SJ2\nend \n\nL[Lehrer:innen] --&gt; SM1 & SM3 & SJ2"
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-1",
@@ -2983,21 +2983,21 @@
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-2",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Was wollen wir da eigentlich wissen?",
-    "text": "Was wollen wir da eigentlich wissen?\nFrage 3a: Ist ein Medikament wirksam? Frage 3b: Wirkt ein türkischer Name anders als ein deutscher?\n\n\n\n\n\nflowchart TB\n\nsubgraph Medikament \nZ1[Zustand $t_1$] \nZ2[Zustand $t_2$]\nMJ[Medikament genommen]\nMN[Medikament nicht genommen]\n\nZ1 --&gt; MJ --&gt; Z2\nZ1 --&gt; MN --&gt; Z2\nend\n\nsubgraph Diskriminierung \n\nP[Musterperson]\nDN[Deutscher Name]\nTN[Türkischer Name]\nE[Einladung zur Besichtigung]\n\nP --&gt; DN & TN\nDN & TN --&gt; E\n\nend"
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 3a: Ist ein Medikament wirksam? Frage 3b: Wirkt ein türkischer Name anders als ein deutscher?\n\n\n\n\n\nflowchart LR\n\nsubgraph Medikament \ndirection LR\nZ1[Zustand $t_1$] \nZ2[Zustand $t_2$]\nMJ[Medikament genommen]\nMN[Medikament nicht genommen]\n\nZ1 --&gt; MJ --&gt; Z2\nZ1 --&gt; MN --&gt; Z2\nend\n\nsubgraph Diskriminierung \ndirection LR\nP[Musterperson]\nDN[Deutscher Name]\nTN[Türkischer Name]\nE[Einladung zur Besichtigung]\n\nP --&gt; DN & TN\nDN & TN --&gt; E\n\nend"
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-3",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-3",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Was wollen wir da eigentlich wissen?",
-    "text": "Was wollen wir da eigentlich wissen?\nFrage 4a: Führt eine Veränderung in X (Umzug) zu einer Veränderung von Y (Noten)?\n\n\n\n\n\nflowchart LR\n    X1[\"X t_1\"] --&gt; Y1[\"Y t_1\"]\n    X2[\"X t_2\"] --&gt; Y2[\"Y t_2\"]\n    Y1 ~~~ X2\n    X1 -.- X2\n    Y1 -.- Y2"
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 4a: Wie verändert sich in der Population die Verteilung der Ausprägung von Eigenschaften?\n\n\n\n\n\nflowchart LR\n    X1[\"X t_1\"] \n    Y1[\"Y t_1\"]\n    X2[\"X t_2\"]\n    Y2[\"Y t_2\"]\n  \n    X1 -.- X2\n    Y1 -.- Y2"
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-4",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-4",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Was wollen wir da eigentlich wissen?",
-    "text": "Was wollen wir da eigentlich wissen?\nFrage 4a: Wie verändert sich in der Population die Verteilung der Ausprägung von Eigenschaften?\n\n\n\n\n\nflowchart LR\n    X1[\"X t_1\"] \n    Y1[\"Y t_1\"]\n    X2[\"X t_2\"]\n    Y2[\"Y t_2\"]\n  \n    X1 -.- X2\n    Y1 -.- Y2"
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 4b: Führt eine Veränderung in X (Umzug) zu einer Veränderung von Y (Noten)?\n\n\n\n\n\nflowchart LR\n    X1[\"X t_1\"] --&gt; Y1[\"Y t_1\"]\n    X2[\"X t_2\"] --&gt; Y2[\"Y t_2\"]\n    Y1 ~~~ X2\n    X1 -.- X2\n    Y1 -.- Y2"
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-5",
@@ -3130,35 +3130,35 @@
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-feldexperiment",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Arten von Experimenten: Feldexperiment",
-    "text": "Arten von Experimenten: Feldexperiment\nFeldexperimente nutzen Untersuchungseinheiten in ihrer “natürlichen” Umgebung, um Einflüsse von Treatments über Versuchs- und Kontrollgruppen zu studieren. Meist ist den untersuchten Personen nicht klar, dass sie Teil eines Experiments sind.\n\nVorteile: Kein Einfluss einer Laborumgebung; Erhebung von konkreten Verhaltensdaten\nNachteile: Einteilung in Versuchs- und Kontrollgruppen kann schwierig sein; Austauschs- und Informationsbeziehungen sind nur äußerst schwer zu kontrollieren. ::: :::::"
+    "text": "Arten von Experimenten: Feldexperiment\nFeldexperimente nutzen Untersuchungseinheiten in ihrer “natürlichen” Umgebung, um Einflüsse von Treatments über Versuchs- und Kontrollgruppen zu studieren. Meist ist den untersuchten Personen nicht klar, dass sie Teil eines Experiments sind.\n\nVorteile: Kein Einfluss einer Laborumgebung; Erhebung von konkreten Verhaltensdaten\nNachteile: Einteilung in Versuchs- und Kontrollgruppen kann schwierig sein; Austauschs- und Informationsbeziehungen sind nur äußerst schwer zu kontrollieren."
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Rechts stehen, links gehen!",
-    "text": "Rechts stehen, links gehen!\n\n\n.5 Quelle\n\n.5 Wolbring et al. (2013) führten ein Feldexperiment in der Münchner U-Bahn durch. Sie wollten wissen, ob Normverstöße gegen die Regel “Rechts stehen, links gehen” auf Rolltreppen nach Geschlecht und sozialem Status der normverstoßenden Person anders sanktioniert werden.\nDazu varriierten Sie die Kleidung von Personen, die ansonsten ähnliche Körpermaße hatten."
+    "text": "Rechts stehen, links gehen!\n\n\n\n\nWolbring et al. (2013) führten ein Feldexperiment in der Münchner U-Bahn durch. Sie wollten wissen, ob Normverstöße gegen die Regel “Rechts stehen, links gehen” auf Rolltreppen nach Geschlecht und sozialem Status der normverstoßenden Person anders sanktioniert werden.\nDazu varriierten Sie die Kleidung von Personen, die ansonsten ähnliche Körpermaße hatten."
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen-1",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen-1",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Rechts stehen, links gehen!",
-    "text": "Rechts stehen, links gehen!\n\n\n.5 Quelle\n\n.5\nMänner und status niedriger gekleidete Personen wurden schneller und heftiger sanktioniert als Frauen und status höher gekleidete Personen."
+    "text": "Rechts stehen, links gehen!\n\n\n\n\nMänner und status niedriger gekleidete Personen wurden schneller und heftiger sanktioniert als Frauen und status höher gekleidete Personen."
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Was hilft gegen Armut?",
-    "text": "Was hilft gegen Armut?\n\n\n\n\n\n\n\n\nBanerjee, Abhijit, et al. A multifaceted program causes lasting progress for the very poor: Evidence from six countries. Science 348.6236 (2015): 1260799.\nHier Ghana; eine Region; Auswahl von Haushalten; 25% sind Teil eines Programms\nProgram: Anlage eines Giro-Kontos, Gesundheits- und Ernährungsbildung, Ziegen / Hühner / Mais / Shea-Nüsse, Geldüberweisungen bei Trockenperiode; wöchentliche Besuche einer NGO"
+    "text": "Was hilft gegen Armut?\n\n\n\n\n\nBanerjee, Abhijit, et al. 2015 wollten wissen, ob ein komplexeres Treatment als “nur Geld” oder “nur Beratung” effizienter gegen Armut hilft.\nProgram: Anlage eines Giro-Kontos, Gesundheits- und Ernährungsbildung, Ziegen / Hühner / Mais / Shea-Nüsse, Geldüberweisungen bei Trockenperiode; wöchentliche Besuche einer NGO"
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut-1",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut-1",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Was hilft gegen Armut?",
-    "text": "Was hilft gegen Armut?\n\n\n.6\n\n.4\nDas Experiment verdeutlicht auch, dass Haushalte unterschiedlich auf das Treatment reagierten. Je höher die Sparneigung eines Haushalts ist, desto stärker ist auch der Treatment-Effekt des Armutsreduktionsprogramms. Ein Vergleich der durschschnittlichen Spareinlagen zwischen Treatment und Kontrollgruppe erfasst diese Unterschiedlichkeit nicht."
+    "text": "Was hilft gegen Armut?\nDas Experiment verdeutlicht auch, dass Haushalte unterschiedlich auf das Treatment reagierten. Je höher die Sparneigung eines Haushalts ist, desto stärker ist auch der Treatment-Effekt des Armutsreduktionsprogramms. Ein Vergleich der durschschnittlichen Spareinlagen zwischen Treatment und Kontrollgruppe erfasst diese Unterschiedlichkeit nicht."
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-natürliche-experimente",
@@ -3172,14 +3172,14 @@
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Terror und Einstellung zu Immigration",
-    "text": "Terror und Einstellung zu Immigration\n\n\n.6 Quelle\n\n.4 Im Jahr 2002 wurde in neun europäischen Ländern der European Social Survey erhoben, der u.a. Einstellungen zu Immigration nutzt. Während der Erhebungsphase fand in Bali eine große Terrorattacke statt. Damit können wir Gruppen der Befragten direkt vor und direkt nach der Terror-Attacke einteilen, um zu studieren, ob solche Ereignisse Einstellungen zu Immigration verändern."
+    "text": "Terror und Einstellung zu Immigration\n\nIm Jahr 2002 wurde in neun europäischen Ländern der European Social Survey erhoben, der u.a. Einstellungen zu Immigration nutzt. Während der Erhebungsphase fand in Bali eine große Terrorattacke statt. Damit konnte Legewie (2013) Befragte direkt vor und direkt nach der Terror-Attacke einteilen, um zu studieren, ob solche Ereignisse Einstellungen zu Immigration verändern."
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration-1",
     "href": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration-1",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Terror und Einstellung zu Immigration",
-    "text": "Terror und Einstellung zu Immigration\n\n\n.3 Quelle\n\n.7 Terror erhöht in einigen Ländern negative Einstellung zu Immigration. Dies ist vor allem dann der Fall, wenn die (wahrgenommene) Gruppe der Immigraten groß und der Arbeitsmarkt im Land herausfordernd ist.\nDer Einfluss nimmt ab, je länger das Ereignis von der Befragung entfernt ist."
+    "text": "Terror und Einstellung zu Immigration\n\n\n\n\nTerror erhöht in einigen Ländern negative Einstellung zu Immigration. Dies ist vor allem dann der Fall, wenn die (wahrgenommene) Gruppe der Immigraten groß und der Arbeitsmarkt im Land herausfordernd ist.\nDer Einfluss nimmt ab, je länger das Ereignis von der Befragung entfernt ist."
   },
   {
     "objectID": "slides/12-UnterschiedeErheben-Untersuchungsdesigns.html#querschnittuntersuchungen-1",
@@ -3327,5 +3327,243 @@
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Annahmen und Interpretation von Experimenten",
     "text": "Annahmen und Interpretation von Experimenten\n\nDas Treatment wirkt für alle gleich.\n\nWir nehmen aktuell an, dass durch ein Treatment die Versuchsgruppen von der Kontrollgruppe im Niveau verschoben werden.\nPersonen können jedoch auch systematisch unterschiedlich auf Treatments reagieren.\n\nUntersuchungseinheiten der Versuchs- und Kontrollgruppe haben die gleiche Wahrscheinlichkeit, Teil der analytischen Stichprobe zu sein.\n\nPersonen können durch ein Treatment verschreckt werden.\nPersonen der Kontrollgruppe können gelangweilt oder enttäuscht sein."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#die-richtigen-werkzeuge-für-jeden-anlass",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#die-richtigen-werkzeuge-für-jeden-anlass",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Die richtigen Werkzeuge für jeden Anlass",
+    "text": "Die richtigen Werkzeuge für jeden Anlass\nAls Sozialwissenschaftler:in können Sie sehr unterschiedliche Forschungsfragen stellen, die unterschiedliche Untersuchungsdesigns zur Folge haben (müssen):\n\nErkennen Lehrer:innen Depressionen bei Mädchen mit höherer Wahrscheinlichkeit als bei Jungen?\nGibt es einen Zusammenhang zwischen dem Beruf und der Lebenszufriedenheit?\nFührt die Einnahme eines Medikaments im Gegensatz zu einem Placebo zu einer Besserung?\nFührt ein türkischer Name zu einer geringeren Wahrscheinlichkeit für ein Bewerbungsgespräch eingeladen zu werden?\nFührt ein Umzug in eine Nachbarschaft mit höherem Akademikeranteil zu besseren Noten für Jugendliche?\nSteigt der relative Anteil von sexuell nicht aufgeklärten aber sexuell aktiven Jugendlichen zwischen 13-15 Jahren?"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was wollen wir da eigentlich wissen?",
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 1: Wie erfassen Lehrer:innen Symptome?\n\n\n\n\n\nflowchart LR\n\nsubgraph Mädchen \ndirection LR\nSM1([Symptom A]) \nSM2([Symptom B])\nSM3([Symptom C])\n\nDM[Depression] \n\nDM --&gt; SM1 & SM2 & SM3\n\nend \n\nsubgraph Jungen\ndirection LR\nSJ1([Symptom B]) \nSJ2([Symptom D])\n\nDJ[Depression] \n\nDJ --&gt; SJ1 & SJ2\nend \n\nL[Lehrer:innen] --&gt; SM1 & SM3 & SJ2"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-1",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-1",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was wollen wir da eigentlich wissen?",
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 2: Gibt es (irgend)einen Zusammenhang zwischen Beruf & Lebenszufriedenheit?\n\n\n\n\n\nflowchart LR\n\nB[Beruf] --&gt; L[Lebenszufriedenheit]\nX[?] &lt;--&gt; B & L"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-2",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-2",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was wollen wir da eigentlich wissen?",
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 3a: Ist ein Medikament wirksam? Frage 3b: Wirkt ein türkischer Name anders als ein deutscher?\n\n\n\n\n\nflowchart LR\n\nsubgraph Medikament \ndirection LR\nZ1[Zustand $t_1$] \nZ2[Zustand $t_2$]\nMJ[Medikament genommen]\nMN[Medikament nicht genommen]\n\nZ1 --&gt; MJ --&gt; Z2\nZ1 --&gt; MN --&gt; Z2\nend\n\nsubgraph Diskriminierung \ndirection LR\nP[Musterperson]\nDN[Deutscher Name]\nTN[Türkischer Name]\nE[Einladung zur Besichtigung]\n\nP --&gt; DN & TN\nDN & TN --&gt; E\n\nend"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-3",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-3",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was wollen wir da eigentlich wissen?",
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 4a: Wie verändert sich in der Population die Verteilung der Ausprägung von Eigenschaften?\n\n\n\n\n\nflowchart LR\n    X1[\"X t_1\"] \n    Y1[\"Y t_1\"]\n    X2[\"X t_2\"]\n    Y2[\"Y t_2\"]\n  \n    X1 -.- X2\n    Y1 -.- Y2"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-4",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-wollen-wir-da-eigentlich-wissen-4",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was wollen wir da eigentlich wissen?",
+    "text": "Was wollen wir da eigentlich wissen?\nFrage 4b: Führt eine Veränderung in X (Umzug) zu einer Veränderung von Y (Noten)?\n\n\n\n\n\nflowchart LR\n    X1[\"X t_1\"] --&gt; Y1[\"Y t_1\"]\n    X2[\"X t_2\"] --&gt; Y2[\"Y t_2\"]\n    Y1 ~~~ X2\n    X1 -.- X2\n    Y1 -.- Y2"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#untersuchungsdesigns",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#untersuchungsdesigns",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Untersuchungsdesigns",
+    "text": "Untersuchungsdesigns\nBezüglich unterschiedlicher (quantitativer) Untersuchungsdesigns können drei zentrale Fragen unterschieden werden:\n\nGibt es eine randomisierte und kontrollierte Aussetzung eines Faktors auf Untersuchungseinheiten?\n\nexperimentelle vs. nicht-experimentelle Designs\n\nWird nur einmal oder wiederholt erhoben?\n\nQuerschnitt- vs. Längsschnitt-Design\n\nFindet die Messwiederholung aufgrund einer identischen oder aufgrund mehrerer Stichproben statt?\n\nPanel vs. Trend-Design\n\n\nEs ist möglich, alle Varianten zu kombinieren!"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#untersuchungsdesigns-datenstrukturen",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#untersuchungsdesigns-datenstrukturen",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Untersuchungsdesigns & Datenstrukturen",
+    "text": "Untersuchungsdesigns & Datenstrukturen"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#die-wesentlichen-unterschiede",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#die-wesentlichen-unterschiede",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Die wesentlichen Unterschiede",
+    "text": "Die wesentlichen Unterschiede\n\nExperimente weißen Werte des Treatment-Status über Spalten zufällig zu. Nicht-experimentelle Designs erfassen diese Werte über Beobachtungen.\nQuerschnittsuntersuchungen konzentrieren sich auf Unterschiede zwischen Untersuchungseinheiten zu einem Zeitpunkt.\nPaneluntersuchungen studieren Veränderungen von Merkmalen über die Zeit. Dazu müssen diese für die gleichen Untersuchungseinheiten über die Zeit beobachtet werden."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#das-ganz-dicke-brett-ursache-wirkung",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#das-ganz-dicke-brett-ursache-wirkung",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Das ganz dicke Brett: Ursache & Wirkung",
+    "text": "Das ganz dicke Brett: Ursache & Wirkung\n\n\n\n\n\nThe ladder of causation (Pearl 2018:28)\n\n\n\nNach Judea Pearl können wir drei Ebenen der Kausalanalyse unterscheiden:\n\nWelche Zusammenhänge kann ich studieren?\nWenn ich etwas verändere, was passiert dann?\nDa ich weiß, dass X eine Wirkung auf Y hat, kann ich mir vorstellen, was passieren würde, wenn X nicht vorliegt."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#ursachen-wirkungen-und-kontrafaktische-zustände",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#ursachen-wirkungen-und-kontrafaktische-zustände",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Ursachen, Wirkungen und kontrafaktische Zustände",
+    "text": "Ursachen, Wirkungen und kontrafaktische Zustände\n\n\n\n\n\nTalebi (2022)\n\n\n\nIn der linken Grafik werden zwei Szenarien für eine Person abgebildet.\nWir können aber pro Person immer nur ein Szenario beobachten."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#wirksamkeit",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#wirksamkeit",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Wirksamkeit",
+    "text": "Wirksamkeit\nWir wollen wissen, ob ein Medikament den systolischen Blutdruck1 senkt. Wir haben Daten von drei vier Personen:\n\n\n\nPerson\nMedikament\nkein Medikament\n\n\n\n\nMax\n120\n?\n\n\nBirte\n?\n100\n\n\nClara\n149\n?\n\n\nTom\n?\n160\n\n\n\nDer systolische Blutdruck entsteht, wenn Ihr Herz durch Anspannung Blut in den Körper drückt. Das ist immer der größere von zwei Werten bei Blutdruckmessungen."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#dann-halt-panel",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#dann-halt-panel",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Dann halt Panel!",
+    "text": "Dann halt Panel!\n\n\n\n\n\nPerson\nMedikament\nkein Medikament\n\n\n\n\nMax \\(t_1\\)\n120\n?\n\n\nMax \\(t_2\\)\n?\n140\n\n\nBirte \\(t_1\\)\n?\n100\n\n\nBirte \\(t_2\\)\n100\n?\n\n\nClara \\(t_1\\)\n149\n?\n\n\nClara \\(t_2\\)\n?\n151\n\n\nTom \\(t_1\\)\n?\n160\n\n\nTom \\(t_2\\)\n100\n?\n\n\n\n\nWir können immer nur beobachten, ob bei Untersuchungseinheiten zu einem bestimmten Zeitpunkt Eigenschaften vorliegen oder nicht. Eine Person hat zu einem bestimmenten Zeitpunkt ein Medikament genommen oder nicht. Wir können nicht beides beobachten. Dieses grundsätzliche Problem löst sich auch nicht einfach durch Mehrfachbeobachtung."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#wir-bohren-dicke-bretter-folge-2.",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#wir-bohren-dicke-bretter-folge-2.",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Wir bohren dicke Bretter, Folge 2.",
+    "text": "Wir bohren dicke Bretter, Folge 2.\n\\(T\\) ist absofort die Abkürzung für ein experimentelles Treatment. Wenn wir Personen unter \\(Y | T = \\text{ja}\\) & \\(Y | T = \\text{nein}\\) zeitgleich beobachten könnten, müssten wir einfach nur die Differenz zwischen beiden Werten bilden und hätten einen individuellen Kausaleffekt (ICE):\n\\[ \\text{ICE} =   (Y | T = \\text{ja}) - (Y | T = \\text{nein}) \\]\nWir haben aber immer nur den Wert unter einer Bedingung beobachtet, der andere Wert ist ein kontrafaktischer Wert oder auch potential outcome.\n\\[\\begin{equation}\nY | T = \\text{ja} \\begin{cases}     \nY_0 & \\, \\text{kontrafaktisch}\\\\\nY_1 & \\, \\text{beobachtet}\n\\end{cases}\n\\end{equation}\\]\n\\[\\begin{equation}\nY | T = \\text{nein} \\begin{cases}   \nY_0 & \\, \\text{beobachtet}\\\\\nY_1 & \\, \\text{kontrafaktisch}\n\\end{cases}\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#wir-bohren-dicke-bretter-folge-3",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#wir-bohren-dicke-bretter-folge-3",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Wir bohren dicke Bretter, Folge 3",
+    "text": "Wir bohren dicke Bretter, Folge 3\nWir kommen bei individuellen Differenzen (siehe ICE) nicht weiter, wenn wir Kausalbehauptungen testen wollen. Wir müssen stets über mehrere Untersuchungseinheiten (sprich: Gruppen) bilden. Diese Erwartung kürzen wir mit \\(E[]\\) ab.\n\\(E[Y | T = \\text{ja}]\\) ist daher der erwartete Wert des Blutdrucks über alle Personen, die das Medikament erhalten haben.\n\\(E[Y | T = \\text{nein}]\\) ist der erwartete Wert des Blutdrucks über alle Personen, die das Medikament nicht erhalten haben."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#übertragbarkeit-von-erwartungen",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#übertragbarkeit-von-erwartungen",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Übertragbarkeit von Erwartungen",
+    "text": "Übertragbarkeit von Erwartungen\nWenn wir Kausalbehauptungen testen wollen, müssen wir zwei Aussagen plausibel machen können:\n\nDer erwartete Wert des beobachteten Outcomes für Personen unter dem Einfluss des Treatments ist gleich mit dem erwarteten Wert des kontrafaktischen Outcomes für Personen ohne Treatment. Formaler: \\[ E[Y_1 | T = \\text{ja}] = E[Y_1 | T = \\text{nein}] = E[Y_1]  \\]\nDer erwartete Wert des beobachteten Outcomes für Personen ohne Einfluss des Treatments ist gleich mit dem erwarteten Wert des kontrafaktischen Outcomes für Personen unter Einfluss des Treatments. Formaler: \\[ E[Y_0 | T = \\text{nein}] = E[Y_0 | T = \\text{ja}] = E[Y_0]  \\] Nur dann können wir behaupten: \\[ E[Y_1 | T = \\text{ja}] - E[Y_0 | T = \\text{nein}] = E[Y_1] - E[Y_0] \\]"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimente",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimente",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Experimente",
+    "text": "Experimente\nFür experimentelle Designs müssen folgende Bedingungen vorliegen:\n\nEs werden durch die Forschenden mindestens zwei Gruppen gebildet: Versuchsgruppe (\\(E[Y_1 | T = \\text{ja}]\\)) und Kotrollgruppe (\\(E[Y_0 | T = \\text{nein}]\\)).\nDie Untersuchungseinheiten werden den Gruppen zufällig zugewiesen (Randomisierung).\nDer Faktor, von dem vermutet wird, dass er das Phänomen systematisch beeinflusst, wird kontrolliert verändert (Veränderung des Treatments).\nNur Untersuchungseinheiten der Versuchsgruppe werdem dem Treatment ausgesetzt."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimentallogik",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimentallogik",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Experimentallogik",
+    "text": "Experimentallogik\n\nSie vermuten, dass eine Eigenschaft \\(X\\) für ein Outcome \\(Y\\) eine notwendige oder hinreichende Bedingung ist.\n\nOhne X tritt Y nicht auf. Oder: Eine Veränderung von X verändert Y.\n\nSie untersuchen N Personen. Sie würfeln aus, wer in die Kontroll- und in die Versuchsgruppe kommt.\n\nDadurch unterscheiden sich die Gruppen bisher nur durch einen Zufallsprozess.\nDas bedeutet auch, dass sich die Verteilung aller weiteren Eigenschaften zwischen den Gruppen nur zufällig unterscheiden."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimentallogik-1",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimentallogik-1",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Experimentallogik",
+    "text": "Experimentallogik\n\nEs ist ihnen möglich X kontrolliert zu verändern und nur die Versuchsgruppe damit zu exponieren1.\n\nAuf diese Weise müsste sich \\(Y\\) in der Versuchsgruppe verändern, während es in der Kontrollgruppe nur zu “Baseline”-Veränderungen kommt.\n\nSie vergleichen \\(Y\\) zwischen den beiden Gruppen. Wenn alles korrekt abgelaufen ist, sind Unterschiede im Outcome nur auf Unterschiede in X zurückzuführen.\n\nDadurch wird eine Eigenschaft \\(X\\) zu einem Treatment \\(T\\)."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimente---blaupause",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#experimente---blaupause",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Experimente - Blaupause",
+    "text": "Experimente - Blaupause"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#annahmen-und-interpretation-von-experimenten",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#annahmen-und-interpretation-von-experimenten",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Annahmen und Interpretation von Experimenten",
+    "text": "Annahmen und Interpretation von Experimenten\n\nDas Treatment wirkt sich nur in den Versuchsgruppen aus.\n\nDazu dürfen zwischen den Gruppen keine Informations- oder Austauschbeziehungen bestehen.\n\nIn der Kontrollgruppe kommt es lediglich zu Baseline-Veränderungen.\n\nAuch in der Kontrollgruppe kommt es typischerweise zu Veränderungen - vor allem bei Experimenten über lange Zeiträume. Darunter fallen u.a. Placebo-Effekte, Reaktionen des Immunsystems, Langeweile, Frustration, verändertes Verhalten.\nDer Einfluss eines Treatments ist daher stets die Differenz der Versuchsgruppen zum Baseline-Effekt, der durch die Kontrollgruppe erfasst wird. Er ist nicht die Differenz von Versuchsgruppe zu “keinem Effekt”.\nDiese Veränderungen dürfen jedoch nicht mit dem Treatment-Status verbunden sein."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#annahmen-und-interpretation-von-experimenten-1",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#annahmen-und-interpretation-von-experimenten-1",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Annahmen und Interpretation von Experimenten",
+    "text": "Annahmen und Interpretation von Experimenten\n\nDas Treatment wirkt für alle gleich.\n\nWir nehmen aktuell an, dass durch ein Treatment die Versuchsgruppen von der Kontrollgruppe im Niveau verschoben werden.\nPersonen können jedoch auch systematisch unterschiedlich auf Treatments reagieren.\n\nUntersuchungseinheiten der Versuchs- und Kontrollgruppe haben die gleiche Wahrscheinlichkeit, Teil der analytischen Stichprobe zu sein.\n\nPersonen können durch ein Treatment verschreckt werden.\nPersonen der Kontrollgruppe können gelangweilt oder enttäuscht sein."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#randomisierung-random-sampling",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#randomisierung-random-sampling",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Randomisierung & random sampling",
+    "text": "Randomisierung & random sampling\n\n\n\n\nBei einer Zufallsstichprobe (random sampling) hat jede Untersuchungseinheit die gleiche Wahrscheinlichkeit, Teil der Nettostichprobe zu werden. Bei einer Randomisierung hat jede Untersuchungseinheit der Nettostichprobe die gleiche Wahrscheinlichkeit, Teil der Versuchs- oder Kontrollgruppe(n) zu werden. Randomisierung ist unabhängig von random sampling. Sie können auch innerhalb eines Schneeball- oder Convienence Samples randomisieren."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#komplexere-experimente",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#komplexere-experimente",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Komplexere Experimente",
+    "text": "Komplexere Experimente\n\n\n\n\n\nQuelle\n\n\n\n\nExperimente müssen nicht nur eine Kontroll- oder eine Versuchsgruppe haben. Sie können mehrere Versuchs- und Kontrollgruppen haben, um u.a. die unterschiedliche Stärke eines Treatments zu studieren oder über verschiedene Kontrollgruppen Baseline-Veränderungen gut zu erfassen.\nTreatments müssen nicht nur ein Stimulus enthalten, sondern können eine Kombination von Stimuli sein."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-laborexperiment",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-laborexperiment",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Arten von Experimenten: Laborexperiment",
+    "text": "Arten von Experimenten: Laborexperiment\n\n\n\n\n\nQuelle\n\n\n\nLaborexperimente sind eine der wichtigesten Quellen wissenschaftlicher Erkenntnis über die meisten Wissenschaftsdisziplinen. In den Sozialwissenschaften werden sie auch zunehmend über PC-Labore eingesetzt.\n\nVorteile: Kein Informationsaustausch zwischen Gruppen; Treatment kann gezielt und klar gesetzt werden; kaum Verweigerung oder Ignorieren des Treatments\nNachteile: Starke Selektion in die Bruttostichprobe; Umfeld des Labors kann sich auf Verhalten auswirken"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-feldexperiment",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-feldexperiment",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Arten von Experimenten: Feldexperiment",
+    "text": "Arten von Experimenten: Feldexperiment\nFeldexperimente nutzen Untersuchungseinheiten in ihrer “natürlichen” Umgebung, um Einflüsse von Treatments über Versuchs- und Kontrollgruppen zu studieren. Meist ist den untersuchten Personen nicht klar, dass sie Teil eines Experiments sind.\n\nVorteile: Kein Einfluss einer Laborumgebung; Erhebung von konkreten Verhaltensdaten\nNachteile: Einteilung in Versuchs- und Kontrollgruppen kann schwierig sein; Austauschs- und Informationsbeziehungen sind nur äußerst schwer zu kontrollieren."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Rechts stehen, links gehen!",
+    "text": "Rechts stehen, links gehen!\n\n\n\n\nWolbring et al. (2013) führten ein Feldexperiment in der Münchner U-Bahn durch. Sie wollten wissen, ob Normverstöße gegen die Regel “Rechts stehen, links gehen” auf Rolltreppen nach Geschlecht und sozialem Status der normverstoßenden Person anders sanktioniert werden.\nDazu varriierten Sie die Kleidung von Personen, die ansonsten ähnliche Körpermaße hatten."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen-1",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#rechts-stehen-links-gehen-1",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Rechts stehen, links gehen!",
+    "text": "Rechts stehen, links gehen!\n\n\n\n\nMänner und status niedriger gekleidete Personen wurden schneller und heftiger sanktioniert als Frauen und status höher gekleidete Personen."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was hilft gegen Armut?",
+    "text": "Was hilft gegen Armut?\n\n\n\n\n\nBanerjee, Abhijit, et al. 2015 wollten wissen, ob ein komplexeres Treatment als “nur Geld” oder “nur Beratung” effizienter gegen Armut hilft.\nProgram: Anlage eines Giro-Kontos, Gesundheits- und Ernährungsbildung, Ziegen / Hühner / Mais / Shea-Nüsse, Geldüberweisungen bei Trockenperiode; wöchentliche Besuche einer NGO"
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut-1",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#was-hilft-gegen-armut-1",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Was hilft gegen Armut?",
+    "text": "Was hilft gegen Armut?\nDas Experiment verdeutlicht auch, dass Haushalte unterschiedlich auf das Treatment reagierten. Je höher die Sparneigung eines Haushalts ist, desto stärker ist auch der Treatment-Effekt des Armutsreduktionsprogramms. Ein Vergleich der durschschnittlichen Spareinlagen zwischen Treatment und Kontrollgruppe erfasst diese Unterschiedlichkeit nicht."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-natürliche-experimente",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#arten-von-experimenten-natürliche-experimente",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Arten von Experimenten: Natürliche Experimente",
+    "text": "Arten von Experimenten: Natürliche Experimente\nManchmal treten (unvorhergesehene) Ereignisse auf, die das Verhalten oder die Einstellungen von Personen verändern. Dazu zählen u.a.:\n\nKatastrophen (Hurrikane, Flut, Pandemie, Kriege)\nTechnische/Medizinische Innovationen (Mobilfunkausbau, Verhütung, Infrastruktur)\npolitische Reformen (Wiedervereinigung, Elterngeldreformen)\n\nWenn diese Ereignisse so erfolgt sind, dass Untersuchungseinheiten von ihnen (im Zeitverlauf) zufällig betroffen waren oder sich die betroffenen Gruppen nicht unterscheiden, können wir betroffene und nicht betroffene Gruppen vergleichen, um den Einfluss diese Ereignisse zu studieren."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Terror und Einstellung zu Immigration",
+    "text": "Terror und Einstellung zu Immigration\n\nIm Jahr 2002 wurde in neun europäischen Ländern der European Social Survey erhoben, der u.a. Einstellungen zu Immigration nutzt. Während der Erhebungsphase fand in Bali eine große Terrorattacke statt. Damit konnte Legewie (2013) Befragte direkt vor und direkt nach der Terror-Attacke einteilen, um zu studieren, ob solche Ereignisse Einstellungen zu Immigration verändern."
+  },
+  {
+    "objectID": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration-1",
+    "href": "slides/13-UnterschiedeErheben-Untersuchungsdesigns.html#terror-und-einstellung-zu-immigration-1",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "Terror und Einstellung zu Immigration",
+    "text": "Terror und Einstellung zu Immigration\n\n\n\n\nTerror erhöht in einigen Ländern negative Einstellung zu Immigration. Dies ist vor allem dann der Fall, wenn die (wahrgenommene) Gruppe der Immigraten groß und der Arbeitsmarkt im Land herausfordernd ist.\nDer Einfluss nimmt ab, je länger das Ereignis von der Befragung entfernt ist."
+  },
+  {
+    "objectID": "slides/13-slides.html",
+    "href": "slides/13-slides.html",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "",
+    "text": "View slides in full screen"
   }
 ]

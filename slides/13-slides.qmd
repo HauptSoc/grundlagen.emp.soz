@@ -1,0 +1,7 @@
+---
+title: "Unterschiede erheben: Untersuchungsdesigns"
+author: "Andreas Haupt"
+format: html
+---
+  
+  {{< revealjs file="13-UnterschiedeErheben-Untersuchungsdesigns.html" height="950px" width="50%" class="ratio ratio-16x9" >}}
