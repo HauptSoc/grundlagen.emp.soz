@@ -1,0 +1,46 @@
+---
+title: "Übung: Untersuchungsdesigns"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+
+## It's a match!
+
+Welches Untersuchungsdesign benötigen Sie zum Testen von folgenden Hypothesen?  
+
+1. Personen mit Migrationshintergrund brechen Ausbildungen mit höherer Wahrscheinlichkeit ab. 
+2. Akkupunktur senkt das Schmerzniveau bei Personen mit chronischen Schmerzen. 
+3. Informationen über den Wasserverbrauch für das Waschen von Handtüchern führt zu geringeren Badarf an neuen Handtüchern in Hotels. 
+4. "Die Jugend wird immer dümmer" (Sokrates 421 v.Chr.).
+5. Millenials[^1] wollen weniger arbeiten als Boomer.
+6. Wenn Personen in eine religiöse Gruppe eintreten, fühlen Sie sich weniger einsam.
+7. Geld macht glücklich.
+
+[^1]: Setzen Sie eine Generationsbezeichnung Ihrer Wahl hier ein. Außer Boomer, versteht sich.
+
+## Social Media Ban als "Natürliches Experiment" 
+
+1. Lesen Sie den verlinkten [Artikel](https://www.nature.com/articles/d41586-025-04069-2).
+2. Diskutieren Sie, ob dieser Fall geeignet ist, um experimentelle Variation zu erzeugen. 
+- Was ist die Versuchs- und Kontrollgruppe? 
+- Was für Outcomes könnten studiert werden? 
+- Welche Annahmen über experimentelle Designs könnten hier verletzt werden und wie könnten Sie das verhindern oder lösen?
+    
