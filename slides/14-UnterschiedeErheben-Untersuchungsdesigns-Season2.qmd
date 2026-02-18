@@ -1,0 +1,200 @@
+---
+title: "Unterschiede erheben: Untersuchungsdesigns"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+##server: shiny
+format: 
+  revealjs:
+    fig-format: svg
+    width: 1280
+    height: 800
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
+
+## Querschnittuntersuchungen
+
+Bei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.
+
+- Vorteile: 
+  - Kostengünstig & weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen
+  - viele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar
+
+- Nachteile: Selektionseffekte (in die Stichprobe & in das "Treatment"), Verzerrung durch unbeobachtete Faktoren
+
+
+## Querschnitt = alle Einflüsse auf einmal!
+
+![](images/survey-methoden-privatschule.svg){width=80%}
+
+## The never ending drama: Selektivitäten {.midi}
+Selektion ins "Treatment"
+
+::::: {.columns}
+:::: {.column width="50%"}
+```{mermaid}
+flowchart TB
+
+X["Privatschule"] --> Y["Bildungserfolg"] 
+Z["Einkommen der Eltern"] --> X & Y
+
+```
+::::
+
+:::: {.column width="50%"}
+- Schüler:innen auf Privatschulen unterscheiden sich in Bezug auf das Einkommen der Eltern von Schüler:innen auf öffentlichen Schulen. 
+- Der Einfluss von Privat/Öffentlichen Schulen muss daher vom Einfluss der "Selektion in Privatschulen" getrennt werden. 
+::::
+:::::
+
+
+## The never ending drama: Selektivitäten {.midi}
+Selektion in die Stichprobe
+
+::::: {.columns}
+:::: {.column width="50%"}
+```{mermaid}
+flowchart TB
+
+G[Geschlecht] --> E[Einsamkeit]
+B[Bildung] --> E
+G --> B
+T[Teilnahme]
+G --> T 
+B --> T
+```
+::::
+
+:::: {.column width="50%"}
+- Personen, die an der Umfrage teilnehmen, sind eher weiblich und höher gebildet. 
+- Da diese beiden Eigenschaften auch auf die Einsamkeit wirken, verzerrt die Teilnahmeselektivität den Zusammenhang zwischen Geschlecht, Bildung und Einsamkeit in der analytischen Stichprobe.
+::::
+:::::
+
+
+## No causal, no cry! {.midi}
+
+- Selektion ins Treatment ist dann ein Problem, wenn wir die direkte Wirkung eines Treatments auf ein Outcome studieren wollen (Stufe 2 der "ladder of causality"). 
+     - Was ist die Wirkung von Privatschulen auf Bildungserfolge von Schüler:innen -- **unabhängig** von allen anderen Eigenschaften, die mit Privatschulen zusammenhängen? 
+     - Was ist der Einfluss von Scheidungen auf die Entwicklung von Kindern -- **unabhängig** von allen anderen Eigenschaften, die mit Scheidungen zusammenhängen? 
+     
+- Manchmal ist das aber nicht unser Ziel. Oft wollen wir "nur" einen Zusammenhang beschreiben oder Unterschiede erfassen (Stufe 1 der "ladder of causality").
+     
+## Renaisance der Mädchen-/Jungenschulen? 
+
+[Clavel & Flannery (2022)](https://bera-journals.onlinelibrary.wiley.com/doi/full/10.1002/berj.3841) untersuchten für Irland Unterschiede zwischen geschlechtergetrennten und gemischten Schulen mit PISA-Daten. 
+
+::::: {.columns}
+:::: {.column width="50%"}
+![](https://bera-journals.onlinelibrary.wiley.com/cms/asset/3d0dbc3d-935c-4cf1-9c95-7ceae42bde64/berj3841-fig-0001-m.png)
+::::
+
+:::: {.column width="50%"}
+![](https://bera-journals.onlinelibrary.wiley.com/cms/asset/ee4067f4-8df1-44d5-a1c7-ac1b4c693c6f/berj3841-fig-0002-m.png)
+::::
+:::::
+
+
+
+## Der Zusammenhang von Intelligenz und Einkommen
+
+![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/esr/39/5/10.1093_esr_jcac076/2/jcac076_fig3.jpeg?Expires=1774356704&Signature=yibGkUtsMopfwBBKo26-NMoZbbvGhlcWW49NMvu5tfKeC87GBQ-wwrzbL40Y-Wf8LZeH6EcAHHcHwp0BRQAKzhmK6Dqf6n-znAB2nv13H8Oi0hmZrjnFT1w0baLELVmYd9Jc5OMseE12mMqqacRJP1KlbQZ2rwONibMg4DnTtXBqg9rG-vC7iYV1~KhkljgzJPDFbS7m9cdCLatH6POW45WbceBhrOGFw16HwMOD~3mpl1ODyXeiBieJzExcDocecvCmcShmTWX18YI0l7vOx-PIBShjyXsGG56lUeVPxCYCXn107L6qXlFkvp0n4gYMDFIS0g2cdM0YBG8Mp37n7w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+
+
+[Quelle: Keuschnigg et al. (2023)](https://academic.oup.com/esr/article/39/5/820/7008955)
+
+
+## Trenddesign
+
+- Bei einem Trenddesign werden über die Zeit mehrere Stichproben gezogen, bei dem das gleiche Item genutzt wird.
+
+- Wichtig: Veränderungen im Trend können sowohl auf veränderte Reaktionen/Messungen auf das Item als auch auf veränderte Zusammensetzungen der Stichproben über die Zeit zurückzuführen sein. 
+
+- Ändern sich z.B. Selektionseffekte über die Zeit, führt dies zu unterschiedlichen Zusammensetzungen und somit auch zu unterschiedlichen Trends.
+
+## Trends in den Krankenständen
+
+![Grobe et al. (2025): TK Gesundheitsreport 2024](images\TK-AU-2024.svg)
+
+## Eine neue Jugendkultur der Vorsicht? 
+
+::::: {.columns}
+:::: {.column width="80%"}
+![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/90/2/10.1111_cdev.12930/2/cdev12930-fig-0001.jpeg?Expires=1774433861&Signature=ClzZkYx1pkfpwnM3bkXlMszA~sfwEXqbzj~FkByDsXClWNiNEBPVVw1RFWqWcXTzCD83ESyCrBqH6AhcFp5yS5YrpxLrxrPcjo7h5JLXalFhAKH7HdfiG1206zV9D3FhIBFXt9o~eG~BAiWgjO21ZIQC-ipQjZcbNxc5lpXJvpELSWQnXHGmH~PfhgHu8GE6LVnVfFDW79vmUVYpDu3vVa308y4aKmwVXfPRVgqD3S4yix-jn74lXNpaKxaau5fBskmYY0gnbbga57STqmff9slHe27U11tHM2Lyn~DEBAKA0KJZHpfKD7k9BFJk1x5263MePTaL~Rknciq1NVG~8A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA){width=70%}
+::::
+
+:::: {.column width="20%"}
+[Quelle: Twenge & Park (2019)](https://academic.oup.com/chidev/article/90/2/638/8257274) für die USA
+::::
+:::::
+
+## Trenddesign: Sonntagsfrage
+
+Welche Partei würden Sie wählen, wenn heute Bundestagswahl wäre ([Quelle](https://www.dkriesel.com/sonntagsfrage))?
+
+![](https://www.dkriesel.com/_media/sonntagsfrage_wahl2021.png){width=90%}
+
+## Paneldesign
+
+- Bei einer Panel-Untersuchung wird mittels einer **konstanten** Stichprobe zu **unterschiedlichen** Zeitpunkten mindestens eine Eigenschaft (typischerweise aber viele) gemessen. 
+
+- Mit einem Paneldesign können Sie den Zusammenhang einer zeitlichen *Veränderungen* eines Merkmals auf *Veränderungen* eines Outcomes studieren.
+
+## Paneldesign & Teilnahmeselektion {.midi}
+
+::::: {.columns}
+:::: {.column width="30%"}
+![](https://thomasklausch.wordpress.com/wp-content/uploads/2015/10/participation-in-the-liss-panel-has-dropped-over2.jpg)
+::::
+
+:::: {.column width="70%"}
+- Panel haben ein besonders Problem: Die Teilnahmewahrscheinlichkeit über Befragungszeitpunkte nimmt ab und ist meist selektiv ([Klausch (2015)](https://thomasklausch.wordpress.com/2015/10/13/attrition-in-the-liss-panel-most-severe-in-the-first-two-years/).
+
+- Daher verändert sich die Zusammensetzung des Panels über die Zeit. Dies wird auch als *Panel-Attrition* bezeichnet. 
+
+- Das ist dann ein Problem, wenn unbeobachtete Faktoren eine große Rolle dabei spielen, die mit Merkmalen innerhalb einer Analyse verknüpft sind.
+
+- Es sind daher meist Auffrischungsstichproben nötig. Dies sind neue Stichproben, die regelmäßig in das Panel hinzugegeben werden.
+::::
+:::::
+
+## Paneldesign: Kinder (sie geben einem viel zurück!)
+
+::::: {.columns}
+:::: {.column width="50%"}
+![](https://onlinelibrary.wiley.com/cms/asset/aa9bfa0f-d6e2-488b-8ab6-122038517d85/jomf12531-fig-0001-m.jpg)
+::::
+
+:::: {.column width="50%"}
+![](https://onlinelibrary.wiley.com/cms/asset/c25d7933-750e-48ab-bc72-701e69e36574/jomf12531-fig-0002-m.jpg)
+::::
+:::::
+
+Quelle: [Ruppanner et al. (2018)](https://onlinelibrary.wiley.com/doi/full/10.1111/jomf.12531)
+
+## Paneldesign: Auch der schlimmste Tag vergeht {.midi}
+
+![](images/hudde-life-satisfaction.png){width=90%}
+
+Quelle: [Hudde & Jacob (2023)](https://sociologicalscience.com/articles-v10-29-830/)
+
