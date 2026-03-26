@@ -1,0 +1,176 @@
+---
+title: "Gute Vergleiche: Vergleiche und Verteilungen"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+##server: shiny
+format: 
+  revealjs:
+    fig-format: svg
+    width: 1280
+    height: 800
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .6em
+      }
+    </style>
+---
+
+## Verstehen, was passiert.
+
+![](images/abitur-geschlecht.png){width="70%"}
+
+## Mit Daten lernen, dann beraten.
+
+![](images/krautreporter-social-media-bans.png){width="70%"}
+
+## Nicht zum Lärm, sondern zur Aufklärung beitragen.
+
+![](images/health-influence.png){width="70%"}
+
+## Wie geht das?
+
+![](images/everything-connectedV2.jpg)
+
+## Geht das auch einfacher? (Spoiler: Jaein.)
+
+![](https://journals.sagepub.com/cms/10.1177/00031224211004187/asset/875eb054-3d59-43e7-9562-81e4172b1d7c/assets/images/large/10.1177_00031224211004187-fig1.jpg)
+
+## Was bedeutet das?
+
+| Erkentnisinteresse | Studienfrage | Theoretische Population | Theorie-Empirie Link | Schätzung |
+|----|----|----|----|----|
+| Warum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen? | Werden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert? | Grundschüler:innen in Deutschland. |  |  |
+|  |  |  |  |  |
+
+## Jungen und Mädchen in der Schule
+
+Unser Erkentnisinteresse formulieren wir meist in Form einer Hypothese. Diese Hypothesen drücken typischerweise systematische Zusammenhänge aus.
+
+-   Einen Vergleich im statistischen Sinn können wir als eine **Differenz** ausdrücken.
+
+-   Typischerweise müssen wir erst unsere Hypothesen für Vergleiche auf Gruppenebene reformulieren. D.h.: Wir müssen klar machen, was für ein Vergleichsmaßsstab genutzt werden soll und wie verglichen werden soll.
+
+## Das Ziel: Gute Vergleiche
+
+Unser grundlegendes Ziel für dieses Semester ist zu lernen, wie gute Vergleiche möglich sind. Generell nutzen wir Vergleiche, um zu lernen, ob Unterschiede in einer Eigenschaft A mit Unterschieden in einer Eigenschaft B in Verbindung stehen. Das kann viele verschiedene Formen haben:
+
+1.  Wir vergleichen Treatment- und eine Kontrollgruppe(n) in einem Experiment.
+
+2.  Wir vergleichen die Verteilung einer Eigenschaft über verschiedene Gruppen.
+
+3.  Wir vergleichen die Verteilung einer Eigenschaft über die Zeit.
+
+## Herausforderungen guter Vergleiche
+
+Niemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen per se schlechten Vergleich. Wir verbinden allerdings in der Wissenschaft mit einem Vergleich ein Erkentnissinteresse. Dieses Interesse kann gut oder schlecht bedient werden.
+
+1.  Wir möchten beschreiben, wie groß die Unterschiede zwischen Gruppen sind.
+
+    1.  Oft vergleichen wir Mittelwerte oder relative Anteile über Gruppen. Das kann aber aus vielen Gründen nicht unseren Interessen genügen. Daher müssen wir reflektieren, was ein sinnvoller Vergleichsmaßstab sein kann.
+
+2.  Wir wollen oft wissen, ob etwas wirksam ist.
+
+    1.  In diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft durch das Gruppenmerkmal bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden. Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale isolieren.
+
+## Was können wir vergleichen?
+
+-   Wir vergleichen ab sofort keine individuellen Informationen sondern operieren stets auf Gruppenebene.[^1]
+
+-   Wenn wir Gruppen vergleichen wollen, müssen wir die Informationen über die Verteilung eines Merkmals zusammenfassen.
+
+    1.  Maße der zentralen Tendenz: Modus, Median, arithmetisches Mittel
+
+    2.  Maße der Streuung: Varianz, Standardabweichung, Diversität
+
+    3.  Weitere Punkte der Verteilung: Quantile/Perzentile, Schiefe
+
+[^1]: Gruppen können auch Länder oder Zeitpunkte sein.
+
+## Verteilung der Löhne in Deutschland 2018
+
+## Isolation von Einflüssen: Grundproblem
+
+-   In einem randomisierten Experiment unterscheiden sich Kontroll- und Treatmentgruppe nur zufällig. Das heißt vor allem, dass sich die Verteilung von individuellen Merkmalen zwischen den Gruppen nur zufällig unterscheidet.
+
+-   Wenn die Zuteilung in ein Treatment nicht randomisiert, sondern selektiv ist, unterscheiden sich Kontroll- und Treatmentgruppe *auch* nach der Verteilung der Merkmale, die zur Selektion führen.
+
+-   Wenn wir Gruppenvergleiche mit dem Interesse machen möchten, den direkten Einfluss der Gruppenmitgliedschaft auf die Verteilung eines Merkmals zu erfassen, müssen wir den "Gruppeneinfluss" von der Selektion in die Gruppe unterscheiden.
+
+-   Isolieren wir Einflüsse nicht voneinander, dann können wir u.a. fälschlicherweise dein Einfluss der Selektion als Gruppeneinfluss ansehen.
+
+## Isolation von Einflüssen: Lösungen
+
+Grundsätzlich haben wir zwei Möglichkeiten zur Isolation von Einflüssen:
+
+-   Randomisierung in verschiedene Gruppen und kontrolliertes Treatment
+
+-   Konstanthaltung, d.h. der Vergleich von Gruppen, die in anderen Eigenschaften $Z$ gleiche Werte haben.
+
+## Vergleich mit dem Zufall
+
+Manchmal vergleichen wir nicht empirische Verteilungen über Gruppen sondern empirische Ergebnisse gegen Ergebnisse, die wir unter Zufallsbedingungen erwarten würden. Zum Beispiel erwarten wir,
+
+1.  dass sich die Verteilung von Merkmalen zwischen Kontroll- und Treatmentgruppe in einem randomisierten Experiment nur *zufällig unterscheiden*.
+
+2.  dass sich die Verteilung von Merkmalen zwischen der Stichprobe und Population nur *zufällig unterscheiden*, wenn die Stichprobe zufällig gezogen wurde und keine Selektion stattfand.
+
+3.  dass sich die Verteilung eines Merkmals *nur zufällig* verändert[^2], wenn ein Treatment oder eine Gruppenmitgliedschaft keine Wirkung hat.
+
+[^2]: Wenn die Veränderung über eine längere Zeit beobachtet wird, müssen diese Veränderungen in Bezug auf einen "Baseline" Wert bezogen werden.
+
+## Empirische Verteilungen und Zufallsverteilungen
+
+-   Empirische Verteilungen und Zufallsverteilungen sind nicht das Gleiche!
+
+-   Empirische Verteilungen enstehen durch datengenerierende Prozesse, wie die Lohnsetzung, Diskriminierung am Wohnungsmarkt oder Berufswahlentscheidungen. Alle diese Prozesse sind **nicht zufällig** und sollten daher auch nicht mit **Zufalls**verteilungen beschrieben werden.
+
+-   Zufallsverteilungen sind das Resultat von Zufallsprozessen. Je nachdem, welchen Zufallsprozess wir beschreiben (z.B. Münzwurf, zufällige Schwankungen, zufällig auftretende sehr seltene Ereignisse), ist die Zufallsverteilung unterschiedlich.
+
+## Erwartungswert (=Durchschnitt der Zufallsverteilung)
+
+Der Erwartungswert einer Variablen X, $E[X]$, bezeichnet das *potentielle, durchschnittliche* Ergebnis, wenn die Erstellung der Variablen X zufällig oft wiederholt würde. Der Wert ist die Summe der jeweiligen Werte von X multipliziert (bzw. gewichtet) mit der Wahrscheinlichkeit, dass X vorliegt.
+
+$$E[X] = \sum x_i \cdot P(x_i)$$
+
+Einfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). $E[\text{Kopf}] = 0 \cdot 0.5 + 1 \cdot 0.5 = 0.5$
+
+## Warum brauchen wir das?
+
+-   Sie machen eine Befragung und ziehen eine Zufallsstichprobe.
+
+-   Woher wissen Sie, ob Ihre Stichprobe *tatsächlich* (annährend) zufällig war?
+
+-   Variable Geschlecht (Werte: 0 = Mann; 1 = Frau): E\[Frau\] = 0.5, da $0.5 \cdot 0 + 0.5 \cdot 1 = 0.5$
+
+-   Keine Stichprobe wird allerdings exakt ein 50/50 Ratio haben, auch wenn die Stichprobe perfekt zufällig war.
+
+-   Daher müssen wir lernen, erwartete Werte ($E[X]$) von realisierten Werten ($\bar{X}$ bzw. $P(X)$) zu unterscheiden, *um sie miteinander vergleichen zu können*.
+
+## Bernoulli-Verteilung (Münzwurf)
+
+## Gleichverteilung (Würfelwurf)
+
+## Normalverteilung(en) (Unsystematische Differenzen in hoher Anzahl)
+
+-   $N(x, \sigma)$ bezeichnet eine Normalverteilung mit dem Mittelwert $x$ und der Standardabweichung $\sigma$.
+
+-   $N(0,1)$ wird als *Standardnormalverteilung* bezeichnet.
+
+## Der Zufallsprozess bestimmt die Zufallsverteilung
