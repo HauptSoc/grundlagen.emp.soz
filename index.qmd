@@ -8,7 +8,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |   |   |
 |:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|---------|---------|
 |  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |  |  |
-| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
+| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |  |  |
 | 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
 | 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
 |  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |  |  |
