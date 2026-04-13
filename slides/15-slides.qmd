@@ -1,0 +1,7 @@
+---
+title: "Unterschiede erheben: Untersuchungsdesigns"
+author: "Andreas Haupt"
+format: html
+---
+  
+  {{< revealjs file="15-Vergleiche_und_Verteilungen.html" height="950px" width="50%" class="ratio ratio-16x9" >}}
