@@ -230,6 +230,11 @@ D -- beruht auf --&gt; V
 </div>
 <p>Wir betreiben Datenanalyse, indem wir gruppenspezifische Verteilungen auf eine korrekte Art miteinander <em>vergleichen</em> und somit die theoretisch behauptete <em>systematische Unterschiedlichkeit</em> von Eigenschaften als <em>Differenzen</em> erfassen.</p>
 </section>
+<section id="die-daten-spielwiese-allbus-2018" class="slide level2">
+<h2>Die Daten-Spielwiese (ALLBUS 2018)</h2>
+<iframe width="100%" height="100%" src="https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud">
+</iframe>
+</section>
 <section id="herausforderungen-guter-vergleiche" class="slide level2 midi">
 <h2>Herausforderungen guter Vergleiche</h2>
 <p>Niemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen per se schlechten Vergleich. Wir verbinden allerdings in der Wissenschaft mit einem Vergleich ein Erkentnissinteresse. Dieses Interesse kann gut oder schlecht bedient werden.</p>
@@ -316,8 +321,10 @@ D -- beruht auf --&gt; V
 </div>
 </div>
 </section>
-<section id="das-datenanalytische-handwerkszeug-für-den-vergleich-von-verteilungen" class="slide level2">
-<h2>Das datenanalytische Handwerkszeug für den Vergleich von Verteilungen</h2>
+<section id="handwerkszeug" class="slide level2 midi">
+<h2>Handwerkszeug</h2>
+<iframe width="100%" height="100%" src="https://019d86ab-8f95-cd27-439b-478f5d4f4fe1.share.connect.posit.cloud">
+</iframe>
 </section>
 <section id="selber-hämmern-nähen-schneiden" class="slide level2">
 <h2>Selber hämmern, nähen &amp; schneiden</h2>
@@ -326,78 +333,6 @@ D -- beruht auf --&gt; V
 2.  Maße der Streuung: Varianz, Standardabweichung, Diversität
 
 3.  Weitere Punkte der Verteilung: Quantile/Perzentile, Schiefe</code></pre>
-</section>
-<section id="verteilung-der-löhne-in-deutschland-2018" class="slide level2">
-<h2>Verteilung der Löhne in Deutschland 2018</h2>
-</section>
-<section id="isolation-von-einflüssen-grundproblem" class="slide level2">
-<h2>Isolation von Einflüssen: Grundproblem</h2>
-<ul>
-<li><p>In einem randomisierten Experiment unterscheiden sich Kontroll- und Treatmentgruppe nur zufällig. Das heißt vor allem, dass sich die Verteilung von individuellen Merkmalen zwischen den Gruppen nur zufällig unterscheidet.</p></li>
-<li><p>Wenn die Zuteilung in ein Treatment nicht randomisiert, sondern selektiv ist, unterscheiden sich Kontroll- und Treatmentgruppe <em>auch</em> nach der Verteilung der Merkmale, die zur Selektion führen.</p></li>
-<li><p>Wenn wir Gruppenvergleiche mit dem Interesse machen möchten, den direkten Einfluss der Gruppenmitgliedschaft auf die Verteilung eines Merkmals zu erfassen, müssen wir den “Gruppeneinfluss” von der Selektion in die Gruppe unterscheiden.</p></li>
-<li><p>Isolieren wir Einflüsse nicht voneinander, dann können wir u.a. fälschlicherweise dein Einfluss der Selektion als Gruppeneinfluss ansehen.</p></li>
-</ul>
-</section>
-<section id="isolation-von-einflüssen-lösungen" class="slide level2">
-<h2>Isolation von Einflüssen: Lösungen</h2>
-<p>Grundsätzlich haben wir zwei Möglichkeiten zur Isolation von Einflüssen:</p>
-<ul>
-<li><p>Randomisierung in verschiedene Gruppen und kontrolliertes Treatment</p></li>
-<li><p>Konstanthaltung, d.h. der Vergleich von Gruppen, die in anderen Eigenschaften <span class="math inline">\(Z\)</span> gleiche Werte haben.</p></li>
-</ul>
-</section>
-<section id="vergleich-mit-dem-zufall" class="slide level2">
-<h2>Vergleich mit dem Zufall</h2>
-<p>Manchmal vergleichen wir nicht empirische Verteilungen über Gruppen sondern empirische Ergebnisse gegen Ergebnisse, die wir unter Zufallsbedingungen erwarten würden. Zum Beispiel erwarten wir,</p>
-<ol type="1">
-<li><p>dass sich die Verteilung von Merkmalen zwischen Kontroll- und Treatmentgruppe in einem randomisierten Experiment nur <em>zufällig unterscheiden</em>.</p></li>
-<li><p>dass sich die Verteilung von Merkmalen zwischen der Stichprobe und Population nur <em>zufällig unterscheiden</em>, wenn die Stichprobe zufällig gezogen wurde und keine Selektion stattfand.</p></li>
-<li><p>dass sich die Verteilung eines Merkmals <em>nur zufällig</em> verändert<sup>1</sup>, wenn ein Treatment oder eine Gruppenmitgliedschaft keine Wirkung hat.</p></li>
-</ol>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Wenn die Veränderung über eine längere Zeit beobachtet wird, müssen diese Veränderungen in Bezug auf einen “Baseline” Wert bezogen werden.</p></li></ol></aside></section>
-<section id="empirische-verteilungen-und-zufallsverteilungen" class="slide level2">
-<h2>Empirische Verteilungen und Zufallsverteilungen</h2>
-<ul>
-<li><p>Empirische Verteilungen und Zufallsverteilungen sind nicht das Gleiche!</p></li>
-<li><p>Empirische Verteilungen enstehen durch datengenerierende Prozesse, wie die Lohnsetzung, Diskriminierung am Wohnungsmarkt oder Berufswahlentscheidungen. Alle diese Prozesse sind <strong>nicht zufällig</strong> und sollten daher auch nicht mit <strong>Zufalls</strong>verteilungen beschrieben werden.</p></li>
-<li><p>Zufallsverteilungen sind das Resultat von Zufallsprozessen. Je nachdem, welchen Zufallsprozess wir beschreiben (z.B. Münzwurf, zufällige Schwankungen, zufällig auftretende sehr seltene Ereignisse), ist die Zufallsverteilung unterschiedlich.</p></li>
-</ul>
-</section>
-<section id="erwartungswert-durchschnitt-der-zufallsverteilung" class="slide level2">
-<h2>Erwartungswert (=Durchschnitt der Zufallsverteilung)</h2>
-<p>The expectation here is a lot of content; continue unchanged.</p>
-<p><span class="math display">\[E[X] = \sum x_i \cdot P(x_i)\]</span></p>
-<p>Einfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). <span class="math inline">\(E[\text{Kopf}] = 0 \cdot 0.5 + 1 \cdot 0.5 = 0.5\)</span></p>
-</section>
-<section id="warum-brauchen-wir-das" class="slide level2">
-<h2>Warum brauchen wir das?</h2>
-<ul>
-<li><p>Sie machen eine Befragung und ziehen eine Zufallsstichprobe.</p></li>
-<li><p>Woher wissen Sie, ob Ihre Stichprobe <em>tatsächlich</em> (annähernd) zufällig war?</p></li>
-<li><p>Variable Geschlecht (Werte: 0 = Mann; 1 = Frau): E[Frau] = 0.5, da <span class="math inline">\(0.5 \cdot 0 + 0.5 \cdot 1 = 0.5\)</span></p></li>
-<li><p>Keine Stichprobe wird allerdings exakt ein 50/50 Ratio haben, auch wenn die Stichprobe perfekt zufällig war.</p></li>
-<li><p>Daher müssen wir lernen, erwartete Werte (<span class="math inline">\(E[X]\)</span>) von realisierten Werten (<span class="math inline">\(\bar{X}\)</span> bzw. <span class="math inline">\(P(X)\)</span>) zu unterscheiden, <em>um sie miteinander vergleichen zu können</em>.</p></li>
-</ul>
-</section>
-<section id="bernoulli-verteilung-münzwurf" class="slide level2">
-<h2>Bernoulli-Verteilung (Münzwurf)</h2>
-</section>
-<section id="gleichverteilung-würfelwurf" class="slide level2">
-<h2>Gleichverteilung (Würfelwurf)</h2>
-</section>
-<section id="interaktive-verteilungen" class="slide level2 midi">
-<h2>Interaktive Verteilungen</h2>
-</section>
-<section id="normalverteilungen-unsystematische-differenzen-in-hoher-anzahl" class="slide level2">
-<h2>Normalverteilung(en) (Unsystematische Differenzen in hoher Anzahl)</h2>
-<ul>
-<li><p><span class="math inline">\(N(x, \sigma)\)</span> bezeichnet eine Normalverteilung mit dem Mittelwert <span class="math inline">\(x\)</span> und der Standardabweichung <span class="math inline">\(\sigma\)</span>.</p></li>
-<li><p><span class="math inline">\(N(0,1)\)</span> wird als <em>Standardnormalverteilung</em> bezeichnet.</p></li>
-</ul>
-</section>
-<section id="der-zufallsprozess-bestimmt-die-zufallsverteilung" class="slide level2">
-<h2>Der Zufallsprozess bestimmt die Zufallsverteilung</h2>
 
 
 </section>
@@ -617,82 +552,6 @@ D -- beruht auf --&gt; V
         ]
       });
     </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
-        }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
-        }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
-        }
-
-    
-
-      })();
-
-    </script>
-
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

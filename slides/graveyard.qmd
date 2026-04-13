@@ -3,15 +3,87 @@ title: "Graveyard"
 format: html
 ---
 
+## Verteilung der Löhne in Deutschland 2018
+
+## Isolation von Einflüssen: Grundproblem
+
+-   In einem randomisierten Experiment unterscheiden sich Kontroll- und Treatmentgruppe nur zufällig. Das heißt vor allem, dass sich die Verteilung von individuellen Merkmalen zwischen den Gruppen nur zufällig unterscheidet.
+
+-   Wenn die Zuteilung in ein Treatment nicht randomisiert, sondern selektiv ist, unterscheiden sich Kontroll- und Treatmentgruppe *auch* nach der Verteilung der Merkmale, die zur Selektion führen.
+
+-   Wenn wir Gruppenvergleiche mit dem Interesse machen möchten, den direkten Einfluss der Gruppenmitgliedschaft auf die Verteilung eines Merkmals zu erfassen, müssen wir den "Gruppeneinfluss" von der Selektion in die Gruppe unterscheiden.
+
+-   Isolieren wir Einflüsse nicht voneinander, dann können wir u.a. fälschlicherweise dein Einfluss der Selektion als Gruppeneinfluss ansehen.
+
+## Isolation von Einflüssen: Lösungen
+
+Grundsätzlich haben wir zwei Möglichkeiten zur Isolation von Einflüssen:
+
+-   Randomisierung in verschiedene Gruppen und kontrolliertes Treatment
+
+-   Konstanthaltung, d.h. der Vergleich von Gruppen, die in anderen Eigenschaften $Z$ gleiche Werte haben.
+
+## Vergleich mit dem Zufall
+
+Manchmal vergleichen wir nicht empirische Verteilungen über Gruppen sondern empirische Ergebnisse gegen Ergebnisse, die wir unter Zufallsbedingungen erwarten würden. Zum Beispiel erwarten wir,
+
+1.  dass sich die Verteilung von Merkmalen zwischen Kontroll- und Treatmentgruppe in einem randomisierten Experiment nur *zufällig unterscheiden*.
+
+2.  dass sich die Verteilung von Merkmalen zwischen der Stichprobe und Population nur *zufällig unterscheiden*, wenn die Stichprobe zufällig gezogen wurde und keine Selektion stattfand.
+
+3.  dass sich die Verteilung eines Merkmals *nur zufällig* verändert[^1], wenn ein Treatment oder eine Gruppenmitgliedschaft keine Wirkung hat.
+
+[^1]: Wenn die Veränderung über eine längere Zeit beobachtet wird, müssen diese Veränderungen in Bezug auf einen "Baseline" Wert bezogen werden.
+
+## Empirische Verteilungen und Zufallsverteilungen
+
+-   Empirische Verteilungen und Zufallsverteilungen sind nicht das Gleiche!
+
+-   Empirische Verteilungen enstehen durch datengenerierende Prozesse, wie die Lohnsetzung, Diskriminierung am Wohnungsmarkt oder Berufswahlentscheidungen. Alle diese Prozesse sind **nicht zufällig** und sollten daher auch nicht mit **Zufalls**verteilungen beschrieben werden.
+
+-   Zufallsverteilungen sind das Resultat von Zufallsprozessen. Je nachdem, welchen Zufallsprozess wir beschreiben (z.B. Münzwurf, zufällige Schwankungen, zufällig auftretende sehr seltene Ereignisse), ist die Zufallsverteilung unterschiedlich.
+
+## Erwartungswert (=Durchschnitt der Zufallsverteilung)
+
+The expectation here is a lot of content; continue unchanged.
+
+$$E[X] = \sum x_i \cdot P(x_i)$$
+
+Einfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). $E[\text{Kopf}] = 0 \cdot 0.5 + 1 \cdot 0.5 = 0.5$
+
+## Warum brauchen wir das?
+
+-   Sie machen eine Befragung und ziehen eine Zufallsstichprobe.
+
+-   Woher wissen Sie, ob Ihre Stichprobe *tatsächlich* (annähernd) zufällig war?
+
+-   Variable Geschlecht (Werte: 0 = Mann; 1 = Frau): E\[Frau\] = 0.5, da $0.5 \cdot 0 + 0.5 \cdot 1 = 0.5$
+
+-   Keine Stichprobe wird allerdings exakt ein 50/50 Ratio haben, auch wenn die Stichprobe perfekt zufällig war.
+
+-   Daher müssen wir lernen, erwartete Werte ($E[X]$) von realisierten Werten ($\bar{X}$ bzw. $P(X)$) zu unterscheiden, *um sie miteinander vergleichen zu können*.
+
+## Bernoulli-Verteilung (Münzwurf)
+
+## Gleichverteilung (Würfelwurf)
+
+## Normalverteilung(en) (Unsystematische Differenzen in hoher Anzahl)
+
+-   $N(x, \sigma)$ bezeichnet eine Normalverteilung mit dem Mittelwert $x$ und der Standardabweichung $\sigma$.
+
+-   $N(0,1)$ wird als *Standardnormalverteilung* bezeichnet.
+
+## Der Zufallsprozess bestimmt die Zufallsverteilung
+
 ## Fehlerquellen unterscheiden
-::::: {.columns}
-:::: {.column width="50%"}
+
+::::: columns
+::: {.column width="50%"}
 ![Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: [Papa et al. (2015)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01674/full)](images/path-impulsivity-externalizing.png)
-::::
+:::
 
-:::: {.column width="50%"}
-- Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.
-- Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.
-::::
+::: {.column width="50%"}
+-   Mütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.
+-   Mütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz.
+:::
 :::::
-

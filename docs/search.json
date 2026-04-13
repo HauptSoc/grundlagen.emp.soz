@@ -2933,8 +2933,8 @@
     "objectID": "slides/graveyard.html#fehlerquellen-unterscheiden",
     "href": "slides/graveyard.html#fehlerquellen-unterscheiden",
     "title": "Graveyard",
-    "section": "",
-    "text": "Die Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al. (2015)\n\n\n\n\nMütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.\nMütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz."
+    "section": "Fehlerquellen unterscheiden",
+    "text": "Fehlerquellen unterscheiden\n\n\n\n\n\nDie Messung von Impulsivität, Frustrationstoleranz und Verhaltensauffälligkeiten des Kindes nach Angaben der Mutter, des Vaters und des Kindes. Quelle: Papa et al. (2015)\n\n\n\n\nMütter und Väter sind bessere Informationsquellen über das Verhalten des Kindes als Selbstangaben.\nMütter und Väter können Impulsivität und Verhaltensprobleme ähnlich gut angeben, unterscheiden sich aber erheblich bei der Frustrationstoleranz."
   },
   {
     "objectID": "exercises/09-ex.html",
@@ -4038,9 +4038,9 @@
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#footnotes",
     "href": "slides/15-Vergleiche_und_Verteilungen.html#footnotes",
-    "title": "Vergleiche und Hypothesen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nGruppen können auch Länder oder Zeitpunkte sein.↩︎\nWenn die Veränderung über eine längere Zeit beobachtet wird, müssen diese Veränderungen in Bezug auf einen “Baseline” Wert bezogen werden.↩︎"
+    "text": "Footnotes\n\n\nPersönliche Selektion aus der Wissenschaftsinbox vom Haupt (2026).↩︎\nIch bezeichne dieses Problem als “Dr. Strange’s Kopfschmerzpille im Multiverse”.↩︎"
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#was-wollen-wir-eigentlich-wissen",
@@ -4356,5 +4356,96 @@
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "",
     "text": "Bei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.\n\nVorteile:\n\nKostengünstig & weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen\nviele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar\n\nNachteile: Selektionseffekte (in die Stichprobe & in das “Treatment”), Verzerrung durch unbeobachtete Faktoren"
+  },
+  {
+    "objectID": "slides/graveyard.html#isolation-von-einflüssen-grundproblem",
+    "href": "slides/graveyard.html#isolation-von-einflüssen-grundproblem",
+    "title": "Graveyard",
+    "section": "Isolation von Einflüssen: Grundproblem",
+    "text": "Isolation von Einflüssen: Grundproblem\n\nIn einem randomisierten Experiment unterscheiden sich Kontroll- und Treatmentgruppe nur zufällig. Das heißt vor allem, dass sich die Verteilung von individuellen Merkmalen zwischen den Gruppen nur zufällig unterscheidet.\nWenn die Zuteilung in ein Treatment nicht randomisiert, sondern selektiv ist, unterscheiden sich Kontroll- und Treatmentgruppe auch nach der Verteilung der Merkmale, die zur Selektion führen.\nWenn wir Gruppenvergleiche mit dem Interesse machen möchten, den direkten Einfluss der Gruppenmitgliedschaft auf die Verteilung eines Merkmals zu erfassen, müssen wir den “Gruppeneinfluss” von der Selektion in die Gruppe unterscheiden.\nIsolieren wir Einflüsse nicht voneinander, dann können wir u.a. fälschlicherweise dein Einfluss der Selektion als Gruppeneinfluss ansehen."
+  },
+  {
+    "objectID": "slides/graveyard.html#isolation-von-einflüssen-lösungen",
+    "href": "slides/graveyard.html#isolation-von-einflüssen-lösungen",
+    "title": "Graveyard",
+    "section": "Isolation von Einflüssen: Lösungen",
+    "text": "Isolation von Einflüssen: Lösungen\nGrundsätzlich haben wir zwei Möglichkeiten zur Isolation von Einflüssen:\n\nRandomisierung in verschiedene Gruppen und kontrolliertes Treatment\nKonstanthaltung, d.h. der Vergleich von Gruppen, die in anderen Eigenschaften \\(Z\\) gleiche Werte haben."
+  },
+  {
+    "objectID": "slides/graveyard.html#vergleich-mit-dem-zufall",
+    "href": "slides/graveyard.html#vergleich-mit-dem-zufall",
+    "title": "Graveyard",
+    "section": "Vergleich mit dem Zufall",
+    "text": "Vergleich mit dem Zufall\nManchmal vergleichen wir nicht empirische Verteilungen über Gruppen sondern empirische Ergebnisse gegen Ergebnisse, die wir unter Zufallsbedingungen erwarten würden. Zum Beispiel erwarten wir,\n\ndass sich die Verteilung von Merkmalen zwischen Kontroll- und Treatmentgruppe in einem randomisierten Experiment nur zufällig unterscheiden.\ndass sich die Verteilung von Merkmalen zwischen der Stichprobe und Population nur zufällig unterscheiden, wenn die Stichprobe zufällig gezogen wurde und keine Selektion stattfand.\ndass sich die Verteilung eines Merkmals nur zufällig verändert1, wenn ein Treatment oder eine Gruppenmitgliedschaft keine Wirkung hat."
+  },
+  {
+    "objectID": "slides/graveyard.html#empirische-verteilungen-und-zufallsverteilungen",
+    "href": "slides/graveyard.html#empirische-verteilungen-und-zufallsverteilungen",
+    "title": "Graveyard",
+    "section": "Empirische Verteilungen und Zufallsverteilungen",
+    "text": "Empirische Verteilungen und Zufallsverteilungen\n\nEmpirische Verteilungen und Zufallsverteilungen sind nicht das Gleiche!\nEmpirische Verteilungen enstehen durch datengenerierende Prozesse, wie die Lohnsetzung, Diskriminierung am Wohnungsmarkt oder Berufswahlentscheidungen. Alle diese Prozesse sind nicht zufällig und sollten daher auch nicht mit Zufallsverteilungen beschrieben werden.\nZufallsverteilungen sind das Resultat von Zufallsprozessen. Je nachdem, welchen Zufallsprozess wir beschreiben (z.B. Münzwurf, zufällige Schwankungen, zufällig auftretende sehr seltene Ereignisse), ist die Zufallsverteilung unterschiedlich."
+  },
+  {
+    "objectID": "slides/graveyard.html#erwartungswert-durchschnitt-der-zufallsverteilung",
+    "href": "slides/graveyard.html#erwartungswert-durchschnitt-der-zufallsverteilung",
+    "title": "Graveyard",
+    "section": "Erwartungswert (=Durchschnitt der Zufallsverteilung)",
+    "text": "Erwartungswert (=Durchschnitt der Zufallsverteilung)\nThe expectation here is a lot of content; continue unchanged.\n\\[E[X] = \\sum x_i \\cdot P(x_i)\\]\nEinfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). \\(E[\\text{Kopf}] = 0 \\cdot 0.5 + 1 \\cdot 0.5 = 0.5\\)"
+  },
+  {
+    "objectID": "slides/graveyard.html#warum-brauchen-wir-das",
+    "href": "slides/graveyard.html#warum-brauchen-wir-das",
+    "title": "Graveyard",
+    "section": "Warum brauchen wir das?",
+    "text": "Warum brauchen wir das?\n\nSie machen eine Befragung und ziehen eine Zufallsstichprobe.\nWoher wissen Sie, ob Ihre Stichprobe tatsächlich (annähernd) zufällig war?\nVariable Geschlecht (Werte: 0 = Mann; 1 = Frau): E[Frau] = 0.5, da \\(0.5 \\cdot 0 + 0.5 \\cdot 1 = 0.5\\)\nKeine Stichprobe wird allerdings exakt ein 50/50 Ratio haben, auch wenn die Stichprobe perfekt zufällig war.\nDaher müssen wir lernen, erwartete Werte (\\(E[X]\\)) von realisierten Werten (\\(\\bar{X}\\) bzw. \\(P(X)\\)) zu unterscheiden, um sie miteinander vergleichen zu können."
+  },
+  {
+    "objectID": "slides/graveyard.html#bernoulli-verteilung-münzwurf",
+    "href": "slides/graveyard.html#bernoulli-verteilung-münzwurf",
+    "title": "Graveyard",
+    "section": "Bernoulli-Verteilung (Münzwurf)",
+    "text": "Bernoulli-Verteilung (Münzwurf)"
+  },
+  {
+    "objectID": "slides/graveyard.html#gleichverteilung-würfelwurf",
+    "href": "slides/graveyard.html#gleichverteilung-würfelwurf",
+    "title": "Graveyard",
+    "section": "Gleichverteilung (Würfelwurf)",
+    "text": "Gleichverteilung (Würfelwurf)"
+  },
+  {
+    "objectID": "slides/graveyard.html#footnotes",
+    "href": "slides/graveyard.html#footnotes",
+    "title": "Graveyard",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWenn die Veränderung über eine längere Zeit beobachtet wird, müssen diese Veränderungen in Bezug auf einen “Baseline” Wert bezogen werden.↩︎"
+  },
+  {
+    "objectID": "slides/graveyard.html#normalverteilungen-unsystematische-differenzen-in-hoher-anzahl",
+    "href": "slides/graveyard.html#normalverteilungen-unsystematische-differenzen-in-hoher-anzahl",
+    "title": "Graveyard",
+    "section": "Normalverteilung(en) (Unsystematische Differenzen in hoher Anzahl)",
+    "text": "Normalverteilung(en) (Unsystematische Differenzen in hoher Anzahl)\n\n\\(N(x, \\sigma)\\) bezeichnet eine Normalverteilung mit dem Mittelwert \\(x\\) und der Standardabweichung \\(\\sigma\\).\n\\(N(0,1)\\) wird als Standardnormalverteilung bezeichnet."
+  },
+  {
+    "objectID": "slides/graveyard.html#der-zufallsprozess-bestimmt-die-zufallsverteilung",
+    "href": "slides/graveyard.html#der-zufallsprozess-bestimmt-die-zufallsverteilung",
+    "title": "Graveyard",
+    "section": "Der Zufallsprozess bestimmt die Zufallsverteilung",
+    "text": "Der Zufallsprozess bestimmt die Zufallsverteilung"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#handwerkszeug",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#handwerkszeug",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Handwerkszeug",
+    "text": "Handwerkszeug"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#die-daten-spielwiese-allbus-2018",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#die-daten-spielwiese-allbus-2018",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Die Daten-Spielwiese (ALLBUS 2018)",
+    "text": "Die Daten-Spielwiese (ALLBUS 2018)"
   }
 ]

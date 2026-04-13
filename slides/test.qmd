@@ -3,7 +3,7 @@ title: "Test"
 format: 
   html:
     page-layout: custom
-server: shiny
+runtime: shiny
 editor: source
 ---
 

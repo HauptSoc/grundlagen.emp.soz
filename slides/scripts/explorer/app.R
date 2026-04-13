@@ -1,3 +1,5 @@
+
+# r
 # Own the Libs
 library(shiny)
 library(dplyr)
@@ -11,13 +13,32 @@ library(conflicted)
 library(ggridges)
 library(summarytools)
 library(here)
+library(viridis)
+
 conflicts_prefer(dplyr::filter)
+
+
+## Ein ppar makros und funktionen für die Schönheit
+.base_size <- 16            # base text size (ca. 2x default)
+
+# diskrete, farbenblinde Palette für fills und colours
+scale_fill_cb <- function(...) {
+  viridis::scale_fill_viridis(..., discrete = TRUE, option = "D", begin = 0.15, end = 0.95)
+}
+scale_color_cb <- function(...) {
+  viridis::scale_colour_viridis(..., discrete = TRUE, option = "D", begin = 0.15, end = 0.95)
+}
+scale_colour_cb <- scale_color_cb  # Alias, falls code 'colour' verwendet
+
+apply_cb_palette <- function(p) {
+  p + scale_fill_cb() + scale_color_cb()
+}
 
 # -------------------------
 # apply value labels ONLY when present in the parsed labels_map (file)
 # -------------------------
 
-raw_df <- haven::read_dta(here("slides", "scripts", "explorer", "allbus.dta"))
+load("explore.Rdata")
 
 # 1) Welche Variablen als "metrisch" behandeln
 metrisch_present <- names(raw_df)   # oder: names(raw_df)[vapply(raw_df, is.numeric, logical(1))]
@@ -49,7 +70,10 @@ raw_df <- normalize_missings(raw_df)
 # optional: falls du bereits make_negatives_missing hast, rufe es danach auf
 # raw_df <- make_negatives_missing(raw_df) 
 
+# -------------------------
 # 3. Value labels (allbus-labels.txt) parsen und anwenden (hier()-Pfad)
+#    Erwartetes Format (Abschnitte): VARNAME:  <newline> CODE <whitespace> LABEL
+# -------------------------
 val_lab_candidates <- c(
   here("slides", "scripts", "explorer", "allbus-labels.txt"),
   here("explorer", "allbus-labels.txt"),
@@ -82,7 +106,10 @@ if (!is.na(lbl_path) && nzchar(lbl_path)) {
   }
 }
 
+# -------------------------
 # 4. Variable‑Labels (allbus-varlabels.txt) parsen (hier()-Pfad)
+#    Erwartetes Format: VARNAME <whitespace> LABELTEXT
+# -------------------------
 varlabel_candidates <- c(
   here("slides", "scripts", "explorer", "allbus-varlabels.txt"),
   here("explorer", "allbus-varlabels.txt"),
@@ -101,16 +128,19 @@ if (!is.na(lbl_path2) && nzchar(lbl_path2)) {
   }
 }
 
-# 5. Erzeuge allbus (metrisch numeric, übrige als factor) und wende value labels an
-allbus <- raw_df %>%
+# -------------------------
+# 5. Arbeite weiter mit raw_df: metrisch numeric, übrige als factor (labelled->as_factor),
+#    wende value labels und variable labels an
+# -------------------------
+raw_df <- raw_df %>%
   mutate(across(all_of(metrisch_present), ~ to_numeric_safe(.x)))
 
 # apply value labels only for labels present in labels_map and only for codes actually present;
 # drop negative codes (typische Missing-Codes) so missings bleiben NA
-for (v in intersect(names(labels_map), names(allbus))) {
+for (v in intersect(names(labels_map), names(raw_df))) {
   lbls_num <- labels_map[[v]]                # named numeric: names = label text, values = codes
   if (length(lbls_num) == 0) next
-  vec <- allbus[[v]]
+  vec <- raw_df[[v]]
 
   # try to get numeric codes present in data (after prior normalization)
   vec_nums <- suppressWarnings(as.numeric(vec))
@@ -124,37 +154,37 @@ for (v in intersect(names(labels_map), names(allbus))) {
   # labelled() expects a numeric vector with names = labels and values = codes
   # ensure correct type and apply
   if (inherits(vec, "labelled") || is.numeric(vec)) {
-    allbus[[v]] <- labelled(as.numeric(vec), labels = labs_filtered)
+    raw_df[[v]] <- labelled(as.numeric(vec), labels = labs_filtered)
   } else if (is.factor(vec) || is.character(vec)) {
     vec_num <- suppressWarnings(as.numeric(as.character(vec)))
-    if (!all(is.na(vec_num))) allbus[[v]] <- labelled(vec_num, labels = labs_filtered)
+    if (!all(is.na(vec_num))) raw_df[[v]] <- labelled(vec_num, labels = labs_filtered)
     # sonst: freie Texte -> leave as-is
   }
 }
 
 # convert remaining non-metric vars to factor (preserve labelled -> as_factor)
-for (v in setdiff(names(allbus), metrisch_present)) {
-  if (!is.numeric(allbus[[v]])) {
-    if (inherits(allbus[[v]], "labelled")) allbus[[v]] <- as_factor(allbus[[v]])
-    else allbus[[v]] <- as.factor(allbus[[v]])
+for (v in setdiff(names(raw_df), metrisch_present)) {
+  if (!is.numeric(raw_df[[v]])) {
+    if (inherits(raw_df[[v]], "labelled")) raw_df[[v]] <- as_factor(raw_df[[v]])
+    else raw_df[[v]] <- as.factor(raw_df[[v]])
   }
 }
 
 # apply variable labels (attr 'label')
-for (v in intersect(names(var_labels), names(allbus))) {
-  attr(allbus[[v]], "label") <- var_labels[[v]]
+for (v in intersect(names(var_labels), names(raw_df))) {
+  attr(raw_df[[v]], "label") <- var_labels[[v]]
 }
 
 # helper for UI choices
-not_numeric_names <- names(allbus)[!vapply(allbus, is.numeric, logical(1))]
+not_numeric_names <- names(raw_df)[!vapply(raw_df, is.numeric, logical(1))]
 
 # erzeugt named-choice-Vektor: names = Variable-Label (oder Name), values = Variablenname
-var_names <- names(allbus)
+var_names <- names(raw_df)
 get_display_label <- function(v) {
   # zuerst aus var_labels (falls geparst), sonst aus attr 'label', sonst der Variablenname
   lbl1 <- if (!is.null(var_labels[v]) && nzchar(var_labels[v])) var_labels[v]
   lbl2 <- if (is.null(lbl1) || !nzchar(lbl1)) {
-    al <- attr(allbus[[v]], "label")
+    al <- attr(raw_df[[v]], "label")
     if (!is.null(al) && nzchar(as.character(al))) as.character(al) else v
   } else lbl1
   as.character(lbl2)
@@ -177,16 +207,14 @@ get_var_label <- function(v) {
   if (!is.null(var_labels) && v %in% names(var_labels) && nzchar(var_labels[[v]])) {
     return(as.character(var_labels[[v]]))
   }
-  al <- attr(allbus[[v]], "label")
+  al <- attr(raw_df[[v]], "label")
   if (!is.null(al) && nzchar(as.character(al))) return(as.character(al))
   v
 }
 
-
 # -------------------------
 # 6. Shiny UI
 # -------------------------
-# R
 ui <- fluidPage(
   titlePanel("Allbus Explorer"),
   sidebarLayout(
@@ -197,9 +225,9 @@ ui <- fluidPage(
       conditionalPanel(
         condition = "input.sampleType == 'random'",
         sliderInput("sampleSize", "Plot sample size (n)",
-                    min = 1, max = nrow(allbus),
-                    value = min(1000, nrow(allbus)),
-                    step = max(1, floor(nrow(allbus)/50))),
+                    min = 1, max = nrow(raw_df),
+                    value = min(1000, nrow(raw_df)),
+                    step = max(1, floor(nrow(raw_df)/50))),
         actionButton("drawAgain", "draw again")
       ),
       radioButtons("analysis_type", "Analyse-Typ",
@@ -218,7 +246,10 @@ ui <- fluidPage(
         selectInput("y", "Outcome", choices = choices_y, selected = "None"),
         selectInput("x", "Beinflussendes Merkmal", choices = choices_y, selected = "None"),
         selectInput("bivar_type", "Bivariate Darstellung",
-                    choices = c("Scatterplot" = "scatter", "Gruppierte Balkendiagramme" = "group_bar"),
+                    choices = c("Scatterplot" = "scatter",
+                                "Gruppierte Balkendiagramme" = "group_bar",
+                                "Boxplots" = "box",
+                                "Kerndichte über Gruppen" = "ridgeline"),
                     selected = "scatter"),
         conditionalPanel(condition = "input.bivar_type == 'scatter'",
                          checkboxInput("jitter", "Jitter", value = FALSE),
@@ -277,76 +308,33 @@ output$snippet <- renderPrint({
   })
 
   sampled_df <- reactive({
-    if (is.null(input$sampleType) || input$sampleType == "all") return(allbus)
+    if (is.null(input$sampleType) || input$sampleType == "all") return(raw_df)
     # random sample
     n <- req(input$sampleSize)
     set.seed(seed_rv())
-    allbus[sample(nrow(allbus), size = min(n, nrow(allbus))), , drop = FALSE]
+    raw_df[sample(nrow(raw_df), size = min(n, nrow(raw_df))), , drop = FALSE]
   })
 
-
-
-  plot_type <- reactive({
-    if (input$analysis_type == "univar") return(-1)
-    req(input$x, input$y)
-    if (input$y == "None") return(-1)
-    is.numeric(allbus[[input$x]]) + is.numeric(allbus[[input$y]])
-  })
-
+  # Unified plotting logic in a single renderPlot to avoid multiple assignments
   output$plot <- renderPlot({
-    p <- NULL
+    df <- sampled_df()
 
-    if (plot_type() == 2) {
-      # both numeric: scatter
-      req(input$x, input$y)
-
-p <- ggplot(sampled_df(), aes(x = .data[[input$x]], y = .data[[input$y]]))
-if (isTRUE(input$jitter)) p <- p + geom_jitter(alpha = 0.6)
-else p <- p + geom_point(alpha = 0.6)
-if (isTRUE(input$smooth)) p <- p + geom_smooth(se = TRUE)
-p <- p + labs(x = get_var_label(input$x), y = get_var_label(input$y))
-
-    } else if (plot_type() == 1) {
-      # one numeric, one categorical -> boxplot
-      req(input$x, input$y)
-      if (is.numeric(allbus[[input$x]])) {
-        num <- input$x; catv <- input$y
-      } else {
-        num <- input$y; catv <- input$x
-      }
-p <- ggplot(sampled_df(), aes(x = .data[[catv]], y = .data[[num]])) +
-  geom_boxplot(na.rm = TRUE)
-p <- p + labs(x = get_var_label(catv), y = get_var_label(num))
-
-    } else if (plot_type() == 0) {
-      # two categorical -> heatmap of counts
-      req(input$x, input$y)
-      temp <- sampled_df() %>% count(.data[[input$x]], .data[[input$y]], name = "n")
-      p <- ggplot(temp, aes(x = .data[[input$x]], y = .data[[input$y]], fill = n)) +
-        geom_tile() +
-        scale_fill_gradient(low = "#e7e7fd", high = "#1111dd") +
-        labs(x = get_var_label(input$x), y = get_var_label(input$y), fill = "Count")
-
-    } else {
-      # univariate branch
-      var <- if (input$analysis_type == "univar") input$y_uni else input$x
-      req(var)
+    if (is.null(input$analysis_type) || input$analysis_type == "univar") {
+      var <- req(input$y_uni)
+      if (is.null(var) || var == "None") return(ggplot() + theme_void())
       utype <- input$univar_type
-      if (is.null(utype)) utype <- "auto"
-      if (utype == "auto" && is.numeric(allbus[[var]])) utype <- "dens"
-      if (utype == "auto" && !is.numeric(allbus[[var]])) utype <- "bar"
+      if (is.null(utype)) utype <- ifelse(is.numeric(raw_df[[var]]), "dens", "bar")
 
       title_text <- get_var_label(var)
 
       if (utype == "dens") {
-        validate(need(is.numeric(allbus[[var]]), "Kerndichte benötigt eine metrische Variable."))
-        p <- ggplot(sampled_df(), aes(x = .data[[var]])) +
+        validate(need(is.numeric(raw_df[[var]]), "Kerndichte benötigt eine metrische Variable."))
+        p <- ggplot(df, aes(x = .data[[var]])) +
           geom_density(fill = "#2c7fb8", alpha = 0.5, na.rm = TRUE) +
           labs(x = get_var_label(var), y = "Dichte", title = title_text)
 
-      } else if (utype == "bar") {
-        # construct bars based on underlying numeric codes, keep labels but disambiguate duplicates
-        df <- sampled_df()
+      } else {
+        # bar
         if (isFALSE(input$show_missings)) df <- df %>% filter(!is.na(.data[[var]]))
 
         temp <- df %>%
@@ -356,7 +344,6 @@ p <- p + labs(x = get_var_label(catv), y = get_var_label(num))
           mutate(code_num = suppressWarnings(as.numeric(.code))) %>%
           arrange(code_num)
 
-        # make display label unique if labels duplicate
         temp <- temp %>%
           group_by(.label) %>%
           mutate(display = ifelse(n() > 1, paste0(.label, " (", .code, ")"), .label)) %>%
@@ -365,59 +352,117 @@ p <- p + labs(x = get_var_label(catv), y = get_var_label(num))
                  display = forcats::fct_inorder(display))
 
         p <- ggplot(temp, aes(x = display, y = prop)) +
-          geom_col(fill = "#4daf4a", alpha = 0.85) +
+          geom_col(fill = "#2c7fb8", alpha = 0.85, width = 0.4) +
           geom_text(aes(label = scales::percent(prop, accuracy = 0.1)),
                     vjust = -0.25, size = 3) +
-          scale_y_continuous(labels = scales::percent_format(accuracy = 0.1), expand = expansion(mult = c(0, 0.08))) +
-          labs(x = title_text, y = "Relative Häufigkeit", title = paste("Relative Häufigkeiten von", title_text)) +
+          scale_y_continuous(labels = scales::percent_format(accuracy = 0.1),
+                             expand = expansion(mult = c(0, 0.08))) +
+          labs(x = title_text, y = "Relative Häufigkeit",
+               title = paste("Relative Häufigkeiten von", title_text)) +
           theme(axis.text.x = element_text(angle = 45, hjust = 1))
       }
-    }
 
-    if (!is.null(p)) p + theme_bw() + theme(plot.title = element_text(hjust = 0.5, face = "bold"))
-  }, height = 600)
+    } else {
+      # Bivariate
+      # require valid selections
+      if (is.null(input$x) || input$x == "None" || is.null(input$y) || input$y == "None") return(ggplot() + theme_void())
+      # optional: remove missings
+      if (isFALSE(input$show_missings_bivar)) {
+        df <- df %>% filter(!is.na(.data[[input$x]]) & !is.na(.data[[input$y]]))
+      }
 
-  # grouped bivar plotting (proportions within X), respects show_missings_bivar
-  observe({
-    req(input$x, input$y)
-    if (input$analysis_type == "bivar" && input$bivar_type == "group_bar") {
+      bivar_type <- input$bivar_type %||% "scatter"
+
       x_label <- get_var_label(input$x)
       y_label <- get_var_label(input$y)
 
-      df <- sampled_df()
-      if (isFALSE(input$show_missings_bivar)) df <- df %>% filter(!is.na(.data[[input$x]]), !is.na(.data[[input$y]]))
+      # decide numeric/categorical
+      x_is_num <- is.numeric(raw_df[[input$x]])
+      y_is_num <- is.numeric(raw_df[[input$y]])
 
-      temp <- df %>%
-        mutate(.x_code = as.character(.data[[input$x]]),
-               .y_code = as.character(.data[[input$y]]),
-               .x_lab = as.character(haven::as_factor(.data[[input$x]])),
-               .y_lab = as.character(haven::as_factor(.data[[input$y]]))) %>%
-        count(.x_code, .x_lab, .y_code, .y_lab, name = "n") %>%
-        group_by(.x_code, .x_lab) %>%
-        mutate(prop_within = n / sum(n)) %>%
-        ungroup() %>%
-        group_by(.x_code) %>%
-        mutate(total_n = sum(n)) %>%
-        ungroup() %>%
-        arrange(as.numeric(.x_code)) %>%
-        mutate(.x_disp = ifelse(duplicated(.x_lab) | duplicated(.x_lab, fromLast = TRUE), paste0(.x_lab, " (", .x_code, ")"), .x_lab),
-               .y_disp = ifelse(duplicated(.y_lab) | duplicated(.y_lab, fromLast = TRUE), paste0(.y_lab, " (", .y_code, ")"), .y_lab),
-               .x_disp = forcats::fct_inorder(.x_disp))
+      if (bivar_type == "scatter") {
+        # fallback to scatter when both numeric
+        if (!(x_is_num && y_is_num)) {
+          # try to coerce and still plot using numeric coercion
+        }
+        p <- ggplot(df, aes(x = .data[[input$x]], y = .data[[input$y]]))
+        if (isTRUE(input$jitter)) p <- p + geom_jitter(alpha = 0.6)
+        else p <- p + geom_point(alpha = 0.6)
+        if (isTRUE(input$smooth)) p <- p + geom_smooth(se = TRUE)
+        p <- p + labs(x = x_label, y = y_label)
 
-      p <- ggplot(temp, aes(x = .x_disp, y = prop_within, fill = .y_disp)) +
-        geom_col(position = position_dodge(width = 0.9), width = 0.8, alpha = 0.9) +
-        geom_text(aes(label = scales::percent(prop_within, accuracy = 0.1)),
-                  position = position_dodge(width = 0.9), vjust = -0.25, size = 3) +
-        scale_y_continuous(labels = scales::percent_format(accuracy = 0.1), expand = expansion(mult = c(0, 0.08))) +
-        labs(x = x_label, y = "Relative Häufigkeit (innerhalb X)", fill = y_label,
-             title = paste(y_label, "nach", x_label)) +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+      } else if (bivar_type == "group_bar") {
+        # two categorical expected: compute proportions of Y within each X
+        temp <- df %>%
+          mutate(.X = forcats::as_factor(.data[[input$x]]),
+                 .Y = forcats::as_factor(.data[[input$y]])) %>%
+          count(.X, .Y, name = "n") %>%
+          group_by(.X) %>%
+          mutate(prop_within = n / sum(n)) %>%
+          ungroup() %>%
+          mutate(label_pct = scales::percent(prop_within, accuracy = 0.1))
 
-      output$plot <- renderPlot({
-        if (!is.null(p)) p + theme_bw() + theme(plot.title = element_text(hjust = 0.5, face = "bold"))
-      }, height = 600)
+        if (nrow(temp) == 0) return(ggplot() + annotate("text", x = 1, y = 1, label = "Keine Daten für die Auswahl") + theme_void())
+
+        dodge <- position_dodge(width = 0.9)
+        p <- ggplot(temp, aes(x = .X, y = prop_within, fill = .Y)) +
+          geom_col(position = dodge, width = 0.7, alpha = 0.9) +
+          geom_text(aes(label = label_pct), position = dodge, vjust = -0.25, size = 3) +
+          scale_y_continuous(labels = scales::percent_format(accuracy = 0.1),
+                             expand = expansion(mult = c(0, 0.08))) +
+          scale_fill_cb() +
+          labs(x = x_label, y = "Relative Häufigkeit (innerhalb X)", fill = y_label,
+               title = paste(y_label, "nach", x_label)) +
+          theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+      } else if (bivar_type == "box") {
+        # Boxplots: Y must be numeric; X grouping variable
+        # If user supplied numeric as x and categorical as y, swap
+        if (x_is_num && !y_is_num) {
+          num_var <- input$x; cat_var <- input$y
+        } else {
+          num_var <- input$y; cat_var <- input$x
+        }
+        # try numeric conversion if needed
+        df2 <- df %>% mutate(.Ynum = to_numeric_safe(.data[[num_var]]), .Xfact = forcats::as_factor(.data[[cat_var]]))
+        validate(need(!all(is.na(df2$.Ynum)), paste("Variable", get_var_label(num_var), "ist nicht numerisch oder enthält keine Werte")))
+
+        p <- ggplot(df2, aes(x = .Xfact, y = .Ynum, fill = .Xfact)) +
+          geom_boxplot(alpha = 0.9, width = 0.7, outlier.size = 1, na.rm = TRUE) +
+          scale_fill_cb() +
+          labs(x = get_var_label(cat_var), y = get_var_label(num_var), fill = get_var_label(cat_var),
+               title = paste("Boxplot von", get_var_label(num_var), "nach", get_var_label(cat_var))) +
+          theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+      } else if (bivar_type == "ridgeline") {
+        # Ridgeline: kernel densities of Y per X
+        df2 <- df %>% mutate(.Ynum = to_numeric_safe(.data[[input$y]]), .Xfact = forcats::as_factor(.data[[input$x]]))
+        validate(need(!all(is.na(df2$.Ynum)), paste("Variable", get_var_label(input$y), "ist nicht numerisch oder enthält keine Werte")))
+        df2 <- df2 %>% mutate(.Xfact = forcats::fct_rev(.Xfact))
+
+        p <- ggplot(df2, aes(x = .Ynum, y = .Xfact, fill = .Xfact)) +
+          ggridges::geom_density_ridges(scale = 1.0, rel_min_height = 0.01, alpha = 0.85, size = 0.25, color = "grey30", na.rm = TRUE) +
+          scale_fill_cb() +
+          labs(x = get_var_label(input$y), y = get_var_label(input$x), fill = get_var_label(input$x),
+               title = paste("Kerndichte von", get_var_label(input$y), "nach", get_var_label(input$x))) +
+          theme(axis.text.y = element_text(size = rel(0.9)))
+
+      } else {
+        # fallback: heatmap for two categoricals
+        temp <- df %>% count(.data[[input$x]], .data[[input$y]], name = "n")
+        p <- ggplot(temp, aes(x = .data[[input$x]], y = .data[[input$y]], fill = n)) +
+          geom_tile() +
+          scale_fill_gradient(low = "#e7e7fd", high = "#1111dd") +
+          labs(x = x_label, y = y_label, fill = "Count")
+      }
     }
-  })
+
+    if (!exists("p") || is.null(p)) return(ggplot() + theme_void())
+    p + theme_bw(base_size = .base_size) +
+      theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+            axis.title = element_text(size = .base_size * 1.1))
+
+  }, height = 600)
 
 }
 
