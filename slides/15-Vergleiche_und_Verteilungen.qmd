@@ -3,7 +3,7 @@ title: "Gute Vergleiche: Vergleiche und Verteilungen"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
 css: global.css
-##server: shiny
+runtime: shiny
 format: 
   revealjs:
     fig-format: svg
@@ -52,56 +52,128 @@ include-in-header:
 
 ![](https://journals.sagepub.com/cms/10.1177/00031224211004187/asset/875eb054-3d59-43e7-9562-81e4172b1d7c/assets/images/large/10.1177_00031224211004187-fig1.jpg)
 
-## Was bedeutet das?
+## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
-| Erkentnisinteresse | Studienfrage | Theoretische Population | Theorie-Empirie Link | Schätzung |
-|----|----|----|----|----|
-| Warum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen? | Werden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert? | Grundschüler:innen in Deutschland. |  |  |
-|  |  |  |  |  |
+![](images/estimand-gym-geschlecht.svg)
 
-## Jungen und Mädchen in der Schule
+## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
-Unser Erkentnisinteresse formulieren wir meist in Form einer Hypothese. Diese Hypothesen drücken typischerweise systematische Zusammenhänge aus.
+![](images/estimand-kompetenzzuschreibung.svg)
 
--   Einen Vergleich im statistischen Sinn können wir als eine **Differenz** ausdrücken.
+## Hypothesen: Unterschiede in X führen zu Unterschieden in Y {.midi}
 
--   Typischerweise müssen wir erst unsere Hypothesen für Vergleiche auf Gruppenebene reformulieren. D.h.: Wir müssen klar machen, was für ein Vergleichsmaßsstab genutzt werden soll und wie verglichen werden soll.
+Die Theorien über Ungleichheiten im Bildungssytem haben wir in Form eines Systems dargestellt, dass Unterschiede in Ausprägungen von Eigenschaften miteinander verbindet. Solche Verbindungen bezeichnen wir als **Hypothesen**. 
 
-## Das Ziel: Gute Vergleiche
+- Hypothesen werden typischerweise als "Wenn-dann" oder als "Je-desto" Aussagen formuliert.
+    - Wenn ein Unterschied in X besteht, besteht auch ein Unterschied in Y. 
+    - Je größer/kleiner die Unterschiede in X sind, desto größer/kleiner sind die Unterschiede in Y. 
 
-Unser grundlegendes Ziel für dieses Semester ist zu lernen, wie gute Vergleiche möglich sind. Generell nutzen wir Vergleiche, um zu lernen, ob Unterschiede in einer Eigenschaft A mit Unterschieden in einer Eigenschaft B in Verbindung stehen. Das kann viele verschiedene Formen haben:
+Hypothesen können auch mehrere Verbindungen umfassen und selbstverständlich sprachlich eleganter als die oben genannten Versionen formuliert sein. 
 
-1.  Wir vergleichen Treatment- und eine Kontrollgruppe(n) in einem Experiment.
+## Aktuelle Hypothesen:[^1] 
 
-2.  Wir vergleichen die Verteilung einer Eigenschaft über verschiedene Gruppen.
+- Traditionelle völkische Folklore verstärkt eine feindliche/negative Sicht auf die soziale Umgebung und erhöht dadurch die Neigung zur Wahl rechtsextremer Parteien ([Amaya & Braun (2026)](https://journals.sagepub.com/doi/full/10.1177/00031224251409746)).
+- Wenn Frauen in Berufe eintreten, die vorher nur von Männern ausgeübt wurden, ändert sich weder das Verhalten, Leistung oder die Beförderung von Männern - aber Männer glauben, dass sich ihre Situation verschlechtert ([Greenberg et al. (2026)](https://academic.oup.com/qje/advance-article/doi/10.1093/qje/qjag016/8551347)).  
+- Je mehr ältere Brüder von der gleichen Mutter ein Mann hat, desto höher ist die Wahrscheinlichkeit, dass er sich als schwul identifiziert ([Blanchard (2017); Leseempfehlung: Kommentare zu diesem Artikel](https://link.springer.com/article/10.1007/s10508-017-1007-4)).
 
-3.  Wir vergleichen die Verteilung einer Eigenschaft über die Zeit.
+[^1]: Persönliche Selektion aus der Wissenschaftsinbox vom Haupt (2026).
 
-## Herausforderungen guter Vergleiche
+## Von der Hypothese zur Datenanalyse {.midi}
+
+Jedes Element von Hypothesen müssen wir in der Datenanalyse in nachvollziehbarer Weise auf beobachtbare Informationen und angemessene Verfahren zurückführen.
+```{mermaid}
+flowchart LR
+
+subgraph H[Hypothese]
+X[Unterschiede in X] -- führen zu -->
+Y[Unterschieden in Y] 
+end
+
+subgraph D[Datenanalyse]
+V1[Verteilung von X] -- korreliert mit -->
+V2[Verteilung von Y] 
+end
+
+subgraph V[Vergleich / Modellierung]
+  X1@{ img: "https://www.svgrepo.com/show/471053/bar-chart-09.svg", label: "Verteilung von Y bei X = 0", pos: "t", h: 60, constraint: "on" }
+  X2@{ img: "https://www.svgrepo.com/show/471054/bar-chart-08.svg", label: "Verteilung von Y bei X = 1", pos: "t", h: 60, constraint: "on" }
+  X1 <-- Differenz --> X2
+end
+
+H -- wird übersetzt zu --> D
+D -- beruht auf --> V
+```
+Wir betreiben Datenanalyse, indem wir gruppenspezifische Verteilungen auf eine korrekte Art miteinander *vergleichen* und somit die theoretisch behauptete *systematische Unterschiedlichkeit* von Eigenschaften als *Differenzen* erfassen.
+
+## Herausforderungen guter Vergleiche {.midi}
 
 Niemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen per se schlechten Vergleich. Wir verbinden allerdings in der Wissenschaft mit einem Vergleich ein Erkentnissinteresse. Dieses Interesse kann gut oder schlecht bedient werden.
 
 1.  Wir möchten beschreiben, wie groß die Unterschiede zwischen Gruppen sind.
 
-    1.  Oft vergleichen wir Mittelwerte oder relative Anteile über Gruppen. Das kann aber aus vielen Gründen nicht unseren Interessen genügen. Daher müssen wir reflektieren, was ein sinnvoller Vergleichsmaßstab sein kann.
+        -  Oft vergleichen wir Mittelwerte oder relative Anteile über Gruppen. Das kann aber aus vielen Gründen nicht unseren Interessen genügen. Daher müssen wir reflektieren, was ein sinnvoller Vergleichsmaßstab sein kann.
 
-2.  Wir wollen oft wissen, ob etwas wirksam ist.
+2.  Wir wollen oft wissen, ob etwas wirksam ist bzw. einen *eigenständigen* Effekt hat.
 
-    1.  In diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft durch das Gruppenmerkmal bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden. Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale isolieren.
+        - In diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft ("Unterschiede in der Wahl extremer Parteien") durch eine andere Eigenschaft ("Verbreitung gruppenfeindliche Folklore") bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden ("Grad der Verstädterung"). Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale **isolieren**.
 
-## Was können wir vergleichen?
+## Warum müssen wir vergleichen? {.midi}
 
--   Wir vergleichen ab sofort keine individuellen Informationen sondern operieren stets auf Gruppenebene.[^1]
+- *Empirische* Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit *gleichzeitig* unter zwei unterschiedlichen Zuständen beobachten.[^3] Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2). 
 
--   Wenn wir Gruppen vergleichen wollen, müssen wir die Informationen über die Verteilung eines Merkmals zusammenfassen.
+- Wir können *kontrafaktische* Vergleiche als *Gedankenexperimente* durchführen. 
+        - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - *im Vergleich* zur reelen Situation? 
+        - Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - *im Vergleich* zur beobachteten Lohnverteilung? 
+
+[^3]: Ich bezeichne dieses Problem als "Dr. Strange's Kopfschmerzpille im Multiverse".
+
+## Warum müssen wir vergleichen? {.midi}
+
+- Wir können beobachtete Verteilungen gegen *erwartete* Verteilungen vergleichen. 
+  - Wir erwarten, dass sich die Verteilungen in einer repräsentative Stichprobe *nicht systematisch* von den Verteilungen unterscheiden, die wir in der Population erwarten.
+  - Wir erwarten, dass sich die Verteilung von Eigenschaften über randomisierte Kontroll- und Versuchgruppen *vor* dem Treatment *nicht systematisch* unterscheiden. 
+  - Wir müssen erwarten, dass sich Studienergebnisse zur gleichen Frage mit gleichem Studiendesign aber unterschiedlichen Stichproben unterscheiden - diese Unterschiede sollten aber im Rahmen einer Zufallsverteilung liegen. 
+  - Wir können die eigenen Studienergebnisse mit vorherigen Studienergebnissen vergleichen. 
+
+
+## In a nutshell: Was vergleichen wir womit? 
+
+::: {.callout-important}
+## *Empirische* Vergleiche 
+
+- Sie können **nur** auf Grundlage von gruppenspezifischen, beobachteten Verteilungen durchgeführt werden.
+- Alles mit N > 1 ist eine Gruppe. 
+- Gruppen können (gleiche) Individuen (über die Zeit), Organistionen, Firmen, Länder oder Planeten sein. 
+:::
+
+::: {.callout-important}
+## Vergleiche zwischen empirischen und *kontrafaktischen Zuständen*
+
+- Das ist immer Theorie (aber deswegen nicht schlecht!). 
+- Jede Kausalbehauptung benötigt ein plausibles, kontrafaktisches Szenario, mit dem wir vergleichen können. 
+- Diese Vergleiche können wir mit Gedankenexperimenten oder Simulationen durchführen.
+:::
+
+## In a nutshell: Was vergleichen wir womit? 
+
+::: {.callout-important}
+## Vergleiche zwischen *empirischen und zufälligen Verteilungen*
+
+- Manchmal lassen wir den Zufall für uns arbeiten (Randomisierung / zufälliges Sampling).
+- **WENN** das so ist, erhalten wir *Zufallsverteilungen*. 
+- Der Vergleich mit diesen Zufallsverteilungen *kann* uns helfen, die Unsicherheit über unsere Ergebnisse zu erfassen. 
+:::
+
+## Das datenanalytische Handwerkszeug für den Vergleich von Verteilungen
+
+
+## Selber hämmern, nähen & schneiden
 
     1.  Maße der zentralen Tendenz: Modus, Median, arithmetisches Mittel
 
     2.  Maße der Streuung: Varianz, Standardabweichung, Diversität
 
     3.  Weitere Punkte der Verteilung: Quantile/Perzentile, Schiefe
-
-[^1]: Gruppen können auch Länder oder Zeitpunkte sein.
 
 ## Verteilung der Löhne in Deutschland 2018
 
@@ -145,7 +217,7 @@ Manchmal vergleichen wir nicht empirische Verteilungen über Gruppen sondern emp
 
 ## Erwartungswert (=Durchschnitt der Zufallsverteilung)
 
-Der Erwartungswert einer Variablen X, $E[X]$, bezeichnet das *potentielle, durchschnittliche* Ergebnis, wenn die Erstellung der Variablen X zufällig oft wiederholt würde. Der Wert ist die Summe der jeweiligen Werte von X multipliziert (bzw. gewichtet) mit der Wahrscheinlichkeit, dass X vorliegt.
+The expectation here is a lot of content; continue unchanged.
 
 $$E[X] = \sum x_i \cdot P(x_i)$$
 
@@ -155,7 +227,7 @@ Einfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). $E[\text{Kopf}] = 0 \cdot
 
 -   Sie machen eine Befragung und ziehen eine Zufallsstichprobe.
 
--   Woher wissen Sie, ob Ihre Stichprobe *tatsächlich* (annährend) zufällig war?
+-   Woher wissen Sie, ob Ihre Stichprobe *tatsächlich* (annähernd) zufällig war?
 
 -   Variable Geschlecht (Werte: 0 = Mann; 1 = Frau): E\[Frau\] = 0.5, da $0.5 \cdot 0 + 0.5 \cdot 1 = 0.5$
 
@@ -166,6 +238,130 @@ Einfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). $E[\text{Kopf}] = 0 \cdot
 ## Bernoulli-Verteilung (Münzwurf)
 
 ## Gleichverteilung (Würfelwurf)
+
+## Interaktive Verteilungen {.midi}
+
+```{r}
+library(shiny)
+ui <- fluidPage(
+  titlePanel("Bild' dir deine (stetige) Verteilung!"),
+  sidebarLayout(
+    sidebarPanel(
+      tabsetPanel(
+        tabPanel("Verteilung A",
+                 h4("Verteilung A"),
+                 sliderInput("mu1",  "Mittelwert μ",    min = -3, max = 3,  value = 0,  step = 0.5),
+                 sliderInput("var1", "Varianz σ²",     min = 1, max = 7, value = 1,  step = 0.5),
+                 sliderInput("skew1","Schiefe γ1",     min = -1,  max = 1,   value = 0,  step = 0.1),
+                 sliderInput("kurt1","Kurtosis γ2",    min = 1, max = 10, value = 5,  step = 1)
+        ),
+        tabPanel("Verteilung B",
+                 h4("Verteilung B"),
+                 sliderInput("mu2",  "Mittelwert μ",    min = -3, max = 3,  value = 0,  step = 0.5),
+                 sliderInput("var2", "Varianz σ²",     min = 1, max = 7, value = 1,  step = 0.5),
+                 sliderInput("skew2","Schiefe γ1",     min = -1,  max = 1,   value = 0,  step = 0.1),
+                 sliderInput("kurt2","Kurtosis γ2",    min = 1, max = 10, value = 5,  step = 1)
+        )
+      ),
+      hr(),
+      actionButton("draw", "Neu berechnen"),
+      helpText("Mathematisch nicht mögliche Kombinationen führen zu einer Fehlermeldung.")
+    ),
+    mainPanel(
+      plotOutput("overlayPlot", height = "600px")
+    )
+  )
+)
+```
+
+```{r}
+#| context: server
+library(shiny)
+library(PearsonDS)
+library(ggplot2)
+
+cols <- c(A = "#1b9e77", B = "#d95f02")
+
+fit_safe <- function(mu, var, skew, kurt) {
+  tryCatch(
+    PearsonDS::pearsonFitM(mean = mu, variance = var, skewness = skew, kurtosis = kurt),
+    error = function(e) structure(list(error = TRUE, message = conditionMessage(e)), class = "pearson_error")
+  )
+}
+
+compute_plot_range <- function(f1, f2) {
+  q1 <- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f1), error = function(e) NA_real_)
+  q2 <- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f2), error = function(e) NA_real_)
+  rng <- range(c(q1, q2), na.rm = TRUE)
+  if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) {
+    s1 <- tryCatch(PearsonDS::rpearson(20000, params = f1), error = function(e) NA_real_)
+    s2 <- tryCatch(PearsonDS::rpearson(20000, params = f2), error = function(e) NA_real_)
+    rng <- range(c(s1, s2), na.rm = TRUE)
+    if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) rng <- c(-5, 5)
+  }
+  x <- seq(rng[1] - 0.1 * diff(rng), rng[2] + 0.1 * diff(rng), length.out = 1200)
+  dens1 <- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))
+  dens2 <- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))
+  ymax <- max(c(dens1, dens2), na.rm = TRUE)
+  if (!is.finite(ymax) || ymax == 0) ymax <- 0.5
+  list(xlim = c(min(x), max(x)), ylim = c(0, ymax * 1.08))
+}
+
+# axis range reactive (initialized once)
+axis_rng <- reactiveVal(NULL)
+observe({
+  req(input$mu1, input$var1, input$skew1, input$kurt1,
+      input$mu2, input$var2, input$skew2, input$kurt2)
+  if (is.null(axis_rng())) {
+    f1 <- fit_safe(input$mu1, input$var1, input$skew1, input$kurt1)
+    f2 <- fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)
+    axis_rng(compute_plot_range(f1, f2))
+  }
+})
+
+# fits reactive (on button or initially)
+vals <- eventReactive(input$draw, {
+  list(
+    f1 = fit_safe(input$mu1, input$var1, input$skew1, input$kurt1),
+    f2 = fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)
+  )
+}, ignoreNULL = FALSE)
+
+overlayPlot <- renderPlot({
+  axis <- axis_rng()
+  req(axis)
+  v <- vals()
+  f1 <- v$f1; f2 <- v$f2
+
+  if (inherits(f1, "pearson_error") || inherits(f2, "pearson_error")) {
+    ggplot() +
+      annotate("text", 0.5, 0.5, label = "Mindestens ein Fit fehlgeschlagen.\nBitte andere Werte wählen.", size = 5) +
+      theme_void()
+  } else {
+    x <- seq(axis$xlim[1], axis$xlim[2], length.out = 1200)
+    dens1 <- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))
+    dens2 <- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))
+
+    df <- data.frame(
+      x = rep(x, 2),
+      density = c(dens1, dens2),
+      dist = factor(rep(c("A","B"), each = length(x)), levels = c("A","B"))
+    )
+
+    ggplot(df, aes(x = x, y = density, color = dist, fill = dist)) +
+      geom_line(linewidth = 1) +
+      geom_area(alpha = 0.18, position = "identity") +
+      scale_color_manual(values = cols) +
+      scale_fill_manual(values = cols) +
+      labs(x = "x", y = "Dichte") +
+      theme_minimal(base_size = 14) +
+      theme(legend.title = element_blank()) +
+      geom_vline(xintercept = input$mu1, linetype = "dashed", color = cols["A"], linewidth = 0.8) +
+      geom_vline(xintercept = input$mu2, linetype = "dashed", color = cols["B"], linewidth = 0.8) +
+      coord_cartesian(xlim = axis$xlim, ylim = axis$ylim, expand = FALSE)
+  }
+}, res = 96)
+```
 
 ## Normalverteilung(en) (Unsystematische Differenzen in hoher Anzahl)
 

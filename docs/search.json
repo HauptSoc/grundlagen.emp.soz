@@ -3843,8 +3843,8 @@
     "objectID": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html#querschnittuntersuchungen",
     "href": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html#querschnittuntersuchungen",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
-    "section": "Querschnittuntersuchungen",
-    "text": "Querschnittuntersuchungen\nBei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.\n\nVorteile:\n\nKostengünstig & weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen\nviele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar\n\nNachteile: Selektionseffekte (in die Stichprobe & in das “Treatment”), Verzerrung durch unbeobachtete Faktoren"
+    "section": "",
+    "text": "Bei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.\n\nVorteile:\n\nKostengünstig & weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen\nviele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar\n\nNachteile: Selektionseffekte (in die Stichprobe & in das “Treatment”), Verzerrung durch unbeobachtete Faktoren"
   },
   {
     "objectID": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html#querschnitt-alle-einflüsse-auf-einmal",
@@ -3921,7 +3921,7 @@
     "href": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html#paneldesign-kinder-sie-geben-einem-viel-zurück",
     "title": "Unterschiede erheben: Untersuchungsdesigns",
     "section": "Paneldesign: Kinder (sie geben einem viel zurück!)",
-    "text": "Paneldesign: Kinder (sie geben einem viel zurück!)\n\n\n\n\n\n\nQuelle: Ruppanner et al. (2018)"
+    "text": "Paneldesign: Kinder (sie geben einem viel zurück!)\n\n\n\n\n\n\n\nQuelle: Ruppanner et al. (2018)"
   },
   {
     "objectID": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html#paneldesign-kinder-sie-geben-einem-viel-zurück-1",
@@ -4061,7 +4061,7 @@
     "href": "slides/15-Vergleiche_und_Verteilungen.html#herausforderungen-guter-vergleiche",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Herausforderungen guter Vergleiche",
-    "text": "Herausforderungen guter Vergleiche\nNiemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen per se schlechten Vergleich. Wir verbinden allerdings in der Wissenschaft mit einem Vergleich ein Erkentnissinteresse. Dieses Interesse kann gut oder schlecht bedient werden.\n\nWir möchten beschreiben, wie groß die Unterschiede zwischen Gruppen sind.\n\nOft vergleichen wir Mittelwerte oder relative Anteile über Gruppen. Das kann aber aus vielen Gründen nicht unseren Interessen genügen. Daher müssen wir reflektieren, was ein sinnvoller Vergleichsmaßstab sein kann.\n\nWir wollen oft wissen, ob etwas wirksam ist.\n\nIn diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft durch das Gruppenmerkmal bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden. Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale isolieren."
+    "text": "Herausforderungen guter Vergleiche\nNiemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen per se schlechten Vergleich. Wir verbinden allerdings in der Wissenschaft mit einem Vergleich ein Erkentnissinteresse. Dieses Interesse kann gut oder schlecht bedient werden.\n\nWir möchten beschreiben, wie groß die Unterschiede zwischen Gruppen sind.\n-  Oft vergleichen wir Mittelwerte oder relative Anteile über Gruppen. Das kann aber aus vielen Gründen nicht unseren Interessen genügen. Daher müssen wir reflektieren, was ein sinnvoller Vergleichsmaßstab sein kann.\nWir wollen oft wissen, ob etwas wirksam ist bzw. einen eigenständigen Effekt hat.\n- In diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft (\"Unterschiede in der Wahl extremer Parteien\") durch eine andere Eigenschaft (\"Verbreitung gruppenfeindliche Folklore\") bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden (\"Grad der Verstädterung\"). Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale **isolieren**."
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#wir-wollen-verstehen-was-passiert.",
@@ -4075,14 +4075,14 @@
     "href": "slides/15-Vergleiche_und_Verteilungen.html#hypothesen-und-vergleiche",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Hypothesen und Vergleiche",
-    "text": "Hypothesen und Vergleiche\n\nUnser Erkentnisinteresse formulieren wir meist in Form einer Hypothese. Diese Hypothesen drücken typischerweise systematische Zusammenhänge aus.\nEinen Vergleich im statistischen Sinn können wir als eine Differenz ausdrücken.\nTypischerweise müssen wir erst unsere Hypothesen für Vergleiche auf Gruppenebene reformulieren. D.h.: Wir müssen klar machen, was für ein Vergleichsmaßsstab genutzt werden soll und wie verglichen werden soll."
+    "text": "Hypothesen und Vergleiche\nIm statistischen Jargon: Bedingte Verteilungen im Gegensatz zu unbedingten Verteilungen über alle Gruppen.\n\nEinen Vergleich im statistischen Sinn können wir als eine Differenz ausdrücken."
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#was-können-wir-vergleichen",
     "href": "slides/15-Vergleiche_und_Verteilungen.html#was-können-wir-vergleichen",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Was können wir vergleichen?",
-    "text": "Was können wir vergleichen?\n\nWir vergleichen ab sofort keine individuellen Informationen sondern operieren stets auf Gruppenebene.1\nWenn wir Gruppen vergleichen wollen, müssen wir die Informationen über die Verteilung eines Merkmals zusammenfassen.\n\nMaße der zentralen Tendenz: Modus, Median, arithmetisches Mittel\nMaße der Streuung: Varianz, Standardabweichung, Diversität\nWeitere Punkte der Verteilung: Quantile/Perzentile, Schiefe\n\n\nGruppen können auch Länder oder Zeitpunkte sein."
+    "text": "Was können wir vergleichen?\n\nWenn wir Gruppen vergleichen wollen, müssen wir die Informationen über die Verteilung eines Merkmals zusammenfassen.\n\nMaße der zentralen Tendenz: Modus, Median, arithmetisches Mittel\nMaße der Streuung: Varianz, Standardabweichung, Diversität\nWeitere Punkte der Verteilung: Quantile/Perzentile, Schiefe"
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#verteilung-der-löhne-in-deutschland-2018",
@@ -4124,14 +4124,14 @@
     "href": "slides/15-Vergleiche_und_Verteilungen.html#erwartungswert-durchschnitt-der-zufallsverteilung",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Erwartungswert (=Durchschnitt der Zufallsverteilung)",
-    "text": "Erwartungswert (=Durchschnitt der Zufallsverteilung)\nDer Erwartungswert einer Variablen X, \\(E[X]\\), bezeichnet das potentielle, durchschnittliche Ergebnis, wenn die Erstellung der Variablen X zufällig oft wiederholt würde. Der Wert ist die Summe der jeweiligen Werte von X multipliziert (bzw. gewichtet) mit der Wahrscheinlichkeit, dass X vorliegt.\n\\[E[X] = \\sum x_i \\cdot P(x_i)\\]\nEinfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). \\(E[\\text{Kopf}] = 0 \\cdot 0.5 + 1 \\cdot 0.5 = 0.5\\)"
+    "text": "Erwartungswert (=Durchschnitt der Zufallsverteilung)\nThe expectation here is a lot of content; continue unchanged.\n\\[E[X] = \\sum x_i \\cdot P(x_i)\\]\nEinfacher Fall: Münzwurf (Werte: 0 = Zahl, 1 = Kopf). \\(E[\\text{Kopf}] = 0 \\cdot 0.5 + 1 \\cdot 0.5 = 0.5\\)"
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#warum-brauchen-wir-das",
     "href": "slides/15-Vergleiche_und_Verteilungen.html#warum-brauchen-wir-das",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Warum brauchen wir das?",
-    "text": "Warum brauchen wir das?\n\nSie machen eine Befragung und ziehen eine Zufallsstichprobe.\nWoher wissen Sie, ob Ihre Stichprobe tatsächlich (annährend) zufällig war?\nVariable Geschlecht (Werte: 0 = Mann; 1 = Frau): E[Frau] = 0.5, da \\(0.5 \\cdot 0 + 0.5 \\cdot 1 = 0.5\\)\nKeine Stichprobe wird allerdings exakt ein 50/50 Ratio haben, auch wenn die Stichprobe perfekt zufällig war.\nDaher müssen wir lernen, erwartete Werte (\\(E[X]\\)) von realisierten Werten (\\(\\bar{X}\\) bzw. \\(P(X)\\)) zu unterscheiden, um sie miteinander vergleichen zu können."
+    "text": "Warum brauchen wir das?\n\nSie machen eine Befragung und ziehen eine Zufallsstichprobe.\nWoher wissen Sie, ob Ihre Stichprobe tatsächlich (annähernd) zufällig war?\nVariable Geschlecht (Werte: 0 = Mann; 1 = Frau): E[Frau] = 0.5, da \\(0.5 \\cdot 0 + 0.5 \\cdot 1 = 0.5\\)\nKeine Stichprobe wird allerdings exakt ein 50/50 Ratio haben, auch wenn die Stichprobe perfekt zufällig war.\nDaher müssen wir lernen, erwartete Werte (\\(E[X]\\)) von realisierten Werten (\\(\\bar{X}\\) bzw. \\(P(X)\\)) zu unterscheiden, um sie miteinander vergleichen zu können."
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#bernoulli-verteilung-münzwurf",
@@ -4208,6 +4208,153 @@
     "href": "slides/15-Vergleiche_und_Verteilungen.html#was-bedeutet-das",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Was bedeutet das?",
-    "text": "Was bedeutet das?"
+    "text": "Was bedeutet das?\n\n\n\n\n\n\n\n\n\n\nErkentnisinteresse\nStudienfrage\nTheoretische Population\nTheorie-Empirie Link\nSchätzung\n\n\n\n\nWarum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen?\nWerden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert?\nGrundschüler:innen in Deutschland."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#jungen-und-mädchen-in-der-schule",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#jungen-und-mädchen-in-der-schule",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Jungen und Mädchen in der Schule",
+    "text": "Jungen und Mädchen in der Schule\nUnser Erkentnisinteresse formulieren wir meist in Form einer Hypothese. Diese Hypothesen drücken typischerweise systematische Zusammenhänge aus.\n\nEinen Vergleich im statistischen Sinn können wir als eine Differenz ausdrücken.\nTypischerweise müssen wir erst unsere Hypothesen für Vergleiche auf Gruppenebene reformulieren. D.h.: Wir müssen klar machen, was für ein Vergleichsmaßsstab genutzt werden soll und wie verglichen werden soll."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-warum-machen-jungen-mit-einer-deutlich-geringeren-wahrscheinlichkeit-abitur-als-mädchen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-warum-machen-jungen-mit-einer-deutlich-geringeren-wahrscheinlichkeit-abitur-als-mädchen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Erkentnisinteresse: Warum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen?",
+    "text": "Erkentnisinteresse: Warum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen?"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-warum-machen-jungen-mit-einer-deutlich-geringeren-wahrscheinlichkeit-abitur-als-mädchen-.",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-warum-machen-jungen-mit-einer-deutlich-geringeren-wahrscheinlichkeit-abitur-als-mädchen-.",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Erkentnisinteresse: Warum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen? {.}",
+    "text": "Erkentnisinteresse: Warum machen Jungen mit einer deutlich geringeren Wahrscheinlichkeit Abitur als Mädchen? {.}\n\n\n\n\n\n\n\n\n\nStudienfrage\nTheoretische Population\nTheorie-Empirie Link\nSchätzung\n\n\n\n\nWerden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert und haben daher geringere Übergangswahrscheinlichkeiten zum Gymnasium?\nGrundschüler:innen in Deutschland.\n                 | 1\\) Lineare Regression mit Förderungsintensität als abhängige Variable mit Geschlecht und Kompetenzen als Kontrollvariablen und Interaktion zwischen Geschlecht und Kompetenzen\\\n                 | \\\n        | 2) Multivariate Logistische Regression mit der Übergangswahrscheinlichkeit auf das Gymnasium als abängige Variable unter Kontrolle der Förderungsintensität und Leistung.          |\n\n\n\n\n\n\n\n\nflowchart TD\n\nG[Geschlecht]\nU[Übergang zum Gymnasium]\nF[Förderung]\nL[Leistungen]\nK[Kompetenzen]\nI@{ shape: f-circ} \n\n\nG --&gt; K\nK --- I --&gt; F  \nG ---&gt; I \nF --&gt; L --&gt; U"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#test",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#test",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Test",
+    "text": "Test\n\n\n\n\n\nflowchart TD\n\nG[Geschlecht]\nU[Übergang zum Gymnasium]\nF[Förderung]\nL[Leistungen]\nK[Kompetenzen]\nI@{ shape: f-circ} \n\n\nG --&gt; K\nK --- I --&gt; F  \nG ---&gt; I \nF --&gt; L --&gt; U"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten",
+    "text": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten-1",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten-1",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten",
+    "text": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#hypothesen-unterschiede-in-x-führen-zu-unterschieden-in-y",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#hypothesen-unterschiede-in-x-führen-zu-unterschieden-in-y",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Hypothesen: Unterschiede in X führen zu Unterschieden in Y",
+    "text": "Hypothesen: Unterschiede in X führen zu Unterschieden in Y\nDie Theorien über Ungleichheiten im Bildungssytem haben wir in Form eines Systems dargestellt, dass Unterschiede in Ausprägungen von Eigenschaften miteinander verbindet. Solche Verbindungen bezeichnen wir als Hypothesen.\n\nHypothesen werden typischerweise als “Wenn-dann” oder als “Je-desto” Aussagen formuliert.\n\nWenn ein Unterschied in X besteht, besteht auch ein Unterschied in Y.\nJe größer/kleiner die Unterschiede in X sind, desto größer/kleiner sind die Unterschiede in Y.\n\n\nHypothesen können auch mehrere Verbindungen umfassen und selbstverständlich sprachlich eleganter als die oben genannten Versionen formuliert sein."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#aktuelle-hypothesen1",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#aktuelle-hypothesen1",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Aktuelle Hypothesen:1",
+    "text": "Aktuelle Hypothesen:1\n\nTraditionelle völkische Folklore verstärkt eine feindliche/negative Sicht auf die soziale Umgebung und erhöht dadurch die Neigung zur Wahl rechtsextremer Parteien (Amaya & Braun (2026)).\nWenn Frauen in Berufe eintreten, die vorher nur von Männern ausgeübt wurden, ändert sich weder das Verhalten, Leistung oder die Beförderung von Männern - aber Männer glauben, dass sich ihre Situation verschlechtert (Greenberg et al. (2026)).\n\nJe mehr ältere Brüder von der gleichen Mutter ein Mann hat, desto höher ist die Wahrscheinlichkeit, dass er sich als schwul identifiziert (Blanchard (2017); Leseempfehlung: Kommentare zu diesem Artikel).\n\nPersönliche Selektion aus der Wissenschaftsinbox vom Haupt (2026)."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#von-der-hypothese-zur-datenanalyse",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#von-der-hypothese-zur-datenanalyse",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Von der Hypothese zur Datenanalyse",
+    "text": "Von der Hypothese zur Datenanalyse\nJedes Element von Hypothesen müssen wir in der Datenanalyse in nachvollziehbarer Weise auf beobachtbare Informationen und angemessene Verfahren zurückführen.\n\n\n\n\n\nflowchart LR\n\nsubgraph H[Hypothese]\nX[Unterschiede in X] -- führen zu --&gt;\nY[Unterschieden in Y] \nend\n\nsubgraph D[Datenanalyse]\nV1[Verteilung von X] -- korreliert mit --&gt;\nV2[Verteilung von Y] \nend\n\nsubgraph V[Vergleich / Modellierung]\n  X1@{ img: \"https://www.svgrepo.com/show/471053/bar-chart-09.svg\", label: \"Verteilung von Y bei X = 0\", pos: \"t\", h: 60, constraint: \"on\" }\n  X2@{ img: \"https://www.svgrepo.com/show/471054/bar-chart-08.svg\", label: \"Verteilung von Y bei X = 1\", pos: \"t\", h: 60, constraint: \"on\" }\n  X1 &lt;-- Differenz --&gt; X2\nend\n\nH -- wird übersetzt zu --&gt; D\nD -- beruht auf --&gt; V\n\n\n\n\n\n\nWir betreiben Datenanalyse, indem wir gruppenspezifische Verteilungen auf eine korrekte Art miteinander vergleichen und somit die theoretisch behauptete systematische Unterschiedlichkeit von Eigenschaften als Differenzen erfassen."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-gruppen-vergleichen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-gruppen-vergleichen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Warum müssen wir Gruppen vergleichen?",
+    "text": "Warum müssen wir Gruppen vergleichen?\n\nEmpirische Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit gleichzeitig unter zwei unterschiedlichen Zuständen beobachten.1 Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren.\nWir können kontrafaktische Vergleiche als Gedankenexperimente durchführen. - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - im Vergleich zur reelen Situation? - Wenn der Mann 50% der Haushalts- und Care-Arbeit übernehmen würden, wären dann diese 50% auch vollständig unter seiner Verantwortung und Kontrolle - im Vergleich zur aktuellen Praxis im Haushalt?\n\nIch bezeichne dieses Problem als “Dr. Strange’s Kopfschmerzpille im Multiverse”."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Warum müssen wir vergleichen?",
+    "text": "Warum müssen wir vergleichen?\n\nEmpirische Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit gleichzeitig unter zwei unterschiedlichen Zuständen beobachten.1 Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2).\nWir können kontrafaktische Vergleiche als Gedankenexperimente durchführen. - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - im Vergleich zur reelen Situation? - Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - im Vergleich zur beobachteten Lohnverteilung?\n\nIch bezeichne dieses Problem als “Dr. Strange’s Kopfschmerzpille im Multiverse”."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen-1",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen-1",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Warum müssen wir vergleichen?",
+    "text": "Warum müssen wir vergleichen?\n\nWir können beobachtete Verteilungen gegen erwartete Verteilungen vergleichen.\n\nWir erwarten, dass sich die Verteilungen in einer repräsentative Stichprobe nicht systematisch von den Verteilungen unterscheiden, die wir in der Population erwarten.\nWir erwarten, dass sich die Verteilung von Eigenschaften über randomisierte Kontroll- und Versuchgruppen vor dem Treatment nicht systematisch unterscheiden.\nWir müssen erwarten, dass sich Studienergebnisse zur gleichen Frage mit gleichem Studiendesign aber unterschiedlichen Stichproben unterscheiden - diese Unterschiede sollten aber im Rahmen einer Zufallsverteilung liegen.\nWir können die eigenen Studienergebnisse mit vorherigen Studienergebnissen vergleichen."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#empirische-vergleiche-differenzen-gruppenspezifischer-verteilungen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#empirische-vergleiche-differenzen-gruppenspezifischer-verteilungen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Empirische Vergleiche = Differenzen gruppenspezifischer Verteilungen",
+    "text": "Empirische Vergleiche = Differenzen gruppenspezifischer Verteilungen"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#in-a-nutshell-was-vergleichen-wir-womit",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#in-a-nutshell-was-vergleichen-wir-womit",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "In a nutshell: Was vergleichen wir womit?",
+    "text": "In a nutshell: Was vergleichen wir womit?\n\n\n\n\n\n\nEmpirische Vergleiche\n\n\n\nSie können nur auf Grundlage von gruppenspezifischen, beobachteten Verteilungen durchgeführt werden.\nAlles mit N &gt; 1 ist eine Gruppe.\nGruppen können (gleiche) Individuen (über die Zeit), Organistionen, Firmen, Länder oder Planeten sein.\n\n\n\n\n\n\n\n\n\n\nVergleiche zwischen empirischen und kontrafaktischen Zuständen\n\n\n\nDas ist immer Theorie (aber deswegen nicht schlecht!).\nJede Kausalbehauptung benötigt ein plausibles, kontrafaktisches Szenario, mit dem wir vergleichen können.\nDiese Vergleiche können wir mit Gedankenexperimenten oder Simulationen durchführen."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#in-a-nutshell-was-vergleichen-wir-womit-1",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#in-a-nutshell-was-vergleichen-wir-womit-1",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "In a nutshell: Was vergleichen wir womit?",
+    "text": "In a nutshell: Was vergleichen wir womit?\n\n\n\n\n\n\nVergleiche zwischen empirischen und zufälligen Verteilungen\n\n\n\nManchmal lassen wir den Zufall für uns arbeiten (Randomisierung / zufälliges Sampling).\nWENN das so ist, erhalten wir Zufallsverteilungen.\nDer Vergleich mit diesen Zufallsverteilungen kann uns helfen, die Unsicherheit über unsere Ergebnisse zu erfassen."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#das-datenanalytische-handwerkszeug-für-den-vergleich-von-verteilungen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#das-datenanalytische-handwerkszeug-für-den-vergleich-von-verteilungen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Das datenanalytische Handwerkszeug für den Vergleich von Verteilungen",
+    "text": "Das datenanalytische Handwerkszeug für den Vergleich von Verteilungen"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#selber-hämmern-nähen-schneiden",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#selber-hämmern-nähen-schneiden",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Selber hämmern, nähen & schneiden",
+    "text": "Selber hämmern, nähen & schneiden\n1.  Maße der zentralen Tendenz: Modus, Median, arithmetisches Mittel\n\n2.  Maße der Streuung: Varianz, Standardabweichung, Diversität\n\n3.  Weitere Punkte der Verteilung: Quantile/Perzentile, Schiefe"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#interaktive-verteilungen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#interaktive-verteilungen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Interaktive Verteilungen",
+    "text": "Interaktive Verteilungen"
+  },
+  {
+    "objectID": "slides/test.html",
+    "href": "slides/test.html",
+    "title": "Test",
+    "section": "",
+    "text": "library(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"Bild' dir deine (stetige) Verteilung!\"),\n  sidebarLayout(\n    sidebarPanel(\n      tabsetPanel(\n        tabPanel(\"Verteilung A\",\n                 h4(\"Verteilung A\"),\n                 sliderInput(\"mu1\",  \"Mittelwert μ\",    min = -3, max = 3,  value = 0,  step = 0.5),\n                 sliderInput(\"var1\", \"Varianz σ²\",     min = 1, max = 7, value = 1,  step = 0.5),\n                 sliderInput(\"skew1\",\"Schiefe γ1\",     min = -1,  max = 1,   value = 0,  step = 0.1),\n                 sliderInput(\"kurt1\",\"Kurtosis γ2\",    min = 1, max = 10, value = 5,  step = 1)\n        ),\n        tabPanel(\"Verteilung B\",\n                 h4(\"Verteilung B\"),\n                 sliderInput(\"mu2\",  \"Mittelwert μ\",    min = -3, max = 3,  value = 0,  step = 0.5),\n                 sliderInput(\"var2\", \"Varianz σ²\",     min = 1, max = 7, value = 1,  step = 0.5),\n                 sliderInput(\"skew2\",\"Schiefe γ1\",     min = -1,  max = 1,   value = 0,  step = 0.1),\n                 sliderInput(\"kurt2\",\"Kurtosis γ2\",    min = 1, max = 10, value = 5,  step = 1)\n        )\n      ),\n      hr(),\n      actionButton(\"draw\", \"Neu berechnen\"),\n      helpText(\"Mathematisch nicht mögliche Kombinationen führen zu einer Fehlermeldung.\")\n    ),\n    mainPanel(\n      plotOutput(\"overlayPlot\", height = \"600px\")\n    )\n  )\n)\n\n\nlibrary(PearsonDS)\nlibrary(ggplot2)\n\ncols &lt;- c(A = \"#1b9e77\", B = \"#d95f02\")\n\nfit_safe &lt;- function(mu, var, skew, kurt) {\n  tryCatch(\n    PearsonDS::pearsonFitM(mean = mu, variance = var, skewness = skew, kurtosis = kurt),\n    error = function(e) structure(list(error = TRUE, message = conditionMessage(e)), class = \"pearson_error\")\n  )\n}\n\ncompute_plot_range &lt;- function(f1, f2) {\n  q1 &lt;- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f1), error = function(e) NA_real_)\n  q2 &lt;- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f2), error = function(e) NA_real_)\n  rng &lt;- range(c(q1, q2), na.rm = TRUE)\n  if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) {\n    s1 &lt;- tryCatch(PearsonDS::rpearson(20000, params = f1), error = function(e) NA_real_)\n    s2 &lt;- tryCatch(PearsonDS::rpearson(20000, params = f2), error = function(e) NA_real_)\n    rng &lt;- range(c(s1, s2), na.rm = TRUE)\n    if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) rng &lt;- c(-5, 5)\n  }\n  x &lt;- seq(rng[1] - 0.1 * diff(rng), rng[2] + 0.1 * diff(rng), length.out = 1200)\n  dens1 &lt;- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))\n  dens2 &lt;- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))\n  ymax &lt;- max(c(dens1, dens2), na.rm = TRUE)\n  if (!is.finite(ymax) || ymax == 0) ymax &lt;- 0.5\n  list(xlim = c(min(x), max(x)), ylim = c(0, ymax * 1.08))\n}\n\n# axis range reactive (initialized once)\naxis_rng &lt;- reactiveVal(NULL)\nobserve({\n  req(input$mu1, input$var1, input$skew1, input$kurt1,\n      input$mu2, input$var2, input$skew2, input$kurt2)\n  if (is.null(axis_rng())) {\n    f1 &lt;- fit_safe(input$mu1, input$var1, input$skew1, input$kurt1)\n    f2 &lt;- fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)\n    axis_rng(compute_plot_range(f1, f2))\n  }\n})\n\n# fits reactive (on button or initially)\nvals &lt;- eventReactive(input$draw, {\n  list(\n    f1 = fit_safe(input$mu1, input$var1, input$skew1, input$kurt1),\n    f2 = fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)\n  )\n}, ignoreNULL = FALSE)\n\noverlayPlot &lt;- renderPlot({\n  axis &lt;- axis_rng()\n  req(axis)\n  v &lt;- vals()\n  f1 &lt;- v$f1; f2 &lt;- v$f2\n\n  if (inherits(f1, \"pearson_error\") || inherits(f2, \"pearson_error\")) {\n    ggplot() +\n      annotate(\"text\", 0.5, 0.5, label = \"Mindestens ein Fit fehlgeschlagen.\\nBitte andere Werte wählen.\", size = 5) +\n      theme_void()\n  } else {\n    x &lt;- seq(axis$xlim[1], axis$xlim[2], length.out = 1200)\n    dens1 &lt;- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))\n    dens2 &lt;- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))\n\n    df &lt;- data.frame(\n      x = rep(x, 2),\n      density = c(dens1, dens2),\n      dist = factor(rep(c(\"A\",\"B\"), each = length(x)), levels = c(\"A\",\"B\"))\n    )\n\n    ggplot(df, aes(x = x, y = density, color = dist, fill = dist)) +\n      geom_line(linewidth = 1) +\n      geom_area(alpha = 0.18, position = \"identity\") +\n      scale_color_manual(values = cols) +\n      scale_fill_manual(values = cols) +\n      labs(x = \"x\", y = \"Dichte\") +\n      theme_minimal(base_size = 14) +\n      theme(legend.title = element_blank()) +\n      geom_vline(xintercept = input$mu1, linetype = \"dashed\", color = cols[\"A\"], linewidth = 0.8) +\n      geom_vline(xintercept = input$mu2, linetype = \"dashed\", color = cols[\"B\"], linewidth = 0.8) +\n      coord_cartesian(xlim = axis$xlim, ylim = axis$ylim, expand = FALSE)\n  }\n}, res = 96)"
+  },
+  {
+    "objectID": "slides/scripts/mermaid graphs/mermaid-graphs.html",
+    "href": "slides/scripts/mermaid graphs/mermaid-graphs.html",
+    "title": "Methoden empirischer Sozialforschung",
+    "section": "",
+    "text": "---\nconfig:\n  theme: 'neutral'\n  themeVariables:\n      fontSize: 20px\n---\n\nflowchart LR\n subgraph sg1[\"**Studienfrage**\"]\n        SF[\"Werden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert und haben daher geringere Übergangswahrscheinlichkeiten zum Gymnasium?\"]\n  end\n subgraph sg2[\"**Population**\"]\n        TP[\"Grundschüler:innen in Deutschland.\"]\n  end\n subgraph sg3[\"**Theorie-Empirie Link**\"]\n    direction TD\n        G[\"Geschlecht\"]\n        U[\"Übergang zum Gymnasium\"]\n        F[\"Förderung\"]\n        L[\"Leistungen\"]\n        K[\"Kompetenzen\"]\n        I[\" \"]\n  end\n subgraph sg4[\"**Schätzung**\"]\n        R1[\"Schritt 1: Lineare Regression mit Förderungsintensität als abhängige Variable mit Geschlecht und Kompetenzen als Kontrollvariablen und Interaktion zwischen Geschlecht und Kompetenzen.\"]\n        R2[\"Schritt 2: Logistische Regression mit der Übergangswahrscheinlichkeit auf das Gymnasium als abängige Variable unter Kontrolle der Förderungsintensität und Leistung.\"]\n  end\n subgraph sg5[\"**Beobachtungsgrundlage**\"]\n        B1[\"Stichprobenziehung aus der Population\"]\n        B2[\"Erfassung von Geschlecht, Kompetenzen, Förderung & Leistung zu t1\"]\n        B3[\"Zusätzliche Erfassung des Übergangs nach Klasse 4/6 zu t2\"]\n  end\n    B1 ~~~ B2\n    B2 ~~~ B3\n    G --&gt; K\n    K --- I\n    I --&gt; F\n    G ---&gt; I\n    F --&gt; L\n    L --&gt; U\n    sg1 --&gt; sg2\n    sg2 --&gt; sg3\n    sg3 --&gt; sg5\n    sg5 --&gt; sg4\n\n    I@{ shape: sm-circ}\n\n\n\n\n\n\nflowchart LR subgraph sg1[“Studienfrage”] SF[“Jungen sind aufgrund von Kompetenzzuschreibungen in ihrer Sozialisation weniger leistungsbereit als Mädchen und erhalten daher schlechtere Noten.”] end subgraph sg2[“Population”] TP[“Alle schulpflichte Personen in Deutschland sowie deren Eltern und Mitglieder der relevanten peer-group.”] end subgraph KZ[“Kompetenzzuschreibungen”] K1([“Selbstwirksamkeit”]) K4([“Selbstbewußtsein”]) K2([“Bewältigung durch Begabung”]) K3([“Bewältigung durch Training”]) end subgraph sg3[“Theorie-Empirie Link”] direction TD G[“Geschlecht”] KZ F[“Leistungsbereitschaft”] L[“Leistungen”] end subgraph sg4[“Schätzung”] direction LR R1[“Schritt 1: Faktoranalyse der Indikatoren zur Kompetenzzuschreibung.”] R2[“Schritt 2: Lineare Regression der latenten Faktorscores als abhängiger Variable auf das Geschlecht.”] R3[“Schritt 3: Moderationsanalyse der geschlechtsspezifischen Leistungen über Kompetenzzuschreibungen und Leistungsbereitschaft.”] R5[“Alternative: Strukturgleichungsmodellierung mit den erfassten Variablen.”] end subgraph sg5[“Beobachtungsgrundlage”] B1[“Stichprobenziehung aus der Population”] B2[“Erfassung des latenten Konstrukts Kompetenzzuschreibungen” sowie des Geschlechts, der Leistungsbereitschaft und der erbrachten Leistungen.]\nend K1 -.- K4 & K2 K2 -.- K3 K4 -.- K3 B1 ~~~ B2\nG ---&gt; KZ\nKZ --&gt; F\nF --&gt; L\nsg1 --&gt; sg2\nsg2 --&gt; sg3\nsg3 --&gt; sg5\nsg5 --&gt; sg4"
+  },
+  {
+    "objectID": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html",
+    "href": "slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html",
+    "title": "Unterschiede erheben: Untersuchungsdesigns",
+    "section": "",
+    "text": "Bei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.\n\nVorteile:\n\nKostengünstig & weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen\nviele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar\n\nNachteile: Selektionseffekte (in die Stichprobe & in das “Treatment”), Verzerrung durch unbeobachtete Faktoren"
   }
 ]

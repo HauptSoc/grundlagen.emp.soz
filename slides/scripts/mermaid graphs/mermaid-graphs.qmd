@@ -1,0 +1,106 @@
+
+```{mermaid}
+---
+config:
+  theme: 'neutral'
+  themeVariables:
+      fontSize: 20px
+---
+
+flowchart LR
+ subgraph sg1["**Studienfrage**"]
+        SF["Werden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert und haben daher geringere Übergangswahrscheinlichkeiten zum Gymnasium?"]
+  end
+ subgraph sg2["**Population**"]
+        TP["Grundschüler:innen in Deutschland."]
+  end
+ subgraph sg3["**Theorie-Empirie Link**"]
+    direction TD
+        G["Geschlecht"]
+        U["Übergang zum Gymnasium"]
+        F["Förderung"]
+        L["Leistungen"]
+        K["Kompetenzen"]
+        I[" "]
+  end
+ subgraph sg4["**Schätzung**"]
+        R1["Schritt 1: Lineare Regression mit Förderungsintensität als abhängige Variable mit Geschlecht und Kompetenzen als Kontrollvariablen und Interaktion zwischen Geschlecht und Kompetenzen."]
+        R2["Schritt 2: Logistische Regression mit der Übergangswahrscheinlichkeit auf das Gymnasium als abängige Variable unter Kontrolle der Förderungsintensität und Leistung."]
+  end
+ subgraph sg5["**Beobachtungsgrundlage**"]
+        B1["Stichprobenziehung aus der Population"]
+        B2["Erfassung von Geschlecht, Kompetenzen, Förderung & Leistung zu t1"]
+        B3["Zusätzliche Erfassung des Übergangs nach Klasse 4/6 zu t2"]
+  end
+    B1 ~~~ B2
+    B2 ~~~ B3
+    G --> K
+    K --- I
+    I --> F
+    G ---> I
+    F --> L
+    L --> U
+    sg1 --> sg2
+    sg2 --> sg3
+    sg3 --> sg5
+    sg5 --> sg4
+
+    I@{ shape: sm-circ}
+```
+
+
+
+
+
+
+---
+config:
+  layout: dagre
+  theme: neutral
+  themeVariables:
+    fontSize: 20px
+---
+flowchart LR
+ subgraph sg1["**Studienfrage**"]
+        SF["Jungen sind aufgrund von Kompetenzzuschreibungen in ihrer Sozialisation weniger leistungsbereit als Mädchen und erhalten daher schlechtere Noten."]
+  end
+ subgraph sg2["**Population**"]
+        TP["Alle schulpflichte Personen in Deutschland sowie deren Eltern und Mitglieder der relevanten peer-group."]
+  end
+ subgraph KZ["**Kompetenzzuschreibungen**"]
+        K1(["Selbstwirksamkeit"])
+        K4(["Selbstbewußtsein"])
+        K2(["Bewältigung durch Begabung"])
+        K3(["Bewältigung durch Training"])
+  end
+ subgraph sg3["**Theorie-Empirie Link**"]
+    direction TD
+        G["Geschlecht"]
+        KZ
+        F["Leistungsbereitschaft"]
+        L["Leistungen"]
+  end
+ subgraph sg4["**Schätzung**"]
+  direction LR
+        R1["Schritt 1: Faktoranalyse der Indikatoren zur Kompetenzzuschreibung."]
+        R2["Schritt 2: Lineare Regression der latenten Faktorscores als abhängiger Variable auf das Geschlecht."]
+        R3["Schritt 3: Moderationsanalyse der geschlechtsspezifischen Leistungen über Kompetenzzuschreibungen und Leistungsbereitschaft."]
+        R5["Alternative: Strukturgleichungsmodellierung mit den erfassten Variablen."]
+  end
+ subgraph sg5["**Beobachtungsgrundlage**"]
+        B1["Stichprobenziehung aus der Population"]
+        B2["Erfassung des latenten Konstrukts *Kompetenzzuschreibungen*" sowie des Geschlechts, der Leistungsbereitschaft und der erbrachten Leistungen.]
+
+  end
+    K1 -.- K4 & K2
+    K2 -.- K3
+    K4 -.- K3
+    B1 ~~~ B2
+
+    G ---> KZ
+    KZ --> F
+    F --> L
+    sg1 --> sg2
+    sg2 --> sg3
+    sg3 --> sg5
+    sg5 --> sg4

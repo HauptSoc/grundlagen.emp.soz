@@ -1,0 +1,790 @@
+pa01:
+         -42 DATENFEHLER: MFN
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+          -1 NICHT ERHOBEN
+           1 Links (1)
+           2 Links (2)
+           3 Links (3)
+           4 Links (4)
+           5 Mitte (5)
+           6 Rechts (6)
+           7 Rechts (7)
+           8 Rechts (8)
+           9 Rechts (9)
+          10 Rechts (10)
+          .a NICHT ERHOBEN
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .z DATENFEHLER: MFN
+pa09:
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 STIMME VOLL ZU
+           2 STIMME EHER ZU
+           3 WEDER NOCH
+           4 STIMME EHER NICHT ZU
+           5 STIMME GAR NICHT ZU
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+id03:
+         -13 KEIN ISSP
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+          -1 NICHT ERHOBEN
+           1 UNTEN
+           2 ..
+           3 ..
+           4 ..
+           5 ..
+           6 ..
+           7 ..
+           8 ..
+           9 ..
+          10 OBEN
+          .a NICHT ERHOBEN
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .i KEIN ISSP
+mp17:
+         -42 DATENFEHLER: MFN
+         -11 TNZ: SPLIT
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 RISIKO UEBERWIEGT
+           2 EHER RISIKO
+           3 WEDER NOCH
+           4 EHER CHANCE
+           5 CHANCE UEBERWIEGT
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .g TNZ: SPLIT
+          .z DATENFEHLER: MFN
+mp18:
+         -42 DATENFEHLER: MFN
+         -11 TNZ: SPLIT
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 RISIKO UEBERWIEGT
+           2 EHER RISIKO
+           3 WEDER NOCH
+           4 EHER CHANCE
+           5 CHANCE UEBERWIEGT
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .g TNZ: SPLIT
+          .z DATENFEHLER: MFN
+fn01:
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 MAN BRAUCHT FAMILIE
+           2 OHNE GLEICH GLUECKL.
+           3 ALLEIN GLUECKLICHER
+           4 UNENTSCHIEDEN
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+fn02:
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 JA
+           2 NEIN
+           3 UNENTSCHIEDEN
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+fn03:
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 JA
+           2 NEIN
+           3 UNENTSCHIEDEN
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+lm01:
+         -42 DATENFEHLER: MFN
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           0 NIE
+           1 AN EINEM TAG
+           2 AN 2 TAGEN
+           3 AN 3 TAGEN
+           4 AN 4 TAGEN
+           5 AN 5 TAGEN
+           6 AN 6 TAGEN
+           7 AN ALLEN 7 TAGEN
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .z DATENFEHLER: MFN
+lm02:
+         -32 NICHT GENERIERBAR
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .k NICHT GENERIERBAR
+lm24:
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 TAEGLICH
+           2 MIND. 1X PRO WOCHE
+           3 MIND. 1X PRO MONAT
+           4 SELTENER
+           5 NIE
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+ls01:
+         -42 DATENFEHLER: MFN
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           0 GANZ UNZUFRIEDEN
+           1 ..
+           2 ..
+           3 ..
+           4 ..
+           5 ..
+           6 ..
+           7 ..
+           8 ..
+           9 ..
+          10 GANZ ZUFRIEDEN
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .z DATENFEHLER: MFN
+hs01:
+         -42 DATENFEHLER: MFN
+         -11 TNZ: SPLIT
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 SEHR GUT
+           2 GUT
+           3 ZUFRIEDENSTELLEND
+           4 WENIGER GUT
+           5 SCHLECHT
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .g TNZ: SPLIT
+          .z DATENFEHLER: MFN
+rd01:
+         -42 DATENFEHLER: MFN
+          -9 KEINE ANGABE
+          -7 VERWEIGERT
+           1 EVANG.OHNE FREIKIRCH
+           2 EVANG.FREIKIRCHE
+           3 ROEMISCH-KATHOLISCH
+           4 AND.CHRISTL.RELIGION
+           5 AND.NICHT-CHRISTLICH
+           6 KEINER RELIGIONSGEM.
+          .c VERWEIGERT
+          .e KEINE ANGABE
+          .z DATENFEHLER: MFN
+va01:
+         -32 NICHT GENERIERBAR
+         -11 TNZ: SPLIT
+           1 AM WICHTIGSTEN
+           2 AM ZWEITWICHTIGSTEN
+           3 AM DRITTWICHTIGSTEN
+           4 AM VIERTWICHTIGSTEN
+          .g TNZ: SPLIT
+          .k NICHT GENERIERBAR
+va04:
+         -32 NICHT GENERIERBAR
+         -11 TNZ: SPLIT
+           1 AM WICHTIGSTEN
+           2 AM ZWEITWICHTIGSTEN
+           3 AM DRITTWICHTIGSTEN
+           4 AM VIERTWICHTIGSTEN
+          .g TNZ: SPLIT
+          .k NICHT GENERIERBAR
+ingle:
+         -32 NICHT GENERIERBAR
+         -11 TNZ: SPLIT
+           1 POSTMATERIALISTEN
+           2 POSTMAT.-MISCHTYP
+           3 MATERIAL.-MISCHTYP
+           4 MATERIALISTEN
+          .g TNZ: SPLIT
+          .k NICHT GENERIERBAR
+st01:
+         -42 DATENFEHLER: MFN
+         -11 TNZ: SPLIT
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 MAN KANN TRAUEN
+           2 MUSS VORSICHTIG SEIN
+           3 KOMMT DARAUF AN
+           4 SONSTIGES
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .g TNZ: SPLIT
+          .z DATENFEHLER: MFN
+si03:
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 TAEGLICH
+           2 MIND. 1X PRO WOCHE
+           3 MIND. 1X PRO MONAT
+           4 SELTENER
+           5 NIE
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+lp04:
+         -42 DATENFEHLER: MFN
+         -11 TNZ: SPLIT
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 BIN DERS.MEINUNG
+           2 BIN ANDERER MEINUNG
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .g TNZ: SPLIT
+          .z DATENFEHLER: MFN
+sex:
+         -42 DATENFEHLER: MFN
+          -9 KEINE ANGABE
+           1 MANN
+           2 FRAU
+           3 DIVERS
+          .e KEINE ANGABE
+          .z DATENFEHLER: MFN
+yborn:
+          -9 KEINE ANGABE
+          -7 VERWEIGERT
+          .c VERWEIGERT
+          .e KEINE ANGABE
+age:
+         -32 NICHT GENERIERBAR
+          .k NICHT GENERIERBAR
+german:
+         -32 NICHT GENERIERBAR
+           1 JA
+           2 JA, UND ANDERE
+           3 NEIN
+          .k NICHT GENERIERBAR
+educ:
+         -41 DATENFEHLER
+         -33 NICHT BESTIMMBAR
+          -9 KEINE ANGABE
+           1 OHNE ABSCHLUSS
+           2 VOLKS-,HAUPTSCHULE
+           3 MITTLERE REIFE
+           4 FACHHOCHSCHULREIFE
+           5 HOCHSCHULREIFE
+           6 ANDERER ABSCHLUSS
+           7 NOCH SCHUELER
+          .e KEINE ANGABE
+          .l NICHT BESTIMMBAR
+          .n DATENFEHLER
+work:
+         -42 DATENFEHLER: MFN
+         -41 DATENFEHLER
+          -9 KEINE ANGABE
+           1 VOLLZEIT, GANZTAGS
+           2 TEILZEIT, HALBTAGS
+           3 NEBENHER BERUFSTAE.
+           4 NICHT ERWERBSTAETIG
+          12 KURZARBEIT
+          .e KEINE ANGABE
+          .n DATENFEHLER
+          .z DATENFEHLER: MFN
+eseg:
+         -34 NICHT ENTHALTEN
+         -32 NICHT GENERIERBAR
+           1 EMPLOYED, NO GROUP
+           2 UNEMPLOYED, NO GROUP
+          10 MANAGERS
+          11 HIGHER MG. SELF-EMP.
+          12 LOWER MG. SELF-EMP.
+          13 HIGHER MG. EMPLOYEES
+          14 LOWER MG. EMPLOYEES
+          20 PROFESSIONALS
+          21 SCIENCE/ICT PROF.
+          22 HEALTH PROFESSIONALS
+          23 BUSINESS PROF.
+          24 LEGAL/SOCIAL PROF.
+          25 TEACHING PROF.
+          30 PROFESSIONAL EMP.
+          31 TECHNICIANS
+          32 HEALTH ASS. PROF.
+          33 BUSINESS ASS. PROF.
+          34 LEGAL/SOCIAL ASS.PRO
+          35 NCOS
+          40 SMALL ENTREPRENEURS
+          41 AGRIC. SELF-EMPLOYED
+          42 SELF-EMPLOYED TECHN.
+          43 CRAFT ETC. SELF-EMP.
+          50 CLERKS/SERVICE EMP.
+          51 GENERAL CLERKS
+          52 CUSTOMER SERVICE CL.
+          53 PERSONAL CARE EMP.
+          54 PROTECTIVE SERVICES
+          60 INDUSTRIAL EMPLOYEES
+          61 BUILDING EMPLOYEES
+          62 FOOD PROCESSING ETC.
+          63 METAL/MACHINERY ETC.
+          64 STATIONARY PLANT OP.
+          65 MOBILE PLANT OP.
+          70 LOWER STATUS EMP.
+          71 SERVICE/SALES EMP.
+          72 BLUE COLLAR EMP.
+          73 CLEANERS AND HELPERS
+          74 AGRICULTURAL EMP.
+          80 RETIRED PERSONS
+          81 RETIRED MANAGERS
+          82 RETIRED PROF.
+          83 RETIRED TECHNICIANS
+          84 R. ENTREPRENEURS
+          85 RETIRED CLERKS
+          86 R. INDUSTRIAL EMP.
+          87 R. LOWER STATUS EMP.
+          90 OTHERS OUTSIDE LF
+          91 STUDENTS
+          99 OTHER INACTIVE
+          .k NICHT GENERIERBAR
+          .m NICHT ENTHALTEN
+dw07:
+         -42 DATENFEHLER: MFN
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 JA
+           2 NEIN
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+          .z DATENFEHLER: MFN
+dw19:
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -7 VERWEIGERT
+          .c VERWEIGERT
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+dw18:
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+           1 JA
+           2 NEIN
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+dw20:
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 JA
+           2 NEIN
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+dw22:
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 JA
+           2 NEIN
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+di01a:
+         -50 KEIN EINKOMMEN
+         -41 DATENFEHLER
+         -34 NICHT ENTHALTEN
+         -15 TNZ: MODE
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .m NICHT ENTHALTEN
+          .n DATENFEHLER
+          .o KEIN EINKOMMEN
+          .y TNZ: MODE
+di02a:
+         -50 KEIN EINKOMMEN
+         -42 DATENFEHLER: MFN
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+          -1 NICHT ERHOBEN
+           1 UNTER 200 EURO
+           2 200 - 299 EURO
+           3 300 - 399 EURO
+           4 400 - 499 EURO
+           5 500-624[21:599] EURO
+           6 625[21:600]-749 EURO
+           7 750 - 874 EURO
+           8 875 - 999 EURO
+           9 1000 - 1124 EURO
+          10 1125 - 1249 EURO
+          11 1250 - 1374 EURO
+          12 1375 - 1499 EURO
+          13 1500 - 1749 EURO
+          14 1750 - 1999 EURO
+          15 2000 - 2249 EURO
+          16 2250 - 2499 EURO
+          17 2500 - 2749 EURO
+          18 2750 - 2999 EURO
+          19 3000 - 3999 EURO
+          20 4000 - 4999 EURO
+          21 5000 - 7499 EURO
+          22 7500 EURO UND MEHR
+          .a NICHT ERHOBEN
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+          .o KEIN EINKOMMEN
+          .z DATENFEHLER: MFN
+inc:
+         -50 KEIN EINKOMMEN
+         -34 NICHT ENTHALTEN
+         -32 NICHT GENERIERBAR
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .k NICHT GENERIERBAR
+          .m NICHT ENTHALTEN
+          .o KEIN EINKOMMEN
+incc:
+         -50 KEIN EINKOMMEN
+         -32 NICHT GENERIERBAR
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+           1 UNTER 200 EURO
+           2 200 - 299 EURO
+           3 300 - 399 EURO
+           4 400 - 499 EURO
+           5 500-624[21:599] EURO
+           6 625[21:600]-749 EURO
+           7 750 - 874 EURO
+           8 875 - 999 EURO
+           9 1000 - 1124 EURO
+          10 1125 - 1249 EURO
+          11 1250 - 1374 EURO
+          12 1375 - 1499 EURO
+          13 1500 - 1749 EURO
+          14 1750 - 1999 EURO
+          15 2000 - 2249 EURO
+          16 2250 - 2499 EURO
+          17 2500 - 2749 EURO
+          18 2750 - 2999 EURO
+          19 3000 - 3999 EURO
+          20 4000 - 4999 EURO
+          21 5000 - 7499 EURO
+          22 7500 EURO UND MEHR
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .k NICHT GENERIERBAR
+          .o KEIN EINKOMMEN
+hhincc:
+         -50 KEIN EINKOMMEN
+         -32 NICHT GENERIERBAR
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -7 VERWEIGERT
+           1 UNTER 200 EURO
+           2 200 - 299 EURO
+           3 300 - 399 EURO
+           4 400 - 499 EURO
+           5 500-624[21:599] EURO
+           6 625[21:600]-749 EURO
+           7 750 - 874 EURO
+           8 875 - 999 EURO
+           9 1000 - 1124 EURO
+          10 1125 - 1249 EURO
+          11 1250 - 1374 EURO
+          12 1375 - 1499 EURO
+          13 1500 - 1749 EURO
+          14 1750 - 1999 EURO
+          15 2000 - 2249 EURO
+          16 2250 - 2499 EURO
+          17 2500 - 2749 EURO
+          18 2750 - 2999 EURO
+          19 3000 - 3999 EURO
+          20 4000 - 4999 EURO
+          21 5000 - 7499 EURO
+          22 7500 EURO UND MEHR
+          .c VERWEIGERT
+          .d WEISS NICHT
+          .e KEINE ANGABE
+          .k NICHT GENERIERBAR
+          .o KEIN EINKOMMEN
+di07:
+         -50 KEIN EINKOMMEN
+         -34 NICHT ENTHALTEN
+         -32 NICHT GENERIERBAR
+          .k NICHT GENERIERBAR
+          .m NICHT ENTHALTEN
+          .o KEIN EINKOMMEN
+di07c:
+         -50 KEIN EINKOMMEN
+         -32 NICHT GENERIERBAR
+           1 UNTER 200 EURO
+           2 200 - 299 EURO
+           3 300 - 399 EURO
+           4 400 - 499 EURO
+           5 500 - 624 EURO
+           6 625 - 749 EURO
+           7 750 - 874 EURO
+           8 875 - 999 EURO
+           9 1000 - 1124 EURO
+          10 1125 - 1249 EURO
+          11 1250 - 1374 EURO
+          12 1375 - 1499 EURO
+          13 1500 - 1749 EURO
+          14 1750 - 1999 EURO
+          15 2000 - 2249 EURO
+          16 2250 - 2499 EURO
+          17 2500 - 2749 EURO
+          18 2750 - 2999 EURO
+          19 3000 - 3999 EURO
+          20 4000 - 4999 EURO
+          21 5000 - 7499 EURO
+          22 7500 EURO UND MEHR
+          .k NICHT GENERIERBAR
+          .o KEIN EINKOMMEN
+mstat:
+         -42 DATENFEHLER: MFN
+         -41 DATENFEHLER
+          -9 KEINE ANGABE
+           1 VERHEIRAT.ZUSAM.LEB.
+           2 VERH.GETRENNT LEBEND
+           3 VERWITWET
+           4 GESCHIEDEN
+           5 LEDIG
+          .e KEINE ANGABE
+          .n DATENFEHLER
+          .z DATENFEHLER: MFN
+scage:
+         -32 NICHT GENERIERBAR
+         -10 TNZ: FILTER
+          -1 NICHT ERHOBEN
+          .a NICHT ERHOBEN
+          .f TNZ: FILTER
+          .k NICHT GENERIERBAR
+dp01:
+         -41 DATENFEHLER
+         -10 TNZ: FILTER
+          -9 KEINE ANGABE
+          -7 VERWEIGERT
+          -1 NICHT ERHOBEN
+           1 JA
+           2 NEIN
+          .a NICHT ERHOBEN
+          .c VERWEIGERT
+          .e KEINE ANGABE
+          .f TNZ: FILTER
+          .n DATENFEHLER
+dh04:
+         -32 NICHT GENERIERBAR
+          .k NICHT GENERIERBAR
+dh12:
+         -32 NICHT GENERIERBAR
+          11 LF1 EHEPAAR
+          21 LF2 NEL,B:LED.
+          22 LF2 NEL,B:NACHEHE
+          31 LF3 K.PART(<86)B:LED
+          32 LF3 K.P.(<86)B:N.EHE
+          33 LF3 K.PART,B:VERH.
+          41 LF4 LAT,B:LED.
+          42 LF4 LAT,B:NACHEHE
+          51 LF5 K.PART,B:LED.
+          52 LF5 K.PART,B:NACHEHE
+          .k NICHT GENERIERBAR
+dh13:
+         -32 NICHT GENERIERBAR
+         111 KL1 EHEPAAR
+         121 KL2 NEL,B:LED.
+         122 KL2 NEL,B:NACHEHE
+         131 KL3 K.PART(<86)B:LED
+         132 KL3 K.P.(<86)B:N.EHE
+         133 KL3 K.PART,B:VERH.
+         141 KL4 LAT,B:LED.
+         142 KL4 LAT,B:NACHEHE
+         151 KL5 K.PART,B:LED.
+         152 KL5 K.PART,B:NACHEHE
+         211 F1 EHEPAAR+KIND
+         221 F2 NEL+KIND,B:LED
+         222 F2 NEL+KIND,B:N.EHE
+         231 F3 K.P.+K(<86),LEDIG
+         232 F3 K.P.+K(<86),N.EHE
+         233 F3 K.PART+K,B:VERH.
+         241 F4 LAT+KIND,B:LED.
+         242 F4 LAT+KIND,B:N.EHE
+         251 F5 K.PART+KIND,B:LED
+         252 F5 K.PART+K,B:N.EHE
+          .k NICHT GENERIERBAR
+dh17:
+         -32 NICHT GENERIERBAR
+           0 UNTER 1 JAHR
+          .k NICHT GENERIERBAR
+dk11:
+         -32 NICHT GENERIERBAR
+           0 KEINE KINDER
+          .k NICHT GENERIERBAR
+gs01:
+         -42 DATENFEHLER: MFN
+         -13 KEIN ISSP
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 GROSSSTADT
+           2 VORORT GROSSSTADT
+           3 MITTEL-, KLEINSTADT
+           4 LAENDL. DORF
+           5 EINZELHAUS, LAND
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+          .i KEIN ISSP
+          .z DATENFEHLER: MFN
+aq01:
+         -42 DATENFEHLER: MFN
+         -41 DATENFEHLER
+         -33 NICHT BESTIMMBAR
+          -9 KEINE ANGABE
+          -7 VERWEIGERT
+           1 ZUR UNTERMIETE
+           2 DIENST-,WERKSWOHNUNG
+           3 SOZIALER WOHNUNGSBAU
+           4 SONST.MIETWOHNUNG
+           5 GEMIETETES HAUS
+           6 EIGENTUMSWOHNUNG
+           7 EIGENHEIM
+           8 ANDERE WOHNFORM
+          .c VERWEIGERT
+          .e KEINE ANGABE
+          .l NICHT BESTIMMBAR
+          .n DATENFEHLER
+          .z DATENFEHLER: MFN
+xh01:
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 LANDWIRT. GEBAEUDE
+           2 1-2FAM.HAUS, FREIST.
+           3 1-2 FAM., REIHENHAUS
+           4 HAUS, 3-4 WOHNUNGEN
+           5 HAUS, 5-8 WOHNUNGEN
+           6 HAUS, 9 ODER MEHR
+           7 HOCHHAUS
+           8 SONSTIGES GEBAEUDE
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+xh02:
+          -9 KEINE ANGABE
+          -8 WEISS NICHT
+          -1 NICHT ERHOBEN
+           1 GUT BIS SEHR GUT
+           2 ETWAS RENOVIEREN
+           3 STARK RENOVIEREN
+          .a NICHT ERHOBEN
+          .d WEISS NICHT
+          .e KEINE ANGABE
+xh04:
+          -9 KEINE ANGABE
+          -1 NICHT ERHOBEN
+           1 SEHR GUT
+           2 GUT
+           3 DURCHSCHNITTLICH
+           4 SCHLECHT
+           5 SEHR SCHLECHT
+          .a NICHT ERHOBEN
+          .e KEINE ANGABE
+xr14:
+          -1 NICHT ERHOBEN
+           1 UNATTRAKTIV
+           2 ..
+           3 ..
+           4 ..
+           5 ..
+           6 ..
+           7 ..
+           8 ..
+           9 ..
+          10 ..
+          11 ATTRAKTIV
+          .a NICHT ERHOBEN
+xr27:
+          -1 NICHT ERHOBEN
+           1 UNTERSCHICHT
+           2 ARBEITERSCHICHT
+           3 MITTELSCHICHT
+           4 OBERE MITTELSCHICHT
+           5 OBERSCHICHT
+           6 NICHT ERKENNBAR
+          .a NICHT ERHOBEN
+land:
+         -34 NICHT ENTHALTEN
+          10 SCHLESWIG-HOLSTEIN
+          20 HAMBURG
+          30 NIEDERSACHSEN
+          40 BREMEN
+          50 NORDRHEIN-WESTFALEN
+          60 HESSEN
+          70 RHEINLAND-PFALZ
+          80 BADEN-WUERTTEMBERG
+          90 BAYERN
+         100 SAARLAND
+         111 EHEM. BERLIN-WEST
+         112 EHEM. BERLIN-OST
+         120 BRANDENBURG
+         130 MECKLENB.-VORPOMMERN
+         140 SACHSEN
+         150 SACHSEN-ANHALT
+         160 THUERINGEN
+          .m NICHT ENTHALTEN
+gkpol:
+         -34 NICHT ENTHALTEN
+           1 BIS 1.999 EINWOHNER
+           2 2.000  -  4.999 EINW
+           3 5.000  - 19.999 EINW
+           4 20.000 - 49.999 EINW
+           5 50.000 - 99.999 EINW
+           6 100.000 - 499.999 E.
+           7 500.000 UND MEHR E.
+          .m NICHT ENTHALTEN
+
+. 

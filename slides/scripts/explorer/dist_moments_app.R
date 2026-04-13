@@ -1,0 +1,118 @@
+# R
+# Shiny app: zwei Tabs (Verteilung A / B) mit festen Achsen,
+# Kurtosis defaults = 5, Skew sliders in [-1,1] mit step = 0.1
+if (!requireNamespace("PearsonDS", quietly = TRUE)) install.packages("PearsonDS")
+if (!requireNamespace("shiny", quietly = TRUE)) install.packages("shiny")
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+if (!requireNamespace("scales", quietly = TRUE)) install.packages("scales")
+
+library(shiny); library(PearsonDS); library(ggplot2); library(scales)
+
+cols <- c(A = "#1b9e77", B = "#d95f02")
+
+ui <- fluidPage(
+  titlePanel("Bild' dir deine (stetige) Verteilung!"),
+  sidebarLayout(
+    sidebarPanel(
+      tabsetPanel(
+        tabPanel("Verteilung A",
+                 h4("Verteilung A"),
+                 sliderInput("mu1",  "Mittelwert μ",    min = -3, max = 3,  value = 0,  step = 0.5),
+                 sliderInput("var1", "Varianz σ²",     min = 1, max = 7, value = 1,  step = 0.5),
+                 sliderInput("skew1","Schiefe γ1",     min = -1,  max = 1,   value = 0,  step = 0.1),
+                 sliderInput("kurt1","Kurtosis γ2",    min = 1, max = 10, value = 5,  step = 1)
+        ),
+        tabPanel("Verteilung B",
+                 h4("Verteilung B"),
+                 sliderInput("mu2",  "Mittelwert μ",    min = -3, max = 3,  value = 0,  step = 0.5),
+                 sliderInput("var2", "Varianz σ²",     min = 1, max = 7, value = 1,  step = 0.5),
+                 sliderInput("skew2","Schiefe γ1",     min = -1,  max = 1,   value = 0,  step = 0.1),
+                 sliderInput("kurt2","Kurtosis γ2",    min = 1, max = 10, value = 5,  step = 1)
+        )
+      ),
+      hr(),
+      actionButton("draw", "Neu berechnen"),
+      helpText("Mathematisch nicht mögliche Kombinationen führen zu einer Fehlermeldung.")
+    ),
+    mainPanel(
+      plotOutput("overlayPlot", height = "600px")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+
+  fit_safe <- function(mu, var, skew, kurt) {
+    tryCatch({
+      PearsonDS::pearsonFitM(mean = mu, variance = var, skewness = skew, kurtosis = kurt)
+    }, error = function(e) structure(list(error = TRUE, message = conditionMessage(e)), class = "pearson_error"))
+  }
+
+  # --- compute fixed axis ranges once at app start using the initial input values ---
+  init_f1 <- fit_safe(input$mu1, input$var1, input$skew1, input$kurt1)
+  init_f2 <- fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)
+
+  compute_plot_range <- function(f1, f2) {
+    # try quantiles, fallback to sampling
+    q1 <- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f1), error = function(e) NA_real_)
+    q2 <- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f2), error = function(e) NA_real_)
+    rng <- range(c(q1, q2), na.rm = TRUE)
+    if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) {
+      s1 <- tryCatch(PearsonDS::rpearson(20000, params = f1), error = function(e) NA_real_)
+      s2 <- tryCatch(PearsonDS::rpearson(20000, params = f2), error = function(e) NA_real_)
+      rng <- range(c(s1, s2), na.rm = TRUE)
+      if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) rng <- c(-5, 5)
+    }
+    x <- seq(rng[1] - 0.1 * diff(rng), rng[2] + 0.1 * diff(rng), length.out = 1200)
+    dens1 <- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))
+    dens2 <- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))
+    ymax <- max(c(dens1, dens2), na.rm = TRUE)
+    if (!is.finite(ymax) || ymax == 0) ymax <- 0.5
+    list(xlim = c(min(x), max(x)), ylim = c(0, ymax * 1.08))
+  }
+
+  axis_rng <- reactiveVal(compute_plot_range(init_f1, init_f2))
+
+  # --- fits reactive (updated on button) ---
+  vals <- eventReactive(input$draw, {
+    list(
+      f1 = fit_safe(input$mu1, input$var1, input$skew1, input$kurt1),
+      f2 = fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)
+    )
+  }, ignoreNULL = FALSE)
+
+  output$overlayPlot <- renderPlot({
+    v <- vals()
+    f1 <- v$f1; f2 <- v$f2
+
+    # Use the fixed axis ranges stored in axis_rng()
+    axis <- axis_rng()
+
+    if (inherits(f1, "pearson_error") || inherits(f2, "pearson_error")) {
+      ggplot() + annotate("text", 0.5, 0.5, label = "Mindestens ein Fit fehlgeschlagen.\nBitte andere Werte wählen.", size = 5) + theme_void()
+    } else {
+      # compute densities on a grid that matches axis$x for consistent plotting
+      x <- seq(axis$xlim[1], axis$xlim[2], length.out = 1200)
+      dens1 <- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))
+      dens2 <- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))
+
+      df <- data.frame(x = rep(x, 2),
+                       density = c(dens1, dens2),
+                       dist = factor(rep(c("A", "B"), each = length(x)), levels = c("A","B")))
+
+      ggplot(df, aes(x = x, y = density, color = dist, fill = dist)) +
+        geom_line(linewidth = 1) +
+        geom_area(alpha = 0.18, position = "identity") +
+        scale_color_manual(values = cols) +
+        scale_fill_manual(values = cols) +
+        labs(x = "x", y = "Dichte", title = " ") +
+        theme_minimal(base_size = 14) +
+        theme(legend.title = element_blank()) +
+        geom_vline(xintercept = input$mu1, linetype = "dashed", color = cols["A"], linewidth = 0.8) +
+        geom_vline(xintercept = input$mu2, linetype = "dashed", color = cols["B"], linewidth = 0.8) +
+        coord_cartesian(xlim = axis$xlim, ylim = axis$ylim, expand = FALSE)
+    }
+  }, res = 96)
+}
+
+shinyApp(ui, server)

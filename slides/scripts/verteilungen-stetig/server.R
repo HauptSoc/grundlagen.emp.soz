@@ -1,0 +1,87 @@
+library(PearsonDS)
+library(ggplot2)
+
+cols <- c(A = "#1b9e77", B = "#d95f02")
+
+fit_safe <- function(mu, var, skew, kurt) {
+  tryCatch(
+    PearsonDS::pearsonFitM(mean = mu, variance = var, skewness = skew, kurtosis = kurt),
+    error = function(e) structure(list(error = TRUE, message = conditionMessage(e)), class = "pearson_error")
+  )
+}
+
+compute_plot_range <- function(f1, f2) {
+  q1 <- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f1), error = function(e) NA_real_)
+  q2 <- tryCatch(PearsonDS::qpearson(c(0.001, 0.999), params = f2), error = function(e) NA_real_)
+  rng <- range(c(q1, q2), na.rm = TRUE)
+  if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) {
+    s1 <- tryCatch(PearsonDS::rpearson(20000, params = f1), error = function(e) NA_real_)
+    s2 <- tryCatch(PearsonDS::rpearson(20000, params = f2), error = function(e) NA_real_)
+    rng <- range(c(s1, s2), na.rm = TRUE)
+    if (!is.finite(rng[1]) || !is.finite(rng[2]) || diff(rng) == 0) rng <- c(-5, 5)
+  }
+  x <- seq(rng[1] - 0.1 * diff(rng), rng[2] + 0.1 * diff(rng), length.out = 1200)
+  dens1 <- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))
+  dens2 <- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))
+  ymax <- max(c(dens1, dens2), na.rm = TRUE)
+  if (!is.finite(ymax) || ymax == 0) ymax <- 0.5
+  list(xlim = c(min(x), max(x)), ylim = c(0, ymax * 1.08))
+}
+
+# axis range reactive (initialized once)
+axis_rng <- reactiveVal(NULL)
+observe({
+  req(input$mu1, input$var1, input$skew1, input$kurt1,
+      input$mu2, input$var2, input$skew2, input$kurt2)
+  if (is.null(axis_rng())) {
+    f1 <- fit_safe(input$mu1, input$var1, input$skew1, input$kurt1)
+    f2 <- fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)
+    axis_rng(compute_plot_range(f1, f2))
+  }
+})
+
+# fits reactive (on button or initially)
+vals <- eventReactive(input$draw, {
+  list(
+    f1 = fit_safe(input$mu1, input$var1, input$skew1, input$kurt1),
+    f2 = fit_safe(input$mu2, input$var2, input$skew2, input$kurt2)
+  )
+}, ignoreNULL = FALSE)
+
+overlayPlot <- renderPlot({
+  axis <- axis_rng()
+  req(axis)
+  v <- vals()
+  f1 <- v$f1; f2 <- v$f2
+
+  if (inherits(f1, "pearson_error") || inherits(f2, "pearson_error")) {
+    ggplot() +
+      annotate("text", 0.5, 0.5, label = "Mindestens ein Fit fehlgeschlagen.\nBitte andere Werte wählen.", size = 5) +
+      theme_void()
+  } else {
+    x <- seq(axis$xlim[1], axis$xlim[2], length.out = 1200)
+    dens1 <- tryCatch(PearsonDS::dpearson(x, params = f1), error = function(e) rep(0, length(x)))
+    dens2 <- tryCatch(PearsonDS::dpearson(x, params = f2), error = function(e) rep(0, length(x)))
+
+    df <- data.frame(
+      x = rep(x, 2),
+      density = c(dens1, dens2),
+      dist = factor(rep(c("A","B"), each = length(x)), levels = c("A","B"))
+    )
+
+    ggplot(df, aes(x = x, y = density, color = dist, fill = dist)) +
+      geom_line(linewidth = 1) +
+      geom_area(alpha = 0.18, position = "identity") +
+      scale_color_manual(values = cols) +
+      scale_fill_manual(values = cols) +
+      labs(x = "x", y = "Dichte") +
+      theme_minimal(base_size = 14) +
+      theme(legend.title = element_blank()) +
+      geom_vline(xintercept = input$mu1, linetype = "dashed", color = cols["A"], linewidth = 0.8) +
+      geom_vline(xintercept = input$mu2, linetype = "dashed", color = cols["B"], linewidth = 0.8) +
+      coord_cartesian(xlim = axis$xlim, ylim = axis$ylim, expand = FALSE)
+  }
+}, res = 96)
+
+# Run the application 
+shinyApp(ui = ui, server = server)

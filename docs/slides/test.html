@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Unterschiede erheben: Untersuchungsdesigns – Methoden empirischer Sozialforschung</title>
+<title>Test – Methoden empirischer Sozialforschung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -44,9 +79,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-792e39acc70db8c578759e6a7c17270a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-27da9cdd4f8225d1d1f077326a5592b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-792e39acc70db8c578759e6a7c17270a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,17 +106,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-<style>
-  .custom-small table {
-    font-size: .6em
-  }
-</style>
 
 
-<link rel="stylesheet" href="global.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -258,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Unterschiede erheben: Untersuchungsdesigns</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Test</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -330,28 +353,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#querschnittuntersuchungen" id="toc-querschnittuntersuchungen" class="nav-link active" data-scroll-target="#querschnittuntersuchungen">Querschnittuntersuchungen</a></li>
-  <li><a href="#querschnitt-alle-einflüsse-auf-einmal" id="toc-querschnitt-alle-einflüsse-auf-einmal" class="nav-link" data-scroll-target="#querschnitt-alle-einflüsse-auf-einmal">Querschnitt = alle Einflüsse auf einmal!</a></li>
-  <li><a href="#the-never-ending-drama-selektivitäten" id="toc-the-never-ending-drama-selektivitäten" class="nav-link" data-scroll-target="#the-never-ending-drama-selektivitäten">The never ending drama: Selektivitäten</a></li>
-  <li><a href="#the-never-ending-drama-selektivitäten-1" id="toc-the-never-ending-drama-selektivitäten-1" class="nav-link" data-scroll-target="#the-never-ending-drama-selektivitäten-1">The never ending drama: Selektivitäten</a></li>
-  <li><a href="#no-causal-no-cry" id="toc-no-causal-no-cry" class="nav-link" data-scroll-target="#no-causal-no-cry">No causal, no cry!</a></li>
-  <li><a href="#renaisance-der-mädchen-jungenschulen" id="toc-renaisance-der-mädchen-jungenschulen" class="nav-link" data-scroll-target="#renaisance-der-mädchen-jungenschulen">Renaisance der Mädchen-/Jungenschulen?</a></li>
-  <li><a href="#der-zusammenhang-von-intelligenz-und-einkommen" id="toc-der-zusammenhang-von-intelligenz-und-einkommen" class="nav-link" data-scroll-target="#der-zusammenhang-von-intelligenz-und-einkommen">Der Zusammenhang von Intelligenz und Einkommen</a></li>
-  <li><a href="#trenddesign" id="toc-trenddesign" class="nav-link" data-scroll-target="#trenddesign">Trenddesign</a></li>
-  <li><a href="#trends-in-den-krankenständen" id="toc-trends-in-den-krankenständen" class="nav-link" data-scroll-target="#trends-in-den-krankenständen">Trends in den Krankenständen</a></li>
-  <li><a href="#eine-neue-jugendkultur-der-vorsicht" id="toc-eine-neue-jugendkultur-der-vorsicht" class="nav-link" data-scroll-target="#eine-neue-jugendkultur-der-vorsicht">Eine neue Jugendkultur der Vorsicht?</a></li>
-  <li><a href="#trenddesign-sonntagsfrage" id="toc-trenddesign-sonntagsfrage" class="nav-link" data-scroll-target="#trenddesign-sonntagsfrage">Trenddesign: Sonntagsfrage</a></li>
-  <li><a href="#paneldesign" id="toc-paneldesign" class="nav-link" data-scroll-target="#paneldesign">Paneldesign</a></li>
-  <li><a href="#paneldesign-teilnahmeselektion" id="toc-paneldesign-teilnahmeselektion" class="nav-link" data-scroll-target="#paneldesign-teilnahmeselektion">Paneldesign &amp; Teilnahmeselektion</a></li>
-  <li><a href="#paneldesign-kinder-sie-geben-einem-viel-zurück" id="toc-paneldesign-kinder-sie-geben-einem-viel-zurück" class="nav-link" data-scroll-target="#paneldesign-kinder-sie-geben-einem-viel-zurück">Paneldesign: Kinder (sie geben einem viel zurück!)</a></li>
-  <li><a href="#paneldesign-auch-der-schlimmste-tag-vergeht" id="toc-paneldesign-auch-der-schlimmste-tag-vergeht" class="nav-link" data-scroll-target="#paneldesign-auch-der-schlimmste-tag-vergeht">Paneldesign: Auch der schlimmste Tag vergeht</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -359,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Unterschiede erheben: Untersuchungsdesigns</h1>
+<h1 class="title">Test</h1>
 </div>
 
 
@@ -376,182 +379,126 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="querschnittuntersuchungen" class="level2">
-<h2 class="anchored" data-anchor-id="querschnittuntersuchungen">Querschnittuntersuchungen</h2>
-<p>Bei einer Querschnitt-Untersuchung werden mittels einer Stichprobe zu einem Zeitpunkt mehrere Eigenschaften simultan gemessen. Das Ziel der Untersuchung ist es, systematische Unterschiede bezüglich eines Merkmals zwischen Gruppen oder systemtatische Zusammenhänge zwischen Merkmalen zu erfassen.</p>
-<ul>
-<li>Vorteile:
-<ul>
-<li>Kostengünstig &amp; weniger voraussetzungsreich als Experimente oder Längsschnittbefragungen</li>
-<li>viele wichtige Einflüsse sind nicht experimentell studierbar aber im Querschnitt erfragbar</li>
-</ul></li>
-<li>Nachteile: Selektionseffekte (in die Stichprobe &amp; in das “Treatment”), Verzerrung durch unbeobachtete Faktoren</li>
-</ul>
-</section>
-<section id="querschnitt-alle-einflüsse-auf-einmal" class="level2">
-<h2 class="anchored" data-anchor-id="querschnitt-alle-einflüsse-auf-einmal">Querschnitt = alle Einflüsse auf einmal!</h2>
-<p><a href="images/survey-methoden-privatschule.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/survey-methoden-privatschule.svg" class="img-fluid" style="width:80.0%"></a></p>
-</section>
-<section id="the-never-ending-drama-selektivitäten" class="level2 midi">
-<h2 class="midi anchored" data-anchor-id="the-never-ending-drama-selektivitäten">The never ending drama: Selektivitäten</h2>
-<p>Selektion ins “Treatment”</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-X["Privatschule"] --&gt; Y["Bildungserfolg"] 
-Z["Einkommen der Eltern"] --&gt; X &amp; Y
-
-</pre>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">titlePanel</span>(<span class="st">"Bild' dir deine (stetige) Verteilung!"</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sidebarLayout</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sidebarPanel</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tabsetPanel</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">tabPanel</span>(<span class="st">"Verteilung A"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">h4</span>(<span class="st">"Verteilung A"</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"mu1"</span>,  <span class="st">"Mittelwert μ"</span>,    <span class="at">min =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">max =</span> <span class="dv">3</span>,  <span class="at">value =</span> <span class="dv">0</span>,  <span class="at">step =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"var1"</span>, <span class="st">"Varianz σ²"</span>,     <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">7</span>, <span class="at">value =</span> <span class="dv">1</span>,  <span class="at">step =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"skew1"</span>,<span class="st">"Schiefe γ1"</span>,     <span class="at">min =</span> <span class="sc">-</span><span class="dv">1</span>,  <span class="at">max =</span> <span class="dv">1</span>,   <span class="at">value =</span> <span class="dv">0</span>,  <span class="at">step =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"kurt1"</span>,<span class="st">"Kurtosis γ2"</span>,    <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">10</span>, <span class="at">value =</span> <span class="dv">5</span>,  <span class="at">step =</span> <span class="dv">1</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">tabPanel</span>(<span class="st">"Verteilung B"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">h4</span>(<span class="st">"Verteilung B"</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"mu2"</span>,  <span class="st">"Mittelwert μ"</span>,    <span class="at">min =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">max =</span> <span class="dv">3</span>,  <span class="at">value =</span> <span class="dv">0</span>,  <span class="at">step =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"var2"</span>, <span class="st">"Varianz σ²"</span>,     <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">7</span>, <span class="at">value =</span> <span class="dv">1</span>,  <span class="at">step =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"skew2"</span>,<span class="st">"Schiefe γ1"</span>,     <span class="at">min =</span> <span class="sc">-</span><span class="dv">1</span>,  <span class="at">max =</span> <span class="dv">1</span>,   <span class="at">value =</span> <span class="dv">0</span>,  <span class="at">step =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">sliderInput</span>(<span class="st">"kurt2"</span>,<span class="st">"Kurtosis γ2"</span>,    <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">10</span>, <span class="at">value =</span> <span class="dv">5</span>,  <span class="at">step =</span> <span class="dv">1</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">hr</span>(),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">actionButton</span>(<span class="st">"draw"</span>, <span class="st">"Neu berechnen"</span>),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">helpText</span>(<span class="st">"Mathematisch nicht mögliche Kombinationen führen zu einer Fehlermeldung."</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mainPanel</span>(</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plotOutput</span>(<span class="st">"overlayPlot"</span>, <span class="at">height =</span> <span class="st">"600px"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p></p></figure><p></p>
+<div class="cell" data-context="server">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PearsonDS)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">A =</span> <span class="st">"#1b9e77"</span>, <span class="at">B =</span> <span class="st">"#d95f02"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>fit_safe <span class="ot">&lt;-</span> <span class="cf">function</span>(mu, var, skew, kurt) {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tryCatch</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    PearsonDS<span class="sc">::</span><span class="fu">pearsonFitM</span>(<span class="at">mean =</span> mu, <span class="at">variance =</span> var, <span class="at">skewness =</span> skew, <span class="at">kurtosis =</span> kurt),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">error =</span> <span class="cn">TRUE</span>, <span class="at">message =</span> <span class="fu">conditionMessage</span>(e)), <span class="at">class =</span> <span class="st">"pearson_error"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>compute_plot_range <span class="ot">&lt;-</span> <span class="cf">function</span>(f1, f2) {</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  q1 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">qpearson</span>(<span class="fu">c</span>(<span class="fl">0.001</span>, <span class="fl">0.999</span>), <span class="at">params =</span> f1), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NA_real_</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  q2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">qpearson</span>(<span class="fu">c</span>(<span class="fl">0.001</span>, <span class="fl">0.999</span>), <span class="at">params =</span> f2), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NA_real_</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  rng <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(q1, q2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.finite</span>(rng[<span class="dv">1</span>]) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(rng[<span class="dv">2</span>]) <span class="sc">||</span> <span class="fu">diff</span>(rng) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    s1 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">rpearson</span>(<span class="dv">20000</span>, <span class="at">params =</span> f1), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NA_real_</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    s2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">rpearson</span>(<span class="dv">20000</span>, <span class="at">params =</span> f2), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NA_real_</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    rng <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(s1, s2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.finite</span>(rng[<span class="dv">1</span>]) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(rng[<span class="dv">2</span>]) <span class="sc">||</span> <span class="fu">diff</span>(rng) <span class="sc">==</span> <span class="dv">0</span>) rng <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">seq</span>(rng[<span class="dv">1</span>] <span class="sc">-</span> <span class="fl">0.1</span> <span class="sc">*</span> <span class="fu">diff</span>(rng), rng[<span class="dv">2</span>] <span class="sc">+</span> <span class="fl">0.1</span> <span class="sc">*</span> <span class="fu">diff</span>(rng), <span class="at">length.out =</span> <span class="dv">1200</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  dens1 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">dpearson</span>(x, <span class="at">params =</span> f1), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(x)))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  dens2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">dpearson</span>(x, <span class="at">params =</span> f2), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(x)))</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  ymax <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">c</span>(dens1, dens2), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.finite</span>(ymax) <span class="sc">||</span> ymax <span class="sc">==</span> <span class="dv">0</span>) ymax <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x)), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, ymax <span class="sc">*</span> <span class="fl">1.08</span>))</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># axis range reactive (initialized once)</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>axis_rng <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">observe</span>({</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">req</span>(input<span class="sc">$</span>mu1, input<span class="sc">$</span>var1, input<span class="sc">$</span>skew1, input<span class="sc">$</span>kurt1,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>      input<span class="sc">$</span>mu2, input<span class="sc">$</span>var2, input<span class="sc">$</span>skew2, input<span class="sc">$</span>kurt2)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(<span class="fu">axis_rng</span>())) {</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    f1 <span class="ot">&lt;-</span> <span class="fu">fit_safe</span>(input<span class="sc">$</span>mu1, input<span class="sc">$</span>var1, input<span class="sc">$</span>skew1, input<span class="sc">$</span>kurt1)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    f2 <span class="ot">&lt;-</span> <span class="fu">fit_safe</span>(input<span class="sc">$</span>mu2, input<span class="sc">$</span>var2, input<span class="sc">$</span>skew2, input<span class="sc">$</span>kurt2)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">axis_rng</span>(<span class="fu">compute_plot_range</span>(f1, f2))</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># fits reactive (on button or initially)</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>vals <span class="ot">&lt;-</span> <span class="fu">eventReactive</span>(input<span class="sc">$</span>draw, {</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">f1 =</span> <span class="fu">fit_safe</span>(input<span class="sc">$</span>mu1, input<span class="sc">$</span>var1, input<span class="sc">$</span>skew1, input<span class="sc">$</span>kurt1),</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">f2 =</span> <span class="fu">fit_safe</span>(input<span class="sc">$</span>mu2, input<span class="sc">$</span>var2, input<span class="sc">$</span>skew2, input<span class="sc">$</span>kurt2)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>}, <span class="at">ignoreNULL =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>overlayPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  axis <span class="ot">&lt;-</span> <span class="fu">axis_rng</span>()</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">req</span>(axis)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  v <span class="ot">&lt;-</span> <span class="fu">vals</span>()</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  f1 <span class="ot">&lt;-</span> v<span class="sc">$</span>f1; f2 <span class="ot">&lt;-</span> v<span class="sc">$</span>f2</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">inherits</span>(f1, <span class="st">"pearson_error"</span>) <span class="sc">||</span> <span class="fu">inherits</span>(f2, <span class="st">"pearson_error"</span>)) {</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="at">label =</span> <span class="st">"Mindestens ein Fit fehlgeschlagen.</span><span class="sc">\n</span><span class="st">Bitte andere Werte wählen."</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_void</span>()</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">seq</span>(axis<span class="sc">$</span>xlim[<span class="dv">1</span>], axis<span class="sc">$</span>xlim[<span class="dv">2</span>], <span class="at">length.out =</span> <span class="dv">1200</span>)</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    dens1 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">dpearson</span>(x, <span class="at">params =</span> f1), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(x)))</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    dens2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(PearsonDS<span class="sc">::</span><span class="fu">dpearson</span>(x, <span class="at">params =</span> f2), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(x)))</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">rep</span>(x, <span class="dv">2</span>),</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>      <span class="at">density =</span> <span class="fu">c</span>(dens1, dens2),</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>      <span class="at">dist =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>), <span class="at">each =</span> <span class="fu">length</span>(x)), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>))</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> density, <span class="at">color =</span> dist, <span class="at">fill =</span> dist)) <span class="sc">+</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="fl">0.18</span>, <span class="at">position =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_color_manual</span>(<span class="at">values =</span> cols) <span class="sc">+</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> cols) <span class="sc">+</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"Dichte"</span>) <span class="sc">+</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> input<span class="sc">$</span>mu1, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> cols[<span class="st">"A"</span>], <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> input<span class="sc">$</span>mu2, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> cols[<span class="st">"B"</span>], <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>      <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> axis<span class="sc">$</span>xlim, <span class="at">ylim =</span> axis<span class="sc">$</span>ylim, <span class="at">expand =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>}, <span class="at">res =</span> <span class="dv">96</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Schüler:innen auf Privatschulen unterscheiden sich in Bezug auf das Einkommen der Eltern von Schüler:innen auf öffentlichen Schulen.</li>
-<li>Der Einfluss von Privat/Öffentlichen Schulen muss daher vom Einfluss der “Selektion in Privatschulen” getrennt werden.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="the-never-ending-drama-selektivitäten-1" class="level2 midi">
-<h2 class="midi anchored" data-anchor-id="the-never-ending-drama-selektivitäten-1">The never ending drama: Selektivitäten</h2>
-<p>Selektion in die Stichprobe</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-
-G[Geschlecht] --&gt; E[Einsamkeit]
-B[Bildung] --&gt; E
-G --&gt; B
-T[Teilnahme]
-G --&gt; T 
-B --&gt; T
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Personen, die an der Umfrage teilnehmen, sind eher weiblich und höher gebildet.</li>
-<li>Da diese beiden Eigenschaften auch auf die Einsamkeit wirken, verzerrt die Teilnahmeselektivität den Zusammenhang zwischen Geschlecht, Bildung und Einsamkeit in der analytischen Stichprobe.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="no-causal-no-cry" class="level2 midi">
-<h2 class="midi anchored" data-anchor-id="no-causal-no-cry">No causal, no cry!</h2>
-<ul>
-<li>Selektion ins Treatment ist dann ein Problem, wenn wir die direkte Wirkung eines Treatments auf ein Outcome studieren wollen (Stufe 2 der “ladder of causality”).
-<ul>
-<li>Was ist die Wirkung von Privatschulen auf Bildungserfolge von Schüler:innen – <strong>unabhängig</strong> von allen anderen Eigenschaften, die mit Privatschulen zusammenhängen?</li>
-<li>Was ist der Einfluss von Scheidungen auf die Entwicklung von Kindern – <strong>unabhängig</strong> von allen anderen Eigenschaften, die mit Scheidungen zusammenhängen?</li>
-</ul></li>
-<li>Manchmal ist das aber nicht unser Ziel. Oft wollen wir “nur” einen Zusammenhang beschreiben oder Unterschiede erfassen (Stufe 1 der “ladder of causality”).</li>
-</ul>
-</section>
-<section id="renaisance-der-mädchen-jungenschulen" class="level2">
-<h2 class="anchored" data-anchor-id="renaisance-der-mädchen-jungenschulen">Renaisance der Mädchen-/Jungenschulen?</h2>
-<p><a href="https://bera-journals.onlinelibrary.wiley.com/doi/full/10.1002/berj.3841">Clavel &amp; Flannery (2022)</a> untersuchten für Irland Unterschiede zwischen geschlechtergetrennten und gemischten Schulen mit PISA-Daten.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="https://bera-journals.onlinelibrary.wiley.com/cms/asset/3d0dbc3d-935c-4cf1-9c95-7ceae42bde64/berj3841-fig-0001-m.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://bera-journals.onlinelibrary.wiley.com/cms/asset/3d0dbc3d-935c-4cf1-9c95-7ceae42bde64/berj3841-fig-0001-m.png" class="img-fluid"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="https://bera-journals.onlinelibrary.wiley.com/cms/asset/ee4067f4-8df1-44d5-a1c7-ac1b4c693c6f/berj3841-fig-0002-m.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://bera-journals.onlinelibrary.wiley.com/cms/asset/ee4067f4-8df1-44d5-a1c7-ac1b4c693c6f/berj3841-fig-0002-m.png" class="img-fluid"></a></p>
-</div>
-</div>
-</section>
-<section id="der-zusammenhang-von-intelligenz-und-einkommen" class="level2">
-<h2 class="anchored" data-anchor-id="der-zusammenhang-von-intelligenz-und-einkommen">Der Zusammenhang von Intelligenz und Einkommen</h2>
-<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/esr/39/5/10.1093_esr_jcac076/2/jcac076_fig3.jpeg?Expires=1774356704&amp;Signature=yibGkUtsMopfwBBKo26-NMoZbbvGhlcWW49NMvu5tfKeC87GBQ-wwrzbL40Y-Wf8LZeH6EcAHHcHwp0BRQAKzhmK6Dqf6n-znAB2nv13H8Oi0hmZrjnFT1w0baLELVmYd9Jc5OMseE12mMqqacRJP1KlbQZ2rwONibMg4DnTtXBqg9rG-vC7iYV1~KhkljgzJPDFbS7m9cdCLatH6POW45WbceBhrOGFw16HwMOD~3mpl1ODyXeiBieJzExcDocecvCmcShmTWX18YI0l7vOx-PIBShjyXsGG56lUeVPxCYCXn107L6qXlFkvp0n4gYMDFIS0g2cdM0YBG8Mp37n7w__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/esr/39/5/10.1093_esr_jcac076/2/jcac076_fig3.jpeg?Expires=1774356704&amp;Signature=yibGkUtsMopfwBBKo26-NMoZbbvGhlcWW49NMvu5tfKeC87GBQ-wwrzbL40Y-Wf8LZeH6EcAHHcHwp0BRQAKzhmK6Dqf6n-znAB2nv13H8Oi0hmZrjnFT1w0baLELVmYd9Jc5OMseE12mMqqacRJP1KlbQZ2rwONibMg4DnTtXBqg9rG-vC7iYV1~KhkljgzJPDFbS7m9cdCLatH6POW45WbceBhrOGFw16HwMOD~3mpl1ODyXeiBieJzExcDocecvCmcShmTWX18YI0l7vOx-PIBShjyXsGG56lUeVPxCYCXn107L6qXlFkvp0n4gYMDFIS0g2cdM0YBG8Mp37n7w__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
-<p><a href="https://academic.oup.com/esr/article/39/5/820/7008955">Quelle: Keuschnigg et al.&nbsp;(2023)</a></p>
-</section>
-<section id="trenddesign" class="level2">
-<h2 class="anchored" data-anchor-id="trenddesign">Trenddesign</h2>
-<ul>
-<li><p>Bei einem Trenddesign werden über die Zeit mehrere Stichproben gezogen, bei dem das gleiche Item genutzt wird.</p></li>
-<li><p>Wichtig: Veränderungen im Trend können sowohl auf veränderte Reaktionen/Messungen auf das Item als auch auf veränderte Zusammensetzungen der Stichproben über die Zeit zurückzuführen sein.</p></li>
-<li><p>Ändern sich z.B. Selektionseffekte über die Zeit, führt dies zu unterschiedlichen Zusammensetzungen und somit auch zu unterschiedlichen Trends.</p></li>
-</ul>
-</section>
-<section id="trends-in-den-krankenständen" class="level2">
-<h2 class="anchored" data-anchor-id="trends-in-den-krankenständen">Trends in den Krankenständen</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images\TK-AU-2024.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Grobe et al.&nbsp;(2025): TK Gesundheitsreport 2024"><img src="images\TK-AU-2024.svg" class="img-fluid figure-img" alt="Grobe et al.&nbsp;(2025): TK Gesundheitsreport 2024"></a></p>
-<figcaption>Grobe et al.&nbsp;(2025): TK Gesundheitsreport 2024</figcaption>
-</figure>
-</div>
-</section>
-<section id="eine-neue-jugendkultur-der-vorsicht" class="level2">
-<h2 class="anchored" data-anchor-id="eine-neue-jugendkultur-der-vorsicht">Eine neue Jugendkultur der Vorsicht?</h2>
-<div class="columns">
-<div class="column" style="width:80%;">
-<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/90/2/10.1111_cdev.12930/2/cdev12930-fig-0001.jpeg?Expires=1774433861&amp;Signature=ClzZkYx1pkfpwnM3bkXlMszA~sfwEXqbzj~FkByDsXClWNiNEBPVVw1RFWqWcXTzCD83ESyCrBqH6AhcFp5yS5YrpxLrxrPcjo7h5JLXalFhAKH7HdfiG1206zV9D3FhIBFXt9o~eG~BAiWgjO21ZIQC-ipQjZcbNxc5lpXJvpELSWQnXHGmH~PfhgHu8GE6LVnVfFDW79vmUVYpDu3vVa308y4aKmwVXfPRVgqD3S4yix-jn74lXNpaKxaau5fBskmYY0gnbbga57STqmff9slHe27U11tHM2Lyn~DEBAKA0KJZHpfKD7k9BFJk1x5263MePTaL~Rknciq1NVG~8A__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/90/2/10.1111_cdev.12930/2/cdev12930-fig-0001.jpeg?Expires=1774433861&amp;Signature=ClzZkYx1pkfpwnM3bkXlMszA~sfwEXqbzj~FkByDsXClWNiNEBPVVw1RFWqWcXTzCD83ESyCrBqH6AhcFp5yS5YrpxLrxrPcjo7h5JLXalFhAKH7HdfiG1206zV9D3FhIBFXt9o~eG~BAiWgjO21ZIQC-ipQjZcbNxc5lpXJvpELSWQnXHGmH~PfhgHu8GE6LVnVfFDW79vmUVYpDu3vVa308y4aKmwVXfPRVgqD3S4yix-jn74lXNpaKxaau5fBskmYY0gnbbga57STqmff9slHe27U11tHM2Lyn~DEBAKA0KJZHpfKD7k9BFJk1x5263MePTaL~Rknciq1NVG~8A__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid" style="width:70.0%"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="https://academic.oup.com/chidev/article/90/2/638/8257274">Quelle: Twenge &amp; Park (2019)</a> für die USA</p>
-</div>
-</div>
-</section>
-<section id="trenddesign-sonntagsfrage" class="level2">
-<h2 class="anchored" data-anchor-id="trenddesign-sonntagsfrage">Trenddesign: Sonntagsfrage</h2>
-<p>Welche Partei würden Sie wählen, wenn heute Bundestagswahl wäre (<a href="https://www.dkriesel.com/sonntagsfrage">Quelle</a>)?</p>
-<p><a href="https://www.dkriesel.com/_media/sonntagsfrage_wahl2021.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://www.dkriesel.com/_media/sonntagsfrage_wahl2021.png" class="img-fluid" style="width:90.0%"></a></p>
-</section>
-<section id="paneldesign" class="level2">
-<h2 class="anchored" data-anchor-id="paneldesign">Paneldesign</h2>
-<ul>
-<li><p>Bei einer Panel-Untersuchung wird mittels einer <strong>konstanten</strong> Stichprobe zu <strong>unterschiedlichen</strong> Zeitpunkten mindestens eine Eigenschaft (typischerweise aber viele) gemessen.</p></li>
-<li><p>Mit einem Paneldesign können Sie den Zusammenhang einer zeitlichen <em>Veränderungen</em> eines Merkmals auf <em>Veränderungen</em> eines Outcomes studieren.</p></li>
-</ul>
-</section>
-<section id="paneldesign-teilnahmeselektion" class="level2 midi">
-<h2 class="midi anchored" data-anchor-id="paneldesign-teilnahmeselektion">Paneldesign &amp; Teilnahmeselektion</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><a href="https://thomasklausch.wordpress.com/wp-content/uploads/2015/10/participation-in-the-liss-panel-has-dropped-over2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://thomasklausch.wordpress.com/wp-content/uploads/2015/10/participation-in-the-liss-panel-has-dropped-over2.jpg" class="img-fluid"></a></p>
-</div><div class="column" style="width:70%;">
-<ul>
-<li><p>Panel haben ein besonders Problem: Die Teilnahmewahrscheinlichkeit über Befragungszeitpunkte nimmt ab und ist meist selektiv (<a href="https://thomasklausch.wordpress.com/2015/10/13/attrition-in-the-liss-panel-most-severe-in-the-first-two-years/">Klausch (2015)</a>.</p></li>
-<li><p>Daher verändert sich die Zusammensetzung des Panels über die Zeit. Dies wird auch als <em>Panel-Attrition</em> bezeichnet.</p></li>
-<li><p>Das ist dann ein Problem, wenn unbeobachtete Faktoren eine große Rolle dabei spielen, die mit Merkmalen innerhalb einer Analyse verknüpft sind.</p></li>
-<li><p>Es sind daher meist Auffrischungsstichproben nötig. Dies sind neue Stichproben, die regelmäßig in das Panel hinzugegeben werden.</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="paneldesign-kinder-sie-geben-einem-viel-zurück" class="level2">
-<h2 class="anchored" data-anchor-id="paneldesign-kinder-sie-geben-einem-viel-zurück">Paneldesign: Kinder (sie geben einem viel zurück!)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="https://onlinelibrary.wiley.com/cms/asset/aa9bfa0f-d6e2-488b-8ab6-122038517d85/jomf12531-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://onlinelibrary.wiley.com/cms/asset/aa9bfa0f-d6e2-488b-8ab6-122038517d85/jomf12531-fig-0001-m.jpg" class="img-fluid"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="https://onlinelibrary.wiley.com/cms/asset/c25d7933-750e-48ab-bc72-701e69e36574/jomf12531-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://onlinelibrary.wiley.com/cms/asset/c25d7933-750e-48ab-bc72-701e69e36574/jomf12531-fig-0002-m.jpg" class="img-fluid"></a></p>
-</div>
-</div>
-<p>Quelle: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jomf.12531">Ruppanner et al.&nbsp;(2018)</a></p>
-</section>
-<section id="paneldesign-auch-der-schlimmste-tag-vergeht" class="level2 midi">
-<h2 class="midi anchored" data-anchor-id="paneldesign-auch-der-schlimmste-tag-vergeht">Paneldesign: Auch der schlimmste Tag vergeht</h2>
-<p><a href="images/hudde-life-satisfaction.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/hudde-life-satisfaction.png" class="img-fluid" style="width:90.0%"></a></p>
-<p>Quelle: <a href="https://sociologicalscience.com/articles-v10-29-830/">Hudde &amp; Jacob (2023)</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -975,44 +922,12 @@ B --&gt; T
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
