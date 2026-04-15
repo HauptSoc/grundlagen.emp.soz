@@ -1,0 +1,505 @@
+\begin{frame}
+\frametitle{Die Beschreibung von Verteilungen}
+
+Nachdem wir operationalisiert und Daten für die theoretischen Konstrukte erhoben haben, liegen die Daten nun in einer Datenmatrix vor.\footnote{Aufgebaut wie eine Excel-Tabelle: Die Zeilen sind die Untersuchungseinheiten und die Spalten sind die Eigenschaften. Jede Zelle beinhaltet daher die Ausprägung einer Eigenschaft für eine Untersuchungseinheit.} Diese Datenmatrix ist meist in ihrer Gesamtheit uninformativ, denn einzelne Werte sagen uns nichts über die \textit{Typik} von Eigenschaften oder über Zusammenhänge zwischen Eigenschaften etwas aus. \vfill
+
+Um Daten gut zu beschreiben, müssen wir sie sinnvoll zusammenfassen (= aggregieren). Dies ist Aufgabe der \textit{deskriptiven Statistik}. 
+
+
+\end{frame}
+\begin{frame}
+\frametitle{Was ist eine Verteilung?}
+
+Eine Verteilung der Werte einer Eigenschaft $Y$ gibt an, wie \textbf{häufig} diese Werte innerhalb einer (analytischen) Stichprobe vorkommen. Diese Häufigkeit kann in unterschiedlicher Weise angegeben werden: 
+
+\vfill
+
+\begin{enumerate}
+  \item absolute Häufigkeiten
+  \item relative Häufigkeiten / Wahrscheinlichkeit 
+  \item Dichte
+\end{enumerate}
+
+\vfill
+
+Diese Häufigkeiten werden auf der Y-Achse (der vertikalen Dimension) grafisch abgetragen. Auf der X-Achse (horizontale Dimension) werden die Ausprägungen abgetragen. Je nach Skalenniveau der gemessenen Eigenschaften sind dies daher Kategorien, Ränge oder Werte in gleichen Intervallen. 
+
+\end{frame}
+\begin{frame}
+\frametitle{Darstellung von Verteilungen als Balkendiagramme}
+\begin{columns}
+\begin{column}{.6\linewidth}
+\resizebox{1\linewidth}{!}{\includegraphics{lehre-gew-arbeitsstunden-cat}}
+{{ \scriptsize Verteilung der gewünschten Arbeitsstunden, 2018. Daten: SOEP V35.}}
+\end{column}
+\begin{column}{.4\linewidth}
+Verteilungen mit wenigen Ausprägungen können in Balkendiagrammen dargestellt werden.\footnote{Ich sage es nur einmal: Wer Tortendiagramme oder 3D-Diagramme anfertigt, kommt in die Hölle. }\newline 
+
+\vfill 
+
+Achten Sie bei Balkendiagrammen auf eine sinnvolle Abtragung der Y-Achse. Diese muss nicht zwingend vom Minimalwert bis zum Maximalwert gehen.\newline   
+
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}
+\frametitle{Darstellung von Verteilungen als Balkendiagramme}
+\begin{columns}
+\begin{column}{.6\linewidth}
+\resizebox{1\linewidth}{!}{\includegraphics{lehre-gew-arbeitsstunden-dis}}
+{{ \scriptsize Verteilung der gewünschten Arbeitsstunden, 2018. Daten: SOEP V35.}}
+\end{column}
+\begin{column}{.4\linewidth}
+Je mehr Ausprägungen der Eigenschaft Sie darstellen wollen, desto unübersichtlicher werden Balkendiagramme für die Darstellung von Verteilungen. Das ist insbesondere für metrisch gemessene Eigenschaften der Fall, die viele (oder potentiell: unendlich viele) unterschiedliche Ausprägungen haben können.  
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}
+\frametitle{Dastellung von Verteilungen als Kurven}
+\begin{columns}
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{\includegraphics{lehre-gew-arbeitsstunden-kdens}}
+{{ \scriptsize Verteilung der gewünschten Arbeitsstunden, 2018. Quelle: SOEP V35.}}
+\end{column}
+\begin{column}{.5\linewidth}
+\small 
+Metrische Verteilungen können auch als Kurven oder Funktionen abgetragen werden. Dabei werden immer (!) die zugrunde liegenden Daten geglättet (= Smoothing). Je nach Stärke der Glättung kann sich die Darstellung der Verteilung stark ändern. Je stärker geglättet wird, desto mehr werden die zugrunde liegenden Daten zu einer (meist glockenförmigen) Verteilung angenähert.\\ \newline
+
+\vfill 
+
+Sehr glatte und glockenförmige Verteilungen sind empirisch kaum beobachtbar. Empirische Verteilungen haben typischerweise ``Zacken'' oder ``Klumpen''. Das ist kein Problem, sondern Teil des empirischen Musters, dass Sie studieren wollen. 
+
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}
+\frametitle{Die Beschreibung von Verteilungen}
+\begin{columns}
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{\includegraphics{lehre-gew-arbeitsstunden-kdens-gender}}
+{{ \scriptsize Verteilung der gewünschten Arbeitsstunden nach Geschlecht, 2018. Daten: SOEP V35.}}
+\end{column}
+\begin{column}{.5\linewidth}
+\small 
+Verteilungen können sich in mehreren Aspekten unterscheiden: 
+\begin{enumerate}
+  \item Werte können häufiger sein
+  \item der häufigste Wert kann sich unterscheiden
+  \item der ``zentrale'' Wert kann sich unterscheiden
+  \item die Werte können unterschiedlich breit streuen
+  \item die Werte können symmetrisch um einen zentralen Wert streuen oder wenige Werte können über einen sehr großen Bereich streuen. 
+\end{enumerate}
+
+Unser Ziel ist es, diese Unterschiede in weniger, klar verständlichen Kennzahlen auszudrücken. 
+
+\end{column}
+\end{columns}
+\end{frame}
+\section{Häufigkeiten}
+\subsection*{}
+\begin{frame}
+  \frametitle{Häufigkeiten: Notation \& Begriffe}
+\small
+\begin{tabular}{llp{.5\linewidth}} \toprule 
+Notation & Bedeutung & Beispiel\\ \midrule
+$N$ & Absolute Häufigkeit & 4.850 Personen gaben in der Stichprobe von 2018 an, 40h arbeiten zu wollen. Die Stichprobe besteht aus  16.886 Personen. \\[.5em] 
+$P(y)$ & Wahrscheinlichkeit & Mit einer Wahrscheinlichkeit von 0.2872 ziehen wir aus der Stichprobe eine Person, die genau 40h als gewünschte Arbeitszeit angegeben hat.\\[.5em] 
+$P(y)\cdot 100$ & relative Häufigkeit & 28.72\% der Befragten gaben an, 40h arbeiten zu wollen.\\[.5em]  
+$P(y) \, | \, (X = x)$ & Bedingte Wahrscheinlichkeit & Unter der Bedingung, dass wir nur Männer analysieren, ist die Wahrscheinlichkeit, einen Befragten zu ziehen, der 40h arbeiten will, 0.4. Bei Frauen liegt diese Wahrscheinlichkeit bei 0.17\\ \bottomrule
+\end{tabular}
+  
+\end{frame}
+\frame{
+\frametitle{Wahrscheinlichkeit \& relative Häufigkeit}
+
+Die Wahrscheinlichkeit $P(y)$ einer Ausprägung eines Merkmals Y in Bezug auf alle Beobachtungen N lässt sich daher wie folgt berechnen: 
+
+\begin{equation}  
+  P(y) = \frac{y}{N}
+\end{equation}
+
+\vfill
+
+Eine Wahrscheinlichkeit von 0,2 sagt Ihnen, dass 20 von 100 Untersuchungseinheiten eine Ausprägung $\tau$ der Eigenschaft Y aufweisen.  Relative Häufigkeiten sind Wahrscheinlichkeiten multipliziert mit 100. 
+
+}
+\frame{
+\frametitle{Bedingte Wahrscheinlichkeit \& relative Häufigkeit}
+
+Bedingte Wahrscheinlichkeiten oder bedingte relative Häufigkeiten werden innerhalb der durch eine Bedingung festgelegten Gruppen gebildet. 
+
+\begin{equation}  
+  P(y) \, | (X = x) = \frac{y}{N_x}
+\end{equation}
+
+\vfill
+
+Ist X zum Beispiel eine Variable für Bildung mit drei Ausprägungen (1 = ohne Berufsabschluss, 2 = mit Berufsabschluss, 3 = Hochschulabschluss) und y sind die Angaben zu den gewünschten Arbeitsstunden, geben die bedingten Wahrscheinlichkeiten an, wie wahrscheinlich bestimmte Arbeitsstunden innerhalb der jeweiligen Bildungsgruppe gefunden werden können. 
+
+}
+\begin{frame}
+\frametitle{Relative Häufigkeiten drücken Relationen aus!}
+
+Wahrscheinlichkeiten oder \textit{relative} Häufigkeiten haben immer eine Bedeutung in Relation zum Nenner. Wenn sich der Nenner ändert, ändert sich auch die Bedeutung der relativen Häufigkeit. Klären Sie daher stets, auf welche \textit{Basis} die relativen Häufigkeiten beziehen. Wir können folgende Relationen grob unterscheiden: 
+
+\begin{itemize}
+   \item Relation zur Stichprobengröße 
+   \item Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in X
+   \item Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in Y
+ \end{itemize} 
+
+Die erste Variante wird typischerweise als ``Zellenprozent'', die zweite als ``Zeilenprozent'' und die dritte als ``Spaltenprozent'' bezeichnet. 
+
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Armutsrisiko (Zeilenprozent)}
+\begin{columns}
+\begin{column}{.6\linewidth}
+\begin{Verbatim}[fontsize=\small]
+Erwerbskonstella |  Armutsgef. Haushalt
+            tion |      nein         ja |     Total
+-----------------+----------------------+----------
+         Rentner |     84.74      15.26 |    100.00 
+      Joblose HH |     33.51      66.49 |    100.00 
+ Doppelverdiener |     99.61       0.39 |    100.00 
+ Alleinverdiener |     91.42       8.58 |    100.00 
+     Zuverdiener |     97.68       2.32 |    100.00 
+  Doppelteilzeit |     88.03      11.97 |    100.00 
+      Prekäre HH |     52.88      47.12 |    100.00 
+Single, Vollzeit |     92.24       7.76 |    100.00 
+Single, Teilzeit |     62.32      37.68 |    100.00 
+-----------------+----------------------+----------
+           Total |     83.14      16.86 |    100.00 
+
+\end{Verbatim}
+\end{column}
+\begin{column}{.3\linewidth}
+Wie hoch ist die Wahrscheinlichkeit einen Haushalt in Armut zu finden \textit{innerhalb} eines bestimmten Haushaltstyps? 
+\end{column}
+\end{columns}
+
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Zusammensetzung von Armut (Spaltenprozent)}
+\begin{columns}
+\begin{column}{.6\linewidth}
+\begin{Verbatim}[fontsize=\small]
+Erwerbskonstella |  Armutsgef. Haushalt
+            tion |      nein         ja |     Total
+-----------------+----------------------+----------
+         Rentner |     37.82      33.58 |     37.10 
+      Joblose HH |      2.79      27.30 |      6.92 
+ Doppelverdiener |     10.24       0.20 |      8.55 
+ Alleinverdiener |      7.10       3.28 |      6.46 
+     Zuverdiener |     12.63       1.48 |     10.75 
+  Doppelteilzeit |      1.10       0.74 |      1.04 
+      Prekäre HH |      2.03       8.93 |      3.20 
+Single, Vollzeit |     21.00       8.72 |     18.93 
+Single, Teilzeit |      5.29      15.78 |      7.06 
+-----------------+----------------------+----------
+           Total |    100.00     100.00 |    100.00 
+\end{Verbatim}
+\end{column}
+\begin{column}{.3\linewidth}
+Wie hoch ist die Wahrscheinlichkeit einen bestimmten Haushaltstyp zu finden \textit{innerhalb} der armutsbetroffenen Haushalte? 
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\section{Typische Werte}
+
+\begin{frame}
+  \frametitle{Typische Werte: Notation \& Begriffe}
+\small
+\begin{tabular}{lp{.12\linewidth}p{.3\linewidth}p{.4\linewidth}} \toprule 
+Notation & Bezeichnung & Bedeutung & Beispiel\\ \midrule
+$y_{Mod} $ & Modalwert & Der Wert mit der höchsten Häufigkeit & Die häufigsten gewünschten Arbeitsstunden waren 40h. \\[.5em]
+$\tilde{y}$ & Median & Der Wert der, die Verteilung in zwei gleich große relative Häufigkeiten teilt & 50\% der Befragten wünschten sich eine Arbeitszeit von unter 35h und 50\% wünschten sich eine Arbeitszeit ab 35h.\\[.5em]
+$\bar{y}$ & Arith\-metisches Mittel & Der Wert, der die Verteilung in zwei gleich große Wertesummen teilt. & Das arith. Mittel der gewünschten Arbeitsstunden lag im Jahr 2018 bei 32.8h. Die Summe aller gewünschten Arbeitsstunden unter 32.8h ist genauso groß wie die Summe aller Arbeitsstunden darüber.\\
+ \bottomrule
+\end{tabular}
+  
+\end{frame}
+\begin{frame}
+\frametitle{Modalwert}
+\begin{columns}
+\begin{column}{.5\linewidth}
+\begin{center}
+\begin{tabular}{c} \\ \toprule
+Größe in cm\\ \midrule
+160\\
+\textbf{165}\\
+\textbf{165}\\
+\textbf{165}\\
+ 173\\ 
+ 174\\
+ 176\\
+ 180\\
+ 180\\
+ 187\\ \bottomrule
+\end{tabular}
+\end{center}
+\quad \newline 
+\end{column}
+\begin{column}[b]{.5\linewidth}
+Der Modalwert oder Modus ist der \textbf{häufigste} Wert einer Verteilung. Es ist daher der Wert mit der größten relativen Häufigkeit. 
+
+\[
+y_{Mod} = 165  \nonumber 
+\]
+\end{column}
+\end{columns}
+\quad \newline 
+\end{frame}
+\begin{frame}
+\frametitle{Median}
+Der Median ist der Wert der Beobachtung einer Verteilung, der genau in ihrer Mitte liegt. 
+
+Der Median $\tilde{y}$ von n \textbf{nach der Größe geordneten} Beobachtungen berechnet sich durch: 
+
+\begin{equation}
+  \tilde{y} = \left\{  
+\begin{array}{l l}
+ y_{\frac{n+1}{2}} \quad & \text{bei ungerader Anzahl}\\[1em]
+ \frac{y_\frac{n}{2} + y_{\frac{n}{2}+1}}{2} \quad & \text{bei gerader Anzahl}\\
+ \end{array} \right.
+\end{equation}
+
+$n$ bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet $y_\frac{10}{2} = y_5 $ den \textbf{Wert} der fünften Beobachtung innerhalb der nach den \textit{Y-Werten geordneten Verteilung}. 
+
+\end{frame}
+\frame{
+\frametitle{Median}
+
+\begin{center}
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+  
+\begin{center}
+\begin{tabular} {@{}l c @{}} \\ \hline
+Nr. & Größe in cm\\
+\hline
+1 &160\\
+2 &165\\
+3 &165\\
+4 & 165\\
+\textbf{5} & 173\\ \hline
+\textbf{6} & 174\\
+7 & 176\\
+8 & 180\\
+9 & 180\\
+10 &187\\
+\hline
+\end{tabular}
+\vspace{1em}
+\end{center}
+  \end{minipage}
+  %\hspace{.1\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+\begin{align}
+ \tilde{y} &= \frac{y_\frac{n}{2} + y_{\frac{n}{2}+1}}{2} \nonumber \\  
+           &= \frac{y_\frac{10}{2} + y_{\frac{10}{2}+1}}{2} \nonumber \\
+           &= \frac{y_{5} + y_{6}}{2} \nonumber \\
+           &= \frac{173 + 174}{2} = 173,5 \nonumber
+ \end{align}
+  \end{minipage}
+\end{center}
+
+}
+\frame{
+\frametitle{Arithmetisches Mittel}
+
+Das arithmetische Mittel $\overline{y}$ der Werte $y_i$ berechnet sich in Bezug auf die Größe einer Verteilung $N$ grundsätzlich in folgender Art: 
+
+\begin{equation} 
+\bar{y} = \dfrac{\sum y_i}{N}
+\end{equation}
+
+}
+\frame{
+\frametitle{Arithmetisches Mittel}
+
+\begin{center}
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+  
+\begin{center}
+\begin{tabular} {@{}l c @{}} \\ \hline
+Nr. & Größe in cm\\
+\hline
+1 &160\\
+2 &165\\
+3 &165\\
+4 & 165\\
+5 & 173\\ 
+6 & 174\\
+7 & 176\\
+8 & 180\\
+9 & 180\\
+10 &187\\
+\hline
+\end{tabular}
+\vspace{1em}
+\end{center}
+  \end{minipage}
+  %\hspace{.1\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+  {{ \small
+  \begin{align}
+\bar{y} &= \dfrac{\sum y_i}{N} \nonumber \\
+&= \frac{ 160 + 165 + 165 \dots + 187}{10} = 172,5 \nonumber
+\end{align}
+  }}
+  \end{minipage}
+\end{center}
+}
+\begin{frame}
+\frametitle{Unterschiede der gewünschten Arbeitsstunden nach Geschlecht}
+\begin{center}
+\begin{tabular}{lrrr} \toprule 
+Wert    & Männer & Frauen & Differenz \\ \midrule 
+Modus   & 40     & 30 & 10\\
+Median   & 40 & 30 & 10 \\
+Arith. Mittel & 36.5 & 29.1 & 7.4 \\  \bottomrule
+\end{tabular} 
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Gewünschte Arbeitsstunden nach Geschlecht über die Zeit}
+\begin{center}
+\resizebox{.7\linewidth}{!}{\includegraphics{lehre-gew-arbeitsstunden-mean-change-gender}}
+\end{center}
+\end{frame}
+
+\section{Typische Unterschiedlichkeit}
+
+\begin{frame}
+  \frametitle{Typische Unterschiedlichkeit: Notation \& Begriffe}
+\small
+\begin{tabular}{lp{.15\linewidth}p{.3\linewidth}p{.35\linewidth}} \toprule 
+Notation & Bezeichnung & Bedeutung & Beispiel\\ \midrule
+$s^2$ & Varianz & Die durchschnittliche, quadrierte Abweichung der Werte zum Mittelwert. &  \\[.5em]
+s & Standard\-abweichung & Die durchschnittliche Abweichung der Werte zum Mittelwert & Im Jahr 2018 unterscheiden sich die gewünschten Arbeitsstunden zwischen allen Befragten typischerweise um 10.4h. \\[.5em] 
+D & Diversität & Die Wahrscheinlichkeit zwei Untersuchungseinheiten mit unterschiedlichen Ausprägungen zufällig aus der Stichprobe zu ziehen. & Die Wahrscheinlichkeit, im Jahr 2018 zwei zufällig gezogene Befragte mit unterschiedlichen Arbeitswünschen zu ziehen, beträgt  0.4.\\
+ \bottomrule
+\end{tabular}
+  
+\end{frame}
+\frame{
+\frametitle{Varianz}
+
+Ein Maß für die Unterschiedlichkeit von Werten ist die \textit{Varianz}. Sie ist die \textit{durchschnittliche} quadrierte Abweichung zum arithmetischen Mittel (und damit eine Sonderform des arithmetischen Mittels). 
+
+\begin{equation}
+s^2 = \frac{\sum(y_i - \overline{y})^2}{n}
+\end{equation}
+}
+\frame{
+\frametitle{Varianz}
+
+\begin{center}
+  \begin{minipage}[b]{.2\linewidth} % [b] => Ausrichtung an \caption
+  
+\begin{center}
+\scalebox{.7}{
+\begin{tabular} {@{}l c @{}} \\ \hline
+Nr. & Größe in cm\\
+\hline
+1 &160\\
+2 &165\\
+3 &165\\
+4 & 165\\
+5 & 173\\ 
+6 & 174\\
+7 & 176\\
+8 & 180\\
+9 & 180\\
+10 &187\\
+\hline
+\end{tabular}}
+\vspace{1em}
+\end{center}
+  \end{minipage}
+  %\hspace{.1\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.6\linewidth} % [b] => Ausrichtung an \caption
+  {{ 
+  \begin{align} 
+s^2 &= \frac{\sum\limits_{i=1}^n(y_i - \overline{y})^2}{n} \nonumber \\
+    &= \frac{(160 - 172,5)^2 + (165 - 172,5)^2 \dots + (187 - 172,5)^2}{10} = 66.25 \nonumber
+\end{align}
+  }}
+  \end{minipage}
+\end{center}
+}
+\frame{
+\frametitle{Standardabweichung}
+
+Wir wollen nicht wissen, was die durchschnittliche "`quadrierte Differenz"' ist, sondern, was die "`typischen Unterschiede"' der Befragten sind. Um eine sinnvolle, inhaltliche Interpretation zu ermöglichen, muss die Wurzel aus der Varianz gezogen werden. Diese Wurzel bezeichnet man als \textit{Standardabweichung}: 
+
+\begin{equation}
+  s = \sqrt{s^2}
+\end{equation}
+
+Da $\sqrt{66,25} \approx 8,14$ ist die typische Abweichung der Körpergrößen zwischen den beobachteten Personen 8,14 cm. 
+
+}
+\begin{frame}
+\frametitle{Verteilung der Löhne in Deutschland 2018}
+\begin{center}
+\resizebox{.68\linewidth}{!}{
+  \includegraphics{lohnvert2018-lehre}
+}
+\end{center}
+\end{frame}
+
+\subsection{Diversität}
+
+\frame{
+\frametitle{Diversität}
+
+In einigen Fällen\footnote{Das sind vor allem: Verteilungen mit nominalen oder ordinal gemessenen Ausprägungen mit sehr unterschiedlichen Intervallen.} ist eine Berechnung eines Mittelwerts nicht sinnvoll. Dennoch möchten wir dann eine Möglichkeit haben, die Unterschiedlichkeit der verteilten Werte auszudrücken. Eine Möglichkeit, diese Unterschiedlichkeit zu messen, besteht in Diversitäts-Maßen, wie dem Simpson Diversitäts Index:  
+
+\[ D = 1 - \sum\limits_{y}^Y P(y)^2 \]
+
+y ist eine Ausprägung des Merkmals Y, Y die Anzahl aller Ausprägungen, und N die Gesamtanzahl aller Beobachtungen ist. Der Index drückt die Wahrscheinlichkeit aus, durch eine Ziehung zwei \textit{unterschiedlich ausgeprägte} Beobachtungen zu erhalten. D schwankt zwischen 0 und 1. Ist D = 1, liegt höchste Diversität vor. 
+
+}
+\begin{frame}
+\frametitle{Belastung durch Arbeitsstunden}
+\small
+\begin{columns}
+\begin{column}{.4\linewidth}
+\begin{tabular}{lrrr} \toprule
+Belastung & Männer & Frauen & Gesamt\\ \midrule
+Gar nicht &       854  &       747 &     1,601 \\
+Mäßig &     4,033  &     3,399 &     7,432 \\
+Stark &     2,459  &     2,186 &     4,645 \\
+Sehr stark&       588 &        553 &     1,141 \\ \midrule
+Gesamt     & 7,934    &  6,885 &    14,819 \\ \bottomrule
+\end{tabular}
+\end{column}
+
+\begin{column}{.5\linewidth}
+Die Tabelle stellt Angabe der subjektiven Belastung durch die Arbeitsstunden ab. Die Diversität der Angaben über alle Befragten lässt sich wie folgt berechnen:\\[1em]
+
+\vfill 
+
+\resizebox{1\linewidth}{!}{
+$ D = 1 - \left( (\dfrac{1601}{14819})^2 + (\dfrac{7432}{14819})^2 + (\dfrac{4645}{14819})^2 + (\dfrac{1141}{14819})^2 \right) = 0.633 $
+}
+\quad \newline
+\vfill
+
+Würden wir zwei Befragte zufällig ziehen, erhielten wir daher mit einer Wahrscheinlichkeit von 63.3\% unterschiedliche Angaben. Die Diversität innerhalb von Männern ist 0.628 und innerhalb von Frauen 0.637. 
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
+\frame{
+\frametitle{Ethnische Diversität}
+\begin{center}
+\resizebox{.7\linewidth}{!}{\includegraphics{US-race-diversity}}
+\end{center}
+
+}

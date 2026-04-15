@@ -1,0 +1,8 @@
+---
+title: "Vergleichsgegenstände I"
+author: "Andreas Haupt"
+format: html
+editor: source
+---
+  
+  {{< revealjs file="16-VergleichsgegenstaendeI.html" height="950px" width="50%" class="ratio ratio-16x9" >}}

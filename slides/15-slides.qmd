@@ -1,7 +1,8 @@
 ---
-title: "Unterschiede erheben: Untersuchungsdesigns"
+title: "Grundlagen guter Vergleiche"
 author: "Andreas Haupt"
 format: html
+editor: source
 ---
   
   {{< revealjs file="15-Vergleiche_und_Verteilungen.html" height="950px" width="50%" class="ratio ratio-16x9" >}}

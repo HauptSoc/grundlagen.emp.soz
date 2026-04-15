@@ -1,0 +1,311 @@
+::: frame
+### Die Beschreibung von Verteilungen
+
+Nachdem wir operationalisiert und Daten für die theoretischen Konstrukte erhoben haben, liegen die Daten nun in einer Datenmatrix vor.[^1] Diese Datenmatrix ist meist in ihrer Gesamtheit uninformativ, denn einzelne Werte sagen uns nichts über die *Typik* von Eigenschaften oder über Zusammenhänge zwischen Eigenschaften etwas aus.
+
+Um Daten gut zu beschreiben, müssen wir sie sinnvoll zusammenfassen (= aggregieren). Dies ist Aufgabe der *deskriptiven Statistik*.
+:::
+
+[^1]: Aufgebaut wie eine Excel-Tabelle: Die Zeilen sind die Untersuchungseinheiten und die Spalten sind die Eigenschaften. Jede Zelle beinhaltet daher die Ausprägung einer Eigenschaft für eine Untersuchungseinheit.
+
+::: frame
+### Was ist eine Verteilung?
+
+Eine Verteilung der Werte einer Eigenschaft $Y$ gibt an, wie **häufig** diese Werte innerhalb einer (analytischen) Stichprobe vorkommen. Diese Häufigkeit kann in unterschiedlicher Weise angegeben werden:
+
+1.  absolute Häufigkeiten
+
+2.  relative Häufigkeiten / Wahrscheinlichkeit
+
+3.  Dichte
+
+Diese Häufigkeiten werden auf der Y-Achse (der vertikalen Dimension) grafisch abgetragen. Auf der X-Achse (horizontale Dimension) werden die Ausprägungen abgetragen. Je nach Skalenniveau der gemessenen Eigenschaften sind dies daher Kategorien, Ränge oder Werte in gleichen Intervallen.
+:::
+
+:::::: frame
+### Darstellung von Verteilungen als Balkendiagramme
+
+::::: columns
+::: column
+.6 Verteilung der gewünschten Arbeitsstunden, 2018. Daten: SOEP V35.
+:::
+
+::: column
+.4 Verteilungen mit wenigen Ausprägungen können in Balkendiagrammen dargestellt werden.[^2]
+
+Achten Sie bei Balkendiagrammen auf eine sinnvolle Abtragung der Y-Achse. Diese muss nicht zwingend vom Minimalwert bis zum Maximalwert gehen.
+:::
+:::::
+::::::
+
+[^2]: Ich sage es nur einmal: Wer Tortendiagramme oder 3D-Diagramme anfertigt, kommt in die Hölle.
+
+:::::: frame
+### Darstellung von Verteilungen als Balkendiagramme
+
+::::: columns
+::: column
+.6 Verteilung der gewünschten Arbeitsstunden, 2018. Daten: SOEP V35.
+:::
+
+::: column
+.4 Je mehr Ausprägungen der Eigenschaft Sie darstellen wollen, desto unübersichtlicher werden Balkendiagramme für die Darstellung von Verteilungen. Das ist insbesondere für metrisch gemessene Eigenschaften der Fall, die viele (oder potentiell: unendlich viele) unterschiedliche Ausprägungen haben können.
+:::
+:::::
+::::::
+
+:::::: frame
+### Dastellung von Verteilungen als Kurven
+
+::::: columns
+::: column
+.5 Verteilung der gewünschten Arbeitsstunden, 2018. Quelle: SOEP V35.
+:::
+
+::: column
+.5 Metrische Verteilungen können auch als Kurven oder Funktionen abgetragen werden. Dabei werden immer (!) die zugrunde liegenden Daten geglättet (= Smoothing). Je nach Stärke der Glättung kann sich die Darstellung der Verteilung stark ändern. Je stärker geglättet wird, desto mehr werden die zugrunde liegenden Daten zu einer (meist glockenförmigen) Verteilung angenähert.\
+
+Sehr glatte und glockenförmige Verteilungen sind empirisch kaum beobachtbar. Empirische Verteilungen haben typischerweise "Zacken" oder "Klumpen". Das ist kein Problem, sondern Teil des empirischen Musters, dass Sie studieren wollen.
+:::
+:::::
+::::::
+
+:::::: frame
+### Die Beschreibung von Verteilungen
+
+::::: columns
+::: column
+.5 Verteilung der gewünschten Arbeitsstunden nach Geschlecht, 2018. Daten: SOEP V35.
+:::
+
+::: column
+.5 Verteilungen können sich in mehreren Aspekten unterscheiden:
+
+1.  Werte können häufiger sein
+
+2.  der häufigste Wert kann sich unterscheiden
+
+3.  der "zentrale" Wert kann sich unterscheiden
+
+4.  die Werte können unterschiedlich breit streuen
+
+5.  die Werte können symmetrisch um einen zentralen Wert streuen oder wenige Werte können über einen sehr großen Bereich streuen.
+
+Unser Ziel ist es, diese Unterschiede in weniger, klar verständlichen Kennzahlen auszudrücken.
+:::
+:::::
+::::::
+
+# Häufigkeiten
+
+##  {#section .unnumbered}
+
+::: frame
+### Häufigkeiten: Notation & Begriffe
+
+| Notation | Bedeutung | Beispiel |
+|:-----------------------|:-----------------------|:-----------------------|
+| $N$ | Absolute Häufigkeit | 4.850 Personen gaben in der Stichprobe von 2018 an, 40h arbeiten zu wollen. Die Stichprobe besteht aus 16.886 Personen. |
+| $P(y)$ | Wahrscheinlichkeit | Mit einer Wahrscheinlichkeit von 0.2872 ziehen wir aus der Stichprobe eine Person, die genau 40h als gewünschte Arbeitszeit angegeben hat. |
+| $P(y)\cdot 100$ | relative Häufigkeit | 28.72% der Befragten gaben an, 40h arbeiten zu wollen. |
+| $P(y) \, | \, (X = x)$ | Bedingte Wahrscheinlichkeit | Unter der Bedingung, dass wir nur Männer analysieren, ist die Wahrscheinlichkeit, einen Befragten zu ziehen, der 40h arbeiten will, 0.4. Bei Frauen liegt diese Wahrscheinlichkeit bei 0.17 |
+:::
+
+::: frame
+### Relative Häufigkeiten drücken Relationen aus!
+
+Wahrscheinlichkeiten oder *relative* Häufigkeiten haben immer eine Bedeutung in Relation zum Nenner. Wenn sich der Nenner ändert, ändert sich auch die Bedeutung der relativen Häufigkeit. Klären Sie daher stets, auf welche *Basis* die relativen Häufigkeiten beziehen. Wir können folgende Relationen grob unterscheiden:
+
+-   Relation zur Stichprobengröße
+
+-   Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in X
+
+-   Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in Y
+
+Die erste Variante wird typischerweise als "Zellenprozent", die zweite als "Zeilenprozent" und die dritte als "Spaltenprozent" bezeichnet.
+:::
+
+:::::: frame
+### Armutsrisiko (Zeilenprozent)
+
+::::: columns
+::: column
+.6
+
+``` {fontsize="\\small"}
+Erwerbskonstella |  Armutsgef. Haushalt
+            tion |      nein         ja |     Total
+-----------------+----------------------+----------
+         Rentner |     84.74      15.26 |    100.00 
+      Joblose HH |     33.51      66.49 |    100.00 
+ Doppelverdiener |     99.61       0.39 |    100.00 
+ Alleinverdiener |     91.42       8.58 |    100.00 
+     Zuverdiener |     97.68       2.32 |    100.00 
+  Doppelteilzeit |     88.03      11.97 |    100.00 
+      Prekäre HH |     52.88      47.12 |    100.00 
+Single, Vollzeit |     92.24       7.76 |    100.00 
+Single, Teilzeit |     62.32      37.68 |    100.00 
+-----------------+----------------------+----------
+           Total |     83.14      16.86 |    100.00 
+```
+:::
+
+::: column
+.3 Wie hoch ist die Wahrscheinlichkeit einen Haushalt in Armut zu finden *innerhalb* eines bestimmten Haushaltstyps?
+:::
+:::::
+::::::
+
+:::::: frame
+### Zusammensetzung von Armut (Spaltenprozent)
+
+::::: columns
+::: column
+.6
+
+``` {fontsize="\\small"}
+Erwerbskonstella |  Armutsgef. Haushalt
+            tion |      nein         ja |     Total
+-----------------+----------------------+----------
+         Rentner |     37.82      33.58 |     37.10 
+      Joblose HH |      2.79      27.30 |      6.92 
+ Doppelverdiener |     10.24       0.20 |      8.55 
+ Alleinverdiener |      7.10       3.28 |      6.46 
+     Zuverdiener |     12.63       1.48 |     10.75 
+  Doppelteilzeit |      1.10       0.74 |      1.04 
+      Prekäre HH |      2.03       8.93 |      3.20 
+Single, Vollzeit |     21.00       8.72 |     18.93 
+Single, Teilzeit |      5.29      15.78 |      7.06 
+-----------------+----------------------+----------
+           Total |    100.00     100.00 |    100.00 
+```
+:::
+
+::: column
+.3 Wie hoch ist die Wahrscheinlichkeit einen bestimmten Haushaltstyp zu finden *innerhalb* der armutsbetroffenen Haushalte?
+:::
+:::::
+::::::
+
+# Typische Werte
+
+::: frame
+### Typische Werte: Notation & Begriffe
+
+| Notation | Bezeichnung | Bedeutung | Beispiel |
+|:-----------------|:-----------------|:-----------------|:-----------------|
+| $y_{Mod}$ | Modalwert | Der Wert mit der höchsten Häufigkeit | Die häufigsten gewünschten Arbeitsstunden waren 40h. |
+| $\tilde{y}$ | Median | Der Wert der, die Verteilung in zwei gleich große relative Häufigkeiten teilt | 50% der Befragten wünschten sich eine Arbeitszeit von unter 35h und 50% wünschten sich eine Arbeitszeit ab 35h. |
+| $\bar{y}$ | Arithmetisches Mittel | Der Wert, der die Verteilung in zwei gleich große Wertesummen teilt. | Das arith. Mittel der gewünschten Arbeitsstunden lag im Jahr 2018 bei 32.8h. Die Summe aller gewünschten Arbeitsstunden unter 32.8h ist genauso groß wie die Summe aller Arbeitsstunden darüber. |
+:::
+
+::::::: frame
+### Modalwert
+
+:::::: columns
+:::: column
+.5
+
+::: center
+| Größe in cm |
+|:-----------:|
+|     160     |
+|   **165**   |
+|   **165**   |
+|   **165**   |
+|     173     |
+|     174     |
+|     176     |
+|     180     |
+|     180     |
+|     187     |
+:::
+::::
+
+::: column
+.5 Der Modalwert oder Modus ist der **häufigste** Wert einer Verteilung. Es ist daher der Wert mit der größten relativen Häufigkeit.
+
+$$y_{Mod} = 165  \nonumber$$
+:::
+::::::
+:::::::
+
+::: frame
+### Median
+
+Der Median ist der Wert der Beobachtung einer Verteilung, der genau in ihrer Mitte liegt.
+
+Der Median $\tilde{y}$ von n **nach der Größe geordneten** Beobachtungen berechnet sich durch:
+
+$$\tilde{y} = \left\{  
+\begin{array}{l l}
+ y_{\frac{n+1}{2}} \quad & \text{bei ungerader Anzahl}\\[1em]
+ \frac{y_\frac{n}{2} + y_{\frac{n}{2}+1}}{2} \quad & \text{bei gerader Anzahl}\\
+ \end{array} \right.$$
+
+$n$ bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet $y_\frac{10}{2} = y_5$ den **Wert** der fünften Beobachtung innerhalb der nach den *Y-Werten geordneten Verteilung*.
+:::
+
+:::: frame
+### Unterschiede der gewünschten Arbeitsstunden nach Geschlecht
+
+::: center
+| Wert          | Männer | Frauen | Differenz |
+|:--------------|-------:|-------:|----------:|
+| Modus         |     40 |     30 |        10 |
+| Median        |     40 |     30 |        10 |
+| Arith. Mittel |   36.5 |   29.1 |       7.4 |
+:::
+::::
+
+:::: frame
+### Gewünschte Arbeitsstunden nach Geschlecht über die Zeit
+
+::: center
+:::
+::::
+
+# Typische Unterschiedlichkeit
+
+::: frame
+### Typische Unterschiedlichkeit: Notation & Begriffe
+
+| Notation | Bezeichnung | Bedeutung | Beispiel |
+|:-----------------|:-----------------|:-----------------|:-----------------|
+| $s^2$ | Varianz | Die durchschnittliche, quadrierte Abweichung der Werte zum Mittelwert. |  |
+| s | Standardabweichung | Die durchschnittliche Abweichung der Werte zum Mittelwert | Im Jahr 2018 unterscheiden sich die gewünschten Arbeitsstunden zwischen allen Befragten typischerweise um 10.4h. |
+| D | Diversität | Die Wahrscheinlichkeit zwei Untersuchungseinheiten mit unterschiedlichen Ausprägungen zufällig aus der Stichprobe zu ziehen. | Die Wahrscheinlichkeit, im Jahr 2018 zwei zufällig gezogene Befragte mit unterschiedlichen Arbeitswünschen zu ziehen, beträgt 0.4. |
+:::
+
+:::: frame
+### Verteilung der Löhne in Deutschland 2018
+
+::: center
+:::
+::::
+
+## Diversität
+
+:::::: frame
+### Belastung durch Arbeitsstunden
+
+::::: columns
+::: column
+.4
+
+| Belastung  | Männer | Frauen | Gesamt |
+|:-----------|-------:|-------:|-------:|
+| Gar nicht  |    854 |    747 |  1,601 |
+| Mäßig      |  4,033 |  3,399 |  7,432 |
+| Stark      |  2,459 |  2,186 |  4,645 |
+| Sehr stark |    588 |    553 |  1,141 |
+| Gesamt     |  7,934 |  6,885 | 14,819 |
+:::
+
+::: column
+.5 Die Tabelle stellt Angabe der subjektiven Belastung durch die Arbeitsstunden ab. Die Diversität der Angaben über alle Befragten lässt sich wie folgt berechnen:\
+
+Würden wir zwei Befragte zufällig ziehen, erhielten wir daher mit einer Wahrscheinlichkeit von 63.3% unterschiedliche Angaben. Die Diversität innerhalb von Männern ist 0.628 und innerhalb von Frauen 0.637.
+:::
+:::::
+::::::

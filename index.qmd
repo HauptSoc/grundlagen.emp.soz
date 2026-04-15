@@ -5,32 +5,32 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 
 # Sommersemester: Datenanalyse
 
-| Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |   |   |
-|:------:|--------|--------|:------:|:------:|:------:|:------:|:------:|--------|--------|
-|  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |  |  |
-| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |  |  |
-| 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-|  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |  |  |
-| 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 5 | 19.05. | Einfache lineare Modelle II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 6 | 26.05. | Pfingsten |  |  |  |  |  |  |  |
-| 7 | 02.06. | Varianzanalyse | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-|  |  | **III. Die Isolation von Einflüssen für gute Vergleiche** |  |  |  |  |  |  |  |
-|  | 09.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 8 | 16.06. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 9 | 23.06. | Multivariate, lineare Modelle | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-|  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |  |  |
-| 10 | 30.06. | Konfidenzintervalle | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 11 | 07.07. | Signifikanz I: Nullhypothesen, t-Tests | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 12 | 14.07. | Signifikanz II: p-Values, Bedeutsamkeit | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 13 | 21.07. | Klausurvorbereitung | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |  |  |
-| 14 | 28.07. | Klausur |  |  |  |  |  |  |  |
+| Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
+|:------:|--------|----------------------|:------:|:------:|:------:|:------:|:------:|
+|  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |
+| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |
+| 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-slides.qmd) | ✍ |  |  |
+| 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+|  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
+| 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 5 | 19.05. | Einfache lineare Modelle II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 6 | 26.05. | Pfingsten |  |  |  |  |  |
+| 7 | 02.06. | Varianzanalyse | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+|  |  | **III. Die Isolation von Einflüssen für gute Vergleiche** |  |  |  |  |  |
+|  | 09.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 8 | 16.06. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 9 | 23.06. | Multivariate, lineare Modelle | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+|  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |
+| 10 | 30.06. | Konfidenzintervalle | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 11 | 07.07. | Signifikanz I: Nullhypothesen, t-Tests | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 12 | 14.07. | Signifikanz II: p-Values, Bedeutsamkeit | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 13 | 21.07. | Klausurvorbereitung | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 14 | 28.07. | Klausur |  |  |  |  |  |
 
 # Wintersemester: Datenerhebung
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|:-------:|---------|-----------------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | [🖥](slides/00-slides.qmd) |  |  | [📁](misc\01-zusatz.qmd) |
 | 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-slides.qmd "Wissenschaftliche Spielregeln") |  |  |  |
 |  |  | **I. Unterschiede messen** |  |  |  |  |  |

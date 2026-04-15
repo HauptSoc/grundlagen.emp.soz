@@ -1,0 +1,601 @@
+---
+title: "Gute Vergleiche: Vergleichsgegenstände -- Akt I"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 12
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    width: 1280
+    height: 800
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.05
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+## Worauf hin wir vergleichen, ist bedeutsam!
+
+![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
+
+## Beschreiben von Verteilungen (=deskriptive Statistik)
+
+Nachdem wir operationalisiert und Daten für die theoretischen Konstrukte erhoben haben, liegen die Daten nun in einer Datenmatrix vor.
+
+Diese Datenmatrix ist meist in ihrer Gesamtheit uninformativ, denn einzelne Werte sagen uns nichts über die **Typik** von Eigenschaften oder über **Zusammenhänge** zwischen Eigenschaften etwas aus.
+
+Um Daten gut zu beschreiben, müssen wir sie sinnvoll zusammenfassen (= aggregieren). Dies ist Aufgabe der *deskriptiven Statistik*.
+
+## Ein Schritt zurück: Was heißt es "Daten" sinnvoll zu aggregieren? {.midi}
+
+Eine Verteilung der Werte einer Eigenschaft $Y$ gibt an, wie *häufig* diese Werte innerhalb einer (analytischen) Stichprobe vorkommen. Diese Häufigkeit kann in unterschiedlicher Weise angegeben werden:
+
+Diese Häufigkeiten werden auf der Y-Achse (der vertikalen Dimension) grafisch abgetragen. Auf der X-Achse (horizontale Dimension) werden die Ausprägungen abgetragen. Je nach Skalenniveau der gemessenen Eigenschaften sind dies daher Kategorien, Ränge oder Werte in gleichen Intervallen.
+
+## Absolute Häufigkeiten
+
+```{r}
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(haven)
+library(forcats)
+
+freda <- read_dta("C:/GIT/Grundlagen EmpSoz/slides/data/fredacamp.dta")
+
+labs <- attr(freda$pa60, "labels")
+names(labs)[labs == 9] <- "Social Media"
+attr(freda$pa60, "labels") <- labs
+
+freda_plot <- freda |>
+  mutate(
+    pa60_label = as_factor(pa60, levels = "labels"),
+    pa60_label = fct_rev(fct_infreq(pa60_label))
+  ) |>
+  filter(!is.na(pa60_label))
+
+g1 <- ggplot(freda_plot, aes(x = pa60_label)) +
+  geom_bar() +
+  coord_flip() +
+  labs(
+    title = "Absolute Häufigkeiten",
+    y = "Häufigkeit"
+  )
+
+g1
+
+```
+
+## Relative Häufigkeiten
+
+```{r}
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(haven)
+library(forcats)
+library(scales)
+
+p_rel <- ggplot(
+  freda_plot,
+  aes(x = pa60_label, y = after_stat(prop), group = 1)
+) +
+  geom_bar() +
+  coord_flip() +
+  scale_y_continuous(labels = label_percent(accuracy = 0.1)) +
+  labs(
+    title = "Relative Häufigkeiten",
+    y = "Anteil"
+  )
+
+p_rel
+```
+
+## Differenzen Jung (\<40) vs. "Alt" (\>=40)
+
+```{r}
+library(dplyr)
+library(haven)
+library(forcats)
+library(ggplot2)
+library(scales)
+
+plot_dat <- freda |>
+  mutate(
+    old = case_when(
+      is.na(age) ~ NA_integer_,
+      age >= 40 ~ 1L,
+      age < 40 ~ 0L
+    ),
+    pa60_label = as_factor(pa60, levels = "labels")
+  ) |>
+  filter(!is.na(pa60_label), !is.na(old)) |>
+  mutate(
+    pa60_label = fct_rev(fct_infreq(pa60_label)),
+    old_group = factor(old, levels = c(0, 1), labels = c("< 40", ">= 40"))
+  ) |>
+  count(old_group, pa60_label, name = "n") |>
+  mutate(prop = n / sum(n), .by = old_group)
+
+p_group <- ggplot(plot_dat, aes(x = pa60_label, y = prop, fill = old_group)) +
+  geom_col(position = position_dodge(width = 0.9)) +
+  scale_y_continuous(labels = label_percent(accuracy = 0.1)) +
+  labs(
+    title = "Relative Häufigkeiten von pa60 nach Altersgruppe",
+    x = "pa60 (Wertelabels)",
+    y = "Relative Häufigkeit",
+    fill = "old"
+  ) + 
+coord_flip()
+
+p_group
+```
+
+## Balken und Dichteverteilungen
+
+<iframe width="100%" height="100%" src="https://019d8bab-fc3c-3183-4e72-e68823568837.share.connect.posit.cloud">
+
+</iframe>
+
+## Häufigkeiten: Notation & Begriffe {.midi style="font-size: 80%"}
+
++------------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Notation               | Bedeutung                   | Beispiel                                                                                                                                                                                    |
++:=======================+:============================+:============================================================================================================================================================================================+
+| $N$                    | Absolute Häufigkeit         | 4.850 Personen gaben in der Stichprobe von 2018 an, 40h arbeiten zu wollen.                                                                                                                 |
++------------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| $P(y)$                 | Wahrscheinlichkeit          | Mit einer Wahrscheinlichkeit von 0.2872 ziehen wir aus der Stichprobe eine Person, die genau 40h als gewünschte Arbeitszeit angegeben hat.                                                  |
++------------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| $P(y)\cdot 100$        | relative Häufigkeit         | 28.72% der Befragten gaben an, 40h arbeiten zu wollen.                                                                                                                                      |
++------------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| $P(y) \, | \, (X = x)$ | Bedingte Wahrscheinlichkeit | Unter der Bedingung, dass wir nur Männer analysieren, ist die Wahrscheinlichkeit, einen Befragten zu ziehen, der 40h arbeiten will, 0.4. Bei Frauen liegt diese Wahrscheinlichkeit bei 0.17 |
++------------------------+-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Relative Häufigkeiten drücken Relationen aus! {.midi}
+
+Wahrscheinlichkeiten oder *relative* Häufigkeiten haben immer eine Bedeutung in Relation zum Nenner. Wenn sich der Nenner ändert, ändert sich auch die Bedeutung der relativen Häufigkeit. Klären Sie daher stets, auf welche *Basis* die relativen Häufigkeiten beziehen. Wir können folgende Relationen grob unterscheiden:
+
+-   Relation zur Stichprobengröße
+
+-   Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in X
+
+-   Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in Y
+
+Die erste Variante wird typischerweise als "Zellenprozent", die zweite als "Zeilenprozent" und die dritte als "Spaltenprozent" bezeichnet.
+
+## Armutsrisiko (Zeilenprozent)
+
+Wie hoch ist die Wahrscheinlichkeit einen Haushalt in Armut zu finden *innerhalb* eines bestimmten Haushaltstyps?
+
+``` {fontsize="\\small"}
+Erwerbskonstella |  Armutsgef. Haushalt
+            tion |      nein         ja |     Total
+-----------------+----------------------+----------
+         Rentner |     84.74      15.26 |    100.00 
+      Joblose HH |     33.51      66.49 |    100.00 
+ Doppelverdiener |     99.61       0.39 |    100.00 
+ Alleinverdiener |     91.42       8.58 |    100.00 
+     Zuverdiener |     97.68       2.32 |    100.00 
+  Doppelteilzeit |     88.03      11.97 |    100.00 
+      Prekäre HH |     52.88      47.12 |    100.00 
+Single, Vollzeit |     92.24       7.76 |    100.00 
+Single, Teilzeit |     62.32      37.68 |    100.00 
+-----------------+----------------------+----------
+           Total |     83.14      16.86 |    100.00 
+```
+
+## Zusammensetzung von Armut (Spaltenprozent)
+
+Wie hoch ist die Wahrscheinlichkeit einen bestimmten Haushaltstyp *innerhalb* der armutsbetroffenen Haushalte zu finden?
+
+``` {fontsize="\\small"}
+Erwerbskonstella |  Armutsgef. Haushalt
+            tion |      nein         ja |     Total
+-----------------+----------------------+----------
+         Rentner |     37.82      33.58 |     37.10 
+      Joblose HH |      2.79      27.30 |      6.92 
+ Doppelverdiener |     10.24       0.20 |      8.55 
+ Alleinverdiener |      7.10       3.28 |      6.46 
+     Zuverdiener |     12.63       1.48 |     10.75 
+  Doppelteilzeit |      1.10       0.74 |      1.04 
+      Prekäre HH |      2.03       8.93 |      3.20 
+Single, Vollzeit |     21.00       8.72 |     18.93 
+Single, Teilzeit |      5.29      15.78 |      7.06 
+-----------------+----------------------+----------
+           Total |    100.00     100.00 |    100.00 
+```
+
+## Typische Fragen zu typischen Unterschieden {.midi style="font-size: 70%"}
+
+|  Fragestellung                                                               	| Vergleich von                                                                    	| Beispiel                                                                                                         	|
+|------------------------------------------------------------------------------	|----------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------------------------------	|
+| Unterscheiden sich Gruppen in ihren typischen Ausprägungen?                  	| Arithmetischen Mitteln, Medianen, Modi, Chancen, Risiken, Wahrscheinlichkeiten   	|  $$\Delta_G = \bar{y}_F - \bar{y}_M$$ Der (unbereinigte) gender wage gap ist die Differenz der durchschnittlichen Bruttostundenlöhne nach Geschlecht. 	|
+| Unterscheiden sich Gruppen in der typischen Streuung ihrer Ausprägungen?     	| Varianzen, Standardabweichungen, Diversitäten                                    	|  $$ F = \sigma^2(y_M) / \sigma^2(y_F) $$  Die Streuung der Löhne von Männern ist um den Faktor $F$ größer als die Streuung der Löhne von Frauen.                                                                       	|
+| Unterscheidet sich die Art der Verteilung von Ausprägungen zwischen Gruppen? 	| Quantilen, Perzentilen, Dezilen | $$ \Delta_{Q_G} = (Q_{90|M} / Q_{90|F}) - (Q_{10|M} / Q_{10|F})  $$ Die Lohnverteilung von Frauen ist vor allem im oberen Bereich im Vergleich zu denen der Männer komprimiert (Gläserne Decke).                  |        
+
+## Typische Werte: Notation & Begriffe {.midi style="font-size: 80%"}
+
++-------------+-----------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Notation    | Bezeichnung           | Bedeutung                                                                     | Beispiel                                                                                                                                                                                         |
++:============+:======================+:==============================================================================+:=================================================================================================================================================================================================+
+| $y_{Mod}$   | Modalwert             | Der Wert mit der höchsten Häufigkeit                                          | Die häufigsten gewünschten Arbeitsstunden waren 40h.                                                                                                                                             |
++-------------+-----------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| $\tilde{y}$ | Median                | Der Wert der, die Verteilung in zwei gleich große relative Häufigkeiten teilt | 50% der Befragten wünschten sich eine Arbeitszeit von unter 35h und 50% wünschten sich eine Arbeitszeit ab 35h.                                                                                  |
++-------------+-----------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| $\bar{y}$   | Arithmetisches Mittel | Durchschnitt         | Das arith. Mittel der gewünschten Arbeitsstunden lag im Jahr 2018 bei 32.8h. |
++-------------+-----------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Modalwert {.midi}
+
+::::: {.columns}
+:::: {.column width="30%"}
+
+| Größe in cm |
+|:-----------:|
+|     160     |
+|   **165**   |
+|   **165**   |
+|   **165**   |
+|     173     |
+|     174     |
+|     176     |
+|     180     |
+|     180     |
+|     187     |
+
+::::
+
+:::: {.column width="70%"}
+Der Modalwert oder Modus ist der **häufigste** Wert einer Verteilung. Es ist daher der Wert mit der größten relativen Häufigkeit.
+$$ y_{Mod} = 165   $$
+::::
+:::::
+
+
+## Median {.midi}
+
+::::: {.columns}
+:::: {.column width="20%"}
+| Größe in cm |
+|:-----------:|
+|     160     |
+|   165   |
+|   165   |
+|   165 |
+|     *173*     |
+|     *174*     |
+|     176     |
+|     180     |
+|     180     |
+|     187     |
+::::
+
+:::: {.column width="80%"}
+Der Median, ist der Wert, der 50% der oberen und 50% der unteren Werte eine Verteilung trennt. Der Median $\tilde{y}$ von n **nach der Größe geordneten** Beobachtungen berechnet sich durch:
+
+$$\tilde{y} = \left\{  
+\begin{array}{l l}
+ y_{\frac{n+1}{2}} \quad & \text{bei ungerader Anzahl}\\[1em]
+ \frac{y_\frac{n}{2} + y_{\frac{n}{2}+1}}{2} \quad & \text{bei gerader Anzahl}\\
+ \end{array} \right.$$
+
+$n$ bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet $y_\frac{10}{2} = y_5$ den **Wert** der fünften Beobachtung innerhalb der nach den *Y-Werten geordneten Verteilung*. Sie berechnen daher erst die **Stelle**, wo der Median in der Verteilung liegt und "berechnen" dann, den **Wert**, den der Median an dieser Stelle hat. 
+
+::::
+:::::
+
+## Aritmethisches Mittel / Mittelwert {.midi}
+
+::::: {.columns}
+:::: {.column width="20%"}
+| Größe in cm |
+|:-----------:|
+|     160     |
+|   165   |
+|   165   |
+|   165  |
+|     173     |
+|     174     |
+|     176     |
+|     180     |
+|     180     |
+|     187     |
+::::
+
+:::: {.column width="80%"}
+
+Der Mittelwert ist das stärkste "Arbeitspferd" der Datenanalyse. Er ist das, was umgangssprachlich als "Durchschnitt" bezeichnet wird und berechnet sich durch: 
+
+$$   \begin{align}
+\bar{y} &= \dfrac{\sum y_i}{N} \nonumber \\
+&= \frac{ 160 + 165 + 165 \dots + 187}{10} = 172,5 \nonumber
+\end{align} $$ 
+
+Im Kern ist das arithmetische Mittel ein "Balance"-Wert. Die Summe aller absoluten Differenzen zum Mittelwert unterhalb und oberhalb des arithmethischen Mittels sind identisch. 
+
+::::
+:::::
+
+
+
+## Was ist das "typische" Alter des ersten Geschlechtsverkehrs? {.midi style="font-size: 60%"}
+
+```{r}
+
+library(dplyr)
+library(ggplot2)
+
+sex_dat <- freda |>
+  transmute(sex1i3_num = as.numeric(sex1i3)) |>
+  mutate(sex1i3_num = if_else(sex1i3_num < 10 | sex1i3_num > 40, NA_real_, sex1i3_num)) |>
+  filter(!is.na(sex1i3_num))
+
+mode_value <- sex_dat |>
+  count(sex1i3_num, sort = TRUE) |>
+  slice(1) |>
+  pull(sex1i3_num)
+
+median_value <- median(sex_dat$sex1i3_num)
+mean_value <- mean(sex_dat$sex1i3_num)
+
+ggplot(sex_dat, aes(x = sex1i3_num)) +
+  geom_histogram(
+    aes(y = after_stat(count / sum(count))),
+    binwidth = 1,
+    boundary = 0.5,
+    closed = "left",
+    fill = "grey75",
+    color = "white"
+  ) +
+  geom_vline(xintercept = mode_value, color = "firebrick", linewidth = 1) +
+  geom_vline(xintercept = median_value, color = "steelblue", linewidth = 1, linetype = "dashed") +
+  geom_vline(xintercept = mean_value, color = "darkgreen", linewidth = 1, linetype = "dotdash") +
+  scale_x_continuous(breaks = 10:40) +
+  scale_y_continuous(labels = scales::label_percent(accuracy = 1)) +
+  labs(
+    title = "Wann hatten Sie zum ersten Mal Geschlechtsverkehr?",
+    x = "Alter",
+    y = "Relative Häufigkeit",
+    subtitle = paste0(
+      "Modus = ", mode_value,
+      " | Median = ", round(median_value, 2),
+      " | Mittelwert = ", round(mean_value, 2)
+    )
+  )
+
+```
+
+## Alter des ersten Geschlechtsverkehrs nach Geschlecht {.midi style="font-size: 80%"}
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(haven)
+library(grid)
+
+plot_dat <- freda |>
+  transmute(
+    sex1i3_num = as.numeric(sex1i3),
+    sex_c_num = as.numeric(sex_c),
+    sex_group = factor(sex_c, levels = c(1, 2), labels = c("Mann", "Frau"))
+  ) |>
+  mutate(
+    sex1i3_num = if_else(sex1i3_num < 10 | sex1i3_num > 40, NA_real_, sex1i3_num)
+  ) |>
+  filter(
+    sex_c_num %in% c(1, 2),
+    !is.na(sex1i3_num),
+    !is.na(sex_group)
+  )
+
+hist_dat <- plot_dat |>
+  count(sex_group, sex1i3_num, name = "n") |>
+  mutate(prop = n / sum(n), .by = sex_group)
+
+mode_tbl <- hist_dat |>
+  arrange(sex_group, desc(n), sex1i3_num) |>
+  slice_head(n = 1, by = sex_group) |>
+  transmute(sex_group, stat = "Modus", value = sex1i3_num)
+
+median_tbl <- plot_dat |>
+  summarize(value = median(sex1i3_num), .by = sex_group) |>
+  mutate(stat = "Median")
+
+mean_tbl <- plot_dat |>
+  summarize(value = mean(sex1i3_num), .by = sex_group) |>
+  mutate(stat = "Mittel")
+
+diff_table <- bind_rows(mode_tbl, median_tbl, mean_tbl) |>
+  select(stat, sex_group, value) |>
+  pivot_wider(names_from = sex_group, values_from = value)
+
+group_names <- names(diff_table)[-1]
+
+diff_table <- diff_table |>
+  mutate(`Δ` = .data[[group_names[2]]] - .data[[group_names[1]]])
+
+table_text <- paste(
+  c(
+    sprintf("%-8s %12s %12s %12s", "Stat", group_names[1], group_names[2], "Δ"),
+    sprintf("%-8s %12s %12s %12s", "--------", "------------", "------------", "------------"),
+    sprintf(
+      "%-8s %12.2f %12.2f %12.2f",
+      diff_table$stat,
+      diff_table[[group_names[1]]],
+      diff_table[[group_names[2]]],
+      diff_table$`Δ`
+    )
+  ),
+  collapse = "\n"
+)
+
+y_max <- max(hist_dat$prop)
+
+hist_sex1i3_by_sex <- ggplot(hist_dat, aes(x = sex1i3_num, y = prop, fill = sex_group)) +
+  geom_col(
+    position = "identity",
+    alpha = 0.45,
+    width = 1,
+    color = "white"
+  ) +
+  annotate(
+    "label",
+    x = 40.8,
+    y = y_max * 0.98,
+    hjust = 1,
+    vjust = 1,
+    family = "mono",
+    size = 4.2,
+    linewidth = 0.4,
+    label.padding = unit(0.4, "lines"),
+    label = table_text
+  ) +
+  scale_x_continuous(
+    breaks = 10:40,
+    expand = expansion(mult = c(0.01, 0.22))
+  ) +
+  scale_y_continuous(
+    labels = scales::label_percent(accuracy = 1)
+  ) +
+  labs(
+    title = "Wann hatten Sie zum ersten Mal Geschlechtsverkehr?",
+    x = "Alter",
+    y = "Relative Häufigkeit pro Geschlecht",
+    fill = "Geschlecht"
+  ) +
+  theme_minimal()
+
+hist_sex1i3_by_sex
+```
+
+
+## Typische Unterschiedlichkeit: Notation & Begriffe {.midi style="font-size: 80%"}
+
+| Notation  	| Bezeichnung        	| Bedeutung                                                                                                                                        	|
+|-----------	|--------------------	|--------------------------------------------------------------------------------------------------------------------------------	|
+|  $s^2$    	| Varianz            	| Die durchschnittliche, quadrierte Abweichung der Werte zum Mittelwert.                                                         	|                                                                                                                 	|
+|  s        	| Standard- abweichung 	| Die durchschnittliche Abweichung der Werte zum Mittelwert.                                                                     	| 
+|  D        	| Diversität         	| Die Wahrscheinlichkeit zwei Untersuchungseinheiten mit unterschiedlichen Ausprägungen zufällig aus der Stichprobe zu ziehen.   	|   
+
+
+
+## Varianz
+
+Ein Maß für die Unterschiedlichkeit von Werten ist die **Varianz**. Sie ist die *durchschnittliche* quadrierte Abweichung zum arithmetischen Mittel (und damit eine Sonderform des arithmetischen Mittels). 
+
+$$
+s^2 = \frac{\sum(y_i - \overline{y})^2}{n}
+$$
+
+## Varianz {.midi}
+
+
+::::: {.columns}
+:::: {.column width="20%"}
+| Größe in cm |
+|:-----------:|
+|     160     |
+|   165   |
+|   165   |
+|   165  |
+|     173     |
+|     174     |
+|     176     |
+|     180     |
+|     180     |
+|     187     |
+::::
+
+:::: {.column width="80%"}
+
+$$
+\begin{align}
+s^2 &= \frac{\sum\limits_{i=1}^n(y_i - \overline{y})^2}{n} \nonumber \\
+    &= \frac{(160 - 172,5)^2 + (165 - 172,5)^2 \dots + (187 - 172,5)^2}{10} = 66.25 \nonumber
+\end{align}
+$$
+
+
+
+::::
+:::::
+
+## Standardabweichung
+
+Wir wollen nicht wissen, was die durchschnittliche "quadrierte Differenz" ist, sondern, was die "typischen Unterschiedlichkeit" der Befragten ist. Um eine sinnvolle, inhaltliche Interpretation zu ermöglichen, muss die Wurzel aus der Varianz gezogen werden. Diese Wurzel bezeichnet man als *Standardabweichung*.
+
+$$
+\begin{equation}
+  s = \sqrt{s^2}
+\end{equation}
+$$
+
+Da $\sqrt{66,25} \approx 8,14$ ist die typische Abweichung der Körpergrößen zwischen den beobachteten Personen 8,14 cm. 
+
+## Reminder: Warum ist das relevant? 
+
+<iframe width="100%" height="100%" src="https://019d86ab-8f95-cd27-439b-478f5d4f4fe1.share.connect.posit.cloud" ></iframe>
+
+## Diversität {.midi}
+
+In einigen Fällen ist eine Berechnung eines Mittelwerts nicht sinnvoll.[^1] Dennoch möchten wir dann eine Möglichkeit haben, die Unterschiedlichkeit der verteilten Werte auszudrücken. Eine Möglichkeit, diese Unterschiedlichkeit zu messen, besteht in Diversitäts-Maßen, wie dem Simpson Diversitäts Index:  
+
+$$ D = 1 - \sum\limits_{y}^Y P(y)^2 $$
+
+y ist eine Ausprägung des Merkmals Y, Y die Anzahl aller Ausprägungen, und N die Gesamtanzahl aller Beobachtungen ist. Der Index drückt die Wahrscheinlichkeit aus, durch eine Ziehung zwei \textit{unterschiedlich ausgeprägte} Beobachtungen zu erhalten. D schwankt zwischen 0 und 1. Ist D = 1, liegt höchste Diversität vor. 
+
+[^1]: Das sind vor allem: Verteilungen mit nominalen oder ordinal gemessenen Ausprägungen mit sehr unterschiedlichen Intervallen.
+
+
+## Belastung durch Arbeitsstunden {.midi}
+
+::: {.columns}
+
+::: {.column style="font-size: 80%"}
+**Wie stark sind Sie durch Ihre Arbeitsstunden belastet?**
+
+
+| Belastung  | Männer | Frauen | Gesamt |
+|:-----------|-------:|-------:|-------:|
+| Gar nicht  |    854 |    747 |  1,601 |
+| Mäßig      |  4,033 |  3,399 |  7,432 |
+| Stark      |  2,459 |  2,186 |  4,645 |
+| Sehr stark |    588 |    553 |  1,141 |
+| Gesamt     |  7,934 |  6,885 | 14,819 |
+
+:::
+
+::: {.column}
+
+ Die Diversität der Angaben über alle Befragten lässt sich wie folgt berechnen:
+
+::: {style="font-size: 50%"}
+
+$$ D = 1 - \left( (\dfrac{1601}{14819})^2 + (\dfrac{7432}{14819})^2 + (\dfrac{4645}{14819})^2 + (\dfrac{1141}{14819})^2 \right) = 0.633 $$
+:::
+
+Würden wir zwei Befragte zufällig ziehen, erhielten wir daher mit einer Wahrscheinlichkeit von 63.3% unterschiedliche Angaben. Die Diversität innerhalb von Männern ist 0.628 und innerhalb von Frauen 0.637.
+
+:::
+
+:::
+
+
+
+
+

@@ -302,3 +302,28 @@ $code-block-font-size: 0.75em;
   margin-left: 0.5em;
   text-align: right !important;
 }
+
+.box {
+height: 55px;
+width: 150px;
+// margin-bottom: 15px;
+border: 0px solid black;
+}
+
+.prior-bg {
+background-color: #60C6FF40;
+}
+
+.likelihood-bg {
+background-color: #FFC40040;
+}
+
+.posterior-bg {
+background-color: #00A80040;
+}
+
+
+.reveal .slide .note {
+  font-size: .8em;
+  color: #607576;
+}
