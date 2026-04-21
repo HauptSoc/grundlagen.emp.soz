@@ -4285,7 +4285,7 @@
     "href": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen",
     "title": "Gute Vergleiche: Vergleiche und Verteilungen",
     "section": "Warum müssen wir vergleichen?",
-    "text": "Warum müssen wir vergleichen?\n\nEmpirische Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit gleichzeitig unter zwei unterschiedlichen Zuständen beobachten.1 Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2).\nWir können kontrafaktische Vergleiche als Gedankenexperimente durchführen. - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - im Vergleich zur reelen Situation? - Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - im Vergleich zur beobachteten Lohnverteilung?\n\nIch bezeichne dieses Problem als “Dr. Strange’s Kopfschmerzpille im Multiverse”."
+    "text": "Warum müssen wir vergleichen?\n\nEmpirische Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit gleichzeitig unter zwei unterschiedlichen Zuständen beobachten.1 Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2).\nWir können kontrafaktische Vergleiche als Gedankenexperimente durchführen.\n\nWie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - im Vergleich zur reelen Situation?\nWie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - im Vergleich zur beobachteten Lohnverteilung?\n\n\nIch bezeichne dieses Problem als “Dr. Strange’s Kopfschmerzpille im Multiverse”."
   },
   {
     "objectID": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen-1",
@@ -4720,5 +4720,103 @@
     "title": "Häufigkeiten",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nAufgebaut wie eine Excel-Tabelle: Die Zeilen sind die Untersuchungseinheiten und die Spalten sind die Eigenschaften. Jede Zelle beinhaltet daher die Ausprägung einer Eigenschaft für eine Untersuchungseinheit.↩︎\nIch sage es nur einmal: Wer Tortendiagramme oder 3D-Diagramme anfertigt, kommt in die Hölle.↩︎"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#zeit-fürs-grobe",
+    "href": "slides/17-VergleichsgegenstaendeII.html#zeit-fürs-grobe",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "",
+    "text": "Im Gegensatz zu stetigen Verteilungen liegen bei diskreten Verteilungen ordinal oder nominal gemessene Ausprägungen vor. Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleich – auch wenn das gerne aus pragmatischen Gründen angenommen wird."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen",
+    "href": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
+    "section": "Diskrete Verteilungen",
+    "text": "Diskrete Verteilungen"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen-1",
+    "href": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen-1",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
+    "section": "Diskrete Verteilungen",
+    "text": "Diskrete Verteilungen\n\n\nIm Gegensatz zu stetigen Verteilungen liegen bei diskreten Verteilungen ordinal oder nominal gemessene Ausprägungen vor. Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleichabständig – auch wenn das gerne aus pragmatischen Gründen angenommen wird."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen-in-der-simulation",
+    "href": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen-in-der-simulation",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Diskrete Verteilungen in der Simulation",
+    "text": "Diskrete Verteilungen in der Simulation"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen-im-richtigen-leben",
+    "href": "slides/17-VergleichsgegenstaendeII.html#diskrete-verteilungen-im-richtigen-leben",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Diskrete Verteilungen im richtigen Leben",
+    "text": "Diskrete Verteilungen im richtigen Leben"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen-.midi-stylefont-size-80",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#warum-müssen-wir-vergleichen-.midi-stylefont-size-80",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Warum müssen wir vergleichen? {.midi style=“font-size: 80%}",
+    "text": "Warum müssen wir vergleichen? {.midi style=“font-size: 80%}\n\nEmpirische Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit gleichzeitig unter zwei unterschiedlichen Zuständen beobachten.1 Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2).\nWir können kontrafaktische Vergleiche als Gedankenexperimente durchführen.\n\nWie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - im Vergleich zur reelen Situation?\nWie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - im Vergleich zur beobachteten Lohnverteilung?\n\n\nIch bezeichne dieses Problem als “Dr. Strange’s Kopfschmerzpille im Multiverse”."
+  },
+  {
+    "objectID": "slides/16-VergleichsgegenstaendeI.html#verteilungs-sandbox",
+    "href": "slides/16-VergleichsgegenstaendeI.html#verteilungs-sandbox",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
+    "section": "Verteilungs Sandbox",
+    "text": "Verteilungs Sandbox"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#reminder-unterschiedliche-messung-von-ausprägungen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#reminder-unterschiedliche-messung-von-ausprägungen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Reminder: Unterschiedliche Messung von Ausprägungen",
+    "text": "Reminder: Unterschiedliche Messung von Ausprägungen\nAus metrischen Ausprägungen lassen sich typischerweise stetige Verteilungen und aus nominalen und ordinalen Ausprägungen diskrete Verteilungen bilden.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFestgelegte Eigenschaft\n\n\n\n\n\n\nSkalenniveau\nSubtyp\nIdentität\nRänge\nAbstände\nNullpunkt\nBeispiel\n\n\nNominal\n\nja\nnein\nnein\nnein\nFamilienstand, Länder\n\n\nOrdinal\n\nja\nja\nnein\nnein\nSchulnoten, Machtpositionen\n\n\nMetrisch\nIntervall\nja\nja\nja\nnein\nPrestige, IQ-Scores\n\n\n\nRatio\nja\nja\nja\nja\nAlter, Arbeitslosigkeitsdauer"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#zeit-fürs-grobe",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#zeit-fürs-grobe",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Zeit fürs Grobe",
+    "text": "Zeit fürs Grobe\n\n\n\n\nDie Abstände der ordinalen Ausprägungen sind nur äußerst selten gleich – auch wenn das gerne aus pragmatischen Gründen angenommen wird."
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#sandbox-stetige-verteilungen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#sandbox-stetige-verteilungen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Sandbox: Stetige Verteilungen",
+    "text": "Sandbox: Stetige Verteilungen"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#diskrete-verteilungen-in-der-simulation",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#diskrete-verteilungen-in-der-simulation",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Diskrete Verteilungen in der Simulation",
+    "text": "Diskrete Verteilungen in der Simulation"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#wie-aus-latenten-stetigen-ausprägungen-diskrete-beobachtete-werte-werden",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#wie-aus-latenten-stetigen-ausprägungen-diskrete-beobachtete-werte-werden",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Wie aus latenten stetigen Ausprägungen diskrete beobachtete Werte werden",
+    "text": "Wie aus latenten stetigen Ausprägungen diskrete beobachtete Werte werden"
+  },
+  {
+    "objectID": "slides/15-Vergleiche_und_Verteilungen.html#sandbox-diskrete-verteilungen",
+    "href": "slides/15-Vergleiche_und_Verteilungen.html#sandbox-diskrete-verteilungen",
+    "title": "Gute Vergleiche: Vergleiche und Verteilungen",
+    "section": "Sandbox: Diskrete Verteilungen",
+    "text": "Sandbox: Diskrete Verteilungen"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html",
+    "href": "slides/17-VergleichsgegenstaendeII.html",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "",
+    "text": "Im Gegensatz zu stetigen Verteilungen liegen bei diskreten Verteilungen ordinal oder nominal gemessene Ausprägungen vor. Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleich – auch wenn das gerne aus pragmatischen Gründen angenommen wird."
   }
 ]

@@ -145,6 +145,7 @@ coord_flip()
 p_group
 ```
 
+
 ## Balken und Dichteverteilungen
 
 <iframe width="100%" height="100%" src="https://019d8bab-fc3c-3183-4e72-e68823568837.share.connect.posit.cloud">

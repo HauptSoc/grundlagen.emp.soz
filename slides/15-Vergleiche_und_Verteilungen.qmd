@@ -6,6 +6,10 @@ css: global.css
 format: 
   revealjs:
     fig-format: svg
+    fig-width: 12
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
     width: 1280
     height: 800
     auto-stretch: false
@@ -49,7 +53,7 @@ include-in-header:
 
 ## Geht das auch einfacher? (Spoiler: Jaein.)
 
-![](https://journals.sagepub.com/cms/10.1177/00031224211004187/asset/875eb054-3d59-43e7-9562-81e4172b1d7c/assets/images/large/10.1177_00031224211004187-fig1.jpg)
+![](images/estimands.jpg)
 
 ## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
@@ -122,17 +126,17 @@ Niemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen p
 
         - In diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft ("Unterschiede in der Wahl extremer Parteien") durch eine andere Eigenschaft ("Verbreitung gruppenfeindliche Folklore") bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden ("Grad der Verstädterung"). Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale **isolieren**.
 
-## Warum müssen wir vergleichen? {.midi}
+## Warum müssen wir vergleichen? {.midi style="font-size: 85%"}
 
 - *Empirische* Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit *gleichzeitig* unter zwei unterschiedlichen Zuständen beobachten.[^3] Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2). 
 
 - Wir können *kontrafaktische* Vergleiche als *Gedankenexperimente* durchführen. 
-        - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - *im Vergleich* zur reelen Situation? 
-        - Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - *im Vergleich* zur beobachteten Lohnverteilung? 
+    - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - *im Vergleich* zur reelen Situation? 
+    - Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - *im Vergleich* zur beobachteten Lohnverteilung? 
 
 [^3]: Ich bezeichne dieses Problem als "Dr. Strange's Kopfschmerzpille im Multiverse".
 
-## Warum müssen wir vergleichen? {.midi}
+## Warum müssen wir vergleichen? {.midi style="font-size: 80%"}
 
 - Wir können beobachtete Verteilungen gegen *erwartete* Verteilungen vergleichen. 
   - Wir erwarten, dass sich die Verteilungen in einer repräsentative Stichprobe *nicht systematisch* von den Verteilungen unterscheiden, die wir in der Population erwarten.
@@ -169,16 +173,52 @@ Niemand verbietet es uns, alles mit allem zu vergleichen. Daher gibt es keinen p
 - Der Vergleich mit diesen Zufallsverteilungen *kann* uns helfen, die Unsicherheit über unsere Ergebnisse zu erfassen. 
 :::
 
-##  Handwerkszeug {.midi}
+## Reminder: Unterschiedliche Messung von Ausprägungen
+
+Aus metrischen Ausprägungen lassen sich typischerweise *stetige* Verteilungen und aus nominalen und ordinalen Ausprägungen *diskrete* Verteilungen bilden. 
+
+::: custom-small
++--------------+-----------+-----------+-------+----------+-------------------------+
+|              |           |   Festgelegte Eigenschaft                              |
++==============+===========+===========+=======+==========+=========================+===============================+
+| Skalenniveau | Subtyp    | Identität | Ränge | Abstände | Nullpunkt               | Beispiel                      |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+| Nominal      |           | ja        | nein  | nein     | nein                    | Familienstand, Länder         |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+| Ordinal      |           | ja        | ja    | nein     | nein                    | Schulnoten, Machtpositionen   |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+| Metrisch     | Intervall | ja        | ja    | ja       | nein                    | Prestige, IQ-Scores           |
++--------------+-----------+-----------+-------+----------+-------------------------+-------------------------------+
+|              | Ratio     | ja        | ja    | ja       | ja                      | Alter, Arbeitslosigkeitsdauer |
++==============+===========+===========+=======+==========+=========================+===============================+
+:::
+
+## Zeit fürs Grobe 
+
+::: {.columns}
+
+::: {.column}
+![](images/nominal_ordinal_binary.png)
+:::
+
+::: {.column}
+Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleich -- auch wenn das gerne aus pragmatischen Gründen angenommen wird.
+:::
+:::
+
+
+##  Wie aus latenten stetigen Ausprägungen diskrete beobachtete Werte werden {.midi style="font-size: 60%"}
+
+<iframe width="100%" height="100%" src="https://019dab17-9041-5311-ca36-f3f4c45d03e5.share.connect.posit.cloud/" ></iframe>
+
+
+
+##  Sandbox: Stetige Verteilungen {.midi}
 
 <iframe width="100%" height="100%" src="https://019d86ab-8f95-cd27-439b-478f5d4f4fe1.share.connect.posit.cloud" ></iframe>
 
 
-## Selber hämmern, nähen & schneiden
+## Sandbox: Diskrete Verteilungen {.midi}
 
-    1.  Maße der zentralen Tendenz: Modus, Median, arithmetisches Mittel
-
-    2.  Maße der Streuung: Varianz, Standardabweichung, Diversität
-
-    3.  Weitere Punkte der Verteilung: Quantile/Perzentile, Schiefe
+<iframe width="100%" height="100%" src="https://019dab63-f84a-c2bf-67c8-dffe4d179050.share.connect.posit.cloud" ></iframe>
 

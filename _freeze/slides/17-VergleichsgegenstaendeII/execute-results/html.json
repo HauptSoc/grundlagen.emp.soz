@@ -1,0 +1,21 @@
+{
+  "hash": "ea141c3e3cabf4cd621f9888b5fd6419",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Gute Vergleiche: Vergleichsgegenstände -- Akt I\"\nslide-level: 2   # <— hier trennt Quarto an \"##\"\nlightbox: true\ncss: global.css\nformat: \n  revealjs:\n    fig-format: svg\n    fig-width: 12\n    fig-asp: 0.618\n    out-width: \"70%\"\n    fig-align: center\n    width: 1280\n    height: 800\n    auto-stretch: false\n    theme: style.scss\n    margin: 0.05\n    slideNumber: true\n    mermaid: \n      theme: neutral\n      look: classic\n      layout: elk\neditor: source\ntbl-cap-location: bottom\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n## Zeit fürs Grobe \n\n![](images/nominal_ordinal_binary.png)\n\n## Diskrete Verteilungen \n\n<iframe width=\"100%\" height=\"100%\" src=\"https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud\" ></iframe>\n\n## Diskrete Verteilungen \n\nIm Gegensatz zu *stetigen* Verteilungen liegen bei *diskreten* Verteilungen ordinal oder nominal gemessene Ausprägungen vor. Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleichabständig -- auch wenn das gerne aus pragmatischen Gründen angenommen wird. \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](17-VergleichsgegenstaendeII_files/figure-revealjs/unnamed-chunk-1-1.svg)\n:::\n:::\n",
+    "supporting": [
+      "17-VergleichsgegenstaendeII_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

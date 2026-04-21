@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d17402779cb860955dfb2638498e4ce5.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1e708164c7ca80090cc744bf22c49a35.css">
   <link rel="stylesheet" href="global.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -163,7 +163,7 @@
 </section>
 <section id="geht-das-auch-einfacher-spoiler-jaein." class="slide level2">
 <h2>Geht das auch einfacher? (Spoiler: Jaein.)</h2>
-<p><a href="https://journals.sagepub.com/cms/10.1177/00031224211004187/asset/875eb054-3d59-43e7-9562-81e4172b1d7c/assets/images/large/10.1177_00031224211004187-fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="https://journals.sagepub.com/cms/10.1177/00031224211004187/asset/875eb054-3d59-43e7-9562-81e4172b1d7c/assets/images/large/10.1177_00031224211004187-fig1.jpg"></a></p>
+<p><a href="images/estimands.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images/estimands.jpg"></a></p>
 </section>
 <section id="erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten" class="slide level2 midi">
 <h2>Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten</h2>
@@ -197,7 +197,7 @@
 <section id="von-der-hypothese-zur-datenanalyse" class="slide level2 midi">
 <h2>Von der Hypothese zur Datenanalyse</h2>
 <p>Jedes Element von Hypothesen müssen wir in der Datenanalyse in nachvollziehbarer Weise auf beobachtbare Informationen und angemessene Verfahren zurückführen.</p>
-<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell" data-reveal="true" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
@@ -245,14 +245,18 @@ D -- beruht auf --&gt; V
 <pre><code>- In diesem Fall möchten wir wissen, wie stark die Unterschiede in der Verteilung einer Eigenschaft ("Unterschiede in der Wahl extremer Parteien") durch eine andere Eigenschaft ("Verbreitung gruppenfeindliche Folklore") bedingt werden und wie stark sie durch andere Eigenschaften bedingt werden, die sich sonst noch zwischen den Gruppen unterscheiden ("Grad der Verstädterung"). Wir müssen daher den Einfluss des Gruppenmerkmals von den Einflüssen anderer Merkmale **isolieren**.</code></pre></li>
 </ol>
 </section>
-<section id="warum-müssen-wir-vergleichen" class="slide level2 midi">
+<section id="warum-müssen-wir-vergleichen" class="slide level2 midi" style="font-size: 85%">
 <h2>Warum müssen wir vergleichen?</h2>
 <ul>
 <li><p><em>Empirische</em> Vergleiche können wir nur mit beobachteten Daten durchführen. Wir können nicht eine Untersuchungseinheit <em>gleichzeitig</em> unter zwei unterschiedlichen Zuständen beobachten.<sup>1</sup> Daher versuchen wir Untersuchungseinheiten zu vergleichen, die hinreichend (oder nahezu perfekt) vergleichbar sind, sich aber in der Eigenschaft unterscheiden, für deren Wirkung wir uns interessieren. Das geht nur auf Gruppenebene (also mindestens N = 2).</p></li>
-<li><p>Wir können <em>kontrafaktische</em> Vergleiche als <em>Gedankenexperimente</em> durchführen. - Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - <em>im Vergleich</em> zur reelen Situation? - Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - <em>im Vergleich</em> zur beobachteten Lohnverteilung?</p></li>
+<li><p>Wir können <em>kontrafaktische</em> Vergleiche als <em>Gedankenexperimente</em> durchführen.</p>
+<ul>
+<li>Wie würden sich Frauen in der Öffentlichkeit bewegen, wenn alle Männer abwesend wären - <em>im Vergleich</em> zur reelen Situation?</li>
+<li>Wie sähe die Lohnverteilung in Deutschland aus, wenn alle Personen wie im öffentlichen Dienst bezahlt würden - <em>im Vergleich</em> zur beobachteten Lohnverteilung?</li>
+</ul></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>Ich bezeichne dieses Problem als “Dr.&nbsp;Strange’s Kopfschmerzpille im Multiverse”.</p></li></ol></aside></section>
-<section id="warum-müssen-wir-vergleichen-1" class="slide level2 midi">
+<section id="warum-müssen-wir-vergleichen-1" class="slide level2 midi" style="font-size: 80%">
 <h2>Warum müssen wir vergleichen?</h2>
 <ul>
 <li>Wir können beobachtete Verteilungen gegen <em>erwartete</em> Verteilungen vergleichen.
@@ -321,18 +325,103 @@ D -- beruht auf --&gt; V
 </div>
 </div>
 </section>
-<section id="handwerkszeug" class="slide level2 midi">
-<h2>Handwerkszeug</h2>
+<section id="reminder-unterschiedliche-messung-von-ausprägungen" class="slide level2">
+<h2>Reminder: Unterschiedliche Messung von Ausprägungen</h2>
+<p>Aus metrischen Ausprägungen lassen sich typischerweise <em>stetige</em> Verteilungen und aus nominalen und ordinalen Ausprägungen <em>diskrete</em> Verteilungen bilden.</p>
+<div class="custom-small">
+<table style="width:96%;">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 21%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th colspan="4">Festgelegte Eigenschaft</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+</tbody><tfoot>
+<tr class="odd">
+<td>Skalenniveau</td>
+<td>Subtyp</td>
+<td>Identität</td>
+<td>Ränge</td>
+<td>Abstände</td>
+<td>Nullpunkt</td>
+<td>Beispiel</td>
+</tr>
+<tr class="even">
+<td>Nominal</td>
+<td></td>
+<td>ja</td>
+<td>nein</td>
+<td>nein</td>
+<td>nein</td>
+<td>Familienstand, Länder</td>
+</tr>
+<tr class="odd">
+<td>Ordinal</td>
+<td></td>
+<td>ja</td>
+<td>ja</td>
+<td>nein</td>
+<td>nein</td>
+<td>Schulnoten, Machtpositionen</td>
+</tr>
+<tr class="even">
+<td>Metrisch</td>
+<td>Intervall</td>
+<td>ja</td>
+<td>ja</td>
+<td>ja</td>
+<td>nein</td>
+<td>Prestige, IQ-Scores</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Ratio</td>
+<td>ja</td>
+<td>ja</td>
+<td>ja</td>
+<td>ja</td>
+<td>Alter, Arbeitslosigkeitsdauer</td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</section>
+<section id="zeit-fürs-grobe" class="slide level2">
+<h2>Zeit fürs Grobe</h2>
+<div class="columns">
+<div class="column">
+<p><a href="images/nominal_ordinal_binary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="images/nominal_ordinal_binary.png"></a></p>
+</div><div class="column">
+<p>Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleich – auch wenn das gerne aus pragmatischen Gründen angenommen wird.</p>
+</div></div>
+</section>
+<section id="wie-aus-latenten-stetigen-ausprägungen-diskrete-beobachtete-werte-werden" class="slide level2 midi" style="font-size: 60%">
+<h2>Wie aus latenten stetigen Ausprägungen diskrete beobachtete Werte werden</h2>
+<iframe width="100%" height="100%" src="https://019dab17-9041-5311-ca36-f3f4c45d03e5.share.connect.posit.cloud/">
+</iframe>
+</section>
+<section id="sandbox-stetige-verteilungen" class="slide level2 midi">
+<h2>Sandbox: Stetige Verteilungen</h2>
 <iframe width="100%" height="100%" src="https://019d86ab-8f95-cd27-439b-478f5d4f4fe1.share.connect.posit.cloud">
 </iframe>
 </section>
-<section id="selber-hämmern-nähen-schneiden" class="slide level2">
-<h2>Selber hämmern, nähen &amp; schneiden</h2>
-<pre><code>1.  Maße der zentralen Tendenz: Modus, Median, arithmetisches Mittel
-
-2.  Maße der Streuung: Varianz, Standardabweichung, Diversität
-
-3.  Weitere Punkte der Verteilung: Quantile/Perzentile, Schiefe</code></pre>
+<section id="sandbox-diskrete-verteilungen" class="slide level2 midi">
+<h2>Sandbox: Diskrete Verteilungen</h2>
+<iframe width="100%" height="100%" src="https://019dab63-f84a-c2bf-67c8-dffe4d179050.share.connect.posit.cloud">
+</iframe>
 
 
 </section>
