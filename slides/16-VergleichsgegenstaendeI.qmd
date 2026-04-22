@@ -30,7 +30,22 @@ execute:
 
 ## Worauf hin wir vergleichen, ist bedeutsam!
 
-![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
+![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png){width=80%}
+
+## Die Daten für die Vorlesung: FReDA
+
+„FReDA - Das familiendemografische Panel“ ist eine wissenschaftliche Studie, die sich mit Beziehungen und Familienleben in Deutschland befasst. Dazu werden bundesweit mehrere tausend zufällig ausgewählte Menschen im Alter von 18 bis 49 Jahren sowie ihre Partnerinnen und Partner befragt. Die Daten werden wissenschaftlich ausgewertet und ermöglichen aktuelle Analysen zu Familie und Bevölkerung in Deutschland.
+
+FReDA befasst sich mit der individuellen Lebenssituation der Menschen: mit dem Leben als Single, in Partnerschaften oder in Familien mit Kindern. Im Zentrum stehen die Themen Beziehung und Familienleben. Die Studie erforscht, wie die Menschen in Deutschland leben, wie sie ihren Alltag in der Partnerschaft organisieren und wie zufrieden sie mit ihrem Leben sind.
+
+## Beispielhafte Fragen im Verlauf der Vorlesung
+
+1. Wie unterscheiden sich Gruppen, wie sie sich kennenlernen (Partnerschaften, Freundschaften)? 
+2. Gibt es Unterschiede, wie es den Menschen in sozialen Beziehungen geht und wie sie sich verhalten? 
+    a) Zufriedenheit
+    b) Sexualität 
+    c) Kinderwunsch und -realität 
+    d) Beziehungsalltag 
 
 ## Beschreiben von Verteilungen (=deskriptive Statistik)
 
@@ -39,6 +54,10 @@ Nachdem wir operationalisiert und Daten für die theoretischen Konstrukte erhobe
 Diese Datenmatrix ist meist in ihrer Gesamtheit uninformativ, denn einzelne Werte sagen uns nichts über die **Typik** von Eigenschaften oder über **Zusammenhänge** zwischen Eigenschaften etwas aus.
 
 Um Daten gut zu beschreiben, müssen wir sie sinnvoll zusammenfassen (= aggregieren). Dies ist Aufgabe der *deskriptiven Statistik*.
+
+## Die Daten-Spielwiese (ALLBUS 2018)
+
+<iframe width="100%" height="100%" src="https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud" ></iframe>
 
 ## Ein Schritt zurück: Was heißt es "Daten" sinnvoll zu aggregieren? {.midi}
 
@@ -52,10 +71,9 @@ Diese Häufigkeiten werden auf der Y-Achse (der vertikalen Dimension) grafisch a
 library(haven)
 library(dplyr)
 library(ggplot2)
-library(haven)
 library(forcats)
 
-freda <- read_dta("C:/GIT/Grundlagen EmpSoz/slides/data/fredacamp.dta")
+freda <- read_dta("./data/fredacamp.dta")
 
 labs <- attr(freda$pa60, "labels")
 names(labs)[labs == 9] <- "Social Media"
