@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>Methoden empirischer Sozialforschung – Gute Vergleiche: Vergleichsgegenstände – Akt I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -140,7 +140,7 @@
 <h2>Worauf hin wir vergleichen, ist bedeutsam!</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="./images/sprachkompetenz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"><img data-src="./images/sprachkompetenz.png" style="width:80.0%" alt="Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"></a></p>
+<p><a href="./images/sprachkompetenz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"><img data-src="./images/sprachkompetenz.png" alt="Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"></a></p>
 <figcaption>Sprachkompetenz und Bildungshintergrund der Eltern <a href="https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html">(Link zur Studie)</a></figcaption>
 </figure>
 </div>
@@ -168,11 +168,6 @@
 <p>Nachdem wir operationalisiert und Daten für die theoretischen Konstrukte erhoben haben, liegen die Daten nun in einer Datenmatrix vor.</p>
 <p>Diese Datenmatrix ist meist in ihrer Gesamtheit uninformativ, denn einzelne Werte sagen uns nichts über die <strong>Typik</strong> von Eigenschaften oder über <strong>Zusammenhänge</strong> zwischen Eigenschaften etwas aus.</p>
 <p>Um Daten gut zu beschreiben, müssen wir sie sinnvoll zusammenfassen (= aggregieren). Dies ist Aufgabe der <em>deskriptiven Statistik</em>.</p>
-</section>
-<section id="die-daten-spielwiese-allbus-2018" class="slide level2">
-<h2>Die Daten-Spielwiese (ALLBUS 2018)</h2>
-<iframe width="100%" height="100%" src="https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud">
-</iframe>
 </section>
 <section id="ein-schritt-zurück-was-heißt-es-daten-sinnvoll-zu-aggregieren" class="slide level2 midi">
 <h2>Ein Schritt zurück: Was heißt es “Daten” sinnvoll zu aggregieren?</h2>
@@ -473,7 +468,8 @@ Single, Teilzeit |      5.29      15.78 |      7.06
 \begin{array}{l l}
 y_{\frac{n+1}{2}} \quad &amp; \text{bei ungerader Anzahl}\\[1em]
 \frac{y_\frac{n}{2} + y_{\frac{n}{2}+1}}{2} \quad &amp; \text{bei gerader Anzahl}\\
-\end{array} \right.\]</span></p>
+\end{array} \right.
+\]</span></p>
 <p><span class="math inline">\(n\)</span> bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet <span class="math inline">\(y_\frac{10}{2} = y_5\)</span> den <strong>Wert</strong> der fünften Beobachtung innerhalb der nach den <em>Y-Werten geordneten Verteilung</em>. Sie berechnen daher erst die <strong>Stelle</strong>, wo der Median in der Verteilung liegt und “berechnen” dann, den <strong>Wert</strong>, den der Median an dieser Stelle hat.</p>
 </div></div>
 </section>
@@ -525,9 +521,25 @@ y_{\frac{n+1}{2}} \quad &amp; \text{bei ungerader Anzahl}\\[1em]
 <p><span class="math display">\[   \begin{align}
 \bar{y} &amp;= \dfrac{\sum y_i}{N} \nonumber \\
 &amp;= \frac{ 160 + 165 + 165 \dots + 187}{10} = 172,5 \nonumber
-\end{align} \]</span></p>
+\end{align}
+\]</span></p>
 <p>Im Kern ist das arithmetische Mittel ein “Balance”-Wert. Die Summe aller absoluten Differenzen zum Mittelwert unterhalb und oberhalb des arithmethischen Mittels sind identisch.</p>
 </div></div>
+</section>
+<section id="das-arithmetische-mittel-und-gewichtete-werte" class="slide level2 midi">
+<h2>Das arithmetische Mittel und gewichtete Werte</h2>
+<p>Eine alternative Darstellung der Berechnung des Mittelwerts ist auch:</p>
+<p><span class="math display">\[
+\bar{y} = \sum P(y_i) \cdot y_i
+\]</span></p>
+<p>Er ist gleich der Summe aller Werte, <em>gewichtet</em> mit der Häufigkeit ihres Auftretens in der Stichprobe.</p>
+<p>Das hat sehr praktische Implikationen. U.a. können wir dadurch den gesamten Mittelwert nach einzelnen Gruppen zerlegen. Im Fall von einer binären Variable X:</p>
+<p><span class="math display">\[
+\begin{align}
+\bar{y} &amp;=  (\bar{y} | X = 0) \cdot P(X = 0) + (\bar{y} | X = 1) \cdot P(X = 1) \\
+        &amp;=  \left( \sum P(y_i) \cdot y_i  | X = 0  \right) \cdot P(X = 0) +  \left( \sum P(y_i) \cdot y_i  | X = 1 \right) \cdot P(X = 1)
+\end{align}
+\]</span></p>
 </section>
 <section id="was-ist-das-typische-alter-des-ersten-geschlechtsverkehrs" class="slide level2 midi" style="font-size: 60%">
 <h2>Was ist das “typische” Alter des ersten Geschlechtsverkehrs?</h2>

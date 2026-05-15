@@ -30,7 +30,7 @@ execute:
 
 ## Worauf hin wir vergleichen, ist bedeutsam!
 
-![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png){width=80%}
+![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
 
 ## Die Daten für die Vorlesung: FReDA
 
@@ -55,10 +55,6 @@ Diese Datenmatrix ist meist in ihrer Gesamtheit uninformativ, denn einzelne Wert
 
 Um Daten gut zu beschreiben, müssen wir sie sinnvoll zusammenfassen (= aggregieren). Dies ist Aufgabe der *deskriptiven Statistik*.
 
-## Die Daten-Spielwiese (ALLBUS 2018)
-
-<iframe width="100%" height="100%" src="https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud" ></iframe>
-
 ## Ein Schritt zurück: Was heißt es "Daten" sinnvoll zu aggregieren? {.midi}
 
 Eine Verteilung der Werte einer Eigenschaft $Y$ gibt an, wie *häufig* diese Werte innerhalb einer (analytischen) Stichprobe vorkommen. Diese Häufigkeit kann in unterschiedlicher Weise angegeben werden:
@@ -71,6 +67,7 @@ Diese Häufigkeiten werden auf der Y-Achse (der vertikalen Dimension) grafisch a
 library(haven)
 library(dplyr)
 library(ggplot2)
+library(haven)
 library(forcats)
 
 freda <- read_dta("./data/fredacamp.dta")
@@ -310,7 +307,8 @@ $$\tilde{y} = \left\{
 \begin{array}{l l}
  y_{\frac{n+1}{2}} \quad & \text{bei ungerader Anzahl}\\[1em]
  \frac{y_\frac{n}{2} + y_{\frac{n}{2}+1}}{2} \quad & \text{bei gerader Anzahl}\\
- \end{array} \right.$$
+ \end{array} \right.
+ $$
 
 $n$ bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet $y_\frac{10}{2} = y_5$ den **Wert** der fünften Beobachtung innerhalb der nach den *Y-Werten geordneten Verteilung*. Sie berechnen daher erst die **Stelle**, wo der Median in der Verteilung liegt und "berechnen" dann, den **Wert**, den der Median an dieser Stelle hat. 
 
@@ -342,14 +340,32 @@ Der Mittelwert ist das stärkste "Arbeitspferd" der Datenanalyse. Er ist das, wa
 $$   \begin{align}
 \bar{y} &= \dfrac{\sum y_i}{N} \nonumber \\
 &= \frac{ 160 + 165 + 165 \dots + 187}{10} = 172,5 \nonumber
-\end{align} $$ 
+\end{align} 
+$$ 
 
 Im Kern ist das arithmetische Mittel ein "Balance"-Wert. Die Summe aller absoluten Differenzen zum Mittelwert unterhalb und oberhalb des arithmethischen Mittels sind identisch. 
 
 ::::
 :::::
 
+## Das arithmetische Mittel und gewichtete Werte  {.midi}
 
+Eine alternative Darstellung der Berechnung des Mittelwerts ist auch: 
+
+$$ 
+\bar{y} = \sum P(y_i) \cdot y_i 
+$$ 
+
+Er ist gleich der Summe aller Werte, *gewichtet* mit der Häufigkeit ihres Auftretens in der Stichprobe. 
+
+Das hat sehr praktische Implikationen. U.a. können wir dadurch den gesamten Mittelwert nach einzelnen Gruppen zerlegen. Im Fall von einer binären Variable X: 
+
+$$ 
+\begin{align}
+\bar{y} &=  (\bar{y} | X = 0) \cdot P(X = 0) + (\bar{y} | X = 1) \cdot P(X = 1) \\
+        &=  \left( \sum P(y_i) \cdot y_i  | X = 0  \right) \cdot P(X = 0) +  \left( \sum P(y_i) \cdot y_i  | X = 1 \right) \cdot P(X = 1)
+\end{align}
+$$
 
 ## Was ist das "typische" Alter des ersten Geschlechtsverkehrs? {.midi style="font-size: 60%"}
 
@@ -503,6 +519,7 @@ hist_sex1i3_by_sex
 ```
 
 
+
 ## Typische Unterschiedlichkeit: Notation & Begriffe {.midi style="font-size: 80%"}
 
 | Notation  	| Bezeichnung        	| Bedeutung                                                                                                                                        	|
@@ -570,6 +587,8 @@ Da $\sqrt{66,25} \approx 8,14$ ist die typische Abweichung der Körpergrößen z
 
 <iframe width="100%" height="100%" src="https://019d86ab-8f95-cd27-439b-478f5d4f4fe1.share.connect.posit.cloud" ></iframe>
 
+
+
 ## Diversität {.midi}
 
 In einigen Fällen ist eine Berechnung eines Mittelwerts nicht sinnvoll.[^1] Dennoch möchten wir dann eine Möglichkeit haben, die Unterschiedlichkeit der verteilten Werte auszudrücken. Eine Möglichkeit, diese Unterschiedlichkeit zu messen, besteht in Diversitäts-Maßen, wie dem Simpson Diversitäts Index:  
@@ -613,8 +632,5 @@ Würden wir zwei Befragte zufällig ziehen, erhielten wir daher mit einer Wahrsc
 :::
 
 :::
-
-
-
 
 

@@ -4565,7 +4565,7 @@
     "href": "slides/16-VergleichsgegenstaendeI.html#median",
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
     "section": "Median",
-    "text": "Median\n\n\n\n\n\nGröße in cm\n\n\n\n\n160\n\n\n165\n\n\n165\n\n\n165\n\n\n173\n\n\n174\n\n\n176\n\n\n180\n\n\n180\n\n\n187\n\n\n\n\nDer Median, ist der Wert, der 50% der oberen und 50% der unteren Werte eine Verteilung trennt. Der Median \\(\\tilde{y}\\) von n nach der Größe geordneten Beobachtungen berechnet sich durch:\n\\[\\tilde{y} = \\left\\{  \n\\begin{array}{l l}\ny_{\\frac{n+1}{2}} \\quad & \\text{bei ungerader Anzahl}\\\\[1em]\n\\frac{y_\\frac{n}{2} + y_{\\frac{n}{2}+1}}{2} \\quad & \\text{bei gerader Anzahl}\\\\\n\\end{array} \\right.\\]\n\\(n\\) bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet \\(y_\\frac{10}{2} = y_5\\) den Wert der fünften Beobachtung innerhalb der nach den Y-Werten geordneten Verteilung. Sie berechnen daher erst die Stelle, wo der Median in der Verteilung liegt und “berechnen” dann, den Wert, den der Median an dieser Stelle hat."
+    "text": "Median\n\n\n\n\n\nGröße in cm\n\n\n\n\n160\n\n\n165\n\n\n165\n\n\n165\n\n\n173\n\n\n174\n\n\n176\n\n\n180\n\n\n180\n\n\n187\n\n\n\n\nDer Median, ist der Wert, der 50% der oberen und 50% der unteren Werte eine Verteilung trennt. Der Median \\(\\tilde{y}\\) von n nach der Größe geordneten Beobachtungen berechnet sich durch:\n\\[\\tilde{y} = \\left\\{  \n\\begin{array}{l l}\ny_{\\frac{n+1}{2}} \\quad & \\text{bei ungerader Anzahl}\\\\[1em]\n\\frac{y_\\frac{n}{2} + y_{\\frac{n}{2}+1}}{2} \\quad & \\text{bei gerader Anzahl}\\\\\n\\end{array} \\right.\n\\]\n\\(n\\) bezeichnet die Anzahl der Beobachtungen. Bei 10 Beobachtungen bezeichnet \\(y_\\frac{10}{2} = y_5\\) den Wert der fünften Beobachtung innerhalb der nach den Y-Werten geordneten Verteilung. Sie berechnen daher erst die Stelle, wo der Median in der Verteilung liegt und “berechnen” dann, den Wert, den der Median an dieser Stelle hat."
   },
   {
     "objectID": "slides/16-VergleichsgegenstaendeI.html#unterschiede-der-gewünschten-arbeitsstunden-nach-geschlecht",
@@ -4593,7 +4593,7 @@
     "href": "slides/16-VergleichsgegenstaendeI.html#aritmethisches-mittel-mittelwert",
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
     "section": "Aritmethisches Mittel / Mittelwert",
-    "text": "Aritmethisches Mittel / Mittelwert\n\n\n\n\n\nGröße in cm\n\n\n\n\n160\n\n\n165\n\n\n165\n\n\n165\n\n\n173\n\n\n174\n\n\n176\n\n\n180\n\n\n180\n\n\n187\n\n\n\n\nDer Mittelwert ist das stärkste “Arbeitspferd” der Datenanalyse. Er ist das, was umgangssprachlich als “Durchschnitt” bezeichnet wird und berechnet sich durch:\n\\[   \\begin{align}\n\\bar{y} &= \\dfrac{\\sum y_i}{N} \\nonumber \\\\\n&= \\frac{ 160 + 165 + 165 \\dots + 187}{10} = 172,5 \\nonumber\n\\end{align} \\]\nIm Kern ist das arithmetische Mittel ein “Balance”-Wert. Die Summe aller absoluten Differenzen zum Mittelwert unterhalb und oberhalb des arithmethischen Mittels sind identisch."
+    "text": "Aritmethisches Mittel / Mittelwert\n\n\n\n\n\nGröße in cm\n\n\n\n\n160\n\n\n165\n\n\n165\n\n\n165\n\n\n173\n\n\n174\n\n\n176\n\n\n180\n\n\n180\n\n\n187\n\n\n\n\nDer Mittelwert ist das stärkste “Arbeitspferd” der Datenanalyse. Er ist das, was umgangssprachlich als “Durchschnitt” bezeichnet wird und berechnet sich durch:\n\\[   \\begin{align}\n\\bar{y} &= \\dfrac{\\sum y_i}{N} \\nonumber \\\\\n&= \\frac{ 160 + 165 + 165 \\dots + 187}{10} = 172,5 \\nonumber\n\\end{align}\n\\]\nIm Kern ist das arithmetische Mittel ein “Balance”-Wert. Die Summe aller absoluten Differenzen zum Mittelwert unterhalb und oberhalb des arithmethischen Mittels sind identisch."
   },
   {
     "objectID": "slides/16-VergleichsgegenstaendeI.html#was-ist-das-typische-alter-des-ersten-geschlechtsverkehrs",
@@ -4839,5 +4839,12 @@
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
     "section": "Die Daten-Spielwiese (ALLBUS 2018)",
     "text": "Die Daten-Spielwiese (ALLBUS 2018)"
+  },
+  {
+    "objectID": "slides/16-VergleichsgegenstaendeI.html#das-arithmetische-mittel-und-gewichtete-werte",
+    "href": "slides/16-VergleichsgegenstaendeI.html#das-arithmetische-mittel-und-gewichtete-werte",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
+    "section": "Das arithmetische Mittel und gewichtete Werte",
+    "text": "Das arithmetische Mittel und gewichtete Werte\nEine alternative Darstellung der Berechnung des Mittelwerts ist auch:\n\\[\n\\bar{y} = \\sum P(y_i) \\cdot y_i\n\\]\nEr ist gleich der Summe aller Werte, gewichtet mit der Häufigkeit ihres Auftretens in der Stichprobe.\nDas hat sehr praktische Implikationen. U.a. können wir dadurch den gesamten Mittelwert nach einzelnen Gruppen zerlegen. Im Fall von einer binären Variable X:\n\\[\n\\begin{align}\n\\bar{y} &=  (\\bar{y} | X = 0) \\cdot P(X = 0) + (\\bar{y} | X = 1) \\cdot P(X = 1) \\\\\n        &=  \\left( \\sum P(y_i) \\cdot y_i  | X = 0  \\right) \\cdot P(X = 0) +  \\left( \\sum P(y_i) \\cdot y_i  | X = 1 \\right) \\cdot P(X = 1)\n\\end{align}\n\\]"
   }
 ]

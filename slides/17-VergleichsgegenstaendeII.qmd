@@ -28,31 +28,6 @@ execute:
   warning: false
 ---
 
-## Zeit fürs Grobe 
-
-
-::: {.columns}
-
-::: {.column}
-![](images/nominal_ordinal_binary.png)
-:::
-
-::: {.column}
-Im Gegensatz zu *stetigen* Verteilungen liegen bei *diskreten* Verteilungen ordinal oder nominal gemessene Ausprägungen vor. Die Abstände der ordinalen Ausprägungen sind nur äußerst selten gleich -- auch wenn das gerne aus pragmatischen Gründen angenommen wird.
-:::
-
-:::
-
-
-## Diskrete Verteilungen in der Simulation
-
-<iframe width="100%" height="100%" src="https://019dab63-f84a-c2bf-67c8-dffe4d179050.share.connect.posit.cloud" ></iframe>
-
-## Diskrete Verteilungen im richtigen Leben
-
-<iframe width="100%" height="100%" src="https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud" ></iframe>
-
- 
 
 
 
