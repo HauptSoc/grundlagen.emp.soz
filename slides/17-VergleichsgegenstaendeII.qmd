@@ -6,15 +6,15 @@ css: global.css
 format: 
   revealjs:
     fig-format: svg
-    fig-width: 12
+    fig-width: 16
     fig-asp: 0.618
     out-width: "70%"
     fig-align: center
-    width: 1280
-    height: 800
+    width: 1400
+    height: 1050
     auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
     mermaid: 
       theme: neutral
@@ -29,6 +29,667 @@ execute:
 ---
 
 
+```{r}
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(haven)
+library(forcats)
+library(tidyr)
+library(knitr)
 
+freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
+```
+
+# Differenzen entlang von Verteilungen
+
+## Jenseits des Mittelwerts
+
+- Manchmal liegen die "interessanten Unterschiede" zwischen Gruppen nicht in der Mitte der Verteilungen sondern ganz oben oder unten. 
+
+- Mittelwerte oder Varianzen können diese Unterschiedlichkeit nur sehr begrenzt erfassen. 
+
+- Es lohnt sich daher, verschiedene Stellen der Verteilung zu analysieren. Dazu können wir Verteilungen in beliebig viele, gleich große[^1] Teile zerlegen. 
+
+[^1]: Gleich groß bedeutet hier, eine gleiche Anzahl von Beobachtungen -- aber nicht gleich viel "Fläche" in einem Koordinatensystem.
+
+## Begrifflichkeiten {.midi}
+
+
+::: {.columns}
+::: {.column}
+| Bezeichnung       	| Anzahl gleich großer Teile 	| Abkürzung       	|
+|-------------------	|----------------------------	|-----------------	|
+| Quartil           	| 4                          	| $Q1 \dots Q4$   	|
+| Dezil             	| 10                         	| $D1 \dots D10$  	|
+| Quantil/Perzentil 	| 100                        	| $P1  \dots P99$ 	|
+
+:::
+
+::: {.column}
+
+- Quartile und Perzentile können synonym benutzt werden. Der Wertebereich von Quantilen liegt zwischen 0.01 und 0.99, während er bei Perzentilen zwischen 1 und 99 liegt. 
+
+- Das 50. Perzentil ist der Median. 
+
+- Mit Quartilen und Dezilen werden typischerweise die Abschnitte einer Verteilung bezeichnet. 
+
+- Quantile und Perzentile bezeichnen aber immer die Grenze eines Abschnitts. Es ist daher der Wert einer Verteilung, der einen neuen Abschnitt nach oben hin definiert. 
+
+:::
+:::
+
+
+## Quartile und Boxplots 
+
+```{r}
+library(ggplot2)
+library(patchwork)
+
+x <- seq(-4, 4, length.out = 1000)
+df <- data.frame(x = x, y = dnorm(x))
+
+q1 <- qnorm(0.25)
+q2 <- qnorm(0.50)
+q3 <- qnorm(0.75)
+
+area_df <- function(lo, hi, n = 200) {
+  xs <- seq(lo, hi, length.out = n)
+  data.frame(x = xs, y = dnorm(xs))
+}
+
+colors <- c("#d0e8f5", "#7bbcde", "#2171b5", "#084594")
+
+p_quartile <- ggplot(df, aes(x, y)) +
+  geom_area(data = area_df(-4, q1),  aes(x, y), fill = colors[1], alpha = 0.9) +
+  geom_area(data = area_df(q1,  q2), aes(x, y), fill = colors[2], alpha = 0.9) +
+  geom_area(data = area_df(q2,  q3), aes(x, y), fill = colors[3], alpha = 0.9) +
+  geom_area(data = area_df(q3,   4), aes(x, y), fill = colors[4], alpha = 0.9) +
+  geom_line(linewidth = 0.8) +
+  geom_vline(xintercept = c(q1, q2, q3), linetype = "dashed", linewidth = 0.6, color = "grey30") +
+  annotate("text", x = c((-2+q1)/2, (q1+q2)/2, (q2+q3)/2, (q3+2)/2),
+           y = 0.02, label = c("1. Quartil", "2. Quartil", "3. Quartil", "4. Quartil"),
+           size = 4.5, color = "white", fontface = "bold") +
+  # Labels links neben die Linie (hjust = 1, leicht nach links versetzt)
+  annotate("text", x = c(q1, q2, q3) - 0.08, y = 0.42,
+           label = c("P25", "P50 (=Median)", "P75"),
+           size = 4.2, color = "grey20", vjust = 1, hjust = 1) +
+  scale_x_continuous(limits = c(-4, 4), breaks = seq(-4, 4, by = 1)) +
+  scale_y_continuous(limits = c(0, 0.45), breaks = seq(0, 0.4, by = 0.1)) +
+  labs(title = " ", x = NULL, y = "Dichte") +
+  theme_classic()
+
+# Boxplot
+set.seed(42)
+sample_data <- data.frame(y = rnorm(500), x = 0)
+
+bxp_stats <- boxplot.stats(sample_data$y)$stats
+iqr_lo <- bxp_stats[2]; iqr_hi <- bxp_stats[4]
+med    <- bxp_stats[3]
+wlo    <- bxp_stats[1]; whi    <- bxp_stats[5]
+
+p_boxplot <- ggplot(sample_data, aes(x = factor(0), y = y)) +
+  annotate("rect", xmin = 0.6, xmax = 1.4, ymin = iqr_lo, ymax = med,
+           fill = colors[2], color = "grey30", linewidth = 0.5) +
+  annotate("rect", xmin = 0.6, xmax = 1.4, ymin = med, ymax = iqr_hi,
+           fill = colors[3], color = "grey30", linewidth = 0.5) +
+  annotate("segment", x = 1, xend = 1, y = wlo, yend = iqr_lo,
+           linewidth = 0.7, color = "grey30") +
+  annotate("segment", x = 1, xend = 1, y = iqr_hi, yend = whi,
+           linewidth = 0.7, color = "grey30") +
+  annotate("segment", x = 0.85, xend = 1.15, y = wlo, yend = wlo,
+           linewidth = 0.7, color = "grey30") +
+  annotate("segment", x = 0.85, xend = 1.15, y = whi, yend = whi,
+           linewidth = 0.7, color = "grey30") +
+  annotate("segment", x = 0.6, xend = 1.4, y = med, yend = med,
+           linewidth = 1.1, color = "white") +
+  geom_jitter(data = subset(sample_data, y < wlo | y > whi),
+              aes(x = factor(0), y = y), width = 0.05, size = 1.5,
+              color = "grey40", alpha = 0.7) +
+  # Q-Labels rechts
+  annotate("text", x = 1.5, y = c(iqr_lo, med, iqr_hi),
+           label = c("P25", "P50", "P75"),
+           hjust = 0, size = 4.5, color = "grey20") +
+  annotate("text", x = 1.5, y = c(wlo, whi),
+           label = c("Unterer Whisker\n(Q1 − 1.5×IQR)", "Oberer Whisker\n(Q3 + 1.5×IQR)"),
+           hjust = 0, size = 3.9, color = "grey40") +
+  # geschweifte Klammer via viele Segmente (simuliert mit geom_curve + Hilfspunkten)
+  # linke Seite: Klammer von iqr_lo bis iqr_hi bei x ~ 0.3
+  annotate("segment", x = 0.42, xend = 0.38, y = iqr_lo, yend = iqr_lo,
+           color = "grey30", linewidth = 0.5) +
+  annotate("segment", x = 0.42, xend = 0.38, y = iqr_hi, yend = iqr_hi,
+           color = "grey30", linewidth = 0.5) +
+  annotate("segment", x = 0.38, xend = 0.38, y = iqr_lo, yend = (iqr_lo + med) / 2,
+           color = "grey30", linewidth = 0.5) +
+  annotate("segment", x = 0.38, xend = 0.38, y = iqr_hi, yend = (iqr_hi + med) / 2,
+           color = "grey30", linewidth = 0.5) +
+  annotate("curve", x = 0.38, xend = 0.34, y = (iqr_lo + med) / 2, yend = med,
+           curvature = 0.4, color = "grey30", linewidth = 0.5) +
+  annotate("curve", x = 0.38, xend = 0.34, y = (iqr_hi + med) / 2, yend = med,
+           curvature = -0.4, color = "grey30", linewidth = 0.5) +
+  # IQR Label bei x = 0
+  annotate("text", x = 0.28, y = med,
+           label = "IQR\n(P25 – P75)",
+           hjust = 1, size = 4.5, color = "grey20", lineheight = 0.9) +
+  scale_x_discrete(labels = NULL) +
+  scale_y_continuous(limits = c(-4, 4), breaks = seq(-4, 4, by = 1)) +
+  labs(title = "Boxplot", x = NULL, y = "x") +
+  coord_flip() +
+  theme_classic() +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
+
+p_quartile / p_boxplot + plot_layout(heights = c(2, 1))
+
+
+
+```
+
+
+## Dezile und Perzentile
+```{r}
+library(ggplot2)
+library(patchwork)
+
+x <- seq(-4, 4, length.out = 1000)
+df <- data.frame(x = x, y = dnorm(x))
+
+# Dezile (10 Teile, 9 Schnitte)
+dezil_cuts <- qnorm(seq(0.1, 0.9, by = 0.1))
+dezil_labels <- data.frame(
+  x = qnorm(seq(0.05, 0.95, by = 0.1)),
+  y = -0.025,
+  label = paste0("D", 1:10)
+)
+
+p_dezile <- ggplot(df, aes(x, y)) +
+  geom_area(fill = "steelblue", alpha = 0.15) +
+  geom_line(linewidth = 0.8) +
+  geom_vline(xintercept = dezil_cuts, linetype = "dashed", color = "steelblue4", linewidth = 0.5) +
+  annotate("text", x = dezil_labels$x, y = dezil_labels$y,
+           label = dezil_labels$label, size = 3, color = "steelblue4") +
+  scale_x_continuous(limits = c(-4, 4), breaks = seq(-4, 4, by = 2)) +
+  scale_y_continuous(limits = c(-0.05, 0.45), breaks = seq(0, 0.4, by = 0.1)) +
+  labs(title = "Dezile", x = "x", y = "Dichte") +
+  theme_classic()
+
+# Perzentile (100 Teile, abwechselnd eingefärbt)
+perc_cuts <- qnorm(seq(0.01, 0.99, by = 0.01))
+
+shade_df <- do.call(rbind, lapply(1:100, function(i) {
+  lo <- ifelse(i == 1,   -4, perc_cuts[i - 1])
+  hi <- ifelse(i == 100,  4, perc_cuts[i])
+  xs <- seq(lo, hi, length.out = 50)
+  data.frame(x = xs, y = dnorm(xs), group = i, fill = i %% 2 == 0)
+}))
+
+p_perzentile <- ggplot(df, aes(x, y)) +
+  geom_area(data = shade_df, aes(x, y, group = group, fill = fill), alpha = 0.6) +
+  geom_line(linewidth = 0.8) +
+  scale_fill_manual(values = c("TRUE" = "steelblue", "FALSE" = "steelblue4"), guide = "none") +
+  scale_x_continuous(
+    breaks = qnorm(c(0.25, 0.50, 0.75)),
+    labels = c("P25", "P50", "P75")
+  ) +
+  scale_y_continuous(breaks = seq(0, 0.4, by = 0.1)) +
+  coord_cartesian(xlim = c(-4, 4), ylim = c(0, 0.45)) +
+  labs(title = "Perzentile", x = "x", y = "Dichte") +
+  theme_classic()
+
+p_dezile | p_perzentile
+```
+
+## Vertiefung: Wie kummulative Häufigkeiten und Perzentile zusammenhängen
+
+Wir können bei ordinalen oder metrischen Ausprägungen die relativen Häufigkeiten laufend aufsummieren und erhalten auf diese Art "kummulative Häufigkeiten". Kummulative Häufigkeiten geben an, wie viel Prozent der Beobachtungen einen bestimmten Wert **oder** einen kleineren Wert haben. 
+
+```{r}
+library(knitr)
+library(ggplot2)
+library(patchwork)
+library(dplyr)
+
+df_tab <- freda |>
+  filter(pa22ri9 >= 1) |>
+  mutate(label = haven::as_factor(pa22ri9, levels = "default")) |>
+  count(Wert = pa22ri9, Kategorie = label, name = "n") |>
+  mutate(
+    `Rel. Häufigkeit` = n / sum(n),
+    `Kum. Häufigkeit` = cumsum(`Rel. Häufigkeit`)
+  ) |>
+  mutate(
+    `Rel. Häufigkeit` = scales::percent(`Rel. Häufigkeit`, accuracy = 0.1, decimal.mark = ","),
+    `Kum. Häufigkeit` = scales::percent(`Kum. Häufigkeit`, accuracy = 0.1, decimal.mark = ",")
+  )
+
+# Perzentile (nur gültige Werte ≥ 1)
+vals <- freda |> filter(pa22ri9 >= 1) |> pull(pa22ri9)
+pct  <- quantile(vals, probs = c(0.25, 0.50, 0.75))
+
+knitr::kable(
+  bind_rows(df_tab),
+  format  = "pipe",
+  caption = "Beilegung von Meinungsverschiedenheiten (Streiten/laut werden)"
+)
+
+```
+
+
+## Vertiefung: Wie kummulative Häufigkeiten und Perzentile zusammenhängen
+
+
+::: {.columns}
+
+::: {.column}
+
+Jede stetige Verteilung lässt sich mit einer Verteilungsfunktion (unten) und einer kummulativen Verteilungsfuntion (oben) darstellen. Perzentile/Quantile sind die Werte, die kummulative Häufigkeiten in beiden Verteilungen abtrennen. 
+
+:::
+
+::: {.column}
+
+
+```{r}
+
+library(ggplot2)
+library(patchwork)
+
+x <- seq(-4, 4, length.out = 1000)
+
+x1 <- -1.61
+x2 <- 1.333
+
+# --- CDF Plot ---
+df_cdf <- data.frame(x = x, y = pnorm(x))
+
+p_cdf <- ggplot(df_cdf, aes(x, y)) +
+  geom_line(linewidth = 0.8) +
+  # horizontal dashed lines
+  annotate("segment", x = -4, xend = x2, y = pnorm(x2), yend = pnorm(x2),
+           linetype = "dashed", color = "grey30") +
+  annotate("segment", x = -4, xend = x1, y = pnorm(x1), yend = pnorm(x1),
+           linetype = "dashed", color = "grey30") +
+  # vertical dashed lines
+  annotate("segment", x = x2, xend = x2, y = 0, yend = pnorm(x2),
+           linetype = "dashed", color = "grey30") +
+  annotate("segment", x = x1, xend = x1, y = 0, yend = pnorm(x1),
+           linetype = "dashed", color = "grey30") +
+  # arrows pointing left (CDF -> y-axis values)
+  annotate("segment", x = x1 - 0.1, xend = -3.6, y = pnorm(x1), yend = pnorm(x1),
+           arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+           color = "steelblue4", linewidth = 0.8) +
+  # arrow pointing down from curve to x-axis (x2)
+  annotate("segment", x = x2, xend = x2, y = pnorm(x2) - 0.02, yend = 0.02,
+           arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+           color = "steelblue4", linewidth = 0.8) +
+  # label F^-1(x)
+  annotate("text", x = 2.6, y = 0.75, label = expression(F^{-1}*(x)),
+           size = 4, color = "grey20") +
+  # y-axis labels
+  annotate("text", x = -4.1, y = pnorm(x2), label = ".90", size = 3.5, hjust = 1) +
+  annotate("text", x = -4.1, y = pnorm(x1), label = ".0629", size = 3.5, hjust = 1) +
+  scale_x_continuous(limits = c(-4, 4), breaks = seq(-4, 4, by = 2)) +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2)) +
+  labs(x = NULL, y = "Cumulative Probability", title = "F(x)") +
+  theme_classic() +
+  theme(
+    axis.title.y = element_text(size = 10),
+    plot.title = element_text(size = 11)
+  )
+
+# --- PDF Plot ---
+df_pdf <- data.frame(x = x, y = dnorm(x))
+df_shade <- subset(df_pdf, x <= x1)
+
+p_pdf <- ggplot(df_pdf, aes(x, y)) +
+  geom_area(data = df_shade, aes(x, y), fill = "lightblue", alpha = 0.7) +
+  geom_line(linewidth = 0.8) +
+  # vertical dashed lines
+  annotate("segment", x = x1, xend = x1, y = 0, yend = dnorm(x1) + 0.02,
+           linetype = "dashed", color = "grey30") +
+  annotate("segment", x = x2, xend = x2, y = 0, yend = dnorm(x2) + 0.02,
+           linetype = "dashed", color = "grey30") +
+  # arrows: pointing up at x1, down at x2
+  annotate("segment", x = x1, xend = x1, y = dnorm(x1) + 0.02, yend = dnorm(x1) + 0.08,
+           arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+           color = "steelblue4", linewidth = 0.8) +
+  annotate("segment", x = x2, xend = x2, y = dnorm(x2) + 0.06, yend = 0.02,
+           arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+           color = "steelblue4", linewidth = 0.8) +
+  # x labels
+  annotate("text", x = x1, y = -0.025, label = "-1.61", size = 3.5) +
+  annotate("text", x = x2, y = -0.025, label = "1.333", size = 3.5) +
+  scale_x_continuous(limits = c(-4, 4), breaks = seq(-4, 4, by = 2)) +
+  scale_y_continuous(limits = c(-0.04, 0.42), breaks = seq(0, 0.4, by = 0.1)) +
+  labs(x = "x", y = "Probability Density", title = "f(x)") +
+  theme_classic() +
+  theme(
+    axis.title.y = element_text(size = 10),
+    plot.title = element_text(size = 11)
+  )
+
+p_cdf / p_pdf
+
+```
+
+:::
+:::
+
+## Vermögensverteilung in Deutschland (2023)
+
+::: {.r-fit-text}
+| Verteilung von Brutto- und Nettovermögen 	| Bruttovermögen (€) 	| Nettovermögen (€) 	|
+|------------------------------------------	|--------------------	|-------------------	|
+| 5. Perzentil                             	| 900                	| −800              	|
+| 10. Perzentil                            	| 2.900              	| 800               	|
+| 20. Perzentil                            	| 10.100             	| 7.100             	|
+| 30. perzentil                            	| 22.300             	| 19.100            	|
+| 40. Perzentil                            	| 55.200             	| 49.300            	|
+| 50. Perzentil                            	| 125.300            	| 103.200           	|
+| 60. Perzentil                            	| 237.000            	| 196.100           	|
+| 70. Perzentil                            	| 366.900            	| 326.200           	|
+| 80. Perzentil                            	| 520.400            	| 473.500           	|
+| 90. Perzentil                            	| 856.900            	| 779.500           	|
+| 95. Perzentil                            	| 1.338.500          	| 1.227.900         	|
+::: 
+
+## Vermögensverteilung in Ost- und Westdeutschland 
+
+::: {.r-fit-text}
+|                       	|    West    	|     Ost    	|
+|:---------------------:	|:----------:	|:----------:	|
+|                       	|    2012    	|    2012    	|
+| Mittelwert            	|     93 790 	|     41 138 	|
+| Median                	|     21 200 	|      8 080 	|
+| 90. Perzentil         	|    239 300 	|    111 580 	|
+| 95. Perzentil         	|    363 980 	|    171 359 	|
+| 99. Perzentil         	|    876 050 	|    399 820 	|
+|                       	|            	|            	|
+|                       	|            	|            	|
+|                       	|            	|            	|
+| Negatives oder kein Vermögen in %    	| 26,9       	| 30,8       	|
+| 90/50-Dezilverhältnis 	| 11,30      	| 13,81      	|
+:::
+
+## Die Daten-Spielwiese (ALLBUS 2018)
+
+<iframe width="100%" height="100%" src="https://019d8719-55fd-c4ab-9a3f-8a43cc60bba4.share.connect.posit.cloud" ></iframe>
+
+# Differenzen von einzelnen Ausprägungen, Ereignissen, Kategorien
+
+## Wahrscheinlichkeiten, Chancen, Risiko
+
+-   Wir interessieren uns oft dafür, wie wahrscheinlich es ist, dass Personen zu einer bestimmten Gruppe gehören (Mieter vs. Eigentümer; Studium vs. Ausbildung; genesen vs. nicht genesen).
+
+-   Soziale Prozesse beeinflussen diese Wahrscheinlichkeiten, sodass es zu Differenzen über verschiedene Gruppen kommt.
+
+-   In vielen Fällen ist es sinnvoll, diese Differenzen als Wahrscheinlichkeiten auszudrücken, allerdings sind wir oft auch an Veränderungen in den *Verhältnissen zwischen Gruppen* interessiert.
+
+## Notationen
+
+| Abkürzung | Bedeutung |
+|:---|:---|
+| P(Y) | Wahrscheinlichkeit von Y |
+| $P(Y|X)$ | Wahrscheinlichkeit von Y unter der Bedingung, dass X vorliegt |
+| $RR_{Y}$ | Risikoverhältnis (oder Risk Ratio) einer (Referenz)Gruppe auf Y gegenüber einer anderen Gruppe |
+| $Odd_Y$ | Chance auf Y (im Gegensatz zu "Nicht Y") |
+| $Odd_{Y|X}$ | Chance auf Y unter der Bedingung, dass X vorliegt |
+| $OR_{Y}$ | Chancenverhältnis von Y von Gruppe A in Referenz auf Gruppe B |
+
+## Alleinerziehende
+
+```{r}
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(haven)
+library(forcats)
+library(tidyr)
+library(knitr)
+
+freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
+
+freda <- freda |>
+  mutate(
+    alleinerz = case_when(
+      is.na(pstat) | is.na(nkidsliv_c) ~ NA_integer_,
+      pstat == 0 & dplyr::between(nkidsliv_c, 1, 4) ~ 1L,
+      TRUE ~ 0L
+    )
+  )
+
+
+kreuz_md <- freda |>
+  filter(!is.na(pstat), !is.na(nkidsliv_c), nkidsliv_c > 0) |>
+  transmute(
+    nkidsliv_c = haven::as_factor(nkidsliv_c, levels = "default"),
+    pstat = haven::as_factor(pstat, levels = "default")
+  ) |>
+  count(nkidsliv_c, pstat, name = "n") |>
+  group_by(nkidsliv_c) |>
+  mutate(
+    zeilenprozent = n / sum(n),
+    zelle = paste0(n, " (", scales::percent(zeilenprozent, accuracy = 0.1, decimal.mark = ","), ")")
+  ) |>
+  ungroup() |>
+  select(nkidsliv_c, pstat, zelle) |>
+  pivot_wider(
+    names_from = pstat,
+    values_from = zelle,
+    values_fill = "0 (0,0%)"
+  )
+
+knitr::kable(
+  kreuz_md,
+  format = "pipe",
+  caption = "Relative Anzahl von Alleinerziehenden pro Anzahl von Kindern im Haushalt"
+)
+
+```
+
+Die unbedingte Wahrscheinlichkeit, als Elternteil alleinerziehend zu sein liegt bei 6.4%.
+
+## "Risiken" für Alleinerziehnde: Region
+
+```{r}
+library(cowplot)
+
+freda |>
+  filter(!is.na(alleinerz), east %in% c(0, 1)) |>
+  mutate(east = haven::as_factor(east) |>
+           forcats::fct_recode("Ost" = "Ja", "West" = "Nein")) |>
+  group_by(east) |>
+  summarise(anteil = mean(alleinerz == 1)) |>
+  ggplot(aes(x = east, y = anteil, fill = east)) +
+  geom_col(width = 0.5) +
+  geom_text(
+    aes(label = paste0(formatC(anteil * 100, format = "f", digits = 1), "%")),
+    vjust = -0.5
+  ) +
+  scale_y_continuous(labels = scales::percent_format(decimal.mark = ",")) +
+  labs(
+    title = "Anteil Alleinerziehender nach Region",
+    x = "Region",
+    y = "Anteil Alleinerziehende",
+    fill = "Region"
+  ) +
+  cowplot::theme_cowplot() +
+  guides(fill = "none")  
+```
+
+## "Risiken" für Alleinerziehnde: Geschlecht
+
+```{r}
+library(cowplot)
+
+freda |>
+  filter(!is.na(alleinerz), !is.na(sex_c)) |>
+  mutate(sex_c = haven::as_factor(sex_c) |>
+           forcats::fct_recode("Mann" = "Male", "Frau" = "Female")) |>
+  group_by(sex_c) |>
+  summarise(anteil = mean(alleinerz == 1)) |>
+  ggplot(aes(x = sex_c, y = anteil, fill = sex_c)) +
+  geom_col(width = 0.5) +
+  geom_text(
+    aes(label = paste0(formatC(anteil * 100, format = "f", digits = 1), "%")),
+    vjust = -0.5
+  ) +
+  scale_y_continuous(labels = scales::percent_format(decimal.mark = ",")) +
+  labs(
+    title = "Anteil Alleinerziehender nach Geschlecht",
+    x = "Geschlecht",
+    y = "Anteil Alleinerziehende",
+    fill = "Geschlecht"
+  ) +
+  cowplot::theme_cowplot() +
+  guides(fill = "none")
+
+```
+
+## "Risiken" für Alleinerziehnde: Bildungsabschluss
+
+```{r}
+
+freda |>
+  filter(!is.na(alleinerz), !is.na(school)) |>
+  mutate(school = haven::as_factor(school)) |>
+  filter(!school %in% c("Unvollständige Daten", "In Ausbildung")) |>
+  group_by(school) |>
+  summarise(anteil = mean(alleinerz == 1)) |>
+  mutate(school = forcats::fct_reorder(school, anteil, .desc = FALSE)) |>
+  ggplot(aes(y = school, x = anteil, fill = school)) +
+  geom_col(width = 0.6) +
+  geom_text(
+    aes(label = paste0(formatC(anteil * 100, format = "f", digits = 1), "%")),
+    hjust = -0.2, size = 3
+  ) +
+  scale_x_continuous(
+    labels = scales::percent_format(decimal.mark = ","),
+    expand = expansion(mult = c(0, 0.15))
+  ) +
+  labs(
+    title = "Anteil Alleinerziehender nach Schulabschluss",
+    y = "Schulabschluss",
+    x = "Anteil Alleinerziehende"
+  ) +
+  cowplot::theme_cowplot() +
+  guides(fill = "none")
+
+```
+
+## Odds & Relatives Risiko
+
+$X_0$ ist die "Referenzgruppe" - d.h., die Gruppe auf der wir eine andere Gruppe mit einer anderen Ausprägung von $X$ vergleichen ($X = x$).
+
+$$RR_{Y} = \dfrac{P(Y| X = x)}{P(Y | X_0)}$$
+
+$$Odd_Y = \dfrac{P(Y)}{ 1 - P(Y)}$$
+
+$$OR_{Y} = \dfrac{Odd_{Y| X = x}}{Odd_{Y| X_0}}$$
+
+
+## Odds & Relatives Risiko
+
+:::::::: columns
+::: column
+| Gruppe A | Gruppe B |
+|:--------:|:--------:|
+|    \+    |    \+    |
+|    \+    |    \+    |
+|    \-    |    \+    |
+|    \-    |    \+    |
+|    \-    |    \-    |
+|    \-    |    \-    |
+|    \-    |    \-    |
+|    \-    |    \-    |
+|    \-    |    \-    |
+|    \-    |    \-    |
+
+: Positive vs. negative Ereignisse innerhalb Gruppe A und B. 
+:::
+
+:::::: column
+::: callout-note
+## Wahrscheinlichkeiten
+
+Gruppe A: $P(+) = 0.2$
+
+Gruppe B: $P(+) = 0.4$
+
+Ausgedrückt als bedingte Wahrscheinlichkeiten $P(+|A) = 0.2 \, \& \, P(+|B) = 0.4$
+:::
+
+::: callout-note
+## Odds (Chancen)
+
+$Odd_{+|A} = \dfrac{0.2}{1 - 0.2} = \dfrac{1}{4}$ = 1:4
+
+$Odd_{+|B} = \dfrac{0.4}{1 - 0.4} = \dfrac{2}{3} =$ 2:3
+:::
+
+::: callout-note
+## Odds Ratio & Relatives Risiko
+
+$OR_{+} = \dfrac{2/3}{1/4}$ = 2.6667
+
+$RR_+ = \dfrac{0.4}{0.2} = 2$
+:::
+::::::
+::::::::
+
+## Das geschlechtsspezifische Risiko, alleinerziehend zu sein
+
+Ausgehend von den geschlechtsspezifischen Wahrscheinlichkeiten alleinerziehend zu sein, können wir Odds, Odds Ratios und Relative Risiken berechnen. 
+
+:::::::: columns
+::: column
+
+::: {.r-fit-text}
+```{r}
+library(dplyr)
+library(knitr)
+
+# Kontingenztabelle
+tab <- freda |>
+  filter(!is.na(sex_c), !is.na(alleinerz)) |>
+  mutate(sex_c = haven::as_factor(sex_c) |>
+           forcats::fct_recode("Mann" = "Male", "Frau" = "Female"),
+         alleinerz_lbl = if_else(alleinerz == 1, "Alleinerziehend", "Nicht alleinerziehend")) |>
+  count(sex_c, alleinerz_lbl) |>
+  group_by(sex_c) |>
+  mutate(
+    gesamt = sum(n),
+    anteil = scales::percent(n / gesamt, accuracy = 0.1, decimal.mark = ","),
+    zelle  = paste0(n, " (", anteil, ")")
+  ) |>
+  ungroup() |>
+  select(sex_c, alleinerz_lbl, zelle) |>
+  tidyr::pivot_wider(names_from = alleinerz_lbl, values_from = zelle)
+
+knitr::kable(tab, format = "pipe")
+```
+::: 
+:::
+:::::::: columns
+::: column
+$$Odd_F = \dfrac{4.0}{96.0} = 0.042 $$ 
+
+$$Odd_M = \dfrac{1.6}{98.4} = 0.016$$ 
+
+$$ OR_{F/M} = \dfrac{0.042}{0.016} = 2.625 $$ 
+
+$$ RR_{F/M} = \dfrac{4.0}{1.6} = 2.5 $$ 
+::: 
+::: 
+
+## Der Unterschied zwischen Odds Ratios und Relativen Risiken
+
+Der Unterschied zwischen OR und RR ist kein Zahlenspielchen sondern eine Frage der Wissenschaftskommunikation. Rein technisch müssen Sie auf zwei Dinge achten, die am einfachsten im Rahmen eines klassichen Experiments deutlich werden. 
+
+col
+
+|                	| Dinge passieren 	| Dinge passieren nicht 	|
+|----------------	|:---------------:	|:---------------------:	|
+| Versuchsgruppe 	|      $N_a$      	|         $N_b$         	|
+| Kontrollgruppe 	|      $N_c$      	|         $N_d$         	|
 
 

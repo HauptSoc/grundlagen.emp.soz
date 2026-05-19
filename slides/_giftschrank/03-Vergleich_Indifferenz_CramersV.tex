@@ -1,0 +1,326 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.0
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+%\documentclass[18pt]{beamer}
+\documentclass[18pt,handout, aspectratio=169]{beamer}
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen = right}
+%\documentclass[18pt,draft]{beamer}
+
+\usetheme{kit2}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%% Zeichencodierung & Schrift
+\usepackage[ansinew]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb}
+\let\raggedright\relax
+\usepackage{ragged2e}
+%\usepackage{color}
+
+
+%%%% Einbinden von Graphiken
+%\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pgf}
+
+%%%% Bibliographie und Zitationen
+\usepackage[round]{natbib}
+\bibliographystyle{nachvorj}
+
+
+%%%% Tabellen
+\usepackage{multirow,booktabs,verbatim }
+\setbeamertemplate{caption}[numbered]
+
+%\graphicspath{{U:/Lehre/MethodenII/Grafiken/}}
+%\graphicspath{{D:/uni/Lehre/MethodenII/Grafiken/}}
+\graphicspath{{/Dropbox/Graphs/}}
+
+\usepackage{hyperref}
+\hypersetup{pdfpagemode=FullScreen}
+
+
+\setbeamerfont{block title}{size=\normalsize}
+
+\title{Datenauswertung}
+\subtitle{Vergleich gegen Unabhängigkeit - Crámer's V }
+\author{Andreas Haupt \\ andreas.haupt@kit.edu }
+\institute{Karlsruher Institut für Technologie}
+\date{}
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{ngerman}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section{Zus. zwischen Kategorien}
+\subsection*{}
+
+\begin{frame}{Ziel und Ausgangsproblem}
+
+\begin{itemize}
+  \item Wir möchten soziale Prozesse studieren. Diese Prozesse können wir als Unterschiede (in X) beschreiben, die andere Unterschiede (in Y) hervorrufen.
+  \item In den meisten Fällen studieren wir diese Prozesse über Gruppenvergleiche. Bei sehr vielen Gruppen ist die Berechnung von Risk Ratios oder Odds Ratios nicht hilfreich. 
+  \item Wir brauchen daher noch ein Zusammenhangsmaß für nominal gemessene Eigenschaften. 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Geschlecht und Alleinerziehend}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrr|r} \toprule
+                & Männer & Frauen & Gesamt\\ \midrule
+Paare             &     4044  &    2822 &     6866\\ 
+Alleinerziehend   &     285   &     747 &     1032\\ \midrule
+Gesamt            &     4329  &    3569 &    7898 \\ \bottomrule
+\end{tabular}
+}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\small
+\begin{itemize}
+  \item Um zu analysieren, ob es sich bei dem Zusammenhang von Familienstruktur und Geschlecht um einen systematischen Zusammenhang handelt, müssen wir die empirisch beobachteten Häufigkeiten mit Häufigkeiten vergleichen, die wir erwarten würden, wenn Geschlecht und Familienstruktur unabhängig wären. 
+  \item Wir unterscheiden daher für jede Zelle der Tabelle\footnote{Die Zahlen zu den Gesamtangaben zählen nicht dazu!} zwischen beobachteten Häufigkeiten $n_{b_{ij}}$ und erwarteten Häufigkeiten unter Unabhängigkeit (oder: Indifferenz) $n_{e_{ij}}$. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}{Konstruktion der Indifferenztabelle}
+
+\begin{columns}
+\begin{column}{.5\linewidth}
+\textbf{Beobachtete Häufigkeiten}\\[.5em]
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrr|r} \toprule
+                & Männer & Frauen & Gesamt\\ \midrule
+Paare             &     4044  &    2822 &     6866\\ 
+Alleinerziehend   &     285   &     747 &     1032\\ \midrule
+Gesamt            &     4329  &    3569 &    7898 \\ \bottomrule
+\end{tabular}
+}
+
+\quad \newline
+
+\( \underbrace{n_{e_{ij}}}_{\text{erwarteter Zellenwert}} = \dfrac{\overbrace{n_{i.}}^{\text{Gesamt Zeile}}\cdot \overbrace{n_{.j}}^{\text{Gesamt Spalte}} }{\underbrace{n}_{\text{Gesamtsumme}}} \) 
+\end{column}
+
+\begin{column}{.5\linewidth}
+\textbf{Indifferenztabelle}\\[.5em]
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrr|r} \toprule
+                & Männer & Frauen & Gesamt\\ \midrule
+Paare             &     3763.3  &    3102.7 &     6866\\ 
+Alleinerziehend   &     565.7   &     466.3 &     1032\\ \midrule
+Gesamt            &     4329  &    3569 &    7898 \\ \bottomrule
+\end{tabular}
+}
+
+\quad \newline
+
+\( n_{e_{1,1}} = \dfrac{6866 \cdot 4329}{ 7898} = 3763.3 \) \newline \quad \\[.1em]
+\( n_{e_{2,1}} = \dfrac{6866 \cdot 3569}{ 7898} = 3102.7 \)
+
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Was bedeutet Unabhängigkeit in der Indifferenztabelle?}
+
+\begin{columns}
+\begin{column}{.5\linewidth}
+\textbf{Beobachtete Häufigkeiten}\\[.5em]
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrr|r} \toprule
+                & Männer & Frauen & Gesamt\\ \midrule
+Paare             &     4044  &    2822 &     6866\\ 
+Alleinerziehend   &     285   &     747 &     1032\\ \midrule
+Gesamt            &     4329  &    3569 &    7898 \\ \bottomrule
+\end{tabular}
+}
+
+\quad \newline
+
+\resizebox{1\linewidth}{!}{
+$OR_{ \text{M/F} } = \dfrac{(285/4329)}{1-(285/4329)}  / \dfrac{(747/3569)}{1-(747/3569)}  = 3.76$
+}
+\resizebox{1\linewidth}{!}{
+$OR_{\text{P/A}} =  \dfrac{(4044/6866)}{1-(4044/6866)} / \dfrac{(285/1032)}{1-(285/1032)}  = 3.76$ 
+}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\textbf{Indifferenztabelle}\\[.5em]
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrr|r} \toprule
+                & Männer & Frauen & Gesamt\\ \midrule
+Paare             &     3763.3  &    3102.7 &     6866\\ 
+Alleinerziehend   &     565.7   &     466.3 &     1032\\ \midrule
+Gesamt            &     4329  &    3569 &    7898 \\ \bottomrule
+\end{tabular}
+}
+
+\quad \newline
+
+\resizebox{1\linewidth}{!}{
+$OR_{ \text{M/F} } = \dfrac{(565.7/4329)}{1-(565.7/4329)}  / \dfrac{(466.3/3569)}{1-(466.3/3569)}  = 1$
+}
+\resizebox{1\linewidth}{!}{
+$OR_{\text{P/A}} =  \dfrac{(3763.3/6866)}{1-(3763.3/6866)} / \dfrac{(565.7/1032)}{1-(565.7/1032)}  = 1$ 
+}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+
+\frame{
+\frametitle{Abweichungen der beobachteten Werte von Indifferenzwerten = $\chi^2$}
+\small
+Wie stark ist die Abweichung der beobachteten Häufigkeiten zu den bei Unabhängigkeit beider Eigenschaften erwarteten Häufigkeiten? Dazu berechnen wir eine spezielle Form der Varianz, die bei Häufigkeiten $\chi^2$ (sprich: ``Chi quadrat'') genannt wird. 
+
+\begin{equation*}
+\chi^2 = \sum\limits_{i=1}^l\sum\limits_{j=1}^m\frac{(n_{b(ij)} - n_{e(ij)})^2}{n_{e(ij)}}
+\end{equation*}
+
+\[
+\chi^2 = \text{Summe aus} \, \frac{(\mbox{beobachteter Zellenwert} - \mbox{erwarteter Zellenwert})^2}{\mbox{erwarteter Zellenwert}}
+\]
+\quad \newline
+Diese Varianz ist allerdings abhängig von der Zellenanzahl der Tabelle. Viele kleine Abweichungen in einer Tabelle summieren sich zu einer großen Varianz auf genauso wie große Abweichungen bei einer kleinen Tabelle. Daher müssen wir in einem letzten Schritt die Varianz auf die Tabellengröße standardisieren. 
+
+}
+
+\frame{
+\frametitle{Cramér's V}
+
+\begin{align}
+\text{Cramér's V} &=  \sqrt{\frac{\chi^2}{n(min(l,m)-1)}}  \\
+  &= \sqrt{\frac{\chi^2}{\text{ \small Anzahl der Beobachtungen} \cdot ( \underbrace{ \text{ \small Zeilen- oder Spaltenanzahl}}_{\text{das Kleinere von beiden!}} - 1  ) }} \nonumber
+\end{align}
+
+Cramér\grq s V kann zwischen 0 und 1 schwanken. Sind beobachtete Häufigkeiten und Indifferenzhäufigkeiten identisch, ist Cramér\grq s 0. Weichen sie maximal voneinander ab, ist der Wert 1. 
+
+}
+
+
+
+\begin{frame}
+\frametitle{Harte Arbeit...}
+\begin{itemize}
+  \item Sie müssen nun für jede Zelle den beobachten vom erwarteten Wert subtrahieren, diese Differenz quadrieren und \textit{danach} durch den erwarten Wert teilen. 
+  \item Danach müssen Sie alle Werte aufsummieren. 
+  \item Das gibt den $\chi^2$-Wert. 
+  \item Aus diesem Wert müssen Sie Cramér\grq s V berechnen.  
+\end{itemize}
+
+
+ \[ \chi^2 = \frac{(4044-3763.3)^2}{3763.3} + \dots \frac{(747-466.3)^2}{466.3} = 354.465 \] 
+
+
+\[ V = \sqrt{\frac{354.465}{7898 \cdot (2-1)}}  = 0.2118 \]
+
+Wir sehen einen Zusammenhang zwischen Geschlecht und dem Risiko alleinerziehend zu sein.
+
+ \end{frame}
+
+
+\end{document}
+
+
+
+\frame{
+\frametitle{Ist die Jugend der Covid-Spreader?}
+
+\begin{center}
+  \begin{minipage}[b]{.45\linewidth} % [b] => Ausrichtung 
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{l|ccccc|r} 
+\multicolumn{7}{l}{a) Empirische Werte}\\
+\toprule 
+ & \multicolumn{6}{c}{Woche} \\
+Altersgruppe &10&11&12&13&14&Total \\
+\hline
+10–14&21&97&234&359&111&822 \\
+15–19&40&163&509&897&287&1896 \\
+20–24&70&304&1356&2094&585&4409 \\
+25–29&70&510&1889&2489&648&5606 \\
+30–34&69&497&1941&2436&656&5599 \\
+35–39&59&523&1668&2202&610&5062 \\
+40–44&80&525&1715&2158&633&5111 \\
+45–49&97&701&1979&2655&715&6147 \\ \midrule 
+Total&506&3320&11291&15290&4245&34652 \\ \bottomrule
+\end{tabular}
+}
+  \end{minipage}
+  \hspace{.025\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.46\linewidth} % 
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{l|ccccc|r}
+\multicolumn{7}{l}{b) Indifferenztabelle}\\ \toprule 
+ & \multicolumn{6}{c}{Woche} \\
+Altersgruppe &10&11&12&13&14&Total \\
+\midrule 
+     10–14 &      12.0 &     78.8 &    267.8 &     362.7 &    100.7 &   822\\ 
+     15–19 &      27.7 &    181.7 &    617.8 &     836.6 &    232.3 &   1896\\ 
+     20–24 &      64.4 &    422.4 &   1436.6 &    1945.4 &    540.1 &   4409\\ 
+     25–29 &      81.9 &    537.1 &   1826.7 &    2473.6 &    686.8 &   5606\\ 
+     30–34 &      81.8 &    536.4 &   1824.4 &    2470.5 &    685.9 &   5599\\ 
+     35–39 &      73.9 &    485.0 &   1649.4 &    2233.6 &    620.1 &   5062\\ 
+     40–44 &      74.6 &    489.7 &   1665.4 &    2255.2 &    626.1 &   5111\\ 
+     45–49 &      89.8 &    588.9 &   2002.9 &    2712.3 &    753.0 &   6147\\ \midrule
+     Total &     506 &   3320 &  11291 &   15290 &   4245 &  34652\\ \bottomrule
+\end{tabular}
+}
+  \end{minipage}
+\end{center}
+
+\[e_{1,1} = \frac{822 \cdot 506}{34652} = 12.003117; \quad e_{8,5} = \frac{6147 \cdot 4245}{34652} = 753.03056  \]
+
+}
+
+
+\frame{
+  \frametitle{Unabhängigkeit?}
+
+Empirisch: 
+
+$Odd_{ \text{A2 vs A1} } =  \frac{(359+111)}{(15290+4245)} / \frac{(21+97)}{(506+3320)}   = 0.78$   \\[1em]
+$Odd_{\text{B2 vs B1}} =   \frac{(897 + 287)}{(15290+4245)} / \frac{(40 + 163)}{(506+3320)}  = 1.1423185$ \\[2em]
+
+
+Indifferenzwerte:
+
+$Odd_{ \text{A2 vs A1} } =  \frac{(362.7+100.7)}{(15290+4245)} / \frac{(12.0+78.8)}{(506+3320)}   = 1$   \\[1em]
+$Odd_{\text{B2 vs B1}} =   \frac{(836.6 + 232.3)}{(15290+4245)} / \frac{(27.7 +    181.7)}{(506+3320)}  = 1$ \\[1em]  
+
+}

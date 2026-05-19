@@ -4846,5 +4846,152 @@
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
     "section": "Das arithmetische Mittel und gewichtete Werte",
     "text": "Das arithmetische Mittel und gewichtete Werte\nEine alternative Darstellung der Berechnung des Mittelwerts ist auch:\n\\[\n\\bar{y} = \\sum P(y_i) \\cdot y_i\n\\]\nEr ist gleich der Summe aller Werte, gewichtet mit der Häufigkeit ihres Auftretens in der Stichprobe.\nDas hat sehr praktische Implikationen. U.a. können wir dadurch den gesamten Mittelwert nach einzelnen Gruppen zerlegen. Im Fall von einer binären Variable X:\n\\[\n\\begin{align}\n\\bar{y} &=  (\\bar{y} | X = 0) \\cdot P(X = 0) + (\\bar{y} | X = 1) \\cdot P(X = 1) \\\\\n        &=  \\left( \\sum P(y_i) \\cdot y_i  | X = 0  \\right) \\cdot P(X = 0) +  \\left( \\sum P(y_i) \\cdot y_i  | X = 1 \\right) \\cdot P(X = 1)\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#wahrscheinlichkeiten-chancen-risiko",
+    "href": "slides/17-VergleichsgegenstaendeII.html#wahrscheinlichkeiten-chancen-risiko",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Wahrscheinlichkeiten, Chancen, Risiko",
+    "text": "Wahrscheinlichkeiten, Chancen, Risiko\n\nWir interessieren uns oft dafür, wie wahrscheinlich es ist, dass Personen zu einer bestimmten Gruppe gehören (Mieter vs. Eigentümer; Studium vs. Ausbildung; genesen vs. nicht genesen).\nSoziale Prozesse beeinflussen diese Wahrscheinlichkeiten, sodass es zu Differenzen über verschiedene Gruppen kommt.\nIn vielen Fällen ist es sinnvoll, diese Differenzen als Wahrscheinlichkeiten auszudrücken, allerdings sind wir oft auch an Veränderungen in den Verhältnissen zwischen Gruppen interessiert."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#notationen",
+    "href": "slides/17-VergleichsgegenstaendeII.html#notationen",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Notationen",
+    "text": "Notationen\n\n\n\n\n\n\n\nAbkürzung\nBedeutung\n\n\n\n\nP(Y)\nWahrscheinlichkeit von Y\n\n\n\\(P(Y|X)\\)\nWahrscheinlichkeit von Y unter der Bedingung, dass X vorliegt\n\n\n\\(RR_{Y}\\)\nRisikoverhältnis (oder Risk Ratio) einer (Referenz)Gruppe auf Y gegenüber einer anderen Gruppe\n\n\n\\(Odd_Y\\)\nChance auf Y (im Gegensatz zu “Nicht Y”)\n\n\n\\(Odd_{Y|X}\\)\nChance auf Y unter der Bedingung, dass X vorliegt\n\n\n\\(OR_{Y}\\)\nChancenverhältnis von Y von Gruppe A in Referenz auf Gruppe B"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#alleinerziehende",
+    "href": "slides/17-VergleichsgegenstaendeII.html#alleinerziehende",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Alleinerziehende",
+    "text": "Alleinerziehende\n\n\n\nRelative Anzahl von Alleinerziehenden pro Anzahl von Kindern im Haushalt\n\n\nnkidsliv_c\nHat keine/n Partner/in\nHat Partner/in\n\n\n\n\n1\n544 (9,1%)\n5420 (90,9%)\n\n\n2\n350 (5,0%)\n6704 (95,0%)\n\n\n3\n74 (4,0%)\n1795 (96,0%)\n\n\n4 or more children\n24 (4,4%)\n521 (95,6%)\n\n\n\n\n\nDie unbedingte Wahrscheinlichkeit, als Elternteil alleinerziehend zu sein liegt bei 6.4%."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#unterschiedliche-risiken-für-alleinerziehnde",
+    "href": "slides/17-VergleichsgegenstaendeII.html#unterschiedliche-risiken-für-alleinerziehnde",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Unterschiedliche “Risiken” für Alleinerziehnde",
+    "text": "Unterschiedliche “Risiken” für Alleinerziehnde"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#risiken-für-alleinerziehnde-region",
+    "href": "slides/17-VergleichsgegenstaendeII.html#risiken-für-alleinerziehnde-region",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "“Risiken” für Alleinerziehnde: Region",
+    "text": "“Risiken” für Alleinerziehnde: Region"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#risiken-für-alleinerziehnde-geschlecht",
+    "href": "slides/17-VergleichsgegenstaendeII.html#risiken-für-alleinerziehnde-geschlecht",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "“Risiken” für Alleinerziehnde: Geschlecht",
+    "text": "“Risiken” für Alleinerziehnde: Geschlecht"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#risiken-für-alleinerziehnde-bildungsabschluss",
+    "href": "slides/17-VergleichsgegenstaendeII.html#risiken-für-alleinerziehnde-bildungsabschluss",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "“Risiken” für Alleinerziehnde: Bildungsabschluss",
+    "text": "“Risiken” für Alleinerziehnde: Bildungsabschluss"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#das-zerlegen-von-verteilungen-in-beliebig-viele-teile",
+    "href": "slides/17-VergleichsgegenstaendeII.html#das-zerlegen-von-verteilungen-in-beliebig-viele-teile",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Das Zerlegen von Verteilungen in beliebig viele Teile",
+    "text": "Das Zerlegen von Verteilungen in beliebig viele Teile\n\n\n\n\n\n\n\n\n\n\ngraph dezile\ngraph perzentile / quantile\nVertiefung: Wahrscheinlichkeitsverteilung / Kummulative Verteilung\nAnwendung Vermögensverteilungen\nAnwendung Geburtsgewicht\nErläuterung Boxplots"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#odds",
+    "href": "slides/17-VergleichsgegenstaendeII.html#odds",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Odds",
+    "text": "Odds\n\n\n\nPositive vs. negative Ereignisse innerhalb Gruppe A und B.\n\n\nGruppe A\nGruppe B\n\n\n\n\n+\n+\n\n\n+\n+\n\n\n-\n+\n\n\n-\n+\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n\n\n\n\n\n\n\n\nWahrscheinlichkeiten\n\n\nGruppe A: \\(P(+) = 0.2\\)\nGruppe B: \\(P(+) = 0.4\\)\nAusgedrückt als bedingte Wahrscheinlichkeiten \\(P(+|A) = 0.2 \\, \\& \\, P(+|B) = 0.4\\)\n\n\n\n\n\n\n\n\n\nOdds (Chancen)\n\n\n\\(Odd_{+|A} = \\dfrac{0.2}{1 - 0.2} = \\dfrac{1}{4}\\) = 1:4\n\\(Odd_{+|B} = \\dfrac{0.4}{1 - 0.4} = \\dfrac{2}{3} =\\) 2:3\n\n\n\n\n\n\n\n\n\nOdds Ratio & Relatives Risiko\n\n\n\\(OR_{+} = \\dfrac{2/3}{1/4}\\) = 2.6667\n\\(RR_+ = \\dfrac{0.4}{0.2} = 2\\)"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#odds-relatives-risiko",
+    "href": "slides/17-VergleichsgegenstaendeII.html#odds-relatives-risiko",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Odds & Relatives Risiko",
+    "text": "Odds & Relatives Risiko\n\\(X_0\\) ist die “Referenzgruppe” - d.h., die Gruppe auf der wir eine andere Gruppe mit einer anderen Ausprägung von \\(X\\) vergleichen (\\(X = x\\)).\n\\[RR_{Y} = \\dfrac{P(Y| X = x)}{P(Y | X_0)}\\]\n\\[Odd_Y = \\dfrac{P(Y)}{ 1 - P(Y)}\\]\n\\[OR_{Y} = \\dfrac{Odd_{Y| X = x}}{Odd_{Y| X_0}}\\]"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#odds-relatives-risiko-1",
+    "href": "slides/17-VergleichsgegenstaendeII.html#odds-relatives-risiko-1",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Odds & Relatives Risiko",
+    "text": "Odds & Relatives Risiko\n\n\n\nPositive vs. negative Ereignisse innerhalb Gruppe A und B.\n\n\nGruppe A\nGruppe B\n\n\n\n\n+\n+\n\n\n+\n+\n\n\n-\n+\n\n\n-\n+\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n-\n-\n\n\n\n\n\n\n\n\n\n\nWahrscheinlichkeiten\n\n\nGruppe A: \\(P(+) = 0.2\\)\nGruppe B: \\(P(+) = 0.4\\)\nAusgedrückt als bedingte Wahrscheinlichkeiten \\(P(+|A) = 0.2 \\, \\& \\, P(+|B) = 0.4\\)\n\n\n\n\n\n\n\n\n\nOdds (Chancen)\n\n\n\\(Odd_{+|A} = \\dfrac{0.2}{1 - 0.2} = \\dfrac{1}{4}\\) = 1:4\n\\(Odd_{+|B} = \\dfrac{0.4}{1 - 0.4} = \\dfrac{2}{3} =\\) 2:3\n\n\n\n\n\n\n\n\n\nOdds Ratio & Relatives Risiko\n\n\n\\(OR_{+} = \\dfrac{2/3}{1/4}\\) = 2.6667\n\\(RR_+ = \\dfrac{0.4}{0.2} = 2\\)"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#quartile-und-boxplots",
+    "href": "slides/17-VergleichsgegenstaendeII.html#quartile-und-boxplots",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Quartile und Boxplots",
+    "text": "Quartile und Boxplots"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#dezile-und-perzentile",
+    "href": "slides/17-VergleichsgegenstaendeII.html#dezile-und-perzentile",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Dezile und Perzentile",
+    "text": "Dezile und Perzentile"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#jenseits-des-mittelwerts",
+    "href": "slides/17-VergleichsgegenstaendeII.html#jenseits-des-mittelwerts",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Jenseits des Mittelwerts",
+    "text": "Jenseits des Mittelwerts\n\nManchmal liegen die “interessanten Unterschiede” zwischen Gruppen nicht in der Mitte der Verteilungen sondern ganz oben oder unten.\nMittelwerte oder Varianzen können diese Unterschiedlichkeit nur sehr begrenzt erfassen.\nEs lohnt sich daher, verschiedene Stellen der Verteilung zu analysieren. Dazu können wir Verteilungen in beliebig viele, gleich große1 Teile zerlegen.\n\nGleich groß bedeutet hier, eine gleiche Anzahl von Beobachtungen – aber nicht gleich viel “Fläche” in einem Koordinatensystem."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#begrifflichkeiten",
+    "href": "slides/17-VergleichsgegenstaendeII.html#begrifflichkeiten",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Begrifflichkeiten",
+    "text": "Begrifflichkeiten\n\n\n\n\n\n\n\n\n\n\nBezeichnung\nAnzahl gleich großer Teile\nAbkürzung\n\n\n\n\nQuartil\n4\n\\(Q1 \\dots Q4\\)\n\n\nDezil\n10\n\\(D1 \\dots D10\\)\n\n\nQuantil/Perzentil\n100\n\\(P1  \\dots P99\\)\n\n\n\n\n\nQuartile und Perzentile können synonym benutzt werden. Der Wertebereich von Quantilen liegt zwischen 0.01 und 0.99, während er bei Perzentilen zwischen 1 und 99 liegt.\nDas 50. Perzentil ist der Median.\nMit Quartilen und Dezilen werden typischerweise die Abschnitte einer Verteilung bezeichnet.\nQuantile und Perzentile bezeichnen aber immer die Grenze eines Abschnitts. Es ist daher der Wert einer Verteilung, der einen neuen Abschnitt nach oben hin definiert."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#vertiefung-wie-kummulative-häufigkeiten-und-perzentile-zusammenhängen",
+    "href": "slides/17-VergleichsgegenstaendeII.html#vertiefung-wie-kummulative-häufigkeiten-und-perzentile-zusammenhängen",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Vertiefung: Wie kummulative Häufigkeiten und Perzentile zusammenhängen",
+    "text": "Vertiefung: Wie kummulative Häufigkeiten und Perzentile zusammenhängen\nWir können bei ordinalen oder metrischen Ausprägungen die relativen Häufigkeiten laufend aufsummieren und erhalten auf diese Art “kummulative Häufigkeiten”. Kummulative Häufigkeiten geben an, wie viel Prozent der Beobachtungen einen bestimmten Wert oder einen kleineren Wert haben.\n\n\n\nBeilegung von Meinungsverschiedenheiten (Streiten/laut werden)\n\n\nWert\nKategorie\nn\nRel. Häufigkeit\nKum. Häufigkeit\n\n\n\n\n1\nNie\n4827\n28,0%\n28,0%\n\n\n2\nSelten\n7136\n41,4%\n69,4%\n\n\n3\nManchmal\n3858\n22,4%\n91,8%\n\n\n4\nOft\n1241\n7,2%\n99,0%\n\n\n5\nSehr oft\n181\n1,0%\n100,0%"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#vertiefung-wie-kummulative-häufigkeiten-und-perzentile-zusammenhängen-1",
+    "href": "slides/17-VergleichsgegenstaendeII.html#vertiefung-wie-kummulative-häufigkeiten-und-perzentile-zusammenhängen-1",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Vertiefung: Wie kummulative Häufigkeiten und Perzentile zusammenhängen",
+    "text": "Vertiefung: Wie kummulative Häufigkeiten und Perzentile zusammenhängen\n\n\nJede stetige Verteilung lässt sich mit einer Verteilungsfunktion (unten) und einer kummulativen Verteilungsfuntion (oben) darstellen. Perzentile/Quantile sind die Werte, die kummulative Häufigkeiten in beiden Verteilungen abtrennen."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#vermögensverteilung-in-deutschland-2023",
+    "href": "slides/17-VergleichsgegenstaendeII.html#vermögensverteilung-in-deutschland-2023",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Vermögensverteilung in Deutschland (2023)",
+    "text": "Vermögensverteilung in Deutschland (2023)\n\n\n\n\n\n\n\n\n\nVerteilung von Brutto- und Nettovermögen\nBruttovermögen (€)\nNettovermögen (€)\n\n\n\n\n5. Perzentil\n900\n−800\n\n\n10. Perzentil\n2.900\n800\n\n\n20. Perzentil\n10.100\n7.100\n\n\n30. perzentil\n22.300\n19.100\n\n\n40. Perzentil\n55.200\n49.300\n\n\n50. Perzentil\n125.300\n103.200\n\n\n60. Perzentil\n237.000\n196.100\n\n\n70. Perzentil\n366.900\n326.200\n\n\n80. Perzentil\n520.400\n473.500\n\n\n90. Perzentil\n856.900\n779.500\n\n\n95. Perzentil\n1.338.500\n1.227.900"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#vermögensverteilung-in-ost--und-westdeutschland",
+    "href": "slides/17-VergleichsgegenstaendeII.html#vermögensverteilung-in-ost--und-westdeutschland",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Vermögensverteilung in Ost- und Westdeutschland",
+    "text": "Vermögensverteilung in Ost- und Westdeutschland\n\n\n\n\n\n\n\n\n\n\nWest\nOst\n\n\n\n\n\n2012\n2012\n\n\nMittelwert\n93 790\n41 138\n\n\nMedian\n21 200\n8 080\n\n\n90. Perzentil\n239 300\n111 580\n\n\n95. Perzentil\n363 980\n171 359\n\n\n99. Perzentil\n876 050\n399 820\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNegatives oder kein Vermögen in %\n26,9\n30,8\n\n\n90/50-Dezilverhältnis\n11,30\n13,81"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#die-daten-spielwiese-allbus-2018",
+    "href": "slides/17-VergleichsgegenstaendeII.html#die-daten-spielwiese-allbus-2018",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Die Daten-Spielwiese (ALLBUS 2018)",
+    "text": "Die Daten-Spielwiese (ALLBUS 2018)"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#das-geschlechtsspezifische-risiko-alleinerziehend-zu-sein",
+    "href": "slides/17-VergleichsgegenstaendeII.html#das-geschlechtsspezifische-risiko-alleinerziehend-zu-sein",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Das geschlechtsspezifische Risiko, alleinerziehend zu sein",
+    "text": "Das geschlechtsspezifische Risiko, alleinerziehend zu sein\nAusgehend von den geschlechtsspezifischen Wahrscheinlichkeiten alleinerziehend zu sein, können wir Odds, Odds Ratios und Relative Risiken berechnen.\n\n\n\n\n\n\n\n\nsex_c\nAlleinerziehend\nNicht alleinerziehend\n\n\n\n\nMann\n242 (1,6%)\n14585 (98,4%)\n\n\nFrau\n748 (4,0%)\n18155 (96,0%)\n\n\n\n\n\n\n\n\n\\[Odd_F = \\dfrac{4.0}{96.0} = 0.042 \\]\n\\[Odd_M = \\dfrac{1.6}{98.4} = 0.016\\]\n\\[ OR_{F/M} = \\dfrac{0.042}{0.016} = 2.625 \\]\n\\[ RR_{F/M} = \\dfrac{4.0}{1.6} = 2.5 \\]"
   }
 ]

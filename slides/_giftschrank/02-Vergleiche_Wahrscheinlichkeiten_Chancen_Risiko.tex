@@ -1,0 +1,525 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.0
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+%\documentclass[18pt]{beamer}
+\documentclass[18pt,handout, aspectratio=169]{beamer}
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen = right}
+%\documentclass[18pt,draft]{beamer}
+
+\usetheme{kit2}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%% Zeichencodierung & Schrift
+\usepackage[ansinew]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb}
+\let\raggedright\relax
+\usepackage{ragged2e}
+%\usepackage{color}
+
+
+%%%% Einbinden von Graphiken
+%\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pgf}
+
+%%%% Bibliographie und Zitationen
+\usepackage[round]{natbib}
+\bibliographystyle{nachvorj}
+
+
+%%%% Tabellen
+\usepackage{multirow,booktabs,verbatim }
+\setbeamertemplate{caption}[numbered]
+
+%\graphicspath{{U:/Lehre/MethodenII/Grafiken/}}
+%\graphicspath{{D:/uni/Lehre/MethodenII/Grafiken/}}
+\graphicspath{{/Dropbox/Graphs/}}
+
+\usepackage{hyperref}
+\hypersetup{pdfpagemode=FullScreen}
+
+
+\setbeamerfont{block title}{size=\normalsize}
+
+\title{Datenauswertung}
+\subtitle{Wahrscheinlichkeiten, Chancen, Risiko}
+\author{}
+\institute{Karlsruher Institut für Technologie}
+\date{}
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{ngerman}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section{Wahrscheinlichkeiten, Chancen, Risiko}
+\subsection*{}
+
+\frame{
+\frametitle{Das Auftreten von Ereignissen und die Verteilungen von kategorialen Merkmalen}
+
+\begin{itemize}
+  \item Wir interessieren uns oft dafür, wie wahrscheinlich es ist, dass Personen zu einer bestimmten Gruppe gehören (Mieter vs. Eigentümer; Studium vs. Ausbildung; genesen vs. nicht genesen). 
+  \item Soziale Prozesse beeinflussen diese Wahrscheinlichkeiten, sodass es zu Differenzen über verschiedene Gruppen kommt. 
+  \item In vielen Fällen ist es sinnvoll, diese Differenzen als Wahrscheinlichkeiten auszudrücken, allerdings sind wir oft auch an Veränderungen in den \textit{Verhältnissen zwischen Gruppen} interessiert. 
+\end{itemize}
+
+}
+
+\frame{
+\frametitle{Abkürzungen}
+\begin{center}
+\begin{tabular}{lp{9cm}} \toprule
+Abkürzung & Bedeutung\\ \midrule
+P(Y) &   Wahrscheinlichkeit von Y \\
+$P(Y|X)$ & Wahrscheinlichkeit von Y unter der Bedingung, dass X vorliegt \\
+$RR_{Y}$ & Risikoverhältnis (oder Risk Ratio) einer (Referenz)Gruppe auf Y gegenüber einer anderen Gruppe\\
+$Odd_Y$ & Chance auf Y\\
+$Odd_{Y|X}$ & Chance auf Y unter der Bedingung, dass X vorliegt\\
+$OR_{Y}$ & Chancenverhältnis von Y gegenüber Z\\ \bottomrule
+\end{tabular}
+\end{center}
+}
+
+\begin{frame}{Anwendungsfall: Alleinerziehende; Basis: alle Haushalte}
+
+\begin{center}
+\resizebox{0.7\textwidth}{!}{
+\includegraphics{hhtyp-share-2021}
+}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Anwendungsfall: Alleinerziehende; Basis: Haushalte mit Kind(ern)}
+
+\begin{center}
+\resizebox{.7\textwidth}{!}{
+\includegraphics{hhtyp-share-childhh-2021}
+}
+\end{center}
+
+\end{frame}
+
+
+%% Frame with 50/50 Split, righthand side graph
+\begin{frame}{Alleinerziehende nach Geschlecht}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\begin{tabular}{rrrr} \toprule
+      & Männer & Frauen & Gesamt\\ \midrule      
+Paare & 40.25 & 44.90 & 85.15  \\
+Alleinerziehend & 2.64 & 12.22 & 14.85 \\  \midrule
+Gesamt & 42.88 & 57.12 & 100 \\ \bottomrule
+\end{tabular}
+
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+  \item 15\% aller Haushalte mit Kindern stellen Alleinerziehende dar.  
+  \item 2.7\% aller Haushalte mit Kindern werden von Vätern und 12\% von Müttern als Alleinerziehenden betreut. 
+  \item Frauen sind mit einer höheren Wahrscheinlichkeit in Familien mit Kindern vertreten als Männer: 57\% vs. 43\%. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+
+%% Frame with 50/50 Split, righthand side graph
+\begin{frame}{Alleinerziehende nach Geschlecht; Zeilenprozente}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\begin{tabular}{rrrr} \toprule
+      & Männer & Frauen & Gesamt\\ \midrule      
+Paare & 47.27 & 52.73 & 100  \\
+Alleinerziehend & 17.75 & 82.25 & 100 \\  \midrule
+Gesamt & 42.88 & 57.12 & 100 \\ \bottomrule
+\end{tabular}
+
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+  \item Circa 82\% aller Alleinerziehenden sind Frauen und 18\% sind Männer im Jahr 2021 (in Relation zu Haushalten mit Kindern). 
+  \item In Bezug auf alle Erziehungsberechtigte bilden Frauen circa 57\%. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Alleinerziehende nach Geschlecht; Spaltenprozente}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\begin{tabular}{rrrr} \toprule
+      & Männer & Frauen & Gesamt\\ \midrule      
+Paare & 93.85 & 78.61 &  85.15   \\
+Alleinerziehend & 6.15 & 21.39 & 14.85 \\  \midrule
+Gesamt & 100 & 100 & 100  \\ \bottomrule
+\end{tabular}
+
+
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+  \item Von allen Männer, die in Haushalten mit Kindern leben, waren 6\% alleinerziehend. 
+  \item Von allen Frauen, die in Haushalten mit Kindern leben, waren 21\% alleinerziehend. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}{die Berechnung}
+
+$X_0$ ist die Gruppe zu der wir vergleichen und $X = x$ ist irgendeine andere Gruppe und somit ein anderer Wert der Variablen $X$.
+
+\begin{equation*}
+  RR_{Y} = \dfrac{P(Y| X = x)}{P(Y | X_0)}
+\end{equation*}
+
+\begin{equation*}
+  Odd_Y = \dfrac{P(Y)}{ 1 - P(Y)}
+\end{equation*}
+
+\begin{equation*}
+  OR_{Y} = \dfrac{Odd_{Y| X = x}}{Odd_{Y| X_0}}
+\end{equation*}
+
+\end{frame}
+
+
+
+\frame{
+\frametitle{Wahrscheinlichkeit, Chance und Risiko}
+
+
+\begin{center}
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\textwidth}{!}{
+\includegraphics{p-odd-risk.pdf}
+}
+\end{center}
+\quad \\[2em] \vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption 
+  \small
+
+\begin{block}{Wahrscheinlichkeit}
+Gruppe A:  $P(K) = 0.2$ \newline  
+Gruppe B: $P(K) = 0.4$ \newline 
+Daher: $P(K|A) = 0.2 \, \& \, P(K|B) = 0.4$ 
+\end{block}
+\quad \\[-3.5em]
+\begin{block}{Odds (Chancen)}
+$Odd_{K|A} = \dfrac{0.2}{1 - 0.2} = \dfrac{1}{4}$  = 1:4 \newline
+$Odd_{K|B} = \dfrac{0.4}{1 - 0.4} = \dfrac{2}{3} =$ 2:3 
+\end{block}
+\quad \\[-3.5em]
+\begin{block}{Odds Ratio \& Relatives Risiko}
+$ OR_{K} = \frac{2/3}{1/4} $ = 2.6667
+
+
+$RR_K = \frac{0.4}{0.2} = 2 $
+\end{block}
+
+  \end{minipage}
+\end{center}
+}
+
+
+\begin{frame}{Alleinerziehende \& Bildung - Risikoverhältnis}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrrr} \toprule
+                      & Paare & Alleinerziehend & Gesamt\\ \midrule
+Keine Berufsausbildung &    79.45   &   20.55 & 100\\ 
+Berufsausbildung  &          83.02  &    16.98 & 100\\ 
+(Fach)Hochschule  &        90.79    &   9.21 & 100\\ \bottomrule
+\end{tabular}
+}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+  \item  Risikverhältnis alleinerziehend zu sein von Personen ohne Berufsausbildung zu Personen mit Hochschulabschluss:\\[.5em]
+  \item[] $RR = \dfrac{20.55}{9.21} = 2.2$.\\[.5em] 
+  \item[] Das Risiko, alleinerziehend zu sein, ist bei Personen ohne Berufsausbildung um das 2.2-fache höher als bei Personen mit Hochschulabschluss. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Alleinerziehende \& Bildung - Odds}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrrr} \toprule
+                      & Paare & Alleinerziehend & Gesamt\\ \midrule
+Keine Berufsausbildung &    79.45   &   20.55 & 100\\ 
+Berufsausbildung  &          83.02  &    16.98 & 100\\ 
+(Fach)Hochschule  &        90.79    &   9.21 & 100\\ \bottomrule
+\end{tabular}
+}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\small
+\begin{itemize}
+  \item Die Chance, als Erziehungsberechtigte in einer Partnerschaft zu leben nach Bildungsabschluss:
+  \item[] $Odd_{KB} = \dfrac{79.45}{20.55} = 3.87$\\[.1em]
+  \item[] $Odd_{H} = \dfrac{90.79}{9.21} = 9.86 $. 
+  \item[] 387 Erziehungsberechtigte ohne Berufsausbildung in Partnerschaften stehen 100 Erziehungsberechtigte als Alleinerziehende gegenüber. Bei Personen mit Hochschulausbildung stehen 986 Erziehungsberechtigte in Partnerschaften 100 Alleinerziehenden gegenüber.  
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Alleinerziehende \& Bildung - Odds Ratio}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{rrrr} \toprule
+                      & Paare & Alleinerziehend & Gesamt\\ \midrule
+Keine Berufsausbildung &    79.45   &   20.55 & 100\\ 
+Berufsausbildung  &          83.02  &    16.98 & 100\\ 
+(Fach)Hochschule  &        90.79    &   9.21 & 100\\ \bottomrule
+\end{tabular}
+}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\small
+\begin{itemize}
+  \item Das Chancenverhältnis als Erziehungsberechtigter in einer Partnerschaft zu leben nach Bildungsabschluss: 
+  \item[] $OR = \dfrac{(90.79 ) / (9.21)}{(79.45 ) / (20.55)} = \dfrac{9.86}{3.87} = 2.55 $
+  \item Die Chance (auf Partnerschaft) ist bei Erziehungsberechtigten mit Hochschulabschluss um das 2.5-fache erhöht. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Die Relation von Risikoverhältnis und Odds Ratios}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\begin{figure}
+\begin{center}
+ \resizebox{1\linewidth}{!}{
+ \includegraphics{../Graphs/rr-or} 
+ }
+\end{center}
+Quelle: \href{https://www.bmj.com/content/348/bmj.f7450}{Grant (2014)}
+\end{figure}
+
+\end{column}
+
+\begin{column}{.5\linewidth}
+\small
+\begin{itemize}
+  \item Je kleiner die Referenzwahrscheinlichkeit (= Wahrscheinlichkeit im Nenner) ist, desto stärker driften Risikoverhältnis und Odds Ratio auseinander. 
+  \item D.h.: Die gleichen absoluten Differenzen einer Wahrscheinlichkeit zwischen Gruppen bei gleicher Basiswahrscheinlichkeit führen zu unterschiedlichen Verhältnissen je nach gewähltem Vergleichsmaß. 
+  \item Odds Ratios und Risikoverhältnisse können wie folgt konvertiert werden: 
+  \item[] $RR=\dfrac{OR}{1-P(Y|X_0) + (P(Y|X_0) \cdot OR)} $
+\end{itemize}
+
+\end{column}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{Absolute und relative Vergleiche}
+\begin{itemize}
+  \item Risikoverhältnisse drücken ein absolutes Risiko zu einer Referenzgruppe aus. Wir können auch sagen: Es ist die Verschiebung eines Risikos von einer Population, die einem Risiko ausgesetzt sein könnte zu einer, bei das Risiko eingetreten ist. 
+  \item Odds Ratios drücken eine Differenz auf eine relative Weise aus: Im Vergleich zu Gruppe A tritt in Gruppe B ein Merkmal (oder ein Risiko) um das X-fache höher auf. Diese Relation ist unabhängig von der Referenzwahrscheinlichkeit. 
+  \item Daher: Ist die Basiswahrscheinlichkeit sehr groß, kann die Differenz zu einer anderen Gruppe nicht sonderlich stärker werden. Aber die relative Differenz kann groß sein.
+  \item Oder: Die gleiche absolute Wahrscheinlichkeitsdifferenz kann etwas ganz anderes bedeuten, je nachdem wie groß die Basiswahrscheinlichkeit ist. 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Basiswahrscheinlichkeiten}
+\begin{itemize}
+  \item Das Risikoverhältnis macht nur Sinn, wenn die Basiswahrscheinlichkeit bekannt ist. 
+  \item Repräsentative Bevölkerungsumfragen erlauben eine gute Schätzung der Basiswahrscheinlichkeiten von beobachteten Merkmalen. 
+  \item Einige Unterschungsdesigns, insbesondere in der Medizin häufig verwendete, erlauben dies aber nicht.
+  \begin{itemize}
+     \item Wir wissen oft nicht, wie das Risiko einer Krankheit in der Gesamtbevölkerung ist. Wir haben meist nur Daten über Patienten (Cases) und Daten über vergleichbare Personen (Controls), die an einer Studie teilgenommen haben. Der Zähler ist daher die Anzahl der Cases oder Controls - aber nicht die Anzahl der Fälle, die potentiell (= in der Bevölkerung) einem Risiko ausgesetzt sind. 
+     \item Ohne Basiswahrscheinlichkeit können wir keine Risk Ratios schätzen. 
+     \item Wir können aber Odds und Odds Ratios berechnen.\footnote{Eine ausführliche Erläuterung finden Sie \href{https://stats.stackexchange.com/questions/276780/why-is-relative-risk-not-valid-in-case-control-studies}{\underline{hier}.}} 
+   \end{itemize}
+   \item Manchmal können wir aber auch die Basiswahrscheinlichkeiten berechnen.  
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Der Satz von Bayes}
+
+\begin{center}
+  \begin{minipage}[b]{.2\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+
+\resizebox{1\textwidth}{!}{
+\includegraphics{Bayes}
+} \tiny
+* um 1701 in London; † 1761 in Tunbridge Wells; war ein englischer Mathematiker, Statistiker, Philosoph und presbyterianischer Pfarrer
+\end{center}
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.7\linewidth} % [b] => Ausrichtung an \caption 
+
+Thomas Bayes entwickelte eine Lösung für das Problem unbekannter bedingter Wahrscheinlichkeiten: 
+
+ \[ P(A|B) = \dfrac{P(B|A) \cdot P(A)}{P(B)} \]
+
+\begin{itemize}
+  \item Wichtig: Für die Umkehrung von $P(B|A)$ auf $P(A|B)$ \textbf{müssen} wir die Wahrscheinlichkeiten P(A) und P(B) kennen oder zumindest gut schätzen können.  
+  \item Einen wunderbaren Einblick in die Bedeutung von Bayes für die moderne Datenanalyse gibt Richard McElreath in diesem \href{https://www.youtube.com/watch?v=yakg94HyWdE&feature=youtu.be}{Video}.
+\end{itemize}
+
+  \end{minipage}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Der Satz von Bayes}
+
+\begin{itemize}
+  \item Wenn wir in einer medizinischen Studie wissen, wie hoch die Wahrscheinlichkeit von Symptomen ($S$) ist, wenn eine Krankheit ($K$) vorliegt und wir außerdem abschätzen können, wie wahrscheinlich diese Symptome insgesamt und wie wahrscheinlich die Krankheit in der Bevölkerung ist, können wir abschätzen, wie wahrscheinlich es ist, dass jemand diese Krankheit hat, wenn Symptome vorliegen.\\[.5em] 
+  \item $P(\text{Krankheit} \, | \, \text{Symptome}) = \dfrac{P(\text{Symptome} \, | \, \text{Krankheit}) \cdot P(\text{Krankheit})}{P(\text{Symptome})}$
+  \item Mit dieser Basiswahrscheinlichkeit können wir das Risiko auf eine Krankheit von symptomatischen zu unsymptomatischen Patient:innen einschätzen.  
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Der Satz von Bayes und selektive Datensätze}
+
+In vielen Fällen beruhen Daten auf sehr selektiven Samplingframes. Zum Beispiel hat eine Behörde typischerweise nur Informationen über Personen, die Hilfen der Behörden in Anspruch nehmen. Wir sind aber auch an einer unterschiedlichen Inanspruchnahme über Gruppen interessiert. Wenn Gruppen, wie Alleinerziehende oder Nicht-Muttersprachler:innen, ein hohes Risiko auf Nicht-Inanspruchnahme haben, müssen Behörden diese ggf. anders erreichen als üblich.\\[1em]
+
+ \resizebox{1\linewidth}{!}{
+$P(\text{Inanspruchnahme} \, | \, \text{Alleinerziehend}) = \dfrac{P(\text{Alleinerziehend} \, | \, \text{Inanspruchnahme}) \cdot P(\text{Inanspruchnahme})}{P(\text{Alleinerziehend})}$
+}
+ \end{frame}
+
+
+
+\end{document}
+
+
+
+\frame{
+\frametitle{Ist die Jugend der Covid-Spreader?}
+
+\begin{center}
+  \begin{minipage}[b]{.45\linewidth} % [b] => Ausrichtung 
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{l|ccccc|r} 
+\multicolumn{7}{l}{a) Empirische Werte}\\
+\toprule 
+ & \multicolumn{6}{c}{Woche} \\
+Altersgruppe &10&11&12&13&14&Total \\
+\hline
+10–14&21&97&234&359&111&822 \\
+15–19&40&163&509&897&287&1896 \\
+20–24&70&304&1356&2094&585&4409 \\
+25–29&70&510&1889&2489&648&5606 \\
+30–34&69&497&1941&2436&656&5599 \\
+35–39&59&523&1668&2202&610&5062 \\
+40–44&80&525&1715&2158&633&5111 \\
+45–49&97&701&1979&2655&715&6147 \\ \midrule 
+Total&506&3320&11291&15290&4245&34652 \\ \bottomrule
+\end{tabular}
+}
+  \end{minipage}
+  \hspace{.025\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.46\linewidth} % 
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{l|ccccc|r}
+\multicolumn{7}{l}{b) Indifferenztabelle}\\ \toprule 
+ & \multicolumn{6}{c}{Woche} \\
+Altersgruppe &10&11&12&13&14&Total \\
+\midrule 
+     10–14 &      12.0 &     78.8 &    267.8 &     362.7 &    100.7 &   822\\ 
+     15–19 &      27.7 &    181.7 &    617.8 &     836.6 &    232.3 &   1896\\ 
+     20–24 &      64.4 &    422.4 &   1436.6 &    1945.4 &    540.1 &   4409\\ 
+     25–29 &      81.9 &    537.1 &   1826.7 &    2473.6 &    686.8 &   5606\\ 
+     30–34 &      81.8 &    536.4 &   1824.4 &    2470.5 &    685.9 &   5599\\ 
+     35–39 &      73.9 &    485.0 &   1649.4 &    2233.6 &    620.1 &   5062\\ 
+     40–44 &      74.6 &    489.7 &   1665.4 &    2255.2 &    626.1 &   5111\\ 
+     45–49 &      89.8 &    588.9 &   2002.9 &    2712.3 &    753.0 &   6147\\ \midrule
+     Total &     506 &   3320 &  11291 &   15290 &   4245 &  34652\\ \bottomrule
+\end{tabular}
+}
+  \end{minipage}
+\end{center}
+
+\[e_{1,1} = \frac{822 \cdot 506}{34652} = 12.003117; \quad e_{8,5} = \frac{6147 \cdot 4245}{34652} = 753.03056  \]
+
+}
+
+
+\frame{
+  \frametitle{Unabhängigkeit?}
+
+Empirisch: 
+
+$Odd_{ \text{A2 vs A1} } =  \frac{(359+111)}{(15290+4245)} / \frac{(21+97)}{(506+3320)}   = 0.78$   \\[1em]
+$Odd_{\text{B2 vs B1}} =   \frac{(897 + 287)}{(15290+4245)} / \frac{(40 + 163)}{(506+3320)}  = 1.1423185$ \\[2em]
+
+
+Indifferenzwerte:
+
+$Odd_{ \text{A2 vs A1} } =  \frac{(362.7+100.7)}{(15290+4245)} / \frac{(12.0+78.8)}{(506+3320)}   = 1$   \\[1em]
+$Odd_{\text{B2 vs B1}} =   \frac{(836.6 + 232.3)}{(15290+4245)} / \frac{(27.7 +    181.7)}{(506+3320)}  = 1$ \\[1em]  
+
+}
