@@ -641,7 +641,7 @@ $RR_+ = \dfrac{0.4}{0.2} = 2$
 Ausgehend von den geschlechtsspezifischen Wahrscheinlichkeiten alleinerziehend zu sein, können wir Odds, Odds Ratios und Relative Risiken berechnen. 
 
 :::::::: columns
-::: column
+:::: column
 
 ::: {.r-fit-text}
 ```{r}
@@ -667,10 +667,11 @@ tab <- freda |>
 
 knitr::kable(tab, format = "pipe")
 ```
+
 ::: 
-:::
-:::::::: columns
-::: column
+::::
+
+:::: column
 $$Odd_F = \dfrac{4.0}{96.0} = 0.042 $$ 
 
 $$Odd_M = \dfrac{1.6}{98.4} = 0.016$$ 
@@ -678,18 +679,140 @@ $$Odd_M = \dfrac{1.6}{98.4} = 0.016$$
 $$ OR_{F/M} = \dfrac{0.042}{0.016} = 2.625 $$ 
 
 $$ RR_{F/M} = \dfrac{4.0}{1.6} = 2.5 $$ 
-::: 
-::: 
+:::: 
+::::::::
 
 ## Der Unterschied zwischen Odds Ratios und Relativen Risiken
 
 Der Unterschied zwischen OR und RR ist kein Zahlenspielchen sondern eine Frage der Wissenschaftskommunikation. Rein technisch müssen Sie auf zwei Dinge achten, die am einfachsten im Rahmen eines klassichen Experiments deutlich werden. 
 
-col
+
 
 |                	| Dinge passieren 	| Dinge passieren nicht 	|
 |----------------	|:---------------:	|:---------------------:	|
 | Versuchsgruppe 	|      $N_a$      	|         $N_b$         	|
 | Kontrollgruppe 	|      $N_c$      	|         $N_d$         	|
 
+## Der Unterschied zwischen Odds Ratios und Relativen Risiken
 
+
+Bei RR berechnen wir eine Relation von Wahrscheinlichkeiten, dass Dinge passieren in Bezug auf die Wahrscheinlichkeit auf alle Ereignisse (= Dinge passieren + Dinge passieren **nicht**): 
+$$ RR = \dfrac{N_a}{N_a + N_b} / \dfrac{N_c}{N_c + N_d} $$
+
+Bei Odds Ratios berechnen wir für jede Gruppe die Relation, dass Dinge passieren oder nicht[^1] und setzen diese Relation dann zueinander ins Verhältnis: 
+
+$$ OR = \dfrac{N_a}{N_b} / \dfrac{N_c}{N_d} $$
+
+
+
+[^1]: Für die Expert:innen: ORs werden mit P(Dinge passieren)/P(Dinge passieren nicht) berechnet. Wir können hier aber das N rauskürzen. 
+
+## Der Unterschied zwischen Odds Ratios und Relativen Risiken {.midi}
+
+:::::::: columns
+:::: column
+
+RR und OR sind nahezu identisch, wenn die Wahrscheinlichkeit, dass in der "Kontrollgruppe" Dinge **passieren** gering ist (="Baseline Risk").  Je höher diese Wahrscheinlichkeit ist, desto stärker divergieren OR und RR.  
+
+Formal besteht zwischen RR und OR folgendes Verhältnis (mit $P_{BL}$ als Baseline Risiko): 
+
+$$ RR = \frac{OR}{1 - P_{BL} + OR \cdot P_{BL}} $$ 
+
+$$ OR = \frac{RR \cdot (1 - P_{BL})}{1 - P_{BL} \cdot RR} $$
+
+::::
+
+:::: column
+```{r}
+
+rr_max <- 5
+or_max <- 10
+
+df_all <- bind_rows(
+  lapply(c("0.5%" = 0.005, "5%" = 0.05, "20%" = 0.20), function(p_bl) {
+    rr <- seq(1, rr_max, length.out = 200)
+    or <- rr * (1 - p_bl) / (1 - p_bl * rr)
+    # drop rows where OR explodes or goes negative
+    data.frame(rr = rr, or = or)
+  }),
+  .id = "baseline"
+) |>
+  filter(or >= 1, or <= or_max, is.finite(or))
+
+ggplot(df_all, aes(x = rr, y = or, color = baseline, linetype = baseline)) +
+  geom_line(linewidth = 1.6) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dotted", color = "grey50", linewidth = 1) +
+  annotate("text", x = 4.7, y = 4.3, label = "OR = RR", color = "grey50", size = 5, angle = 38) +
+  scale_color_manual(
+    values = c("0.5%" = "steelblue3", "5%" = "darkorange2", "20%" = "firebrick3"),
+    name = "Baseline Risk"
+  ) +
+  scale_linetype_manual(
+    values = c("0.5%" = "solid", "5%" = "dashed", "20%" = "dotdash"),
+    name = "Baseline Risk"
+  ) +
+  scale_x_continuous(limits = c(1, rr_max), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(1, or_max), expand = c(0, 0)) +
+  labs(
+    title    = "Verhältnis von Odds Ratio und Relativem Risiko",
+    subtitle = "Gestrichelte Linie: OR = RR. Mit steigendem Baseline Risk unterscheiden sich OR und RR stärker.",
+    x        = "Relatives Risiko (RR)",
+    y        = "Odds Ratio (OR)"
+  ) +
+  theme_classic(base_size = 16) +
+  theme(
+    legend.position         = "inside",
+    legend.position.inside  = c(0.15, 0.78),
+    legend.text             = element_text(size = 14),
+    legend.title            = element_text(size = 15),
+    plot.title              = element_text(size = 18, face = "bold"),
+    plot.subtitle           = element_text(size = 13)
+  )
+
+```
+::::
+::::::::
+
+## Sind Männer konservativer? 
+
+Behauptung: Kinder unter 6 Jahren leiden, wenn die Mutter erwerbstätig ist. 
+
+
+```{r}
+freda |>
+  filter(!is.na(val1i5), !is.na(sex_c)) |>
+  group_by(val1i5, sex_c) |>
+  summarize(n = n(), .groups = "drop") |>
+  group_by(sex_c) |>
+  mutate(
+    rel = round(n / sum(n) * 100, 1),
+    kum = cumsum(n),
+    kum_rel = round(cumsum(n) / sum(n) * 100, 1)
+  ) |>
+  ungroup() |>
+  pivot_wider(
+    names_from = sex_c,
+    values_from = c(n, rel, kum, kum_rel),
+    names_glue = "{sex_c}_{.value}"
+  ) |>
+  mutate(
+    val1i5_label = case_when(
+      val1i5 == 1 ~ "Stimme überhaupt nicht zu",
+      val1i5 == 2 ~ "Stimme eher nicht zu",
+      val1i5 == 3 ~ "Weder noch",
+      val1i5 == 4 ~ "Stimme eher zu",
+      val1i5 == 5 ~ "Stimme voll zu"
+    )
+  ) |>
+  select(val1i5_label, `1_rel`, `1_kum_rel`, `2_rel`, `2_kum_rel`) |>
+  setNames(c(" ", "Männer (%)", "Männer kum. (%)", "Frauen (%)", "Frauen kum. (%)")) |>
+  knitr::kable(format = "markdown")
+```
+
+## Sind Männer konservativer? 
+
+Wir setzen die Frauen  als "Kontroll-/Referenzgruppe" und nehmen "stimme eher zu" und "stimme voll zu" als "Ereignis *Zustimmung*". Dann können wir berechnen: 
+
+$$RR = \frac{23.2}{13.4} = 1.73$$  Das "Risiko" auf diese Frage zuzustimmen ist bei Männern um das 1.7-fache höher. 
+
+$$OR = \frac{23.2}{76.8} / \frac{13.4}{86.6} = 1.96 $$  Die Chance, dass ein Mann zustimmt anstatt "nicht zustimmt", ist um das 1.96-fache höher. 

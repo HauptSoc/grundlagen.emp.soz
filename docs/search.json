@@ -4459,8 +4459,8 @@
     "objectID": "slides/16-VergleichsgegenstaendeI.html#worauf-hin-wir-vergleichen-ist-bedeutsam",
     "href": "slides/16-VergleichsgegenstaendeI.html#worauf-hin-wir-vergleichen-ist-bedeutsam",
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
-    "section": "Worauf hin wir vergleichen, ist bedeutsam!",
-    "text": "Worauf hin wir vergleichen, ist bedeutsam!\n\n\n\nSprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
+    "section": "",
+    "text": "Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
   },
   {
     "objectID": "slides/16-VergleichsgegenstaendeI.html#beschreiben-von-verteilungen-deskriptive-statistik",
@@ -4509,7 +4509,7 @@
     "href": "slides/16-VergleichsgegenstaendeI.html#diversität",
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
     "section": "Diversität",
-    "text": "Diversität\nIn einigen Fällen ist eine Berechnung eines Mittelwerts nicht sinnvoll.1 Dennoch möchten wir dann eine Möglichkeit haben, die Unterschiedlichkeit der verteilten Werte auszudrücken. Eine Möglichkeit, diese Unterschiedlichkeit zu messen, besteht in Diversitäts-Maßen, wie dem Simpson Diversitäts Index:\n\\[ D = 1 - \\sum\\limits_{y}^Y P(y)^2 \\]\ny ist eine Ausprägung des Merkmals Y, Y die Anzahl aller Ausprägungen, und N die Gesamtanzahl aller Beobachtungen ist. Der Index drückt die Wahrscheinlichkeit aus, durch eine Ziehung zwei Beobachtungen zu erhalten. D schwankt zwischen 0 und 1. Ist D = 1, liegt höchste Diversität vor.\nDas sind vor allem: Verteilungen mit nominalen oder ordinal gemessenen Ausprägungen mit sehr unterschiedlichen Intervallen."
+    "text": "Diversität\nIn einigen Fällen ist eine Berechnung eines Mittelwerts nicht sinnvoll.1 Dennoch möchten wir dann eine Möglichkeit haben, die Unterschiedlichkeit der verteilten Werte auszudrücken. Eine Möglichkeit, diese Unterschiedlichkeit zu messen, besteht in Diversitäts-Maßen, wie dem Simpson Diversitäts Index:\n\\[ D = 1 - \\sum\\limits_{y}^Y P(y)^2 \\]\ny ist eine Ausprägung des Merkmals Y, Y die Anzahl aller Ausprägungen, und N die Gesamtanzahl aller Beobachtungen ist. Der Index drückt die Wahrscheinlichkeit aus, durch eine Ziehung zwei Beobachtungen zu erhalten. D schwankt zwischen 0 und 1. Ist D = 1, liegt höchste Diversität vor."
   },
   {
     "objectID": "slides/16-VergleichsgegenstaendeI.html#häufigkeiten-notation-begriffe",
@@ -4943,7 +4943,7 @@
     "href": "slides/17-VergleichsgegenstaendeII.html#jenseits-des-mittelwerts",
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
     "section": "Jenseits des Mittelwerts",
-    "text": "Jenseits des Mittelwerts\n\nManchmal liegen die “interessanten Unterschiede” zwischen Gruppen nicht in der Mitte der Verteilungen sondern ganz oben oder unten.\nMittelwerte oder Varianzen können diese Unterschiedlichkeit nur sehr begrenzt erfassen.\nEs lohnt sich daher, verschiedene Stellen der Verteilung zu analysieren. Dazu können wir Verteilungen in beliebig viele, gleich große1 Teile zerlegen.\n\nGleich groß bedeutet hier, eine gleiche Anzahl von Beobachtungen – aber nicht gleich viel “Fläche” in einem Koordinatensystem."
+    "text": "Jenseits des Mittelwerts\n\nManchmal liegen die “interessanten Unterschiede” zwischen Gruppen nicht in der Mitte der Verteilungen sondern ganz oben oder unten.\nMittelwerte oder Varianzen können diese Unterschiedlichkeit nur sehr begrenzt erfassen.\nEs lohnt sich daher, verschiedene Stellen der Verteilung zu analysieren. Dazu können wir Verteilungen in beliebig viele, gleich große1 Teile zerlegen.\n\nFür die Expert:innen: ORs werden mit P(Dinge passieren)/P(Dinge passieren nicht) berechnet. Wir können hier aber das N rauskürzen."
   },
   {
     "objectID": "slides/17-VergleichsgegenstaendeII.html#begrifflichkeiten",
@@ -4992,6 +4992,62 @@
     "href": "slides/17-VergleichsgegenstaendeII.html#das-geschlechtsspezifische-risiko-alleinerziehend-zu-sein",
     "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
     "section": "Das geschlechtsspezifische Risiko, alleinerziehend zu sein",
-    "text": "Das geschlechtsspezifische Risiko, alleinerziehend zu sein\nAusgehend von den geschlechtsspezifischen Wahrscheinlichkeiten alleinerziehend zu sein, können wir Odds, Odds Ratios und Relative Risiken berechnen.\n\n\n\n\n\n\n\n\nsex_c\nAlleinerziehend\nNicht alleinerziehend\n\n\n\n\nMann\n242 (1,6%)\n14585 (98,4%)\n\n\nFrau\n748 (4,0%)\n18155 (96,0%)\n\n\n\n\n\n\n\n\n\\[Odd_F = \\dfrac{4.0}{96.0} = 0.042 \\]\n\\[Odd_M = \\dfrac{1.6}{98.4} = 0.016\\]\n\\[ OR_{F/M} = \\dfrac{0.042}{0.016} = 2.625 \\]\n\\[ RR_{F/M} = \\dfrac{4.0}{1.6} = 2.5 \\]"
+    "text": "Das geschlechtsspezifische Risiko, alleinerziehend zu sein\nAusgehend von den geschlechtsspezifischen Wahrscheinlichkeiten alleinerziehend zu sein, können wir Odds, Odds Ratios und Relative Risiken berechnen.\n\n\n\n\n\n\n\n\nsex_c\nAlleinerziehend\nNicht alleinerziehend\n\n\n\n\nMann\n242 (1,6%)\n14585 (98,4%)\n\n\nFrau\n748 (4,0%)\n18155 (96,0%)\n\n\n\n\n\n\n\n\\[Odd_F = \\dfrac{4.0}{96.0} = 0.042 \\]\n\\[Odd_M = \\dfrac{1.6}{98.4} = 0.016\\]\n\\[ OR_{F/M} = \\dfrac{0.042}{0.016} = 2.625 \\]\n\\[ RR_{F/M} = \\dfrac{4.0}{1.6} = 2.5 \\]"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#der-unterschied-zwischen-odds-ratios-und-relativen-risiken",
+    "href": "slides/17-VergleichsgegenstaendeII.html#der-unterschied-zwischen-odds-ratios-und-relativen-risiken",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Der Unterschied zwischen Odds Ratios und Relativen Risiken",
+    "text": "Der Unterschied zwischen Odds Ratios und Relativen Risiken\nDer Unterschied zwischen OR und RR ist kein Zahlenspielchen sondern eine Frage der Wissenschaftskommunikation. Rein technisch müssen Sie auf zwei Dinge achten, die am einfachsten im Rahmen eines klassichen Experiments deutlich werden.\n\n\n\n\nDinge passieren\nDinge passieren nicht\n\n\n\n\nVersuchsgruppe\n\\(N_a\\)\n\\(N_b\\)\n\n\nKontrollgruppe\n\\(N_c\\)\n\\(N_d\\)"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#der-unterschied-zwischen-odds-ratios-und-relativen-risiken-1",
+    "href": "slides/17-VergleichsgegenstaendeII.html#der-unterschied-zwischen-odds-ratios-und-relativen-risiken-1",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Der Unterschied zwischen Odds Ratios und Relativen Risiken",
+    "text": "Der Unterschied zwischen Odds Ratios und Relativen Risiken\nBei RR berechnen wir eine Relation von Wahrscheinlichkeiten, dass Dinge passieren in Bezug auf die Wahrscheinlichkeit auf alle Ereignisse (= Dinge passieren + Dinge passieren nicht): \\[ RR = \\dfrac{N_a}{N_a + N_b} / \\dfrac{N_c}{N_c + N_d} \\]\nBei Odds Ratios berechnen wir für jede Gruppe die Relation, dass Dinge passieren oder nicht1 und setzen diese Relation dann zueinander ins Verhältnis:\n\\[ OR = \\dfrac{N_a}{N_b} / \\dfrac{N_c}{N_d} \\]\nFür die Expert:innen: ORs werden mit P(Dinge passieren)/P(Dinge passieren nicht) berechnet. Wir können hier aber das N rauskürzen."
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#der-unterschied-zwischen-odds-ratios-und-relativen-risiken-2",
+    "href": "slides/17-VergleichsgegenstaendeII.html#der-unterschied-zwischen-odds-ratios-und-relativen-risiken-2",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Der Unterschied zwischen Odds Ratios und Relativen Risiken",
+    "text": "Der Unterschied zwischen Odds Ratios und Relativen Risiken\n\n\nRR und OR sind nahezu identisch, wenn die Wahrscheinlichkeit, dass in der “Kontrollgruppe” Dinge passieren gering ist (=“Baseline Risk”). Je höher diese Wahrscheinlichkeit ist, desto stärker divergieren OR und RR.\nFormal besteht zwischen RR und OR folgendes Verhältnis (mit \\(P_{BL}\\) als Baseline Risiko):\n\\[ RR = \\frac{OR}{1 - P_{BL} + OR \\cdot P_{BL}} \\]\n\\[ OR = \\frac{RR \\cdot (1 - P_{BL})}{1 - P_{BL} \\cdot RR} \\]"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#sind-männer-konservativer",
+    "href": "slides/17-VergleichsgegenstaendeII.html#sind-männer-konservativer",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Sind Männer konservativer?",
+    "text": "Sind Männer konservativer?\nBehauptung: Kinder unter 6 Jahren leiden, wenn die Mutter erwerbstätig ist.\n\n\n\n\n\n\n\n\n\n\n\n\n\nMänner (%)\nMänner kum. (%)\nFrauen (%)\nFrauen kum. (%)\n\n\n\n\nStimme überhaupt nicht zu\n25.5\n25.5\n39.8\n39.8\n\n\nStimme eher nicht zu\n32.4\n57.8\n32.5\n72.4\n\n\nWeder noch\n18.9\n76.8\n14.2\n86.6\n\n\nStimme eher zu\n18.3\n95.1\n10.5\n97.1\n\n\nStimme voll zu\n4.9\n100.0\n2.9\n100.0"
+  },
+  {
+    "objectID": "slides/17-VergleichsgegenstaendeII.html#sind-männer-konservativer-1",
+    "href": "slides/17-VergleichsgegenstaendeII.html#sind-männer-konservativer-1",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt II",
+    "section": "Sind Männer konservativer?",
+    "text": "Sind Männer konservativer?\nWir setzen die Frauen als “Kontroll-/Referenzgruppe” und nehmen “stimme eher zu” und “stimme voll zu” als “Ereignis Zustimmung”. Dann können wir berechnen:\n\\[RR = \\frac{23.2}{13.4} = 1.73\\] Das “Risiko” auf diese Frage zuzustimmen ist bei Männern um das 1.7-fache höher.\n\\[OR = \\frac{23.2}{76.8} / \\frac{13.4}{86.6} = 1.96 \\] Die Chance, dass ein Mann zustimmt anstatt “nicht zustimmt”, ist um das 1.96-fache höher."
+  },
+  {
+    "objectID": "slides/17-slides.html",
+    "href": "slides/17-slides.html",
+    "title": "Vergleichsgegenstände II",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/16-VergleichsgegenstaendeI.html",
+    "href": "slides/16-VergleichsgegenstaendeI.html",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
+    "section": "",
+    "text": "Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
+  },
+  {
+    "objectID": "slides/16-VergleichsgegenstaendeI.html#footnotes",
+    "href": "slides/16-VergleichsgegenstaendeI.html#footnotes",
+    "title": "Gute Vergleiche: Vergleichsgegenstände – Akt I",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDas sind vor allem: Verteilungen mit nominalen oder ordinal gemessenen Ausprägungen mit sehr unterschiedlichen Intervallen.↩︎"
   }
 ]

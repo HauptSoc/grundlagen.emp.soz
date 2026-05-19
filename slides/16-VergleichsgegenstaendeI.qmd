@@ -28,6 +28,8 @@ execute:
   warning: false
 ---
 
+
+
 ## Worauf hin wir vergleichen, ist bedeutsam!
 
 ![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
@@ -70,7 +72,7 @@ library(ggplot2)
 library(haven)
 library(forcats)
 
-freda <- read_dta("./data/fredacamp.dta")
+freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
 
 labs <- attr(freda$pa60, "labels")
 names(labs)[labs == 9] <- "Social Media"
