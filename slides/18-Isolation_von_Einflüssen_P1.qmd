@@ -5,6 +5,7 @@ lightbox: true
 css: global.css
 format: 
   revealjs:
+    self-contained: true
     fig-format: svg
     fig-width: 16
     fig-asp: 0.618
@@ -27,19 +28,6 @@ execute:
   message: false
   warning: false
 ---
-
-
-```{r}
-library(haven)
-library(dplyr)
-library(ggplot2)
-library(haven)
-library(forcats)
-library(tidyr)
-library(knitr)
-
-freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
-```
 
 ## Ziel: Wirkungen isolieren als Kern guter Vergleiche
 
@@ -393,7 +381,7 @@ $$ 35 \cdot 2 \cdot 2 = 140 $$
 
 ## Zerlegung des Datensatzes und sein Fluch 
 
-::: {.extrapad}
+:::{.extrapad}
 
 - Viele der studierten Prozesse in den Sozialwissenschaften sind komplex und hochgradig verflochten. 
 
@@ -575,7 +563,8 @@ Aber:
 [McElreath (2020: 1)](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath).
 
 ## Klemmbausteine für datenanalytische Modelle
-::: {.extrapad}
+
+:::{.extrapad}
 1. **Korrelationen**:  Statistische Modelle korrelieren Ausprägungen von Variablen miteinader. 
 
 2. **Residualvarianz**: Sie bilden ihre Parameter so, dass die Abstände zwischen *vorhergesagten Werten* und *beobachteten Werten* so gering wie möglich ist. 
@@ -615,7 +604,6 @@ schließen können.
 [^5]: Aber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.
 
 ## Der Scatterplot als (visuelle) Grundlage für Korrelationen
-
 
 ```{r}
 library(ggplot2)
@@ -712,14 +700,11 @@ eine solche gleichmäßige Steigerung streuen, desto geringer ist der
 
 ## Pearsons r und die Verteilung von Daten 
 
-
 ```{r}
 {{< include ./scripts/_correlation-examples.R >}}
 ```
 
 ## Unterschied zwischen Korrelation und Einfluss
-
-::: {.extrapad}
 
 - Korrelationen sind lediglich der Informationen der Art: "Wenn ich eine Ausprägung von X sehe, dann sehe ich sehr unwahrscheinlich / unwahrscheinlich / (scheinbar) zufällig / wahrscheinlich / sehr wahrscheinlich  Ausprägungen von Y."
 
@@ -727,11 +712,9 @@ eine solche gleichmäßige Steigerung streuen, desto geringer ist der
     - welche Eigenschaft eine andere beeinflusst (Treatment $\rightarrow$ Outcome und nicht Outcome $\rightarrow$ Treatment)
     - wie stark wir diesen Einfluss schätzen.  
 
-- **Die Stärke eines Einflusses "schätzen" wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert.**
+- Die Stärke eines Einflusses "schätzen" wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert.
 
- :::
 
- ## Wie schätzen wir einen Einfluss? 
+## Wie schätzen wir einen Einfluss? 
 
- 
-
+ <iframe width="1400" height="1050" data-external="1" src="https://019e841d-86fb-a0f3-d58b-43dbef9540a1.share.connect.posit.cloud"></iframe>

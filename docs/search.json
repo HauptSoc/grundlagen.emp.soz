@@ -5258,6 +5258,13 @@
     "href": "slides/18-Isolation_von_Einflüssen_P1.html#unterschied-zwischen-korrelation-und-einfluss",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Unterschied zwischen Korrelation und Einfluss",
-    "text": "Unterschied zwischen Korrelation und Einfluss\n\nKorrelationen sind lediglich der Informationen der Art: “Wenn ich eine Ausprägung von X sehe, dann sehe ich sehr unwahrscheinlich / unwahrscheinlich / (scheinbar) zufällig / wahrscheinlich / sehr wahrscheinlich Ausprägungen von Y.”\nEinflüsse sind Angaben darüber,\n\nwelche Eigenschaft eine andere beeinflusst (Treatment \\(\\rightarrow\\) Outcome und nicht Outcome \\(\\rightarrow\\) Treatment)\nwie stark wir diesen Einfluss schätzen.\n\nDie Stärke eines Einflusses “messen” wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert."
+    "text": "Unterschied zwischen Korrelation und Einfluss\n\nKorrelationen sind lediglich der Informationen der Art: “Wenn ich eine Ausprägung von X sehe, dann sehe ich sehr unwahrscheinlich / unwahrscheinlich / (scheinbar) zufällig / wahrscheinlich / sehr wahrscheinlich Ausprägungen von Y.”\nEinflüsse sind Angaben darüber,\n\nwelche Eigenschaft eine andere beeinflusst (Treatment \\(\\rightarrow\\) Outcome und nicht Outcome \\(\\rightarrow\\) Treatment)\nwie stark wir diesen Einfluss schätzen.\n\nDie Stärke eines Einflusses “schätzen” wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einflüssen_P1.html#wie-schätzen-wir-einen-einfluss",
+    "href": "slides/18-Isolation_von_Einflüssen_P1.html#wie-schätzen-wir-einen-einfluss",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Wie schätzen wir einen Einfluss?",
+    "text": "Wie schätzen wir einen Einfluss?"
   }
 ]
