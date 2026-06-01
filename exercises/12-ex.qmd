@@ -1,0 +1,85 @@
+---
+title: "Übung: 'Vergleichsgegenstände'"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+
+
+```{r}
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(haven)
+library(forcats)
+library(tidyr)
+library(knitr)
+
+freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
+```
+
+
+## Marmor, Stein und Eisen bricht... 
+
+FreDa ist ein Panel. Daher können wir verfolgen, ob Personen sich seit der letzten Befragung voneinander getrennt haben. Die Tabelle stellt die relativen Häufigkeiten nach Bildungsabschlüssen dar. 
+
+```{r}
+freda |>
+  filter(!is.na(voctrain), !is.na(separation)) |>
+  count(voctrain, separation, name = "n") |>
+  group_by(voctrain) |>
+  mutate(rel = n / sum(n), gesamt = sum(n)) |>
+  ungroup() |>
+  filter(as.numeric(separation) == 1) |>
+  transmute(
+    `Berufsausbildung (voctrain)` = as_factor(voctrain),
+    `N gesamt` = gesamt,
+    `N Trennung` = n,
+    `Anteil Trennung (%)` = round(rel * 100, 1)
+  ) |>
+  knitr::kable()
+```
+
+
+## Arbeit, nichts als Arbeit
+
+
+```{r}
+attr(freda$sex_c, "label")
+levels(as_factor(freda$sex_c))
+
+freda |>
+  filter(!is.na(job56), !is.na(pa21i7), as_factor(sex_c) %in% c("Male", "Female")) |>
+  mutate(
+    pa21i7 = as_factor(pa21i7),
+    sex_c  = as_factor(sex_c)
+  ) |>
+  ggplot(aes(x = pa21i7, y = job56)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 10)) +
+  facet_wrap(~ sex_c, ncol = 1, labeller = labeller(sex_c = c(Male = "Männer", Female = "Frauen"))) +
+  labs(
+    x = attr(freda$pa21i7, "label"),
+    y = attr(freda$job56, "label")
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```

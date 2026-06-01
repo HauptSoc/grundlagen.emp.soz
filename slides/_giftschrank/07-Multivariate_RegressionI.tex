@@ -1,0 +1,802 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.0
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+%\documentclass[18pt]{beamer}
+\documentclass[18pt, aspectratio=169]{beamer}
+
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen = right}
+%\documentclass[18pt,draft]{beamer}
+
+\usetheme{kit2}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%% Zeichencodierung & Schrift
+\usepackage[ansinew]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb}
+\let\raggedright\relax
+\usepackage{ragged2e}
+%\usepackage{color}
+
+
+%%%% Einbinden von Graphiken
+%\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+
+
+%%%% Bibliographie und Zitationen
+\usepackage[round]{natbib}
+\bibliographystyle{nachvorj}
+
+
+%%%% Tabellen
+\usepackage{multirow,booktabs,verbatim }
+\setbeamertemplate{caption}[numbered]
+
+%\graphicspath{{U:/Lehre/MethodenII/Grafiken/}}
+%\graphicspath{{D:/uni/Lehre/MethodenII/Grafiken/}}
+\graphicspath{{/Dropbox/Graphs/}}
+
+
+
+\hypersetup{pdfpagemode=FullScreen}
+
+
+\setbeamerfont{block title}{size=\normalsize}
+
+\title{Datenauswertung}
+\subtitle{Multivariate Regression - Isolation von Einflüssen}
+\author{Andreas Haupt \\ andreas.haupt@kit.edu }
+\institute{Karlsruher Institut für Technologie}
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{ngerman}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section{Multivariate Regression}
+\subsection*{}
+
+\frame{
+  \vfill 
+\begin{center}
+{{\large Multivariate Regression - Idee \& Mechanik}}
+\end{center}
+}
+
+\frame{
+\frametitle{Das Ausgangsproblem}
+Wir interessieren uns für systematische Zusammenhänge von mindestens zwei Merkmalen (um ggf. Effekte zu studieren). In vielen Fällen hängen die zu studierenden Merkmale aber noch systematisch mit anderen Merkmalen zusammen. Wenn dies nicht beachtet wird, kann das die Analyseergebnisse des zu studierenden Zusammenhangs stark verzerren und uns zu völlig falschen Schlüssen führen. 
+
+\vfill
+
+Unser Ziel ist es daher, den interessierenden Zusammenhang zwischen zwei Eigenschaften von allen anderen mit diesen Eigenschaften verbundenen Zusammenhängen \textbf{zu isolieren}. 
+
+\vfill
+
+Der Einbezug solcher dritten Merkmale auf den Zusammenhang von zwei interessierenden Merkmalen wird ``Drittvariablenkontrolle'' genannt. 
+
+}
+
+\begin{frame}{Typische Beziehungen}
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{Leseleistung-Dritt1}
+}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Isolation von Einflüssen durch Konstanthaltung}
+
+Die grundlegende Idee einer Isolation von Einflüssen ist die Konstanthaltung. Sie basiert auf dem Gedanken, nur Gruppen zu vergleichen (= in Differenz zu setzen), die in anderen ("`dritten"') Eigenschaft gleich sind. Wir können z.B. die Leseleistung von Schüler:innen nach Leseschwäche und Nachhilfebesuch vergleichen: 
+
+\begin{center}
+\begin{tabular}{ccc}  \toprule
+  & \multicolumn{2}{c}{Nachhilfe}  \\
+Leseschwäche & nein & ja  \\ \cmidrule{2-3}
+nein & 299.7 & 343.9  \\
+ja & 224.8 & 265.7  \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\frame{
+\frametitle{Isolation von Einflüssen durch Konstanthaltung}
+
+Ein Vergleich von Gruppen nach einem Outcome, die in weiteren Eigenschaften gleich sind, ist in vielen Aspekten sehr limitiert: 
+
+\begin{enumerate}
+  \item Meist haben wir schlicht zu kleine Stichproben, um dies durchzuführen. 
+  \item Mit metrisch gemessenen Eigenschaften ist dieses Verfahren zwar theoretisch möglich, aber praktisch nicht durchführbar. 
+  \item Es wird sehr schnell sehr unübersichtlich. 
+\end{enumerate}
+
+Eine weit verbreitete Alternative ist die \textit{multivariate Regression}. Dabei werden Einflüsse auf ein Outcome voneinander unabhängig analysiert. 
+
+}
+
+\begin{frame}
+\frametitle{Multivariate Regression - die Idee}
+
+In einer Regression können sehr viele Drittvariablen genutzt werden, um den direkten Einfluss eines Exposures/Treatments auf ein Outcome zu isolieren und/oder um zu analysieren, ob der Einfluss eines Treatments gruppenspezifisch ist.
+
+\vfill
+
+Unser Ziel ist es meist \textit{nicht}, alle Einflüsse auf ein Outcome zu modellieren. Wir möchten in der Regel in eine Situation kommen, wo wir wie in einem einfachen, randomisierten Experiment Gruppen sinnvoll vergleichen können. Es ist jedoch eine Ausnahe, dass Gruppenzugehörigkeiten zufällig sind. Gruppen setzen sich nach selektiven Prozessen zusammen. Soziale Prozesse können sich überlagern oder verschachteln. Wenn wir aber über Gruppenvergleiche etwas über einen spezifischen sozialen Prozess lernen wollen\footnote{Zum Beispiel: Wie können wir sinnvoll den Einfluss einer Leseschwäche auf die Leseleistung über einen Vergleich von Schüler:innen mit und ohne Leseschwäche analysieren?}, müssen wir diese Dinge voneinander trennen (=isolieren).  
+
+\end{frame}
+
+
+%% Frame with 50/50 Split, righthand side graph
+\begin{frame}{Graphische Darstellung von sozialen Prozessen}
+
+Grapische Darstellungen der Beziehungen der analysierten Eigenschaften ist extrem hilfreich.\footnote{Diese werden in der Literatur auch DAG (Directed Acyclic Graph) genannt.} 
+
+\begin{columns}
+
+\begin{column}{.3\linewidth}
+\begin{figure}
+\begin{center}
+ \resizebox{1\linewidth}{!}{
+ \begin{tikzpicture}
+\draw[line width=1pt, ->] (-2.65,0) -- (-0.25,3);
+\draw[line width=1pt, ->] (0.25,3) -- (2.65,0);
+\draw[line width=1pt,dashed, -] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+ }
+\end{center}
+\end{figure}
+\end{column}
+
+\begin{column}{.7\linewidth}
+
+\begin{tabular}{ll}
+Y & ist das studierte Outcome\\
+X & ist die Eigenschaft (Treatment), deren Einfluss studiert werden soll\\
+Z & ist die Eigenschaft, deren Einfluss isoliert werden soll\\ 
+$\rightarrow$ & ist ein gerichteter Kausalprozess\\
+$\cdots $ & ist eine Korrelation zwischen Eigenschaften\\ 
+\end{tabular}
+
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Ein alternativer Blick auf $\hat{\beta}$}
+
+Für die nächsten Schritte ist es sehr nützlich, einen alternativen Blick auf $\hat{\beta}$-Koeffizienten zu nutzen. Die Berechnung des $\hat{\beta}$-Koeffizienten lässt sich auch darstellen als: 
+
+\begin{equation}
+\hat{\beta} = \frac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = r_{yx} \cdot \frac{s_y}{s_{x}}
+\end{equation}
+\vfill
+D.h.: Ein $\beta$-Koeffizient ist standardisiertes bzw. skaliertes Pearsons $r$. Das Verhältnis der Standardabweichungen vom Outcome und der erklärenden Variable bilden dabei den Skalierungsfaktor. Ein identisches $r$ bei unterschiedlichen Standardabweichungen führt daher zu verschiedenen $\hat{\beta}$-Koeffizienten.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Die Berechnung isolierter Einflüsse (für den Fall von drei Variablen)}
+
+$\beta_x$-Koeffizient
+\begin{equation}
+\hat{\beta}_x=\frac{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}
+\end{equation}
+
+$\beta_z$-Koeffizient
+\begin{equation}
+\hat{\beta}_z=\frac{r_{y{z}}-r_{y{x}}\cdot r_{xz}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{z}}
+\end{equation}
+
+$\alpha$-Koeffizient
+\begin{equation}
+\hat{\alpha} =\bar{y}-\hat{\beta}_1\bar{x}-\hat{\beta}_2\bar{z}
+\end{equation}
+
+\vfill 
+
+Wichtig: In einem multivariaten Regressionsmodell werden \textbf{immer} alle Korrelationen aller erklärenden Variablen voneinander bereinigt. Daher analysieren wir stets Fälle in Bezug auf ein Exposure/Treatment miteinander, die \textbf{in allen anderen Eigenschaften nicht mehr korreliert sind}. Die Konstante bezieht sich immer auf den Durchschnitt des Outcomes, wenn alle Eigenschaften null sind bzw. auf alle Referenzkategorien gleichzeitig. 
+
+\end{frame}
+
+
+
+
+\section{Additiver Einfluss}
+\subsection*{}
+
+
+%%%%%%%%%%%% Additiver Einfluss %%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Fall 1:  Additiver Einfluss}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (0.25,3) -- (2.65,0);
+\draw[line width=1pt, ->] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (-2.75,-0.25) {\large X };
+\node at (2.75,-0.25)  {\large Y };
+\end{tikzpicture}
+\end{figure}
+
+\vfill 
+
+Bei einem additiven Einfluss ist es nicht nötig, Einflüsse voneinander zu isolieren. Die Unterschiede, die X in Y verursacht, werden nicht durch Unterschiede in Z auch noch zusätzlich bedingt. Gleiches gilt für die Unterschiede, die Z in Y verursacht. 
+
+Dennoch kann es sinnvoll sein, die Annahme eines additiven Einflusses zu überprüfen. 
+\end{frame}
+
+%%%%%%%%%%%% Unabhängig: Geschwister & Schultyp %%%%%%%%%%%%%%%%%
+
+\frame{
+\frametitle{Fall 1: Additiver Einfluss}
+\begin{center}
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+
+
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{l*{3}{c}}
+\toprule
+            &\multicolumn{3}{c}{Humanistische Ausrichtung}\\
+Ältere(s) Geschwister&        nein&          ja&       Total\\
+\midrule
+nein        &        1585&        2435&        4020\\
+ja          &         395&         585&         980\\
+Total       &        1980&        3020&        5000\\
+\bottomrule
+\end{tabular}
+}
+{{ \scriptsize V = 0.007}}
+\end{center}
+
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-gesch-human}
+}
+\end{center}
+  \end{minipage}
+\end{center}
+
+Wichtig: Unterschiede in den Eigenschaften an sich können weiterhin bestehen. Die Behauptung, dass der Einfluss beider additiv ist, besteht darin, dass wir keinen Unterschied in Bezug auf die Leseleistung \textit{erwarten}, wenn wir Gruppen mit gleichen Kombinationen der Eigenschaften vergleichen. 
+}
+
+\begin{frame}
+\frametitle{Fall 1: Additiver Einfluss}
+
+\begin{tabular}{lrr} \toprule
+ & \multicolumn{2}{c}{Ältere(s) Geschwister}\\
+Humanistische Ausrichtung & nein & ja\\ \midrule
+nein & 296 &  317\\
+ja & 306 &  334\\ \bottomrule
+\end{tabular}  
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Fall 1: Additiver Einfluss}
+
+Im Fall eines additiven Einflusses ist $r_{xz} \approx 0$.
+
+\begin{equation*}
+\hat{\beta}_x=\frac{r_{y{x}}-r_{y{z}}\cdot \textcolor{red}{r_{{x}{z}}}}{1-\textcolor{red}{r_{{x}{z}}^2}}\cdot\frac{s_y}{s_{x}}
+\end{equation*}
+
+
+
+Wenn $r_{xz} = 0$ ist, dann 
+
+\begin{equation*}
+\hat{\beta}_x=\frac{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}} = r_{yx} \cdot \frac{s_y}{s_{x}} 
+\end{equation*}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Fall 1: Additiver Einfluss}
+
+\begin{center}
+\input{/Dropbox/Tabellen/lehre-ss20-reg-gesch-human.tex}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%% Mediation %%%%%%%%%%%%%%%%%%%%%%%
+\section{Mediation/Intervention}
+\subsection*{}
+
+\begin{frame}
+\frametitle{Fall 2: Mediation/Intervention}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (-2.65,0) -- (-0.25,3);
+\draw[line width=1pt, ->] (0.25,3) -- (2.65,0);
+\draw[line width=1pt,dashed, -] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+\end{figure}
+
+{{ \scriptsize Eine Mediation (oder auch "`Intervention"') liegt genau dann vor, wenn die Beziehung zwischen den Merkmalen X und Y nicht direkt besteht, sondern über eine dritte Eigenschaft Z vermittelt wird.  Bei einer Mediation stehen die drei Eigenschaften in einer Kausalkette. Die dritte Eigenschaft Z ist das "`Bindeglied"' zwischen X und Y. Würden wir uns \textbf{nur} für den Einfluss von Z auf Y interessieren, müssen wir \textbf{in diesem Fall nicht} die Unterschiede von X beachten, die systematische Unterschiede in Z bedingen. }}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Fall 2: Mediation/Intervention}
+
+\begin{center}
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-proj}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-proj-lesint}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-lesen-lesint}
+}
+\end{center}
+  \end{minipage}
+\end{center}
+\end{frame}
+
+
+
+\frame{
+\frametitle{Fall 2: Mediation/Intervention}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+  \includegraphics{lehre-ss20-lesen-lesintV1}
+}
+\end{center}
+}
+
+\frame{
+\frametitle{Fall 2: Mediation/Intervention}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+  \includegraphics{lehre-ss20-lesen-lesintV2}
+}
+\end{center}
+}
+
+\begin{frame}
+\frametitle{Fall 2: Mediation/Intervention}
+
+Im Fall einer Mediation beruht der Zusammenhang von $r_{xy}$ vollständig auf dem Produkt von $r_{xz}$ und $r_{zy}$. 
+
+\vfill
+
+Wenn $r_{xy}$ = $r_{xz} \cdot r_{zy}$
+
+\begin{equation*}
+\hat{\beta}_x=\frac{\textcolor{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}
+\end{equation*}
+
+ dann 
+
+\begin{equation*}
+\hat{\beta}_x=\frac{0}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}} = 0 
+\end{equation*}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Fall 2: Mediation/Intervention}
+
+\begin{block}{Vorsicht bei der Interpretation}
+
+Wenn eine Mediation durch Z vorliegt, bedeutet dies nicht, dass das Treatment/Exposure \textbf{keinen Einfluss} auf das Outcome hat. Es hat lediglich keinen \textbf{direkten Einfluss}. Ein $\hat{\beta}$ von 0 bei einer Mediation bedeuetet daher nicht, dass das Treatment/Exposure nicht wirkt. 
+\\[1em] Eindeutig verbessert das Schulprojekt vermittelt über ein höheres Leseinteresse die Leseleistung.
+\end{block}
+
+\end{frame}
+
+
+%%%%%%%%%%% Konfundierung %%%%%%%%%%%%%%%%
+\section{Konfundierung}
+\subsection*{}
+\begin{frame}
+\frametitle{Fall 3: Konfundierung}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (-2.65,0) -- (-0.25,3);
+\draw[line width=1pt, ->] (0.25,3) -- (2.65,0);
+\draw[line width=1pt, ->] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+\end{figure}
+Eine Konfundierung zwischen Treatment/Exposure (X) und einem Outcome (Y) \textbf{durch} eine dritte Eigenschaft (Z) liegt genau dann vor, wenn X auf Y eine eigenständige, direkte Wirkung hat und \textbf{zusätzlich} über das Merkmal Z einen indirekten Einfluss auf Y hat. \textbf{Wenn} wir daran interessiert sind, wie stark der direkte Einfluss ist, dann müssen wir diesen vom indirekten Einfluss isolieren. Andernfalls würden wir den direkten Einfluss über- oder unterschätzen. 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Fall 3: Konfundierung}
+
+\begin{center}
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-lesschw}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-lesschw-nach}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-nach}
+}
+\end{center}
+  \end{minipage}
+\end{center}
+\end{frame}
+
+
+\frame{
+\frametitle{Fall 3: Konfundierung}
+\begin{center}
+  \begin{minipage}[b]{.33\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1.1\linewidth}{!}{
+  \includegraphics{lehre-ss20-lesschw-nach-lesen}
+}
+\end{center}
+\quad \vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.6\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{c*{6}{c}}
+\toprule
+\multicolumn{2}{c}{A} & \multicolumn{2}{c}{B} & \\  \cmidrule{1-2} \cmidrule{3-4}
+Leseschwäche & Nachhilfe & Leseschwäche & Nachhilfe &     $\bar{y}_A $&      $\bar{y}_B$&        Differenz\\
+\midrule
+nein & nein &  ja& nein         &       299.7&       224.8&       -74.9\\
+nein & ja    & ja& ja           &      343.9&       265.7&       -78.2\\ \midrule
+nein & ja   & nein&nein         &       299.7&       343.9&        44.2\\
+ja&ja & ja&nein                 &       224.8&       265.7&        40.9\\
+\bottomrule
+\end{tabular}
+}
+\end{center}
+\quad \\[1em] \vfill
+  \end{minipage}
+\end{center}
+
+}
+
+\begin{frame}
+\frametitle{Wie funktioniert das?}
+
+\begin{center}
+\only<1>{
+\resizebox{.4\linewidth}{!}{
+  \includegraphics{gganim_plot0001.png}
+}
+}
+
+\only<2>{
+\resizebox{.4\linewidth}{!}{
+  \includegraphics{gganim_plot0043.png}
+}
+}
+
+
+\only<3>{
+\resizebox{.4\linewidth}{!}{
+  \includegraphics{gganim_plot0078.png}
+}
+}
+
+\only<4>{
+\resizebox{.4\linewidth}{!}{
+  \includegraphics{gganim_plot0102.png}
+}
+}
+
+
+\only<5>{
+\resizebox{.4\linewidth}{!}{
+  \includegraphics{gganim_plot0200.png}
+}
+}
+
+\end{center}
+\href{https://twitter.com/nickchk/status/1068215492458905600}{Quelle (dringliche Empfehlung)}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Fall 3: Konfundierung}
+
+Im Fall einer Konfundierung besteht der gesamte Einfluss von X auf Y in einer Kombination eines direkten Einflusses von X auf Y und einem indirekten Einfluss, weil X die Eigenschaft Z beeinflusst und Z das Outcome Y beeinflusst.  
+
+\vfill
+
+Wenn $|r_{zy}| > 0 \, \text{und} \, |r_{xy}| > 0$, dann wird $\hat{\beta}_x$ durch die Trennung des indirekten Einflusses kleiner. Vor der Trennung war dieser Einfluss eine Kombination von zwei positiven oder negativen Einflüssen.  
+
+\begin{equation*}
+\hat{\beta}_x=\frac{\textcolor{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}
+\end{equation*}
+
+Wenn $r_{zy} < 0 \, \text{und} \, r_{xy} > 0$, dann wird $\hat{\beta}_x$ durch die Trennung des indirekten Einflusses größer. Vor der Trennung war dieser Einfluss eine Kombination eines positiven und eines negativen Einflusses.  
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Fall 3: Konfundierung}
+
+\begin{center}
+\input{/Dropbox/Tabellen/lehre-ss20-reg-lessch-nach.tex}
+\end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%% Selektion ins Treatment %%%%%%%%%%%%%%%%
+\section{Selektion ins Treatment/Exposure}
+\subsection*{}
+
+\begin{frame}
+\frametitle{Fall 4: Selektion ins Treatment/Exposure}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (-0.25,3)  -- (-2.65,0);
+\draw[line width=1pt, ->] (0.25,3) -- (2.65,0);
+\draw[line width=1pt, ->] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+\end{figure}
+
+Nur bei einem randomisierten Treatment bestehen keine Einflüsse von dritten Eigenschaften (Z) auf die Wahrscheinlichkeit, ein Treatment zu erhalten. In den meisten empirischen Situationen selektieren/sortieren sich Untersuchungseinheiten nach spezifischen Ausprägungen von Z in das Treatment/Exposure. Sowohl das Treatment/Exposure als auch die sortierende Eigenschaft Z haben direkte Einflüsse auf das Outcome.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Selektion in die Nachhilfe}
+
+\begin{center}
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-lesschw}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-lesschw-nach}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-nach}
+}
+\end{center}
+  \end{minipage}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Fall 4: Selektion ins Treatment}
+
+\begin{center}
+\input{/Dropbox/Tabellen/lehre-ss20-reg-lessch-nach.tex}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Things to consider}
+
+\begin{block}{Vorsicht bei der Interpretation (again)}
+\begin{itemize}
+  \item Eine Konfundierung und eine Selektion ins Treatment kann eine Frage der theoretischen Perspektive sein (was ist das Treatment?) oder eine Frage der angenommenen Wirkrichtung ($X \rightarrow Z$ oder $X \leftarrow Z$). 
+  \item Eine Selektion ins Treatment hat zunächst nichts mit der Repräsentativität der Stichprobe zu tun. Sie können unabhängig voneinander Selektion in die Stichprobe und Selektion ins Treatment haben. 
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%% Interaktion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interaktion}
+\subsection*{}
+\begin{frame}
+\frametitle{Fall 5: Interaktion}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (0,3) -- (0,0);
+\draw[line width=1pt, ->] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (0,-0.25) {\large \textit{I}};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+\end{figure}
+Eine Interaktion liegt genau dann vor, wenn die Stärke des Effekts von X auf Y systematisch von einer dritten Eigenschaft Z abhängig ist. Dabei ist es unerheblich, ob die Eigenschaft Z \textit{zusätzlich} \textit{auch} einen Einfluss auf X und Y ausübt. 
+\end{frame}
+
+
+\frame{
+\frametitle{Fall 5: Interaktion}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+  \includegraphics{lehre-ss20-frau-bildung-lesen}
+  }
+\end{center}
+
+}
+
+
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{Fall 5: Interaktion}
+
+Wenn wir mittlere Bildung ($B$) als Referenzkategorie für die Bildung nutzen und das Geschlecht ($F$) so codieren, dass Männer eine 0 erhalten und Frauen eine 1, könnten wir versucht sein, folgende Regression zu schätzen: 
+
+\[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}}  \] 
+
+Das würde uns einen Geschlechtereinfluss $\hat{\beta_1}F_i$ als auch einen vom Geschlecht \textbf{unabhängigen} Einfluss von Bildung geben. Wir möchten aber einen \textbf{geschlechtsspezifischen} Einfluss berechnen. 
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Fall 5: Interaktion}
+
+Wir müssen daher die Terme für Bildung für beide Geschlechter seperat berechnen. Das kann man auf folgende Art erreichen: 
+
+\[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}} + \hat{\beta_4}B_{i_{niedrig}}\cdot F_i + \hat{\beta_5}B_{i_{hoch}}\cdot F_i  \] 
+
+Damit können wir alle sechs Gruppen abbilden: 
+
+\begin{center}
+{{ \small 
+\begin{tabular}{lcccr} \toprule
+                    & Geschlecht & niedrige Bildung & hohe Bildung & Gruppe\\  \midrule
+$\hat{\alpha}$                          & 0 & 0 & 0 & Männer, mittel \\
+$\hat{\beta_1}F_i$                      & 1 & 0 & 0 & Frauen, mittel \\
+$\hat{\beta_2}B_{i_{niedrig}}$          & 0 & 1 & 0 & Männer, niedrig \\
+$\hat{\beta_3}B_{i_{hoch}}$             & 0 & 0 & 1 & Männer, hoch \\
+$\hat{\beta_4}B_{i_{niedrig}}F_i$       & 1 & 1 & 0 & Frauen, niedrig \\
+$\hat{\beta_5}B_{i_{hoch}}F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bottomrule
+\end{tabular}
+}}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Fall 5: Interaktion}
+\begin{center}
+  \begin{minipage}[c]{.3\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox*{1\linewidth}{!}{
+\input{/Dropbox/Tabellen/lehre-ss20-reg-bild-frau.tex}
+}
+\end{center}
+\vfill
+\quad \\[8em]
+  \end{minipage}
+  \hspace{.15\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption 
+  \begin{center}
+\resizebox{1\linewidth}{!}{
+  \includegraphics{lehreSS20-lesereg-interaktV2}
+}
+\end{center}
+\end{minipage}
+\end{center}
+\
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Modellspezifikationen}
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\input{/Dropbox/Tabellen/lehreSS20-lesereg-all.tex}
+}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Leseempfehlungen}
+
+Über die graphische Darstellung von Kausaltheorien: \href{https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html}{Intro to DAGs}
+
+\vfill
+
+Ein kleiner ``Crash Course'' über gute und schlechte Wege Einflüsse zu isolieren: \href{http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/}{A Crash Course in Good and Bad Control}
+
+\end{frame}

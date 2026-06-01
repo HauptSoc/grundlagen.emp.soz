@@ -1,0 +1,499 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.0
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+%\documentclass[18pt]{beamer}
+\documentclass[18pt,handout, aspectratio=169]{beamer}
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen = right}
+%\documentclass[18pt,draft]{beamer}
+
+\usetheme{kit2}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%% Zeichencodierung & Schrift
+\usepackage[ansinew]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb}
+\let\raggedright\relax
+\usepackage{ragged2e}
+%\usepackage{color}
+
+
+%%%% Einbinden von Graphiken
+%\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+%\pdfminorversion=6 
+
+%%%% Bibliographie und Zitationen
+\usepackage[round]{natbib}
+\bibliographystyle{nachvorj}
+
+
+%%%% Tabellen
+\usepackage{multirow,booktabs,verbatim,dcolumn}
+\setbeamertemplate{caption}[numbered]
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+% handy shortcut macro for multicolumns
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}} 
+
+%\graphicspath{{U:/Lehre/MethodenII/Grafiken/}}
+%\graphicspath{{D:/uni/Lehre/MethodenII/Grafiken/}}
+\graphicspath{{/Dropbox/Graphs/}}
+
+\usepackage{hyperref}
+\hypersetup{pdfpagemode=FullScreen}
+
+\title{Datenauswertung}
+\subtitle{Regression III - Grundlagen der Varianzanalyse}
+\author{Andreas Haupt}
+\institute{Karlsruher Institut für Technologie}
+\date{}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{ngerman}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Welche Unterschiede sind bedeutsam?}
+\begin{itemize}
+  \item Bisher haben wir uns auf Unterschiede der Durchschnitte über Gruppen Gedanken gemacht. Diese haben wir als Differenzen hin zu einer Basisgruppe ausgedrückt. 
+  \item Wir können die Unterschiede zwischen Gruppen aber auch als eigene Varianz auffassen, die interessant sein kann.
+  \item Innerhalb von Gruppen gibt es auch Varianz. Diese haben wir bisher als Residuen bezeichnet und nicht weiter analysiert. Die Varianz innerhalb von Gruppen kann aber bedeutsam sein. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Strange Variance}
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+\includegraphics{Anova-StrangerThings}
+} 
+\end{center}
+\end{frame}
+
+\section{Varianzanalyse}
+\subsection*{}
+
+
+\begin{frame}
+\frametitle{Effizienz von Lehrmethoden}
+
+
+\begin{center}
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\textwidth}{!}{
+\begin{tabular}{c|c|c|c|c}\toprule
+Methode &1&2&3&4\\
+\hline
+\hline
+&5& 6 &2& 7\\
+&7& 10& 1&  8\\
+&5& 4 &2& 8\\
+&8& 5 &3& 5\\
+&5& 9 &4& \\
+&4&     &\\
+&6&     &\\
+\hline
+\hline
+$\sum y$&40&34& 12& 28\\
+\hline
+\hline
+$\bar{y}$&5.7&  6.8&  2.4&  7.0\\ \bottomrule
+\end{tabular}
+}
+\end{center}
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.55\linewidth} % [b] => Ausrichtung an \caption 
+  \small
+ In einer Schule machen Sie ein kleines Experiment, welche Lehrmethode sich für die Vermittung von Englischkenntnissen am Besten eignet. Sie möchten drei neue Methoden (2-4) gegen die etablierte Methode 1 testen. Nach ein paar Wochen des Testlaufs liegen ihnen nun Punkte für einen standardisierten Englischtest vor. Sie wollen zunächst wissen, ob die Gruppen sich überhaupt voneinander unterscheiden.\\[2.5em]
+  \end{minipage}
+\end{center}
+
+
+
+\end{frame}
+
+\frame{
+\frametitle{Varianzanalyse (ANOVA) - drei grundlegende Abweichungen}
+Man muss nun drei Beziehungen analysieren: 
+\begin{enumerate}
+  \item Die Abweichung der Testpunkte zum Gesamtdurchschnitt (Gesamtabweichungen).
+  \item Die Abweichung der Testpunkte zum Gruppendurchschnitt (Abweichungen innherhalb der Gruppen).
+  \item Die Abweichung der Gruppendurchschnitte (als Schätzwert für jede Person der Gruppe) zum Gesamtdurchschnitt (Abweichungen zwischen den Gruppen). 
+\end{enumerate}
+}
+
+
+
+
+\frame{
+\frametitle{Varianzanalyse - Bestandteile}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+\includegraphics{lehre-SS20-anova0}
+} 
+\end{center}
+}
+
+\frame{
+\frametitle{Varianzanalyse - Gesamtabweichungen}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+\includegraphics{lehre-SS20-anova1}
+} 
+\end{center}
+}
+
+
+\frame{
+\frametitle{Varianzanalyse - Abweichungen innerhalb}
+
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+\includegraphics{lehre-SS20-anova2}
+} 
+\end{center}
+}
+
+\frame{
+\frametitle{Varianzanalyse - Abweichungen zwischen}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+\includegraphics{lehre-SS20-anova3}
+} 
+\end{center}
+}
+
+\frame{
+\frametitle{Was bedeuten die Abweichungen inhaltlich?}
+
+\begin{tabular}{lp{7cm}} \toprule
+Abweichungen zum Gesamtdurchschnitt & Gesamtvarianz = Varianz innerhalb + Varianz zwischen den Gruppen\\ \midrule
+Abweichungen zwischen den Gruppen & Varianz der Gruppenmittelwerte = systematische Varianz durch die Lehrmethode = Unterschiede der Testpunkte, die wir durch die Lehrmethode \textit{erklären} können. Die Form dieser Unterschiedlichkeit wird als \textit{erklärte Varianz} bezeichnet.\\\midrule
+Abweichungen innerhalb der Gruppe & Abweichungen innerhalb der Gruppe, die nicht durch die Gruppen selbst erklärt werden kann. Diese Form \textit{unsystematischer} Unterschiedlichkeit wird als \textit{Residualvarianz} bezeichnet. \\ \bottomrule
+\end{tabular}
+
+}
+
+
+
+
+
+\frame{
+\frametitle{Berechnung der drei Abweichungen}
+\begin{align}
+  SQT \, (\text{Sum of Squares Total}) &= \sum\limits_{g=1}^G\sum\limits_{i=1}^n(y_{ig} - \overline{y})^2\\
+  SQR \, (\text{Sum of Squares Residuals}) &= \sum\limits_{g=1}^G\sum\limits_{i=1}^n(y_{ig} - \overline{y}_g)^2\\
+  SQE \, (\text{Sum of Squares Explained}) &= \sum\limits_{g=1}^G {n_g}(\overline{y}_g - \overline{y})^2
+\end{align}
+
+$i$ = Beobachtungsnummer; $g$ = Gruppennummer; $G$ = Gruppenanzahl
+
+}
+
+
+\frame{
+\frametitle{Verhältnis der drei Abweichungen}
+
+\begin{align}
+  SQT &= SQE + SQR\\
+  SQR &= SQT - SQE\\
+  SQE &= SQT - SQR
+\end{align}
+
+}
+
+
+\begin{frame}
+\frametitle{Varianzanalyse eines Englischtests}
+\begin{center}
+  \begin{minipage}[b]{.2\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1.4\textwidth}{!}{
+\begin{tabular}{c|c|c|c|c}\toprule
+Methode &1&2&3&4\\
+\hline
+\hline
+&5& 6 &2& 7\\
+&7& 10& 1&  8\\
+&5& 4 &2& 8\\
+&8& 5 &3& 5\\
+&5& 9 &4& \\
+&4&     &\\
+&6&     &\\
+\hline
+\hline
+$\sum y$&40&34& 12& 28\\
+\hline
+\hline
+$\bar{y}$&5.7&  6.8&  2.4&  7.0\\ \bottomrule
+\end{tabular}
+}
+\end{center}
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.7\linewidth} % [b] => Ausrichtung an \caption 
+ \begin{align*} 
+SQT &= (5-5.43)^2 + (7-5.43)^2 \cdots (6-5.43)^2 \cdots (2-5.43)^2 \cdots (7-5.43)^2=115.14\\
+SQE &=7\cdot(5.7-5.43)^2+5\cdot(6.8-5.43)^2+5\cdot(2.4-5.43)^2+4\cdot(7-5.43)^2=65.71\\ 
+SQR &= 115.14-65.71 = 49.43\\
+\end{align*}
+  \end{minipage}
+\end{center}
+
+\end{frame}
+
+
+
+
+
+\frame{
+\frametitle{Stärke des Zusammenhangs zwischen metrisch und nominal skalierten Eigenschaften ( $\eta$ sprich ``Eta'')}
+
+\begin{equation}
+  \eta = \sqrt{\frac{SQE}{SQT}}
+\end{equation}
+
+$\eta$ nimmt Ausprägungen zwischen 0 und 1 an und ist wie Cramérs V interpretierbar. 
+
+\vfill 
+
+Im vorliegenden Fall: 
+
+
+\[ \eta^2 = \frac{65.71}{115.14} = 0.57\]
+
+\[ \eta = \sqrt{0.57} = 0.755\]
+
+Zwischen den Lehrmethoden und den Testpunkten zeigen unsere Daten einen starken Zusammenhang von 0.755 (bei Maximalwert von 1). 
+
+}
+
+
+\section{Erklärte Varianz bei der Regression}
+\subsection*{}
+
+\frame{
+\frametitle{Erklärte Varianz bei Regressionsmodellen}
+
+Forscher:innen können daran interessiert sein, welchen Anteil die Unterschiede der erklärenden Variablen an den Unterschieden im Outcome haben. D.\,h.: Wie stark können wir Unterschiede in Y auf Unterschiede in X zurückführen?
+
+\begin{equation}
+\begin{split}
+  R^2 &= \frac{\sum\limits_{i=1}^n(y_i-\bar{y})^2-\sum\limits_{i=1}^n(y_i-\hat{y_i})^2}{\sum\limits_{i=1}^n(y_i-\bar{y})^2}\\
+   &= \frac{\sum\limits_{i=1}^n(\hat{y_i}-\bar{y})^2}{\sum\limits_{i=1}^n(y_i-\bar{y})^2} = \frac{\mbox{SQE}}{\mbox{SQT}}
+\end{split}
+\end{equation}
+
+}
+
+\frame{
+\frametitle{Berechnung der Güte des Modells}
+Genauso wie bei einer ANOVA berechnen wir die Abweichungen zum Gesamtmittelwert und die Abweichungen zum Vorhersagewert für jede Einheit der erklärenden Variable. Für den Fall des Leseinteresses ergibt sich daher: 
+  
+\begin{center} 
+\begin{tabular}{lll}
+$\sum (y_i-\bar{y})^2$ =&  5108108.93     &   \\ 
+$\sum (\hat{y}_i-\bar{y}_i)^2$ =& 1442165.73  &    \\ 
+\end{tabular}
+\end{center}
+
+\[
+  R^2 = \frac{1442165.73  }{5108108.93  } \approx 0.28
+\]
+
+
+
+Unterschiede im Leseinteresse \textit{erklären} ca. 28\% der Unterschiede der Leseleistung.\footnote{Das bedeutet \textbf{nicht}, dass wir 28\% aller Leseleistungen korrekt vorhersagen oder dass 28\% aller Fälle auf der Regressionsgerade liegen würden. } 
+}
+
+
+
+\end{document}
+
+
+
+
+\frame{
+\frametitle{Bestimmung des Effekts der Gruppe auf die Punkte im Test}
+
+$\eta$ ist ein Zusammenhangsmaß, das uns angibt, ob generell zwischen der Gruppenzugehörigkeit und einem metrisch gemessenen Merkmal ein Zusammenhang besteht. Wir möchten aber nun auch wissen, wie stark die Gruppenzugehörigkeit das Merkmal beeinflusst, d.h. wie stark die Gruppenzugehörigkeit die Unterschiede der Ausprägung des Merkmals erklärt und ob dies auch statistisch signifikant ist.  
+
+}
+
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 1}
+
+Bestimmung der drei Variationen als Populationsvarianzen: 
+
+\begin{align}
+  \hat{\sigma}_T^2 &= \frac{\sum\limits_{g=1}^G\sum\limits_{i=1}^n(y_{ig} - \overline{y})^2}{n-1} = \frac{\text{SQT}}{df}\\
+  \hat{\sigma}_R^2 &= \frac{\sum\limits_{g=1}^G\sum\limits_{i=1}^n(y_{ig} - \overline{y}_g)^2}{n-G} = \frac{\text{SQR}}{df}\\
+  \hat{\sigma}_E^2 &= \frac{\sum\limits_{g=1}^G {n_g} (\overline{y}_g - \overline{y})^2}{G-1} = \frac{\text{SQE}}{df}
+\end{align}
+
+g = Nummer der Gruppe, G = Anzahl der Gruppen, i = Nummer der Beobachtung, n = Anzahl der gesamten Beobachtungen, $n_g$ = Anzahl von Beobachtungen in einer Gruppe
+
+}
+
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 1}
+
+\[
+  \begin{split}
+  \hat{\sigma}_T^2 &= \frac{115.14}{21-1} = 5.76\\
+  \hat{\sigma}_R^2 &= \frac{49.43}{21-4} = 2.91\\
+  \hat{\sigma}_E^2 &= \frac{65.71}{4-1} = 21.90
+  \end{split}
+\]
+
+}
+
+
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 2}
+
+Bestimmung der Hypothese
+
+Wenn ein Effekt bestimmbar ist, dann muss die Varianz \textit{zwischen} den Gruppen größer sein als die Varianz \textit{innerhalb der Gruppen}. Es handelt sich also um eine \textit{gerichtete} Hypothese über das Verhältnis zweier Varianzen: 
+
+\begin{enumerate}
+  \item[$H_0$:] $\hat{\sigma}_E^2 = \hat{\sigma}_R^2$
+  \item[$H_1$:] $\hat{\sigma}_E^2 > \hat{\sigma}_R^2$
+\end{enumerate}
+
+Wir testen die gerichtete $H_0$ auf Basis einer 1\%igen Irrtumswahrscheinlichkeit. 
+}
+
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 3.1}
+
+Berechnung eines F-Tests: 
+
+$$F=\frac{\hat{\sigma}_E^2}{\hat{\sigma}_R^2} \approx F(G-1, n-G)$$
+
+\pause
+
+$$F=\frac{21.90}{2.91}=7.52 \approx F(3,17) $$
+ 
+}
+
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 3.2}
+
+\begin{center}
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+
+\resizebox{1\textwidth}{!}{
+\includegraphics{fvert-anova}
+}
+\end{center}
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption 
+ Der berechnete F-Wert von 7.52 ist deutlich größer als der für einen einseitigen Test mit 1\%iger Irrtumswahrscheinlichkeit notwendige Wert von 5.29.\footnotemark \, Wir können daher die Nullhypothese verwerfen und behaupten weiterhin, dass unterschiedliche Lehrmethoden einen Effekt auf die Punkte im Test haben.
+ \quad \\[2em]
+  \end{minipage}
+
+\end{center}
+
+\footnotetext{Das p-value für einen F-Wert von 7.53 (oder größer) ist 0.002.}
+}
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 4}
+
+Eine Varianzanalyse sagt bisher nur, dass sich die Varianz der Werte durch die Gruppeneinteilung erklären lässt. Wir wissen bisher aber nicht, wie stark die Unterschiede zwischen den Gruppen ausgeprägt sind und welche Gruppe/n die Varianz am stärksten beeinflussen. 
+
+\vfill
+
+Es bieten sich hierfür eine Serie von t-Tests oder das Abtragen von Konfidenzintervallen an.  
+
+
+}
+
+\frame{
+\frametitle{Bestimmung des Effekts: Schritt 4}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+\includegraphics{lehre-SS20-ci-anova}
+}
+\end{center}
+}
+
+
+\frame{
+  \frametitle{Sport \& Lernleistung}
+\begin{center}
+  \begin{minipage}[b]{.6\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+
+\resizebox{.75\textwidth}{!}{
+\includegraphics{jogging1}
+}
+\end{center}
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.3\linewidth} % [b] => Ausrichtung an \caption 
+ {{\scriptsize Frith, Emily, Eveleen Sng, and Paul D. Loprinzi (2017): ``Randomized controlled trial evaluating the temporal effects of high-intensity exercise on learning, short-term and long-term memory, and prospective memory.'' \textit{European Journal of Neuroscience} 46.10: 2557-2564. }}
+ \quad \\[2em]
+  \end{minipage}
+\end{center}
+}
+
+
+\frame{
+  \frametitle{Sport \& Lernleistung}
+\begin{center}
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\textwidth}{!}{
+\includegraphics{jogging2}
+}
+\end{center}
+\vfill
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption 
+Figure 3 showed that there were significant differences in performance scores between the groups after the 20-min delay ($F_{3, 84}$ = 3.36, P = 0.02, partial eta-squared = 0.11). A post hoc test (independent t-test) of pairwise comparisons showed that the jogging before RAVLT group did significantly better (i.e., recalled more words from List A) than the control and jogging during RAVLT groups, P = 0.01 and P = 0.004, respectively. 
+ \quad \\[2em]
+  \end{minipage}
+\end{center}
+}
+
+
+

@@ -1,0 +1,371 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.0
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+%\documentclass[18pt]{beamer}
+\documentclass[18pt, aspectratio=169]{beamer}
+
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen = right}
+%\documentclass[18pt,draft]{beamer}
+
+\usetheme{kit2}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%% Zeichencodierung & Schrift
+\usepackage[ansinew]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb}
+\let\raggedright\relax
+\usepackage{ragged2e}
+%\usepackage{color}
+
+
+%%%% Einbinden von Graphiken
+%\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+
+
+%%%% Bibliographie und Zitationen
+\usepackage[round]{natbib}
+\bibliographystyle{nachvorj}
+
+
+%%%% Tabellen
+\usepackage{multirow,booktabs,verbatim }
+\setbeamertemplate{caption}[numbered]
+
+%\graphicspath{{U:/Lehre/MethodenII/Grafiken/}}
+%\graphicspath{{D:/uni/Lehre/MethodenII/Grafiken/}}
+\graphicspath{{/Dropbox/Graphs/}}
+
+
+
+\hypersetup{pdfpagemode=FullScreen}
+
+
+\setbeamerfont{block title}{size=\normalsize}
+
+\title{Datenauswertung}
+\subtitle{Multivariate Regression - Komplexere Fälle}
+\author{Andreas Haupt \\ andreas.haupt@kit.edu }
+\institute{Karlsruher Institut für Technologie}
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{ngerman}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%% Interaktion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interaktion}
+\subsection*{}
+\begin{frame}
+\frametitle{Interaktion}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (0,3) -- (0,0);
+\draw[line width=1pt, ->] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (0,-0.25) {\large \textit{I}};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+\end{figure}
+Eine Interaktion liegt genau dann vor, wenn die Stärke des Effekts von X auf Y systematisch von einer dritten Eigenschaft Z abhängig ist. Dabei ist es unerheblich, ob die Eigenschaft Z \textit{zusätzlich} \textit{auch} einen Einfluss auf X und Y ausübt. 
+\end{frame}
+
+
+\frame{
+\frametitle{Interaktion}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+  \includegraphics{lehre-ss20-frau-bildung-lesen}
+  }
+\end{center}
+
+}
+
+
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{Interaktion}
+
+Wenn wir mittlere Bildung ($B$) als Referenzkategorie für die Bildung nutzen und das Geschlecht ($F$) so codieren, dass Männer eine 0 erhalten und Frauen eine 1, könnten wir versucht sein, folgende Regression zu schätzen: 
+
+\[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}}  \] 
+
+Das würde uns einen Geschlechtereinfluss $\hat{\beta_1}F_i$ als auch einen vom Geschlecht \textbf{unabhängigen} Einfluss von Bildung geben. Wir möchten aber einen \textbf{geschlechtsspezifischen} Einfluss berechnen. 
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Fall 5: Interaktion}
+
+Wir müssen daher die Terme für Bildung für beide Geschlechter seperat berechnen. Das kann man auf folgende Art erreichen: 
+
+\[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}} + \hat{\beta_4}B_{i_{niedrig}}\cdot F_i + \hat{\beta_5}B_{i_{hoch}}\cdot F_i  \] 
+
+Damit können wir alle sechs Gruppen abbilden: 
+
+\begin{center}
+{{ \small 
+\begin{tabular}{lcccr} \toprule
+                    & Geschlecht & niedrige Bildung & hohe Bildung & Gruppe\\  \midrule
+$\hat{\alpha}$                          & 0 & 0 & 0 & Männer, mittel \\
+$\hat{\beta_1}F_i$                      & 1 & 0 & 0 & Frauen, mittel \\
+$\hat{\beta_2}B_{i_{niedrig}}$          & 0 & 1 & 0 & Männer, niedrig \\
+$\hat{\beta_3}B_{i_{hoch}}$             & 0 & 0 & 1 & Männer, hoch \\
+$\hat{\beta_4}B_{i_{niedrig}} \cdot F_i$       & 1 & 1 & 0 & Frauen, niedrig \\
+$\hat{\beta_5}B_{i_{hoch}} \cdot F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bottomrule
+\end{tabular}
+}}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Fall 5: Interaktion}
+\begin{center}
+  \begin{minipage}[c]{.3\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox*{1\linewidth}{!}{
+\input{/Dropbox/Tabellen/lehre-ss20-reg-bild-frau.tex}
+}
+\end{center}
+\vfill
+\quad \\[8em]
+  \end{minipage}
+  \hspace{.15\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption 
+  \begin{center}
+\resizebox{1\linewidth}{!}{
+  \includegraphics{lehreSS20-lesereg-interaktV2}
+}
+\end{center}
+\end{minipage}
+\end{center}
+\
+\end{frame}
+
+%%%%%%%%%%%%%%%% Collider %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Collider}
+\subsection*{}
+
+\begin{frame}
+\frametitle{The Dark Triangle: Collider}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[line width=1pt, ->] (-2.65,0) -- (-0.25,3);
+\draw[line width=1pt, <-] (0.25,3) -- (2.65,0);
+\draw[line width=1pt, ->] (-2.5,-0.25) -- (2.5,-0.25);
+\node at (0,3.25) {\large Z};
+\node at (-2.75,-0.25) {\large X};
+\node at (2.75,-0.25)  {\large Y};
+\end{tikzpicture}
+\end{figure}
+
+{{Ein Collider liegt dann vor, wenn ein Treatment X einen Einfluss auf das Outcome Y hat, aber parallel die Verteilung einer dritten Eigenschaft Z vom Outcome bedingt wird.  In einem solchen Fall führt die Isolation des Einflusses von X $\rightarrow$ Y mit Hilfe von Z zu völlig falschen Ergebnissen.}}
+
+\end{frame}
+
+
+\begin{frame}{Medienkonsum und Übergewicht (again)}
+\begin{columns}
+
+\small
+
+\begin{column}{.4\linewidth}
+\begin{center}
+ \resizebox{1\linewidth}{!}{
+ \includegraphics{../Graphs/screentime-obesity} 
+ }
+\end{center}
+{{ \scriptsize Source: \href{https://pubmed.ncbi.nlm.nih.gov/29967527/}{Williams et al. (2018)}}}
+
+\end{column}
+
+\begin{column}{.6\linewidth}
+\begin{itemize}
+	\item Selbstverletzungstendenzen bilden in Modell d ein Collider mit Übergewicht und Medienkonsum. 
+	\item Laut diesem Modell neigen Personen mit Übergewicht stärker zu Selbstverletzungen und sind daher in der Gruppe der ``Selbstverletztenden'' überrepräsentiert. 
+	\item Das Modell nimmt außerdem einen direkten Einfluss des Medienkonsums auf die Selbstverletzungstendenz an. 
+	\item Wenn wir den Einfluss von Medienkonsum auf Übergewicht isolieren wollen, dürfen wir nicht für Selbstverletzungstendenzen kontrollieren, weil die Unterscheidung nach diesen Tendenzen \textit{eine implizite, erneute} Unterscheidung nach Übergewicht ist.
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Fördern Bibliotheksbesuche das Leseinteresse?}
+\begin{columns}
+
+\small
+
+\begin{column}{.4\linewidth}
+\begin{center}
+ \resizebox{1\linewidth}{!}{
+ \includegraphics{../Graphs/Leseleistung-Kollider} 
+ }
+\end{center}
+\end{column}
+
+\begin{column}{.6\linewidth}
+\begin{itemize}
+	\item Im linken Modell gehen Schüler:innen mit höherem Leseinteresse mit höherer Wahrscheinlichkeit in die Bibliothek. 
+	\item Frauen gehen mit höherer Wahrscheinlichkeit in die Bibliothek. 
+	\item In diesem Modell erhöht ein Bibliotheksbesuch das Leseinteresse nicht!
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Dark Triangle: Collider}
+\begin{center}
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-coll-lesint-frau}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-collider-bib-lesint}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-coll-lesint-frau-bib}
+}
+\end{center}
+  \end{minipage}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Dark Triangle: Collider}
+
+\begin{tabular}{l*{6}{c}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    &\multicolumn{3}{c}{Leseinteresse}&\multicolumn{3}{c}{Bibliotheksnutzung}\\
+\midrule
+Frau                &        20.0\sym{***}&                     &        14.1\sym{***}&        20.0\sym{***}&                     &        13.6\sym{***}\\
+                    &      (0.51)         &                     &      (0.50)         &      (0.53)         &                     &      (0.52)         \\
+Bibliotheksnutzung  &                     &        32.7\sym{***}&        29.5\sym{***}&                     &                     &                     \\
+                    &                     &      (0.52)         &      (0.53)         &                     &                     &                     \\
+Leseinteresse       &                     &                     &                     &                     &         0.4\sym{***}&         0.3\sym{***}\\
+                    &                     &                     &                     &                     &      (0.01)         &      (0.01)         \\
+Konstante           &       120.9\sym{***}&       108.9\sym{***}&       103.9\sym{***}&        57.4\sym{***}&        21.3\sym{***}&        18.8\sym{***}\\
+                    &      (0.36)         &      (0.43)         &      (0.46)         &      (0.38)         &      (0.78)         &      (0.78)         \\
+\midrule
+N        &       30000         &       30000         &       30000         &       30000         &       30000         &       30000         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Standardfehler in Klammern}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{Collider und Stichprobenselektion}
+\begin{columns}
+\small
+
+\begin{column}{.5\linewidth}
+\begin{center}
+ \resizebox{1\linewidth}{!}{
+ \includegraphics{../Graphs/dag-collider-depression} 
+ }
+\end{center}
+{{\scriptsize Source: \href{https://www.aerzteblatt.de/archiv/223244/Collider-Bias-in-Beobachtungsstudien-Konsequenzen-fuer-die-medizinische-Forschung}{Tönnies et al. (2022)}}}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+	\item Die Probleme ``Kontrolle mit einem Collider'' und Stichprobenselektion können sich überlagern. 
+	\item Prozesse, die mit einer Stichprobenselektion einhergehen, können auch mit dem Treatment, einer Kontrollvariable und/oder dem Outcome korreliert sein.
+	\item In der Grafik bildet einen Fall ab, in der Personen mit geringeren depressiven Zuständen und besserer Gesundheit eher an einer Studie teilnehmen. Dadurch ist die analytische Stichprobe im Vergleich zur Population selektiv. Die Eigenschaft ``Studienteilnahme'' ist daher ein Collider.
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+
+\section{Gute und schlechte Modelle}
+\subsection*{}
+
+\begin{frame}{Effekte auf einen Blick}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\begin{center}
+ \resizebox{1\linewidth}{!}{
+ \includegraphics{../Graphs/rohrer-dag-explainer} 
+ }
+\end{center}
+{{ \scriptsize Quelle: \href{https://compass.onlinelibrary.wiley.com/doi/pdf/10.1111/spc3.12948}{Rohrer (2024, Abbildung 1)}}}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+	\item Soziale Prozesse können weitaus komplexer sein, als Dreiecksbeziehungen. 
+	\item Typischerweise können Sie aber jedes einzelne Element in komplexen Beziehungen in Form von Dreiecksbeziehungen darstellen. 
+	\item Reduzieren Sie daher Komplexität, indem Sie stets die Ihr Ziel im Auge behalten: Sie wollen gute Vergleiche. 
+\end{itemize}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Leseempfehlungen}
+
+Über die graphische Darstellung von Kausaltheorien: \href{https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html}{Intro to DAGs}
+
+\vfill
+
+Ein kleiner ``Crash Course'' über gute und schlechte Wege Einflüsse zu isolieren: \href{http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/}{A Crash Course in Good and Bad Control}
+
+\end{frame}
+
+\end{document}

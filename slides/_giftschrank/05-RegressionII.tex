@@ -1,0 +1,655 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.0
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+%\documentclass[18pt]{beamer}
+\documentclass[18pt,handout, aspectratio=169]{beamer}
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen = right}
+%\documentclass[18pt,draft]{beamer}
+
+\usetheme{kit2}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{}
+
+
+%%%% Zeichencodierung & Schrift
+\usepackage[ansinew]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb}
+\let\raggedright\relax
+\usepackage{ragged2e}
+%\usepackage{color}
+
+
+%%%% Einbinden von Graphiken
+%\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+%\pdfminorversion=6 
+
+%%%% Bibliographie und Zitationen
+\usepackage[round]{natbib}
+\bibliographystyle{nachvorj}
+
+
+%%%% Tabellen
+\usepackage{multirow,booktabs,verbatim,dcolumn}
+\setbeamertemplate{caption}[numbered]
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+% handy shortcut macro for multicolumns
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}} 
+
+%\graphicspath{{U:/Lehre/MethodenII/Grafiken/}}
+%\graphicspath{{D:/uni/Lehre/MethodenII/Grafiken/}}
+\graphicspath{{/Dropbox/Graphs/}}
+
+\usepackage{hyperref}
+\hypersetup{pdfpagemode=FullScreen}
+
+\title{Datenauswertung}
+\subtitle{Regression II - Vergleiche über Gruppen}
+\author{Andreas Haupt}
+\institute{Karlsruher Institut für Technologie}
+\date{}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{ngerman}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Unterschiede, die Unterschiede machen}
+
+\begin{itemize}
+  \item Vergleiche werden in der Datenanalyse über Differenzen (= Unterschiede) ausgedrückt. 
+  \item Gute Vergleiche beruhen daher auf sinnvollen\footnote{Was immer das auch ist.} Differenzen über verschiedene Gruppen. 
+  \item Vergleiche und daher auch Differenzen haben stets eine Richtung. Ausgehend von einer Gruppe vergleichen wir zu einer anderen Gruppe. 
+  \item Eine Regression ist nichts anderes: Wir bilden (sinnvolle) Differenzen ausgehend von einer Basisgruppe über andere Gruppen. Damit beziehen wir Unterschiede in der Gruppenmitgliedschaft ($X$) auf Unterschiede eines Outcomes ($Y$). 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Gruppenanzahl und Vergleiche}
+\begin{columns}
+
+\begin{column}{.5\linewidth}
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{Leseleistung-Dritt1}
+}
+\end{center}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{ll} \toprule
+Merkmal & Ausprägungen \\ \midrule
+Älteres Geschwister & ja, nein\\
+Schultyp & humanistisch, naturwissenschaftlich-technisch\\
+Schulprojekt & teilgenommen, nicht teilgenommen\\
+Leseinteresse & metrisch\\
+Leseschwäche & ja, nein\\
+Nachhilfe & ja, nein\\
+Bildung der Eltern & niedrig, mittel, hoch\\
+Geschlecht & männlich, weiblich\\
+Leseleistung & metrisch\\ \bottomrule
+\end{tabular}
+}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\section{Genau zwei Gruppen}
+\subsection*{}
+
+\begin{frame}
+\frametitle{Binäre Unterschiede (Dummy Variablen)}
+
+\begin{center}
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-proj}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-proj-lesint}
+}
+\end{center}
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.35\linewidth} % [b] => Ausrichtung an \caption
+\begin{center}
+\resizebox{1\linewidth}{!}{
+\includegraphics{lehre-ss20-lesen-lesint}
+}
+\end{center}
+  \end{minipage}
+\end{center}
+\end{frame}
+
+
+\frame{
+  \frametitle{Vergleich von zwei Gruppen}
+
+  \begin{center}
+  \resizebox{.7\linewidth}{!}{
+    \includegraphics{lehre-scatter-lfit-lesen-projekt}
+  }
+  \end{center}
+
+
+}
+
+\frame{
+\frametitle{\textbf{O}rdinary-\textbf{L}east-\textbf{S}quares-Koeffizienten}
+
+Für den Fall der Projektteilnahme brauchen wir folgende Angaben, um beide Koeffizienten zu berechnen: 
+
+\begin{center}
+\begin{tabular}{ccccccc} \toprule
+$\bar{y}$ & $\bar{x}$ & $\sum x_iy_i$ & $\sum x_i^2$ & n\\ \midrule
+ 306.94 &  0.257 & 444001.4 & 1284 & 5000\\ \bottomrule
+\end{tabular}
+\end{center}
+
+\[ \hat{\beta} = \dfrac{\sum x_iy_i - n\cdot\bar{x}\cdot\bar{y}}{\sum x_i^2 - n\cdot \bar{x}^2} = \dfrac{444001.4  - 5000 \cdot 306.94\cdot 0.257 }{ 1284 - 5000 \cdot 0.257^2} \approx 52 \]
+Wenn sich die Projektteilnahme um eine Einheit erhöht (0 $\rightarrow$ 1),  erhöht sich die Leseleistung durchschnittlich um 52 Einheiten. 
+
+\[ \hat{\alpha} = \bar{y}-\hat{\beta} \bar{x} = 306.94 - 52 \cdot 0.257 \approx 293.5 \]
+Schüler:innen, die nicht am Projekt teilgenommen haben, haben eine durchschnittliche Leseleistung von 293.5. 
+
+}
+
+
+\section{Mehr als zwei Gruppen}
+\subsection*{}
+
+
+\begin{frame}{Vergleich bei mehr als zwei Gruppen}
+\begin{columns}
+\begin{column}{.5\linewidth}
+\begin{center}
+\resizebox{.95\linewidth}{!}{
+\includegraphics{lehre-ss20-bildung}
+}
+\end{center}
+\end{column}
+
+\begin{column}{.5\linewidth}
+\begin{itemize}
+  \item Bei mehr als zwei Gruppen müssen wir uns für eine Gruppe als Basisgruppe entscheiden. 
+  \item Diese Gruppe wird auch als \textbf{Referenzkategorie} bezeichnet. 
+  \item Wir vergleichen die (durchschnittliche) Leseleistung der anderen Gruppen in Bezug auf diese Basisgruppe. 
+  \item Daher berechnen wir Differenzen der durchschnittlichen Leseleistung zur Referenzkategorie. 
+\end{itemize}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Zerlegung von nominalen/ordinalen Variablen in Dummy-Variablen}
+\small
+Bei ordinal und nominal gemessenen Eigenschaften mit n-Ausprägungen zerlegen wir diese immer in n-Kategorien, die Werte von 0 und 1 aufweisen.
+\begin{columns}
+\begin{column}{.5\linewidth}
+\begin{center}
+\begin{tabular}{lccc} \toprule
+        & \multicolumn{3}{c}{Bildung der Eltern}\\
+Person  & Niedrig & Mittel & Hoch\\ \midrule
+A       & 1       & 0  & 0 \\
+B       & 0       & 1  & 0 \\
+C       & 0       & 0  & 1 \\ \bottomrule
+\end{tabular}
+\end{center}
+\end{column}
+\begin{column}{.5\linewidth}
+Wählen wir ``Mittel'' als Referenzkategorie, erhalten wir daher folgende Regressionsgleichung:\\[.5em]
+\resizebox{1\linewidth}{!}{
+\[
+\underbrace{\hat{y}_i}_{\substack{\text{geschätzte} \\ \text{Leseleistung}}} = \underbrace{\hat{\alpha}_{\color{white}{i}}}_{\substack{\text{Leseleistung} \\ \text{Mittel}}} +  \underbrace{\hat{\beta}_{1}\cdot x_{1_i}}_{\substack{\text{Unterschied Leseleistung} \\ \text{Mittel $\rightarrow$ Niedrig}}} + \underbrace{\hat{\beta}_{2}\cdot x_{2_i}}_{\substack{\text{Unterschied Leseleistung} \\ \text{Mittel $\rightarrow$ Hoch}}}     
+\]
+}
+\end{column}
+\end{columns}
+\quad \newline 
+ Wir nehmen dann n-1 Kategorien mit in das Regressionsmodell. Die Kategorie, die wir nicht in das Modell nehmen, ist die \textbf{Referenzkategorie}. Die Konstante bezieht sich auf das durchschnittliche Outcome dieser Gruppe. Alle $\hat{\beta}$-Koeffizienten, die mit den n-1 Kategorien geschätzt werden, drücken immer Differenzen der Schätzwerte zur Referenzkategorie aus. 
+\vfill
+\end{frame}
+
+
+\begin{frame}{Referenzkategorie: Eltern mit mittlerer Bildung}
+\begin{center}
+\resizebox{.75\linewidth}{!}{
+\includegraphics{lehre-scatter-lfit-lesen-bildung}
+}
+\end{center}
+\end{frame}
+
+\begin{frame}{Referenzkategorie: Eltern mit hoher Bildung}
+\begin{center}
+\resizebox{.75\linewidth}{!}{
+\includegraphics{lehre-scatter-lfit-lesen-bildungV2}
+}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Publikationsversion}
+\begin{center}
+\resizebox{.65\linewidth}{!}{
+{
+
+\begin{tabular}{l*{5}{c}}
+\toprule
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+\midrule
+Leseinteresse   &      1.0\sym{***}&                  &                  &                  &                  \\
+                &   (0.03)         &                  &                  &                  &                  \\
+\addlinespace
+Teilhabe am Projekt&                  &     52.3\sym{***}&                  &                  &                  \\
+                &                  &   (2.41)         &                  &                  &                  \\
+\addlinespace
+Bildung der Eltern\\
+Niedrig         &                  &                  &    -37.5\sym{***}&    -59.7\sym{***}&                  \\
+                &                  &                  &   (3.14)         &   (3.18)         &                  \\
+\addlinespace
+Mittel          &                  &                  &                  &    -22.2\sym{***}&     37.5\sym{***}\\
+                &                  &                  &                  &   (2.32)         &   (3.14)         \\
+\addlinespace
+Hoch            &                  &                  &     22.2\sym{***}&                  &     59.7\sym{***}\\
+                &                  &                  &   (2.32)         &                  &   (3.18)         \\                
+\addlinespace
+Konstante       &    195.9\sym{***}&    293.5\sym{***}&    303.8\sym{***}&    326.0\sym{***}&    266.3\sym{***}\\
+                &   (3.09)         &   (1.22)         &   (1.60)         &   (1.68)         &   (2.70)         \\
+\midrule
+N   &     5000         &     5000         &     5000         &     5000         &     5000         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Standardfehler in Klammern; \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+}
+\end{center}
+
+
+\end{frame}
+
+\end{document}
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{OLS-Regression - PC-Version}
+\scriptsize
+\begin{verbatim}
+      Source |       SS           df       MS      Number of obs   =     1,000
+-------------+----------------------------------   F(1, 998)       =    392.61
+       Model |  1442165.73         1  1442165.73   Prob > F        =    0.0000
+    Residual |   3665943.2       998  3673.28978   R-squared       =    0.2823
+-------------+----------------------------------   Adj R-squared   =    0.2816
+       Total |  5108108.93       999  5113.22215   Root MSE        =    60.608
+
+------------------------------------------------------------------------------
+       lesen |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      lesint |   .9986589   .0504008    19.81   0.000     .8997553    1.097563
+       _cons |    191.879   5.930404    32.36   0.000     180.2415    203.5165
+------------------------------------------------------------------------------
+
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Regression - Zeitschriftversion}
+
+\begin{center}
+{
+
+\begin{tabular}{l*{1}{c}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}\\
+                    &\multicolumn{1}{c}{Leseleistung}\\
+\midrule
+Leseinteresse       &        1.00\sym{***}\\
+                    &      (0.05)         \\
+\addlinespace
+Konstante           &      191.88\sym{***}\\
+                    &      (5.93)         \\
+\midrule
+N                   &     1000         \\
+$R^2$                 &        0.28         \\
+\bottomrule
+\multicolumn{2}{l}{\footnotesize Standardfehler in Klammern}\\
+\multicolumn{2}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{The big picture}
+\begin{center}
+\resizebox{1\linewidth}{!}{
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{11}{c}}
+\toprule  
+                   & & \multicolumn{2}{c}{Additiver Effekt} & \multicolumn{2}{c}{Mediation} & \multicolumn{2}{c}{Konfundierung} & \multicolumn{3}{c}{Interaktion}\\
+                   & Wahrer Einfluss &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}&\multicolumn{1}{c}{(9)}\\
+\midrule
+Ältere(s) Geschwister & 25&       26.38\sym{***}&       26.52\sym{***}&       25.60\sym{***}&       26.23\sym{***}&       26.63\sym{***}&       26.44\sym{***}&       26.49\sym{***}&       27.24\sym{***}&       27.31\sym{***}\\
+Humanistische Ausrichtung& 15 &                     &       15.64\sym{***}&       15.11\sym{***}&       15.17\sym{***}&       15.10\sym{***}&       13.92\sym{***}&       13.72\sym{***}&       15.71\sym{***}&       15.97\sym{***}\\ \midrule
+Teilhabe am Projekt & 0 &                    &                     &       50.30\sym{***}&        1.45         &        1.26         &       -1.27         &       -1.28         &       -2.50         &       -2.20         \\
+Leseinteresse       & 1 &                    &                     &                     &        0.97\sym{***}&        0.97\sym{***}&        0.99\sym{***}&        0.99\sym{***}&        1.00\sym{***}&        1.00\sym{***}\\ \midrule
+Nachhilfe           & 40 &                    &                     &                     &                     &       23.97\sym{***}&       39.74\sym{***}&       40.12\sym{***}&       40.32\sym{***}&       40.54\sym{***}\\
+Leseschwäche        & -80 &                    &                     &                     &                     &                     &      -79.86\sym{***}&      -79.29\sym{***}&      -77.34\sym{***}&      -77.95\sym{***}\\ \midrule
+\multicolumn{3}{l}{Bildung der Eltern (Referenz: mittlere Bildung)}\\
+Niedrig             & -30 &                    &                     &                     &                     &                     &                     &      -34.91\sym{***}&      -33.08\sym{***}&      -27.87\sym{***}\\
+Hoch                &  40 &                   &                     &                     &                     &                     &                     &       24.08\sym{***}&       25.42\sym{***}&       41.01\sym{***}\\ \addlinespace
+Frau                & 70 &                    &                     &                     &                     &                     &                     &                     &       87.63\sym{***}&       70.56\sym{***}\\ \addlinespace
+Frau \& Eltern niedr. Bildung& 20 &                     &                     &                     &                     &                     &                     &                     &                     &       21.18\sym{***}\\
+Frau \& Eltern hohe Bildung&  30 &                  &                     &                     &                     &                     &                     &                     &                     &       31.23\sym{***}\\ \midrule
+Konstante            & (120) &      301.82\sym{***}&      292.34\sym{***}&      279.93\sym{***}&      183.49\sym{***}&      175.06\sym{***}&      176.64\sym{***}&      172.29\sym{***}&      125.11\sym{***}&      117.99\sym{***}\\
+\midrule
+$R^2$                &  &        0.02         &        0.03         &        0.11         &        0.24         &        0.27         &        0.35         &        0.41         &        0.73         &        0.73         \\
+N                  & &     5000         &     5000         &     5000         &     5000         &     5000         &     5000         &     5000         &     5000         &     5000         \\
+\bottomrule
+\multicolumn{10}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+}
+\end{center}
+\end{frame}
+
+
+
+\frame{
+\frametitle{Berechnung der Güte des Modells}
+
+Forscher:innen können daran interessiert sein, welchen Anteil die Unterschiede der erklärenden Variablen an den Unterschieden im Outcome haben. D.\,h.: Wie stark können wir Unterschiede in Y auf Unterschiede in X zurückführen?
+
+\begin{equation}
+\begin{split}
+  R^2 &= \frac{\sum\limits_{i=1}^n(y_i-\bar{y})^2-\sum\limits_{i=1}^n(y_i-\hat{y_i})^2}{\sum\limits_{i=1}^n(y_i-\bar{y})^2}\\
+   &= \frac{\sum\limits_{i=1}^n(\hat{y_i}-\bar{y})^2}{\sum\limits_{i=1}^n(y_i-\bar{y})^2} = \frac{\mbox{SQE}}{\mbox{SQT}}
+\end{split}
+\end{equation}
+
+}
+
+\frame{
+\frametitle{Berechnung der Güte des Modells}
+Genauso wie bei einer ANOVA berechnen wir die Abweichungen zum Gesamtmittelwert und die Abweichungen zum Vorhersagewert für jede Einheit der erklärenden Variable. Für den Fall des Leseinteresses ergibt sich daher: 
+  
+\begin{center} 
+\begin{tabular}{lll}
+$\sum (y_i-\bar{y})^2$ =&  5108108.93     &   \\ 
+$\sum (\hat{y}_i-\bar{y}_i)^2$ =& 1442165.73  &    \\ 
+\end{tabular}
+\end{center}
+
+\[
+  R^2 = \frac{1442165.73  }{5108108.93  } \approx 0.28
+\]
+
+
+
+Unterschiede im Leseinteresse \textit{erklären} ca. 28\% der Unterschiede der Leseleistung.\footnote{Das bedeutet \textbf{nicht}, dass wir 28\% aller Leseleistungen korrekt vorhersagen oder dass 28\% aller Fälle auf der Regressionsgerade liegen würden. } 
+}
+
+
+
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+Problem: Die OLS-Koefizienten werden aufgrund der Stichproben-Werte bestimmt. Man möchte allerdings eine Aussage über den \textit{Effekt} in der Grundgesamtheit machen. 
+
+Daher muss durch Signifikanztests überprüft werden, ob die Regressionsparameter sich von 0 unterscheiden. Ist dies nicht der Fall, dann können wir nicht mehr ausschließen dass es \textit{keinen} Effekt (Effekt = 0) gibt. 
+
+}
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+Prinzipiell sind diese Signifikanztest spezielle t-Tests. Sie prüfen die $H_0$, dass die Regressionsparameter 0 sind. 
+
+\[
+t = \frac{\mbox{geschätzter Parameter} - 0}{\mbox{Standardfehler des Parameters}}
+\]
+
+\begin{equation}
+  t_{\hat{\alpha}} = \frac{\hat{\alpha}}{\hat{\sigma}_{\hat{\alpha}}} \approx t_{df}
+\end{equation}
+
+\begin{equation}
+  t_{\hat{\beta}} = \frac{\hat{\beta}}{\hat{\sigma}_{\hat{\beta}}} \approx t_{df}
+\end{equation}
+
+}
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+Die Standardfehler der $\beta$-Koeffizienten für den Fall einer erklärenden Variable berechnen sich durch: 
+
+\begin{equation}
+\begin{split}
+  \hat{\sigma}_{\hat{\beta}} &= \sqrt{\frac{\frac{\sum\limits_{i=1}^n(y_i-\hat{y}_i)^2}{n-2}}{\sum\limits_{i=1}^n(x_i-\bar{x})^2}}\\
+                             &= \sqrt{\frac{\mbox{Varianz der Residuen}}{\mbox{Variation der unab. Variable}}}
+\end{split}
+\end{equation}
+
+}
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+Die Standardfehler der $\alpha$-Koeffizienten berechnen sich durch: 
+
+\begin{equation}
+ \hat{\sigma}_{\hat{\alpha}} = \sqrt{\frac{\sum\limits_{i=1}^n(y_i-\hat{y}_i)^2}{n-2} \cdot \left(  \frac{1}{n} + \frac{\bar{x}^2}{\sum\limits_{i=1}^n(x_i-\bar{x})^2}  \right)} 
+\end{equation}
+
+}
+
+
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+\[\hat{\sigma}_{\hat{\beta}} = \sqrt{\frac{\frac{3665943.2}{1000-2}}{1446041.5} } \approx 0.05 \]
+
+Wir erwarten eine typische Variation von $\hat{\beta}$  durch Zufallsschwankungen aus alternativen Stichproben von 0.05 Einheiten. 
+
+\[ \hat{\sigma}_{\hat{\alpha}} = \sqrt{ \frac{3665943.2}{1000-2} \cdot \left(  \frac{1}{1000} + \frac{111.35^2 }{1446041.5}  \right)  } = 5.93 \] 
+
+Wir erwarten eine typische Variation von $\hat{\alpha}$  durch Zufallsschwankungen aus alternativen Stichproben von 5.93 Einheiten. 
+}
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+\[ t_{\hat{\beta}} = \frac{1}{0.05} = 20 \]
+
+Bei einer Irrtumswahrscheinlichkeit von 5\% lauten die kritischen Werte für eine t-Verteilung mit 998 Freiheitsgraden (ungerichtet / gerichtet ): 1.977 / 1.656. 
+
+\vfill
+
+Wir können daher die $H_0$ verwerfen, dass es in der Grundgesamtheit keinen Einfluss des Leseinteresses auf die Leseleistung gibt. 
+
+}
+
+
+\frame{
+\frametitle{Wie kann man die Signifikanz der Regressionsparameter bestimmen?}
+
+Mit den nun zur Verfügung stehenden Informationen können wir auch das Konfidenzintervall für $\hat{\beta}$ berechnen: 
+
+\[ 
+OG / UG = 1  \pm 1.977 \cdot 0.05 = 1.099 / 0.90
+\]
+
+Bei einer Vielzahl von alternativen, unabhängigen Zufallsstichproben würden wir bei 95\% aller Stichproben $\hat{\beta}$-Koeffizienten zwischen 0.90 und 1.099 erwarten. Wir gehen davon aus, dass dieses Intervall den Populationswert überdeckt. Diese Annahme ist mit einer Wahrscheinlichkeit von 5\% falsch.
+
+}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{\textbf{O}rdinary-\textbf{L}east-\textbf{S}quares-Koeffizienten}
+\begin{center}
+  \begin{minipage}[b]{.4\linewidth} % [b] => Ausrichtung an \caption
+\resizebox{1.1\linewidth}{!}{
+\includegraphics{ss19-lehre-reg-dis}
+}
+\vfill 
+  \end{minipage}
+  \hspace{.05\linewidth}% Abstand zwischen Bilder
+  \begin{minipage}[b]{.5\linewidth} % [b] => Ausrichtung an \caption 
+Der $\beta$-Koeffizient drückt Unterschiede der geschätzten Werte pro Ausprägung von $X$ aus. In unserem Fall haben wir nur zwei Ausprägungen $X = 0$ und $X = 1$. Es sind aber unendlich viele Ausprägungen denkbar. Die Logik bleibt aber immer die gleiche: Wenn $X$ um eine Einheit steigt, ändert sich $y$ um $\beta$-Einheiten. 
+\vfill 
+Der $\alpha$-Koeffizient drückt immer unsere Schätzung aus, wenn alle im Modell befindlichen Einflüsse nicht vorhanden sind, d.h., wenn alle X-Werte 0 sind. 
+\end{minipage}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{\textbf{O}rdinary-\textbf{L}east-\textbf{S}quares-Koeffizienten}
+
+Bisher haben wir die Korrelation der erklärenden Variablen untereinander nicht einbezogen. Wir wissen aber, dass einige unserer erklärenden Eigenschaften untereinander stark korreliert sind. Zum Beispiel wissen wir, dass es keinen direkten Einfluss der Elternschaft auf die Spendenhöhe gibt, sondern dass dies eine Mediation über das Spielplatzprojekttreatment ist (Folie 2). Wenn wir, wie bisher, einen $\hat{\beta}$-Koeffizient berechnen, kommen wir aber zu einem anderen Schluss: 
+
+
+\begin{center}
+\begin{tabular}{ccccccc} \toprule
+$\bar{y}$ & $\bar{x}$ & $\sum x_iy_i$ & $\sum x_1^2$ & n\\ \midrule
+42.787 & 0.686 & 15270.627 & 343 & 500\\ \bottomrule
+\end{tabular}
+\end{center}
+
+\[ \hat{\beta} = \dfrac{\sum x_iy_i - n\cdot\bar{x}\cdot\bar{y}}{\sum x_i^2 - n\cdot \bar{x}^2} = \dfrac{15270.627 - 500 \cdot 42.787 \cdot 0.686 }{ 343  - 500 \cdot 0.686^2} = 5.52. \]
+
+\end{frame}
+
+
+
+
+
+\frame{
+\frametitle{Multivariate OLS}
+
+Im Fall von zwei erklärenden Variablen ändern sich die Berechnungen der Koeffizienten folgendermaßen:\footnote{Die Logik für mehr als zwei erklärende Variablen ist gleich, allerdings erhöht sich der Grad der notwendigen mathematischen Komplexität, auf den ich hier verzichte.} 
+
+\begin{equation}
+  \hat{\alpha}= \bar{y}-\hat{\beta}_1\bar{x}_1-\hat{\beta}_2\bar{x}_2
+\end{equation}
+
+\begin{equation}
+  \hat{\beta}_1=\frac{r_{yx_1}-r_{yx_2}\cdot r_{x_1x_2}}{1-r_{x_1x_2}^2}\cdot \frac{s_y}{s_{x_1}}
+\end{equation}
+
+\begin{equation}
+  \hat{\beta}_2=\frac{r_{yx_2}-r_{yx_1}\cdot r_{x_1x_2}}{1-r_{x_1x_2}^2}\cdot \frac{s_y}{s_{x_2}}
+\end{equation}
+
+
+}
+
+\frame{
+\frametitle{Multivariate OLS}
+
+Die Schätzung des Einflusses von Elternschaft ($X_1$) auf die Spendenhöhe ($Y$) unter Kontrolle des Einflusses von Spielplatzprojekttreatments ($X_2$) benötigt daher folgende Informationen: 
+
+\begin{center}
+\begin{tabular}{ccccccc} \toprule
+$r_{yx{_1}}$ & $r_{yx_2}$ & $r_{x_1x_2}$ & $s_y$ & $s_{x_1}$ & $s_{x_2}$ \\ \midrule
+0.2414 & 0.3916  & 0.4506 & 10.631 & 0.465 & 0.498 \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation*}
+  \hat{\beta}_1=\frac{r_{yx_1}-r_{yx_2}\cdot r_{x_1x_2}}{1-r_{x_1x_2}^2}\cdot \frac{s_y}{s_{x_1}} = \frac{0.2414 - 0.3916\cdot 0.4506}{1-0.4506^2}\cdot \frac{10.631}{0.465} \approx 1.86.
+\end{equation*}
+
+\begin{equation*}
+  \hat{\beta}_2=\frac{r_{yx_2}-r_{yx_1}\cdot r_{x_1x_2}}{1-r_{x_1x_2}^2}\cdot \frac{s_y}{s_{x_2}} = \frac{0.3916  - 0.2414\cdot 0.4506}{1-0.4506^2}\cdot \frac{10.631}{0.498 } \approx 7.59.
+\end{equation*}
+
+}
+
+
+\begin{frame}[fragile]
+\frametitle{Multivariate OLS-Regression - PC-Version}
+\scriptsize
+\begin{verbatim}
+
+      Source |       SS           df       MS      Number of obs   =       500
+-------------+----------------------------------   F(2, 497)       =     46.85
+       Model |  8946.11409         2  4473.05705   Prob > F        =    0.0000
+    Residual |  47451.2513       497  95.4753547   R-squared       =    0.1586
+-------------+----------------------------------   Adj R-squared   =    0.1552
+       Total |  56397.3654       499  113.020772   Root MSE        =    9.7711
+
+------------------------------------------------------------------------------
+     spenden |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      eltern |   1.863997   1.054641     1.77   0.078    -.2081069      3.9361
+     spielpl |   7.573047   .9834943     7.70   0.000     5.640727    9.505366
+       _cons |   37.35786    .808385    46.21   0.000     35.76958    38.94613
+------------------------------------------------------------------------------
+\end{verbatim}
+\end{frame}
+
+
+\frame{
+  \frametitle{Kompakte Publikationsdarstellung}
+
+\begin{center}
+\resizebox{.7\linewidth}{!}{
+  \input{lehre-ss19-multreg.tex}
+}
+\end{center}
+
+}
+
+
+
+
+\frame{
+\frametitle{Berechnung der Güte des Modells}
+\begin{equation}
+\begin{split}
+  R^2 &= \frac{\sum\limits_{i=1}^n(y_i-\bar{y})^2-\sum\limits_{i=1}^n(y_i-\hat{y_i})^2}{\sum\limits_{i=1}^n(y_i-\bar{y})^2}\\
+   &= \frac{\sum\limits_{i=1}^n(\hat{y_i}-\bar{y})^2}{\sum\limits_{i=1}^n(y_i-\bar{y})^2} 
+\end{split}
+\end{equation}
+
+}

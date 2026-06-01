@@ -1,0 +1,17 @@
+{
+  "hash": "bfa3a08d8322235266be7dc4215f9c3b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Übung: 'Vergleichsgegenstände'\"\nauthor: \"Andreas Haupt, Sophia Horn\"\nformat: \n  html: \n    self-contained: true\n    fontsize: 1em\n    mainfont: sans-serif\n    number-sections: true\n    number-depth: 2\n    table-of-contents: true\n    section-divs: true\n    code-block-bg: \"#76b5c5\"\n    highlight-style: monochrome\n    mermaid:\n      theme: neutral\neditor: source\nexecute: \n  echo: false\n  warning: false\n  message: false\n---\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n## Marmor, Stein und Eisen bricht... \n\nFreDa ist ein Panel. Daher können wir verfolgen, ob Personen sich seit der letzten Befragung voneinander getrennt haben. Die Tabelle stellt die relativen Häufigkeiten nach Bildungsabschlüssen dar. \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n\n|Berufsausbildung (voctrain)               | N gesamt| N Trennung| Anteil Trennung (%)|\n|:-----------------------------------------|--------:|----------:|-------------------:|\n|In Ausbildung                             |      984|        126|                12.8|\n|Kein Abschluss                            |      740|         60|                 8.1|\n|Beruflich-betriebliche Ausbildung (Lehre) |     4496|        133|                 3.0|\n|Beruflich-schulische Ausbildung           |     1729|         64|                 3.7|\n|Fach-, Meister-, Technikerschule          |     1230|         17|                 1.4|\n|Beamtenausbildung                         |      127|          6|                 4.7|\n|Fachhochschule, Berufsakademie            |     2683|         65|                 2.4|\n|Universität                               |     4084|        100|                 2.4|\n|Promotion                                 |      581|          9|                 1.5|\n|Anderer beruflicher Abschluss             |      359|         17|                 4.7|\n\n\n:::\n:::\n\n\n\n## Arbeit, nichts als Arbeit\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Geschlecht, Anker\"\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1] \"Missing by study design\"        \"Invalid (multiple) answers\"    \n [3] \"Does not apply (answer option)\" \"Incomplete data\"               \n [5] \"Unreadable answer\"              \"Inconsistent value\"            \n [7] \"Filter error/incorrect entry\"   \"Does not apply (filter)\"       \n [9] \"No answer\"                      \"Don't know\"                    \n[11] \"Male\"                           \"Female\"                        \n```\n\n\n:::\n\n::: {.cell-output-display}\n![](12-ex_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "12-ex_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
