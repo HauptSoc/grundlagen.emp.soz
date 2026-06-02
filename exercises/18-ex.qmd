@@ -1,0 +1,88 @@
+---
+title: "Übung: 'Isolation von Einflüssen'"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Teure Mieten, noch teurere Mieten
+
+Wir beschäftigen uns mit folgender Theorie: 
+```{mermaid}
+flowchart 
+G["Größe in m²"]
+Z["Zimmeranzahl"]
+N["Neubau"]
+M["Miete"]
+
+G --> Z
+N --> G  
+G & N & Z --> M  
+```
+
+Die Tabelle zeigt zwölf zufällig gezogene Wohnungen. 
+
+```{r}
+set.seed(5656)
+n <- 1000
+
+# Neubau: ja ~ 25%
+neubau <- rbinom(n, 1, 0.25)
+
+# Größe: Altbau-Mittelwert 80, Neubau-Mittelwert 50 (Differenz -30)
+groesse_raw <- rnorm(n, mean = 80 - 30 * neubau, sd = 20)
+groesse <- pmin(pmax(groesse_raw, 20), 140)
+
+# Zimmeranzahl: Korrelation ~0.5 mit Größe, skaliert auf 1-8
+groesse_z <- (groesse - mean(groesse)) / sd(groesse)
+zimmer_raw <- 0.5 * groesse_z + sqrt(1 - 0.5^2) * rnorm(n)
+zimmeranzahl <- (zimmer_raw - min(zimmer_raw)) / (max(zimmer_raw) - min(zimmer_raw)) * 7 + 1
+
+# Miete
+miete <- 50 + 200 * neubau + 5 * groesse + 25 * zimmeranzahl + rnorm(n, 0, 50)
+
+mieten <- data.frame(
+  Neubau       = factor(neubau, labels = c("Nein", "Ja")),
+  Groesse      = round(groesse, 0),
+  Zimmeranzahl = round(zimmeranzahl, 0),
+  Miete        = round(miete, 0)
+)
+
+set.seed(11679)
+idx <- sample(1:1000, 12)
+mieten[idx, ] |>
+  knitr::kable(row.names = FALSE, col.names = c("Neubau", "Größe", "Zimmeranzahl", "Miete"))
+
+```
+
+1. Berechnen Sie die durschnittlichen Differenzen zwischen: 
+    a. Größe nach Neubau sowie
+    b. Miete nach Neubau. 
+2. Berechnen Sie Pearsons r zwischen 
+    a. Größe und Zimmeranzahl;
+    b. Zimmeranzahl und Miete;
+    c. Größe und Miete. 
+
+3. Was müssen wir konstanthalten, um die Wirkung der 
+    a. Größe auf Miete sowie des 
+    b. Neubau-Status auf die Miete 
+zu isolieren? 
+
+4. Wenn Sie es bis hierhin geschafft haben, dann überlegen Sie sich bitte eine Art und Weise, wie die Zimmeranzahl von Wohnungen randomisiert werden kann. Was können Sie damit isolieren? 
+

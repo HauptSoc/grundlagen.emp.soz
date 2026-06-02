@@ -5292,8 +5292,8 @@
     "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#ziel-wirkungen-isolieren-als-kern-guter-vergleiche",
     "href": "slides/18-Isolation_von_Einfluessen_P1.html#ziel-wirkungen-isolieren-als-kern-guter-vergleiche",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
-    "section": "Ziel: Wirkungen isolieren als Kern guter Vergleiche",
-    "text": "Ziel: Wirkungen isolieren als Kern guter Vergleiche\n \n\n\n\n\n\nXKDC 1462 – “Blind Trials”\n\n\n\nDer Kern sozialwissenschaftlicher Fragen ist die Isolation von miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen “naiv” zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die in anderen Eigenschaften identisch sind, um eine gemeinsame Vergleichsgrundlage zu haben."
+    "section": "",
+    "text": "XKDC 1462 – “Blind Trials”\n\n\n\nDer Kern sozialwissenschaftlicher Fragen ist die Isolation von miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen “naiv” zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die in anderen Eigenschaften identisch sind, um eine gemeinsame Vergleichsgrundlage zu haben."
   },
   {
     "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#typische-fragen-nach-wirkungen",
@@ -5307,7 +5307,7 @@
     "href": "slides/18-Isolation_von_Einfluessen_P1.html#was-bedeutet-isolation",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Was bedeutet Isolation?",
-    "text": "Was bedeutet Isolation?\nZiel: Isolation der “direkten Wirkung” von Katzen auf die Zufriedenheit.\n\n\n\n\n\n\n\n\nflowchart TB\n%%{init: {\"flowchart\": {\"htmlLabels\": false}}}%%\n    K[\"Hat Katze(n)\"]:::plain\n    U[Zufriedenheit]:::plain\n    E[Einsamkeit]:::plain\n    S[Single]:::plain\n\n    K -.-&gt; U\n    K --&gt; E\n    E --&gt; U\n    S --&gt; K\n    S --&gt; E\n    \n  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;\n\n\n\n\n\n\n\nUnsere (=meine) “Katzenglücks-Theorie”:\n\nKatzen machen glücklich/zufriedener.1\nSingles haben eine höhere Wahrscheinlichkeit Katzen zu haben.\nSingles sind (im Durchschnitt!!) einsamer als verpartnerte Personen.\nKatzen verringern das Gefühl von Einsamkeit.\nEinsamkeit senkt die Zufriedenheit.\n\n\nIm Durchschnitt!"
+    "text": "Was bedeutet Isolation?\nZiel: Isolation der “direkten Wirkung” von Katzen auf die Zufriedenheit.\n\n\n\n\n\n\n\n\nflowchart TB\n%%{init: {\"flowchart\": {\"htmlLabels\": false}}}%%\n    K[\"Hat Katze(n)\"]:::plain\n    U[Zufriedenheit]:::plain\n    E[Einsamkeit]:::plain\n    S[Single]:::plain\n\n    K -.-&gt; U\n    K --&gt; E\n    E --&gt; U\n    S --&gt; K\n    S --&gt; E\n    \n  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;\n\n\n\n\n\n\n\nUnsere (=meine) “Katzenglücks-Theorie”:\n\nKatzen machen glücklich/zufriedener.1\nSingles haben eine höhere Wahrscheinlichkeit Katzen zu haben.\nSingles sind (im Durchschnitt!!) einsamer als verpartnerte Personen.\nKatzen verringern das Gefühl von Einsamkeit.\nEinsamkeit senkt die Zufriedenheit."
   },
   {
     "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#was-bedeutet-isolation-1",
@@ -5363,7 +5363,7 @@
     "href": "slides/18-Isolation_von_Einfluessen_P1.html#zerlegung-des-datensatzes-wo-ist-der-haken",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Zerlegung des Datensatzes: Wo ist der Haken?",
-    "text": "Zerlegung des Datensatzes: Wo ist der Haken?\n\nDiese Methode funktioniert nur, wenn\n\ndie Anzahl der Kontrollvariablen gering ist und\ndie Ausprägungen der Eigenschaften gering sind und\nder Datensatz entsprechend groß genug ist, um innerhalb jeder Gruppe ein ausreichend großes N zu haben.\n\n\nDie Anzahl der Gruppen, die durch die Ausprägungen der Variablen gebildet werden können ist ein kartesisches Produkt1.\nBei drei Variablen, die jeweils zwei Ausprägungen haben (ja/nein) ergibt sich: \\[ 2 \\cdot 2 \\cdot 2 = 8 \\]\nAngenommen, eine Variable ist metrisch und hat 35 Ausprägungen:\n\\[ 35 \\cdot 2 \\cdot 2 = 140 \\]\nKartesisch, weil René Descartes es als erstes formuliert hat."
+    "text": "Zerlegung des Datensatzes: Wo ist der Haken?\n\nDiese Methode funktioniert nur, wenn\n\ndie Anzahl der Kontrollvariablen gering ist und\ndie Ausprägungen der Eigenschaften gering sind und\nder Datensatz entsprechend groß genug ist, um innerhalb jeder Gruppe ein ausreichend großes N zu haben.\n\n\nDie Anzahl der Gruppen, die durch die Ausprägungen der Variablen gebildet werden können ist ein kartesisches Produkt2.\nBei drei Variablen, die jeweils zwei Ausprägungen haben (ja/nein) ergibt sich: \\[ 2 \\cdot 2 \\cdot 2 = 8 \\]\nAngenommen, eine Variable ist metrisch und hat 35 Ausprägungen:\n\\[ 35 \\cdot 2 \\cdot 2 = 140 \\]"
   },
   {
     "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#zerlegung-des-datensatzes-und-sein-fluch",
@@ -5405,7 +5405,7 @@
     "href": "slides/18-Isolation_von_Einfluessen_P1.html#isolation-von-einflüssen-durch-datenanalytische-modelle",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Isolation von Einflüssen durch datenanalytische Modelle",
-    "text": "Isolation von Einflüssen durch datenanalytische Modelle\n\nDatenanalytische / statistische Modelle sind das am weit verbreiteteste Werkzeug zur Isolation von Einflüssen.\n\nDaher müssen wir das Werkzeug gut kennen lernen, um zu verstehen, was damit in der Forschung produziert wird.\nSpoiler 1: Sehr viele schlaue Leute haben sich sehr kluge Gedanken um dieses Werkzeug gemacht, sodass es extrem flexibel und mächtig ist.\nSpoiler 2: In einigen Fällen wird damit aber Unsinn produziert.1\n\n\n - Egal, wie “fancy” das Modell bezeichnet wird und egal, wie viele grieschische Buchstaben benutzt werden: Am Ende ist ein Modell immer ein Vergleich zwischen Gruppen.2\nDas wollen Sie nicht, denn dann schaue ich Sie sehr streng an.Ich habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren."
+    "text": "Isolation von Einflüssen durch datenanalytische Modelle\n\nDatenanalytische / statistische Modelle sind das am weit verbreiteteste Werkzeug zur Isolation von Einflüssen.\n\nDaher müssen wir das Werkzeug gut kennen lernen, um zu verstehen, was damit in der Forschung produziert wird.\nSpoiler 1: Sehr viele schlaue Leute haben sich sehr kluge Gedanken um dieses Werkzeug gemacht, sodass es extrem flexibel und mächtig ist.\nSpoiler 2: In einigen Fällen wird damit aber Unsinn produziert.3\n\n\n - Egal, wie “fancy” das Modell bezeichnet wird und egal, wie viele grieschische Buchstaben benutzt werden: Am Ende ist ein Modell immer ein Vergleich zwischen Gruppen.4"
   },
   {
     "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#statistische-golems",
@@ -5440,7 +5440,7 @@
     "href": "slides/18-Isolation_von_Einfluessen_P1.html#was-sagt-die-stärke-von-korrelationen-aus",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Was sagt die Stärke von Korrelationen aus?",
-    "text": "Was sagt die Stärke von Korrelationen aus?\nIm Kern sind Korrelationen ein Maß über die Sicherheit, wie gut wir in Bezug auf eine Untersuchungseinheit von den Ausprägung einer Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y) (mit Hilfe einer implizit angenommenen Funktion zwischen beiden) schließen können.\n\nWas eine starke und was eine schwache Korrelation ist, ist in höchstem Maße kontextabhängig!\nEine Korrelation um null bedeutet nicht, dass kein Zusammenhang vorliegt, sondern zunächst nur, dass mit dem gewählten Korrelationsmaß kein Zusammenhang beschrieben werden kann.\nBei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach, Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.1\nIn hochkomplexen sozialen Systemen können Zusammenhänge von 0.5 als sehr stark gelten, wenn üblicherweise die Zusammenhänge um 0.1 bis 0.3 liegen.\n\nAber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext."
+    "text": "Was sagt die Stärke von Korrelationen aus?\nIm Kern sind Korrelationen ein Maß über die Sicherheit, wie gut wir in Bezug auf eine Untersuchungseinheit von den Ausprägung einer Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y) (mit Hilfe einer implizit angenommenen Funktion zwischen beiden) schließen können.\n\nWas eine starke und was eine schwache Korrelation ist, ist in höchstem Maße kontextabhängig!\nEine Korrelation um null bedeutet nicht, dass kein Zusammenhang vorliegt, sondern zunächst nur, dass mit dem gewählten Korrelationsmaß kein Zusammenhang beschrieben werden kann.\nBei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach, Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.5\nIn hochkomplexen sozialen Systemen können Zusammenhänge von 0.5 als sehr stark gelten, wenn üblicherweise die Zusammenhänge um 0.1 bis 0.3 liegen."
   },
   {
     "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#der-scatterplot-als-visuelle-grundlage-für-korrelationen",
@@ -5483,5 +5483,33 @@
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Wie schätzen wir einen Einfluss?",
     "text": "Wie schätzen wir einen Einfluss?"
+  },
+  {
+    "objectID": "exercises/18-ex.html",
+    "href": "exercises/18-ex.html",
+    "title": "Übung: ‘Isolation von Einflüssen’",
+    "section": "",
+    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\n\nBerechnen Sie die durschnittlichen Differenzen zwischen:\n\nGröße nach Neubau sowie\nMiete nach Neubau.\n\nBerechnen Sie Pearsons r zwischen\n\nGröße und Zimmeranzahl;\nZimmeranzahl und Miete;\nGröße und Miete.\n\nWas müssen wir konstanthalten, um die Wirkung der\n\nGröße auf Miete sowie des\nNeubau-Status auf die Miete zu isolieren?\n\nWenn Sie es bis hierhin geschafft haben, dann überlegen Sie sich bitte eine Art und Weise, wie die Zimmeranzahl von Wohnungen randomisiert werden kann. Was können Sie damit isolieren?"
+  },
+  {
+    "objectID": "exercises/18-ex.html#teure-mieten-noch-teurere-mieten",
+    "href": "exercises/18-ex.html#teure-mieten-noch-teurere-mieten",
+    "title": "Übung: ‘Isolation von Einflüssen’",
+    "section": "",
+    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\n\nBerechnen Sie die durschnittlichen Differenzen zwischen:\n\nGröße nach Neubau sowie\nMiete nach Neubau.\n\nBerechnen Sie Pearsons r zwischen\n\nGröße und Zimmeranzahl;\nZimmeranzahl und Miete;\nGröße und Miete.\n\nWas müssen wir konstanthalten, um die Wirkung der\n\nGröße auf Miete sowie des\nNeubau-Status auf die Miete zu isolieren?\n\nWenn Sie es bis hierhin geschafft haben, dann überlegen Sie sich bitte eine Art und Weise, wie die Zimmeranzahl von Wohnungen randomisiert werden kann. Was können Sie damit isolieren?"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P1.html",
+    "href": "slides/18-Isolation_von_Einfluessen_P1.html",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "",
+    "text": "XKDC 1462 – “Blind Trials”\n\n\n\nDer Kern sozialwissenschaftlicher Fragen ist die Isolation von miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen “naiv” zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die in anderen Eigenschaften identisch sind, um eine gemeinsame Vergleichsgrundlage zu haben."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P1.html#footnotes",
+    "href": "slides/18-Isolation_von_Einfluessen_P1.html#footnotes",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIm Durchschnitt!↩︎\nKartesisch, weil René Descartes es als erstes formuliert hat.↩︎\nDas wollen Sie nicht, denn dann schaue ich Sie sehr streng an.↩︎\nIch habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren.↩︎\nAber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.↩︎"
   }
 ]

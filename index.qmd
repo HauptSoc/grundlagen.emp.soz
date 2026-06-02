@@ -6,13 +6,13 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 # Sommersemester: Datenanalyse
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:-------:|---------|-----------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
 |  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |
 | 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |
 | 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-slides.qmd) | ✍ |  |  |
 | 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/17-slides.qmd) | ✍ |  |  |
 |  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
-| 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/18-slides.qmd) | ✍ |  |  |
+| 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/18-slides.qmd) | [✍](exercises/18-ex.qmd) |  |  |
 | 5 | 19.05. | Einfache lineare Modelle II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
 | 6 | 26.05. | Pfingsten |  |  |  |  |  |
 | 7 | 02.06. | Varianzanalyse | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
