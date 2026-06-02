@@ -6,13 +6,13 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 # Sommersemester: Datenanalyse
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:------:|--------|----------------------|:------:|:------:|:------:|:------:|:------:|
+|:-------:|---------|-----------|:-------:|:-------:|:-------:|:-------:|:-------:|
 |  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |
 | 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |
 | 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-slides.qmd) | ✍ |  |  |
 | 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/17-slides.qmd) | ✍ |  |  |
 |  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
-| 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/18-slides.qmd) | ✍ |  |  |
 | 5 | 19.05. | Einfache lineare Modelle II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
 | 6 | 26.05. | Pfingsten |  |  |  |  |  |
 | 7 | 02.06. | Varianzanalyse | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
@@ -30,7 +30,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 # Wintersemester: Datenerhebung
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:-------:|---------|-----------------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | [🖥](slides/00-slides.qmd) |  |  | [📁](misc\01-zusatz.qmd) |
 | 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-slides.qmd "Wissenschaftliche Spielregeln") |  |  |  |
 |  |  | **I. Unterschiede messen** |  |  |  |  |  |

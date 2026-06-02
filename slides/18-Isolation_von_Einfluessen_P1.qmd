@@ -5,7 +5,6 @@ lightbox: true
 css: global.css
 format: 
   revealjs:
-    self-contained: true
     fig-format: svg
     fig-width: 16
     fig-asp: 0.618
@@ -29,7 +28,20 @@ execute:
   warning: false
 ---
 
-## Ziel: Wirkungen isolieren als Kern guter Vergleiche
+## Ziel: Wirkungen isolieren als Kern guter Vergleiche {.midi}
+
+<br> 
+<br>
+
+::: {.columns}
+
+::: {.column}
+
+![XKDC 1462  -- "Blind Trials"](https://imgs.xkcd.com/comics/blind_trials.png)
+
+:::
+
+::: {.column}
 
 Der Kern sozialwissenschaftlicher Fragen ist die Isolation von
 miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen
@@ -37,10 +49,18 @@ miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen
 in anderen Eigenschaften identisch sind, um eine gemeinsame
 Vergleichsgrundlage zu haben.
 
+
+:::
+
+:::
+
+
+## Typische Fragen nach Wirkungen
+
 1.  Wie stark beeinflussen Frauen im Gegensatz zu Männern als Vorgesetze
     das Arbeitsklima?
 
-    1.  Wir wissen, dass es nicht zufällig ist, in welchen
+      - Wir wissen, dass es nicht zufällig ist, in welchen
         Organisationen Frauen Vorgesetzte sind. Die Art der Organisation
         beeinflusst daher sehr wahrscheinlich sowohl die Rekrutierung
         von Frauen in Führungspositionen als auch das Arbeitsklima.
@@ -48,14 +68,14 @@ Vergleichsgrundlage zu haben.
 2.  Führt die Einnahme von Vitamin D zu verringerten
     Gesundheitsproblemen?
 
-    1.  Wir wissen, dass Personen, die besonders gesundheitsbewusst
+      - Wir wissen, dass Personen, die besonders gesundheitsbewusst
         sind, eher dazu neigen, Vitamin D zu nehmen und außerdem mehr
         auf ihre Gesundheit zu achten.
 
 3.  Welche Bedeutung spielt Armut für den Verlust von
     Institutionenvertrauen?
 
-    1.  Personen in Armut sind überdurchschnittlich stärker von
+      - Personen in Armut sind überdurchschnittlich stärker von
         Arbeitslosigkeit betroffen. Arbeitslosigkeit selbst könnte
         Institutionenverlust hervorrufen oder ihn auch bestärken.
 
@@ -63,6 +83,8 @@ Vergleichsgrundlage zu haben.
 ## Was bedeutet Isolation? 
 
 Ziel: Isolation der "direkten Wirkung" von Katzen auf die Zufriedenheit.
+
+<br>
 
 ::: {.columns}
 
@@ -81,11 +103,7 @@ flowchart TB
     S --> K
     S --> E
     
-  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:18px;
-  classDef boxed fill:transparent,stroke:#000,stroke-width:2px,color:#000,font-size:18px;
-  classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-  
-
+  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;
 ```
 
 :::
@@ -106,7 +124,7 @@ Unsere (=meine) "Katzenglücks-Theorie":
 
 ## Was bedeutet Isolation? {.midi}
 
-Pippi-Langstrumpf-Methode: Ich baue mir eine Welt, wie sie mir gefällt (=Simulation).  
+Pippi-Langstrumpf-Methode: Ich simuliere eine Welt, wie sie mir gefällt.  
 
 ```{r}
 library(tidyverse)
@@ -165,9 +183,8 @@ flowchart TB
 - Singles haben eine um 10pp erhöhte Wahrscheinlichkeit, einsam zu sein. 
 - Insgesamt 32% aller Personen haben eine Katze. 
 - Insgesamt 20% aller Personen sind einsam. 
-- Katzen erhöhen die Zufriedenheit um 3 Punkte auf einer 10er Skala. 
+- Katzen erhöhen die Zufriedenheit um 3 Punkte. 
 - Einsamkeit senkt die Zufriedenheit um 2 Punkte. 
-- Personen sind grundsätzlich sehr zufrieden. 
 :::
 
 :::
@@ -248,10 +265,11 @@ dat |>
 
 Wir können grundsätzlich drei Methoden anwenden, um Effekte zu isolieren: 
 
+::: {.extrapad}
 - Zerlegung des Datensatzes in Gruppen, die sich nur nach einer Ausprägung unterscheiden.
 - Randomisierung der Gruppen in "Treatment-/Kontrollgruppe". 
 - "Bereinigung des Treatments" durch andere Effekte im Rahmen eines datenanalytischen Modells. 
-
+:::
 
 ## Zerlegung des Datensatzes: Katzen-Effekt
 
@@ -337,7 +355,7 @@ tbl_vis_einsam |>
 
 ## Was passiert hier eigentlich?
 
-Aufgrund der dargestellten Theorie erwarten wir Differenzen zwischen Gruppen. Das drücken wir mit dem Erwartungswert-Operator $ E[] $ aus. 
+Aufgrund der dargestellten Theorie erwarten wir Differenzen zwischen Gruppen. Das drücken wir mit dem Erwartungswert-Operator $E[]$ aus. 
 
 $$ \begin{align} 
 \Delta &=  E[\text{Zufriedenheit} \, | \, \text{Katze} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
@@ -381,6 +399,8 @@ $$ 35 \cdot 2 \cdot 2 = 140 $$
 
 ## Zerlegung des Datensatzes und sein Fluch 
 
+<br> 
+
 :::{.extrapad}
 
 - Viele der studierten Prozesse in den Sozialwissenschaften sind komplex und hochgradig verflochten. 
@@ -394,11 +414,11 @@ $$ 35 \cdot 2 \cdot 2 = 140 $$
 
 ## Methode 2: Randomisierung 
 
-![](images/katzentombola.png)
-
+::: {.centering}
+![](images/katzentombola.png){width="75%"}
+:::
 
 ## Was macht Randomisierung? 
-
 
 ::: {.columns}
 
@@ -511,12 +531,18 @@ vergleich_neu |>
 
 ## Was passiert bei Randomisierung? 
 
+<br>
+<br>
+
 $$ \begin{align} 
 \Delta &=  E[\text{Zufriedenheit} \, | \, \text{Katze} = ja, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
  &- E[\text{Zufriedenheit} \, | \, \text{Katze} = nein, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
  &= 3
 \end{align} 
 $$ 
+
+<br>
+<br>
 
 Generell können wir daher auch schreiben: 
 
@@ -564,6 +590,9 @@ Aber:
 
 ## Klemmbausteine für datenanalytische Modelle
 
+<br>
+<br>
+
 :::{.extrapad}
 1. **Korrelationen**:  Statistische Modelle korrelieren Ausprägungen von Variablen miteinader. 
 
@@ -574,9 +603,29 @@ Aber:
 
 ## Klemmbaustein 1: Korrelationen
 
+
+::: {.columns}
+
+::: {.column}
+<br>
+<br>
+
+![Brauer: Causation without Correlation?](https://reluctantcriminologists.com/blog-posts/%5B4%5D/datacantspeak2.jpg)
+:::
+
+::: {.column}
+<br>
+
 - Damit überhaupt ein Einfluss isoliert werden kann, sollte ein Treatment mit einem Outcome in irgendeinem, statistisch erfassbaren Zusammenhang stehen (= Korrelation). 
 
 - Datenanalytische Verfahren können uns **immer** nur Korrelationen geben -- egal wie fancy das Modell ist. Kausalitätsaussagen sind immer eine (theoriegeleitete) Interpretation von Korrelationen.  
+
+:::
+:::
+
+## Was sollen Korrelationen leisten? 
+<br>
+<br>
 
 - Wir möchten wissen: 
     -  gehen steigende Werte in einem Merkmal, mit steigenden Werten in einem anderen Merkmal einher (positiver Zusammenhang)?
@@ -586,18 +635,18 @@ Aber:
 Wir berechnen dazu Zusammenhangsmaße. Diese können immer zwischen -1 und +1 schwanken. 
 
 
-## Was sagt die Stärke von Korrelationen aus?
+## Was sagt die Stärke von Korrelationen aus? {.midi}
 
 Im Kern sind Korrelationen ein Maß über die **Sicherheit**, wie gut wir
 in Bezug auf eine Untersuchungseinheit von den Ausprägung einer
-Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y)
+Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y) (mit Hilfe einer implizit angenommenen Funktion zwischen beiden)
 schließen können.
 
 -   Was eine starke und was eine schwache Korrelation ist, ist in höchstem Maße kontextabhängig!
 
 -   Eine Korrelation um null bedeutet **nicht**, dass kein Zusammenhang vorliegt, sondern zunächst nur, dass mit dem gewählten Korrelationsmaß kein Zusammenhang beschrieben werden kann.
 
--   Bei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach,Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.[^5]
+-   Bei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach, Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.[^5]
 
 -   In hochkomplexen sozialen Systemen können Zusammenhänge von 0.5 als sehr stark gelten, wenn üblicherweise die Zusammenhänge um 0.1 bis  0.3 liegen.
 
