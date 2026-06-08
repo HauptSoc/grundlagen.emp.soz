@@ -1,0 +1,8 @@
+---
+title: "Isolation von Einflüssen - Part 2"
+author: "Andreas Haupt"
+format: html
+editor: source
+---
+  
+{{< revealjs file="19-Isolation_von_Einfluessen_P2.html" height="950px" width="50%" class="ratio ratio-16x9" >}}

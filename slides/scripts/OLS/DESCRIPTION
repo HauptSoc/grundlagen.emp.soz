@@ -1,0 +1,13 @@
+Package: ols-regression-app
+Type: Application
+Title: Interaktive OLS-Lernapp
+Version: 0.0.0.9000
+Encoding: UTF-8
+Depends: R (>= 4.5.0)
+Imports:
+    shiny,
+    dplyr,
+    plotly,
+    tibble
+Description: Shiny-App zum interaktiven Verstehen linearer Regression, Residuen und OLS.
+License: MIT + file LICENSE

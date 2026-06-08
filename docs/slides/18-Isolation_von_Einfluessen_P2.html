@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Gute Vergleiche: Isolation von Einflüßen - Part 1 – Methoden empirischer Sozialforschung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-792e39acc70db8c578759e6a7c17270a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-27da9cdd4f8225d1d1f077326a5592b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-792e39acc70db8c578759e6a7c17270a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="global.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Gute Vergleiche: Isolation von Einflüßen - Part 1</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/mindmap-logoV2.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/mindmap-logoV2.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/HauptSoc/grundlagen.emp.soz" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
+    <a href="https://campus.kit.edu" title="ILIAS KIT" class="quarto-navigation-tool px-1" aria-label="ILIAS KIT"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Wissenswertes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ziele</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Was, wann, welche Reihenfolge?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Kleingedruckte</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ziel-wirkungen-isolieren-als-kern-guter-vergleiche" id="toc-ziel-wirkungen-isolieren-als-kern-guter-vergleiche" class="nav-link active" data-scroll-target="#ziel-wirkungen-isolieren-als-kern-guter-vergleiche">Ziel: Wirkungen isolieren als Kern guter Vergleiche</a></li>
+  <li><a href="#typische-fragen-nach-wirkungen" id="toc-typische-fragen-nach-wirkungen" class="nav-link" data-scroll-target="#typische-fragen-nach-wirkungen">Typische Fragen nach Wirkungen</a></li>
+  <li><a href="#was-bedeutet-isolation" id="toc-was-bedeutet-isolation" class="nav-link" data-scroll-target="#was-bedeutet-isolation">Was bedeutet Isolation?</a></li>
+  <li><a href="#was-bedeutet-isolation-1" id="toc-was-bedeutet-isolation-1" class="nav-link" data-scroll-target="#was-bedeutet-isolation-1">Was bedeutet Isolation?</a></li>
+  <li><a href="#gute-und-schlechte-vergleiche-mit-katzen" id="toc-gute-und-schlechte-vergleiche-mit-katzen" class="nav-link" data-scroll-target="#gute-und-schlechte-vergleiche-mit-katzen">Gute und schlechte Vergleiche (mit Katzen)</a></li>
+  <li><a href="#unterschiede-zwischen-den-gruppen" id="toc-unterschiede-zwischen-den-gruppen" class="nav-link" data-scroll-target="#unterschiede-zwischen-den-gruppen">Unterschiede zwischen den Gruppen</a></li>
+  <li><a href="#was-können-wir-tun" id="toc-was-können-wir-tun" class="nav-link" data-scroll-target="#was-können-wir-tun">Was können wir tun?</a></li>
+  <li><a href="#zerlegung-des-datensatzes-katzen-effekt" id="toc-zerlegung-des-datensatzes-katzen-effekt" class="nav-link" data-scroll-target="#zerlegung-des-datensatzes-katzen-effekt">Zerlegung des Datensatzes: Katzen-Effekt</a></li>
+  <li><a href="#zerlegung-des-datensatzes-einsamkeits-effekt" id="toc-zerlegung-des-datensatzes-einsamkeits-effekt" class="nav-link" data-scroll-target="#zerlegung-des-datensatzes-einsamkeits-effekt">Zerlegung des Datensatzes: Einsamkeits-Effekt</a></li>
+  <li><a href="#was-passiert-hier-eigentlich" id="toc-was-passiert-hier-eigentlich" class="nav-link" data-scroll-target="#was-passiert-hier-eigentlich">Was passiert hier eigentlich?</a></li>
+  <li><a href="#zerlegung-des-datensatzes-wo-ist-der-haken" id="toc-zerlegung-des-datensatzes-wo-ist-der-haken" class="nav-link" data-scroll-target="#zerlegung-des-datensatzes-wo-ist-der-haken">Zerlegung des Datensatzes: Wo ist der Haken?</a></li>
+  <li><a href="#zerlegung-des-datensatzes-und-sein-fluch" id="toc-zerlegung-des-datensatzes-und-sein-fluch" class="nav-link" data-scroll-target="#zerlegung-des-datensatzes-und-sein-fluch">Zerlegung des Datensatzes und sein Fluch</a></li>
+  <li><a href="#methode-2-randomisierung" id="toc-methode-2-randomisierung" class="nav-link" data-scroll-target="#methode-2-randomisierung">Methode 2: Randomisierung</a></li>
+  <li><a href="#was-macht-randomisierung" id="toc-was-macht-randomisierung" class="nav-link" data-scroll-target="#was-macht-randomisierung">Was macht Randomisierung?</a></li>
+  <li><a href="#was-passiert-bei-randomisierung" id="toc-was-passiert-bei-randomisierung" class="nav-link" data-scroll-target="#was-passiert-bei-randomisierung">Was passiert bei Randomisierung?</a></li>
+  <li><a href="#was-ist-das-problem-mit-randomisierung" id="toc-was-ist-das-problem-mit-randomisierung" class="nav-link" data-scroll-target="#was-ist-das-problem-mit-randomisierung">Was ist das “Problem” mit Randomisierung?</a></li>
+  <li><a href="#isolation-von-einflüssen-durch-datenanalytische-modelle" id="toc-isolation-von-einflüssen-durch-datenanalytische-modelle" class="nav-link" data-scroll-target="#isolation-von-einflüssen-durch-datenanalytische-modelle">Isolation von Einflüssen durch datenanalytische Modelle</a></li>
+  <li><a href="#statistische-golems" id="toc-statistische-golems" class="nav-link" data-scroll-target="#statistische-golems">Statistische Golems</a></li>
+  <li><a href="#klemmbausteine-für-datenanalytische-modelle" id="toc-klemmbausteine-für-datenanalytische-modelle" class="nav-link" data-scroll-target="#klemmbausteine-für-datenanalytische-modelle">Klemmbausteine für datenanalytische Modelle</a></li>
+  <li><a href="#klemmbaustein-1-korrelationen" id="toc-klemmbaustein-1-korrelationen" class="nav-link" data-scroll-target="#klemmbaustein-1-korrelationen">Klemmbaustein 1: Korrelationen</a></li>
+  <li><a href="#was-sollen-korrelationen-leisten" id="toc-was-sollen-korrelationen-leisten" class="nav-link" data-scroll-target="#was-sollen-korrelationen-leisten">Was sollen Korrelationen leisten?</a></li>
+  <li><a href="#was-sagt-die-stärke-von-korrelationen-aus" id="toc-was-sagt-die-stärke-von-korrelationen-aus" class="nav-link" data-scroll-target="#was-sagt-die-stärke-von-korrelationen-aus">Was sagt die Stärke von Korrelationen aus?</a></li>
+  <li><a href="#der-scatterplot-als-visuelle-grundlage-für-korrelationen" id="toc-der-scatterplot-als-visuelle-grundlage-für-korrelationen" class="nav-link" data-scroll-target="#der-scatterplot-als-visuelle-grundlage-für-korrelationen">Der Scatterplot als (visuelle) Grundlage für Korrelationen</a></li>
+  <li><a href="#der-baustein-des-bausteins-die-covarianz" id="toc-der-baustein-des-bausteins-die-covarianz" class="nav-link" data-scroll-target="#der-baustein-des-bausteins-die-covarianz">Der Baustein des Bausteins: die Covarianz</a></li>
+  <li><a href="#pearsons-r" id="toc-pearsons-r" class="nav-link" data-scroll-target="#pearsons-r">Pearsons r</a></li>
+  <li><a href="#pearsons-r-und-die-verteilung-von-daten" id="toc-pearsons-r-und-die-verteilung-von-daten" class="nav-link" data-scroll-target="#pearsons-r-und-die-verteilung-von-daten">Pearsons r und die Verteilung von Daten</a></li>
+  <li><a href="#unterschied-zwischen-korrelation-und-einfluss" id="toc-unterschied-zwischen-korrelation-und-einfluss" class="nav-link" data-scroll-target="#unterschied-zwischen-korrelation-und-einfluss">Unterschied zwischen Korrelation und Einfluss</a></li>
+  <li><a href="#wie-schätzen-wir-einen-einfluss" id="toc-wie-schätzen-wir-einen-einfluss" class="nav-link" data-scroll-target="#wie-schätzen-wir-einen-einfluss">Wie schätzen wir einen Einfluss?</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="18-Isolation_von_Einfluessen_P2.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gute Vergleiche: Isolation von Einflüßen - Part 1</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="ziel-wirkungen-isolieren-als-kern-guter-vergleiche" class="level2 midi">
+<h2 class="midi anchored" data-anchor-id="ziel-wirkungen-isolieren-als-kern-guter-vergleiche">Ziel: Wirkungen isolieren als Kern guter Vergleiche</h2>
+<p><br> <br></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://imgs.xkcd.com/comics/blind_trials.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="XKDC 1462 – “Blind Trials”"><img src="https://imgs.xkcd.com/comics/blind_trials.png" class="img-fluid figure-img" alt="XKDC 1462 – “Blind Trials”"></a></p>
+<figcaption>XKDC 1462 – “Blind Trials”</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<p>Der Kern sozialwissenschaftlicher Fragen ist die Isolation von miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen “naiv” zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die in anderen Eigenschaften identisch sind, um eine gemeinsame Vergleichsgrundlage zu haben.</p>
+</div>
+</div>
+</section>
+<section id="typische-fragen-nach-wirkungen" class="level2">
+<h2 class="anchored" data-anchor-id="typische-fragen-nach-wirkungen">Typische Fragen nach Wirkungen</h2>
+<ol type="1">
+<li><p>Wie stark beeinflussen Frauen im Gegensatz zu Männern als Vorgesetze das Arbeitsklima?</p>
+<ul>
+<li>Wir wissen, dass es nicht zufällig ist, in welchen Organisationen Frauen Vorgesetzte sind. Die Art der Organisation beeinflusst daher sehr wahrscheinlich sowohl die Rekrutierung von Frauen in Führungspositionen als auch das Arbeitsklima.</li>
+</ul></li>
+<li><p>Führt die Einnahme von Vitamin D zu verringerten Gesundheitsproblemen?</p>
+<ul>
+<li>Wir wissen, dass Personen, die besonders gesundheitsbewusst sind, eher dazu neigen, Vitamin D zu nehmen und außerdem mehr auf ihre Gesundheit zu achten.</li>
+</ul></li>
+<li><p>Welche Bedeutung spielt Armut für den Verlust von Institutionenvertrauen?</p>
+<ul>
+<li>Personen in Armut sind überdurchschnittlich stärker von Arbeitslosigkeit betroffen. Arbeitslosigkeit selbst könnte Institutionenverlust hervorrufen oder ihn auch bestärken.</li>
+</ul></li>
+</ol>
+</section>
+<section id="was-bedeutet-isolation" class="level2">
+<h2 class="anchored" data-anchor-id="was-bedeutet-isolation">Was bedeutet Isolation?</h2>
+<p>Ziel: Isolation der “direkten Wirkung” von Katzen auf die Zufriedenheit.</p>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+%%{init: {"flowchart": {"htmlLabels": false}}}%%
+    K["Hat Katze(n)"]:::plain
+    U[Zufriedenheit]:::plain
+    E[Einsamkeit]:::plain
+    S[Single]:::plain
+
+    K -.-&gt; U
+    K --&gt; E
+    E --&gt; U
+    S --&gt; K
+    S --&gt; E
+    
+  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column">
+<p>Unsere (=meine) “Katzenglücks-Theorie”:</p>
+<ul>
+<li>Katzen machen glücklich/zufriedener.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Singles haben eine höhere Wahrscheinlichkeit Katzen zu haben.</li>
+<li>Singles sind (im Durchschnitt!!) einsamer als verpartnerte Personen.</li>
+<li>Katzen verringern das Gefühl von Einsamkeit.</li>
+<li>Einsamkeit senkt die Zufriedenheit.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="was-bedeutet-isolation-1" class="level2 midi">
+<h2 class="midi anchored" data-anchor-id="was-bedeutet-isolation-1">Was bedeutet Isolation?</h2>
+<p>Pippi-Langstrumpf-Methode: Ich simuliere eine Welt, wie sie mir gefällt.</p>
+<div class="columns">
+<div class="column">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    S["&lt;b&gt;Single&lt;/b&gt;&lt;br/&gt;Ja: 35%; Nein: 65%"]:::plain
+    
+    K["&lt;b&gt;Katzenbesitz&lt;/b&gt;&lt;br/&gt;Ja: 32%; Nein: 68%"]:::plain
+    E["&lt;b&gt;Einsamkeit&lt;/b&gt;&lt;br/&gt;Ja: 20%; Nein: 80%"]:::plain
+    
+    Z["&lt;b&gt;Zufriedenheit&lt;/b&gt;&lt;br/&gt;MW: 8.46 (SD: 1.34)"]:::plain
+
+    S --&gt;|+20pp| K
+    S --&gt;|+10pp| E
+    K --&gt;|-10pp| E
+    K --&gt;|+3 Punkte| Z
+    E --&gt;|-4 Punkte| Z
+
+    classDef plain fill:transparent,stroke:#000,stroke-width:2px,color:#000,font-size:13px;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li>35% aller Personen sind Single.</li>
+<li>Singles haben eine um 20 Prozentpunkte (pp) erhöhte Wahrscheinlichkeit, eine Katze zu besitzen.</li>
+<li>Singles haben eine um 10pp erhöhte Wahrscheinlichkeit, einsam zu sein.</li>
+<li>Insgesamt 32% aller Personen haben eine Katze.</li>
+<li>Insgesamt 20% aller Personen sind einsam.</li>
+<li>Katzen erhöhen die Zufriedenheit um 3 Punkte.</li>
+<li>Einsamkeit senkt die Zufriedenheit um 2 Punkte.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="gute-und-schlechte-vergleiche-mit-katzen" class="level2">
+<h2 class="anchored" data-anchor-id="gute-und-schlechte-vergleiche-mit-katzen">Gute und schlechte Vergleiche (mit Katzen)</h2>
+<p>Können wir in so einem Setting Katzenbesitzer:innen mit Nicht-Katzenbesitzer:inenn vergleichen, um den direkten “Katzen-Zufriedenheits-Effekt” zu isolieren?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="18-Isolation_von_Einfluessen_P2_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="18-Isolation_von_Einfluessen_P2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="unterschiede-zwischen-den-gruppen" class="level2">
+<h2 class="anchored" data-anchor-id="unterschiede-zwischen-den-gruppen">Unterschiede zwischen den Gruppen</h2>
+<ul>
+<li><p>Zwischen Katzenbesitzer:innen und Nicht-Katzenbesitzer:innen bestehen <strong>auch</strong> Unterschiede nach Single-Status und Einsamkeit.</p></li>
+<li><p>Da diese mit Zufriedenheit <strong>und</strong> Katzenbesitz verbunden sind, vergleichen wir nicht nur nach Katzenbesitz sondern <strong>implizit</strong> auch nach diesen weiteren Unterschieden.</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Katze</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">M (SD)</th>
+<th style="text-align: right;">Single: Ja (%)</th>
+<th style="text-align: right;">Einsam: Ja (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nein</td>
+<td style="text-align: right;">5426</td>
+<td style="text-align: left;">6 (1.7)</td>
+<td style="text-align: right;">23.4</td>
+<td style="text-align: right;">10.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ja</td>
+<td style="text-align: right;">4574</td>
+<td style="text-align: left;">7 (2.4)</td>
+<td style="text-align: right;">48.9</td>
+<td style="text-align: right;">59.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li><p>Ein “naiver” Vergleich zwischen beiden Gruppen nach ihrer durchschnittlichen Zufriedenheit führt dazu, dass der “Katzen-Glückseffekt” bei circa 1 Punkt liegt, obwohl er 3 Punkte groß ist.</p></li>
+<li><p>Die weiteren Unterschiede zwischen den Gruppen “überdecken” daher den “direkten Katzen-Glückseffekt.”</p></li>
+</ul>
+</section>
+<section id="was-können-wir-tun" class="level2">
+<h2 class="anchored" data-anchor-id="was-können-wir-tun">Was können wir tun?</h2>
+<p>Wir können grundsätzlich drei Methoden anwenden, um Effekte zu isolieren:</p>
+<div class="extrapad">
+<ul>
+<li>Zerlegung des Datensatzes in Gruppen, die sich nur nach einer Ausprägung unterscheiden.</li>
+<li>Randomisierung der Gruppen in “Treatment-/Kontrollgruppe”.</li>
+<li>“Bereinigung des Treatments” durch andere Effekte im Rahmen eines datenanalytischen Modells.</li>
+</ul>
+</div>
+</section>
+<section id="zerlegung-des-datensatzes-katzen-effekt" class="level2">
+<h2 class="anchored" data-anchor-id="zerlegung-des-datensatzes-katzen-effekt">Zerlegung des Datensatzes: Katzen-Effekt</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Konstanthaltung</th>
+<th style="text-align: left;">Katze</th>
+<th style="text-align: left;">Ø Zufriedenheit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Single=Ja, Einsam=Ja</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">2.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Ja, Einsam=Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">5.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Ja, Einsam=Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">6.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Single=Ja, Einsam=Nein</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">9.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Single=Nein, Einsam=Ja</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">2.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Nein, Einsam=Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">5.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Nein, Einsam=Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">6.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Single=Nein, Einsam=Nein</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">9.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="zerlegung-des-datensatzes-einsamkeits-effekt" class="level2">
+<h2 class="anchored" data-anchor-id="zerlegung-des-datensatzes-einsamkeits-effekt">Zerlegung des Datensatzes: Einsamkeits-Effekt</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Konstanthaltung</th>
+<th style="text-align: left;">Einsam</th>
+<th style="text-align: left;">Ø Zufriedenheit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Single=Ja, Katze=Ja</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">9.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Ja, Katze=Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">5.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Ja, Katze=Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">6.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Single=Ja, Katze=Nein</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">2.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Single=Nein, Katze=Ja</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">9.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Nein, Katze=Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">5.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single=Nein, Katze=Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">6.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Single=Nein, Katze=Nein</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">2.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="was-passiert-hier-eigentlich" class="level2">
+<h2 class="anchored" data-anchor-id="was-passiert-hier-eigentlich">Was passiert hier eigentlich?</h2>
+<p>Aufgrund der dargestellten Theorie erwarten wir Differenzen zwischen Gruppen. Das drücken wir mit dem Erwartungswert-Operator <span class="math inline">\(E[]\)</span> aus.</p>
+<p><span class="math display">\[ \begin{align}
+\Delta &amp;=  E[\text{Zufriedenheit} \, | \, \text{Katze} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+&amp;- E[\text{Zufriedenheit} \, | \, \text{Katze} = nein, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+&amp;= 3
+\end{align}
+\]</span></p>
+<p><span class="math display">\[ \begin{align}
+\Delta &amp;=  E[\text{Zufriedenheit} \, | \, \text{Einsam} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+&amp;- E[\text{Zufriedenheit} \, | \, \text{Einsam} = nein, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+&amp;= 4
+\end{align}
+\]</span></p>
+<p>Generell können wir daher auch schreiben:</p>
+<p><span class="math display">\[ \begin{align}
+\Delta &amp;=  E[\text{Outcome} \, | \, \text{Treatment} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+&amp;- E[\text{Outcome} \, | \, \text{Treatment} = nein, \, \text{sonstige Unterschiede} = \text{konstant}]
+\end{align}
+\]</span></p>
+</section>
+<section id="zerlegung-des-datensatzes-wo-ist-der-haken" class="level2">
+<h2 class="anchored" data-anchor-id="zerlegung-des-datensatzes-wo-ist-der-haken">Zerlegung des Datensatzes: Wo ist der Haken?</h2>
+<ul>
+<li>Diese Methode funktioniert nur, wenn
+<ul>
+<li>die Anzahl der Kontrollvariablen gering ist <strong>und</strong></li>
+<li>die Ausprägungen der Eigenschaften gering sind <strong>und</strong></li>
+<li>der Datensatz entsprechend groß genug ist, um innerhalb jeder Gruppe ein ausreichend großes N zu haben.</li>
+</ul></li>
+</ul>
+<p>Die Anzahl der Gruppen, die durch die Ausprägungen der Variablen gebildet werden können ist ein <em>kartesisches Produkt</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>Bei drei Variablen, die jeweils zwei Ausprägungen haben (ja/nein) ergibt sich: <span class="math display">\[ 2 \cdot 2 \cdot 2 = 8 \]</span></p>
+<p>Angenommen, eine Variable ist metrisch und hat 35 Ausprägungen:</p>
+<p><span class="math display">\[ 35 \cdot 2 \cdot 2 = 140 \]</span></p>
+</section>
+<section id="zerlegung-des-datensatzes-und-sein-fluch" class="level2">
+<h2 class="anchored" data-anchor-id="zerlegung-des-datensatzes-und-sein-fluch">Zerlegung des Datensatzes und sein Fluch</h2>
+<p><br></p>
+<div class="extrapad">
+<ul>
+<li><p>Viele der studierten Prozesse in den Sozialwissenschaften sind komplex und hochgradig verflochten.</p></li>
+<li><p>Bei einer entsprechend guten Operationalisierung und Erhebung haben wir oft viele Variablen mit differenzierten Ausprägungen.</p></li>
+<li><p>Damit erhöht sich das kartesische Produkt der Anzahl aller möglichen Gruppen so enorm, dass keine sinnvollen Vergleiche mehr möglich sind.</p></li>
+<li><p>Dieses Problem wird auch als “Curse of Dimensionality” bezeichnet.</p></li>
+</ul>
+</div>
+</section>
+<section id="methode-2-randomisierung" class="level2">
+<h2 class="anchored" data-anchor-id="methode-2-randomisierung">Methode 2: Randomisierung</h2>
+<div class="centering">
+<p><a href="images/katzentombola.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/katzentombola.png" class="img-fluid" style="width:75.0%"></a></p>
+</div>
+</section>
+<section id="was-macht-randomisierung" class="level2">
+<h2 class="anchored" data-anchor-id="was-macht-randomisierung">Was macht Randomisierung?</h2>
+<div class="columns">
+<div class="column">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    K["Hat Katze(n)"]:::plain
+    U[Zufriedenheit]:::plain
+    E[Einsamkeit]:::plain
+    S[Single]:::plain
+
+    K -.-&gt; U
+    K --&gt; E
+    E --&gt; U
+    S x--x K
+    S --&gt; E
+    
+  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li>Wenn wir in diesem bestehenden sozialen System den Katzenbesitz randomisieren, d.h. zufällig zuordnen, würden, dann
+<ul>
+<li>setzen wir die Korrelation von Katzenbesitz und Singles auf 0;</li>
+<li>alles andere bleibt identisch.</li>
+</ul></li>
+</ul>
+</div><div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 32%">
+<col style="width: 28%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Szenario</th>
+<th style="text-align: right;">naive Δ Zufriedenheit (Katze Ja-Nein)</th>
+<th style="text-align: right;">Δ Single: Ja (%) (Katze Ja-Nein)</th>
+<th style="text-align: right;">Δ Einsam: Ja (%) (Katze Ja-Nein)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Beobachtet</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">25.5</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Randomisiert</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-0.8</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="was-passiert-bei-randomisierung" class="level2">
+<h2 class="anchored" data-anchor-id="was-passiert-bei-randomisierung">Was passiert bei Randomisierung?</h2>
+<p><br> <br></p>
+<p><span class="math display">\[ \begin{align}
+\Delta &amp;=  E[\text{Zufriedenheit} \, | \, \text{Katze} = ja, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
+&amp;- E[\text{Zufriedenheit} \, | \, \text{Katze} = nein, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
+&amp;= 3
+\end{align}
+\]</span></p>
+<p><br> <br></p>
+<p>Generell können wir daher auch schreiben:</p>
+<p><span class="math display">\[ \begin{align}
+\Delta &amp;=  E[\text{Outcome} \, | \, \text{Treatment} = ja, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
+&amp;- E[\text{Outcome} \, | \, \text{Treatment} = nein, \, \text{sonstige Unterschiede} = \text{ignorierbar}]
+\end{align}
+\]</span></p>
+</section>
+<section id="was-ist-das-problem-mit-randomisierung" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-das-problem-mit-randomisierung">Was ist das “Problem” mit Randomisierung?</h2>
+<ul>
+<li>Randomisierung ist ein extrem mächtiges Werkzeug zur Isolation von Einflüssen, weil es einen sauberen Vergleich von “Treatment-/Kontrollgruppen” ermöglich, da die Differenzen in der Zusammensetzung nach anderen Eigenschaften ignorierbar sind.</li>
+</ul>
+<p>Aber:</p>
+<ul>
+<li><p>Personen sind oft Dingen ausgesetzt, die sich nicht (gesteuert) randomisieren lassen:</p>
+<ul>
+<li>Bedingungen in Familien</li>
+<li>Nationalstaaten</li>
+<li>Kanzler Merz</li>
+<li>öffentliche Infrastruktur</li>
+<li>Bildungssystem</li>
+</ul></li>
+</ul>
+</section>
+<section id="isolation-von-einflüssen-durch-datenanalytische-modelle" class="level2">
+<h2 class="anchored" data-anchor-id="isolation-von-einflüssen-durch-datenanalytische-modelle">Isolation von Einflüssen durch datenanalytische Modelle</h2>
+<ul>
+<li>Datenanalytische / statistische Modelle sind das am weit verbreiteteste Werkzeug zur Isolation von Einflüssen.
+<ul>
+<li>Daher müssen wir das Werkzeug gut kennen lernen, um zu verstehen, was damit in der Forschung produziert wird.</li>
+<li>Spoiler 1: Sehr viele schlaue Leute haben sich sehr kluge Gedanken um dieses Werkzeug gemacht, sodass es extrem flexibel und mächtig ist.</li>
+<li>Spoiler 2: In einigen Fällen wird damit aber Unsinn produziert.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+</ul></li>
+</ul>
+<p><br> - Egal, wie “fancy” das Modell bezeichnet wird und egal, wie viele grieschische Buchstaben benutzt werden: Am Ende ist ein Modell <strong>immer</strong> ein Vergleich zwischen Gruppen.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</section>
+<section id="statistische-golems" class="level2">
+<h2 class="anchored" data-anchor-id="statistische-golems">Statistische Golems</h2>
+<p><br> <br> <br></p>
+<blockquote class="blockquote">
+<p>Scientists also make golems. Our golems rarely have physical form, but they too are often made of clay, living in silicon as computer code. These golems are scientific model. But these golems have real effects on the world, through the predictions they make and the intuitions they challenge or inspire. A concern with truth enlivens these models, but just like a golem or a modern robot, scientific models are neither true nor false, neither prophets nor charlatans. Rather they are constructs engineered for some purpose. These constructs are incredibly powerful, dutifully conducting their programmed calculations <a href="https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath">McElreath (2020: 1)</a>.</p>
+</blockquote>
+</section>
+<section id="klemmbausteine-für-datenanalytische-modelle" class="level2">
+<h2 class="anchored" data-anchor-id="klemmbausteine-für-datenanalytische-modelle">Klemmbausteine für datenanalytische Modelle</h2>
+<p><br> <br></p>
+<div class="extrapad">
+<ol type="1">
+<li><p><strong>Korrelationen</strong>: Statistische Modelle korrelieren Ausprägungen von Variablen miteinader.</p></li>
+<li><p><strong>Residualvarianz</strong>: Sie bilden ihre Parameter so, dass die Abstände zwischen <em>vorhergesagten Werten</em> und <em>beobachteten Werten</em> so gering wie möglich ist.</p></li>
+<li><p><strong>partielle Korrelationen</strong>: Diese Modelle isolieren Einflüsse, indem sie die Korrelation zwischen dem Treatment und anderen Eigenschaften, die <em>sowohl</em> mit dem Treatment als <em>auch</em> mit dem Outcome verbunden sind, voneinander trennen.</p></li>
+</ol>
+</div>
+</section>
+<section id="klemmbaustein-1-korrelationen" class="level2">
+<h2 class="anchored" data-anchor-id="klemmbaustein-1-korrelationen">Klemmbaustein 1: Korrelationen</h2>
+<div class="columns">
+<div class="column">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://reluctantcriminologists.com/blog-posts/%5B4%5D/datacantspeak2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Brauer: Causation without Correlation?"><img src="https://reluctantcriminologists.com/blog-posts/%5B4%5D/datacantspeak2.jpg" class="img-fluid figure-img" alt="Brauer: Causation without Correlation?"></a></p>
+<figcaption>Brauer: Causation without Correlation?</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<p><br></p>
+<ul>
+<li><p>Damit überhaupt ein Einfluss isoliert werden kann, sollte ein Treatment mit einem Outcome in irgendeinem, statistisch erfassbaren Zusammenhang stehen (= Korrelation).</p></li>
+<li><p>Datenanalytische Verfahren können uns <strong>immer</strong> nur Korrelationen geben – egal wie fancy das Modell ist. Kausalitätsaussagen sind immer eine (theoriegeleitete) Interpretation von Korrelationen.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="was-sollen-korrelationen-leisten" class="level2">
+<h2 class="anchored" data-anchor-id="was-sollen-korrelationen-leisten">Was sollen Korrelationen leisten?</h2>
+<p><br> <br></p>
+<ul>
+<li>Wir möchten wissen:
+<ul>
+<li>gehen steigende Werte in einem Merkmal, mit steigenden Werten in einem anderen Merkmal einher (positiver Zusammenhang)?</li>
+<li>gehen steigende Werte in einem Merkmal, mit sinkenden Werten in einem anderen Merkmal einher (negativer Zusammenhang)?</li>
+<li>oder stehen Werte in keinem systematischen Zusammenhang?</li>
+</ul></li>
+</ul>
+<p>Wir berechnen dazu Zusammenhangsmaße. Diese können immer zwischen -1 und +1 schwanken.</p>
+</section>
+<section id="was-sagt-die-stärke-von-korrelationen-aus" class="level2 midi">
+<h2 class="midi anchored" data-anchor-id="was-sagt-die-stärke-von-korrelationen-aus">Was sagt die Stärke von Korrelationen aus?</h2>
+<p>Im Kern sind Korrelationen ein Maß über die <strong>Sicherheit</strong>, wie gut wir in Bezug auf eine Untersuchungseinheit von den Ausprägung einer Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y) (mit Hilfe einer implizit angenommenen Funktion zwischen beiden) schließen können.</p>
+<ul>
+<li><p>Was eine starke und was eine schwache Korrelation ist, ist in höchstem Maße kontextabhängig!</p></li>
+<li><p>Eine Korrelation um null bedeutet <strong>nicht</strong>, dass kein Zusammenhang vorliegt, sondern zunächst nur, dass mit dem gewählten Korrelationsmaß kein Zusammenhang beschrieben werden kann.</p></li>
+<li><p>Bei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach, Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p></li>
+<li><p>In hochkomplexen sozialen Systemen können Zusammenhänge von 0.5 als sehr stark gelten, wenn üblicherweise die Zusammenhänge um 0.1 bis 0.3 liegen.</p></li>
+</ul>
+</section>
+<section id="der-scatterplot-als-visuelle-grundlage-für-korrelationen" class="level2">
+<h2 class="anchored" data-anchor-id="der-scatterplot-als-visuelle-grundlage-für-korrelationen">Der Scatterplot als (visuelle) Grundlage für Korrelationen</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="18-Isolation_von_Einfluessen_P2_files/figure-html/unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="18-Isolation_von_Einfluessen_P2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="der-baustein-des-bausteins-die-covarianz" class="level2">
+<h2 class="anchored" data-anchor-id="der-baustein-des-bausteins-die-covarianz">Der Baustein des Bausteins: die Covarianz</h2>
+<p><span class="math display">\[\begin{split}
+COV_{xy} &amp; = \frac{\sum\limits_{i=1}^n(x_i - \overline{x})(y_i - \overline{y})}{n}\\
+%&amp; = \frac{1}{n}\sum\limits_{i=1}^n(x_iy_i - x_i\overline{y} - \overline{x}y_i + \overline{xy})\\
+%&amp; = \sum\limits_{i=1}^n\frac{x_iy_i}{n} - \overline{y}\sum\limits_{i=1}^n\frac{x_i}{n} - \overline{x}\sum\limits_{i=1}^n\frac{y_i}{n} + \overline{xy}\\
+%&amp; = \sum\limits_{i=1}^n\frac{x_iy_i}{n} - \overline{yx} - \overline{xy} + \overline{xy}\\
+&amp; = \frac{1}{n}\cdot\left(\sum\limits_{i=1}^nx_i\cdot y_i\right) - \bar{x}\cdot \bar{y}\\
+%&amp; = \sum\limits_{i=1}^n x_iy_i - n\overline{xy}.
+\end{split}\]</span></p>
+<ul>
+<li><p>Eine hohe positive Covarianz ergibt sich, wenn häufig eine überdurchschnittliche Abweichung der x-Werte mit einer überdurchschnittlichen Abweichung der y-Werte einhergeht und unterdurchschnittliche x-Werte mit unterdurchschnittlichen y-Werten einhergehen.</p></li>
+<li><p>Eine hohe negative Covarianz ergibt sich, wenn häufig eine unterdurchschnittliche Abweichung der x-Werte mit einer überdurchschnittlichen Abweichung der y-Werte einhergeht und überdurchschnittliche x-Werte mit unterdurchschnittlichen y-Werten einhergehen.</p></li>
+</ul>
+</section>
+<section id="pearsons-r" class="level2">
+<h2 class="anchored" data-anchor-id="pearsons-r">Pearsons r</h2>
+<p><span class="math display">\[r_{xy} = \frac{Cov_{xy}}{s_x\cdot s_y}\]</span></p>
+<ul>
+<li><p>Pearsons r ist ein Maß, wie <strong>linear</strong> die Ausprägungen von zwei Messungen korrelieren. Es ist <strong>kein</strong> Maß, wie stark sich diese Ausprägungen beeinflussen!</p></li>
+<li><p>Die Ausprägungen von zwei Eigenschaften korrelieren perfekt linear, wenn wir in Bezug auf eine Untersuchungseinheit ohne Informationsverlust von einer Ausprägung in X auf eine Ausprägung in Y durch Addieren einer gleichmäßigen Steigerung schließen können. Je mehr die Ausprägungen um eine solche gleichmäßige Steigerung streuen, desto geringer ist der <strong>lineare</strong> Zusammenhang.</p></li>
+</ul>
+</section>
+<section id="pearsons-r-und-die-verteilung-von-daten" class="level2">
+<h2 class="anchored" data-anchor-id="pearsons-r-und-die-verteilung-von-daten">Pearsons r und die Verteilung von Daten</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="18-Isolation_von_Einfluessen_P2_files/figure-html/unnamed-chunk-11-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="18-Isolation_von_Einfluessen_P2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="unterschied-zwischen-korrelation-und-einfluss" class="level2">
+<h2 class="anchored" data-anchor-id="unterschied-zwischen-korrelation-und-einfluss">Unterschied zwischen Korrelation und Einfluss</h2>
+<ul>
+<li><p>Korrelationen sind lediglich der Informationen der Art: “Wenn ich eine Ausprägung von X sehe, dann sehe ich sehr unwahrscheinlich / unwahrscheinlich / (scheinbar) zufällig / wahrscheinlich / sehr wahrscheinlich Ausprägungen von Y.”</p></li>
+<li><p>Einflüsse sind Angaben darüber,</p>
+<ul>
+<li>welche Eigenschaft eine andere beeinflusst (Treatment <span class="math inline">\(\rightarrow\)</span> Outcome und nicht Outcome <span class="math inline">\(\rightarrow\)</span> Treatment)</li>
+<li>wie stark wir diesen Einfluss schätzen.</li>
+</ul></li>
+<li><p>Die Stärke eines Einflusses “schätzen” wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert.</p></li>
+</ul>
+</section>
+<section id="wie-schätzen-wir-einen-einfluss" class="level2">
+<h2 class="anchored" data-anchor-id="wie-schätzen-wir-einen-einfluss">Wie schätzen wir einen Einfluss?</h2>
+<p><iframe width="1400" height="1050" data-external="1" src="https://019e841d-86fb-a0f3-d58b-43dbef9540a1.share.connect.posit.cloud"></iframe></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Im Durchschnitt!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Kartesisch, weil René Descartes es als erstes formuliert hat.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Das wollen Sie nicht, denn dann schaue ich Sie sehr streng an.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Ich habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Aber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/methoden\.empirischer\.sozialforschung\.netlify\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Andreas Haupt</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

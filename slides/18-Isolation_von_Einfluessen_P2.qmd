@@ -1,0 +1,769 @@
+---
+title: "Gute Vergleiche: Isolation von Einflüßen - Part 1"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.01
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+## Ziel: Wirkungen isolieren als Kern guter Vergleiche {.midi}
+
+<br> 
+<br>
+
+::: {.columns}
+
+::: {.column}
+
+![XKDC 1462  -- "Blind Trials"](https://imgs.xkcd.com/comics/blind_trials.png)
+
+:::
+
+::: {.column}
+
+Der Kern sozialwissenschaftlicher Fragen ist die Isolation von
+miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen
+"naiv" zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die
+in anderen Eigenschaften identisch sind, um eine gemeinsame
+Vergleichsgrundlage zu haben.
+
+
+:::
+
+:::
+
+
+## Typische Fragen nach Wirkungen
+
+1.  Wie stark beeinflussen Frauen im Gegensatz zu Männern als Vorgesetze
+    das Arbeitsklima?
+
+      - Wir wissen, dass es nicht zufällig ist, in welchen
+        Organisationen Frauen Vorgesetzte sind. Die Art der Organisation
+        beeinflusst daher sehr wahrscheinlich sowohl die Rekrutierung
+        von Frauen in Führungspositionen als auch das Arbeitsklima.
+
+2.  Führt die Einnahme von Vitamin D zu verringerten
+    Gesundheitsproblemen?
+
+      - Wir wissen, dass Personen, die besonders gesundheitsbewusst
+        sind, eher dazu neigen, Vitamin D zu nehmen und außerdem mehr
+        auf ihre Gesundheit zu achten.
+
+3.  Welche Bedeutung spielt Armut für den Verlust von
+    Institutionenvertrauen?
+
+      - Personen in Armut sind überdurchschnittlich stärker von
+        Arbeitslosigkeit betroffen. Arbeitslosigkeit selbst könnte
+        Institutionenverlust hervorrufen oder ihn auch bestärken.
+
+
+## Was bedeutet Isolation? 
+
+Ziel: Isolation der "direkten Wirkung" von Katzen auf die Zufriedenheit.
+
+<br>
+
+::: {.columns}
+
+::: {.column}
+```{mermaid}
+flowchart TB
+%%{init: {"flowchart": {"htmlLabels": false}}}%%
+    K["Hat Katze(n)"]:::plain
+    U[Zufriedenheit]:::plain
+    E[Einsamkeit]:::plain
+    S[Single]:::plain
+
+    K -.-> U
+    K --> E
+    E --> U
+    S --> K
+    S --> E
+    
+  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;
+```
+
+:::
+
+::: {.column}
+Unsere (=meine) "Katzenglücks-Theorie": 
+
+- Katzen machen glücklich/zufriedener.[^1]
+- Singles haben eine höhere Wahrscheinlichkeit Katzen zu haben.
+- Singles sind (im Durchschnitt!!) einsamer als verpartnerte Personen. 
+- Katzen verringern das Gefühl von Einsamkeit. 
+- Einsamkeit senkt die Zufriedenheit. 
+:::
+
+:::
+
+[^1]: Im Durchschnitt! 
+
+## Was bedeutet Isolation? {.midi}
+
+Pippi-Langstrumpf-Methode: Ich simuliere eine Welt, wie sie mir gefällt.  
+
+```{r}
+library(tidyverse)
+
+set.seed(42)
+n <- 10000
+
+# 1) Single-Status
+single <- rbinom(n, 1, 0.35)
+
+# 2) Einsamkeit (abhängig von Single)
+p_einsam <- plogis(-1.1 + 1.0 * single)
+einsam <- rbinom(n, 1, p_einsam)
+
+# 3) Katzenbesitz (Single + Einsamkeit) — stärkere Konfundierung
+p_katze <- plogis(-1.2 + 0.8 * single + 2.5 * einsam)
+katze <- rbinom(n, 1, p_katze)
+
+# 4) Zufriedenheit: DAG-Effekt Katze fix +3, Einsamkeit -4.0
+zufriedenheit_base <- rnorm(n, mean = 6.4, sd = 1.0)
+zufriedenheit <- zufriedenheit_base + 3 * katze - 4.0 * einsam + rnorm(n, 0, 0.7)
+
+dat <- tibble(single, katze, einsam, zufriedenheit) |>
+  mutate(
+    single = factor(single, 0:1, c("Nein", "Ja")),
+    katze  = factor(katze,  0:1, c("Nein", "Ja")),
+    einsam = factor(einsam, 0:1, c("Nein", "Ja"))
+  )
+```
+
+::: {.columns}
+::: {.column}
+```{mermaid}
+flowchart TB
+    S["<b>Single</b><br/>Ja: 35%; Nein: 65%"]:::plain
+    
+    K["<b>Katzenbesitz</b><br/>Ja: 32%; Nein: 68%"]:::plain
+    E["<b>Einsamkeit</b><br/>Ja: 20%; Nein: 80%"]:::plain
+    
+    Z["<b>Zufriedenheit</b><br/>MW: 8.46 (SD: 1.34)"]:::plain
+
+    S -->|+20pp| K
+    S -->|+10pp| E
+    K -->|-10pp| E
+    K -->|+3 Punkte| Z
+    E -->|-4 Punkte| Z
+
+    classDef plain fill:transparent,stroke:#000,stroke-width:2px,color:#000,font-size:13px;
+```
+
+:::
+
+::: {.column}
+- 35% aller Personen sind Single. 
+-  Singles haben eine um 20 Prozentpunkte (pp) erhöhte Wahrscheinlichkeit, eine Katze zu besitzen. 
+- Singles haben eine um 10pp erhöhte Wahrscheinlichkeit, einsam zu sein. 
+- Insgesamt 32% aller Personen haben eine Katze. 
+- Insgesamt 20% aller Personen sind einsam. 
+- Katzen erhöhen die Zufriedenheit um 3 Punkte. 
+- Einsamkeit senkt die Zufriedenheit um 2 Punkte. 
+:::
+
+:::
+
+
+## Gute und schlechte Vergleiche (mit Katzen)
+
+Können wir in so einem Setting Katzenbesitzer:innen mit Nicht-Katzenbesitzer:inenn vergleichen, um den direkten "Katzen-Zufriedenheits-Effekt" zu isolieren?
+
+```{r}
+means <- dat |>
+  summarise(m = mean(zufriedenheit), .by = katze)
+
+y_arrow <- 0.03
+
+ggplot(dat, aes(x = zufriedenheit, fill = katze, color = katze)) +
+  geom_density(alpha = 0.4) +
+  geom_vline(data = means, aes(xintercept = m, color = katze),
+             linetype = "dashed", linewidth = 0.8) +
+  annotate("segment",
+           x    = means$m[means$katze == "Nein"],
+           xend = means$m[means$katze == "Ja"],
+           y    = y_arrow, yend = y_arrow,
+           arrow = arrow(ends = "both", length = unit(0.2, "cm"), type = "closed"),
+           color = "grey30", linewidth = 0.7) +
+  annotate("label",
+           x = mean(means$m),
+           y = y_arrow + 0.004,
+           label = paste0("Δ = ", round(diff(sort(means$m)), 2)),
+           size = 3.5, color = "grey30", fill = "white", label.size = 0) +
+  labs(
+    x = "Zufriedenheit",
+    y = "Dichte",
+    fill = "Katze",
+    color = "Katze"
+  ) +
+  theme_minimal()
+
+```
+
+## Unterschiede zwischen den Gruppen
+
+- Zwischen Katzenbesitzer:innen und Nicht-Katzenbesitzer:innen bestehen **auch** Unterschiede nach Single-Status und Einsamkeit. 
+
+- Da diese mit Zufriedenheit **und** Katzenbesitz verbunden sind, vergleichen wir nicht nur nach Katzenbesitz sondern **implizit** auch nach diesen weiteren Unterschieden. 
+
+```{r}
+dat |>
+  mutate(
+    katze_bin  = if_else(katze  == "Ja", 1, 0),
+    single_bin = if_else(single == "Ja", 1, 0),
+    einsam_bin = if_else(einsam == "Ja", 1, 0)
+  ) |>
+  summarise(
+    n                  = n(),
+    zuf_m              = round(mean(zufriedenheit), 1),
+    zuf_sd             = round(sd(zufriedenheit), 1),
+    single_pct         = round(mean(single_bin) * 100, 1),
+    einsam_pct         = round(mean(einsam_bin) * 100, 1),
+    .by = katze
+  ) |>
+  arrange(katze) |>
+  transmute(
+    Katze              = katze,
+    n                  = n,
+    `M (SD)`           = paste0(zuf_m, " (", zuf_sd, ")"),
+    `Single: Ja (%)`   = single_pct,
+    `Einsam: Ja (%)`   = einsam_pct
+  ) |>
+  knitr::kable(format = "markdown")
+```
+
+- Ein "naiver" Vergleich zwischen beiden Gruppen nach ihrer durchschnittlichen Zufriedenheit führt dazu, dass der "Katzen-Glückseffekt" bei circa 1 Punkt liegt, obwohl er 3 Punkte groß ist. 
+
+- Die weiteren Unterschiede zwischen den Gruppen "überdecken" daher den "direkten Katzen-Glückseffekt." 
+
+## Was können wir tun? 
+
+Wir können grundsätzlich drei Methoden anwenden, um Effekte zu isolieren: 
+
+::: {.extrapad}
+- Zerlegung des Datensatzes in Gruppen, die sich nur nach einer Ausprägung unterscheiden.
+- Randomisierung der Gruppen in "Treatment-/Kontrollgruppe". 
+- "Bereinigung des Treatments" durch andere Effekte im Rahmen eines datenanalytischen Modells. 
+:::
+
+## Zerlegung des Datensatzes: Katzen-Effekt
+
+```{r}
+library(tidyverse)
+
+baum_tab <- dat |>
+  summarise(
+    n = n(),
+    m_zuf = mean(zufriedenheit),
+    .by = c(single, einsam, katze)
+  ) |>
+  arrange(single, einsam, katze) |>
+  mutate(
+    m_zuf = round(m_zuf, 1),
+    anteil = round(n / sum(n) * 100, 1)
+  )
+
+tbl_vis <- baum_tab |>
+  arrange(single, einsam, katze) |>
+  transmute(
+    `Konstanthaltung` = paste0("Single=", single, ", Einsam=", einsam),
+    Katze = as.character(katze),
+    n = as.character(n),
+    `Ø Zufriedenheit` = sprintf("%.1f", m_zuf),
+    `Anteil (%)` = sprintf("%.1f", anteil)
+  ) |>
+  group_split(`Konstanthaltung`) |>
+  purrr::imap_dfr(\(g, i) {
+    spacer <- tibble(
+      `Konstanthaltung` = "",
+      Katze = "",
+      n = "",
+      `Ø Zufriedenheit` = "",
+      `Anteil (%)` = ""
+    )
+    if (i < length(unique(paste(baum_tab$single, baum_tab$einsam)))) {
+      bind_rows(g, spacer)
+    } else {
+      g
+    }
+  })
+
+tbl_vis |>
+  select(`Konstanthaltung`, Katze, `Ø Zufriedenheit`) |>
+  knitr::kable(format = "markdown")
+```
+
+## Zerlegung des Datensatzes: Einsamkeits-Effekt
+
+```{r}
+library(tidyverse)
+
+tbl_vis_einsam <- dat |>
+  summarise(
+    m_zuf = mean(zufriedenheit),
+    .by = c(single, katze, einsam)
+  ) |>
+  arrange(single, katze, einsam) |>
+  mutate(m_zuf = round(m_zuf, 1)) |>
+  transmute(
+    Konstanthaltung = paste0("Single=", single, ", Katze=", katze),
+    Einsam = as.character(einsam),
+    `Ø Zufriedenheit` = sprintf("%.1f", m_zuf)
+  ) |>
+  group_split(Konstanthaltung) |>
+  purrr::imap_dfr(\(g, i) {
+    spacer <- tibble(
+      Konstanthaltung = "",
+      Einsam = "",
+      `Ø Zufriedenheit` = ""
+    )
+    if (i < n_distinct(paste(dat$single, dat$katze))) {
+      bind_rows(g, spacer)
+    } else {
+      g
+    }
+  })
+
+tbl_vis_einsam |>
+  knitr::kable(format = "markdown")
+```
+
+## Was passiert hier eigentlich?
+
+Aufgrund der dargestellten Theorie erwarten wir Differenzen zwischen Gruppen. Das drücken wir mit dem Erwartungswert-Operator $E[]$ aus. 
+
+$$ \begin{align} 
+\Delta &=  E[\text{Zufriedenheit} \, | \, \text{Katze} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+ &- E[\text{Zufriedenheit} \, | \, \text{Katze} = nein, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+ &= 3
+\end{align} 
+$$ 
+
+$$ \begin{align} 
+\Delta &=  E[\text{Zufriedenheit} \, | \, \text{Einsam} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+ &- E[\text{Zufriedenheit} \, | \, \text{Einsam} = nein, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+ &= 4
+\end{align} 
+$$ 
+
+Generell können wir daher auch schreiben: 
+
+$$ \begin{align} 
+\Delta &=  E[\text{Outcome} \, | \, \text{Treatment} = ja, \, \text{sonstige Unterschiede} = \text{konstant}] \\
+ &- E[\text{Outcome} \, | \, \text{Treatment} = nein, \, \text{sonstige Unterschiede} = \text{konstant}]
+\end{align} 
+$$ 
+
+## Zerlegung des Datensatzes: Wo ist der Haken? 
+
+- Diese Methode funktioniert nur, wenn
+    - die Anzahl der Kontrollvariablen gering ist **und**
+    - die Ausprägungen der Eigenschaften gering sind **und** 
+    - der Datensatz entsprechend groß genug ist, um innerhalb jeder Gruppe ein ausreichend großes N zu haben. 
+
+Die Anzahl der Gruppen, die durch die Ausprägungen der Variablen gebildet werden können ist ein *kartesisches Produkt*[^2].
+
+Bei drei Variablen, die jeweils zwei Ausprägungen haben (ja/nein) ergibt sich: 
+$$ 2 \cdot 2 \cdot 2 = 8 $$ 
+
+Angenommen, eine Variable ist metrisch und hat 35 Ausprägungen: 
+
+$$ 35 \cdot 2 \cdot 2 = 140 $$ 
+
+[^2]: Kartesisch, weil René Descartes es als erstes formuliert hat. 
+
+## Zerlegung des Datensatzes und sein Fluch 
+
+<br> 
+
+:::{.extrapad}
+
+- Viele der studierten Prozesse in den Sozialwissenschaften sind komplex und hochgradig verflochten. 
+
+- Bei einer entsprechend guten Operationalisierung und Erhebung haben wir oft viele Variablen mit differenzierten Ausprägungen. 
+
+- Damit erhöht sich das kartesische Produkt der Anzahl aller möglichen Gruppen so enorm, dass keine sinnvollen Vergleiche mehr möglich sind.
+
+- Dieses Problem wird auch als "Curse of Dimensionality" bezeichnet. 
+::: 
+
+## Methode 2: Randomisierung 
+
+::: {.centering}
+![](images/katzentombola.png){width="75%"}
+:::
+
+## Was macht Randomisierung? 
+
+::: {.columns}
+
+::: {.column}
+```{mermaid}
+flowchart TB
+    K["Hat Katze(n)"]:::plain
+    U[Zufriedenheit]:::plain
+    E[Einsamkeit]:::plain
+    S[Single]:::plain
+
+    K -.-> U
+    K --> E
+    E --> U
+    S x--x K
+    S --> E
+    
+  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;
+```
+:::
+
+::: {.column}
+
+- Wenn wir in diesem bestehenden sozialen System den Katzenbesitz randomisieren, d.h. zufällig zuordnen, würden, dann
+    - setzen wir die Korrelation von Katzenbesitz und Singles auf 0;
+    - alles andere bleibt identisch. 
+:::
+
+
+```{r}
+library(tidyverse)
+
+set.seed(42)
+n <- 10000
+
+# 1) Single-Status (unverändert)
+single <- rbinom(n, 1, 0.35)
+
+# 2) Einsamkeit (abhängig von Single; unverändert)
+p_einsam <- plogis(-1.1 + 1.0 * single)
+einsam <- rbinom(n, 1, p_einsam)
+
+# 3) Katze RANDOMISIERT (keine Eltern im DAG)
+# Prävalenz auf ähnlichem Niveau wie zuvor (~45.7 %)
+p_katze_rand <- 0.457
+katze <- rbinom(n, 1, p_katze_rand)
+
+# 4) Zufriedenheit (Pfade unverändert: Katze +3, Einsamkeit -4.0)
+zufriedenheit_base <- rnorm(n, mean = 6.4, sd = 1.0)
+zufriedenheit <- zufriedenheit_base + 3 * katze - 4.0 * einsam + rnorm(n, 0, 0.7)
+
+dat_rand <- tibble(single, katze, einsam, zufriedenheit) |>
+  mutate(
+    single = factor(single, 0:1, c("Nein", "Ja")),
+    katze  = factor(katze,  0:1, c("Nein", "Ja")),
+    einsam = factor(einsam, 0:1, c("Nein", "Ja"))
+  )
+
+# Optionaler Check: naiver vs. adjustierter Effekt (sollten nahe beieinander liegen)
+effekt_daten_rand <- dat_rand |>
+  transmute(
+    zufriedenheit = zufriedenheit,
+    katze_num = if_else(katze == "Ja", 1, 0),
+    einsam_num = if_else(einsam == "Ja", 1, 0),
+    single_num = if_else(single == "Ja", 1, 0)
+  )
+
+effekte_rand <- tibble(
+  naive_diff = coef(lm(zufriedenheit ~ katze_num, data = effekt_daten_rand))[["katze_num"]],
+  adjustiert_einsam = coef(lm(zufriedenheit ~ katze_num + einsam_num, data = effekt_daten_rand))[["katze_num"]],
+  adjustiert_einsam_single = coef(lm(zufriedenheit ~ katze_num + einsam_num + single_num, data = effekt_daten_rand))[["katze_num"]]
+)
+
+summarise_effects_compact <- function(df, szenario) {
+  grp <- df |>
+    mutate(
+      single_num = if_else(single == "Ja", 1, 0),
+      einsam_num = if_else(einsam == "Ja", 1, 0)
+    ) |>
+    summarise(
+      single_pct = mean(single_num) * 100,
+      einsam_pct = mean(einsam_num) * 100,
+      m_zuf      = mean(zufriedenheit),
+      .by = katze
+    )
+
+  tibble(
+    Szenario = szenario,
+    `naive Δ Zufriedenheit (Katze Ja-Nein)` =
+      grp$m_zuf[grp$katze == "Ja"] - grp$m_zuf[grp$katze == "Nein"],
+    `Δ Single: Ja (%) (Katze Ja-Nein)` =
+      grp$single_pct[grp$katze == "Ja"] - grp$single_pct[grp$katze == "Nein"],
+    `Δ Einsam: Ja (%) (Katze Ja-Nein)` =
+      grp$einsam_pct[grp$katze == "Ja"] - grp$einsam_pct[grp$katze == "Nein"]
+  )
+}
+
+vergleich_neu <- bind_rows(
+  summarise_effects_compact(dat, "Beobachtet"),
+  summarise_effects_compact(dat_rand, "Randomisiert")
+) |>
+  mutate(across(-Szenario, ~ round(.x, 1)))
+
+vergleich_neu |>
+  knitr::kable(format = "markdown")
+
+```
+
+:::
+
+## Was passiert bei Randomisierung? 
+
+<br>
+<br>
+
+$$ \begin{align} 
+\Delta &=  E[\text{Zufriedenheit} \, | \, \text{Katze} = ja, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
+ &- E[\text{Zufriedenheit} \, | \, \text{Katze} = nein, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
+ &= 3
+\end{align} 
+$$ 
+
+<br>
+<br>
+
+Generell können wir daher auch schreiben: 
+
+$$ \begin{align} 
+\Delta &=  E[\text{Outcome} \, | \, \text{Treatment} = ja, \, \text{sonstige Unterschiede} = \text{ignorierbar}] \\
+ &- E[\text{Outcome} \, | \, \text{Treatment} = nein, \, \text{sonstige Unterschiede} = \text{ignorierbar}]
+\end{align} 
+$$ 
+
+## Was ist das "Problem" mit Randomisierung? 
+
+- Randomisierung ist ein extrem mächtiges Werkzeug zur Isolation von Einflüssen, weil es einen sauberen Vergleich von "Treatment-/Kontrollgruppen" ermöglich, da die Differenzen in der Zusammensetzung nach anderen Eigenschaften ignorierbar sind. 
+
+Aber:
+
+- Personen sind oft Dingen ausgesetzt, die sich nicht (gesteuert) randomisieren lassen: 
+
+    - Bedingungen in Familien
+    - Nationalstaaten 
+    - Kanzler Merz 
+    - öffentliche Infrastruktur 
+    - Bildungssystem
+
+## Isolation von Einflüssen durch datenanalytische Modelle
+
+- Datenanalytische / statistische Modelle sind das am weit verbreiteteste Werkzeug zur Isolation von Einflüssen. 
+    - Daher müssen wir das Werkzeug gut kennen lernen, um zu verstehen, was damit in der Forschung produziert wird. 
+    - Spoiler 1: Sehr viele schlaue Leute haben sich sehr kluge Gedanken um dieses Werkzeug gemacht, sodass es extrem flexibel und mächtig ist. 
+    - Spoiler 2: In einigen Fällen wird damit aber Unsinn produziert.[^3]
+
+<br>
+- Egal, wie "fancy" das Modell bezeichnet wird und egal, wie viele grieschische Buchstaben benutzt werden: Am Ende ist ein Modell **immer** ein Vergleich zwischen Gruppen.[^4]
+
+  [^3]: Das wollen Sie nicht, denn dann schaue ich Sie sehr streng an.  
+  [^4]: Ich habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren. 
+
+## Statistische Golems 
+
+<br>
+<br>
+<br>
+
+> Scientists also make golems. Our golems rarely have physical form, but they too are often made of clay, living in silicon as computer code. These golems are scientific model. But these golems have real effects on the world, through the predictions they make and the intuitions they challenge or inspire. A concern with truth enlivens these models, but just like a golem or a modern robot, scientific models are neither true nor false, neither prophets nor charlatans. Rather they are constructs engineered for some purpose. These constructs are incredibly powerful, dutifully conducting their programmed calculations 
+[McElreath (2020: 1)](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath).
+
+## Klemmbausteine für datenanalytische Modelle
+
+<br>
+<br>
+
+:::{.extrapad}
+1. **Korrelationen**:  Statistische Modelle korrelieren Ausprägungen von Variablen miteinader. 
+
+2. **Residualvarianz**: Sie bilden ihre Parameter so, dass die Abstände zwischen *vorhergesagten Werten* und *beobachteten Werten* so gering wie möglich ist. 
+
+3. **partielle Korrelationen**: Diese Modelle isolieren Einflüsse, indem sie die Korrelation zwischen dem Treatment und anderen Eigenschaften, die *sowohl* mit dem Treatment als *auch* mit dem Outcome verbunden sind, voneinander trennen. 
+:::
+
+## Klemmbaustein 1: Korrelationen
+
+
+::: {.columns}
+
+::: {.column}
+<br>
+<br>
+
+![Brauer: Causation without Correlation?](https://reluctantcriminologists.com/blog-posts/%5B4%5D/datacantspeak2.jpg)
+:::
+
+::: {.column}
+<br>
+
+- Damit überhaupt ein Einfluss isoliert werden kann, sollte ein Treatment mit einem Outcome in irgendeinem, statistisch erfassbaren Zusammenhang stehen (= Korrelation). 
+
+- Datenanalytische Verfahren können uns **immer** nur Korrelationen geben -- egal wie fancy das Modell ist. Kausalitätsaussagen sind immer eine (theoriegeleitete) Interpretation von Korrelationen.  
+
+:::
+:::
+
+## Was sollen Korrelationen leisten? 
+<br>
+<br>
+
+- Wir möchten wissen: 
+    -  gehen steigende Werte in einem Merkmal, mit steigenden Werten in einem anderen Merkmal einher (positiver Zusammenhang)?
+   - gehen steigende Werte in einem Merkmal, mit sinkenden Werten in einem anderen Merkmal einher (negativer Zusammenhang)?
+   -  oder stehen Werte in keinem systematischen Zusammenhang?
+
+Wir berechnen dazu Zusammenhangsmaße. Diese können immer zwischen -1 und +1 schwanken. 
+
+
+## Was sagt die Stärke von Korrelationen aus? {.midi}
+
+Im Kern sind Korrelationen ein Maß über die **Sicherheit**, wie gut wir
+in Bezug auf eine Untersuchungseinheit von den Ausprägung einer
+Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y) (mit Hilfe einer implizit angenommenen Funktion zwischen beiden)
+schließen können.
+
+-   Was eine starke und was eine schwache Korrelation ist, ist in höchstem Maße kontextabhängig!
+
+-   Eine Korrelation um null bedeutet **nicht**, dass kein Zusammenhang vorliegt, sondern zunächst nur, dass mit dem gewählten Korrelationsmaß kein Zusammenhang beschrieben werden kann.
+
+-   Bei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach, Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.[^5]
+
+-   In hochkomplexen sozialen Systemen können Zusammenhänge von 0.5 als sehr stark gelten, wenn üblicherweise die Zusammenhänge um 0.1 bis  0.3 liegen.
+
+[^5]: Aber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.
+
+## Der Scatterplot als (visuelle) Grundlage für Korrelationen
+
+```{r}
+library(ggplot2)
+library(tibble)
+
+set.seed(42)
+
+n <- 500
+r <- 0.70
+
+x <- rnorm(n)
+y <- r * x + sqrt(1 - r^2) * rnorm(n)
+
+df <- tibble(x = x, y = y)
+
+x_mean <- mean(df$x)
+y_mean <- mean(df$y)
+
+p <- ggplot(df, aes(x = x, y = y)) +
+  geom_point(color = "#2E86DE", size = 2.4, alpha = 0.95) +
+  geom_vline(xintercept = x_mean, linetype = "dashed", linewidth = 0.6, color = "grey45") +
+  geom_hline(yintercept = y_mean, linetype = "dashed", linewidth = 0.6, color = "grey45") +
+  annotate(
+    "text", x = -3.8, y = 3.8,
+    label = "In Y über- und\nin X unterdurchschnittlich",
+    hjust = 0, vjust = 1, size = 4.2, lineheight = 1.0
+  ) +
+  annotate(
+    "text", x = 3.8, y = 3.8,
+    label = "In X und in Y\nüberdurchschnittlich",
+    hjust = 1, vjust = 1, size = 4.2, lineheight = 1.0
+  ) +
+  annotate(
+    "text", x = -3.8, y = -3.8,
+    label = "In X und in Y\nunterdurchschnittlich",
+    hjust = 0, vjust = 0, size = 4.2, lineheight = 1.0
+  ) +
+  annotate(
+    "text", x = 3.8, y = -3.8,
+    label = "In X über- und\nin Y unterdurchschnittlich",
+    hjust = 1, vjust = 0, size = 4.2, lineheight = 1.0
+  ) +
+  labs(x = "X", y = "Y") +
+  coord_cartesian(xlim = c(-4, 4), ylim = c(-4, 4), clip = "off") +
+  theme_classic(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background = element_rect(fill = "white", color = NA),
+    axis.line = element_line(linewidth = 0.6),
+    plot.margin = margin(15, 15, 15, 15)
+  )
+
+p
+```
+
+## Der Baustein des Bausteins: die Covarianz 
+
+$$\begin{split}
+COV_{xy} & = \frac{\sum\limits_{i=1}^n(x_i - \overline{x})(y_i - \overline{y})}{n}\\
+%& = \frac{1}{n}\sum\limits_{i=1}^n(x_iy_i - x_i\overline{y} - \overline{x}y_i + \overline{xy})\\
+%& = \sum\limits_{i=1}^n\frac{x_iy_i}{n} - \overline{y}\sum\limits_{i=1}^n\frac{x_i}{n} - \overline{x}\sum\limits_{i=1}^n\frac{y_i}{n} + \overline{xy}\\
+%& = \sum\limits_{i=1}^n\frac{x_iy_i}{n} - \overline{yx} - \overline{xy} + \overline{xy}\\
+& = \frac{1}{n}\cdot\left(\sum\limits_{i=1}^nx_i\cdot y_i\right) - \bar{x}\cdot \bar{y}\\
+%& = \sum\limits_{i=1}^n x_iy_i - n\overline{xy}.
+\end{split}$$
+
+-   Eine hohe positive Covarianz ergibt sich, wenn häufig eine
+    überdurchschnittliche Abweichung der x-Werte mit einer
+    überdurchschnittlichen Abweichung der y-Werte einhergeht und
+    unterdurchschnittliche x-Werte mit unterdurchschnittlichen y-Werten
+    einhergehen.
+
+-   Eine hohe negative Covarianz ergibt sich, wenn häufig eine
+    unterdurchschnittliche Abweichung der x-Werte mit einer
+    überdurchschnittlichen Abweichung der y-Werte einhergeht und
+    überdurchschnittliche x-Werte mit unterdurchschnittlichen y-Werten
+    einhergehen.
+
+## Pearsons r
+
+$$r_{xy} = \frac{Cov_{xy}}{s_x\cdot s_y}$$
+
+- Pearsons r ist ein Maß, wie **linear** die Ausprägungen von zwei
+Messungen korrelieren. Es ist **kein** Maß, wie stark sich diese
+Ausprägungen beeinflussen!
+
+- Die Ausprägungen von zwei Eigenschaften korrelieren perfekt linear, wenn
+wir in Bezug auf eine Untersuchungseinheit ohne Informationsverlust von
+einer Ausprägung in X auf eine Ausprägung in Y durch Addieren einer
+gleichmäßigen Steigerung schließen können. Je mehr die Ausprägungen um
+eine solche gleichmäßige Steigerung streuen, desto geringer ist der
+**lineare** Zusammenhang.
+
+
+## Pearsons r und die Verteilung von Daten 
+
+```{r}
+{{< include ./scripts/_correlation-examples.R >}}
+```
+
+## Unterschied zwischen Korrelation und Einfluss
+
+- Korrelationen sind lediglich der Informationen der Art: "Wenn ich eine Ausprägung von X sehe, dann sehe ich sehr unwahrscheinlich / unwahrscheinlich / (scheinbar) zufällig / wahrscheinlich / sehr wahrscheinlich  Ausprägungen von Y."
+
+- Einflüsse sind Angaben darüber, 
+    - welche Eigenschaft eine andere beeinflusst (Treatment $\rightarrow$ Outcome und nicht Outcome $\rightarrow$ Treatment)
+    - wie stark wir diesen Einfluss schätzen.  
+
+- Die Stärke eines Einflusses "schätzen" wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert.
+
+
+## Wie schätzen wir einen Einfluss? 
+
+ <iframe width="1400" height="1050" data-external="1" src="https://019e841d-86fb-a0f3-d58b-43dbef9540a1.share.connect.posit.cloud"></iframe>

@@ -86,3 +86,59 @@ zu isolieren?
 
 4. Wenn Sie es bis hierhin geschafft haben, dann überlegen Sie sich bitte eine Art und Weise, wie die Zimmeranzahl von Wohnungen randomisiert werden kann. Was können Sie damit isolieren? 
 
+## Lösungen für Aufgaben 1 und 2. 
+
+
+```{r}
+
+selected <- data.frame(
+  Neubau = factor(
+    c('Nein','Nein','Nein','Nein','Ja','Ja','Nein','Nein','Nein','Ja','Nein','Nein'),
+    levels = c('Nein','Ja')
+  ),
+  Groesse = c(74, 122, 97, 118, 48, 26, 121, 41, 101, 47, 67, 69),
+  Zimmeranzahl = c(6, 5, 3, 7, 3, 3, 6, 5, 7, 5, 6, 5),
+  Miete = c(493, 848, 698, 801, 625, 462, 749, 377, 774, 547, 614, 506)
+)
+
+selected_num <- selected |>
+  dplyr::mutate(Neubau = as.integer(Neubau == "Ja"))
+
+pop_var <- function(x) mean((x - mean(x))^2)
+pop_sd <- function(x) sqrt(pop_var(x))
+
+stats <- data.frame(
+  Eigenschaft = c("Neubau (0/1)", "Größe", "Zimmeranzahl", "Miete"),
+  Mittelwert = c(
+    mean(selected_num$Neubau),
+    mean(selected_num$Groesse),
+    mean(selected_num$Zimmeranzahl),
+    mean(selected_num$Miete)
+  ),
+  Varianz_n = c(
+    pop_var(selected_num$Neubau),
+    pop_var(selected_num$Groesse),
+    pop_var(selected_num$Zimmeranzahl),
+    pop_var(selected_num$Miete)
+  ),
+  SD_n = c(
+    pop_sd(selected_num$Neubau),
+    pop_sd(selected_num$Groesse),
+    pop_sd(selected_num$Zimmeranzahl),
+    pop_sd(selected_num$Miete)
+  )
+)
+
+corr <- cor(selected_num)
+
+stats |>
+  dplyr::mutate(dplyr::across(where(is.numeric), ~ round(.x, 3))) |>
+  knitr::kable(
+    format = "markdown",
+    col.names = c("Eigenschaft", "Mittelwert", "Varianz (n)", "Standardabweichung (n)")
+  )
+
+corr |>
+  round(3) |>
+  knitr::kable(format = "markdown")
+```

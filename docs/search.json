@@ -5511,5 +5511,411 @@
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIm Durchschnitt!↩︎\nKartesisch, weil René Descartes es als erstes formuliert hat.↩︎\nDas wollen Sie nicht, denn dann schaue ich Sie sehr streng an.↩︎\nIch habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren.↩︎\nAber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.↩︎"
+  },
+  {
+    "objectID": "exercises/18-ex.html#lösungen-für-aufgaben-1-und-2.",
+    "href": "exercises/18-ex.html#lösungen-für-aufgaben-1-und-2.",
+    "title": "Übung: ‘Isolation von Einflüssen’",
+    "section": "2 Lösungen für Aufgaben 1 und 2.",
+    "text": "2 Lösungen für Aufgaben 1 und 2.\n\n\n\n\n\nEigenschaft\nMittelwert\nVarianz (n)\nStandardabweichung (n)\n\n\n\n\nNeubau (0/1)\n0.250\n0.188\n0.433\n\n\nGröße\n77.583\n1035.410\n32.178\n\n\nZimmeranzahl\n5.083\n1.910\n1.382\n\n\nMiete\n624.500\n20789.250\n144.185\n\n\n\n\n\n\n\n\n\nNeubau\nGroesse\nZimmeranzahl\nMiete\n\n\n\n\nNeubau\n1.000\n-0.668\n-0.592\n-0.320\n\n\nGroesse\n-0.668\n1.000\n0.526\n0.876\n\n\nZimmeranzahl\n-0.592\n0.526\n1.000\n0.339\n\n\nMiete\n-0.320\n0.876\n0.339\n1.000"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#klemmbausteine-für-datenanalytische-modelle",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#klemmbausteine-für-datenanalytische-modelle",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Klemmbausteine für datenanalytische Modelle",
+    "text": "Klemmbausteine für datenanalytische Modelle\n \n\n\nKorrelationen: Statistische Modelle korrelieren Ausprägungen von Variablen miteinader.\nResidualvarianz: Sie bilden ihre Parameter so, dass die Abstände zwischen vorhergesagten Werten und beobachteten Werten so gering wie möglich ist.\npartielle Korrelationen: Diese Modelle isolieren Einflüsse, indem sie die Korrelation zwischen dem Treatment und anderen Eigenschaften, die sowohl mit dem Treatment als auch mit dem Outcome verbunden sind, voneinander trennen."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#wie-schätzen-wir-einen-einfluss",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#wie-schätzen-wir-einen-einfluss",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Wie schätzen wir einen Einfluss?",
+    "text": "Wie schätzen wir einen Einfluss?"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-behaupten-wir-da-eigentlich-inhaltlich",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-behaupten-wir-da-eigentlich-inhaltlich",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was behaupten wir da eigentlich inhaltlich?",
+    "text": "Was behaupten wir da eigentlich inhaltlich?\nHypothese: Je früher das Alter des ersten Geschlechtsverkehrs war, desto höher ist die Anzahl bisheriger Partnerschaften zum Erhebungszeitpunkt.\n\n\n\n\n\nflowchart TB\n\nA[Alter]\nS[\"Alter erster GV\"]\nP[\"Anzahl bisheriger Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --- S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-sagen-uns-die-freda-daten",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-sagen-uns-die-freda-daten",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was sagen uns die FREDA Daten?",
+    "text": "Was sagen uns die FREDA Daten?"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-sagen-uns-die-freda-daten-1",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-sagen-uns-die-freda-daten-1",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was sagen uns die FREDA Daten?",
+    "text": "Was sagen uns die FREDA Daten?"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#zusammenhänge",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#zusammenhänge",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Zusammenhänge",
+    "text": "Zusammenhänge"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#flexiblere-modellierung-no-golem-policy",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#flexiblere-modellierung-no-golem-policy",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Flexiblere Modellierung (No-Golem-Policy!)",
+    "text": "Flexiblere Modellierung (No-Golem-Policy!)"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-macht-ein-regressions-modell",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-macht-ein-regressions-modell",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was macht ein (Regressions)-Modell?",
+    "text": "Was macht ein (Regressions)-Modell?\n\n\n\n\n\n\n\nflowchart TB\n\nA[Alter]\nS[\"Alter erster GV\"]\nP[\"Anzahl bisheriger Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --- S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I\n\n\n\n\n\n\n\n\nRegressionsmodelle sind Werkzeuge zur - Erfassung der Größenordnung von Einflüssen - und zur Isolation von Einflüssen.\nEin typisches[^1] Regressionsmodell bezieht sich immer auf direkte Einflüsse auf ein Outcome. - Es werden daher diejenigen “Pfeile” untersucht, die direkt auf eine Box abzielen.\n- Wir können aber so tun, als ob bestimte “Boxen” nicht vorkommen, um damit “direkte” Pfeile herzustellen."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#regressionsmodelle-drücken-erwartete-differenzen-aus",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#regressionsmodelle-drücken-erwartete-differenzen-aus",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Regressionsmodelle drücken erwartete Differenzen aus",
+    "text": "Regressionsmodelle drücken erwartete Differenzen aus\nJedes Regressionsmodell nimmt einen statistischen Kennwert und berechnet Differenzen dieses Kennwerts über verschiedene Gruppen.\n\n\n\nRegressionsmodell\nDifferenzen in\n\n\n\n\nLineare Regression\nMittelwerte\n\n\nLineares Wahrscheinlichkeitsmodell\nWahrscheinlichkeiten\n\n\nLogistische Regression\nOdds Ratios\n\n\nVariance Function Regression\nVarianzen\n\n\nQuantil Regression\nQuantilwerte"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#die-niederungen-der-einzelheiten",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#die-niederungen-der-einzelheiten",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Die Niederungen der Einzelheiten",
+    "text": "Die Niederungen der Einzelheiten\n\\[\\underbrace{y_i}_{\\substack{\\text{individ. Anzahl} \\\\ \\text{bisheriger Partner}}} = \\underbrace{\\hat{\\alpha}_{\\color{white}{i}}}_{\\substack{\\text{durchschn. Anzahl} \\\\ \\text{Basisgruppe}}} +  \\underbrace{\\hat{\\beta}\\cdot x_i}_{\\substack{\\text{systematische} \\\\ \\text{Gruppenunterschiede}}}  + \\underbrace{\\epsilon_i}_{\\substack{\\text{individuelle} \\\\ \\text{Abweichung = Residuum}}}\\]\n\n\n\n\n\n\n\n\nAbkürzung\n“sprich”\nBedeutung\n\n\n\n\n\\(y_i\\)\n\nGemessener Wert der Anazhl bisheriger Beziehungen für Person \\(i\\)\n\n\n\\(\\hat{\\alpha}\\)\nalpha\nDurchschnittliche Anzahl bisheriger Beziehungen für die Referenzgruppe\n\n\n\\(\\hat{\\beta}x_i\\)\nbeta\nDifferenz in der durchschnittlichen Anzahl bisheriger Beziehungen, wenn wir Personen vergleichen, die sich im Alter ihres ersten GVs um ein Jahr unterscheiden\n\n\n\\(\\epsilon_i\\)\nepsilon\n(zufällige) Differenz zwischen der beobachteten Anzahl bisheriger Beziehungen für Person \\(i\\) zum Durchschnitt für Personen, die im gleichen Alter wie Person \\(i\\) ihren ersten GV hatten"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-eine-gute-schätzung---kausaltheoretisch",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-eine-gute-schätzung---kausaltheoretisch",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was ist eine gute Schätzung - Kausaltheoretisch?",
+    "text": "Was ist eine gute Schätzung - Kausaltheoretisch?\n\nDie (soziale) Welt wirkt auf uns systematisch über verschiedene Prozesse.\nIm Rahmen dieser Bedingungen entwickeln wir dennoch ein hohes Maß an Individualität, d.h.: kleinere oder größere Abweichungen zu den “Typen”, die das Resultat sozialer Prozesse sind.\nWenn wir alle systematischen Einflüsse auf ein Outcome erfasst haben, kann der Rest nur noch unsystematisch* und damit zufällig sein.\nEine lineare Regression soll die systematischen “Typen” hinsichtlich eines Outcomes als eine Nievauverschiebung erfassen.\nFalls dies eine korrekte Erfassung der Wirkung der studierten sozialen Prozesse ist, sind die individuellen Abweichungen zum Niveau der eigenen Gruppe unsystematisch / zufällig."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#dieser-gedanke-in-kunstform",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#dieser-gedanke-in-kunstform",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Dieser Gedanke in “Kunstform”",
+    "text": "Dieser Gedanke in “Kunstform”"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#von-individuellen-werten-zur-schätzung-von-einflüssen",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#von-individuellen-werten-zur-schätzung-von-einflüssen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Von individuellen Werten zur Schätzung von Einflüssen",
+    "text": "Von individuellen Werten zur Schätzung von Einflüssen\n\nUnser altes Problem: Wir können Einflüsse nicht auf Individualebene schätzen.\nWir müssen Einflüsse durch den Vergleich von Untersuchungseinheiten erfassen, die sich im Hinblick auf das Treatment um eine Einheit unterscheiden (und deren sonstige Unterschiede ignorierbar sind).\nDie Modellparameter einer Regression beziehen sich daher auf Unterschiede zwischen Gruppen.\n\n\\[\\underbrace{\\hat{y}_i}_{\\substack{\\text{erwartete Anzahl} \\\\ \\text{bisheriger Partner}}} = \\underbrace{\\hat{\\alpha}_{\\color{white}{i}}}_{\\substack{\\text{durchschn. Anzahl} \\\\ \\text{Basisgruppe}}} +  \\underbrace{\\hat{\\beta}\\cdot x_i}_{\\substack{\\text{systematische} \\\\ \\text{Gruppenunterschiede im Durchschnitt}}}\\]"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-eine-gute-schätzung-eines-einflusses---statistisch",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-eine-gute-schätzung-eines-einflusses---statistisch",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was ist eine gute Schätzung eines Einflusses - Statistisch?",
+    "text": "Was ist eine gute Schätzung eines Einflusses - Statistisch?\n\n\n\n\n\nJohann Carl Friedrich Gauß, der Typ von der Normalverteilung\n\n\n\nBehauptung des alten Gauß: Diejenige Schätzung eines Regressionsmodells ist am Besten, die die kleinst mögliche Summe der (quadrierten) Abstände zwischen den tatsächlichen und den geschätzten Werten (=Regressionsgerade) generiert.\n\nDie Residuen werden quadriert, weil sich negative und positive Abweichungen von der Schätzung nicht wegsummieren sollen. Wir möchten das “Gesamtpaket” aller Residuen haben.\nSchätzungen, die hohe einzelne Abweichungen verursachen, erhalten durch die Quadrierung ebenfalls eine schlechtere Bewertung, weil hohe quadrierte Abweichungen die Gesamtsumme aller quadrierten Residuen stark beeinflussen."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#wie-minimiert-man-die-residualvarianz",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#wie-minimiert-man-die-residualvarianz",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Wie minimiert man die Residualvarianz?",
+    "text": "Wie minimiert man die Residualvarianz?\n\\[\\begin{aligned}\n\\mathrm{min} =& \\sum\\limits_{i=1}^n(y_i - \\hat{y}_i)^2 \\\\\n            =&\\sum\\limits_{i=1}^n(y_i - (\\hat{\\alpha} + \\hat{\\beta}x_i))^2\n\\end{aligned}\\]\nMathematisch lösbar durch: Ableitung nach \\(\\hat{\\alpha}\\) und \\(\\hat{\\beta}\\) und diese beiden ersten Ableitungen auf 0 setzen und nach \\(\\hat{\\alpha}\\) oder \\(\\hat{\\beta}\\) auflösen."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#ols",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#ols",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "OLS",
+    "text": "OLS\nDaraus erhält man (für den Fall von einer genutzten Variablen):\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x}\\]\nDie Schätzung von \\(\\hat{\\alpha}\\) verdeutlicht, dass dies ein Mittelwert (=Erwartungswert!) von \\(y\\) ist, aus dem alle anderen durch \\(x\\) bedingten systematischen Unterschiede herausgerechnet wurden.\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{\\sum x_iy_i - n\\cdot\\bar{x}\\cdot\\bar{y}}{\\sum x_i^2 - n\\cdot \\bar{x}^2}\\]\nDer \\(\\hat{\\beta}\\)-Koeffizient drückt ein Verhältnis der Covarianz von \\(x\\) und \\(y\\) in Relation zur Variation der \\(x\\)-Variable aus. Oder einfacher: Welche Unterschiede im Zusammenhang von \\(x\\) und \\(y\\) beruhen auf der Variation von \\(x\\)?"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#wie-minimiert-man-die-summe-der-residuen",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#wie-minimiert-man-die-summe-der-residuen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Wie minimiert man die Summe der Residuen?",
+    "text": "Wie minimiert man die Summe der Residuen?\n\\[\\begin{aligned}\n\\mathrm{min} =& \\sum\\limits_{i=1}^n(y_i - \\hat{y}_i)^2 \\\\\n            =&\\sum\\limits_{i=1}^n(y_i - (\\hat{\\alpha} + \\hat{\\beta}x_i))^2\n\\end{aligned}\\]\nMathematisch lösbar durch: Ableitung nach \\(\\hat{\\alpha}\\) und \\(\\hat{\\beta}\\) und diese beiden ersten Ableitungen auf 0 setzen und nach \\(\\hat{\\alpha}\\) oder \\(\\hat{\\beta}\\) auflösen."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#born-to-be-wild",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#born-to-be-wild",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Born to be wild?",
+    "text": "Born to be wild?\nHypothese: Je früher das Alter des ersten Geschlechtsverkehrs war, desto höher ist die Anzahl bisheriger Partnerschaften zum Erhebungszeitpunkt.\n\n\n\n\n\nflowchart TB\n\nA[Alter]\nS[\"Alter erster GV\"]\nP[\"Anzahl bisheriger Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --- S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#niveauverschiebung-in-der-regression",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#niveauverschiebung-in-der-regression",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Niveauverschiebung in der Regression",
+    "text": "Niveauverschiebung in der Regression"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#methode-der-kleinsten-residualquadrate",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#methode-der-kleinsten-residualquadrate",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Methode der kleinsten (Residual)quadrate",
+    "text": "Methode der kleinsten (Residual)quadrate\n\nDenken Sie daran, dass \\(\\hat{y}_i\\) eine Schätzung der Ausprägung eines Typen ist, die lediglich durch systematische Prozesse bedingt werden.\nEine lineare Regression setzt “soziale Prozesse” mit Niveauverschiebungen gleich.\nEine Niveauverschiebung wird als Differenz von geschätzten Ausprägungen nach Typen behandelt und die Residuen als “Zufallsstreuung” angesehen.\nZentrale Behauptung: Systematische Prozesse sind stets stärker als zufällige Prozesse.1 Daher ist die Methode am besten geeignet systematische von unsystematischen Einflüssen sauber zu trennen, die die kleinste Summe der “Zufallsstreuung” erfassen kann.\nDie Schätzmethode heißt deswegen Ordinary-Least-Squares - die Minimerung der Residualquadrate.\n\nEtwas muss über den “Placebo-Effekt” hinaus gehen, um als wirkungsvoll angesehen zu werden."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#berechnung-von-ols-parametern",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#berechnung-von-ols-parametern",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Berechnung von OLS-Parametern",
+    "text": "Berechnung von OLS-Parametern\nDaraus erhält man (für den Fall von einer genutzten Variablen):\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x}\\]\nDie Schätzung von \\(\\hat{\\alpha}\\) verdeutlicht, dass dies ein Mittelwert von \\(y\\) ist, aus dem alle anderen durch \\(x\\) bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen entfernt wurde. Diese Gruppe nennen wir “Basisgruppe”.\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{\\sum x_iy_i - n\\cdot\\bar{x}\\cdot\\bar{y}}{\\sum x_i^2 - n\\cdot \\bar{x}^2}\\]\nDer \\(\\hat{\\beta}\\)-Koeffizient drückt ein Verhältnis der Covarianz von \\(x\\) und \\(y\\) in Relation zur Variation der \\(x\\)-Variable aus. Oder: Um wieviel erhöhen/verringern sich Y-Werte im Durchschnitt, wenn sich die X-Werte um eine Einheit ändern."
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#papier-ist-geduldig",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#papier-ist-geduldig",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Papier ist geduldig…",
+    "text": "Papier ist geduldig…\n\n\n\n\n\nAnz. Partnerschaften\nAlter erster GV\nGeschlecht (0=F, 1=M)\n\n\n\n\n0\n25\n0\n\n\n8\n17\n1\n\n\n0\n17\n1\n\n\n0\n22\n0\n\n\n3\n18\n0\n\n\n2\n18\n1\n\n\n1\n19\n1\n\n\n0\n17\n0\n\n\n5\n17\n0\n\n\n0\n18\n1\n\n\nØ 1.9\nØ 18.8\nØ 0.5"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#übung-macht-die-meisterin",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#übung-macht-die-meisterin",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Übung macht die Meisterin",
+    "text": "Übung macht die Meisterin"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-mit-eigenschaften-die-nicht-metrisch-gemessen-wurden",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-mit-eigenschaften-die-nicht-metrisch-gemessen-wurden",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was ist mit Eigenschaften, die nicht metrisch gemessen wurden?",
+    "text": "Was ist mit Eigenschaften, die nicht metrisch gemessen wurden?"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#berechnung",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#berechnung",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Berechnung",
+    "text": "Berechnung\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{-27.2}{63.6} = -0.428 \\]\n\nDie durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später statt fand.\nAlternativ: Vergleicht man Personen, deren GV ein Jahr später als die Vergleichsgruppe stattfand, ist deren durchschnittliche Anzahl bisheriger Partner um 0.43 geringer.\n\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x} = 1.9 - (-0.428)*18.8 = 9.94\\]\nGolem-Alarm1: Die Basisgruppe sind in diesem Modell Personen ohne Einfluss des Alters des ersten GV. Wir erwarten daher für Personen, die mit null Jahren zum ersten mal freiwillig! GV hatten, eine durchschnittliche Anzahl von 9.94 bisherigen Partnern.\nDas ist natürlich eine reichlich sinnlose Information. Das ist aber unserem Modell egal!"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-mit-nicht-metrischen-variablen",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-mit-nicht-metrischen-variablen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was ist mit nicht-metrischen Variablen?",
+    "text": "Was ist mit nicht-metrischen Variablen?\nOLS behandelt alles als metrisch! Deswegen können Sie die gleichen Formeln über andere Daten bügeln (Golem-Alarm).\nWenn wir eine Regression der Anzahl bisheriger Partnerschaften auf das Geschlecht (0 = Frauen, 1 = Männer) durchführen, ergibt sich:\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{1.5}{2.5} = 0.6 \\]\nWenn sich das Geschlecht um eine Einheit (Frau = 0 \\(\\rightarrow\\) Mann = 1) erhöht, dann erhöht sich die durchschnittliche Anzahl bisheriger Partner:innen um 0.6.\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x} = 1.9 - (0.6)*0.5 = 1.6\\]\nDie Basisgruppe in diesem Modell sind die Frauen, da der Einfluss von “Mann-sein” in Relation zu “Frau-sein” erfasst wird. Daher erwarten wir für Frauen im Durchschnitt 1.6 bisherige Partner:innen."
+  },
+  {
+    "objectID": "slides/19-slides.html",
+    "href": "slides/19-slides.html",
+    "title": "Isolation von Einflüssen - Part 2",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "",
+    "text": "XKDC 1462 – “Blind Trials”\n\n\n\nDer Kern sozialwissenschaftlicher Fragen ist die Isolation von miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen “naiv” zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die in anderen Eigenschaften identisch sind, um eine gemeinsame Vergleichsgrundlage zu haben."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#ziel-wirkungen-isolieren-als-kern-guter-vergleiche",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#ziel-wirkungen-isolieren-als-kern-guter-vergleiche",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "",
+    "text": "XKDC 1462 – “Blind Trials”\n\n\n\nDer Kern sozialwissenschaftlicher Fragen ist die Isolation von miteinander verbundenen Einflüssen. Es ist oft nicht sinnvoll, Gruppen “naiv” zu vergleichen, sondern nur diejenigen Elemente von Gruppen, die in anderen Eigenschaften identisch sind, um eine gemeinsame Vergleichsgrundlage zu haben."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#typische-fragen-nach-wirkungen",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#typische-fragen-nach-wirkungen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Typische Fragen nach Wirkungen",
+    "text": "Typische Fragen nach Wirkungen\n\nWie stark beeinflussen Frauen im Gegensatz zu Männern als Vorgesetze das Arbeitsklima?\n\nWir wissen, dass es nicht zufällig ist, in welchen Organisationen Frauen Vorgesetzte sind. Die Art der Organisation beeinflusst daher sehr wahrscheinlich sowohl die Rekrutierung von Frauen in Führungspositionen als auch das Arbeitsklima.\n\nFührt die Einnahme von Vitamin D zu verringerten Gesundheitsproblemen?\n\nWir wissen, dass Personen, die besonders gesundheitsbewusst sind, eher dazu neigen, Vitamin D zu nehmen und außerdem mehr auf ihre Gesundheit zu achten.\n\nWelche Bedeutung spielt Armut für den Verlust von Institutionenvertrauen?\n\nPersonen in Armut sind überdurchschnittlich stärker von Arbeitslosigkeit betroffen. Arbeitslosigkeit selbst könnte Institutionenverlust hervorrufen oder ihn auch bestärken."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-bedeutet-isolation",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-bedeutet-isolation",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was bedeutet Isolation?",
+    "text": "Was bedeutet Isolation?\nZiel: Isolation der “direkten Wirkung” von Katzen auf die Zufriedenheit.\n\n\n\n\n\n\n\n\nflowchart TB\n%%{init: {\"flowchart\": {\"htmlLabels\": false}}}%%\n    K[\"Hat Katze(n)\"]:::plain\n    U[Zufriedenheit]:::plain\n    E[Einsamkeit]:::plain\n    S[Single]:::plain\n\n    K -.-&gt; U\n    K --&gt; E\n    E --&gt; U\n    S --&gt; K\n    S --&gt; E\n    \n  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;\n\n\n\n\n\n\n\nUnsere (=meine) “Katzenglücks-Theorie”:\n\nKatzen machen glücklich/zufriedener.1\nSingles haben eine höhere Wahrscheinlichkeit Katzen zu haben.\nSingles sind (im Durchschnitt!!) einsamer als verpartnerte Personen.\nKatzen verringern das Gefühl von Einsamkeit.\nEinsamkeit senkt die Zufriedenheit."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-bedeutet-isolation-1",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-bedeutet-isolation-1",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was bedeutet Isolation?",
+    "text": "Was bedeutet Isolation?\nPippi-Langstrumpf-Methode: Ich simuliere eine Welt, wie sie mir gefällt.\n\n\n\n\n\n\n\nflowchart TB\n    S[\"&lt;b&gt;Single&lt;/b&gt;&lt;br/&gt;Ja: 35%; Nein: 65%\"]:::plain\n    \n    K[\"&lt;b&gt;Katzenbesitz&lt;/b&gt;&lt;br/&gt;Ja: 32%; Nein: 68%\"]:::plain\n    E[\"&lt;b&gt;Einsamkeit&lt;/b&gt;&lt;br/&gt;Ja: 20%; Nein: 80%\"]:::plain\n    \n    Z[\"&lt;b&gt;Zufriedenheit&lt;/b&gt;&lt;br/&gt;MW: 8.46 (SD: 1.34)\"]:::plain\n\n    S --&gt;|+20pp| K\n    S --&gt;|+10pp| E\n    K --&gt;|-10pp| E\n    K --&gt;|+3 Punkte| Z\n    E --&gt;|-4 Punkte| Z\n\n    classDef plain fill:transparent,stroke:#000,stroke-width:2px,color:#000,font-size:13px;\n\n\n\n\n\n\n\n\n35% aller Personen sind Single.\nSingles haben eine um 20 Prozentpunkte (pp) erhöhte Wahrscheinlichkeit, eine Katze zu besitzen.\nSingles haben eine um 10pp erhöhte Wahrscheinlichkeit, einsam zu sein.\nInsgesamt 32% aller Personen haben eine Katze.\nInsgesamt 20% aller Personen sind einsam.\nKatzen erhöhen die Zufriedenheit um 3 Punkte.\nEinsamkeit senkt die Zufriedenheit um 2 Punkte."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#gute-und-schlechte-vergleiche-mit-katzen",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#gute-und-schlechte-vergleiche-mit-katzen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Gute und schlechte Vergleiche (mit Katzen)",
+    "text": "Gute und schlechte Vergleiche (mit Katzen)\nKönnen wir in so einem Setting Katzenbesitzer:innen mit Nicht-Katzenbesitzer:inenn vergleichen, um den direkten “Katzen-Zufriedenheits-Effekt” zu isolieren?"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#unterschiede-zwischen-den-gruppen",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#unterschiede-zwischen-den-gruppen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Unterschiede zwischen den Gruppen",
+    "text": "Unterschiede zwischen den Gruppen\n\nZwischen Katzenbesitzer:innen und Nicht-Katzenbesitzer:innen bestehen auch Unterschiede nach Single-Status und Einsamkeit.\nDa diese mit Zufriedenheit und Katzenbesitz verbunden sind, vergleichen wir nicht nur nach Katzenbesitz sondern implizit auch nach diesen weiteren Unterschieden.\n\n\n\n\n\n\nKatze\nn\nM (SD)\nSingle: Ja (%)\nEinsam: Ja (%)\n\n\n\n\nNein\n5426\n6 (1.7)\n23.4\n10.4\n\n\nJa\n4574\n7 (2.4)\n48.9\n59.4\n\n\n\n\n\n\nEin “naiver” Vergleich zwischen beiden Gruppen nach ihrer durchschnittlichen Zufriedenheit führt dazu, dass der “Katzen-Glückseffekt” bei circa 1 Punkt liegt, obwohl er 3 Punkte groß ist.\nDie weiteren Unterschiede zwischen den Gruppen “überdecken” daher den “direkten Katzen-Glückseffekt.”"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-können-wir-tun",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-können-wir-tun",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was können wir tun?",
+    "text": "Was können wir tun?\nWir können grundsätzlich drei Methoden anwenden, um Effekte zu isolieren:\n\n\nZerlegung des Datensatzes in Gruppen, die sich nur nach einer Ausprägung unterscheiden.\nRandomisierung der Gruppen in “Treatment-/Kontrollgruppe”.\n“Bereinigung des Treatments” durch andere Effekte im Rahmen eines datenanalytischen Modells."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-katzen-effekt",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-katzen-effekt",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Zerlegung des Datensatzes: Katzen-Effekt",
+    "text": "Zerlegung des Datensatzes: Katzen-Effekt\n\n\n\n\n\nKonstanthaltung\nKatze\nØ Zufriedenheit\n\n\n\n\nSingle=Ja, Einsam=Ja\nNein\n2.4\n\n\nSingle=Ja, Einsam=Ja\nJa\n5.4\n\n\n\n\n\n\n\nSingle=Ja, Einsam=Nein\nNein\n6.4\n\n\nSingle=Ja, Einsam=Nein\nJa\n9.5\n\n\n\n\n\n\n\nSingle=Nein, Einsam=Ja\nNein\n2.4\n\n\nSingle=Nein, Einsam=Ja\nJa\n5.4\n\n\n\n\n\n\n\nSingle=Nein, Einsam=Nein\nNein\n6.4\n\n\nSingle=Nein, Einsam=Nein\nJa\n9.4"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-einsamkeits-effekt",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-einsamkeits-effekt",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Zerlegung des Datensatzes: Einsamkeits-Effekt",
+    "text": "Zerlegung des Datensatzes: Einsamkeits-Effekt\n\n\n\n\n\nKonstanthaltung\nEinsam\nØ Zufriedenheit\n\n\n\n\nSingle=Ja, Katze=Ja\nNein\n9.5\n\n\nSingle=Ja, Katze=Ja\nJa\n5.4\n\n\n\n\n\n\n\nSingle=Ja, Katze=Nein\nNein\n6.4\n\n\nSingle=Ja, Katze=Nein\nJa\n2.4\n\n\n\n\n\n\n\nSingle=Nein, Katze=Ja\nNein\n9.4\n\n\nSingle=Nein, Katze=Ja\nJa\n5.4\n\n\n\n\n\n\n\nSingle=Nein, Katze=Nein\nNein\n6.4\n\n\nSingle=Nein, Katze=Nein\nJa\n2.4"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-passiert-hier-eigentlich",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-passiert-hier-eigentlich",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was passiert hier eigentlich?",
+    "text": "Was passiert hier eigentlich?\nAufgrund der dargestellten Theorie erwarten wir Differenzen zwischen Gruppen. Das drücken wir mit dem Erwartungswert-Operator \\(E[]\\) aus.\n\\[ \\begin{align}\n\\Delta &=  E[\\text{Zufriedenheit} \\, | \\, \\text{Katze} = ja, \\, \\text{sonstige Unterschiede} = \\text{konstant}] \\\\\n&- E[\\text{Zufriedenheit} \\, | \\, \\text{Katze} = nein, \\, \\text{sonstige Unterschiede} = \\text{konstant}] \\\\\n&= 3\n\\end{align}\n\\]\n\\[ \\begin{align}\n\\Delta &=  E[\\text{Zufriedenheit} \\, | \\, \\text{Einsam} = ja, \\, \\text{sonstige Unterschiede} = \\text{konstant}] \\\\\n&- E[\\text{Zufriedenheit} \\, | \\, \\text{Einsam} = nein, \\, \\text{sonstige Unterschiede} = \\text{konstant}] \\\\\n&= 4\n\\end{align}\n\\]\nGenerell können wir daher auch schreiben:\n\\[ \\begin{align}\n\\Delta &=  E[\\text{Outcome} \\, | \\, \\text{Treatment} = ja, \\, \\text{sonstige Unterschiede} = \\text{konstant}] \\\\\n&- E[\\text{Outcome} \\, | \\, \\text{Treatment} = nein, \\, \\text{sonstige Unterschiede} = \\text{konstant}]\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-wo-ist-der-haken",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-wo-ist-der-haken",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Zerlegung des Datensatzes: Wo ist der Haken?",
+    "text": "Zerlegung des Datensatzes: Wo ist der Haken?\n\nDiese Methode funktioniert nur, wenn\n\ndie Anzahl der Kontrollvariablen gering ist und\ndie Ausprägungen der Eigenschaften gering sind und\nder Datensatz entsprechend groß genug ist, um innerhalb jeder Gruppe ein ausreichend großes N zu haben.\n\n\nDie Anzahl der Gruppen, die durch die Ausprägungen der Variablen gebildet werden können ist ein kartesisches Produkt2.\nBei drei Variablen, die jeweils zwei Ausprägungen haben (ja/nein) ergibt sich: \\[ 2 \\cdot 2 \\cdot 2 = 8 \\]\nAngenommen, eine Variable ist metrisch und hat 35 Ausprägungen:\n\\[ 35 \\cdot 2 \\cdot 2 = 140 \\]"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-und-sein-fluch",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#zerlegung-des-datensatzes-und-sein-fluch",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Zerlegung des Datensatzes und sein Fluch",
+    "text": "Zerlegung des Datensatzes und sein Fluch\n\n\n\nViele der studierten Prozesse in den Sozialwissenschaften sind komplex und hochgradig verflochten.\nBei einer entsprechend guten Operationalisierung und Erhebung haben wir oft viele Variablen mit differenzierten Ausprägungen.\nDamit erhöht sich das kartesische Produkt der Anzahl aller möglichen Gruppen so enorm, dass keine sinnvollen Vergleiche mehr möglich sind.\nDieses Problem wird auch als “Curse of Dimensionality” bezeichnet."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#methode-2-randomisierung",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#methode-2-randomisierung",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Methode 2: Randomisierung",
+    "text": "Methode 2: Randomisierung"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-macht-randomisierung",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-macht-randomisierung",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was macht Randomisierung?",
+    "text": "Was macht Randomisierung?\n\n\n\n\n\n\n\nflowchart TB\n    K[\"Hat Katze(n)\"]:::plain\n    U[Zufriedenheit]:::plain\n    E[Einsamkeit]:::plain\n    S[Single]:::plain\n\n    K -.-&gt; U\n    K --&gt; E\n    E --&gt; U\n    S x--x K\n    S --&gt; E\n    \n  classDef plain fill:transparent,stroke:transparent,color:#000,font-size:26px;\n\n\n\n\n\n\n\n\nWenn wir in diesem bestehenden sozialen System den Katzenbesitz randomisieren, d.h. zufällig zuordnen, würden, dann\n\nsetzen wir die Korrelation von Katzenbesitz und Singles auf 0;\nalles andere bleibt identisch.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSzenario\nnaive Δ Zufriedenheit (Katze Ja-Nein)\nΔ Single: Ja (%) (Katze Ja-Nein)\nΔ Einsam: Ja (%) (Katze Ja-Nein)\n\n\n\n\nBeobachtet\n1\n25.5\n49\n\n\nRandomisiert\n3\n-0.8\n1"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-passiert-bei-randomisierung",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-passiert-bei-randomisierung",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was passiert bei Randomisierung?",
+    "text": "Was passiert bei Randomisierung?\n \n\\[ \\begin{align}\n\\Delta &=  E[\\text{Zufriedenheit} \\, | \\, \\text{Katze} = ja, \\, \\text{sonstige Unterschiede} = \\text{ignorierbar}] \\\\\n&- E[\\text{Zufriedenheit} \\, | \\, \\text{Katze} = nein, \\, \\text{sonstige Unterschiede} = \\text{ignorierbar}] \\\\\n&= 3\n\\end{align}\n\\]\n \nGenerell können wir daher auch schreiben:\n\\[ \\begin{align}\n\\Delta &=  E[\\text{Outcome} \\, | \\, \\text{Treatment} = ja, \\, \\text{sonstige Unterschiede} = \\text{ignorierbar}] \\\\\n&- E[\\text{Outcome} \\, | \\, \\text{Treatment} = nein, \\, \\text{sonstige Unterschiede} = \\text{ignorierbar}]\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-ist-das-problem-mit-randomisierung",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-ist-das-problem-mit-randomisierung",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was ist das “Problem” mit Randomisierung?",
+    "text": "Was ist das “Problem” mit Randomisierung?\n\nRandomisierung ist ein extrem mächtiges Werkzeug zur Isolation von Einflüssen, weil es einen sauberen Vergleich von “Treatment-/Kontrollgruppen” ermöglich, da die Differenzen in der Zusammensetzung nach anderen Eigenschaften ignorierbar sind.\n\nAber:\n\nPersonen sind oft Dingen ausgesetzt, die sich nicht (gesteuert) randomisieren lassen:\n\nBedingungen in Familien\nNationalstaaten\nKanzler Merz\nöffentliche Infrastruktur\nBildungssystem"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#isolation-von-einflüssen-durch-datenanalytische-modelle",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#isolation-von-einflüssen-durch-datenanalytische-modelle",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Isolation von Einflüssen durch datenanalytische Modelle",
+    "text": "Isolation von Einflüssen durch datenanalytische Modelle\n\nDatenanalytische / statistische Modelle sind das am weit verbreiteteste Werkzeug zur Isolation von Einflüssen.\n\nDaher müssen wir das Werkzeug gut kennen lernen, um zu verstehen, was damit in der Forschung produziert wird.\nSpoiler 1: Sehr viele schlaue Leute haben sich sehr kluge Gedanken um dieses Werkzeug gemacht, sodass es extrem flexibel und mächtig ist.\nSpoiler 2: In einigen Fällen wird damit aber Unsinn produziert.3\n\n\n - Egal, wie “fancy” das Modell bezeichnet wird und egal, wie viele grieschische Buchstaben benutzt werden: Am Ende ist ein Modell immer ein Vergleich zwischen Gruppen.4"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#statistische-golems",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#statistische-golems",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Statistische Golems",
+    "text": "Statistische Golems\n  \n\nScientists also make golems. Our golems rarely have physical form, but they too are often made of clay, living in silicon as computer code. These golems are scientific model. But these golems have real effects on the world, through the predictions they make and the intuitions they challenge or inspire. A concern with truth enlivens these models, but just like a golem or a modern robot, scientific models are neither true nor false, neither prophets nor charlatans. Rather they are constructs engineered for some purpose. These constructs are incredibly powerful, dutifully conducting their programmed calculations McElreath (2020: 1)."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#klemmbausteine-für-datenanalytische-modelle",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#klemmbausteine-für-datenanalytische-modelle",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Klemmbausteine für datenanalytische Modelle",
+    "text": "Klemmbausteine für datenanalytische Modelle\n \n\n\nKorrelationen: Statistische Modelle korrelieren Ausprägungen von Variablen miteinader.\nResidualvarianz: Sie bilden ihre Parameter so, dass die Abstände zwischen vorhergesagten Werten und beobachteten Werten so gering wie möglich ist.\npartielle Korrelationen: Diese Modelle isolieren Einflüsse, indem sie die Korrelation zwischen dem Treatment und anderen Eigenschaften, die sowohl mit dem Treatment als auch mit dem Outcome verbunden sind, voneinander trennen."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#klemmbaustein-1-korrelationen",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#klemmbaustein-1-korrelationen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Klemmbaustein 1: Korrelationen",
+    "text": "Klemmbaustein 1: Korrelationen\n\n\n \n\n\n\nBrauer: Causation without Correlation?\n\n\n\n\n\nDamit überhaupt ein Einfluss isoliert werden kann, sollte ein Treatment mit einem Outcome in irgendeinem, statistisch erfassbaren Zusammenhang stehen (= Korrelation).\nDatenanalytische Verfahren können uns immer nur Korrelationen geben – egal wie fancy das Modell ist. Kausalitätsaussagen sind immer eine (theoriegeleitete) Interpretation von Korrelationen."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-sollen-korrelationen-leisten",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-sollen-korrelationen-leisten",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was sollen Korrelationen leisten?",
+    "text": "Was sollen Korrelationen leisten?\n \n\nWir möchten wissen:\n\ngehen steigende Werte in einem Merkmal, mit steigenden Werten in einem anderen Merkmal einher (positiver Zusammenhang)?\ngehen steigende Werte in einem Merkmal, mit sinkenden Werten in einem anderen Merkmal einher (negativer Zusammenhang)?\noder stehen Werte in keinem systematischen Zusammenhang?\n\n\nWir berechnen dazu Zusammenhangsmaße. Diese können immer zwischen -1 und +1 schwanken."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#was-sagt-die-stärke-von-korrelationen-aus",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#was-sagt-die-stärke-von-korrelationen-aus",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Was sagt die Stärke von Korrelationen aus?",
+    "text": "Was sagt die Stärke von Korrelationen aus?\nIm Kern sind Korrelationen ein Maß über die Sicherheit, wie gut wir in Bezug auf eine Untersuchungseinheit von den Ausprägung einer Eigenschaft (X) auf die Ausprägung einer anderen Eigenschaft (Y) (mit Hilfe einer implizit angenommenen Funktion zwischen beiden) schließen können.\n\nWas eine starke und was eine schwache Korrelation ist, ist in höchstem Maße kontextabhängig!\nEine Korrelation um null bedeutet nicht, dass kein Zusammenhang vorliegt, sondern zunächst nur, dass mit dem gewählten Korrelationsmaß kein Zusammenhang beschrieben werden kann.\nBei Mehrfachmessungen eines latenten Faktors durch mehrere Items sind Zusammenhänge der Items unter 0.3 eher schwach, Zusammenhänge zwischen 0.3 und 0.6 moderat und über 0.6 eher stark.5\nIn hochkomplexen sozialen Systemen können Zusammenhänge von 0.5 als sehr stark gelten, wenn üblicherweise die Zusammenhänge um 0.1 bis 0.3 liegen."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#der-scatterplot-als-visuelle-grundlage-für-korrelationen",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#der-scatterplot-als-visuelle-grundlage-für-korrelationen",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Der Scatterplot als (visuelle) Grundlage für Korrelationen",
+    "text": "Der Scatterplot als (visuelle) Grundlage für Korrelationen"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#der-baustein-des-bausteins-die-covarianz",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#der-baustein-des-bausteins-die-covarianz",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Der Baustein des Bausteins: die Covarianz",
+    "text": "Der Baustein des Bausteins: die Covarianz\n\\[\\begin{split}\nCOV_{xy} & = \\frac{\\sum\\limits_{i=1}^n(x_i - \\overline{x})(y_i - \\overline{y})}{n}\\\\\n%& = \\frac{1}{n}\\sum\\limits_{i=1}^n(x_iy_i - x_i\\overline{y} - \\overline{x}y_i + \\overline{xy})\\\\\n%& = \\sum\\limits_{i=1}^n\\frac{x_iy_i}{n} - \\overline{y}\\sum\\limits_{i=1}^n\\frac{x_i}{n} - \\overline{x}\\sum\\limits_{i=1}^n\\frac{y_i}{n} + \\overline{xy}\\\\\n%& = \\sum\\limits_{i=1}^n\\frac{x_iy_i}{n} - \\overline{yx} - \\overline{xy} + \\overline{xy}\\\\\n& = \\frac{1}{n}\\cdot\\left(\\sum\\limits_{i=1}^nx_i\\cdot y_i\\right) - \\bar{x}\\cdot \\bar{y}\\\\\n%& = \\sum\\limits_{i=1}^n x_iy_i - n\\overline{xy}.\n\\end{split}\\]\n\nEine hohe positive Covarianz ergibt sich, wenn häufig eine überdurchschnittliche Abweichung der x-Werte mit einer überdurchschnittlichen Abweichung der y-Werte einhergeht und unterdurchschnittliche x-Werte mit unterdurchschnittlichen y-Werten einhergehen.\nEine hohe negative Covarianz ergibt sich, wenn häufig eine unterdurchschnittliche Abweichung der x-Werte mit einer überdurchschnittlichen Abweichung der y-Werte einhergeht und überdurchschnittliche x-Werte mit unterdurchschnittlichen y-Werten einhergehen."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#pearsons-r",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#pearsons-r",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Pearsons r",
+    "text": "Pearsons r\n\\[r_{xy} = \\frac{Cov_{xy}}{s_x\\cdot s_y}\\]\n\nPearsons r ist ein Maß, wie linear die Ausprägungen von zwei Messungen korrelieren. Es ist kein Maß, wie stark sich diese Ausprägungen beeinflussen!\nDie Ausprägungen von zwei Eigenschaften korrelieren perfekt linear, wenn wir in Bezug auf eine Untersuchungseinheit ohne Informationsverlust von einer Ausprägung in X auf eine Ausprägung in Y durch Addieren einer gleichmäßigen Steigerung schließen können. Je mehr die Ausprägungen um eine solche gleichmäßige Steigerung streuen, desto geringer ist der lineare Zusammenhang."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#pearsons-r-und-die-verteilung-von-daten",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#pearsons-r-und-die-verteilung-von-daten",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Pearsons r und die Verteilung von Daten",
+    "text": "Pearsons r und die Verteilung von Daten"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#unterschied-zwischen-korrelation-und-einfluss",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#unterschied-zwischen-korrelation-und-einfluss",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Unterschied zwischen Korrelation und Einfluss",
+    "text": "Unterschied zwischen Korrelation und Einfluss\n\nKorrelationen sind lediglich der Informationen der Art: “Wenn ich eine Ausprägung von X sehe, dann sehe ich sehr unwahrscheinlich / unwahrscheinlich / (scheinbar) zufällig / wahrscheinlich / sehr wahrscheinlich Ausprägungen von Y.”\nEinflüsse sind Angaben darüber,\n\nwelche Eigenschaft eine andere beeinflusst (Treatment \\(\\rightarrow\\) Outcome und nicht Outcome \\(\\rightarrow\\) Treatment)\nwie stark wir diesen Einfluss schätzen.\n\nDie Stärke eines Einflusses “schätzen” wir mit der Angabe, um wieviele Ausprägungen sich Y verändert, wenn sich X um eine Einheit verändert."
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#wie-schätzen-wir-einen-einfluss",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#wie-schätzen-wir-einen-einfluss",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Wie schätzen wir einen Einfluss?",
+    "text": "Wie schätzen wir einen Einfluss?"
+  },
+  {
+    "objectID": "slides/18-Isolation_von_Einfluessen_P2.html#footnotes",
+    "href": "slides/18-Isolation_von_Einfluessen_P2.html#footnotes",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIm Durchschnitt!↩︎\nKartesisch, weil René Descartes es als erstes formuliert hat.↩︎\nDas wollen Sie nicht, denn dann schaue ich Sie sehr streng an.↩︎\nIch habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren.↩︎\nAber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.↩︎"
   }
 ]
