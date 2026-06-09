@@ -5573,7 +5573,7 @@
     "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-macht-ein-regressions-modell",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Was macht ein (Regressions)-Modell?",
-    "text": "Was macht ein (Regressions)-Modell?\n\n\n\n\n\n\n\nflowchart TB\n\nA[Alter]\nS[\"Alter erster GV\"]\nP[\"Anzahl bisheriger Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --- S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I\n\n\n\n\n\n\n\n\nRegressionsmodelle sind Werkzeuge zur - Erfassung der Größenordnung von Einflüssen - und zur Isolation von Einflüssen.\nEin typisches[^1] Regressionsmodell bezieht sich immer auf direkte Einflüsse auf ein Outcome. - Es werden daher diejenigen “Pfeile” untersucht, die direkt auf eine Box abzielen.\n- Wir können aber so tun, als ob bestimte “Boxen” nicht vorkommen, um damit “direkte” Pfeile herzustellen."
+    "text": "Was macht ein (Regressions)-Modell?\n\n\n\n\n\n\n\nflowchart TB\n\nA[Alter]\nS[\"Alter &lt;br/&gt; erster GV\"]\nP[\"Anzahl bisheriger  Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --- S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I\n\n\n\n\n\n\n\n\nRegressionsmodelle sind Werkzeuge zur - Erfassung der Größenordnung von Einflüssen - und zur Isolation von Einflüssen.\nEin typisches Regressionsmodell bezieht sich immer auf direkte Einflüsse auf ein Outcome.1\n\nEs werden daher diejenigen “Pfeile” untersucht, die direkt auf eine Box abzielen.\n\nWir können aber so tun, als ob bestimte “Boxen” nicht vorkommen, um damit “direkte” Pfeile herzustellen.\n\n\n\nModelle, die mehrere Outcomes gleichzeitig haben sind u.a.: Strukturgleichungsmodelle, Seemingly Unrelated Regression, Joint Models"
   },
   {
     "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#regressionsmodelle-drücken-erwartete-differenzen-aus",
@@ -5587,7 +5587,7 @@
     "href": "slides/19-Isolation_von_Einfluessen_P2.html#die-niederungen-der-einzelheiten",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Die Niederungen der Einzelheiten",
-    "text": "Die Niederungen der Einzelheiten\n\\[\\underbrace{y_i}_{\\substack{\\text{individ. Anzahl} \\\\ \\text{bisheriger Partner}}} = \\underbrace{\\hat{\\alpha}_{\\color{white}{i}}}_{\\substack{\\text{durchschn. Anzahl} \\\\ \\text{Basisgruppe}}} +  \\underbrace{\\hat{\\beta}\\cdot x_i}_{\\substack{\\text{systematische} \\\\ \\text{Gruppenunterschiede}}}  + \\underbrace{\\epsilon_i}_{\\substack{\\text{individuelle} \\\\ \\text{Abweichung = Residuum}}}\\]\n\n\n\n\n\n\n\n\nAbkürzung\n“sprich”\nBedeutung\n\n\n\n\n\\(y_i\\)\n\nGemessener Wert der Anazhl bisheriger Beziehungen für Person \\(i\\)\n\n\n\\(\\hat{\\alpha}\\)\nalpha\nDurchschnittliche Anzahl bisheriger Beziehungen für die Referenzgruppe\n\n\n\\(\\hat{\\beta}x_i\\)\nbeta\nDifferenz in der durchschnittlichen Anzahl bisheriger Beziehungen, wenn wir Personen vergleichen, die sich im Alter ihres ersten GVs um ein Jahr unterscheiden\n\n\n\\(\\epsilon_i\\)\nepsilon\n(zufällige) Differenz zwischen der beobachteten Anzahl bisheriger Beziehungen für Person \\(i\\) zum Durchschnitt für Personen, die im gleichen Alter wie Person \\(i\\) ihren ersten GV hatten"
+    "text": "Die Niederungen der Einzelheiten\n\\[\\underbrace{y_i}_{\\substack{\\text{individ. Anzahl} \\\\ \\text{bisheriger Partner}}} = \\underbrace{\\hat{\\alpha}_{\\color{white}{i}}}_{\\substack{\\text{durchschn. Anzahl} \\\\ \\text{Basisgruppe}}} +  \\underbrace{\\hat{\\beta}\\cdot x_i}_{\\substack{\\text{systematische} \\\\ \\text{Gruppenunterschiede}}}  + \\underbrace{\\epsilon_i}_{\\substack{\\text{individuelle} \\\\ \\text{Abweichung = Residuum}}}\\]\n\n\n\n\n\n\n\n\n\nAbkürzung\n“sprich”\nBedeutung\n\n\n\n\n\\(y_i\\)\n\nGemessener Wert der Anazhl bisheriger Beziehungen für Person \\(i\\)\n\n\n\\(\\hat{\\alpha}\\) / \\(\\hat{\\beta}_0\\)\nalpha / beta null\nDurchschnittliche Anzahl bisheriger Beziehungen für die Referenzgruppe\n\n\n\\(\\hat{\\beta}x_i\\)\nbeta\nDifferenz in der durchschnittlichen Anzahl bisheriger Beziehungen, wenn wir Personen vergleichen, die sich im Alter ihres ersten GVs um ein Jahr unterscheiden\n\n\n\\(\\epsilon_i\\)\nepsilon\n(zufällige) Differenz zwischen der beobachteten Anzahl bisheriger Beziehungen für Person \\(i\\) zum Durchschnitt für Personen, die im gleichen Alter wie Person \\(i\\) ihren ersten GV hatten"
   },
   {
     "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-eine-gute-schätzung---kausaltheoretisch",
@@ -5643,7 +5643,7 @@
     "href": "slides/19-Isolation_von_Einfluessen_P2.html#born-to-be-wild",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Born to be wild?",
-    "text": "Born to be wild?\nHypothese: Je früher das Alter des ersten Geschlechtsverkehrs war, desto höher ist die Anzahl bisheriger Partnerschaften zum Erhebungszeitpunkt.\n\n\n\n\n\nflowchart TB\n\nA[Alter]\nS[\"Alter erster GV\"]\nP[\"Anzahl bisheriger Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --- S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I"
+    "text": "Born to be wild?\nHypothese: Je früher das Alter des ersten Geschlechtsverkehrs war, desto höher ist die Anzahl bisheriger Partnerschaften zum Erhebungszeitpunkt.\n\n\n\n\n\n%%{init: {\n  'theme': {'neutral'},\n  'themeVariables': { 'fontSize': '24px' },\n  'flowchart': { 'htmlLabels': true, 'useMaxWidth': false }\n}}%%\n\nflowchart TB\n\nA[Alter]\nS[\"Alter &lt;br/&gt; erster GV\"]\nP[\"Anzahl bisheriger &lt;br/&gt; Partnerschaften\"]\nG[\"Geschlecht\"]\nI@{shape: sm-circ}\n\nA --&gt; S\nG --&gt; S --- I --&gt; P\nG --?--&gt; I"
   },
   {
     "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#niveauverschiebung-in-der-regression",
@@ -5664,14 +5664,14 @@
     "href": "slides/19-Isolation_von_Einfluessen_P2.html#berechnung-von-ols-parametern",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Berechnung von OLS-Parametern",
-    "text": "Berechnung von OLS-Parametern\nDaraus erhält man (für den Fall von einer genutzten Variablen):\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x}\\]\nDie Schätzung von \\(\\hat{\\alpha}\\) verdeutlicht, dass dies ein Mittelwert von \\(y\\) ist, aus dem alle anderen durch \\(x\\) bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen entfernt wurde. Diese Gruppe nennen wir “Basisgruppe”.\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{\\sum x_iy_i - n\\cdot\\bar{x}\\cdot\\bar{y}}{\\sum x_i^2 - n\\cdot \\bar{x}^2}\\]\nDer \\(\\hat{\\beta}\\)-Koeffizient drückt ein Verhältnis der Covarianz von \\(x\\) und \\(y\\) in Relation zur Variation der \\(x\\)-Variable aus. Oder: Um wieviel erhöhen/verringern sich Y-Werte im Durchschnitt, wenn sich die X-Werte um eine Einheit ändern."
+    "text": "Berechnung von OLS-Parametern\nDaraus erhält man (für den Fall von einer genutzten Variablen):\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x}\\]\nDie Schätzung von \\(\\hat{\\alpha}\\) verdeutlicht, dass dies ein Mittelwert von \\(y\\) ist, aus dem alle anderen durch \\(x\\) bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen - die zum Vergleichen genutzt werden - entfernt wurde. Diese Gruppe nennen wir “Basisgruppe”.\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{\\sum x_iy_i - n\\cdot\\bar{x}\\cdot\\bar{y}}{\\sum x_i^2 - n\\cdot \\bar{x}^2}\\]\nDer \\(\\hat{\\beta}\\)-Koeffizient drückt ein Verhältnis der Covarianz von \\(x\\) und \\(y\\) in Relation zur Variation der \\(x\\)-Variable aus. Oder: Um wieviel erhöhen/verringern sich Y-Werte im Durchschnitt, wenn sich die X-Werte um eine Einheit ändern."
   },
   {
     "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#papier-ist-geduldig",
     "href": "slides/19-Isolation_von_Einfluessen_P2.html#papier-ist-geduldig",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Papier ist geduldig…",
-    "text": "Papier ist geduldig…\n\n\n\n\n\nAnz. Partnerschaften\nAlter erster GV\nGeschlecht (0=F, 1=M)\n\n\n\n\n0\n25\n0\n\n\n8\n17\n1\n\n\n0\n17\n1\n\n\n0\n22\n0\n\n\n3\n18\n0\n\n\n2\n18\n1\n\n\n1\n19\n1\n\n\n0\n17\n0\n\n\n5\n17\n0\n\n\n0\n18\n1\n\n\nØ 1.9\nØ 18.8\nØ 0.5"
+    "text": "Papier ist geduldig…\n\n\n\n\n\nAnz. Partnerschaften\nAlter erster GV - 17\nGeschlecht (0=F, 1=M)\n\n\n\n\n0\n8\n0\n\n\n8\n0\n1\n\n\n0\n0\n1\n\n\n0\n5\n0\n\n\n3\n1\n0\n\n\n2\n1\n1\n\n\n1\n2\n1\n\n\n0\n0\n0\n\n\n5\n0\n0\n\n\n0\n1\n1\n\n\nØ 1.9\nØ 1.8\nØ 0.5"
   },
   {
     "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#übung-macht-die-meisterin",
@@ -5692,7 +5692,7 @@
     "href": "slides/19-Isolation_von_Einfluessen_P2.html#berechnung",
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Berechnung",
-    "text": "Berechnung\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{-27.2}{63.6} = -0.428 \\]\n\nDie durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später statt fand.\nAlternativ: Vergleicht man Personen, deren GV ein Jahr später als die Vergleichsgruppe stattfand, ist deren durchschnittliche Anzahl bisheriger Partner um 0.43 geringer.\n\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x} = 1.9 - (-0.428)*18.8 = 9.94\\]\nGolem-Alarm1: Die Basisgruppe sind in diesem Modell Personen ohne Einfluss des Alters des ersten GV. Wir erwarten daher für Personen, die mit null Jahren zum ersten mal freiwillig! GV hatten, eine durchschnittliche Anzahl von 9.94 bisherigen Partnern.\nDas ist natürlich eine reichlich sinnlose Information. Das ist aber unserem Modell egal!"
+    "text": "Berechnung\n\\[\\hat{\\beta} = \\dfrac{\\sum(x_i-\\bar{x})(y_i - \\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\dfrac{-27.2}{63.6} = -0.428 \\]\n\nDie durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später als 17 statt fand und 0.43 für jedes Jahr, in dem der erste GV früher als 17 statt fand.\nAlternativ: Vergleicht man Personen, deren GV ein Jahr später als die Vergleichsgruppe stattfand, ist deren durchschnittliche Anzahl bisheriger Partner um 0.43 geringer.\n\n\\[\\hat{\\alpha}=\\bar{y}-\\hat{\\beta} \\bar{x} = 1.9 - (-0.428)*1.8 = 2.67\\]\nDie Basisgruppe sind in diesem Modell Personen, die mit 17 das erste Mal GV hatten. Wir erwarten daher für diese Gruppe, eine durchschnittliche Anzahl von 2.67 bisherigen Partner:innen."
   },
   {
     "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-mit-nicht-metrischen-variablen",
@@ -5917,5 +5917,19 @@
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 1",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIm Durchschnitt!↩︎\nKartesisch, weil René Descartes es als erstes formuliert hat.↩︎\nDas wollen Sie nicht, denn dann schaue ich Sie sehr streng an.↩︎\nIch habe nichts dagegen, wenn Sie sich das auf den Unterarm tätowieren.↩︎\nAber auch das kommt stark auf die Art und Weise der Operationalisierung und Skalierung an! Learn to love it: Es gibt keine einfachen Antworten in diesem Kontext.↩︎"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-das-für-ein-voodoo",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#was-ist-das-für-ein-voodoo",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Was ist das für ein Voodoo?",
+    "text": "Was ist das für ein Voodoo?\n\n\n\n\n\n\n\n\n\n\\(\\alpha\\) +\n\\(\\beta\\) \\(\\cdot\\)\nAlter erster GV - 17\n= \\(\\hat{y}_i\\)\n\n\n\n\n2.67\n-0.428\n-3\n3.954\n\n\n2.67\n-0.428\n-2\n3.526\n\n\n2.67\n-0.428\n-1\n3.098\n\n\n2.67\n-0.428\n0\n2.67\n\n\n2.67\n-0.428\n1\n2.242\n\n\n2.67\n-0.428\n2\n1.814\n\n\n2.67\n-0.428\n3\n1.386\n\n\n2.67\n-0.428\n4\n0.958\n\n\n2.67\n-0.428\n5\n0.53\n\n\n2.67\n-0.428\n6\n0.102"
+  },
+  {
+    "objectID": "slides/19-Isolation_von_Einfluessen_P2.html#wie-sieht-das-in-unserem-beispiel-aus",
+    "href": "slides/19-Isolation_von_Einfluessen_P2.html#wie-sieht-das-in-unserem-beispiel-aus",
+    "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
+    "section": "Wie sieht das in unserem Beispiel aus?",
+    "text": "Wie sieht das in unserem Beispiel aus?"
   }
 ]

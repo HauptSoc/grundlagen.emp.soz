@@ -60,15 +60,21 @@ freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
 Hypothese: Je früher das Alter des ersten Geschlechtsverkehrs war, desto höher ist die Anzahl bisheriger Partnerschaften zum Erhebungszeitpunkt. 
 
 ```{mermaid}
+%%{init: {
+  'theme': {'neutral'},
+  'themeVariables': { 'fontSize': '24px' },
+  'flowchart': { 'htmlLabels': true, 'useMaxWidth': false }
+}}%%
+
 flowchart TB
 
 A[Alter]
-S["Alter erster GV"]
-P["Anzahl bisheriger Partnerschaften"]
+S["Alter <br/> erster GV"]
+P["Anzahl bisheriger <br/> Partnerschaften"]
 G["Geschlecht"]
 I@{shape: sm-circ}
 
-A --- S
+A --> S
 G --> S --- I --> P
 G --?--> I
 ```
@@ -87,7 +93,12 @@ freda |>
     x = "Anzahl bisheriger Partnerschaften",
     y = "Relative Häufigkeit (%)"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    text = element_text(size = 20),
+    axis.title = element_text(size = 24),
+    axis.text = element_text(size = 18)
+  )
 ```
 
 ## Was sagen uns die FREDA Daten? 
@@ -106,7 +117,12 @@ freda |>
     y = "Relative Häufigkeit (%)",
     fill = "Geschlecht"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    text = element_text(size = 20),
+    axis.title = element_text(size = 24),
+    axis.text = element_text(size = 18)
+  )
 ```
 
 ## Zusammenhänge 
@@ -121,7 +137,12 @@ freda |>
     x = "Alter des ersten Geschlechtsverkehrs",
     y = "Anzahl bisheriger Partnerschaften",
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    text = element_text(size = 20),
+    axis.title = element_text(size = 24),
+    axis.text = element_text(size = 18)
+  )
 ```
 
 ## Flexiblere Modellierung (No-Golem-Policy!)
@@ -139,7 +160,12 @@ freda |>
     y = "Anzahl bisheriger Partnerschaften",
     color = "Geschlecht"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    text = element_text(size = 20),
+    axis.title = element_text(size = 24),
+    axis.text = element_text(size = 18)
+  )
 ```
 
 ## Was macht ein (Regressions)-Modell? 
@@ -152,8 +178,8 @@ freda |>
 flowchart TB
 
 A[Alter]
-S["Alter erster GV"]
-P["Anzahl bisheriger Partnerschaften"]
+S["Alter <br/> erster GV"]
+P["Anzahl bisheriger  Partnerschaften"]
 G["Geschlecht"]
 I@{shape: sm-circ}
 
@@ -171,12 +197,16 @@ G --?--> I
       - Erfassung der Größenordnung von Einflüssen
       - und zur Isolation von Einflüssen. 
 
-- Ein typisches[^1] Regressionsmodell bezieht sich immer auf **direkte** Einflüsse auf **ein** Outcome. 
-      - Es werden daher diejenigen "Pfeile" untersucht, die direkt auf eine Box abzielen.  
-      - Wir können aber so tun, als ob bestimte "Boxen" nicht vorkommen, um damit "direkte" Pfeile herzustellen. 
+- Ein typisches Regressionsmodell bezieht sich immer auf **direkte** Einflüsse auf **ein** Outcome.[^1] 
+
+    - Es werden daher diejenigen "Pfeile" untersucht, die direkt auf eine Box abzielen.  
+    - Wir können aber so tun, als ob bestimte "Boxen" nicht vorkommen, um damit "direkte" Pfeile herzustellen.
+
 ::: 
 
 ::: 
+
+[^1]: Modelle, die mehrere Outcomes gleichzeitig haben sind u.a.: Strukturgleichungsmodelle, Seemingly Unrelated Regression, Joint Models
 
 ## Regressionsmodelle drücken erwartete Differenzen aus
 
@@ -212,16 +242,16 @@ Jedes Regressionsmodell nimmt einen statistischen Kennwert und berechnet Differe
  <iframe width="1400" height="1050" data-external="1" src="https://019e841d-86fb-a0f3-d58b-43dbef9540a1.share.connect.posit.cloud"></iframe>
 
 ##  Die Niederungen der Einzelheiten {.midi}
-
 $$\underbrace{y_i}_{\substack{\text{individ. Anzahl} \\ \text{bisheriger Partner}}} = \underbrace{\hat{\alpha}_{\color{white}{i}}}_{\substack{\text{durchschn. Anzahl} \\ \text{Basisgruppe}}} +  \underbrace{\hat{\beta}\cdot x_i}_{\substack{\text{systematische} \\ \text{Gruppenunterschiede}}}  + \underbrace{\epsilon_i}_{\substack{\text{individuelle} \\ \text{Abweichung = Residuum}}}$$
 
-
+::: {.r-fit-text}
 | Abkürzung        	| "sprich" 	| Bedeutung                                                                                                               	|
-|------------------	|----------	|-------------------------------------------------------------------------------------------------------------------------	|
+|------------------	|-----------------------	|------------------------------------------	|
 | $y_i$            	|          	| Gemessener Wert der Anazhl bisheriger Beziehungen für Person $i$                                                                	|
-| $\hat{\alpha}$   	| alpha    	| Durchschnittliche Anzahl bisheriger Beziehungen für die Referenzgruppe                                                                    	|
+| $\hat{\alpha}$  / $\hat{\beta}_0$   	| alpha / beta null   	| Durchschnittliche Anzahl bisheriger Beziehungen für die Referenzgruppe                                                              	|
 | $\hat{\beta}x_i$ 	| beta     	| Differenz in der durchschnittlichen Anzahl bisheriger Beziehungen, wenn wir Personen vergleichen, die sich im Alter ihres ersten GVs um ein Jahr unterscheiden             	|
 | $\epsilon_i$     	| epsilon  	| (zufällige) Differenz zwischen der beobachteten Anzahl bisheriger Beziehungen für Person $i$ zum Durchschnitt für Personen, die im gleichen Alter wie Person $i$ ihren ersten GV hatten  	|
+::: 
 
 ## Von individuellen Werten zur Schätzung von Einflüssen
 
@@ -291,7 +321,7 @@ Daraus erhält man (für den Fall von **einer** genutzten Variablen):
 
 $$\hat{\alpha}=\bar{y}-\hat{\beta} \bar{x}$$
 
-Die Schätzung von $\hat{\alpha}$ verdeutlicht, dass dies ein Mittelwert von $y$ ist, aus dem alle anderen durch $x$ bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen entfernt wurde. Diese Gruppe nennen wir "Basisgruppe". 
+Die Schätzung von $\hat{\alpha}$ verdeutlicht, dass dies ein Mittelwert von $y$ ist, aus dem alle anderen durch $x$ bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen - die zum Vergleichen genutzt werden - entfernt wurde. Diese Gruppe nennen wir "Basisgruppe". 
 
 $$\hat{\beta} = \dfrac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = \dfrac{\sum x_iy_i - n\cdot\bar{x}\cdot\bar{y}}{\sum x_i^2 - n\cdot \bar{x}^2}$$
 
@@ -317,6 +347,7 @@ tab_data <- freda |>
   select(rtr51, sex1i3, sex_c) |>
   filter(!is.na(rtr51), !is.na(sex1i3), !is.na(sex_c)) |>
   mutate(sex_c_num = if_else(as_factor(sex_c) == "Male", 1L, 0L)) |>
+  mutate(sex1i3 = sex1i3 - 17) |>
   select(rtr51, sex1i3, sex_c_num) |>
   slice_head(n = 10)
 
@@ -333,7 +364,7 @@ tab_data |>
     sex_c_num = if_else(row_number() == 11, paste0("Ø ", sex_c_num), sex_c_num)
   ) |>
   kable(
-    col.names = c("Anz. Partnerschaften", "Alter erster GV", "Geschlecht (0=F, 1=M)"),
+    col.names = c("Anz. Partnerschaften", "Alter erster GV - 17", "Geschlecht (0=F, 1=M)"),
     align = "c"
   ) |>
   kable_styling(full_width = FALSE) |>
@@ -345,14 +376,111 @@ tab_data |>
 
 $$\hat{\beta} = \dfrac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = \dfrac{-27.2}{63.6} = -0.428 $$
 
-- Die durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später statt fand. 
+- Die durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später als 17 statt fand und 0.43 für jedes Jahr, in dem der erste GV früher als 17 statt fand. 
+
 - Alternativ: Vergleicht man Personen, deren GV ein Jahr später als die Vergleichsgruppe stattfand, ist deren durchschnittliche Anzahl bisheriger Partner um 0.43 geringer. 
 
-$$\hat{\alpha}=\bar{y}-\hat{\beta} \bar{x} = 1.9 - (-0.428)*18.8 = 9.94$$
+$$\hat{\alpha}=\bar{y}-\hat{\beta} \bar{x} = 1.9 - (-0.428)*1.8 = 2.67$$
 
-**Golem-Alarm**[^3]: Die Basisgruppe sind in diesem Modell Personen *ohne Einfluss des Alters des ersten GV*.  Wir erwarten daher für Personen, die mit null Jahren zum ersten mal freiwillig! GV hatten, eine durchschnittliche Anzahl von 9.94 bisherigen Partnern.  
+ Die Basisgruppe sind in diesem Modell Personen, die mit 17 das erste Mal GV hatten.  Wir erwarten daher für diese Gruppe, eine durchschnittliche Anzahl von 2.67 bisherigen Partner:innen.  
 
-[^3]: Das ist natürlich eine reichlich sinnlose Information. Das ist aber unserem Modell egal! 
+## Was ist das für ein Voodoo?
+
+| $\alpha$ +     	| $\beta$ $\cdot$      	| Alter erster GV - 17 	|  = $\hat{y}_i$     	|
+|------	|--------	|:--------------------:	|-------	|
+| 2.67 	| -0.428 	| -3                   	| 3.954 	|
+| 2.67 	| -0.428 	| -2                   	| 3.526 	|
+| 2.67 	| -0.428 	| -1                   	| 3.098 	|
+| 2.67 	| -0.428 	| 0                    	| 2.67  	|
+| 2.67 	| -0.428 	| 1                    	| 2.242 	|
+| 2.67 	| -0.428 	| 2                    	| 1.814 	|
+| 2.67 	| -0.428 	| 3                    	| 1.386 	|
+| 2.67 	| -0.428 	| 4                    	| 0.958 	|
+| 2.67 	| -0.428 	| 5                    	| 0.53  	|
+| 2.67 	| -0.428 	| 6                    	| 0.102 	|
+
+## Wie sieht das in unserem Beispiel aus? 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+
+make_plot_with_ann <- function(data, xvar, yvar, xlab, ylab, jitter_x = FALSE, binary_x = FALSE) {
+  df <- data |>
+    select(x = all_of(xvar), y = all_of(yvar)) |>
+    filter(!is.na(x), !is.na(y))
+
+  fit <- lm(y ~ x, data = df)
+  b0 <- coef(fit)[1]
+  b1 <- coef(fit)[2]
+
+  x0 <- 0
+  xmax <- max(df$x, na.rm = TRUE)
+
+  y0 <- b0 + b1 * x0
+  ymax <- b0 + b1 * xmax
+
+  xmid <- (x0 + xmax) / 2
+  ymid <- b0 + b1 * xmid
+
+  p <- ggplot(df, aes(x = x, y = y)) +
+    {if (jitter_x) geom_jitter(width = 0.08, height = 0, alpha = 0.8) else geom_point(alpha = 0.8)} +
+    geom_smooth(method = "lm", se = FALSE) +
+    annotate("point", x = x0, y = y0, size = 2.5) +
+    annotate("text", x = x0, y = y0, label = paste0(round(y0, 2)),
+             hjust = -0.1, vjust = -0.8, size = 5) +
+    annotate("point", x = xmax, y = ymax, size = 2.5) +
+    annotate("text", x = xmax, y = ymax, label = paste0(round(ymax, 2)),
+             hjust = 1.1, vjust = -0.8, size = 5) +
+    annotate("text", x = xmid, y = ymid, label = paste0(round(b1, 2)),
+             vjust = -1.0, size = 5.5, fontface = "bold") +
+    labs(x = xlab, y = ylab) +
+    theme_minimal() +
+    theme(
+      text = element_text(size = 20),
+      axis.title = element_text(size = 16),
+      axis.text = element_text(size = 14)
+    )
+
+  if (binary_x) {
+    p <- p + scale_x_continuous(
+      breaks = c(0, 1),
+      labels = c("0", "1"),
+      limits = c(-0.2, 1.2)
+    )
+  }
+
+  p
+}
+
+p1 <- make_plot_with_ann(
+  tab_data, "sex1i3", "rtr51",
+  xlab = "Alter erster GV - 17",
+  ylab = "Anzahl bisheriger Beziehungen",
+  jitter_x = FALSE,
+  binary_x = FALSE
+)
+
+p2 <- make_plot_with_ann(
+  tab_data, "sex_c_num", "rtr51",
+  xlab = "Geschlecht (0 = Frauen, 1 = Männer)",
+  ylab = "Anzahl bisheriger Beziehungen",
+  jitter_x = TRUE,
+  binary_x = TRUE
+)
+
+p3 <- make_plot_with_ann(
+  tab_data, "sex_c_num", "sex1i3",
+  xlab = "Geschlecht (0 = Frauen, 1 = Männer)",
+  ylab = "Alter erster GV - 17",
+  jitter_x = TRUE,
+  binary_x = TRUE
+)
+
+panel <- p1 + p2 + p3 + plot_layout(ncol = 3)
+panel
+```
 
 ## Was ist mit nicht-metrischen Variablen?
 

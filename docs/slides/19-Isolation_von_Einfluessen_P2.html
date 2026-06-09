@@ -163,15 +163,21 @@
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TB
+<pre class="mermaid mermaid-js">%%{init: {
+  'theme': {'neutral'},
+  'themeVariables': { 'fontSize': '24px' },
+  'flowchart': { 'htmlLabels': true, 'useMaxWidth': false }
+}}%%
+
+flowchart TB
 
 A[Alter]
-S["Alter erster GV"]
-P["Anzahl bisheriger Partnerschaften"]
+S["Alter &lt;br/&gt; erster GV"]
+P["Anzahl bisheriger &lt;br/&gt; Partnerschaften"]
 G["Geschlecht"]
 I@{shape: sm-circ}
 
-A --- S
+A --&gt; S
 G --&gt; S --- I --&gt; P
 G --?--&gt; I
 </pre>
@@ -241,8 +247,8 @@ G --?--&gt; I
 <pre class="mermaid mermaid-js">flowchart TB
 
 A[Alter]
-S["Alter erster GV"]
-P["Anzahl bisheriger Partnerschaften"]
+S["Alter &lt;br/&gt; erster GV"]
+P["Anzahl bisheriger  Partnerschaften"]
 G["Geschlecht"]
 I@{shape: sm-circ}
 
@@ -258,11 +264,15 @@ G --?--&gt; I
 </div><div class="column" style="width:70%;">
 <ul>
 <li><p>Regressionsmodelle sind Werkzeuge zur - Erfassung der Größenordnung von Einflüssen - und zur Isolation von Einflüssen.</p></li>
-<li><p>Ein typisches[^1] Regressionsmodell bezieht sich immer auf <strong>direkte</strong> Einflüsse auf <strong>ein</strong> Outcome. - Es werden daher diejenigen “Pfeile” untersucht, die direkt auf eine Box abzielen.<br>
-- Wir können aber so tun, als ob bestimte “Boxen” nicht vorkommen, um damit “direkte” Pfeile herzustellen.</p></li>
+<li><p>Ein typisches Regressionsmodell bezieht sich immer auf <strong>direkte</strong> Einflüsse auf <strong>ein</strong> Outcome.<sup>1</sup></p>
+<ul>
+<li>Es werden daher diejenigen “Pfeile” untersucht, die direkt auf eine Box abzielen.<br>
+</li>
+<li>Wir können aber so tun, als ob bestimte “Boxen” nicht vorkommen, um damit “direkte” Pfeile herzustellen.</li>
+</ul></li>
 </ul>
 </div></div>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Modelle, die mehrere Outcomes gleichzeitig haben sind u.a.: Strukturgleichungsmodelle, Seemingly Unrelated Regression, Joint Models</p></li></ol></aside></section>
 <section id="regressionsmodelle-drücken-erwartete-differenzen-aus" class="slide level2">
 <h2>Regressionsmodelle drücken erwartete Differenzen aus</h2>
 <p>Jedes Regressionsmodell nimmt einen statistischen Kennwert und berechnet Differenzen dieses Kennwerts über verschiedene Gruppen.</p>
@@ -318,11 +328,12 @@ G --?--&gt; I
 <section id="die-niederungen-der-einzelheiten" class="slide level2 midi">
 <h2>Die Niederungen der Einzelheiten</h2>
 <p><span class="math display">\[\underbrace{y_i}_{\substack{\text{individ. Anzahl} \\ \text{bisheriger Partner}}} = \underbrace{\hat{\alpha}_{\color{white}{i}}}_{\substack{\text{durchschn. Anzahl} \\ \text{Basisgruppe}}} +  \underbrace{\hat{\beta}\cdot x_i}_{\substack{\text{systematische} \\ \text{Gruppenunterschiede}}}  + \underbrace{\epsilon_i}_{\substack{\text{individuelle} \\ \text{Abweichung = Residuum}}}\]</span></p>
+<div class="r-fit-text">
 <table>
 <colgroup>
-<col style="width: 12%">
-<col style="width: 6%">
-<col style="width: 81%">
+<col style="width: 21%">
+<col style="width: 27%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -338,8 +349,8 @@ G --?--&gt; I
 <td>Gemessener Wert der Anazhl bisheriger Beziehungen für Person <span class="math inline">\(i\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\hat{\alpha}\)</span></td>
-<td>alpha</td>
+<td><span class="math inline">\(\hat{\alpha}\)</span> / <span class="math inline">\(\hat{\beta}_0\)</span></td>
+<td>alpha / beta null</td>
 <td>Durchschnittliche Anzahl bisheriger Beziehungen für die Referenzgruppe</td>
 </tr>
 <tr class="odd">
@@ -354,6 +365,7 @@ G --?--&gt; I
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="von-individuellen-werten-zur-schätzung-von-einflüssen" class="slide level2">
 <h2>Von individuellen Werten zur Schätzung von Einflüssen</h2>
@@ -391,7 +403,7 @@ G --?--&gt; I
 <li><p><strong>Zentrale Behauptung</strong>: Systematische Prozesse sind stets stärker als zufällige Prozesse.<sup>1</sup> Daher ist die Methode am besten geeignet systematische von unsystematischen Einflüssen sauber zu trennen, die die kleinste Summe der “Zufallsstreuung” erfassen kann.</p></li>
 <li><p>Die Schätzmethode heißt deswegen <strong>O</strong>rdinary-<strong>L</strong>east-<strong>S</strong>quares - die Minimerung der Residualquadrate.</p></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Etwas muss über den “Placebo-Effekt” hinaus gehen, um als wirkungsvoll angesehen zu werden.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Etwas muss über den “Placebo-Effekt” hinaus gehen, um als wirkungsvoll angesehen zu werden.</p></li></ol></aside></section>
 <section id="wie-minimiert-man-die-summe-der-residuen" class="slide level2">
 <h2>Wie minimiert man die Summe der Residuen?</h2>
 <p><span class="math display">\[\begin{aligned}
@@ -404,7 +416,7 @@ G --?--&gt; I
 <h2>Berechnung von OLS-Parametern</h2>
 <p>Daraus erhält man (für den Fall von <strong>einer</strong> genutzten Variablen):</p>
 <p><span class="math display">\[\hat{\alpha}=\bar{y}-\hat{\beta} \bar{x}\]</span></p>
-<p>Die Schätzung von <span class="math inline">\(\hat{\alpha}\)</span> verdeutlicht, dass dies ein Mittelwert von <span class="math inline">\(y\)</span> ist, aus dem alle anderen durch <span class="math inline">\(x\)</span> bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen entfernt wurde. Diese Gruppe nennen wir “Basisgruppe”.</p>
+<p>Die Schätzung von <span class="math inline">\(\hat{\alpha}\)</span> verdeutlicht, dass dies ein Mittelwert von <span class="math inline">\(y\)</span> ist, aus dem alle anderen durch <span class="math inline">\(x\)</span> bedingten systematischen Unterschiede herausgerechnet wurden. Es ist der Durchschnittswert derjenigen Gruppe, aus der die Unterschiede zu allen anderen Gruppen - die zum Vergleichen genutzt werden - entfernt wurde. Diese Gruppe nennen wir “Basisgruppe”.</p>
 <p><span class="math display">\[\hat{\beta} = \dfrac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = \dfrac{\sum x_iy_i - n\cdot\bar{x}\cdot\bar{y}}{\sum x_i^2 - n\cdot \bar{x}^2}\]</span></p>
 <p>Der <span class="math inline">\(\hat{\beta}\)</span>-Koeffizient drückt ein Verhältnis der Covarianz von <span class="math inline">\(x\)</span> und <span class="math inline">\(y\)</span> in Relation zur Variation der <span class="math inline">\(x\)</span>-Variable aus. Oder: Um wieviel erhöhen/verringern sich Y-Werte im Durchschnitt, wenn sich die X-Werte um eine Einheit ändern.</p>
 </section>
@@ -420,64 +432,64 @@ G --?--&gt; I
 <thead>
 <tr class="header">
 <th style="text-align: center;" data-quarto-table-cell-role="th">Anz. Partnerschaften</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">Alter erster GV</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Alter erster GV - 17</th>
 <th style="text-align: center;" data-quarto-table-cell-role="th">Geschlecht (0=F, 1=M)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">25</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">22</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">3</td>
-<td style="text-align: center;">18</td>
+<td style="text-align: center;">1</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">2</td>
-<td style="text-align: center;">18</td>
+<td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">19</td>
+<td style="text-align: center;">2</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: center; border-bottom: 2px solid black;">0</td>
-<td style="text-align: center; border-bottom: 2px solid black;">18</td>
+<td style="text-align: center; border-bottom: 2px solid black;">1</td>
 <td style="text-align: center; border-bottom: 2px solid black;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center; font-weight: bold; background-color: rgba(245, 245, 245, 255) !important;">Ø 1.9</td>
-<td style="text-align: center; font-weight: bold; background-color: rgba(245, 245, 245, 255) !important;">Ø 18.8</td>
+<td style="text-align: center; font-weight: bold; background-color: rgba(245, 245, 245, 255) !important;">Ø 1.8</td>
 <td style="text-align: center; font-weight: bold; background-color: rgba(245, 245, 245, 255) !important;">Ø 0.5</td>
 </tr>
 </tbody>
@@ -489,12 +501,105 @@ G --?--&gt; I
 <h2>Berechnung</h2>
 <p><span class="math display">\[\hat{\beta} = \dfrac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = \dfrac{-27.2}{63.6} = -0.428 \]</span></p>
 <ul>
-<li>Die durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später statt fand.</li>
-<li>Alternativ: Vergleicht man Personen, deren GV ein Jahr später als die Vergleichsgruppe stattfand, ist deren durchschnittliche Anzahl bisheriger Partner um 0.43 geringer.</li>
+<li><p>Die durchschnittliche Anzahl bisheriger Partnerschaften sinkt um 0.43 Partner*innen für jedes Jahr, in dem der erste GV später als 17 statt fand und 0.43 für jedes Jahr, in dem der erste GV früher als 17 statt fand.</p></li>
+<li><p>Alternativ: Vergleicht man Personen, deren GV ein Jahr später als die Vergleichsgruppe stattfand, ist deren durchschnittliche Anzahl bisheriger Partner um 0.43 geringer.</p></li>
 </ul>
-<p><span class="math display">\[\hat{\alpha}=\bar{y}-\hat{\beta} \bar{x} = 1.9 - (-0.428)*18.8 = 9.94\]</span></p>
-<p><strong>Golem-Alarm</strong><sup>1</sup>: Die Basisgruppe sind in diesem Modell Personen <em>ohne Einfluss des Alters des ersten GV</em>. Wir erwarten daher für Personen, die mit null Jahren zum ersten mal freiwillig! GV hatten, eine durchschnittliche Anzahl von 9.94 bisherigen Partnern.</p>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Das ist natürlich eine reichlich sinnlose Information. Das ist aber unserem Modell egal!</p></li></ol></aside></section>
+<p><span class="math display">\[\hat{\alpha}=\bar{y}-\hat{\beta} \bar{x} = 1.9 - (-0.428)*1.8 = 2.67\]</span></p>
+<p>Die Basisgruppe sind in diesem Modell Personen, die mit 17 das erste Mal GV hatten. Wir erwarten daher für diese Gruppe, eine durchschnittliche Anzahl von 2.67 bisherigen Partner:innen.</p>
+</section>
+<section id="was-ist-das-für-ein-voodoo" class="slide level2">
+<h2>Was ist das für ein Voodoo?</h2>
+<table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 51%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\alpha\)</span> +</th>
+<th><span class="math inline">\(\beta\)</span> <span class="math inline">\(\cdot\)</span></th>
+<th style="text-align: center;">Alter erster GV - 17</th>
+<th>= <span class="math inline">\(\hat{y}_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">-3</td>
+<td>3.954</td>
+</tr>
+<tr class="even">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">-2</td>
+<td>3.526</td>
+</tr>
+<tr class="odd">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">-1</td>
+<td>3.098</td>
+</tr>
+<tr class="even">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">0</td>
+<td>2.67</td>
+</tr>
+<tr class="odd">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">1</td>
+<td>2.242</td>
+</tr>
+<tr class="even">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">2</td>
+<td>1.814</td>
+</tr>
+<tr class="odd">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">3</td>
+<td>1.386</td>
+</tr>
+<tr class="even">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">4</td>
+<td>0.958</td>
+</tr>
+<tr class="odd">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">5</td>
+<td>0.53</td>
+</tr>
+<tr class="even">
+<td>2.67</td>
+<td>-0.428</td>
+<td style="text-align: center;">6</td>
+<td>0.102</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wie-sieht-das-in-unserem-beispiel-aus" class="slide level2">
+<h2>Wie sieht das in unserem Beispiel aus?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="19-Isolation_von_Einfluessen_P2_files/figure-revealjs/unnamed-chunk-9-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="19-Isolation_von_Einfluessen_P2_files/figure-revealjs/unnamed-chunk-9-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="was-ist-mit-nicht-metrischen-variablen" class="slide level2">
 <h2>Was ist mit nicht-metrischen Variablen?</h2>
 <p>OLS behandelt alles als metrisch! Deswegen können Sie die gleichen Formeln über andere Daten bügeln (<strong>Golem-Alarm</strong>).</p>
