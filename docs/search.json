@@ -5931,5 +5931,26 @@
     "title": "Gute Vergleiche: Isolation von Einflüßen - Part 2",
     "section": "Wie sieht das in unserem Beispiel aus?",
     "text": "Wie sieht das in unserem Beispiel aus?"
+  },
+  {
+    "objectID": "exercises/19-ex.html",
+    "href": "exercises/19-ex.html",
+    "title": "Übung: ‘Isolation von Einflüssen’",
+    "section": "",
+    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\n\nWeil es so schön war, berechnen wir eine Regression für\n\nGröße \\(\\rightarrow\\) Miete\nNeubau \\(\\rightarrow\\) Miete und interpretieren, was wir berechnet haben."
+  },
+  {
+    "objectID": "exercises/19-ex.html#dauerthema-teure-mieten-noch-teurere-mieten",
+    "href": "exercises/19-ex.html#dauerthema-teure-mieten-noch-teurere-mieten",
+    "title": "Übung: ‘Isolation von Einflüssen’",
+    "section": "",
+    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\n\nWeil es so schön war, berechnen wir eine Regression für\n\nGröße \\(\\rightarrow\\) Miete\nNeubau \\(\\rightarrow\\) Miete und interpretieren, was wir berechnet haben."
+  },
+  {
+    "objectID": "exercises/19-ex.html#neues-aus-der-forschung",
+    "href": "exercises/19-ex.html#neues-aus-der-forschung",
+    "title": "Übung: ‘Isolation von Einflüssen’",
+    "section": "2 Neues aus der Forschung",
+    "text": "2 Neues aus der Forschung\nLörz et al. (2026) stellen folgende Theorie über Prozesse sozialer Ungleichheit beim Übergang ins Gymnasium vor:\n\n\n\nSchematische Darstellung des theoretischen Modells und der erwarteten direkten und indirekten Zusammenhänge.\n\n\nSie legen außerdem folgende Informationen über Ihre Daten vor:\n\n\n\n\n\n\n\n\n\n\nWelle\nInsgesamt\nSozioökonomischer Status der Eltern\n\n\n\n\n\n\n\n\nNiedrig (1. Quartil)\nMittel (2./3. Quartil)\nHoch (4. Quartil)\n\n\nKulturelle Ressourcen\n\n\n\n\n\n\nBücherbesitz\n2\n2,30 (1,31)\n1,37 (1,10)\n2,28 (1,18)\n\n\nSchüler*innenmerkmale\n\n\n\n\n\n\nKompetenzen\n2\n0,00 (1,00)\n−0,60 (0,89)\n−0,05 (0,94)\n\n\nAnstrengungsbereitschaft\n2\n0,00 (1,00)\n−0,04 (0,99)\n−0,00 (1,01)\n\n\nElterneinschätzungen\n\n\n\n\n\n\nC: Kosteneinschätzung Eltern\n1\n0,00 (1,00)\n0,33 (1,07)\n0,02 (0,97)\n\n\nB: Studienwunsch Eltern\n1\n0,66 (0,47)\n0,50 (0,50)\n0,65 (0,48)\n\n\nP: Erfolgsaussichten Eltern\n1\n0,00 (1,00)\n−0,24 (1,00)\n−0,05 (0,99)\n\n\nLehrer*innenbeurteilungen\n\n\n\n\n\n\nLeistungsbeurteilung\n2\n0,00 (1,00)\n−0,44 (0,98)\n−0,03 (0,96)\n\n\nAnstrengungsbeurteilung\n2\n0,00 (1,00)\n−0,37 (1,00)\n−0,02 (0,97)\n\n\nKontrollvariablen\n\n\n\n\n\n\nMigrationshintergrund\n1\n0,45 (0,50)\n0,66 (0,47)\n0,44 (0,50)\n\n\nGeschlecht (männlich)\n1\n0,48 (0,50)\n0,49 (0,50)\n0,49 (0,50)\n\n\nAlter im Jahr 2010\n1\n11,4 (0,60)\n11,5 (0,64)\n11,4 (0,59)\n\n\nN\n\n3641\n931\n1807\n\n\n%\n\n100,0\n25,6\n49,6\n\n\n\nNehmen Sie einen Einfluss aus der Darstellung der Autor:innen und legen Sie dar, welche Informationen in Beziehung gesetzt werden müssen, um diesen Einfluss zu erfassen."
   }
 ]
