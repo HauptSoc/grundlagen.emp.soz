@@ -14,8 +14,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 |  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
 | 4 | 12.05. | Einfache lineare Modelle I | 📖 | [🖥](slides/18-slides.qmd) | [✍](exercises/18-ex.qmd) |  |  |
 | 5 | 19.05. | Einfache lineare Modelle II | 📖 | [🖥](slides/19-slides.qmd) | [✍](exercises/19-ex.qmd) |  |  |
-| 6 | 26.05. | Pfingsten |  |  |  |  |  |
-| 7 | 02.06. | Varianzanalyse | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 6 | 19.05. | Einfache lineare Modelle III | 📖 | [🖥](slides/20-slides.qmd) | [✍](exercises/19-ex.qmd) |  |  |
 |  |  | **III. Die Isolation von Einflüssen für gute Vergleiche** |  |  |  |  |  |
 |  | 09.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
 | 8 | 16.06. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |

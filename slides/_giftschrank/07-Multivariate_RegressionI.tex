@@ -63,9 +63,9 @@
 \setbeamerfont{block title}{size=\normalsize}
 
 \title{Datenauswertung}
-\subtitle{Multivariate Regression - Isolation von Einflüssen}
+\subtitle{Multivariate Regression - Isolation von EinflÃ¼ssen}
 \author{Andreas Haupt \\ andreas.haupt@kit.edu }
-\institute{Karlsruher Institut für Technologie}
+\institute{Karlsruher Institut fÃ¼r Technologie}
 \begin{document}
 
 % change the following line to "ngerman" for German style date and logos
@@ -89,11 +89,11 @@
 
 \frame{
 \frametitle{Das Ausgangsproblem}
-Wir interessieren uns für systematische Zusammenhänge von mindestens zwei Merkmalen (um ggf. Effekte zu studieren). In vielen Fällen hängen die zu studierenden Merkmale aber noch systematisch mit anderen Merkmalen zusammen. Wenn dies nicht beachtet wird, kann das die Analyseergebnisse des zu studierenden Zusammenhangs stark verzerren und uns zu völlig falschen Schlüssen führen. 
+Wir interessieren uns fÃ¼r systematische ZusammenhÃ¤nge von mindestens zwei Merkmalen (um ggf. Effekte zu studieren). In vielen FÃ¤llen hÃ¤ngen die zu studierenden Merkmale aber noch systematisch mit anderen Merkmalen zusammen. Wenn dies nicht beachtet wird, kann das die Analyseergebnisse des zu studierenden Zusammenhangs stark verzerren und uns zu vÃ¶llig falschen SchlÃ¼ssen fÃ¼hren. 
 
 \vfill
 
-Unser Ziel ist es daher, den interessierenden Zusammenhang zwischen zwei Eigenschaften von allen anderen mit diesen Eigenschaften verbundenen Zusammenhängen \textbf{zu isolieren}. 
+Unser Ziel ist es daher, den interessierenden Zusammenhang zwischen zwei Eigenschaften von allen anderen mit diesen Eigenschaften verbundenen ZusammenhÃ¤ngen \textbf{zu isolieren}. 
 
 \vfill
 
@@ -110,14 +110,14 @@ Der Einbezug solcher dritten Merkmale auf den Zusammenhang von zwei interessiere
 \end{frame}
 
 
-\begin{frame}{Isolation von Einflüssen durch Konstanthaltung}
+\begin{frame}{Isolation von EinflÃ¼ssen durch Konstanthaltung}
 
-Die grundlegende Idee einer Isolation von Einflüssen ist die Konstanthaltung. Sie basiert auf dem Gedanken, nur Gruppen zu vergleichen (= in Differenz zu setzen), die in anderen ("`dritten"') Eigenschaft gleich sind. Wir können z.B. die Leseleistung von Schüler:innen nach Leseschwäche und Nachhilfebesuch vergleichen: 
+Die grundlegende Idee einer Isolation von EinflÃ¼ssen ist die Konstanthaltung. Sie basiert auf dem Gedanken, nur Gruppen zu vergleichen (= in Differenz zu setzen), die in anderen ("`dritten"') Eigenschaft gleich sind. Wir kÃ¶nnen z.B. die Leseleistung von SchÃ¼ler:innen nach LeseschwÃ¤che und Nachhilfebesuch vergleichen: 
 
 \begin{center}
 \begin{tabular}{ccc}  \toprule
   & \multicolumn{2}{c}{Nachhilfe}  \\
-Leseschwäche & nein & ja  \\ \cmidrule{2-3}
+LeseschwÃ¤che & nein & ja  \\ \cmidrule{2-3}
 nein & 299.7 & 343.9  \\
 ja & 224.8 & 265.7  \\ \bottomrule
 \end{tabular}
@@ -126,28 +126,28 @@ ja & 224.8 & 265.7  \\ \bottomrule
 \end{frame}
 
 \frame{
-\frametitle{Isolation von Einflüssen durch Konstanthaltung}
+\frametitle{Isolation von EinflÃ¼ssen durch Konstanthaltung}
 
 Ein Vergleich von Gruppen nach einem Outcome, die in weiteren Eigenschaften gleich sind, ist in vielen Aspekten sehr limitiert: 
 
 \begin{enumerate}
-  \item Meist haben wir schlicht zu kleine Stichproben, um dies durchzuführen. 
-  \item Mit metrisch gemessenen Eigenschaften ist dieses Verfahren zwar theoretisch möglich, aber praktisch nicht durchführbar. 
-  \item Es wird sehr schnell sehr unübersichtlich. 
+  \item Meist haben wir schlicht zu kleine Stichproben, um dies durchzufÃ¼hren. 
+  \item Mit metrisch gemessenen Eigenschaften ist dieses Verfahren zwar theoretisch mÃ¶glich, aber praktisch nicht durchfÃ¼hrbar. 
+  \item Es wird sehr schnell sehr unÃ¼bersichtlich. 
 \end{enumerate}
 
-Eine weit verbreitete Alternative ist die \textit{multivariate Regression}. Dabei werden Einflüsse auf ein Outcome voneinander unabhängig analysiert. 
+Eine weit verbreitete Alternative ist die \textit{multivariate Regression}. Dabei werden EinflÃ¼sse auf ein Outcome voneinander unabhÃ¤ngig analysiert. 
 
 }
 
 \begin{frame}
 \frametitle{Multivariate Regression - die Idee}
 
-In einer Regression können sehr viele Drittvariablen genutzt werden, um den direkten Einfluss eines Exposures/Treatments auf ein Outcome zu isolieren und/oder um zu analysieren, ob der Einfluss eines Treatments gruppenspezifisch ist.
+In einer Regression kÃ¶nnen sehr viele Drittvariablen genutzt werden, um den direkten Einfluss eines Exposures/Treatments auf ein Outcome zu isolieren und/oder um zu analysieren, ob der Einfluss eines Treatments gruppenspezifisch ist.
 
 \vfill
 
-Unser Ziel ist es meist \textit{nicht}, alle Einflüsse auf ein Outcome zu modellieren. Wir möchten in der Regel in eine Situation kommen, wo wir wie in einem einfachen, randomisierten Experiment Gruppen sinnvoll vergleichen können. Es ist jedoch eine Ausnahe, dass Gruppenzugehörigkeiten zufällig sind. Gruppen setzen sich nach selektiven Prozessen zusammen. Soziale Prozesse können sich überlagern oder verschachteln. Wenn wir aber über Gruppenvergleiche etwas über einen spezifischen sozialen Prozess lernen wollen\footnote{Zum Beispiel: Wie können wir sinnvoll den Einfluss einer Leseschwäche auf die Leseleistung über einen Vergleich von Schüler:innen mit und ohne Leseschwäche analysieren?}, müssen wir diese Dinge voneinander trennen (=isolieren).  
+Unser Ziel ist es meist \textit{nicht}, alle EinflÃ¼sse auf ein Outcome zu modellieren. Wir mÃ¶chten in der Regel in eine Situation kommen, wo wir wie in einem einfachen, randomisierten Experiment Gruppen sinnvoll vergleichen kÃ¶nnen. Es ist jedoch eine Ausnahe, dass GruppenzugehÃ¶rigkeiten zufÃ¤llig sind. Gruppen setzen sich nach selektiven Prozessen zusammen. Soziale Prozesse kÃ¶nnen sich Ã¼berlagern oder verschachteln. Wenn wir aber Ã¼ber Gruppenvergleiche etwas Ã¼ber einen spezifischen sozialen Prozess lernen wollen\footnote{Zum Beispiel: Wie kÃ¶nnen wir sinnvoll den Einfluss einer LeseschwÃ¤che auf die Leseleistung Ã¼ber einen Vergleich von SchÃ¼ler:innen mit und ohne LeseschwÃ¤che analysieren?}, mÃ¼ssen wir diese Dinge voneinander trennen (=isolieren).  
 
 \end{frame}
 
@@ -194,18 +194,18 @@ $\cdots $ & ist eine Korrelation zwischen Eigenschaften\\
 
 \begin{frame}{Ein alternativer Blick auf $\hat{\beta}$}
 
-Für die nächsten Schritte ist es sehr nützlich, einen alternativen Blick auf $\hat{\beta}$-Koeffizienten zu nutzen. Die Berechnung des $\hat{\beta}$-Koeffizienten lässt sich auch darstellen als: 
+FÃ¼r die nÃ¤chsten Schritte ist es sehr nÃ¼tzlich, einen alternativen Blick auf $\hat{\beta}$-Koeffizienten zu nutzen. Die Berechnung des $\hat{\beta}$-Koeffizienten lÃ¤sst sich auch darstellen als: 
 
 \begin{equation}
 \hat{\beta} = \frac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = r_{yx} \cdot \frac{s_y}{s_{x}}
 \end{equation}
 \vfill
-D.h.: Ein $\beta$-Koeffizient ist standardisiertes bzw. skaliertes Pearsons $r$. Das Verhältnis der Standardabweichungen vom Outcome und der erklärenden Variable bilden dabei den Skalierungsfaktor. Ein identisches $r$ bei unterschiedlichen Standardabweichungen führt daher zu verschiedenen $\hat{\beta}$-Koeffizienten.
+D.h.: Ein $\beta$-Koeffizient ist standardisiertes bzw. skaliertes Pearsons $r$. Das VerhÃ¤ltnis der Standardabweichungen vom Outcome und der erklÃ¤renden Variable bilden dabei den Skalierungsfaktor. Ein identisches $r$ bei unterschiedlichen Standardabweichungen fÃ¼hrt daher zu verschiedenen $\hat{\beta}$-Koeffizienten.
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Die Berechnung isolierter Einflüsse (für den Fall von drei Variablen)}
+\frametitle{Die Berechnung isolierter EinflÃ¼sse (fÃ¼r den Fall von drei Variablen)}
 
 $\beta_x$-Koeffizient
 \begin{equation}
@@ -224,7 +224,7 @@ $\alpha$-Koeffizient
 
 \vfill 
 
-Wichtig: In einem multivariaten Regressionsmodell werden \textbf{immer} alle Korrelationen aller erklärenden Variablen voneinander bereinigt. Daher analysieren wir stets Fälle in Bezug auf ein Exposure/Treatment miteinander, die \textbf{in allen anderen Eigenschaften nicht mehr korreliert sind}. Die Konstante bezieht sich immer auf den Durchschnitt des Outcomes, wenn alle Eigenschaften null sind bzw. auf alle Referenzkategorien gleichzeitig. 
+Wichtig: In einem multivariaten Regressionsmodell werden \textbf{immer} alle Korrelationen aller erklÃ¤renden Variablen voneinander bereinigt. Daher analysieren wir stets FÃ¤lle in Bezug auf ein Exposure/Treatment miteinander, die \textbf{in allen anderen Eigenschaften nicht mehr korreliert sind}. Die Konstante bezieht sich immer auf den Durchschnitt des Outcomes, wenn alle Eigenschaften null sind bzw. auf alle Referenzkategorien gleichzeitig. 
 
 \end{frame}
 
@@ -252,12 +252,12 @@ Wichtig: In einem multivariaten Regressionsmodell werden \textbf{immer} alle Kor
 
 \vfill 
 
-Bei einem additiven Einfluss ist es nicht nötig, Einflüsse voneinander zu isolieren. Die Unterschiede, die X in Y verursacht, werden nicht durch Unterschiede in Z auch noch zusätzlich bedingt. Gleiches gilt für die Unterschiede, die Z in Y verursacht. 
+Bei einem additiven Einfluss ist es nicht nÃ¶tig, EinflÃ¼sse voneinander zu isolieren. Die Unterschiede, die X in Y verursacht, werden nicht durch Unterschiede in Z auch noch zusÃ¤tzlich bedingt. Gleiches gilt fÃ¼r die Unterschiede, die Z in Y verursacht. 
 
-Dennoch kann es sinnvoll sein, die Annahme eines additiven Einflusses zu überprüfen. 
+Dennoch kann es sinnvoll sein, die Annahme eines additiven Einflusses zu Ã¼berprÃ¼fen. 
 \end{frame}
 
-%%%%%%%%%%%% Unabhängig: Geschwister & Schultyp %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% UnabhÃ¤ngig: Geschwister & Schultyp %%%%%%%%%%%%%%%%%
 
 \frame{
 \frametitle{Fall 1: Additiver Einfluss}
@@ -270,7 +270,7 @@ Dennoch kann es sinnvoll sein, die Annahme eines additiven Einflusses zu überprü
 \begin{tabular}{l*{3}{c}}
 \toprule
             &\multicolumn{3}{c}{Humanistische Ausrichtung}\\
-Ältere(s) Geschwister&        nein&          ja&       Total\\
+Ã„ltere(s) Geschwister&        nein&          ja&       Total\\
 \midrule
 nein        &        1585&        2435&        4020\\
 ja          &         395&         585&         980\\
@@ -293,14 +293,14 @@ Total       &        1980&        3020&        5000\\
   \end{minipage}
 \end{center}
 
-Wichtig: Unterschiede in den Eigenschaften an sich können weiterhin bestehen. Die Behauptung, dass der Einfluss beider additiv ist, besteht darin, dass wir keinen Unterschied in Bezug auf die Leseleistung \textit{erwarten}, wenn wir Gruppen mit gleichen Kombinationen der Eigenschaften vergleichen. 
+Wichtig: Unterschiede in den Eigenschaften an sich kÃ¶nnen weiterhin bestehen. Die Behauptung, dass der Einfluss beider additiv ist, besteht darin, dass wir keinen Unterschied in Bezug auf die Leseleistung \textit{erwarten}, wenn wir Gruppen mit gleichen Kombinationen der Eigenschaften vergleichen. 
 }
 
 \begin{frame}
 \frametitle{Fall 1: Additiver Einfluss}
 
 \begin{tabular}{lrr} \toprule
- & \multicolumn{2}{c}{Ältere(s) Geschwister}\\
+ & \multicolumn{2}{c}{Ã„ltere(s) Geschwister}\\
 Humanistische Ausrichtung & nein & ja\\ \midrule
 nein & 296 &  317\\
 ja & 306 &  334\\ \bottomrule
@@ -355,7 +355,7 @@ Wenn $r_{xz} = 0$ ist, dann
 \end{tikzpicture}
 \end{figure}
 
-{{ \scriptsize Eine Mediation (oder auch "`Intervention"') liegt genau dann vor, wenn die Beziehung zwischen den Merkmalen X und Y nicht direkt besteht, sondern über eine dritte Eigenschaft Z vermittelt wird.  Bei einer Mediation stehen die drei Eigenschaften in einer Kausalkette. Die dritte Eigenschaft Z ist das "`Bindeglied"' zwischen X und Y. Würden wir uns \textbf{nur} für den Einfluss von Z auf Y interessieren, müssen wir \textbf{in diesem Fall nicht} die Unterschiede von X beachten, die systematische Unterschiede in Z bedingen. }}
+{{ \scriptsize Eine Mediation (oder auch "`Intervention"') liegt genau dann vor, wenn die Beziehung zwischen den Merkmalen X und Y nicht direkt besteht, sondern Ã¼ber eine dritte Eigenschaft Z vermittelt wird.  Bei einer Mediation stehen die drei Eigenschaften in einer Kausalkette. Die dritte Eigenschaft Z ist das "`Bindeglied"' zwischen X und Y. WÃ¼rden wir uns \textbf{nur} fÃ¼r den Einfluss von Z auf Y interessieren, mÃ¼ssen wir \textbf{in diesem Fall nicht} die Unterschiede von X beachten, die systematische Unterschiede in Z bedingen. }}
 
 \end{frame}
 
@@ -415,7 +415,7 @@ Wenn $r_{xz} = 0$ ist, dann
 \begin{frame}
 \frametitle{Fall 2: Mediation/Intervention}
 
-Im Fall einer Mediation beruht der Zusammenhang von $r_{xy}$ vollständig auf dem Produkt von $r_{xz}$ und $r_{zy}$. 
+Im Fall einer Mediation beruht der Zusammenhang von $r_{xy}$ vollstÃ¤ndig auf dem Produkt von $r_{xz}$ und $r_{zy}$. 
 
 \vfill
 
@@ -441,7 +441,7 @@ Wenn $r_{xy}$ = $r_{xz} \cdot r_{zy}$
 \begin{block}{Vorsicht bei der Interpretation}
 
 Wenn eine Mediation durch Z vorliegt, bedeutet dies nicht, dass das Treatment/Exposure \textbf{keinen Einfluss} auf das Outcome hat. Es hat lediglich keinen \textbf{direkten Einfluss}. Ein $\hat{\beta}$ von 0 bei einer Mediation bedeuetet daher nicht, dass das Treatment/Exposure nicht wirkt. 
-\\[1em] Eindeutig verbessert das Schulprojekt vermittelt über ein höheres Leseinteresse die Leseleistung.
+\\[1em] Eindeutig verbessert das Schulprojekt vermittelt Ã¼ber ein hÃ¶heres Leseinteresse die Leseleistung.
 \end{block}
 
 \end{frame}
@@ -463,7 +463,7 @@ Wenn eine Mediation durch Z vorliegt, bedeutet dies nicht, dass das Treatment/Ex
 \node at (2.75,-0.25)  {\large Y};
 \end{tikzpicture}
 \end{figure}
-Eine Konfundierung zwischen Treatment/Exposure (X) und einem Outcome (Y) \textbf{durch} eine dritte Eigenschaft (Z) liegt genau dann vor, wenn X auf Y eine eigenständige, direkte Wirkung hat und \textbf{zusätzlich} über das Merkmal Z einen indirekten Einfluss auf Y hat. \textbf{Wenn} wir daran interessiert sind, wie stark der direkte Einfluss ist, dann müssen wir diesen vom indirekten Einfluss isolieren. Andernfalls würden wir den direkten Einfluss über- oder unterschätzen. 
+Eine Konfundierung zwischen Treatment/Exposure (X) und einem Outcome (Y) \textbf{durch} eine dritte Eigenschaft (Z) liegt genau dann vor, wenn X auf Y eine eigenstÃ¤ndige, direkte Wirkung hat und \textbf{zusÃ¤tzlich} Ã¼ber das Merkmal Z einen indirekten Einfluss auf Y hat. \textbf{Wenn} wir daran interessiert sind, wie stark der direkte Einfluss ist, dann mÃ¼ssen wir diesen vom indirekten Einfluss isolieren. Andernfalls wÃ¼rden wir den direkten Einfluss Ã¼ber- oder unterschÃ¤tzen. 
 
 \end{frame}
 
@@ -517,7 +517,7 @@ Eine Konfundierung zwischen Treatment/Exposure (X) und einem Outcome (Y) \textbf
 \begin{tabular}{c*{6}{c}}
 \toprule
 \multicolumn{2}{c}{A} & \multicolumn{2}{c}{B} & \\  \cmidrule{1-2} \cmidrule{3-4}
-Leseschwäche & Nachhilfe & Leseschwäche & Nachhilfe &     $\bar{y}_A $&      $\bar{y}_B$&        Differenz\\
+LeseschwÃ¤che & Nachhilfe & LeseschwÃ¤che & Nachhilfe &     $\bar{y}_A $&      $\bar{y}_B$&        Differenz\\
 \midrule
 nein & nein &  ja& nein         &       299.7&       224.8&       -74.9\\
 nein & ja    & ja& ja           &      343.9&       265.7&       -78.2\\ \midrule
@@ -582,13 +582,13 @@ Im Fall einer Konfundierung besteht der gesamte Einfluss von X auf Y in einer Ko
 
 \vfill
 
-Wenn $|r_{zy}| > 0 \, \text{und} \, |r_{xy}| > 0$, dann wird $\hat{\beta}_x$ durch die Trennung des indirekten Einflusses kleiner. Vor der Trennung war dieser Einfluss eine Kombination von zwei positiven oder negativen Einflüssen.  
+Wenn $|r_{zy}| > 0 \, \text{und} \, |r_{xy}| > 0$, dann wird $\hat{\beta}_x$ durch die Trennung des indirekten Einflusses kleiner. Vor der Trennung war dieser Einfluss eine Kombination von zwei positiven oder negativen EinflÃ¼ssen.  
 
 \begin{equation*}
 \hat{\beta}_x=\frac{\textcolor{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}
 \end{equation*}
 
-Wenn $r_{zy} < 0 \, \text{und} \, r_{xy} > 0$, dann wird $\hat{\beta}_x$ durch die Trennung des indirekten Einflusses größer. Vor der Trennung war dieser Einfluss eine Kombination eines positiven und eines negativen Einflusses.  
+Wenn $r_{zy} < 0 \, \text{und} \, r_{xy} > 0$, dann wird $\hat{\beta}_x$ durch die Trennung des indirekten Einflusses grÃ¶ÃŸer. Vor der Trennung war dieser Einfluss eine Kombination eines positiven und eines negativen Einflusses.  
 
 \end{frame}
 
@@ -620,7 +620,7 @@ Wenn $r_{zy} < 0 \, \text{und} \, r_{xy} > 0$, dann wird $\hat{\beta}_x$ durch d
 \end{tikzpicture}
 \end{figure}
 
-Nur bei einem randomisierten Treatment bestehen keine Einflüsse von dritten Eigenschaften (Z) auf die Wahrscheinlichkeit, ein Treatment zu erhalten. In den meisten empirischen Situationen selektieren/sortieren sich Untersuchungseinheiten nach spezifischen Ausprägungen von Z in das Treatment/Exposure. Sowohl das Treatment/Exposure als auch die sortierende Eigenschaft Z haben direkte Einflüsse auf das Outcome.
+Nur bei einem randomisierten Treatment bestehen keine EinflÃ¼sse von dritten Eigenschaften (Z) auf die Wahrscheinlichkeit, ein Treatment zu erhalten. In den meisten empirischen Situationen selektieren/sortieren sich Untersuchungseinheiten nach spezifischen AusprÃ¤gungen von Z in das Treatment/Exposure. Sowohl das Treatment/Exposure als auch die sortierende Eigenschaft Z haben direkte EinflÃ¼sse auf das Outcome.
 
 \end{frame}
 
@@ -671,7 +671,7 @@ Nur bei einem randomisierten Treatment bestehen keine Einflüsse von dritten Eige
 \begin{block}{Vorsicht bei der Interpretation (again)}
 \begin{itemize}
   \item Eine Konfundierung und eine Selektion ins Treatment kann eine Frage der theoretischen Perspektive sein (was ist das Treatment?) oder eine Frage der angenommenen Wirkrichtung ($X \rightarrow Z$ oder $X \leftarrow Z$). 
-  \item Eine Selektion ins Treatment hat zunächst nichts mit der Repräsentativität der Stichprobe zu tun. Sie können unabhängig voneinander Selektion in die Stichprobe und Selektion ins Treatment haben. 
+  \item Eine Selektion ins Treatment hat zunÃ¤chst nichts mit der ReprÃ¤sentativitÃ¤t der Stichprobe zu tun. Sie kÃ¶nnen unabhÃ¤ngig voneinander Selektion in die Stichprobe und Selektion ins Treatment haben. 
 \end{itemize}
 \end{block}
 
@@ -699,7 +699,7 @@ Nur bei einem randomisierten Treatment bestehen keine Einflüsse von dritten Eige
 \node at (2.75,-0.25)  {\large Y};
 \end{tikzpicture}
 \end{figure}
-Eine Interaktion liegt genau dann vor, wenn die Stärke des Effekts von X auf Y systematisch von einer dritten Eigenschaft Z abhängig ist. Dabei ist es unerheblich, ob die Eigenschaft Z \textit{zusätzlich} \textit{auch} einen Einfluss auf X und Y ausübt. 
+Eine Interaktion liegt genau dann vor, wenn die StÃ¤rke des Effekts von X auf Y systematisch von einer dritten Eigenschaft Z abhÃ¤ngig ist. Dabei ist es unerheblich, ob die Eigenschaft Z \textit{zusÃ¤tzlich} \textit{auch} einen Einfluss auf X und Y ausÃ¼bt. 
 \end{frame}
 
 
@@ -722,31 +722,31 @@ Eine Interaktion liegt genau dann vor, wenn die Stärke des Effekts von X auf Y s
 \begin{frame}[fragile]
 \frametitle{Fall 5: Interaktion}
 
-Wenn wir mittlere Bildung ($B$) als Referenzkategorie für die Bildung nutzen und das Geschlecht ($F$) so codieren, dass Männer eine 0 erhalten und Frauen eine 1, könnten wir versucht sein, folgende Regression zu schätzen: 
+Wenn wir mittlere Bildung ($B$) als Referenzkategorie fÃ¼r die Bildung nutzen und das Geschlecht ($F$) so codieren, dass MÃ¤nner eine 0 erhalten und Frauen eine 1, kÃ¶nnten wir versucht sein, folgende Regression zu schÃ¤tzen: 
 
 \[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}}  \] 
 
-Das würde uns einen Geschlechtereinfluss $\hat{\beta_1}F_i$ als auch einen vom Geschlecht \textbf{unabhängigen} Einfluss von Bildung geben. Wir möchten aber einen \textbf{geschlechtsspezifischen} Einfluss berechnen. 
+Das wÃ¼rde uns einen Geschlechtereinfluss $\hat{\beta_1}F_i$ als auch einen vom Geschlecht \textbf{unabhÃ¤ngigen} Einfluss von Bildung geben. Wir mÃ¶chten aber einen \textbf{geschlechtsspezifischen} Einfluss berechnen. 
 
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Fall 5: Interaktion}
 
-Wir müssen daher die Terme für Bildung für beide Geschlechter seperat berechnen. Das kann man auf folgende Art erreichen: 
+Wir mÃ¼ssen daher die Terme fÃ¼r Bildung fÃ¼r beide Geschlechter seperat berechnen. Das kann man auf folgende Art erreichen: 
 
 \[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}} + \hat{\beta_4}B_{i_{niedrig}}\cdot F_i + \hat{\beta_5}B_{i_{hoch}}\cdot F_i  \] 
 
-Damit können wir alle sechs Gruppen abbilden: 
+Damit kÃ¶nnen wir alle sechs Gruppen abbilden: 
 
 \begin{center}
 {{ \small 
 \begin{tabular}{lcccr} \toprule
                     & Geschlecht & niedrige Bildung & hohe Bildung & Gruppe\\  \midrule
-$\hat{\alpha}$                          & 0 & 0 & 0 & Männer, mittel \\
+$\hat{\alpha}$                          & 0 & 0 & 0 & MÃ¤nner, mittel \\
 $\hat{\beta_1}F_i$                      & 1 & 0 & 0 & Frauen, mittel \\
-$\hat{\beta_2}B_{i_{niedrig}}$          & 0 & 1 & 0 & Männer, niedrig \\
-$\hat{\beta_3}B_{i_{hoch}}$             & 0 & 0 & 1 & Männer, hoch \\
+$\hat{\beta_2}B_{i_{niedrig}}$          & 0 & 1 & 0 & MÃ¤nner, niedrig \\
+$\hat{\beta_3}B_{i_{hoch}}$             & 0 & 0 & 1 & MÃ¤nner, hoch \\
 $\hat{\beta_4}B_{i_{niedrig}}F_i$       & 1 & 1 & 0 & Frauen, niedrig \\
 $\hat{\beta_5}B_{i_{hoch}}F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bottomrule
 \end{tabular}
@@ -793,10 +793,10 @@ $\hat{\beta_5}B_{i_{hoch}}F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bottomrule
 \begin{frame}
 \frametitle{Leseempfehlungen}
 
-Über die graphische Darstellung von Kausaltheorien: \href{https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html}{Intro to DAGs}
+Ãœber die graphische Darstellung von Kausaltheorien: \href{https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html}{Intro to DAGs}
 
 \vfill
 
-Ein kleiner ``Crash Course'' über gute und schlechte Wege Einflüsse zu isolieren: \href{http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/}{A Crash Course in Good and Bad Control}
+Ein kleiner ``Crash Course'' Ã¼ber gute und schlechte Wege EinflÃ¼sse zu isolieren: \href{http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/}{A Crash Course in Good and Bad Control}
 
 \end{frame}

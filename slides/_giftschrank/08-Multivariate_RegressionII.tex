@@ -63,9 +63,9 @@
 \setbeamerfont{block title}{size=\normalsize}
 
 \title{Datenauswertung}
-\subtitle{Multivariate Regression - Komplexere Fälle}
+\subtitle{Multivariate Regression - Komplexere FÃ¤lle}
 \author{Andreas Haupt \\ andreas.haupt@kit.edu }
-\institute{Karlsruher Institut für Technologie}
+\institute{Karlsruher Institut fÃ¼r Technologie}
 \begin{document}
 
 % change the following line to "ngerman" for German style date and logos
@@ -95,7 +95,7 @@
 \node at (2.75,-0.25)  {\large Y};
 \end{tikzpicture}
 \end{figure}
-Eine Interaktion liegt genau dann vor, wenn die Stärke des Effekts von X auf Y systematisch von einer dritten Eigenschaft Z abhängig ist. Dabei ist es unerheblich, ob die Eigenschaft Z \textit{zusätzlich} \textit{auch} einen Einfluss auf X und Y ausübt. 
+Eine Interaktion liegt genau dann vor, wenn die StÃ¤rke des Effekts von X auf Y systematisch von einer dritten Eigenschaft Z abhÃ¤ngig ist. Dabei ist es unerheblich, ob die Eigenschaft Z \textit{zusÃ¤tzlich} \textit{auch} einen Einfluss auf X und Y ausÃ¼bt. 
 \end{frame}
 
 
@@ -118,31 +118,31 @@ Eine Interaktion liegt genau dann vor, wenn die Stärke des Effekts von X auf Y s
 \begin{frame}[fragile]
 \frametitle{Interaktion}
 
-Wenn wir mittlere Bildung ($B$) als Referenzkategorie für die Bildung nutzen und das Geschlecht ($F$) so codieren, dass Männer eine 0 erhalten und Frauen eine 1, könnten wir versucht sein, folgende Regression zu schätzen: 
+Wenn wir mittlere Bildung ($B$) als Referenzkategorie fÃ¼r die Bildung nutzen und das Geschlecht ($F$) so codieren, dass MÃ¤nner eine 0 erhalten und Frauen eine 1, kÃ¶nnten wir versucht sein, folgende Regression zu schÃ¤tzen: 
 
 \[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}}  \] 
 
-Das würde uns einen Geschlechtereinfluss $\hat{\beta_1}F_i$ als auch einen vom Geschlecht \textbf{unabhängigen} Einfluss von Bildung geben. Wir möchten aber einen \textbf{geschlechtsspezifischen} Einfluss berechnen. 
+Das wÃ¼rde uns einen Geschlechtereinfluss $\hat{\beta_1}F_i$ als auch einen vom Geschlecht \textbf{unabhÃ¤ngigen} Einfluss von Bildung geben. Wir mÃ¶chten aber einen \textbf{geschlechtsspezifischen} Einfluss berechnen. 
 
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Fall 5: Interaktion}
 
-Wir müssen daher die Terme für Bildung für beide Geschlechter seperat berechnen. Das kann man auf folgende Art erreichen: 
+Wir mÃ¼ssen daher die Terme fÃ¼r Bildung fÃ¼r beide Geschlechter seperat berechnen. Das kann man auf folgende Art erreichen: 
 
 \[ \hat{y}_i = \hat{\alpha} + \hat{\beta_1}F_i + \hat{\beta_2}B_{i_{niedrig}} + \hat{\beta_3}B_{i_{hoch}} + \hat{\beta_4}B_{i_{niedrig}}\cdot F_i + \hat{\beta_5}B_{i_{hoch}}\cdot F_i  \] 
 
-Damit können wir alle sechs Gruppen abbilden: 
+Damit kÃ¶nnen wir alle sechs Gruppen abbilden: 
 
 \begin{center}
 {{ \small 
 \begin{tabular}{lcccr} \toprule
                     & Geschlecht & niedrige Bildung & hohe Bildung & Gruppe\\  \midrule
-$\hat{\alpha}$                          & 0 & 0 & 0 & Männer, mittel \\
+$\hat{\alpha}$                          & 0 & 0 & 0 & MÃ¤nner, mittel \\
 $\hat{\beta_1}F_i$                      & 1 & 0 & 0 & Frauen, mittel \\
-$\hat{\beta_2}B_{i_{niedrig}}$          & 0 & 1 & 0 & Männer, niedrig \\
-$\hat{\beta_3}B_{i_{hoch}}$             & 0 & 0 & 1 & Männer, hoch \\
+$\hat{\beta_2}B_{i_{niedrig}}$          & 0 & 1 & 0 & MÃ¤nner, niedrig \\
+$\hat{\beta_3}B_{i_{hoch}}$             & 0 & 0 & 1 & MÃ¤nner, hoch \\
 $\hat{\beta_4}B_{i_{niedrig}} \cdot F_i$       & 1 & 1 & 0 & Frauen, niedrig \\
 $\hat{\beta_5}B_{i_{hoch}} \cdot F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bottomrule
 \end{tabular}
@@ -193,12 +193,12 @@ $\hat{\beta_5}B_{i_{hoch}} \cdot F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bot
 \end{tikzpicture}
 \end{figure}
 
-{{Ein Collider liegt dann vor, wenn ein Treatment X einen Einfluss auf das Outcome Y hat, aber parallel die Verteilung einer dritten Eigenschaft Z vom Outcome bedingt wird.  In einem solchen Fall führt die Isolation des Einflusses von X $\rightarrow$ Y mit Hilfe von Z zu völlig falschen Ergebnissen.}}
+{{Ein Collider liegt dann vor, wenn ein Treatment X einen Einfluss auf das Outcome Y hat, aber parallel die Verteilung einer dritten Eigenschaft Z vom Outcome bedingt wird.  In einem solchen Fall fÃ¼hrt die Isolation des Einflusses von X $\rightarrow$ Y mit Hilfe von Z zu vÃ¶llig falschen Ergebnissen.}}
 
 \end{frame}
 
 
-\begin{frame}{Medienkonsum und Übergewicht (again)}
+\begin{frame}{Medienkonsum und Ãœbergewicht (again)}
 \begin{columns}
 
 \small
@@ -215,10 +215,10 @@ $\hat{\beta_5}B_{i_{hoch}} \cdot F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bot
 
 \begin{column}{.6\linewidth}
 \begin{itemize}
-	\item Selbstverletzungstendenzen bilden in Modell d ein Collider mit Übergewicht und Medienkonsum. 
-	\item Laut diesem Modell neigen Personen mit Übergewicht stärker zu Selbstverletzungen und sind daher in der Gruppe der ``Selbstverletztenden'' überrepräsentiert. 
-	\item Das Modell nimmt außerdem einen direkten Einfluss des Medienkonsums auf die Selbstverletzungstendenz an. 
-	\item Wenn wir den Einfluss von Medienkonsum auf Übergewicht isolieren wollen, dürfen wir nicht für Selbstverletzungstendenzen kontrollieren, weil die Unterscheidung nach diesen Tendenzen \textit{eine implizite, erneute} Unterscheidung nach Übergewicht ist.
+	\item Selbstverletzungstendenzen bilden in Modell d ein Collider mit Ãœbergewicht und Medienkonsum. 
+	\item Laut diesem Modell neigen Personen mit Ãœbergewicht stÃ¤rker zu Selbstverletzungen und sind daher in der Gruppe der ``Selbstverletztenden'' Ã¼berreprÃ¤sentiert. 
+	\item Das Modell nimmt auÃŸerdem einen direkten Einfluss des Medienkonsums auf die Selbstverletzungstendenz an. 
+	\item Wenn wir den Einfluss von Medienkonsum auf Ãœbergewicht isolieren wollen, dÃ¼rfen wir nicht fÃ¼r Selbstverletzungstendenzen kontrollieren, weil die Unterscheidung nach diesen Tendenzen \textit{eine implizite, erneute} Unterscheidung nach Ãœbergewicht ist.
 \end{itemize}
 \end{column}
 
@@ -226,7 +226,7 @@ $\hat{\beta_5}B_{i_{hoch}} \cdot F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bot
 \end{frame}
 
 
-\begin{frame}{Fördern Bibliotheksbesuche das Leseinteresse?}
+\begin{frame}{FÃ¶rdern Bibliotheksbesuche das Leseinteresse?}
 \begin{columns}
 
 \small
@@ -241,9 +241,9 @@ $\hat{\beta_5}B_{i_{hoch}} \cdot F_i$          & 1 & 0 & 1 & Frauen, hoch\\ \bot
 
 \begin{column}{.6\linewidth}
 \begin{itemize}
-	\item Im linken Modell gehen Schüler:innen mit höherem Leseinteresse mit höherer Wahrscheinlichkeit in die Bibliothek. 
-	\item Frauen gehen mit höherer Wahrscheinlichkeit in die Bibliothek. 
-	\item In diesem Modell erhöht ein Bibliotheksbesuch das Leseinteresse nicht!
+	\item Im linken Modell gehen SchÃ¼ler:innen mit hÃ¶herem Leseinteresse mit hÃ¶herer Wahrscheinlichkeit in die Bibliothek. 
+	\item Frauen gehen mit hÃ¶herer Wahrscheinlichkeit in die Bibliothek. 
+	\item In diesem Modell erhÃ¶ht ein Bibliotheksbesuch das Leseinteresse nicht!
 \end{itemize}
 \end{column}
 
@@ -315,14 +315,14 @@ N        &       30000         &       30000         &       30000         &    
  \includegraphics{../Graphs/dag-collider-depression} 
  }
 \end{center}
-{{\scriptsize Source: \href{https://www.aerzteblatt.de/archiv/223244/Collider-Bias-in-Beobachtungsstudien-Konsequenzen-fuer-die-medizinische-Forschung}{Tönnies et al. (2022)}}}
+{{\scriptsize Source: \href{https://www.aerzteblatt.de/archiv/223244/Collider-Bias-in-Beobachtungsstudien-Konsequenzen-fuer-die-medizinische-Forschung}{TÃ¶nnies et al. (2022)}}}
 \end{column}
 
 \begin{column}{.5\linewidth}
 \begin{itemize}
-	\item Die Probleme ``Kontrolle mit einem Collider'' und Stichprobenselektion können sich überlagern. 
-	\item Prozesse, die mit einer Stichprobenselektion einhergehen, können auch mit dem Treatment, einer Kontrollvariable und/oder dem Outcome korreliert sein.
-	\item In der Grafik bildet einen Fall ab, in der Personen mit geringeren depressiven Zuständen und besserer Gesundheit eher an einer Studie teilnehmen. Dadurch ist die analytische Stichprobe im Vergleich zur Population selektiv. Die Eigenschaft ``Studienteilnahme'' ist daher ein Collider.
+	\item Die Probleme ``Kontrolle mit einem Collider'' und Stichprobenselektion kÃ¶nnen sich Ã¼berlagern. 
+	\item Prozesse, die mit einer Stichprobenselektion einhergehen, kÃ¶nnen auch mit dem Treatment, einer Kontrollvariable und/oder dem Outcome korreliert sein.
+	\item In der Grafik bildet einen Fall ab, in der Personen mit geringeren depressiven ZustÃ¤nden und besserer Gesundheit eher an einer Studie teilnehmen. Dadurch ist die analytische Stichprobe im Vergleich zur Population selektiv. Die Eigenschaft ``Studienteilnahme'' ist daher ein Collider.
 \end{itemize}
 \end{column}
 
@@ -348,9 +348,9 @@ N        &       30000         &       30000         &       30000         &    
 
 \begin{column}{.5\linewidth}
 \begin{itemize}
-	\item Soziale Prozesse können weitaus komplexer sein, als Dreiecksbeziehungen. 
-	\item Typischerweise können Sie aber jedes einzelne Element in komplexen Beziehungen in Form von Dreiecksbeziehungen darstellen. 
-	\item Reduzieren Sie daher Komplexität, indem Sie stets die Ihr Ziel im Auge behalten: Sie wollen gute Vergleiche. 
+	\item Soziale Prozesse kÃ¶nnen weitaus komplexer sein, als Dreiecksbeziehungen. 
+	\item Typischerweise kÃ¶nnen Sie aber jedes einzelne Element in komplexen Beziehungen in Form von Dreiecksbeziehungen darstellen. 
+	\item Reduzieren Sie daher KomplexitÃ¤t, indem Sie stets die Ihr Ziel im Auge behalten: Sie wollen gute Vergleiche. 
 \end{itemize}
 \end{column}
 
@@ -360,11 +360,11 @@ N        &       30000         &       30000         &       30000         &    
 \begin{frame}
 \frametitle{Leseempfehlungen}
 
-Über die graphische Darstellung von Kausaltheorien: \href{https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html}{Intro to DAGs}
+Ãœber die graphische Darstellung von Kausaltheorien: \href{https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html}{Intro to DAGs}
 
 \vfill
 
-Ein kleiner ``Crash Course'' über gute und schlechte Wege Einflüsse zu isolieren: \href{http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/}{A Crash Course in Good and Bad Control}
+Ein kleiner ``Crash Course'' Ã¼ber gute und schlechte Wege EinflÃ¼sse zu isolieren: \href{http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/}{A Crash Course in Good and Bad Control}
 
 \end{frame}
 

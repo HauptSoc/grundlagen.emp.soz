@@ -1,0 +1,763 @@
+---
+title: "Gute Vergleiche: Isolation von Einflüßen - Part 3"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.01
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(haven)
+library(forcats)
+library(tidyr)
+library(knitr)
+
+freda <- read_dta("C:/Daten/FReDA Campus Use File v.1.0.0/Data/freda_long.dta")
+```
+
+
+## Klemmbausteine für datenanalytische Modelle
+
+<br>
+<br>
+
+:::{.extrapad}
+1. **Korrelationen**:  Statistische Modelle korrelieren Ausprägungen von Variablen miteinader. 
+
+2. **Residualvarianz**: Sie bilden ihre Parameter so, dass die Abstände zwischen *vorhergesagten Werten* und *beobachteten Werten* so gering wie möglich ist. 
+
+3. **partielle Korrelationen**: Diese Modelle isolieren Einflüsse, indem sie die Korrelation zwischen dem Treatment und anderen Eigenschaften, die *sowohl* mit dem Treatment als *auch* mit dem Outcome verbunden sind, voneinander trennen. 
+:::
+
+
+## Das wichtigste Problem: Selektion ins Treatment {.midi}
+
+Fall A: Unproblatischer Vergleich von Treatment- und Kontrollgruppen im bivariaten Fall: 
+```{mermaid}
+flowchart LR
+
+Z["Eigenschaft Z"] --> T["Treatment"] --> O["Outcome"]
+
+```
+
+Fall B: Problatischer Vergleich von Treatment- und Kontrollgruppen im bivariaten Fall: 
+```{mermaid}
+flowchart LR
+
+Z["Eigenschaft Z"] --> T["Treatment"] --> O["Outcome"]
+Z --> O
+
+```
+
+## Wo ist das Problem? 
+
+- Nur bei einem randomisierten Treatment bestehen keine Einflüsse von dritten Eigenschaften (Z) auf die Wahrscheinlichkeit, ein Treatment zu erhalten oder in einer bestimmten Stärke zu erhalten. In den meisten empirischen Situationen selektieren/sortieren sich Untersuchungseinheiten nach spezifischen Ausprägungen von Z in das Treatment. 
+
+- Beachten wir das nicht, dann vergleichen wir mit "Treatment- und Kontrollgruppen" implizit auch die Gruppen nach den Selektionsmerkmalen ins Treatment. 
+
+- Das ist allerdings nur dann ein Problem, wenn die Eigenschaften, nach denen die Selektion ins Treatment erfolgt, auch mit dem Outcome verbunden sind. 
+
+
+## Selektion ins Treatment 
+
+::: {.columns}
+
+::: {.column}
+```{mermaid}
+flowchart TD 
+
+K["Konflikte"] --> T["Trennungsgedanken"] --> ZU["Zufriedenheit mit <br> der Beziehung"]
+K --> ZU
+
+```
+:::
+
+::: {.column}
+
+- In diesem Beispiel führen stärkere Konflikte in der Beziehung zu einer höheren Wahrscheinlichkeit auf Trennungsgedanken.
+
+- Trennungsgedanken reduzieren die Zufriedenheit mit der Beziehung. 
+
+- Stärkere Konflikte reduzieren jedoch auch die Zufriedenheit. 
+
+- Mit einem bivariaten Vergleich von Personen, die sich Trennungsgedanken machen / nicht machen, vergleichen wir daher auch Personen, die sich mehr / weniger stark streiten. 
+
+:::
+:::
+
+
+## Zufriedenheit mit der Beziehung (FREDA)
+
+```{r}
+data <- freda |>
+  select(pa27, pa22ri9, age, sat3, sex_c) |>
+  filter(!is.na(pa27), !is.na(pa22ri9), !is.na(age), !is.na(sat3), !is.na(sex_c)) |>
+  mutate(sex_c_num = if_else(as_factor(sex_c) == "Male", 1L, 0L)) |>
+  mutate(pa27 = if_else(pa27 == 2, 0, 1)) |>
+  mutate(pa22ri9 = fct_drop(as_factor(pa22ri9)))
+
+
+df <- as.data.frame(prop.table(table(data$sat3)) * 100)
+names(df) <- c("sat3", "rel_Hfg")
+
+ggplot(df, aes(x = sat3, y = rel_Hfg)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = sprintf("%.1f%%", rel_Hfg)), 
+            vjust = -0.5, size = 4) +
+  ylim(0, max(df$rel_Hfg) * 1.15) +
+  labs(title = "Zufriedenheit mit der Beziehung",
+       x = "Zufriedenheit auf 11er-Skala", y = "Relative Häufigkeit (%)") +
+  theme_minimal()
+
+```
+
+## Streit bei Meinungsverschiedenheiten (FREDA)
+
+```{r}
+
+
+df2 <- as.data.frame(prop.table(table(data$pa22ri9)) * 100)
+names(df2) <- c("pa22ri9", "rel_Hfg2")
+
+ggplot(df2, aes(x = pa22ri9, y = rel_Hfg2)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = sprintf("%.1f%%", rel_Hfg2)), 
+            vjust = -0.5, size = 4) +
+  ylim(0, max(df2$rel_Hfg2) * 1.15) +
+  labs(title = "Streit in der Beziehung",
+       x = "Konflikte enden im Streit", y = "Relative Häufigkeit (%)") +
+  theme_minimal()
+```
+
+## Trennungsgedanken (FREDA)
+
+```{r}
+library(patchwork)
+
+# --- Graph 1: pa27 overall ---
+df1 <- as.data.frame(prop.table(table(data$pa27)) * 100)
+names(df1) <- c("pa27", "rel_Hfg")
+df1$pa27 <- droplevels(df1$pa27)
+
+g1 <- ggplot(df1, aes(x = pa27, y = rel_Hfg)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = sprintf("%.1f%%", rel_Hfg)), 
+            vjust = -0.5, size = 4) +
+  ylim(0, max(df1$rel_Hfg) * 1.2) +
+  scale_x_discrete(labels = c("0" = "Nein", "1" = "Ja")) +
+  labs(title = "Gesamt",
+       x = "Trennungsgedanken", y = "Relative Häufigkeit (%)") +
+  theme_minimal()
+
+# --- Graph 2: pa27 nach sex_c (Anteile innerhalb jeder Gruppe) ---
+df2 <- data |>
+  group_by(sex_c) |>
+  summarise(Anteil = mean(pa27) * 100, .groups = "drop") |>
+  mutate(sex_c = fct_drop(as_factor(sex_c)))
+
+g2 <- ggplot(df2, aes(x = sex_c, y = Anteil)) +
+  geom_bar(stat = "identity", fill = "coral") +
+  geom_text(aes(label = sprintf("%.1f%%", Anteil)), 
+            vjust = -0.5, size = 4) +
+  ylim(0, max(df2$Anteil) * 1.2) +
+  labs(title = "nach Geschlecht",
+       x = "Geschlecht", y = "Relative Häufigkeit (%)") +
+  theme_minimal()
+
+# --- Panel ---
+g1 | g2
+```
+
+## Selektion in Trennungsgedanken? 
+
+```{r}
+library(janitor)
+library(kableExtra)
+
+# Kreuztabelle erstellen
+tab <- tabyl(data, pa27, pa22ri9) |>
+  adorn_percentages(denominator = "row") |>
+  adorn_rounding(digits = 3) |>
+  adorn_pct_formatting(digits = 1)
+
+# 1) Spaltenüberschrift ändern
+names(tab)[1] <- "Trennungsgedanken"
+
+# 2) Zeilenlabels ändern (0 → Nein, 1 → Ja)
+tab[[1]] <- ifelse(tab[[1]] == 0, "Nein", "Ja")
+
+# 3) Differenz-Zeile hinzufügen
+# Numerische Werte extrahieren
+werte_1 <- as.numeric(gsub("%", "", tab[1, -1]))  # Nein-Zeile
+werte_2 <- as.numeric(gsub("%", "", tab[2, -1]))  # Ja-Zeile
+differenz <- werte_1 - werte_2
+
+diff_row <- c("Differenz", paste0(differenz, "%"))
+tab <- rbind(tab[1, ], tab[2, ], diff_row)
+
+# Markdown-Tabelle mit spanning header
+kable(tab, 
+      format = "markdown",
+      align = c("l", "c", "c", "c", "c", "c")) |>
+  add_header_above(c(" " = 1, "Konflikte enden im Streit" = 5))
+```
+
+## Die "Wirkung" von Konflikt auf Beziehungszufriedenheit
+
+```{r}
+library(ggridges)
+library(ggplot2)
+
+# Mittelwerte pro Gruppe berechnen
+means <- data |>
+  group_by(pa22ri9) |>
+  summarise(mean = mean(sat3), .groups = "drop") |>
+  mutate(pa22ri9_num = seq_len(n()))
+
+# Plot erstellen
+ggplot(data, aes(x = sat3, y = fct_drop(as_factor(pa22ri9)))) +
+  geom_density_ridges(fill = "lightblue", alpha = 0.7) +
+  geom_point(aes(x = mean, y = pa22ri9_num), 
+             data = means,
+             color = "red", size = 3, shape = 21, fill = "red") +
+  scale_x_continuous(limits = c(0, 10)) +
+  annotate("text", 
+         x = means$mean, 
+         y = means$pa22ri9_num + 0.15, 
+         label = sprintf("M = %.1f", means$mean), 
+         size = 3, color = "red") +
+  labs(title = "Zufriedenheit mit der Beziehung nach Konfliktverhalten ",
+       x = "Zufriedenheit", y = "Konflikte enden im Streit") +
+  scale_fill_brewer(palette = "Blues") +
+  theme_minimal()
+```
+
+## Die "Wirkung" von Trennungsgedanken auf Beziehungszufriedenheit
+
+```{r}
+library(ggridges)
+library(ggplot2)
+
+# Mittelwerte pro Gruppe berechnen
+means <- data |>
+  group_by(pa27) |>
+  summarise(mean = mean(sat3), .groups = "drop") |>
+  mutate(pa27_factor = factor(pa27, labels = c("Nein", "Ja")),
+         y_pos = as.numeric(pa27_factor))
+
+# Plot erstellen
+ggplot(data, aes(x = sat3, y = as_factor(pa27), 
+                 fill = as_factor(pa27))) +
+  geom_density_ridges() +
+  
+  # Gruppendurchschnitte als Punkte
+  geom_point(aes(x = mean, y = y_pos), 
+             data = means,
+             color = "red", size = 3, shape = 21, fill = "red") +
+  
+  # x-Achse auf 0-10 beschränken
+  scale_x_continuous(limits = c(0, 10)) +
+
+  annotate("text", 
+         x = means$mean, 
+         y = means$pa27_factor, 
+         label = sprintf("M = %.1f", means$mean), 
+         size = 3, color = "red") +
+
+  # Labels anpassen
+  scale_y_discrete(labels = c("0" = "Nein", "1" = "Ja")) +
+  scale_fill_manual(values = c("0" = "#47d0fa", "1" = "#07fae6"),
+                    labels = c("0" = "Nein", "1" = "Ja")) +
+  
+  labs(title = "Zufriedenheit mit der Beziehung nach Trennungsgedanken",
+       x = "Zufriedenheit", 
+       y = "Trennungsgedanken",
+       fill = "pa27") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+```
+
+## Isolierung von Einflüssen {.midi}
+
+```{r}
+library(dplyr)
+library(broom)
+library(kableExtra)
+library(modelsummary)
+
+# Referenzgruppe für pa22ri9 setzen
+data <- data |>
+  mutate(pa22ri9 = relevel(fct_drop(as_factor(pa22ri9)), ref = 1))
+
+# Drei Modelle schätzen
+fit1 <- lm(sat3 ~ pa27, data = data)
+fit2 <- lm(sat3 ~ pa22ri9, data = data)
+fit3 <- lm(sat3 ~ pa27 + pa22ri9, data = data)
+
+models <- list(
+  "Bivariat\n Trennungsgedanken" = fit1, 
+  "Bivariat\n Konflikte" = fit2, 
+  "Beides isoliert \n voneinander" = fit3
+)
+
+# Variablen-Labels definieren
+coef_map <- c(
+  "(Intercept)" = "Konstante",
+  "pa27" = "Trennungsgedanken",
+  "pa22ri9Selten" = "Selten",
+  "pa22ri9Manchmal" = "Manchmal",
+  "pa22ri9Oft" = "Oft",
+  "pa22ri9Sehr oft" = "Sehr oft"
+)
+
+# Tabelle erstellen
+tab <- modelsummary(models, 
+                    stars = TRUE, 
+                    statistic = NULL,
+                    gof_omit = "IC|Adj|F|RMSE|Log",
+                    coef_map = coef_map,
+                    output = "kableExtra")
+
+# Zeilen gruppieren: "Selten", "Manchmal", "Oft", "Sehr oft" unter "Konflikte enden im Streit"
+tab |>
+  pack_rows("Konflikte enden im Streit (Referenz: Nie)", 3, 4, bold = TRUE, color = "black")
+```
+
+## Was machen diese Modelle da? 
+
+Wir besprechen zwei Zugänge, um zu verstehen, was Regressionsmodelle machen, wenn sie Einflüsse voneinander "isolieren": 
+
+- Sie "entfernen" den Einfluss auf die Verteilung von Messwerten über verschiedene Gruppen, indem sie die "Niveauverschiebungen" der einzelnen Gruppen rückgängig machen.   
+
+- Sie setzen die Korrelationen aller Einflussvariablen untereinander auf 0. 
+   - Textbücher bezeichnen diesen Fall deshalb auch als "statistische Unabhängigkeit" von X gegenüber anderen Variablen wie Z. 
+   - Im Kern macht eine Randomisierung nichts anderes: Sie setzt die Korrelation zwischen anderen Einflüssen und dem Treatment auf 0, um die Selektion ins Treatment aufzuheben. 
+
+## Zugang 1: Niveauverschiebung 
+
+::: {.columns}
+::: {.column width=30%}
+```{mermaid}
+flowchart TD 
+
+A["Aura"] -- +10pp --> H["Hot"] -- +6 --> FE["Flirtexposure"]
+A -- +1 --> FE
+
+```
+:::
+
+::: {.column width=70%} 
+- Für jeden Einheit Aura mehr, erhöht sich das Flirtexposure um eine Einheit (= **direter Auraeffekt**). 
+
+- Für jede Einheit Aura mehr, erhöht sich die Wahrscheinlichkeit, "hot" zu sein, um 10 Prozentpunkte. 
+
+- Personen, die "hot" anstatt "not" sind, haben ein um 6 Punkte höheres Flirtexposure (direkter Hotness-Effekt). 
+
+- Da die Aura die Hotness erhöht, die wiederum das Flirtexposure erhöht, hat die Aura über die Hotness einen **zusätzlichen, indirekten Effekt**. 
+
+- Wenn wir beide nicht voneinander isolieren, ist der Effekt von Aura auf Flirtexposure eine **Kombination** von direktem und indirektem Effekt. 
+
+:::
+:::
+
+## Eine einfache lineare Regression gibt uns die Kombination von direktem und indirektem Einfluss als $\hat{\beta}$-Wert 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+set.seed(48798465)
+
+n <- 200
+
+# Simulation
+sim_data <- tibble(
+  # 1) Aura: metrisch, 1-8
+  aura = sample(1:8, n, replace = TRUE),
+  
+  # 2) Hot: binomial, beeinflusst durch Aura (+20 pp)
+  p_hot = pmin(0.70, 0.10 + aura * 0.10),
+  hot = rbinom(n, 1, p_hot),
+  
+  # 3) Flirtexposure: metrisch, begrenzt auf 0-10
+  flirtexposure =  0 + hot * 6 + aura * 1 + rnorm(n, 0, 3)
+)
+
+# Regression berechnen
+reg <- lm(flirtexposure ~ aura, data = sim_data)
+beta <- coef(reg)["aura"]
+
+# Scatterplot
+ggplot(sim_data, aes(x = aura, y = flirtexposure, 
+                     color = factor(hot, labels = c("Nein", "Ja")),
+                     shape = factor(hot, labels = c("Nein", "Ja")))) +
+  geom_jitter(size = 2, alpha = 0.6, width = 0.2, height = 0.2) +
+
+   # Regressionsgerade
+  geom_smooth(method = "lm", se = FALSE, linewidth = 1, color = "black",
+              aes(group = NULL, color = NULL, shape = NULL)) +
+  
+  # Annotation mit Beta-Koeffizient
+  annotate("text", x = 2, y = 10, 
+           label = sprintf("β = %.2f", beta),
+           size = 5, color = "black", fontface = "bold") +
+
+  scale_color_manual(values = c("Nein" = "#b9a00e", "Ja" = "#fc0202")) +
+  scale_shape_manual(values = c("Nein" = 16, "Ja" = 17)) +
+  labs(title = "Bivariater Zusammenhang zwischen Aura und Flirtexposure",
+       x = "Aura", y = "Flirtexposure",
+       color = "Hot", shape = "Hot") +
+  theme_minimal()
+```
+
+## Was bedeutet "Niveauverschiebung"?
+
+```{r}
+
+# Mittelwerte pro Gruppe berechnen
+means <- sim_data |>
+  group_by(hot) |>
+  summarise(
+    aura_mw = mean(aura),
+    flirtexposure_mw = mean(flirtexposure),
+    .groups = "drop"
+  ) |>
+  mutate(hot_label = factor(hot, labels = c("Nein", "Ja")))
+
+# Differenzen berechnen
+diff_aura <- means$aura_mw[2] - means$aura_mw[1]
+diff_fe <- means$flirtexposure_mw[2] - means$flirtexposure_mw[1]
+
+# Plot erstellen
+ggplot(sim_data, aes(x = aura, y = flirtexposure)) +
+  # Scatterplot
+  geom_jitter(aes(color = factor(hot, labels = c("Nein", "Ja")),
+                  shape = factor(hot, labels = c("Nein", "Ja"))),
+              size = 2, alpha = 0.6, width = 0.2, height = 0.2) +
+  
+  # Mittelwerte als Punkte
+  geom_point(data = means, aes(x = aura_mw, y = flirtexposure_mw,
+                                color = hot_label, shape = hot_label),
+             size = 5, stroke = 2) +
+  
+  # Horizontale Linien bei Mittelwerten von Flirtexposure
+  geom_hline(data = means, aes(yintercept = flirtexposure_mw),
+             linetype = "dashed", color = "gray40", linewidth = 1) +
+  
+  # Vertikale Linien bei Mittelwerten von Aura
+  geom_vline(data = means, aes(xintercept = aura_mw),
+             linetype = "dashed", color = "gray40", linewidth = 1) +
+  
+  # Pfeil a): Horizontal (Aura)
+  geom_segment(x = means$aura_mw[1], y = means$flirtexposure_mw[1],
+               xend = means$aura_mw[2], yend = means$flirtexposure_mw[1],
+               arrow = arrow(length = unit(0.3, "cm")),
+               color = "#4D4D4D", linewidth = 1.5) +
+  
+  # Pfeil b): Vertikal (Flirtexposure)
+  geom_segment(x = means$aura_mw[2], y = means$flirtexposure_mw[1],
+               xend = means$aura_mw[2], yend = means$flirtexposure_mw[2],
+               arrow = arrow(length = unit(0.3, "cm")),
+               color = "#4D4D4D", linewidth = 1.5) +
+  
+  # Annotation Δ Aura
+  annotate("text", 
+           x = (means$aura_mw[1] + means$aura_mw[2]) / 2,
+           y = means$flirtexposure_mw[1] - 0.5,
+           label = sprintf("ΔAura = %.2f", diff_aura),
+           size = 4, color = "#4D4D4D", fontface = "bold") +
+  
+  # Annotation Δ Flirtexposure
+  annotate("text", 
+           x = means$aura_mw[2] + 0.15,
+           y = (means$flirtexposure_mw[1] + means$flirtexposure_mw[2]) / 2,
+           label = sprintf("ΔFE = %.1f", diff_fe),
+           size = 4, color = "#4D4D4D", fontface = "bold") +
+  
+  scale_color_manual(values = c("Nein" = "#b9a00e", "Ja" = "#fc0202")) +
+  scale_shape_manual(values = c("Nein" = 16, "Ja" = 17)) +
+  labs(title = "Bivariater Zusammenhang zwischen Aura und Flirtexposure",
+       x = "Aura", y = "Flirtexposure",
+       color = "Hot", shape = "Hot") +
+  theme_minimal()
+
+```
+
+## Isolieren = Zurückschieben (wenn der Effekt eine Niveauverschiebung verursacht...)
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+
+# Mittelwerte pro Gruppe
+means <- sim_data |>
+  group_by(hot) |>
+  summarise(
+    aura_mw = mean(aura),
+    flirtexposure_mw = mean(flirtexposure),
+    .groups = "drop"
+  )
+
+# Differenzen berechnen
+diff_aura <- means$aura_mw[2] - means$aura_mw[1]
+diff_fe <- means$flirtexposure_mw[2] - means$flirtexposure_mw[1]
+
+# Neuer Dataframe: Effekte abziehen für hot == 1
+sim_adj <- sim_data |>
+  mutate(
+    aura_adj = if_else(hot == 1, aura - diff_aura, aura),
+    flirtexposure_adj = if_else(hot == 1, flirtexposure - diff_fe, flirtexposure)
+  )
+
+# Mittelwerte im adjusted Datensatz
+means_adj <- sim_adj |>
+  group_by(hot) |>
+  summarise(
+    aura_mw = mean(aura_adj),
+    flirtexposure_mw = mean(flirtexposure_adj),
+    .groups = "drop"
+  )
+
+# --- Plot 1: Mittelwerte nach Hot ---
+ggplot(sim_adj, aes(x = aura_adj, y = flirtexposure_adj)) +
+  geom_jitter(aes(color = factor(hot, labels = c("Nein", "Ja")),
+                  shape = factor(hot, labels = c("Nein", "Ja"))),
+              size = 2, alpha = 0.6, width = 0.2, height = 0.2) +
+  
+  geom_point(data = means_adj, aes(x = aura_mw, y = flirtexposure_mw,
+                                    color = factor(hot, labels = c("Nein", "Ja")),
+                                    shape = factor(hot, labels = c("Nein", "Ja"))),
+             size = 5, stroke = 2) +
+  
+  geom_hline(data = means_adj, aes(yintercept = flirtexposure_mw),
+             linetype = "dashed", color = "gray40", linewidth = 1) +
+  
+  geom_vline(data = means_adj, aes(xintercept = aura_mw),
+             linetype = "dashed", color = "gray40", linewidth = 1) +
+  
+  geom_line(data = means_adj, aes(x = aura_mw, y = flirtexposure_mw),
+            linewidth = 1, color = "black") +
+  
+  scale_color_manual(values = c("Nein" = "#b9a00e", "Ja" = "#fc0202")) +
+  scale_shape_manual(values = c("Nein" = 16, "Ja" = 17)) +
+  labs(title = "Adjustierte Werte: Mittelwerte nach Hot",
+       x = "Aura (adjustiert)", y = "Flirtexposure (adjustiert)",
+       color = "Hot", shape = "Hot") +
+  theme_minimal()
+
+```
+
+## Nach "Hotness" bereinigter Einfluss der Aura
+
+```{r}
+# Regression berechnen
+reg <- lm(flirtexposure_adj ~ aura_adj, data = sim_adj)
+beta <- coef(reg)["aura_adj"]
+
+# --- Plot 2: Regressionsgerade ---
+ggplot(sim_adj, aes(x = aura_adj, y = flirtexposure_adj)) +
+  geom_jitter(aes(color = factor(hot, labels = c("Nein", "Ja")),
+                  shape = factor(hot, labels = c("Nein", "Ja"))),
+              size = 2, alpha = 0.6, width = 0.2, height = 0.2) +
+  
+  geom_smooth(method = "lm", se = FALSE, linewidth = 1.5, color = "black",
+              aes(group = NULL, color = NULL, shape = NULL)) +
+  
+  # Annotation Beta-Koeffizient
+  annotate("text", x = 2, y = 10,
+           label = sprintf("β = %.2f", beta),
+           size = 5, color = "black", fontface = "bold") +
+  
+  scale_color_manual(values = c("Nein" = "#b9a00e", "Ja" = "#fc0202")) +
+  scale_shape_manual(values = c("Nein" = 16, "Ja" = 17)) +
+  labs(title = "Adjustierte Werte: Regressionsgerade",
+       x = "Aura (adjustiert)", y = "Flirtexposure (adjustiert)",
+       color = "Hot", shape = "Hot") +
+  theme_minimal()
+```
+
+## Für jedes Problemchen ein Appchen
+
+<iframe width="100%" height="100%" src="https://www.shiny-appserver.org/regression_multi">
+</iframe>
+
+
+## Zugang 2:  $\hat{\beta}$ ist ein verkapptes Pearsons r
+
+Für die nächsten Schritte ist es sehr nützlich, einen alternativen Blick auf $\hat{\beta}$-Koeffizienten zu nutzen. Die Berechnung des $\hat{\beta}$-Koeffizienten lässt sich auch darstellen als:
+
+$$\hat{\beta} = \frac{\sum(x_i-\bar{x})(y_i - \bar{y})}{\sum(x_i-\bar{x})^2} = r_{yx} \cdot \frac{s_y}{s_{x}}$$
+
+D.h.: Ein $\beta$-Koeffizient ist standardisiertes bzw. skaliertes Pearsons $r$. Das Verhältnis der Standardabweichungen vom Outcome und der erklärenden Variable bilden dabei den Skalierungsfaktor. 
+
+Ein identisches $r$ bei unterschiedlichen Standardabweichungen führt daher zu verschiedenen $\hat{\beta}$-Koeffizienten.
+
+
+## Isolation = Korrelationen minus andere Korrelationen
+
+Im Fall von **zwei** erklärenden Variablen ändern sich die Berechnungen der Koeffizienten folgendermaßen:
+
+
+::: {.columns}
+::: {.column}
+$$\hat{\beta}_1=\frac{r_{xy}-r_{zy}\cdot r_{xz}}{1-r_{xz}^2}\cdot \frac{s_y}{s_{x}}$$
+
+:::
+::: {.column}
+
+```{mermaid}
+%%{init: {
+  'theme': {'neutral'},
+  'themeVariables': { 'fontSize': '24px' },
+  'flowchart': { 'htmlLabels': true, 'useMaxWidth': false }
+}}%%
+
+graph TD
+X --> |"$$ r_{xy} $$"| Y 
+X --> |"$$ r_{xz} $$"| Z
+Z --> |"$$ r_{zy} $$"| Y
+
+```
+:::
+:::
+
+- $r_{xy} \rightarrow$ *direkter* Einfluss von X auf Y. 
+- $r_{xz} \rightarrow$ *direkter* Einfluss von X auf Z. 
+- $r_{zx} \rightarrow$ *direkter* Einfluss von Z auf X.
+- $r_{zy}\cdot r_{xz} \rightarrow$ *indirekter* Einfluss von X auf Y über Z. 
+
+## Berechnungen von restlichen Koeffizienten für diesen Fall
+
+$$\hat{\alpha}= \bar{y}-\hat{\beta}_1\bar{x}-\hat{\beta}_2\bar{z}$$
+
+Die Basisgruppe erhält den durchschnittlichen Wert des Outcomes, aus dem alle "Niveauverschiebungen" durch X und Z herausgerechnet wurden.
+
+$$\hat{\beta}_2=\frac{r_{yz}-r_{yx}\cdot r_{xz}}{1-r_{xz}^2}\cdot \frac{s_y}{s_{z}}$$
+
+Für $\hat{\beta}_2$ wird der Einfluss von $X \rightarrow Z$ sowie der direkte Einfluss von $X \rightarrow Y$ vom direkten Einfluss von $Z \rightarrow Y$ isoliert. 
+
+## Selektion ins Treatment
+
+::: {.columns}
+::: {.column width=30%}
+
+```{mermaid}
+%%{init: {
+  'theme': {'neutral'},
+  'themeVariables': { 'fontSize': '24px' },
+  'flowchart': { 'htmlLabels': true, 'useMaxWidth': false }
+}}%%
+
+graph TD
+X["Selektionseigenschaft"] --> |"$$ r_{xy} $$"| Y["Outcome"] 
+X --> |"$$ r_{xz} $$"| Z["Treatment"]
+Z --> |"$$ r_{zy} $$"| Y
+
+```
+
+:::
+::: {.column width=70%}
+- Selektion ins Treatment ist in Studien mit Beobachtungsdaten **fast** immer eine Kombination aus direkten und indirekten Einflüssen, weil die Selektionseigenschaften **fast** immer eine eigenständige Wirkung über die Selektion ins Treatment hinaus haben. 
+
+- Regressionsmodelle setzen die Korrelation der Selektionseigenschaft auf das Treatment auf null. 
+
+:::
+:::
+
+## Der Selektion ihre Schwester: Konfundierung
+
+::: {.columns}
+::: {.column width=30%}
+
+```{mermaid}
+%%{init: {
+  'theme': {'neutral'},
+  'themeVariables': { 'fontSize': '24px' },
+  'flowchart': { 'htmlLabels': true, 'useMaxWidth': false }
+}}%%
+
+graph TD
+X["X"] --> |"$$ r_{xy} $$"| Y["Outcome"] 
+Z["Treatment"] --> |"$$ r_{xz} $$"| X
+Z --> |"$$ r_{zy} $$"| Y
+
+```
+
+:::
+::: {.column width=70%}
+
+- Ein Treatment kann mehrere Wirkungen haben ($T \rightarrow Y$ und $T \rightarrow X$). 
+
+- Wenn X *auch* eine eigene Wirkung auf Y hat, dann hat das Treatment eine direkte Wirkung ($T \rightarrow Y$) und eine indirekte Wirkung auf Y ($T \rightarrow X \rightarrow Y$). 
+
+- Eine solche Datenstruktur wird auch als **Konfundierung** bezeichnet.
+
+- Regressionsmodelle isolieren die direkte Wirkung $T \rightarrow Y$, indem sie die Korrelation von Treatment und X auf null setzen. 
+
+:::
+:::
+
+## Was macht das bei der Berechnung? 
+
+In beiden Fällen besteht der gesamte Einfluss von X auf Y in
+einer Kombination eines direkten Einflusses von X auf Y und einem
+indirekten Einfluss. 
+
+Wenn $|r_{zy}| > 0 \, \text{und} \, |r_{xy}| > 0$, dann wird
+$\hat{\beta}_x$ durch die Trennung des indirekten Einflusses kleiner.
+Vor der Trennung war dieser Einfluss eine Kombination von zwei positiven
+oder negativen Einflüssen.
+
+$$\hat{\beta}_x=\frac{\color{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}$$
+
+Wenn $r_{zy} < 0 \, \text{und} \, r_{xy} > 0$, dann wird $\hat{\beta}_x$
+durch die Trennung des indirekten Einflusses größer. Vor der Trennung
+war dieser Einfluss eine Kombination eines positiven und eines negativen
+Einflusses. 
+
+
+## Selektion ins Treatment und Repräsentativitität 
+
+::: block
+Vorsicht bei der Interpretation (again)
+
+-   Eine Konfundierung und eine Selektion ins Treatment kann eine Frage
+    der theoretischen Perspektive sein (was ist das Treatment?) oder
+    eine Frage der angenommenen Wirkrichtung ($X \rightarrow Z$ oder
+    $X \leftarrow Z$).
+
+-   Eine Selektion ins Treatment hat zunächst nichts mit der
+    Repräsentativität der Stichprobe zu tun. Sie können unabhängig
+    voneinander Selektion in die Stichprobe und Selektion ins Treatment
+    haben.
+:::
+
+
+
