@@ -1,0 +1,59 @@
+library(modelsummary)
+library(tidyverse)
+
+set.seed(5656)
+n <- 1000
+
+# Original-Datengenerierung (unverändert)
+neubau <- rbinom(n, 1, 0.25)
+groesse_raw <- rnorm(n, mean = 80 - 30 * neubau, sd = 20)
+groesse <- pmin(pmax(groesse_raw, 20), 140)
+groesse_z <- (groesse - mean(groesse)) / sd(groesse)
+zimmer_raw <- 0.5 * groesse_z + sqrt(1 - 0.5^2) * rnorm(n)
+zimmeranzahl <- (zimmer_raw - min(zimmer_raw)) / (max(zimmer_raw) - min(zimmer_raw)) * 7 + 1
+miete <- 50 + 200 * neubau + 5 * groesse + 25 * zimmeranzahl + rnorm(n, 0, 50)
+
+mieten <- data.frame(
+  Neubau       = factor(neubau, labels = c("Nein", "Ja")),
+  Groesse      = round(groesse, 0),
+  Zimmeranzahl = round(zimmeranzahl, 0),
+  Miete        = round(miete, 0)
+)
+
+set.seed(11679)
+idx <- sample(1:1000, 12)
+
+mieten[idx, ] |>
+  knitr::kable(row.names = FALSE, col.names = c("Neubau", "Größe", "Zimmeranzahl", "Miete"))
+
+# Korrekte Umwandlung des Subsets in einen Tibble
+df_s <- tibble(
+  Neubau       = mieten$Neubau[idx],
+  Groesse      = mieten$Groesse[idx],
+  Zimmeranzahl = mieten$Zimmeranzahl[idx],
+  Miete        = mieten$Miete[idx]
+)
+
+mieten_subset <- mieten[idx, ] %>%
+  # Konvertiere "Neubau" zu numerisch (0 für "Nein", 1 für "Ja")
+  mutate(Neubau = ifelse(Neubau == "Ja", 1, 0))
+
+# Deskriptive Statistiken berechnen
+datasummary_skim(mieten_subset, fmt = 2)
+
+datasummary_correlation(mieten_subset, fmt = 3)
+
+
+models <- list(
+m1 = lm(Miete ~ Neubau, data = mieten_subset),
+m2 = lm(Miete ~ Groesse, data = mieten_subset),
+m3 = lm(Miete ~ Zimmeranzahl, data = mieten_subset),
+m4 = lm(Miete ~ Neubau + Zimmeranzahl, data = mieten_subset),
+m5 = lm(Miete ~ Neubau + Groesse, data = mieten_subset),
+m6 = lm(Miete ~ Neubau + Groesse + Zimmeranzahl, data = mieten_subset)
+)
+
+modelsummary(models, output = "markdown", 
+                    stars = TRUE, 
+                    statistic = NULL,
+                    gof_omit = "IC|Adj|F|RMSE|Log")
