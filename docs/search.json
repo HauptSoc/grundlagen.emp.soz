@@ -6224,14 +6224,14 @@
     "href": "exercises/20-ex.html",
     "title": "Übung: ‘Isolation von Einflüssen’",
     "section": "",
-    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\n\nWeil es so schön war, berechnen wir eine Regression für\n\nGröße \\(\\rightarrow\\) Miete\nNeubau \\(\\rightarrow\\) Miete und interpretieren, was wir berechnet haben."
+    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\nIn der vorherigen Übung haben Sie eine bivariate Regresssion mit Miete als Outcome auf die Eigenschaft “Neubau” durchgeführt. Führen Sie nun eine multivariate Regression mit Miete als Outcome mit den Variablen “Größe und Neubau” sowie “Zimmeranzahl und Neubau” durch. Warum verändert sich der \\(\\beta\\)-Koeffizient von “Neubau”, wenn Sie Größe oder Zimmeranzahl einbeziehen?"
   },
   {
     "objectID": "exercises/20-ex.html#dauerthema-teure-mieten-noch-teurere-mieten",
     "href": "exercises/20-ex.html#dauerthema-teure-mieten-noch-teurere-mieten",
     "title": "Übung: ‘Isolation von Einflüssen’",
     "section": "",
-    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\n\nWeil es so schön war, berechnen wir eine Regression für\n\nGröße \\(\\rightarrow\\) Miete\nNeubau \\(\\rightarrow\\) Miete und interpretieren, was wir berechnet haben."
+    "text": "Wir beschäftigen uns mit folgender Theorie:\n\n\n\n\n\nflowchart \nG[\"Größe in m²\"]\nZ[\"Zimmeranzahl\"]\nN[\"Neubau\"]\nM[\"Miete\"]\n\nG --&gt; Z\nN --&gt; G  \nG & N & Z --&gt; M  \n\n\n\n\n\n\nDie Tabelle zeigt zwölf zufällig gezogene Wohnungen.\n\n\n\n\n\nNeubau\nGröße\nZimmeranzahl\nMiete\n\n\n\n\nNein\n74\n6\n493\n\n\nNein\n122\n5\n848\n\n\nNein\n97\n3\n698\n\n\nNein\n118\n7\n801\n\n\nJa\n48\n3\n625\n\n\nJa\n26\n3\n462\n\n\nNein\n121\n6\n749\n\n\nNein\n41\n5\n377\n\n\nNein\n101\n7\n774\n\n\nJa\n47\n5\n547\n\n\nNein\n67\n6\n614\n\n\nNein\n69\n5\n506\n\n\n\n\n\nIn der vorherigen Übung haben Sie eine bivariate Regresssion mit Miete als Outcome auf die Eigenschaft “Neubau” durchgeführt. Führen Sie nun eine multivariate Regression mit Miete als Outcome mit den Variablen “Größe und Neubau” sowie “Zimmeranzahl und Neubau” durch. Warum verändert sich der \\(\\beta\\)-Koeffizient von “Neubau”, wenn Sie Größe oder Zimmeranzahl einbeziehen?"
   },
   {
     "objectID": "exercises/20-ex.html#neues-aus-der-forschung",
@@ -6239,5 +6239,229 @@
     "title": "Übung: ‘Isolation von Einflüssen’",
     "section": "2 Neues aus der Forschung",
     "text": "2 Neues aus der Forschung\nLörz et al. (2026) stellen folgende Theorie über Prozesse sozialer Ungleichheit beim Übergang ins Gymnasium vor:\n\n\n\nSchematische Darstellung des theoretischen Modells und der erwarteten direkten und indirekten Zusammenhänge.\n\n\nSie legen außerdem folgende Informationen über Ihre Daten vor:\n\n\n\n\n\n\n\n\n\n\nWelle\nInsgesamt\nSozioökonomischer Status der Eltern\n\n\n\n\n\n\n\n\nNiedrig (1. Quartil)\nMittel (2./3. Quartil)\nHoch (4. Quartil)\n\n\nKulturelle Ressourcen\n\n\n\n\n\n\nBücherbesitz\n2\n2,30 (1,31)\n1,37 (1,10)\n2,28 (1,18)\n\n\nSchüler*innenmerkmale\n\n\n\n\n\n\nKompetenzen\n2\n0,00 (1,00)\n−0,60 (0,89)\n−0,05 (0,94)\n\n\nAnstrengungsbereitschaft\n2\n0,00 (1,00)\n−0,04 (0,99)\n−0,00 (1,01)\n\n\nElterneinschätzungen\n\n\n\n\n\n\nC: Kosteneinschätzung Eltern\n1\n0,00 (1,00)\n0,33 (1,07)\n0,02 (0,97)\n\n\nB: Studienwunsch Eltern\n1\n0,66 (0,47)\n0,50 (0,50)\n0,65 (0,48)\n\n\nP: Erfolgsaussichten Eltern\n1\n0,00 (1,00)\n−0,24 (1,00)\n−0,05 (0,99)\n\n\nLehrer*innenbeurteilungen\n\n\n\n\n\n\nLeistungsbeurteilung\n2\n0,00 (1,00)\n−0,44 (0,98)\n−0,03 (0,96)\n\n\nAnstrengungsbeurteilung\n2\n0,00 (1,00)\n−0,37 (1,00)\n−0,02 (0,97)\n\n\nKontrollvariablen\n\n\n\n\n\n\nMigrationshintergrund\n1\n0,45 (0,50)\n0,66 (0,47)\n0,44 (0,50)\n\n\nGeschlecht (männlich)\n1\n0,48 (0,50)\n0,49 (0,50)\n0,49 (0,50)\n\n\nAlter im Jahr 2010\n1\n11,4 (0,60)\n11,5 (0,64)\n11,4 (0,59)\n\n\nN\n\n3641\n931\n1807\n\n\n%\n\n100,0\n25,6\n49,6\n\n\n\nNehmen Sie einen Einfluss aus der Darstellung der Autor:innen und legen Sie dar, welche Informationen in Beziehung gesetzt werden müssen, um diesen Einfluss zu erfassen."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#sind-romantische-beziehungen-für-männer-bedeutsamer-als-für-frauen",
+    "href": "slides/21-Komplexe_DGP_1.html#sind-romantische-beziehungen-für-männer-bedeutsamer-als-für-frauen",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Sind romantische Beziehungen für Männer bedeutsamer als für Frauen?",
+    "text": "Sind romantische Beziehungen für Männer bedeutsamer als für Frauen?\nEs geistert eine Behauptung durch die Wissenschaft und (vor allem) Social Media - und die geht ungefähr so:\nFür Männer sind Paarbeziehungen deutlich bedeutsamer als für Frauen.\nEs bestehen hier aber einige Unklarheiten:\n\nVergleichen wir Singles mit Personen in Beziehungen?\nGeht es um die Beziehungsdauer?\nVergleichen wir als Outcomes Zufriedenheit mit dem Leben, Beziehungszufriedenheit, Leidensdruck oder (mentale) Gesundheit?"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#die-einen-sagen-so",
+    "href": "slides/21-Komplexe_DGP_1.html#die-einen-sagen-so",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Die einen sagen so…",
+    "text": "Die einen sagen so…\n“Romantic Relationships Matter More to Men than to Women” Wahring et al. (2024)\n\n\n\n\n\n\n\n\n\n\nProposition\nFinding (Ergebnis)\nStudies (Studien)\nMean η² per finding\nMean η² per proposition\n\n\n\n\nMen (perceive to) have less intimacy and emotional support in their social ties beyond romantic partners than women do\nMen tend to perceive less support from their social ties\nCarr, 2004; Colarossi et al., 2001; Galambos et al., 2018; Kalmijn, 2007; Rosenthal et al., 1986; Rueger et al., 2008\n.0534\n.0344\n\n\n\nMen are more likely to receive no or little emotional support\nMatthews et al., 1999; Liebler & Sandefur, 2002; Shaw et al., 2021; Sonnenberg et al., 2013\n.0297\n\n\n\n\nMen are more likely to lack people they can confide in\nAdamczyk, 2016; Barreto et al., 2021; Dykstra & Fokkema, 2007; von Soest, Luhmann, & Gerstorf, 2020\n.0202\n\n\n\nMen depend more strongly on romantic partners for emotional support\nMen’s global perceptions of support depend more on their relationship status\nKafetsios, 2007; Stronge et al., 2019\n.0119\n.0721\n\n\n\nMen tend to view their partners as their primary support resource\nUmberson et al., 1996; Liao et al., 2018\n.1243\n\n\n\nMen strive more to establish relationships\nMen tend to view romantic involvement as more central to their well-being\nDykstra & Fokkema, 2007; Scheling & Richter, 2021\n.0305\n.0461\n\n\n\nMen are more likely to display romantic beliefs\nKnox & Sporakowski, 1968; Sharp & Ganong, 2000; Sprecher & Metts, 1989; Sprecher & Toro-Morn, 2002\n.0290\n\n\n\n\nMen are more interested in dating and finding a new partner\nBrown, 2021; Carr, 2004; Frazier et al., 1996; Hoan & MacDonald, 2024; Wahring et al., 2025\n.0454\n\n\n\n\nMen fall in love faster\nHarrison & Shortall, 2011\n.0544\n\n\n\n\nMen are more likely to experience love at first sight\nGalperin & Haselton, 2010; Northrup, C., Schwartz, P., & White, 2013\n.0369\n\n\n\n\nMen fall in love more often\nCruces et al., 2015; Montgomery & Sorell, 1998; Montgomery, 2005\n.0394\n\n\n\n\nMen are more likely to experience unreciprocated love\nCruces et al., 2015; Galperin & Haselton, 2010\n.0603\n\n\n\n\nMen are more likely to confess their love first\nBrantley et al., 2002; Ackerman et al., 2011; Watkins et al., 2022\n.0729\n\n\n\nMen benefit more from relationship involvement\nMen’s relationship status is more strongly associated with their well-being\nStronge et al., 2019; Grundström et al., 2021\n.0043\n.0161\n\n\n\nMen’s relationship status is more strongly associated with their mental health\nGrundström et al., 2021; Wright & Brown, 2017; Sonnenberg et al., 2013; Shaw et al., 2021\n.0307\n\n\n\n\nMen’s relationship status is more strongly associated with their physical health\nDavidsen et al., 2022; Ramezankhani et al., 2019\n.0244\n\n\n\n\nMen’s relationship status is more strongly associated with their all-cause mortality\nSbarra et al., 2011; Wang et al., 2020\n.0053\n\n\n\nMen are less likely to initiate relationship dissolution\nMen are less likely to initiate divorce\nKalmijn & Poortman, 2006; Amato & Previti, 2004; Brinig & Allen, 2000; Rosenfeld, 2018\n.2232\n.1675\n\n\n\nMen are less likely to initiate nonmarital dissolutions\nBrüning, 2022; Helgeson, 1994; Morris et al., 2015; Rosenfeld, 2018\n.1118\n\n\n\nMen suffer more when experiencing relationship dissolution\nMen are less likely to see positive sides in a break-up\nHelgeson, 1994; Tashiro & Frazier, 2003\n.0572\n.0407\n\n\n\nMen tend to view their ex-partner more positively\nAthenstaedt et al., 2020; Grüning et al., 2023\n.0412\n\n\n\n\nMen tend to remain emotionally attached to their ex-partner longer\nShimek & Bello, 2014\n.04\n\n\n\n\nMen are less likely to experience positive emotions after a break-up\nCarter et al., 2018; Choo et al., 1996\n.0241\n\n\n\n\nMen are more likely to feel lonely following divorce\nLeopold, 2018\n.0654\n\n\n\n\nMen’s life satisfaction decreases more sharply following divorce or a partner’s death\nChipperfield & Havens, 2001; Preetz, 2022; Van Scheppingen & Leopold, 2020\n.0518\n\n\n\n\nMen are more likely to commit suicide following divorce\nKposowa, 2000; Kposowa et al., 2020\n.0353\n\n\n\n\nMen’s mortality risk increases more sharply following a spouse’s death\nShor et al., 2012b\n.0007\n\n\n\n\nMen tend to enact less healthy and more unhealthy break-up coping\nAthenstaedt et al., 2020; Davis et al., 2003; Gehl et al., 2024; Shimek & Bello, 2014\n.0508"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#die-anderen-sagen-so",
+    "href": "slides/21-Komplexe_DGP_1.html#die-anderen-sagen-so",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Die anderen sagen so…",
+    "text": "Die anderen sagen so…\n\nZugang zur Diskussion innerhalb des KIT-Netzes finden Sie hier"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#wir-gehen-rein",
+    "href": "slides/21-Komplexe_DGP_1.html#wir-gehen-rein",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Wir gehen rein…",
+    "text": "Wir gehen rein…\nWir können folgende Theorie mit den FREDA Daten konfrontieren.\n\n\n\n\n\n\n\nflowchart TB\n\nB[\"Beziehungsstatus\"]\nG[\"Geschlecht\"]\nH([\"Heteronormativität\"])\nC1@{ shape: sm-circ, label: \" \"}\nC2@{ shape: sm-circ, label: \" \"}\n\nG --&gt; H --- C1 --&gt; B --- C2 --&gt; O[\"(Un)Zufriedenheit\"] \nG --&gt; C1 \nG --&gt; C2\n\n\n\n\n\n\n\n\nBehauptungen\n\nMänner tendieren stärker zur Heteronormativität.\nMänner bilden seltener Paarbeziehungen.\nFür Männer gilt: Je höher die Heteronormativität, desto geringer ist die Wahrscheinlichkeit einer Beziehung.\nFür Frauen gilt: Je höher die Heteronormativität, desto höher ist die Wahrscheinlichkeit einer Beziehung.\nBeziehungen machen zufriedener.\nMänner sind in Beziehungen noch zufriedener als im Single-Zustand."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#ein-erster-blick-in-die-daten",
+    "href": "slides/21-Komplexe_DGP_1.html#ein-erster-blick-in-die-daten",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Ein erster Blick in die Daten",
+    "text": "Ein erster Blick in die Daten"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#single-dasein",
+    "href": "slides/21-Komplexe_DGP_1.html#single-dasein",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Single Dasein",
+    "text": "Single Dasein"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#beziehungswunsch",
+    "href": "slides/21-Komplexe_DGP_1.html#beziehungswunsch",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Beziehungswunsch",
+    "text": "Beziehungswunsch"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#mediation-intervention",
+    "href": "slides/21-Komplexe_DGP_1.html#mediation-intervention",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Mediation / Intervention",
+    "text": "Mediation / Intervention\nIm Fall einer Mediation beruht der Zusammenhang von \\(r_{xy}\\) vollständig auf dem Produkt von \\(r_{xz}\\) und \\(r_{zy}\\).\nWenn \\(r_{xy}\\) = \\(r_{xz} \\cdot r_{zy}\\)\n\\[\\hat{\\beta}_x=\\frac{\\color{red}{r_{y{x}}-r_{y{z}}\\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\\cdot\\frac{s_y}{s_{x}}\\]\ndann\n\\[\\hat{\\beta}_x=\\frac{0}{1-r_{{x}{z}}^2}\\cdot\\frac{s_y}{s_{x}} = 0\\]"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktion",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktion",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktion",
+    "text": "Interaktion"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#colider",
+    "href": "slides/21-Komplexe_DGP_1.html#colider",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Colider",
+    "text": "Colider"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html",
+    "href": "slides/21-Komplexe_DGP_1.html",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "",
+    "text": "Es geistert eine Behauptung durch die Wissenschaft und (vor allem) Social Media - und die geht ungefähr so:\nFür Männer sind Paarbeziehungen deutlich bedeutsamer als für Frauen.\nEs bestehen hier aber einige Unklarheiten:\n\nVergleichen wir Singles mit Personen in Beziehungen?\nGeht es um die Beziehungsdauer?\nVergleichen wir als Outcomes Zufriedenheit mit dem Leben, Beziehungszufriedenheit, Leidensdruck oder (mentale) Gesundheit?"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#neue-behauptungen-brauchen-neue-werkzeuge",
+    "href": "slides/21-Komplexe_DGP_1.html#neue-behauptungen-brauchen-neue-werkzeuge",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Neue Behauptungen brauchen neue Werkzeuge",
+    "text": "Neue Behauptungen brauchen neue Werkzeuge\n\nIn dieser Theorie geht kein direkter* Pfeil von Geschlecht auf (Un)Zufriedenheit. Wir behaupten daher, dass alle* Wirkungen einer Eigenschaft auf das Outcome **indirekt* sind. Diese Struktur wird als “Mediation” oder auch “Intervention” bezeichnet.\nViele öffentliche und sozialwissenschaftliche Debatten drehen sich im Kern um das (Nicht)Vorliegen einer solchen Struktur:\n\nGibt es einen direkten Einfluss des Geschlechts auf den Lohn oder werden geschlechtsspezifische Entlohnungen über andere Eigenschaften vermittelt?\nGibt es einen direkten Einfluss des Migrationshintergrunds auf die Kriminalitätsneigung oder liegen bei Personen mit Migrationshintergrund gehäuft Eigenschaften vor, die mit einer Kriminalitätsneigung einhergehen?"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#neue-behauptungen-brauchen-neue-werkzeuge-mediation",
+    "href": "slides/21-Komplexe_DGP_1.html#neue-behauptungen-brauchen-neue-werkzeuge-mediation",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Neue Behauptungen brauchen neue Werkzeuge: Mediation",
+    "text": "Neue Behauptungen brauchen neue Werkzeuge: Mediation\n\nIn dieser Theorie geht kein direkter Pfeil von Geschlecht auf (Un)Zufriedenheit. Wir behaupten daher, dass alle* Wirkungen einer Eigenschaft auf das Outcome indirekt* sind. Diese Struktur wird als “Mediation” oder auch “Intervention” bezeichnet.\nViele öffentliche und sozialwissenschaftliche Debatten drehen sich im Kern um das (Nicht)Vorliegen einer solchen Struktur:\n\nGibt es einen direkten Einfluss des Geschlechts auf den Lohn oder werden geschlechtsspezifische Entlohnungen über andere Eigenschaften vermittelt?\nGibt es einen direkten Einfluss des Migrationshintergrunds auf die Kriminalitätsneigung oder liegen bei Personen mit Migrationshintergrund gehäuft Eigenschaften vor, die mit einer Kriminalitätsneigung einhergehen?"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#der-mediation-ihre-schwester-scheinkorrelation",
+    "href": "slides/21-Komplexe_DGP_1.html#der-mediation-ihre-schwester-scheinkorrelation",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Der Mediation ihre Schwester: “Schein”korrelation",
+    "text": "Der Mediation ihre Schwester: “Schein”korrelation\n\n\n\n\n\n\n\nflowchart TD\nZ --&gt; X & Y\n\n\n\n\n\n\n\n\nDie Datenstruktur mit der schlechtesten Publicity. Wird aber einfach missverstanden.1\nDer bivariate Zusammenhang zwischen X und Y wird vollständig über eine Eigenschaft Z vermittelt, die sowohl Unterschiede in X als auch in Y verursacht.\nEine solche Datenstruktur aufzudecken ist keine “Scheinwissenschaft”, sondern genauso eine Erkenntnis wie bei einer Mediation.\n\n\nLassen Sie mal ein bisschen Love für sie da."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#scheinkorrelation",
+    "href": "slides/21-Komplexe_DGP_1.html#scheinkorrelation",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Scheinkorrelation",
+    "text": "Scheinkorrelation\nAuch bei einer “Schein”korrelation beruht der Zusammenhang von \\(r_{xy}\\) vollständig auf dem Produkt von \\(r_{xz}\\) und \\(r_{zy}\\).\nDaher erneut: Wenn \\(r_{xy}\\) = \\(r_{xz} \\cdot r_{zy}\\)\n\\[\\hat{\\beta}_x=\\frac{\\color{red}{r_{y{x}}-r_{y{z}}\\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\\cdot\\frac{s_y}{s_{x}}\\]\ndann\n\\[\\hat{\\beta}_x=\\frac{0}{1-r_{{x}{z}}^2}\\cdot\\frac{s_y}{s_{x}} = 0\\]\nEine Mediation und eine Scheinkorrelation sind daher datenanalytisch nicht trennbar, sondern eine theoretische Frage."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#für-jedes-problemchen-ein-appchen",
+    "href": "slides/21-Komplexe_DGP_1.html#für-jedes-problemchen-ein-appchen",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Für jedes Problemchen ein Appchen",
+    "text": "Für jedes Problemchen ein Appchen"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#neue-behauptung-interaktion",
+    "href": "slides/21-Komplexe_DGP_1.html#neue-behauptung-interaktion",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Neue Behauptung: Interaktion",
+    "text": "Neue Behauptung: Interaktion\n\nDie Art des Einflusses (u.a.: positiv/negativ) sowie dessen Stärke kann systematisch durch eine weitere Eigenschaft bedingt sein. Diese Datenstruktur wird als “Interaktion” oder “gruppenspezifischer Einfluss” bezeichnet.\nWenn das der Fall ist, besteht zwischen Gruppen eine (wachsende) Differenz in der Niveauverschiebung des Outcomes durch ein Treatment.\n\nDer Einfluss von Kindern auf die Einkommensentwicklung von Eltern ist geschlechtsspezifisch.\nDer Zusammenhang von Schlafdauer und Regeneration ist abhängig von der Raumtemperatur."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktionen-und-isolation",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktionen-und-isolation",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktionen und Isolation",
+    "text": "Interaktionen und Isolation\n\n\nVariante 1: Reine Interaktion\n\n\n\n\n\nflowchart TB\n\nC1@{ shape: sm-circ, label: \" \"}\n\nX --- C1 --&gt; Y\nZ --&gt; C1\n\n\n\n\n\n\n\nVariante 2: Der übliche Mist\n\n\n\n\n\nflowchart TB\n\nC1@{ shape: sm-circ, label: \" \"}\n\nX --- C1 --&gt; Y\nZ --&gt; C1\nX --&gt; Z\nZ --&gt; Y\n\n\n\n\n\n\n\n\nEine Interaktion ist eine Frage der Modellierung - sie kann nicht per se isoliert werden.\nAuch in Variante 1 führt Z bivariat eine Niveauverschiebung in Y durch, weil Z die Nivauverschiebung durch Z verändert.\nMit der Korrelation von \\(r_{y{x}}\\) zu isolieren wäre in dieser Variante aber falsch, weil diese Korrelation de facto null ist. \\[\\hat{\\beta}_x=\\frac{\\color{red}{r_{y{x}}-r_{y{z}}\\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\\cdot\\frac{s_y}{s_{x}}\\]\nIn Variante 2 und seinen Spielarten besteht zur Interaktion auch eine Konfundierung. Letzte muss vom reinen Interaktionseffekt isoliert werden."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#für-jedes-problemchen-ein-appchen-1",
+    "href": "slides/21-Komplexe_DGP_1.html#für-jedes-problemchen-ein-appchen-1",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Für jedes Problemchen ein Appchen",
+    "text": "Für jedes Problemchen ein Appchen"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktion-mit-metrisch-gemessenen-eigenschaften",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktion-mit-metrisch-gemessenen-eigenschaften",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktion mit metrisch gemessenen Eigenschaften",
+    "text": "Interaktion mit metrisch gemessenen Eigenschaften\nAngenommen, Variante 1 liegt als Daten generierender Prozess vor:\n\n\n\n\n\n\n\nflowchart TB\n\nC1@{ shape: sm-circ, label: \" \"}\n\nX --- C1 --&gt; Y\nZ --&gt; C1\n\n\n\n\n\n\n\nKleinst mögliches Beispiel:\n\n\n\n\n\nZ\n\n\n\n\n\n\n\nnein\nja\n\n\nX\nnein\n40\n40\n\n\n\nja\n100\n120\n\n\n\nZellen = Durchschnitte des Outcomes\n\nEine lineare Regression drückt immer Differenzen in Durchschnitten aus. Eine Regression drückt\n\n\\(E[Y | X = \\text{ja}, Z = \\text{nein}]\\) - \\(E[Y | X = \\text{nein}, Z = \\text{nein}]\\) = 60\n\\(E[Y | X = \\text{ja}, Z = \\text{ja}]\\) - \\(E[Y | X = \\text{nein}, Z = \\text{ja}]\\) = 80\nDifferenz beider Diffenzen = 20\n\nLetztere Differenz ist die zusätzliche Niveauverschiebung im Outcome durch X, weil Z diesen Einfluss verstärkt. Z hat keinen direkten Einfluss auf Y, daher ist die Differenz in der ersten Zeile = 0."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktion-is-a-beast",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktion-is-a-beast",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktion is a beast",
+    "text": "Interaktion is a beast\nAngenommen, Variante 1 liegt als Daten generierender Prozess vor:\n\n\n\n\n\n\n\nflowchart TB\n\nC1@{ shape: sm-circ, label: \" \"}\n\nX --- C1 --&gt; Y\nZ --&gt; C1\n\n\n\n\n\n\n\nKleinst mögliches Beispiel:\n\n\n\n\n\nZ\n\n\n\n\n\n\n\nnein\nja\n\n\nX\nnein\n40\n40\n\n\n\nja\n100\n120\n\n\n\nZellen = Durchschnitte des Outcomes\n\nEine lineare Regression drückt immer Differenzen in Durchschnitten aus.\n\n\\(E[Y | X = \\text{ja}, Z = \\text{nein}]\\) - \\(E[Y | X = \\text{nein}, Z = \\text{nein}]\\) = 60\n\\(E[Y | X = \\text{ja}, Z = \\text{ja}]\\) - \\(E[Y | X = \\text{nein}, Z = \\text{ja}]\\) = 80\nDifferenz beider Diffenzen = 20\n\nLetztere Differenz ist die zusätzliche Niveauverschiebung im Outcome durch X, weil Z diesen Einfluss verstärkt. Z hat keinen direkten Einfluss auf Y, daher ist die Differenz in der ersten Zeile = 0."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktion-is-a-beast-1",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktion-is-a-beast-1",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktion is a beast",
+    "text": "Interaktion is a beast\nAngenommen, Variante 2 liegt als Daten generierender Prozess vor:\n\n\n\n\n\n\n\nflowchart TB\n\nC1@{ shape: sm-circ, label: \" \"}\n\nX --- C1 --&gt; Y\nZ --&gt; C1\nX --&gt; Z\nZ --&gt; Y\n\n\n\n\n\n\n\n\n\n\n\nZ\n\n\n\n\n\n\n\nnein\nja\n\n\nX\nnein\n40\n80\n\n\n\nja\n100\n160\n\n\n\nZellen = Durchschnitte des Outcomes\n\nIn diesem Fall gibt es drei Niveauverschiebungen:\n\n+40, wenn Z von nein \\(\\rightarrow\\) ja\n+60, wenn X von nein \\(\\rightarrow\\) ja\n+20, wenn X und Z gleichzeitig ja sind.\n\nAnders als bei Variante 1 müssen wir die Niveauverschiebung von \\(X \\rightarrow Z \\rightarrow Y\\) vom Interaktionseffekt isolieren, da:\n\n\\(E[Y | X = \\text{ja}, Z = \\text{nein}]\\) - \\(E[Y | X = \\text{nein}, Z = \\text{nein}]\\) = 60\n\\(E[Y | X = \\text{ja}, Z = \\text{ja}]\\) - \\(E[Y | X = \\text{nein}, Z = \\text{ja}]\\) = 80\nDifferenz beider Diffenzen = 40 \\(\\leftarrow\\) das ist nicht der korrekte Zusatzeffekt"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktionen-in-einer-regression",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktionen-in-einer-regression",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktionen in einer Regression",
+    "text": "Interaktionen in einer Regression\nRegressionen drücken ausgehend von einer Basisgruppe Differenzen zu verschiedenen Vergleichsgruppen aus.\n\\[\n\\hat{y}_i = \\underbrace{\\hat{\\alpha}}_{40} + \\underbrace{\\hat{\\beta}_1}_{+60} \\cdot \\underbrace{x_i}_{\\substack{0 \\\\ 1}} + \\underbrace{\\hat{\\beta}_2}_{+40} \\cdot \\underbrace{z_i}_{\\substack{0 \\\\ 1}} + \\underbrace{\\hat{\\beta}_3}_{+20} \\cdot ( \\underbrace{x_i}_{\\substack{0 \\\\ 1}} \\cdot \\underbrace{z_i}_{\\substack{0 \\\\ 1}} )\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\hat{\\alpha}\\)\n\\(+\\hat{\\beta}_1\\)\n\\(\\cdot x_i\\)\n\\(+ \\hat{\\beta}_2\\)\n\\(\\cdot z_i\\)\n\\(+ \\hat{\\beta}_3\\)\n\\(\\cdot x_i\\)\n\\(\\cdot z_i\\)\n=\n\n\n\n\n40\n60\n0\n40\n0\n20\n0\n0\n40\n\n\n40\n60\n1\n40\n0\n20\n1\n0\n100\n\n\n40\n60\n0\n40\n1\n20\n0\n1\n80\n\n\n40\n60\n1\n40\n1\n20\n1\n1\n160\n\n\n\n\n\\(\\alpha\\) ist per Definition die Gruppe, die in allen beeinflussenden Eigenschaften den Wert 0 hat (X == 0 & Z == 0).\nDer Interaktionseffekt wird nur dann eingerechnet, wenn beide Eigenschaften nicht null sind."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#die-kunst-sinn-daraus-zu-machen",
+    "href": "slides/21-Komplexe_DGP_1.html#die-kunst-sinn-daraus-zu-machen",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Die Kunst, Sinn daraus zu machen",
+    "text": "Die Kunst, Sinn daraus zu machen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\hat{\\alpha}\\)\n+\n\\(\\hat{\\beta}_1\\)\n\\(\\cdot\\)\n\\(x_i\\)\n+\n\\(\\hat{\\beta}_2\\)\n\\(\\cdot\\)\n\\(z_i\\)\n+\n\\(\\hat{\\beta}_3\\)\n\\(x_i\\)\n\\(\\cdot\\)\n\\(z_i\\)\n=\n\n\n\n\n\n40\n\n60\n\n0\n\n40\n\n0\n\n20\n0\n\n0\n\n40\n\n\n40\n\n60\n\n1\n\n40\n\n0\n\n20\n1\n\n0\n\n100\n\n\n40\n\n60\n\n0\n\n40\n\n1\n\n20\n0\n\n1\n\n80\n\n\n40\n\n60\n\n1\n\n40\n\n1\n\n20\n1\n\n1\n\n160"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktionen-mit-metrischen-variablen",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktionen-mit-metrischen-variablen",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktionen mit metrischen Variablen",
+    "text": "Interaktionen mit metrischen Variablen"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#interaktionen-mit-metrischen-variablen-1",
+    "href": "slides/21-Komplexe_DGP_1.html#interaktionen-mit-metrischen-variablen-1",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Interaktionen mit metrischen Variablen",
+    "text": "Interaktionen mit metrischen Variablen\nDie Logik von Interaktionstermen in einer metrischen Regression ist prinzipiell identisch, hat aber einen “eigenen flavor”.\n\\[\n\\hat{y}_i = \\underbrace{\\hat{\\alpha}}_{2} + \\underbrace{\\hat{\\beta}_1}_{+3} \\cdot \\underbrace{x_i}_{\\substack{0 \\\\ 1 \\\\ 2 \\\\ \\dots \\\\ x_{max}}} + \\underbrace{\\hat{\\beta}_2}_{+1} \\cdot \\underbrace{z_i}_{\\substack{0 \\\\ 1 \\\\ 2 \\\\ \\dots \\\\ z_{max}}} + \\underbrace{\\hat{\\beta}_3}_{+0.5} \\cdot ( \\underbrace{x_i}_{\\substack{0 \\\\ 1 \\\\ 2 \\\\ \\dots \\\\ x_{max}}} \\cdot \\underbrace{z_i}_{\\substack{0 \\\\ 1 \\\\ 2 \\\\ \\dots \\\\ z_{max}}} )\n\\]\n\nFür jede Einheit in X steigt Y durchschnittlich um 3 Einheiten, wenn Z konstant ist.\nFür jede Einheit in Z steigt Y durchschnittlich um eine Einheit, wenn X konstant ist.\nWenn X und Z sich zusammen um eine Einheit erhöhen, erhöht sich Y durchschnittlich um 0.5 Einheiten."
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#in-die-schlammigen-tiefen-der-empirie",
+    "href": "slides/21-Komplexe_DGP_1.html#in-die-schlammigen-tiefen-der-empirie",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "In die schlammigen Tiefen der Empirie",
+    "text": "In die schlammigen Tiefen der Empirie\n\n\n\nRegressionsergebnisse: Zufriedenheit mit dem Leben\n\n\n\n\n\n\n\n\n\nModell 1: Geschlecht\nModell 2: + Beziehungsstatus\nModell 3: + Interaktion\n\n\n\n\nIntercept\n7.147***\n6.415***\n6.457***\n\n\n\n(0.006)\n(0.010)\n(0.012)\n\n\nMännlich\n-0.011\n0.040***\n-0.045*\n\n\n\n(0.009)\n(0.009)\n(0.018)\n\n\nHat Partner/in\n\n0.933***\n0.880***\n\n\n\n\n(0.010)\n(0.014)\n\n\nInteraktion: Männlich × Partnerstatus\n\n\n0.112***\n\n\n\n\n\n(0.020)\n\n\nNum.Obs.\n158343\n157957\n157957\n\n\n\n\np &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#machen-beziehungen-männer-zufriedener",
+    "href": "slides/21-Komplexe_DGP_1.html#machen-beziehungen-männer-zufriedener",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Machen Beziehungen Männer zufriedener?",
+    "text": "Machen Beziehungen Männer zufriedener?\n\n\n\nRegressionsergebnisse: Zufriedenheit mit dem Leben\n\n\n\n\n\n\n\n\n\nModell 1: Geschlecht\nModell 2: + Beziehungsstatus\nModell 3: + Interaktion\n\n\n\n\nIntercept\n7.147***\n6.415***\n6.457***\n\n\n\n(0.006)\n(0.010)\n(0.012)\n\n\nMännlich\n-0.011\n0.040***\n-0.045*\n\n\n\n(0.009)\n(0.009)\n(0.018)\n\n\nHat Partner/in\n\n0.933***\n0.880***\n\n\n\n\n(0.010)\n(0.014)\n\n\nInteraktion: Männlich × Partnerstatus\n\n\n0.112***\n\n\n\n\n\n(0.020)\n\n\nNum.Obs.\n158343\n157957\n157957\n\n\n\n\np &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#steigt-für-männer-die-zufriedenheit-nach-beziehungsdauer-unterschiedlich",
+    "href": "slides/21-Komplexe_DGP_1.html#steigt-für-männer-die-zufriedenheit-nach-beziehungsdauer-unterschiedlich",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Steigt für Männer die Zufriedenheit nach Beziehungsdauer unterschiedlich?",
+    "text": "Steigt für Männer die Zufriedenheit nach Beziehungsdauer unterschiedlich?\n\n\n\nRegressionsergebnisse: Zufriedenheit mit der Beziehung\n\n\n\n\n\n\n\n\n\nModell 1: Geschlecht\nModell 2: + Beziehungsdauer (reldur)\nModell 3: + Interaktion\n\n\n\n\nIntercept\n8.129***\n8.259***\n8.289***\n\n\n\n(0.006)\n(0.011)\n(0.012)\n\n\nMännlich\n0.105***\n0.105***\n0.027\n\n\n\n(0.010)\n(0.011)\n(0.020)\n\n\nBeziehungsdauer\n\n-0.001***\n-0.001***\n\n\n\n\n(0.000)\n(0.000)\n\n\nInteraktion: Männlich × Beziehungsdauer\n\n\n0.001***\n\n\n\n\n\n(0.000)\n\n\nNum.Obs.\n120260\n93886\n93886\n\n\n\n\np &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#was-bedeutet-das",
+    "href": "slides/21-Komplexe_DGP_1.html#was-bedeutet-das",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Was bedeutet das?",
+    "text": "Was bedeutet das?"
+  },
+  {
+    "objectID": "slides/21-Komplexe_DGP_1.html#footnotes",
+    "href": "slides/21-Komplexe_DGP_1.html#footnotes",
+    "title": "Komplexe datengenerierende Prozesse - Teil 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nLassen Sie mal ein bisschen Love für sie da.↩︎"
+  },
+  {
+    "objectID": "slides/21-slides.html",
+    "href": "slides/21-slides.html",
+    "title": "Komplexe Daten generierende Prozesse – Teil 1",
+    "section": "",
+    "text": "View slides in full screen"
   }
 ]

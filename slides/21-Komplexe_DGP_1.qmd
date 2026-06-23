@@ -1,0 +1,693 @@
+---
+title: "Komplexe datengenerierende Prozesse - Teil 1"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.01
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+# 1️⃣ Lade notwendige Bibliotheken
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(haven)
+
+freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta")
+```
+
+```{r}
+# Pfad zum Skript (relativ zum Quarto-Dokument)
+skript <- here::here("slides", "scripts", "freda_clean.R")
+# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
+source(skript, local = TRUE)
+```
+
+
+## Sind romantische Beziehungen für Männer bedeutsamer als für Frauen? 
+
+Es geistert eine Behauptung durch die Wissenschaft und (vor allem) Social Media - und die geht ungefähr so:
+
+**Für Männer sind Paarbeziehungen deutlich bedeutsamer als für Frauen.**
+
+Es bestehen hier aber einige Unklarheiten: 
+
+- Vergleichen wir Singles mit Personen in Beziehungen? 
+- Geht es um die Beziehungsdauer? 
+- Vergleichen wir als Outcomes Zufriedenheit mit dem Leben, Beziehungszufriedenheit, Leidensdruck oder (mentale) Gesundheit? 
+
+
+## Die einen sagen so... {.scrollable .midi}
+
+"Romantic Relationships Matter More to Men than to Women" [Wahring et al. (2024)](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/romantic-relationships-matter-more-to-men-than-to-women/52E626D3CD7DB14CD946F9A2FBDA739C)
+
+| Proposition | Finding (Ergebnis) | Studies (Studien) | Mean η² per finding | Mean η² per proposition |
+| :--- | :--- | :--- | :--- | :--- |
+| **Men (perceive to) have less intimacy and emotional support in their social ties beyond romantic partners than women do** | Men tend to perceive less support from their social ties | Carr, 2004; Colarossi et al., 2001; Galambos et al., 2018; Kalmijn, 2007; Rosenthal et al., 1986; Rueger et al., 2008 | .0534 | .0344 |
+| | Men are more likely to receive no or little emotional support | Matthews et al., 1999; Liebler & Sandefur, 2002; Shaw et al., 2021; Sonnenberg et al., 2013 | .0297 | |
+| | Men are more likely to lack people they can confide in | Adamczyk, 2016; Barreto et al., 2021; Dykstra & Fokkema, 2007; von Soest, Luhmann, & Gerstorf, 2020 | .0202 | |
+| **Men depend more strongly on romantic partners for emotional support** | Men's global perceptions of support depend more on their relationship status | Kafetsios, 2007; Stronge et al., 2019 | .0119 | .0721 |
+| | Men tend to view their partners as their primary support resource | Umberson et al., 1996; Liao et al., 2018 | .1243 | |
+| **Men strive more to establish relationships** | Men tend to view romantic involvement as more central to their well-being | Dykstra & Fokkema, 2007; Scheling & Richter, 2021 | .0305 | .0461 |
+| | Men are more likely to display romantic beliefs | Knox & Sporakowski, 1968; Sharp & Ganong, 2000; Sprecher & Metts, 1989; Sprecher & Toro-Morn, 2002 | .0290 | |
+| | Men are more interested in dating and finding a new partner | Brown, 2021; Carr, 2004; Frazier et al., 1996; Hoan & MacDonald, 2024; Wahring et al., 2025 | .0454 | |
+| | Men fall in love faster | Harrison & Shortall, 2011 | .0544 | |
+| | Men are more likely to experience love at first sight | Galperin & Haselton, 2010; Northrup, C., Schwartz, P., & White, 2013 | .0369 | |
+| | Men fall in love more often | Cruces et al., 2015; Montgomery & Sorell, 1998; Montgomery, 2005 | .0394 | |
+| | Men are more likely to experience unreciprocated love | Cruces et al., 2015; Galperin & Haselton, 2010 | .0603 | |
+| | Men are more likely to confess their love first | Brantley et al., 2002; Ackerman et al., 2011; Watkins et al., 2022 | .0729 | |
+| **Men benefit more from relationship involvement** | Men's relationship status is more strongly associated with their well-being | Stronge et al., 2019; Grundström et al., 2021 | .0043 | .0161 |
+| | Men's relationship status is more strongly associated with their mental health | Grundström et al., 2021; Wright & Brown, 2017; Sonnenberg et al., 2013; Shaw et al., 2021 | .0307 | |
+| | Men's relationship status is more strongly associated with their physical health | Davidsen et al., 2022; Ramezankhani et al., 2019 | .0244 | |
+| | Men's relationship status is more strongly associated with their all-cause mortality | Sbarra et al., 2011; Wang et al., 2020 | .0053 | |
+| **Men are less likely to initiate relationship dissolution** | Men are less likely to initiate divorce | Kalmijn & Poortman, 2006; Amato & Previti, 2004; Brinig & Allen, 2000; Rosenfeld, 2018 | .2232 | .1675 |
+| | Men are less likely to initiate nonmarital dissolutions | Brüning, 2022; Helgeson, 1994; Morris et al., 2015; Rosenfeld, 2018 | .1118 | |
+| **Men suffer more when experiencing relationship dissolution** | Men are less likely to see positive sides in a break-up | Helgeson, 1994; Tashiro & Frazier, 2003 | .0572 | .0407 |
+| | Men tend to view their ex-partner more positively | Athenstaedt et al., 2020; Grüning et al., 2023 | .0412 | |
+| | Men tend to remain emotionally attached to their ex-partner longer | Shimek & Bello, 2014 | .04 | |
+| | Men are less likely to experience positive emotions after a break-up | Carter et al., 2018; Choo et al., 1996 | .0241 | |
+| | Men are more likely to feel lonely following divorce | Leopold, 2018 | .0654 | |
+| | Men's life satisfaction decreases more sharply following divorce or a partner's death | Chipperfield & Havens, 2001; Preetz, 2022; Van Scheppingen & Leopold, 2020 | .0518 | |
+| | Men are more likely to commit suicide following divorce | Kposowa, 2000; Kposowa et al., 2020 | .0353 | |
+| | Men's mortality risk increases more sharply following a spouse's death | Shor et al., 2012b | .0007 | |
+| | Men tend to enact less healthy and more unhealthy break-up coping | Athenstaedt et al., 2020; Davis et al., 2003; Gehl et al., 2024; Shimek & Bello, 2014 | .0508 | |
+
+
+
+## Die anderen sagen so... 
+![](images/romantic_relations_gender_discussion.png.jpg)
+
+Zugang zur Diskussion innerhalb des KIT-Netzes finden Sie [hier](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/reassessing-romantic-dependency-gendered-vulnerabilities-and-cultural-realities-beyond-the-western-lens/EA17B493F568B1F3DEF074D41F03CB03#related-commentaries)
+
+
+## Wir gehen rein... 
+Wir können folgende Theorie mit den FREDA Daten konfrontieren. 
+
+::: {.columns}
+::: {.column width=30%}
+```{mermaid}
+flowchart TB
+
+B["Beziehungsstatus"]
+G["Geschlecht"]
+H(["Heteronormativität"])
+C1@{ shape: sm-circ, label: " "}
+C2@{ shape: sm-circ, label: " "}
+
+G --> H --- C1 --> B --- C2 --> O["(Un)Zufriedenheit"] 
+G --> C1 
+G --> C2
+
+```
+:::
+
+::: {.column width=70%}
+
+**Behauptungen**
+
+- Männer tendieren stärker zur Heteronormativität. 
+- Männer bilden seltener Paarbeziehungen.
+- Für Männer gilt: Je höher die Heteronormativität, desto geringer ist die Wahrscheinlichkeit einer Beziehung. 
+- Für Frauen gilt: Je höher die Heteronormativität, desto höher ist die Wahrscheinlichkeit einer Beziehung. 
+- Beziehungen machen zufriedener. 
+- Männer sind in Beziehungen noch zufriedener als im Single-Zustand. 
+
+:::
+:::
+
+
+## Ein erster Blick in die Daten
+```{r}
+# 1️⃣ Datenvorbereitung
+dat_plot_sat6 <- freda_clean %>%
+  filter(!is.na(pstat)) %>%
+  mutate(
+    pstat_numeric = case_when(
+      pstat %in% c(0, "0", "nein", "nein ") ~ 0,
+      pstat %in% c(1, "1", "ja", "ja ") ~ 1,
+      TRUE ~ NA_real_
+    ),
+    sex_clean = case_when(
+      tolower(trimws(as.character(sex))) %in% c(1, "m", "männlich", "mann") ~ "Männlich",
+      tolower(trimws(as.character(sex))) %in% c(2, "w", "weiblich", "frau") ~ "Weiblich",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(pstat_numeric), !is.na(sex_clean)) %>%
+  select(sex_clean, sat6, pstat = pstat_numeric)
+
+# 2️⃣ Berechne relative Häufigkeiten
+häufigkeiten <- dat_plot_sat6 %>%
+  group_by(sex_clean) %>%
+  summarise(
+    gesamt = n(),
+    in_partnerschaft = sum(pstat == 1),
+    anteil = in_partnerschaft / gesamt * 100
+  )
+
+# 3️⃗ Plot erstellen mit angepassten X-Labels
+ggplot(dat_plot_sat6, aes(x = factor(pstat), y = sat6, fill = sex_clean)) +
+  geom_boxplot() +
+  labs(
+    title = "Zufriedenheit mit dem Leben nach Geschlecht & Partnerschaftsstatus",
+    x = "Beziehungsstatus",  # Übergeordnete X-Label
+    y = "Zufriedenheit mit dem Leben (Skala)",
+    fill = "Geschlecht",
+    caption = "0 = Single, 1 = Paarbeziehung"  # Erklärung der X-Achsen-Codes
+  ) +
+  scale_fill_manual(values = c("Männlich" = "#1f77b4", "Weiblich" = "#ff7f0e")) +
+  scale_x_discrete(
+    labels = c("0" = "Single", "1" = "Paarbeziehung")  # Direkte Labels für X-Achse
+  ) +
+  theme_minimal() +
+  theme(axis.title.x = element_text(size = 12)) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(dat_plot_sat6$sat6, na.rm = TRUE),
+    label = paste(
+      "Anteil in Partnerschaft:\n",
+      "Männer: ", round(häufigkeiten$anteil[häufigkeiten$sex_clean == "Männlich"], 1), "%\n",
+      "Frauen: ", round(häufigkeiten$anteil[häufigkeiten$sex_clean == "Weiblich"], 1), "%",
+      sep = ""
+    ),
+    hjust = 0,
+    vjust = -1,
+    color = "black",
+    size = 3.5
+  )
+```
+
+## Single Dasein
+```{r}
+# 1️⃣ Daten für 'sin3i1' vorbereiten (inkl. pstat-Filter für Partner)
+dat_sin3i1 <- freda_clean %>% select(sex, sin3i1) %>% filter(!is.na(sin3i1))               # Nur benötigte Variablen
+
+
+# 2️⃣ Relative Häufigkeiten **innerhalb eines Geschlechts** berechnen
+häufigkeiten_sin3i1 <- dat_sin3i1 %>%
+  group_by(sex, sin3i1) %>%  # Gruppiere nach Geschlecht und Antwortkategorie
+  summarise(anzahl = n(), .groups = "drop") %>%
+  mutate(anteil = anzahl / sum(anzahl) * 100)  # Anteil innerhalb des Geschlechts
+
+ggplot(häufigkeiten_sin3i1, aes(x = sin3i1, y = anteil, fill = sex)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8)) +
+    geom_text(
+    aes(label = paste0(round(anteil, 1), "%")),  # Beschriftung mit einer Dezimalstelle
+    vjust = -0.5,  # Position der Beschriftung über dem Balken
+    position = position_dodge(width = 0.8),  # Zentriere die Beschriftung über den Balken
+    size = 3.5,
+    angle = 0
+  ) +
+  labs(
+    title = "Zustimmung: 'Als Single ist vieles leichter' nach Geschlecht",
+    x = "Antwortkategorie",
+    y = "Relative Häufigkeit (%)",
+    fill = "Geschlecht"
+  ) +
+  scale_fill_manual(values = c("Männlich" = "#1f77b4", "Weiblich" = "#ff7f0e")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Beziehungswunsch
+```{r}
+# 1️⃣ Datenvorbereitung (wie zuvor)
+häufigkeiten_sin3i2 <- freda_clean %>% 
+  select(sex, sin3i2) %>% 
+  filter(!is.na(sin3i2))  %>%
+  group_by(sex, sin3i2) %>%
+  summarise(anzahl = n(), .groups = "drop") %>%
+  mutate(anteil = anzahl / sum(anzahl) * 100)  # Relative Häufigkeit in Prozent
+
+# 2️⃗ Balkendiagramm mit Beschriftungen
+ggplot(häufigkeiten_sin3i2, aes(x = sin3i2, y = anteil, fill = sex)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8)) +
+  geom_text(
+    aes(label = paste0(round(anteil, 1), "%")),  # Beschriftung mit einer Dezimalstelle
+    vjust = -0.5,  # Position der Beschriftung über dem Balken
+    position = position_dodge(width = 0.8),  # Zentriere die Beschriftung über den Balken
+    size = 3.5,
+    angle = 0
+  ) +
+  labs(
+    title = "Zustimmung: 'Ich hätte gerne eine Beziehung' nach Geschlecht",
+    x = "Antwortkategorie",
+    y = "Relative Häufigkeit (%)",
+    fill = "Geschlecht"
+  ) +
+  scale_fill_manual(values = c("Männlich" = "#1f77b4", "Weiblich" = "#ff7f0e")) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(hjust = 0.5)
+  )
+```
+
+## Neue Behauptungen brauchen neue Werkzeuge: Mediation
+
+- In dieser Theorie geht kein **direkter** Pfeil von *Geschlecht* auf *(Un)Zufriedenheit*. Wir behaupten daher, dass **alle* Wirkungen einer Eigenschaft auf das Outcome **indirekt* sind. Diese Struktur wird als "Mediation" oder auch "Intervention" bezeichnet. 
+
+- Viele öffentliche und sozialwissenschaftliche Debatten drehen sich im Kern um das (Nicht)Vorliegen einer solchen Struktur: 
+   - Gibt es einen *direkten* Einfluss des Geschlechts auf den Lohn oder werden geschlechtsspezifische Entlohnungen über andere Eigenschaften vermittelt? 
+   - Gibt es einen *direkten* Einfluss des Migrationshintergrunds auf die Kriminalitätsneigung oder liegen bei Personen mit Migrationshintergrund gehäuft Eigenschaften vor, die mit einer Kriminalitätsneigung einhergehen? 
+
+
+## Mediation / Intervention 
+
+Im Fall einer Mediation beruht der Zusammenhang von $r_{xy}$ vollständig auf dem Produkt von $r_{xz}$ und $r_{zy}$.
+
+Wenn $r_{xy}$ = $r_{xz} \cdot r_{zy}$
+
+$$\hat{\beta}_x=\frac{\color{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}$$
+
+dann
+
+$$\hat{\beta}_x=\frac{0}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}} = 0$$
+
+## Der Mediation ihre Schwester: "Schein"korrelation 
+
+::: {.columns}
+::: {.column width=30%}
+```{mermaid}
+flowchart TD
+Z --> X & Y
+```
+:::
+
+::: {.column}
+- Die Datenstruktur mit der schlechtesten Publicity. Wird aber einfach missverstanden.[^1] 
+
+- Der *bivariate* Zusammenhang zwischen X und Y wird vollständig über eine Eigenschaft Z vermittelt, die sowohl Unterschiede in X als auch in Y verursacht. 
+
+- Eine solche Datenstruktur aufzudecken ist keine "Scheinwissenschaft", sondern genauso eine Erkenntnis wie bei einer Mediation. 
+
+:::
+
+:::
+
+[^1]: Lassen Sie mal ein bisschen Love für sie da.
+
+## Scheinkorrelation
+
+Auch bei einer "Schein"korrelation beruht der Zusammenhang von $r_{xy}$ vollständig auf dem Produkt von $r_{xz}$ und $r_{zy}$.
+
+Daher erneut: Wenn $r_{xy}$ = $r_{xz} \cdot r_{zy}$
+
+$$\hat{\beta}_x=\frac{\color{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}$$
+
+dann
+
+$$\hat{\beta}_x=\frac{0}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}} = 0$$
+
+Eine Mediation und eine Scheinkorrelation sind daher datenanalytisch nicht trennbar, sondern eine theoretische Frage. 
+
+## Für jedes Problemchen ein Appchen
+
+<iframe width="100%" height="100%" src="https://www.shiny-appserver.org/regression_multi">
+</iframe>
+
+
+## Neue Behauptung: Interaktion
+
+- Die Art des Einflusses (u.a.: positiv/negativ) sowie dessen Stärke kann systematisch durch eine weitere Eigenschaft bedingt sein. Diese Datenstruktur wird als "Interaktion" oder "gruppenspezifischer Einfluss" bezeichnet. 
+
+- Wenn das der Fall ist, besteht zwischen Gruppen eine (wachsende) *Differenz in der Niveauverschiebung* des Outcomes durch ein Treatment. 
+
+    - Der Einfluss von Kindern auf die Einkommensentwicklung von Eltern ist geschlechtsspezifisch. 
+    - Der Zusammenhang von Schlafdauer und Regeneration ist abhängig von der Raumtemperatur. 
+
+
+## Interaktionen und Isolation 
+
+
+::: {.columns}
+::: {.column width=30%}
+Variante 1: Reine Interaktion
+```{mermaid}
+flowchart TB
+
+C1@{ shape: sm-circ, label: " "}
+
+X --- C1 --> Y
+Z --> C1
+
+```
+
+Variante 2: Der übliche Mist
+```{mermaid}
+flowchart TB
+
+C1@{ shape: sm-circ, label: " "}
+
+X --- C1 --> Y
+Z --> C1
+X --> Z
+Z --> Y
+```
+:::
+
+::: {.column width=70%}
+
+- Eine Interaktion ist eine Frage der Modellierung - sie kann nicht per se *isoliert* werden.
+- Auch in Variante 1 führt Z bivariat eine Niveauverschiebung in Y durch, weil Z die Nivauverschiebung durch Z *verändert*. 
+- Mit der Korrelation von $r_{y{x}}$ zu isolieren wäre in dieser Variante aber falsch, weil diese Korrelation de facto null ist. 
+$$\hat{\beta}_x=\frac{\color{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}$$
+
+- In Variante 2 und seinen Spielarten besteht zur Interaktion auch eine Konfundierung. Letzte muss vom reinen Interaktionseffekt isoliert werden. 
+:::
+:::
+
+## Interaktion is a beast {.midi}
+
+Angenommen, Variante 1 liegt als Daten generierender Prozess vor: 
+
+::: {.columns}
+::: {.column width=30%}
+```{mermaid}
+flowchart TB
+
+C1@{ shape: sm-circ, label: " "}
+
+X --- C1 --> Y
+Z --> C1
+
+```
+
+Kleinst mögliches Beispiel:
+
+|       	|      	| **Z** 	|     	|
+|-------	|------	|-------	|-----	|
+|       	|      	| nein  	| ja  	|
+| **X** 	| nein 	| 40    	| 40  	|
+|       	| ja   	| 100   	| 120 	|
+
+Zellen = Durchschnitte des Outcomes 
+
+:::
+
+::: {.column width=70%}
+
+Eine lineare Regression drückt immer *Differenzen in Durchschnitten* aus. 
+
+- $E[Y | X = \text{ja}, Z = \text{nein}]$ - $E[Y | X = \text{nein}, Z = \text{nein}]$ = 60
+- $E[Y | X = \text{ja}, Z = \text{ja}]$ - $E[Y | X = \text{nein}, Z = \text{ja}]$ = 80
+- Differenz beider Diffenzen = 20
+
+Letztere Differenz ist die *zusätzliche Niveauverschiebung* im Outcome durch X, weil Z diesen Einfluss verstärkt. Z hat keinen direkten Einfluss auf Y, daher ist die Differenz in der ersten Zeile = 0.
+
+:::
+:::
+
+## Interaktion is a beast {.midi}
+
+Angenommen, Variante 2 liegt als Daten generierender Prozess vor: 
+
+::: {.columns}
+::: {.column width=30%}
+```{mermaid}
+flowchart TB
+
+C1@{ shape: sm-circ, label: " "}
+
+X --- C1 --> Y
+Z --> C1
+X --> Z
+Z --> Y
+```
+
+
+|       	|      	| **Z** 	|     	|
+|-------	|------	|-------	|-----	|
+|       	|      	| nein  	| ja  	|
+| **X** 	| nein 	| 40    	| 80  	|
+|       	| ja   	| 100   	| 160 	|
+
+Zellen = Durchschnitte des Outcomes 
+
+:::
+
+::: {.column width=70%}
+
+In diesem Fall gibt es drei Niveauverschiebungen: 
+
+- +40, wenn Z von nein $\rightarrow$ ja
+- +60, wenn X von nein $\rightarrow$ ja
+- +20, wenn X und Z *gleichzeitig* ja sind. 
+
+Anders als bei Variante 1 müssen wir die Niveauverschiebung von $X \rightarrow Z \rightarrow Y$ vom Interaktionseffekt isolieren, da: 
+
+- $E[Y | X = \text{ja}, Z = \text{nein}]$ - $E[Y | X = \text{nein}, Z = \text{nein}]$ = 60
+- $E[Y | X = \text{ja}, Z = \text{ja}]$ - $E[Y | X = \text{nein}, Z = \text{ja}]$ = 80
+- Differenz beider Diffenzen = 40 $\leftarrow$ das ist **nicht** der korrekte Zusatzeffekt 
+:::
+:::
+
+## Interaktionen in einer Regression 
+
+Regressionen drücken ausgehend von einer **Basisgruppe** Differenzen zu verschiedenen Vergleichsgruppen aus.  
+
+$$ 
+\hat{y}_i = \underbrace{\hat{\alpha}}_{40} + \underbrace{\hat{\beta}_1}_{+60} \cdot \underbrace{x_i}_{\substack{0 \\ 1}} + \underbrace{\hat{\beta}_2}_{+40} \cdot \underbrace{z_i}_{\substack{0 \\ 1}} + \underbrace{\hat{\beta}_3}_{+20} \cdot ( \underbrace{x_i}_{\substack{0 \\ 1}} \cdot \underbrace{z_i}_{\substack{0 \\ 1}} )
+$$
+
+| $\hat{\alpha}$ 	| $+\hat{\beta}_1$ 	| $\cdot x_i$ 	| $+ \hat{\beta}_2$ 	| $\cdot z_i$ 	| $+ \hat{\beta}_3$ 	| $\cdot x_i$ 	| $\cdot z_i$ 	| =   	|
+|----------------	|------------------	|-------------	|-------------------	|-------------	|-------------------	|-------------	|-------------	|-----	|
+| 40             	| 60               	| 0           	| 40                	| 0           	| 20                	| 0           	| 0           	| 40  	|
+| 40             	| 60               	| 1           	| 40                	| 0           	| 20                	| 1           	| 0           	| 100 	|
+| 40             	| 60               	| 0           	| 40                	| 1           	| 20                	| 0           	| 1           	| 80  	|
+| 40             	| 60               	| 1           	| 40                	| 1           	| 20                	| 1           	| 1           	| 160 	|
+
+- $\alpha$ ist per Definition die Gruppe, die in allen *beeinflussenden* Eigenschaften den Wert 0 hat (X == 0 & Z == 0). 
+- Der Interaktionseffekt wird nur dann eingerechnet, wenn beide Eigenschaften nicht null sind. 
+
+## Interaktionen mit metrischen Variablen 
+
+```{r}
+# 1️⃣ Lade Bibliotheken
+library(ggplot2)
+library(dplyr)
+
+# 2️⃣ Simuliere Daten für ein klares Beispiel (deterministisch, ohne Zufall)
+set.seed(123)  # Nur für Reproduzierbarkeit, aber keine Zufallsvarianz
+n <- 50
+
+# Prädiktor x (gleichmäßig verteilt)
+x <- seq(1, 10, length.out = n)
+
+# Moderator z (zwei Werte: niedrig/hoch)
+z_niedrig <- 1
+z_hoch <- 5
+
+# **Deterministische Vorhersagen** basierend auf den Koeffizienten
+# Interaktion: y = b_0 + b_1*x + b_2*z + b_3*(x*z)
+b_0 <- 2
+b_1 <- 3
+b_2 <- 1
+b_3 <- 0.5
+
+y_niedrig <- b_0 + b_1*x + b_2*z_niedrig + b_3*x*z_niedrig  # Monoton steigend
+y_hoch <- b_0 + b_1*x + b_2*z_hoch + b_3*x*z_hoch            # Monoton steigend
+
+# Daten zusammenführen
+df <- data.frame(
+  x = rep(x, 2),
+  z = c(rep(z_niedrig, n), rep(z_hoch, n)),
+  y = c(y_niedrig, y_hoch),
+  gruppe = rep(c("z = niedrig (1)", "z = hoch (5)"), each = n)
+)
+
+# 3️⃣ Regression durchführen (mit Interaktion)
+model <- lm(y ~ x * z, data = df)
+summary_model <- summary(model)
+
+# Koeffizienten extrahieren und formatieren
+coefs <- round(coef(summary_model)[, "Estimate"], 2)
+formatted_coefs <- sprintf(
+  "Intercept: %.2f\nb_1 (x): %.2f\nb_2 (z): %.2f\nb_3 (x*z): %.2f",
+  coefs[1], coefs[2], coefs[3], coefs[4]
+)
+
+# 4️⃣ Plot erstellen: **Deterministische Geraden**
+p <- ggplot(df, aes(x = x, y = y, color = gruppe)) +
+  geom_smooth(method = "lm", linewidth = 1.5) +  # Dicke Linien
+  labs(
+    title = "Regressionsgeraden mit Interaktionseffekt",
+    x = "X",
+    y = "Y",
+    color = "Z"
+  ) +
+  scale_x_continuous(
+  breaks = 1:10,   # Setzt Beschriftungen an den Positionen 1, 2, ..., 10
+  labels = 1:10,  # Beschriftungen als 1, 2, ..., 10
+  limits = c(1, 10)  # Zwingt die Achse von 1 bis 10
+) +
+  scale_color_manual(values = c("z = niedrig (1)" = "blue", "z = hoch (5)" = "red")) +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+# 5️⃣ Regressionstabelle als Annotation hinzufügen
+p + annotate(
+  "text",
+  x = 1, y = max(df$y) - 1,  # Position basierend auf Datenbereich
+  label = formatted_coefs,
+  hjust = 0,
+  size = 5,
+  color = "black"
+)
+
+```
+
+## Interaktionen mit metrischen Variablen 
+
+Die Logik von Interaktionstermen in einer metrischen Regression ist prinzipiell identisch, hat aber einen "eigenen flavor". 
+
+$$ 
+\hat{y}_i = \underbrace{\hat{\alpha}}_{2} + \underbrace{\hat{\beta}_1}_{+3} \cdot \underbrace{x_i}_{\substack{0 \\ 1 \\ 2 \\ \dots \\ x_{max}}} + \underbrace{\hat{\beta}_2}_{+1} \cdot \underbrace{z_i}_{\substack{0 \\ 1 \\ 2 \\ \dots \\ z_{max}}} + \underbrace{\hat{\beta}_3}_{+0.5} \cdot ( \underbrace{x_i}_{\substack{0 \\ 1 \\ 2 \\ \dots \\ x_{max}}} \cdot \underbrace{z_i}_{\substack{0 \\ 1 \\ 2 \\ \dots \\ z_{max}}} )
+$$
+
+- Für jede Einheit in X steigt Y durchschnittlich um 3 Einheiten, wenn Z konstant ist. 
+- Für jede Einheit in Z steigt Y durchschnittlich um eine Einheit, wenn X konstant ist. 
+- Wenn X und Z sich **zusammen** um eine Einheit erhöhen, erhöht sich Y durchschnittlich um 0.5 Einheiten.  
+
+## Für jedes Problemchen ein Appchen
+
+<iframe width="100%" height="100%" src="https://www.shiny-appserver.org/regression_multi">
+</iframe>
+
+## Machen Beziehungen Männer zufriedener? 
+```{r}
+library(dplyr)
+library(modelsummary)
+
+# 1️⃣ Datenvorbereitung: Konvertiere 'sex' zu 'mann' (1/0) und pstat zu Faktor
+freda_clean <- freda %>%
+  as.data.frame() %>%
+  mutate(
+    # Erstelle 'mann' direkt aus 'sex' (1 = männlich, 0 = nicht-männlich)
+    mann = if_else(sex == 1, 1, 0),
+    pstat = as.factor(pstat)  # pstat als Faktor für bessere Interpretation
+  )
+
+# 2️⃣ Modelldefinitionen (mit 'mann' statt 'sex')
+model1 <- lm(sat6 ~ mann, data = freda_clean)
+model2 <- lm(sat6 ~ mann + pstat, data = freda_clean)
+model3 <- lm(sat6 ~ mann * pstat, data = freda_clean)  # Interaktion als 'mann:pstat'
+
+# 3️⃣ Modelle zusammenstellen
+models <- list(
+  "Modell 1: Geschlecht" = model1,
+  "Modell 2: + Beziehungsstatus" = model2,
+  "Modell 3: + Interaktion" = model3
+)
+
+# 4️⃣ Tabelle mit modelsummary erstellen
+modelsummary(models,
+             output = "markdown",  # Output als Markdown-Tabelle
+             coef_map = c(
+               "(Intercept)" = "Intercept",
+               "mann" = "Männlich",
+               "pstat1" = "Hat Partner/in",
+               "mann:pstat1" = "Interaktion: Männlich × Partnerstatus"
+             ),
+             gof_omit = "AIC|BIC|Log.Lik.|F|RMSE|R2",  # Übersichtliche Ausgabe
+             stars = TRUE,  # Keine Signifikanzsterne
+             title = "Regressionsergebnisse: Zufriedenheit mit dem Leben")
+```
+
+
+## Steigt für Männer die Zufriedenheit nach Beziehungsdauer unterschiedlich?
+
+
+```{r}
+library(dplyr)
+library(modelsummary)
+
+# 1️⃣ Datenvorbereitung: Konvertiere 'sex' zu 'mann' (1/0) und behalte reldur
+freda_clean <- freda %>%
+  as.data.frame() %>%
+  mutate(
+    # Erstelle 'mann' direkt aus 'sex' (1 = männlich, 0 = nicht-männlich)
+    mann = if_else(sex == 1, 1, 0)
+    # reldur bleibt als metrische Variable erhalten
+  )
+
+# 2️⃣ Modelldefinitionen (mit 'mann' statt 'sex' und 'reldur' statt 'pstat')
+model1 <- lm(sat3 ~ mann, data = freda_clean)
+model2 <- lm(sat3 ~ mann + reldur, data = freda_clean)
+model3 <- lm(sat3 ~ mann * reldur, data = freda_clean)  # Interaktion
+
+# 3️⃣ Modelle zusammenstellen
+models <- list(
+  "Modell 1: Geschlecht" = model1,
+  "Modell 2: + Beziehungsdauer (reldur)" = model2,
+  "Modell 3: + Interaktion" = model3
+)
+
+# 4️⃣ Tabelle mit modelsummary erstellen
+modelsummary(models,
+             output = "markdown",
+             coef_map = c(
+               "(Intercept)" = "Intercept",
+               "mann" = "Männlich",
+               "reldur" = "Beziehungsdauer",
+               "mann:reldur" = "Interaktion: Männlich × Beziehungsdauer"
+             ),
+             gof_omit = "AIC|BIC|Log.Lik.|F|RMSE|R2",  # Übersichtliche Ausgabe
+             stars = TRUE,  # Signifikanzsterne erhalten
+             title = "Regressionsergebnisse: Zufriedenheit mit der Beziehung")
+```
+
+
+## Was bedeutet das? 
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# 1️⃣ Vorbereitung der Daten für die Visualisierung
+plot_data <- freda_clean %>%
+  filter(!is.na(reldur), !is.na(sat3)) %>%  # Nur gültige Werte für reldur und sat3
+  mutate(
+    # Erstelle eine vollständige Vorhersage für alle Kombinationen von mann und reldur
+    prediction = predict(model3, newdata = .)  # Modellvorhersagen berechnen
+  )
+
+# 2️⃣ Plot erstellen
+ggplot(plot_data, aes(x = reldur, y = prediction, color = factor(mann))) +
+  geom_line(linewidth = 1) +  # Regressionsgeraden für Männer und Frauen
+  geom_point(size = 0.5, alpha = 0.3) +  # Punkte für tatsächliche Daten (optional)
+  labs(
+    title = "Einfluss von Geschlecht und Beziehungsdauer auf Beziehungszufriedenheit",
+    x = "Beziehungsdauer",
+    y = "Vorhergesagte Zufriedenheit mit der Beziehung",
+    color = "Geschlecht"
+  ) +
+  scale_color_manual(values = c("0" = "red", "1" = "blue"), labels = c("Frau", "Mann")) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
+

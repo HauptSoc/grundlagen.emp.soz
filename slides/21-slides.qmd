@@ -1,0 +1,8 @@
+---
+title: "Komplexe Daten generierende Prozesse -- Teil 1"
+author: "Andreas Haupt"
+format: html
+editor: source
+---
+  
+{{< revealjs file="21-Komplexe_DGP_1.html" height="950px" width="50%" class="ratio ratio-16x9" >}}
