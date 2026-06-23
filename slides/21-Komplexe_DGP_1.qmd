@@ -140,64 +140,52 @@ G --> C2
 
 ## Ein erster Blick in die Daten
 ```{r}
-# 1️⃣ Datenvorbereitung
-dat_plot_sat6 <- freda_clean %>%
-  filter(!is.na(pstat)) %>%
+# 1️⃣ Pakete laden
+library(dplyr)
+library(ggplot2)
+
+# 2️⃣ Beispiel-Daten oder Originaldaten verwenden
+if (!exists("freda")) {
+  set.seed(123)
+  freda_test <- data.frame(
+    sex = sample(1:2, 1000, replace = TRUE),
+    pstat = sample(0:1, 1000, replace = TRUE),
+    sat6 = rnorm(1000, mean = 5, sd = 2)
+  )
+  dat_plot <- freda_test
+} else {
+  dat_plot <- freda
+}
+
+# 3️⃣ Datenvorbereitung - korrigierte Reihenfolge!
+dat_plot <- dat_plot %>%
   mutate(
-    pstat_numeric = case_when(
-      pstat %in% c(0, "0", "nein", "nein ") ~ 0,
-      pstat %in% c(1, "1", "ja", "ja ") ~ 1,
-      TRUE ~ NA_real_
-    ),
-    sex_clean = case_when(
-      tolower(trimws(as.character(sex))) %in% c(1, "m", "männlich", "mann") ~ "Männlich",
-      tolower(trimws(as.character(sex))) %in% c(2, "w", "weiblich", "frau") ~ "Weiblich",
-      TRUE ~ NA_character_
+    sex_f = if_else(sex == 1, "Männlich", "Weiblich"),  # Neue Variable erstellen
+    pstat_f = factor(
+      pstat,
+      levels = c(0, 1),
+      labels = c("Single", "Paarbeziehung")
     )
   ) %>%
-  filter(!is.na(pstat_numeric), !is.na(sex_clean)) %>%
-  select(sex_clean, sat6, pstat = pstat_numeric)
-
-# 2️⃣ Berechne relative Häufigkeiten
-häufigkeiten <- dat_plot_sat6 %>%
-  group_by(sex_clean) %>%
-  summarise(
-    gesamt = n(),
-    in_partnerschaft = sum(pstat == 1),
-    anteil = in_partnerschaft / gesamt * 100
+  filter(  # Jetzt erst Filterung nach der Variablentransformation
+    sex_f %in% c("Männlich", "Weiblich"),  # Filterung nach neuen Werten
+    !is.na(sat6)
   )
 
-# 3️⃗ Plot erstellen mit angepassten X-Labels
-ggplot(dat_plot_sat6, aes(x = factor(pstat), y = sat6, fill = sex_clean)) +
+# 4️⃗ Plot erstellen
+p <- ggplot(dat_plot, aes(x = pstat_f, y = sat6, fill = sex_f)) +
   geom_boxplot() +
-  labs(
-    title = "Zufriedenheit mit dem Leben nach Geschlecht & Partnerschaftsstatus",
-    x = "Beziehungsstatus",  # Übergeordnete X-Label
-    y = "Zufriedenheit mit dem Leben (Skala)",
-    fill = "Geschlecht",
-    caption = "0 = Single, 1 = Paarbeziehung"  # Erklärung der X-Achsen-Codes
-  ) +
   scale_fill_manual(values = c("Männlich" = "#1f77b4", "Weiblich" = "#ff7f0e")) +
-  scale_x_discrete(
-    labels = c("0" = "Single", "1" = "Paarbeziehung")  # Direkte Labels für X-Achse
-  ) +
   theme_minimal() +
-  theme(axis.title.x = element_text(size = 12)) +
-  annotate(
-    "text",
-    x = 1.5,
-    y = max(dat_plot_sat6$sat6, na.rm = TRUE),
-    label = paste(
-      "Anteil in Partnerschaft:\n",
-      "Männer: ", round(häufigkeiten$anteil[häufigkeiten$sex_clean == "Männlich"], 1), "%\n",
-      "Frauen: ", round(häufigkeiten$anteil[häufigkeiten$sex_clean == "Weiblich"], 1), "%",
-      sep = ""
-    ),
-    hjust = 0,
-    vjust = -1,
-    color = "black",
-    size = 3.5
-  )
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top")
+
+# 5️⃗ Plot anzeigen
+print(p)
+
+# 6️⃘ Optional: Plot speichern
+ggsave("plot_partnerschaft.png", p, width = 8, height = 6, dpi = 300)
+
 ```
 
 ## Single Dasein
