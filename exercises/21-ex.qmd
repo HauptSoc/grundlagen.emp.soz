@@ -1,0 +1,181 @@
+---
+title: "Übung: Komplexe Daten generierende Prozesse"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Marmor, Stein und Eisen bricht... 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(haven)
+
+freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta", 
+        col_select = c("welle", "sex", "age", "east", "sat3", "sat6", "pstat", "sin3i1", "sin3i2", 
+                        "reldur", "voctrain", "hlt32", "pa18i2"))
+
+# Pfad zum Skript (relativ zum Quarto-Dokument)
+skript <- here::here("slides", "scripts", "freda_clean.R")
+# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
+source(skript, local = TRUE)
+
+```
+
+```{r}
+library(dplyr)
+library(modelsummary)
+library(tidyr)  # Erforderlich für drop_na()
+library(broom)
+
+# 1️⃣ Datenvorbereitung: Mean-Centering von age und Umwandlung von ordered Faktoren
+data_clean <- freda %>%
+  as.data.frame() %>%
+  mutate(
+    # Mean-Centering von age
+    age_centered = scale(age, scale = FALSE)
+  ) %>%
+ mutate(
+    voctrain_f = factor(
+      voctrain,
+      levels = c(1, 2, 3, 4, 5, 6, 7, 8, 9),  # Alle Levels setzen
+      labels = c(
+        "1" = "Kein Abschluss",
+        "2" = "Beruflich-betriebliche Ausbildung (Referenz)",  # Referenzkategorie
+        "3" = "Beruflich-schulische Ausbildung",
+        "4" = "Fach-, Meister-, Technikerschule",
+        "5" = "Beamtenausbildung",
+        "6" = "Fachhochschule, Berufsakademie",
+        "7" = "Universität",
+        "8" = "Promotion",
+        "9" = "Anderer beruflicher Abschluss"
+      )
+    )
+  )
+
+# Referenzkategorie auf Level 2 setzen (Beruflich-betriebliche Ausbildung)
+data_clean$voctrain_f <- relevel(data_clean$voctrain_f, ref = "Beruflich-betriebliche Ausbildung (Referenz)")
+
+```
+
+
+Im Folgenden finden Sie eine Reihe von Modellen. Alle Modelle haben die Beziehungsdauer in Monaten als Outcome. Die Tabellen weißen die $\hat{\beta}$-Koeffizienten der Modelle aus. 
+
+1. Konfrontieren Sie folgende Thesen mit den Modellergebnissen: 
+    a. Ostdeutsche führen längere Beziehungen. 
+    b. In Ostdeutschland sind die Beziehungen länger, weil die Menschen älter sind und mit dem Alter die Bezieungsdauer steigt. Es gibt keinen "direkten" Ossi-Effekt auf die Beziehungsdauer. 
+    c. Männer bleiben länger in Beziehungen als Frauen. 
+
+2. Erläutern Sie, warum sich der Koeffizient für das Geschlecht über die Modelle M1 bis M5 ändert. 
+3. Interpretieren Sie den Koeffizient für Alter in den Modellen 2 und 5. Warum wird diese Variable zentriert? 
+4. Interpretieren Sie den Koeffizient für "Hochschule" und "In Ausbildung"? Warum verändern sich diese Koeffizienten, wenn für Alter kontrolliert wird? 
+5. Warum ändert sich die Fallzahl der Modelle, wenn der höchste Bildungsabschluss aufgenommen wird? 
+
+```{r}
+
+# 2️⃣ Modelldefinitionen
+models <- list(
+  # Modell 1: Geschlecht + Ost/West
+  "Modell 1" = lm(reldur ~ factor(sex) + factor(east), data = data_clean),
+
+  # Modell 2: Geschlecht + Ost/West
+  "Modell 2" = lm(reldur ~ factor(sex) + factor(east) + age_centered, data = data_clean),
+
+  # Modell 3: Geschlecht + voctrain
+  "Modell 3" = lm(reldur ~ factor(sex) + factor(east) + age_centered + voctrain_f, data = data_clean),
+
+  # Modell 4: Geschlecht + Alter + Bildung
+  "Modell 4" = lm(reldur ~ factor(sex) + factor(east) + voctrain_f, data = data_clean),
+
+  # Modell 5: Geschlecht + Ost/West + Alter + Bildung
+  "Modell 5" = lm(reldur ~ factor(sex) + factor(east) + age_centered + voctrain_f, data = data_clean)
+)
+
+# 3️⃗ Kompakte Darstellung mit modelsummary (kompakt, ohne Standardfehler)
+modelsummary(
+  models,
+  include_reference = TRUE,
+  output = "markdown",
+  coef_map = c(
+    "(Intercept)" = "Intercept",
+    "factor(sex)2" = "Mann",
+    "factor(east)1" = "Ost",
+    "age_centered" = "Alter (zentriert)",
+    "voctrain_fKein Abschluss" = "Bildung: Kein Abschluss",
+    "voctrain_fBeruflich-betriebliche Ausbildung (Referenz)" = "Bildung: Berufliche Ausbildung",
+    "voctrain_fBeruflich-schulische Ausbildung" = "Bildung: Schulische Ausbildung",
+    "voctrain_fFach-, Meister-, Technikerschule" = "Bildung: Meisterschule",
+    "voctrain_fBeamtenausbildung" = "Bildung: Beamtenausbildung",
+    "voctrain_fFachhochschule/Berufsakademie" = "Bildung: Fachhochschule",
+    "voctrain_fUniversität" = "Bildung: Universität",
+    "voctrain_fPromotion" = "Bildung: Promotion",
+    "voctrain_fAnderer beruflicher Abschluss" = "Bildung: Sonstige"
+  ),
+  gof_map = c("nobs", "R2"),
+  statistic = NULL,  # Keine Standardfehler oder t-Werte
+  fmt = 1,  # Runden auf 2 Nachkommastellen
+  title = "Einflüsse auf die Beziehungsdauer"
+)
+```
+
+
+6. Führen Ostdeutsche Männer die dauerhaftesten Beziehungen? 
+7. Sprechen die Modelle für einen geschlechtsspezifischen Alterseinfluss auf die Dauer von Beziehungen und steht dieser Einfluss in Beziehung mit dem Berufsabschluss? 
+
+```{r}
+
+# 2️⃣ Modelldefinitionen
+models <- list(
+  "Modell 6: Ost/West X Geschlecht" = lm(reldur ~ factor(sex) * factor(east), data = data_clean),
+  "Modell 7: Alter X Geschlecht" = lm(reldur ~ factor(sex) * age_centered, data = data_clean),
+  "Modell 8: Alter X Geschlecht + Ausbildung" = lm(reldur ~ factor(sex) * age_centered + factor(east) + voctrain_f, data = data_clean)
+)
+
+# 3️⃗ Kompakte Darstellung mit modelsummary (kompakt, ohne Standardfehler)
+modelsummary(
+  models,
+  include_reference = TRUE,
+  output = "markdown",
+  coef_map = c(
+    "(Intercept)" = "Intercept",
+    "factor(sex)2" = "Mann",
+    "factor(east)1" = "Ost",
+    "age_centered" = "Alter (zentriert)",
+    "voctrain_fKein Abschluss" = "Bildung: Kein Abschluss",
+    "voctrain_fBeruflich-betriebliche Ausbildung (Referenz)" = "Bildung: Berufliche Ausbildung",
+    "voctrain_fBeruflich-schulische Ausbildung" = "Bildung: Schulische Ausbildung",
+    "voctrain_fFach-, Meister-, Technikerschule" = "Bildung: Meisterschule",
+    "voctrain_fBeamtenausbildung" = "Bildung: Beamtenausbildung",
+    "voctrain_fFachhochschule/Berufsakademie" = "Bildung: Fachhochschule",
+    "voctrain_fUniversität" = "Bildung: Universität",
+    "voctrain_fPromotion" = "Bildung: Promotion",
+    "voctrain_fAnderer beruflicher Abschluss" = "Bildung: Sonstige",
+
+    # Interaktionen
+    "factor(sex)2:factor(east)1" = "Interaktion: Mann × Ost",
+    "factor(sex)2:age_centered" = "Interaktion: Mann × Alter"
+  ),
+  gof_map = c("nobs", "R2"),
+  statistic = NULL,  # Keine Standardfehler oder t-Werte
+  fmt = 1,  # Runden auf 2 Nachkommastellen
+  title = "Einflüsse auf die Beziehungsdauer"
+)
+```
