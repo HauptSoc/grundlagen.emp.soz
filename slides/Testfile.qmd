@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+format: html
+editor: source
+---
+
+$$ 
+\underbrace{Var(q_{1}q_{2})}_{\text{Varianz aller Reaktionen}} 
+$$ 
+
+
+
+
+## Familienwerte {.scrollable .smaller}
+
+**Über die Aufgaben von Müttern und Vätern gibt es verschiedene Meinungen. Inwieweit stimmen Sie jeder der folgenden Aussagen zu beziehungsweise nicht zu?** 
+
+| Aussage | Stimme überhaupt nicht zu | Stimme eher nicht zu | Weder noch | Stimme eher zu | Stimme voll zu |
+| :----------------- | :---: | :---: | :---: | :---: | :---: |
+| Eine Vollzeit erwerbstätige Mutter kann zu ihrem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie eine Mutter, die nicht berufstätig ist. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Die beste Arbeitsteilung in einer Familie ist die, dass beide Eltern Vollzeit arbeiten und sich gleichermaßen um den Haushalt und die Kinder kümmern. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Ein Kleinkind wird sicherlich darunter leiden, wenn seine Mutter berufstätig ist. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Es ist für alle Beteiligten viel besser, wenn der Mann voll im Berufsleben steht und die Frau zu Hause bleibt und sich um den Haushalt und die Kinder kümmert. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Es ist für ein Kind sogar gut, wenn seine Mutter berufstätig ist und sich nicht nur auf den Haushalt konzentriert. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Ein Vollzeit erwerbstätiger Vater kann sich nicht ausreichend um seine Kinder kümmern. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Auch wenn beide Eltern erwerbstätig sind, ist es besser, wenn die Verantwortung für den Haushalt und die Kinder hauptsächlich bei der Frau liegt. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Ein Vollzeit erwerbstätiger Vater kann zu seinem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie ein Vater, der nicht berufstätig ist. | [ ] | [ ] | [ ] | [ ] | [ ] |
+| In einer Familie kann auch der Mann für den Haushalt und die Kinder verantwortlich sein, während die Frau Vollzeit erwerbstätig ist. | [ ] | [ ] | [ ] | [ ] | [ ] |

@@ -1,6 +1,7 @@
 ---
 title: "Grundlagen empirischer Sozialforschung"
 tbl-colwidths: [5,15,45,5,5,5,5,5]
+editor: source
 ---
 
 # Sommersemester: Datenanalyse
@@ -18,8 +19,7 @@ tbl-colwidths: [5,15,45,5,5,5,5,5]
 |  |  |  |  |  | [💡](exercises/mieten-solutions.qmd) | [📋](https://ilias.studium.kit.edu/ilias.php?baseClass=ilrepositorygui&cmdNode=xs:mo&cmdClass=ilobjcoursegui&ref_id=2866067&item_ref_id=0) |  |
 |  |  | **III. Komplexe Daten generierende Prozesse** |  |  |  |  |  |
 | 7 | 23.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/21-slides.qmd) | [✍](exercises/21-ex.qmd) |  |  |
-| 8 | 30.06. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
-| 9 | 07.07. | Modelle für latente Faktoren | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 8 | 07.07. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/22-slides.qmd) | ✍ |  |  |
 |  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |
 | 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
 | 11 | 21.07. | p-Values | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
