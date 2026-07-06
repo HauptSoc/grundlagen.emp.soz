@@ -1,0 +1,21 @@
+{
+  "hash": "895d9395e05191ff7f4ac5993573e905",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Komplexe datengenerierende Prozesse - Teil 2\"\nslide-level: 2   # <— hier trennt Quarto an \"##\"\nlightbox: true\ncss: global.css\nformat: \n  revealjs:\n    fig-format: svg\n    fig-width: 16\n    fig-asp: 0.618\n    out-width: \"70%\"\n    fig-align: center\n    width: 1400\n    height: 1050\n    auto-stretch: false\n    margin: 0.01\n    slideNumber: true\n    mermaid: \n      theme: neutral\n      look: classic\n      layout: elk\neditor: source\ntbl-cap-location: bottom\nexecute: \n  echo: false\n  message: false\n  warning: false\n---\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n`````{=html}\n<table>\n<caption>Tierlist-Ranking</caption>\n <thead>\n  <tr>\n   <th style=\"text-align:left;\"> Tier </th>\n   <th style=\"text-align:left;\"> Datenerhebung </th>\n   <th style=\"text-align:left;\"> Datenanalyse </th>\n  </tr>\n </thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:left;\"> 🔴 S </td>\n   <td style=\"text-align:left;\"> - Systemisches Denken\n- Fehleranalyse\n- Edge-Cases </td>\n   <td style=\"text-align:left;\"> - Regressionsmodelle\n- Interaktionseffekte\n- Stichproben </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> 🟠 A </td>\n   <td style=\"text-align:left;\"> - Wissenschaftliche Grundlagen\n- Skalierung\n- Messfehler </td>\n   <td style=\"text-align:left;\"> - Fortgeschrittene Statistik\n- Selektive Stichproben </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> 🟢 B </td>\n   <td style=\"text-align:left;\"> - Reliabilität/Validität\n- Skalierungstypen\n- Typenbildung </td>\n   <td style=\"text-align:left;\"> - Inferenzstatistik\n- Regressionsmodelle </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> 🔵 C </td>\n   <td style=\"text-align:left;\"> - Operationalisierung\n- Indexbildung\n- Designs </td>\n   <td style=\"text-align:left;\"> - Bivariate Modelle\n- Residuen\n- Konfidenzintervalle </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> 🟣 D </td>\n   <td style=\"text-align:left;\"> - Konzeptspezifikation\n- Selektion </td>\n   <td style=\"text-align:left;\"> - Deskriptive Statistik\n- Verteilungen </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> 💖 E </td>\n   <td style=\"text-align:left;\"> - Definitionen/Hypothesen\n- Skalentypen\n- Designs </td>\n   <td style=\"text-align:left;\"> - Modus/Median/Mittelwert\n- Boxplots/Histogramme </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> 💙 F </td>\n   <td style=\"text-align:left;\"> - Regelbruch: Mayo-Kartoffelsalat </td>\n   <td style=\"text-align:left;\"> - Keine Kompetenz </td>\n  </tr>\n</tbody>\n</table>\n\n`````\n:::\n:::\n",
+    "supporting": [
+      "klausurziele_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

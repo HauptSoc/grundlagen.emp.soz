@@ -93,6 +93,10 @@ flowchart LR
     AB2 -- bestanden --> K
 ```
 
+# Lernziele (Modul 2025/26)
+
+
+
 # Was sollten Sie mitbringen
 
 Neugier, Aufgeschlossenheit und die Bereitschaft, eventuellen Balast aus Schulzeit abzuwerfen.
