@@ -95,7 +95,7 @@ flowchart LR
 
 # Lernziele (Modul 2025/26)
 
-Das ist ein [Link](unterscheiden-und-vergleichen.netlify.app/tierlist.html)
+[Bitte einmal hier drauf drücken.](https://unterscheiden-und-vergleichen.netlify.app/tierlist)
 
 # Was sollten Sie mitbringen
 
