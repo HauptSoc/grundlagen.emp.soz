@@ -95,7 +95,7 @@ flowchart LR
 
 # Lernziele (Modul 2025/26)
 
-Hier geht es zur [Übersicht über die Lernziele für das Modul 2025/26](docs/tierlist.html).
+Das ist ein [Link](unterscheiden-und-vergleichen.netlify.app/tierlist.html)
 
 # Was sollten Sie mitbringen
 

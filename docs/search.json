@@ -6875,7 +6875,7 @@
     "href": "slides/23-Inferenz-P1.html#korrektur-der-varianz-bei-stichproben",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Korrektur der Varianz bei Stichproben",
-    "text": "Korrektur der Varianz bei Stichproben\nDie Stichproben-Varianz (\\(s\\)) ist kein erwartungstreuer Schätzer der Populationsvarianz \\(\\sigma^2\\), sie ist systematisch zu klein! Sie muss daher mit dem Term \\(\\frac{n}{n-1}\\) nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (\\(\\hat{\\sigma}^2\\)) sowie die Schätzung für die Populations-Standardabweichung (\\(\\hat{\\sigma}\\)) ergibt.\n\\[\n\\begin{split}\n         \\hat{\\sigma}_x^2   &= \\frac{ \\sum (x_i - \\bar{x})^2}{n} \\cdot \\frac{n}{n-1} \\\\\n                            &= \\frac{\\sum(x_i - \\bar{x})^2}{n-1}\n  \\end{split}\n\\] \\[\n  \\hat{\\sigma} = \\sqrt{\\hat{\\sigma}^2}\n  \\]"
+    "text": "Korrektur der Varianz bei Stichproben\nDie Stichproben-Varianz (\\(s\\)) ist kein erwartungstreuer Schätzer der Populationsvarianz \\(\\sigma^2\\), sie ist systematisch zu klein! Sie muss daher mit dem Term \\(\\frac{n}{n-1}\\) nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (\\(\\hat{\\sigma}^2\\)) sowie die Schätzung für die Populations-Standardabweichung (\\(\\hat{\\sigma}\\)) ergibt.\n\\[\n\\begin{split}\n         \\hat{\\sigma}_x^2   &= \\dfrac{ \\sum (x_i - \\bar{x})^2}{n} \\cdot \\dfrac{n}{n-1} \\\\\n                            &= \\dfrac{\\sum(x_i - \\bar{x})^2}{n-1}\n  \\end{split}\n\\] \\[\n  \\hat{\\sigma} = \\sqrt{\\hat{\\sigma}^2}\n  \\]"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#standardfehler-variation-erwarteterzukünftiger-ergebnisse",
