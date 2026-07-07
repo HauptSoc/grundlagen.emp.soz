@@ -154,8 +154,8 @@
     "objectID": "course-syllabus.html#bücherempfehlungen",
     "href": "course-syllabus.html#bücherempfehlungen",
     "title": "Grundlagen empirischer Sozialforschung",
-    "section": "3.1 Bücherempfehlungen",
-    "text": "3.1 Bücherempfehlungen\n\n\n\n\n\nNick Huntington-Klein, The Effect: An Introduction to Research Design and Causality. https://theeffectbook.net\n\n\n\n\n\n\n\n\nBaur, N. & Blasius, J. (Hrsg.) (2022), Handbuch Methoden der empirischen Sozialforschung. https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4",
+    "section": "5.1 Bücherempfehlungen",
+    "text": "5.1 Bücherempfehlungen\n\n\n\n\n\nNick Huntington-Klein, The Effect: An Introduction to Research Design and Causality. https://theeffectbook.net\n\n\n\n\n\n\n\n\nBaur, N. & Blasius, J. (Hrsg.) (2022), Handbuch Methoden der empirischen Sozialforschung. https://link.springer.com/book/10.1007\\%2F978-3-658-21308-4",
     "crumbs": [
       "Wissenswertes",
       "Das Kleingedruckte"
@@ -165,8 +165,8 @@
     "objectID": "course-syllabus.html#multimedia",
     "href": "course-syllabus.html#multimedia",
     "title": "Grundlagen empirischer Sozialforschung",
-    "section": "3.2 Multimedia",
-    "text": "3.2 Multimedia\nViele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.1 Unter anderem empfehle ich Ihnen:\n\nRichard McElreath: https://www.youtube.com/@rmcelreath\nJosh Starmer: https://www.youtube.com/@statquest\nGrant Sanderson: https://www.youtube.com/@3blue1brown\nJulia M. Rohrer: https://juliarohrer.com/resources",
+    "section": "5.2 Multimedia",
+    "text": "5.2 Multimedia\nViele Kolleg:innen machen hervorragende Videos, die Inhalte des Moduls besprechen.1 Unter anderem empfehle ich Ihnen:\n\nRichard McElreath: https://www.youtube.com/@rmcelreath\nJosh Starmer: https://www.youtube.com/@statquest\nGrant Sanderson: https://www.youtube.com/@3blue1brown\nJulia M. Rohrer: https://juliarohrer.com/resources",
     "crumbs": [
       "Wissenswertes",
       "Das Kleingedruckte"
@@ -6806,5 +6806,89 @@
     "title": "Untitled",
     "section": "Familienwerte",
     "text": "Familienwerte\nÜber die Aufgaben von Müttern und Vätern gibt es verschiedene Meinungen. Inwieweit stimmen Sie jeder der folgenden Aussagen zu beziehungsweise nicht zu?\n\n\n\n\n\n\n\n\n\n\n\nAussage\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\n\n\n\n\nEine Vollzeit erwerbstätige Mutter kann zu ihrem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie eine Mutter, die nicht berufstätig ist.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nDie beste Arbeitsteilung in einer Familie ist die, dass beide Eltern Vollzeit arbeiten und sich gleichermaßen um den Haushalt und die Kinder kümmern.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nEin Kleinkind wird sicherlich darunter leiden, wenn seine Mutter berufstätig ist.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nEs ist für alle Beteiligten viel besser, wenn der Mann voll im Berufsleben steht und die Frau zu Hause bleibt und sich um den Haushalt und die Kinder kümmert.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nEs ist für ein Kind sogar gut, wenn seine Mutter berufstätig ist und sich nicht nur auf den Haushalt konzentriert.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nEin Vollzeit erwerbstätiger Vater kann sich nicht ausreichend um seine Kinder kümmern.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nAuch wenn beide Eltern erwerbstätig sind, ist es besser, wenn die Verantwortung für den Haushalt und die Kinder hauptsächlich bei der Frau liegt.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nEin Vollzeit erwerbstätiger Vater kann zu seinem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie ein Vater, der nicht berufstätig ist.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]\n\n\nIn einer Familie kann auch der Mann für den Haushalt und die Kinder verantwortlich sein, während die Frau Vollzeit erwerbstätig ist.\n[ ]\n[ ]\n[ ]\n[ ]\n[ ]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html",
+    "href": "slides/23-Inferenz-P1.html",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "",
+    "text": "Wie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine Blutgruppe zu bestimmen?\nWie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln probieren, um einzuschätzen, ob die Nudeln gar sind?\nWie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß die Unterschiede in der häuslichen Arbeitsteilung sind?\n\nWoher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur dritten?"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#ein-kessel-buntes",
+    "href": "slides/23-Inferenz-P1.html#ein-kessel-buntes",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "",
+    "text": "Wie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine Blutgruppe zu bestimmen?\nWie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln probieren, um einzuschätzen, ob die Nudeln gar sind?\nWie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß die Unterschiede in der häuslichen Arbeitsteilung sind?\n\nWoher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur dritten?"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#unsicherheit-informationen-und-stichproben",
+    "href": "slides/23-Inferenz-P1.html#unsicherheit-informationen-und-stichproben",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Unsicherheit, Informationen und Stichproben",
+    "text": "Unsicherheit, Informationen und Stichproben\nDie Unsicherheit der Schätzung eines Merkmals hängt im Wesentlichen von zwei Fragen ab:\n\nWie unterschiedlich ist die Verteilung dieses Merkmals?\nWie oft wurde das Merkmal beobachtet?\n\nHat das Merkmal keine Varianz (wie die Blutgruppe eines Menschen) genügt prinzipiell eine Beobachtung zur Bestimmung des Merkmals. Je unterschiedlicher das Merkmal ist, desto mehr Beobachtungen werden benötigt, um die Unsicherheit des Schlusses von einer Stichprobenverteilung auf die Verteilung in der Grundgesamtheit zu verringern."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#über-was-sind-wir-durch-stichproben-unsicher",
+    "href": "slides/23-Inferenz-P1.html#über-was-sind-wir-durch-stichproben-unsicher",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Über was sind wir (durch Stichproben) unsicher?",
+    "text": "Über was sind wir (durch Stichproben) unsicher?\nBitte prägen Sie sich folgende Annahmen1 für die kommenden Argumentationen & Interpretationen ein:\n\nWerte, Zusammenhänge, Unterschiede (=Parameter) in der Population sind fix. D.h. sie haben keine Wahrscheinlichkeit, sie sind zu einem definierten Zeitpunkt nicht veränderlich.\nParameter2 in einer Stichprobe sind auch das Resultat von Zufallsschwankungen. Diese Zufallsschwankungen betreffen die Wahrscheinlichkeit, Werte aus der Population auch in der Stichprobe zu finden."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-1-konfidenzintervalle",
+    "href": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-1-konfidenzintervalle",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Ausdruck von Unsicherheit 1: Konfidenzintervalle",
+    "text": "Ausdruck von Unsicherheit 1: Konfidenzintervalle\nWir formulieren Erwartungen über Werte von zukünftigen Stichproben.\n\nWenn wir viele, weitere Stichproben aus der selben Population ziehen und sich die Stichproben nur zufällig unterscheiden würden, was für eine Streuung von Ergebnissen können wir dann erwarten?\nDa die Ergebnisse durch zufällig varrierende Stichproben aus der gleichen Population berechnet wurden, können wir die Zufallsstreuung aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute Annäherung an den uns unbekannten Populationsparameter."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-2-signifikanz",
+    "href": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-2-signifikanz",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Ausdruck von Unsicherheit 2: Signifikanz",
+    "text": "Ausdruck von Unsicherheit 2: Signifikanz\nWir möchten wissen, mit welcher Wahrscheinlichkeit wir eine/n Differenz/Zusammenhang in der Stichprobe nur durch Zufall sehen könnten.\n\nDazu treffen wir Annahmen, wie die Daten verteilt sein müssten, wenn es keine Differenz oder keinen Zusammenhang geben würde.\nAuch in diesem Fall varrieren Ergebnisse von vielen Stichproben zufällig. Manchmal könnte es aus reinem Zufall zu gehäuftem Auftreten von Wertepaaren kommen, was dann zu zufälligen Zusammenhängen oder Differenzen führt, die es in der Population nicht gibt.\nDie Daten, mit denen wir arbeiten, könnten eine solche Stichprobe sein. Unter der Annahme, dass dies der Fall ist, können wir alle Ergebnisse, die wir mit der Stichprobe berechnen, als Zufallsereignis ansehen. Die Auftretenswahrscheinlichkeit von solchen (oder extremeren) Zufallsereignissen lässt sich gut berechnen.\nIst diese Wahrscheinlichkeit sehr klein, sagen wir per Konvention, dass unsere Ergebnisse nicht durch Zufall entstanden sind."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#woher-kommen-schwankungen-von-parametern-in-stichproben",
+    "href": "slides/23-Inferenz-P1.html#woher-kommen-schwankungen-von-parametern-in-stichproben",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Woher kommen Schwankungen von Parametern in Stichproben?",
+    "text": "Woher kommen Schwankungen von Parametern in Stichproben?\nSie wissen, dass der Erwartungswert die Summe der Produkte von Werten mit ihrer Auftretenswahrscheinlichkeit ist: \\[E[Y] = \\underbrace{\\sum y_i}_{\\text{Werte der} \\atop \\text{Eigenschaft Y}} \\cdot \\underbrace{P(y_i)}_{\\text{Wahrscheinlichkeit des Wertes} \\atop \\text{in der Stichprobe} }\\]\n\nEine reine Zufallsstichprobe ändert nichts an den Werten der Eigenschaft Y.\nBei einer reinen Zufallsstichprobe haben auch alle Werte die gleiche Chance, Teil der Stichprobe zu werden, aber das ist letztlich eine Lotterie. Es wird fast immer so sein, dass eine Zufallsstichprobe in Bezug auf \\(P(y_i)\\) Abweichungen von der Population aufweist.\nDadurch enstehen zufallsbedingte Abweichungen der Stichprobenparameter in Bezug auf die Populationsparameter."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#die-welt-des-reinen-zufalls",
+    "href": "slides/23-Inferenz-P1.html#die-welt-des-reinen-zufalls",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Die Welt des reinen Zufalls",
+    "text": "Die Welt des reinen Zufalls\nZentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.\nWenn also der Unterschied eines Stichprobenparameters zum Popuplationsparameter auf einer Zufallsschwankung beruht, dann können wir annehmen, dass diese Parameterunterschiede normalverteilt sind.3\nDa jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#sind-zufallsbedingte-abweichungen-der-stichprobenparameter-problematisch",
+    "href": "slides/23-Inferenz-P1.html#sind-zufallsbedingte-abweichungen-der-stichprobenparameter-problematisch",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Sind zufallsbedingte Abweichungen der Stichprobenparameter problematisch?",
+    "text": "Sind zufallsbedingte Abweichungen der Stichprobenparameter problematisch?\n\nDas kommt auf den Parameter an!\nBei einigen Parametern, wie beim arithmetischen Mittel, sind diese Abweichungen unproblematisch. Diese Parameter werden erwartungstreu genannt.\nAndere Parameter sind nicht erwartungstreu. Ein Beispiel dafür ist die Varianz."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#korrektur-der-varianz-bei-stichproben",
+    "href": "slides/23-Inferenz-P1.html#korrektur-der-varianz-bei-stichproben",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Korrektur der Varianz bei Stichproben",
+    "text": "Korrektur der Varianz bei Stichproben\nDie Stichproben-Varianz (\\(s\\)) ist kein erwartungstreuer Schätzer der Populationsvarianz \\(\\sigma^2\\), sie ist systematisch zu klein! Sie muss daher mit dem Term \\(\\frac{n}{n-1}\\) nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (\\(\\hat{\\sigma}^2\\)) sowie die Schätzung für die Populations-Standardabweichung (\\(\\hat{\\sigma}\\)) ergibt.\n\\[\n\\begin{split}\n         \\hat{\\sigma}_x^2   &= \\frac{ \\sum (x_i - \\bar{x})^2}{n} \\cdot \\frac{n}{n-1} \\\\\n                            &= \\frac{\\sum(x_i - \\bar{x})^2}{n-1}\n  \\end{split}\n\\] \\[\n  \\hat{\\sigma} = \\sqrt{\\hat{\\sigma}^2}\n  \\]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-variation-erwarteterzukünftiger-ergebnisse",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-variation-erwarteterzukünftiger-ergebnisse",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler = Variation erwarteter/zukünftiger Ergebnisse",
+    "text": "Standardfehler = Variation erwarteter/zukünftiger Ergebnisse\nWenn die Differenz des Stichprobenmittelwertes zum Populationsmittelwert auf Zufall beruht, dann können wir das Wissen um den Stichprobenmittelwert mit dem Wissen über Normalverteilungen verbinden: Wir können abschätzen, in welchem Maß die Mittelwerte weiterer Stichproben durch reinen Zufall fluktuieren. Diese Information erhält man durch den Standardfehler. Es gibt für jeden Parameter einen eigenen Standardfehler. Für Mittelwerte berechnet sich dieser:\n\\[\\hat{\\sigma}_{\\bar{x}} = \\sqrt{\\frac{\\hat{\\sigma}^2}{n}} = \\frac{\\hat{\\sigma}}{\\sqrt{n}}\\]\nDer geschätzte Standardfehler für Mittelwerte ist die geschätzte Standardabweichung der auf Zufall beruhenden Differenz aller Mittelwerte in weiteren Stichproben zum Populationswert."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#footnotes",
+    "href": "slides/23-Inferenz-P1.html#footnotes",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFür die Expert:innen: Diese Annahmen und die daraus entstehenden Konsequenzen unterscheiden im Wesentlichen frequentistische von bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier getroffenen Annahmen sind zentrale, frequentistische Annahmen.↩︎\nAlles, was wir berechnen können (Mittelwerte, Varianzen, Regressionskoeffizienten …)↩︎\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten.↩︎"
   }
 ]

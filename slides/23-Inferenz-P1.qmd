@@ -1,0 +1,231 @@
+---
+title: "Inferenzstatistik - Teil 1"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.01
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r, cache = TRUE}
+# 1️⃣ Lade notwendige Bibliotheken
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(haven)
+library(tidyverse)
+
+freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta", 
+        col_select = c("welle", "id", "pid", "sample", "sex", "age", "east", "sat3", "sat6", "pstat", "sin3i1", "sin3i2", 
+                        "reldur", "voctrain", "hlt32", "pa18i2", 
+        "val13i1", "val13i2", "val13i6",  "val13i8",  "val13i3", "val13i4", "val13i5", "val13i7", "val13i9", "val10i1", "val10i2", "val10i3", "val10i4", "val10i5" 
+                        )
+                        ) 
+
+# Pfad zum Skript (relativ zum Quarto-Dokument)
+skript <- here::here("slides", "scripts", "freda_clean.R")
+# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
+source(skript, local = TRUE) 
+```
+
+
+
+
+## Ein Kessel Buntes
+
+-   Wie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine
+    Blutgruppe zu bestimmen?
+
+-   Wie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln
+    probieren, um einzuschätzen, ob die Nudeln gar sind?
+
+-   Wie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß
+    die Unterschiede in der häuslichen Arbeitsteilung sind?
+
+Woher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur
+dritten?
+
+
+## Unsicherheit, Informationen und Stichproben 
+
+Die Unsicherheit der Schätzung eines Merkmals hängt im Wesentlichen von
+zwei Fragen ab:
+
+1.  Wie unterschiedlich ist die Verteilung dieses Merkmals?
+
+2.  Wie oft wurde das Merkmal beobachtet?
+
+Hat das Merkmal *keine* Varianz (wie die Blutgruppe eines Menschen)
+genügt prinzipiell *eine* Beobachtung zur Bestimmung des Merkmals. Je
+unterschiedlicher das Merkmal ist, desto mehr Beobachtungen werden
+benötigt, um die Unsicherheit des Schlusses von einer
+Stichprobenverteilung auf die Verteilung in der Grundgesamtheit zu
+verringern.
+
+## Über was sind wir (durch Stichproben) unsicher? 
+
+Bitte prägen Sie sich folgende Annahmen[^1] für die kommenden
+Argumentationen & Interpretationen ein:
+
+1.  Werte, Zusammenhänge, Unterschiede (=Parameter) **in der
+    Population** sind fix. D.h. sie haben keine Wahrscheinlichkeit, sie
+    sind zu einem definierten Zeitpunkt nicht veränderlich.
+
+2.  Parameter[^2] in einer **Stichprobe** sind **auch** das Resultat von
+    Zufallsschwankungen. Diese Zufallsschwankungen betreffen die
+    Wahrscheinlichkeit, Werte aus der Population auch in der Stichprobe
+    zu finden.
+
+[^1]: Für die Expert:innen: Diese Annahmen und die daraus entstehenden
+    Konsequenzen unterscheiden im Wesentlichen frequentistische von
+    bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier
+    getroffenen Annahmen sind zentrale, frequentistische Annahmen.
+
+[^2]: Alles, was wir berechnen können (Mittelwerte, Varianzen,
+    Regressionskoeffizienten ...)
+
+## Ausdruck von Unsicherheit 1: Konfidenzintervalle
+
+Wir formulieren Erwartungen über Werte von **zukünftigen** Stichproben.
+
+1.  Wenn wir viele, weitere Stichproben aus *der selben* Population
+    ziehen *und* sich die Stichproben nur *zufällig* unterscheiden
+    würden, was für eine *Streuung* von Ergebnissen können wir dann
+    erwarten?
+
+2.  Da die Ergebnisse durch zufällig varrierende Stichproben aus der
+    gleichen Population berechnet wurden, können wir die Zufallsstreuung
+    aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute
+    Annäherung an den uns unbekannten Populationsparameter.
+
+## Ausdruck von Unsicherheit 2: Signifikanz
+
+Wir möchten wissen, mit welcher Wahrscheinlichkeit wir eine/n
+Differenz/Zusammenhang in der Stichprobe nur durch Zufall sehen
+*könnten*.
+
+1.  Dazu treffen wir Annahmen, wie die Daten verteilt sein müssten, wenn
+    es keine Differenz oder keinen Zusammenhang geben würde.
+
+2.  Auch in diesem Fall varrieren Ergebnisse von vielen Stichproben
+    *zufällig*. Manchmal könnte es aus reinem Zufall zu gehäuftem
+    Auftreten von Wertepaaren kommen, was dann zu zufälligen
+    Zusammenhängen oder Differenzen führt, die es in der Population
+    nicht gibt.
+
+3.  Die Daten, mit denen wir arbeiten, könnten eine solche Stichprobe
+    sein. Unter der Annahme, dass dies der Fall ist, können wir alle
+    Ergebnisse, die wir mit der Stichprobe berechnen, als
+    Zufallsereignis ansehen. Die Auftretenswahrscheinlichkeit von
+    solchen (oder extremeren) Zufallsereignissen lässt sich gut
+    berechnen.
+
+4.  Ist diese Wahrscheinlichkeit sehr klein, sagen wir *per Konvention*,
+    dass unsere Ergebnisse nicht durch Zufall entstanden sind.
+
+
+## Woher kommen Schwankungen von Parametern in Stichproben?
+
+Sie wissen, dass der Erwartungswert die Summe der Produkte von Werten
+mit ihrer Auftretenswahrscheinlichkeit ist:
+$$E[Y] = \underbrace{\sum y_i}_{\text{Werte der} \atop \text{Eigenschaft Y}} \cdot \underbrace{P(y_i)}_{\text{Wahrscheinlichkeit des Wertes} \atop \text{in der Stichprobe} }$$
+
+-   Eine reine Zufallsstichprobe ändert nichts an den Werten der
+    Eigenschaft Y.
+
+-   Bei einer reinen Zufallsstichprobe haben auch alle Werte die gleiche
+    Chance, Teil der Stichprobe zu werden, aber das ist letztlich eine
+    Lotterie. Es wird fast immer so sein, dass eine Zufallsstichprobe in
+    Bezug auf $P(y_i)$ Abweichungen von der Population aufweist.
+
+-   Dadurch enstehen **zufallsbedingte Abweichungen** der
+    Stichprobenparameter in Bezug auf die Populationsparameter.
+
+
+## Die Welt des reinen Zufalls 
+
+Zentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds
+auf reinem Zufall beruht, dann verteilt sich dieses/r
+Merkmal/Unterschied nach einer Normalverteilung.
+
+Wenn also der **Unterschied** eines Stichprobenparameters zum
+Popuplationsparameter auf einer **Zufallsschwankung** beruht, dann
+können wir annehmen, dass diese Parameter**unterschiede** normalverteilt
+sind.[^4]
+
+Da jede Normalverteilung durch z-Transformation zu einer
+Standardnormalverteilung umformbar ist, und wir über die
+Standardnormalverteilung definitorisches Wissen haben, haben wir auch
+volles Wissen über die Verteilung der zu analysierenden Verteilung.
+
+[^4]: Bitte machen Sie hier nicht den Fehler und behaupten, dass dadurch
+    die Merkmale oder Parameter normalverteilt sein müssten.
+
+## Sind zufallsbedingte Abweichungen der Stichprobenparameter problematisch?
+
+-   Das kommt auf den Parameter an!
+
+-   Bei einigen Parametern, wie beim arithmetischen Mittel, sind diese
+    Abweichungen unproblematisch. Diese Parameter werden
+    *erwartungstreu* genannt.
+
+-   Andere Parameter sind nicht erwartungstreu. Ein Beispiel dafür ist
+    die Varianz.
+
+
+## Korrektur der Varianz bei Stichproben
+
+Die Stichproben-Varianz ($s$) ist *kein* erwartungstreuer Schätzer der
+Populationsvarianz $\sigma^2$, sie ist *systematisch zu klein*! Sie muss
+daher mit dem Term $\frac{n}{n-1}$ nach oben korrigiert werden, was
+unsere Schätzung für die Populationsvarianz ($\hat{\sigma}^2$) sowie die
+Schätzung für die Populations-Standardabweichung ($\hat{\sigma}$)
+ergibt.
+
+$$
+\begin{split}
+         \hat{\sigma}_x^2   &= \dfrac{ \sum (x_i - \bar{x})^2}{n} \cdot \dfrac{n}{n-1} \\
+                            &= \dfrac{\sum(x_i - \bar{x})^2}{n-1}
+  \end{split}
+$$ 
+  $$
+  \hat{\sigma} = \sqrt{\hat{\sigma}^2}
+  $$
+
+
+## Standardfehler = Variation erwarteter/zukünftiger Ergebnisse
+
+Wenn die Differenz des Stichprobenmittelwertes zum Populationsmittelwert
+auf Zufall beruht, dann können wir das Wissen um den
+Stichprobenmittelwert mit dem Wissen über Normalverteilungen verbinden:
+Wir können abschätzen, in welchem Maß die Mittelwerte weiterer
+Stichproben durch reinen Zufall fluktuieren. Diese Information erhält
+man durch den *Standardfehler*. Es gibt für jeden Parameter einen
+eigenen Standardfehler. Für Mittelwerte berechnet sich dieser:
+
+$$\hat{\sigma}_{\bar{x}} = \sqrt{\frac{\hat{\sigma}^2}{n}} = \frac{\hat{\sigma}}{\sqrt{n}}$$
+
+Der geschätzte Standardfehler für Mittelwerte ist die geschätzte
+Standardabweichung der auf Zufall beruhenden Differenz aller Mittelwerte
+in weiteren Stichproben zum Populationswert.
