@@ -1240,8 +1240,6 @@ kable(anova(fit,fit2),
 
 ## Werden wir dadurch schlauer? 
 
-
-
 ```{r}
 library(ggeffects)
 library(ggplot2)

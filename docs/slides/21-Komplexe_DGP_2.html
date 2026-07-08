@@ -1,177 +1,456 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Komplexe datengenerierende Prozesse - Teil 2 – Methoden empirischer Sozialforschung</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fa10f7f84c0bbfa5711d976a732184a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-02dd15c06fe5d430702b1a29b11a0478.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-fa10f7f84c0bbfa5711d976a732184a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
 
-  <title>Methoden empirischer Sozialforschung – Komplexe datengenerierende Prozesse - Teil 2</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-      vertical-align: middle;
-    }
-  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1ed9982d18a5606c0a1dc210f3a66cab.css">
-  <link rel="stylesheet" href="global.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-    .reveal div.sourceCode {
-      margin: 0;
-      overflow: auto;
-    }
-    .reveal div.hanging-indent {
-      margin-left: 1em;
-      text-indent: -1em;
-    }
-    .reveal .slide:not(.center) {
-      height: 100%;
-    }
-    .reveal .slide.scrollable {
-      overflow-y: auto;
-    }
-    .reveal .footnotes {
-      height: 100%;
-      overflow-y: auto;
-    }
-    .reveal .slide .absolute {
-      position: absolute;
-      display: block;
-    }
-    .reveal .footnotes ol {
-      counter-reset: ol;
-      list-style-type: none; 
-      margin-left: 0;
-    }
-    .reveal .footnotes ol li:before {
-      counter-increment: ol;
-      content: counter(ol) ". "; 
-    }
-    .reveal .footnotes ol li > p:first-child {
-      display: inline-block;
-    }
-    .reveal .slide ul,
-    .reveal .slide ol {
-      margin-bottom: 0.5em;
-    }
-    .reveal .slide ul li,
-    .reveal .slide ol li {
-      margin-top: 0.4em;
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide ul[role="tablist"] li {
-      margin-bottom: 0;
-    }
-    .reveal .slide ul li > *:first-child,
-    .reveal .slide ol li > *:first-child {
-      margin-block-start: 0;
-    }
-    .reveal .slide ul li > *:last-child,
-    .reveal .slide ol li > *:last-child {
-      margin-block-end: 0;
-    }
-    .reveal .slide .columns:nth-child(3) {
-      margin-block-start: 0.8em;
-    }
-    .reveal blockquote {
-      box-shadow: none;
-    }
-    .reveal .tippy-content>* {
-      margin-top: 0.2em;
-      margin-bottom: 0.7em;
-    }
-    .reveal .tippy-content>*:last-child {
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide > img.stretch.quarto-figure-center,
-    .reveal .slide > img.r-stretch.quarto-figure-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-left,
-    .reveal .slide > img.r-stretch.quarto-figure-left  {
-      display: block;
-      margin-left: 0;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-right,
-    .reveal .slide > img.r-stretch.quarto-figure-right  {
-      display: block;
-      margin-left: auto;
-      margin-right: 0; 
-    }
-  </style>
-  <meta name="mermaid-theme" content="neutral">
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
-  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
 
-  <link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 
-  <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../site_libs/viz-1.8.2/viz.js"></script>
 
-  <script src="../site_libs/viz-1.8.2/viz.js"></script>
+<link href="../site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
 
-  <link href="../site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="../site_libs/grViz-binding-1.0.12/grViz.js"></script>
 
-  <script src="../site_libs/grViz-binding-1.0.12/grViz.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="global.css">
 </head>
-<body class="quarto-light">
-  <div class="reveal">
-    <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Komplexe datengenerierende Prozesse - Teil 2</h1>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
-<div class="quarto-title-authors">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Komplexe datengenerierende Prozesse - Teil 2</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/mindmap-logoV2.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/mindmap-logoV2.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/HauptSoc/grundlagen.emp.soz" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
+    <a href="https://campus.kit.edu" title="ILIAS KIT" class="quarto-navigation-tool px-1" aria-label="ILIAS KIT"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Wissenswertes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ziele</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Was, wann, welche Reihenfolge?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Das Kleingedruckte</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aus-dem-archiv-die-messung-latenter-eigenschaften" id="toc-aus-dem-archiv-die-messung-latenter-eigenschaften" class="nav-link active" data-scroll-target="#aus-dem-archiv-die-messung-latenter-eigenschaften">Aus dem Archiv: Die Messung latenter Eigenschaften</a></li>
+  <li><a href="#aus-dem-archiv-überall-fehler" id="toc-aus-dem-archiv-überall-fehler" class="nav-link" data-scroll-target="#aus-dem-archiv-überall-fehler">Aus dem Archiv: Überall Fehler</a></li>
+  <li><a href="#aus-dem-archiv-ausprägungen-und-indikatoren" id="toc-aus-dem-archiv-ausprägungen-und-indikatoren" class="nav-link" data-scroll-target="#aus-dem-archiv-ausprägungen-und-indikatoren">Aus dem Archiv: Ausprägungen und Indikatoren</a></li>
+  <li><a href="#items-und-latente-eigenschaften" id="toc-items-und-latente-eigenschaften" class="nav-link" data-scroll-target="#items-und-latente-eigenschaften">Items und latente Eigenschaften</a></li>
+  <li><a href="#gemessenes-latentes-und-unsystematisches" id="toc-gemessenes-latentes-und-unsystematisches" class="nav-link" data-scroll-target="#gemessenes-latentes-und-unsystematisches">Gemessenes, Latentes und Unsystematisches</a></li>
+  <li><a href="#was-ist-das-für-ein-datenanalytisches-problem" id="toc-was-ist-das-für-ein-datenanalytisches-problem" class="nav-link" data-scroll-target="#was-ist-das-für-ein-datenanalytisches-problem">Was ist das für ein datenanalytisches Problem?</a></li>
+  <li><a href="#was-ist-das-für-ein-datenanalytisches-problem-1" id="toc-was-ist-das-für-ein-datenanalytisches-problem-1" class="nav-link" data-scroll-target="#was-ist-das-für-ein-datenanalytisches-problem-1">Was ist das für ein datenanalytisches Problem?</a></li>
+  <li><a href="#gemeinsame-varianz-und-residuen" id="toc-gemeinsame-varianz-und-residuen" class="nav-link" data-scroll-target="#gemeinsame-varianz-und-residuen">Gemeinsame Varianz und Residuen</a></li>
+  <li><a href="#was-heißt-das-konkret" id="toc-was-heißt-das-konkret" class="nav-link" data-scroll-target="#was-heißt-das-konkret">Was heißt das konkret?</a></li>
+  <li><a href="#verteilung-von-antworten" id="toc-verteilung-von-antworten" class="nav-link" data-scroll-target="#verteilung-von-antworten">Verteilung von Antworten</a></li>
+  <li><a href="#systematische-covarianz-der-reaktionen" id="toc-systematische-covarianz-der-reaktionen" class="nav-link" data-scroll-target="#systematische-covarianz-der-reaktionen">Systematische Covarianz der Reaktionen</a></li>
+  <li><a href="#systematische-covarianz-der-reaktionen-1" id="toc-systematische-covarianz-der-reaktionen-1" class="nav-link" data-scroll-target="#systematische-covarianz-der-reaktionen-1">Systematische Covarianz der Reaktionen</a></li>
+  <li><a href="#alles-in-einer-matrix" id="toc-alles-in-einer-matrix" class="nav-link" data-scroll-target="#alles-in-einer-matrix">Alles in einer Matrix</a></li>
+  <li><a href="#wie-geht-das-intuition" id="toc-wie-geht-das-intuition" class="nav-link" data-scroll-target="#wie-geht-das-intuition">Wie geht das (Intuition)?</a></li>
+  <li><a href="#unstandardisierte-faktorladungen" id="toc-unstandardisierte-faktorladungen" class="nav-link" data-scroll-target="#unstandardisierte-faktorladungen">Unstandardisierte Faktorladungen</a></li>
+  <li><a href="#standardisierte-faktorladungen" id="toc-standardisierte-faktorladungen" class="nav-link" data-scroll-target="#standardisierte-faktorladungen">Standardisierte Faktorladungen</a></li>
+  <li><a href="#was-ist-da-passiert" id="toc-was-ist-da-passiert" class="nav-link" data-scroll-target="#was-ist-da-passiert">Was ist da passiert?</a></li>
+  <li><a href="#was-sind-faktorladungen" id="toc-was-sind-faktorladungen" class="nav-link" data-scroll-target="#was-sind-faktorladungen">Was sind Faktorladungen?</a></li>
+  <li><a href="#was-ist-da-passiert-1" id="toc-was-ist-da-passiert-1" class="nav-link" data-scroll-target="#was-ist-da-passiert-1">Was ist da passiert?</a></li>
+  <li><a href="#interpretation-der-parameter-einer-faktorenanalyse" id="toc-interpretation-der-parameter-einer-faktorenanalyse" class="nav-link" data-scroll-target="#interpretation-der-parameter-einer-faktorenanalyse">Interpretation der Parameter einer Faktorenanalyse</a></li>
+  <li><a href="#mini-exkurs-standardisierung" id="toc-mini-exkurs-standardisierung" class="nav-link" data-scroll-target="#mini-exkurs-standardisierung">Mini-Exkurs: Standardisierung</a></li>
+  <li><a href="#mini-exkurs-standardisierung-1" id="toc-mini-exkurs-standardisierung-1" class="nav-link" data-scroll-target="#mini-exkurs-standardisierung-1">Mini-Exkurs: Standardisierung</a></li>
+  <li><a href="#mini-exkurs-standardisierung-2" id="toc-mini-exkurs-standardisierung-2" class="nav-link" data-scroll-target="#mini-exkurs-standardisierung-2">Mini-Exkurs: Standardisierung</a></li>
+  <li><a href="#sind-männer-konservativer-in-bezug-auf-geschlechterrollen" id="toc-sind-männer-konservativer-in-bezug-auf-geschlechterrollen" class="nav-link" data-scroll-target="#sind-männer-konservativer-in-bezug-auf-geschlechterrollen">Sind Männer konservativer in Bezug auf Geschlechterrollen?</a></li>
+  <li><a href="#geschlecht-geschlechterrolleneinstellungen-und-beziehungsstatus" id="toc-geschlecht-geschlechterrolleneinstellungen-und-beziehungsstatus" class="nav-link" data-scroll-target="#geschlecht-geschlechterrolleneinstellungen-und-beziehungsstatus">Geschlecht, Geschlechterrolleneinstellungen und Beziehungsstatus</a></li>
+  <li><a href="#sind-die-ergebnisse-datenanalytisch-sinnvoll" id="toc-sind-die-ergebnisse-datenanalytisch-sinnvoll" class="nav-link" data-scroll-target="#sind-die-ergebnisse-datenanalytisch-sinnvoll">Sind die Ergebnisse (datenanalytisch) sinnvoll?</a></li>
+  <li><a href="#zwei-dimensionen" id="toc-zwei-dimensionen" class="nav-link" data-scroll-target="#zwei-dimensionen">Zwei Dimensionen</a></li>
+  <li><a href="#vergleichen-der-modellanpassung" id="toc-vergleichen-der-modellanpassung" class="nav-link" data-scroll-target="#vergleichen-der-modellanpassung">Vergleichen der Modellanpassung</a></li>
+  <li><a href="#werden-wir-dadurch-schlauer" id="toc-werden-wir-dadurch-schlauer" class="nav-link" data-scroll-target="#werden-wir-dadurch-schlauer">Werden wir dadurch schlauer?</a></li>
+  <li><a href="#werden-wir-dadurch-schlauer-1" id="toc-werden-wir-dadurch-schlauer-1" class="nav-link" data-scroll-target="#werden-wir-dadurch-schlauer-1">Werden wir dadurch schlauer?</a></li>
+  <li><a href="#unkorrelierte-faktoren" id="toc-unkorrelierte-faktoren" class="nav-link" data-scroll-target="#unkorrelierte-faktoren">Unkorrelierte Faktoren</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="21-Komplexe_DGP_2.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Komplexe datengenerierende Prozesse - Teil 2</h1>
 </div>
 
-</section>
-<section id="aus-dem-archiv-die-messung-latenter-eigenschaften" class="slide level2">
-<h2>Aus dem Archiv: Die Messung latenter Eigenschaften</h2>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="aus-dem-archiv-die-messung-latenter-eigenschaften" class="level2">
+<h2 class="anchored" data-anchor-id="aus-dem-archiv-die-messung-latenter-eigenschaften">Aus dem Archiv: Die Messung latenter Eigenschaften</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><a href="images/faktor-multi-item.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/faktor-multi-item.svg" style="width:90.0%"></a></p>
+<p><a href="images/faktor-multi-item.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/faktor-multi-item.svg" class="img-fluid" style="width:90.0%"></a></p>
 </div><div class="column" style="width:50%;">
 <p>Annahmen:</p>
 <ul>
 <li><p>Die die Ausprägungen in systematischen Zusammenhang miteinander und zu der latenten Eigenschaft stehen.</p></li>
 <li><p>Die Störfaktoren sind voneinander unabhängig und treten zufällig auf.</p></li>
 </ul>
-</div></div>
+</div>
+</div>
 </section>
-<section id="aus-dem-archiv-überall-fehler" class="slide level2 midi">
-<h2>Aus dem Archiv: Überall Fehler</h2>
+<section id="aus-dem-archiv-überall-fehler" class="level2 midi">
+<h2 class="midi anchored" data-anchor-id="aus-dem-archiv-überall-fehler">Aus dem Archiv: Überall Fehler</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><a href="images/faktor-beabachtung-error-auspr.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/faktor-beabachtung-error-auspr.svg" style="width:100.0%"></a></p>
+<p><a href="images/faktor-beabachtung-error-auspr.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/faktor-beabachtung-error-auspr.svg" class="img-fluid" style="width:100.0%"></a></p>
 </div><div class="column" style="width:70%;">
 <p>Das Messergebnis <span class="math inline">\(y_i\)</span> (= Beobachteter Wert der Variable <span class="math inline">\(Y\)</span> einer Untersuchungseinheit <span class="math inline">\(i\)</span>) wird mindestens von zwei Komponenten bestimmt:</p>
 <ol type="1">
@@ -179,17 +458,18 @@
 <li><p>einen Störfaktor <span class="math inline">\(\epsilon\)</span> (sprich: epsilon), den wir zunächst als zufällig betrachten.</p></li>
 </ol>
 <p>Wir gehen davon aus, dass sich beide Komponenten <em>additiv</em> verhalten und damit gilt: <span class="math inline">\(y_i = \tau_i + \epsilon_i\)</span></p>
-</div></div>
-</section>
-<section id="aus-dem-archiv-ausprägungen-und-indikatoren" class="slide level2">
-<h2>Aus dem Archiv: Ausprägungen und Indikatoren</h2>
-<p><br> <br></p>
-<div class="{centering}">
-<p><a href="images/faktor-ausprägung-variablen.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/faktor-ausprägung-variablen.svg" style="width:70.0%"></a></p>
+</div>
 </div>
 </section>
-<section id="items-und-latente-eigenschaften" class="slide level2">
-<h2>Items und latente Eigenschaften</h2>
+<section id="aus-dem-archiv-ausprägungen-und-indikatoren" class="level2">
+<h2 class="anchored" data-anchor-id="aus-dem-archiv-ausprägungen-und-indikatoren">Aus dem Archiv: Ausprägungen und Indikatoren</h2>
+<p><br> <br></p>
+<div class="{centering}">
+<p><a href="images/faktor-ausprägung-variablen.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/faktor-ausprägung-variablen.svg" class="img-fluid" style="width:70.0%"></a></p>
+</div>
+</section>
+<section id="items-und-latente-eigenschaften" class="level2">
+<h2 class="anchored" data-anchor-id="items-und-latente-eigenschaften">Items und latente Eigenschaften</h2>
 <p>Wenn die Ausprägungen einer latenten Eigenschaft <span class="math inline">\(f\)</span>, die zugrunde liegende Neigung zur Reaktion <span class="math inline">\(\tau\)</span> eines Items <span class="math inline">\(q_1\)</span> beeinflusst, können wir das auch so ausdrücken: <span class="math display">\[
 \tau_{q_1} = \underbrace{\lambda_{q_1}}_{\text{Niveauverschiebung} \atop \text{durch} \, f} \cdot \underbrace{f_{i}}_{\text{Ausprägung der} \atop \text{Eigenschaft} \, f}
 \]</span></p>
@@ -198,8 +478,8 @@
 \underbrace{y_{{q_{1}}i}}_{\text{Messwert für Item} \, q_1 \, \atop \text{für Person i }} = \underbrace{\lambda_{q_1}}_{\text{Niveauverschiebung in der} \atop \text{Reaktion auf} \, q_1} \cdot \underbrace{f_{i}}_{\text{Ausprägung der} \atop \text{Eigenschaft} \, f \, \text{für Person i} } + \underbrace{\epsilon_{{q_1}i}}_{\text{Messfehler für Item} \, q_1 \atop \text{für Person i } }
 \]</span></p>
 </section>
-<section id="gemessenes-latentes-und-unsystematisches" class="slide level2">
-<h2>Gemessenes, Latentes und Unsystematisches</h2>
+<section id="gemessenes-latentes-und-unsystematisches" class="level2">
+<h2 class="anchored" data-anchor-id="gemessenes-latentes-und-unsystematisches">Gemessenes, Latentes und Unsystematisches</h2>
 <p>Wenn wir eine Item-Batterie mit vier Items entwickeln und davon ausgehen, dass <em>ein</em> latenter Faktor die Reaktion auf die Items beeinflusst, dann können wir dies folgendermaßen ausdrücken: <span class="math display">\[
 \begin{align}
 y_{{q_1}i} &amp;= \lambda_{q_{1}} f_{i} + \epsilon_{{q_1}i}\\
@@ -216,14 +496,14 @@ y_{{q_k}i} &amp;= \lambda_{q_{k}} f_{i} + \epsilon_{{q_k}i}\\
 \]</span></p>
 <p>Wir kennen die Werte von <span class="math inline">\(y_{{q_k}i}\)</span> als Reaktionen auf die Items. Unser Ziel ist, es nun, <span class="math inline">\(\lambda_{q_{k}} f_{i}\)</span> so zu bestimmen, dass <span class="math inline">\(\epsilon_{{q_k}i}\)</span> nur noch unsystematische Variation enthält.</p>
 </section>
-<section id="was-ist-das-für-ein-datenanalytisches-problem" class="slide level2">
-<h2>Was ist das für ein datenanalytisches Problem?</h2>
+<section id="was-ist-das-für-ein-datenanalytisches-problem" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-das-für-ein-datenanalytisches-problem">Was ist das für ein datenanalytisches Problem?</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
-<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
-<p></p><figure class=""><p></p>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB 
 
@@ -243,16 +523,17 @@ F([" F "]) --&gt; I1["Item 1"] &amp; I2["Item 2"]
 <p>Wenn <span class="math inline">\(r_{xy}\)</span> = <span class="math inline">\(r_{xz} \cdot r_{zy}\)</span></p>
 <p><span class="math display">\[\hat{\beta}_x=\frac{\color{red}{r_{y{x}}-r_{y{z}}\cdot r_{{x}{z}}}}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}}\]</span></p>
 <p>dann <span class="math display">\[\hat{\beta}_x=\frac{0}{1-r_{{x}{z}}^2}\cdot\frac{s_y}{s_{x}} = 0\]</span></p>
-</div></div>
+</div>
+</div>
 </section>
-<section id="was-ist-das-für-ein-datenanalytisches-problem-1" class="slide level2">
-<h2>Was ist das für ein datenanalytisches Problem?</h2>
+<section id="was-ist-das-für-ein-datenanalytisches-problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-das-für-ein-datenanalytisches-problem-1">Was ist das für ein datenanalytisches Problem?</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
-<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
-<p></p><figure class=""><p></p>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB 
 
@@ -276,10 +557,11 @@ I1 -- "$$r_{q_{1}q_{2}}$$" --- I2
 <li><p>Wenn der latente Faktor <strong>perfekt</strong> für die Reaktionen verantwortlich wäre, dann gilt: <span class="math display">\[r_{q_{1}q_{2}} - \lambda_{q_{1}} f_{i} \cdot \lambda_{q_{2}} f_{i} = 0\]</span></p></li>
 <li><p>Dies ist aber empirisch nie der Fall. Es bestehen immer Messfehler und erratische Reaktionen der Untersuchungseinheiten.</p></li>
 </ul>
-</div></div>
+</div>
+</div>
 </section>
-<section id="gemeinsame-varianz-und-residuen" class="slide level2">
-<h2>Gemeinsame Varianz und Residuen</h2>
+<section id="gemeinsame-varianz-und-residuen" class="level2">
+<h2 class="anchored" data-anchor-id="gemeinsame-varianz-und-residuen">Gemeinsame Varianz und Residuen</h2>
 <ul>
 <li><p>Pearsons r ist eine standardisierte Covarianz: <span class="math inline">\(r_{xy} = \frac{Cov_{xy}}{s_x\cdot s_y}\)</span>.</p></li>
 <li><p>Daher können wir das Problem der Isolierung von systematischen und erratischen Zusammenhängen von Reaktionen auf Varianzen und Covarianzen zurückführen:</p></li>
@@ -294,15 +576,15 @@ I1 -- "$$r_{q_{1}q_{2}}$$" --- I2
 \min  \sum\left[ \, Cov(q_{k}q_{l}) -  Cov(\lambda_{q_{k}} f_{i} \cdot \lambda_{q_{l}} f_{i}) \, \right]^2
 \]</span></p>
 </section>
-<section id="was-heißt-das-konkret" class="slide level2">
-<h2>Was heißt das konkret?</h2>
-<p><a href="images/freda-geschlechterrollen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/freda-geschlechterrollen.png"></a></p>
+<section id="was-heißt-das-konkret" class="level2">
+<h2 class="anchored" data-anchor-id="was-heißt-das-konkret">Was heißt das konkret?</h2>
+<p><a href="images/freda-geschlechterrollen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/freda-geschlechterrollen.png" class="img-fluid"></a></p>
 </section>
-<section id="verteilung-von-antworten" class="slide level2">
-<h2>Verteilung von Antworten</h2>
+<section id="verteilung-von-antworten" class="level2">
+<h2 class="anchored" data-anchor-id="verteilung-von-antworten">Verteilung von Antworten</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-striped table-hover table-condensed" style="font-size: 26px; margin-left: auto; margin-right: auto;">
+<table class="table table-striped table-hover table-condensed table-sm small">
 <caption>Relative Häufigkeiten der Antworten pro Item (%)</caption>
 <colgroup>
 <col style="width: 16%">
@@ -376,104 +658,104 @@ Antwortkategorien
 </div>
 </div>
 </section>
-<section id="systematische-covarianz-der-reaktionen" class="slide level2">
-<h2>Systematische Covarianz der Reaktionen</h2>
+<section id="systematische-covarianz-der-reaktionen" class="level2">
+<h2 class="anchored" data-anchor-id="systematische-covarianz-der-reaktionen">Systematische Covarianz der Reaktionen</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-6-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-6-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="systematische-covarianz-der-reaktionen-1" class="slide level2">
-<h2>Systematische Covarianz der Reaktionen</h2>
+<section id="systematische-covarianz-der-reaktionen-1" class="level2">
+<h2 class="anchored" data-anchor-id="systematische-covarianz-der-reaktionen-1">Systematische Covarianz der Reaktionen</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-7-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-7-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="alles-in-einer-matrix" class="slide level2">
-<h2>Alles in einer Matrix</h2>
+<section id="alles-in-einer-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="alles-in-einer-matrix">Alles in einer Matrix</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-8-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-8-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="wie-geht-das-intuition" class="slide level2 midi">
-<h2>Wie geht das (Intuition)?</h2>
+<section id="wie-geht-das-intuition" class="level2 midi">
+<h2 class="midi anchored" data-anchor-id="wie-geht-das-intuition">Wie geht das (Intuition)?</h2>
 <ul>
-<li><p>Alle latenten Faktoren erhalten den Mittelwert von 0 und (zunächst) eine Standarabweichung von 1.<sup>1</sup></p></li>
+<li><p>Alle latenten Faktoren erhalten den Mittelwert von 0 und (zunächst) eine Standarabweichung von 1.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
 <li><p>Alle Beziehungen zwischen den latenten Faktoren und den Items werden auf 0 gesetzt - mit Ausnahme von einer, bei der die Beziehung auf “1” gefixt werden muss.</p></li>
 <li><p>Das ist eine Simulation des “Zufalls im Hintergrund”.</p></li>
 <li><p>Es wird nun solange mit Werten für <span class="math inline">\(\lambda_{q_{k}} f_{i} \cdot \lambda_{q_{l}} f_{i}\)</span> “itereriert”, bis eine “optimale Lösung” gefunden wird, die sich hinreichend vom Zufallsmodell unterscheidet.</p></li>
 <li><p>Diese Lösung kann theoretisch falsch sein.</p></li>
 <li><p>Diese Lösung kann empirisch nicht gut an die Daten angepasst sein. Sie ist lediglich die “optimale Lösung” für die Passung von einem Modell zu einem analytischen Sample.</p></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Das ist eine ziemlich harte Annahme über die Normalverteilung latenter Faktoren. Die muss man nicht treffen, aber dadurch wird es erst einmal leichter.</p></li></ol></aside></section>
-<section id="unstandardisierte-faktorladungen" class="slide level2">
-<h2>Unstandardisierte Faktorladungen</h2>
+</section>
+<section id="unstandardisierte-faktorladungen" class="level2">
+<h2 class="anchored" data-anchor-id="unstandardisierte-faktorladungen">Unstandardisierte Faktorladungen</h2>
 <div class="r-fit-text">
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-6b0321629fed7ef2b654" style="width:1536px;height:949.248px;"></div>
-<script type="application/json" data-for="htmlwidget-6b0321629fed7ef2b654">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"LR\"]\n\n\n\n  \"1\" [label = \"Heteronormativität\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"2\" [label = \"Politische Führung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"3\" [label = \"Uni ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"4\" [label = \"Arbeit ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"5\" [label = \"Haushalt/Kinder wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"6\" [label = \"Besser Kinderbetreuung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n\"2\"->\"1\" [dir = \"back\", label = \"1***\", color = \"grey\"] \n\"3\"->\"1\" [dir = \"back\", label = \"0.49***\", color = \"grey\"] \n\"4\"->\"1\" [dir = \"back\", label = \"1.5***\", color = \"grey\"] \n\"5\"->\"1\" [dir = \"back\", label = \"-2.02***\", color = \"grey\"] \n\"6\"->\"1\" [dir = \"back\", label = \"-1.98***\", color = \"grey\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-386a8f19879274fc32b3" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-386a8f19879274fc32b3">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"LR\"]\n\n\n\n  \"1\" [label = \"Heteronormativität\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"2\" [label = \"Politische Führung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"3\" [label = \"Uni ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"4\" [label = \"Arbeit ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"5\" [label = \"Haushalt/Kinder wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"6\" [label = \"Besser Kinderbetreuung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n\"2\"->\"1\" [dir = \"back\", label = \"1***\", color = \"grey\"] \n\"3\"->\"1\" [dir = \"back\", label = \"0.49***\", color = \"grey\"] \n\"4\"->\"1\" [dir = \"back\", label = \"1.5***\", color = \"grey\"] \n\"5\"->\"1\" [dir = \"back\", label = \"-2.02***\", color = \"grey\"] \n\"6\"->\"1\" [dir = \"back\", label = \"-1.98***\", color = \"grey\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 </section>
-<section id="standardisierte-faktorladungen" class="slide level2">
-<h2>Standardisierte Faktorladungen</h2>
+<section id="standardisierte-faktorladungen" class="level2">
+<h2 class="anchored" data-anchor-id="standardisierte-faktorladungen">Standardisierte Faktorladungen</h2>
 <div class="r-fit-text">
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-54a5b7d5ee2ce1e39f02" style="width:1536px;height:949.248px;"></div>
-<script type="application/json" data-for="htmlwidget-54a5b7d5ee2ce1e39f02">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"LR\"]\n\n\n\n  \"1\" [label = \"Heteronormativität\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"2\" [label = \"Politische Führung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"3\" [label = \"Uni ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"4\" [label = \"Arbeit ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"5\" [label = \"Haushalt/Kinder wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"6\" [label = \"Besser Kinderbetreuung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n\"2\"->\"1\" [dir = \"back\", label = \"0.29***\", color = \"grey\"] \n\"3\"->\"1\" [dir = \"back\", label = \"0.24***\", color = \"grey\"] \n\"4\"->\"1\" [dir = \"back\", label = \"0.56***\", color = \"grey\"] \n\"5\"->\"1\" [dir = \"back\", label = \"-0.66***\", color = \"grey\"] \n\"6\"->\"1\" [dir = \"back\", label = \"-0.54***\", color = \"grey\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-2898a3e63d75c026e833" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2898a3e63d75c026e833">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"LR\"]\n\n\n\n  \"1\" [label = \"Heteronormativität\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"2\" [label = \"Politische Führung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"3\" [label = \"Uni ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"4\" [label = \"Arbeit ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"5\" [label = \"Haushalt/Kinder wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"6\" [label = \"Besser Kinderbetreuung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n\"2\"->\"1\" [dir = \"back\", label = \"0.29***\", color = \"grey\"] \n\"3\"->\"1\" [dir = \"back\", label = \"0.24***\", color = \"grey\"] \n\"4\"->\"1\" [dir = \"back\", label = \"0.56***\", color = \"grey\"] \n\"5\"->\"1\" [dir = \"back\", label = \"-0.66***\", color = \"grey\"] \n\"6\"->\"1\" [dir = \"back\", label = \"-0.54***\", color = \"grey\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 </section>
-<section id="was-ist-da-passiert" class="slide level2">
-<h2>Was ist da passiert?</h2>
+<section id="was-ist-da-passiert" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-da-passiert">Was ist da passiert?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-12-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-12-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-12-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="was-sind-faktorladungen" class="slide level2">
-<h2>Was sind Faktorladungen?</h2>
+<section id="was-sind-faktorladungen" class="level2">
+<h2 class="anchored" data-anchor-id="was-sind-faktorladungen">Was sind Faktorladungen?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/corr-f1-items-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/corr-f1-items-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/corr-f1-items-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="21-Komplexe_DGP_2_files/figure-html/corr-f1-items-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="was-ist-da-passiert-1" class="slide level2">
-<h2>Was ist da passiert?</h2>
+<section id="was-ist-da-passiert-1" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-da-passiert-1">Was ist da passiert?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-striped table-hover table-condensed" style="font-size: 26px; margin-left: auto; margin-right: auto;">
+<table class="table table-striped table-hover table-condensed table-sm small">
 <caption>Parameter der Faktor-Analyse</caption>
 <thead>
 <tr class="header">
@@ -537,9 +819,9 @@ Antwortkategorien
 </div>
 </div>
 </section>
-<section id="interpretation-der-parameter-einer-faktorenanalyse" class="slide level2">
-<h2>Interpretation der Parameter einer Faktorenanalyse</h2>
-<table>
+<section id="interpretation-der-parameter-einer-faktorenanalyse" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-der-parameter-einer-faktorenanalyse">Interpretation der Parameter einer Faktorenanalyse</h2>
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 78%">
@@ -581,28 +863,28 @@ Antwortkategorien
 </tbody>
 </table>
 </section>
-<section id="mini-exkurs-standardisierung" class="slide level2">
-<h2>Mini-Exkurs: Standardisierung</h2>
+<section id="mini-exkurs-standardisierung" class="level2">
+<h2 class="anchored" data-anchor-id="mini-exkurs-standardisierung">Mini-Exkurs: Standardisierung</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/z-standard-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/z-standard-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/z-standard-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="21-Komplexe_DGP_2_files/figure-html/z-standard-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="mini-exkurs-standardisierung-1" class="slide level2">
-<h2>Mini-Exkurs: Standardisierung</h2>
+<section id="mini-exkurs-standardisierung-1" class="level2">
+<h2 class="anchored" data-anchor-id="mini-exkurs-standardisierung-1">Mini-Exkurs: Standardisierung</h2>
 <ul>
-<li><p>Manchmal ist es sinnvoll, Ergebnisse von Modellen zu standardisieren, damit man Einflüsse besser vergleichen kann.<sup>1</sup></p></li>
+<li><p>Manchmal ist es sinnvoll, Ergebnisse von Modellen zu standardisieren, damit man Einflüsse besser vergleichen kann.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
 <li><p>Standardisierung erfolgt entweder über z-transformierte Variablen, die in einer Regression genutzt werden mit <span class="math display">\[ z_i = \dfrac{x_i - \bar{x}}{s_x} \]</span></p></li>
 <li><p>oder über die (erneute) Multiplikation des <span class="math inline">\(\hat{\beta}\)</span>-Koeffizienten mit <span class="math inline">\(\frac{s_{x}}{s_{y}}\)</span></p></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p><span class="math inline">\(\hat{\beta}\)</span>-Koeffizienten sind abhängig von der zugrunde liegenden Einheit. Sie können damit <span class="math inline">\(\hat{\beta}\)</span>-Koeffizienten beliebig groß/klein machen in der Kommunikation, wenn Sie z.B. Einkommen in Tausender- oder in Ein-Euro-Schritten in einer Regression nutzen.</p></li></ol></aside></section>
-<section id="mini-exkurs-standardisierung-2" class="slide level2">
-<h2>Mini-Exkurs: Standardisierung</h2>
+</section>
+<section id="mini-exkurs-standardisierung-2" class="level2">
+<h2 class="anchored" data-anchor-id="mini-exkurs-standardisierung-2">Mini-Exkurs: Standardisierung</h2>
 <ul>
 <li><p>Werden nur die x-Variablen z-transformiert, spricht man von Teil-Standardisierung.</p>
 <ul>
@@ -614,32 +896,32 @@ Antwortkategorien
 </ul></li>
 </ul>
 </section>
-<section id="sind-männer-konservativer-in-bezug-auf-geschlechterrollen" class="slide level2">
-<h2>Sind Männer konservativer in Bezug auf Geschlechterrollen?</h2>
+<section id="sind-männer-konservativer-in-bezug-auf-geschlechterrollen" class="level2">
+<h2 class="anchored" data-anchor-id="sind-männer-konservativer-in-bezug-auf-geschlechterrollen">Sind Männer konservativer in Bezug auf Geschlechterrollen?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/kdens-geschlecht-f1-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/kdens-geschlecht-f1-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/kdens-geschlecht-f1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="21-Komplexe_DGP_2_files/figure-html/kdens-geschlecht-f1-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="geschlecht-geschlechterrolleneinstellungen-und-beziehungsstatus" class="slide level2 midi">
-<h2>Geschlecht, Geschlechterrolleneinstellungen und Beziehungsstatus</h2>
+<section id="geschlecht-geschlechterrolleneinstellungen-und-beziehungsstatus" class="level2 midi">
+<h2 class="midi anchored" data-anchor-id="geschlecht-geschlechterrolleneinstellungen-und-beziehungsstatus">Geschlecht, Geschlechterrolleneinstellungen und Beziehungsstatus</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/ame-interaction-f1-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/ame-interaction-f1-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/ame-interaction-f1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="21-Komplexe_DGP_2_files/figure-html/ame-interaction-f1-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="sind-die-ergebnisse-datenanalytisch-sinnvoll" class="slide level2">
-<h2>Sind die Ergebnisse (datenanalytisch) sinnvoll?</h2>
+<section id="sind-die-ergebnisse-datenanalytisch-sinnvoll" class="level2">
+<h2 class="anchored" data-anchor-id="sind-die-ergebnisse-datenanalytisch-sinnvoll">Sind die Ergebnisse (datenanalytisch) sinnvoll?</h2>
 <ul>
 <li><p>Die Ergebnisse von Faktoranalysen sind stets abhängig vom (theoretischen) Input.</p></li>
 <li><p>Grundsätzlich müssen Sie drei Fragen beantworten können:</p>
@@ -650,20 +932,20 @@ Antwortkategorien
 </ul></li>
 </ul>
 </section>
-<section id="zwei-dimensionen" class="slide level2">
-<h2>Zwei Dimensionen</h2>
+<section id="zwei-dimensionen" class="level2">
+<h2 class="anchored" data-anchor-id="zwei-dimensionen">Zwei Dimensionen</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-05a6ceb8a7dee7d44ab6" style="width:1536px;height:949.248px;"></div>
-<script type="application/json" data-for="htmlwidget-05a6ceb8a7dee7d44ab6">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"TB\",\n       label = \"Zwei Dimenensionen\"]\n\n\n\n  \"1\" [label = \"Versorgung im Äußeren\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"2\" [label = \"Versorgung im Inneren\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"3\" [label = \"Politische Führung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"4\" [label = \"Uni ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"5\" [label = \"Arbeit ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"6\" [label = \"Haushalt/Kinder wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"7\" [label = \"Besser Kinderbetreuung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n\"3\"->\"1\" [dir = \"back\", label = \"1***\", color = \"grey\"] \n\"4\"->\"1\" [dir = \"back\", label = \"0.63***\", color = \"grey\"] \n\"5\"->\"1\" [dir = \"back\", label = \"1.97***\", color = \"grey\"] \n\"6\"->\"2\" [dir = \"back\", label = \"1***\", color = \"grey\"] \n\"7\"->\"2\" [dir = \"back\", label = \"0.88***\", color = \"grey\"] \n\"2\"->\"1\" [dir = \"both\", label = \"-0.04\", color = \"grey\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-d0181231e2d81f341e4e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d0181231e2d81f341e4e">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"TB\",\n       label = \"Zwei Dimenensionen\"]\n\n\n\n  \"1\" [label = \"Versorgung im Äußeren\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"2\" [label = \"Versorgung im Inneren\", shape = \"oval\", group = \"latent\", fontname = \"Helvetica\"] \n  \"3\" [label = \"Politische Führung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"4\" [label = \"Uni ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"5\" [label = \"Arbeit ist wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"6\" [label = \"Haushalt/Kinder wichtiger\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n  \"7\" [label = \"Besser Kinderbetreuung\", shape = \"box\", group = \"obs\", fontname = \"Helvetica\"] \n\"3\"->\"1\" [dir = \"back\", label = \"1***\", color = \"grey\"] \n\"4\"->\"1\" [dir = \"back\", label = \"0.63***\", color = \"grey\"] \n\"5\"->\"1\" [dir = \"back\", label = \"1.97***\", color = \"grey\"] \n\"6\"->\"2\" [dir = \"back\", label = \"1***\", color = \"grey\"] \n\"7\"->\"2\" [dir = \"back\", label = \"0.88***\", color = \"grey\"] \n\"2\"->\"1\" [dir = \"both\", label = \"-0.04\", color = \"grey\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="vergleichen-der-modellanpassung" class="slide level2">
-<h2>Vergleichen der Modellanpassung</h2>
+<section id="vergleichen-der-modellanpassung" class="level2">
+<h2 class="anchored" data-anchor-id="vergleichen-der-modellanpassung">Vergleichen der Modellanpassung</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-striped table-hover table-condensed" style="font-size: 18px; margin-left: auto; margin-right: auto;">
+<table class="table table-striped table-hover table-condensed table-sm small">
 <caption>Vergleich der Modellanpassungen</caption>
 <thead>
 <tr class="header">
@@ -706,44 +988,44 @@ Antwortkategorien
 </div>
 </div>
 <ul>
-<li>Das Modell mit zwei Dimensionen ist den Daten deutlich besser angepasst:<sup>1</sup>
+<li>Das Modell mit zwei Dimensionen ist den Daten deutlich besser angepasst:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
 <ul>
 <li>“AIC” &amp; “BIC” sind “Informationskriterien”. Es gilt: Je kleiner der Wert, desto besser geht das Modell mit den zur Verfügung stehenden Informationen um.</li>
 <li>Die <span class="math inline">\(\chi^2\)</span> - Werte und RMSEA zeigen, dass das Modell mit zwei Dimensionen eine deutlich geringere Residualvarianz hat.</li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Achtung! Das hier setzt Dinge voraus, die wir noch besprechen müssen.</p></li></ol></aside></section>
-<section id="werden-wir-dadurch-schlauer" class="slide level2">
-<h2>Werden wir dadurch schlauer?</h2>
+</section>
+<section id="werden-wir-dadurch-schlauer" class="level2">
+<h2 class="anchored" data-anchor-id="werden-wir-dadurch-schlauer">Werden wir dadurch schlauer?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-16-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-16-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-16-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="werden-wir-dadurch-schlauer-1" class="slide level2">
-<h2>Werden wir dadurch schlauer?</h2>
+<section id="werden-wir-dadurch-schlauer-1" class="level2">
+<h2 class="anchored" data-anchor-id="werden-wir-dadurch-schlauer-1">Werden wir dadurch schlauer?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><a href="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-17-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="21-Komplexe_DGP_2_files/figure-revealjs/unnamed-chunk-17-1.svg"></a></p>
+<figure class="figure">
+<p><a href="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-17-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="21-Komplexe_DGP_2_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="unkorrelierte-faktoren" class="slide level2">
-<h2>Unkorrelierte Faktoren</h2>
+<section id="unkorrelierte-faktoren" class="level2">
+<h2 class="anchored" data-anchor-id="unkorrelierte-faktoren">Unkorrelierte Faktoren</h2>
 <div class="columns">
 <div class="column">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://www.theanalysisfactor.com/wp-content/uploads/2012/09/bloggraph1v2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Orthogonale Rotation von zwei Faktoren"><img data-src="https://www.theanalysisfactor.com/wp-content/uploads/2012/09/bloggraph1v2.png" alt="Orthogonale Rotation von zwei Faktoren"></a></p>
+<figure class="figure">
+<p><a href="https://www.theanalysisfactor.com/wp-content/uploads/2012/09/bloggraph1v2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Orthogonale Rotation von zwei Faktoren"><img src="https://www.theanalysisfactor.com/wp-content/uploads/2012/09/bloggraph1v2.png" class="img-fluid figure-img" alt="Orthogonale Rotation von zwei Faktoren"></a></p>
 <figcaption>Orthogonale Rotation von zwei Faktoren</figcaption>
 </figure>
 </div>
@@ -754,502 +1036,482 @@ Antwortkategorien
 <li><p>Wir (ja, auch Sie!) wollen aber nicht einfach, wir wollen empirisch adäquat.</p></li>
 <li><p>Deswegen machen wir das jetzt nicht mehr.</p></li>
 </ul>
-</div></div>
+</div>
+</div>
 
 
 </section>
 
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
-<div class="footer footer-default">
 
-</div>
-</div></div>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': false,
-'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease",
-'autoAnimateDuration': 1,
-'autoAnimateUnmatched': true,
-'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
- 
-        // Display controls in the bottom right corner
-        controls: false,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: 'c/t',
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
-        // Push each slide change to the browser history
-        history: true,
-
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: false,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: false,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        // The "normal" size of the presentation, aspect ratio will be preserved
-        // when the presentation is scaled to fit different resolutions. Can be
-        // specified using percentage units.
-        width: 1400,
-
-        height: 1050,
-
-        // Factor of the display size that should remain empty around the content
-        margin: 1.0e-2,
-
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
-
-          RevealMath,
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
+<ol>
+<li id="fn1"><p>Das ist eine ziemlich harte Annahme über die Normalverteilung latenter Faktoren. Die muss man nicht treffen, aber dadurch wird es erst einmal leichter.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><span class="math inline">\(\hat{\beta}\)</span>-Koeffizienten sind abhängig von der zugrunde liegenden Einheit. Sie können damit <span class="math inline">\(\hat{\beta}\)</span>-Koeffizienten beliebig groß/klein machen in der Kommunikation, wenn Sie z.B. Einkommen in Tausender- oder in Ein-Euro-Schritten in einer Regression nutzen.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Achtung! Das hier setzt Dinge voraus, die wir noch besprechen müssen.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
-    </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/methoden\.empirischer\.sozialforschung\.netlify\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
         }
-
-    
-
-      })();
-
-    </script>
-
-    
-
-    <script id="quarto-html-after-body" type="application/javascript">
-      window.document.addEventListener("DOMContentLoaded", function (event) {
-        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-        tabsets.forEach(function(tabset) {
-          const tabby = new Tabby('#' + tabset.id);
-        });
-        const isCodeAnnotation = (el) => {
-          for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
-              return true;
-            }
-          }
-          return false;
-        }
-        const onCopySuccess = function(e) {
-          // button target
-          const button = e.trigger;
-          // don't keep focus
-          button.blur();
-          // flash "checked"
-          button.classList.add('code-copy-button-checked');
-          var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copied!");
-          let tooltip;
-          if (window.bootstrap) {
-            button.setAttribute("data-bs-toggle", "tooltip");
-            button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
-                customClass: "code-copy-button-tooltip",
-                offset: [0, -8]});
-            tooltip.show();    
-          }
-          setTimeout(function() {
-            if (tooltip) {
-              tooltip.hide();
-              button.removeAttribute("data-bs-title");
-              button.removeAttribute("data-bs-toggle");
-              button.removeAttribute("data-bs-placement");
-            }
-            button.setAttribute("title", currentTitle);
-            button.classList.remove('code-copy-button-checked');
-          }, 1000);
-          // clear code selection
-          e.clearSelection();
-        }
-        const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-          text: getTextToCopy
-        });
-        clipboard.on('success', onCopySuccess);
-        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-            text: getTextToCopy,
-            container: window.document.getElementById('quarto-embedded-source-code-modal')
-          });
-          clipboardModal.on('success', onCopySuccess);
-        }
-          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/methoden\.empirischer\.sozialforschung\.netlify\.com");
-          var isInternal = (href) => {
-              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-          }
-          // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-          for (var i=0; i<links.length; i++) {
-            const link = links[i];
-            if (!isInternal(link.href)) {
-              // undo the damage that might have been done by quarto-nav.js in the case of
-              // links that we want to consider external
-              if (link.dataset.originalHref !== undefined) {
-                link.href = link.dataset.originalHref;
-              }
-            }
-          }
-        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-          const config = {
-            allowHTML: true,
-            maxWidth: 500,
-            delay: 100,
-            arrow: false,
-            appendTo: function(el) {
-                return el.closest('section.slide') || el.parentElement;
-            },
-            interactive: true,
-            interactiveBorder: 10,
-            theme: 'light-border',
-            placement: 'bottom-start',
-          };
-          if (contentFn) {
-            config.content = contentFn;
-          }
-          if (onTriggerFn) {
-            config.onTrigger = onTriggerFn;
-          }
-          if (onUntriggerFn) {
-            config.onUntrigger = onUntriggerFn;
-          }
-            config['offset'] = [0,0];
-            config['maxWidth'] = 700;
-          window.tippy(el, config); 
-        }
-        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-        for (var i=0; i<noterefs.length; i++) {
-          const ref = noterefs[i];
-          tippyHover(ref, function() {
-            // use id or data attribute instead here
-            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-            try { href = new URL(href).hash; } catch {}
-            const id = href.replace(/^#\/?/, "");
-            const note = window.document.getElementById(id);
-            if (note) {
-              return note.innerHTML;
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
             } else {
-              return "";
+              container.appendChild(child.cloneNode(true));
+              break;
             }
-          });
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
         }
-        const findCites = (el) => {
-          const parentEl = el.parentElement;
-          if (parentEl) {
-            const cites = parentEl.dataset.cites;
-            if (cites) {
-              return {
-                el,
-                cites: cites.split(' ')
-              };
-            } else {
-              return findCites(el.parentElement)
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
             }
           } else {
-            return undefined;
-          }
-        };
-        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-        for (var i=0; i<bibliorefs.length; i++) {
-          const ref = bibliorefs[i];
-          const citeInfo = findCites(ref);
-          if (citeInfo) {
-            tippyHover(citeInfo.el, function() {
-              var popup = window.document.createElement('div');
-              citeInfo.cites.forEach(function(cite) {
-                var citeDiv = window.document.createElement('div');
-                citeDiv.classList.add('hanging-indent');
-                citeDiv.classList.add('csl-entry');
-                var biblioDiv = window.document.getElementById('ref-' + cite);
-                if (biblioDiv) {
-                  citeDiv.innerHTML = biblioDiv.innerHTML;
-                }
-                popup.appendChild(citeDiv);
-              });
-              return popup.innerHTML;
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
             });
           }
-        }
-      });
-      </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
               }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
             }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
           }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
         });
-      
-      };
-      
-    })();
-              </script>
-    
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Andreas Haupt</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
 
 </body></html>

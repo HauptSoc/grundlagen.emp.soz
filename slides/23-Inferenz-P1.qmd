@@ -28,30 +28,6 @@ execute:
   warning: false
 ---
 
-```{r, cache = TRUE}
-# 1️⃣ Lade notwendige Bibliotheken
-library(dplyr)
-library(ggplot2)
-library(forcats)
-library(haven)
-library(tidyverse)
-
-freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta", 
-        col_select = c("welle", "id", "pid", "sample", "sex", "age", "east", "sat3", "sat6", "pstat", "sin3i1", "sin3i2", 
-                        "reldur", "voctrain", "hlt32", "pa18i2", 
-        "val13i1", "val13i2", "val13i6",  "val13i8",  "val13i3", "val13i4", "val13i5", "val13i7", "val13i9", "val10i1", "val10i2", "val10i3", "val10i4", "val10i5" 
-                        )
-                        ) 
-
-# Pfad zum Skript (relativ zum Quarto-Dokument)
-skript <- here::here("slides", "scripts", "freda_clean.R")
-# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
-source(skript, local = TRUE) 
-```
-
-
-
-
 ## Ein Kessel Buntes
 
 -   Wie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine

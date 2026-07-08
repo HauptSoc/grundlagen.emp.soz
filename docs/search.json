@@ -6818,8 +6818,8 @@
     "objectID": "slides/23-Inferenz-P1.html#ein-kessel-buntes",
     "href": "slides/23-Inferenz-P1.html#ein-kessel-buntes",
     "title": "Inferenzstatistik - Teil 1",
-    "section": "",
-    "text": "Wie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine Blutgruppe zu bestimmen?\nWie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln probieren, um einzuschätzen, ob die Nudeln gar sind?\nWie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß die Unterschiede in der häuslichen Arbeitsteilung sind?\n\nWoher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur dritten?"
+    "section": "Ein Kessel Buntes",
+    "text": "Ein Kessel Buntes\n\nWie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine Blutgruppe zu bestimmen?\nWie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln probieren, um einzuschätzen, ob die Nudeln gar sind?\nWie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß die Unterschiede in der häuslichen Arbeitsteilung sind?\n\nWoher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur dritten?"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#unsicherheit-informationen-und-stichproben",
@@ -6833,7 +6833,7 @@
     "href": "slides/23-Inferenz-P1.html#über-was-sind-wir-durch-stichproben-unsicher",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Über was sind wir (durch Stichproben) unsicher?",
-    "text": "Über was sind wir (durch Stichproben) unsicher?\nBitte prägen Sie sich folgende Annahmen1 für die kommenden Argumentationen & Interpretationen ein:\n\nWerte, Zusammenhänge, Unterschiede (=Parameter) in der Population sind fix. D.h. sie haben keine Wahrscheinlichkeit, sie sind zu einem definierten Zeitpunkt nicht veränderlich.\nParameter2 in einer Stichprobe sind auch das Resultat von Zufallsschwankungen. Diese Zufallsschwankungen betreffen die Wahrscheinlichkeit, Werte aus der Population auch in der Stichprobe zu finden."
+    "text": "Über was sind wir (durch Stichproben) unsicher?\nBitte prägen Sie sich folgende Annahmen1 für die kommenden Argumentationen & Interpretationen ein:\n\nWerte, Zusammenhänge, Unterschiede (=Parameter) in der Population sind fix. D.h. sie haben keine Wahrscheinlichkeit, sie sind zu einem definierten Zeitpunkt nicht veränderlich.\nParameter2 in einer Stichprobe sind auch das Resultat von Zufallsschwankungen. Diese Zufallsschwankungen betreffen die Wahrscheinlichkeit, Werte aus der Population auch in der Stichprobe zu finden.\n\nFür die Expert:innen: Diese Annahmen und die daraus entstehenden Konsequenzen unterscheiden im Wesentlichen frequentistische von bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier getroffenen Annahmen sind zentrale, frequentistische Annahmen.Alles, was wir berechnen können (Mittelwerte, Varianzen, Regressionskoeffizienten …)"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-1-konfidenzintervalle",
@@ -6861,7 +6861,7 @@
     "href": "slides/23-Inferenz-P1.html#die-welt-des-reinen-zufalls",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Die Welt des reinen Zufalls",
-    "text": "Die Welt des reinen Zufalls\nZentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.\nWenn also der Unterschied eines Stichprobenparameters zum Popuplationsparameter auf einer Zufallsschwankung beruht, dann können wir annehmen, dass diese Parameterunterschiede normalverteilt sind.3\nDa jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung."
+    "text": "Die Welt des reinen Zufalls\nZentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.\nWenn also der Unterschied eines Stichprobenparameters zum Popuplationsparameter auf einer Zufallsschwankung beruht, dann können wir annehmen, dass diese Parameterunterschiede normalverteilt sind.1\nDa jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung.\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#sind-zufallsbedingte-abweichungen-der-stichprobenparameter-problematisch",
@@ -6890,5 +6890,103 @@
     "title": "Inferenzstatistik - Teil 1",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nFür die Expert:innen: Diese Annahmen und die daraus entstehenden Konsequenzen unterscheiden im Wesentlichen frequentistische von bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier getroffenen Annahmen sind zentrale, frequentistische Annahmen.↩︎\nAlles, was wir berechnen können (Mittelwerte, Varianzen, Regressionskoeffizienten …)↩︎\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten.↩︎"
+  },
+  {
+    "objectID": "exercises/23-fragebogen-werte-eltern.html",
+    "href": "exercises/23-fragebogen-werte-eltern.html",
+    "title": "Fragebogen-Faksimile: Werte zu Elternschaft und Erwerbstätigkeit",
+    "section": "",
+    "text": "Der letzte Teil dieser Befragung beschäftigt sich mit Ihren Einstellungen und Werten. Dies ist sehr wichtig, damit wir Ihre Ansichten über Familie und Beziehungen besser verstehen können.\n\n\n129  Über die Aufgaben von Müttern und Vätern gibt es verschiedene Meinungen. Inwieweit stimmen Sie jeder der folgenden Aussagen zu beziehungsweise nicht zu? \n\n\n\n\n\n\nAussage\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\n\n\n\n\nEine Vollzeit erwerbstätige Mutter kann zu ihrem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie eine Mutter, die nicht berufstätig ist.\n\n\n\n\n\n\n\nDie beste Arbeitsteilung in einer Familie ist, dass beide Eltern Vollzeit arbeiten und sich gleichermaßen um den Haushalt und die Kinder kümmern.\n\n\n\n\n\n\n\nEin Kleinkind wird sicherlich darunter leiden, wenn seine Mutter berufstätig ist.\n\n\n\n\n\n\n\nEs ist für alle Beteiligten viel besser, wenn der Mann voll im Berufsleben steht und die Frau zu Hause bleibt und sich um den Haushalt und die Kinder kümmert.\n\n\n\n\n\n\n\nEs ist für ein Kind sogar gut, wenn seine Mutter berufstätig ist und sich nicht nur auf den Haushalt konzentriert.\n\n\n\n\n\n\n\nEin Vollzeit erwerbstätiger Vater kann sich nicht ausreichend um seine Kinder kümmern.\n\n\n\n\n\n\n\nAuch wenn beide Eltern erwerbstätig sind, ist es besser, wenn die Verantwortung für den Haushalt und die Kinder hauptsächlich bei der Frau liegt.\n\n\n\n\n\n\n\nEin Vollzeit erwerbstätiger Vater kann zu seinem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie ein Vater, der nicht berufstätig ist.\n\n\n\n\n\n\n\nIn einer Familie kann auch der Mann für den Haushalt und die Kinder verantwortlich sein, während die Frau Vollzeit erwerbstätig ist.\n\n\n\n\n\n\n\n\n\n\n\nHinweis: Die Reihenfolge der Aussagen entspricht den Variablen val13i1 bis val13i9 in freda_clean (siehe slides/scripts/freda_clean.R und slides/scripts/val13_analysis.R)."
+  },
+  {
+    "objectID": "exercises/23-ex.html",
+    "href": "exercises/23-ex.html",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "",
+    "text": "[Dramatische Stimme: an] Diese Übung konfrontiert Sie mit der Komplexität empirischer Sozialforschung. Das ist gut so, denn ab und zu müssen wir uns die Hände schmutzig machen. Ihre wesentliche Aufgabe für diese Übung ist es, sich von dieser Komplexität nicht beeindrucken zu lassen, sondern ruhig und methodisch durch den Dschungel zu gehen. [Dramatische Stimme: aus]"
+  },
+  {
+    "objectID": "exercises/23-ex.html#die-quelle",
+    "href": "exercises/23-ex.html#die-quelle",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "2 Die Quelle",
+    "text": "2 Die Quelle\nUnsere Daten stammen aus einer weiteren Erhebung von FREDA. Diesen Teil des Fragebogens erhalten nur Personen, die vorher angegeben haben, Eltern zu sein. Füllen Sie diesen Teil einmal aus, um ein Gefühl zu erhalten, über was die weiteren Analysen eine Aussage machen sollen.\n\n\nDer letzte Teil dieser Befragung beschäftigt sich mit Ihren Einstellungen und Werten. Dies ist sehr wichtig, damit wir Ihre Ansichten über Familie und Beziehungen besser verstehen können.\n\n\n129  Über die Aufgaben von Müttern und Vätern gibt es verschiedene Meinungen. Inwieweit stimmen Sie jeder der folgenden Aussagen zu beziehungsweise nicht zu? \n\n\n\n\n\n\nAussage\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\n\n\n\n\nEine Vollzeit erwerbstätige Mutter kann zu ihrem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie eine Mutter, die nicht berufstätig ist.\n\n\n\n\n\n\n\nDie beste Arbeitsteilung in einer Familie ist, dass beide Eltern Vollzeit arbeiten und sich gleichermaßen um den Haushalt und die Kinder kümmern.\n\n\n\n\n\n\n\nEin Kleinkind wird sicherlich darunter leiden, wenn seine Mutter berufstätig ist.\n\n\n\n\n\n\n\nEs ist für alle Beteiligten viel besser, wenn der Mann voll im Berufsleben steht und die Frau zu Hause bleibt und sich um den Haushalt und die Kinder kümmert.\n\n\n\n\n\n\n\nEs ist für ein Kind sogar gut, wenn seine Mutter berufstätig ist und sich nicht nur auf den Haushalt konzentriert.\n\n\n\n\n\n\n\nEin Vollzeit erwerbstätiger Vater kann sich nicht ausreichend um seine Kinder kümmern.\n\n\n\n\n\n\n\nAuch wenn beide Eltern erwerbstätig sind, ist es besser, wenn die Verantwortung für den Haushalt und die Kinder hauptsächlich bei der Frau liegt.\n\n\n\n\n\n\n\nEin Vollzeit erwerbstätiger Vater kann zu seinem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie ein Vater, der nicht berufstätig ist.\n\n\n\n\n\n\n\nIn einer Familie kann auch der Mann für den Haushalt und die Kinder verantwortlich sein, während die Frau Vollzeit erwerbstätig ist."
+  },
+  {
+    "objectID": "exercises/23-ex.html#was-eltern-denken",
+    "href": "exercises/23-ex.html#was-eltern-denken",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "2 Was Eltern denken…",
+    "text": "2 Was Eltern denken…\n\n\n\nRelative Häufigkeiten (%) der Antwortkategorien je Item (nur gültige Antworten)\n\n\nItem\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\n\n\n\n\nWerte Eltern: Erwerbstätige Mutter kann inniges Verhältnis zu Kind haben\n6.6\n22.6\n9.9\n30.1\n30.8\n\n\nWerte Eltern: Beide Eltern arbeiten und kümmern sich um Haus und Kind\n9.7\n23.0\n25.1\n25.0\n17.3\n\n\nWerte Eltern: Kind leidet, wenn Mutter arbeitet\n33.9\n29.9\n16.7\n15.6\n3.9\n\n\nWerte Eltern: Nur Vater arbeitet, Mutter bleibt zu Hause\n49.0\n22.4\n18.7\n8.1\n1.9\n\n\nWerte Eltern: Gut für Kind, wenn Mutter arbeitet\n5.1\n11.8\n28.5\n35.9\n18.7\n\n\nWerte Eltern: Erwerbstätiger Vater kann sich nicht um Kind kümmern\n23.6\n32.5\n18.5\n21.2\n4.3\n\n\nWerte Eltern: Beide Eltern erwerbstätig, Mutter verantwortlich für Haus und Kind\n50.8\n24.7\n16.2\n7.4\n1.0\n\n\nWerte Eltern: Erwerbstätiger Vater kann inniges Verhältnis zu Kind haben\n4.0\n19.8\n13.1\n33.5\n29.6\n\n\nWerte Eltern: Mutter erwerbstätig, Vater verantwortlich für Haus und Kind\n0.8\n2.8\n6.6\n28.1\n61.7"
+  },
+  {
+    "objectID": "exercises/23-ex.html#werte-und-geschlecht",
+    "href": "exercises/23-ex.html#werte-und-geschlecht",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "3 Werte und Geschlecht",
+    "text": "3 Werte und Geschlecht\n\n\n\nRelative Häufigkeiten (%) der Antwortkategorien je Item, getrennt nach Geschlecht\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMännlich\n\n\nWeiblich\n\n\n\nItem\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\n\n\n\n\nWerte Eltern: Erwerbstätige Mutter kann inniges Verhältnis zu Kind haben\n8.5\n25.5\n11.0\n29.3\n25.7\n5.2\n20.2\n9.0\n30.7\n34.8\n\n\nWerte Eltern: Beide Eltern arbeiten und kümmern sich um Haus und Kind\n9.7\n22.2\n24.6\n26.5\n17.0\n9.6\n23.6\n25.5\n23.7\n17.6\n\n\nWerte Eltern: Kind leidet, wenn Mutter arbeitet\n26.3\n29.8\n18.7\n20.1\n5.1\n39.8\n30.0\n15.1\n12.2\n2.9\n\n\nWerte Eltern: Nur Vater arbeitet, Mutter bleibt zu Hause\n41.4\n23.9\n21.9\n10.6\n2.2\n55.0\n21.2\n16.2\n6.2\n1.6\n\n\nWerte Eltern: Gut für Kind, wenn Mutter arbeitet\n6.4\n15.8\n32.4\n33.1\n12.3\n4.0\n8.7\n25.5\n38.1\n23.6\n\n\nWerte Eltern: Erwerbstätiger Vater kann sich nicht um Kind kümmern\n19.7\n32.1\n19.8\n23.9\n4.5\n26.6\n32.8\n17.4\n19.1\n4.1\n\n\nWerte Eltern: Beide Eltern erwerbstätig, Mutter verantwortlich für Haus und Kind\n41.3\n26.3\n20.1\n10.8\n1.5\n58.2\n23.4\n13.1\n4.8\n0.5\n\n\nWerte Eltern: Erwerbstätiger Vater kann inniges Verhältnis zu Kind haben\n5.2\n22.5\n14.6\n33.4\n24.4\n3.1\n17.7\n12.0\n33.6\n33.6\n\n\nWerte Eltern: Mutter erwerbstätig, Vater verantwortlich für Haus und Kind\n1.1\n3.1\n8.1\n32.4\n55.3\n0.6\n2.5\n5.5\n24.7\n66.6"
+  },
+  {
+    "objectID": "exercises/23-ex.html#alles-hängt-mit-allem-zusammen",
+    "href": "exercises/23-ex.html#alles-hängt-mit-allem-zusammen",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "5 Alles hängt mit allem zusammen",
+    "text": "5 Alles hängt mit allem zusammen\nIm Folgenden sehen sie Korrelationen aller Items untereinander. Gibt es “Cluster” – d.h. Items, die besonders stark miteinander korrelieren – und was würden diese bedeuten?\n\n\n\nKorrelationsmatrix der val13-Items (untere Dreiecksmatrix, Kurzvarianten)\n\n\nItem\nval13i1\nval13i2\nval13i6\nval13i8\nval13i3\nval13i4\nval13i5\nval13i7\nval13i9\n\n\n\n\nMutter-Kind Verhältnis\n1\n\n\n\n\n\n\n\n\n\n\nArbeitsteilung ideal\n0.48\n1\n\n\n\n\n\n\n\n\n\nVater unzureichend für Kinder\n-0.39\n-0.3\n1\n\n\n\n\n\n\n\n\nVater-Kind Verhältnis\n0.64\n0.38\n-0.49\n1\n\n\n\n\n\n\n\nKind leidet bei Berufstätigkeit\n-0.55\n-0.35\n0.38\n-0.43\n1\n\n\n\n\n\n\nTraditionelle Rollen\n-0.41\n-0.3\n0.25\n-0.27\n0.56\n1\n\n\n\n\n\nMutter berufstätig gut für Kind\n0.37\n0.32\n-0.18\n0.3\n-0.44\n-0.4\n1\n\n\n\n\nHauptverantwortung bei Frau\n-0.28\n-0.2\n0.21\n-0.2\n0.39\n0.56\n-0.23\n1\n\n\n\nMann übernimmt Verantwortung\n0.27\n0.15\n-0.15\n0.23\n-0.31\n-0.41\n0.22\n-0.46\n1"
+  },
+  {
+    "objectID": "exercises/23-ex.html#einflüsse-des-geschlechts-auf-die-itemreaktionen",
+    "href": "exercises/23-ex.html#einflüsse-des-geschlechts-auf-die-itemreaktionen",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "5 Einflüsse des Geschlechts auf die Itemreaktionen",
+    "text": "5 Einflüsse des Geschlechts auf die Itemreaktionen\n\n\n\nBivariate Regressionen: Item = b0 + b1 * Weiblich (Referenz: Männlich)\n\n\nItem\nN\nIntercept\nEffekt Weiblich\n95%-KI\np-Wert\n\n\n\n\nWerte Eltern: Erwerbstätige Mutter kann inniges Verhältnis zu Kind haben\n18523\n3.38\n0.32\n[0.28, 0.35]\n&lt; .001\n\n\nWerte Eltern: Beide Eltern arbeiten und kümmern sich um Haus und Kind\n18489\n3.19\n-0.03\n[-0.06, 0.01]\n0.118\n\n\nWerte Eltern: Kind leidet, wenn Mutter arbeitet\n18505\n2.48\n-0.40\n[-0.43, -0.36]\n&lt; .001\n\n\nWerte Eltern: Nur Vater arbeitet, Mutter bleibt zu Hause\n18516\n2.08\n-0.30\n[-0.33, -0.27]\n&lt; .001\n\n\nWerte Eltern: Gut für Kind, wenn Mutter arbeitet\n18491\n3.29\n0.39\n[0.36, 0.42]\n&lt; .001\n\n\nWerte Eltern: Erwerbstätiger Vater kann sich nicht um Kind kümmern\n18517\n2.62\n-0.20\n[-0.24, -0.17]\n&lt; .001\n\n\nWerte Eltern: Beide Eltern erwerbstätig, Mutter verantwortlich für Haus und Kind\n18494\n2.05\n-0.39\n[-0.42, -0.36]\n&lt; .001\n\n\nWerte Eltern: Erwerbstätiger Vater kann inniges Verhältnis zu Kind haben\n18505\n3.49\n0.28\n[0.24, 0.31]\n&lt; .001\n\n\nWerte Eltern: Mutter erwerbstätig, Vater verantwortlich für Haus und Kind\n18503\n4.38\n0.16\n[0.14, 0.19]\n&lt; .001"
+  },
+  {
+    "objectID": "exercises/23-ex.html#latente-einstellungen",
+    "href": "exercises/23-ex.html#latente-einstellungen",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "6 Latente Einstellungen",
+    "text": "6 Latente Einstellungen"
+  },
+  {
+    "objectID": "exercises/23-ex.html#zwei-dimensionen-elterlicher-werte",
+    "href": "exercises/23-ex.html#zwei-dimensionen-elterlicher-werte",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "7 Zwei Dimensionen elterlicher Werte?",
+    "text": "7 Zwei Dimensionen elterlicher Werte?"
+  },
+  {
+    "objectID": "exercises/23-ex.html#drei-dimensionen-elterlicher-werte",
+    "href": "exercises/23-ex.html#drei-dimensionen-elterlicher-werte",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "8 Drei Dimensionen elterlicher Werte?",
+    "text": "8 Drei Dimensionen elterlicher Werte?\n\n\n\n\n\n\n\n\n\nVergleich der Modellanpassungen\n\n\n\nDf\nAIC\nBIC\nChisq\nChisq diff\nRMSEA\nDf diff\nPr(&gt;Chisq)\n\n\n\n\nfit3\n24\n330309.8\n330467.3\n2744.77\nNA\nNA\nNA\nNA\n\n\nfit2\n26\n332067.1\n332209.6\n4506.05\n1761.28\n0.26\n2\n0\n\n\nfit\n27\n335506.0\n335641.0\n7946.96\n3440.91\n0.51\n1\n0"
+  },
+  {
+    "objectID": "exercises/23-ex.html#vorrede",
+    "href": "exercises/23-ex.html#vorrede",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "",
+    "text": "[Dramatische Stimme: an] Diese Übung konfrontiert Sie mit der Komplexität empirischer Sozialforschung. Das ist gut so, denn ab und zu müssen wir uns die Hände schmutzig machen. Ihre wesentliche Aufgabe für diese Übung ist es, sich von dieser Komplexität nicht beeindrucken zu lassen, sondern ruhig und methodisch durch den Dschungel zu gehen. [Dramatische Stimme: aus]"
+  },
+  {
+    "objectID": "exercises/23-ex.html#verteilung-der-reaktionen",
+    "href": "exercises/23-ex.html#verteilung-der-reaktionen",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "3 Verteilung der Reaktionen",
+    "text": "3 Verteilung der Reaktionen\nWir studieren zunächst die allgemeine Reaktion auf die Items.\n\nGibt es eine allgemeine Tendenz zu einem “konservativen” oder “progressiven” Muster?\nGibt es Items, die wenig Varianz produzieren?\nGibt es Items, die ganz besonders viel Varianz produzieren?\n\n\n\n\nRelative Häufigkeiten (%) der Antwortkategorien je Item (nur gültige Antworten)\n\n\nFragebogenitem\nStimme überhaupt nicht zu\nStimme eher nicht zu\nWeder noch\nStimme eher zu\nStimme voll zu\n\n\n\n\nMutter-Kind-Verhältnis (Vollzeit vs. nicht berufstätig)\n6.6\n22.6\n9.9\n30.1\n30.8\n\n\nBeste Arbeitsteilung (beide Eltern Vollzeit)\n9.7\n23.0\n25.1\n25.0\n17.3\n\n\nUnzureichende Kinderbetreuung durch vollzeitberufstätigen Vater\n23.6\n32.5\n18.5\n21.2\n4.3\n\n\nVater-Kind-Verhältnis (Vollzeit vs. nicht berufstätig)\n4.0\n19.8\n13.1\n33.5\n29.6\n\n\nLeid des Kleinkinds bei Berufstätigkeit der Mutter\n33.9\n29.9\n16.7\n15.6\n3.9\n\n\nTraditionelle Rollenverteilung (Mann Vollzeit, Frau zu Hause)\n49.0\n22.4\n18.7\n8.1\n1.9\n\n\nGut für Kind, wenn Mutter berufstätig ist\n5.1\n11.8\n28.5\n35.9\n18.7\n\n\nHauptverantwortung Haushalt/Kinder bei Frau (trotz beider Eltern berufstätig)\n50.8\n24.7\n16.2\n7.4\n1.0\n\n\nMann kann Verantwortung für Haushalt/Kinder übernehmen (Frau Vollzeit)\n0.8\n2.8\n6.6\n28.1\n61.7"
+  },
+  {
+    "objectID": "exercises/23-ex.html#geschlechtsspezifische-differenzen-der-reaktionen",
+    "href": "exercises/23-ex.html#geschlechtsspezifische-differenzen-der-reaktionen",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "4 Geschlechtsspezifische Differenzen der Reaktionen",
+    "text": "4 Geschlechtsspezifische Differenzen der Reaktionen\nWir analysieren nun, ob es geschlechtsspezifische Differenzen in den Reaktionen gibt.\n\nIm ersten Graph sehen Sie geschlechtsspezifische Differenzen relativer Häufigkeiten auf die Itemreaktionen.\nDer zweite Graph trägt \\(\\hat{\\beta}\\)-Koeffizienten bivariater Regressionen mit den Items als Outcome und dem Geschlecht als erklärende Variable ab.\n\nWelche Muster können Sie erkennen?"
+  },
+  {
+    "objectID": "exercises/23-ex.html#latente-faktoren",
+    "href": "exercises/23-ex.html#latente-faktoren",
+    "title": "Übung: Komplexe Daten generierende Prozesse",
+    "section": "6 Latente Faktoren",
+    "text": "6 Latente Faktoren\nIm Folgenden sehen Sie Faktorenanalyse mit einem, zwei und drei Faktoren.\n\nWelches Modell präferieren Sie und warum?\nWie können wir die latenten Faktoren/Dimensionen bezeichnen?\nWie könnten wir die Validität dieser Modellierung überprüfen?\n\n\nEine Dimension elterlicher Werte?\n\n\n\n\n\n\n\n\nZwei Dimensionen elterlicher Werte?\n\n\n\n\n\n\n\n\nDrei Dimensionen elterlicher Werte?\n\n\n\n\n\n\n\n\n\nVergleich der Modellanpassungen\n\n\n\nDf\nAIC\nBIC\nChisq\nChisq diff\nRMSEA\nDf diff\nPr(&gt;Chisq)\n\n\n\n\nfit3\n24\n330309.8\n330467.3\n2744.77\nNA\nNA\nNA\nNA\n\n\nfit2\n26\n332067.1\n332209.6\n4506.05\n1761.28\n0.26\n2\n0\n\n\nfit\n27\n335506.0\n335641.0\n7946.96\n3440.91\n0.51\n1\n0"
   }
 ]

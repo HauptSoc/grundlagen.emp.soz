@@ -6,6 +6,9 @@
     },
     "executeCode": {
       "*": "allow"
+    },
+    "bash": {
+      "quarto render *": "allow"
     }
   }
 }

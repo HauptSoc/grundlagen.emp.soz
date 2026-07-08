@@ -1,0 +1,200 @@
+---
+title: "Fragebogen-Faksimile: Werte zu Elternschaft und Erwerbstätigkeit"
+subtitle: "Item-Batterie val13i1–val13i9 (FReDA-Fragebogen, Frage 129)"
+lang: de
+format:
+  html:
+    self-contained: true
+    fontsize: 1em
+    mainfont: sans-serif
+editor: source
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(dplyr)
+library(purrr)
+library(tibble)
+library(knitr)
+library(kableExtra)
+```
+
+<style>
+body {
+  color: #222;
+}
+.intro-text {
+  background-color: #eef3f7;
+  border-left: 4px solid #4a7ba6;
+  padding: 10px 16px;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+.frage-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.frage-nr {
+  flex: 0 0 auto;
+  background-color: #2c5f7c;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.frage-text {
+  font-weight: 600;
+}
+
+/* Tabelle: prozentuale Spaltenbreiten sorgen dafuer, dass der Browser
+   die Itemtexte je nach verfuegbarer Breite (Desktop vs. Handy)
+   unterschiedlich umbricht - wie bei einer normalen kable()-HTML-Tabelle. */
+.likert-table {
+  width: 100%;
+}
+.likert-table th,
+.likert-table td {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  vertical-align: middle;
+}
+.likert-table thead th {
+  font-size: 0.85rem;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: #f5f5f5;
+}
+
+/* Radiobuttons optisch als Kaestchen darstellen (wie im Papierfragebogen),
+   technisch aber weiterhin exklusiv pro Zeile (name-Gruppierung je Item) */
+.likert-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+.likert-cell input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #555;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+}
+.likert-cell input[type="radio"]:checked {
+  background-color: #2c5f7c;
+  border-color: #2c5f7c;
+}
+.likert-cell input[type="radio"]:checked::after {
+  content: "\2713";
+  color: white;
+  font-size: 13px;
+  line-height: 1;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+}
+.likert-table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+@media (max-width: 700px) {
+  .likert-table th,
+  .likert-table td {
+    font-size: 0.75rem;
+    padding: 5px 3px !important;
+  }
+  .likert-cell input[type="radio"] {
+    width: 15px;
+    height: 15px;
+  }
+}
+</style>
+
+<p class="intro-text">
+Der letzte Teil dieser Befragung beschäftigt sich mit Ihren Einstellungen und
+Werten. Dies ist sehr wichtig, damit wir Ihre Ansichten über Familie und
+Beziehungen besser verstehen können.
+</p>
+
+<div class="frage-block">
+  <span class="frage-nr">129</span>
+  <span class="frage-text">
+    Über die Aufgaben von Müttern und Vätern gibt es verschiedene Meinungen.
+    Inwieweit stimmen Sie jeder der folgenden Aussagen zu beziehungsweise
+    nicht zu?
+  </span>
+</div>
+
+```{r}
+#| label: item-table
+
+# Item-Wortlaut in Fragebogenreihenfolge; var verweist auf die Variable
+# in freda_clean (siehe slides/scripts/freda_clean.R), damit sich das
+# Faksimile eindeutig den val13-Items zuordnen laesst.
+items <- tribble(
+  ~var,      ~text,
+  "val13i1", "Eine Vollzeit erwerbstätige Mutter kann zu ihrem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie eine Mutter, die nicht berufstätig ist.",
+  "val13i2", "Die beste Arbeitsteilung in einer Familie ist, dass beide Eltern Vollzeit arbeiten und sich gleichermaßen um den Haushalt und die Kinder kümmern.",
+  "val13i3", "Ein Kleinkind wird sicherlich darunter leiden, wenn seine Mutter berufstätig ist.",
+  "val13i4", "Es ist für alle Beteiligten viel besser, wenn der Mann voll im Berufsleben steht und die Frau zu Hause bleibt und sich um den Haushalt und die Kinder kümmert.",
+  "val13i5", "Es ist für ein Kind sogar gut, wenn seine Mutter berufstätig ist und sich nicht nur auf den Haushalt konzentriert.",
+  "val13i6", "Ein Vollzeit erwerbstätiger Vater kann sich nicht ausreichend um seine Kinder kümmern.",
+  "val13i7", "Auch wenn beide Eltern erwerbstätig sind, ist es besser, wenn die Verantwortung für den Haushalt und die Kinder hauptsächlich bei der Frau liegt.",
+  "val13i8", "Ein Vollzeit erwerbstätiger Vater kann zu seinem Kleinkind normalerweise ein genauso inniges Verhältnis haben wie ein Vater, der nicht berufstätig ist.",
+  "val13i9", "In einer Familie kann auch der Mann für den Haushalt und die Kinder verantwortlich sein, während die Frau Vollzeit erwerbstätig ist."
+)
+
+response_options <- c(
+  "Stimme überhaupt nicht zu",
+  "Stimme eher nicht zu",
+  "Weder noch",
+  "Stimme eher zu",
+  "Stimme voll zu"
+)
+
+# Radiobutton in ein <label> eingebettet, damit die ganze Zelle klickbar ist;
+# name = Itemvariable sorgt fuer exklusive Auswahl pro Zeile (Likert-Logik)
+make_radio_cell <- function(row_id, value, aria_label) {
+  sprintf(
+    '<label class="likert-cell"><input type="radio" name="%s" value="%d" aria-label="%s"></label>',
+    row_id, value, aria_label
+  )
+}
+
+radio_cols <- map(seq_along(response_options), function(opt) {
+  map2_chr(items$var, response_options[opt], ~ make_radio_cell(.x, opt, .y))
+})
+names(radio_cols) <- response_options
+
+survey_table <- bind_cols(Aussage = items$text, as_tibble(radio_cols))
+
+survey_table |>
+  kable(
+    format = "html",
+    escape = FALSE,
+    align = c("l", rep("c", 5)),
+    table.attr = 'class="table likert-table"'
+  ) |>
+  kable_styling(bootstrap_options = c("striped"), full_width = TRUE) |>
+  column_spec(1, width = "38%") |>
+  column_spec(2:6, width = "12.4%")
+```
+
+<p style="font-size: 0.8rem; color: #666; margin-top: 10px;">
+Hinweis: Die Reihenfolge der Aussagen entspricht den Variablen
+<code>val13i1</code> bis <code>val13i9</code> in <code>freda_clean</code>
+(siehe <code>slides/scripts/freda_clean.R</code> und
+<code>slides/scripts/val13_analysis.R</code>).
+</p>
