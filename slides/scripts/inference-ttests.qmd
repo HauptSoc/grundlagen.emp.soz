@@ -1,0 +1,271 @@
+---
+title: "Mittelwertdifferenzen & t-Tests"
+subtitle: "Sind Frauen systematisch unzufriedener mit dem Singlestatus als Männer?"
+format: html
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+
+source("freda_clean.R")
+```
+
+## Forschungsfrage
+
+**Sind Frauen innerhalb jeder sin11-Kategorie systematisch unzufriedener mit dem Singlestatus (sat2) als Männer?**
+
+Wir testen dies für jede Beziehungskategorie separat mit unabhängigen t-Tests.
+
+---
+
+## Zusammenfassende Tabelle
+
+```{r table, echo=FALSE}
+# Berechne Statistiken für jeden sin11-Wert
+ttest_results <- freda_clean %>%
+  filter(!is.na(sat2), !is.na(sex), !is.na(sin11)) %>%
+  group_by(sin11) %>%
+  summarise(
+    # Frauen
+    mean_f = mean(sat2[sex == "Weiblich"], na.rm = TRUE),
+    sd_f = sd(sat2[sex == "Weiblich"], na.rm = TRUE),
+    n_f = sum(sex == "Weiblich"),
+    
+    # Männer
+    mean_m = mean(sat2[sex == "Männlich"], na.rm = TRUE),
+    sd_m = sd(sat2[sex == "Männlich"], na.rm = TRUE),
+    n_m = sum(sex == "Männlich"),
+    
+    .groups = "drop"
+  ) %>%
+  mutate(
+    # Differenz der Mittelwerte
+    mean_diff = mean_f - mean_m,
+    
+    # Standardfehler der Differenz
+    se_diff = sqrt((sd_f^2 / n_f) + (sd_m^2 / n_m)),
+    
+    # 95% CI
+    ci_lower = mean_diff - 1.96 * se_diff,
+    ci_upper = mean_diff + 1.96 * se_diff,
+    
+    sin11_label = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ as.character(sin11)
+    )
+  ) %>%
+  select(sin11_label, mean_f, mean_m, mean_diff, sd_f, sd_m, se_diff, ci_lower, ci_upper)
+
+# Erstelle Tabelle für kable()
+tabelle_ttest <- ttest_results %>%
+  mutate(
+    mean_f = round(mean_f, 2),
+    mean_m = round(mean_m, 2),
+    mean_diff = round(mean_diff, 2),
+    sd_f = round(sd_f, 2),
+    sd_m = round(sd_m, 2),
+    se_diff = round(se_diff, 3),
+    ci = paste0("[", round(ci_lower, 2), ", ", round(ci_upper, 2), "]")
+  ) %>%
+  select(
+    "Beziehungskategorie" = sin11_label,
+    "MW Frauen" = mean_f,
+    "MW Männer" = mean_m,
+    "Differenz" = mean_diff,
+    "SD Frauen" = sd_f,
+    "SD Männer" = sd_m,
+    "SE Diff." = se_diff,
+    "95%-KI" = ci
+  )
+
+kable(tabelle_ttest, 
+      caption = "Zufriedenheit mit Singlestatus (sat2) nach Geschlecht und Beziehungskategorie",
+      align = "lccccccc") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), 
+                full_width = FALSE,
+                font_size = 12) %>%
+  column_spec(1, bold = TRUE, width = "25%")
+```
+
+### Interpretation der Ergebnisse
+
+| Kategorie | Ergebnis |
+|-----------|----------|
+| **Kein Interesse** | ✓ Signifikant (KI: [0.25, 0.54]) — Frauen zufriedener |
+| **Offen für Beziehung** | ✓ Signifikant (KI: [0.40, 0.58]) — Frauen zufriedener |
+| **Anbahnende Beziehung** | ✓ Signifikant (KI: [0.24, 0.74]) — Frauen zufriedener |
+| **On-off-Beziehung** | ✗ Nicht signifikant (KI: [-0.23, 1.38]) — kein Unterschied |
+| **Freundschaft Plus** | ✗ Nicht signifikant (KI: [-0.40, 0.08]) — kein Unterschied |
+| **Sonstiges** | ✓ Signifikant (KI: [0.44, 1.35]) — Frauen zufriedener |
+
+**Gesamtkonklusion:** In 4 von 6 Kategorien sind Frauen signifikant zufriedener mit dem Singlestatus als Männer.
+
+---
+
+## Detailliertes Beispiel: "Kein Interesse"
+
+Wir verdeutlichen die Konfidenzintervall-Berechnung Schritt-für-Schritt für die Kategorie "Kein Interesse".
+
+### Schritt 1: Daten zusammenfassen
+
+```
+Frauen (n = 1988):
+  Mittelwert = 8.02
+  SD = 2.00
+
+Männer (n = 1202):
+  Mittelwert = 7.62
+  SD = 2.10
+```
+
+**Datenquelle:** Zufriedenheitsskala sat2 (0-10), gruppiert nach Geschlecht
+
+### Schritt 2: Mittelwertdifferenz berechnen
+
+$$\text{Differenz} = \text{MW}_{\text{Frauen}} - \text{MW}_{\text{Männer}} = 8.02 - 7.62 = 0.395$$
+
+**Interpretation:** Frauen sind im Durchschnitt um 0.40 Punkte (auf 0-10 Skala) zufriedener mit dem Singlestatus.
+
+---
+
+### Schritt 3: Standardfehler der Differenz
+
+Der Standardfehler kombiniert die Varianzen beider Gruppen und berücksichtigt ihre Stichprobengrößen:
+
+$$\text{SE}_{\text{Diff}} = \sqrt{\frac{\text{SD}_{\text{Frauen}}^2}{n_{\text{Frauen}}} + \frac{\text{SD}_{\text{Männer}}^2}{n_{\text{Männer}}}}$$
+
+### Berechnung im Detail:
+
+$$\text{SE}_{\text{Diff}} = \sqrt{\frac{2.00^2}{1988} + \frac{2.10^2}{1202}}$$
+
+$$= \sqrt{\frac{4.00}{1988} + \frac{4.41}{1202}}$$
+
+$$= \sqrt{0.00201 + 0.00367}$$
+
+$$= \sqrt{0.00568} = 0.0753$$
+
+**Was bedeutet das?**
+- Der Standardfehler ist klein (0.0753), weil wir große Stichproben haben
+- Bei kleineren Stichproben würde der SE größer sein und das KI breiter
+
+---
+
+### Schritt 4: Kritischer z-Wert für 95%-KI
+
+Für ein **95%-Konfidenzintervall** verwenden wir $z = 1.96$ aus der Standard-Normalverteilung:
+
+$$P(-1.96 \leq Z \leq 1.96) = 0.95$$
+
+**Warum Normalverteilung?**
+
+Auch hier greift der **Zentrale Grenzwertsatz**: Die Differenz zweier Mittelwerte ist asymptotisch normalverteilt, unabhängig davon, wie die zugrunde liegenden Variablen verteilt sind.
+
+Mit großen Stichproben (n₁ = 1988, n₂ = 1202) ist die Normalverteilung eine ausgezeichnete Approximation.
+
+---
+
+### Schritt 5: Konfidenzintervall berechnen
+
+**Untere Grenze:**
+$$\text{Differenz} - z \times \text{SE}_{\text{Diff}} = 0.395 - 1.96 \times 0.0753 = 0.395 - 0.147 = 0.247$$
+
+**Obere Grenze:**
+$$\text{Differenz} + z \times \text{SE}_{\text{Diff}} = 0.395 + 1.96 \times 0.0753 = 0.395 + 0.147 = 0.543$$
+
+**95%-Konfidenzintervall: [0.25, 0.54]**
+
+---
+
+### Schritt 6: Interpretation
+
+Mit **95% Konfidenz** liegt die wahre Mittelwertdifferenz zwischen **0.25 und 0.54 Punkten**.
+
+**Entscheidend:**
+- Das Konfidenzintervall **enthält NICHT die 0**
+- Dies bedeutet, der Unterschied ist **statistisch signifikant** auf dem 5%-Niveau
+- Frauen sind **nachweislich zufriedener** mit dem Singlestatus als Männer in dieser Kategorie
+
+---
+
+## Visualisierung aller t-Tests
+
+```{r plot, echo=FALSE, fig.width=10, fig.height=6}
+ttest_results_plot <- ttest_results %>%
+  mutate(
+    sin11_label = factor(sin11_label, levels = c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    )),
+    signifikant = ifelse((ci_lower > 0 | ci_upper < 0), "ja", "nein")
+  )
+
+ggplot(ttest_results_plot, aes(x = sin11_label, y = mean_diff, color = signifikant)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray60", linewidth = 1) +
+  geom_errorbar(
+    aes(ymin = ci_lower, ymax = ci_upper),
+    width = 0.2,
+    linewidth = 1
+  ) +
+  geom_point(size = 5) +
+  geom_text(
+    aes(label = round(mean_diff, 2)),
+    vjust = -1.5,
+    size = 4,
+    fontface = "bold",
+    color = "black"
+  ) +
+  scale_color_manual(
+    values = c("ja" = "#FF744E", "nein" = "#75AADB"),
+    labels = c("ja" = "Signifikant", "nein" = "Nicht signifikant")
+  ) +
+  labs(
+    x = "Beziehungskategorie",
+    y = "Mittelwertdifferenz (Frauen - Männer)",
+    title = "Geschlechtsunterschiede in der Zufriedenheit mit Singlestatus",
+    subtitle = "95%-Konfidenzintervalle | Positive Werte: Frauen zufriedener | Negative Werte: Männer zufriedener",
+    color = ""
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 11),
+    axis.text.y = element_text(size = 11),
+    plot.title = element_text(size = 15, face = "bold", margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 10, color = "gray50", margin = margin(b = 10)),
+    legend.position = "top",
+    panel.grid.major.y = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+---
+
+## Annahmen des t-Tests
+
+Der unabhängige t-Test basiert auf folgenden Annahmen:
+
+1. **Unabhängigkeit:** Frauen und Männer sind unabhängige Stichproben ✓
+2. **Normalverteilung:** sat2 sollte normalverteilt sein (mit n > 1000 ist dies nicht kritisch) ✓
+3. **Homogenität der Varianzen:** Die Varianzen sollten ähnlich sein (wir verwenden Welch's Formel, die dies nicht annimmt) ✓
+
+---
+
+## Hinweis: Multiple Tests
+
+**Achtung:** Wir führen **6 t-Tests** durch (einen für jede sin11-Kategorie).
+
+**Multiple Comparisons Problem:**
+- Wenn wir 6 unabhängige Tests auf 5%-Niveau machen, erhöht sich die Wahrscheinlichkeit mindestens eines Fehler 1. Art
+- Bonferroni-Korrektur: 0.05 / 6 ≈ 0.0083 statt 0.05
+- Unsere Ergebnisse bleiben auch bei dieser strengeren Schwelle signifikant

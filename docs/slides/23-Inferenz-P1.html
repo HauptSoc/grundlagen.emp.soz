@@ -6,7 +6,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
   <title>Methoden empirischer Sozialforschung – Inferenzstatistik - Teil 1</title>
@@ -124,6 +127,10 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -153,6 +160,8 @@
 <li><p>Wie oft wurde das Merkmal beobachtet?</p></li>
 </ol>
 <p>Hat das Merkmal <em>keine</em> Varianz (wie die Blutgruppe eines Menschen) genügt prinzipiell <em>eine</em> Beobachtung zur Bestimmung des Merkmals. Je unterschiedlicher das Merkmal ist, desto mehr Beobachtungen werden benötigt, um die Unsicherheit des Schlusses von einer Stichprobenverteilung auf die Verteilung in der Grundgesamtheit zu verringern.</p>
+<p>Wir haben daher immer folgende Relation:</p>
+<p><span class="math display">\[ \text{Unsicherheit des Parameters durch Sampling} = \dfrac{\text{Variabilität des Parameters}}{\text{Stichprobengröße}} \]</span></p>
 </section>
 <section id="über-was-sind-wir-durch-stichproben-unsicher" class="slide level2">
 <h2>Über was sind wir (durch Stichproben) unsicher?</h2>
@@ -166,8 +175,10 @@
 <h2>Ausdruck von Unsicherheit 1: Konfidenzintervalle</h2>
 <p>Wir formulieren Erwartungen über Werte von <strong>zukünftigen</strong> Stichproben.</p>
 <ol type="1">
-<li><p>Wenn wir viele, weitere Stichproben aus <em>der selben</em> Population ziehen <em>und</em> sich die Stichproben nur <em>zufällig</em> unterscheiden würden, was für eine <em>Streuung</em> von Ergebnissen können wir dann erwarten?</p></li>
-<li><p>Da die Ergebnisse durch zufällig varrierende Stichproben aus der gleichen Population berechnet wurden, können wir die Zufallsstreuung aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute Annäherung an den uns unbekannten Populationsparameter.</p></li>
+<li><p>Wenn wir viele, weitere Stichproben aus <em>der selben</em> Population ziehen <em>und</em> sich die Stichproben nur <em>zufällig</em> unterscheiden würden, was für eine <em>Streuung</em> von Ergebnissen können wir dann erwarten?</p>
+<p><span class="math inline">\(\rightarrow\)</span> Das ist ein Gedankenexperiment!</p></li>
+<li><p>Da die Ergebnisse durch zufällig varrierende Stichproben aus der gleichen Population berechnet wurden, können wir die Zufallsstreuung aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute Annäherung an den uns unbekannten Populationsparameter.</p>
+<p><span class="math inline">\(\rightarrow\)</span> Das funktioniert aber nur, wenn <em>keine</em> Selektionen im Sampling, ins Treatment oder Fehler in der Modellierung sind.</p></li>
 </ol>
 </section>
 <section id="ausdruck-von-unsicherheit-2-signifikanz" class="slide level2">
@@ -177,7 +188,7 @@
 <li><p>Dazu treffen wir Annahmen, wie die Daten verteilt sein müssten, wenn es keine Differenz oder keinen Zusammenhang geben würde.</p></li>
 <li><p>Auch in diesem Fall varrieren Ergebnisse von vielen Stichproben <em>zufällig</em>. Manchmal könnte es aus reinem Zufall zu gehäuftem Auftreten von Wertepaaren kommen, was dann zu zufälligen Zusammenhängen oder Differenzen führt, die es in der Population nicht gibt.</p></li>
 <li><p>Die Daten, mit denen wir arbeiten, könnten eine solche Stichprobe sein. Unter der Annahme, dass dies der Fall ist, können wir alle Ergebnisse, die wir mit der Stichprobe berechnen, als Zufallsereignis ansehen. Die Auftretenswahrscheinlichkeit von solchen (oder extremeren) Zufallsereignissen lässt sich gut berechnen.</p></li>
-<li><p>Ist diese Wahrscheinlichkeit sehr klein, sagen wir <em>per Konvention</em>, dass unsere Ergebnisse nicht durch Zufall entstanden sind.</p></li>
+<li><p>Ist diese Wahrscheinlichkeit sehr klein, sagen wir <strong>per Konvention</strong>, dass unsere Ergebnisse nicht durch Zufall entstanden sind.</p></li>
 </ol>
 </section>
 <section id="woher-kommen-schwankungen-von-parametern-in-stichproben" class="slide level2">
@@ -189,8 +200,8 @@
 <li><p>Dadurch enstehen <strong>zufallsbedingte Abweichungen</strong> der Stichprobenparameter in Bezug auf die Populationsparameter.</p></li>
 </ul>
 </section>
-<section id="die-welt-des-reinen-zufalls" class="slide level2">
-<h2>Die Welt des reinen Zufalls</h2>
+<section id="zentraler-grenzwertsatz" class="slide level2">
+<h2>Zentraler Grenzwertsatz</h2>
 <p>Zentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.</p>
 <p>Wenn also der <strong>Unterschied</strong> eines Stichprobenparameters zum Popuplationsparameter auf einer <strong>Zufallsschwankung</strong> beruht, dann können wir annehmen, dass diese Parameter<strong>unterschiede</strong> normalverteilt sind.<sup>1</sup></p>
 <p>Da jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung.</p>
@@ -205,24 +216,904 @@
 </section>
 <section id="korrektur-der-varianz-bei-stichproben" class="slide level2">
 <h2>Korrektur der Varianz bei Stichproben</h2>
-<p>Die Stichproben-Varianz (<span class="math inline">\(s\)</span>) ist <em>kein</em> erwartungstreuer Schätzer der Populationsvarianz <span class="math inline">\(\sigma^2\)</span>, sie ist <em>systematisch zu klein</em>! Sie muss daher mit dem Term <span class="math inline">\(\frac{n}{n-1}\)</span> nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (<span class="math inline">\(\hat{\sigma}^2\)</span>) sowie die Schätzung für die Populations-Standardabweichung (<span class="math inline">\(\hat{\sigma}\)</span>) ergibt.</p>
+<p>Die Stichproben-Varianz (<span class="math inline">\(s\)</span>) ist <em>kein</em> erwartungstreuer Schätzer der Populationsvarianz <span class="math inline">\(\sigma^2\)</span> (sprich: sigma quadrat), sie ist <em>systematisch zu klein</em>! Sie muss daher mit dem Term <span class="math inline">\(\frac{n}{n-1}\)</span> nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (<span class="math inline">\(\hat{\sigma}^2\)</span>) sowie die Schätzung für die Populations-Standardabweichung (<span class="math inline">\(\hat{\sigma}\)</span>) ergibt.</p>
 <p><span class="math display">\[
 \begin{split}
-         \hat{\sigma}_x^2   &amp;= \dfrac{ \sum (x_i - \bar{x})^2}{n} \cdot \dfrac{n}{n-1} \\
+         \hat{\sigma}^2   &amp;= \dfrac{ \sum (x_i - \bar{x})^2}{n} \cdot \dfrac{n}{n-1} \\
                             &amp;= \dfrac{\sum(x_i - \bar{x})^2}{n-1}
   \end{split}
-\]</span> <span class="math display">\[
+\]</span> Die korrigierte Standardabweichung ist dementsprechend: <span class="math display">\[
   \hat{\sigma} = \sqrt{\hat{\sigma}^2}
   \]</span></p>
 </section>
-<section id="standardfehler-variation-erwarteterzukünftiger-ergebnisse" class="slide level2">
-<h2>Standardfehler = Variation erwarteter/zukünftiger Ergebnisse</h2>
-<p>Wenn die Differenz des Stichprobenmittelwertes zum Populationsmittelwert auf Zufall beruht, dann können wir das Wissen um den Stichprobenmittelwert mit dem Wissen über Normalverteilungen verbinden: Wir können abschätzen, in welchem Maß die Mittelwerte weiterer Stichproben durch reinen Zufall fluktuieren. Diese Information erhält man durch den <em>Standardfehler</em>. Es gibt für jeden Parameter einen eigenen Standardfehler. Für Mittelwerte berechnet sich dieser:</p>
-<p><span class="math display">\[\hat{\sigma}_{\bar{x}} = \sqrt{\frac{\hat{\sigma}^2}{n}} = \frac{\hat{\sigma}}{\sqrt{n}}\]</span></p>
-<p>Der geschätzte Standardfehler für Mittelwerte ist die geschätzte Standardabweichung der auf Zufall beruhenden Differenz aller Mittelwerte in weiteren Stichproben zum Populationswert.</p>
-
+<section id="standardfehler-standardabweichung-erwarteterzukünftiger-ergebnisse" class="slide level2 midi">
+<h2>Standardfehler = Standardabweichung erwarteter/zukünftiger Ergebnisse</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>Hier hat ein Computer aus einer Population 10.000 mal Stichproben von n = 50 gezogen.</p></li>
+<li><p>In der Population ist der Mittelwert der Eigenschaft 5 mit einer Standardabweichung von 2.</p></li>
+<li><p>Die Verteilung der 10.000 Mittelwerte hat eine Standardabweichung von 0.2783.</p></li>
+<li><p>Der <strong>Standardfehler</strong> aufgrund einer Stichprobe versucht genau diesen Wert zu <strong>schätzen</strong> mit <span class="math display">\[ \hat{\sigma}_{\bar{x}} = \dfrac{2}{\sqrt{50}} = 0.2828 \]</span></p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/mittelwerte-sim1-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="23-Inferenz-P1_files/figure-revealjs/mittelwerte-sim1-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="der-standard-error-se-die-kernidee" class="slide level2">
+<h2>Der Standard Error (SE) — Die Kernidee</h2>
+<h3 id="was-ist-se">Was ist SE?</h3>
+<p>Der Standardfehler (= <strong>S</strong>tandard <strong>E</strong>rror) ist die <strong>Standardabweichung weiterer möglicher Mittelwerte aus gleich gezogenen Stichproben der selben Population</strong>.</p>
+<p><span class="math display">\[\text{SE}_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\]</span></p>
+<h3 id="berechnung">Berechnung</h3>
+<p><span class="math display">\[\text{SE}_{\bar{x}} = \frac{2}{\sqrt{50}} = \frac{2}{7.07} = 0.2828\]</span></p>
+<p><strong>Das bedeutet:</strong> Wir <em>schätzen</em>, dass die Mittelwerte zukünftiger Stichproben sich typischerweise um 0.2828 unterscheiden.</p>
+</section>
+<section id="folgen" class="slide level2">
+<h2>Folgen</h2>
+<h3 id="größere-stichproben-kleinerer-se">Größere Stichproben = Kleinerer SE</h3>
+<p>Wenn wir ein größeres n statt 50 hätten, z.B. n = 200:</p>
+<p><span class="math display">\[\text{SE}_{neu} = \frac{2}{\sqrt{200}} = 0.1414\]</span></p>
+<p>Die SE würde halbiert! Die grünen Linien würden näher zusammenrücken.</p>
+<p><strong>Folge:</strong> Mit größeren Stichproben sind unsere Schätzungen präziser.</p>
+<h3 id="mehr-variation-in-den-daten-größerer-se">Mehr Variation in den Daten = Größerer SE</h3>
+<p>Wenn σ größer statt 2 wäre, z.B. σ = 4:</p>
+<p><span class="math display">\[\text{SE}_{neu} = \frac{4}{\sqrt{50}} = 0.5657\]</span></p>
+<p>Der SE würde sich verdoppeln! Die grünen Linien würden weiter auseinander liegen.</p>
+<p><strong>Folge:</strong> Heterogenere Populationen sind schwerer zu schätzen.</p>
+</section>
+<section id="konfidenzintervalle-bereiche-von-möglichen-schwankungen" class="slide level2">
+<h2>Konfidenzintervalle = Bereiche von möglichen Schwankungen</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/mittelwerte-sim-konf-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="23-Inferenz-P1_files/figure-revealjs/mittelwerte-sim-konf-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="was-sind-konfidenzintervalle-deep-dive" class="slide level2 midi">
+<h2>Was sind Konfidenzintervalle (deep dive)?</h2>
+<ul>
+<li><p>Konfidenzintervalle sind Perzentilgrenzen für eine geschätzte Verteilung möglicher Parameter, die <em>nur</em> durch zufällige Unterschiede bei der Stichprobenziehung variiert.</p></li>
+<li><p>Wir behaupten, dass unser Parameter der Mittelwert<sup>1</sup> und der geschätzte Standardfehler die Standardabweichung der Parameterverteilung ist.</p></li>
+<li><p>Da die Variation der Parameter zufällig ist<sup>2</sup>, ergibt die Parameterverteilung eine Zufallsverteilung, über die wir komplettes Wissen haben.</p></li>
+<li><p>Wir können daher angeben, wie viele Standardabweichungen wir vom Mittelwert aus nach oben/unten gehen müssen, um 99%, 98%, 97%, 96%, 95%, usw. der nicht extremen<sup>3</sup> Zufallsvariation zu erfassen.</p></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Genauer: Der Erwartungswert der Verteilung.</p></li><li id="fn5"><p>In der Praxis: als zufällig behauptet wird.</p></li><li id="fn6"><p>Extrem ist im Zufallssprech alles, was an den Rändern liegt.</p></li></ol></aside></section>
+<section id="generelle-berechnung" class="slide level2">
+<h2>Generelle Berechnung</h2>
+<p>Die Berechnung von Konfidenzintervallen ist grundsätzlich immer gleich - egal, was für ein Parameter wir nutzen:</p>
+<p><span class="math display">\[\text{Konfidenzintervall} = \text{Parameter} \pm \text{Skalierungsfaktor} \cdot \text{Standardfehler}\]</span></p>
+<ul>
+<li>Der Skalierungsfaktor (manchmal auch: kritischer Wert) bezeichnet, wie wieviel wir den Standardfehler erhöhen, um nicht extreme Bereiche der Zufallsvariation zu erfassen.</li>
+</ul>
+</section>
+<section id="bereiche-der-normalverteilung" class="slide level2">
+<h2>Bereiche der Normalverteilung</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/mittelwerte-sim2-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="23-Inferenz-P1_files/figure-revealjs/mittelwerte-sim2-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="spezialitätenproblem-1-kleine-stichproben-führen-mit-höherer-wahrscheinlichkeit-zu-extremen-abweichungen" class="slide level2 small">
+<h2>Spezialitätenproblem 1: Kleine Stichproben führen mit höherer Wahrscheinlichkeit zu extremen Abweichungen</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/t-verteilung-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="23-Inferenz-P1_files/figure-revealjs/t-verteilung-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="spezialitätenproblem-2-verhältnisse-sind-meist-nicht-symmetrisch-verteilt" class="slide level2">
+<h2>Spezialitätenproblem 2: Verhältnisse sind (meist) nicht symmetrisch verteilt</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/f-verteilung-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="23-Inferenz-P1_files/figure-revealjs/f-verteilung-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="woher-kennen-wir-skalierungsparameter-für-jede-verteilung" class="slide level2 small">
+<h2>Woher kennen wir Skalierungsparameter für jede Verteilung?</h2>
+<p><a href="images/kloster-verteilungen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/kloster-verteilungen.png"></a></p>
+</section>
+<section id="für-jedes-problemchen-ein-appchen" class="slide level2">
+<h2>Für jedes Problemchen ein Appchen</h2>
+<iframe width="100%" height="100%" src="https://www.shiny-appserver.org/inference">
+</iframe>
+</section>
+<section id="es-ist-kompliziert-macht-unglücklich" class="slide level2">
+<h2>“Es ist kompliziert” macht unglücklich</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/singletyp-zufriedenheit-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="23-Inferenz-P1_files/figure-revealjs/singletyp-zufriedenheit-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="standardfehler-für-wahrscheinlichkeiten" class="slide level2">
+<h2>Standardfehler für Wahrscheinlichkeiten</h2>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[
+SE_{p} = \sqrt{\frac{p(1-p)}{n}}
+\]</span> wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße</p>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/wahrscheinlichkeiten-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="23-Inferenz-P1_files/figure-revealjs/wahrscheinlichkeiten-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="es-ist-kompliziert-ist-selten" class="slide level2">
+<h2>“Es ist kompliziert” ist selten</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/p-singletyp-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="23-Inferenz-P1_files/figure-revealjs/p-singletyp-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="standardfehler-für-mittelwertdifferenzen" class="slide level2">
+<h2>Standardfehler für Mittelwertdifferenzen</h2>
+<p><span class="math display">\[\text{SE}_{\bar{x}_A - \bar{x}_B } = \sqrt{\frac{\hat{\sigma}_{\text{A}}^2}{n_{\text{A}}} + \frac{\hat{\sigma}_{\text{B}}^2}{n_{\text{B}}}}\]</span> Je kleiner die Stichproben und/oder je größer die Varianz des Merkmals:</p>
+<ul>
+<li>desto “unsicherer” ist unsere Inferenz über die Differenzen in der Population;</li>
+<li>desto wahrscheinlicher sind extreme, aber dennoch zufällige Abeichungen;</li>
+<li>desto wahrscheinlicher weichen die Ergebnisse vom Populationsparameter ab.</li>
+</ul>
+</section>
+<section id="sind-frauen-auch-bei-es-ist-kompliziert-zufriedener-als-männer" class="slide level2">
+<h2>Sind Frauen auch bei “es ist kompliziert” zufriedener als Männer?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover" style="font-size: 26px; margin-left: auto; margin-right: auto;">
+<caption>Zufriedenheit mit Singlestatus nach Geschlecht und Beziehungskategorie</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beziehungskategorie</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">MW Frauen</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">MW Männer</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Differenz</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">SD Frauen</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">SD Männer</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">SE Diff.</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">95%-KI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Kein Interesse</td>
+<td style="text-align: center;">8.02</td>
+<td style="text-align: center;">7.62</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">2.10</td>
+<td style="text-align: center;">0.075</td>
+<td style="text-align: center;">[0.25, 0.54]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Offen für Beziehung</td>
+<td style="text-align: center;">5.60</td>
+<td style="text-align: center;">5.11</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">2.32</td>
+<td style="text-align: center;">2.35</td>
+<td style="text-align: center;">0.045</td>
+<td style="text-align: center;">[0.4, 0.58]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Anbahnende Beziehung</td>
+<td style="text-align: center;">6.09</td>
+<td style="text-align: center;">5.60</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">2.21</td>
+<td style="text-align: center;">2.29</td>
+<td style="text-align: center;">0.129</td>
+<td style="text-align: center;">[0.24, 0.74]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">On-off-Beziehung</td>
+<td style="text-align: center;">4.54</td>
+<td style="text-align: center;">3.97</td>
+<td style="text-align: center;">0.58</td>
+<td style="text-align: center;">2.68</td>
+<td style="text-align: center;">2.63</td>
+<td style="text-align: center;">0.411</td>
+<td style="text-align: center;">[-0.23, 1.38]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Freundschaft Plus</td>
+<td style="text-align: center;">6.34</td>
+<td style="text-align: center;">6.49</td>
+<td style="text-align: center;">-0.16</td>
+<td style="text-align: center;">2.40</td>
+<td style="text-align: center;">2.35</td>
+<td style="text-align: center;">0.121</td>
+<td style="text-align: center;">[-0.4, 0.08]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Sonstiges</td>
+<td style="text-align: center;">5.50</td>
+<td style="text-align: center;">4.61</td>
+<td style="text-align: center;">0.89</td>
+<td style="text-align: center;">2.66</td>
+<td style="text-align: center;">2.56</td>
+<td style="text-align: center;">0.234</td>
+<td style="text-align: center;">[0.44, 1.35]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="detailliertes-beispiel-kein-interesse" class="slide level2">
+<h2>Detailliertes Beispiel: “Kein Interesse”</h2>
+<p>Wir verdeutlichen die Konfidenzintervall-Berechnung Schritt-für-Schritt für die Kategorie “Kein Interesse”.</p>
+<ul>
+<li>Frauen: n = 1988; Mittelwert = 8.02; SD = 2.00</li>
+<li>Männer: n = 1202; Mittelwert = 7.62; SD = 2.10</li>
+</ul>
+<p><span class="math display">\[\text{Differenz} = \bar{x}_{\text{Frauen}} - \bar{x}_{\text{Männer}} = 8.02 - 7.62 = 0.395\]</span></p>
+<p><strong>Interpretation:</strong> Frauen sind im Durchschnitt um 0.40 Punkte (auf 0-10 Skala) zufriedener mit dem Singlestatus.</p>
+</section>
+<section id="standardfehler-der-differenz" class="slide level2">
+<h2>Standardfehler der Differenz</h2>
+<p>Der Standardfehler kombiniert die Varianzen der Zufriedenheit beider Gruppen und berücksichtigt ihre verschiedenen Stichprobengrößen:</p>
+<p><span class="math display">\[
+\begin{align}
+\text{SE}_{\bar{x}_{\text{Frauen}} - \bar{x}_{\text{Männer}}} &amp;= \sqrt{\frac{\hat{\sigma}_{\text{Frauen}}^2}{n_{\text{Frauen}}} + \frac{\hat{\sigma}_{\text{Männer}}^2}{n_{\text{Männer}}}} \\
+&amp;= \sqrt{\frac{4.00}{1988} + \frac{4.41}{1202}} \\
+&amp;= \sqrt{0.00201 + 0.00367}\\
+&amp;= 0.0753
+\end{align}
+\]</span> Wir schätzen, dass Mittelwertdifferenzen in der Zufriedenheit zwischen Frauen und Männern, die als Single keine Beziehung suchen typischerweise um 0.0753 Einheiten schwanken.</p>
+</section>
+<section id="skalierungsparameter" class="slide level2 midi scrollable">
+<h2>Skalierungsparameter</h2>
+<table>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 41%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>df</strong></th>
+<th><strong>95%-Perzentil</strong> (einseitig)</th>
+<th><strong>97,5%-Perzentil</strong> (zweiseitig)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>6,3138</td>
+<td>12,706</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>2,9200</td>
+<td>4,3027</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>2,3534</td>
+<td>3,1824</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>2,1318</td>
+<td>2,7764</td>
+</tr>
+<tr class="odd">
+<td><strong>—</strong></td>
+<td><strong>—</strong></td>
+<td><strong>—</strong></td>
+</tr>
+<tr class="even">
+<td><strong>9</strong></td>
+<td>1,8331</td>
+<td>2,2622</td>
+</tr>
+<tr class="odd">
+<td><strong>10</strong></td>
+<td>1,8125</td>
+<td>2,2281</td>
+</tr>
+<tr class="even">
+<td><strong>—</strong></td>
+<td><strong>—</strong></td>
+<td><strong>—</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1000</strong></td>
+<td>1,6464</td>
+<td>1,9623</td>
+</tr>
+<tr class="even">
+<td><strong>2000</strong></td>
+<td>1,6455</td>
+<td>1,9616</td>
+</tr>
+<tr class="odd">
+<td><strong>3000</strong></td>
+<td>1,6453</td>
+<td>1,9614</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="konfidenzintervall-berechnen" class="slide level2">
+<h2>Konfidenzintervall berechnen</h2>
+<p><strong>Untere Grenze:</strong> <span class="math display">\[\text{Differenz} - z \times \text{SE}_{\text{Diff}} = 0.395 - 1.96 \times 0.0753 = 0.395 - 0.147 = 0.247\]</span></p>
+<p><strong>Obere Grenze:</strong> <span class="math display">\[\text{Differenz} + z \times \text{SE}_{\text{Diff}} = 0.395 + 1.96 \times 0.0753 = 0.395 + 0.147 = 0.543\]</span></p>
+<p><strong>Interpretation</strong>: Wir erwarten bei zukünftigen Stichproben, dass 95% aller nicht-extremen Stichproben eine Mittelwertdifferenz der Single-Zufriedenheit für Singles, die kein Interesse an einer Beziehung haben, zwischen 0.25 und 0.54 schwankt.</p>
+</section>
+<section id="visualisierung-aller-t-tests" class="slide level2">
+<h2>Visualisierung aller t-Tests</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/plot-ttest-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="23-Inferenz-P1_files/figure-revealjs/plot-ttest-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="standardfehler-für-odds-ratios" class="slide level2">
+<h2>Standardfehler für Odds Ratios</h2>
+<p><span class="math display">\[
+SE_{\text{OR}} = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}
+\]</span></p>
+<p>wobei: a, b, c, d = Zellhäufigkeiten in der empirischen Zusammenhangstabelle</p>
+<p>Wichtig: Odds Ratios sind ein Verhältnis.</p>
+<ul>
+<li>Verhältnisse unter 1:1 konvergieren gegen 0, werden aber nie null.</li>
+<li>Verhältnisse über 1:1 konvergieren gegen <span class="math inline">\(\inf\)</span>, werden aber nie <span class="math inline">\(\inf\)</span>.</li>
+<li>Daher fallen Zufallsschwankungen von Odds Ratios in einen <em>asymmetrischen Bereich</em>.</li>
+<li>Das lässt sich mathematisch durch eine Log-Transformation leicht in den Griff bekommen (siehe Anhang).</li>
+</ul>
+</section>
+<section id="es-ist-eher-bei-frauen-kompliziert" class="slide level2">
+<h2>Es ist (eher bei Frauen) kompliziert</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/odds-geschlecht-singletyp-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="23-Inferenz-P1_files/figure-revealjs/odds-geschlecht-singletyp-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="standardfehler-für-bivariate-regressionskoeffizienten" class="slide level2">
+<h2>Standardfehler für bivariate Regressionskoeffizienten</h2>
+<p><span class="math display">\[
+SE_{\beta} = \sqrt{\frac{\sigma^2}{\sum{(x_i - \bar{x})^2}}}
+\]</span></p>
+<p><span class="math inline">\(\sigma^2\)</span> = Varianz der Residuen; <span class="math inline">\(x_i\)</span> = Werte ; <span class="math inline">\(\bar{x}\)</span> = Mittelwert der beeinflussenden Eigenschaft</p>
+</section>
+<section id="überblick-bivariate-regressionen" class="slide level2">
+<h2>Überblick: Bivariate Regressionen</h2>
+<p>Wir testen die Beziehung zwischen Zufriedenheit mit Singlestatus mit verschiedenen Eigenschaften über eine Reihe bivariater Regressionen:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Einflüsse auf die Zufriedenheit mit Singlestatus</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 18%">
+<col style="width: 23%">
+<col style="width: 27%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Prädiktor</th>
+<th style="text-align: right;">Koeffizient (β)</th>
+<th style="text-align: right;">Standardfehler (SE)</th>
+<th style="text-align: left;">95%-Konfidenzintervall</th>
+<th style="text-align: right;">R² (Modellgüte)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Weiblich</td>
+<td style="text-align: right;">0.6433</td>
+<td style="text-align: right;">0.0305</td>
+<td style="text-align: left;">[0.5835, 0.703]</td>
+<td style="text-align: right;">0.0165</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Osten</td>
+<td style="text-align: right;">0.2647</td>
+<td style="text-align: right;">0.0420</td>
+<td style="text-align: left;">[0.1823, 0.347]</td>
+<td style="text-align: right;">0.0015</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Alter</td>
+<td style="text-align: right;">0.0131</td>
+<td style="text-align: right;">0.0015</td>
+<td style="text-align: left;">[0.0101, 0.0161]</td>
+<td style="text-align: right;">0.0027</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="beispielrechnung-für-beta-alter" class="slide level2">
+<h2>Beispielrechnung für <span class="math inline">\(\beta\)</span> Alter</h2>
+<p>Das einfache lineare Regressionsmodell ist:</p>
+<p><span class="math display">\[\text{Zufriedenheit mit Singlestatus}_i = \beta_0 + \beta_1 \times \text{Alter}_i + \varepsilon_i\]</span></p>
+<h3 id="schritt-1-daten-zusammenfassen">Schritt 1: Daten zusammenfassen</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>n = 158332 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mittelwert Alter = 35.74 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SD Alter = 9.22 </code></pre>
+</div>
+</div>
+<h3 id="schritt-2-regressionsgleichung">Schritt 2: Regressionsgleichung</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>sat2 = 5.4904 + 0.0131 × age + ε</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Interpretation des Slopes:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>• Pro Lebensjahr steigt die Zufriedenheit mit dem Singlestatus um 0.0131 Punkte</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>• 10 Jahre älter → Zufriedenheit um 0.1312 Punkte höher</code></pre>
+</div>
+</div>
+</section>
+<section id="schritt-3-standardfehler-des-koeffizients" class="slide level2">
+<h2>Schritt 3: Standardfehler des Koeffizients</h2>
+<p>Der Standardfehler misst die Unsicherheit der Schätzung:</p>
+<p><span class="math display">\[\text{SE}(\beta_1) = \sqrt{\frac{\sigma^2}{\sum(x_i - \bar{x})^2}}\]</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Berechnung:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>σ² = RSS / (n - k) = 165807.9 / 26518 = 6.2527 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Σ(age - mean)² = 13471999 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SE(β₁) = √( 6.2527 / 13471999 ) = 0.000681 </code></pre>
+</div>
+</div>
+</section>
+<section id="schritt-4-konfidenzintervall-berechnen" class="slide level2">
+<h2>Schritt 4: Konfidenzintervall berechnen</h2>
+<p><span class="math display">\[\text{CI} = \hat{\beta}_1 \pm t_{\text{kritisch}} \times \text{SE}(\hat{\beta}_1)\]</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Untere Grenze = 0.0131 - 1.9601 × 0.000681 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              = 0.0131 - 0.0013 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              = 0.0118 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Obere Grenze  = 0.0131 + 1.9601 × 0.000681 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             = 0.0131 + 0.0013 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             = 0.0145 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>95%-KI: [ 0.0118 , 0.0145 ]</code></pre>
+</div>
+</div>
+<p>Wenn wir unendlich viele Stichproben wie FREDA ziehen würden, können wir erwarten, dass 95% aller nicht extremen Unterschiede aller <span class="math inline">\(\hat{\beta}\)</span>-Koeffizienten für Alter im Bereich [0.0118 , 0.0145] liegen.</p>
+</section>
+<section id="visualisierung" class="slide level2">
+<h2>Visualisierung</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/age-fit-ci-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="23-Inferenz-P1_files/figure-revealjs/age-fit-ci-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="das-multivariate-modell" class="slide level2">
+<h2>Das multivariate Modell</h2>
+<p><br> <br> <span class="math display">\[
+\begin{align*}
+\text{Zufriedenheit als Single}_i &amp;= \beta_0\\ &amp;+ \beta_{\text{Alter}} \\
+&amp;+ \beta_{\text{Frau}} + \beta_{\text{Ost}} + \beta_{\text{Frau X Ost}}\\
+&amp;+ \beta_{\text{Offen}} + \beta_{\text{Anbahnend}} + \beta_{\text{On-Off}} + \beta_{\text{Freundschaft Plus}} + \beta_{\text{Sonstiges}} \\
+&amp;+ \varepsilon_i
+\end{align*}
+\]</span></p>
+<p><br> <br></p>
+<ul>
+<li>Region und Geschlecht bilden einen Interaktionseffekt</li>
+<li>“kein Interesse” ist Referenzkategorie für die Beziehungskategorie</li>
+</ul>
+</section>
+<section id="regressionsergebnisse" class="slide level2">
+<h2>Regressionsergebnisse</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover" style="font-size: 30px; margin-left: auto; margin-right: auto;">
+<caption>Ergebnisse des multivariaten Regressionsmodells</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Variabel</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Koeffizient (β)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Standardfehler (SE)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">95%-Konfidenzintervall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Konstante</td>
+<td style="text-align: right;">7.46</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: left;">[7.31, 7.62]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Frau</td>
+<td style="text-align: right;">0.43</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: left;">[0.36, 0.51]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Osten</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: left;">[0.12, 0.38]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Alter</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: left;">[0, 0.01]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Offen für Beziehung</td>
+<td style="text-align: right;">-2.45</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">[-2.54, -2.36]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Anbahnende Beziehung</td>
+<td style="text-align: right;">-1.95</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: left;">[-2.1, -1.79]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">On-off-Beziehung</td>
+<td style="text-align: right;">-3.52</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: left;">[-3.86, -3.18]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Freundschaft Plus</td>
+<td style="text-align: right;">-1.42</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: left;">[-1.56, -1.28]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 25%; font-weight: bold;">Sonstiges</td>
+<td style="text-align: right;">-2.69</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: left;">[-2.9, -2.48]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 25%; font-weight: bold;">Interaktion: Frau × Osten</td>
+<td style="text-align: right;">-0.05</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: left;">[-0.24, 0.13]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section>
+<section id="anhang" class="title-slide slide level1 center">
+<h1>Anhang</h1>
 
 </section>
+<section id="wichtige-standardfehler" class="slide level2">
+<h2>Wichtige Standardfehler</h2>
+<h3 id="standardfehler-für-wahrscheinlichkeitsdifferenzen">Standardfehler für Wahrscheinlichkeitsdifferenzen</h3>
+<p><span class="math display">\[
+SE_{p_1 - p_2} = \sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}
+\]</span></p>
+<h3 id="standardfehler-für-varianzen">Standardfehler für Varianzen</h3>
+<p><span class="math display">\[
+SE_{\sigma^2} = \sqrt{\frac{2\sigma^4}{n-1}}
+\]</span></p>
+<p>wobei:</p>
+<p><span class="math inline">\(\sigma^2\)</span> = Varianz der Grundgesamtheit n = Stichprobengröße</p>
+<h3 id="standardfehler-für-odds">Standardfehler für Odds</h3>
+<p><span class="math display">\[
+SE_{\text{Odds}} = \frac{\sqrt{\frac{p(1-p)}{n}}}{(1-p)^2}
+\]</span> wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße</p>
+</section>
+<section id="die-22-kontingenztabelle" class="slide level2">
+<h2>Die 2×2 Kontingenztabelle</h2>
+<p>Zunächst betrachten wir die Häufigkeitsverteilung von “Freundschaft Plus” nach Geschlecht:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>2×2 Kontingenztabelle: Freundschaft Plus nach Geschlecht</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Freundschaft Plus</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Nicht Freundschaft Plus</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Weiblich</td>
+<td style="text-align: right;">828</td>
+<td style="text-align: right;">7928</td>
+<td style="text-align: right;">8756</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Männlich</td>
+<td style="text-align: right;">711</td>
+<td style="text-align: right;">7929</td>
+<td style="text-align: right;">8640</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gesamt</td>
+<td style="text-align: right;">1539</td>
+<td style="text-align: right;">15857</td>
+<td style="text-align: right;">17396</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Notation für die Berechnung:</strong> - a = 828 (Frauen in Freundschaft Plus) - b = 7928 (Frauen nicht in Freundschaft Plus) - c = 711 (Männer in Freundschaft Plus) - d = 7929 (Männer nicht in Freundschaft Plus)</p>
+</section>
+<section id="schritt-1-odds-für-jedes-geschlecht-berechnen" class="slide level2">
+<h2>Schritt 1: Odds für jedes Geschlecht berechnen</h2>
+<p>Die <strong>Odds</strong> ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zur Wahrscheinlichkeit, dass es nicht eintritt.</p>
+<h3 id="odds-für-frauen">Odds für Frauen</h3>
+<p><span class="math display">\[\text{Odds}_{\text{Frauen}} = \frac{\text{Frauen in FP}}{\text{Frauen nicht in FP}} = \frac{828}{7928} = 0.1044\]</span></p>
+<p><strong>Interpretation:</strong> Von 100 Frauen, die nicht in “Freundschaft Plus” sind, haben etwa 10 Frauen diese Beziehungsform.</p>
+<h3 id="odds-für-männer">Odds für Männer</h3>
+<p><span class="math display">\[\text{Odds}_{\text{Männer}} = \frac{\text{Männer in FP}}{\text{Männer nicht in FP}} = \frac{711}{7929} = 0.0897\]</span></p>
+<p><strong>Interpretation:</strong> Von 100 Männern, die nicht in “Freundschaft Plus” sind, haben etwa 9 Männer diese Beziehungsform.</p>
+</section>
+<section id="schritt-2-odds-ratio-berechnen" class="slide level2">
+<h2>Schritt 2: Odds Ratio berechnen</h2>
+<p>Die <strong>Odds Ratio</strong> vergleicht die Odds zwischen den beiden Gruppen:</p>
+<p><span class="math display">\[\text{OR} = \frac{\text{Odds}_{\text{Frauen}}}{\text{Odds}_{\text{Männer}}} = \frac{0.1044}{0.0897} = 1.165\]</span></p>
+<p><strong>Interpretation:</strong> Frauen haben eine <strong>1.16-mal höhere Odds</strong>, in “Freundschaft Plus” zu sein als Männer.</p>
+</section>
+<section id="schritt-3-logarithmus-nehmen" class="slide level2">
+<h2>Schritt 3: Logarithmus nehmen</h2>
+<p>Für die Konfidenzintervall-Berechnung transformieren wir auf die logarithmische Skala:</p>
+<p><span class="math display">\[\log(\text{OR}) = \log(1.165) = 0.1525\]</span></p>
+<p><strong>Warum Logarithmus?</strong> - Das Konfidenzintervall ist auf der log-Skala <em>symmetrisch</em> - Die Normalverteilungs-Annahme passt besser - Nach der Berechnung transformieren wir zurück mit exp()</p>
+</section>
+<section id="schritt-4-standardfehler-des-logor" class="slide level2">
+<h2>Schritt 4: Standardfehler des log(OR)</h2>
+<p>Der Standardfehler quantifiziert, wie genau unsere Schätzung ist:</p>
+<p><span class="math display">\[SE[\log(\text{OR})] = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}\]</span></p>
+<h3 id="berechnung-im-detail">Berechnung im Detail:</h3>
+<p><span class="math display">\[SE[\log(\text{OR})] = \sqrt{\frac{1}{828} + \frac{1}{7928} + \frac{1}{711} + \frac{1}{7929}}\]</span></p>
+<p><span class="math display">\[= \sqrt{0.001208 + 0.000126 + 0.001406 + 0.000126}\]</span></p>
+<p><span class="math display">\[= \sqrt{0.002866} = 0.0535\]</span></p>
+<p><strong>Interpretation:</strong> Mit dieser Genauigkeit schätzen wir das log(OR).</p>
+</section>
+<section id="schritt-5-kritischer-z-wert-für-90-ki-warum-normalverteilung" class="slide level2 midi scrollable">
+<h2>Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?</h2>
+<h3 id="das-zentrale-problem">Das zentrale Problem</h3>
+<p>Die <strong>Odds Ratio selbst</strong> ist NICHT normalverteilt: - Sie ist immer positiv (0 bis ∞) - Sie ist schief (asymmetrisch) - Das Konfidenzintervall würde asymmetrisch ausfallen</p>
+<h3 id="die-lösung-logarithmische-transformation">Die Lösung: Logarithmische Transformation</h3>
+<p>Durch den <strong>Logarithmus</strong> transformieren wir die Odds Ratio so, dass sie normalverteilt wird:</p>
+<p><span class="math display">\[\text{OR} \in (0, \infty) \xrightarrow{\log()} \log(\text{OR}) \in (-\infty, +\infty)\]</span></p>
+<p>Das <span class="math inline">\(\log(\text{OR})\)</span> ist <strong>asymptotisch normalverteilt</strong> — und zwar aufgrund des <strong>Zentralen Grenzwertsatzes</strong>:</p>
+<blockquote>
+<p>Der SE des log(OR) ist eine Summe von Termen: <span class="math inline">\(SE = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}\)</span></p>
+<p>Nach dem Zentralen Grenzwertsatz wird die Summe unabhängiger Zufallsvariablen asymptotisch normalverteilt, <strong>unabhängig von ihrer einzelnen Verteilung</strong>.</p>
+</blockquote>
+</section>
+<section id="praktische-anwendung" class="slide level2">
+<h2>Praktische Anwendung</h2>
+<p>Für größere Stichproben (wie unsere mit n = 17,396) gilt:</p>
+<p><span class="math display">\[\frac{\log(\text{OR}) - \log(\text{wahrer OR})}{\text{SE}[\log(\text{OR})]} \sim N(0,1)\]</span></p>
+<p>Daher verwenden wir für ein <strong>90%-Konfidenzintervall</strong> den kritischen Wert <span class="math inline">\(z = 1.645\)</span>:</p>
+<p><span class="math display">\[P(-1.645 \leq Z \leq 1.645) = 0.90\]</span></p>
+<p>Das bedeutet: 5% der Fläche liegt in jedem Schwanz der Normalverteilung (α/2 = 0.05).</p>
+</section>
+<section id="schritt-6-konfidenzintervall-auf-log-skala-berechnen" class="slide level2">
+<h2>Schritt 6: Konfidenzintervall auf log-Skala berechnen</h2>
+<p><strong>Untere Grenze:</strong> <span class="math display">\[\log(\text{OR}) - z \times SE[\log(\text{OR})] = 0.1525 - 1.645 \times 0.0535 = 0.0644\]</span></p>
+<p><strong>Obere Grenze:</strong> <span class="math display">\[\log(\text{OR}) + z \times SE[\log(\text{OR})] = 0.1525 + 1.645 \times 0.0535 = 0.2405\]</span></p>
+<p><strong>90%-KI auf log-Skala:</strong> <span class="math inline">\([0.0644, 0.2405]\)</span></p>
+</section>
+<section id="schritt-7-zurück-transformieren-exponentialisieren" class="slide level2">
+<h2>Schritt 7: Zurück transformieren (Exponentialisieren)</h2>
+<p>Zum Schluss exponentialisieren wir, um auf die OR-Skala zurückzukehren:</p>
+<p><strong>Untere Grenze:</strong> <span class="math display">\[e^{0.0644} = 1.067\]</span></p>
+<p><strong>Obere Grenze:</strong> <span class="math display">\[e^{0.2405} = 1.272\]</span></p>
+<p><strong>90%-Konfidenzintervall auf OR-Skala: <span class="math inline">\([1.07, 1.27]\)</span></strong></p>
+</section>
+<section id="visuelle-darstellung" class="slide level2">
+<h2>Visuelle Darstellung</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="23-Inferenz-P1_files/figure-revealjs/plot-freundchaft-plus-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="23-Inferenz-P1_files/figure-revealjs/plot-freundchaft-plus-1.svg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="berechnung-des-konfidenzintervalls-bei-multivariaten-regressionskoeffizienten" class="slide level2">
+<h2>Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten</h2>
+<p>Wir verdeutlichen die Berechnung des Konfidenzintervalls für Alter im multivariaten Kontext.</p>
+<h3 id="schritt-1-multivariate-vs.-bivariate-effekte">Schritt 1: Multivariate vs.&nbsp;Bivariate Effekte</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>BIVARIATE REGRESSION (sat2 ~ age):</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  β = 0.0169 (SE = 0.0019 )</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Signifikant: JA (p &lt; 0.001)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  β = 0.0027 (SE = 0.0018 )</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Signifikant: NEIN (p = 0.130)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>DIFFERENZ:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Δβ = 0.0142 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  (Dies ist der Confounding-Effekt durch sin11_cat)</code></pre>
+</div>
+</div>
+</section>
+<section id="schritt-2-interpretation-des-multivariaten-koeffizients" class="slide level2">
+<h2>Schritt 2: Interpretation des multivariaten Koeffizients</h2>
+<p>Der Koeffizient 0.0027 ist der <strong>partielle Effekt</strong>:</p>
+<ul>
+<li><strong>Definition:</strong> Effekt von age auf sat2, <em>nachdem</em> alle anderen Variablen kontrolliert wurden</li>
+<li><strong>Praktisch:</strong> Mit der obigen Formel: Für jedes Lebensjahr mehr steigt sat2 um 0.0027 Punkte (wenn sex, east, sin11_cat konstant bleiben)</li>
+</ul>
+</section>
+<section id="schritt-3-standardfehler-im-multivariaten-modell" class="slide level2">
+<h2>Schritt 3: Standardfehler im multivariaten Modell</h2>
+<p><span class="math display">\[\text{SE}(\beta_1)_{\text{multi}} = \sqrt{\frac{\sigma^2_{\text{multi}}}{\sum(x_i - \bar{x})^2 \times (1 - R^2_{1|others})}}\]</span></p>
+<h3 id="schritt-4-t-statistik-und-signifikanz">Schritt 4: t-Statistik und Signifikanz</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>t = β / SE =  0.0027  /  0.0018  =  1.5152 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>p-Wert =  0.1297399 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Interpretation:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  • t = 1.5152 ist relativ klein</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  • p = 0.1297 &gt; 0.05</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  ✗ NICHT statistisch signifikant (nach Kontrolle)</code></pre>
+</div>
+</div>
+</section>
+<section id="schritt-5-kritischer-t-wert" class="slide level2">
+<h2>Schritt 5: Kritischer t-Wert</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>df = n - k =  17327  -  10  =  17317 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>t_0.025(df) = 1.9601 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(≈ 1.96 bei großem df)</code></pre>
+</div>
+</div>
+</section>
+<section id="schritt-6-konfidenzintervall-berechnen" class="slide level2">
+<h2>Schritt 6: Konfidenzintervall berechnen</h2>
+<p><span class="math display">\[\text{CI} = \hat{\beta}_{\text{age}} \pm t_{\text{crit}} \times \text{SE}(\hat{\beta}_{\text{age}})\]</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Untere Grenze =  0.0027  -  1.9601  ×  0.0018 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              =  0.0027  -  0.0035 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              =  -8e-04 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Obere Grenze  =  0.0027  +  1.9601  ×  0.0018 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             =  0.0027  +  0.0035 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             =  0.0062 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>95%-KI: [ -8e-04 ,  0.0062 ]</code></pre>
+</div>
+</div>
+
+
+</section></section>
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -439,6 +1330,82 @@
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -607,6 +1574,38 @@
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

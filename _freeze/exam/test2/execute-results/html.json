@@ -1,0 +1,12 @@
+{
+  "hash": "b3d9eeb1df65b9a8bcbe157835c9e724",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Examen demo\"\nauthor: \"John Doe\"\ndate: \"19 April, 2016\"\noutput:\n  unilur::examen_pdf:\n    id: yes\n  unilur::examen_pdf_solution:\n    id: yes\n---\n\n##### Write your answer below\n\n```{block, solution = TRUE, answer.lines = 1}\nThis is the hidden answer generating lines in the main pdf file.\n```\n\n##### Second question\n\n```{block, solution = TRUE, answer.lines = 0.5}\nThis would be the expected answer to the question\n```\n\n",
+    "supporting": [
+      "test2_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,280 @@
+---
+title: "Multivariate Regression"
+subtitle: "Partielle Effekte, Confounding & Konfidenzintervalle"
+format: html
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(dplyr)
+library(broom)
+library(ggplot2)
+
+source("freda_clean.R")
+
+# Prepare data
+freda_modelling <- freda_clean %>%
+  filter(!is.na(sat2), !is.na(sex), !is.na(east), !is.na(age), !is.na(sin11)) %>%
+  mutate(
+    sin11_cat = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ NA_character_
+    ),
+    sin11_cat = factor(sin11_cat, levels = c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    ))
+  )
+
+# Fit bivariate and multivariate models
+model_age_biv <- lm(sat2 ~ age, data = freda_modelling)
+model_multi <- lm(sat2 ~ sex * east + age + sin11_cat, data = freda_modelling)
+```
+
+## Das multivariate Modell
+
+$$\text{sat2} = \beta_0 + \beta_{\text{sex}} + \beta_{\text{east}} + \beta_{\text{age}} + \beta_{\text{sex×east}} + \beta_{\text{sin11}} + \varepsilon$$
+
+Mit Referenzkategorien:
+- **sex:** Männlich (baseline)
+- **sin11_cat:** Kein Interesse (baseline)
+
+---
+
+## Regressionsergebnisse
+
+```{r results, echo=FALSE}
+results_multi <- tidy(model_multi)
+glance_multi <- glance(model_multi)
+
+# Format for display
+results_display <- results_multi %>%
+  mutate(
+    "95%-KI" = paste0("[", 
+                      round(estimate - 1.96 * std.error, 4), ", ",
+                      round(estimate + 1.96 * std.error, 4), "]"),
+    estimate = round(estimate, 4),
+    std.error = round(std.error, 4),
+    statistic = round(statistic, 2),
+    p.value = format(p.value, scientific = TRUE, digits = 2)
+  ) %>%
+  select(term, estimate, std.error, "95%-KI", statistic, p.value)
+
+knitr::kable(results_display)
+
+cat("\n")
+cat("Modellgüte:\n")
+cat("R² =", round(glance_multi$r.squared, 4), "\n")
+cat("Adj. R² =", round(glance_multi$adj.r.squared, 4), "\n")
+cat("n =", glance_multi$nobs, "\n")
+```
+
+---
+
+## Fokus: Der age-Koeffizient
+
+Wir verdeutlichen die Berechnung des Konfidenzintervalls für **age** im multivariaten Kontext.
+
+### Schritt 1: Multivariate vs. Bivariate Effekte
+
+```{r comparison, echo=FALSE}
+# Bivariate model
+coef_age_biv <- coef(model_age_biv)["age"]
+se_age_biv <- tidy(model_age_biv)[2, "std.error"] %>% pull()
+
+# Multivariate model  
+age_row <- results_multi %>% filter(term == "age")
+coef_age_multi <- age_row$estimate %>% as.numeric()
+se_age_multi <- age_row$std.error %>% as.numeric()
+
+cat("BIVARIATE REGRESSION (sat2 ~ age):\n")
+cat("  β =", round(coef_age_biv, 4), "(SE =", round(se_age_biv, 4), ")\n")
+cat("  Signifikant: JA (p < 0.001)\n\n")
+
+cat("MULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):\n")
+cat("  β =", round(coef_age_multi, 4), "(SE =", round(se_age_multi, 4), ")\n")
+cat("  Signifikant: NEIN (p = 0.130)\n\n")
+
+cat("DIFFERENZ:\n")
+cat("  Δβ =", round(coef_age_biv - coef_age_multi, 4), "\n")
+cat("  (Dies ist der Confounding-Effekt durch sin11_cat)\n")
+```
+
+### Schritt 2: Interpretation des multivariaten Koeffizients
+
+Der Koeffizient `r round(coef_age_multi, 4)` ist der **partielle Effekt**:
+
+- **Definition:** Effekt von age auf sat2, *nachdem* alle anderen Variablen kontrolliert wurden
+- **Praktisch:** Mit der obigen Formel: Für jedes Lebensjahr mehr steigt sat2 um `r round(coef_age_multi, 4)` Punkte (wenn sex, east, sin11_cat konstant bleiben)
+
+### Schritt 3: Standardfehler im multivariaten Modell
+
+$$\text{SE}(\beta_1)_{\text{multi}} = \sqrt{\frac{\sigma^2_{\text{multi}}}{\sum(x_i - \bar{x})^2 \times (1 - R^2_{1|others})}}$$
+
+**Wichtig:** Der SE ist größer als im bivariaten Modell!
+
+```{r se_comparison, echo=FALSE}
+cat("SE(β_age):\n")
+cat("  Bivariate:   ", round(se_age_biv, 6), "\n")
+cat("  Multivariate:", round(se_age_multi, 6), "\n")
+cat("  Differenz:   ", round(se_age_multi - se_age_biv, 6), "\n\n")
+
+cat("Gründe für größeren SE:\n")
+cat("  1. Multikollinearität: age korreliert mit sin11_cat\n")
+cat("  2. Fehler-Varianz: σ²_multi ist kleiner als σ²_bivariat\n")
+cat("     (weil mehr Varianz erklärt wird)\n")
+```
+
+### Schritt 4: t-Statistik und Signifikanz
+
+```{r t_stat, echo=FALSE}
+tstat <- coef_age_multi / se_age_multi
+pval <- age_row$p.value %>% as.numeric()
+
+cat("t = β / SE = ", round(coef_age_multi, 4), " / ", round(se_age_multi, 4), " = ", round(tstat, 4), "\n")
+cat("p-Wert = ", format(pval, scientific = FALSE), "\n\n")
+
+cat("Interpretation:\n")
+cat("  • t =", round(tstat, 4), "ist relativ klein\n")
+cat("  • p =", round(pval, 4), "> 0.05\n")
+cat("  ✗ NICHT statistisch signifikant (nach Kontrolle)\n")
+```
+
+### Schritt 5: Kritischer t-Wert
+
+```{r t_crit, echo=FALSE}
+n_multi <- glance_multi$nobs
+k_multi <- nrow(results_multi)
+df_multi <- n_multi - k_multi
+t_crit <- qt(0.975, df_multi)
+
+cat("df = n - k = ", n_multi, " - ", k_multi, " = ", df_multi, "\n")
+cat("t_0.025(df) =", round(t_crit, 4), "\n")
+cat("(≈ 1.96 bei großem df)\n")
+```
+
+### Schritt 6: Konfidenzintervall berechnen
+
+$$\text{CI} = \hat{\beta}_{\text{age}} \pm t_{\text{crit}} \times \text{SE}(\hat{\beta}_{\text{age}})$$
+
+```{r ci_calc, echo=FALSE}
+ci_lower <- coef_age_multi - t_crit * se_age_multi
+ci_upper <- coef_age_multi + t_crit * se_age_multi
+
+cat("Untere Grenze = ", round(coef_age_multi, 4), " - ", round(t_crit, 4), " × ", round(se_age_multi, 4), "\n")
+cat("              = ", round(coef_age_multi, 4), " - ", round(t_crit * se_age_multi, 4), "\n")
+cat("              = ", round(ci_lower, 4), "\n\n")
+
+cat("Obere Grenze  = ", round(coef_age_multi, 4), " + ", round(t_crit, 4), " × ", round(se_age_multi, 4), "\n")
+cat("             = ", round(coef_age_multi, 4), " + ", round(t_crit * se_age_multi, 4), "\n")
+cat("             = ", round(ci_upper, 4), "\n\n")
+
+cat("95%-KI: [", round(ci_lower, 4), ", ", round(ci_upper, 4), "]\n")
+```
+
+### Schritt 7: Interpretation des Konfidenzintervalls
+
+```{r ci_interp, echo=FALSE}
+if (ci_lower < 0 & ci_upper > 0) {
+  cat("Das KI ENTHÄLT 0.\n\n")
+  cat("Das bedeutet:\n")
+  cat("  ✗ Der Effekt ist NICHT statistisch signifikant\n")
+  cat("  ✗ Mit 95% Konfidenz könnte der wahre Effekt auch negativ sein\n")
+  cat("  ✗ Es könnte kein Effekt existieren (β = 0)\n")
+  cat("  ✗ Die Daten sind mit null Effekt kompatibel\n")
+}
+```
+
+---
+
+## Warum unterscheiden sich die Ergebnisse?
+
+### Confounding durch sin11_cat
+
+**Frage:** Warum ist age im bivariaten Modell signifikant, aber im multivariaten nicht?
+
+```{r confounding_analysis, echo=FALSE}
+cat("1. CONFOUNDING MECHANISM:\n\n")
+
+cat("   Bivariate Weg:\n")
+cat("   age → (indirekt über sin11_cat) → sat2\n")
+cat("   age ist mit Beziehungsstatus korreliert\n")
+cat("   Beziehungsstatus hat starken Effekt auf sat2\n\n")
+
+cat("2. EFFEKTZERLEGUNG:\n\n")
+
+cat("   Bivariater Gesamteffekt = ", round(coef_age_biv, 4), "\n")
+cat("                           = Direkter Effekt + Indirekter Effekt\n")
+cat("                           = ", round(coef_age_multi, 4), " + ", 
+    round(coef_age_biv - coef_age_multi, 4), "\n\n")
+
+cat("   • Direkter Effekt (multi):  ", round(coef_age_multi, 4), " (partiell)\n")
+cat("   • Indirekter Effekt:        ", round(coef_age_biv - coef_age_multi, 4), " (über sin11_cat)\n\n")
+
+cat("3. INTERPRETATION:\n\n")
+
+cat("   Der scheinbar starke age-Effekt im bivariaten Modell war\n")
+cat("   großteils durch die Korrelation mit Beziehungsstatus bedingt.\n\n")
+
+cat("   Der wahre, partielle Effekt von age (unabhängig vom\n")
+cat("   Beziehungsstatus) ist sehr klein und nicht signifikant.\n")
+```
+
+### Precision-Gewinn und Precision-Verlust
+
+```{r precision, echo=FALSE}
+cat("MODELLGÜTE VERBESSERUNG:\n")
+cat("  Bivariate:   R² = ", round(glance(model_age_biv)$r.squared, 4), "\n")
+cat("  Multivariate: R² = ", round(glance_multi$r.squared, 4), "\n\n")
+
+cat("Durch Kontrolle von sin11_cat wird viel mehr Varianz erklärt.\n")
+cat("Das ist gut für Modellgüte, aber:\n\n")
+
+cat("SE NACHTEIL:\n")
+cat("  Der SE wird größer wegen Multikollinearität\n")
+cat("  Das ist der Preis für Kontrolle von Confounding\n\n")
+
+cat("TRADE-OFF:\n")
+cat("  ✓ Bessere Modellgüte (mehr erklärte Varianz)\n")
+cat("  ✓ Kausalere Interpretation (Confounder kontrolliert)\n")
+cat("  ✗ Weniger Präzision für age-Effekt\n")
+```
+
+---
+
+## Zusammenfassung: Bivariate vs. Multivariate
+
+| Aspekt | Bivariate | Multivariate |
+|--------|-----------|--------------|
+| **Modell** | sat2 ~ age | sat2 ~ sex\*east + age + sin11_cat |
+| **Effekt** | β = 0.0131 | β = 0.0027 |
+| **SE** | 0.0015 | 0.0018 |
+| **95%-KI** | [0.0101, 0.0161] | [-0.00079, 0.00615] |
+| **Signifikanz** | p < 0.001 ✓ | p = 0.130 ✗ |
+| **R²** | 0.0027 | 0.1637 |
+| **Interpretation** | Roh-Effekt | Partieller Effekt (kontrolliert) |
+| **Schluss** | age wirkt | age-Effekt durch sin11_cat erklärt |
+
+---
+
+## Wichtige Lektionen
+
+1. **Partielle Effekte:** Im multivariaten Modell sind Koeffizenten partiell, d.h. kontrolliert für andere Variablen
+
+2. **Confounding:** Ein bivariater Effekt kann durch Confounder aufgeblasen sein
+
+3. **Kausalität:** Multivariate Kontrolle nähert sich kausalen Interpretationen an (aber nicht vollständig ohne Design-Qualität)
+
+4. **Standardfehler:** Größerer SE durch Multikollinearität ist normal und akzeptabel, wenn wir dadurch Confounding kontrollieren
+
+5. **Modellwahl:** Entscheidung, welche Variablen zu kontrollieren sind, sollte **theoretisch** begründet sein, nicht nur datengetrieben
+

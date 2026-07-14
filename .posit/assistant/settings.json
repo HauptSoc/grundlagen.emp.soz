@@ -10,5 +10,8 @@
     "bash": {
       "quarto render *": "allow"
     }
+  },
+  "sandbox": {
+    "enabled": true
   }
 }

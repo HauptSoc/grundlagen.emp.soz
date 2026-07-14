@@ -6826,7 +6826,7 @@
     "href": "slides/23-Inferenz-P1.html#unsicherheit-informationen-und-stichproben",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Unsicherheit, Informationen und Stichproben",
-    "text": "Unsicherheit, Informationen und Stichproben\nDie Unsicherheit der Schätzung eines Merkmals hängt im Wesentlichen von zwei Fragen ab:\n\nWie unterschiedlich ist die Verteilung dieses Merkmals?\nWie oft wurde das Merkmal beobachtet?\n\nHat das Merkmal keine Varianz (wie die Blutgruppe eines Menschen) genügt prinzipiell eine Beobachtung zur Bestimmung des Merkmals. Je unterschiedlicher das Merkmal ist, desto mehr Beobachtungen werden benötigt, um die Unsicherheit des Schlusses von einer Stichprobenverteilung auf die Verteilung in der Grundgesamtheit zu verringern."
+    "text": "Unsicherheit, Informationen und Stichproben\nDie Unsicherheit der Schätzung eines Merkmals hängt im Wesentlichen von zwei Fragen ab:\n\nWie unterschiedlich ist die Verteilung dieses Merkmals?\nWie oft wurde das Merkmal beobachtet?\n\nHat das Merkmal keine Varianz (wie die Blutgruppe eines Menschen) genügt prinzipiell eine Beobachtung zur Bestimmung des Merkmals. Je unterschiedlicher das Merkmal ist, desto mehr Beobachtungen werden benötigt, um die Unsicherheit des Schlusses von einer Stichprobenverteilung auf die Verteilung in der Grundgesamtheit zu verringern.\nWir haben daher immer folgende Relation:\n\\[ \\text{Unsicherheit des Parameters durch Sampling} = \\dfrac{\\text{Variabilität des Parameters}}{\\text{Stichprobengröße}} \\]"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#über-was-sind-wir-durch-stichproben-unsicher",
@@ -6840,7 +6840,7 @@
     "href": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-1-konfidenzintervalle",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Ausdruck von Unsicherheit 1: Konfidenzintervalle",
-    "text": "Ausdruck von Unsicherheit 1: Konfidenzintervalle\nWir formulieren Erwartungen über Werte von zukünftigen Stichproben.\n\nWenn wir viele, weitere Stichproben aus der selben Population ziehen und sich die Stichproben nur zufällig unterscheiden würden, was für eine Streuung von Ergebnissen können wir dann erwarten?\nDa die Ergebnisse durch zufällig varrierende Stichproben aus der gleichen Population berechnet wurden, können wir die Zufallsstreuung aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute Annäherung an den uns unbekannten Populationsparameter."
+    "text": "Ausdruck von Unsicherheit 1: Konfidenzintervalle\nWir formulieren Erwartungen über Werte von zukünftigen Stichproben.\n\nWenn wir viele, weitere Stichproben aus der selben Population ziehen und sich die Stichproben nur zufällig unterscheiden würden, was für eine Streuung von Ergebnissen können wir dann erwarten?\n\\(\\rightarrow\\) Das ist ein Gedankenexperiment!\nDa die Ergebnisse durch zufällig varrierende Stichproben aus der gleichen Population berechnet wurden, können wir die Zufallsstreuung aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute Annäherung an den uns unbekannten Populationsparameter.\n\\(\\rightarrow\\) Das funktioniert aber nur, wenn keine Selektionen im Sampling, ins Treatment oder Fehler in der Modellierung sind."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-2-signifikanz",
@@ -6875,14 +6875,14 @@
     "href": "slides/23-Inferenz-P1.html#korrektur-der-varianz-bei-stichproben",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Korrektur der Varianz bei Stichproben",
-    "text": "Korrektur der Varianz bei Stichproben\nDie Stichproben-Varianz (\\(s\\)) ist kein erwartungstreuer Schätzer der Populationsvarianz \\(\\sigma^2\\), sie ist systematisch zu klein! Sie muss daher mit dem Term \\(\\frac{n}{n-1}\\) nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (\\(\\hat{\\sigma}^2\\)) sowie die Schätzung für die Populations-Standardabweichung (\\(\\hat{\\sigma}\\)) ergibt.\n\\[\n\\begin{split}\n         \\hat{\\sigma}_x^2   &= \\dfrac{ \\sum (x_i - \\bar{x})^2}{n} \\cdot \\dfrac{n}{n-1} \\\\\n                            &= \\dfrac{\\sum(x_i - \\bar{x})^2}{n-1}\n  \\end{split}\n\\] \\[\n  \\hat{\\sigma} = \\sqrt{\\hat{\\sigma}^2}\n  \\]"
+    "text": "Korrektur der Varianz bei Stichproben\nDie Stichproben-Varianz (\\(s\\)) ist kein erwartungstreuer Schätzer der Populationsvarianz \\(\\sigma^2\\) (sprich: sigma quadrat), sie ist systematisch zu klein! Sie muss daher mit dem Term \\(\\frac{n}{n-1}\\) nach oben korrigiert werden, was unsere Schätzung für die Populationsvarianz (\\(\\hat{\\sigma}^2\\)) sowie die Schätzung für die Populations-Standardabweichung (\\(\\hat{\\sigma}\\)) ergibt.\n\\[\n\\begin{split}\n         \\hat{\\sigma}^2   &= \\dfrac{ \\sum (x_i - \\bar{x})^2}{n} \\cdot \\dfrac{n}{n-1} \\\\\n                            &= \\dfrac{\\sum(x_i - \\bar{x})^2}{n-1}\n  \\end{split}\n\\] Die korrigierte Standardabweichung ist dementsprechend: \\[\n  \\hat{\\sigma} = \\sqrt{\\hat{\\sigma}^2}\n  \\]"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#standardfehler-variation-erwarteterzukünftiger-ergebnisse",
     "href": "slides/23-Inferenz-P1.html#standardfehler-variation-erwarteterzukünftiger-ergebnisse",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Standardfehler = Variation erwarteter/zukünftiger Ergebnisse",
-    "text": "Standardfehler = Variation erwarteter/zukünftiger Ergebnisse\nWenn die Differenz des Stichprobenmittelwertes zum Populationsmittelwert auf Zufall beruht, dann können wir das Wissen um den Stichprobenmittelwert mit dem Wissen über Normalverteilungen verbinden: Wir können abschätzen, in welchem Maß die Mittelwerte weiterer Stichproben durch reinen Zufall fluktuieren. Diese Information erhält man durch den Standardfehler. Es gibt für jeden Parameter einen eigenen Standardfehler. Für Mittelwerte berechnet sich dieser:\n\\[\\hat{\\sigma}_{\\bar{x}} = \\sqrt{\\frac{\\hat{\\sigma}^2}{n}} = \\frac{\\hat{\\sigma}}{\\sqrt{n}}\\]\nDer geschätzte Standardfehler für Mittelwerte ist die geschätzte Standardabweichung der auf Zufall beruhenden Differenz aller Mittelwerte in weiteren Stichproben zum Populationswert."
+    "text": "Standardfehler = Variation erwarteter/zukünftiger Ergebnisse\nWenn die Differenz des Stichprobenmittelwertes zum Populationsmittelwert auf Zufall beruht, dann können wir das Wissen um den Stichprobenmittelwert mit dem Wissen über Normalverteilungen verbinden: Wir können abschätzen, in welchem Maß die Mittelwerte weiterer Stichproben durch reinen Zufall fluktuieren. Diese Information erhält man durch den Standardfehler."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#footnotes",
@@ -6988,5 +6988,467 @@
     "title": "Übung: Komplexe Daten generierende Prozesse",
     "section": "6 Latente Faktoren",
     "text": "6 Latente Faktoren\nIm Folgenden sehen Sie Faktorenanalyse mit einem, zwei und drei Faktoren.\n\nWelches Modell präferieren Sie und warum?\nWie können wir die latenten Faktoren/Dimensionen bezeichnen?\nWie könnten wir die Validität dieser Modellierung überprüfen?\n\n\nEine Dimension elterlicher Werte?\n\n\n\n\n\n\n\n\nZwei Dimensionen elterlicher Werte?\n\n\n\n\n\n\n\n\nDrei Dimensionen elterlicher Werte?\n\n\n\n\n\n\n\n\n\nVergleich der Modellanpassungen\n\n\n\nDf\nAIC\nBIC\nChisq\nChisq diff\nRMSEA\nDf diff\nPr(&gt;Chisq)\n\n\n\n\nfit3\n24\n330309.8\n330467.3\n2744.77\nNA\nNA\nNA\nNA\n\n\nfit2\n26\n332067.1\n332209.6\n4506.05\n1761.28\n0.26\n2\n0\n\n\nfit\n27\n335506.0\n335641.0\n7946.96\n3440.91\n0.51\n1\n0"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#für-jedes-problemchen-ein-appchen",
+    "href": "slides/23-Inferenz-P1.html#für-jedes-problemchen-ein-appchen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Für jedes Problemchen ein Appchen",
+    "text": "Für jedes Problemchen ein Appchen"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-mittelwerte",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-mittelwerte",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Mittelwerte",
+    "text": "Standardfehler für Mittelwerte\n\n\n\\[SE_{\\bar{x}} = \\frac{\\hat{\\sigma}}{\\sqrt{n}}\\]\nDer geschätzte Standardfehler für Mittelwerte ist die geschätzte Standardabweichung der auf Zufall beruhenden Differenz aller Mittelwerte in weiteren Stichproben zum Populationswert."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-wahrscheinlichkeiten",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-wahrscheinlichkeiten",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Wahrscheinlichkeiten",
+    "text": "Standardfehler für Wahrscheinlichkeiten\n\n\n\\[\nSE_{p} = \\sqrt{\\frac{p(1-p)}{n}}\n\\] wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-odds",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-odds",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Odds",
+    "text": "Standardfehler für Odds\n\\[\nSE_{\\text{Odds}} = \\frac{\\sqrt{\\frac{p(1-p)}{n}}}{(1-p)^2}\n\\] wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-odds-ratios",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-odds-ratios",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Odds Ratios",
+    "text": "Standardfehler für Odds Ratios\n\\[\nSE_{\\text{OR}} = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\n\\]\nwobei: a, b, c, d = Zellhäufigkeiten in der empirischen Zusammenhangstabelle\nWichtig: Odds Ratios sind ein Verhältnis.\n\nVerhältnisse unter 1:1 konvergieren gegen 0, werden aber nie null.\nVerhältnisse über 1:1 konvergieren gegen \\(\\inf\\), werden aber nie \\(\\inf\\).\nDaher fallen Zufallsschwankungen von Odds Ratios in einen asymmetrischen Bereich.\nDas lässt sich mathematisch durch eine Log-Transformation leicht in den Griff bekommen (siehe Anhang)."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-varianzen",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-varianzen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Varianzen",
+    "text": "Standardfehler für Varianzen\n\\[\nSE_{\\sigma^2} = \\sqrt{\\frac{2\\sigma^4}{n-1}}\n\\]\nwobei:\n\\(\\sigma^2\\) = Varianz der Grundgesamtheit n = Stichprobengröße"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-von-mittelwertdifferenzen",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-von-mittelwertdifferenzen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler von Mittelwertdifferenzen",
+    "text": "Standardfehler von Mittelwertdifferenzen\n\\[\nSE_{\\bar{x}_1 - \\bar{x}_2} = \\sqrt{\\frac{\\sigma_1^2}{n_1} + \\frac{\\sigma_2^2}{n_2}}\n\\] wobei:\n\\(\\sigma_1^2\\)\n\\(\\sigma_2^2\\) n_1 n_2"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-wahrscheinlichkeitsdifferenzen",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-wahrscheinlichkeitsdifferenzen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Wahrscheinlichkeitsdifferenzen",
+    "text": "Standardfehler für Wahrscheinlichkeitsdifferenzen\n\\[\nSE_{p_1 - p_2} = \\sqrt{\\frac{p_1(1-p_1)}{n_1} + \\frac{p_2(1-p_2)}{n_2}}\n\\]"
+  },
+  {
+    "objectID": "exam/test2.html",
+    "href": "exam/test2.html",
+    "title": "Examen demo",
+    "section": "",
+    "text": "Write your answer below\n{block, solution = TRUE, answer.lines = 1} This is the hidden answer generating lines in the main pdf file.\n\n\nSecond question\n{block, solution = TRUE, answer.lines = 0.5} This would be the expected answer to the question"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-standardabweichung-erwarteterzukünftiger-ergebnisse",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-standardabweichung-erwarteterzukünftiger-ergebnisse",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler = Standardabweichung erwarteter/zukünftiger Ergebnisse",
+    "text": "Standardfehler = Standardabweichung erwarteter/zukünftiger Ergebnisse\n\n\n\nHier hat ein Computer aus einer Population 10.000 mal Stichproben von n = 50 gezogen.\nIn der Population ist der Mittelwert der Eigenschaft 5 mit einer Standardabweichung von 2.\nDie Verteilung der 10.000 Mittelwerte hat eine Standardabweichung von 0.2783.\nDer Standardfehler aufgrund einer Stichprobe versucht genau diesen Wert zu schätzen mit \\[ \\hat{\\sigma}_{\\bar{x}} = \\dfrac{2}{\\sqrt{50}} = 0.2828 \\]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#konfidenzintervall-bereich-erwarteterzukünftiger-ergebnisse",
+    "href": "slides/23-Inferenz-P1.html#konfidenzintervall-bereich-erwarteterzukünftiger-ergebnisse",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Konfidenzintervall = Bereich erwarteter/zukünftiger Ergebnisse",
+    "text": "Konfidenzintervall = Bereich erwarteter/zukünftiger Ergebnisse"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#es-ist-kompliziert-macht-unglücklich",
+    "href": "slides/23-Inferenz-P1.html#es-ist-kompliziert-macht-unglücklich",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "“Es ist kompliziert” macht unglücklich",
+    "text": "“Es ist kompliziert” macht unglücklich"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#es-ist-kompliziert-ist-selten",
+    "href": "slides/23-Inferenz-P1.html#es-ist-kompliziert-ist-selten",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "“Es ist kompliziert” ist selten",
+    "text": "“Es ist kompliziert” ist selten"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-mittelwertdifferenzen",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-mittelwertdifferenzen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für Mittelwertdifferenzen",
+    "text": "Standardfehler für Mittelwertdifferenzen\n\\[\\text{SE}_{\\bar{x}_A - \\bar{x}_B } = \\sqrt{\\frac{\\hat{\\sigma}_{\\text{A}}^2}{n_{\\text{A}}} + \\frac{\\hat{\\sigma}_{\\text{B}}^2}{n_{\\text{B}}}}\\] Je kleiner die Stichproben und/oder je größer die Varianz des Merkmals:\n\ndesto “unsicherer” ist unsere Inferenz über die Differenzen in der Population;\ndesto wahrscheinlicher sind extreme, aber dennoch zufällige Abeichungen;\ndesto wahrscheinlicher weichen die Ergebnisse vom Populationsparameter ab."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#sind-frauen-auch-bei-es-ist-kompliziert-zufriedener-als-männer",
+    "href": "slides/23-Inferenz-P1.html#sind-frauen-auch-bei-es-ist-kompliziert-zufriedener-als-männer",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Sind Frauen auch bei “es ist kompliziert” zufriedener als Männer?",
+    "text": "Sind Frauen auch bei “es ist kompliziert” zufriedener als Männer?\n\n\n\nZufriedenheit mit Singlestatus nach Geschlecht und Beziehungskategorie\n\n\nBeziehungskategorie\nMW Frauen\nMW Männer\nDifferenz\nSD Frauen\nSD Männer\nSE Diff.\n95%-KI\n\n\n\n\nKein Interesse\n8.02\n7.62\n0.39\n2.00\n2.10\n0.075\n[0.25, 0.54]\n\n\nOffen für Beziehung\n5.60\n5.11\n0.49\n2.32\n2.35\n0.045\n[0.4, 0.58]\n\n\nAnbahnende Beziehung\n6.09\n5.60\n0.49\n2.21\n2.29\n0.129\n[0.24, 0.74]\n\n\nOn-off-Beziehung\n4.54\n3.97\n0.58\n2.68\n2.63\n0.411\n[-0.23, 1.38]\n\n\nFreundschaft Plus\n6.34\n6.49\n-0.16\n2.40\n2.35\n0.121\n[-0.4, 0.08]\n\n\nSonstiges\n5.50\n4.61\n0.89\n2.66\n2.56\n0.234\n[0.44, 1.35]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#detailliertes-beispiel-kein-interesse",
+    "href": "slides/23-Inferenz-P1.html#detailliertes-beispiel-kein-interesse",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Detailliertes Beispiel: “Kein Interesse”",
+    "text": "Detailliertes Beispiel: “Kein Interesse”\nWir verdeutlichen die Konfidenzintervall-Berechnung Schritt-für-Schritt für die Kategorie “Kein Interesse”.\n\nFrauen: n = 1988; Mittelwert = 8.02; SD = 2.00\nMänner: n = 1202; Mittelwert = 7.62; SD = 2.10\n\n\\[\\text{Differenz} = \\bar{x}_{\\text{Frauen}} - \\bar{x}_{\\text{Männer}} = 8.02 - 7.62 = 0.395\\]\nInterpretation: Frauen sind im Durchschnitt um 0.40 Punkte (auf 0-10 Skala) zufriedener mit dem Singlestatus."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-der-differenz",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-der-differenz",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler der Differenz",
+    "text": "Standardfehler der Differenz\nDer Standardfehler kombiniert die Varianzen der Zufriedenheit beider Gruppen und berücksichtigt ihre verschiedenen Stichprobengrößen:\n\\[\n\\begin{align}\n\\text{SE}_{\\bar{x}_{\\text{Frauen}} - \\bar{x}_{\\text{Männer}}} &= \\sqrt{\\frac{\\hat{\\sigma}_{\\text{Frauen}}^2}{n_{\\text{Frauen}}} + \\frac{\\hat{\\sigma}_{\\text{Männer}}^2}{n_{\\text{Männer}}}} \\\\\n&= \\sqrt{\\frac{4.00}{1988} + \\frac{4.41}{1202}} \\\\\n&= \\sqrt{0.00201 + 0.00367}\\\\\n&= 0.0753\n\\end{align}\n\\] Wir schätzen, dass Mittelwertdifferenzen in der Zufriedenheit zwischen Frauen und Männern, die als Single keine Beziehung suchen typischerweise um 0.0753 Einheiten schwanken."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#kritischer-z-wert-für-95-ki",
+    "href": "slides/23-Inferenz-P1.html#kritischer-z-wert-für-95-ki",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Kritischer z-Wert für 95%-KI",
+    "text": "Kritischer z-Wert für 95%-KI\nFür ein 95%-Konfidenzintervall verwenden wir \\(z = 1.96\\) aus der Standard-Normalverteilung:\n\\[P(-1.96 \\leq Z \\leq 1.96) = 0.95\\] Warum Normalverteilung?\nAuch hier greift der Zentrale Grenzwertsatz: Die Differenz zweier Mittelwerte ist asymptotisch normalverteilt, unabhängig davon, wie die zugrunde liegenden Variablen verteilt sind.\nMit großen Stichproben (n₁ = 1988, n₂ = 1202) ist die Normalverteilung eine ausgezeichnete Approximation."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#konfidenzintervall-berechnen",
+    "href": "slides/23-Inferenz-P1.html#konfidenzintervall-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Konfidenzintervall berechnen",
+    "text": "Konfidenzintervall berechnen\nUntere Grenze: \\[\\text{Differenz} - z \\times \\text{SE}_{\\text{Diff}} = 0.395 - 1.96 \\times 0.0753 = 0.395 - 0.147 = 0.247\\]\nObere Grenze: \\[\\text{Differenz} + z \\times \\text{SE}_{\\text{Diff}} = 0.395 + 1.96 \\times 0.0753 = 0.395 + 0.147 = 0.543\\]\nInterpretation: Wir erwarten bei zukünftigen Stichproben, dass 95% aller nicht-extremen Stichproben eine Mittelwertdifferenz der Single-Zufriedenheit für Singles, die kein Interesse an einer Beziehung haben, zwischen 0.25 und 0.54 schwankt."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#visualisierung-aller-t-tests",
+    "href": "slides/23-Inferenz-P1.html#visualisierung-aller-t-tests",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Visualisierung aller t-Tests",
+    "text": "Visualisierung aller t-Tests"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#es-ist-eher-bei-frauen-kompliziert",
+    "href": "slides/23-Inferenz-P1.html#es-ist-eher-bei-frauen-kompliziert",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Es ist (eher bei Frauen) kompliziert",
+    "text": "Es ist (eher bei Frauen) kompliziert"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#die-22-kontingenztabelle",
+    "href": "slides/23-Inferenz-P1.html#die-22-kontingenztabelle",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Die 2×2 Kontingenztabelle",
+    "text": "Die 2×2 Kontingenztabelle\nZunächst betrachten wir die Häufigkeitsverteilung von “Freundschaft Plus” nach Geschlecht:\n\n\n\n2×2 Kontingenztabelle: Freundschaft Plus nach Geschlecht\n\n\n\nFreundschaft Plus\nNicht Freundschaft Plus\nGesamt\n\n\n\n\nWeiblich\n828\n7928\n8756\n\n\nMännlich\n711\n7929\n8640\n\n\nGesamt\n1539\n15857\n17396\n\n\n\n\n\nNotation für die Berechnung: - a = 828 (Frauen in Freundschaft Plus) - b = 7928 (Frauen nicht in Freundschaft Plus) - c = 711 (Männer in Freundschaft Plus) - d = 7929 (Männer nicht in Freundschaft Plus)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-1-odds-für-jedes-geschlecht-berechnen",
+    "href": "slides/23-Inferenz-P1.html#schritt-1-odds-für-jedes-geschlecht-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 1: Odds für jedes Geschlecht berechnen",
+    "text": "Schritt 1: Odds für jedes Geschlecht berechnen\nDie Odds ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zur Wahrscheinlichkeit, dass es nicht eintritt.\nOdds für Frauen\n\\[\\text{Odds}_{\\text{Frauen}} = \\frac{\\text{Frauen in FP}}{\\text{Frauen nicht in FP}} = \\frac{828}{7928} = 0.1044\\]\nInterpretation: Von 100 Frauen, die nicht in “Freundschaft Plus” sind, haben etwa 10 Frauen diese Beziehungsform.\nOdds für Männer\n\\[\\text{Odds}_{\\text{Männer}} = \\frac{\\text{Männer in FP}}{\\text{Männer nicht in FP}} = \\frac{711}{7929} = 0.0897\\]\nInterpretation: Von 100 Männern, die nicht in “Freundschaft Plus” sind, haben etwa 9 Männer diese Beziehungsform."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-2-odds-ratio-berechnen",
+    "href": "slides/23-Inferenz-P1.html#schritt-2-odds-ratio-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 2: Odds Ratio berechnen",
+    "text": "Schritt 2: Odds Ratio berechnen\nDie Odds Ratio vergleicht die Odds zwischen den beiden Gruppen:\n\\[\\text{OR} = \\frac{\\text{Odds}_{\\text{Frauen}}}{\\text{Odds}_{\\text{Männer}}} = \\frac{0.1044}{0.0897} = 1.165\\]\nInterpretation: Frauen haben eine 1.16-mal höhere Odds, in “Freundschaft Plus” zu sein als Männer."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-3-logarithmus-nehmen",
+    "href": "slides/23-Inferenz-P1.html#schritt-3-logarithmus-nehmen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 3: Logarithmus nehmen",
+    "text": "Schritt 3: Logarithmus nehmen\nFür die Konfidenzintervall-Berechnung transformieren wir auf die logarithmische Skala:\n\\[\\log(\\text{OR}) = \\log(1.165) = 0.1525\\]\nWarum Logarithmus? - Das Konfidenzintervall ist auf der log-Skala symmetrisch - Die Normalverteilungs-Annahme passt besser - Nach der Berechnung transformieren wir zurück mit exp()"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-4-standardfehler-des-logor",
+    "href": "slides/23-Inferenz-P1.html#schritt-4-standardfehler-des-logor",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 4: Standardfehler des log(OR)",
+    "text": "Schritt 4: Standardfehler des log(OR)\nDer Standardfehler quantifiziert, wie genau unsere Schätzung ist:\n\\[SE[\\log(\\text{OR})] = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\]\nBerechnung im Detail:\n\\[SE[\\log(\\text{OR})] = \\sqrt{\\frac{1}{828} + \\frac{1}{7928} + \\frac{1}{711} + \\frac{1}{7929}}\\]\n\\[= \\sqrt{0.001208 + 0.000126 + 0.001406 + 0.000126}\\]\n\\[= \\sqrt{0.002866} = 0.0535\\]\nInterpretation: Mit dieser Genauigkeit schätzen wir das log(OR)."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-5-kritischer-z-wert-für-90-ki-warum-normalverteilung",
+    "href": "slides/23-Inferenz-P1.html#schritt-5-kritischer-z-wert-für-90-ki-warum-normalverteilung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?",
+    "text": "Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?\nDas zentrale Problem\nDie Odds Ratio selbst ist NICHT normalverteilt: - Sie ist immer positiv (0 bis ∞) - Sie ist schief (asymmetrisch) - Das Konfidenzintervall würde asymmetrisch ausfallen\nDie Lösung: Logarithmische Transformation\nDurch den Logarithmus transformieren wir die Odds Ratio so, dass sie normalverteilt wird:\n\\[\\text{OR} \\in (0, \\infty) \\xrightarrow{\\log()} \\log(\\text{OR}) \\in (-\\infty, +\\infty)\\]\nDas \\(\\log(\\text{OR})\\) ist asymptotisch normalverteilt — und zwar aufgrund des Zentralen Grenzwertsatzes:\n\nDer SE des log(OR) ist eine Summe von Termen: \\(SE = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\)\nNach dem Zentralen Grenzwertsatz wird die Summe unabhängiger Zufallsvariablen asymptotisch normalverteilt, unabhängig von ihrer einzelnen Verteilung."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-6-konfidenzintervall-auf-log-skala-berechnen",
+    "href": "slides/23-Inferenz-P1.html#schritt-6-konfidenzintervall-auf-log-skala-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 6: Konfidenzintervall auf log-Skala berechnen",
+    "text": "Schritt 6: Konfidenzintervall auf log-Skala berechnen\nUntere Grenze: \\[\\log(\\text{OR}) - z \\times SE[\\log(\\text{OR})] = 0.1525 - 1.645 \\times 0.0535 = 0.0644\\]\nObere Grenze: \\[\\log(\\text{OR}) + z \\times SE[\\log(\\text{OR})] = 0.1525 + 1.645 \\times 0.0535 = 0.2405\\]\n90%-KI auf log-Skala: \\([0.0644, 0.2405]\\)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-7-zurück-transformieren-exponentialisieren",
+    "href": "slides/23-Inferenz-P1.html#schritt-7-zurück-transformieren-exponentialisieren",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 7: Zurück transformieren (Exponentialisieren)",
+    "text": "Schritt 7: Zurück transformieren (Exponentialisieren)\nZum Schluss exponentialisieren wir, um auf die OR-Skala zurückzukehren:\nUntere Grenze: \\[e^{0.0644} = 1.067\\]\nObere Grenze: \\[e^{0.2405} = 1.272\\]\n90%-Konfidenzintervall auf OR-Skala: \\([1.07, 1.27]\\)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#zusammenfassung-interpretation",
+    "href": "slides/23-Inferenz-P1.html#zusammenfassung-interpretation",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Zusammenfassung & Interpretation",
+    "text": "Zusammenfassung & Interpretation\n\n\n\nStatistik\nWert\n\n\n\n\nPunkt-Schätzung (OR)\n1.16\n\n\n90%-Konfidenzintervall\n[1.07, 1.27]\n\n\n\nWas bedeutet das?\n✅ Mit 90% Konfidenz liegt die wahre Odds Ratio zwischen 1.07 und 1.27.\n✅ Das Intervall enthält nicht die 1, daher ist der Unterschied statistisch signifikant.\n✅ Frauen haben eine signifikant höhere Wahrscheinlichkeit, “Freundschaft Plus” zu praktizieren als Männer.\n✅ Die Odds sind für Frauen etwa 1.16-mal höher als für Männer."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#visuelle-darstellung",
+    "href": "slides/23-Inferenz-P1.html#visuelle-darstellung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Visuelle Darstellung",
+    "text": "Visuelle Darstellung"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#standardfehler-für-bivariate-regressionskoeffizienten",
+    "href": "slides/23-Inferenz-P1.html#standardfehler-für-bivariate-regressionskoeffizienten",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Standardfehler für bivariate Regressionskoeffizienten",
+    "text": "Standardfehler für bivariate Regressionskoeffizienten\n\\[\nSE_{\\beta} = \\sqrt{\\frac{\\sigma^2}{\\sum{(x_i - \\bar{x})^2}}}\n\\]\n\\(\\sigma^2\\) = Varianz der Residuen; \\(x_i\\) = Werte ; \\(\\bar{x}\\) = Mittelwert der beeinflussenden Eigenschaft"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#überblick-bivariate-regressionen",
+    "href": "slides/23-Inferenz-P1.html#überblick-bivariate-regressionen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Überblick: Bivariate Regressionen",
+    "text": "Überblick: Bivariate Regressionen\nWir testen die Beziehung zwischen Zufriedenheit mit Singlestatus mit verschiedenen Eigenschaften über eine Reihe bivariater Regressionen:\n\n\n\nEinflüsse auf die Zufriedenheit mit Singlestatus\n\n\n\n\n\n\n\n\n\nPrädiktor\nKoeffizient (β)\nStandardfehler (SE)\n95%-Konfidenzintervall\nR² (Modellgüte)\n\n\n\n\nWeiblich\n0.6433\n0.0305\n[0.5835, 0.703]\n0.0165\n\n\nOsten\n0.2647\n0.0420\n[0.1823, 0.347]\n0.0015\n\n\nAlter\n0.0131\n0.0015\n[0.0101, 0.0161]\n0.0027"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#beispielrechnung-für-beta-alter",
+    "href": "slides/23-Inferenz-P1.html#beispielrechnung-für-beta-alter",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Beispielrechnung für \\(\\beta\\) Alter",
+    "text": "Beispielrechnung für \\(\\beta\\) Alter\nDas einfache lineare Regressionsmodell ist:\n\\[\\text{Zufriedenheit mit Singlestatus}_i = \\beta_0 + \\beta_1 \\times \\text{Alter}_i + \\varepsilon_i\\]\nSchritt 1: Daten zusammenfassen\n\n\nn = 158332 \n\n\nMittelwert Alter = 35.74 \n\n\nSD Alter = 9.22 \n\n\nSchritt 2: Regressionsgleichung\n\n\nsat2 = 5.4904 + 0.0131 × age + ε\n\n\nInterpretation des Slopes:\n\n\n• Pro Lebensjahr steigt die Zufriedenheit mit dem Singlestatus um 0.0131 Punkte\n\n\n• 10 Jahre älter → Zufriedenheit um 0.1312 Punkte höher"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-3-standardfehler-des-koeffizients",
+    "href": "slides/23-Inferenz-P1.html#schritt-3-standardfehler-des-koeffizients",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 3: Standardfehler des Koeffizients",
+    "text": "Schritt 3: Standardfehler des Koeffizients\nDer Standardfehler misst die Unsicherheit der Schätzung:\n\\[\\text{SE}(\\beta_1) = \\sqrt{\\frac{\\sigma^2}{\\sum(x_i - \\bar{x})^2}}\\]\n\n\nBerechnung:\n\n\nσ² = RSS / (n - k) = 165807.9 / 26518 = 6.2527 \n\n\nΣ(age - mean)² = 13471999 \n\n\nSE(β₁) = √( 6.2527 / 13471999 ) = 0.000681"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-4-kritischer-t-wert",
+    "href": "slides/23-Inferenz-P1.html#schritt-4-kritischer-t-wert",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 4: Kritischer t-Wert",
+    "text": "Schritt 4: Kritischer t-Wert\nFür ein 95%-Konfidenzintervall verwenden wir die t-Verteilung:\n\n\ndf = n - k = 26520 - 2 = 26518 \n\n\nt_0.025 (df = 26518 ) = 1.9601 \n\n\n(Approximation: t ≈ z = 1.96 bei großen df)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-5-konfidenzintervall-berechnen",
+    "href": "slides/23-Inferenz-P1.html#schritt-5-konfidenzintervall-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 5: Konfidenzintervall berechnen",
+    "text": "Schritt 5: Konfidenzintervall berechnen\n\\[\\text{CI} = \\hat{\\beta}_1 \\pm t_{\\text{kritisch}} \\times \\text{SE}(\\hat{\\beta}_1)\\]\n\n\nUntere Grenze = 0.0131 - 1.9601 × 0.000681 \n\n\n              = 0.0131 - 0.0013 \n\n\n              = 0.0118 \n\n\nObere Grenze  = 0.0131 + 1.9601 × 0.000681 \n\n\n             = 0.0131 + 0.0013 \n\n\n             = 0.0145 \n\n\n95%-KI: [ 0.0118 , 0.0145 ]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-6-interpretation",
+    "href": "slides/23-Inferenz-P1.html#schritt-6-interpretation",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 6: Interpretation",
+    "text": "Schritt 6: Interpretation\nMit 95% Konfidenz liegt der wahre Effekt von age zwischen 0.0118 und 0.0145 Punkten pro Lebensjahr.\nDas bedeutet: - ✓ Das Konfidenzintervall enthält nicht die 0 - ✓ Der Effekt ist statistisch signifikant auf dem 5%-Niveau - ✓ Es gibt einen echten positiven Zusammenhang - ✓ Ältere Personen sind systematisch zufriedener mit dem Singlestatus"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#warum-normalverteilung-t-verteilung",
+    "href": "slides/23-Inferenz-P1.html#warum-normalverteilung-t-verteilung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Warum Normalverteilung / t-Verteilung?",
+    "text": "Warum Normalverteilung / t-Verteilung?\nWir verwenden die t-Verteilung für Regressionskoeffizenten, weil:\n\nKleine Stichproben: Bei kleinen n ist die t-Verteilung konservativer (breitere KI)\nSchätzung von σ²: Wir schätzen die Fehler-Varianz aus den Daten\nFreiheitsgrade: df = n - k berücksichtigt die Anzahl der Parameter\nGroße Stichproben: Bei n &gt; 1000 konvergiert t gegen z = 1.96\n\nMit unseren Daten (n &gt; 26000) unterscheidet sich t praktisch nicht von z."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#visualisierung",
+    "href": "slides/23-Inferenz-P1.html#visualisierung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Visualisierung",
+    "text": "Visualisierung"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#das-multivariate-modell",
+    "href": "slides/23-Inferenz-P1.html#das-multivariate-modell",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Das multivariate Modell",
+    "text": "Das multivariate Modell\n  \\[\n\\begin{align*}\n\\text{Zufriedenheit als Single}_i &= \\beta_0\\\\ &+ \\beta_{\\text{Alter}} \\\\\n&+ \\beta_{\\text{Frau}} + \\beta_{\\text{Ost}} + \\beta_{\\text{Frau X Ost}}\\\\\n&+ \\beta_{\\text{Offen}} + \\beta_{\\text{Anbahnend}} + \\beta_{\\text{On-Off}} + \\beta_{\\text{Freundschaft Plus}} + \\beta_{\\text{Sonstiges}} \\\\\n&+ \\varepsilon_i\n\\end{align*}\n\\]\n \n\nRegion und Geschlecht bilden einen Interaktionseffekt\n“kein Interesse” ist Referenzkategorie für die Beziehungskategorie"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#regressionsergebnisse",
+    "href": "slides/23-Inferenz-P1.html#regressionsergebnisse",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Regressionsergebnisse",
+    "text": "Regressionsergebnisse\n\n\n\nErgebnisse des multivariaten Regressionsmodells\n\n\nVariabel\nKoeffizient (β)\nStandardfehler (SE)\n95%-Konfidenzintervall\n\n\n\n\nKonstante\n7.46\n0.08\n[7.31, 7.62]\n\n\nFrau\n0.43\n0.04\n[0.36, 0.51]\n\n\nOsten\n0.25\n0.07\n[0.12, 0.38]\n\n\nAlter\n0.00\n0.00\n[0, 0.01]\n\n\nOffen für Beziehung\n-2.45\n0.05\n[-2.54, -2.36]\n\n\nAnbahnende Beziehung\n-1.95\n0.08\n[-2.1, -1.79]\n\n\nOn-off-Beziehung\n-3.52\n0.17\n[-3.86, -3.18]\n\n\nFreundschaft Plus\n-1.42\n0.07\n[-1.56, -1.28]\n\n\nSonstiges\n-2.69\n0.11\n[-2.9, -2.48]\n\n\nInteraktion: Frau × Osten\n-0.05\n0.09\n[-0.24, 0.13]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#fokus-der-age-koeffizient",
+    "href": "slides/23-Inferenz-P1.html#fokus-der-age-koeffizient",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Fokus: Der age-Koeffizient",
+    "text": "Fokus: Der age-Koeffizient\nWir verdeutlichen die Berechnung des Konfidenzintervalls für age im multivariaten Kontext.\nSchritt 1: Multivariate vs. Bivariate Effekte\n\n\nBIVARIATE REGRESSION (sat2 ~ age):\n\n\n  β = 0.0169 (SE = 0.0019 )\n\n\n  Signifikant: JA (p &lt; 0.001)\n\n\nMULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):\n\n\n  β = 0.0027 (SE = 0.0018 )\n\n\n  Signifikant: NEIN (p = 0.130)\n\n\nDIFFERENZ:\n\n\n  Δβ = 0.0142 \n\n\n  (Dies ist der Confounding-Effekt durch sin11_cat)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-2-interpretation-des-multivariaten-koeffizients",
+    "href": "slides/23-Inferenz-P1.html#schritt-2-interpretation-des-multivariaten-koeffizients",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 2: Interpretation des multivariaten Koeffizients",
+    "text": "Schritt 2: Interpretation des multivariaten Koeffizients\nDer Koeffizient 0.0027 ist der partielle Effekt:\n\nDefinition: Effekt von age auf sat2, nachdem alle anderen Variablen kontrolliert wurden\nPraktisch: Mit der obigen Formel: Für jedes Lebensjahr mehr steigt sat2 um 0.0027 Punkte (wenn sex, east, sin11_cat konstant bleiben)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-3-standardfehler-im-multivariaten-modell",
+    "href": "slides/23-Inferenz-P1.html#schritt-3-standardfehler-im-multivariaten-modell",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 3: Standardfehler im multivariaten Modell",
+    "text": "Schritt 3: Standardfehler im multivariaten Modell\n\\[\\text{SE}(\\beta_1)_{\\text{multi}} = \\sqrt{\\frac{\\sigma^2_{\\text{multi}}}{\\sum(x_i - \\bar{x})^2 \\times (1 - R^2_{1|others})}}\\]\nSchritt 4: t-Statistik und Signifikanz\n\n\nt = β / SE =  0.0027  /  0.0018  =  1.5152 \n\n\np-Wert =  0.1297399 \n\n\nInterpretation:\n\n\n  • t = 1.5152 ist relativ klein\n\n\n  • p = 0.1297 &gt; 0.05\n\n\n  ✗ NICHT statistisch signifikant (nach Kontrolle)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-5-kritischer-t-wert",
+    "href": "slides/23-Inferenz-P1.html#schritt-5-kritischer-t-wert",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 5: Kritischer t-Wert",
+    "text": "Schritt 5: Kritischer t-Wert\n\n\ndf = n - k =  17327  -  10  =  17317 \n\n\nt_0.025(df) = 1.9601 \n\n\n(≈ 1.96 bei großem df)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-6-konfidenzintervall-berechnen",
+    "href": "slides/23-Inferenz-P1.html#schritt-6-konfidenzintervall-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 6: Konfidenzintervall berechnen",
+    "text": "Schritt 6: Konfidenzintervall berechnen\n\\[\\text{CI} = \\hat{\\beta}_{\\text{age}} \\pm t_{\\text{crit}} \\times \\text{SE}(\\hat{\\beta}_{\\text{age}})\\]\n\n\nUntere Grenze =  0.0027  -  1.9601  ×  0.0018 \n\n\n              =  0.0027  -  0.0035 \n\n\n              =  -8e-04 \n\n\nObere Grenze  =  0.0027  +  1.9601  ×  0.0018 \n\n\n             =  0.0027  +  0.0035 \n\n\n             =  0.0062 \n\n\n95%-KI: [ -8e-04 ,  0.0062 ]"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#zentraler-grenzwertsatz",
+    "href": "slides/23-Inferenz-P1.html#zentraler-grenzwertsatz",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Zentraler Grenzwertsatz",
+    "text": "Zentraler Grenzwertsatz\nZentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.\nWenn also der Unterschied eines Stichprobenparameters zum Popuplationsparameter auf einer Zufallsschwankung beruht, dann können wir annehmen, dass diese Parameterunterschiede normalverteilt sind.1\nDa jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung.\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#der-standard-error-se-die-kernidee",
+    "href": "slides/23-Inferenz-P1.html#der-standard-error-se-die-kernidee",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Der Standard Error (SE) — Die Kernidee",
+    "text": "Der Standard Error (SE) — Die Kernidee\nWas ist SE?\nDer Standardfehler (= Standard Error) ist die Standardabweichung weiterer möglicher Mittelwerte aus gleich gezogenen Stichproben der selben Population.\n\\[\\text{SE}_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}\\]\nBerechnung\n\\[\\text{SE}_{\\bar{x}} = \\frac{2}{\\sqrt{50}} = \\frac{2}{7.07} = 0.2828\\]\nDas bedeutet: Wir schätzen, dass die Mittelwerte zukünftiger Stichproben sich typischerweise um 0.2828 unterscheiden."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#die-se-bereiche-visualisiert",
+    "href": "slides/23-Inferenz-P1.html#die-se-bereiche-visualisiert",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Die SE-Bereiche visualisiert",
+    "text": "Die SE-Bereiche visualisiert\nGrüner Bereich: μ ± 1×SE (68%)\nGrenzen: μ - SE bis μ + SE\n       = 5 - 0.283 bis 5 + 0.283\n       = 4.717 bis 5.283\n\nGrüne vertikale Linien: Diese Grenzen markieren\nBedeutung: 68% der Stichprobenmittelwerte fallen in diesen Bereich.\nOrange Bereich: μ ± 2×SE (95%)\nGrenzen: μ - 2×SE bis μ + 2×SE\n       = 5 - 0.566 bis 5 + 0.566\n       = 4.434 bis 5.566\nBedeutung: 95% der Stichprobenmittelwerte fallen in diesen Bereich."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#warum-ist-das-wichtig",
+    "href": "slides/23-Inferenz-P1.html#warum-ist-das-wichtig",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Warum ist das wichtig?",
+    "text": "Warum ist das wichtig?\nKonfidenzintervalle sind eine Angabe über eine Spanne dieser zukünftigen/möglichen Stichprobenparameter basieren darauf\nEin 95%-KI für Mittelwerte wird konstruiert als:\n\\[\\text{KI} = \\bar{x} \\pm 1.96 \\times \\text{SE}\\]\nDas 1.96 kommt daher, dass ±1.96 SE ungefähr die 95%-Grenzen abdeckt (nicht genau 2, aber nah dran)."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#konfidenzintervalle-bereiche-von-möglichen-schwankungen",
+    "href": "slides/23-Inferenz-P1.html#konfidenzintervalle-bereiche-von-möglichen-schwankungen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Konfidenzintervalle = Bereiche von möglichen Schwankungen",
+    "text": "Konfidenzintervalle = Bereiche von möglichen Schwankungen"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#folgen",
+    "href": "slides/23-Inferenz-P1.html#folgen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Folgen",
+    "text": "Folgen\nGrößere Stichproben = Kleinerer SE\nWenn wir ein größeres n statt 50 hätten, z.B. n = 200:\n\\[\\text{SE}_{neu} = \\frac{2}{\\sqrt{200}} = 0.1414\\]\nDie SE würde halbiert! Die grünen Linien würden näher zusammenrücken.\nFolge: Mit größeren Stichproben sind unsere Schätzungen präziser.\nMehr Variation in den Daten = Größerer SE\nWenn σ größer statt 2 wäre, z.B. σ = 4:\n\\[\\text{SE}_{neu} = \\frac{4}{\\sqrt{50}} = 0.5657\\]\nDer SE würde sich verdoppeln! Die grünen Linien würden weiter auseinander liegen.\nFolge: Heterogenere Populationen sind schwerer zu schätzen."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#was-sind-konfidenzintervalle-deep-dive",
+    "href": "slides/23-Inferenz-P1.html#was-sind-konfidenzintervalle-deep-dive",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Was sind Konfidenzintervalle (deep dive)?",
+    "text": "Was sind Konfidenzintervalle (deep dive)?\n\nKonfidenzintervalle sind Perzentilgrenzen für eine geschätzte Verteilung möglicher Parameter, die nur durch zufällige Unterschiede bei der Stichprobenziehung variiert.\nWir behaupten, dass unser Parameter der Mittelwert1 und der geschätzte Standardfehler die Standardabweichung der Parameterverteilung ist.\nDa die Variation der Parameter zufällig ist2, ergibt die Parameterverteilung eine Zufallsverteilung, über die wir komplettes Wissen haben.\nWir können daher angeben, wie viele Standardabweichungen wir vom Mittelwert aus nach oben/unten gehen müssen, um 99%, 98%, 97%, 96%, 95%, usw. der nicht extremen3 Zufallsvariation zu erfassen.\n\nGenauer: Der Erwartungswert der Verteilung.In der Praxis: als zufällig behauptet wird.Extrem ist im Zufallssprech alles, was an den Rändern liegt."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#generelle-berechnung",
+    "href": "slides/23-Inferenz-P1.html#generelle-berechnung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Generelle Berechnung",
+    "text": "Generelle Berechnung\nDie Berechnung von Konfidenzintervallen ist grundsätzlich immer gleich - egal, was für ein Parameter wir nutzen:\n\\[\\text{Konfidenzintervall} = \\text{Parameter} \\pm \\text{Skalierungsfaktor} \\cdot \\text{Standardfehler}\\]\n\nDer Skalierungsfaktor (manchmal auch: kritischer Wert) bezeichnet, wie wieviel wir den Standardfehler erhöhen, um nicht extreme Bereiche der Zufallsvariation zu erfassen."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#bereiche-der-normalverteilung",
+    "href": "slides/23-Inferenz-P1.html#bereiche-der-normalverteilung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Bereiche der Normalverteilung",
+    "text": "Bereiche der Normalverteilung"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#spezialitätenproblem-1-kleine-stichproben-führen-mit-höherer-wahrscheinlichkeit-zu-extremen-abweichungen",
+    "href": "slides/23-Inferenz-P1.html#spezialitätenproblem-1-kleine-stichproben-führen-mit-höherer-wahrscheinlichkeit-zu-extremen-abweichungen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Spezialitätenproblem 1: Kleine Stichproben führen mit höherer Wahrscheinlichkeit zu extremen Abweichungen",
+    "text": "Spezialitätenproblem 1: Kleine Stichproben führen mit höherer Wahrscheinlichkeit zu extremen Abweichungen"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#spezialitätenproblem-2-verhältnisse-sind-meist-nicht-symmetrisch-verteilt",
+    "href": "slides/23-Inferenz-P1.html#spezialitätenproblem-2-verhältnisse-sind-meist-nicht-symmetrisch-verteilt",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Spezialitätenproblem 2: Verhältnisse sind (meist) nicht symmetrisch verteilt",
+    "text": "Spezialitätenproblem 2: Verhältnisse sind (meist) nicht symmetrisch verteilt"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#woher-kennen-wir-skalierungsparameter-für-jede-verteilung",
+    "href": "slides/23-Inferenz-P1.html#woher-kennen-wir-skalierungsparameter-für-jede-verteilung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Woher kennen wir Skalierungsparameter für jede Verteilung?",
+    "text": "Woher kennen wir Skalierungsparameter für jede Verteilung?"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#wichtige-standardfehler",
+    "href": "slides/23-Inferenz-P1.html#wichtige-standardfehler",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Wichtige Standardfehler",
+    "text": "Wichtige Standardfehler\nStandardfehler für Wahrscheinlichkeitsdifferenzen\n\\[\nSE_{p_1 - p_2} = \\sqrt{\\frac{p_1(1-p_1)}{n_1} + \\frac{p_2(1-p_2)}{n_2}}\n\\]\nStandardfehler für Varianzen\n\\[\nSE_{\\sigma^2} = \\sqrt{\\frac{2\\sigma^4}{n-1}}\n\\]\nwobei:\n\\(\\sigma^2\\) = Varianz der Grundgesamtheit n = Stichprobengröße\nStandardfehler für Odds\n\\[\nSE_{\\text{Odds}} = \\frac{\\sqrt{\\frac{p(1-p)}{n}}}{(1-p)^2}\n\\] wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#skalierungsparameter",
+    "href": "slides/23-Inferenz-P1.html#skalierungsparameter",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Skalierungsparameter",
+    "text": "Skalierungsparameter\n\n\n\n\n\n\n\n\ndf\n95%-Perzentil (einseitig)\n97,5%-Perzentil (zweiseitig)\n\n\n\n\n1\n6,3138\n12,706\n\n\n2\n2,9200\n4,3027\n\n\n3\n2,3534\n3,1824\n\n\n4\n2,1318\n2,7764\n\n\n—\n—\n—\n\n\n9\n1,8331\n2,2622\n\n\n10\n1,8125\n2,2281\n\n\n—\n—\n—\n\n\n1000\n1,6464\n1,9623\n\n\n2000\n1,6455\n1,9616\n\n\n3000\n1,6453\n1,9614"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#interpretation-wir-erwarten-bei-zukünftigen-stichproben-dass-95-aller-nicht-extremen-stichproben-eine-mittelwertdifferenz-der-single-zufriedenheit-für-singles-die-kein-interesse-an-einer-beziehung-haben-zwischen-0.25-und-0.54-schwankt.",
+    "href": "slides/23-Inferenz-P1.html#interpretation-wir-erwarten-bei-zukünftigen-stichproben-dass-95-aller-nicht-extremen-stichproben-eine-mittelwertdifferenz-der-single-zufriedenheit-für-singles-die-kein-interesse-an-einer-beziehung-haben-zwischen-0.25-und-0.54-schwankt.",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Interpretation: Wir erwarten bei zukünftigen Stichproben, dass 95% aller nicht-extremen Stichproben eine Mittelwertdifferenz der Single-Zufriedenheit für Singles, die kein Interesse an einer Beziehung haben, zwischen 0.25 und 0.54 schwankt.",
+    "text": "Interpretation: Wir erwarten bei zukünftigen Stichproben, dass 95% aller nicht-extremen Stichproben eine Mittelwertdifferenz der Single-Zufriedenheit für Singles, die kein Interesse an einer Beziehung haben, zwischen 0.25 und 0.54 schwankt."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#schritt-4-konfidenzintervall-berechnen",
+    "href": "slides/23-Inferenz-P1.html#schritt-4-konfidenzintervall-berechnen",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Schritt 4: Konfidenzintervall berechnen",
+    "text": "Schritt 4: Konfidenzintervall berechnen\n\\[\\text{CI} = \\hat{\\beta}_1 \\pm t_{\\text{kritisch}} \\times \\text{SE}(\\hat{\\beta}_1)\\]\n\n\nUntere Grenze = 0.0131 - 1.9601 × 0.000681 \n\n\n              = 0.0131 - 0.0013 \n\n\n              = 0.0118 \n\n\nObere Grenze  = 0.0131 + 1.9601 × 0.000681 \n\n\n             = 0.0131 + 0.0013 \n\n\n             = 0.0145 \n\n\n95%-KI: [ 0.0118 , 0.0145 ]\n\n\nWenn wir unendlich viele Stichproben wie FREDA ziehen würden, können wir erwarten, dass 95% aller nicht extremen Unterschiede aller \\(\\hat{\\beta}\\)-Koeffizienten für Alter im Bereich [0.0118 , 0.0145] liegen."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#skalierungsparameter-.midi-.-scrollable",
+    "href": "slides/23-Inferenz-P1.html#skalierungsparameter-.midi-.-scrollable",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Skalierungsparameter {.midi . scrollable}",
+    "text": "Skalierungsparameter {.midi . scrollable}\nSkalierungsparameter ändern sich bei kleinen Stichproben je nach Stichprobengröße1. Symmetrische Zufallsverteilungen konvergieren mit hohen Fallzahlen zur Normalverteilung.\n\n\n\n\n\n\n\n\ndf\n95%-Perzentil (einseitig)\n97,5%-Perzentil (zweiseitig)\n\n\n\n\n1\n6,3138\n12,706\n\n\n2\n2,9200\n4,3027\n\n\n3\n2,3534\n3,1824\n\n\n4\n2,1318\n2,7764\n\n\n—\n—\n—\n\n\n9\n1,8331\n2,2622\n\n\n10\n1,8125\n2,2281\n\n\n—\n—\n—\n\n\n1000\n1,6464\n1,9623\n\n\n2000\n1,6455\n1,9616\n\n\n3000\n1,6453\n1,9614\n\n\n\nDf = Degress of freedom. Das ist immer Stichprobengröße - Anzahl genutzter Parameter."
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#berechnung-des-konfidenzintervalls-bei-multivariaten-regressionskoeffizienten",
+    "href": "slides/23-Inferenz-P1.html#berechnung-des-konfidenzintervalls-bei-multivariaten-regressionskoeffizienten",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten",
+    "text": "Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten\nWir verdeutlichen die Berechnung des Konfidenzintervalls für Alter im multivariaten Kontext.\nSchritt 1: Multivariate vs. Bivariate Effekte\n\n\nBIVARIATE REGRESSION (sat2 ~ age):\n\n\n  β = 0.0169 (SE = 0.0019 )\n\n\n  Signifikant: JA (p &lt; 0.001)\n\n\nMULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):\n\n\n  β = 0.0027 (SE = 0.0018 )\n\n\n  Signifikant: NEIN (p = 0.130)\n\n\nDIFFERENZ:\n\n\n  Δβ = 0.0142 \n\n\n  (Dies ist der Confounding-Effekt durch sin11_cat)"
+  },
+  {
+    "objectID": "slides/23-Inferenz-P1.html#praktische-anwendung",
+    "href": "slides/23-Inferenz-P1.html#praktische-anwendung",
+    "title": "Inferenzstatistik - Teil 1",
+    "section": "Praktische Anwendung",
+    "text": "Praktische Anwendung\nFür größere Stichproben (wie unsere mit n = 17,396) gilt:\n\\[\\frac{\\log(\\text{OR}) - \\log(\\text{wahrer OR})}{\\text{SE}[\\log(\\text{OR})]} \\sim N(0,1)\\]\nDaher verwenden wir für ein 90%-Konfidenzintervall den kritischen Wert \\(z = 1.645\\):\n\\[P(-1.645 \\leq Z \\leq 1.645) = 0.90\\]\nDas bedeutet: 5% der Fläche liegt in jedem Schwanz der Normalverteilung (α/2 = 0.05)."
   }
 ]

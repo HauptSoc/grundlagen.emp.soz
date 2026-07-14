@@ -24,9 +24,33 @@ editor: source
 tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
 ---
+
+
+```{r freda-clean, cache = TRUE}
+# 1️⃣ Lade notwendige Bibliotheken
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(haven)
+library(tidyverse)
+
+freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta", 
+        col_select = c("welle", "id", "pid", "sample", "sex", "age", "east", "sat3", "sat2", "sat6", "pstat", "sin3i1", "sin3i2", "sin11",
+                        "reldur", "voctrain", "hlt32", "pa18i2", 
+        "val13i1", "val13i2", "val13i6",  "val13i8",  "val13i3", "val13i4", "val13i5", "val13i7", "val13i9", "val10i1", "val10i2", "val10i3", "val10i4", "val10i5", "sd67", "cohort"
+                        )
+                        ) 
+
+# Pfad zum Skript (relativ zum Quarto-Dokument)
+skript <- here::here("slides", "scripts", "freda_clean.R")
+# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
+source(skript, local = TRUE)
+```
+
 
 ## Ein Kessel Buntes
 
@@ -59,6 +83,10 @@ benötigt, um die Unsicherheit des Schlusses von einer
 Stichprobenverteilung auf die Verteilung in der Grundgesamtheit zu
 verringern.
 
+Wir haben daher immer folgende Relation: 
+
+$$ \text{Unsicherheit des Parameters durch Sampling} = \dfrac{\text{Variabilität des Parameters}}{\text{Stichprobengröße}} $$
+
 ## Über was sind wir (durch Stichproben) unsicher? 
 
 Bitte prägen Sie sich folgende Annahmen[^1] für die kommenden
@@ -90,10 +118,14 @@ Wir formulieren Erwartungen über Werte von **zukünftigen** Stichproben.
     würden, was für eine *Streuung* von Ergebnissen können wir dann
     erwarten?
 
+    $\rightarrow$ Das ist ein Gedankenexperiment!
+
 2.  Da die Ergebnisse durch zufällig varrierende Stichproben aus der
     gleichen Population berechnet wurden, können wir die Zufallsstreuung
     aus den Ergebnissen herausrechnen. Das gibt uns eine sehr gute
     Annäherung an den uns unbekannten Populationsparameter.
+
+    $\rightarrow$ Das funktioniert aber nur, wenn *keine* Selektionen im Sampling, ins Treatment oder Fehler in der Modellierung sind. 
 
 ## Ausdruck von Unsicherheit 2: Signifikanz
 
@@ -117,7 +149,7 @@ Differenz/Zusammenhang in der Stichprobe nur durch Zufall sehen
     solchen (oder extremeren) Zufallsereignissen lässt sich gut
     berechnen.
 
-4.  Ist diese Wahrscheinlichkeit sehr klein, sagen wir *per Konvention*,
+4.  Ist diese Wahrscheinlichkeit sehr klein, sagen wir **per Konvention**,
     dass unsere Ergebnisse nicht durch Zufall entstanden sind.
 
 
@@ -139,7 +171,8 @@ $$E[Y] = \underbrace{\sum y_i}_{\text{Werte der} \atop \text{Eigenschaft Y}} \cd
     Stichprobenparameter in Bezug auf die Populationsparameter.
 
 
-## Die Welt des reinen Zufalls 
+
+## Zentraler Grenzwertsatz
 
 Zentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds
 auf reinem Zufall beruht, dann verteilt sich dieses/r
@@ -173,35 +206,1767 @@ volles Wissen über die Verteilung der zu analysierenden Verteilung.
 ## Korrektur der Varianz bei Stichproben
 
 Die Stichproben-Varianz ($s$) ist *kein* erwartungstreuer Schätzer der
-Populationsvarianz $\sigma^2$, sie ist *systematisch zu klein*! Sie muss
-daher mit dem Term $\frac{n}{n-1}$ nach oben korrigiert werden, was
+Populationsvarianz $\sigma^2$ (sprich: sigma quadrat), sie ist *systematisch zu klein*! Sie muss daher mit dem Term $\frac{n}{n-1}$ nach oben korrigiert werden, was
 unsere Schätzung für die Populationsvarianz ($\hat{\sigma}^2$) sowie die
 Schätzung für die Populations-Standardabweichung ($\hat{\sigma}$)
 ergibt.
 
 $$
 \begin{split}
-         \hat{\sigma}_x^2   &= \dfrac{ \sum (x_i - \bar{x})^2}{n} \cdot \dfrac{n}{n-1} \\
+         \hat{\sigma}^2   &= \dfrac{ \sum (x_i - \bar{x})^2}{n} \cdot \dfrac{n}{n-1} \\
                             &= \dfrac{\sum(x_i - \bar{x})^2}{n-1}
   \end{split}
 $$ 
+Die korrigierte Standardabweichung ist dementsprechend: 
   $$
   \hat{\sigma} = \sqrt{\hat{\sigma}^2}
   $$
 
 
-## Standardfehler = Variation erwarteter/zukünftiger Ergebnisse
+## Standardfehler = Standardabweichung erwarteter/zukünftiger Ergebnisse {.midi}
 
-Wenn die Differenz des Stichprobenmittelwertes zum Populationsmittelwert
-auf Zufall beruht, dann können wir das Wissen um den
-Stichprobenmittelwert mit dem Wissen über Normalverteilungen verbinden:
-Wir können abschätzen, in welchem Maß die Mittelwerte weiterer
-Stichproben durch reinen Zufall fluktuieren. Diese Information erhält
-man durch den *Standardfehler*. Es gibt für jeden Parameter einen
-eigenen Standardfehler. Für Mittelwerte berechnet sich dieser:
+::: {.columns}
+::: {.column}
 
-$$\hat{\sigma}_{\bar{x}} = \sqrt{\frac{\hat{\sigma}^2}{n}} = \frac{\hat{\sigma}}{\sqrt{n}}$$
+- Hier hat ein Computer aus einer Population 10.000 mal Stichproben von n = 50 gezogen. 
 
-Der geschätzte Standardfehler für Mittelwerte ist die geschätzte
-Standardabweichung der auf Zufall beruhenden Differenz aller Mittelwerte
-in weiteren Stichproben zum Populationswert.
+- In der Population ist der Mittelwert der Eigenschaft 5 mit einer Standardabweichung von 2.
+
+- Die Verteilung der 10.000 Mittelwerte hat eine Standardabweichung von 0.2783. 
+
+- Der **Standardfehler** aufgrund einer Stichprobe versucht genau diesen Wert zu **schätzen** mit $$ \hat{\sigma}_{\bar{x}} = \dfrac{2}{\sqrt{50}} = 0.2828 $$
+
+:::
+::: {.column}
+
+```{r mittelwerte-sim1}
+
+library(ggplot2)
+library(dplyr)
+
+set.seed(123)
+
+# Anzahl der Stichproben und Stichprobengröße
+n_samples <- 10000
+n <- 50
+
+mu <- 5
+sigma <- 2
+
+# Simulation von Mittelwerten
+sample_means <- sapply(1:n_samples, function(x) {
+  mean(rnorm(n, mean = mu, sd = sigma))
+})
+
+# Berechne theoretischen Standard Error
+se_theoretical <- sigma / sqrt(n)
+se_empirical <- sd(sample_means)
+
+# Erstelle Daten für Plot
+sim_data <- data.frame(sample_means = sample_means)
+
+# Plot mit ggplot2
+ggplot(sim_data, aes(x = sample_means)) +
+  # SE-Bereich: μ ± 2×SE (95% Bereich) - hinter allem
+  annotate("rect",
+           xmin = mu - 2 * se_theoretical,
+           xmax = mu + 2 * se_theoretical,
+           ymin = 0,
+           ymax = Inf,
+           alpha = 0.08,
+           fill = "orange") +
+  
+  # Schattierter Bereich: μ ± 1×SE (68% Bereich)
+  annotate("rect",
+           xmin = mu - se_theoretical,
+           xmax = mu + se_theoretical,
+           ymin = 0,
+           ymax = Inf,
+           alpha = 0.15,
+           fill = "green") +
+  
+  # Histogram
+  geom_histogram(aes(y = after_stat(density)), 
+                 bins = 30, 
+                 fill = "#75AADB", 
+                 alpha = 0.7, 
+                 color = "black",
+                 linewidth = 0.3) +
+  
+  # Theoretische Normalverteilung
+  stat_function(
+    fun = dnorm,
+    args = list(mean = mu, sd = se_theoretical),
+    color = "darkblue",
+    linewidth = 1.2,
+    linetype = "solid"
+  ) +
+  
+  # Mittellinie (wahrer Mittelwert)
+  geom_vline(xintercept = mu, 
+             color = "#FF744E", 
+             linewidth = 1.2, 
+             linetype = "dashed") +
+  
+  # SE-Grenzen
+  geom_vline(xintercept = mu - se_theoretical, 
+             color = "darkgreen", 
+             linewidth = 0.9, 
+             linetype = "dotted") +
+  geom_vline(xintercept = mu + se_theoretical, 
+             color = "darkgreen", 
+             linewidth = 0.9, 
+             linetype = "dotted") +
+  
+  # Annotationen für SE-Werte
+  annotate("text",
+           x = mu,
+           y = dnorm(mu, mu, se_theoretical) * 0.95,
+           label = paste0("μ = ", mu),
+           size = 4,
+           fontface = "bold",
+           color = "#FF744E",
+           hjust = -0.3) +
+  
+  annotate("text",
+           x = mu + se_theoretical,
+           y = dnorm(mu + se_theoretical, mu, se_theoretical) * 0.90,
+           label = paste0("+1 SE\n(", round(mu + se_theoretical, 3), ")"),
+           size = 3.5,
+           color = "darkgreen",
+           hjust = -0.2,
+           fontface = "bold") +
+  
+  annotate("text",
+           x = mu - se_theoretical,
+           y = dnorm(mu - se_theoretical, mu, se_theoretical) * 0.90,
+           label = paste0("-1 SE\n(", round(mu - se_theoretical, 3), ")"),
+           size = 3.5,
+           color = "darkgreen",
+           hjust = 1.2,
+           fontface = "bold") +
+  
+  # Info-Text oben links
+  annotate("text",
+           x = -Inf,
+           y = Inf,
+           label = paste0(
+             "SE = σ/√n = ", sigma, "/√", n, " = ", round(se_theoretical, 4), "\n",
+             "Theoretisch: ", round(se_theoretical, 4),
+             " | Empirisch: ", round(se_empirical, 4),
+             "\n\n",
+             "Grüner Bereich: μ ± 1×SE (68%)\n",
+             "Orange Bereich: μ ± 2×SE (95%)"
+           ),
+           size = 3.5,
+           hjust = -0.05,
+           vjust = 1.05,
+           fontface = "italic",
+           color = "gray30") +
+  
+  labs(
+    title = "Sampling-Verteilung von Mittelwerten",
+    subtitle = "Simulation zeigt: Wie variieren Stichprobenmittelwerte um μ? Die Variation wird durch SE gemessen.",
+    x = "Geschätzter Mittelwert",
+    y = "Dichte"
+  ) +
+  
+  theme_minimal(base_size = 18) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15, margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 10, color = "gray50", margin = margin(b = 12)),
+    panel.grid.major = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(size = 11),
+    axis.title = element_text(size = 12, face = "bold")
+  )
+```
+:::
+
+:::
+
+
+## Der Standard Error (SE) — Die Kernidee
+
+### Was ist SE?
+
+Der Standardfehler (= **S**tandard **E**rror) ist die **Standardabweichung weiterer möglicher Mittelwerte aus gleich gezogenen Stichproben der selben Population**.
+
+$$\text{SE}_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$$
+
+### Berechnung
+
+$$\text{SE}_{\bar{x}} = \frac{2}{\sqrt{50}} = \frac{2}{7.07} = 0.2828$$
+
+**Das bedeutet:** Wir *schätzen*, dass die Mittelwerte zukünftiger Stichproben sich typischerweise um 0.2828 unterscheiden.
+
+---
+
+
+## Folgen
+
+### Größere Stichproben = Kleinerer SE
+
+Wenn wir ein größeres n statt 50 hätten, z.B. n = 200:
+
+$$\text{SE}_{neu} = \frac{2}{\sqrt{200}} = 0.1414$$
+
+Die SE würde halbiert! Die grünen Linien würden näher zusammenrücken.
+
+**Folge:** Mit größeren Stichproben sind unsere Schätzungen präziser.
+
+### Mehr Variation in den Daten = Größerer SE
+
+Wenn σ größer statt 2 wäre, z.B. σ = 4:
+
+$$\text{SE}_{neu} = \frac{4}{\sqrt{50}} = 0.5657$$
+
+Der SE würde sich verdoppeln! Die grünen Linien würden weiter auseinander liegen.
+
+**Folge:** Heterogenere Populationen sind schwerer zu schätzen.
+
+---
+
+## Konfidenzintervalle = Bereiche von möglichen Schwankungen
+
+```{r mittelwerte-sim-konf}
+
+library(ggplot2)
+library(dplyr)
+
+set.seed(123)
+
+# Anzahl der Stichproben und Stichprobengröße
+n_samples <- 10000
+n <- 50
+
+mu <- 5
+sigma <- 2
+
+# Simulation von Mittelwerten
+sample_means <- sapply(1:n_samples, function(x) {
+  mean(rnorm(n, mean = mu, sd = sigma))
+})
+
+# Berechne theoretischen Standard Error
+se_theoretical <- sigma / sqrt(n)
+se_empirical <- sd(sample_means)
+
+# Erstelle Daten für Plot
+sim_data <- data.frame(sample_means = sample_means)
+
+# Plot mit ggplot2
+ggplot(sim_data, aes(x = sample_means)) +
+  # SE-Bereich: μ ± 2×SE (95% Bereich) - hinter allem
+  annotate("rect",
+           xmin = mu - 2 * se_theoretical,
+           xmax = mu + 2 * se_theoretical,
+           ymin = 0,
+           ymax = Inf,
+           alpha = 0.08,
+           fill = "orange") +
+  
+  # Schattierter Bereich: μ ± 1×SE (68% Bereich)
+  annotate("rect",
+           xmin = mu - se_theoretical,
+           xmax = mu + se_theoretical,
+           ymin = 0,
+           ymax = Inf,
+           alpha = 0.15,
+           fill = "green") +
+  
+  # Histogram
+  geom_histogram(aes(y = after_stat(density)), 
+                 bins = 30, 
+                 fill = "#75AADB", 
+                 alpha = 0.7, 
+                 color = "black",
+                 linewidth = 0.3) +
+  
+  # Theoretische Normalverteilung
+  stat_function(
+    fun = dnorm,
+    args = list(mean = mu, sd = se_theoretical),
+    color = "darkblue",
+    linewidth = 1.2,
+    linetype = "solid"
+  ) +
+  
+  # Mittellinie (wahrer Mittelwert)
+  geom_vline(xintercept = mu, 
+             color = "#FF744E", 
+             linewidth = 1.2, 
+             linetype = "dashed") +
+  
+  # SE-Grenzen
+  geom_vline(xintercept = mu - se_theoretical, 
+             color = "darkgreen", 
+             linewidth = 0.9, 
+             linetype = "dotted") +
+  geom_vline(xintercept = mu + se_theoretical, 
+             color = "darkgreen", 
+             linewidth = 0.9, 
+             linetype = "dotted") +
+  
+  # Annotationen für SE-Werte
+  annotate("text",
+           x = mu,
+           y = dnorm(mu, mu, se_theoretical) * 0.95,
+           label = paste0("μ = ", mu),
+           size = 4,
+           fontface = "bold",
+           color = "#FF744E",
+           hjust = -0.3) +
+  
+  annotate("text",
+           x = mu + se_theoretical,
+           y = dnorm(mu + se_theoretical, mu, se_theoretical) * 0.90,
+           label = paste0("+1 SE\n(", round(mu + se_theoretical, 3), ")"),
+           size = 3.5,
+           color = "darkgreen",
+           hjust = -0.2,
+           fontface = "bold") +
+  
+  annotate("text",
+           x = mu - se_theoretical,
+           y = dnorm(mu - se_theoretical, mu, se_theoretical) * 0.90,
+           label = paste0("-1 SE\n(", round(mu - se_theoretical, 3), ")"),
+           size = 3.5,
+           color = "darkgreen",
+           hjust = 1.2,
+           fontface = "bold") +
+  
+  # Info-Text oben links
+  annotate("text",
+           x = -Inf,
+           y = Inf,
+           label = paste0(
+             "SE = σ/√n = ", sigma, "/√", n, " = ", round(se_theoretical, 4), "\n",
+             "Theoretisch: ", round(se_theoretical, 4),
+             " | Empirisch: ", round(se_empirical, 4),
+             "\n\n",
+             "Grüner Bereich: μ ± 1×SE (68%)\n",
+             "Orange Bereich: μ ± 2×SE (95%)"
+           ),
+           size = 3.5,
+           hjust = -0.05,
+           vjust = 1.05,
+           fontface = "italic",
+           color = "gray30") +
+  
+  labs(
+    title = "Sampling-Verteilung von Mittelwerten",
+    subtitle = "Simulation zeigt: Wie variieren Stichprobenmittelwerte um μ? Die Variation wird durch SE gemessen.",
+    x = "Geschätzter Mittelwert",
+    y = "Dichte"
+  ) +
+  
+  theme_minimal(base_size = 24) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15, margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 10, color = "gray50", margin = margin(b = 12)),
+    panel.grid.major = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(size = 11),
+    axis.title = element_text(size = 12, face = "bold")
+  )
+```
+
+
+## Was sind Konfidenzintervalle (deep dive)? {.midi}
+
+- Konfidenzintervalle sind Perzentilgrenzen für eine geschätzte Verteilung möglicher Parameter, die *nur* durch zufällige Unterschiede bei der Stichprobenziehung variiert. 
+
+- Wir behaupten, dass unser Parameter der Mittelwert[^5] und der geschätzte Standardfehler die Standardabweichung der Parameterverteilung ist. 
+
+- Da die Variation der Parameter zufällig ist[^6], ergibt die Parameterverteilung eine Zufallsverteilung, über die wir komplettes Wissen haben.
+
+- Wir können daher angeben, wie viele Standardabweichungen wir vom Mittelwert aus nach oben/unten gehen müssen, um 99%, 98%, 97%, 96%, 95%, usw. der nicht extremen[^7] Zufallsvariation zu erfassen. 
+
+[^5]: Genauer: Der Erwartungswert der Verteilung.
+[^6]: In der Praxis: als zufällig behauptet wird.
+[^7]: Extrem ist im Zufallssprech alles, was an den Rändern liegt. 
+
+## Generelle Berechnung 
+
+Die Berechnung von Konfidenzintervallen ist grundsätzlich immer gleich - egal, was für ein Parameter wir nutzen: 
+
+$$\text{Konfidenzintervall} = \text{Parameter} \pm \text{Skalierungsfaktor} \cdot \text{Standardfehler}$$
+
+- Der Skalierungsfaktor (manchmal auch: kritischer Wert) bezeichnet, wie wieviel wir den Standardfehler erhöhen, um nicht extreme Bereiche der Zufallsvariation zu erfassen. 
+
+## Bereiche der Normalverteilung
+
+```{r mittelwerte-sim2}
+
+library(ggplot2)
+library(dplyr)
+
+set.seed(123)
+
+# Anzahl der Stichproben und Stichprobengröße
+n_samples <- 10000
+n <- 50
+
+mu <- 5
+sigma <- 2
+
+# Simulation von Mittelwerten
+sample_means <- sapply(1:n_samples, function(x) {
+  mean(rnorm(n, mean = mu, sd = sigma))
+})
+
+# Berechne theoretischen Standard Error
+se_theoretical <- sigma / sqrt(n)
+se_empirical <- sd(sample_means)
+
+# Erstelle Daten für Plot
+sim_data <- data.frame(sample_means = sample_means)
+
+# Plot mit ggplot2
+ggplot(sim_data, aes(x = sample_means)) +
+  # SE-Bereich: μ ± 2×SE (95% Bereich) - hinter allem
+  annotate("rect",
+           xmin = mu - 2 * se_theoretical,
+           xmax = mu + 2 * se_theoretical,
+           ymin = 0,
+           ymax = Inf,
+           alpha = 0.08,
+           fill = "orange") +
+  
+  # Schattierter Bereich: μ ± 1×SE (68% Bereich)
+  annotate("rect",
+           xmin = mu - se_theoretical,
+           xmax = mu + se_theoretical,
+           ymin = 0,
+           ymax = Inf,
+           alpha = 0.15,
+           fill = "green") +
+  
+  # Histogram
+  geom_histogram(aes(y = after_stat(density)), 
+                 bins = 30, 
+                 fill = "#75AADB", 
+                 alpha = 0.7, 
+                 color = "black",
+                 linewidth = 0.3) +
+  
+  # Theoretische Normalverteilung
+  stat_function(
+    fun = dnorm,
+    args = list(mean = mu, sd = se_theoretical),
+    color = "darkblue",
+    linewidth = 1.2,
+    linetype = "solid"
+  ) +
+  
+  # Mittellinie (wahrer Mittelwert)
+  geom_vline(xintercept = mu, 
+             color = "#FF744E", 
+             linewidth = 1.2, 
+             linetype = "dashed") +
+  
+  # SE-Grenzen
+  geom_vline(xintercept = mu - se_theoretical, 
+             color = "darkgreen", 
+             linewidth = 0.9, 
+             linetype = "dotted") +
+  geom_vline(xintercept = mu + se_theoretical, 
+             color = "darkgreen", 
+             linewidth = 0.9, 
+             linetype = "dotted") +
+  
+  # Info-Text oben links
+  annotate("text",
+           x = -Inf,
+           y = Inf,
+           label = paste0(
+             "Grüne: μ ± 1×SE (68%)\n",
+             "Orange: μ ± 1.96×SE (95%)"
+           ),
+           size = 5,
+           hjust = -0.05,
+           vjust = 1.05,
+           fontface = "italic",
+           color = "black") +
+  
+  labs(
+    x = "Geschätzter Mittelwert",
+    y = "Dichte"
+  ) +
+  
+  theme_minimal(base_size = 18) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15, margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 10, color = "gray50", margin = margin(b = 12)),
+    panel.grid.major = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(size = 11),
+    axis.title = element_text(size = 12, face = "bold")
+  )
+```
+
+## Spezialitätenproblem 1: Kleine Stichproben führen mit höherer Wahrscheinlichkeit zu extremen Abweichungen {.small}
+
+```{r t-verteilung}
+library(gridExtra)
+# ============================================================================
+# PANEL 1: t-Verteilungen (10 df vs 40 df)
+# ============================================================================
+
+# Berechne kritische Werte
+t_90_10 <- qt(0.95, df = 10)
+t_95_10 <- qt(0.975, df = 10)
+t_90_40 <- qt(0.95, df = 40)
+t_95_40 <- qt(0.975, df = 40)
+
+# Plot t-Verteilung 10 df
+p_t_10 <- ggplot(data.frame(x = c(-4, 4)), aes(x = x)) +
+  annotate("rect", xmin = -t_90_10, xmax = t_90_10, ymin = 0, ymax = Inf,
+           alpha = 0.15, fill = "green") +
+  annotate("rect", xmin = -t_95_10, xmax = t_95_10, ymin = 0, ymax = Inf,
+           alpha = 0.08, fill = "orange") +
+  stat_function(fun = dt, args = list(df = 10), color = "#FF744E", linewidth = 1.2) +
+  geom_vline(xintercept = c(-t_90_10, t_90_10), color = "darkgreen", linewidth = 0.8, linetype = "dotted") +
+  geom_vline(xintercept = c(-t_95_10, t_95_10), color = "darkorange", linewidth = 0.8, linetype = "dashed") +
+  # Annotationen versetzt übereinander
+  annotate("text", x = 0, y = dt(0, 10) * 0.90, 
+           label = paste0("90%: ±", round(t_90_10, 2)),
+           size = 3.5, hjust = 0.5, vjust = 0,
+           color = "darkgreen", fontface = "bold") +
+  annotate("text", x = 0, y = dt(0, 10) * 0.75, 
+           label = paste0("95%: ±", round(t_95_10, 2)),
+           size = 3.5, hjust = 0.5, vjust = 0,
+           color = "darkorange", fontface = "bold") +
+  labs(x = "t-Wert", y = "Dichte", title = "t-Verteilung (df = 10)") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold", size = 12),
+        panel.grid.major = element_line(color = "lightgray", linewidth = 0.2),
+        axis.text = element_text(size = 10))
+
+# Plot t-Verteilung 40 df
+p_t_40 <- ggplot(data.frame(x = c(-4, 4)), aes(x = x)) +
+  annotate("rect", xmin = -t_90_40, xmax = t_90_40, ymin = 0, ymax = Inf,
+           alpha = 0.15, fill = "green") +
+  annotate("rect", xmin = -t_95_40, xmax = t_95_40, ymin = 0, ymax = Inf,
+           alpha = 0.08, fill = "orange") +
+  stat_function(fun = dt, args = list(df = 40), color = "#75AADB", linewidth = 1.2) +
+  geom_vline(xintercept = c(-t_90_40, t_90_40), color = "darkgreen", linewidth = 0.8, linetype = "dotted") +
+  geom_vline(xintercept = c(-t_95_40, t_95_40), color = "darkorange", linewidth = 0.8, linetype = "dashed") +
+  # Annotationen versetzt übereinander
+  annotate("text", x = 0, y = dt(0, 40) * 0.90, 
+           label = paste0("90%: ±", round(t_90_40, 2)),
+           size = 3.5, hjust = 0.5, vjust = 0,
+           color = "darkgreen", fontface = "bold") +
+  annotate("text", x = 0, y = dt(0, 40) * 0.75, 
+           label = paste0("95%: ±", round(t_95_40, 2)),
+           size = 3.5, hjust = 0.5, vjust = 0,
+           color = "darkorange", fontface = "bold") +
+  labs(x = "t-Wert", y = "Dichte", title = "t-Verteilung (df = 40)") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold", size = 12),
+        panel.grid.major = element_line(color = "lightgray", linewidth = 0.2),
+        axis.text = element_text(size = 10))
+
+# Kombiniere t-Verteilungs-Plots
+panel_t <- grid.arrange(p_t_10, p_t_40, ncol = 2, 
+                        top = "t-Verteilungen: 90% und 95% Konfidenzintervalle")
+
+```
+
+## Spezialitätenproblem 2: Verhältnisse sind (meist) nicht symmetrisch verteilt
+
+```{r f-verteilung}
+
+# ============================================================================
+# PANEL 2: F-Verteilungen (3/10 df vs 45/100 df)
+# ============================================================================
+
+# Berechne kritische Werte für F-Verteilung
+f_90_3_10 <- qf(0.90, df1 = 3, df2 = 10)
+f_95_3_10 <- qf(0.95, df1 = 3, df2 = 10)
+f_90_45_100 <- qf(0.90, df1 = 45, df2 = 100)
+f_95_45_100 <- qf(0.95, df1 = 45, df2 = 100)
+
+# Berechne maximale Dichte für Annotationen
+max_y_3_10 <- df(f_90_3_10, 3, 10)
+max_y_45_100 <- df(f_90_45_100, 45, 100)
+
+# Erstelle F-Verteilungs-Plot 3/10 df
+p_f_3_10 <- ggplot(data.frame(x = c(0, 10)), aes(x = x)) +
+  annotate("rect", xmin = 0, xmax = f_90_3_10, ymin = 0, ymax = Inf,
+           alpha = 0.15, fill = "green") +
+  annotate("rect", xmin = 0, xmax = f_95_3_10, ymin = 0, ymax = Inf,
+           alpha = 0.08, fill = "orange") +
+  stat_function(fun = df, args = list(df1 = 3, df2 = 10),
+                color = "#FF744E", linewidth = 1.2) +
+  geom_vline(xintercept = f_90_3_10, color = "darkgreen", linewidth = 0.8, linetype = "dotted") +
+  geom_vline(xintercept = f_95_3_10, color = "darkorange", linewidth = 0.8, linetype = "dashed") +
+  # Annotationen versetzt untereinander
+  annotate("text", x = f_90_3_10 + 0.5, y = max_y_3_10 * 0.90,
+           label = paste0("90%: ", round(f_90_3_10, 2)),
+           size = 3.5, hjust = 0, vjust = 0.5,
+           color = "darkgreen", fontface = "bold") +
+  annotate("text", x = f_95_3_10 + 0.5, y = max_y_3_10 * 0.70,
+           label = paste0("95%: ", round(f_95_3_10, 2)),
+           size = 3.5, hjust = 0, vjust = 0.5,
+           color = "darkorange", fontface = "bold") +
+  labs(x = "F-Wert", y = "Dichte", title = "F-Verteilung (df = 3/10)") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold", size = 12),
+        panel.grid.major = element_line(color = "lightgray", linewidth = 0.2),
+        axis.text = element_text(size = 10))
+
+# Erstelle F-Verteilungs-Plot 45/100 df
+p_f_45_100 <- ggplot(data.frame(x = c(0, 3)), aes(x = x)) +
+  annotate("rect", xmin = 0, xmax = f_90_45_100, ymin = 0, ymax = Inf,
+           alpha = 0.15, fill = "green") +
+  annotate("rect", xmin = 0, xmax = f_95_45_100, ymin = 0, ymax = Inf,
+           alpha = 0.08, fill = "orange") +
+  stat_function(fun = df, args = list(df1 = 45, df2 = 100),
+                color = "#75AADB", linewidth = 1.2) +
+  geom_vline(xintercept = f_90_45_100, color = "darkgreen", linewidth = 0.8, linetype = "dotted") +
+  geom_vline(xintercept = f_95_45_100, color = "darkorange", linewidth = 0.8, linetype = "dashed") +
+  # Annotationen versetzt untereinander
+  annotate("text", x = f_90_45_100 + 0.15, y = max_y_45_100 * 0.90,
+           label = paste0("90%: ", round(f_90_45_100, 2)),
+           size = 3.5, hjust = 0, vjust = 0.5,
+           color = "darkgreen", fontface = "bold") +
+  annotate("text", x = f_95_45_100 + 0.15, y = max_y_45_100 * 0.70,
+           label = paste0("95%: ", round(f_95_45_100, 2)),
+           size = 3.5, hjust = 0, vjust = 0.5,
+           color = "darkorange", fontface = "bold") +
+  labs(x = "F-Wert", y = "Dichte", title = "F-Verteilung (df = 45/100)") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold", size = 12),
+        panel.grid.major = element_line(color = "lightgray", linewidth = 0.2),
+        axis.text = element_text(size = 10))
+
+# Kombiniere F-Verteilungs-Plots
+panel_f <- grid.arrange(p_f_3_10, p_f_45_100, ncol = 2, 
+                        top = "F-Verteilungen: 90% und 95% Konfidenzintervalle")
+
+```
+
+## Woher kennen wir Skalierungsparameter für jede Verteilung? {.small}
+
+![](images/kloster-verteilungen.png)
+
+
+## Für jedes Problemchen ein Appchen 
+
+<iframe width="100%" height="100%" src="https://www.shiny-appserver.org/inference">
+</iframe>
+
+## "Es ist kompliziert" macht unglücklich
+```{r singletyp-zufriedenheit}
+library(ggplot2)
+library(dplyr)
+
+# Daten vorbereiten und NA filtern
+plot_data <- freda_clean %>%
+  filter(!is.na(sin11)) %>%
+  group_by(sin11) %>%
+  summarise(
+    mean_sat2 = mean(sat2, na.rm = TRUE),
+    n = n(),
+    se = sd(sat2, na.rm = TRUE) / sqrt(n()),
+    ci_lower = mean_sat2 - 1.96 * se,
+    ci_upper = mean_sat2 + 1.96 * se,
+    .groups = "drop"
+  ) %>%
+  mutate(
+    sin11_label = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ as.character(sin11)
+    ),
+    sin11_label = factor(sin11_label, levels = rev(c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    )))
+  )
+
+# Plot mit angepassten Einstellungen
+ggplot(plot_data, aes(x = mean_sat2, y = sin11_label)) +
+  geom_errorbarh(
+    aes(xmin = ci_lower, xmax = ci_upper),
+    height = 0.3,
+    linewidth = 1,
+    color = "darkgray"
+  ) +
+  geom_point(size = 4, color = "#FF744E") +  # Mittelwertpunkte in Orange
+  # Labels für untere KI-Grenze (links außen)
+  geom_text(
+    aes(x = ci_lower, label = round(ci_lower, 1)),
+    hjust = 1.1,
+    vjust = -0.6,
+    size = 6,
+    color = "darkgray",
+    fontface = "italic"
+  ) +
+  # Labels für obere KI-Grenze (rechts außen)
+  geom_text(
+    aes(x = ci_upper, label = round(ci_upper, 1)),
+    hjust = -0.1,
+    vjust = -0.6,
+    size = 6,
+    color = "darkgray",
+    fontface = "italic"
+  ) +
+  # Labels für Mittelwerte (über den Punkten)
+  geom_text(
+    aes(label = round(mean_sat2, 1)),
+    hjust = 0.5,
+    vjust = -1.2,
+    size = 6,
+    color = "#FF744E",
+    fontface = "bold"
+  ) +
+  labs(
+    x = "Durchschnittliche Zufriedenheit mit dem Singlestatus",
+    y = "Beziehungskategorie",
+    title = "Konfidenzintervalle der Zufriedenheit nach Beziehungskategorie",
+    subtitle = "Punkte = Mittelwert, Fehlerbalken = 95%-Konfidenzintervalle"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    axis.text.y = element_text(size = 11, color = "black"),
+    axis.text.x = element_text(size = 11),
+    plot.title = element_text(size = 15, face = "bold", margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 10, color = "gray50", margin = margin(b = 10)),
+    panel.grid.major.x = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line.x = element_line(color = "black", linewidth = 0.5)
+  ) +
+  scale_x_continuous(
+    limits = c(
+      min(plot_data$ci_lower) - 0.8, 
+      max(plot_data$ci_upper) + 0.8
+    )
+  )
+```
+
+
+## Standardfehler für Wahrscheinlichkeiten
+
+::: {.columns}
+
+::: {.column}
+$$
+SE_{p} = \sqrt{\frac{p(1-p)}{n}}
+$$
+wobei:
+p = Wahrscheinlichkeit in der Grundgesamtheit
+n = Stichprobengröße
+:::
+
+::: {.column}
+```{r wahrscheinlichkeiten}
+set.seed(123)
+p <- 0.3
+
+# Simulation von Wahrscheinlichkeiten
+sample_probs <- sapply(1:n_samples, function(x) {
+  mean(rbinom(n, size = 1, prob = p))
+})
+
+# Plot
+hist(sample_probs, breaks = 30, prob = TRUE,
+     main = "Verteilung der Wahrscheinlichkeits-Schätzungen (p = 0.3, n = 50)",
+     xlab = "Geschätzte Wahrscheinlichkeit") 
+abline(v = p, col = "red", lwd = 2, lty = 2)
+
+```
+
+:::
+:::
+
+## "Es ist kompliziert" ist selten
+
+```{r p-singletyp}
+library(ggplot2)
+library(dplyr)
+
+# Relative Häufigkeiten und Konfidenzintervalle berechnen
+häufigkeiten_all <- freda_clean %>%
+  filter(!is.na(sin11)) %>%
+  group_by(sin11) %>%
+  summarise(
+    count = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    total = sum(count),
+    prop = count / total,  # Anteil dieser Kategorie an der Gesamtzahl
+    se = sqrt(prop * (1 - prop) / total),  # SE für Proportion
+    ci_lower = pmax(0, prop - 1.96 * se),  # Verhindert negative Grenzen
+    ci_upper = pmin(1, prop + 1.96 * se),  # Verhindert Grenzen > 100%
+    sin11_label = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ as.character(sin11)
+    )
+  )
+
+# Anteil von "Offen für Beziehung" speichern für Subtitle
+anteil_offen <- häufigkeiten_all %>%
+  filter(sin11 == 2) %>%
+  pull(prop) %>%
+  (function(x) round(x * 100, 1))
+
+# Für den Plot nur Kategorien außer "Offen für Beziehung"
+häufigkeiten <- häufigkeiten_all %>%
+  filter(sin11 != 2) %>%
+  mutate(
+    sin11_label = factor(sin11_label, levels = c(
+      "Kein Interesse",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    ))
+  )
+
+# Balkendiagramm mit Konfidenzintervallen
+ggplot(häufigkeiten, aes(x = sin11_label, y = prop, fill = sin11_label)) +
+  geom_bar(stat = "identity", width = 0.6, color = "black", alpha = 0.7) +
+  geom_errorbar(
+    aes(ymin = ci_lower, ymax = ci_upper),
+    width = 0.25,
+    linewidth = 1,
+    color = "black"
+  ) +
+  geom_text(
+    aes(label = paste0(round(prop * 100, 1), "%")),
+    vjust = -1.8,
+    size = 4,
+    color = "black",
+    fontface = "bold"
+  ) +
+  scale_y_continuous(
+    labels = scales::percent,
+    limits = c(0, max(häufigkeiten$ci_upper) * 1.1)
+  ) +
+  scale_fill_manual(values = c(
+    "Kein Interesse" = "#FF744E",
+    "Anbahnende Beziehung" = "#A4D65E",
+    "On-off-Beziehung" = "#FFD966",
+    "Freundschaft Plus" = "#B4A7D6",
+    "Sonstiges" = "#70AD47"
+  )) +
+  labs(
+    x = "Beziehungskategorie",
+    y = "Relative Häufigkeit (%)",
+    title = "Verteilung der Beziehungskategorien mit 95%-Konfidenzintervallen",
+    subtitle = paste0("'Offen für Beziehung' (", anteil_offen, "%) ausgeschlossen | In Berechnung berücksichtigt")
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 11),
+    axis.text.y = element_text(size = 11),
+    plot.title = element_text(size = 15, face = "bold", margin = margin(b = 3)),
+    plot.subtitle = element_text(size = 9, color = "gray50", margin = margin(b = 12), lineheight = 1.2),
+    legend.position = "none",
+    panel.grid.major.y = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.major.x = element_blank(),
+    plot.margin = margin(t = 10, r = 10, b = 10, l = 10)
+  )
+```
+
+
+## Standardfehler für Mittelwertdifferenzen
+
+$$\text{SE}_{\bar{x}_A - \bar{x}_B } = \sqrt{\frac{\hat{\sigma}_{\text{A}}^2}{n_{\text{A}}} + \frac{\hat{\sigma}_{\text{B}}^2}{n_{\text{B}}}}$$
+Je kleiner die Stichproben und/oder je größer die Varianz des Merkmals: 
+
+ - desto "unsicherer" ist unsere Inferenz über die Differenzen in der Population; 
+ - desto wahrscheinlicher sind extreme, aber dennoch zufällige Abeichungen;
+ - desto wahrscheinlicher weichen die Ergebnisse vom Populationsparameter ab.
+
+
+## Sind Frauen auch bei "es ist kompliziert" zufriedener als Männer?
+
+```{r table-ttest, echo=FALSE}
+# Berechne Statistiken für jeden sin11-Wert
+ttest_results <- freda_clean %>%
+  filter(!is.na(sat2), !is.na(sex), !is.na(sin11)) %>%
+  group_by(sin11) %>%
+  summarise(
+    # Frauen
+    mean_f = mean(sat2[sex == "Weiblich"], na.rm = TRUE),
+    sd_f = sd(sat2[sex == "Weiblich"], na.rm = TRUE),
+    n_f = sum(sex == "Weiblich"),
+    
+    # Männer
+    mean_m = mean(sat2[sex == "Männlich"], na.rm = TRUE),
+    sd_m = sd(sat2[sex == "Männlich"], na.rm = TRUE),
+    n_m = sum(sex == "Männlich"),
+    
+    .groups = "drop"
+  ) %>%
+  mutate(
+    # Differenz der Mittelwerte
+    mean_diff = mean_f - mean_m,
+    
+    # Standardfehler der Differenz
+    se_diff = sqrt((sd_f^2 / n_f) + (sd_m^2 / n_m)),
+    
+    # 95% CI
+    ci_lower = mean_diff - 1.96 * se_diff,
+    ci_upper = mean_diff + 1.96 * se_diff,
+    
+    sin11_label = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ as.character(sin11)
+    )
+  ) %>%
+  select(sin11_label, mean_f, mean_m, mean_diff, sd_f, sd_m, se_diff, ci_lower, ci_upper)
+
+# Erstelle Tabelle für kable()
+tabelle_ttest <- ttest_results %>%
+  mutate(
+    mean_f = round(mean_f, 2),
+    mean_m = round(mean_m, 2),
+    mean_diff = round(mean_diff, 2),
+    sd_f = round(sd_f, 2),
+    sd_m = round(sd_m, 2),
+    se_diff = round(se_diff, 3),
+    ci = paste0("[", round(ci_lower, 2), ", ", round(ci_upper, 2), "]")
+  ) %>%
+  select(
+    "Beziehungskategorie" = sin11_label,
+    "MW Frauen" = mean_f,
+    "MW Männer" = mean_m,
+    "Differenz" = mean_diff,
+    "SD Frauen" = sd_f,
+    "SD Männer" = sd_m,
+    "SE Diff." = se_diff,
+    "95%-KI" = ci
+  )
+
+kable(tabelle_ttest, 
+      caption = "Zufriedenheit mit Singlestatus nach Geschlecht und Beziehungskategorie",
+      align = "lccccccc") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), 
+                full_width = TRUE,
+                font_size = 26) %>%
+  column_spec(1, bold = TRUE, width = "25%")
+```
+
+
+## Detailliertes Beispiel: "Kein Interesse"
+
+Wir verdeutlichen die Konfidenzintervall-Berechnung Schritt-für-Schritt für die Kategorie "Kein Interesse".
+
+- Frauen: n = 1988; Mittelwert = 8.02; SD = 2.00
+- Männer: n = 1202; Mittelwert = 7.62; SD = 2.10
+
+$$\text{Differenz} = \bar{x}_{\text{Frauen}} - \bar{x}_{\text{Männer}} = 8.02 - 7.62 = 0.395$$
+
+**Interpretation:** Frauen sind im Durchschnitt um 0.40 Punkte (auf 0-10 Skala) zufriedener mit dem Singlestatus.
+
+---
+
+## Standardfehler der Differenz
+
+Der Standardfehler kombiniert die Varianzen der Zufriedenheit beider Gruppen und berücksichtigt ihre verschiedenen Stichprobengrößen:
+
+$$
+\begin{align}
+\text{SE}_{\bar{x}_{\text{Frauen}} - \bar{x}_{\text{Männer}}} &= \sqrt{\frac{\hat{\sigma}_{\text{Frauen}}^2}{n_{\text{Frauen}}} + \frac{\hat{\sigma}_{\text{Männer}}^2}{n_{\text{Männer}}}} \\
+ &= \sqrt{\frac{4.00}{1988} + \frac{4.41}{1202}} \\
+ &= \sqrt{0.00201 + 0.00367}\\
+ &= 0.0753
+ \end{align}
+$$
+Wir schätzen, dass Mittelwertdifferenzen in der Zufriedenheit zwischen Frauen und Männern, die als Single keine Beziehung suchen typischerweise um 0.0753 Einheiten schwanken. 
+
+## Skalierungsparameter {.midi .scrollable}
+
+| **df**  | **95%-Perzentil** (einseitig) | **97,5%-Perzentil** (zweiseitig) |
+|---------|-------------------------------|----------------------------------|
+| **1**   | 6,3138                        | 12,706                           |
+| **2**   | 2,9200                        | 4,3027                           |
+| **3**   | 2,3534                        | 3,1824                           |
+| **4**   | 2,1318                        | 2,7764                           |
+| **---** | **---**                       | **---**                          |
+| **9**   | 1,8331                        | 2,2622                           |
+| **10**  | 1,8125                        | 2,2281                           |
+| **---** | **---**                       | **---**                          |
+| **1000**| 1,6464                        | 1,9623                           |
+| **2000**| 1,6455                        | 1,9616                           |
+| **3000**| 1,6453                        | 1,9614                           |
+
+[^8]: Df = Degress of freedom. Das ist immer Stichprobengröße - Anzahl genutzter Parameter. 
+
+##  Konfidenzintervall berechnen
+
+**Untere Grenze:**
+$$\text{Differenz} - z \times \text{SE}_{\text{Diff}} = 0.395 - 1.96 \times 0.0753 = 0.395 - 0.147 = 0.247$$
+
+**Obere Grenze:**
+$$\text{Differenz} + z \times \text{SE}_{\text{Diff}} = 0.395 + 1.96 \times 0.0753 = 0.395 + 0.147 = 0.543$$
+
+**Interpretation**: Wir erwarten bei zukünftigen Stichproben, dass 95% aller nicht-extremen Stichproben eine Mittelwertdifferenz der Single-Zufriedenheit für Singles, die kein Interesse an einer Beziehung haben, zwischen 0.25 und 0.54 schwankt. 
+
+
+## Visualisierung aller t-Tests
+
+```{r plot-ttest, echo=FALSE, fig.width=17, fig.height=8}
+ttest_results_plot <- ttest_results %>%
+  mutate(
+    sin11_label = factor(sin11_label, levels = c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    )),
+    signifikant = ifelse((ci_lower > 0 | ci_upper < 0), "ja", "nein")
+  )
+
+ggplot(ttest_results_plot, aes(x = sin11_label, y = mean_diff, color = signifikant)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray60", linewidth = 1) +
+  geom_errorbar(
+    aes(ymin = ci_lower, ymax = ci_upper),
+    width = 0.2,
+    linewidth = 1
+  ) +
+  geom_point(size = 5) +
+  geom_text(
+    aes(label = round(mean_diff, 2)),
+    vjust = -1.5,
+    size = 4,
+    fontface = "bold",
+    color = "black"
+  ) +
+  scale_color_manual(
+    values = c("ja" = "#FF744E", "nein" = "#75AADB"),
+    labels = c("ja" = "Signifikant", "nein" = "Nicht signifikant")
+  ) +
+  labs(
+    x = "Beziehungskategorie",
+    y = "Mittelwertdifferenz (Frauen - Männer)",
+    title = "Geschlechtsunterschiede in der Zufriedenheit mit Singlestatus",
+    subtitle = "95%-Konfidenzintervalle | Positive Werte: Frauen zufriedener | Negative Werte: Männer zufriedener",
+    color = ""
+  ) +
+  theme_minimal(base_size = 16) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.text.y = element_text(size = 14),
+    plot.title = element_text(size = 24, face = "bold", margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 14, color = "gray50", margin = margin(b = 10)),
+    legend.position = "top",
+    panel.grid.major.y = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+
+## Standardfehler für Odds Ratios
+
+$$
+SE_{\text{OR}} = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}
+$$
+
+wobei:
+a, b, c, d = Zellhäufigkeiten in der empirischen Zusammenhangstabelle
+
+Wichtig: Odds Ratios sind ein Verhältnis. 
+
+- Verhältnisse unter 1:1 konvergieren gegen 0, werden aber nie null. 
+- Verhältnisse über 1:1 konvergieren gegen $\inf$, werden aber nie $\inf$. 
+- Daher fallen Zufallsschwankungen von Odds Ratios in einen *asymmetrischen Bereich*. 
+- Das lässt sich mathematisch durch eine Log-Transformation leicht in den Griff bekommen (siehe Anhang). 
+
+## Es ist (eher bei Frauen) kompliziert 
+
+```{r odds-geschlecht-singletyp, fig.width=22, fig.height=10}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+
+# ============================================================================
+# PLOT 2: ODDS RATIOS VON FRAUEN ZU MÄNNERN
+# ============================================================================
+
+# Daten vorbereiten: 2x2 Tabellen für jede sin11-Kategorie
+or_data <- freda_clean %>%
+  filter(!is.na(sin11), !is.na(sex)) %>%
+  crossing(sin11_cat = unique(freda_clean$sin11[!is.na(freda_clean$sin11)])) %>%
+  mutate(
+    in_category = (sin11 == sin11_cat)
+  ) %>%
+  group_by(sin11_cat, sex, in_category) %>%
+  summarise(count = n(), .groups = "drop") %>%
+  pivot_wider(
+    names_from = in_category,
+    values_from = count,
+    values_fill = 0
+  ) %>%
+  rename(not_in_cat = `FALSE`, in_cat = `TRUE`) %>%
+  pivot_wider(
+    names_from = sex,
+    values_from = c(in_cat, not_in_cat),
+    values_fill = 0
+  ) %>%
+  mutate(
+    # Odds für Frauen
+    odds_female = in_cat_Weiblich / not_in_cat_Weiblich,
+    # Odds für Männer
+    odds_male = in_cat_Männlich / not_in_cat_Männlich,
+    # Odds Ratio
+    or = odds_female / odds_male,
+    # Log Odds Ratio
+    log_or = log(or),
+    # SE des log OR (Formel: sqrt(1/a + 1/b + 1/c + 1/d))
+    se_log_or = sqrt(1/in_cat_Weiblich + 1/not_in_cat_Weiblich + 
+                      1/in_cat_Männlich + 1/not_in_cat_Männlich),
+    # 90% KI (z = 1.645 für 90%)
+    z_90 = 1.645,
+    log_ci_lower = log_or - z_90 * se_log_or,
+    log_ci_upper = log_or + z_90 * se_log_or,
+    ci_lower = exp(log_ci_lower),
+    ci_upper = exp(log_ci_upper),
+    # Labels
+    sin11_label = case_when(
+      sin11_cat == 1 ~ "Kein Interesse",
+      sin11_cat == 2 ~ "Offen für Beziehung",
+      sin11_cat == 3 ~ "Anbahnende Beziehung",
+      sin11_cat == 4 ~ "On-off-Beziehung",
+      sin11_cat == 5 ~ "Freundschaft Plus",
+      sin11_cat == 6 ~ "Sonstiges",
+      TRUE ~ as.character(sin11_cat)
+    ),
+    sin11_label = factor(sin11_label, levels = c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    ))
+  ) %>%
+  select(sin11_cat, sin11_label, or, ci_lower, ci_upper)
+
+# Plot der Odds Ratios
+ggplot(or_data, aes(x = sin11_label, y = or)) +
+  # Referenzlinie bei OR = 1 (kein Unterschied)
+  geom_hline(yintercept = 1, linetype = "dashed", color = "gray60", linewidth = 1) +
+  # Fehlerbalken für KI
+  geom_errorbar(
+    aes(ymin = ci_lower, ymax = ci_upper),
+    width = 0.25,
+    linewidth = 1,
+    color = "black"
+  ) +
+  # Punkte für OR
+  geom_point(
+    size = 5,
+    color = "#FF744E"
+  ) +
+  # Labels für OR-Werte (links neben den Punkten)
+  geom_text(
+    aes(label = round(or, 2)),
+    hjust = 1.3,
+    vjust = 0.5,
+    size = 8,
+    color = "black",
+    fontface = "bold"
+  ) +
+  # Labels für untere KI-Grenze (unter den Fehlerbalken)
+  geom_text(
+    aes(y = ci_lower, label = round(ci_lower, 2)),
+    vjust = 1.3,
+    hjust = 0.5,
+    size = 8,
+    color = "black",
+    fontface = "italic"
+  ) +
+  # Labels für obere KI-Grenze (über den Fehlerbalken)
+  geom_text(
+    aes(y = ci_upper, label = round(ci_upper, 2)),
+    vjust = -0.8,
+    hjust = 0.5,
+    size = 8,
+    color = "black",
+    fontface = "italic"
+  ) +
+  scale_y_log10(
+    breaks = c(0.3, 0.5, 1, 2, 3, 4),
+    labels = c("0.3", "0.5", "1.0", "2.0", "3.0", "4.0")
+  ) +
+  labs(
+    x = "Beziehungskategorie",
+    y = "Odds Ratio (Frauen vs. Männer, logarithmische Skala)",
+    title = "Odds Ratios von Frauen zu Männern pro Beziehungskategorie",
+    subtitle = "Fehlerbalken zeigen 90%-Konfidenzintervalle | OR > 1: Frauen häufiger in Kategorie | OR < 1: Männer häufiger"
+  ) +
+  theme_minimal(base_size = 18) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 18),
+    axis.text.y = element_text(size = 18),
+    plot.title = element_text(size = 24, face = "bold", margin = margin(b = 3)),
+    plot.subtitle = element_text(size = 16, color = "gray50", margin = margin(b = 12), lineheight = 1.2),
+    legend.position = "none",
+    panel.grid.major.y = element_line(color = "lightgray", linewidth = 0.3),
+    panel.grid.major.x = element_blank(),
+    plot.margin = margin(t = 10, r = 10, b = 10, l = 10)
+  )
+```
+
+
+## Standardfehler für bivariate Regressionskoeffizienten
+
+$$
+SE_{\beta} = \sqrt{\frac{\sigma^2}{\sum{(x_i - \bar{x})^2}}}
+$$
+
+$\sigma^2$ = Varianz der Residuen;  $x_i$  = Werte ; $\bar{x}$  = Mittelwert der beeinflussenden Eigenschaft
+
+
+```{r setup bivar-reg, include=FALSE}
+# Fit bivariate models
+model_sex <- lm(sat2 ~ sex, data = freda_clean)
+model_east <- lm(sat2 ~ east, data = freda_clean)
+model_age <- lm(sat2 ~ age, data = freda_clean)
+```
+
+## Überblick: Bivariate Regressionen
+
+Wir testen die Beziehung zwischen Zufriedenheit mit Singlestatus mit verschiedenen Eigenschaften über eine Reihe bivariater Regressionen:
+
+```{r summary_table, echo=FALSE}
+results_summary <- tibble(
+  "Prädiktor" = c("Weiblich", "Osten", "Alter"),
+  "Koeffizient (β)" = c(
+    round(coef(model_sex)["sexWeiblich"], 4),
+    round(coef(model_east)["east"], 4),
+    round(coef(model_age)["age"], 4)
+  ),
+  "Standardfehler (SE)" = c(
+    round(tidy(model_sex)[2, "std.error"] %>% pull(), 4),
+    round(tidy(model_east)[2, "std.error"] %>% pull(), 4),
+    round(tidy(model_age)[2, "std.error"] %>% pull(), 4)
+  ),
+  "95%-Konfidenzintervall" = c(
+    paste0("[", round(confint(model_sex)[2,1], 4), ", ", round(confint(model_sex)[2,2], 4), "]"),
+    paste0("[", round(confint(model_east)[2,1], 4), ", ", round(confint(model_east)[2,2], 4), "]"),
+    paste0("[", round(confint(model_age)[2,1], 4), ", ", round(confint(model_age)[2,2], 4), "]")
+  ),
+  "R² (Modellgüte)" = c(
+    round(glance(model_sex)$r.squared, 4),
+    round(glance(model_east)$r.squared, 4),
+    round(glance(model_age)$r.squared, 4)
+  )
+)
+
+knitr::kable(results_summary,
+             caption = "Einflüsse auf die Zufriedenheit mit Singlestatus")
+```
+
+------------------------------------------------------------------------
+
+## Beispielrechnung für $\beta$ Alter
+
+Das einfache lineare Regressionsmodell ist:
+
+$$\text{Zufriedenheit mit Singlestatus}_i = \beta_0 + \beta_1 \times \text{Alter}_i + \varepsilon_i$$
+
+### Schritt 1: Daten zusammenfassen
+
+```{r, echo=FALSE}
+age_data <- freda_clean$age[!is.na(freda_clean$age)]
+cat("n =", length(age_data), "\n")
+cat("Mittelwert Alter =", round(mean(age_data), 2), "\n")
+cat("SD Alter =", round(sd(age_data), 2), "\n")
+```
+
+### Schritt 2: Regressionsgleichung
+
+```{r, echo=FALSE}
+coefs_age <- coef(model_age)
+cat("sat2 =", round(coefs_age[1], 4), "+", round(coefs_age[2], 4), "× age + ε\n\n")
+cat("Interpretation des Slopes:\n")
+cat("• Pro Lebensjahr steigt die Zufriedenheit mit dem Singlestatus um", round(coefs_age[2], 4), "Punkte\n")
+cat("• 10 Jahre älter → Zufriedenheit um", round(coefs_age[2] * 10, 4), "Punkte höher\n")
+```
+
+## Schritt 3: Standardfehler des Koeffizients
+
+Der Standardfehler misst die Unsicherheit der Schätzung:
+
+$$\text{SE}(\beta_1) = \sqrt{\frac{\sigma^2}{\sum(x_i - \bar{x})^2}}$$
+```{r, echo=FALSE}
+residuals_age <- residuals(model_age)
+rss <- sum(residuals_age^2)
+n <- nobs(model_age)
+k <- 2
+sigma_sq <- rss / (n - k)
+
+mean_age <- mean(age_data)
+sum_sq_age <- sum((age_data - mean_age)^2)
+
+se_age <- sqrt(sigma_sq / sum_sq_age)
+
+cat("Berechnung:\n")
+cat("σ² = RSS / (n - k) =", round(rss, 1), "/", n - k, "=", round(sigma_sq, 4), "\n")
+cat("Σ(age - mean)² =", round(sum_sq_age, 0), "\n")
+cat("SE(β₁) = √(", round(sigma_sq, 4), "/", round(sum_sq_age, 0), ") =", round(se_age, 6), "\n")
+```
+
+
+## Schritt 4: Konfidenzintervall berechnen
+
+$$\text{CI} = \hat{\beta}_1 \pm t_{\text{kritisch}} \times \text{SE}(\hat{\beta}_1)$$
+
+```{r, echo=FALSE}
+t_crit <- 1.9601
+coef_age_val <- coefs_age["age"]
+ci_lower <- coef_age_val - t_crit * se_age
+ci_upper <- coef_age_val + t_crit * se_age
+
+
+cat("Untere Grenze =", round(coef_age_val, 4), "-", round(t_crit, 4), "×", round(se_age, 6), "\n")
+cat("              =", round(coef_age_val, 4), "-", round(t_crit * se_age, 4), "\n")
+cat("              =", round(ci_lower, 4), "\n\n")
+
+cat("Obere Grenze  =", round(coef_age_val, 4), "+", round(t_crit, 4), "×", round(se_age, 6), "\n")
+cat("             =", round(coef_age_val, 4), "+", round(t_crit * se_age, 4), "\n")
+cat("             =", round(ci_upper, 4), "\n\n")
+
+cat("95%-KI: [", round(ci_lower, 4), ",", round(ci_upper, 4), "]\n")
+```
+
+Wenn wir unendlich viele Stichproben wie FREDA ziehen würden, können wir erwarten, dass 95% aller nicht extremen Unterschiede aller $\hat{\beta}$-Koeffizienten für Alter im Bereich [0.0118 , 0.0145] liegen.
+
+## Visualisierung
+
+```{r age-fit-ci, echo=FALSE, fig.width=17, fig.height=10}
+ggplot(freda_clean, aes(x = age, y = sat2)) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF744E", fill = "#FFE5D9") +
+  labs(
+    x = "Alter (Jahre)",
+    y = "Zufriedenheit mit Singlestatus",
+    title = "Gechätzter Zusammenhang von Alter mit der Zufriedenheit mit dem Singlestatus",
+    subtitle = "Mit 95%-Konfidenzband "
+  ) +
+  theme_minimal(base_size = 18) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15),
+    plot.subtitle = element_text(color = "gray50", margin = margin(b = 15))
+  )
+```
+
+```{r setup reg-multi, include=FALSE}
+# Prepare data
+freda_modelling <- freda_clean %>%
+  filter(!is.na(sat2), !is.na(sex), !is.na(east), !is.na(age), !is.na(sin11)) %>%
+  mutate(
+    sin11_cat = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ NA_character_
+    ),
+    sin11_cat = factor(sin11_cat, levels = c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    ))
+  )
+
+# Fit bivariate and multivariate models
+model_age_biv <- lm(sat2 ~ age, data = freda_modelling)
+model_multi <- lm(sat2 ~ sex * east + age + sin11_cat, data = freda_modelling)
+```
+
+## Das multivariate Modell
+
+<br> 
+<br> 
+$$
+\begin{align*}
+\text{Zufriedenheit als Single}_i &= \beta_0\\ &+ \beta_{\text{Alter}} \\
+ &+ \beta_{\text{Frau}} + \beta_{\text{Ost}} + \beta_{\text{Frau X Ost}}\\ 
+&+ \beta_{\text{Offen}} + \beta_{\text{Anbahnend}} + \beta_{\text{On-Off}} + \beta_{\text{Freundschaft Plus}} + \beta_{\text{Sonstiges}} \\ 
+ &+ \varepsilon_i
+\end{align*}
+$$
+
+<br> 
+<br> 
+
+
+- Region und Geschlecht bilden einen Interaktionseffekt
+- "kein Interesse" ist Referenzkategorie für die Beziehungskategorie
+
+## Regressionsergebnisse
+
+```{r results, echo=FALSE}
+results_multi <- tidy(model_multi)
+glance_multi <- glance(model_multi)
+
+# Format for display with proper variable labels
+results_display <- results_multi %>%
+  mutate(
+    "Variabel" = case_when(
+      term == "(Intercept)" ~ "Konstante",
+      term == "sexWeiblich" ~ "Frau",
+      term == "east" ~ "Osten",
+      term == "sexWeiblich:east" ~ "Interaktion: Frau × Osten",
+      term == "age" ~ "Alter ",
+      term == "sin11_catOffen für Beziehung" ~ "Offen für Beziehung",
+      term == "sin11_catAnbahnende Beziehung" ~ "Anbahnende Beziehung",
+      term == "sin11_catOn-off-Beziehung" ~ "On-off-Beziehung",
+      term == "sin11_catFreundschaft Plus" ~ " Freundschaft Plus",
+      term == "sin11_catSonstiges" ~ "Sonstiges",
+      TRUE ~ term
+    ),
+    "Koeffizient (β)" = round(estimate, 2),
+    "Standardfehler (SE)" = round(std.error, 2),
+    "95%-Konfidenzintervall" = paste0("[", 
+                      round(estimate - 1.96 * std.error, 2), ", ",
+                      round(estimate + 1.96 * std.error, 2), "]")
+  ) %>%
+  select("Variabel", "Koeffizient (β)", "Standardfehler (SE)", "95%-Konfidenzintervall")
+
+knitr::kable(results_display,
+             caption = "Ergebnisse des multivariaten Regressionsmodells") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), 
+                full_width = TRUE,
+                font_size = 30) %>%
+  column_spec(1, bold = TRUE, width = "25%")
+```
+
+
+# Anhang
+
+
+## Wichtige Standardfehler 
+
+### Standardfehler für Wahrscheinlichkeitsdifferenzen
+
+$$
+SE_{p_1 - p_2} = \sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}
+$$
+
+### Standardfehler für Varianzen
+
+$$
+SE_{\sigma^2} = \sqrt{\frac{2\sigma^4}{n-1}}
+$$
+
+wobei:
+
+$\sigma^2$ = Varianz der Grundgesamtheit
+n = Stichprobengröße
+
+### Standardfehler für Odds 
+$$
+SE_{\text{Odds}} = \frac{\sqrt{\frac{p(1-p)}{n}}}{(1-p)^2}
+$$
+wobei:
+p = Wahrscheinlichkeit in der Grundgesamtheit
+n = Stichprobengröße
+
+
+## Die 2×2 Kontingenztabelle
+
+Zunächst betrachten wir die Häufigkeitsverteilung von "Freundschaft Plus" nach Geschlecht:
+
+```{r table, echo=FALSE}
+tabelle_kable <- data.frame(
+  " " = c("Weiblich", "Männlich", "Gesamt"),
+  "Freundschaft Plus" = c(828, 711, 1539),
+  "Nicht Freundschaft Plus" = c(7928, 7929, 15857),
+  "Gesamt" = c(8756, 8640, 17396),
+  check.names = FALSE
+)
+
+kable(tabelle_kable, 
+      caption = "2×2 Kontingenztabelle: Freundschaft Plus nach Geschlecht",
+      align = "lrrrr") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+```
+
+**Notation für die Berechnung:**
+- a = 828 (Frauen in Freundschaft Plus)
+- b = 7928 (Frauen nicht in Freundschaft Plus)
+- c = 711 (Männer in Freundschaft Plus)
+- d = 7929 (Männer nicht in Freundschaft Plus)
+
+---
+
+## Schritt 1: Odds für jedes Geschlecht berechnen
+
+Die **Odds** ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zur Wahrscheinlichkeit, dass es nicht eintritt.
+
+### Odds für Frauen
+$$\text{Odds}_{\text{Frauen}} = \frac{\text{Frauen in FP}}{\text{Frauen nicht in FP}} = \frac{828}{7928} = 0.1044$$
+
+**Interpretation:** Von 100 Frauen, die nicht in "Freundschaft Plus" sind, haben etwa 10 Frauen diese Beziehungsform.
+
+### Odds für Männer
+$$\text{Odds}_{\text{Männer}} = \frac{\text{Männer in FP}}{\text{Männer nicht in FP}} = \frac{711}{7929} = 0.0897$$
+
+**Interpretation:** Von 100 Männern, die nicht in "Freundschaft Plus" sind, haben etwa 9 Männer diese Beziehungsform.
+
+---
+
+## Schritt 2: Odds Ratio berechnen
+
+Die **Odds Ratio** vergleicht die Odds zwischen den beiden Gruppen:
+
+$$\text{OR} = \frac{\text{Odds}_{\text{Frauen}}}{\text{Odds}_{\text{Männer}}} = \frac{0.1044}{0.0897} = 1.165$$
+
+**Interpretation:** Frauen haben eine **1.16-mal höhere Odds**, in "Freundschaft Plus" zu sein als Männer.
+
+---
+
+## Schritt 3: Logarithmus nehmen
+
+Für die Konfidenzintervall-Berechnung transformieren wir auf die logarithmische Skala:
+
+$$\log(\text{OR}) = \log(1.165) = 0.1525$$
+
+**Warum Logarithmus?**
+- Das Konfidenzintervall ist auf der log-Skala *symmetrisch*
+- Die Normalverteilungs-Annahme passt besser
+- Nach der Berechnung transformieren wir zurück mit exp()
+
+---
+
+## Schritt 4: Standardfehler des log(OR)
+
+Der Standardfehler quantifiziert, wie genau unsere Schätzung ist:
+
+$$SE[\log(\text{OR})] = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}$$
+
+### Berechnung im Detail:
+
+$$SE[\log(\text{OR})] = \sqrt{\frac{1}{828} + \frac{1}{7928} + \frac{1}{711} + \frac{1}{7929}}$$
+
+$$= \sqrt{0.001208 + 0.000126 + 0.001406 + 0.000126}$$
+
+$$= \sqrt{0.002866} = 0.0535$$
+
+**Interpretation:** Mit dieser Genauigkeit schätzen wir das log(OR).
+
+---
+
+## Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung? {.midi .scrollable}
+
+### Das zentrale Problem
+
+Die **Odds Ratio selbst** ist NICHT normalverteilt:
+- Sie ist immer positiv (0 bis ∞)
+- Sie ist schief (asymmetrisch)
+- Das Konfidenzintervall würde asymmetrisch ausfallen
+
+### Die Lösung: Logarithmische Transformation
+
+Durch den **Logarithmus** transformieren wir die Odds Ratio so, dass sie normalverteilt wird:
+
+$$\text{OR} \in (0, \infty) \xrightarrow{\log()} \log(\text{OR}) \in (-\infty, +\infty)$$
+
+Das $\log(\text{OR})$ ist **asymptotisch normalverteilt** — und zwar aufgrund des **Zentralen Grenzwertsatzes**:
+
+> Der SE des log(OR) ist eine Summe von Termen: $SE = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}$
+>
+> Nach dem Zentralen Grenzwertsatz wird die Summe unabhängiger Zufallsvariablen asymptotisch normalverteilt, **unabhängig von ihrer einzelnen Verteilung**.
+
+## Praktische Anwendung
+
+Für größere Stichproben (wie unsere mit n = 17,396) gilt:
+
+$$\frac{\log(\text{OR}) - \log(\text{wahrer OR})}{\text{SE}[\log(\text{OR})]} \sim N(0,1)$$
+
+Daher verwenden wir für ein **90%-Konfidenzintervall** den kritischen Wert $z = 1.645$:
+
+$$P(-1.645 \leq Z \leq 1.645) = 0.90$$
+
+Das bedeutet: 5% der Fläche liegt in jedem Schwanz der Normalverteilung (α/2 = 0.05).
+
+---
+
+## Schritt 6: Konfidenzintervall auf log-Skala berechnen
+
+**Untere Grenze:**
+$$\log(\text{OR}) - z \times SE[\log(\text{OR})] = 0.1525 - 1.645 \times 0.0535 = 0.0644$$
+
+**Obere Grenze:**
+$$\log(\text{OR}) + z \times SE[\log(\text{OR})] = 0.1525 + 1.645 \times 0.0535 = 0.2405$$
+
+**90%-KI auf log-Skala:** $[0.0644, 0.2405]$
+
+---
+
+## Schritt 7: Zurück transformieren (Exponentialisieren)
+
+Zum Schluss exponentialisieren wir, um auf die OR-Skala zurückzukehren:
+
+**Untere Grenze:**
+$$e^{0.0644} = 1.067$$
+
+**Obere Grenze:**
+$$e^{0.2405} = 1.272$$
+
+**90%-Konfidenzintervall auf OR-Skala: $[1.07, 1.27]$**
+
+---
+
+## Visuelle Darstellung
+
+```{r plot-freundchaft-plus, echo=FALSE, fig.width=8, fig.height=5}
+or_fp <- data.frame(
+  category = "Freundschaft Plus",
+  or = 1.165,
+  ci_lower = 1.067,
+  ci_upper = 1.272
+)
+
+library(ggplot2)
+
+ggplot(or_fp, aes(x = category, y = or)) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "gray60", linewidth = 1) +
+  geom_errorbar(
+    aes(ymin = ci_lower, ymax = ci_upper),
+    width = 0.2,
+    linewidth = 1.5,
+    color = "black"
+  ) +
+  geom_point(size = 6, color = "#FF744E") +
+  geom_text(aes(label = "1.16", vjust = -1.5), size = 5, fontface = "bold") +
+  geom_text(aes(y = ci_lower, label = "1.07", vjust = 1.5), size = 4, color = "darkgray") +
+  geom_text(aes(y = ci_upper, label = "1.27", vjust = -1.2), size = 4, color = "darkgray") +
+  scale_y_continuous(limits = c(0.8, 1.5), breaks = seq(0.8, 1.5, 0.1)) +
+  labs(
+    x = "",
+    y = "Odds Ratio (Frauen vs. Männer)",
+    title = "Freundschaft Plus: Geschlechtsunterschiede mit 90%-KI"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    panel.grid.major.y = element_line(color = "lightgray"),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+
+## Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten
+
+Wir verdeutlichen die Berechnung des Konfidenzintervalls für Alter im multivariaten Kontext.
+
+### Schritt 1: Multivariate vs. Bivariate Effekte
+
+```{r comparison, echo=FALSE}
+# Bivariate model
+coef_age_biv <- coef(model_age_biv)["age"]
+se_age_biv <- tidy(model_age_biv)[2, "std.error"] %>% pull()
+
+# Multivariate model  
+age_row <- results_multi %>% filter(term == "age")
+coef_age_multi <- age_row$estimate %>% as.numeric()
+se_age_multi <- age_row$std.error %>% as.numeric()
+
+cat("BIVARIATE REGRESSION (sat2 ~ age):\n")
+cat("  β =", round(coef_age_biv, 4), "(SE =", round(se_age_biv, 4), ")\n")
+cat("  Signifikant: JA (p < 0.001)\n\n")
+
+cat("MULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):\n")
+cat("  β =", round(coef_age_multi, 4), "(SE =", round(se_age_multi, 4), ")\n")
+cat("  Signifikant: NEIN (p = 0.130)\n\n")
+
+cat("DIFFERENZ:\n")
+cat("  Δβ =", round(coef_age_biv - coef_age_multi, 4), "\n")
+cat("  (Dies ist der Confounding-Effekt durch sin11_cat)\n")
+```
+
+## Schritt 2: Interpretation des multivariaten Koeffizients
+
+Der Koeffizient `r round(coef_age_multi, 4)` ist der **partielle Effekt**:
+
+- **Definition:** Effekt von age auf sat2, *nachdem* alle anderen Variablen kontrolliert wurden
+- **Praktisch:** Mit der obigen Formel: Für jedes Lebensjahr mehr steigt sat2 um `r round(coef_age_multi, 4)` Punkte (wenn sex, east, sin11_cat konstant bleiben)
+
+## Schritt 3: Standardfehler im multivariaten Modell
+
+$$\text{SE}(\beta_1)_{\text{multi}} = \sqrt{\frac{\sigma^2_{\text{multi}}}{\sum(x_i - \bar{x})^2 \times (1 - R^2_{1|others})}}$$
+
+### Schritt 4: t-Statistik und Signifikanz
+
+```{r t_stat, echo=FALSE}
+tstat <- coef_age_multi / se_age_multi
+pval <- age_row$p.value %>% as.numeric()
+
+cat("t = β / SE = ", round(coef_age_multi, 4), " / ", round(se_age_multi, 4), " = ", round(tstat, 4), "\n")
+cat("p-Wert = ", format(pval, scientific = FALSE), "\n\n")
+
+cat("Interpretation:\n")
+cat("  • t =", round(tstat, 4), "ist relativ klein\n")
+cat("  • p =", round(pval, 4), "> 0.05\n")
+cat("  ✗ NICHT statistisch signifikant (nach Kontrolle)\n")
+```
+
+## Schritt 5: Kritischer t-Wert
+
+```{r t_crit, echo=FALSE}
+n_multi <- glance_multi$nobs
+k_multi <- nrow(results_multi)
+df_multi <- n_multi - k_multi
+t_crit <- qt(0.975, df_multi)
+
+cat("df = n - k = ", n_multi, " - ", k_multi, " = ", df_multi, "\n")
+cat("t_0.025(df) =", round(t_crit, 4), "\n")
+cat("(≈ 1.96 bei großem df)\n")
+```
+
+## Schritt 6: Konfidenzintervall berechnen
+
+$$\text{CI} = \hat{\beta}_{\text{age}} \pm t_{\text{crit}} \times \text{SE}(\hat{\beta}_{\text{age}})$$
+
+```{r ci_calc, echo=FALSE}
+ci_lower <- coef_age_multi - t_crit * se_age_multi
+ci_upper <- coef_age_multi + t_crit * se_age_multi
+
+cat("Untere Grenze = ", round(coef_age_multi, 4), " - ", round(t_crit, 4), " × ", round(se_age_multi, 4), "\n")
+cat("              = ", round(coef_age_multi, 4), " - ", round(t_crit * se_age_multi, 4), "\n")
+cat("              = ", round(ci_lower, 4), "\n\n")
+
+cat("Obere Grenze  = ", round(coef_age_multi, 4), " + ", round(t_crit, 4), " × ", round(se_age_multi, 4), "\n")
+cat("             = ", round(coef_age_multi, 4), " + ", round(t_crit * se_age_multi, 4), "\n")
+cat("             = ", round(ci_upper, 4), "\n\n")
+
+cat("95%-KI: [", round(ci_lower, 4), ", ", round(ci_upper, 4), "]\n")
+```

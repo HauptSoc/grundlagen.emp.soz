@@ -16,6 +16,9 @@ library(lavaan)
 library(broom)
 library(labelled)
 library(lavaanPlot)
+library(gridExtra)
+library(grid)
+library(lattice)
 
 # 2️⃣ Setze Variablen-Labels für spätere Verarbeitung mit kableExtra
 # Dies muss erfolgen, bevor die Daten manipuliert werden

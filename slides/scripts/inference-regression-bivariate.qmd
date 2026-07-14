@@ -1,0 +1,184 @@
+---
+title: "Bivariate Regression"
+subtitle: "Standardfehler & Konfidenzintervalle von Regressionskoeffizenten"
+format: html
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(dplyr)
+library(broom)
+library(ggplot2)
+
+source("freda_clean.R")
+
+# Fit bivariate models
+model_sex <- lm(sat2 ~ sex, data = freda_clean)
+model_east <- lm(sat2 ~ east, data = freda_clean)
+model_age <- lm(sat2 ~ age, data = freda_clean)
+```
+
+## Überblick: Bivariate Regressionen
+
+Wir testen die Beziehung zwischen Zufriedenheit mit Singlestatus (sat2) und verschiedenen Prädiktoren:
+
+```{r summary_table, echo=FALSE}
+results_summary <- tibble(
+  Prädiktor = c("sex", "east", "age"),
+  Koeffizient = c(
+    round(coef(model_sex)["sexWeiblich"], 4),
+    round(coef(model_east)["east"], 4),
+    round(coef(model_age)["age"], 4)
+  ),
+  SE = c(
+    round(tidy(model_sex)[2, "std.error"] %>% pull(), 4),
+    round(tidy(model_east)[2, "std.error"] %>% pull(), 4),
+    round(tidy(model_age)[2, "std.error"] %>% pull(), 4)
+  ),
+  "95%-KI" = c(
+    paste0("[", round(confint(model_sex)[2,1], 4), ", ", round(confint(model_sex)[2,2], 4), "]"),
+    paste0("[", round(confint(model_east)[2,1], 4), ", ", round(confint(model_east)[2,2], 4), "]"),
+    paste0("[", round(confint(model_age)[2,1], 4), ", ", round(confint(model_age)[2,2], 4), "]")
+  ),
+  "R²" = c(
+    round(glance(model_sex)$r.squared, 4),
+    round(glance(model_east)$r.squared, 4),
+    round(glance(model_age)$r.squared, 4)
+  )
+)
+
+knitr::kable(results_summary)
+```
+
+------------------------------------------------------------------------
+
+## Detailliertes Beispiel: sat2 \~ age
+
+Wir verdeutlichen die Berechnung von Standardfehler und Konfidenzintervall für den age-Koeffizient.
+
+### Das Regressionsmodell
+
+Das einfache lineare Regressionsmodell ist:
+
+$$\text{sat2}_i = \beta_0 + \beta_1 \times \text{age}_i + \varepsilon_i$$
+
+**Komponenten:** - $\beta_0$ (Intercept): Erwartete sat2-Zufriedenheit bei age = 0 - $\beta_1$ (Slope): Änderung in sat2 pro Lebensjahr - $\varepsilon_i$ (Fehler): Residuum, die unerklärte Variation
+
+### Schritt 1: Daten zusammenfassen
+
+```{r, echo=FALSE}
+age_data <- freda_clean$age[!is.na(freda_clean$age)]
+cat("n =", length(age_data), "\n")
+cat("Mittelwert age =", round(mean(age_data), 2), "\n")
+cat("SD age =", round(sd(age_data), 2), "\n")
+```
+
+### Schritt 2: Regressionsgleichung
+
+```{r, echo=FALSE}
+coefs_age <- coef(model_age)
+cat("sat2 =", round(coefs_age[1], 4), "+", round(coefs_age[2], 4), "× age + ε\n\n")
+cat("Interpretation des Slopes:\n")
+cat("• Pro Lebensjahr steigt sat2 um", round(coefs_age[2], 4), "Punkte\n")
+cat("• 10 Jahre älter → sat2 um", round(coefs_age[2] * 10, 4), "Punkte höher\n")
+```
+
+### Schritt 3: Standardfehler des Koeffizients
+
+Der Standardfehler misst die Unsicherheit der Schätzung:
+
+$$\text{SE}(\beta_1) = \sqrt{\frac{\sigma^2}{\sum(x_i - \bar{x})^2}}$$
+
+**Komponenten:** - $\sigma^2$: Geschätzte Varianz der Residuen = RSS / (n - k) - $\sum(x_i - \bar{x})^2$: Variation in der Prädiktor-Variable - Größere Variation in x → kleinerer SE (präzisere Schätzung) - Größere Fehler → größerer SE (impräzisere Schätzung)
+
+```{r, echo=FALSE}
+residuals_age <- residuals(model_age)
+rss <- sum(residuals_age^2)
+n <- nobs(model_age)
+k <- 2
+sigma_sq <- rss / (n - k)
+
+mean_age <- mean(age_data)
+sum_sq_age <- sum((age_data - mean_age)^2)
+
+se_age <- sqrt(sigma_sq / sum_sq_age)
+
+cat("Berechnung:\n")
+cat("σ² = RSS / (n - k) =", round(rss, 1), "/", n - k, "=", round(sigma_sq, 4), "\n")
+cat("Σ(age - mean)² =", round(sum_sq_age, 0), "\n")
+cat("SE(β₁) = √(", round(sigma_sq, 4), "/", round(sum_sq_age, 0), ") =", round(se_age, 6), "\n")
+```
+
+### Schritt 4: Kritischer t-Wert
+
+Für ein 95%-Konfidenzintervall verwenden wir die t-Verteilung:
+
+```{r, echo=FALSE}
+df <- n - k
+t_crit <- qt(0.975, df)
+cat("df = n - k =", n, "-", k, "=", df, "\n")
+cat("t_0.025 (df =", df, ") =", round(t_crit, 4), "\n")
+cat("(Approximation: t ≈ z = 1.96 bei großen df)\n")
+```
+
+### Schritt 5: Konfidenzintervall berechnen
+
+$$\text{CI} = \hat{\beta}_1 \pm t_{\text{kritisch}} \times \text{SE}(\hat{\beta}_1)$$
+
+```{r, echo=FALSE}
+coef_age_val <- coefs_age["age"]
+ci_lower <- coef_age_val - t_crit * se_age
+ci_upper <- coef_age_val + t_crit * se_age
+
+cat("Untere Grenze =", round(coef_age_val, 4), "-", round(t_crit, 4), "×", round(se_age, 6), "\n")
+cat("              =", round(coef_age_val, 4), "-", round(t_crit * se_age, 4), "\n")
+cat("              =", round(ci_lower, 4), "\n\n")
+
+cat("Obere Grenze  =", round(coef_age_val, 4), "+", round(t_crit, 4), "×", round(se_age, 6), "\n")
+cat("             =", round(coef_age_val, 4), "+", round(t_crit * se_age, 4), "\n")
+cat("             =", round(ci_upper, 4), "\n\n")
+
+cat("95%-KI: [", round(ci_lower, 4), ",", round(ci_upper, 4), "]\n")
+```
+
+### Schritt 6: Interpretation
+
+Mit **95% Konfidenz** liegt der wahre Effekt von age zwischen `r round(ci_lower, 4)` und `r round(ci_upper, 4)` Punkten pro Lebensjahr.
+
+**Das bedeutet:** - ✓ Das Konfidenzintervall enthält **nicht die 0** - ✓ Der Effekt ist **statistisch signifikant** auf dem 5%-Niveau - ✓ Es gibt einen **echten positiven Zusammenhang** - ✓ Ältere Personen sind systematisch zufriedener mit dem Singlestatus
+
+------------------------------------------------------------------------
+
+## Warum Normalverteilung / t-Verteilung?
+
+Wir verwenden die t-Verteilung für Regressionskoeffizenten, weil:
+
+1.  **Kleine Stichproben:** Bei kleinen n ist die t-Verteilung konservativer (breitere KI)
+2.  **Schätzung von σ²:** Wir schätzen die Fehler-Varianz aus den Daten
+3.  **Freiheitsgrade:** df = n - k berücksichtigt die Anzahl der Parameter
+4.  **Große Stichproben:** Bei n \> 1000 konvergiert t gegen z = 1.96
+
+Mit unseren Daten (n \> 26000) unterscheidet sich t praktisch nicht von z.
+
+------------------------------------------------------------------------
+
+## Visualisierung
+
+```{r plot, echo=FALSE, fig.width=10, fig.height=6}
+ggplot(freda_clean, aes(x = age, y = sat2)) +
+  geom_point(alpha = 0.1, size = 1) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF744E", fill = "#FFE5D9") +
+  labs(
+    x = "Alter (Jahre)",
+    y = "Zufriedenheit mit Singlestatus",
+    title = "Bivariate Regression: sat2 ~ age",
+    subtitle = "Mit 95%-Konfidenzband (shaded area)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15),
+    plot.subtitle = element_text(color = "gray50", margin = margin(b = 10))
+  )
+```
+
+Das Konfidenzband zeigt die Unsicherheit des Regressionsmodells. Mit zunehmendem Abstand vom Mittelwert von age wird die Unsicherheit größer.

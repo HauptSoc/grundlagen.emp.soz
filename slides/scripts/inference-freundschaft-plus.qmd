@@ -1,0 +1,217 @@
+---
+title: "Odds Ratio Konfidenzintervall - Beispiel Freundschaft Plus"
+subtitle: "Schritt-für-Schritt Berechnung für Studierende"
+format: html
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(dplyr)
+library(kableExtra)
+
+# Laden Sie die Daten
+source("../graph-boxenstopp.R")
+```
+
+## Die 2×2 Kontingenztabelle
+
+Zunächst betrachten wir die Häufigkeitsverteilung von "Freundschaft Plus" nach Geschlecht:
+
+```{r table, echo=FALSE}
+tabelle_kable <- data.frame(
+  " " = c("Weiblich", "Männlich", "Gesamt"),
+  "Freundschaft Plus" = c(828, 711, 1539),
+  "Nicht Freundschaft Plus" = c(7928, 7929, 15857),
+  "Gesamt" = c(8756, 8640, 17396),
+  check.names = FALSE
+)
+
+kable(tabelle_kable, 
+      caption = "2×2 Kontingenztabelle: Freundschaft Plus nach Geschlecht",
+      align = "lrrrr") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+```
+
+**Notation für die Berechnung:**
+- a = 828 (Frauen in Freundschaft Plus)
+- b = 7928 (Frauen nicht in Freundschaft Plus)
+- c = 711 (Männer in Freundschaft Plus)
+- d = 7929 (Männer nicht in Freundschaft Plus)
+
+---
+
+## Schritt 1: Odds für jedes Geschlecht berechnen
+
+Die **Odds** ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zur Wahrscheinlichkeit, dass es nicht eintritt.
+
+### Odds für Frauen
+$$\text{Odds}_{\text{Frauen}} = \frac{\text{Frauen in FP}}{\text{Frauen nicht in FP}} = \frac{828}{7928} = 0.1044$$
+
+**Interpretation:** Von 100 Frauen, die nicht in "Freundschaft Plus" sind, haben etwa 10 Frauen diese Beziehungsform.
+
+### Odds für Männer
+$$\text{Odds}_{\text{Männer}} = \frac{\text{Männer in FP}}{\text{Männer nicht in FP}} = \frac{711}{7929} = 0.0897$$
+
+**Interpretation:** Von 100 Männern, die nicht in "Freundschaft Plus" sind, haben etwa 9 Männer diese Beziehungsform.
+
+---
+
+## Schritt 2: Odds Ratio berechnen
+
+Die **Odds Ratio** vergleicht die Odds zwischen den beiden Gruppen:
+
+$$\text{OR} = \frac{\text{Odds}_{\text{Frauen}}}{\text{Odds}_{\text{Männer}}} = \frac{0.1044}{0.0897} = 1.165$$
+
+**Interpretation:** Frauen haben eine **1.16-mal höhere Odds**, in "Freundschaft Plus" zu sein als Männer.
+
+---
+
+## Schritt 3: Logarithmus nehmen
+
+Für die Konfidenzintervall-Berechnung transformieren wir auf die logarithmische Skala:
+
+$$\log(\text{OR}) = \log(1.165) = 0.1525$$
+
+**Warum Logarithmus?**
+- Das Konfidenzintervall ist auf der log-Skala *symmetrisch*
+- Die Normalverteilungs-Annahme passt besser
+- Nach der Berechnung transformieren wir zurück mit exp()
+
+---
+
+## Schritt 4: Standardfehler des log(OR)
+
+Der Standardfehler quantifiziert, wie genau unsere Schätzung ist:
+
+$$SE[\log(\text{OR})] = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}$$
+
+### Berechnung im Detail:
+
+$$SE[\log(\text{OR})] = \sqrt{\frac{1}{828} + \frac{1}{7928} + \frac{1}{711} + \frac{1}{7929}}$$
+
+$$= \sqrt{0.001208 + 0.000126 + 0.001406 + 0.000126}$$
+
+$$= \sqrt{0.002866} = 0.0535$$
+
+**Interpretation:** Mit dieser Genauigkeit schätzen wir das log(OR).
+
+---
+
+## Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?
+
+### Das zentrale Problem
+
+Die **Odds Ratio selbst** ist NICHT normalverteilt:
+- Sie ist immer positiv (0 bis ∞)
+- Sie ist schief (asymmetrisch)
+- Das Konfidenzintervall würde asymmetrisch ausfallen
+
+### Die Lösung: Logarithmische Transformation
+
+Durch den **Logarithmus** transformieren wir die Odds Ratio so, dass sie normalverteilt wird:
+
+$$\text{OR} \in (0, \infty) \xrightarrow{\log()} \log(\text{OR}) \in (-\infty, +\infty)$$
+
+Das $\log(\text{OR})$ ist **asymptotisch normalverteilt** — und zwar aufgrund des **Zentralen Grenzwertsatzes**:
+
+> Der SE des log(OR) ist eine Summe von Termen: $SE = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}$
+>
+> Nach dem Zentralen Grenzwertsatz wird die Summe unabhängiger Zufallsvariablen asymptotisch normalverteilt, **unabhängig von ihrer einzelnen Verteilung**.
+
+### Praktische Anwendung
+
+Für größere Stichproben (wie unsere mit n = 17,396) gilt:
+
+$$\frac{\log(\text{OR}) - \log(\text{wahrer OR})}{\text{SE}[\log(\text{OR})]} \sim N(0,1)$$
+
+Daher verwenden wir für ein **90%-Konfidenzintervall** den kritischen Wert $z = 1.645$:
+
+$$P(-1.645 \leq Z \leq 1.645) = 0.90$$
+
+Das bedeutet: 5% der Fläche liegt in jedem Schwanz der Normalverteilung (α/2 = 0.05).
+
+---
+
+## Schritt 6: Konfidenzintervall auf log-Skala berechnen
+
+**Untere Grenze:**
+$$\log(\text{OR}) - z \times SE[\log(\text{OR})] = 0.1525 - 1.645 \times 0.0535 = 0.0644$$
+
+**Obere Grenze:**
+$$\log(\text{OR}) + z \times SE[\log(\text{OR})] = 0.1525 + 1.645 \times 0.0535 = 0.2405$$
+
+**90%-KI auf log-Skala:** $[0.0644, 0.2405]$
+
+---
+
+## Schritt 7: Zurück transformieren (Exponentialisieren)
+
+Zum Schluss exponentialisieren wir, um auf die OR-Skala zurückzukehren:
+
+**Untere Grenze:**
+$$e^{0.0644} = 1.067$$
+
+**Obere Grenze:**
+$$e^{0.2405} = 1.272$$
+
+**90%-Konfidenzintervall auf OR-Skala: $[1.07, 1.27]$**
+
+---
+
+## Zusammenfassung & Interpretation
+
+| Statistik | Wert |
+|-----------|------|
+| Punkt-Schätzung (OR) | 1.16 |
+| 90%-Konfidenzintervall | [1.07, 1.27] |
+
+### Was bedeutet das?
+
+✅ **Mit 90% Konfidenz** liegt die wahre Odds Ratio zwischen **1.07 und 1.27**.
+
+✅ Das Intervall enthält **nicht die 1**, daher ist der Unterschied **statistisch signifikant**.
+
+✅ **Frauen haben eine signifikant höhere Wahrscheinlichkeit**, "Freundschaft Plus" zu praktizieren als Männer.
+
+✅ **Die Odds sind für Frauen etwa 1.16-mal höher** als für Männer.
+
+---
+
+## Visuelle Darstellung
+
+```{r plot, echo=FALSE, fig.width=8, fig.height=5}
+or_fp <- data.frame(
+  category = "Freundschaft Plus",
+  or = 1.165,
+  ci_lower = 1.067,
+  ci_upper = 1.272
+)
+
+library(ggplot2)
+
+ggplot(or_fp, aes(x = category, y = or)) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "gray60", linewidth = 1) +
+  geom_errorbar(
+    aes(ymin = ci_lower, ymax = ci_upper),
+    width = 0.2,
+    linewidth = 1.5,
+    color = "black"
+  ) +
+  geom_point(size = 6, color = "#FF744E") +
+  geom_text(aes(label = "1.16", vjust = -1.5), size = 5, fontface = "bold") +
+  geom_text(aes(y = ci_lower, label = "1.07", vjust = 1.5), size = 4, color = "darkgray") +
+  geom_text(aes(y = ci_upper, label = "1.27", vjust = -1.2), size = 4, color = "darkgray") +
+  scale_y_continuous(limits = c(0.8, 1.5), breaks = seq(0.8, 1.5, 0.1)) +
+  labs(
+    x = "",
+    y = "Odds Ratio (Frauen vs. Männer)",
+    title = "Freundschaft Plus: Geschlechtsunterschiede mit 90%-KI"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    panel.grid.major.y = element_line(color = "lightgray"),
+    panel.grid.major.x = element_blank()
+  )
+```
