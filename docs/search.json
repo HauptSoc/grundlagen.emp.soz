@@ -7450,5 +7450,54 @@
     "title": "Inferenzstatistik - Teil 1",
     "section": "Praktische Anwendung",
     "text": "Praktische Anwendung\nFür größere Stichproben (wie unsere mit n = 17,396) gilt:\n\\[\\frac{\\log(\\text{OR}) - \\log(\\text{wahrer OR})}{\\text{SE}[\\log(\\text{OR})]} \\sim N(0,1)\\]\nDaher verwenden wir für ein 90%-Konfidenzintervall den kritischen Wert \\(z = 1.645\\):\n\\[P(-1.645 \\leq Z \\leq 1.645) = 0.90\\]\nDas bedeutet: 5% der Fläche liegt in jedem Schwanz der Normalverteilung (α/2 = 0.05)."
+  },
+  {
+    "objectID": "tufte/index.html",
+    "href": "tufte/index.html",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "",
+    "text": "Edward R. Tufte, godfather of charts, slayer of slide decks. Art by Fred Guth and MidJourney.\n\n\nProfessor Emeritus of Political Science, Statistics and Computer Sciente at Yale University, Edward Tufte is an expert in the presentation of informational.\nTufte’s style is known for extensive use of sidenotes, integration of graphics with text and typography1.\n\n\n\n\nMinard’s map of Napoleon’s Russian campaign, described by Edward Tufte as “may well be the best statistical graphic ever drawn” Tufte (2001, dy.–11cm)."
+  },
+  {
+    "objectID": "tufte/index.html#arbitrary-margin-content",
+    "href": "tufte/index.html#arbitrary-margin-content",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "Arbitrary Margin Content",
+    "text": "Arbitrary Margin Content\nYou can include anything in the margin by places the class .column-margin on the element. See an example on the right about the first fundamental theorem of calculus.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\\]"
+  },
+  {
+    "objectID": "tufte/index.html#arbitrary-full-width-content",
+    "href": "tufte/index.html#arbitrary-full-width-content",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "Arbitrary Full Width Content",
+    "text": "Arbitrary Full Width Content\nAny content can span to the full width of the page, simply place the element in a div and add the class column-page-right. For example, the following code will display its contents as full width.\n::: {.fullwidth}\nAny _full width_ content here.\n:::"
+  },
+  {
+    "objectID": "tufte/index.html#footnotes",
+    "href": "tufte/index.html#footnotes",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nTufte’s website: https://www.edwardtufte.com/tufte/↩︎"
+  },
+  {
+    "objectID": "apsr/apsr.html",
+    "href": "apsr/apsr.html",
+    "title": "Quarto Title for the APSR",
+    "section": "",
+    "text": "for using Quarto to write your article. This Quarto template is unofficial and based on Overleaf’s APSR template. Your introduction goes here! Do make sure the first paragraph here is at least three lines long, to accommodate the dropped-cap. Some examples of commonly used commands and features are listed below, to help you get started.\nSince we are in Quarto, you can cite with an @ symbol, like Knuth and Bibby (1984). As seen below, you can mix markdown and Latex with each other, though it’s likely best to mostly use markdown.\nUse section (#) and subsection (##) commands to organize your document. and Quarto handle all the formatting and numbering automatically. Use the @ commands for cross-references."
+  },
+  {
+    "objectID": "apsr/apsr.html#lists-and-quotations",
+    "href": "apsr/apsr.html#lists-and-quotations",
+    "title": "Quarto Title for the APSR",
+    "section": "Lists and Quotations",
+    "text": "Lists and Quotations\nYou can make lists with automatic numbering \n\nLike this,\nand like this.\n\nor bullet points \n\nLike this,\nand like this.\n\nAn example long quotation:\n\nThis is a sample quotation text. This is a sample quotation text. This is a sample quotation text."
+  },
+  {
+    "objectID": "slides/23-slides.html",
+    "href": "slides/23-slides.html",
+    "title": "Inferenzstatistik – Teil 1",
+    "section": "",
+    "text": "View slides in full screen"
   }
 ]
