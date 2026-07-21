@@ -24,7 +24,7 @@ editor: source
 | 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/23-slides.qmd) | ✍ |  |  |
 | 11 | 21.07. | p-Values | 📖 | [🖥](slides/24-slides.qmd) | ✍ |  |  |
 | 12 | 28.07. | Klausur |  |  |  |  |  |
-
+|  |  | Formelsammlung | [🖥](misc/Formelsammlung2526.pdf) |  |  |  |  |
 # Wintersemester: Datenerhebung
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
