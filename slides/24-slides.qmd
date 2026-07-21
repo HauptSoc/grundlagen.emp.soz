@@ -1,0 +1,8 @@
+---
+title: "Inferenzstatistik -- Teil 2"
+author: "Andreas Haupt"
+format: html
+editor: source
+---
+  
+{{< revealjs file="24-Inferenz-P2.html" height="950px" width="50%" class="ratio ratio-16x9" >}}

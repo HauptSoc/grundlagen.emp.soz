@@ -1,0 +1,139 @@
+---
+title: "Übung: Inferenzstatistik"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  cache: true
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup, cache = TRUE}
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(haven)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(broom)
+
+freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta", 
+        col_select = c("welle", "id", "pid", "sample", "sex", "age", "east", "sat3", "sat2", "sat6", "pstat", "sin3i1", "sin3i2", "sin11",
+                        "reldur", "voctrain", "hlt32", "pa18i2", 
+        "val13i1", "val13i2", "val13i6",  "val13i8",  "val13i3", "val13i4", "val13i5", "val13i7", "val13i9", "val10i1", "val10i2", "val10i3", "val10i4", "val10i5", "sd67", "cohort", "cla25", "val1i10"
+                        )
+                        ) 
+
+# Pfad zum Skript (relativ zum Quarto-Dokument)
+skript <- here::here("slides", "scripts", "freda_clean.R")
+# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
+source(skript, local = TRUE)
+
+# Vorbereitung: Erstelle bereinigten Datensatz für Übungen
+# Nutze cla25 (Beziehungsqualität 0-10), val1i10 (Zustimmung), sex, age, east, pstat
+exercise_data <- freda_clean |>
+  select(cla25, sex, val1i10, age, east, pstat) |>
+  mutate(
+    # Konvertiere zu numerisch
+    cla25 = as.numeric(cla25),
+    sex = as.factor(sex),
+    val1i10 = as.numeric(val1i10),
+    age = as.numeric(age),
+    east = as.numeric(east),
+    pstat = as.numeric(pstat)
+  ) |>
+  # Entferne ungültige Codes für cla25 und val1i10 (< 0)
+  filter(cla25 >= 0, val1i10 > 0) |>
+  # Konvertiere val1i10 zu Faktor mit Referenzkategorie "Weder noch" (3)
+  mutate(
+    val1i10 = factor(val1i10, 
+                     levels = c(3, 1, 2, 4, 5), 
+                     labels = c("Weder noch", "Stimme überhaupt nicht zu", 
+                               "Stimme eher nicht zu", "Stimme eher zu", "Stimme voll zu"))
+  ) |>
+  drop_na()
+```
+
+# War bei den Eltern alles gut?
+
+## Datensatz
+Im Folgenden sehen Sie eine zufällige Stichprobe von 20 Personen aus dem FReDA-Datensatz mit den Variablen:
+
+- Eingeschätzte Beziehungsqualität zwischen leiblichen Eltern in der eigenen Kindheit (0 "Sehr schlecht" - 10 "Sehr gut")
+- Geschlecht
+- Zustimmung zur Aussage: Scheidung ist in Ordnung
+- Alter 
+- Herkunft aus Ostdeutschland 
+
+```{r table-sample}
+
+# Setze seed für reproduzierbare Stichprobenziehung
+set.seed(8789)
+
+# Erstelle eine zufällige Stichprobe von 20 Personen
+sample_data <- exercise_data |>
+  slice_sample(n = 20)
+
+# Berechne Mittelwert und Standardabweichung für numerische Variablen
+summary_stats <- exercise_data |>
+  summarise(
+    across(c(cla25, age), list(
+      Mean = ~mean(., na.rm = TRUE),
+      SD = ~sd(., na.rm = TRUE)
+    ))
+  )
+
+# Erstelle Tabelle mit den 20 Personen
+display_table <- sample_data |>
+  mutate(
+    ID = as.character(row_number()),
+    sex = as.character(sex),
+    val1i10 = as.character(val1i10),
+    cla25 = as.character(as.integer(round(cla25, 0))),
+    age = as.character(as.integer(age)),
+    east = as.character(as.integer(east))
+  ) |>
+  select(ID, cla25, sex, val1i10, age, east) |>
+  bind_rows(
+    tibble(
+      ID = "Mittelwert",
+      cla25 = sprintf("%.2f", summary_stats$cla25_Mean),
+      sex = "",
+      val1i10 = "",
+      age = sprintf("%.1f", summary_stats$age_Mean),
+      east = ""
+    ),
+    tibble(
+      ID = "SD",
+      cla25 = sprintf("%.2f", summary_stats$cla25_SD),
+      sex = "",
+      val1i10 = "",
+      age = sprintf("%.1f", summary_stats$age_SD),
+      east = ""
+    )
+  )
+
+kable(display_table,
+      format = "html",
+      caption = "Tabelle 1: Zufallsstichprobe von 20 Personen mit deskriptiven Statistiken",
+      col.names = c("ID", "Beziehung der Eltern", "Geschlecht", "Scheidung ist in Ordnung", "Alter", "Ost")) |>
+  kable_styling()
+```
+
+1. Berechnen Sie für die eingeschätzte Beziehungsqualität und das Alter in der 20er-Stichprobe jeweils ein 95%-Konfidenzintervall. 
+
+2. Berechnen Sie das Odds-Ratio, auf die Aussage "Scheidung ist in Ordnung" voll zuzustimmen im Gegensatz zu allen anderen Antwortreaktionen, wenn man die Beziehungsqualität der Eltern mit weniger als 8 bewertet.  

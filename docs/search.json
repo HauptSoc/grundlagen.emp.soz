@@ -6818,8 +6818,8 @@
     "objectID": "slides/23-Inferenz-P1.html#ein-kessel-buntes",
     "href": "slides/23-Inferenz-P1.html#ein-kessel-buntes",
     "title": "Inferenzstatistik - Teil 1",
-    "section": "Ein Kessel Buntes",
-    "text": "Ein Kessel Buntes\n\nWie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine Blutgruppe zu bestimmen?\nWie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln probieren, um einzuschätzen, ob die Nudeln gar sind?\nWie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß die Unterschiede in der häuslichen Arbeitsteilung sind?\n\nWoher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur dritten?"
+    "section": "",
+    "text": "Wie viel Blut müssen Sie jemandem abnehmen, um mit Sicherheit seine Blutgruppe zu bestimmen?\nWie viele Nudeln müssen Sie aus einem Topf mit kochenden Nudeln probieren, um einzuschätzen, ob die Nudeln gar sind?\nWie viele Paare müssen Sie befragen, um sicher zu wissen, wie groß die Unterschiede in der häuslichen Arbeitsteilung sind?\n\nWoher kommt der Unterschied der Antworten auf die ersten zwei Fragen zur dritten?"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#unsicherheit-informationen-und-stichproben",
@@ -6833,7 +6833,7 @@
     "href": "slides/23-Inferenz-P1.html#über-was-sind-wir-durch-stichproben-unsicher",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Über was sind wir (durch Stichproben) unsicher?",
-    "text": "Über was sind wir (durch Stichproben) unsicher?\nBitte prägen Sie sich folgende Annahmen1 für die kommenden Argumentationen & Interpretationen ein:\n\nWerte, Zusammenhänge, Unterschiede (=Parameter) in der Population sind fix. D.h. sie haben keine Wahrscheinlichkeit, sie sind zu einem definierten Zeitpunkt nicht veränderlich.\nParameter2 in einer Stichprobe sind auch das Resultat von Zufallsschwankungen. Diese Zufallsschwankungen betreffen die Wahrscheinlichkeit, Werte aus der Population auch in der Stichprobe zu finden.\n\nFür die Expert:innen: Diese Annahmen und die daraus entstehenden Konsequenzen unterscheiden im Wesentlichen frequentistische von bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier getroffenen Annahmen sind zentrale, frequentistische Annahmen.Alles, was wir berechnen können (Mittelwerte, Varianzen, Regressionskoeffizienten …)"
+    "text": "Über was sind wir (durch Stichproben) unsicher?\nBitte prägen Sie sich folgende Annahmen1 für die kommenden Argumentationen & Interpretationen ein:\n\nWerte, Zusammenhänge, Unterschiede (=Parameter) in der Population sind fix. D.h. sie haben keine Wahrscheinlichkeit, sie sind zu einem definierten Zeitpunkt nicht veränderlich.\nParameter2 in einer Stichprobe sind auch das Resultat von Zufallsschwankungen. Diese Zufallsschwankungen betreffen die Wahrscheinlichkeit, Werte aus der Population auch in der Stichprobe zu finden."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#ausdruck-von-unsicherheit-1-konfidenzintervalle",
@@ -6889,7 +6889,7 @@
     "href": "slides/23-Inferenz-P1.html#footnotes",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nFür die Expert:innen: Diese Annahmen und die daraus entstehenden Konsequenzen unterscheiden im Wesentlichen frequentistische von bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier getroffenen Annahmen sind zentrale, frequentistische Annahmen.↩︎\nAlles, was wir berechnen können (Mittelwerte, Varianzen, Regressionskoeffizienten …)↩︎\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten.↩︎"
+    "text": "Footnotes\n\n\nFür die Expert:innen: Diese Annahmen und die daraus entstehenden Konsequenzen unterscheiden im Wesentlichen frequentistische von bayesianischer Statistik. Wir machen hier ersteres, d.h. die hier getroffenen Annahmen sind zentrale, frequentistische Annahmen.↩︎\nAlles, was wir berechnen können (Mittelwerte, Varianzen, Regressionskoeffizienten …)↩︎\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten.↩︎\nGenauer: Der Erwartungswert der Verteilung.↩︎\nIn der Praxis: als zufällig behauptet wird.↩︎\nExtrem ist im Zufallssprech alles, was an den Rändern liegt.↩︎"
   },
   {
     "objectID": "exercises/23-fragebogen-werte-eltern.html",
@@ -7148,7 +7148,7 @@
     "href": "slides/23-Inferenz-P1.html#schritt-1-odds-für-jedes-geschlecht-berechnen",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Schritt 1: Odds für jedes Geschlecht berechnen",
-    "text": "Schritt 1: Odds für jedes Geschlecht berechnen\nDie Odds ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zur Wahrscheinlichkeit, dass es nicht eintritt.\nOdds für Frauen\n\\[\\text{Odds}_{\\text{Frauen}} = \\frac{\\text{Frauen in FP}}{\\text{Frauen nicht in FP}} = \\frac{828}{7928} = 0.1044\\]\nInterpretation: Von 100 Frauen, die nicht in “Freundschaft Plus” sind, haben etwa 10 Frauen diese Beziehungsform.\nOdds für Männer\n\\[\\text{Odds}_{\\text{Männer}} = \\frac{\\text{Männer in FP}}{\\text{Männer nicht in FP}} = \\frac{711}{7929} = 0.0897\\]\nInterpretation: Von 100 Männern, die nicht in “Freundschaft Plus” sind, haben etwa 9 Männer diese Beziehungsform."
+    "text": "Schritt 1: Odds für jedes Geschlecht berechnen\nDie Odds ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zur Wahrscheinlichkeit, dass es nicht eintritt.\n\nOdds für Frauen\n\\[\\text{Odds}_{\\text{Frauen}} = \\frac{\\text{Frauen in FP}}{\\text{Frauen nicht in FP}} = \\frac{828}{7928} = 0.1044\\]\nInterpretation: Von 100 Frauen, die nicht in “Freundschaft Plus” sind, haben etwa 10 Frauen diese Beziehungsform.\n\n\nOdds für Männer\n\\[\\text{Odds}_{\\text{Männer}} = \\frac{\\text{Männer in FP}}{\\text{Männer nicht in FP}} = \\frac{711}{7929} = 0.0897\\]\nInterpretation: Von 100 Männern, die nicht in “Freundschaft Plus” sind, haben etwa 9 Männer diese Beziehungsform."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#schritt-2-odds-ratio-berechnen",
@@ -7169,14 +7169,14 @@
     "href": "slides/23-Inferenz-P1.html#schritt-4-standardfehler-des-logor",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Schritt 4: Standardfehler des log(OR)",
-    "text": "Schritt 4: Standardfehler des log(OR)\nDer Standardfehler quantifiziert, wie genau unsere Schätzung ist:\n\\[SE[\\log(\\text{OR})] = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\]\nBerechnung im Detail:\n\\[SE[\\log(\\text{OR})] = \\sqrt{\\frac{1}{828} + \\frac{1}{7928} + \\frac{1}{711} + \\frac{1}{7929}}\\]\n\\[= \\sqrt{0.001208 + 0.000126 + 0.001406 + 0.000126}\\]\n\\[= \\sqrt{0.002866} = 0.0535\\]\nInterpretation: Mit dieser Genauigkeit schätzen wir das log(OR)."
+    "text": "Schritt 4: Standardfehler des log(OR)\nDer Standardfehler quantifiziert, wie genau unsere Schätzung ist:\n\\[SE[\\log(\\text{OR})] = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\]\n\nBerechnung im Detail:\n\\[SE[\\log(\\text{OR})] = \\sqrt{\\frac{1}{828} + \\frac{1}{7928} + \\frac{1}{711} + \\frac{1}{7929}}\\]\n\\[= \\sqrt{0.001208 + 0.000126 + 0.001406 + 0.000126}\\]\n\\[= \\sqrt{0.002866} = 0.0535\\]\nInterpretation: Mit dieser Genauigkeit schätzen wir das log(OR)."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#schritt-5-kritischer-z-wert-für-90-ki-warum-normalverteilung",
     "href": "slides/23-Inferenz-P1.html#schritt-5-kritischer-z-wert-für-90-ki-warum-normalverteilung",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?",
-    "text": "Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?\nDas zentrale Problem\nDie Odds Ratio selbst ist NICHT normalverteilt: - Sie ist immer positiv (0 bis ∞) - Sie ist schief (asymmetrisch) - Das Konfidenzintervall würde asymmetrisch ausfallen\nDie Lösung: Logarithmische Transformation\nDurch den Logarithmus transformieren wir die Odds Ratio so, dass sie normalverteilt wird:\n\\[\\text{OR} \\in (0, \\infty) \\xrightarrow{\\log()} \\log(\\text{OR}) \\in (-\\infty, +\\infty)\\]\nDas \\(\\log(\\text{OR})\\) ist asymptotisch normalverteilt — und zwar aufgrund des Zentralen Grenzwertsatzes:\n\nDer SE des log(OR) ist eine Summe von Termen: \\(SE = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\)\nNach dem Zentralen Grenzwertsatz wird die Summe unabhängiger Zufallsvariablen asymptotisch normalverteilt, unabhängig von ihrer einzelnen Verteilung."
+    "text": "Schritt 5: Kritischer z-Wert für 90% KI — Warum Normalverteilung?\n\nDas zentrale Problem\nDie Odds Ratio selbst ist NICHT normalverteilt: - Sie ist immer positiv (0 bis ∞) - Sie ist schief (asymmetrisch) - Das Konfidenzintervall würde asymmetrisch ausfallen\n\n\nDie Lösung: Logarithmische Transformation\nDurch den Logarithmus transformieren wir die Odds Ratio so, dass sie normalverteilt wird:\n\\[\\text{OR} \\in (0, \\infty) \\xrightarrow{\\log()} \\log(\\text{OR}) \\in (-\\infty, +\\infty)\\]\nDas \\(\\log(\\text{OR})\\) ist asymptotisch normalverteilt — und zwar aufgrund des Zentralen Grenzwertsatzes:\n\nDer SE des log(OR) ist eine Summe von Termen: \\(SE = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\)\nNach dem Zentralen Grenzwertsatz wird die Summe unabhängiger Zufallsvariablen asymptotisch normalverteilt, unabhängig von ihrer einzelnen Verteilung."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#schritt-6-konfidenzintervall-auf-log-skala-berechnen",
@@ -7225,7 +7225,7 @@
     "href": "slides/23-Inferenz-P1.html#beispielrechnung-für-beta-alter",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Beispielrechnung für \\(\\beta\\) Alter",
-    "text": "Beispielrechnung für \\(\\beta\\) Alter\nDas einfache lineare Regressionsmodell ist:\n\\[\\text{Zufriedenheit mit Singlestatus}_i = \\beta_0 + \\beta_1 \\times \\text{Alter}_i + \\varepsilon_i\\]\nSchritt 1: Daten zusammenfassen\n\n\nn = 158332 \n\n\nMittelwert Alter = 35.74 \n\n\nSD Alter = 9.22 \n\n\nSchritt 2: Regressionsgleichung\n\n\nsat2 = 5.4904 + 0.0131 × age + ε\n\n\nInterpretation des Slopes:\n\n\n• Pro Lebensjahr steigt die Zufriedenheit mit dem Singlestatus um 0.0131 Punkte\n\n\n• 10 Jahre älter → Zufriedenheit um 0.1312 Punkte höher"
+    "text": "Beispielrechnung für \\(\\beta\\) Alter\nDas einfache lineare Regressionsmodell ist:\n\\[\\text{Zufriedenheit mit Singlestatus}_i = \\beta_0 + \\beta_1 \\times \\text{Alter}_i + \\varepsilon_i\\]\n\nSchritt 1: Daten zusammenfassen\n\n\nn = 158332 \n\n\nMittelwert Alter = 35.74 \n\n\nSD Alter = 9.22 \n\n\n\n\nSchritt 2: Regressionsgleichung\n\n\nsat2 = 5.4904 + 0.0131 × age + ε\n\n\nInterpretation des Slopes:\n\n\n• Pro Lebensjahr steigt die Zufriedenheit mit dem Singlestatus um 0.0131 Punkte\n\n\n• 10 Jahre älter → Zufriedenheit um 0.1312 Punkte höher"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#schritt-3-standardfehler-des-koeffizients",
@@ -7302,7 +7302,7 @@
     "href": "slides/23-Inferenz-P1.html#schritt-3-standardfehler-im-multivariaten-modell",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Schritt 3: Standardfehler im multivariaten Modell",
-    "text": "Schritt 3: Standardfehler im multivariaten Modell\n\\[\\text{SE}(\\beta_1)_{\\text{multi}} = \\sqrt{\\frac{\\sigma^2_{\\text{multi}}}{\\sum(x_i - \\bar{x})^2 \\times (1 - R^2_{1|others})}}\\]\nSchritt 4: t-Statistik und Signifikanz\n\n\nt = β / SE =  0.0027  /  0.0018  =  1.5152 \n\n\np-Wert =  0.1297399 \n\n\nInterpretation:\n\n\n  • t = 1.5152 ist relativ klein\n\n\n  • p = 0.1297 &gt; 0.05\n\n\n  ✗ NICHT statistisch signifikant (nach Kontrolle)"
+    "text": "Schritt 3: Standardfehler im multivariaten Modell\n\\[\\text{SE}(\\beta_1)_{\\text{multi}} = \\sqrt{\\frac{\\sigma^2_{\\text{multi}}}{\\sum(x_i - \\bar{x})^2 \\times (1 - R^2_{1|others})}}\\]\n\nSchritt 4: t-Statistik und Signifikanz\n\n\nt = β / SE =  0.0027  /  0.0018  =  1.5152 \n\n\np-Wert =  0.1297399 \n\n\nInterpretation:\n\n\n  • t = 1.5152 ist relativ klein\n\n\n  • p = 0.1297 &gt; 0.05\n\n\n  ✗ NICHT statistisch signifikant (nach Kontrolle)"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#schritt-5-kritischer-t-wert",
@@ -7323,14 +7323,14 @@
     "href": "slides/23-Inferenz-P1.html#zentraler-grenzwertsatz",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Zentraler Grenzwertsatz",
-    "text": "Zentraler Grenzwertsatz\nZentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.\nWenn also der Unterschied eines Stichprobenparameters zum Popuplationsparameter auf einer Zufallsschwankung beruht, dann können wir annehmen, dass diese Parameterunterschiede normalverteilt sind.1\nDa jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung.\nBitte machen Sie hier nicht den Fehler und behaupten, dass dadurch die Merkmale oder Parameter normalverteilt sein müssten."
+    "text": "Zentraler Grenzwertsatz\nZentraler Grenzwertsatz: Wenn die Verteilung eines Merkmals/Unterschieds auf reinem Zufall beruht, dann verteilt sich dieses/r Merkmal/Unterschied nach einer Normalverteilung.\nWenn also der Unterschied eines Stichprobenparameters zum Popuplationsparameter auf einer Zufallsschwankung beruht, dann können wir annehmen, dass diese Parameterunterschiede normalverteilt sind.3\nDa jede Normalverteilung durch z-Transformation zu einer Standardnormalverteilung umformbar ist, und wir über die Standardnormalverteilung definitorisches Wissen haben, haben wir auch volles Wissen über die Verteilung der zu analysierenden Verteilung."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#der-standard-error-se-die-kernidee",
     "href": "slides/23-Inferenz-P1.html#der-standard-error-se-die-kernidee",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Der Standard Error (SE) — Die Kernidee",
-    "text": "Der Standard Error (SE) — Die Kernidee\nWas ist SE?\nDer Standardfehler (= Standard Error) ist die Standardabweichung weiterer möglicher Mittelwerte aus gleich gezogenen Stichproben der selben Population.\n\\[\\text{SE}_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}\\]\nBerechnung\n\\[\\text{SE}_{\\bar{x}} = \\frac{2}{\\sqrt{50}} = \\frac{2}{7.07} = 0.2828\\]\nDas bedeutet: Wir schätzen, dass die Mittelwerte zukünftiger Stichproben sich typischerweise um 0.2828 unterscheiden."
+    "text": "Der Standard Error (SE) — Die Kernidee\n\nWas ist SE?\nDer Standardfehler (= Standard Error) ist die Standardabweichung weiterer möglicher Mittelwerte aus gleich gezogenen Stichproben der selben Population.\n\\[\\text{SE}_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}\\]\n\n\nBerechnung\n\\[\\text{SE}_{\\bar{x}} = \\frac{2}{\\sqrt{50}} = \\frac{2}{7.07} = 0.2828\\]\nDas bedeutet: Wir schätzen, dass die Mittelwerte zukünftiger Stichproben sich typischerweise um 0.2828 unterscheiden."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#die-se-bereiche-visualisiert",
@@ -7358,14 +7358,14 @@
     "href": "slides/23-Inferenz-P1.html#folgen",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Folgen",
-    "text": "Folgen\nGrößere Stichproben = Kleinerer SE\nWenn wir ein größeres n statt 50 hätten, z.B. n = 200:\n\\[\\text{SE}_{neu} = \\frac{2}{\\sqrt{200}} = 0.1414\\]\nDie SE würde halbiert! Die grünen Linien würden näher zusammenrücken.\nFolge: Mit größeren Stichproben sind unsere Schätzungen präziser.\nMehr Variation in den Daten = Größerer SE\nWenn σ größer statt 2 wäre, z.B. σ = 4:\n\\[\\text{SE}_{neu} = \\frac{4}{\\sqrt{50}} = 0.5657\\]\nDer SE würde sich verdoppeln! Die grünen Linien würden weiter auseinander liegen.\nFolge: Heterogenere Populationen sind schwerer zu schätzen."
+    "text": "Folgen\n\nGrößere Stichproben = Kleinerer SE\nWenn wir ein größeres n statt 50 hätten, z.B. n = 200:\n\\[\\text{SE}_{neu} = \\frac{2}{\\sqrt{200}} = 0.1414\\]\nDie SE würde halbiert! Die grünen Linien würden näher zusammenrücken.\nFolge: Mit größeren Stichproben sind unsere Schätzungen präziser.\n\n\nMehr Variation in den Daten = Größerer SE\nWenn σ größer statt 2 wäre, z.B. σ = 4:\n\\[\\text{SE}_{neu} = \\frac{4}{\\sqrt{50}} = 0.5657\\]\nDer SE würde sich verdoppeln! Die grünen Linien würden weiter auseinander liegen.\nFolge: Heterogenere Populationen sind schwerer zu schätzen."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#was-sind-konfidenzintervalle-deep-dive",
     "href": "slides/23-Inferenz-P1.html#was-sind-konfidenzintervalle-deep-dive",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Was sind Konfidenzintervalle (deep dive)?",
-    "text": "Was sind Konfidenzintervalle (deep dive)?\n\nKonfidenzintervalle sind Perzentilgrenzen für eine geschätzte Verteilung möglicher Parameter, die nur durch zufällige Unterschiede bei der Stichprobenziehung variiert.\nWir behaupten, dass unser Parameter der Mittelwert1 und der geschätzte Standardfehler die Standardabweichung der Parameterverteilung ist.\nDa die Variation der Parameter zufällig ist2, ergibt die Parameterverteilung eine Zufallsverteilung, über die wir komplettes Wissen haben.\nWir können daher angeben, wie viele Standardabweichungen wir vom Mittelwert aus nach oben/unten gehen müssen, um 99%, 98%, 97%, 96%, 95%, usw. der nicht extremen3 Zufallsvariation zu erfassen.\n\nGenauer: Der Erwartungswert der Verteilung.In der Praxis: als zufällig behauptet wird.Extrem ist im Zufallssprech alles, was an den Rändern liegt."
+    "text": "Was sind Konfidenzintervalle (deep dive)?\n\nKonfidenzintervalle sind Perzentilgrenzen für eine geschätzte Verteilung möglicher Parameter, die nur durch zufällige Unterschiede bei der Stichprobenziehung variiert.\nWir behaupten, dass unser Parameter der Mittelwert4 und der geschätzte Standardfehler die Standardabweichung der Parameterverteilung ist.\nDa die Variation der Parameter zufällig ist5, ergibt die Parameterverteilung eine Zufallsverteilung, über die wir komplettes Wissen haben.\nWir können daher angeben, wie viele Standardabweichungen wir vom Mittelwert aus nach oben/unten gehen müssen, um 99%, 98%, 97%, 96%, 95%, usw. der nicht extremen6 Zufallsvariation zu erfassen."
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#generelle-berechnung",
@@ -7407,7 +7407,7 @@
     "href": "slides/23-Inferenz-P1.html#wichtige-standardfehler",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Wichtige Standardfehler",
-    "text": "Wichtige Standardfehler\nStandardfehler für Wahrscheinlichkeitsdifferenzen\n\\[\nSE_{p_1 - p_2} = \\sqrt{\\frac{p_1(1-p_1)}{n_1} + \\frac{p_2(1-p_2)}{n_2}}\n\\]\nStandardfehler für Varianzen\n\\[\nSE_{\\sigma^2} = \\sqrt{\\frac{2\\sigma^4}{n-1}}\n\\]\nwobei:\n\\(\\sigma^2\\) = Varianz der Grundgesamtheit n = Stichprobengröße\nStandardfehler für Odds\n\\[\nSE_{\\text{Odds}} = \\frac{\\sqrt{\\frac{p(1-p)}{n}}}{(1-p)^2}\n\\] wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße"
+    "text": "Wichtige Standardfehler\n\nStandardfehler für Wahrscheinlichkeitsdifferenzen\n\\[\nSE_{p_1 - p_2} = \\sqrt{\\frac{p_1(1-p_1)}{n_1} + \\frac{p_2(1-p_2)}{n_2}}\n\\]\n\n\nStandardfehler für Varianzen\n\\[\nSE_{\\sigma^2} = \\sqrt{\\frac{2\\sigma^4}{n-1}}\n\\]\nwobei:\n\\(\\sigma^2\\) = Varianz der Grundgesamtheit n = Stichprobengröße\n\n\nStandardfehler für Odds\n\\[\nSE_{\\text{Odds}} = \\frac{\\sqrt{\\frac{p(1-p)}{n}}}{(1-p)^2}\n\\] wobei: p = Wahrscheinlichkeit in der Grundgesamtheit n = Stichprobengröße"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#skalierungsparameter",
@@ -7442,7 +7442,7 @@
     "href": "slides/23-Inferenz-P1.html#berechnung-des-konfidenzintervalls-bei-multivariaten-regressionskoeffizienten",
     "title": "Inferenzstatistik - Teil 1",
     "section": "Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten",
-    "text": "Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten\nWir verdeutlichen die Berechnung des Konfidenzintervalls für Alter im multivariaten Kontext.\nSchritt 1: Multivariate vs. Bivariate Effekte\n\n\nBIVARIATE REGRESSION (sat2 ~ age):\n\n\n  β = 0.0169 (SE = 0.0019 )\n\n\n  Signifikant: JA (p &lt; 0.001)\n\n\nMULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):\n\n\n  β = 0.0027 (SE = 0.0018 )\n\n\n  Signifikant: NEIN (p = 0.130)\n\n\nDIFFERENZ:\n\n\n  Δβ = 0.0142 \n\n\n  (Dies ist der Confounding-Effekt durch sin11_cat)"
+    "text": "Berechnung des Konfidenzintervalls bei multivariaten Regressionskoeffizienten\nWir verdeutlichen die Berechnung des Konfidenzintervalls für Alter im multivariaten Kontext.\n\nSchritt 1: Multivariate vs. Bivariate Effekte\n\n\nBIVARIATE REGRESSION (sat2 ~ age):\n\n\n  β = 0.0169 (SE = 0.0019 )\n\n\n  Signifikant: JA (p &lt; 0.001)\n\n\nMULTIVARIATE REGRESSION (kontrolliert für sex, east, sin11_cat):\n\n\n  β = 0.0027 (SE = 0.0018 )\n\n\n  Signifikant: NEIN (p = 0.130)\n\n\nDIFFERENZ:\n\n\n  Δβ = 0.0142 \n\n\n  (Dies ist der Confounding-Effekt durch sin11_cat)"
   },
   {
     "objectID": "slides/23-Inferenz-P1.html#praktische-anwendung",
@@ -7499,5 +7499,320 @@
     "title": "Inferenzstatistik – Teil 1",
     "section": "",
     "text": "View slides in full screen"
+  },
+  {
+    "objectID": "exercises/24-ex.html",
+    "href": "exercises/24-ex.html",
+    "title": "Übung: Inferenzstatistik",
+    "section": "",
+    "text": "Im Folgenden sehen Sie eine zufällige Stichprobe von 20 Personen aus dem FReDA-Datensatz mit den Variablen: - Beziehungsqualität zwischen leiblichen Eltern in der eigenen Kindheit (0 “Sehr schlecht” - 10 “Sehr gut”) - Geschlecht - Zustimmung zur Aussage: Scheidung ist in Ordnung - Alter - Herkunft aus Ostdeutschland\n\n\n\nTabelle 1: Zufallsstichprobe von 20 Personen mit deskriptiven Statistiken\n\n\nID\nBeziehung der Eltern\nGeschlecht\nScheidung ist in Ordnung\nAlter\nOst\n\n\n\n\n1\n9\nMännlich\nStimme eher zu\n34\n0\n\n\n2\n10\nMännlich\nStimme voll zu\n47\n0\n\n\n3\n10\nWeiblich\nStimme voll zu\n23\n0\n\n\n4\n6\nMännlich\nStimme eher zu\n40\n0\n\n\n5\n7\nWeiblich\nStimme voll zu\n50\n0\n\n\n6\n10\nWeiblich\nStimme voll zu\n24\n0\n\n\n7\n7\nMännlich\nWeder noch\n22\n0\n\n\n8\n7\nWeiblich\nStimme eher nicht zu\n36\n0\n\n\n9\n10\nWeiblich\nStimme überhaupt nicht zu\n38\n1\n\n\n10\n10\nWeiblich\nStimme voll zu\n26\n0\n\n\n11\n9\nMännlich\nStimme eher zu\n22\n0\n\n\n12\n8\nWeiblich\nStimme eher zu\n30\n0\n\n\n13\n7\nMännlich\nStimme voll zu\n42\n0\n\n\n14\n8\nMännlich\nStimme voll zu\n24\n0\n\n\n15\n3\nWeiblich\nStimme voll zu\n48\n0\n\n\n16\n6\nWeiblich\nStimme voll zu\n19\n0\n\n\n17\n6\nMännlich\nStimme eher zu\n39\n1\n\n\n18\n10\nWeiblich\nStimme voll zu\n45\n0\n\n\n19\n8\nMännlich\nStimme eher nicht zu\n27\n0\n\n\n20\n8\nWeiblich\nStimme voll zu\n31\n1\n\n\nMittelwert\n6.92\n\n\n34.8\n\n\n\nSD\n2.62\n\n\n8.8\n\n\n\n\n\n\n\n\n\nBerechnen Sie für die Gesamtstichprobe (n = 14362):\na) Konfidenzintervall für cla25 (95%)\n\nBerechnen Sie den Mittelwert und die Standardabweichung\nGeben Sie die kritischen Werte an\nBerechnen Sie das 95%-Konfidenzintervall\nFormeln: \\[SE = \\frac{s}{\\sqrt{n}}, \\quad KI = \\bar{x} \\pm t_{crit} \\cdot SE\\]\n\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\nn = 14362\nMittelwert (\\[\\bar{x}\\]) = 6.923\nStandardabweichung (s) = 2.624\nStandardfehler (SE) = 0.022\nFreiheitsgrade (df) = 1.4361^{4}\nKritischer t-Wert (α = 0.05, zweiseitig) = 1.96\n95%-KI = [6.88, 6.965]\n\nInterpretation: Das Konfidenzintervall gibt den Bereich an, in dem der wahre Populationsmittelwert mit 95% Wahrscheinlichkeit liegt.\n\n\n\nb) Konfidenzintervall für east (95%)\nDie Variable east ist binär (0 = West, 1 = Ost). Behandeln Sie diese als Anteil der Personen aus dem Osten.\n\nBerechnen Sie den Anteil (p)\nGeben Sie die kritischen Werte an\nBerechnen Sie das 95%-Konfidenzintervall\nFormel: \\[SE_p = \\sqrt{\\frac{p(1-p)}{n}}, \\quad KI = p \\pm z_{crit} \\cdot SE_p\\]\n\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\nn = 14362\nAnteil (p) = 0.147\nStandardfehler (SE) = 0.003\nKritischer z-Wert (α = 0.05, zweiseitig) = 1.96\n95%-KI = [0.141, 0.152]\n\nInterpretation: Das Intervall gibt an, in welchem Bereich der wahre Anteil der Personen aus dem Osten mit 95% Wahrscheinlichkeit liegt.\n\n\n\n\n\n\n\n\nVergleichen Sie die Beziehungsqualität (cla25) nach Geschlecht (sex).\n\n\n\n\n\nTabelle 2: Deskriptive Statistiken für cla25 nach Geschlecht\n\n\nGeschlecht\nn\nMittelwert\nStandardabweichung\n\n\n\n\nMännlich\n6322\n7.214\n2.443\n\n\nWeiblich\n8040\n6.693\n2.736\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nFreiheitsgrade = n₁ + n₂ - 2 = 6322 + 8040 - 2 = 1.436^{4}\nKritischer t-Wert (α = 0.05, zweiseitig) = 1.96\n\n\n\n\n\n\nBerechnen Sie: 1. Die Mittelwertdifferenz 2. Den gepoolten Standardfehler 3. Das 95%-Konfidenzintervall der Differenz 4. Interpretieren Sie das Ergebnis\nFormeln: \\[s_{gepolt} = \\sqrt{\\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}, \\quad SE_{Diff} = s_{gepolt} \\cdot \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}\\] \\[KI = (\\bar{x}_1 - \\bar{x}_2) \\pm t_{crit} \\cdot SE_{Diff}\\]\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\nGepoolte Standardabweichung = 2.611\nStandardfehler der Differenz = 0.044\nMittelwertdifferenz = 0.521\n95%-KI = [0.435, 0.607]\n\nInterpretation: Das Konfidenzintervall beschreibt den Bereich, in dem die wahre Mittelwertdifferenz mit 95% Wahrscheinlichkeit liegt. Falls das Intervall die Null nicht enthält, unterscheiden sich die Geschlechter signifikant in ihrer Wahrnehmung der Beziehungsqualität.\n\n\n\n\n\n\n\n\nBerechnen Sie das Odds Ratio für das Auftreten von pstat == 1 bei cla25 &lt;= 6 im Vergleich zu cla25 &gt; 6.\nForschungsfrage: Sind Personen mit besserer wahrgenommener Beziehungsqualität der Eltern (cla25 &gt; 6) weniger wahrscheinlich verheiratet/in eheähnlicher Gemeinschaft (pstat == 1)?\n\n\n\n\n\nTabelle 3: Kontingenztafel für cla25-Gruppen und pstat\n\n\ncla25-Gruppe\npstat = 1\npstat ≠ 1\n\n\n\n\ncla25 &gt; 6\n2291\n7261\n\n\ncla25 ≤ 6\n1215\n3595\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nKritischer z-Wert (α = 0.10, zweiseitig) = 1.645\n\n\n\n\n\n\nBerechnen Sie: 1. Die Odds für pstat == 1 in jeder Gruppe 2. Das Odds Ratio (OR) 3. Das 90%-Konfidenzintervall (nutzen Sie die Log-Transformation) 4. Interpretieren Sie das Ergebnis\nFormeln (2×2-Tafel mit a, b, c, d): \\[OR = \\frac{a \\cdot d}{b \\cdot c}, \\quad SE[\\ln(OR)] = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\] \\[KI_{OR} = \\exp\\left(\\ln(OR) \\pm z_{crit} \\cdot SE[\\ln(OR)]\\right)\\]\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\na (cla25 ≤ 6, pstat = 1) = 2291\nb (cla25 ≤ 6, pstat ≠ 1) = 7261\nc (cla25 &gt; 6, pstat = 1) = 1215\nd (cla25 &gt; 6, pstat ≠ 1) = 3595\nOdds Ratio = 0.934\nln(OR) = -0.069\nSE[ln(OR)] = 0.041\n90%-KI für OR = [0.873, 0.999]\n\nInterpretation: - Ein OR = 1 bedeutet keine Unterschied zwischen den Gruppen - Ein OR &gt; 1 bedeutet, dass die Chancen für pstat = 1 in der Gruppe cla25 ≤ 6 höher sind - Falls das KI die 1 nicht enthält, ist der Unterschied signifikant (auf 90%-Niveau)\n\n\n\n\n\n\n\n\nUntersuchen Sie, wie die Relation von cla25 zu val1i10 durch andere Variablen (Geschlecht, Alter, Region, Beziehungsstatus) konfundiert wird.\nHintergrund: Konfundierung liegt vor, wenn Variablen sowohl mit der Expositionsvariable (val1i10) als auch mit der Outcome-Variablen (cla25) korrelieren. Durch das schrittweise Hinzufügen von Variablen können Sie beobachten, wie sich die val1i10-Koeffizienten ändern – eine Veränderung von &gt;10% deutet auf Konfundierung hin.\n\n\n\n\n\nHinweis zur Referenzkategorie: Die Koeffizienten für “val1i10” zeigen die Unterschiede zur Referenzkategorie “Weder noch”. Ein negatives Vorzeichen bedeutet, dass diese Gruppe eine niedrigere Beziehungsqualität der Eltern berichtet als die Referenzkategorie, ein positives Vorzeichen bedeutet eine höhere Qualität.\n\n\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                 \n                Modell 1:\nEinstellung\n                Modell 2:\n+ Geschlecht\n                Modell 3:\n+ Alter\n                Modell 4:\n+ Region\n                Modell 5:\nVollständig\n              \n        \n        \n        \n                \n                  Stimme überhaupt nicht zu\n                  -0.113 [-0.495, 0.268]\n                  -0.101 [-0.481, 0.279]\n                  -0.083 [-0.463, 0.296]\n                  -0.082 [-0.461, 0.297]\n                  -0.076 [-0.455, 0.303]\n                \n                \n                  Stimme eher nicht zu\n                  -0.094 [-0.374, 0.186]\n                  -0.104 [-0.383, 0.175]\n                  -0.085 [-0.363, 0.194]\n                  -0.087 [-0.366, 0.192]\n                  -0.093 [-0.372, 0.185]\n                \n                \n                  Stimme eher zu\n                  -0.088 [-0.283, 0.106]\n                  -0.040 [-0.234, 0.154]\n                  -0.009 [-0.203, 0.185]\n                  -0.010 [-0.204, 0.184]\n                  -0.017 [-0.211, 0.178]\n                \n                \n                  Stimme voll zu\n                  -0.610 [-0.796, -0.425]\n                  -0.500 [-0.686, -0.314]\n                  -0.491 [-0.677, -0.306]\n                  -0.492 [-0.678, -0.306]\n                  -0.495 [-0.681, -0.309]\n                \n                \n                  Geschlecht: Weiblich\n                  \n                  -0.447 [-0.534, -0.360]\n                  -0.451 [-0.538, -0.364]\n                  -0.449 [-0.537, -0.362]\n                  -0.458 [-0.545, -0.370]\n                \n                \n                  Alter (Jahre)\n                  \n                  \n                  -0.015 [-0.020, -0.010]\n                  -0.015 [-0.020, -0.010]\n                  -0.017 [-0.022, -0.012]\n                \n                \n                  Region: Ost (binär)\n                  \n                  \n                  \n                  -0.096 [-0.216, 0.024]\n                  -0.095 [-0.215, 0.026]\n                \n                \n                  Beziehungsstatus\n                  \n                  \n                  \n                  \n                  0.143 [0.040, 0.245]\n                \n        \n      \n    \n\n\n\n\n\n\nAnalysieren Sie anhand der Tabelle:\n\nKoeffizientenstabilität: Wie verändern sich die Koeffizienten von val1i10 beim schrittweisen Hinzufügen von Variablen?\n\nVergleichen Sie insbesondere den Koeffizient “Stimme voll zu” über alle Modelle hinweg\nBeispiel: Modell 1: -0.610 → Modell 5: -0.495 = Veränderung von etwa 18.9%\n\nKonfundierung: Welche Variablen wirken als Confounder für die Relation zwischen cla25 und val1i10?\n\nHinweis: Eine Veränderung der Koeffizienten von &gt;10% deutet auf Konfundierung hin\nIn welchem Schritt ändert sich der Koeffizient am stärksten?\n\nRichtung und Stärke: Wird die Relation durch die Hinzunahme von Variablen stärker, schwächer oder bleibt sie gleich?\n\nBewegen sich die Koeffizienten zur Null hin (schwächer) oder weg von ihr (stärker)?\n\nModellwahl: Welches Modell würden Sie zur finalen Inferenz empfehlen und warum?\n\nBeachten Sie die Balance zwischen statistischer Kontrolle und Parsimonie (Sparsamkeit)\nBetrachten Sie, welche Variablen theoretisch relevant sind\nHat die Kontrolle für weitere Variablen die Schätzungen wesentlich verändert?\n\n\n\n\n\n\n\n\nNote\n\n\n\nInterpretation der Koeffizienten: - Negative Koeffizienten: Diese Gruppe berichtet eine niedrigere Beziehungsqualität als die Referenzkategorie “Weder noch” - Positive Koeffizienten: Diese Gruppe berichtet eine höhere Beziehungsqualität als die Referenzkategorie - Die Konfidenzintervalle zeigen die Unsicherheit der Schätzung\nKonkretes Beispiel für Konfundierung: Wenn sich der Koeffizient für “Stimme voll zu” erheblich ändert, wenn wir für Geschlecht (Modell 2) kontrollieren, deutet das darauf hin, dass Geschlecht den Zusammenhang zwischen val1i10 und cla25 beeinflusst."
+  },
+  {
+    "objectID": "exercises/24-ex.html#aufgabe-1-deskriptive-statistik-und-konfidenzintervalle",
+    "href": "exercises/24-ex.html#aufgabe-1-deskriptive-statistik-und-konfidenzintervalle",
+    "title": "Übung: Inferenzstatistik",
+    "section": "",
+    "text": "Im Folgenden sehen Sie eine zufällige Stichprobe von 20 Personen aus dem FReDA-Datensatz mit den Variablen: - Beziehungsqualität zwischen leiblichen Eltern in der eigenen Kindheit (0 “Sehr schlecht” - 10 “Sehr gut”) - Geschlecht - Zustimmung zur Aussage: Scheidung ist in Ordnung - Alter - Herkunft aus Ostdeutschland\n\n\n\nTabelle 1: Zufallsstichprobe von 20 Personen mit deskriptiven Statistiken\n\n\nID\nBeziehung der Eltern\nGeschlecht\nScheidung ist in Ordnung\nAlter\nOst\n\n\n\n\n1\n9\nMännlich\nStimme eher zu\n34\n0\n\n\n2\n10\nMännlich\nStimme voll zu\n47\n0\n\n\n3\n10\nWeiblich\nStimme voll zu\n23\n0\n\n\n4\n6\nMännlich\nStimme eher zu\n40\n0\n\n\n5\n7\nWeiblich\nStimme voll zu\n50\n0\n\n\n6\n10\nWeiblich\nStimme voll zu\n24\n0\n\n\n7\n7\nMännlich\nWeder noch\n22\n0\n\n\n8\n7\nWeiblich\nStimme eher nicht zu\n36\n0\n\n\n9\n10\nWeiblich\nStimme überhaupt nicht zu\n38\n1\n\n\n10\n10\nWeiblich\nStimme voll zu\n26\n0\n\n\n11\n9\nMännlich\nStimme eher zu\n22\n0\n\n\n12\n8\nWeiblich\nStimme eher zu\n30\n0\n\n\n13\n7\nMännlich\nStimme voll zu\n42\n0\n\n\n14\n8\nMännlich\nStimme voll zu\n24\n0\n\n\n15\n3\nWeiblich\nStimme voll zu\n48\n0\n\n\n16\n6\nWeiblich\nStimme voll zu\n19\n0\n\n\n17\n6\nMännlich\nStimme eher zu\n39\n1\n\n\n18\n10\nWeiblich\nStimme voll zu\n45\n0\n\n\n19\n8\nMännlich\nStimme eher nicht zu\n27\n0\n\n\n20\n8\nWeiblich\nStimme voll zu\n31\n1\n\n\nMittelwert\n6.92\n\n\n34.8\n\n\n\nSD\n2.62\n\n\n8.8\n\n\n\n\n\n\n\n\n\nBerechnen Sie für die Gesamtstichprobe (n = 14362):\na) Konfidenzintervall für cla25 (95%)\n\nBerechnen Sie den Mittelwert und die Standardabweichung\nGeben Sie die kritischen Werte an\nBerechnen Sie das 95%-Konfidenzintervall\nFormeln: \\[SE = \\frac{s}{\\sqrt{n}}, \\quad KI = \\bar{x} \\pm t_{crit} \\cdot SE\\]\n\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\nn = 14362\nMittelwert (\\[\\bar{x}\\]) = 6.923\nStandardabweichung (s) = 2.624\nStandardfehler (SE) = 0.022\nFreiheitsgrade (df) = 1.4361^{4}\nKritischer t-Wert (α = 0.05, zweiseitig) = 1.96\n95%-KI = [6.88, 6.965]\n\nInterpretation: Das Konfidenzintervall gibt den Bereich an, in dem der wahre Populationsmittelwert mit 95% Wahrscheinlichkeit liegt.\n\n\n\nb) Konfidenzintervall für east (95%)\nDie Variable east ist binär (0 = West, 1 = Ost). Behandeln Sie diese als Anteil der Personen aus dem Osten.\n\nBerechnen Sie den Anteil (p)\nGeben Sie die kritischen Werte an\nBerechnen Sie das 95%-Konfidenzintervall\nFormel: \\[SE_p = \\sqrt{\\frac{p(1-p)}{n}}, \\quad KI = p \\pm z_{crit} \\cdot SE_p\\]\n\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\nn = 14362\nAnteil (p) = 0.147\nStandardfehler (SE) = 0.003\nKritischer z-Wert (α = 0.05, zweiseitig) = 1.96\n95%-KI = [0.141, 0.152]\n\nInterpretation: Das Intervall gibt an, in welchem Bereich der wahre Anteil der Personen aus dem Osten mit 95% Wahrscheinlichkeit liegt."
+  },
+  {
+    "objectID": "exercises/24-ex.html#aufgabe-2-vergleich-von-mittelwerten-t-test",
+    "href": "exercises/24-ex.html#aufgabe-2-vergleich-von-mittelwerten-t-test",
+    "title": "Übung: Inferenzstatistik",
+    "section": "",
+    "text": "Vergleichen Sie die Beziehungsqualität (cla25) nach Geschlecht (sex).\n\n\n\n\n\nTabelle 2: Deskriptive Statistiken für cla25 nach Geschlecht\n\n\nGeschlecht\nn\nMittelwert\nStandardabweichung\n\n\n\n\nMännlich\n6322\n7.214\n2.443\n\n\nWeiblich\n8040\n6.693\n2.736\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nFreiheitsgrade = n₁ + n₂ - 2 = 6322 + 8040 - 2 = 1.436^{4}\nKritischer t-Wert (α = 0.05, zweiseitig) = 1.96\n\n\n\n\n\n\nBerechnen Sie: 1. Die Mittelwertdifferenz 2. Den gepoolten Standardfehler 3. Das 95%-Konfidenzintervall der Differenz 4. Interpretieren Sie das Ergebnis\nFormeln: \\[s_{gepolt} = \\sqrt{\\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}, \\quad SE_{Diff} = s_{gepolt} \\cdot \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}\\] \\[KI = (\\bar{x}_1 - \\bar{x}_2) \\pm t_{crit} \\cdot SE_{Diff}\\]\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\nGepoolte Standardabweichung = 2.611\nStandardfehler der Differenz = 0.044\nMittelwertdifferenz = 0.521\n95%-KI = [0.435, 0.607]\n\nInterpretation: Das Konfidenzintervall beschreibt den Bereich, in dem die wahre Mittelwertdifferenz mit 95% Wahrscheinlichkeit liegt. Falls das Intervall die Null nicht enthält, unterscheiden sich die Geschlechter signifikant in ihrer Wahrnehmung der Beziehungsqualität."
+  },
+  {
+    "objectID": "exercises/24-ex.html#aufgabe-3-odds-ratio-und-konfidenzintervall-90",
+    "href": "exercises/24-ex.html#aufgabe-3-odds-ratio-und-konfidenzintervall-90",
+    "title": "Übung: Inferenzstatistik",
+    "section": "",
+    "text": "Berechnen Sie das Odds Ratio für das Auftreten von pstat == 1 bei cla25 &lt;= 6 im Vergleich zu cla25 &gt; 6.\nForschungsfrage: Sind Personen mit besserer wahrgenommener Beziehungsqualität der Eltern (cla25 &gt; 6) weniger wahrscheinlich verheiratet/in eheähnlicher Gemeinschaft (pstat == 1)?\n\n\n\n\n\nTabelle 3: Kontingenztafel für cla25-Gruppen und pstat\n\n\ncla25-Gruppe\npstat = 1\npstat ≠ 1\n\n\n\n\ncla25 &gt; 6\n2291\n7261\n\n\ncla25 ≤ 6\n1215\n3595\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nKritischer z-Wert (α = 0.10, zweiseitig) = 1.645\n\n\n\n\n\n\nBerechnen Sie: 1. Die Odds für pstat == 1 in jeder Gruppe 2. Das Odds Ratio (OR) 3. Das 90%-Konfidenzintervall (nutzen Sie die Log-Transformation) 4. Interpretieren Sie das Ergebnis\nFormeln (2×2-Tafel mit a, b, c, d): \\[OR = \\frac{a \\cdot d}{b \\cdot c}, \\quad SE[\\ln(OR)] = \\sqrt{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} + \\frac{1}{d}}\\] \\[KI_{OR} = \\exp\\left(\\ln(OR) \\pm z_{crit} \\cdot SE[\\ln(OR)]\\right)\\]\n\n\n\n\n\n\nTipLösungshinweise\n\n\n\n\n\n\na (cla25 ≤ 6, pstat = 1) = 2291\nb (cla25 ≤ 6, pstat ≠ 1) = 7261\nc (cla25 &gt; 6, pstat = 1) = 1215\nd (cla25 &gt; 6, pstat ≠ 1) = 3595\nOdds Ratio = 0.934\nln(OR) = -0.069\nSE[ln(OR)] = 0.041\n90%-KI für OR = [0.873, 0.999]\n\nInterpretation: - Ein OR = 1 bedeutet keine Unterschied zwischen den Gruppen - Ein OR &gt; 1 bedeutet, dass die Chancen für pstat = 1 in der Gruppe cla25 ≤ 6 höher sind - Falls das KI die 1 nicht enthält, ist der Unterschied signifikant (auf 90%-Niveau)"
+  },
+  {
+    "objectID": "exercises/24-ex.html#aufgabe-4-konfundierung-in-der-regression",
+    "href": "exercises/24-ex.html#aufgabe-4-konfundierung-in-der-regression",
+    "title": "Übung: Inferenzstatistik",
+    "section": "",
+    "text": "Untersuchen Sie, wie die Relation von cla25 zu val1i10 durch andere Variablen (Geschlecht, Alter, Region, Beziehungsstatus) konfundiert wird.\nHintergrund: Konfundierung liegt vor, wenn Variablen sowohl mit der Expositionsvariable (val1i10) als auch mit der Outcome-Variablen (cla25) korrelieren. Durch das schrittweise Hinzufügen von Variablen können Sie beobachten, wie sich die val1i10-Koeffizienten ändern – eine Veränderung von &gt;10% deutet auf Konfundierung hin.\n\n\n\n\n\nHinweis zur Referenzkategorie: Die Koeffizienten für “val1i10” zeigen die Unterschiede zur Referenzkategorie “Weder noch”. Ein negatives Vorzeichen bedeutet, dass diese Gruppe eine niedrigere Beziehungsqualität der Eltern berichtet als die Referenzkategorie, ein positives Vorzeichen bedeutet eine höhere Qualität.\n\n\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                 \n                Modell 1:\nEinstellung\n                Modell 2:\n+ Geschlecht\n                Modell 3:\n+ Alter\n                Modell 4:\n+ Region\n                Modell 5:\nVollständig\n              \n        \n        \n        \n                \n                  Stimme überhaupt nicht zu\n                  -0.113 [-0.495, 0.268]\n                  -0.101 [-0.481, 0.279]\n                  -0.083 [-0.463, 0.296]\n                  -0.082 [-0.461, 0.297]\n                  -0.076 [-0.455, 0.303]\n                \n                \n                  Stimme eher nicht zu\n                  -0.094 [-0.374, 0.186]\n                  -0.104 [-0.383, 0.175]\n                  -0.085 [-0.363, 0.194]\n                  -0.087 [-0.366, 0.192]\n                  -0.093 [-0.372, 0.185]\n                \n                \n                  Stimme eher zu\n                  -0.088 [-0.283, 0.106]\n                  -0.040 [-0.234, 0.154]\n                  -0.009 [-0.203, 0.185]\n                  -0.010 [-0.204, 0.184]\n                  -0.017 [-0.211, 0.178]\n                \n                \n                  Stimme voll zu\n                  -0.610 [-0.796, -0.425]\n                  -0.500 [-0.686, -0.314]\n                  -0.491 [-0.677, -0.306]\n                  -0.492 [-0.678, -0.306]\n                  -0.495 [-0.681, -0.309]\n                \n                \n                  Geschlecht: Weiblich\n                  \n                  -0.447 [-0.534, -0.360]\n                  -0.451 [-0.538, -0.364]\n                  -0.449 [-0.537, -0.362]\n                  -0.458 [-0.545, -0.370]\n                \n                \n                  Alter (Jahre)\n                  \n                  \n                  -0.015 [-0.020, -0.010]\n                  -0.015 [-0.020, -0.010]\n                  -0.017 [-0.022, -0.012]\n                \n                \n                  Region: Ost (binär)\n                  \n                  \n                  \n                  -0.096 [-0.216, 0.024]\n                  -0.095 [-0.215, 0.026]\n                \n                \n                  Beziehungsstatus\n                  \n                  \n                  \n                  \n                  0.143 [0.040, 0.245]\n                \n        \n      \n    \n\n\n\n\n\n\nAnalysieren Sie anhand der Tabelle:\n\nKoeffizientenstabilität: Wie verändern sich die Koeffizienten von val1i10 beim schrittweisen Hinzufügen von Variablen?\n\nVergleichen Sie insbesondere den Koeffizient “Stimme voll zu” über alle Modelle hinweg\nBeispiel: Modell 1: -0.610 → Modell 5: -0.495 = Veränderung von etwa 18.9%\n\nKonfundierung: Welche Variablen wirken als Confounder für die Relation zwischen cla25 und val1i10?\n\nHinweis: Eine Veränderung der Koeffizienten von &gt;10% deutet auf Konfundierung hin\nIn welchem Schritt ändert sich der Koeffizient am stärksten?\n\nRichtung und Stärke: Wird die Relation durch die Hinzunahme von Variablen stärker, schwächer oder bleibt sie gleich?\n\nBewegen sich die Koeffizienten zur Null hin (schwächer) oder weg von ihr (stärker)?\n\nModellwahl: Welches Modell würden Sie zur finalen Inferenz empfehlen und warum?\n\nBeachten Sie die Balance zwischen statistischer Kontrolle und Parsimonie (Sparsamkeit)\nBetrachten Sie, welche Variablen theoretisch relevant sind\nHat die Kontrolle für weitere Variablen die Schätzungen wesentlich verändert?\n\n\n\n\n\n\n\n\nNote\n\n\n\nInterpretation der Koeffizienten: - Negative Koeffizienten: Diese Gruppe berichtet eine niedrigere Beziehungsqualität als die Referenzkategorie “Weder noch” - Positive Koeffizienten: Diese Gruppe berichtet eine höhere Beziehungsqualität als die Referenzkategorie - Die Konfidenzintervalle zeigen die Unsicherheit der Schätzung\nKonkretes Beispiel für Konfundierung: Wenn sich der Koeffizient für “Stimme voll zu” erheblich ändert, wenn wir für Geschlecht (Modell 2) kontrollieren, deutet das darauf hin, dass Geschlecht den Zusammenhang zwischen val1i10 und cla25 beeinflusst."
+  },
+  {
+    "objectID": "slides/25-Testverteilungen.html#übersicht-parameter-und-testverteilungen",
+    "href": "slides/25-Testverteilungen.html#übersicht-parameter-und-testverteilungen",
+    "title": "Testverteilungen für Signifikanztests",
+    "section": "Übersicht: Parameter und Testverteilungen",
+    "text": "Übersicht: Parameter und Testverteilungen\n\n\n\n\n\n\n\n\nParameter\nTestverteilung\nTeststatistik\n\n\n\n\nMittelwert (μ)\nt-Verteilung (df = n − 1)\n\\[t = \\frac{\\bar{x}}{SE}\\]\n\n\nMittelwertdifferenz (μ₁ − μ₂)\nt-Verteilung (df = min(n₁, n₂) − 1)\n\\[t = \\frac{\\bar{x}_1 - \\bar{x}_2}{SE}\\]\n\n\nRegressionskoeffizient (β)\nt-Verteilung (df = n − 2)\n\\[t = \\frac{\\hat{\\beta}}{SE}\\]\n\n\nWahrscheinlichkeit (p)\nNormalverteilung (z-Test)\n\\[z = \\frac{\\hat{p}}{SE}\\]\n\n\nWahrscheinlichkeitsdifferenz (p₁ − p₂)\nNormalverteilung (z-Test)\n\\[z = \\frac{\\hat{p}_1 - \\hat{p}_2}{SE}\\]\n\n\nOdds / Odds Ratio\nNormalverteilung (z-Test, log-Skala)\n\\[z = \\frac{\\text{Schätzung}}{SE}\\]\n\n\nVarianz (σ²)\nChi-Quadrat-Verteilung (df = n − 1)\n\\[\\chi^2 = df \\cdot \\frac{s^2}{\\sigma_0^2}\\]\n\n\nVarianzverhältnis (σ₁²/σ₂²)\nF-Verteilung (df₁ = n₁ − 1, df₂ = n₂ − 1)\n\\[F = \\frac{s_1^2}{s_2^2}\\]"
+  },
+  {
+    "objectID": "slides/25-Testverteilungen.html#t-verteilung",
+    "href": "slides/25-Testverteilungen.html#t-verteilung",
+    "title": "Testverteilungen für Signifikanztests",
+    "section": "t-Verteilung",
+    "text": "t-Verteilung\nFür Mittelwerte, Mittelwertdifferenzen und Regressionskoeffizienten.\n\\[t = \\frac{\\text{Schätzung}}{SE}, \\quad df = n - 1 \\text{ (bzw. } n-2 \\text{ bei Regression)}\\]\nDie t-Verteilung hat schwerere Ränder als die Normalverteilung – besonders bei kleinem df. Bei großem df nähert sie sich der Normalverteilung an.\n\n\n\n\n\n\n\n\nFigure 1: t-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+  },
+  {
+    "objectID": "slides/25-Testverteilungen.html#normalverteilung-z-test",
+    "href": "slides/25-Testverteilungen.html#normalverteilung-z-test",
+    "title": "Testverteilungen für Signifikanztests",
+    "section": "Normalverteilung (z-Test)",
+    "text": "Normalverteilung (z-Test)\nFür Wahrscheinlichkeiten, Wahrscheinlichkeitsdifferenzen, Odds und Odds Ratios.\n\\[z = \\frac{\\text{Schätzung}}{SE}\\]\nDie Normalverteilung hat keine Freiheitsgrade – die kritischen Werte sind immer ±1.96 (bei α = 0.05).\nOdds und Odds Ratios werden auf der log-Skala getestet (dort ist die Verteilung symmetrisch).\n\n\n\n\n\n\n\n\nFigure 2: Standardnormalverteilung mit zweiseitigem Ablehnungsbereich (α = 0.05)"
+  },
+  {
+    "objectID": "slides/25-Testverteilungen.html#chi-quadrat-verteilung",
+    "href": "slides/25-Testverteilungen.html#chi-quadrat-verteilung",
+    "title": "Testverteilungen für Signifikanztests",
+    "section": "Chi-Quadrat-Verteilung",
+    "text": "Chi-Quadrat-Verteilung\nFür Varianzen (σ²).\n\\[\\chi^2 = df \\cdot \\frac{s^2}{\\sigma_0^2}, \\quad df = n - 1\\]\nDie Chi-Quadrat-Verteilung ist rechtsschief und nur für positive Werte definiert. Bei großem df nähert sie sich einer Normalverteilung an. Der Ablehnungsbereich ist nicht symmetrisch – die kritischen Werte unterscheiden sich für den linken und rechten Rand.\n\n\n\n\n\n\n\n\nFigure 3: Chi-Quadrat-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+  },
+  {
+    "objectID": "slides/25-Testverteilungen.html#f-verteilung",
+    "href": "slides/25-Testverteilungen.html#f-verteilung",
+    "title": "Testverteilungen für Signifikanztests",
+    "section": "F-Verteilung",
+    "text": "F-Verteilung\nFür Varianzverhältnisse (σ₁²/σ₂²).\n\\[F = \\frac{s_1^2}{s_2^2}, \\quad df_1 = n_1 - 1, \\quad df_2 = n_2 - 1\\]\nDie F-Verteilung ist rechtsschief und nur für positive Werte definiert. Bei gleichen Gruppengrößen gilt df₁ = df₂. Bei großen Freiheitsgraden konzentriert sich die Verteilung um 1 (kein Unterschied).\n\n\n\n\n\n\n\n\nFigure 4: F-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade (df₁ = df₂)"
+  },
+  {
+    "objectID": "slides/25-Testverteilungen.html#zusammenfassung-wahl-der-verteilung",
+    "href": "slides/25-Testverteilungen.html#zusammenfassung-wahl-der-verteilung",
+    "title": "Testverteilungen für Signifikanztests",
+    "section": "Zusammenfassung: Wahl der Verteilung",
+    "text": "Zusammenfassung: Wahl der Verteilung\n\n\n\n\n\n\nFaustregel\n\n\nDie Wahl der Testverteilung ergibt sich aus dem Parameter, den Sie testen:\n\nLokationsparameter (Mittelwerte, Differenzen, Koeffizienten) → t-Verteilung\nProportionen und Odds → Normalverteilung (z-Test)\nVarianz eines Merkmals → Chi-Quadrat-Verteilung\nVerhältnis zweier Varianzen → F-Verteilung\n\n\n\n\nBei allen Verteilungen gilt: Je größer die Stichprobe (und damit die Freiheitsgrade), desto schmaler die Verteilung und desto kleiner die Ablehnungsbereiche relativ zur Gesamtfläche.\n→ Testen Sie die Verteilungen interaktiv in der Shiny-App."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#das-multivariate-modell",
+    "href": "slides/24-Inferenz-P2.html#das-multivariate-modell",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Das multivariate Modell",
+    "text": "Das multivariate Modell\n  \\[\n\\begin{align*}\n\\text{Zufriedenheit als Single}_i &= \\beta_0\\\\ &+ \\beta_{\\text{Alter}} \\\\\n&+ \\beta_{\\text{Frau}} + \\beta_{\\text{Ost}} + \\beta_{\\text{Frau X Ost}}\\\\\n&+ \\beta_{\\text{Offen}} + \\beta_{\\text{Anbahnend}} + \\beta_{\\text{On-Off}} + \\beta_{\\text{Freundschaft Plus}} + \\beta_{\\text{Sonstiges}} \\\\\n&+ \\varepsilon_i\n\\end{align*}\n\\]\n \n\nRegion und Geschlecht bilden einen Interaktionseffekt\n“kein Interesse” ist Referenzkategorie für die Beziehungskategorie"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#regressionsergebnisse",
+    "href": "slides/24-Inferenz-P2.html#regressionsergebnisse",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Regressionsergebnisse",
+    "text": "Regressionsergebnisse\n\n\n\nErgebnisse des multivariaten Regressionsmodells\n\n\nVariabel\nKoeffizient (β)\nStandardfehler (SE)\np-value\n\n\n\n\nKonstante\n7.46\n0.08\n0.000\n\n\nFrau\n0.43\n0.04\n0.000\n\n\nOsten\n0.25\n0.07\n0.000\n\n\nAlter\n0.00\n0.00\n0.130\n\n\nOffen für Beziehung\n-2.45\n0.05\n0.000\n\n\nAnbahnende Beziehung\n-1.95\n0.08\n0.000\n\n\nOn-off-Beziehung\n-3.52\n0.17\n0.000\n\n\nFreundschaft Plus\n-1.42\n0.07\n0.000\n\n\nSonstiges\n-2.69\n0.11\n0.000\n\n\nInteraktion: Frau × Osten\n-0.05\n0.09\n0.585\n\n\n\n\n\nReferenzkategorie für den Single-Typ: Kein Interesse an einer Beziehung."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#null--und-forschungshypothesen",
+    "href": "slides/24-Inferenz-P2.html#null--und-forschungshypothesen",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Null- und Forschungshypothesen",
+    "text": "Null- und Forschungshypothesen\nAufgrund des Falsifikationsproblems lassen sich die eigentlichen Forschungshypothesen1 nicht direkt testen. Man sucht zu ihr immer einen Widerspruch, der sich testen lässt. Dieser Widerspruch wird typischerweise durch eine Nullhypothese formuliert.\n\n\n\n\nForschungshypothese\nNullhypothese\n\n\n\\(a &lt; b\\)\n\\(a = b\\)\n\n\n\\(a &gt; b\\)\n\\(a = b\\)\n\n\n\\(a \\neq b\\)\n\\(a = b\\)\n\n\n\n\nDie Nullhypothese behauptet immer, dass ein Zusammenhang/Unterschied nur aus Zufall beobachtet wird und in der Grundgesamheit nicht besteht.\nDiese These wird auch “Alternativhypothese” genannt."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#signifikanz-lernen-aus-empirischen-ergebnissen",
+    "href": "slides/24-Inferenz-P2.html#signifikanz-lernen-aus-empirischen-ergebnissen",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Signifikanz & Lernen aus empirischen Ergebnissen",
+    "text": "Signifikanz & Lernen aus empirischen Ergebnissen\nWir möchten mit Datenanalyse unsere Annahmen über die (soziale) Welt verändern/bestärken. Haben wir die Annahme, dass es starke Einflüsse gibt, dann ist einer der größten Widersprüche gegen diese Annahme, dass mit den vorliegenden Daten nicht unterschieden werden kann, ob das Phänomen durch den behaupteten Effekt oder durch bloßen Zufall entstanden sein könnte.\nHypothesentests vergleichen daher das empirische Resultat (meist ein Unterschied!) mit einer Verteilung von Ergebnissen, die das Produkt eines eines Zufallsprozesses ist. Jeder Wert innerhalb dieser Verteilung ist eine von unendlich vielen Stichproben. Innerhalb dieser Stichproben gibt es keine systematischen Unterschiede zwischen Gruppen.\nWenn der empirische Wert innerhalb der Verteilung von Zufallsergebnissen sehr unwahrscheinlich ist, dann können wir der Nullhypothese (=Zufallsbehauptung) sehr geringe Plausibilität beimessen. In diesem Fall spricht man auch von statistischer Signifikanz oder auch von Überzufälligkeit."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#signifikanz-und-plausibilität-von-hypothesen",
+    "href": "slides/24-Inferenz-P2.html#signifikanz-und-plausibilität-von-hypothesen",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Signifikanz und Plausibilität von Hypothesen",
+    "text": "Signifikanz und Plausibilität von Hypothesen\n\nFormulierung der Alternativ- und Nullhypothese.\nBerechnung des zu testenden Parameters (= alles, was eine Tendenz, Unterschied oder Zusammenhang ausdrückt).\nÜberlegung, wie eine Verteilung der Parameter aus unendlich vielen Stichproben aussehen sollte, wenn die Nullhypothese zutrifft. Diese Verteilung bezeichnen wir als Testverteilung.\nFormulierung, mit welcher Wahrscheinlichkeit der Parameter innerhalb der Testverteilung auftreten darf, um als Produkt einer Zufallsschwankung zu gelten (Festlegung der Irrtumswahrscheinlichkeit & eines Ablehnungsbereiches).\nBerechnung der Wahrscheinlichkeit des Auftretens des empirisch beobachteten Parameters (oder eines extremeren) innerhalb der Testverteilung. Dieser Wert wird als p-value bezeichnet.\nWenn das p-Value kleiner ist als ein vorher festgelegter Schwellenwert, lehnen wir die Nullhypothese ab. Ansonsten behalten wir sie bei."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#die-berechnung-von-p-values",
+    "href": "slides/24-Inferenz-P2.html#die-berechnung-von-p-values",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Die Berechnung von p-values",
+    "text": "Die Berechnung von p-values\nZur Berechnung eines p-values müssen wir die Fläche unter einer Verteilung berechnen, die vom Parameter abgetrennt wird. Das kann z.T. sehr schwierig sein. Wir müssen dazu die Dichtefunktion einer Verteilung kennen. Im Fall einer Standardnormalverteilung lautet diese:\n\\[\\varphi(z)=\\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{1}{2} z^2}\\quad -\\infty&lt;z&lt;\\infty\\]\nDiese Dichtefunktion können wir nutzen, um die Wahrscheinlichkeit eines errechneten oder extremeren Wertes in dieser Zufallsverteilung zu berechnen. Ein Wert mit einer Abweichung von 1.9645 \\(\\sigma\\) vom Mittelwert einer Standardnormalverteilung grenzt daher 2.5% der oberen Fläche ab:\n\\[P(1.9645) = \\frac{1}{{\\sqrt {2\\pi } }}e^{-\\frac{1}{2} \\cdot \\left( 1.9645\\right)^2 } \\approx 0.025\\]"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#was-bedeutet-es-wenn-mein-ergebnis-im-ablehnungsbereich-liegt",
+    "href": "slides/24-Inferenz-P2.html#was-bedeutet-es-wenn-mein-ergebnis-im-ablehnungsbereich-liegt",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Was bedeutet es, wenn mein Ergebnis im Ablehnungsbereich liegt?",
+    "text": "Was bedeutet es, wenn mein Ergebnis im Ablehnungsbereich liegt?\n\nEs bedeutet nur, dass - unter Gültigkeit aller Annahmen - das Ergebnis nur mit einer geringen Wahrscheinlichkeit das Resultat einer Zufallsschwankung ist.\nEs sagt nichts darüber aus, ob Ihre Annahmen verletzt sind.\nEs sagt wenig darüber aus, ob Ihre Forschungsfrage stimmt. Wenn viele Alternativerklärungen zu Ihrem Forschungsergebnis führen können, dann haben Sie mit dem Signifikanztest nur eine von vielen Erklärungen für das Ergebnis unplausibel gemacht: den Zufall.\nBitte (!!!!) nutzen Sie Ablehnungsbereiche nicht als dichotome Kategorien."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#signifikanz-und-sternedeutung",
+    "href": "slides/24-Inferenz-P2.html#signifikanz-und-sternedeutung",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Signifikanz und Sternedeutung",
+    "text": "Signifikanz und Sternedeutung\n\nIn vielen Publikationen wird statistische Signifikanz durch unterschiedliche Symbole verkürzt dargestellt.\nDie Parameter werden mit verschiedenen Irrtumswahrscheinlichkeiten getestet.\nDerjenige Test, der mit der geringsten Irrtumswahrscheinlichkeit statistische Signifikanz berechnet, wird als Grundlage für das jeweilige Symbol genommen.\nKein Symbol = keine statistische Signifikanz auf der höchsten angesetzten Irrtumswahrscheinlichkeit."
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#sternedeutung",
+    "href": "slides/24-Inferenz-P2.html#sternedeutung",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Sternedeutung",
+    "text": "Sternedeutung"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#für-jedes-problemchen-ein-appchen",
+    "href": "slides/24-Inferenz-P2.html#für-jedes-problemchen-ein-appchen",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Für jedes Problemchen ein Appchen",
+    "text": "Für jedes Problemchen ein Appchen"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#übersicht-parameter-und-testverteilungen",
+    "href": "slides/24-Inferenz-P2.html#übersicht-parameter-und-testverteilungen",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Übersicht: Parameter und Testverteilungen",
+    "text": "Übersicht: Parameter und Testverteilungen\n\n\n\n\n\n\n\n\nParameter\nTestverteilung\nTeststatistik\n\n\n\n\nMittelwertdifferenz (μ₁ − μ₂)\nt-Verteilung (df = min(n₁, n₂) − 1)\n\\[t = \\frac{\\bar{x}_1 - \\bar{x}_2}{SE}\\]\n\n\nRegressionskoeffizient (β)\nt-Verteilung (df = n − 2)\n\\[t = \\frac{\\hat{\\beta}}{SE}\\]\n\n\nWahrscheinlichkeitsdifferenz (p₁ − p₂)\nNormalverteilung (z-Test)\n\\[z = \\frac{\\hat{p}_1 - \\hat{p}_2}{SE}\\]\n\n\nOdds / Odds Ratio\nNormalverteilung (z-Test, log-Skala)\n\\[z = \\frac{\\text{Schätzung}}{SE}\\]\n\n\nVarianzverhältnis (σ₁²/σ₂²)\nF-Verteilung (df₁ = n₁ − 1, df₂ = n₂ − 1)\n\\[F = \\frac{\\hat{\\sigma}_1^2}{\\hat{\\sigma}_2^2}\\]"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#t-verteilung",
+    "href": "slides/24-Inferenz-P2.html#t-verteilung",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "t-Verteilung",
+    "text": "t-Verteilung\nFür Mittelwerte, Mittelwertdifferenzen und Regressionskoeffizienten.\n\\[t = \\frac{\\text{Schätzung}}{SE}, \\quad df = n - 1 \\text{ (bzw. } n-2 \\text{ bei Regression)}\\]\nDie t-Verteilung hat breitere Ränder als die Normalverteilung – besonders bei kleinem df. Bei großem df nähert sie sich der Normalverteilung an.\n\n\n\n\n\n\n\n\nFigure 1: t-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#normalverteilung-z-test",
+    "href": "slides/24-Inferenz-P2.html#normalverteilung-z-test",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Normalverteilung (z-Test)",
+    "text": "Normalverteilung (z-Test)\nFür Wahrscheinlichkeiten, Wahrscheinlichkeitsdifferenzen, log. Odds und log. Odds Ratios.\n\\[z = \\frac{\\text{Schätzung}}{SE}\\]\nDie Normalverteilung hat keine Freiheitsgrade – die kritischen Werte sind immer ±1.96 (bei α = 0.05).\nOdds und Odds Ratios werden auf der log-Skala getestet (dort ist die Verteilung symmetrisch).\n\n\n\n\n\n\n\n\nFigure 2: Standardnormalverteilung mit zweiseitigem Ablehnungsbereich (α = 0.05)"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#chi-quadrat-verteilung",
+    "href": "slides/24-Inferenz-P2.html#chi-quadrat-verteilung",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "Chi-Quadrat-Verteilung",
+    "text": "Chi-Quadrat-Verteilung\nFür Varianzen (σ²).\n\\[\\chi^2 = df \\cdot \\frac{s^2}{\\sigma_0^2}, \\quad df = n - 1\\]\nDie Chi-Quadrat-Verteilung ist rechtsschief und nur für positive Werte definiert. Bei großem df nähert sie sich einer Normalverteilung an. Der Ablehnungsbereich ist nicht symmetrisch – die kritischen Werte unterscheiden sich für den linken und rechten Rand.\n\n\n\n\n\n\n\n\nFigure 3: Chi-Quadrat-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#f-verteilung",
+    "href": "slides/24-Inferenz-P2.html#f-verteilung",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "F-Verteilung",
+    "text": "F-Verteilung\nFür Varianzverhältnisse (σ₁²/σ₂²).\n\\[F = \\frac{\\hat{\\sigma}_1^2}{\\hat{\\sigma}_2^2}, \\quad df_1 = n_1 - 1, \\quad df_2 = n_2 - 1\\] Die F-Verteilung ist rechtsschief (außer bei sehr großen Fallzahlen) und nur für positive Werte definiert.\n\n\n\n\n\n\n\n\nFigure 3: F-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade (df₁ = df₂)"
+  },
+  {
+    "objectID": "slides/24-Inferenz-P2.html#the-final-slide-zufriedenheit-und-sterne",
+    "href": "slides/24-Inferenz-P2.html#the-final-slide-zufriedenheit-und-sterne",
+    "title": "Inferenzstatistik - Teil 2",
+    "section": "The final slide: Zufriedenheit und Sterne",
+    "text": "The final slide: Zufriedenheit und Sterne\n\n\n\n\n\n\n\n\n\n\n\n\nBeziehungszufriedenheit (0–10)\n\n\n\n\nModell 1\n Modell 2\n\n\n\n\nKonstante\n8.839***\n8.857***\n\n\n\np = &lt;0.001\np = &lt;0.001\n\n\nKohorte: 1981–83\n-0.230**\n-0.229**\n\n\n\np = 0.044\np = 0.046\n\n\nKohorte: 1991–93\n0.052\n0.076\n\n\n\np = 0.812\np = 0.731\n\n\nKohorte: 2001–03\n0.084\n0.119\n\n\n\np = 0.798\np = 0.717\n\n\nGeschlecht: weiblich\n-0.168***\n-0.178***\n\n\n\np = &lt;0.001\np = &lt;0.001\n\n\nAlter\n-0.018*\n-0.019*\n\n\n\np = 0.097\np = 0.075\n\n\nOstdeutschland\n0.000\n0.001\n\n\n\np = 0.997\np = 0.966\n\n\nBeziehungsdauer (Jahre)\n\n0.004*\n\n\n\n\np = 0.081\n\n\nNum.Obs.\n15334\n15067\n\n\nR2\n0.024\n0.026\n\n\nR2 Adj.\n0.024\n0.025\n\n\n\nNote: \n\n\n\n\n Referenzkategorie: Kohorte 1971–73. Signifikanzniveaus: * p &lt; .10, ** p &lt; .05, *** p &lt; .01."
+  },
+  {
+    "objectID": "slides/24-slides.html",
+    "href": "slides/24-slides.html",
+    "title": "Inferenzstatistik – Teil 2",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "exams/exam-template-advanced.html",
+    "href": "exams/exam-template-advanced.html",
+    "title": "Empirische Sozialforschung: Prüfung mit R-Code",
+    "section": "",
+    "text": "Dauer: 120 Minuten | Punkte: 80 | Bestanden: ≥40 Punkte\nDiese Prüfung kombiniert konzeptuelle Fragen mit R-basierten Datenanalysen. Sie können R-Code direkt in den bereitgestellten Code-Blöcken schreiben oder auf Papier lösen.\n\n\n\n\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMittelwert\n6.681\n\n\nSD\n1.826\n\n\nSE\n0.183\n\n\n95%-KI untere Grenze\n6.319\n\n\n95%-KI obere Grenze\n7.043\n\n\n\n\n\n\\question{Interpretieren Sie das 95%-Konfidenzintervall für die Zufriedenheit basierend auf den oben gezeigten Ergebnissen. Was bedeutet dieses Intervall?}{8}\n\n\n\n\n\n\n\n    Welch Two Sample t-test\n\ndata:  group1 and group2\nt = 9.1084, df = 11.859, p-value = 1.064e-06\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 0.8473872 1.3811842\nsample estimates:\nmean of x mean of y \n 7.114286  6.000000 \n\n\n\n\n\n\n\n\n\nCall:\nlm(formula = satisfaction ~ age)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.4397 -0.9755 -0.0692  1.0020  3.0578 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   1.9210     0.5856   3.280  0.00193 ** \nage           0.0852     0.0130   6.552 3.58e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.443 on 48 degrees of freedom\nMultiple R-squared:  0.4721,    Adjusted R-squared:  0.4611 \nF-statistic: 42.93 on 1 and 48 DF,  p-value: 3.58e-08\n\n\n\n\n\n\n\n\n\n\\question{Gegeben: Stichprobe mit n = 64, Mittelwert = 52, s = 8. Berechnen Sie ein 95%-KI.}{10}\nGegeben: - n = 64 - x̄ = 52\n- s = 8 - Gesucht: 95%-KI für μ\nSchritte:\n\nSE = s/√n = 8/√64 = ______\ndf = n - 1 = ______\nt₀.₉₇₅(df) = ______\nUntere Grenze = 52 - t · SE = ______\nObere Grenze = 52 + t · SE = ______\n\n95%-KI = [______, ______]\n\n\n\n\n\n\n\n\nErkrankt (ja)\nErkrankt (nein)\n\n\n\n\nExponiert (ja)\n45\n55\n\n\nExponiert (nein)\n30\n70\n\n\n\nBerechnung:\nInterpretation: ______________________________\n\n\n\n\n\\question{Sie planen eine Studie zur Schätzung eines Anteils. Wie groß muss die Stichprobe sein, um einen Anteil von \\(p = 0.4\\) mit \\(E = 0.05\\) und 95% Konfidenzniveau zu schätzen?}{10}\nFormel: \\(n = \\frac{z^2 \\cdot p(1-p)}{E^2}\\)\nBerechnung: $n = $ _________________\n\n\n\n\n\n\n\n\n\n\n\n\\question{Ein Forscher findet ein 95%-KI = [0.5, 1.5] für die Differenz zweier Mittelwerte. Er schließt daraus: “Es gibt keinen signifikanten Unterschied zwischen den Gruppen, weil das Intervall Null enthält.” Ist diese Aussage korrekt? Begründen Sie.}{10}\n\n\n\n\n\n\n\nSchreiben Sie einen R-Code, der ein 95%-Konfidenzintervall für einen Datensatz berechnet.\n\n# Ihr Code:\n# 1. Erstellen Sie einen Vektor 'x' mit Werten\n# 2. Berechnen Sie Mittelwert, SD, SE\n# 3. Berechnen Sie die KI-Grenzen\n\n# x &lt;- ...\n# n &lt;- ...\n# mean_x &lt;- ...\n# ... weitere Befehle\n\n\n\n\n\n\n\nEnde der Prüfung. Bitte überprüfen Sie Ihre Antworten.\nZeitangabe: Beginn ________ Uhr, Ende ________ Uhr"
+  },
+  {
+    "objectID": "exams/exam-template-advanced.html#teil-1-r-output-interpretation-25-punkte",
+    "href": "exams/exam-template-advanced.html#teil-1-r-output-interpretation-25-punkte",
+    "title": "Empirische Sozialforschung: Prüfung mit R-Code",
+    "section": "",
+    "text": "Statistik\nWert\n\n\n\n\nMittelwert\n6.681\n\n\nSD\n1.826\n\n\nSE\n0.183\n\n\n95%-KI untere Grenze\n6.319\n\n\n95%-KI obere Grenze\n7.043\n\n\n\n\n\n\\question{Interpretieren Sie das 95%-Konfidenzintervall für die Zufriedenheit basierend auf den oben gezeigten Ergebnissen. Was bedeutet dieses Intervall?}{8}\n\n\n\n\n\n\n\n    Welch Two Sample t-test\n\ndata:  group1 and group2\nt = 9.1084, df = 11.859, p-value = 1.064e-06\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 0.8473872 1.3811842\nsample estimates:\nmean of x mean of y \n 7.114286  6.000000 \n\n\n\n\n\n\n\n\n\nCall:\nlm(formula = satisfaction ~ age)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.4397 -0.9755 -0.0692  1.0020  3.0578 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   1.9210     0.5856   3.280  0.00193 ** \nage           0.0852     0.0130   6.552 3.58e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.443 on 48 degrees of freedom\nMultiple R-squared:  0.4721,    Adjusted R-squared:  0.4611 \nF-statistic: 42.93 on 1 and 48 DF,  p-value: 3.58e-08"
+  },
+  {
+    "objectID": "exams/exam-template-advanced.html#teil-2-eigene-berechnungen-30-punkte",
+    "href": "exams/exam-template-advanced.html#teil-2-eigene-berechnungen-30-punkte",
+    "title": "Empirische Sozialforschung: Prüfung mit R-Code",
+    "section": "",
+    "text": "\\question{Gegeben: Stichprobe mit n = 64, Mittelwert = 52, s = 8. Berechnen Sie ein 95%-KI.}{10}\nGegeben: - n = 64 - x̄ = 52\n- s = 8 - Gesucht: 95%-KI für μ\nSchritte:\n\nSE = s/√n = 8/√64 = ______\ndf = n - 1 = ______\nt₀.₉₇₅(df) = ______\nUntere Grenze = 52 - t · SE = ______\nObere Grenze = 52 + t · SE = ______\n\n95%-KI = [______, ______]\n\n\n\n\n\n\n\n\nErkrankt (ja)\nErkrankt (nein)\n\n\n\n\nExponiert (ja)\n45\n55\n\n\nExponiert (nein)\n30\n70\n\n\n\nBerechnung:\nInterpretation: ______________________________\n\n\n\n\n\\question{Sie planen eine Studie zur Schätzung eines Anteils. Wie groß muss die Stichprobe sein, um einen Anteil von \\(p = 0.4\\) mit \\(E = 0.05\\) und 95% Konfidenzniveau zu schätzen?}{10}\nFormel: \\(n = \\frac{z^2 \\cdot p(1-p)}{E^2}\\)\nBerechnung: $n = $ _________________"
+  },
+  {
+    "objectID": "exams/exam-template-advanced.html#teil-3-anwendung-und-analyse-20-punkte",
+    "href": "exams/exam-template-advanced.html#teil-3-anwendung-und-analyse-20-punkte",
+    "title": "Empirische Sozialforschung: Prüfung mit R-Code",
+    "section": "",
+    "text": "\\question{Ein Forscher findet ein 95%-KI = [0.5, 1.5] für die Differenz zweier Mittelwerte. Er schließt daraus: “Es gibt keinen signifikanten Unterschied zwischen den Gruppen, weil das Intervall Null enthält.” Ist diese Aussage korrekt? Begründen Sie.}{10}"
+  },
+  {
+    "objectID": "exams/exam-template-advanced.html#bonus-r-code-schreiben-bis-zu-5-zusatzpunkte",
+    "href": "exams/exam-template-advanced.html#bonus-r-code-schreiben-bis-zu-5-zusatzpunkte",
+    "title": "Empirische Sozialforschung: Prüfung mit R-Code",
+    "section": "",
+    "text": "Schreiben Sie einen R-Code, der ein 95%-Konfidenzintervall für einen Datensatz berechnet.\n\n# Ihr Code:\n# 1. Erstellen Sie einen Vektor 'x' mit Werten\n# 2. Berechnen Sie Mittelwert, SD, SE\n# 3. Berechnen Sie die KI-Grenzen\n\n# x &lt;- ...\n# n &lt;- ...\n# mean_x &lt;- ...\n# ... weitere Befehle"
+  },
+  {
+    "objectID": "exams/exam-template-advanced.html#notizbereich",
+    "href": "exams/exam-template-advanced.html#notizbereich",
+    "title": "Empirische Sozialforschung: Prüfung mit R-Code",
+    "section": "",
+    "text": "Ende der Prüfung. Bitte überprüfen Sie Ihre Antworten.\nZeitangabe: Beginn ________ Uhr, Ende ________ Uhr"
+  },
+  {
+    "objectID": "exams/exam-minimal.html",
+    "href": "exams/exam-minimal.html",
+    "title": "Klausur: Inferenzstatistik",
+    "section": "",
+    "text": "Dauer: 90 Minuten | Punkte: 60 | Bestanden: ≥30\n\n\n\nErklären Sie, was ein 95%-Konfidenzintervall bedeutet.\n\n\n\n\nGegeben: n = 100, \\(\\bar{x}\\) = 50, s = 10. Berechnen Sie das 95%-KI für μ.\nStandardfehler: SE = _______________\nKritischer Wert: \\(t_{0.975}\\) = _______________\nUntere Grenze: _______________\nObere Grenze: _______________\n95%-KI = [_____________, _____________]\n\n\n\n\nEin t-Test ergibt p = 0.032. Was bedeutet dieser p-Wert?\n\n\n\n\nBeschreiben Sie, wie Sie vorgehen würden, um zu testen, ob Männer und Frauen unterschiedliche mittlere Lebenszufriedenheit haben.\n\nViel Erfolg!"
+  },
+  {
+    "objectID": "exams/exam-minimal.html#frage-1-konzept-10-punkte",
+    "href": "exams/exam-minimal.html#frage-1-konzept-10-punkte",
+    "title": "Klausur: Inferenzstatistik",
+    "section": "",
+    "text": "Erklären Sie, was ein 95%-Konfidenzintervall bedeutet."
+  },
+  {
+    "objectID": "exams/exam-minimal.html#frage-2-berechnung-20-punkte",
+    "href": "exams/exam-minimal.html#frage-2-berechnung-20-punkte",
+    "title": "Klausur: Inferenzstatistik",
+    "section": "",
+    "text": "Gegeben: n = 100, \\(\\bar{x}\\) = 50, s = 10. Berechnen Sie das 95%-KI für μ.\nStandardfehler: SE = _______________\nKritischer Wert: \\(t_{0.975}\\) = _______________\nUntere Grenze: _______________\nObere Grenze: _______________\n95%-KI = [_____________, _____________]"
+  },
+  {
+    "objectID": "exams/exam-minimal.html#frage-3-interpretation-15-punkte",
+    "href": "exams/exam-minimal.html#frage-3-interpretation-15-punkte",
+    "title": "Klausur: Inferenzstatistik",
+    "section": "",
+    "text": "Ein t-Test ergibt p = 0.032. Was bedeutet dieser p-Wert?"
+  },
+  {
+    "objectID": "exams/exam-minimal.html#frage-4-anwendung-15-punkte",
+    "href": "exams/exam-minimal.html#frage-4-anwendung-15-punkte",
+    "title": "Klausur: Inferenzstatistik",
+    "section": "",
+    "text": "Beschreiben Sie, wie Sie vorgehen würden, um zu testen, ob Männer und Frauen unterschiedliche mittlere Lebenszufriedenheit haben.\n\nViel Erfolg!"
+  },
+  {
+    "objectID": "exams/exam-template-basic.html",
+    "href": "exams/exam-template-basic.html",
+    "title": "Empirische Sozialforschung: Inferenzstatistik",
+    "section": "",
+    "text": "Dauer: 90 Minuten | Maximale Punktzahl: 100 Punkte | Bestehensgrenze: 50 Punkte\nBearbeitungshinweise: - Alle Antworten auf diesem Aufgabenblatt - Taschenrechner erlaubt - Statistische Tabellen bereitgestellt - Lesen Sie alle Fragen sorgfältig durch\n\n\n\n\n\n\\question{Erklären Sie, was ein 95%-Konfidenzintervall bedeutet und wie es zu interpretieren ist}{8}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\question{Gegeben: \\(n = 100\\), \\(\\bar{x} = 5.5\\), \\(s = 2.0\\), gesucht: 95%-KI für \\(\\mu\\)}{10}\nLösung:\nStandardfehler: \\(SE = \\frac{s}{\\sqrt{n}} = \\frac{2.0}{\\sqrt{100}} = \\blankline{2cm}\\)\nKritischer Wert: \\(t_{0.975}\\) mit \\(df = 99 \\approx \\blankline{2cm}\\)\nUntere Grenze: \\(\\blankline{3cm}\\)\nObere Grenze: \\(\\blankline{3cm}\\)\n95%-KI = \\([\\blankline{2cm}, \\blankline{2cm}]\\)\n\n\n\nOdds für Gruppe 1: \\(\\text{Odds}_1 = \\frac{a}{b} = \\blankline{2cm}\\)\nOdds für Gruppe 2: \\(\\text{Odds}_2 = \\frac{c}{d} = \\blankline{2cm}\\)\nOdds Ratio: \\(OR = \\frac{\\text{Odds}_1}{\\text{Odds}_2} = \\blankline{2cm}\\)\n\n\n\n\\question{Für eine Studie möchten Sie die Wahrscheinlichkeit (p) mit 95%-Konfidenz schätzen, mit Margin of Error von 5%. Wie groß muss die Stichprobe sein, wenn Sie p = 0.5 erwarten?}{10}\nFormel: \\(n = \\frac{z^2 \\cdot p(1-p)}{E^2}\\)\n\\(z_{0.975} = \\blankline{1.5cm}\\)\nBerechnung: \\(n = \\blankline{4cm}\\)\nErforderliche Stichprobengröße: \\(n = \\blankline{2cm}\\)\n\n\n\nGepoolte Varianz: \\(s_p^2 = \\blankline{3cm}\\)\nStandardfehler der Differenz: \\(SE_{\\text{diff}} = \\blankline{3cm}\\)\nT-Wert: \\(t = \\frac{\\bar{x}_1 - \\bar{x}_2}{SE_{\\text{diff}}} = \\blankline{2cm}\\)\n\n\n\n\n\n\n\n\\question{Interpretieren Sie den folgenden Regressionskoeffizienten: \\(\\hat{\\beta} = 0.45\\) mit 95%-KI = [0.12, 0.78]}{10}\n\n\n\nCall:\nlm(formula = y ~ x)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1.3497 -0.3055  0.0916  0.3006  0.7758 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.04693    0.06420  31.884  &lt; 2e-16 ***\nx            0.35399    0.05629   6.288 9.08e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4537 on 48 degrees of freedom\nMultiple R-squared:  0.4517,    Adjusted R-squared:  0.4403 \nF-statistic: 39.54 on 1 and 48 DF,  p-value: 9.078e-08\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\question{Schreiben Sie einen R-Code-Snippet, der ein 95%-Konfidenzintervall für einen Mittelwert berechnet, wenn Sie einen Vektor \\(x\\) mit Daten haben.}{5}\n# Ihr Code hier:\n\n\n\n\n\n\n\nViel Erfolg bei der Bearbeitung!\nVielen Dank für Ihre Aufmerksamkeit und die gewissenhafte Bearbeitung."
+  },
+  {
+    "objectID": "exams/exam-template-basic.html#teil-a-konzeptuelles-verständnis-30-punkte",
+    "href": "exams/exam-template-basic.html#teil-a-konzeptuelles-verständnis-30-punkte",
+    "title": "Empirische Sozialforschung: Inferenzstatistik",
+    "section": "",
+    "text": "\\question{Erklären Sie, was ein 95%-Konfidenzintervall bedeutet und wie es zu interpretieren ist}{8}"
+  },
+  {
+    "objectID": "exams/exam-template-basic.html#teil-b-rechenaufgaben-40-punkte",
+    "href": "exams/exam-template-basic.html#teil-b-rechenaufgaben-40-punkte",
+    "title": "Empirische Sozialforschung: Inferenzstatistik",
+    "section": "",
+    "text": "\\question{Gegeben: \\(n = 100\\), \\(\\bar{x} = 5.5\\), \\(s = 2.0\\), gesucht: 95%-KI für \\(\\mu\\)}{10}\nLösung:\nStandardfehler: \\(SE = \\frac{s}{\\sqrt{n}} = \\frac{2.0}{\\sqrt{100}} = \\blankline{2cm}\\)\nKritischer Wert: \\(t_{0.975}\\) mit \\(df = 99 \\approx \\blankline{2cm}\\)\nUntere Grenze: \\(\\blankline{3cm}\\)\nObere Grenze: \\(\\blankline{3cm}\\)\n95%-KI = \\([\\blankline{2cm}, \\blankline{2cm}]\\)\n\n\n\nOdds für Gruppe 1: \\(\\text{Odds}_1 = \\frac{a}{b} = \\blankline{2cm}\\)\nOdds für Gruppe 2: \\(\\text{Odds}_2 = \\frac{c}{d} = \\blankline{2cm}\\)\nOdds Ratio: \\(OR = \\frac{\\text{Odds}_1}{\\text{Odds}_2} = \\blankline{2cm}\\)\n\n\n\n\\question{Für eine Studie möchten Sie die Wahrscheinlichkeit (p) mit 95%-Konfidenz schätzen, mit Margin of Error von 5%. Wie groß muss die Stichprobe sein, wenn Sie p = 0.5 erwarten?}{10}\nFormel: \\(n = \\frac{z^2 \\cdot p(1-p)}{E^2}\\)\n\\(z_{0.975} = \\blankline{1.5cm}\\)\nBerechnung: \\(n = \\blankline{4cm}\\)\nErforderliche Stichprobengröße: \\(n = \\blankline{2cm}\\)\n\n\n\nGepoolte Varianz: \\(s_p^2 = \\blankline{3cm}\\)\nStandardfehler der Differenz: \\(SE_{\\text{diff}} = \\blankline{3cm}\\)\nT-Wert: \\(t = \\frac{\\bar{x}_1 - \\bar{x}_2}{SE_{\\text{diff}}} = \\blankline{2cm}\\)"
+  },
+  {
+    "objectID": "exams/exam-template-basic.html#teil-c-interpretation-und-anwendung-30-punkte",
+    "href": "exams/exam-template-basic.html#teil-c-interpretation-und-anwendung-30-punkte",
+    "title": "Empirische Sozialforschung: Inferenzstatistik",
+    "section": "",
+    "text": "\\question{Interpretieren Sie den folgenden Regressionskoeffizienten: \\(\\hat{\\beta} = 0.45\\) mit 95%-KI = [0.12, 0.78]}{10}\n\n\n\nCall:\nlm(formula = y ~ x)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1.3497 -0.3055  0.0916  0.3006  0.7758 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.04693    0.06420  31.884  &lt; 2e-16 ***\nx            0.35399    0.05629   6.288 9.08e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4537 on 48 degrees of freedom\nMultiple R-squared:  0.4517,    Adjusted R-squared:  0.4403 \nF-statistic: 39.54 on 1 and 48 DF,  p-value: 9.078e-08"
+  },
+  {
+    "objectID": "exams/exam-template-basic.html#teil-d-datenanalyse-mit-r-bonus-bis-zu-10-zusatzpunkte",
+    "href": "exams/exam-template-basic.html#teil-d-datenanalyse-mit-r-bonus-bis-zu-10-zusatzpunkte",
+    "title": "Empirische Sozialforschung: Inferenzstatistik",
+    "section": "",
+    "text": "\\question{Schreiben Sie einen R-Code-Snippet, der ein 95%-Konfidenzintervall für einen Mittelwert berechnet, wenn Sie einen Vektor \\(x\\) mit Daten haben.}{5}\n# Ihr Code hier:"
+  },
+  {
+    "objectID": "exams/exam-template-basic.html#abschnitt-für-notizen-zusatzantworten",
+    "href": "exams/exam-template-basic.html#abschnitt-für-notizen-zusatzantworten",
+    "title": "Empirische Sozialforschung: Inferenzstatistik",
+    "section": "",
+    "text": "Viel Erfolg bei der Bearbeitung!\nVielen Dank für Ihre Aufmerksamkeit und die gewissenhafte Bearbeitung."
   }
 ]

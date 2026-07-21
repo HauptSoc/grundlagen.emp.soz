@@ -1,0 +1,248 @@
+---
+title: "Testverteilungen für Signifikanztests"
+slide-level: 2
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 14
+    fig-asp: 0.5
+    out-width: "90%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.01
+    slideNumber: true
+editor: source
+execute: 
+  echo: false
+  cache: true
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(ggplot2)
+library(patchwork)
+
+COL_REJECT <- "#FF744E"
+COL_ACCEPT <- "#75AADB"
+ALPHA <- 0.05
+```
+
+## Übersicht: Parameter und Testverteilungen
+
+| Parameter | Testverteilung | Teststatistik |
+|---|---|---|
+| Mittelwert (μ) | t-Verteilung (df = n − 1) | $$t = \frac{\bar{x}}{SE}$$ |
+| Mittelwertdifferenz (μ₁ − μ₂) | t-Verteilung (df = min(n₁, n₂) − 1) | $$t = \frac{\bar{x}_1 - \bar{x}_2}{SE}$$ |
+| Regressionskoeffizient (β) | t-Verteilung (df = n − 2) | $$t = \frac{\hat{\beta}}{SE}$$ |
+| Wahrscheinlichkeit (p) | Normalverteilung (z-Test) | $$z = \frac{\hat{p}}{SE}$$ |
+| Wahrscheinlichkeitsdifferenz (p₁ − p₂) | Normalverteilung (z-Test) | $$z = \frac{\hat{p}_1 - \hat{p}_2}{SE}$$ |
+| Odds / Odds Ratio | Normalverteilung (z-Test, log-Skala) | $$z = \frac{\text{Schätzung}}{SE}$$ |
+| Varianz (σ²) | Chi-Quadrat-Verteilung (df = n − 1) | $$\chi^2 = df \cdot \frac{s^2}{\sigma_0^2}$$ |
+| Varianzverhältnis (σ₁²/σ₂²) | F-Verteilung (df₁ = n₁ − 1, df₂ = n₂ − 1) | $$F = \frac{s_1^2}{s_2^2}$$ |
+
+
+## t-Verteilung {.smaller}
+
+Für **Mittelwerte**, **Mittelwertdifferenzen** und **Regressionskoeffizienten**.
+
+$$t = \frac{\text{Schätzung}}{SE}, \quad df = n - 1 \text{ (bzw. } n-2 \text{ bei Regression)}$$
+
+Die t-Verteilung hat schwerere Ränder als die Normalverteilung – besonders bei kleinem df.
+Bei großem df nähert sie sich der Normalverteilung an.
+
+```{r}
+#| label: fig-t-dist
+#| fig-cap: "t-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+#| fig-asp: 0.4
+
+dfs <- c(5, 15, 50)
+x <- seq(-5, 5, length.out = 500)
+
+plots <- lapply(dfs, function(df) {
+  y <- dt(x, df)
+  crit <- qt(1 - ALPHA/2, df)
+  
+  df_curve <- data.frame(x = x, y = y)
+  df_left  <- df_curve[df_curve$x <= -crit, ]
+  df_right <- df_curve[df_curve$x >= crit, ]
+  
+  ggplot(df_curve, aes(x, y)) +
+    geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+    geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+    geom_line(linewidth = 0.9, color = "#333") +
+    geom_vline(xintercept = c(-crit, crit), linetype = "dashed", 
+               color = COL_REJECT, linewidth = 0.7) +
+    annotate("text", x = crit, y = max(y) * 0.85, 
+             label = paste0("t[krit]==", round(crit, 2)), parse = TRUE,
+             hjust = -0.1, size = 4, color = COL_REJECT) +
+    labs(title = paste0("df = ", df), x = "t", y = "Dichte") +
+    theme_minimal(base_size = 14) +
+    theme(plot.title = element_text(face = "bold", size = 16))
+})
+
+plots[[1]] + plots[[2]] + plots[[3]]
+```
+
+
+## Normalverteilung (z-Test) {.smaller}
+
+Für **Wahrscheinlichkeiten**, **Wahrscheinlichkeitsdifferenzen**, **Odds** und **Odds Ratios**.
+
+$$z = \frac{\text{Schätzung}}{SE}$$
+
+Die Normalverteilung hat keine Freiheitsgrade – die kritischen Werte sind immer ±1.96 (bei α = 0.05).
+
+Odds und Odds Ratios werden auf der **log-Skala** getestet (dort ist die Verteilung symmetrisch).
+
+```{r}
+#| label: fig-z-dist
+#| fig-cap: "Standardnormalverteilung mit zweiseitigem Ablehnungsbereich (α = 0.05)"
+#| fig-asp: 0.4
+
+x <- seq(-4, 4, length.out = 500)
+y <- dnorm(x)
+crit <- qnorm(1 - ALPHA/2)
+
+df_curve <- data.frame(x = x, y = y)
+df_left  <- df_curve[df_curve$x <= -crit, ]
+df_right <- df_curve[df_curve$x >= crit, ]
+
+ggplot(df_curve, aes(x, y)) +
+  geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+  geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+  geom_line(linewidth = 0.9, color = "#333") +
+  geom_vline(xintercept = c(-crit, crit), linetype = "dashed", 
+             color = COL_REJECT, linewidth = 0.7) +
+  annotate("text", x = crit, y = max(y) * 0.85, 
+           label = paste0("z[krit]==", round(crit, 2)), parse = TRUE,
+           hjust = -0.1, size = 5, color = COL_REJECT) +
+  annotate("text", x = -crit, y = max(y) * 0.85, 
+           label = paste0("z[krit]==", round(-crit, 2)), parse = TRUE,
+           hjust = 1.1, size = 5, color = COL_REJECT) +
+  labs(x = "z", y = "Dichte") +
+  theme_minimal(base_size = 14)
+```
+
+
+## Chi-Quadrat-Verteilung {.smaller}
+
+Für **Varianzen** (σ²).
+
+$$\chi^2 = df \cdot \frac{s^2}{\sigma_0^2}, \quad df = n - 1$$
+
+Die Chi-Quadrat-Verteilung ist **rechtsschief** und nur für positive Werte definiert.
+Bei großem df nähert sie sich einer Normalverteilung an.
+Der Ablehnungsbereich ist **nicht symmetrisch** – die kritischen Werte unterscheiden sich für den linken und rechten Rand.
+
+```{r}
+#| label: fig-chisq-dist
+#| fig-cap: "Chi-Quadrat-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+#| fig-asp: 0.4
+
+dfs <- c(5, 15, 50)
+
+plots <- lapply(dfs, function(df) {
+  x_max <- qchisq(0.999, df)
+  x <- seq(0.01, x_max, length.out = 500)
+  y <- dchisq(x, df)
+  
+  crit_lo <- qchisq(ALPHA/2, df)
+  crit_hi <- qchisq(1 - ALPHA/2, df)
+  
+  df_curve <- data.frame(x = x, y = y)
+  df_left  <- df_curve[df_curve$x <= crit_lo, ]
+  df_right <- df_curve[df_curve$x >= crit_hi, ]
+  
+  ggplot(df_curve, aes(x, y)) +
+    geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+    geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+    geom_line(linewidth = 0.9, color = "#333") +
+    geom_vline(xintercept = c(crit_lo, crit_hi), linetype = "dashed", 
+               color = COL_REJECT, linewidth = 0.7) +
+    annotate("text", x = crit_hi, y = max(y) * 0.7, 
+             label = round(crit_hi, 1),
+             hjust = -0.15, size = 3.5, color = COL_REJECT) +
+    annotate("text", x = crit_lo, y = max(y) * 0.7, 
+             label = round(crit_lo, 1),
+             hjust = 1.15, size = 3.5, color = COL_REJECT) +
+    labs(title = paste0("df = ", df), x = expression(chi^2), y = "Dichte") +
+    theme_minimal(base_size = 14) +
+    theme(plot.title = element_text(face = "bold", size = 16))
+})
+
+plots[[1]] + plots[[2]] + plots[[3]]
+```
+
+
+## F-Verteilung {.smaller}
+
+Für **Varianzverhältnisse** (σ₁²/σ₂²).
+
+$$F = \frac{s_1^2}{s_2^2}, \quad df_1 = n_1 - 1, \quad df_2 = n_2 - 1$$
+
+Die F-Verteilung ist **rechtsschief** und nur für positive Werte definiert.
+Bei gleichen Gruppengrößen gilt df₁ = df₂.
+Bei großen Freiheitsgraden konzentriert sich die Verteilung um 1 (kein Unterschied).
+
+```{r}
+#| label: fig-f-dist
+#| fig-cap: "F-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade (df₁ = df₂)"
+#| fig-asp: 0.4
+
+dfs <- c(5, 15, 50)
+
+plots <- lapply(dfs, function(df) {
+  x_max <- qf(0.999, df, df)
+  x <- seq(0.01, x_max, length.out = 500)
+  y <- df(x, df, df)
+  
+  crit_lo <- qf(ALPHA/2, df, df)
+  crit_hi <- qf(1 - ALPHA/2, df, df)
+  
+  df_curve <- data.frame(x = x, y = y)
+  df_left  <- df_curve[df_curve$x <= crit_lo, ]
+  df_right <- df_curve[df_curve$x >= crit_hi, ]
+  
+  ggplot(df_curve, aes(x, y)) +
+    geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+    geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+    geom_line(linewidth = 0.9, color = "#333") +
+    geom_vline(xintercept = c(crit_lo, crit_hi), linetype = "dashed", 
+               color = COL_REJECT, linewidth = 0.7) +
+    annotate("text", x = crit_hi, y = max(y) * 0.7, 
+             label = round(crit_hi, 2),
+             hjust = -0.15, size = 3.5, color = COL_REJECT) +
+    annotate("text", x = crit_lo, y = max(y) * 0.7, 
+             label = round(crit_lo, 2),
+             hjust = 1.15, size = 3.5, color = COL_REJECT) +
+    labs(title = paste0("df₁ = df₂ = ", df), x = "F", y = "Dichte") +
+    theme_minimal(base_size = 14) +
+    theme(plot.title = element_text(face = "bold", size = 16))
+})
+
+plots[[1]] + plots[[2]] + plots[[3]]
+```
+
+
+## Zusammenfassung: Wahl der Verteilung
+
+::: {.callout-tip}
+## Faustregel
+
+Die Wahl der Testverteilung ergibt sich aus dem **Parameter**, den Sie testen:
+
+- **Lokationsparameter** (Mittelwerte, Differenzen, Koeffizienten) → **t-Verteilung**
+- **Proportionen** und **Odds** → **Normalverteilung** (z-Test)
+- **Varianz** eines Merkmals → **Chi-Quadrat-Verteilung**
+- **Verhältnis** zweier Varianzen → **F-Verteilung**
+:::
+
+Bei allen Verteilungen gilt: Je größer die Stichprobe (und damit die Freiheitsgrade), desto schmaler die Verteilung und desto kleiner die Ablehnungsbereiche relativ zur Gesamtfläche.
+
+→ Testen Sie die Verteilungen interaktiv in der [Shiny-App](scripts/inference/app.R).

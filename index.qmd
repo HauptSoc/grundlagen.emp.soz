@@ -22,7 +22,7 @@ editor: source
 | 8 | 07.07. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/22-slides.qmd) | [✍](exercises/23-ex.qmd)|  |  |
 |  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |
 | 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/23-slides.qmd) | ✍ |  |  |
-| 11 | 21.07. | p-Values | 📖 | [🖥](slides/00-slides.qmd) | ✍ |  |  |
+| 11 | 21.07. | p-Values | 📖 | [🖥](slides/24-slides.qmd) | ✍ |  |  |
 | 12 | 28.07. | Klausur |  |  |  |  |  |
 
 # Wintersemester: Datenerhebung

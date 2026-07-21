@@ -8,6 +8,18 @@ staging/
 .Rhistory
 .RData
 .Ruserdata
+exams/
+test/
+tufte/
+docs/exams/
+docs/exam/
+00-graveyard/
+data/
+slides/_giftschrank
+
+_freeze/
+.posit/assitant 
+
 
 /.quarto/
 **/*.quarto_ipynb

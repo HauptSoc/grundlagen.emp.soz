@@ -1,0 +1,569 @@
+---
+title: "Inferenzstatistik - Teil 2"
+slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
+format: 
+  revealjs:
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
+    theme: style.scss
+    margin: 0.01
+    slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
+editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  cache: true
+  message: false
+  warning: false
+---
+
+
+```{r freda-clean, cache = TRUE}
+# 1️⃣ Lade notwendige Bibliotheken
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(haven)
+library(tidyverse)
+
+freda <-  read_dta("C:/Daten/FReDA v6.0.0/R-Data/fredav6.dta", 
+        col_select = c("welle", "id", "pid", "sample", "sex", "age", "east", "sat3", "sat2", "sat6", "pstat", "sin3i1", "sin3i2", "sin11",
+                        "reldur", "voctrain", "hlt32", "pa18i2", 
+        "val13i1", "val13i2", "val13i6",  "val13i8",  "val13i3", "val13i4", "val13i5", "val13i7", "val13i9", "val10i1", "val10i2", "val10i3", "val10i4", "val10i5", "sd67", "cohort", "cla25", "val1i10"
+                        )
+                        ) 
+
+# Pfad zum Skript (relativ zum Quarto-Dokument)
+skript <- here::here("slides", "scripts", "freda_clean.R")
+# Skript ausführen und den erstellten Datensatz 'freda_clean' verfügbar machen
+source(skript, local = TRUE)
+```
+
+```{r col-setup}
+library(ggplot2)
+library(patchwork)
+
+COL_REJECT <- "#FF744E"
+COL_ACCEPT <- "#75AADB"
+ALPHA <- 0.05
+```
+
+## Das multivariate Modell
+
+<br> 
+<br> 
+$$
+\begin{align*}
+\text{Zufriedenheit als Single}_i &= \beta_0\\ &+ \beta_{\text{Alter}} \\
+ &+ \beta_{\text{Frau}} + \beta_{\text{Ost}} + \beta_{\text{Frau X Ost}}\\ 
+&+ \beta_{\text{Offen}} + \beta_{\text{Anbahnend}} + \beta_{\text{On-Off}} + \beta_{\text{Freundschaft Plus}} + \beta_{\text{Sonstiges}} \\ 
+ &+ \varepsilon_i
+\end{align*}
+$$
+
+<br> 
+<br> 
+
+
+- Region und Geschlecht bilden einen Interaktionseffekt
+- "kein Interesse" ist Referenzkategorie für die Beziehungskategorie
+
+## Regressionsergebnisse
+
+```{r setup reg-multi, include=FALSE}
+# Prepare data
+freda_modelling <- freda_clean %>%
+  filter(!is.na(sat2), !is.na(sex), !is.na(east), !is.na(age), !is.na(sin11)) %>%
+  mutate(
+    sin11_cat = case_when(
+      sin11 == 1 ~ "Kein Interesse",
+      sin11 == 2 ~ "Offen für Beziehung",
+      sin11 == 3 ~ "Anbahnende Beziehung",
+      sin11 == 4 ~ "On-off-Beziehung",
+      sin11 == 5 ~ "Freundschaft Plus",
+      sin11 == 6 ~ "Sonstiges",
+      TRUE ~ NA_character_
+    ),
+    sin11_cat = factor(sin11_cat, levels = c(
+      "Kein Interesse",
+      "Offen für Beziehung",
+      "Anbahnende Beziehung",
+      "On-off-Beziehung",
+      "Freundschaft Plus",
+      "Sonstiges"
+    ))
+  )
+
+# Fit bivariate and multivariate models
+model_age_biv <- lm(sat2 ~ age, data = freda_modelling)
+model_multi <- lm(sat2 ~ sex * east + age + sin11_cat, data = freda_modelling)
+```
+
+```{r results, echo=FALSE}
+results_multi <- tidy(model_multi)
+glance_multi <- glance(model_multi)
+
+# Format for display with proper variable labels
+results_display <- results_multi %>%
+  mutate(
+    "Variabel" = case_when(
+      term == "(Intercept)" ~ "Konstante",
+      term == "sexWeiblich" ~ "Frau",
+      term == "east" ~ "Osten",
+      term == "sexWeiblich:east" ~ "Interaktion: Frau × Osten",
+      term == "age" ~ "Alter ",
+      term == "sin11_catOffen für Beziehung" ~ "Offen für Beziehung",
+      term == "sin11_catAnbahnende Beziehung" ~ "Anbahnende Beziehung",
+      term == "sin11_catOn-off-Beziehung" ~ "On-off-Beziehung",
+      term == "sin11_catFreundschaft Plus" ~ " Freundschaft Plus",
+      term == "sin11_catSonstiges" ~ "Sonstiges",
+      TRUE ~ term
+    ),
+    "Koeffizient (β)" = round(estimate, 2),
+    "Standardfehler (SE)" = round(std.error, 2),
+    "p-value" = round(p.value, 3)
+  ) %>%
+  select("Variabel", "Koeffizient (β)", "Standardfehler (SE)", "p-value")
+
+knitr::kable(results_display,
+             caption = "Ergebnisse des multivariaten Regressionsmodells") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), 
+                full_width = TRUE,
+                font_size = 30) %>%
+  column_spec(1, bold = TRUE, width = "25%")
+```
+
+Referenzkategorie für den Single-Typ: Kein Interesse an einer Beziehung. 
+
+## Null- und Forschungshypothesen 
+
+Aufgrund des *Falsifikationsproblems* lassen sich die eigentlichen
+Forschungshypothesen[^1] nicht direkt testen. Man sucht zu ihr immer
+einen Widerspruch, der sich testen lässt. Dieser Widerspruch wird
+typischerweise durch eine *Nullhypothese* formuliert.
+
+::: center
+  --------------------- ---------------
+  Forschungshypothese   Nullhypothese
+  $a < b$               $a = b$
+  $a > b$               $a = b$
+  $a \neq b$            $a = b$
+  --------------------- ---------------
+:::
+
+Die Nullhypothese behauptet immer, dass ein Zusammenhang/Unterschied nur
+aus **Zufall beobachtet** wird und in der Grundgesamheit nicht besteht.
+
+[^1]: Diese These wird auch "Alternativhypothese" genannt.
+
+## Signifikanz & Lernen aus empirischen Ergebnissen
+
+Wir möchten mit Datenanalyse unsere Annahmen über die (soziale) Welt
+verändern/bestärken. Haben wir die Annahme, dass es starke Einflüsse
+gibt, dann ist einer der größten Widersprüche gegen diese Annahme, dass
+mit den vorliegenden Daten nicht unterschieden werden kann, ob das
+Phänomen durch den behaupteten Effekt oder durch bloßen Zufall
+entstanden sein **könnte**.
+
+Hypothesentests vergleichen daher das empirische Resultat (meist ein
+Unterschied!) mit einer *Verteilung von Ergebnissen*, die das Produkt
+eines *eines Zufallsprozesses* ist. Jeder Wert innerhalb dieser
+Verteilung ist eine von unendlich vielen Stichproben. Innerhalb dieser
+Stichproben gibt es keine systematischen Unterschiede zwischen Gruppen.
+
+Wenn der empirische Wert innerhalb der Verteilung von Zufallsergebnissen
+sehr unwahrscheinlich ist, dann können wir der Nullhypothese
+(=Zufallsbehauptung) sehr geringe Plausibilität beimessen. In diesem
+Fall spricht man auch von statistischer *Signifikanz* oder auch von
+*Überzufälligkeit*.
+
+## Signifikanz und Plausibilität von Hypothesen
+
+1.  Formulierung der Alternativ- und Nullhypothese.
+
+2.  Berechnung des zu testenden Parameters (= alles, was eine Tendenz,
+    Unterschied oder Zusammenhang ausdrückt).
+
+3.  Überlegung, wie eine Verteilung der Parameter aus unendlich vielen
+    Stichproben aussehen sollte, **wenn die Nullhypothese zutrifft**.
+    Diese Verteilung bezeichnen wir als **Testverteilung**.
+
+4.  Formulierung, mit welcher Wahrscheinlichkeit der Parameter innerhalb
+    der Testverteilung auftreten darf, um als Produkt einer
+    *Zufallsschwankung* zu gelten (Festlegung der
+    Irrtumswahrscheinlichkeit & eines Ablehnungsbereiches).
+
+5.  Berechnung der Wahrscheinlichkeit des Auftretens des empirisch
+    beobachteten Parameters (oder eines extremeren) innerhalb der Testverteilung. Dieser Wert wird als **p-value** bezeichnet.
+
+6.  Wenn das p-Value kleiner ist als ein vorher
+    festgelegter Schwellenwert, lehnen wir die Nullhypothese ab.
+    Ansonsten behalten wir sie bei.
+
+
+## Übersicht: Parameter und Testverteilungen {.midi .scrollable}
+
+| Parameter | Testverteilung | Teststatistik |
+|---|---|---|
+| Mittelwertdifferenz (μ₁ − μ₂) | t-Verteilung (df = min(n₁, n₂) − 1) | $$t = \frac{\bar{x}_1 - \bar{x}_2}{SE}$$ |
+| Regressionskoeffizient (β) | t-Verteilung (df = n − 2) | $$t = \frac{\hat{\beta}}{SE}$$ |
+| Wahrscheinlichkeitsdifferenz (p₁ − p₂) | Normalverteilung (z-Test) | $$z = \frac{\hat{p}_1 - \hat{p}_2}{SE}$$ |
+| Odds / Odds Ratio | Normalverteilung (z-Test, log-Skala) | $$z = \frac{\text{Schätzung}}{SE}$$ |
+| Varianzverhältnis (σ₁²/σ₂²) | F-Verteilung (df₁ = n₁ − 1, df₂ = n₂ − 1) | $$F = \frac{\hat{\sigma}_1^2}{\hat{\sigma}_2^2}$$ |
+
+## t-Verteilung {.smaller}
+
+Für **Mittelwerte**, **Mittelwertdifferenzen** und **Regressionskoeffizienten**.
+
+$$t = \frac{\text{Schätzung}}{SE}, \quad df = n - 1 \text{ (bzw. } n-2 \text{ bei Regression)}$$
+
+Die t-Verteilung hat breitere Ränder als die Normalverteilung – besonders bei kleinem df.
+Bei großem df nähert sie sich der Normalverteilung an.
+
+```{r}
+#| label: fig-t-dist
+#| fig-cap: "t-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade"
+#| fig-asp: 0.4
+
+dfs <- c(5, 15, 50)
+x <- seq(-5, 5, length.out = 500)
+
+plots <- lapply(dfs, function(df) {
+  y <- dt(x, df)
+  crit <- qt(1 - ALPHA/2, df)
+  
+  df_curve <- data.frame(x = x, y = y)
+  df_left  <- df_curve[df_curve$x <= -crit, ]
+  df_right <- df_curve[df_curve$x >= crit, ]
+  
+  ggplot(df_curve, aes(x, y)) +
+    geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+    geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+    geom_line(linewidth = 0.9, color = "#333") +
+    geom_vline(xintercept = c(-crit, crit), linetype = "dashed", 
+               color = COL_REJECT, linewidth = 0.7) +
+    annotate("text", x = crit, y = max(y) * 0.85, 
+             label = paste0("t[krit]==", round(crit, 2)), parse = TRUE,
+             hjust = -0.1, size = 4, color = COL_REJECT) +
+    labs(title = paste0("df = ", df), x = "t", y = "Dichte") +
+    theme_minimal(base_size = 14) +
+    theme(plot.title = element_text(face = "bold", size = 16))
+})
+
+plots[[1]] + plots[[2]] + plots[[3]]
+```
+
+
+## Normalverteilung (z-Test) {.smaller}
+
+Für **Wahrscheinlichkeiten**, **Wahrscheinlichkeitsdifferenzen**, **log. Odds** und **log. Odds Ratios**.
+
+$$z = \frac{\text{Schätzung}}{SE}$$
+
+Die Normalverteilung hat keine Freiheitsgrade – die kritischen Werte sind immer ±1.96 (bei α = 0.05).
+
+Odds und Odds Ratios werden auf der **log-Skala** getestet (dort ist die Verteilung symmetrisch).
+
+```{r}
+#| label: fig-z-dist
+#| fig-cap: "Standardnormalverteilung mit zweiseitigem Ablehnungsbereich (α = 0.05)"
+#| fig-asp: 0.4
+
+x <- seq(-4, 4, length.out = 500)
+y <- dnorm(x)
+crit <- qnorm(1 - ALPHA/2)
+
+df_curve <- data.frame(x = x, y = y)
+df_left  <- df_curve[df_curve$x <= -crit, ]
+df_right <- df_curve[df_curve$x >= crit, ]
+
+ggplot(df_curve, aes(x, y)) +
+  geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+  geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+  geom_line(linewidth = 0.9, color = "#333") +
+  geom_vline(xintercept = c(-crit, crit), linetype = "dashed", 
+             color = COL_REJECT, linewidth = 0.7) +
+  annotate("text", x = crit, y = max(y) * 0.85, 
+           label = paste0("z[krit]==", round(crit, 2)), parse = TRUE,
+           hjust = -0.1, size = 5, color = COL_REJECT) +
+  annotate("text", x = -crit, y = max(y) * 0.85, 
+           label = paste0("z[krit]==", round(-crit, 2)), parse = TRUE,
+           hjust = 1.1, size = 5, color = COL_REJECT) +
+  labs(x = "z", y = "Dichte") +
+  theme_minimal(base_size = 14)
+```
+
+## F-Verteilung {.smaller}
+
+Für **Varianzverhältnisse** (σ₁²/σ₂²).
+
+$$F = \frac{\hat{\sigma}_1^2}{\hat{\sigma}_2^2}, \quad df_1 = n_1 - 1, \quad df_2 = n_2 - 1$$
+Die F-Verteilung ist **rechtsschief** (außer bei sehr großen Fallzahlen) und nur für positive Werte definiert.
+
+
+```{r}
+#| label: fig-f-dist
+#| fig-cap: "F-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für drei Freiheitsgrade (df₁ = df₂)"
+#| fig-asp: 0.4
+
+dfs <- c(5, 15, 50)
+
+plots <- lapply(dfs, function(df) {
+  x_max <- qf(0.999, df, df)
+  x <- seq(0.01, x_max, length.out = 500)
+  y <- df(x, df, df)
+  
+  crit_lo <- qf(ALPHA/2, df, df)
+  crit_hi <- qf(1 - ALPHA/2, df, df)
+  
+  df_curve <- data.frame(x = x, y = y)
+  df_left  <- df_curve[df_curve$x <= crit_lo, ]
+  df_right <- df_curve[df_curve$x >= crit_hi, ]
+  
+  ggplot(df_curve, aes(x, y)) +
+    geom_area(data = df_left, fill = COL_REJECT, alpha = 0.3) +
+    geom_area(data = df_right, fill = COL_REJECT, alpha = 0.3) +
+    geom_line(linewidth = 0.9, color = "#333") +
+    geom_vline(xintercept = c(crit_lo, crit_hi), linetype = "dashed", 
+               color = COL_REJECT, linewidth = 0.7) +
+    annotate("text", x = crit_hi, y = max(y) * 0.7, 
+             label = round(crit_hi, 2),
+             hjust = -0.15, size = 3.5, color = COL_REJECT) +
+    annotate("text", x = crit_lo, y = max(y) * 0.7, 
+             label = round(crit_lo, 2),
+             hjust = 1.15, size = 3.5, color = COL_REJECT) +
+    labs(title = paste0("df₁ = df₂ = ", df), x = "F", y = "Dichte") +
+    theme_minimal(base_size = 14) +
+    theme(plot.title = element_text(face = "bold", size = 16))
+})
+
+plots[[1]] + plots[[2]] + plots[[3]]
+```
+
+
+## Die Berechnung von p-values
+
+Zur Berechnung eines p-values müssen wir die Fläche unter einer
+Verteilung berechnen, die vom Parameter abgetrennt wird. Das kann z.T.
+sehr schwierig sein. Wir müssen dazu die Dichtefunktion einer Verteilung
+kennen. Im Fall einer Standardnormalverteilung lautet diese:
+
+$$\varphi(z)=\frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2} z^2}\quad -\infty<z<\infty$$
+
+Diese Dichtefunktion können wir nutzen, um die Wahrscheinlichkeit eines
+**errechneten oder extremeren** Wertes in dieser Zufallsverteilung zu
+berechnen. Ein Wert mit einer Abweichung von 1.9645 $\sigma$ vom
+Mittelwert einer Standardnormalverteilung grenzt daher 2.5% der oberen
+Fläche ab:
+
+$$P(1.9645) = \frac{1}{{\sqrt {2\pi } }}e^{-\frac{1}{2} \cdot \left( 1.9645\right)^2 } \approx 0.025$$
+
+## Für jedes Problemchen ein Appchen 
+
+<iframe width="100%" height="100%" src="https://www.shiny-appserver.org/inference">
+</iframe>
+
+
+## Was bedeutet es, wenn mein Ergebnis im Ablehnungsbereich liegt?
+
+-   Es bedeutet **nur**, dass - unter Gültigkeit aller Annahmen - das
+    Ergebnis nur mit einer geringen Wahrscheinlichkeit das Resultat
+    einer Zufallsschwankung ist.
+
+-   Es sagt **nichts** darüber aus, ob Ihre Annahmen verletzt sind.
+
+-   Es sagt **wenig** darüber aus, ob Ihre Forschungsfrage stimmt. Wenn
+    viele Alternativerklärungen zu Ihrem Forschungsergebnis führen
+    können, dann haben Sie mit dem Signifikanztest nur **eine** von
+    vielen Erklärungen für das Ergebnis unplausibel gemacht: den Zufall.
+
+-   Bitte (!!!!) nutzen Sie Ablehnungsbereiche nicht als dichotome
+    Kategorien.
+
+
+## Signifikanz und Sternedeutung 
+
+-   In vielen Publikationen wird statistische Signifikanz durch
+    unterschiedliche Symbole verkürzt dargestellt.
+
+-   Die Parameter werden mit verschiedenen Irrtumswahrscheinlichkeiten
+    getestet.
+
+-   Derjenige Test, der mit der **geringsten** Irrtumswahrscheinlichkeit
+    statistische Signifikanz berechnet, wird als Grundlage für das
+    jeweilige Symbol genommen.
+
+-   Kein Symbol = keine statistische Signifikanz auf der höchsten
+    angesetzten Irrtumswahrscheinlichkeit.
+
+
+## Sternedeutung 
+
+```{r sterne}
+
+library(ggplot2)
+
+# ── Parameter ────────────────────────────────────────────────────────────────
+## Der Plot passt sich den Freiheitsgeraden an, aber die Lage auf der y-achse der Pfeile und der Beschriftung der Pfeile ist noch nicht interaktiv.
+
+df_val <- 15   # Freiheitsgrade (hier: n - 1 = 6 - 1)
+
+# Kritische Werte für zweiseitigen t-Test
+# Formel: qt(1 - α/2, df)  →  |t| > cv  bedeutet  p < α
+cv_10 <- qt(1 - 0.10 / 2, df_val)  # ≈ 2.02  (α = 10 %)
+cv_05 <- qt(1 - 0.05 / 2, df_val)  # ≈ 2.57  (α =  5 %)
+cv_01 <- qt(1 - 0.01 / 2, df_val)  # ≈ 4.03  (α =  1 %)
+
+# Dichtefunktion der t-Verteilung
+dt_fun <- function(x) dt(x, df = df_val)
+
+# Farben: hell = weniger streng, dunkel = strenger
+col_10 <- "#d9d9d9"
+col_05 <- "#bdbdbd"
+col_01 <- "#969696"
+
+# ── Plot ──────────────────────────────────────────────────────────────────────
+ggplot(data.frame(x = c(-5, 5)), aes(x)) +
+
+  # Ablehnungsbereiche – rechte Seite
+  stat_function(fun = dt_fun, geom = "area", xlim = c(cv_10, 5),  fill = col_10) +
+  stat_function(fun = dt_fun, geom = "area", xlim = c(cv_05, 5),  fill = col_05) +
+  stat_function(fun = dt_fun, geom = "area", xlim = c(cv_01, 5),  fill = col_01) +
+
+  # Ablehnungsbereiche – linke Seite (zweiseitig, symmetrisch)
+  stat_function(fun = dt_fun, geom = "area", xlim = c(-5, -cv_10), fill = col_10) +
+  stat_function(fun = dt_fun, geom = "area", xlim = c(-5, -cv_05), fill = col_05) +
+  stat_function(fun = dt_fun, geom = "area", xlim = c(-5, -cv_01), fill = col_01) +
+
+  # Dichtefunktion der t-Verteilung
+  stat_function(fun = dt_fun, color = "#2980b9", linewidth = 1.2) +
+
+  # ── Beschriftungen & Pfeile (rechts) ──────────────────────────────────────
+  # Text + Pfeil: beide zeigen, welcher Bereich welchem p-Wert entspricht.
+  # Rechte Seite: Pfeil zeigt in den rechten Ablehnungsbereich →
+  # Linke  Seite: Pfeil zeigt in den linken  Ablehnungsbereich ←
+
+  # p < 0.10  →  *
+  annotate("text", x = cv_10, y = 0.17,
+           label = "p < 0.10 \u2261 *", hjust = 0, size = 3.5) +
+  annotate("segment", x = cv_10, xend = 4.95, y = 0.15, yend = 0.15,
+           arrow = arrow(length = unit(0.18, "cm"), type = "closed")) +
+
+  # p < 0.05  →  **
+  annotate("text", x = cv_05, y = 0.23,
+           label = "p < 0.05 \u2261 **", hjust = 0, size = 3.5) +
+  annotate("segment", x = cv_05, xend = 4.95, y = 0.21, yend = 0.21,
+           arrow = arrow(length = unit(0.18, "cm"), type = "closed")) +
+
+  # p < 0.01  →  ***
+  annotate("text", x = cv_01, y = 0.29,
+           label = "p < 0.01 \u2261 ***", hjust = 0, size = 3.5) +
+  annotate("segment", x = cv_01, xend = 4.95, y = 0.27, yend = 0.27,
+           arrow = arrow(length = unit(0.18, "cm"), type = "closed")) +
+
+  # ── Pfeile links (symmetrisch, kein Doppel-Text) ──────────────────────────
+  annotate("segment", x = -cv_10, xend = -4.95, y = 0.15, yend = 0.15,
+           arrow = arrow(length = unit(0.18, "cm"), type = "closed")) +
+  annotate("segment", x = -cv_05, xend = -4.95, y = 0.21, yend = 0.21,
+           arrow = arrow(length = unit(0.18, "cm"), type = "closed")) +
+  annotate("segment", x = -cv_01, xend = -4.95, y = 0.27, yend = 00.27,
+           arrow = arrow(length = unit(0.18, "cm"), type = "closed")) +
+
+  # ── Achsen & Labels ───────────────────────────────────────────────────────
+  scale_x_continuous(breaks = -5:5, limits = c(-5, 5), expand = c(0.01, 0)) +
+  scale_y_continuous(
+    breaks = seq(0, 0.4, 0.1),
+    labels = c("0", ".1", ".2", ".3", ".4"),
+    limits = c(0, 0.43),
+    expand = c(0, 0)
+  ) +
+  labs(
+    title = paste0("t-Verteilung mit ", df_val, " df und zweiseitigem Ablehnungsbereich "),
+    subtitle = paste0("f\u00fcr die oberen und unteren 10%, 5%, 1%"),
+    x = "t",
+    y = "f(t)"
+  ) +
+  theme_classic(base_size = 13) +
+  theme( axis.title.y = element_text(angle = 0, vjust = 0.5, margin = margin(r = 8))
+  )
+
+```
+
+
+## The final slide: Zufriedenheit und Sterne {.midi .scrollable}
+
+```{r cohort-reg}
+
+library(modelsummary)
+library(kableExtra)
+
+# ── Neue Variablen ────────────────────────────────────────────────────────────
+df_model <- freda_clean |>
+  filter(cohort %in% 1:4) |>
+  mutate(
+    # Korrigierte Reihenfolge: 1 = älteste Kohorte (1971–73), ..., 4 = jüngste (2001–03)
+    cohort2 = case_when(
+      cohort == 1 ~ 3L,   # 1991–1993 → Rang 3
+      cohort == 2 ~ 2L,   # 1981–1983 → Rang 2
+      cohort == 3 ~ 1L,   # 1971–1973 → Rang 1 (Referenz)
+      cohort == 4 ~ 4L    # 2001–2003 → Rang 4
+    ) |> factor(levels = 1:4, ordered = TRUE),
+    # Beziehungsdauer in Jahren
+    relyear = reldur / 12
+  )
+
+# Treatment-Kontraste mit Referenz = 1 (Kohorte 1971–73)
+contrasts(df_model$cohort2) <- contr.treatment(4, base = 1)
+
+# ── Modelle ───────────────────────────────────────────────────────────────────
+m1 <- lm(sat3 ~ cohort2 + sex + age + east,          data = df_model)
+m2 <- lm(sat3 ~ cohort2 + sex + age + east + relyear, data = df_model)
+
+# ── coef_map ──────────────────────────────────────────────────────────────────
+coef_map <- c(
+  "(Intercept)" = "Konstante",
+  "cohort22"    = "Kohorte: 1981–83",
+  "cohort23"    = "Kohorte: 1991–93",
+  "cohort24"    = "Kohorte: 2001–03",
+  "sexWeiblich" = "Geschlecht: weiblich",
+  "age"         = "Alter",
+  "east"        = "Ostdeutschland",
+  "relyear"     = "Beziehungsdauer (Jahre)"
+)
+
+# ── Tabelle ───────────────────────────────────────────────────────────────────
+modelsummary(
+  list("Modell 1" = m1, "Modell 2" = m2),
+  coef_map  = coef_map,
+  stars     = c("*" = .1, "**" = .05, "***" = .01),
+  estimate  = "{estimate}{stars}",
+  statistic = "p = {p.value}",
+  fmt       = 3,
+  gof_map   = c("nobs", "r.squared", "adj.r.squared"),
+  escape    = FALSE,  
+  output    = "kableExtra"
+) |>
+  kable_styling(
+    bootstrap_options = c("striped", "condensed"),
+    full_width = FALSE
+  ) |>
+  add_header_above(c(
+    " " = 1,
+    "Beziehungszufriedenheit (0–10)" = 2
+  )) |>
+  footnote(
+    general = "Referenzkategorie: Kohorte 1971–73. Signifikanzniveaus: * p < .10, ** p < .05, *** p < .01."
+  )
+```
