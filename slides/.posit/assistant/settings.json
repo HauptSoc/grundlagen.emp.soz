@@ -1,0 +1,21 @@
+{
+  "permission": {
+    "external_directory": {
+      "c:/GIT/Grundlagen EmpSoz/exams/*": "allow",
+      "c:/GIT/Grundlagen EmpSoz/docs/exams/*": "allow"
+    },
+    "executeCode": {
+      "*": "allow"
+    },
+    "edit": {
+      "*.qmd": "allow"
+    },
+    "bash": {
+      "cp *": "allow",
+      "echo *": "allow",
+      "cd *": "allow",
+      "python3 *": "allow",
+      "python *": "allow"
+    }
+  }
+}

@@ -9,6 +9,9 @@
     },
     "bash": {
       "quarto render *": "allow"
+    },
+    "webfetch": {
+      "https://box.hu-berlin.de/*": "allow"
     }
   },
   "sandbox": {
