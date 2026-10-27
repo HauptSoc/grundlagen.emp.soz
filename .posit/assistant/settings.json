@@ -11,7 +11,13 @@
       "quarto render *": "allow"
     },
     "webfetch": {
-      "https://box.hu-berlin.de/*": "allow"
+      "https://box.hu-berlin.de/*": "allow",
+      "https://www.ncbi.nlm.nih.gov/*": "allow",
+      "https://www.sciencedirect.com/*": "allow",
+      "https://www.nature.com/*": "allow",
+      "https://www.frontiersin.org/*": "allow",
+      "https://www.jpain.org/*": "allow",
+      "https://www.pnas.org/*": "allow"
     }
   },
   "sandbox": {

@@ -14,14 +14,11 @@ execute:
 ---
 
 ## Wissenschaft heißt Wissen schaffen {.midi}
-
 > Science writing that isn't credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility. 
 
 Josha Schimel: Writing Science (2011, 23) ([Website des Autors](https://schimelwritingscience.wordpress.com/))
 
 ## Werden Sie ein produktives Mitglied
-
-Wie werden Sie ein produktives Mitglied der wissenschaftlichen Gemeinschaft:
 
   1.  nehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;
 
@@ -91,7 +88,7 @@ Fragen Sie sich selbst:
   
 ## Überzeugungen verändern
 
-Wenn Sie eine Behauptung aufstellen, die bei anderen eine Überzeugung verändern soll[^1], dann gilt folgende goldene Regel: 
+Wenn Sie eine Behauptung aufstellen, die bei anderen eine wissenschaftlich basierte Überzeugung verändern soll, dann gilt folgende goldene Regel: 
 
 ::: {.callout-note appearance="default"}
 ## Die goldene Regel der empirischen Wissenschaften 
@@ -99,9 +96,15 @@ Wenn Sie eine Behauptung aufstellen, die bei anderen eine Überzeugung veränder
 Lege dar, wie Daten aussehen müssen, die im Widerspruch zur Behauptung stehen. 
 :::
 
-[^1]: Ausgenommen sind religiöse, verschwörungstheoretische, mathematische und aussagenlogische Behauptungen. 
+Wissenschaftler:innen dürfen keine Anwält:innen ihrer eigenen Überzeugungen sein! Wir müssen demütig und gegenüber unseren Überzeugungen kritisch bleiben. Wir müssen stets die Möglichkeit zulassen, dass wir uns irren.
 
----
+## Suche nach Gegenevidenz
+
+1. Gender Pain Gap
+  - Geben Männer und Frauen bei gleicher Ursache unterschiedliche Schmerzintensitäten an?
+  - Werden Schmerzen bei Frauen mit höherer Wahrscheinlichkeit abgetan oder als psychisch bedingt interpretiert? 
+
+
 
 ## Gibt es ein gesundes Maß von Rauchverhalten? {.small}
 

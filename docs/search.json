@@ -308,15 +308,15 @@
     "objectID": "slides/01-WissenschaftlicheSpielregeln.html#wissenschaft-heißt-wissen-schaffen",
     "href": "slides/01-WissenschaftlicheSpielregeln.html#wissenschaft-heißt-wissen-schaffen",
     "title": "Wissenschaftliche Spielregeln",
-    "section": "",
-    "text": "Science writing that isn’t credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility.\n\nJosha Schimel: Writing Science (2011, 23) (Website des Autors)"
+    "section": "Wissenschaft heißt Wissen schaffen",
+    "text": "Wissenschaft heißt Wissen schaffen\n\nScience writing that isn’t credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility.\n\nJosha Schimel: Writing Science (2011, 23) (Website des Autors)"
   },
   {
     "objectID": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied",
     "href": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied",
     "title": "Wissenschaftliche Spielregeln",
     "section": "Werden Sie ein produktives Mitglied",
-    "text": "Werden Sie ein produktives Mitglied\nWie werden Sie ein produktives Mitglied der wissenschaftlichen Gemeinschaft:\n\nnehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;\nsuchen Sie nach Dingen, um die Debatte zu bereichern;\nnutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;\nüberzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war."
+    "text": "Werden Sie ein produktives Mitglied\n\nnehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;\nsuchen Sie nach Dingen, um die Debatte zu bereichern;\nnutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;\nüberzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war."
   },
   {
     "objectID": "slides/01-WissenschaftlicheSpielregeln.html#überzeugend-sein",
@@ -344,14 +344,14 @@
     "href": "slides/01-WissenschaftlicheSpielregeln.html#testen-sie-sich-selbst",
     "title": "Wissenschaftliche Spielregeln",
     "section": "Testen Sie sich selbst",
-    "text": "Testen Sie sich selbst\n\n\n\n\n\n\nNote\n\n\n\nFragen Sie sich selbst:\n\nWelche (wissenschaftliche) Überzeugung würden Sie immer noch behalten, selbst wenn mehrere neue Studie erscheinen, die das Gegenteil behaupten?\nWelche (wissenschaftliche) Überzeugung haben Sie aufgrund gegenteiliger (wissenschaftlicher) Evidenz aufgegeben?\nSuchen Sie für beide Punkte Evidenz oder Gegenevidenz."
+    "text": "Testen Sie sich selbst\n\n\n\n\n\n\nNote\n\n\nFragen Sie sich selbst:\n\nWelche (wissenschaftliche) Überzeugung würden Sie immer noch behalten, selbst wenn mehrere neue Studie erscheinen, die das Gegenteil behaupten?\nWelche (wissenschaftliche) Überzeugung haben Sie aufgrund gegenteiliger (wissenschaftlicher) Evidenz aufgegeben?\nSuchen Sie für beide Punkte Evidenz oder Gegenevidenz."
   },
   {
     "objectID": "slides/01-WissenschaftlicheSpielregeln.html#erwarten-sie-keine-revolutionen",
     "href": "slides/01-WissenschaftlicheSpielregeln.html#erwarten-sie-keine-revolutionen",
     "title": "Wissenschaftliche Spielregeln",
     "section": "Erwarten Sie keine Revolutionen!",
-    "text": "Erwarten Sie keine Revolutionen!\n\n\n\n\n\n\nDie Veränderungen der Vorannahmen über die Wirkung des Mindeslohns; Quelle"
+    "text": "Erwarten Sie keine Revolutionen!\n\n\n\n\nDie Veränderungen der Vorannahmen über die Wirkung des Mindeslohns; Quelle"
   },
   {
     "objectID": "slides/01-WissenschaftlicheSpielregeln.html#verkannte-genies",
@@ -820,7 +820,7 @@
     "href": "slides/01-WissenschaftlicheSpielregeln.html#überzeugungen-verändern",
     "title": "Wissenschaftliche Spielregeln",
     "section": "Überzeugungen verändern",
-    "text": "Überzeugungen verändern\nWenn Sie eine Behauptung aufstellen, die bei anderen eine Überzeugung verändern soll1, dann gilt folgende goldene Regel:\n\n\n\n\n\n\nNoteDie goldene Regel der empirischen Wissenschaften\n\n\n\nLege dar, wie Daten aussehen müssen, die im Widerspruch zur Behauptung stehen."
+    "text": "Überzeugungen verändern\nWenn Sie eine Behauptung aufstellen, die bei anderen eine wissenschaftlich basierte Überzeugung verändern soll, dann gilt folgende goldene Regel:\n\n\n\n\n\n\nDie goldene Regel der empirischen Wissenschaften\n\n\nLege dar, wie Daten aussehen müssen, die im Widerspruch zur Behauptung stehen.\n\n\n\nWissenschaftler:innen dürfen keine Anwält:innen ihrer eigenen Überzeugungen sein! Wir müssen demütig und gegenüber unseren Überzeugungen kritisch bleiben. Wir müssen stets die Möglichkeit zulassen, dass wir uns irren."
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#ein-besonders-lebensweltliches-beispiel",
@@ -7821,5 +7821,40 @@
     "title": "Formelsammlung – Sozialwissenschaftliche Methoden I (Anhang zur Klausur)",
     "section": "",
     "text": "Grundlagen der deskriptiven Statistik\n\n\n\n\n\n\nWahrscheinlichkeiten und Verteilungen\n\n\n\n\n\nKonzepte der Reliabilität und Validität\n\n\n\n\n\nBivariate und multivariate Regression\n\n\n\n\n\nInferenzstatistik und Hypothesentests"
+  },
+  {
+    "objectID": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30background-position-50-background-repeat-no-repeat",
+    "href": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30background-position-50-background-repeat-no-repeat",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg”; background-size: 30%;background-position: 50%; background-repeat: no-repeat}",
+    "text": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg”; background-size: 30%;background-position: 50%; background-repeat: no-repeat}\n\nnehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;\nsuchen Sie nach Dingen, um die Debatte zu bereichern;\nnutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;\nüberzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war."
+  },
+  {
+    "objectID": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30-background-position-50-background-repeat-no-repeat",
+    "href": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30-background-position-50-background-repeat-no-repeat",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg” background-size: 30% background-position: 50% background-repeat: no-repeat}",
+    "text": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg” background-size: 30% background-position: 50% background-repeat: no-repeat}\n\nnehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;\nsuchen Sie nach Dingen, um die Debatte zu bereichern;\nnutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;\nüberzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war."
+  },
+  {
+    "objectID": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30-background-repeat-no-repeat",
+    "href": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30-background-repeat-no-repeat",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg” background-size: “30%” background-repeat: “no-repeat”}",
+    "text": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg” background-size: “30%” background-repeat: “no-repeat”}\n\nnehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;\nsuchen Sie nach Dingen, um die Debatte zu bereichern;\nnutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;\nüberzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war."
+  },
+  {
+    "objectID": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30",
+    "href": "slides/01-WissenschaftlicheSpielregeln.html#werden-sie-ein-produktives-mitglied-background-imagehttpswww.appgecet.co.inwp-contentuploads202310the-importance-of-collaboration-in-the-scientific-community-0.jpg-background-size-30",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg” background-size = “30%” }",
+    "text": "Werden Sie ein produktives Mitglied {background-image=“https://www.appgecet.co.in/wp-content/uploads/2023/10/the-importance-of-collaboration-in-the-scientific-community-0.jpg” background-size = “30%” }\n\nnehmen Sie an einer thematischen Debatte teil, die sich um das Verständnis eines Teils der (sozialen) Welt dreht;\nsuchen Sie nach Dingen, um die Debatte zu bereichern;\nnutzen Sie argumentative Verbesserungen, inhaltliche Anwendungen, Daten und Methoden, um die Debatte zu bereichern;\nüberzeugen Sie die Debattenteilnehmer:innen, dass ihr Beitrag eine Bereicherung war."
+  },
+  {
+    "objectID": "slides/01-WissenschaftlicheSpielregeln.html#suche-nach-gegenevidenz",
+    "href": "slides/01-WissenschaftlicheSpielregeln.html#suche-nach-gegenevidenz",
+    "title": "Wissenschaftliche Spielregeln",
+    "section": "Suche nach Gegenevidenz",
+    "text": "Suche nach Gegenevidenz\n\nGender Pain Gap\n\n\nGeben Männer und Frauen bei gleicher Ursache unterschiedliche Schmerzintensitäten an?\nWerden Schmerzen bei Frauen mit höherer Wahrscheinlichkeit abgetan oder als psychisch bedingt interpretiert?"
   }
 ]
