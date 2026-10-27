@@ -1,30 +1,9 @@
 ---
-title: "Grundlagen empirischer Sozialforschung"
+title: "Grundlagen empirischer Sozialforschung & Datenerhebung"
 tbl-colwidths: [5,15,45,5,5,5,5,5]
 editor: source
 ---
 
-# Sommersemester: Datenanalyse
-
-| Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
-|  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |
-| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |
-| 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-slides.qmd) | ✍ |  |  |
-| 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/17-slides.qmd) | ✍ |  |  |
-|  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
-| 4 | 02.06. | P1: Korrelationen | 📖 | [🖥](slides/18-slides.qmd) | [✍](exercises/18-ex.qmd) |  |  |
-| 5 | 09.06. | P2: Residualvarianz & OLS | 📖 | [🖥](slides/19-slides.qmd) | [✍](exercises/19-ex.qmd) |  |  |
-| 6 | 16.06. | P3: Partielle Korrelation & Multivariate OLS | 📖 | [🖥](slides/20-slides.qmd) | [✍](exercises/20-ex.qmd) |  |  |
-|  |  |  |  |  | [💡](exercises/mieten-solutions.qmd) | [📋](https://ilias.studium.kit.edu/ilias.php?baseClass=ilrepositorygui&cmdNode=xs:mo&cmdClass=ilobjcoursegui&ref_id=2866067&item_ref_id=0) |  |
-|  |  | **III. Komplexe Daten generierende Prozesse** |  |  |  |  |  |
-| 7 | 23.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/21-slides.qmd) | [✍](exercises/21-ex.qmd) |  |  |
-| 8 | 07.07. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/22-slides.qmd) | [✍](exercises/23-ex.qmd)|  |  |
-|  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |
-| 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/23-slides.qmd) | ✍ |  |  |
-| 11 | 21.07. | p-Values | 📖 | [🖥](slides/24-slides.qmd) | ✍ |  |  |
-| 12 | 28.07. | Klausur |  |  |  |  |  |
-|  |  | Formelsammlung | [🖥](misc/Formelsammlung2526.pdf) |  |  |  |  |
 # Wintersemester: Datenerhebung
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
@@ -48,3 +27,25 @@ editor: source
 |  |  | **III. Die richtigen Unterschiede erfassen** |  |  |  |  |  |
 | 13 | 05.02. | Untersuchungsdesigns - Season 1 | 📖 | [🖥](slides\13-slides.qmd) | [✍](exercises/10-ex.qmd) |  |  |
 | 14 | 12.02. | Untersuchungsdesigns - Season 2 | 📖 | [🖥](slides\14-slides.qmd) | ✍ |  |  |
+
+# Sommersemester: Datenanalyse
+
+| Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
+|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |
+| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |
+| 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-slides.qmd) | ✍ |  |  |
+| 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/17-slides.qmd) | ✍ |  |  |
+|  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
+| 4 | 02.06. | P1: Korrelationen | 📖 | [🖥](slides/18-slides.qmd) | [✍](exercises/18-ex.qmd) |  |  |
+| 5 | 09.06. | P2: Residualvarianz & OLS | 📖 | [🖥](slides/19-slides.qmd) | [✍](exercises/19-ex.qmd) |  |  |
+| 6 | 16.06. | P3: Partielle Korrelation & Multivariate OLS | 📖 | [🖥](slides/20-slides.qmd) | [✍](exercises/20-ex.qmd) |  |  |
+|  |  |  |  |  | [💡](exercises/mieten-solutions.qmd) | [📋](https://ilias.studium.kit.edu/ilias.php?baseClass=ilrepositorygui&cmdNode=xs:mo&cmdClass=ilobjcoursegui&ref_id=2866067&item_ref_id=0) |  |
+|  |  | **III. Komplexe Daten generierende Prozesse** |  |  |  |  |  |
+| 7 | 23.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/21-slides.qmd) | [✍](exercises/21-ex.qmd) |  |  |
+| 8 | 07.07. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/22-slides.qmd) | [✍](exercises/23-ex.qmd)|  |  |
+|  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |
+| 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/23-slides.qmd) | ✍ |  |  |
+| 11 | 21.07. | p-Values | 📖 | [🖥](slides/24-slides.qmd) | ✍ |  |  |
+| 12 | 28.07. | Klausur |  |  |  |  |  |
+|  |  | Formelsammlung | [🖥](misc/Formelsammlung2526.pdf) |  |  |  |  |

@@ -2,47 +2,185 @@
 title: "Unterscheiden: Grundlagen"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
+css: global.css
 format: 
   revealjs:
+    fig-format: svg
+    mermaid-format: svg
+    out-width: "70%"
+    fig-align: center
+    width: 1400
+    height: 1050
+    auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: dagre
 editor: source
+tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
----
+--- 
 
-## Unterschiede, die Unterschiede machen {.midi}
-
-![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
 
 ## Forschung - wie geht das? {.nostretch}
 
 ![Ein idealisierter Forschungsablauf](images/Forschungsablauf.jpg){width="70%"}
 
-## Stereotype {.midi}
+## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
-::::: columns
-::: {.column width="30%"}
-![](images/licensing-toddlers.jpg)
-:::
+![](images/estimand-gym-geschlecht.svg)
 
-::: {.column width="70%"}
-Menschen teilen ihre Mitmenschen in unterschiedliche Kategorien ein, was z.T. erhebliche Konsequenzen hat.
+## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
-Normativ stellt sich bei solchen Typisierungen immer die Frage, ob dies berechtigt ist und wie stark man Einzelpersonen damit schaden kann.
+![](images/estimand-kompetenzzuschreibung.svg)
 
-Aus einer wissenschaftlichen Perspektive müssen wir uns fragen, inwieweit die getroffenen Unterscheidungen hilfreich sind, um individuelles Handeln und/oder soziale Prozesse zu erklären.
-:::
-:::::
+## Der große Bogen
 
-## Gesellschaft zu verstehen, bedeutet, Unterschiede zu verstehen.
+```{dot}
+//| fig-width: 100%
+//| fig-alt: "Der große Bogen von der Hypothese über Operationalisierung und Forschungsdesign zur Datenerhebung und Vergleich"
+//| 
+digraph {
+  rankdir = TB;
+  compound = true;
+  bgcolor = "transparent";
+  nodesep = 1.0;
+  ranksep = 1.2;
+  newrank = true;
+  sep = "+0.5,0.5";
+  
+  # Node defaults
+  node [shape = box, style = "rounded", fillcolor = "#ffffff", 
+        fontname = "Arial", fontsize = 12, margin = "0.4,0.25"];
+  edge [color = "#333333", arrowhead = vee, minlen = 2, fontsize = 12, penwidth = 1.5];
+  
+  # Hypothese
+  subgraph cluster_H {
+    label = "Hypothese";
+    fontname = "Arial Bold";
+    fontsize = 13;
+    labelloc = "t";
+    style = "filled,rounded";
+    fillcolor = "#f9f9f9";
+    color = "#999999";
+    margin = 8;
+    clusterrank = global;
+    
+    H_X [label = "X"];
+    H_Y [label = "Y"];
+    H_X -> H_Y [label = "führt zu"];
+  }
+  
+  # Parent-Cluster für Operationalisierung und Forschungsdesign
+    
+    # Operationalisierung (links)
+    subgraph cluster_O {
+      label = "Operationalisierung";
+      fontname = "Arial Bold";
+      fontsize = 13;
+      labelloc = "t";
+      style = "filled,rounded";
+      fillcolor = "#f9f9f9";
+      color = "#999999";
+      margin = 8;
+      clusterrank = global;
+      
+      O_X [label = "Unterschiede\nin X"];
+      O_Y [label = "Unterschiede\nin Y"];
+      O_X -> O_Y [label = "stehen in\nBeziehung zu"];
+    }
+    
+    # Forschungsdesign (rechts)
+    subgraph cluster_FD {
+      label = "Forschungsdesign";
+      fontname = "Arial Bold";
+      fontsize = 13;
+      labelloc = "t";
+      style = "filled,rounded";
+      fillcolor = "#f9f9f9";
+      color = "#999999";
+      margin = 8;
+      
+      
+      FD_UE [label = "Forschungsdesign"];
+      FD_R [label = "Art der Zuweisung zu \n Untersuchungsgruppen"];
+      FD_T [label = "Anzahl\nMesszeitpunkte"];
+      FD_SD [label = "Stichprobendesign"]; 
+      FD_SR [label = "Stichprobenrahmen"];
+      FD_SA [label = "Stichprobenart"];
 
--   Wie unterschiedlich sind Personen nach Kulturen, Nationen, Generationen, Lebenslagen, Prägungen, Verhaltensweisen, Denkweisen?
--   Wie können wir diese Unterschiede methodisch sicher erfassen?
--   Welche Unterschiede sind mit anderen Unterschieden *systematisch* verbunden?
+      FD_UE -> FD_R [arrowhead = "none"];
+      FD_UE -> FD_T [arrowhead = "none"];
+      FD_SD -> FD_SA
+      FD_SD -> FD_SR
+    }
+    
+ 
+  
+  # Datenerhebung
+  subgraph cluster_D {
+    label = "Datenerhebung";
+    fontname = "Arial Bold";
+    fontsize = 13;
+    labelloc = "t";
+    style = "filled,rounded";
+    fillcolor = "#f9f9f9";
+    color = "#999999";
+    margin = 8;
+    
+    D_S [label = "Stichprobe"];
+    D_UE [label = "Untersuchungs-\neinheiten"];
+    D_B [label = "Beobachter:innen"];
+    
+    D_S -> D_UE [label = "Quelle von"];
+    D_UE -> D_B [label = "Beschreibung" dir = back];
+    
+
+  }
+  
+  # Vergleich / Modellierung
+  subgraph cluster_V {
+    label = "Vergleich / Modellierung";
+    fontname = "Arial Bold";
+    fontsize = 13;
+    labelloc = "t";
+    style = "filled,rounded";
+    fillcolor = "#f9f9f9";
+    color = "#999999";
+    margin = 8;
+    
+    V_X0 [label = "📊\nVerteilung von\nY bei X = 0", shape = "box"];
+    V_X1 [label = "📊\nVerteilung von\nY bei X = 1", shape = "box"];
+    V_D [label = "Differenz", shape = "none"]
+    V_X0 -> V_D [dir = back];
+    V_D -> V_X1
+  }
+  
+  # Rank-Constraint: O und FD auf gleicher Höhe (horizontal nebeneinander)
+  {rank = same; H_X; O_X; FD_SD; FD_UE D_S; V_X0}
+  
+  # Verbindungen zwischen den Hauptclustern
+  H_X -> O_X [ltail = cluster_H, lhead = cluster_O, label = "wird übersetzt zu", labelangle = 45, labeldistance = 2.0];
+  O_X -> FD_SD [ltail = cluster_O, lhead = cluster_FD, label = "bedingt", labelangle = 45, labeldistance = 2.0]; 
+  FD_UE -> D_S [ltail = cluster_FD, lhead = cluster_D, label = "Rahmen für", labelangle = 45, labeldistance = 2.0];
+  D_S -> V_X0 [ltail = cluster_D, lhead = cluster_V, label = "Grundlage für", labelangle = 45, labeldistance = 2.0];
+}
+
+```
+
+## Unterschiede, die Unterschiede machen {.midi}
+
+![Sprachkompetenz und Bildungshintergrund der Eltern [(Link zur Studie)](https://www.diw.de/de/diw_01.c.619383.de/publikationen/wochenberichte/2019_16/sprachkompetenz_von_kindern__unterschied_nach_bildung_der_eltern_im_unteren_leistungsbereich_besonders_gross.html)](./images/sprachkompetenz.png)
+
+
+
 
 ## Ziele {.midi}
 
@@ -74,9 +212,54 @@ $\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander 
 
 ![Trends der relativen Anteile von Familienformen](images/trend-familien.png){width="50%"}
 
+## Unterschiedliche Möglichkeiten der Differenzierung von Familien
+
+```{mermaid}
+flowchart TD
+    subgraph S1["Nach Größe und Struktur"]
+        B1[Kernfamilie]
+        B2[Gemeinschaftsfamilie/Erweiterte Familie]
+        B1 --> B1a[Familie der Orientierung]
+        B1 --> B1b[Familie der Zeugung]
+    end
+
+    subgraph S2["Nach Heiratspraktiken"]
+        C1[Monogame Familie]
+        C2[Polygame Familie]
+        C3[Endogame Familie]
+        C4[Exogame Familie]
+        C2 --> C2a[Polyandrische Familie]
+        C2 --> C2b[Polygyne Familie]
+        C3 --> C3a[Endogamie-Prinzip]
+        C4 --> C4a[Exogamie-Prinzip]
+    end
+
+    subgraph S3["Nach Autorität"]
+        D1[Patriarchale Familie]
+        D2[Matriarchale Familie]
+        D3[Egalitäre Familie]
+    end
+
+    subgraph S4["Nach Wohnsitz"]
+        E1[Patrilokale Wohnsitznahme]
+        E2[Matrilokale Wohnsitznahme]
+        E3[Bilokale Wohnsitznahme]
+        E4[Neolokale Wohnsitznahme]
+        E5[Avunkulokale Wohnsitznahme]
+    end
+
+    subgraph S5["Nach Abstammung"]
+        F1[Unilineare Abstammung]
+        F2[Bilineare Abstammung]
+        F1 --> F1a[Patrilineare Abstammung]
+        F1 --> F1b[Matrilineare Abstammung]
+    end
+```
+
+
 ## Am Anfang ist das Wort {.midi}
 
-::::: columns
+::: columns
 ::: {.column width="30%"}
 ![](images/perception_prop.png)
 :::
@@ -88,11 +271,11 @@ Allerdings gibt es auch eine erhebliche Variation bei der Aktivierung von gleich
 
 Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wissenschaftlichen Studie gilt es diese Missverständnisse dringend zu vermeiden.
 :::
-:::::
+:::
 
 ## Konzeptspezifikation {.nostretch}
 
-![Operationalisierung und Konzeptspezifikation Quelle: [Wonka (2022)](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
+![Operationalisierung und Konzeptspezifikation Quelle: [@wonkaKonzepteUndKonzeptspezifikation2022](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
 
 ## Was ist ein Konzept? {.midi}
 
@@ -155,59 +338,105 @@ Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern s
 ## Die Bedeutung guter Konzepte
 
  - Klare Beschreibungen benötigen klare Konzepte, da eine Beschreibung die Einordnung einer Beobachtung *B* unter ein Konzept *K* der Form "B ist eine Realisation von K" ist. 
-  -  Wenn Sie Eigenschaften oder Ausprägungen *A* und *B*  voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension *A* hat, die *B* nicht hat. Dazu müssen wir *A* und *B* nicht erschöpfend beschreiben. Wir benötigen "nur" eine klare Trenn-Eigenschaft. 
+
+  -  Wenn Sie Eigenschaften oder Ausprägungen *A* und *B*  voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension *A* hat, die *B* nicht hat. Dazu müssen wir *A* und *B* nicht erschöpfend beschreiben. Wir benötigen aber mindestens eine klare Trenn-Eigenschaft. 
   
-  
-## Beschreibung von Dingen
 
-![Ein Zeitschriftenständer](https://fintabo.de/images/product_images/popup_images/prospektstaender_880_0.webp)
+## Unterscheidung nach "Migrationshintergrund"
 
-## Beschreibung von Dingen
+```{mermaid}
+flowchart TD
+    A["Definitionen von<br/>Migrationshintergrund"]
+    A --> B["Externe<br/>Klassifizierung"]
+    A --> C["Subjektive<br/>Klassifizierung"]
+    B --> B1["Person ODER<br/>mind. 1 Elternteil<br/>nicht dt. Staatsang."]
+    B --> B2["Personen ODER<br/>Elternteile seit 1950<br/>eingewandert"]
+    B --> B3["Eingewanderte +<br/>direkte Nachkommen"]
+    C --> C1["Selbst-<br/>positionierung"]
+```
 
-![Ein römischer Dodekaeder](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pentagon-dodeca%C3%ABder_in_brons%2C_150_tot_400_NC%2C_vindplaats-_Tongeren%2C_Leopoldwal%2C_1939%2C_collectie_Gallo-Romeins_Museum_Tongeren%2C_4002.jpg/1024px-Pentagon-dodeca%C3%ABder_in_brons%2C_150_tot_400_NC%2C_vindplaats-_Tongeren%2C_Leopoldwal%2C_1939%2C_collectie_Gallo-Romeins_Museum_Tongeren%2C_4002.jpg){width=50%}
+## Migrationshintergrund -- Version 1 ("Staatsbügerschaft")
 
-## Beschreiben und Unterscheiden
+**Definition:**
+Eine Person hat einen Migrationshintergrund, wenn **sie selbst oder mindestens ein Elternteil nicht mit deutscher Staatsangehörigkeit geboren wurde**.
 
-:::::{.columns}
+```{mermaid}
+flowchart TD
+    A["Alle Personen<br/>in Deutschland"]
+    A --> B["Mit<br/>Migrationshintergrund"]
+    A --> C["Ohne<br/>Migrationshintergrund"]
+    B --> B1["Person selbst nicht<br/>mit dt. Staatsangehörigkeit<br/>geboren"]
+    B --> B2["Min. ein Elternteil nicht mit <br/> dt. Staatsangehörigkeit geboren"]
+    C --> C1["Beide Elternteile und<br/>Person selbst mit<br/>dt. Staatsangehörigkeit<br/>geboren"]
+```
 
-::::{.column width="50%"}
- ![](images/hikikomori.png)
-::::
+Probleme: 
 
-::::{.column width="50%"}
-Hikikomori[^1] - ist das eine Form von Isolation, Zurückgezogenheit, (maximale) Introvertiertheit, Depression?
+- Aussiedler (u.a. "Russlanddeutsche"), in der DDR geborene, einbürgerte Personen werden der Gruppe "Ohne Migrationshintergrund" zugeordnet.
+- Die dritte migrantische Generation wird als "ohne Migrationshintergrund" klassifiziert, wobei diese Gruppe von ungleicher Behandlung aufgrund askriptiver Merkmale betroffen sein könnte.
 
-::::
-::::: 
 
-[^1]: hiku: sich zurückziehen, komoru: sich verschließen
+## Migrationshintergrund -- Version 2 ("Personen mit Migrationsgeschichte")
 
----
+Eine Person gehört zu dieser Gruppe, wenn sie selbst eingewandert ist oder direkte Nachkommen eines Eingewanderten ist.
+```{mermaid}
+flowchart TD
+    A[Bevölkerung] --> B[Eingewanderte und ihre Nachkommen]
+    A --> C[Personen ohne Migrationsgeschichte]
 
-## Die (soziale) Welt ist bunt
+    B --> B1[Direkt Eingewanderte]
+    B --> B2[Kinder von Eingewanderten]
+    B --> B3[Enkel von Eingewanderten]
 
-![](images/cohen-single-family.png){width=120%}
+    C --> C1[Dritte Generation oder später ohne Migrationsgeschichte]
+```
 
-## Ist das ein Auto?
+## Migrationshintergrund -- Version 3 ("Personen mit Einwanderungsgeschichte")
 
-![Der Fiat Topolino. Bildquelle: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/d7/Fiat_Topolino_%282023%29_IMG_0749.jpg){width="70%"}
+**Definition:**
+Eine Person gehört zu dieser Gruppe, **wenn sie oder beide Elternteile seit 1950 ins heutige Bundesgebiet eingewandert sind**.
 
-## Gebräuchliche Definitionen
+## Migrationshintergrund -- Version 4
+```{mermaid}
+flowchart TD
+    A[Bevölkerung] --> B[Personen mit Einwanderungsgeschichte]
+    A --> C[Personen ohne Einwanderungsgeschichte]
 
--   Eine *Grey Divorce* ist die Scheidung einer Ehe, in der beide Partner mindestens 50 Jahre alt sind.\
+    B --> B1[Person selbst seit 1950 eingewandert]
+    B --> B2[Beide Elternteile seit 1950 eingewandert]
+    B --> B3[Ein Elternteil seit 1950 eingewandert]
 
--   *Arbeitslose* sind Personen, die
+    C --> C1[Person und Eltern vor 1950 eingewandert oder nicht migriert]
+```
 
-    -   vorübergehend nicht in einem Beschäftigungsverhältnis stehen,
+## Migrationshintergrund -- Version 4 ("Geburtsortsdefinition")
 
-    -   eine versicherungspflichtige Beschäftigung suchen und dabei den Vermittlungsbemühungen der Agentur für Arbeit zur Verfügung stehen und
+**Definition:**
+Eine Person gehört zu dieser Gruppe, **wenn sie ins heutige Bundesgebiet eingewandert ist**.
 
-    -   sich bei der Agentur für Arbeit arbeitslos gemeldet haben.
+```{mermaid}
+flowchart TD
+    A[Bevölkerung] --> B[Im Land geboren]
+    A --> C[Nicht im Land geboren]
+```
 
-## Armut und der Reichtum an Begriffen {.midi}
+## Migrationshintergrund -- Version 5 ("Subjektive Einordnung")
 
-![Konzepte von Armut im internationalen Vergleich. Quelle: Our World in Data](https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/63d8e4f5-b1f3-4847-7981-b9de18260500/w=850){width=70%}
+**Definition:**
+Eine Person gehört zu dieser Gruppe, wenn sie sich zu einer ethnischen oder religiösen Minderheit zählt, die ihren ihren "Ursprung" nicht im Land verortet (z. B. "Afrikanisch", "Schwarz", "Muslimisch").
 
-## Macht es einen Unterschied? 
+```{mermaid}
+flowchart TD
+    A[Bevölkerung] --> B[Minderheitsidentifikation]
 
-<iframe src="https://ourworldindata.org/explorers/poverty-explorer?Indicator=Share+in+poverty&Poverty+line=%243+per+day%3A+International+Poverty+Line&Household+survey+data+type=Show+data+from+both+income+and+consumption+surveys&Show+breaks+between+less+comparable+surveys=false&country=BGD~BOL~KEN~MOZ~NGA~ZMB&tab=map&hideControls=false" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+    B --> B1["Afrikanisch"]
+    B --> B2["Schwarz"]
+    B --> B3["Muslimisch"]
+    B --> B4["Andere Kategorien"]
+
+    A --> C["Mehrheitsidentifikation"]
+```
+
+## Does it matter? 
+
+!(Quelle: @milewskiBevolkerungMitMigrationshintergrund2024)[https://www.bib.bund.de/DE/Publikationen/Broschueren/Online/Bilder/Pyramiden-Migration/Die-Bevoelkerung-mit-Migrationshintergrund-neu-entdecken-Abb1.png]

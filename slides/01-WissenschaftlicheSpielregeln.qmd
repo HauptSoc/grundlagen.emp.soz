@@ -1,14 +1,28 @@
 ---
 title: "Wissenschaftliche Spielregeln"
 slide-level: 2   # <— hier trennt Quarto an "##"
+lightbox: true
+css: global.css
 format: 
   revealjs:
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
+    auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
+    mermaid: 
+      theme: neutral
+      look: classic
+      layout: elk
 editor: source
+tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
 ---
@@ -98,30 +112,14 @@ Lege dar, wie Daten aussehen müssen, die im Widerspruch zur Behauptung stehen.
 
 Wissenschaftler:innen dürfen keine Anwält:innen ihrer eigenen Überzeugungen sein! Wir müssen demütig und gegenüber unseren Überzeugungen kritisch bleiben. Wir müssen stets die Möglichkeit zulassen, dass wir uns irren.
 
-## Suche nach Gegenevidenz
+## Gender Pain Gap
 
-1. Gender Pain Gap
-  - Geben Männer und Frauen bei gleicher Ursache unterschiedliche Schmerzintensitäten an?
-  - Werden Schmerzen bei Frauen mit höherer Wahrscheinlichkeit abgetan oder als psychisch bedingt interpretiert? 
+- Hypothese 1: Männer geben bei gleicher Ursache eine höhere Schmerzintensität als Frauen an.
+- Hypothese 2: Wenn Männer und Frauen die gleiche Schmerzintensität angeben, dann werden Frauen mit einer geringeren Wahrscheinlichkeit in Bezug auf diese Schmerzen behandelt als Männer. 
+
+$\rightarrow$ Wie müssten Daten aussehen, die als Gegenevidenz zu diesen Behauptungen gelten würden? 
 
 
-
-## Gibt es ein gesundes Maß von Rauchverhalten? {.small}
-
-::: {layout="[[1,1], [1,1]]"}
-![](images/Smoking1.png)
-![](images/Smoking2.png)
-
-![](images/Smoking3.png)
-![](images/Smoking4.png)
-:::
-
-## War das schon immer so klar? {.midi}
-  - Der Nachweis, dass Rauchen Krebs **verursacht**, war ein wichtiger Beschleuniger für verbesserte Methoden und Daten in den Gesundheitswissenschafte (siehe: [Pearl & Mackenzie (2018)](https://archive.illc.uva.nl/cil/uploaded_files/inlineitem/Pearl_Mackenzie_2018_The_Book_of_Why.pdf)). 
-  - Diese Debatte war hoch umkämpft, da unsere Beobachtungen "nur" einen Zusammenhang zwischen dem Rauchverhalten einer Bevölkerung und dem Ausmaß von Lungenkrebs erlauben (siehe: [Oreskes & Conaway (2010)](https://www.nature.com/articles/465686a)
-    ). 
-  - Andere Faktoren (u.a.: Genetik, Umweltverschmutzung, Sporen) verursachen auch Lungenkrebs. Wie können wir uns daher sicher sein, dass Rauchen eine wesentliche Ursache ist? 
-  
 # Wissenschaftliche Verantwortung
 
 ## Wissenschaftliche Verantwortung
@@ -138,7 +136,7 @@ Wir haben daher auf zwei Arten eine Verantwortung:
 
 2.  Keinen bullshit in die Welt setzen! Dazu müssen wir unsere eigene wissenschaftliche Praxis methodisch so gut wie möglich absichern und wir müssen stets demütig bleiben.
 
-## Brandolini in action: The alpha wolf  {.midi}
+## Brandolini in action: Alpha Wolf  {.midi}
 
 ::: {.fragment fragment-index=0}
 
@@ -148,9 +146,7 @@ Wir haben daher auf zwei Arten eine Verantwortung:
 ::::
 
 ::::{.column width="70%"} 
-Das Konzept eines Alpha-Wolfs und einer “pack order” wurde in den 1970er aufgrund der selektiven Beobachtung von Wölfen in Gefangenschaft entwickelt, die kaum familiäre Bindungen hatten. 
-
-Natürliche Wolfsrudel sind aber schlicht Familienverbände aus Vaterwolf, Mamawolf und ihren Kindern. 
+Das Konzept eines Alpha-Wolfs wurde in den 1970er aufgrund der selektiven Beobachtung von Wölfen in Gefangenschaft entwickelt. Natürliche Wolfsrudel sind aber schlicht Familienverbände aus Vaterwolf, Mamawolf und ihren Kindern. 
 
 David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert, versuchte bis 2020 vergeblich, sein eigenes Buch aus dem Verkehr zu ziehen ([mehr hier](https://sciencenorway.no/ulv/wolf-packs-dont-actually-have-alpha-males-and-alpha-females-the-idea-is-based-on-a-misunderstanding/1850514)).
 ::::
@@ -162,11 +158,11 @@ David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert
 :::
 
 
-## Brandolini in action: Myers-Briggs-Test {.midi}
+## Brandolini in action: Rohrschach-Test {.midi}
 ::: {.fragment fragment-index=1}
 ::::::{.columns}
 ::::{.column width="30%"}
-![](images/MyersBriggs.png)
+![](https://upload.wikimedia.org/wikipedia/commons/a/a7/Rorschach1.jpg)
 ::::
 
 ::::{.column width="70%"} 

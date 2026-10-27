@@ -116,11 +116,11 @@ Unser Ziel ist es, diese Unterschiede in weniger, klar verständlichen Kennzahle
 
 Wahrscheinlichkeiten oder *relative* Häufigkeiten haben immer eine Bedeutung in Relation zum Nenner. Wenn sich der Nenner ändert, ändert sich auch die Bedeutung der relativen Häufigkeit. Klären Sie daher stets, auf welche *Basis* die relativen Häufigkeiten beziehen. Wir können folgende Relationen grob unterscheiden:
 
--   Relation zur Stichprobengröße
+- Relation zur Stichprobengröße
 
--   Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in X
+- Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in X
 
--   Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in Y
+- Relation zu einer bestimmten Gruppe definiert durch Ausprägungen in Y
 
 Die erste Variante wird typischerweise als "Zellenprozent", die zweite als "Zeilenprozent" und die dritte als "Spaltenprozent" bezeichnet.
 :::
