@@ -2,30 +2,29 @@
 title: "Methoden - Was soll das?"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
+css: global.css
 format: 
   revealjs:
-    embed-resources: true
-    width: 1200
-    height: 700
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
     auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
-    mermaid:
+    mermaid: 
       theme: neutral
+      look: classic
       layout: elk
 editor: source
+tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
-include-in-header: 
-  text: |
-    <style>
-      .custom-small table {
-        font-size: .6em
-      }
-    </style>
 ---
 
 ## Unsere Homebase

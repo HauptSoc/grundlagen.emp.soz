@@ -3,15 +3,16 @@ title: "Unterschiede erheben: Untersuchungsdesigns"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
 css: global.css
-##server: shiny
 format: 
   revealjs:
     fig-format: svg
-    width: 1280
-    height: 800
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
     auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
     mermaid: 
       theme: neutral
@@ -21,15 +22,9 @@ editor: source
 tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
-include-in-header: 
-  text: |
-    <style>
-      .custom-small table {
-        font-size: .6em
-      }
-    </style>
 ---
 
 ## Querschnittuntersuchungen

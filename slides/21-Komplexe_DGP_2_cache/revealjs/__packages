@@ -21,3 +21,5 @@ gridExtra
 cowplot
 ggeffects
 rlang
+broom
+lattice

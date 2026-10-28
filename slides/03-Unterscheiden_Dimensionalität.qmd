@@ -2,32 +2,29 @@
 title: "Unterscheiden: Dimensionen, Ausprägungen, Typen"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
+css: global.css
 format: 
   revealjs:
-    css: global.css
+    fig-format: svg
+    fig-width: 16
+    fig-asp: 0.618
+    out-width: "70%"
+    fig-align: center
     auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
     mermaid: 
       theme: neutral
       look: classic
       layout: elk
-      htmlLabels: true
 editor: source
+tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
-include-in-header: 
-  text: |
-    <style>
-      .custom-small table {
-        font-size: .6em
-      }
-    </style>
-    
-    <style>.plot-padding {width=80%; padding: 0em 0em 0em 0em; }</style
 ---
 
 ## Ein empirisches Problem: Einsamkeit und Gesellschaft {.midi}

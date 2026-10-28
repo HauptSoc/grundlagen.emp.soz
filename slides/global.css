@@ -30,3 +30,11 @@
   .extrapad li:not(:last-child) {
     margin-bottom:60px  !important;
 }
+
+  .custom-small table {
+    font-size: .6em;
+  }
+
+  .plot-padding {
+    padding: 0;
+  }

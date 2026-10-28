@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>Methoden empirischer Sozialforschung – Testverteilungen für Signifikanztests</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,10 +22,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -34,7 +37,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-dd168a6330b54ea77fb40226282d2c33.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8a9aec59fe4a5dbcc35c853f44d74aa0.css">
   <link rel="stylesheet" href="global.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -141,7 +144,7 @@
 </section>
 <section id="übersicht-parameter-und-testverteilungen" class="slide level2">
 <h2>Übersicht: Parameter und Testverteilungen</h2>
-<table class="caption-top">
+<table>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -486,9 +489,9 @@ Figure&nbsp;4: F-Verteilung mit zweiseitigem Ablehnungsbereich (α = 0.05) für 
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1400,
+        width: 1050,
 
-        height: 1050,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
         margin: 1.0e-2,

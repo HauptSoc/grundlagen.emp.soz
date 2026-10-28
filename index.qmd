@@ -2,50 +2,54 @@
 title: "Grundlagen empirischer Sozialforschung & Datenerhebung"
 tbl-colwidths: [5,15,45,5,5,5,5,5]
 editor: source
+from: markdown+emoji
 ---
 
-# Wintersemester: Datenerhebung
+# Wintersemester 2026: Datenerhebung 
 
-| Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
-|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
-| 1 | 30.10. | Methoden - Was soll das? | [📖](https://link.springer.com/rwe/10.1007/978-3-658-39759-3_21-1 "Schamlose Eigenwerbung") | [🖥](slides/00-slides.qmd) |  |  | [📁](misc\01-zusatz.qmd) |
-| 2 | 06.11. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-slides.qmd "Wissenschaftliche Spielregeln") |  |  |  |
-|  |  | **I. Unterschiede messen** |  |  |  |  |  |
-| 3 | 13.11. | Grundlagen guten Unterscheidens | [📖](https://flowingdata.com/2016/07/20/modern-family-structure/ "Welche unterschiedlichen Haushaltsformen gibt es da draußen?") | [🖥](slides/02-slides.qmd "Grundlagen guten Unterscheidens") | [✍](exercises/01-ex.qmd) |  |  |
-| 4 | 20.11. | Dimensionen, Typen, Ausprägungen | 📖 | [🖥](slides/03-slides.qmd) | [✍](exercises/02-ex.qmd) |  |  |
-| 5 | 27.11. | Messtheoretische Grundlagen | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_107.pdf "Blasius (2019): Skalierung") | [🖥](slides\04-slides.qmd "Messtheoretische Grundlagen") | [✍](exercises/03-ex.qmd) |  | [📁](misc\05-zusatz.qmd) |
-| 6 | 04.12. | Skalierung | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_62.pdf "Latcheva & Davidov (2019)") | [🖥](slides\05-slides.qmd) | [✍](exercises/04-ex.qmd) |  |  |
-| 7 | 11.12. | Ausprägungen kombinieren | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_62) | [🖥](slides\06-slides.qmd) |  |  |  |
-|  |  | Itemkonstruktion | [📖](https://link.springer.com/chapter/10.1007/978-3-658-37985-8_64) | [🖥](slides\07-slides.qmd) | [✍](exercises/05-ex.qmd) |  |  |
-| 8 | 18.12. | Reaktionen erfassen | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_58) | [🖥](slides\08-slides.qmd) |  |  |  |
-| 9 | 08.01. | Reliabilität und Validität | [📖](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_11) | [🖥](slides\09-slides.qmd) | [✍](exercises/06-ex.qmd) |  |  |
-|  | ab. 14.1. |  |  |  |  | [📋](https://ilias.studium.kit.edu/goto.php/crs/2757061) |  |
-|  |  | **II. Unterschiede erheben** |  |  |  |  |  |
-| 10 | 15.01. | Stichprobenziehung | 📖 | [🖥](slides\10-slides.qmd) | [✍](exercises/07-ex.qmd) |  |  |
-| 11 | 22.01. | Teilnahmeselektion | 📖 | [🖥](slides\11-slides.qmd) | [✍](exercises/08-ex.qmd) |  |  |
-| 12 | 29.01. | Antwortverweigerung | 📖 | [🖥](slides\12-slides.qmd) | [✍](exercises/09-ex.qmd) | 📋 |  |
-|  |  | **III. Die richtigen Unterschiede erfassen** |  |  |  |  |  |
-| 13 | 05.02. | Untersuchungsdesigns - Season 1 | 📖 | [🖥](slides\13-slides.qmd) | [✍](exercises/10-ex.qmd) |  |  |
-| 14 | 12.02. | Untersuchungsdesigns - Season 2 | 📖 | [🖥](slides\14-slides.qmd) | ✍ |  |  |
+| Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Shownotes |
+|---------|-------------------|:----:|:-------:|:-----:|:-------:|:-------:|
+| 29.10. | Wissenschaftliche Spielregeln | [📖](https://www.scientificamerican.com/article/what-happens-when-an-entire-scientific-field-changes-its-mind/ "Wissenschaftliche Revolutiönchen") | [🖥](slides/01-WissenschaftlicheSpielregeln.html "Wissenschaftliche Spielregeln") [📄](slides/01-WissenschaftlicheSpielregeln.pdf "PDF") |  |  | [:scroll:](shownotes.html#gender-pain-gap) |
+|  | **I. Unterschiede messen** |  |  |  |  |  |
+| 05.11. | Grundlagen guten Unterscheidens | [📖](https://flowingdata.com/2016/07/20/modern-family-structure/ "Welche unterschiedlichen Haushaltsformen gibt es da draußen?") | [🖥](slides/02-Unterscheiden_Grundlagen.html) [📄](slides/02-Unterscheiden_Grundlagen.pdf) | [✍](exercises/01-ex.html) |  |  |
+| 12.11. | Dimensionen, Typen, Ausprägungen | 📖 | [🖥](slides/03-Unterscheiden_Dimensionalit%C3%A4t.html) [📄](slides/03-Unterscheiden_Dimensionalit%C3%A4t.pdf) | [✍](exercises/02-ex.html) |  |  |
+| 19.11. | Messtheoretische Grundlagen | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_107.pdf "Blasius (2019): Skalierung") | [🖥](slides/04-Messen_Grundlagen.html "Messtheoretische Grundlagen") [📄](slides/04-Messen_Grundlagen.pdf) | [✍](exercises/03-ex.html) |  |  |
+| 26.11. | Skalierung | [📖](https://link.springer.com/content/pdf/10.1007/978-3-658-21308-4_62.pdf "Latcheva & Davidov (2019)") | [🖥](slides/05-Skalierung.html) [📄](slides/05-Skalierung.pdf) | [✍](exercises/04-ex.html) |  |  |
+| 03.12. | Ausprägungen kombinieren | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_62) | [🖥](slides/06-Auspr%C3%A4gungen_kombinieren.html) [📄](slides/06-Auspr%C3%A4gungen_kombinieren.pdf) |  |  |  |
+|  | Itemkonstruktion | [📖](https://link.springer.com/chapter/10.1007/978-3-658-37985-8_64) | [🖥](slides/07-Itemkonstruktion.html) [📄](slides/07-Itemkonstruktion.pdf) | [✍](exercises/05-ex.html) |  |  |
+| 10.12. | Reaktionen erfassen | [📖](https://link.springer.com/chapter/10.1007/978-3-658-21308-4_58) | [🖥](slides/08-Reaktionsvorgaben.html) [📄](slides/08-Reaktionsvorgaben.pdf) |  |  |  |
+| 17.12. | Reliabilität und Validität | [📖](https://link.springer.com/chapter/10.1007/978-3-531-92038-2_11) | [🖥](slides/09-Reliabilit%C3%A4t_Validit%C3%A4t.html) [📄](slides/09-Reliabilit%C3%A4t_Validit%C3%A4t.pdf) | [✍](exercises/06-ex.html) |  |  |
+| ab. 17.12. |  |  |  |  | [📋](https://ilias.studium.kit.edu/goto.php/crs/2757061) |  |
+|  | **II. Unterschiede erheben** |  |  |  |  |  |
+| 07.01. | Stichprobenziehung | 📖 | [🖥](slides/10-UnterschiedeErheben-Stichprobentypen.html) [📄](slides/10-UnterschiedeErheben-Stichprobentypen.pdf) | [✍](exercises/07-ex.html) |  |  |
+| 14.01. | Teilnahmeselektion | 📖 | [🖥](slides/11-UnterschiedeErheben-Teilnahmeselektion.html) [📄](slides/11-UnterschiedeErheben-Teilnahmeselektion.pdf) | [✍](exercises/08-ex.html) |  |  |
+| 21.01. | Antwortverweigerung | 📖 | [🖥](slides/12-UnterschiedeErheben-Item_Nonresponse.html) [📄](slides/12-UnterschiedeErheben-Item_Nonresponse.pdf) | [✍](exercises/09-ex.html) |  |  |
+| 28.01. | Survey Design |  |  |  |  |  |
+| ab 28.01. |  |  |  |  | 📋 |  |
+|  | **III. Die richtigen Unterschiede erfassen** |  |  |  |  |  |
+| 04.02. | Untersuchungsdesigns - Season 1 | 📖 | [🖥](slides/13-UnterschiedeErheben-Untersuchungsdesigns.html) [📄](slides/13-UnterschiedeErheben-Untersuchungsdesigns.pdf) | [✍](exercises/10-ex.html) |  |  |
+| 11.02. | Untersuchungsdesigns - Season 2 | 📖 | [🖥](slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.html) [📄](slides/14-UnterschiedeErheben-Untersuchungsdesigns-Season2.pdf) | ✍ |  |  |
+| 18.02. | Vignettendesign |  |  |  |  |  |
+|  | ab 18.02. |  |  |  |  | 📋 |
 
 # Sommersemester: Datenanalyse
 
 | Woche | Termin | Thema | Lektüre | Folien | Übungen | Aufgabenblätter | Vertiefungen |
 |:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
 |  |  | **I. Grundlagen guten Vergleichens** |  |  |  |  |  |
-| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-slides.qmd) | ✍ |  |  |
-| 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-slides.qmd) | ✍ |  |  |
-| 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/17-slides.qmd) | ✍ |  |  |
+| 1 | 21.04. | Vergleiche und Verteilungen | 📖 | [🖥](slides/15-Vergleiche_und_Verteilungen.html) [📄](slides/15-Vergleiche_und_Verteilungen.pdf) | ✍ |  |  |
+| 2 | 28.04. | Vergleichsgegenstände I | 📖 | [🖥](slides/16-VergleichsgegenstaendeI.html) [📄](slides/16-VergleichsgegenstaendeI.pdf) | ✍ |  |  |
+| 3 | 05.05. | Vergleichsgegenstände II | 📖 | [🖥](slides/17-VergleichsgegenstaendeII.html) [📄](slides/17-VergleichsgegenstaendeII.pdf) | ✍ |  |  |
 |  |  | **II. Der Vergleich zwischen beeinflussten und weniger beeinflussten Gruppen** |  |  |  |  |  |
-| 4 | 02.06. | P1: Korrelationen | 📖 | [🖥](slides/18-slides.qmd) | [✍](exercises/18-ex.qmd) |  |  |
-| 5 | 09.06. | P2: Residualvarianz & OLS | 📖 | [🖥](slides/19-slides.qmd) | [✍](exercises/19-ex.qmd) |  |  |
-| 6 | 16.06. | P3: Partielle Korrelation & Multivariate OLS | 📖 | [🖥](slides/20-slides.qmd) | [✍](exercises/20-ex.qmd) |  |  |
-|  |  |  |  |  | [💡](exercises/mieten-solutions.qmd) | [📋](https://ilias.studium.kit.edu/ilias.php?baseClass=ilrepositorygui&cmdNode=xs:mo&cmdClass=ilobjcoursegui&ref_id=2866067&item_ref_id=0) |  |
+| 4 | 02.06. | P1: Korrelationen | 📖 | [🖥](slides/18-Isolation_von_Einfluessen_P1.html) [📄](slides/18-Isolation_von_Einfluessen_P1.pdf) | [✍](exercises/18-ex.html) |  |  |
+| 5 | 09.06. | P2: Residualvarianz & OLS | 📖 | [🖥](slides/19-Isolation_von_Einfluessen_P2.html) [📄](slides/19-Isolation_von_Einfluessen_P2.pdf) | [✍](exercises/19-ex.html) |  |  |
+| 6 | 16.06. | P3: Partielle Korrelation & Multivariate OLS | 📖 | [🖥](slides/20-Isolation_von_Einfluessen_P3.html) [📄](slides/20-Isolation_von_Einfluessen_P3.pdf) | [✍](exercises/20-ex.html) |  |  |
+|  |  |  |  |  | [💡](exercises/mieten-solutions.html) | [📋](https://ilias.studium.kit.edu/ilias.php?baseClass=ilrepositorygui&cmdNode=xs:mo&cmdClass=ilobjcoursegui&ref_id=2866067&item_ref_id=0) |  |
 |  |  | **III. Komplexe Daten generierende Prozesse** |  |  |  |  |  |
-| 7 | 23.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/21-slides.qmd) | [✍](exercises/21-ex.qmd) |  |  |
-| 8 | 07.07. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/22-slides.qmd) | [✍](exercises/23-ex.qmd)|  |  |
+| 7 | 23.06. | Komplexe Daten generierende Prozesse I | 📖 | [🖥](slides/21-Komplexe_DGP_1.html) [📄](slides/21-Komplexe_DGP_1.pdf) | [✍](exercises/21-ex.html) |  |  |
+| 8 | 07.07. | Komplexe Daten generierende Prozesse II | 📖 | [🖥](slides/21-Komplexe_DGP_2.html) [📄](slides/21-Komplexe_DGP_2.pdf) | [✍](exercises/23-ex.html) |  |  |
 |  |  | **IV. Der Vergleich mit Zufallsprodukten** |  |  |  |  |  |
-| 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/23-slides.qmd) | ✍ |  |  |
-| 11 | 21.07. | p-Values | 📖 | [🖥](slides/24-slides.qmd) | ✍ |  |  |
+| 10 | 14.07. | Konfidenzintervalle | 📖 | [🖥](slides/23-Inferenz-P1.html) [📄](slides/23-Inferenz-P1.pdf) | ✍ |  |  |
+| 11 | 21.07. | p-Values | 📖 | [🖥](slides/24-Inferenz-P2.html) [📄](slides/24-Inferenz-P2.pdf) | ✍ |  |  |
 | 12 | 28.07. | Klausur |  |  |  |  |  |
 |  |  | Formelsammlung | [🖥](misc/Formelsammlung2526.pdf) |  |  |  |  |

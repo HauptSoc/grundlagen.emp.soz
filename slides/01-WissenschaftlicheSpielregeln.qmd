@@ -3,6 +3,7 @@ title: "Wissenschaftliche Spielregeln"
 slide-level: 2   # <— hier trennt Quarto an "##"
 lightbox: true
 css: global.css
+bibliography: Rcpp.bib
 format: 
   revealjs:
     fig-format: svg
@@ -30,7 +31,7 @@ execute:
 ## Wissenschaft heißt Wissen schaffen {.midi}
 > Science writing that isn't credible is science fiction. Credibility goes hand in hand with being concrete. We establish the credibility of our ideas by grounding them in previous work and citing those sources. We establish the credibility of our data by describing our methods, presenting the data clearly, and using appropriate statistics. We establish the credibility of our conclusions by showing that they grow from those credible data. We build a chain that extends from past work into future directions. A break anywhere in that chain makes the whole endeavour lose credibility. 
 
-Josha Schimel: Writing Science (2011, 23) ([Website des Autors](https://schimelwritingscience.wordpress.com/))
+Joshua @schimelWritingScienceHow2012 [p. 1] 
 
 ## Werden Sie ein produktives Mitglied
 
@@ -56,7 +57,7 @@ Sie überzeugen andere Teilnehmer:innen, wenn
 
 Um empirisch überzeugend sein zu können, brauchen Sie
 
-  1.  gute Daten &
+  1.  gute Daten und das Wissen, wie diese entstanden sind &
 
   2.  angemessene Methoden &
 
@@ -89,7 +90,7 @@ Fragen Sie sich selbst:
 ::: center
 :::
 
-![Die Veränderungen der Vorannahmen über die Wirkung des Mindeslohns; [Quelle](https://twitter.com/arindube/status/1315857681148596224)](images/priors-minimumwage.jpg)
+![Die Veränderungen der Vorannahmen über die Wirkung des Mindeslohns; [Quelle](https://twitter.com/arindube/status/1315857681148596224)](images/priors-minimumwage.jpg){.height="60%"}
 
 ::: center
 :::
@@ -126,11 +127,11 @@ $\rightarrow$ Wie müssten Daten aussehen, die als Gegenevidenz zu diesen Behaup
 
 In den vergangenen Jahren hat sich die Verbreitung von Missinformation, fake news und Halbwahrheiten verstärkt. Es ist unsere Verantwortung diese Ausbreitung einzudämmen und nicht aktiv daran teilzunehmen.
 
-Es ist stets schwerer, Missinformation und Unwahrheiten aus der Welt zu bekommen, als sie in die Welt zu setzen. Das wird auch als **Brandolinis Gesetz** bezeichnet.
+Es ist stets schwerer, Missinformation und Unwahrheiten aus der Welt zu bekommen, als sie in die Welt zu setzen. Das wird auch als [Brandolinis Gesetz](https://en.wikipedia.org/wiki/Brandolini%27s_law) oder als **Bullshit Asymmetry Principle**  bezeichnet.
 
 ## Wissenschaftliche Verantwortung
 
-Wir haben daher auf zwei Arten eine Verantwortung:
+Wir haben daher auf zwei Arten eine Verantwortung [@bergstromCallingBullshitArt2020]:
 
 1.  Calling bullshit: Wir müssen nach bestem Wissen und Gewissen Aufklärungsarbeit leisten. Dazu müssen wir methodisch gesichertes Wissen aufbauen.
 
@@ -166,11 +167,7 @@ David Mech, der Autor des Buches von 1970, auf dem der Alpha Wolf Mythos basiert
 ::::
 
 ::::{.column width="70%"} 
-Der Myers-Briggs-Test ist ein sehr populärer Persönlichkeitstest in vielen Organisationen zur Einordnung von Kandidaten oder Teammitgliedern.
-
-Führt man mit Personen diesen Test aber wiederholt aus, verändert sich die Einstufung der Persönlichkeit zum Teil drastisch.
-
-Die Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mit Verhaltensweisen und Leistungen von Personen in Organisationen ([ausführlicher](https://www.theswaddle.com/myers-briggs-test-has-been-debunked-time-and-again-why-do-companies-still-use-it)). 
+ Rohrschachtests wurden 1921 von Hermann Rohrschach als Methode zur Psychodiagnostik vorgeschlagen und werden heute in einigen Ländern noch benutzt. Sie sind jedoch als diagnostisches Verfahren absolut ungeeignet [@garbRootsRorschachControversy2005]. 
 ::::
 :::
 
@@ -187,9 +184,9 @@ Die Einstufungen durch den Test stehen darüber hinaus in keinem Zusammenhang mi
 ::::
 
 ::::{.column width="70%"} 
-[Kruger & Dunning (1999)](https://doi.org/10.1037/0022-3514.77.6.1121) postulierten aufgrund eines (!) Experiments, dass vor allem Personen, die geringe Fähigkeiten haben, die Ausprägung dieser Fähigkeiten bei sich selbst überschätzen. 
+@krugerUnskilledUnawareIt1999 postulierten aufgrund eines (!) Experiments, dass vor allem Personen, die geringe Fähigkeiten haben, die Ausprägung dieser Fähigkeiten bei sich selbst überschätzen. 
 
-Die wissenschaftliche Evidenz für diese Behauptung ist **extrem** dünn ([Gignac & Zajenkowski (2020)](https://doi.org/10.1016/j.intell.2020.101449)). 
+Die wissenschaftliche Evidenz für diese Behauptung ist **extrem** dünn [@gignacDunningKrugerEffectMostly2020]. 
 ::::
 :::
 
@@ -198,3 +195,7 @@ Die wissenschaftliche Evidenz für diese Behauptung ist **extrem** dünn ([Gigna
 ![](images/StempelOverconfidence.png){.absolute bottom=0 left=0 width="300" height="300"}
 :::
 
+## Literatur
+
+::: {#refs}
+:::

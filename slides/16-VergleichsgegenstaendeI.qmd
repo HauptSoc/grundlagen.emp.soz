@@ -6,15 +6,13 @@ css: global.css
 format: 
   revealjs:
     fig-format: svg
-    fig-width: 12
+    fig-width: 16
     fig-asp: 0.618
     out-width: "70%"
     fig-align: center
-    width: 1280
-    height: 800
     auto-stretch: false
     theme: style.scss
-    margin: 0.05
+    margin: 0.01
     slideNumber: true
     mermaid: 
       theme: neutral
@@ -24,6 +22,7 @@ editor: source
 tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: true
   message: false
   warning: false
 ---

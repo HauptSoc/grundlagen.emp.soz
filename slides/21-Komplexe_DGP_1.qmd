@@ -10,8 +10,6 @@ format:
     fig-asp: 0.618
     out-width: "70%"
     fig-align: center
-    width: 1400
-    height: 1050
     auto-stretch: false
     theme: style.scss
     margin: 0.01
@@ -24,6 +22,7 @@ editor: source
 tbl-cap-location: bottom
 execute: 
   echo: false
+  cache: false
   message: false
   warning: false
 ---
