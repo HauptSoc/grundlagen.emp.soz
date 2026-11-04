@@ -26,7 +26,7 @@ execute:
 Unten sehen Sie eine Zufallsstichprobe von 30 verschiedenen LEGO-Teilen. Entwickeln Sie in Ihrer Gruppe eine Taxonomie, mit der sich die Teile sinnvoll unterscheiden lassen.
  
 2. Sie haben eine Zufallsauswahl von Lego-Teilen erhalten. Erstellen Sie ein Ordnungssystem für Ihre Lego-Teile. Legen Sie dazu digitale Lego-Schubladen an und ziehen Sie die Lego-Teile in die jeweilige Schublade.[^1] Bedenken Sie dabei, dass Sie nur mit einer Zufallsauwahl arbeiten - später können noch andere Teil von anderen Zufallsauswahlen hinzukommen. 
-3. Prüfen Sie Ihr Ordnungssystem theoretisch: Sind die "Schubladen" **erschöpfend** (jeder Typ von Lego-Teil findet einen Platz) und **disjunkt** (jedes Teil passt nur in eine Klasse)? Folgt Ihr Ordnungssystem eine "inneren Logik"? Wenn ja, welcher? Wenn nicht - was ist mit Ihnen los?[^2]
+3. Prüfen Sie Ihr Ordnungssystem theoretisch: Sind die "Schubladen" **erschöpfend** (jeder Typ von Lego-Teil findet einen Platz) und **disjunkt** (jedes Teil passt nur in eine Klasse)? Folgt Ihr Ordnungssystem einer "inneren Logik"? Wenn ja, welcher? Wenn nicht - was ist mit Ihnen los?[^2]
 4. Testen Sie Ihr Ordnungssystem: Ziehen Sie mit „Weitere Stichprobe“ 30 neue Teile. Ihre Klassen und Zuordnungen bleiben erhalten. Lassen sich die neuen Teile einordnen, oder müssen Sie neue Schubladen anlegen?
 5. Vergleichen Sie Ihr Ordnungssystem mit anderen Gruppen. Gibt es Teile bei anderen Gruppen, die überhaupt nicht in Ihr System passen?
 6. Vergleichen Sie zum Schluss Ihre Lösung mit den Kategorien von Rebrickable (Button „Rebrickable-Kategorien zeigen“) - gibt es größere Abweichungen und warum.
