@@ -1,0 +1,125 @@
+digraph {
+  rankdir = TB;
+  compound = true;
+  bgcolor = "transparent";
+  nodesep = 1.0;
+  ranksep = 1.2;
+  newrank = true;
+  sep = "+0.5,0.5";
+  
+  # Node defaults
+  node [shape = box, style = "rounded", fillcolor = "#ffffff", 
+        fontname = "Arial", fontsize = 12, margin = "0.4,0.25"];
+  edge [color = "#333333", arrowhead = vee, minlen = 2, fontsize = 12, penwidth = 1.5];
+  
+  # Hypothese
+  subgraph cluster_H {
+    label = "Hypothese";
+    fontname = "Arial Bold";
+    fontsize = 13;
+    labelloc = "t";
+    style = "filled,rounded";
+    fillcolor = "#f9f9f9";
+    color = "#999999";
+    margin = 8;
+    clusterrank = global;
+    
+    H_X [label = "X"];
+    H_Y [label = "Y"];
+    H_X -> H_Y [label = "führt zu"];
+  }
+  
+  # Parent-Cluster für Operationalisierung und Forschungsdesign
+    
+    # Operationalisierung (links)
+    subgraph cluster_O {
+      label = "Operationalisierung";
+      fontname = "Arial Bold";
+      fontsize = 13;
+      labelloc = "t";
+      style = "filled,rounded";
+      fillcolor = "#f9f9f9";
+      color = "#999999";
+      margin = 8;
+      clusterrank = global;
+      
+      O_X [label = "Unterschiede\nin X"];
+      O_Y [label = "Unterschiede\nin Y"];
+      O_X -> O_Y [label = "stehen in\nBeziehung zu"];
+    }
+    
+    # Forschungsdesign (rechts)
+    subgraph cluster_FD {
+      label = "Forschungsdesign";
+      fontname = "Arial Bold";
+      fontsize = 13;
+      labelloc = "t";
+      style = "filled,rounded";
+      fillcolor = "#f9f9f9";
+      color = "#999999";
+      margin = 8;
+      
+      
+      FD_UE [label = "Forschungsdesign"];
+      FD_R [label = "Art der Zuweisung zu \n Untersuchungsgruppen"];
+      FD_T [label = "Anzahl\nMesszeitpunkte"];
+      FD_SD [label = "Stichprobendesign"]; 
+      FD_SR [label = "Stichprobenrahmen"];
+      FD_SA [label = "Stichprobenart"];
+
+      FD_UE -> FD_R [arrowhead = "none"];
+      FD_UE -> FD_T [arrowhead = "none"];
+      FD_SD -> FD_SA
+      FD_SD -> FD_SR
+    }
+    
+ 
+  
+  # Datenerhebung
+  subgraph cluster_D {
+    label = "Datenerhebung";
+    fontname = "Arial Bold";
+    fontsize = 13;
+    labelloc = "t";
+    style = "filled,rounded";
+    fillcolor = "#f9f9f9";
+    color = "#999999";
+    margin = 8;
+    
+    D_S [label = "Stichprobe"];
+    D_UE [label = "Untersuchungs-\neinheiten"];
+    D_B [label = "Beobachter:innen"];
+    
+    D_S -> D_UE [label = "Quelle von"];
+    D_UE -> D_B [label = "Beschreibung" dir = back];
+    
+
+  }
+  
+  # Vergleich / Modellierung
+  subgraph cluster_V {
+    label = "Vergleich / Modellierung";
+    fontname = "Arial Bold";
+    fontsize = 13;
+    labelloc = "t";
+    style = "filled,rounded";
+    fillcolor = "#f9f9f9";
+    color = "#999999";
+    margin = 8;
+    
+    V_X0 [label = "📊\nVerteilung von\nY bei X = 0", shape = "box"];
+    V_X1 [label = "📊\nVerteilung von\nY bei X = 1", shape = "box"];
+    V_D [label = "Differenz", shape = "none"]
+    V_X0 -> V_D [dir = back];
+    V_D -> V_X1
+  }
+  
+  # Rank-Constraint: O und FD auf gleicher Höhe (horizontal nebeneinander)
+  {rank = same; H_X; O_X; FD_SD; FD_UE D_S; V_X0}
+  
+  # Verbindungen zwischen den Hauptclustern
+  H_X -> O_X [ltail = cluster_H, lhead = cluster_O, label = "wird übersetzt zu", labelangle = 45, labeldistance = 2.0];
+  O_X -> FD_SD [ltail = cluster_O, lhead = cluster_FD, label = "bedingt", labelangle = 45, labeldistance = 2.0]; 
+  FD_UE -> D_S [ltail = cluster_FD, lhead = cluster_D, label = "Rahmen für", labelangle = 45, labeldistance = 2.0];
+  D_S -> V_X0 [ltail = cluster_D, lhead = cluster_V, label = "Grundlage für", labelangle = 45, labeldistance = 2.0];
+}

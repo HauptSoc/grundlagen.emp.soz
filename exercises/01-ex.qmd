@@ -3,7 +3,7 @@ title: "Übung: Grundlagen guten Unterscheidens"
 author: "Andreas Haupt, Sophia Horn"
 format: 
   html: 
-    self-contained: true
+    self-contained: false
     fontsize: 1em
     mainfont: sans-serif
     number-sections: true
@@ -21,44 +21,22 @@ execute:
   message: false
 ---
 
-## Die Fragestellung
+## Kann es für alles eine Schublade geben? 
 
-Einsamkeit wird zunehmend als gesundheitliches Risiko aufgefasst, dass immer größere Teile der Bevölkerung erfassen könnte. Wir möchten wissen: Auf welche Art und Weise sind Unterschiede im Einsamkeitserleben mit gesundheitlichen Unterschieden in der Bevölkerung verbunden?
+Unten sehen Sie eine Zufallsstichprobe von 30 verschiedenen LEGO-Teilen. Entwickeln Sie in Ihrer Gruppe eine Taxonomie, mit der sich die Teile sinnvoll unterscheiden lassen.
+ 
+2. Sie haben eine Zufallsauswahl von Lego-Teilen erhalten. Erstellen Sie ein Ordnungssystem für Ihre Lego-Teile. Legen Sie dazu digitale Lego-Schubladen an und ziehen Sie die Lego-Teile in die jeweilige Schublade.[^1] Bedenken Sie dabei, dass Sie nur mit einer Zufallsauwahl arbeiten - später können noch andere Teil von anderen Zufallsauswahlen hinzukommen. 
+3. Prüfen Sie Ihr Ordnungssystem theoretisch: Sind die "Schubladen" **erschöpfend** (jeder Typ von Lego-Teil findet einen Platz) und **disjunkt** (jedes Teil passt nur in eine Klasse)? Folgt Ihr Ordnungssystem eine "inneren Logik"? Wenn ja, welcher? Wenn nicht - was ist mit Ihnen los?[^2]
+4. Testen Sie Ihr Ordnungssystem: Ziehen Sie mit „Weitere Stichprobe“ 30 neue Teile. Ihre Klassen und Zuordnungen bleiben erhalten. Lassen sich die neuen Teile einordnen, oder müssen Sie neue Schubladen anlegen?
+5. Vergleichen Sie Ihr Ordnungssystem mit anderen Gruppen. Gibt es Teile bei anderen Gruppen, die überhaupt nicht in Ihr System passen?
+6. Vergleichen Sie zum Schluss Ihre Lösung mit den Kategorien von Rebrickable (Button „Rebrickable-Kategorien zeigen“) - gibt es größere Abweichungen und warum.
 
-```{mermaid}
-flowchart LR
-E[Einsamkeit] --> G[Gesundheit]
+[Werkzeug in neuem Tab öffnen](lego/index.html){target="_blank"}
+
+```{=html}
+<iframe src="lego/index.html" data-external="1" width="100%" height="950"
+        style="border:1px solid #ccc; border-radius:8px"></iframe>
 ```
 
-## Erste Schritte
-
-1. Um die Ausbreitung von Einsamkeit zu erfassen und seinen negativen Wirkungen vorzubeugen, hat die Bundesregierung das Einsamkeitsbarometer erstellt. Recherieren Sie, wie das Einsamkeitsbarometer Unterschiede in der Einsamkeit von Personen erfasst. 
-
-2. Trennen Sie **Einsamkeit** von **Isolation** ab. 
-
-3. Unterscheiden Sie mindestens drei Ausprägungen der Eigenschaft **Einsamkeit** und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen. 
-
-4. Unterscheiden Sie mindestens drei Ausprügungen der Eigenschaft **Gesundheit** und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.
-
-5. Diskutieren Sie, auf welche Art und Weise, die von Ihnen getroffenen Unterschiede von Einsamkeit mit gesundheitlichen Unterschieden verbunden sind? Benötigen wir ggf. mehr Eigenschaften, um diese Verbindung zu verstehen? 
-
-
-```{mermaid}
-flowchart LR
-
-E[Einsamkeit] --> BB[?] --> G[Gesundheit]
-```
-
-```{mermaid}
-flowchart LR
-E[Einsamkeit]  --> G[Gesundheit]
-BB[?] --> E & G 
-
-```
-
-```{mermaid}
-flowchart LR
-E[Einsamkeit]  --> G[Gesundheit]
-E --> BB[?] 
-BB --> G
-```
+[^1]: Tipp: Halten Sie "Shift" gedrückt, dann können Sie mehrere Objekte auf einmal auswählen.
+[^2]: Ist lieb gemeint.

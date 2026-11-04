@@ -3,9 +3,11 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    - "!exercises/2025/"
   resources:
     - "*.docx"
     - docs/slides/*
+    - exercises/lego/**
 
 website:
   page-navigation: true

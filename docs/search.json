@@ -3,8 +3,8 @@
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#unterschiede-die-unterschiede-machen",
     "href": "slides/02-Unterscheiden_Grundlagen.html#unterschiede-die-unterschiede-machen",
     "title": "Unterscheiden: Grundlagen",
-    "section": "",
-    "text": "Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
+    "section": "Unterschiede, die Unterschiede machen",
+    "text": "Unterschiede, die Unterschiede machen\n\n\n\nSprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#forschung---wie-geht-das",
@@ -67,7 +67,7 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html#konzeptspezifikation",
     "title": "Unterscheiden: Grundlagen",
     "section": "Konzeptspezifikation",
-    "text": "Konzeptspezifikation\n\n\n\nOperationalisierung und Konzeptspezifikation Quelle: Wonka (2022)"
+    "text": "Konzeptspezifikation\n\n\n\nOperationalisierung und Konzeptspezifikation Quelle: @wonkaKonzepteUndKonzeptspezifikation2022"
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#was-ist-ein-konzept",
@@ -869,7 +869,7 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html#die-bedeutung-guter-konzepte",
     "title": "Unterscheiden: Grundlagen",
     "section": "Die Bedeutung guter Konzepte",
-    "text": "Die Bedeutung guter Konzepte\n\nKlare Beschreibungen benötigen klare Konzepte, da eine Beschreibung die Einordnung einer Beobachtung B unter ein Konzept K der Form “B ist eine Realisation von K” ist.\nWenn Sie Eigenschaften oder Ausprägungen A und B voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension A hat, die B nicht hat. Dazu müssen wir A und B nicht erschöpfend beschreiben. Wir benötigen “nur” eine klare Trenn-Eigenschaft."
+    "text": "Die Bedeutung guter Konzepte\n\nKlare Beschreibungen benötigen klare Konzepte, da eine Beschreibung die Einordnung einer Beobachtung B unter ein Konzept K der Form “B ist eine Realisation von K” ist.\nWenn Sie Eigenschaften oder Ausprägungen A und B voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension A hat, die B nicht hat. Dazu müssen wir A und B nicht erschöpfend beschreiben. Wir benötigen aber mindestens eine klare Trenn-Eigenschaft."
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#beschreibung-von-dingen",
@@ -897,7 +897,7 @@
     "href": "exercises/01-ex.html",
     "title": "Übung: Grundlagen guten Unterscheidens",
     "section": "",
-    "text": "Einsamkeit wird zunehmend als gesundheitliches Risiko aufgefasst, dass immer größere Teile der Bevölkerung erfassen könnte. Wir möchten wissen: Auf welche Art und Weise sind Unterschiede im Einsamkeitserleben mit gesundheitlichen Unterschieden in der Bevölkerung verbunden?\n\n\n\n\n\nflowchart LR\nE[Einsamkeit] --&gt; G[Gesundheit]"
+    "text": "Unten sehen Sie eine Zufallsstichprobe von 30 verschiedenen LEGO-Teilen. Entwickeln Sie in Ihrer Gruppe eine Taxonomie, mit der sich die Teile sinnvoll unterscheiden lassen.\n\nSie haben eine Zufallsauswahl von Lego-Teilen erhalten. Erstellen Sie ein Ordnungssystem für Ihre Lego-Teile. Legen Sie dazu digitale Lego-Schubladen an und ziehen Sie die Lego-Teile in die jeweilige Schublade.1 Bedenken Sie dabei, dass Sie nur mit einer Zufallsauwahl arbeiten - später können noch andere Teil von anderen Zufallsauswahlen hinzukommen.\nPrüfen Sie Ihr Ordnungssystem theoretisch: Sind die “Schubladen” erschöpfend (jeder Typ von Lego-Teil findet einen Platz) und disjunkt (jedes Teil passt nur in eine Klasse)? Folgt Ihr Ordnungssystem eine “inneren Logik”? Wenn ja, welcher? Wenn nicht - was ist mit Ihnen los?2\nTesten Sie Ihr Ordnungssystem: Ziehen Sie mit „Weitere Stichprobe“ 30 neue Teile. Ihre Klassen und Zuordnungen bleiben erhalten. Lassen sich die neuen Teile einordnen, oder müssen Sie neue Schubladen anlegen?\nVergleichen Sie Ihr Ordnungssystem mit anderen Gruppen. Gibt es Teile bei anderen Gruppen, die überhaupt nicht in Ihr System passen?\nVergleichen Sie zum Schluss Ihre Lösung mit den Kategorien von Rebrickable (Button „Rebrickable-Kategorien zeigen“) - gibt es größere Abweichungen und warum.\n\nWerkzeug in neuem Tab öffnen"
   },
   {
     "objectID": "exercises/01-ex.html#die-fragestellung",
@@ -7989,5 +7989,110 @@
     "title": "Messtheoretische Grundlagen",
     "section": "",
     "text": "!(Spiegelhalter)[https://medium.com/wintoncentre/the-risks-of-alcohol-again-2ae8cb006a4a] über die Veränderung der WHO-Empfehlung zur Wirkung von “moderatem Alkoholkonsum”."
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten",
+    "text": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten-1",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#erkentnisinteresse-geschlechtsspezifische-bildungsungleichheiten-1",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten",
+    "text": "Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#der-große-bogen",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#der-große-bogen",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Der große Bogen",
+    "text": "Der große Bogen\n\n\n\n\n\n\n\n\ncluster_H\n\nHypothese\n\n\ncluster_O\n\nOperationalisierung\n\n\ncluster_FD\n\nForschungsdesign\n\n\ncluster_D\n\nDatenerhebung\n\n\ncluster_V\n\nVergleich / Modellierung\n\n\n\nH_X\n\nX\n\n\n\nH_Y\n\nY\n\n\n\nH_X-&gt;H_Y\n\n\nführt zu\n\n\n\nO_X\n\nUnterschiede\nin X\n\n\n\nH_X-&gt;O_X\n\n\nwird übersetzt zu\n\n\n\nO_Y\n\nUnterschiede\nin Y\n\n\n\nO_X-&gt;O_Y\n\n\nstehen in\nBeziehung zu\n\n\n\nFD_SD\n\nStichprobendesign\n\n\n\nO_X-&gt;FD_SD\n\n\nbedingt\n\n\n\nFD_UE\n\nForschungsdesign\n\n\n\nFD_R\n\nArt der Zuweisung zu \n Untersuchungsgruppen\n\n\n\nFD_UE-&gt;FD_R\n\n\n\n\nFD_T\n\nAnzahl\nMesszeitpunkte\n\n\n\nFD_UE-&gt;FD_T\n\n\n\n\nD_S\n\nStichprobe\n\n\n\nFD_UE-&gt;D_S\n\n\nRahmen für\n\n\n\nFD_SR\n\nStichprobenrahmen\n\n\n\nFD_SD-&gt;FD_SR\n\n\n\n\n\nFD_SA\n\nStichprobenart\n\n\n\nFD_SD-&gt;FD_SA\n\n\n\n\n\nD_UE\n\nUntersuchungs-\neinheiten\n\n\n\nD_S-&gt;D_UE\n\n\nQuelle von\n\n\n\nV_X0\n\n📊\nVerteilung von\nY bei X = 0\n\n\n\nD_S-&gt;V_X0\n\n\nGrundlage für\n\n\n\nD_B\n\nBeobachter:innen\n\n\n\nD_UE-&gt;D_B\n\n\nBeschreibung\n\n\n\nV_D\nDifferenz\n\n\n\nV_X0-&gt;V_D\n\n\n\n\n\nV_X1\n\n📊\nVerteilung von\nY bei X = 1\n\n\n\nV_D-&gt;V_X1"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#unterschiedliche-möglichkeiten-der-differenzierung-von-familien",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#unterschiedliche-möglichkeiten-der-differenzierung-von-familien",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Unterschiedliche Möglichkeiten der Differenzierung von Familien",
+    "text": "Unterschiedliche Möglichkeiten der Differenzierung von Familien\n\n\n\n\n\n\n\n\n\n\n\nNach Abstammung\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnilineare Abstammung\n\n\n\n\n\n\n\nPatrilineare Abstammung\n\n\n\n\n\n\n\nMatrilineare Abstammung\n\n\n\n\n\n\n\nBilineare Abstammung\n\n\n\n\n\n\n\nNach Wohnsitz\n\n\n\n\n\n\n\nPatrilokale Wohnsitznahme\n\n\n\n\n\n\n\nMatrilokale Wohnsitznahme\n\n\n\n\n\n\n\nBilokale Wohnsitznahme\n\n\n\n\n\n\n\nNeolokale Wohnsitznahme\n\n\n\n\n\n\n\nAvunkulokale Wohnsitznahme\n\n\n\n\n\n\n\nNach Autorität\n\n\n\n\n\n\n\nPatriarchale Familie\n\n\n\n\n\n\n\nMatriarchale Familie\n\n\n\n\n\n\n\nEgalitäre Familie\n\n\n\n\n\n\n\nNach Heiratspraktiken\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMonogame Familie\n\n\n\n\n\n\n\nPolygame Familie\n\n\n\n\n\n\n\nPolyandrische Familie\n\n\n\n\n\n\n\nPolygyne Familie\n\n\n\n\n\n\n\nEndogame Familie\n\n\n\n\n\n\n\nEndogamie-Prinzip\n\n\n\n\n\n\n\nExogame Familie\n\n\n\n\n\n\n\nExogamie-Prinzip\n\n\n\n\n\n\n\nNach Größe und Struktur\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKernfamilie\n\n\n\n\n\n\n\nFamilie der Orientierung\n\n\n\n\n\n\n\nFamilie der Zeugung\n\n\n\n\n\n\n\nGemeinschaftsfamilie/Erweiterte Familie"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#unterscheidung-nach-migrationshintergrund",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#unterscheidung-nach-migrationshintergrund",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Unterscheidung nach “Migrationshintergrund”",
+    "text": "Unterscheidung nach “Migrationshintergrund”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinitionen vonMigrationshintergrund\n\n\n\n\n\n\n\nExterneKlassifizierung\n\n\n\n\n\n\n\nSubjektiveKlassifizierung\n\n\n\n\n\n\n\nPerson ODERmind. 1 Elternteilnicht dt. Staatsang.\n\n\n\n\n\n\n\nPersonen ODERElternteile seit 1950eingewandert\n\n\n\n\n\n\n\nEingewanderte +direkte Nachkommen\n\n\n\n\n\n\n\nSelbst-positionierung"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-1-staatsbügerschaft",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-1-staatsbügerschaft",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Migrationshintergrund – Version 1 (“Staatsbügerschaft”)",
+    "text": "Migrationshintergrund – Version 1 (“Staatsbügerschaft”)\nDefinition: Eine Person hat einen Migrationshintergrund, wenn sie selbst oder mindestens ein Elternteil nicht mit deutscher Staatsangehörigkeit geboren wurde.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlle Personenin Deutschland\n\n\n\n\n\n\n\nMitMigrationshintergrund\n\n\n\n\n\n\n\nOhneMigrationshintergrund\n\n\n\n\n\n\n\nPerson selbst nichtmit dt. Staatsangehörigkeitgeboren\n\n\n\n\n\n\n\nMin. ein Elternteil nicht mit  dt. Staatsangehörigkeit geboren\n\n\n\n\n\n\n\nBeide Elternteile undPerson selbst mitdt. Staatsangehörigkeitgeboren\n\n\n\n\n\n\n\n\n\n\nProbleme:\n\nAussiedler (u.a. “Russlanddeutsche”), in der DDR geborene, einbürgerte Personen werden der Gruppe “Ohne Migrationshintergrund” zugeordnet.\nDie dritte migrantische Generation wird als “ohne Migrationshintergrund” klassifiziert, wobei diese Gruppe von ungleicher Behandlung aufgrund askriptiver Merkmale betroffen sein könnte."
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-2-personen-mit-migrationsgeschichte",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-2-personen-mit-migrationsgeschichte",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Migrationshintergrund – Version 2 (“Personen mit Migrationsgeschichte”)",
+    "text": "Migrationshintergrund – Version 2 (“Personen mit Migrationsgeschichte”)\nEine Person gehört zu dieser Gruppe, wenn sie selbst eingewandert ist oder direkte Nachkommen eines Eingewanderten ist.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBevölkerung\n\n\n\n\n\n\n\nEingewanderte und ihre Nachkommen\n\n\n\n\n\n\n\nPersonen ohne Migrationsgeschichte\n\n\n\n\n\n\n\nDirekt Eingewanderte\n\n\n\n\n\n\n\nKinder von Eingewanderten\n\n\n\n\n\n\n\nEnkel von Eingewanderten\n\n\n\n\n\n\n\nDritte Generation oder später ohne Migrationsgeschichte"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-3-personen-mit-einwanderungsgeschichte",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-3-personen-mit-einwanderungsgeschichte",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Migrationshintergrund – Version 3 (“Personen mit Einwanderungsgeschichte”)",
+    "text": "Migrationshintergrund – Version 3 (“Personen mit Einwanderungsgeschichte”)\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie oder beide Elternteile seit 1950 ins heutige Bundesgebiet eingewandert sind."
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-4",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-4",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Migrationshintergrund – Version 4",
+    "text": "Migrationshintergrund – Version 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBevölkerung\n\n\n\n\n\n\n\nPersonen mit Einwanderungsgeschichte\n\n\n\n\n\n\n\nPersonen ohne Einwanderungsgeschichte\n\n\n\n\n\n\n\nPerson selbst seit 1950 eingewandert\n\n\n\n\n\n\n\nBeide Elternteile seit 1950 eingewandert\n\n\n\n\n\n\n\nEin Elternteil seit 1950 eingewandert\n\n\n\n\n\n\n\nPerson und Eltern vor 1950 eingewandert oder nicht migriert"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-4-geburtsortsdefinition",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-4-geburtsortsdefinition",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Migrationshintergrund – Version 4 (“Geburtsortsdefinition”)",
+    "text": "Migrationshintergrund – Version 4 (“Geburtsortsdefinition”)\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie ins heutige Bundesgebiet eingewandert ist.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBevölkerung\n\n\n\n\n\n\n\nIm Land geboren\n\n\n\n\n\n\n\nNicht im Land geboren"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-5-subjektive-einordnung",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#migrationshintergrund-version-5-subjektive-einordnung",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Migrationshintergrund – Version 5 (“Subjektive Einordnung”)",
+    "text": "Migrationshintergrund – Version 5 (“Subjektive Einordnung”)\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie sich zu einer ethnischen oder religiösen Minderheit zählt, die ihren ihren “Ursprung” nicht im Land verortet (z. B. “Afrikanisch”, “Schwarz”, “Muslimisch”).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBevölkerung\n\n\n\n\n\n\n\nMinderheitsidentifikation\n\n\n\n\n\n\n\nAfrikanisch\n\n\n\n\n\n\n\nSchwarz\n\n\n\n\n\n\n\nMuslimisch\n\n\n\n\n\n\n\nAndere Kategorien\n\n\n\n\n\n\n\nMehrheitsidentifikation"
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#does-it-matter",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#does-it-matter",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Does it matter?",
+    "text": "Does it matter?\n!(Quelle: @milewskiBevolkerungMitMigrationshintergrund2024)[https://www.bib.bund.de/DE/Publikationen/Broschueren/Online/Bilder/Pyramiden-Migration/Die-Bevoelkerung-mit-Migrationshintergrund-neu-entdecken-Abb1.png]"
+  },
+  {
+    "objectID": "exercises/01-ex.html#lego-taxonomie",
+    "href": "exercises/01-ex.html#lego-taxonomie",
+    "title": "Übung: Grundlagen guten Unterscheidens",
+    "section": "",
+    "text": "Unten sehen Sie eine Zufallsstichprobe von 30 verschiedenen LEGO-Teilen. Entwickeln Sie in Ihrer Gruppe eine Taxonomie, mit der sich die Teile sinnvoll unterscheiden lassen.\n\nTragen Sie oben Ihren Gruppennamen ein. Wenn alle Gruppen dieselben Teile sortieren sollen, öffnen Sie die Seite mit dem vorgegebenen Seed, z. B. lego/index.html?seed=4711.\nLegen Sie Klassen an und ordnen Sie ihnen per Drag & Drop die Teile zu. Klassen können über die Auswahl „unter: …“ einer Oberklasse untergeordnet werden.\nPrüfen Sie Ihre Taxonomie: Sind die Klassen erschöpfend (jedes Teil findet einen Platz) und disjunkt (jedes Teil passt nur in eine Klasse)? Folgt jede Ebene einem Unterscheidungskriterium?\nExportieren Sie Ihr Ergebnis als CSV und laden Sie es hoch.\nVergleichen Sie zum Schluss Ihre Lösung mit den Kategorien von Rebrickable (Button „Rebrickable-Kategorien zeigen“).\n\nWerkzeug in neuem Tab öffnen"
+  },
+  {
+    "objectID": "exercises/01-ex.html#kann-es-für-alles-eine-schublade-geben",
+    "href": "exercises/01-ex.html#kann-es-für-alles-eine-schublade-geben",
+    "title": "Übung: Grundlagen guten Unterscheidens",
+    "section": "",
+    "text": "Unten sehen Sie eine Zufallsstichprobe von 30 verschiedenen LEGO-Teilen. Entwickeln Sie in Ihrer Gruppe eine Taxonomie, mit der sich die Teile sinnvoll unterscheiden lassen.\n\nSie haben eine Zufallsauswahl von Lego-Teilen erhalten. Erstellen Sie ein Ordnungssystem für Ihre Lego-Teile. Legen Sie dazu digitale Lego-Schubladen an und ziehen Sie die Lego-Teile in die jeweilige Schublade.1 Bedenken Sie dabei, dass Sie nur mit einer Zufallsauwahl arbeiten - später können noch andere Teil von anderen Zufallsauswahlen hinzukommen.\nPrüfen Sie Ihr Ordnungssystem theoretisch: Sind die “Schubladen” erschöpfend (jeder Typ von Lego-Teil findet einen Platz) und disjunkt (jedes Teil passt nur in eine Klasse)? Folgt Ihr Ordnungssystem eine “inneren Logik”? Wenn ja, welcher? Wenn nicht - was ist mit Ihnen los?2\nTesten Sie Ihr Ordnungssystem: Ziehen Sie mit „Weitere Stichprobe“ 30 neue Teile. Ihre Klassen und Zuordnungen bleiben erhalten. Lassen sich die neuen Teile einordnen, oder müssen Sie neue Schubladen anlegen?\nVergleichen Sie Ihr Ordnungssystem mit anderen Gruppen. Gibt es Teile bei anderen Gruppen, die überhaupt nicht in Ihr System passen?\nVergleichen Sie zum Schluss Ihre Lösung mit den Kategorien von Rebrickable (Button „Rebrickable-Kategorien zeigen“) - gibt es größere Abweichungen und warum.\n\nWerkzeug in neuem Tab öffnen"
+  },
+  {
+    "objectID": "exercises/01-ex.html#footnotes",
+    "href": "exercises/01-ex.html#footnotes",
+    "title": "Übung: Grundlagen guten Unterscheidens",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nTipp: Halten Sie “Shift” gedrückt, dann können Sie mehrere Objekte auf einmal auswählen.↩︎\nIst lieb gemeint.↩︎"
   }
 ]

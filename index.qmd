@@ -1,6 +1,6 @@
 ---
 title: "Grundlagen empirischer Sozialforschung & Datenerhebung"
-tbl-colwidths: [5,15,45,5,5,5,5,5]
+tbl-colwidths: [15,45,5,5,5,5,5]
 editor: source
 from: markdown+emoji
 ---

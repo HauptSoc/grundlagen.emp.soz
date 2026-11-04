@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>LEGO-Taxonomie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: "Atkinson Hyperlegible", system-ui, sans-serif; margin: 0; padding: 10px; background: #fff; font-size: 14px; }
+  header { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  header input { font: inherit; padding: 5px 8px; border: 1px solid #889; border-radius: 6px; }
+  button { font: inherit; padding: 5px 12px; border: 1px solid #456; border-radius: 6px; background: #D9E3E4; cursor: pointer; }
+  button:hover { background: #c3d3d5; }
+  button.small { padding: 1px 7px; font-size: 0.85em; }
+  #seed { font-family: monospace; color: #456; }
+  .hint { color: #666; font-size: 0.85em; }
+
+  main { display: grid; grid-template-columns: minmax(260px, 2fr) 3fr; gap: 12px; align-items: start; }
+  h2 { font-size: 1.05em; margin: 0 0 6px; }
+
+  .zone { min-height: 110px; border: 2px dashed #bbb; border-radius: 8px; padding: 6px;
+          display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 6px; align-content: start; }
+  .zone.over { border-color: #2a7; background: #eefaf2; }
+  #unsorted { min-height: 400px; }
+
+  .klasse { border: 1px solid #9ab; border-radius: 8px; margin-bottom: 10px; background: #f6f9fa; }
+  .klasse-head { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; padding: 6px; border-bottom: 1px solid #dde; }
+  .klasse-head input { font: inherit; font-weight: bold; flex: 1 1 140px; padding: 3px 6px; border: 1px solid #bbc; border-radius: 4px; }
+  .klasse-head select { font: inherit; font-size: 0.85em; max-width: 190px; }
+  .klasse .zone { border: none; min-height: 90px; }
+  .count { color: #567; font-size: 0.85em; }
+
+  figure { margin: 0; border: 1px solid #ddd; border-radius: 6px; padding: 3px; text-align: center;
+           background: #fff; cursor: grab; user-select: none; }
+  figure.selected { outline: 3px solid #e80; }
+  figure img { width: 100%; aspect-ratio: 1; object-fit: contain; pointer-events: none; }
+  .nr { font-weight: bold; }
+  .info { display: none; font-size: 0.7em; color: #333; line-height: 1.15; }
+  body.solution .info { display: block; }
+</style>
+</head>
+<body>
+<header>
+  <input id="group" placeholder="Gruppenname" size="16">
+  <button id="more">Weitere Stichprobe</button>
+  <button id="export">CSV exportieren</button>
+  <button id="toggle">Rebrickable-Kategorien zeigen</button>
+  <button id="reset" class="small">Zuordnungen löschen</button>
+  <button id="restart" class="small">Neu beginnen</button>
+  <span>Stichproben: <span id="n-samples"></span> · Seed: <span id="seed"></span></span>
+</header>
+
+<main>
+  <section>
+    <h2>Unsortiert <span id="n-unsorted" class="count"></span></h2>
+    <div id="unsorted" class="zone" data-cls=""></div>
+    <p class="hint">Teile per Drag &amp; Drop in Klassen ziehen. Alternativ: Teile anklicken (orange markiert)
+      und dann auf eine Klasse klicken – funktioniert auch auf Tablets.</p>
+  </section>
+  <section>
+    <h2>Klassen</h2>
+    <form id="add-form" style="display:flex; gap:6px; margin-bottom:10px">
+      <input id="new-name" placeholder="Name der neuen Klasse" style="flex:1; font:inherit; padding:5px 8px">
+      <button type="submit">+ Klasse</button>
+    </form>
+    <div id="classes"></div>
+  </section>
+</main>
+
+<script src="pool.js"></script>
+<script>
+const N = 30;
+const POOL = window.LEGO_POOL;
+const $ = (id) => document.getElementById(id);
+
+// Seed-basierter Zufallsgenerator (mulberry32): gleicher Seed = gleiche Stichprobe
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// Zieht N Teile, die in früheren Stichproben noch nicht vorkamen
+function drawSample(seed, exclude, startNr, idx) {
+  const a = POOL.filter((p) => !exclude.has(p.element_id)), rng = mulberry32(seed);
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a.slice(0, N).map((p, i) => ({ ...p, nr: startNr + i + 1, stichprobe: idx }));
+}
+
+// Alle Stichproben einer Seed-Folge nacheinander ziehen (deterministisch)
+function buildParts(seedList) {
+  const out = [];
+  seedList.forEach((s, i) => {
+    out.push(...drawSample(s, new Set(out.map((p) => p.element_id)), out.length, i + 1));
+  });
+  return out;
+}
+
+const randomSeed = () => Math.floor(Math.random() * 9000) + 1000;
+
+// ---- Zustand (pro Seed-Folge im Browser gespeichert, damit ein Reload nichts löscht) ----
+let seeds, parts, state;
+const selected = new Set();
+const storageKey = () => "lego-taxonomie-" + seeds.join("-");
+
+function emptyState() { return { group: $("group").value || "", classes: [], assign: {} }; }
+function save() { try { localStorage.setItem(storageKey(), JSON.stringify(state)); } catch (e) {} }
+function load() {
+  try { return JSON.parse(localStorage.getItem(storageKey())) || emptyState(); }
+  catch (e) { return emptyState(); }
+}
+
+// carry: bisherigen Zustand (Klassen + Zuordnungen) in die erweiterte Seed-Folge übernehmen
+function start(seedList, carry) {
+  seeds = seedList;
+  history.replaceState(null, "", "?seed=" + seeds.join(","));
+  parts = buildParts(seeds);
+  state = carry || load();
+  save();
+  selected.clear();
+  $("seed").textContent = seeds.join(", ");
+  $("n-samples").textContent = seeds.length;
+  $("group").value = state.group;
+  render();
+}
+
+// ---- Klassenhierarchie ----
+const byId = (id) => state.classes.find((k) => k.id === id);
+const children = (id) => state.classes.filter((k) => k.parent === id);
+function descendants(id) {
+  return children(id).flatMap((k) => [k.id, ...descendants(k.id)]);
+}
+function path(id) {
+  const names = [];
+  for (let k = byId(id); k; k = byId(k.parent)) names.unshift(k.name);
+  return names.join(" > ");
+}
+function treeOrder(parent = null, depth = 0) {
+  return children(parent).flatMap((k) => [{ k, depth }, ...treeOrder(k.id, depth + 1)]);
+}
+
+// ---- Darstellung ----
+function tile(p) {
+  const f = document.createElement("figure");
+  f.draggable = true;
+  f.dataset.id = p.element_id;
+  if (selected.has(String(p.element_id))) f.classList.add("selected");
+  f.innerHTML = `<img src="img/${p.element_id}.jpg" alt="Teil ${p.nr}">
+    <figcaption><div class="nr">${p.nr}</div>
+    <div class="info">${p.name}<br><em>${p.category}</em><br>${p.color}</div></figcaption>`;
+  f.addEventListener("dragstart", (e) => {
+    selected.add(f.dataset.id);
+    e.dataTransfer.setData("text/plain", f.dataset.id);
+  });
+  f.addEventListener("click", (e) => {
+    e.stopPropagation();
+    selected.has(f.dataset.id) ? selected.delete(f.dataset.id) : selected.add(f.dataset.id);
+    f.classList.toggle("selected");
+  });
+  return f;
+}
+
+function makeZone(zone, cls) {
+  zone.dataset.cls = cls;
+  zone.addEventListener("dragover", (e) => { e.preventDefault(); zone.classList.add("over"); });
+  zone.addEventListener("dragleave", () => zone.classList.remove("over"));
+  zone.addEventListener("drop", (e) => { e.preventDefault(); zone.classList.remove("over"); moveSelected(cls); });
+  zone.addEventListener("click", () => { if (selected.size) moveSelected(cls); });
+}
+
+function moveSelected(cls) {
+  selected.forEach((id) => { if (cls) state.assign[id] = cls; else delete state.assign[id]; });
+  selected.clear();
+  save(); render();
+}
+
+function render() {
+  const unsorted = $("unsorted");
+  unsorted.replaceChildren(...parts.filter((p) => !state.assign[p.element_id]).map(tile));
+  $("n-unsorted").textContent = `(${unsorted.children.length} von ${parts.length})`;
+
+  $("classes").replaceChildren(...treeOrder().map(({ k, depth }) => {
+    const box = document.createElement("div");
+    box.className = "klasse";
+    box.style.marginLeft = depth * 22 + "px";
+
+    const head = document.createElement("div");
+    head.className = "klasse-head";
+
+    const name = document.createElement("input");
+    name.value = k.name;
+    name.addEventListener("input", () => { k.name = name.value; save(); });
+    name.addEventListener("change", render);
+
+    // Als Oberklasse wählbar: alle außer der Klasse selbst und ihren Unterklassen (keine Zyklen)
+    const parentSel = document.createElement("select");
+    const banned = new Set([k.id, ...descendants(k.id)]);
+    parentSel.add(new Option("– oberste Ebene –", ""));
+    state.classes.filter((o) => !banned.has(o.id))
+      .forEach((o) => parentSel.add(new Option("unter: " + path(o.id), o.id)));
+    parentSel.value = k.parent || "";
+    parentSel.addEventListener("change", () => { k.parent = parentSel.value || null; save(); render(); });
+
+    const items = parts.filter((p) => state.assign[p.element_id] === k.id);
+    const count = document.createElement("span");
+    count.className = "count";
+    count.textContent = items.length + " Teile";
+
+    const del = document.createElement("button");
+    del.className = "small"; del.textContent = "✕"; del.title = "Klasse löschen";
+    del.addEventListener("click", () => {
+      if (!confirm(`Klasse „${k.name}“ löschen? Ihre Teile kommen zurück zu „Unsortiert“.`)) return;
+      children(k.id).forEach((c) => (c.parent = k.parent));
+      for (const id in state.assign) if (state.assign[id] === k.id) delete state.assign[id];
+      state.classes = state.classes.filter((o) => o.id !== k.id);
+      save(); render();
+    });
+
+    head.append(name, parentSel, count, del);
+    const zone = document.createElement("div");
+    zone.className = "zone";
+    makeZone(zone, k.id);
+    zone.append(...items.map(tile));
+    box.append(head, zone);
+    return box;
+  }));
+}
+
+// ---- CSV-Export (Semikolon + BOM, damit deutsches Excel es direkt öffnet) ----
+function exportCsv() {
+  const unsortedN = parts.filter((p) => !state.assign[p.element_id]).length;
+  if (unsortedN && !confirm(`${unsortedN} Teile sind noch unsortiert. Trotzdem exportieren?`)) return;
+  const header = ["gruppe", "seeds", "stichprobe", "nr", "element_id", "part_num", "klasse", "oberklasse",
+                  "pfad", "ebene", "klasse_angelegt_in_stichprobe",
+                  "rebrickable_name", "rebrickable_kategorie", "farbe"];
+  const rows = parts.map((p) => {
+    const k = byId(state.assign[p.element_id]);
+    const pfad = k ? path(k.id) : "";
+    return [state.group, seeds.join(","), p.stichprobe, p.nr, p.element_id, p.part_num, k ? k.name : "",
+            k && byId(k.parent) ? byId(k.parent).name : "", pfad, pfad ? pfad.split(" > ").length : "",
+            k ? k.created || 1 : "", p.name, p.category, p.color];
+  });
+  const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
+  const csv = "\ufeff" + [header, ...rows].map((r) => r.map(q).join(";")).join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+  const g = (state.group || "gruppe").replace(/[^\wäöüÄÖÜß-]+/g, "_");
+  a.download = `taxonomie_${g}_seed${seeds[0]}_${seeds.length}stichproben.csv`;
+  document.body.append(a); a.click(); a.remove();
+}
+
+// ---- Bedienelemente ----
+makeZone($("unsorted"), "");
+
+$("add-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = $("new-name").value.trim();
+  if (!name) return;
+  state.classes.push({ id: "k" + Date.now().toString(36) + Math.random().toString(36).slice(2, 5),
+                       name, parent: null, created: seeds.length });
+  $("new-name").value = "";
+  save(); render();
+});
+
+$("group").addEventListener("input", () => { state.group = $("group").value; save(); });
+$("export").addEventListener("click", exportCsv);
+$("more").addEventListener("click", () => {
+  if (parts.length >= POOL.length) { alert("Alle Teile des Pools wurden bereits gezogen."); return; }
+  const open = parts.filter((p) => !state.assign[p.element_id]).length;
+  if (open && !confirm(`${open} Teile sind noch unsortiert. Trotzdem weitere Stichprobe ziehen?`)) return;
+  start([...seeds, randomSeed()], state);
+});
+$("reset").addEventListener("click", () => {
+  if (!confirm("Alle Klassen und Zuordnungen löschen? Die gezogenen Teile bleiben.")) return;
+  state = { ...emptyState(), group: state.group };
+  save(); render();
+});
+$("restart").addEventListener("click", () => {
+  if (!confirm("Mit einer ganz neuen Stichprobe von vorn beginnen? Der bisherige Stand bleibt unter seiner URL gespeichert.")) return;
+  start([randomSeed()]);
+});
+$("toggle").addEventListener("click", (e) => {
+  const on = document.body.classList.toggle("solution");
+  e.target.textContent = on ? "Kategorien verbergen" : "Rebrickable-Kategorien zeigen";
+});
+
+const urlSeeds = (new URLSearchParams(location.search).get("seed") || "")
+  .split(",").map((s) => parseInt(s)).filter(Number.isFinite);
+start(urlSeeds.length ? urlSeeds : [randomSeed()]);
+</script>
+</body>
+</html>

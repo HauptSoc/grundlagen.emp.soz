@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrS" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="12" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#333333"/>
+    </marker>
+    <marker id="arrL" markerUnits="userSpaceOnUse" markerWidth="22" markerHeight="22" refX="22" refY="11" orient="auto">
+      <path d="M0,0 L22,11 L0,22 z" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="1050" fill="#ffffff"/>
+
+  <!-- Cluster -->
+  <g fill="#f9f9f9" stroke="#999999" stroke-width="2">
+    <rect x="60" y="40" width="380" height="270" rx="18"/>
+    <rect x="785" y="40" width="600" height="270" rx="18"/>
+    <rect x="122" y="360" width="1200" height="340" rx="18"/>
+    <rect x="60" y="765" width="580" height="269" rx="18"/>
+    <rect x="800" y="765" width="585" height="269" rx="18"/>
+  </g>
+
+  <!-- Cluster-Titel -->
+  <g font-size="26" font-weight="bold" fill="#000000" text-anchor="middle">
+    <text x="250" y="78">Hypothese</text>
+    <text x="1085" y="78">Operationalisierung</text>
+    <text x="722" y="393">Forschungsdesign</text>
+    <text x="350" y="797">Datenerhebung</text>
+    <text x="1092" y="797">Vergleich / Modellierung</text>
+  </g>
+
+  <!-- Knoten -->
+  <g fill="#ffffff" stroke="#333333" stroke-width="2">
+    <rect x="150" y="105" width="200" height="55" rx="10"/>
+    <rect x="150" y="215" width="200" height="55" rx="10"/>
+    <rect x="925" y="105" width="320" height="55" rx="10"/>
+    <rect x="925" y="215" width="320" height="55" rx="10"/>
+    <rect x="292" y="440" width="260" height="50" rx="10"/>
+    <rect x="902" y="440" width="240" height="50" rx="10"/>
+    <rect x="142" y="555" width="270" height="70" rx="10"/>
+    <rect x="457" y="555" width="220" height="70" rx="10"/>
+    <rect x="842" y="555" width="220" height="70" rx="10"/>
+    <rect x="1072" y="555" width="240" height="70" rx="10"/>
+    <rect x="200" y="818" width="260" height="40" rx="10"/>
+    <rect x="180" y="898" width="300" height="40" rx="10"/>
+    <rect x="200" y="978" width="260" height="40" rx="10"/>
+    <rect x="962" y="812" width="260" height="54" rx="10"/>
+    <rect x="962" y="956" width="260" height="54" rx="10"/>
+  </g>
+
+  <!-- Knotenbeschriftung -->
+  <g font-size="24" fill="#000000" text-anchor="middle">
+    <text x="250" y="141">X</text>
+    <text x="250" y="251">Y</text>
+    <text x="1085" y="141">Unterschiede in X</text>
+    <text x="1085" y="251">Unterschieden in Y</text>
+    <text x="422" y="473">Forschungsdesign</text>
+    <text x="1022" y="473">Stichprobendesign</text>
+    <text x="277" y="582">Art der Zuweisung zu</text>
+    <text x="277" y="610">Untersuchungsgruppen</text>
+    <text x="567" y="582">Anzahl</text>
+    <text x="567" y="610">Messzeitpunkte</text>
+    <text x="952" y="598">Stichprobenart</text>
+    <text x="1192" y="598">Stichprobenrahmen</text>
+    <text x="330" y="846">Stichprobe</text>
+    <text x="330" y="926">Untersuchungseinheiten</text>
+    <text x="330" y="1006">Beobachter:innen</text>
+    <text x="1092" y="834">Verteilung von</text>
+    <text x="1092" y="858">Y bei X = 0</text>
+    <text x="1092" y="978">Verteilung von</text>
+    <text x="1092" y="1002">Y bei X = 1</text>
+  </g>
+  <text x="1110" y="912" font-size="24" fill="#000000">Differenz</text>
+
+  <!-- Verbindungen zwischen den Clustern (dick, Cluster-Rand zu Cluster-Rand) -->
+  <g fill="none" stroke="#333333" stroke-width="5">
+    <path d="M440 132 H785" marker-end="url(#arrL)"/>
+    <path d="M1085 310 V360" marker-end="url(#arrL)"/>
+    <path d="M300 700 V765" marker-end="url(#arrL)"/>
+    <path d="M640 838 H800" marker-end="url(#arrL)"/>
+  </g>
+
+  <!-- Verbindungen innerhalb der Cluster (dünn) -->
+  <g fill="none" stroke="#333333" stroke-width="2">
+    <path d="M250 160 V215" marker-end="url(#arrS)"/>
+    <path d="M1085 160 V215" marker-end="url(#arrS)"/>
+    <path d="M422 490 V522 H277 V555"/>
+    <path d="M422 522 H567 V555"/>
+    <path d="M1022 490 V520 H952 V555" marker-end="url(#arrS)"/>
+    <path d="M1022 520 H1192 V555" marker-end="url(#arrS)"/>
+    <path d="M330 858 V898" marker-end="url(#arrS)"/>
+    <path d="M330 978 V938" marker-end="url(#arrS)"/>
+    <path d="M1092 896 V866" marker-end="url(#arrS)"/>
+    <path d="M1092 912 V956" marker-end="url(#arrS)"/>
+  </g>
+
+  <!-- Beschriftung der Cluster-Verbindungen -->
+  <g font-size="22" fill="#000000">
+    <text x="612" y="122" text-anchor="middle">wird übersetzt zu</text>
+    <text x="1100" y="342">bedingt</text>
+    <text x="315" y="738">Rahmen für</text>
+    <text x="720" y="828" text-anchor="middle">Grundlage für</text>
+  </g>
+
+  <!-- Beschriftung innerhalb der Cluster -->
+  <g font-size="22" fill="#000000">
+    <text x="265" y="194">führt zu</text>
+    <text x="1100" y="194">stehen in Beziehung zu</text>
+    <text x="345" y="884">Quelle von</text>
+    <text x="345" y="962">Beschreibung</text>
+  </g>
+</svg>
