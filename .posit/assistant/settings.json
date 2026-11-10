@@ -21,6 +21,6 @@
     }
   },
   "sandbox": {
-    "enabled": true
+    "enabled": false
   }
 }

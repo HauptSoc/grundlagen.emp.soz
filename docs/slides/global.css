@@ -38,3 +38,20 @@
   .plot-padding {
     padding: 0;
   }
+
+/* Mermaid-Diagramme: auf volle Folienbreite skalieren statt auf ihre
+   natürliche Größe zu schrumpfen. Dadurch bleibt die Schrift lesbar. */
+.reveal .mermaid-js,
+.reveal pre.mermaid,
+.reveal div.cell-output-display:has(> svg[id^="mermaid"]) {
+  width: 100%;
+}
+
+.reveal svg[id^="mermaid"] {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: 780px;
+  display: block;
+  margin-inline: auto;
+}

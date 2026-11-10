@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 530" width="700" height="530" font-family="Arial, Helvetica, sans-serif"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<text x="350" y="30" text-anchor="middle" dominant-baseline="central" font-size="24" fill="#555" font-weight="bold">Beschreiben</text>
+<rect x="20" y="60" width="230" height="90" rx="10" fill="#eef3f8" stroke="#5b7a99" stroke-width="2.5"/>
+<text x="135" y="105" text-anchor="middle" dominant-baseline="central" font-size="26" fill="#222" >Beobachtung B</text>
+<rect x="450" y="60" width="230" height="90" rx="10" fill="#fff6e0" stroke="#c9a227" stroke-width="2.5"/>
+<text x="565" y="105" text-anchor="middle" dominant-baseline="central" font-size="26" fill="#222" >Konzept K</text>
+<line x1="250" y1="105" x2="450" y2="105" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="350" y="80" text-anchor="middle" dominant-baseline="central" font-size="21" fill="#444" >ist Realisation von</text>
+<text x="350" y="250" text-anchor="middle" dominant-baseline="central" font-size="24" fill="#555" font-weight="bold">Unterscheiden</text>
+<rect x="20" y="290" width="230" height="140" rx="10" fill="#fff6e0" stroke="#c9a227" stroke-width="2.5"/>
+<text x="135" y="335" text-anchor="middle" dominant-baseline="central" font-size="26" fill="#222" >Konzept A</text>
+<text x="135" y="385" text-anchor="middle" dominant-baseline="central" font-size="21" fill="#444" >hat Eigenschaft x</text>
+<rect x="450" y="290" width="230" height="140" rx="10" fill="#fff6e0" stroke="#c9a227" stroke-width="2.5"/>
+<text x="565" y="335" text-anchor="middle" dominant-baseline="central" font-size="26" fill="#222" >Konzept B</text>
+<text x="565" y="385" text-anchor="middle" dominant-baseline="central" font-size="21" fill="#444" >hat x nicht</text>
+<line x1="350" y1="285" x2="350" y2="435" stroke="#C0392B" stroke-width="4" stroke-dasharray="10 7"/>
+<text x="350" y="470" text-anchor="middle" dominant-baseline="central" font-size="23" fill="#C0392B" font-weight="bold">Trenn-Eigenschaft x</text>
+<text x="350" y="505" text-anchor="middle" dominant-baseline="central" font-size="19" fill="#444" >genügt, keine vollständige Beschreibung nötig</text>
+</svg>

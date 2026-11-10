@@ -2,6 +2,12 @@
 title: "Shownotes"
 format: html
 editor: source
+tbl-cap-location: bottom
+execute: 
+  echo: false
+  cache: true
+  message: false
+  warning: false
 ---
 
 # Gender Pain Gap
@@ -70,4 +76,259 @@ Eine aktuelle Studie in **PNAS (2024)** zeigt **systematische Verzerrungen** in 
 \[[3](https://www.frontiersin.org/journals/pain-research/articles/10.3389/fpain.2024.1415635/full)\] M. Guzikevits, T. Gordon-Hecker, D. Rekhtman, S. Salameh, S. Israel, M. Shayo, D. Gozal, A. Perry, A. Gileles-Hillel, & S. Choshen-Hillel, Sex bias in pain management decisions, Proc. Natl. Acad. Sci. U.S.A. 121 (33) e2401331121, <https://doi.org/10.1073/pnas.2401331121> (2024).
 
 \[[4](https://www.jpain.org/article/S1526-5900(24)00480-2/fulltext)\] **Keogh, E. (2025):** *Sex, gender, and pain: Evidence and knowledge gaps.* **Frontiers in Pain Research.**
+:::
+
+# Gender und Emotionale Intelligenz
+
+::: callout-note
+**Studie:** Hausfeld, Hampel, Bach & Menges (2026). *Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities.* Emotion. <https://doi.org/10.1037/emo0001733>
+:::
+
+**Frage:** Sind Frauen emotional intelligenter als Männer? Die Studie fasst dazu 1.279 Artikel mit 1.428 Stichproben und rund 609.000 Personen aus 76 Ländern zusammen.
+
+```{r}
+#| label: setup-ei
+#| echo: false
+#| message: false
+library(ggplot2)
+library(dplyr)
+theme_set(theme_minimal(base_size = 13))
+```
+
+## Zentrale Konzepte
+
+**Emotionale Intelligenz (EI)** ist die Fähigkeit, eigene und fremde Emotionen zu erkennen, zu verstehen und zu regulieren. Die Studie unterscheidet drei Teilfähigkeiten und zwei Blickrichtungen:
+
+| Teilfähigkeit | Beispiel |
+|------------------------------------|------------------------------------|
+| Emotionserkennung | Erkenne ich an einem Gesicht, dass jemand traurig ist? |
+| Emotionsverständnis | Weiß ich, wie Ärger entsteht und wohin er sich entwickeln kann? |
+| Emotionsregulation | Kann ich Wut herunterregeln, oder eine gestresste Kollegin beruhigen? |
+
+: Die drei Teilfähigkeiten der EI
+
+-   **Selbst- vs. Fremdfokus:** Es geht um die eigenen Emotionen (selbstfokussiert) oder die anderer (fremdfokussiert).
+-   **Messung:** *Leistungstests* (man löst Aufgaben mit richtigen Antworten) vs. *Selbstauskunft* (man schätzt sich selbst ein). Das ist die wichtigste methodische Unterscheidung der Studie.
+-   **Kontext:** Die Autorinnen und Autoren prüfen, ob Unterschiede von Führungsrolle, Branche, Alter, Erhebungsjahr und Weltregion abhängen. Theoretischer Hintergrund ist die *Social Role Theory*: Geschlechterunterschiede entstehen auch durch unterschiedliche soziale Rollen und Erwartungen.
+
+## Was macht eine Metaanalyse?
+
+Eine **Metaanalyse** fasst die Ergebnisse vieler Einzelstudien statistisch zusammen. Jede Studie liefert einen Effekt, hier den Mittelwertunterschied zwischen Frauen und Männern. Diese Effekte werden gemittelt, wobei größere Stichproben mehr Gewicht erhalten. Der Vorteil: Widersprüchliche Einzelbefunde (mal Frauen vorn, mal Männer, mal kein Unterschied) verdichten sich zu einem Gesamtbild. Zudem lässt sich prüfen, wovon der Effekt abhängt (**Moderatoren**), z. B. von der Art der Messung.
+
+Zwei Kennwerte aus der Studie sollten Sie kennen:
+
+-   **95%-Konfidenzintervall (KI):** Plausibler Bereich für den wahren Effekt. Schließt das KI die 0 ein, ist ein Unterschied nicht von Null unterscheidbar.
+-   **Heterogenität (I²):** Anteil der Streuung zwischen den Studien, der über Zufall hinausgeht. Hier liegt I² meist bei über 95 %. Die Einzelstudien unterscheiden sich also stark, und der Durchschnitt gilt nicht für jede Situation.
+
+## Wie interpretiert man Cohens d?
+
+**d** ist der Mittelwertunterschied in Einheiten der Standardabweichung. Ein Wert von $$d = 0{,}15$$ heißt: Der Durchschnitt der Frauen liegt 0,15 Standardabweichungen über dem der Männer. Positive Werte bedeuten hier einen Vorteil für Frauen, negative für Männer. Als grobe Richtwerte gelten $$d \approx 0{,}2$$ klein, $$0{,}5$$ mittel und $$0{,}8$$ groß.
+
+```{r}
+#| label: fig-d-intro
+#| echo: false
+#| fig-cap: "Was bedeutet d? Verteilungen von Männern (grau) und Frauen (rot) bei verschiedenen Effektgrößen. d = 0,15 ist der Gesamteffekt der Studie, d = 0,38 der Effekt in Leistungstests."
+#| fig-height: 3.2
+#| fig-width: 8
+ds <- c(0.15, 0.38, 0.80)
+lab <- sprintf("d = %s\nÜberlappung: %d %%", format(ds, decimal.mark = ","),
+               round(200 * pnorm(-ds / 2)))
+x <- seq(-4, 5, length.out = 400)
+kurven <- bind_rows(lapply(seq_along(ds), \(i) bind_rows(
+  tibble(x, y = dnorm(x), gruppe = "Männer", panel = lab[i]),
+  tibble(x, y = dnorm(x, ds[i]), gruppe = "Frauen", panel = lab[i]))))
+ggplot(kurven, aes(x, y, fill = gruppe)) +
+  geom_area(alpha = .5, position = "identity") +
+  scale_fill_manual(values = c(Männer = "grey50", Frauen = "#C0392B")) +
+  facet_wrap(~panel) +
+  labs(x = "Testwert (in Standardabweichungen)", y = NULL, fill = NULL) +
+  theme(axis.text.y = element_blank(), panel.grid = element_blank(),
+        legend.position = "bottom")
+```
+
+Auch ein "kleines" d bedeutet, dass sich die beiden Verteilungen fast vollständig überlappen. Bei $$d = 0{,}15$$ hat bei einem zufälligen Paar aus einer Frau und einem Mann die Frau nur in etwa `r round(100 * pnorm(0.15 / sqrt(2)))` % der Fälle den höheren Wert (Zufall wären 50 %). Von Gruppenunterschieden lässt sich nicht auf Einzelpersonen schließen.
+
+## Ergebnisse
+
+### Gesamtbild: Kleiner Vorteil für Frauen, je nach Fähigkeit unterschiedlich
+
+```{r}
+#| label: fig-haupt
+#| echo: false
+#| fig-cap: "Geschlechterunterschiede nach Fähigkeit (Punkt = d, Balken = 95%-KI). Positive Werte: Vorteil für Frauen."
+#| fig-height: 3
+#| fig-width: 7
+haupt <- tribble(
+  ~faehigkeit, ~d, ~lo, ~hi,
+  "Emotionale Intelligenz (gesamt)", .15, .13, .17,
+  "Emotionserkennung", .15, .12, .18,
+  "Emotionsverständnis", .22, .19, .25,
+  "Emotionsregulation", .04, .01, .07
+) |> mutate(faehigkeit = factor(faehigkeit, rev(faehigkeit)))
+ggplot(haupt, aes(d, faehigkeit, xmin = lo, xmax = hi)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_vline(xintercept = .2, colour = "grey60", linetype = "dotted") +
+  geom_pointrange(size = .7) +
+  scale_x_continuous(limits = c(-.1, .5)) +
+  labs(x = "Cohens d (gepunktet: d = 0,2, 'klein')", y = NULL)
+```
+
+Frauen schneiden insgesamt etwas besser ab (d = 0,15). Am größten ist der Unterschied beim Emotionsverständnis, bei der Emotionsregulation ist er praktisch null.
+
+### Entscheidend ist: Wessen Emotionen?
+
+```{r}
+#| label: fig-fokus
+#| echo: false
+#| fig-cap: "Selbst- vs. fremdfokussierte Fähigkeiten. Frauen haben vor allem bei den Emotionen anderer einen Vorteil. Bei der Regulation eigener Emotionen liegen Männer leicht vorn."
+#| fig-height: 3.4
+#| fig-width: 7
+fokus <- tribble(
+  ~faehigkeit, ~fokus, ~d, ~lo, ~hi,
+  "Emotionale Intelligenz (gesamt)", "Selbst", .07, -.03, .18,
+  "Emotionale Intelligenz (gesamt)", "Andere", .26, .18, .35,
+  "Emotionserkennung", "Selbst", .04, -.01, .10,
+  "Emotionserkennung", "Andere", .18, .13, .23,
+  "Emotionsverständnis", "Selbst", .19, .15, .23,
+  "Emotionsverständnis", "Andere", .25, .21, .29,
+  "Emotionsregulation", "Selbst", -.07, -.10, -.04,
+  "Emotionsregulation", "Andere", .23, .16, .31
+) |> mutate(faehigkeit = factor(faehigkeit, rev(unique(faehigkeit))),
+            fokus = factor(fokus, c("Selbst", "Andere")))
+ggplot(fokus, aes(d, faehigkeit, colour = fokus, xmin = lo, xmax = hi)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_pointrange(position = position_dodge(width = .6), size = .6) +
+  scale_colour_manual(values = c(Selbst = "#2C7FB8", Andere = "#C0392B")) +
+  labs(x = "Cohens d (positiv = Vorteil Frauen)", y = NULL, colour = "Fokus")
+```
+
+Die Autorinnen und Autoren sehen darin einen Hinweis auf eine mögliche "Doppelbelastung": Frauen wird zugeschrieben, besser mit Emotionen umzugehen, obwohl sich dies bei den eigenen Emotionen kaum zeigt. Sie sollen aber zusätzlich die Emotionen anderer managen.
+
+### Entscheidend ist auch: Wie wird gemessen?
+
+```{r}
+#| label: fig-messung
+#| echo: false
+#| fig-cap: "Leistungstests vs. Selbstauskunft (bzw. nicht-leistungsbasierte Maße). Der Vorteil für Frauen ist in Leistungstests meist deutlich größer."
+#| fig-height: 3.4
+#| fig-width: 7
+mess <- tribble(
+  ~faehigkeit, ~messung, ~d, ~lo, ~hi,
+  "Emotionale Intelligenz (gesamt)", "Leistungstest", .38, .33, .42,
+  "Emotionale Intelligenz (gesamt)", "Selbstauskunft u. a.", .10, .08, .12,
+  "Emotionserkennung", "Leistungstest", .27, .23, .31,
+  "Emotionserkennung", "Selbstauskunft u. a.", .12, .08, .16,
+  "Emotionsverständnis", "Leistungstest", .21, .17, .25,
+  "Emotionsverständnis", "Selbstauskunft u. a.", .23, .19, .28,
+  "Emotionsregulation", "Leistungstest", .32, .27, .38,
+  "Emotionsregulation", "Selbstauskunft u. a.", -.02, -.05, .00
+) |> mutate(faehigkeit = factor(faehigkeit, rev(unique(faehigkeit))))
+ggplot(mess, aes(d, faehigkeit, colour = messung, xmin = lo, xmax = hi)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_pointrange(position = position_dodge(width = .6), size = .6) +
+  scale_colour_manual(values = c(Leistungstest = "#C0392B", `Selbstauskunft u. a.` = "grey40")) +
+  labs(x = "Cohens d (positiv = Vorteil Frauen)", y = NULL, colour = "Messung")
+```
+
+Bei der Regulation ist der Kontrast am größten: In Leistungstests liegt d bei 0,32, in Selbstauskünften praktisch bei 0. Beim Emotionsverständnis gibt es keinen Unterschied zwischen den Messarten. Selbstauskünfte hängen davon ab, wie sich Menschen selbst sehen, und das kann von Geschlechterstereotypen geprägt sein.
+
+### Kontexteffekte
+
+Der Unterschied ist nicht überall gleich groß. Bei Führungskräften ist er größer (d = 0,25 in der Gesamt-EI) als bei Beschäftigten ohne Führungsrolle (d = 0,13). In männlich dominierten Branchen war er entgegen der Erwartung eher kleiner. Mit steigendem Alter nimmt er leicht zu (etwa +0,04 je 10 Jahre). In Nordamerika und Europa (d = 0,19) ist er größer als in anderen Regionen (d = 0,06).
+
+### Wird der Unterschied kleiner?
+
+Je später die Daten erhoben wurden, desto kleiner ist der Vorteil der Frauen in der Gesamt-EI: Im Durchschnittsjahr 2013 liegt d bei 0,15, fünf Jahre später um 0,06 niedriger (95%-KI der Steigung: −0,08 bis −0,04). Gegen Ende des Beobachtungszeitraums nähert sich der Trend der Nulllinie.
+
+```{r}
+#| label: fig-zeit
+#| echo: false
+#| fig-cap: "Schematische Nachbildung von Abbildung 4 der Studie: Geschlechterunterschied in der Gesamt-EI nach Erhebungsjahr. Die Punkte sind simuliert (die Originaldaten liegen nicht vor), die Trendlinie folgt den berichteten Werten (d = 0,15 im Jahr 2013, −0,06 pro 5 Jahre)."
+#| fig-height: 4
+#| fig-width: 8
+set.seed(5873)
+n <- 1000
+sim <- tibble(
+  jahr = round(rnorm(n, 2013, 6)),
+  streuung = runif(n) < .08
+) |>
+  filter(jahr >= 1995, jahr <= 2023) |>
+  mutate(d = 0.15 - 0.012 * (jahr - 2013) +
+           rnorm(n(), 0, if_else(streuung, .8, .3)))
+trend <- tibble(jahr = 1995:2023, d = 0.15 - 0.012 * (jahr - 2013))
+ggplot(sim, aes(jahr, d)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_point(alpha = .3) +
+  geom_line(data = trend, colour = "#C0392B", linewidth = 1) +
+  labs(x = "Jahr der Datenerhebung", y = "Geschlechterunterschied in der Gesamt-EI (d)")
+```
+
+Der Rückgang ist klein im Vergleich zur Streuung der Einzelstudien (jeder Punkt ist ein Effekt aus einer Stichprobe). Die Studie kann Erhebungsjahr, Alter und Generation nicht trennen. Ob sich Geschlechterrollen angleichen, bleibt daher eine Vermutung.
+
+## Limitationen
+
+-   **Keine Kausalaussagen:** Die Studie zeigt, *wo* Unterschiede bestehen, nicht *warum*. Sozialisation, biologische Faktoren und Selbstselektion (z. B. in Führungspositionen) lassen sich nicht trennen.
+-   **Kleine Effekte, hohe Heterogenität:** Die Effekte sind klein, die Streuung zwischen den Studien ist groß (I² meist über 95 %).
+-   **Lücken bei der Messung:** Für manche Fähigkeiten gibt es keine Leistungstests, z. B. nicht für selbstfokussierte Emotionserkennung. Messart und Fokus lassen sich daher nicht sauber trennen.
+-   **Nur Gruppenvergleiche:** Viele Studien berichten keine Mittelwerte getrennt nach Geschlecht. Es bleibt offen, ob Kontexteffekte auf Frauen, Männer oder beide zurückgehen.
+-   **Zeit, Alter und Generation sind vermischt:** Der Effekt des Erhebungsjahres lässt sich nicht von Alters- und Kohorteneffekten trennen.
+-   **Nur nicht-klinische Stichproben:** Die Ergebnisse gelten nicht ohne Weiteres für Personen mit Diagnosen.
+-   **Binäres Geschlecht:** Verglichen werden Frauen und Männer, andere Geschlechtsidentitäten kommen nicht vor.
+-   **Verallgemeinerbarkeit:** Leistungstests sind aufwendig und werden vermutlich in ressourcenärmeren Regionen seltener eingesetzt. Das kann regionale Vergleiche verzerren.
+
+::: callout-tip
+Hausfeld, M. M., Hampel, V., Bach, L. J., & Menges, J. I. (2026). *Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities.* **Emotion**. <https://doi.org/10.1037/emo0001733>
+:::
+
+
+
+# Alternative Differenzierungen von Familien
+
+Die Folie zeigt, dass sich "Familie" nach ganz unterschiedlichen Merkmalen unterscheiden lässt. Jede Dimension führt zu einer eigenen Typologie.
+
+## Nach Größe und Struktur
+
+| Begriff | Bedeutung |
+|------------------------|------------------------------------------------|
+| Kernfamilie | Eltern(teil) und die eigenen Kinder |
+| Familie der Orientierung | Die Familie, in die man hineingeboren wird (Herkunftsfamilie) |
+| Familie der Zeugung | Die Familie, die man selbst gründet (Eltern-Kind-Beziehung aus Sicht der Erwachsenen) |
+| Gemeinschafts- bzw. erweiterte Familie | Mehrere Generationen und weitere Verwandte (z. B. Großeltern, Onkel, Tanten) bilden eine Einheit |
+
+## Nach Heiratspraktiken
+
+| Begriff | Bedeutung |
+|------------------------|------------------------------------------------|
+| Monogame Familie | Zu einem Zeitpunkt besteht nur eine Ehe bzw. Partnerschaft |
+| Polygame Familie | Mehrere Ehepartner gleichzeitig |
+| Polyandrische Familie | Eine Frau mit mehreren Männern |
+| Polygyne Familie | Ein Mann mit mehreren Frauen |
+| Endogame Familie | Es wird innerhalb einer Gruppe geheiratet (z. B. Religion, Schicht, Clan). Das Endogamie-Prinzip ist die entsprechende Regel |
+| Exogame Familie | Es wird außerhalb der eigenen Gruppe geheiratet (z. B. durch Inzestverbote). Das Exogamie-Prinzip ist die entsprechende Regel |
+
+## Nach Autorität
+
+-   **Patriarchal:** Entscheidungsmacht liegt bei den Männern (meist beim Vater).
+-   **Matriarchal:** Entscheidungsmacht liegt bei den Frauen (meist bei der Mutter).
+-   **Egalitär:** Entscheidungsmacht ist zwischen den Partnern geteilt.
+
+## Nach Wohnsitz
+
+| Begriff | Das Paar lebt nach der Heirat ... |
+|------------------------|------------------------------------------------|
+| Patrilokal | bei bzw. in der Nähe der Familie des Mannes |
+| Matrilokal | bei bzw. in der Nähe der Familie der Frau |
+| Bilokal | wahlweise bei der einen oder der anderen Familie |
+| Neolokal | an einem neuen, eigenen Wohnort |
+| Avunkulokal | beim Onkel mütterlicherseits (dem Bruder der Mutter) |
+
+## Nach Abstammung
+
+-   **Unilinear:** Die Verwandtschaft wird nur über eine Linie gezählt.
+    -   *Patrilinear:* über die Vaterlinie.
+    -   *Matrilinear:* über die Mutterlinie.
+-   **Bilinear:** Beide Linien zählen, oft mit unterschiedlichen Rechten, z. B. beim Erbe oder bei der Gruppenzugehörigkeit.
+
+::: callout-note
+Die Typologien sind nicht trennscharf und schließen sich nicht aus. Dieselbe Familie kann z. B. eine Kernfamilie, monogam, egalitär und neolokal sein. Welche Dimension sinnvoll ist, hängt von der Forschungsfrage ab.
 :::

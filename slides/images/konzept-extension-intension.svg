@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 850" width="780" height="850" font-family="Arial, Helvetica, sans-serif"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<path d="M85,75 L5,300 M315,75 L395,300" stroke="#444" stroke-width="2" stroke-dasharray="8 6" fill="none"/>
+<ellipse cx="200" cy="305" rx="195" ry="80" fill="#cfe3f5" stroke="#5b7a99" stroke-width="2.5" stroke-dasharray="8 6"/>
+<rect x="85" y="13" width="230" height="62" fill="white" stroke="black" stroke-width="3"/>
+<text x="200" y="44" text-anchor="middle" dominant-baseline="central" font-size="34" font-weight="bold">Familie</text>
+<rect x="400" y="13" width="360" height="158" rx="6" fill="#fff6c8" stroke="#888" stroke-width="1.5"/>
+<text x="580" y="44" text-anchor="middle" dominant-baseline="central" font-size="28" font-weight="bold">Intension</text>
+<text x="418" y="88" font-size="22" fill="#333">• mind. ein Kind</text>
+<text x="418" y="122" font-size="22" fill="#333">• mind. eine erziehungs-</text>
+<text x="418" y="156" font-size="22" fill="#333">• berechtigte Person</text>
+<line x1="315" y1="44" x2="400" y2="44" stroke="#888" stroke-width="1.5"/>
+<circle cx="105" cy="262" r="12" fill="#3b5b7a"/><rect x="90" y="278" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<circle cx="155" cy="262" r="12" fill="#3b5b7a"/><rect x="140" y="278" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<circle cx="130" cy="294" r="8.4" fill="#d98a3d"/><rect x="119.5" y="305.2" width="21" height="30.8" rx="8.4" fill="#d98a3d"/>
+<text x="130" y="342" text-anchor="middle" dominant-baseline="central" font-size="18" >Paar mit Kind</text>
+<circle cx="265" cy="262" r="12" fill="#3b5b7a"/><rect x="250" y="278" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<circle cx="305" cy="294" r="8.4" fill="#d98a3d"/><rect x="294.5" y="305.2" width="21" height="30.8" rx="8.4" fill="#d98a3d"/>
+<text x="285" y="342" text-anchor="middle" dominant-baseline="central" font-size="18" >Alleinerziehende</text>
+<text x="580" y="287" text-anchor="middle" dominant-baseline="central" font-size="30" font-weight="bold">Extension</text>
+<text x="580" y="325" text-anchor="middle" dominant-baseline="central" font-size="20" >alle Familien, abgegrenzt von</text>
+<text x="580" y="351" text-anchor="middle" dominant-baseline="central" font-size="20" >anderen Lebensformen</text>
+<path d="M85,515 L5,740 M315,515 L395,740" stroke="#444" stroke-width="2" stroke-dasharray="8 6" fill="none"/>
+<ellipse cx="200" cy="745" rx="195" ry="80" fill="#cfe3f5" stroke="#5b7a99" stroke-width="2.5" stroke-dasharray="8 6"/>
+<rect x="85" y="453" width="230" height="62" fill="white" stroke="black" stroke-width="3"/>
+<text x="200" y="484" text-anchor="middle" dominant-baseline="central" font-size="34" font-weight="bold">Paar</text>
+<rect x="400" y="453" width="360" height="158" rx="6" fill="#fff6c8" stroke="#888" stroke-width="1.5"/>
+<text x="580" y="484" text-anchor="middle" dominant-baseline="central" font-size="28" font-weight="bold">Intension</text>
+<text x="418" y="528" font-size="22" fill="#333">• zwei Personen</text>
+<text x="418" y="562" font-size="22" fill="#333">• in einer Partnerschaft</text>
+<text x="418" y="596" font-size="22" fill="#333">• ohne Kinder im Haushalt</text>
+<line x1="315" y1="484" x2="400" y2="484" stroke="#888" stroke-width="1.5"/>
+<circle cx="105" cy="702" r="12" fill="#3b5b7a"/><rect x="90" y="718" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<circle cx="155" cy="702" r="12" fill="#3b5b7a"/><rect x="140" y="718" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<text x="130" y="782" text-anchor="middle" dominant-baseline="central" font-size="18" >Ehepaar</text>
+<circle cx="265" cy="702" r="12" fill="#3b5b7a"/><rect x="250" y="718" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<circle cx="315" cy="702" r="12" fill="#3b5b7a"/><rect x="300" y="718" width="30" height="44" rx="12" fill="#3b5b7a"/>
+<text x="290" y="782" text-anchor="middle" dominant-baseline="central" font-size="18" >Nichteheliche LG</text>
+<text x="580" y="727" text-anchor="middle" dominant-baseline="central" font-size="30" font-weight="bold">Extension</text>
+<text x="580" y="765" text-anchor="middle" dominant-baseline="central" font-size="20" >alle Paare, abgegrenzt von</text>
+<text x="580" y="791" text-anchor="middle" dominant-baseline="central" font-size="20" >anderen Lebensformen</text>
+</svg>

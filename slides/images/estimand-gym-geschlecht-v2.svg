@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920" font-family="Arial, Helvetica, sans-serif"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<rect x="10" y="10" width="1420" height="120" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="32" font-size=" 20" font-weight="bold" fill="#555">Studienfrage</text>
+<rect x="40" y="45" width="1360" height="70" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="720" y="65" text-anchor="middle" dominant-baseline="central" font-size="24" >Werden Jungen in der Grundschule in geringerem Maße als Mädchen entsprechend ihrer Bedürfnisse gefördert</text>
+<text x="720" y="95" text-anchor="middle" dominant-baseline="central" font-size="24" >und haben daher geringere Übergangswahrscheinlichkeiten zum Gymnasium?</text>
+<rect x="10" y="145" width="1420" height="100" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="167" font-size=" 20" font-weight="bold" fill="#555">Population</text>
+<rect x="40" y="170" width="1360" height="55" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="720" y="197.5" text-anchor="middle" dominant-baseline="central" font-size="24" >Grundschüler:innen in Deutschland</text>
+<rect x="10" y="260" width="1420" height="210" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="282" font-size=" 20" font-weight="bold" fill="#555">Theorie-Empirie-Link</text>
+<rect x="40" y="295" width="200" height="70" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="140" y="330" text-anchor="middle" dominant-baseline="central" font-size="24" >Geschlecht</text>
+<rect x="320" y="295" width="200" height="70" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="420" y="330" text-anchor="middle" dominant-baseline="central" font-size="24" >Kompetenzen</text>
+<circle cx="575" cy="330" r="24" fill="white" stroke="#444" stroke-width="2.5"/>
+<text x="575" y="330" text-anchor="middle" dominant-baseline="central" font-size="30" >×</text>
+<rect x="630" y="295" width="200" height="70" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="730" y="330" text-anchor="middle" dominant-baseline="central" font-size="24" >Förderung</text>
+<rect x="910" y="295" width="200" height="70" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="1010" y="330" text-anchor="middle" dominant-baseline="central" font-size="24" >Leistungen</text>
+<rect x="1190" y="295" width="200" height="70" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="1290" y="315" text-anchor="middle" dominant-baseline="central" font-size="24" >Übergang zum</text>
+<text x="1290" y="345" text-anchor="middle" dominant-baseline="central" font-size="24" >Gymnasium</text>
+<line x1="240" y1="330" x2="320" y2="330" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="520" y1="330" x2="551" y2="330" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="599" y1="330" x2="630" y2="330" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="830" y1="330" x2="910" y2="330" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="1110" y1="330" x2="1190" y2="330" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<path d="M140,365 C140,440 575,440 575,354" fill="none" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="10" y="485" width="1420" height="190" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="507" font-size=" 20" font-weight="bold" fill="#555">Beobachtungsgrundlage</text>
+<rect x="40" y="525" width="380" height="110" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="230" y="565" text-anchor="middle" dominant-baseline="central" font-size="24" >Stichprobenziehung aus der</text>
+<text x="230" y="595" text-anchor="middle" dominant-baseline="central" font-size="24" >Population</text>
+<rect x="510" y="525" width="380" height="110" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="700" y="550" text-anchor="middle" dominant-baseline="central" font-size="24" >t1: Erfassung von</text>
+<text x="700" y="580" text-anchor="middle" dominant-baseline="central" font-size="24" >Geschlecht, Kompetenzen,</text>
+<text x="700" y="610" text-anchor="middle" dominant-baseline="central" font-size="24" >Förderung und Leistung</text>
+<rect x="980" y="525" width="380" height="110" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="1170" y="565" text-anchor="middle" dominant-baseline="central" font-size="24" >t2: Erfassung des Übergangs</text>
+<text x="1170" y="595" text-anchor="middle" dominant-baseline="central" font-size="24" >nach Klasse 4/6</text>
+<line x1="420" y1="580" x2="510" y2="580" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="890" y1="580" x2="980" y2="580" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="10" y="690" width="1420" height="220" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="712" font-size=" 20" font-weight="bold" fill="#555">Schätzung</text>
+<rect x="40" y="730" width="640" height="150" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="360" y="760" text-anchor="middle" dominant-baseline="central" font-size="24" >Schritt 1: Lineare Regression mit</text>
+<text x="360" y="790" text-anchor="middle" dominant-baseline="central" font-size="24" >Förderungsintensität als abhängiger Variable,</text>
+<text x="360" y="820" text-anchor="middle" dominant-baseline="central" font-size="24" >Geschlecht und Kompetenzen als Kontrollvariablen</text>
+<text x="360" y="850" text-anchor="middle" dominant-baseline="central" font-size="24" >sowie der Interaktion Geschlecht × Kompetenzen</text>
+<rect x="760" y="730" width="640" height="150" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="1080" y="760" text-anchor="middle" dominant-baseline="central" font-size="24" >Schritt 2: Logistische Regression mit der</text>
+<text x="1080" y="790" text-anchor="middle" dominant-baseline="central" font-size="24" >Übergangswahrscheinlichkeit auf das Gymnasium</text>
+<text x="1080" y="820" text-anchor="middle" dominant-baseline="central" font-size="24" >als abhängiger Variable unter Kontrolle von</text>
+<text x="1080" y="850" text-anchor="middle" dominant-baseline="central" font-size="24" >Förderungsintensität und Leistung</text>
+<line x1="680" y1="805" x2="760" y2="805" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+</svg>

@@ -13,13 +13,14 @@ format:
     height: 1050
     auto-stretch: false
     theme: style.scss
-    margin: 0.01
+    margin: 0.05
     slideNumber: true
     mermaid: 
       theme: neutral
       look: classic
       layout: dagre
 editor: source
+bibliography: methoden.bib
 tbl-cap-location: bottom
 execute: 
   echo: false
@@ -28,44 +29,55 @@ execute:
   warning: false
 --- 
 
+## Neues aus der Wissenschaft!
 
-## Forschung - wie geht das? {.nostretch}
+::: callout-note
+**Studie:** Hausfeld, Hampel, Bach & Menges (2026). *Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities.* Emotion. <https://doi.org/10.1037/emo0001733>
+:::
 
-![Ein idealisierter Forschungsablauf](images/Forschungsablauf.jpg){width="70%"}
+<br> 
+<br> 
+
+**Frage:** Sind Frauen emotional intelligenter als Männer? Die Studie fasst dazu 1.279 Artikel mit 1.428 Stichproben und rund 609.000 Personen aus 76 Ländern zusammen.
+
+<br> 
+<br> 
+
+[Zu den Shownotes](shownotes.html#gender-und-emotionale-intelligenz)
 
 ## Der große Bogen
 
-![](images/grosser-bogen.svg)
+![](images/grosser-bogen.svg){height="840px"}
 
+## Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
-## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
+![](images/estimand-gym-geschlecht-v2.svg)
 
-![](images/estimand-gym-geschlecht.svg)
+## Geschlechtsspezifische Bildungsungleichheiten {.midi}
 
-## Erkentnisinteresse: Geschlechtsspezifische Bildungsungleichheiten {.midi}
+![](images/estimand-kompetenzzuschreibung-v2.svg)
 
-![](images/estimand-kompetenzzuschreibung.svg)
+## Der Theorie-Empirie-Link
 
+![](images/hypothese-ebenen.svg)
 
-## Ziel 1: Gutes Unterscheiden {.midi}
+## Ziel 1: Gutes Unterscheiden
 
 1.  **Klare Unterscheidungen**: Wir benötigen klar definierte Abgrenzungen von Eigenschaften und ihren relevanten Ausprägungen.
 
-2.  **Sinnvolle Unterscheidungen**: Wir nutzen geeignete Daten, die die erwarteten Ausprägungen zuverlässig abbilden können.
+2.  **Sinnvolle Unterscheidungen**: Die getroffenen Unterscheidungen sind nützlich für eine wissenschaftliche Frage, weil sie relevante Eigenschaften zwischen den Gruppen trennen und relevante Unterschiede innerhalb der Gruppen (für die jeweilige Frage!) minimieren. 
 
 3.  **Trennscharfe Unterscheidungen**: Beobachtungen sollen ein-eindeutig einer Ausprägung einer Eigenschaft zugeordnet werden können.
 
 4.  **Relevante Unterscheidungen**: Die genutzten Unterschiede sollen zur Erklärung der (sozialen) Welt nützlich sein.
 
-## Klare Unterscheidungen: Familien und andere Lebensformen {.midi}
+## Klare Unterscheidungen: Familien und andere Lebensformen
 
--   Wie haben sich Familienformen in den vergangenen Jahren entwickelt?
+Forschungsfrage:  Wie haben sich Familienformen in den vergangenen Jahren entwickelt?
 
 $\rightarrow$ Wir wollen dazu nur Familien **untereinander** abgrenzen.
-
-```         
-Dazu müssen wir allerdings Familien von anderen  Lebensformen abgrenzen. Dazu zählen dyadische Lebensformen (Ehe, Nichteheliche Lebensgemeinschaft), geteiltes Wohnen (WGs, Heimgemeinschaften), Alleinlebende
-```
+  
+$\rightarrow$ Dazu müssen wir allerdings Familien von anderen  Lebensformen abgrenzen. Dazu zählen dyadische Lebensformen (Ehe, Nichteheliche Lebensgemeinschaft), geteiltes Wohnen (WGs, Heimgemeinschaften), Alleinlebende
 
 $\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander abgrenzen, wie z.B. Mehrgenerationfamilie, Einelternfamilie, Kleinfamilie, Großfamilie, Regenbogenfamilie, Pflegefamilie, Patchworkfamilie
 
@@ -77,52 +89,14 @@ $\rightarrow$ Außerdem müssen wir Unterschiede familiärer Formen voneinander 
 
 ![Trends der relativen Anteile von Familienformen](images/trend-familien.png){width="50%"}
 
-## Unterschiedliche Möglichkeiten der Differenzierung von Familien
+## Alternative Differenzierungen von Familien
 
-```{mermaid}
-flowchart TD
-    subgraph S1["Nach Größe und Struktur"]
-        B1[Kernfamilie]
-        B2[Gemeinschaftsfamilie/Erweiterte Familie]
-        B1 --> B1a[Familie der Orientierung]
-        B1 --> B1b[Familie der Zeugung]
-    end
+![](images/familien-differenzierung.svg){height="740px"}
 
-    subgraph S2["Nach Heiratspraktiken"]
-        C1[Monogame Familie]
-        C2[Polygame Familie]
-        C3[Endogame Familie]
-        C4[Exogame Familie]
-        C2 --> C2a[Polyandrische Familie]
-        C2 --> C2b[Polygyne Familie]
-        C3 --> C3a[Endogamie-Prinzip]
-        C4 --> C4a[Exogamie-Prinzip]
-    end
-
-    subgraph S3["Nach Autorität"]
-        D1[Patriarchale Familie]
-        D2[Matriarchale Familie]
-        D3[Egalitäre Familie]
-    end
-
-    subgraph S4["Nach Wohnsitz"]
-        E1[Patrilokale Wohnsitznahme]
-        E2[Matrilokale Wohnsitznahme]
-        E3[Bilokale Wohnsitznahme]
-        E4[Neolokale Wohnsitznahme]
-        E5[Avunkulokale Wohnsitznahme]
-    end
-
-    subgraph S5["Nach Abstammung"]
-        F1[Unilineare Abstammung]
-        F2[Bilineare Abstammung]
-        F1 --> F1a[Patrilineare Abstammung]
-        F1 --> F1b[Matrilineare Abstammung]
-    end
-```
+[Zu den Shownotes](shownotes.html#alternative-differenzierungen-von-familien)
 
 
-## Am Anfang ist das Wort {.midi}
+## Die Verteilung von Bedeutungen
 
 ::: columns
 ::: {.column width="30%"}
@@ -134,13 +108,13 @@ Wir alle nutzen Schemata, um die Welt einzuteilen und miteinander zu kommunizier
 
 Allerdings gibt es auch eine erhebliche Variation bei der Aktivierung von gleichen Schemata (siehe Abb. links), was zu Missverständnissen führen kann.
 
-Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wissenschaftlichen Studie gilt es diese Missverständnisse dringend zu vermeiden.
-:::
+Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wissenschaftlichen Studie gilt es, diese Missverständnisse und Unklarheiten dringend zu vermeiden.
+::: 
 :::
 
 ## Konzeptspezifikation {.nostretch}
 
-![Operationalisierung und Konzeptspezifikation Quelle: [@wonkaKonzepteUndKonzeptspezifikation2022](https://link.springer.com/chapter/10.1007/978-3-658-36972-9_8)](images/Konzept.png){width="40%"}
+![Operationalisierung und Konzeptspezifikation; Quelle: @wonkaKonzepteUndKonzeptspezifikation2022](images/Konzept.png){width="40%"}
 
 ## Was ist ein Konzept? {.midi}
 
@@ -158,43 +132,42 @@ Die **Intension** eines Konzepts sind alle Eigenschaften, die den Einheiten inne
  Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
 ```
 
-## Warum das alles? {.midi}
+## Familie und Paar: Überschneidende Konzepte
+
+![](images/konzept-ueberschneidung.svg)
+
+## Warum das alles?
 
 Wir möchten klare Unterscheidungen u.a. von:
 
--   Untersuchungseinheiten
+a) **Untersuchungseinheiten**
 
-    ```         
-    In einer Untersuchung über Familien sollten daher keine Paare ohne Kinder auftauchen. Aber gelten getrennt lebende Ehepaare mit Kindern als eine Familie oder zwei? Was ist mit Patchwork-Familien oder Personen, die mehrere Haushalte aber nur eine Familie führen? 
-    ```
+- In einer Untersuchung über Familien sollten daher keine Paare ohne Kinder auftauchen. Aber gelten getrennt lebende Ehepaare mit Kindern als eine Familie oder zwei? Was ist mit Patchwork-Familien oder Personen, die mehrere Haushalte aber nur eine Familie führen? 
 
--   Eigenschaften
+b)  **Eigenschaften**
 
-    ```         
-    Versuchen Sie es mal: ADHS & Hochsensibilität; Mental Load & Stress; Zufriedenheit & Glück
-    ```
+- Familien und Paare können u.a. mehr oder weniger *konflikthaft*, *vermögend* oder *entfremdet* sein. Diese Eigenschaften müssen sauber von ihrem nächsten "Verwandten" abgegrenzt werden: *konflikthaft* vs. *emotional unreguliert*; *Vermögen* vs. *Einkommen*; *Entfremdung* vs. *Kommunikationsstile*.
 
--   Ausprägungen von Eigenschaften
+c)  Ausprägungen von Eigenschaften
+  
+-  Wie viele Familienformen müssen/sollten wir (für welche Frage) unterscheiden? Welche Grade der *Entfremdung* sollten wir unterscheiden? 
 
-    ```         
-    Wie viele Familienformen, Geschlechter, Bildungsformen, Organisationstypen und Regierungsformen müssen/sollten wir unterscheiden? 
-    ```
 
 ## Konzepte und Unterscheidungen
 
 Wenn wir von Konzepten sprechen, beziehen wir uns daher typischerweise auf Schemata über Untersuchungseinheiten, Eigenschaften oder Ausprägungen.
 
-Zwei Konzepte A und B voneinander zu unterscheiden, bedeutet daher zu beschreiben, welches intensionale Merkmal A hat aber B nicht. Das ist die Aufgabe von Definitionen.
+Zwei Konzepte A und B voneinander zu unterscheiden, bedeutet daher zu beschreiben, welches intensionale Merkmal A hat aber B nicht hat. **Das ist die Aufgabe von Definitionen.**
 
-## Unterschiede festlegen ist Aufgabe von Definitionen
+Eine Definition legt die Extension eines Konzepts mittels einer Menge von intensionalen Merkmalen fest. D.h.: Mit einer Definition wird festgelegt, welche Untersuchungseinheiten oder Ausprägungen zu einem Konzept gehören. 
 
-Eine Definition legt die Extension eines Konzepts mittels einer Menge von intensionalen Merkmalen fest. D.h.: Mit einer Definition wird festgelegt, welche Untersuchungseinheiten oder Ausprägungen zu einem Konzept gehören. Die Festlegung erfolgt durch mindestens ein Merkmal, das allen Gegenständen gemeinsam ist und das eine definierte Menge von anderen Mengen unterscheidet.
+Die Festlegung erfolgt durch **mindestens ein Merkmal, das allen Gegenständen gemeinsam ist und das eine definierte Menge von anderen Mengen unterscheidet**.
 
-## Der Zweck von Definitionen
+## Der Zweck von Definitionen & Beschreibungen
 
-Der Zweck einer Definition innerhalb der Wissenschaft ist es daher, Mengen von Gegenständen zu konstruieren, die sich gegenseitig ausschließen. Bei einer Definition handelt es sich *nur* um eine sprachliche Regel. Mit Definitionen können keine empirischen Aussagen getroffen werden. Sie sind weder richtig noch falsch sondern nur nützlich oder weniger nützlich.
+Der Zweck einer Definition innerhalb der Wissenschaft ist es daher, Mengen von Gegenständen zu konstruieren, die sich gegenseitig ausschließen. 
 
-## Was unterscheidet Definitionen von Beschreibungen?
+Bei einer Definition handelt es sich *nur* um eine sprachliche Regel. Mit Definitionen können keine empirischen Aussagen getroffen werden. Sie sind weder richtig noch falsch sondern nur -- in Bezug auf eine Fragestellung -- nützlich oder weniger nützlich.
 
 Eine Beschreibung ist die die Identifikation eines Objekts unter mindestens ein Konzept. Die Beschreibung eines gleichen Objekts unterscheidet sich daher, wenn für sie unterschiedliche Konzepte verwendet werden.
 
@@ -202,38 +175,39 @@ Beschreibungen setzen daher im Gegensatz zu Definitionen keine Regeln, sondern s
 
 ## Die Bedeutung guter Konzepte
 
- - Klare Beschreibungen benötigen klare Konzepte, da eine Beschreibung die Einordnung einer Beobachtung *B* unter ein Konzept *K* der Form "B ist eine Realisation von K" ist. 
+::: columns
+::: {.column width="55%"}
+- Klare Beschreibungen benötigen klare Konzepte, da eine Beschreibung die Einordnung einer Beobachtung *B* unter ein Konzept *K* der Form "B ist eine Realisation von K" ist. 
 
-  -  Wenn Sie Eigenschaften oder Ausprägungen *A* und *B*  voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension *A* hat, die *B* nicht hat. Dazu müssen wir *A* und *B* nicht erschöpfend beschreiben. Wir benötigen aber mindestens eine klare Trenn-Eigenschaft. 
-  
+-  Wenn Sie Eigenschaften oder Ausprägungen *A* und *B*  voneinander unterscheiden wollen, müssen Sie spezifizieren, welche Intension *A* hat, die *B* nicht hat. Dazu müssen wir *A* und *B* nicht erschöpfend beschreiben. Wir benötigen aber mindestens eine klare Trenn-Eigenschaft. 
+:::
 
-## Unterscheidung nach "Migrationshintergrund"
+::: {.column width="45%"}
+![](images/bedeutung-konzepte.svg)
+:::
 
-```{mermaid}
-flowchart TD
-    A["Definitionen von<br/>Migrationshintergrund"]
-    A --> B["Externe<br/>Klassifizierung"]
-    A --> C["Subjektive<br/>Klassifizierung"]
-    B --> B1["Person ODER<br/>mind. 1 Elternteil<br/>nicht dt. Staatsang."]
-    B --> B2["Personen ODER<br/>Elternteile seit 1950<br/>eingewandert"]
-    B --> B3["Eingewanderte +<br/>direkte Nachkommen"]
-    C --> C1["Selbst-<br/>positionierung"]
-```
+:::
 
-## Migrationshintergrund -- Version 1 ("Staatsbügerschaft")
+## Frage 2: Sinnvolle Unterscheidungen 
+
+Sauber getrennte Unterscheidungen müssen nicht zwangsläufig **sinnvolle** Unterscheidungen sein.
+
+Eine Unterscheidung ist sinnvoll, wenn 
+
+a) alle *für eine Fragestellung* relevanten Differenzen zwischen Untersuchungseinheiten, Eigenschaften oder Ausprägungen erfasst wurden *und* 
+
+b) innerhalb der unterschiedenen Gruppen keine *für die Fragestellung* relevanten Unterschiede übersehen wurden. 
+
+## Unterscheidung von In-Group/Out-Group auf Nationalstaatsebene
+
+![](images/mh-definitionen-ueberblick.svg)
+
+## Staatsbügerschaft
 
 **Definition:**
 Eine Person hat einen Migrationshintergrund, wenn **sie selbst oder mindestens ein Elternteil nicht mit deutscher Staatsangehörigkeit geboren wurde**.
 
-```{mermaid}
-flowchart TD
-    A["Alle Personen<br/>in Deutschland"]
-    A --> B["Mit<br/>Migrationshintergrund"]
-    A --> C["Ohne<br/>Migrationshintergrund"]
-    B --> B1["Person selbst nicht<br/>mit dt. Staatsangehörigkeit<br/>geboren"]
-    B --> B2["Min. ein Elternteil nicht mit <br/> dt. Staatsangehörigkeit geboren"]
-    C --> C1["Beide Elternteile und<br/>Person selbst mit<br/>dt. Staatsangehörigkeit<br/>geboren"]
-```
+![](images/mh-v1-staatsangehoerigkeit.svg)
 
 Probleme: 
 
@@ -241,66 +215,32 @@ Probleme:
 - Die dritte migrantische Generation wird als "ohne Migrationshintergrund" klassifiziert, wobei diese Gruppe von ungleicher Behandlung aufgrund askriptiver Merkmale betroffen sein könnte.
 
 
-## Migrationshintergrund -- Version 2 ("Personen mit Migrationsgeschichte")
+## Personen mit Migrationsgeschichte
 
 Eine Person gehört zu dieser Gruppe, wenn sie selbst eingewandert ist oder direkte Nachkommen eines Eingewanderten ist.
-```{mermaid}
-flowchart TD
-    A[Bevölkerung] --> B[Eingewanderte und ihre Nachkommen]
-    A --> C[Personen ohne Migrationsgeschichte]
 
-    B --> B1[Direkt Eingewanderte]
-    B --> B2[Kinder von Eingewanderten]
-    B --> B3[Enkel von Eingewanderten]
+![](images/mh-v2-migrationsgeschichte.svg)
 
-    C --> C1[Dritte Generation oder später ohne Migrationsgeschichte]
-```
-
-## Migrationshintergrund -- Version 3 ("Personen mit Einwanderungsgeschichte")
+## Personen mit Einwanderungsgeschichte
 
 **Definition:**
 Eine Person gehört zu dieser Gruppe, **wenn sie oder beide Elternteile seit 1950 ins heutige Bundesgebiet eingewandert sind**.
 
-## Migrationshintergrund -- Version 4
-```{mermaid}
-flowchart TD
-    A[Bevölkerung] --> B[Personen mit Einwanderungsgeschichte]
-    A --> C[Personen ohne Einwanderungsgeschichte]
+![](images/mh-v3-einwanderungsgeschichte.svg)
 
-    B --> B1[Person selbst seit 1950 eingewandert]
-    B --> B2[Beide Elternteile seit 1950 eingewandert]
-    B --> B3[Ein Elternteil seit 1950 eingewandert]
-
-    C --> C1[Person und Eltern vor 1950 eingewandert oder nicht migriert]
-```
-
-## Migrationshintergrund -- Version 4 ("Geburtsortsdefinition")
+## Geburtsortsdefinition
 
 **Definition:**
 Eine Person gehört zu dieser Gruppe, **wenn sie ins heutige Bundesgebiet eingewandert ist**.
 
-```{mermaid}
-flowchart TD
-    A[Bevölkerung] --> B[Im Land geboren]
-    A --> C[Nicht im Land geboren]
-```
+![](images/mh-v4-geburtsort.svg)
 
-## Migrationshintergrund -- Version 5 ("Subjektive Einordnung")
+## Subjektive Einordnung in Mehrheits- oder Minderheitsgruppe
 
 **Definition:**
 Eine Person gehört zu dieser Gruppe, wenn sie sich zu einer ethnischen oder religiösen Minderheit zählt, die ihren ihren "Ursprung" nicht im Land verortet (z. B. "Afrikanisch", "Schwarz", "Muslimisch").
 
-```{mermaid}
-flowchart TD
-    A[Bevölkerung] --> B[Minderheitsidentifikation]
-
-    B --> B1["Afrikanisch"]
-    B --> B2["Schwarz"]
-    B --> B3["Muslimisch"]
-    B --> B4["Andere Kategorien"]
-
-    A --> C["Mehrheitsidentifikation"]
-```
+![](images/mh-v5-subjektiv.svg)
 
 ## Does it matter? 
 

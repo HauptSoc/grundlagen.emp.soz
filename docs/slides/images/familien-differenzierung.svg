@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1390 1060" width="1390" height="1060" font-family="Arial, Helvetica, sans-serif"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<rect x="10" y="10" width="1370" height="235" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="38" font-size="22" font-weight="bold" fill="#555">Nach Größe und Struktur</text>
+<rect x="437" y="60" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="562" y="92" text-anchor="middle" dominant-baseline="central" font-size="21" >Kernfamilie</text>
+<rect x="304" y="165" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="429" y="183.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Familie der</text>
+<text x="429" y="210.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Orientierung</text>
+<line x1="562" y1="124" x2="429" y2="165" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="570" y="165" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="695" y="197" text-anchor="middle" dominant-baseline="central" font-size="21" >Familie der Zeugung</text>
+<line x1="562" y1="124" x2="695" y2="165" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="836" y="60" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="961" y="78.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Gemeinschaftsfamilie/</text>
+<text x="961" y="105.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Erweiterte Familie</text>
+<rect x="10" y="260" width="1370" height="235" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="288" font-size="22" font-weight="bold" fill="#555">Nach Heiratspraktiken</text>
+<rect x="38" y="310" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="163" y="342" text-anchor="middle" dominant-baseline="central" font-size="21" >Monogame Familie</text>
+<rect x="437" y="310" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="562" y="342" text-anchor="middle" dominant-baseline="central" font-size="21" >Polygame Familie</text>
+<rect x="304" y="415" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="429" y="433.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Polyandrische</text>
+<text x="429" y="460.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Familie</text>
+<line x1="562" y1="374" x2="429" y2="415" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="570" y="415" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="695" y="447" text-anchor="middle" dominant-baseline="central" font-size="21" >Polygyne Familie</text>
+<line x1="562" y1="374" x2="695" y2="415" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="836" y="310" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="961" y="342" text-anchor="middle" dominant-baseline="central" font-size="21" >Endogame Familie</text>
+<rect x="836" y="415" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="961" y="447" text-anchor="middle" dominant-baseline="central" font-size="21" >Endogamie-Prinzip</text>
+<line x1="961" y1="374" x2="961" y2="415" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="1102" y="310" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="1227" y="342" text-anchor="middle" dominant-baseline="central" font-size="21" >Exogame Familie</text>
+<rect x="1102" y="415" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="1227" y="447" text-anchor="middle" dominant-baseline="central" font-size="21" >Exogamie-Prinzip</text>
+<line x1="1227" y1="374" x2="1227" y2="415" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="10" y="510" width="1370" height="135" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="538" font-size="22" font-weight="bold" fill="#555">Nach Autorität</text>
+<rect x="304" y="560" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="429" y="592" text-anchor="middle" dominant-baseline="central" font-size="21" >Patriarchale Familie</text>
+<rect x="570" y="560" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="695" y="592" text-anchor="middle" dominant-baseline="central" font-size="21" >Matriarchale Familie</text>
+<rect x="836" y="560" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="961" y="592" text-anchor="middle" dominant-baseline="central" font-size="21" >Egalitäre Familie</text>
+<rect x="10" y="660" width="1370" height="135" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="688" font-size="22" font-weight="bold" fill="#555">Nach Wohnsitz</text>
+<rect x="38" y="710" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="163" y="728.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Patrilokale</text>
+<text x="163" y="755.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Wohnsitznahme</text>
+<rect x="304" y="710" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="429" y="728.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Matrilokale</text>
+<text x="429" y="755.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Wohnsitznahme</text>
+<rect x="570" y="710" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="695" y="728.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Bilokale</text>
+<text x="695" y="755.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Wohnsitznahme</text>
+<rect x="836" y="710" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="961" y="728.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Neolokale</text>
+<text x="961" y="755.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Wohnsitznahme</text>
+<rect x="1102" y="710" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="1227" y="728.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Avunkulokale</text>
+<text x="1227" y="755.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Wohnsitznahme</text>
+<rect x="10" y="810" width="1370" height="235" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="2"/>
+<text x="26" y="838" font-size="22" font-weight="bold" fill="#555">Nach Abstammung</text>
+<rect x="437" y="860" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="562" y="878.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Unilineare</text>
+<text x="562" y="905.125" text-anchor="middle" dominant-baseline="central" font-size="21" >Abstammung</text>
+<rect x="304" y="965" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="429" y="983.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Patrilineare</text>
+<text x="429" y="1010.12" text-anchor="middle" dominant-baseline="central" font-size="21" >Abstammung</text>
+<line x1="562" y1="924" x2="429" y2="965" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="570" y="965" width="250" height="64" rx="8" fill="#eef3f8" stroke="#5b7a99" stroke-width="2"/>
+<text x="695" y="983.875" text-anchor="middle" dominant-baseline="central" font-size="21" >Matrilineare</text>
+<text x="695" y="1010.12" text-anchor="middle" dominant-baseline="central" font-size="21" >Abstammung</text>
+<line x1="562" y1="924" x2="695" y2="965" stroke="#444" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="836" y="860" width="250" height="64" rx="8" fill="#fff6e0" stroke="#5b7a99" stroke-width="2"/>
+<text x="961" y="892" text-anchor="middle" dominant-baseline="central" font-size="21" >Bilineare Abstammung</text>
+</svg>

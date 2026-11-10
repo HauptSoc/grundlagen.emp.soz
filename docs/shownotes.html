@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,18 +37,19 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6d5672f023b68a69bd6f3c71321a71dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-99d3ba80a24d4727ee6147323ff6ba5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-6d5672f023b68a69bd6f3c71321a71dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81408d3218f9b43691a591bde5425f17.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7783bd4cb731ee3232c4c6e11091b24b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-81408d3218f9b43691a591bde5425f17.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,10 +78,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -103,6 +133,7 @@ ul.task-list li input[type="checkbox"] {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -132,13 +163,19 @@ ul.task-list li input[type="checkbox"] {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -232,6 +269,7 @@ ul.task-list li input[type="checkbox"] {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -246,13 +284,13 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Shownotes</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Shownotes</li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -263,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Site">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./images/mindmap-logoV2.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
@@ -273,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
     <a href="https://github.com/HauptSoc/grundlagen.emp.soz" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://posit.cloud/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
     <a href="https://campus.kit.edu" title="ILIAS KIT" class="quarto-navigation-tool px-1" aria-label="ILIAS KIT"><i class="bi bi-person-fill"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -285,13 +323,10 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Wissenswertes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Wissenswertes</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
@@ -324,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -344,11 +379,26 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#offene-fragen-und-forschungsprioritäten" id="toc-offene-fragen-und-forschungsprioritäten" class="nav-link" data-scroll-target="#offene-fragen-und-forschungsprioritäten">Offene Fragen und Forschungsprioritäten</a></li>
   </ul></li>
   <li><a href="#literaturhinweise" id="toc-literaturhinweise" class="nav-link" data-scroll-target="#literaturhinweise">Literaturhinweise</a></li>
+  <li><a href="#gender-und-emotionale-intelligenz-eine-metaanalyse" id="toc-gender-und-emotionale-intelligenz-eine-metaanalyse" class="nav-link" data-scroll-target="#gender-und-emotionale-intelligenz-eine-metaanalyse">Gender und Emotionale Intelligenz: Eine Metaanalyse</a>
+  <ul class="collapse">
+  <li><a href="#zentrale-konzepte" id="toc-zentrale-konzepte" class="nav-link" data-scroll-target="#zentrale-konzepte">Zentrale Konzepte</a></li>
+  <li><a href="#was-macht-eine-metaanalyse" id="toc-was-macht-eine-metaanalyse" class="nav-link" data-scroll-target="#was-macht-eine-metaanalyse">Was macht eine Metaanalyse?</a></li>
+  <li><a href="#wie-interpretiert-man-cohens-d" id="toc-wie-interpretiert-man-cohens-d" class="nav-link" data-scroll-target="#wie-interpretiert-man-cohens-d">Wie interpretiert man Cohens d?</a></li>
+  <li><a href="#ergebnisse" id="toc-ergebnisse" class="nav-link" data-scroll-target="#ergebnisse">Ergebnisse</a>
+  <ul class="collapse">
+  <li><a href="#gesamtbild-kleiner-vorteil-für-frauen-je-nach-fähigkeit-unterschiedlich" id="toc-gesamtbild-kleiner-vorteil-für-frauen-je-nach-fähigkeit-unterschiedlich" class="nav-link" data-scroll-target="#gesamtbild-kleiner-vorteil-für-frauen-je-nach-fähigkeit-unterschiedlich">Gesamtbild: Kleiner Vorteil für Frauen, je nach Fähigkeit unterschiedlich</a></li>
+  <li><a href="#entscheidend-ist-wessen-emotionen" id="toc-entscheidend-ist-wessen-emotionen" class="nav-link" data-scroll-target="#entscheidend-ist-wessen-emotionen">Entscheidend ist: Wessen Emotionen?</a></li>
+  <li><a href="#entscheidend-ist-auch-wie-wird-gemessen" id="toc-entscheidend-ist-auch-wie-wird-gemessen" class="nav-link" data-scroll-target="#entscheidend-ist-auch-wie-wird-gemessen">Entscheidend ist auch: Wie wird gemessen?</a></li>
+  <li><a href="#kontexteffekte" id="toc-kontexteffekte" class="nav-link" data-scroll-target="#kontexteffekte">Kontexteffekte</a></li>
+  <li><a href="#wird-der-unterschied-kleiner" id="toc-wird-der-unterschied-kleiner" class="nav-link" data-scroll-target="#wird-der-unterschied-kleiner">Wird der Unterschied kleiner?</a></li>
+  </ul></li>
+  <li><a href="#limitationen" id="toc-limitationen" class="nav-link" data-scroll-target="#limitationen">Limitationen</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/HauptSoc/grundlagen.emp.soz/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -454,8 +504,195 @@ Tip
 <p>[<a href="https://www.jpain.org/article/S1526-5900(24)00480-2/fulltext">4</a>] <strong>Keogh, E. (2025):</strong> <em>Sex, gender, and pain: Evidence and knowledge gaps.</em> <strong>Frontiers in Pain Research.</strong></p>
 </div>
 </div>
+</section>
+<section id="gender-und-emotionale-intelligenz-eine-metaanalyse" class="level1">
+<h1>Gender und Emotionale Intelligenz: Eine Metaanalyse</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Studie:</strong> Hausfeld, Hampel, Bach &amp; Menges (2026). <em>Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities.</em> Emotion. <a href="https://doi.org/10.1037/emo0001733" class="uri">https://doi.org/10.1037/emo0001733</a></p>
+</div>
+</div>
+<p><strong>Frage:</strong> Sind Frauen emotional intelligenter als Männer? Die Studie fasst dazu 1.279 Artikel mit 1.428 Stichproben und rund 609.000 Personen aus 76 Ländern zusammen.</p>
+<section id="zentrale-konzepte" class="level2">
+<h2 class="anchored" data-anchor-id="zentrale-konzepte">Zentrale Konzepte</h2>
+<p><strong>Emotionale Intelligenz (EI)</strong> ist die Fähigkeit, eigene und fremde Emotionen zu erkennen, zu verstehen und zu regulieren. Die Studie unterscheidet drei Teilfähigkeiten und zwei Blickrichtungen:</p>
+<table class="table">
+<caption>Die drei Teilfähigkeiten der EI</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Teilfähigkeit</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Emotionserkennung</td>
+<td>Erkenne ich an einem Gesicht, dass jemand traurig ist?</td>
+</tr>
+<tr class="even">
+<td>Emotionsverständnis</td>
+<td>Weiß ich, wie Ärger entsteht und wohin er sich entwickeln kann?</td>
+</tr>
+<tr class="odd">
+<td>Emotionsregulation</td>
+<td>Kann ich Wut herunterregeln, oder eine gestresste Kollegin beruhigen?</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Selbst- vs.&nbsp;Fremdfokus:</strong> Es geht um die eigenen Emotionen (selbstfokussiert) oder die anderer (fremdfokussiert).</li>
+<li><strong>Messung:</strong> <em>Leistungstests</em> (man löst Aufgaben mit richtigen Antworten) vs.&nbsp;<em>Selbstauskunft</em> (man schätzt sich selbst ein). Das ist die wichtigste methodische Unterscheidung der Studie.</li>
+<li><strong>Kontext:</strong> Die Autorinnen und Autoren prüfen, ob Unterschiede von Führungsrolle, Branche, Alter, Erhebungsjahr und Weltregion abhängen. Theoretischer Hintergrund ist die <em>Social Role Theory</em>: Geschlechterunterschiede entstehen auch durch unterschiedliche soziale Rollen und Erwartungen.</li>
+</ul>
+</section>
+<section id="was-macht-eine-metaanalyse" class="level2">
+<h2 class="anchored" data-anchor-id="was-macht-eine-metaanalyse">Was macht eine Metaanalyse?</h2>
+<p>Eine <strong>Metaanalyse</strong> fasst die Ergebnisse vieler Einzelstudien statistisch zusammen. Jede Studie liefert einen Effekt, hier den Mittelwertunterschied zwischen Frauen und Männern. Diese Effekte werden gemittelt, wobei größere Stichproben mehr Gewicht erhalten. Der Vorteil: Widersprüchliche Einzelbefunde (mal Frauen vorn, mal Männer, mal kein Unterschied) verdichten sich zu einem Gesamtbild. Zudem lässt sich prüfen, wovon der Effekt abhängt (<strong>Moderatoren</strong>), z. B. von der Art der Messung.</p>
+<p>Zwei Kennwerte aus der Studie sollten Sie kennen:</p>
+<ul>
+<li><strong>95%-Konfidenzintervall (KI):</strong> Plausibler Bereich für den wahren Effekt. Schließt das KI die 0 ein, ist ein Unterschied nicht von Null unterscheidbar.</li>
+<li><strong>Heterogenität (I²):</strong> Anteil der Streuung zwischen den Studien, der über Zufall hinausgeht. Hier liegt I² meist bei über 95 %. Die Einzelstudien unterscheiden sich also stark, und der Durchschnitt gilt nicht für jede Situation.</li>
+</ul>
+</section>
+<section id="wie-interpretiert-man-cohens-d" class="level2">
+<h2 class="anchored" data-anchor-id="wie-interpretiert-man-cohens-d">Wie interpretiert man Cohens d?</h2>
+<p><strong>d</strong> ist der Mittelwertunterschied in Einheiten der Standardabweichung. Ein Wert von <span class="math display">\[d = 0{,}15\]</span> heißt: Der Durchschnitt der Frauen liegt 0,15 Standardabweichungen über dem der Männer. Positive Werte bedeuten hier einen Vorteil für Frauen, negative für Männer. Als grobe Richtwerte gelten <span class="math display">\[d \approx 0{,}2\]</span> klein, <span class="math display">\[0{,}5\]</span> mittel und <span class="math display">\[0{,}8\]</span> groß.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-d-intro" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d-intro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shownotes_files/figure-html/fig-d-intro-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-intro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Was bedeutet d? Verteilungen von Männern (grau) und Frauen (rot) bei verschiedenen Effektgrößen. d = 0,15 ist der Gesamteffekt der Studie, d = 0,38 der Effekt in Leistungstests.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Auch ein “kleines” d bedeutet, dass sich die beiden Verteilungen fast vollständig überlappen. Bei <span class="math display">\[d = 0{,}15\]</span> hat bei einem zufälligen Paar aus einer Frau und einem Mann die Frau nur in etwa 54 % der Fälle den höheren Wert (Zufall wären 50 %). Von Gruppenunterschieden lässt sich nicht auf Einzelpersonen schließen.</p>
+</section>
+<section id="ergebnisse" class="level2">
+<h2 class="anchored" data-anchor-id="ergebnisse">Ergebnisse</h2>
+<section id="gesamtbild-kleiner-vorteil-für-frauen-je-nach-fähigkeit-unterschiedlich" class="level3">
+<h3 class="anchored" data-anchor-id="gesamtbild-kleiner-vorteil-für-frauen-je-nach-fähigkeit-unterschiedlich">Gesamtbild: Kleiner Vorteil für Frauen, je nach Fähigkeit unterschiedlich</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-haupt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-haupt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shownotes_files/figure-html/fig-haupt-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-haupt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Geschlechterunterschiede nach Fähigkeit (Punkt = d, Balken = 95%-KI). Positive Werte: Vorteil für Frauen.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Frauen schneiden insgesamt etwas besser ab (d = 0,15). Am größten ist der Unterschied beim Emotionsverständnis, bei der Emotionsregulation ist er praktisch null.</p>
+</section>
+<section id="entscheidend-ist-wessen-emotionen" class="level3">
+<h3 class="anchored" data-anchor-id="entscheidend-ist-wessen-emotionen">Entscheidend ist: Wessen Emotionen?</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-fokus" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fokus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shownotes_files/figure-html/fig-fokus-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fokus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Selbst- vs.&nbsp;fremdfokussierte Fähigkeiten. Frauen haben vor allem bei den Emotionen anderer einen Vorteil. Bei der Regulation eigener Emotionen liegen Männer leicht vorn.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Die Autorinnen und Autoren sehen darin einen Hinweis auf eine mögliche “Doppelbelastung”: Frauen wird zugeschrieben, besser mit Emotionen umzugehen, obwohl sich dies bei den eigenen Emotionen kaum zeigt. Sie sollen aber zusätzlich die Emotionen anderer managen.</p>
+</section>
+<section id="entscheidend-ist-auch-wie-wird-gemessen" class="level3">
+<h3 class="anchored" data-anchor-id="entscheidend-ist-auch-wie-wird-gemessen">Entscheidend ist auch: Wie wird gemessen?</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-messung" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-messung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shownotes_files/figure-html/fig-messung-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-messung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Leistungstests vs.&nbsp;Selbstauskunft (bzw. nicht-leistungsbasierte Maße). Der Vorteil für Frauen ist in Leistungstests meist deutlich größer.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Bei der Regulation ist der Kontrast am größten: In Leistungstests liegt d bei 0,32, in Selbstauskünften praktisch bei 0. Beim Emotionsverständnis gibt es keinen Unterschied zwischen den Messarten. Selbstauskünfte hängen davon ab, wie sich Menschen selbst sehen, und das kann von Geschlechterstereotypen geprägt sein.</p>
+</section>
+<section id="kontexteffekte" class="level3">
+<h3 class="anchored" data-anchor-id="kontexteffekte">Kontexteffekte</h3>
+<p>Der Unterschied ist nicht überall gleich groß. Bei Führungskräften ist er größer (d = 0,25 in der Gesamt-EI) als bei Beschäftigten ohne Führungsrolle (d = 0,13). In männlich dominierten Branchen war er entgegen der Erwartung eher kleiner. Mit steigendem Alter nimmt er leicht zu (etwa +0,04 je 10 Jahre). In Nordamerika und Europa (d = 0,19) ist er größer als in anderen Regionen (d = 0,06).</p>
+</section>
+<section id="wird-der-unterschied-kleiner" class="level3">
+<h3 class="anchored" data-anchor-id="wird-der-unterschied-kleiner">Wird der Unterschied kleiner?</h3>
+<p>Je später die Daten erhoben wurden, desto kleiner ist der Vorteil der Frauen in der Gesamt-EI: Im Durchschnittsjahr 2013 liegt d bei 0,15, fünf Jahre später um 0,06 niedriger (95%-KI der Steigung: −0,08 bis −0,04). Gegen Ende des Beobachtungszeitraums nähert sich der Trend der Nulllinie.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-zeit" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zeit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shownotes_files/figure-html/fig-zeit-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zeit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Schematische Nachbildung von Abbildung 4 der Studie: Geschlechterunterschied in der Gesamt-EI nach Erhebungsjahr. Die Punkte sind simuliert (die Originaldaten liegen nicht vor), die Trendlinie folgt den berichteten Werten (d = 0,15 im Jahr 2013, −0,06 pro 5 Jahre).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Der Rückgang ist klein im Vergleich zur Streuung der Einzelstudien (jeder Punkt ist ein Effekt aus einer Stichprobe). Die Studie kann Erhebungsjahr, Alter und Generation nicht trennen. Ob sich Geschlechterrollen angleichen, bleibt daher eine Vermutung.</p>
+</section>
+</section>
+<section id="limitationen" class="level2">
+<h2 class="anchored" data-anchor-id="limitationen">Limitationen</h2>
+<ul>
+<li><strong>Keine Kausalaussagen:</strong> Die Studie zeigt, <em>wo</em> Unterschiede bestehen, nicht <em>warum</em>. Sozialisation, biologische Faktoren und Selbstselektion (z. B. in Führungspositionen) lassen sich nicht trennen.</li>
+<li><strong>Kleine Effekte, hohe Heterogenität:</strong> Die Effekte sind klein, die Streuung zwischen den Studien ist groß (I² meist über 95 %).</li>
+<li><strong>Lücken bei der Messung:</strong> Für manche Fähigkeiten gibt es keine Leistungstests, z. B. nicht für selbstfokussierte Emotionserkennung. Messart und Fokus lassen sich daher nicht sauber trennen.</li>
+<li><strong>Nur Gruppenvergleiche:</strong> Viele Studien berichten keine Mittelwerte getrennt nach Geschlecht. Es bleibt offen, ob Kontexteffekte auf Frauen, Männer oder beide zurückgehen.</li>
+<li><strong>Zeit, Alter und Generation sind vermischt:</strong> Der Effekt des Erhebungsjahres lässt sich nicht von Alters- und Kohorteneffekten trennen.</li>
+<li><strong>Nur nicht-klinische Stichproben:</strong> Die Ergebnisse gelten nicht ohne Weiteres für Personen mit Diagnosen.</li>
+<li><strong>Binäres Geschlecht:</strong> Verglichen werden Frauen und Männer, andere Geschlechtsidentitäten kommen nicht vor.</li>
+<li><strong>Verallgemeinerbarkeit:</strong> Leistungstests sind aufwendig und werden vermutlich in ressourcenärmeren Regionen seltener eingesetzt. Das kann regionale Vergleiche verzerren.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hausfeld, M. M., Hampel, V., Bach, L. J., &amp; Menges, J. I. (2026). <em>Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities.</em> <strong>Emotion</strong>. <a href="https://doi.org/10.1037/emo0001733" class="uri">https://doi.org/10.1037/emo0001733</a></p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -463,15 +700,50 @@ Tip
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -550,7 +822,8 @@ Tip
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -559,8 +832,69 @@ Tip
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -574,6 +908,7 @@ Tip
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -736,44 +1071,54 @@ Tip
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -871,6 +1216,9 @@ Tip
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 <footer class="footer">
