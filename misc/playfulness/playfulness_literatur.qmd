@@ -1,0 +1,184 @@
+---
+title: "Playfulness: Messung, Wirkbedingungen und Befunde"
+subtitle: "Eine Literaturübersicht zu Paaren, Familien, kindlicher Entwicklung und Organisationen"
+author: "Andreas Haupt"
+date: today
+lang: de
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+bibliography: playfulness.bib
+csl: https://www.zotero.org/styles/apa
+link-citations: true
+---
+
+::: callout-warning
+## Hinweis zur Quellenlage
+
+Die Übersicht ist ein Arbeitsentwurf. Bibliografische Angaben (Jahrgänge, Seitenzahlen) sollten vor einer Verwendung in Lehre oder Publikation gegen die Originalquellen geprüft und um DOIs ergänzt werden.
+:::
+
+# Begriff und Abgrenzung
+
+*Playfulness* (Verspieltheit, Spielfreude) bezeichnet in der aktuellen Forschung überwiegend eine **Persönlichkeitsdisposition**: die Neigung, Situationen so zu rahmen (oder umzudeuten), dass sie für sich selbst und/oder andere unterhaltsam, interessant oder intellektuell anregend werden [@proyer2017; @barnett2007]. Davon zu unterscheiden sind
+
+-   **Spiel (play)** als beobachtbare Aktivität bzw. Verhaltensklasse [@burghardt2005; @pellegrini2009],
+-   **spielerische Zustände (state playfulness)**, etwa der *paratelische* Zustand in Apters Reversal-Theorie [@apter1991],
+-   **Humor** und **Spaß (fun)**, die mit Playfulness korrelieren, aber konzeptuell enger sind [@proyer2013].
+
+Begriffsgeschichtlich reicht die Diskussion von kulturtheoretischen Ansätzen [@huizinga1938] über Batesons Idee der Metakommunikation ("this is play") [@bateson1972] bis zu evolutionär-biologischen Perspektiven [@burghardt2005; @bateson2013]. Eine interdisziplinäre Übersicht der Definitionen geben @masek2021, für die Erwachsenenforschung @vanvleet2015a und @vanvleet2015b.
+
+Für die Messung ist diese Unterscheidung zentral: Ein Instrument kann Playfulness als *Trait* (stabile Disposition), als *State* (situativer Zustand) oder als *Verhalten* (beobachtete Spielqualität) operationalisieren. Diese Operationalisierungen sind nicht austauschbar.
+
+# Messung von Playfulness
+
+## Überblick über zentrale Instrumente
+
+| Instrument | Quelle | Zielgruppe | Methode | Dimensionen / Struktur |
+|---------------|---------------|---------------|---------------|---------------|
+| Playfulness Scale | @lieberman1977 | Kinder (Kindergarten) | Fremdeinschätzung (Lehrkräfte) | Physische, soziale, kognitive Spontaneität; manifeste Freude; Sinn für Humor |
+| Children's Playfulness Scale (CPS) | @barnett1990; @barnett1991 | Kinder (3--7 J.) | Fremdeinschätzung, 23 Items | Übernimmt Liebermans fünf Dimensionen, psychometrisch verbessert |
+| Test of Playfulness (ToP) | @bundy2001; @skard2008 | Kinder/Jugendliche (bis ca. 18 J.) | Verhaltensbeobachtung im freien Spiel, Rasch-skaliert | Intrinsische Motivation, internale Kontrolle, Suspendierung der Realität, Framing |
+| Adult Playfulness Scale (APS) | @glynn1992 | Erwachsene | Selbstbericht, 32 bipolare Adjektivpaare | Spontan, expressiv, fun, kreativ, albern (*silly*) |
+| Computer Playfulness Scale | @webster1992 | Erwachsene (Arbeitskontext) | Selbstbericht | Spielerische Haltung im Umgang mit Technologie |
+| Playfulness Scale for Adults (PSA) | @schaefer1997 | Erwachsene | Selbstbericht | Globaler Faktor plus Facetten |
+| Young-Adult Playfulness | @barnett2007 | Junge Erwachsene | Selbstbericht | Gregarious, uninhibited, comedic, dynamic |
+| Older Adult Playfulness Scale (OAPS) | @yarnal2011 | Ältere Erwachsene | Selbstbericht | Fun-loving, happy, humorous, spontaneous etc. |
+| Short Measure for Adult Playfulness (SMAP) | @proyer2012 | Erwachsene | Selbstbericht, 5 Items | Eindimensional (globale Playfulness) |
+| Adult Playfulness Trait Scale (APTS) | @shen2014 | Erwachsene | Selbstbericht, 19 Items | Fun-seeking motivation, uninhibitedness, spontaneity |
+| OLIW | @proyer2017 | Erwachsene | Selbstbericht, 28 Items | **O**ther-directed, **L**ighthearted, **I**ntellectual, **W**himsical |
+| Playful Work Design Scale (PWDS) | @scharp2023 | Beschäftigte | Selbstbericht (auch Tagebuch) | Designing fun, designing competition |
+
+: Ausgewählte Messinstrumente für Playfulness {#tbl-instrumente}
+
+## Entwicklungslinien der Messung
+
+**Kindheit: Fremdbeurteilung und Beobachtung.** Die frühen Instrumente [@lieberman1977; @barnett1990; @barnett1991] beruhen auf Ratings durch Lehrkräfte oder Eltern. Sie konfundieren tendenziell Playfulness mit allgemeiner Sozialkompetenz bzw. positiver Affektivität und sind anfällig für Halo-Effekte. Der *Test of Playfulness* [@bundy2001; @skard2008] wählt einen anderen Weg: Er bewertet Spielverhalten in einer konkreten, videografierten Situation und bildet damit eher die *Spielqualität* als einen Trait ab. Die Reliabilität hängt von geschulten Beurteilenden ab; Bundy et al. berichten gute Passung zum Rasch-Modell.
+
+**Erwachsenenalter: Selbstbericht und Strukturfragen.** Für Erwachsene dominieren Selbstberichtsskalen. @proyer2013 analysierten 17 Instrumente gemeinsam und fanden eine hierarchische Struktur mit einem Generalfaktor sowie Subfaktoren, die u. a. mit Extraversion, Offenheit und Humor überlappen. Daraus entstand das OLIW-Modell [@proyer2017], das vier Facetten unterscheidet:
+
+-   *Other-directed*: Playfulness im Umgang mit anderen (z. B. Spannungen auflockern),
+-   *Lighthearted*: unbeschwerte, wenig zukunftsbesorgte Grundhaltung,
+-   *Intellectual*: Spiel mit Ideen und Gedanken,
+-   *Whimsical*: Vorliebe für Ungewöhnliches, Skurriles.
+
+## Methodische Probleme
+
+Für eine methodenorientierte Lektüre sind folgende Punkte relevant (vgl. die Kriterien aus den Sitzungen zu Reliabilität und Validität):
+
+1.  **Konstruktvalidität und Jingle-Jangle-Fallacy.** Unterschiedliche Instrumente messen unter demselben Label teils verschiedene Dinge (Humor, Extraversion, Offenheit, Spaßorientierung). Die diskriminante Validität gegenüber den Big Five ist ein wiederkehrendes Thema [@proyer2013; @shen2014]. Proyer berichtet allerdings inkrementelle Validität über die Big Five hinaus.
+2.  **Trait vs. State.** Viele Wirkhypothesen (z. B. "Playfulness hilft in Konflikten") betreffen situatives Verhalten, gemessen wird aber häufig der Trait. Tagebuchstudien [@scharp2019] adressieren diese Lücke.
+3.  **Selbst- vs. Fremdbericht.** In Paarstudien ist die Übereinstimmung zwischen Selbst- und Partnereinschätzung nur moderat; dyadische Designs (APIM) erlauben eine Trennung von Akteurs- und Partnereffekten [@proyer2019apim].
+4.  **Messinvarianz über Altersgruppen und Kulturen.** Altersspezifische Instrumente (Kinder, junge Erwachsene, Ältere) erschweren Vergleiche über die Lebensspanne. Kulturvergleichende Invarianzprüfungen sind selten.
+5.  **Kausalität.** Ein Großteil der Evidenz ist querschnittlich und korrelativ. Experimentelle Belege sind rar; eine Ausnahme ist die randomisierte, placebokontrollierte Interventionsstudie von @proyer2021intervention.
+
+# Bedingungen für die Wirksamkeit von Playfulness
+
+Die Literatur stimmt weitgehend darin überein, dass Playfulness kein "unbedingt" positiver Trait ist. Ob er sich entfalten und positive Wirkungen haben kann, hängt von Bedingungen auf Ebene der Person, der Interaktion und des Kontexts ab.
+
+## Sicherheit und entspanntes Feld
+
+Aus der Tierforschung stammt das Kriterium des **relaxed field**: Spiel tritt auf, wenn Grundbedürfnisse gedeckt sind und keine akute Bedrohung, kein Stress und keine Konkurrenz um Ressourcen bestehen [@burghardt2005]. Ein analoges Argument findet sich in Apters Reversal-Theorie: Der spielerische (*paratelische*) Zustand setzt einen **schützenden Rahmen** (*protective frame*) voraus; bei wahrgenommener Gefahr wechseln Menschen in einen zielorientierten (*telischen*) Modus [@apter1991]. Für Organisationen entspricht dem die **psychologische Sicherheit** im Team [@edmondson1999]: Wer Sanktionen für Fehler oder "unpassendes" Verhalten befürchtet, hält spielerische Impulse zurück [@mainemelis2006].
+
+## Metakommunikation und geteilte Rahmung
+
+Spiel funktioniert nur, wenn alle Beteiligten das Signal "dies ist Spiel" verstehen und teilen [@bateson1972]. Wird spielerisches Necken als Angriff gelesen, kehrt sich die Wirkung um. In Paarbeziehungen setzt wirksames *intimate play* daher geteiltes Wissen, private Codes und Vertrauen voraus [@baxter1992; @betcher1981]. Am Arbeitsplatz zeigen ethnografische Studien, dass Humor und Spaß dort scheitern, wo implizite Grenzen (Hierarchie, Gender, Kultur) überschritten werden [@plester2009].
+
+## Freiwilligkeit und intrinsische Motivation
+
+Sowohl die klassischen Definitionen als auch der *Test of Playfulness* betonen **intrinsische Motivation** und **internale Kontrolle** als konstitutiv [@skard2008; @bundy2001]. Verordneter Spaß (*mandated fun*) kann Zynismus und Widerstand erzeugen, statt Bindung zu fördern [@fleming2005]. In der Organisationsforschung wird deshalb zwischen top-down organisierten Fun-Aktivitäten und selbst initiierter Playfulness unterschieden [@celestine2021; @petelczyc2018]; letztere (z. B. *Playful Work Design*) zeigt konsistentere positive Befunde [@scharp2023].
+
+## Passung von Person und Situation (Trait-Aktivierung)
+
+Nach der Trait-Aktivierungstheorie wirken Persönlichkeitsmerkmale vor allem dann, wenn die Situation Hinweisreize bietet, die den Trait relevant machen [@tett2003]. @scharp2019 zeigen in einer Tagebuchstudie, dass spielerische Arbeitsgestaltung besonders an Tagen mit **monotonen bzw. langweiligen** Aufgaben auftritt und dort mit besseren Arbeitserfahrungen einhergeht. Playfulness ist also besonders dann wirksam, wenn die Situation "unterfordert" und Spielraum zur Umgestaltung lässt.
+
+## Dosierung, Timing und Angemessenheit
+
+Playfulness kann dysfunktional werden, wenn sie als mangelnde Ernsthaftigkeit wahrgenommen wird, Konflikte vermeidet statt bearbeitet oder in Situationen hoher Verantwortung auftritt [@vanvleet2015b; @petelczyc2018]. In Paarbeziehungen wirkt Humor in Konflikten deeskalierend, wenn er auf Verbindung zielt, nicht aber, wenn er abwertend oder ausweichend ist [@driver2004].
+
+## Wechselseitigkeit und Ko-Regulation
+
+Insbesondere in Eltern-Kind-Interaktionen ist Playfulness ein dyadisches Phänomen: Wirksam ist sie, wenn Erwachsene feinfühlig auf Signale des Kindes reagieren, Erregung regulieren und klare Grenzen setzen, etwa beim Toben (*rough-and-tumble play*) [@paquette2004; @fletcher2013].
+
+```{mermaid}
+%%| label: fig-bedingungen
+%%| fig-cap: "Bedingungen, unter denen Playfulness positive Wirkungen entfalten kann (schematische Zusammenfassung)"
+flowchart LR
+    T["Trait Playfulness"] --> S["spielerisches Verhalten"]
+    C1["Sicherheit / schützender Rahmen"] --> S
+    C2["Geteilte Rahmung<br/>('dies ist Spiel')"] --> S
+    C3["Freiwilligkeit /<br/>Autonomie"] --> S
+    C4["Situative Passung<br/>(Trait-Aktivierung)"] --> S
+    S --> O["Positive Effekte<br/>(Wohlbefinden, Bindung,<br/>Kreativität, Engagement)"]
+    C5["Angemessenheit,<br/>Timing, Gegenseitigkeit"] -.moderiert.-> O
+```
+
+# Befunde nach Anwendungsfeldern
+
+## Paare
+
+**Partnerwahl und Signaltheorie.** @chick2012 schlagen vor, dass Playfulness bei Erwachsenen als Signal fungiert: bei Männern für Ungefährlichkeit/Nicht-Aggressivität, bei Frauen für Jugendlichkeit und Fruchtbarkeit. In Befragungen gehört Playfulness tatsächlich zu den hoch bewerteten Partnereigenschaften; die geschlechtsspezifischen Signalhypothesen werden in einer deutschsprachigen Replikation nur teilweise gestützt [@proyer2015signal].
+
+**Beziehungsqualität.** Frühe qualitative und klinische Arbeiten beschreiben *intimate play* (Necken, private Rituale, Kosenamen, Rollenspiele) als Mechanismus der Beziehungsregulation, der Nähe herstellt und Spannungen entschärft [@betcher1981; @baxter1992]. Quantitative Studien finden positive Zusammenhänge zwischen Spiel in der Partnerschaft und Beziehungszufriedenheit sowie positiver Emotionalität [@aune2002; @vanderbleek2011]. Die dyadische Studie von @proyer2019apim zeigt mit dem Actor-Partner Interdependence Model: Die eigene Playfulness hängt mit der eigenen Beziehungszufriedenheit zusammen, und die Playfulness des Partners/der Partnerin trägt teilweise zusätzlich bei; einzelne OLIW-Facetten (v. a. *other-directed*) sind dabei besonders relevant. Einen Überblick über diese Forschungslinie geben @brauer2021.
+
+**Mechanismen.** Experimentell gut belegt ist, dass gemeinsame **neue und anregende Aktivitäten** die Beziehungsqualität verbessern [@aron2000]; diese Aktivitäten haben oft spielerischen Charakter, sind aber nicht identisch mit Trait-Playfulness. Beobachtungsstudien an Paaren zeigen, dass Humor und spielerische Zuwendungsangebote (*bids*) im Alltag mit mehr positivem Affekt in Konfliktgesprächen einhergehen [@driver2004].
+
+**Einschränkungen.** Die meisten Studien sind querschnittlich, beruhen auf Selbstberichten und nutzen überwiegend junge, heterosexuelle, westliche Stichproben. Die Richtung des Zusammenhangs (Playfulness → Zufriedenheit oder umgekehrt) ist weitgehend offen.
+
+## Familien
+
+Familienbezogene Forschung fokussiert vor allem auf **elterliche Playfulness** und **Eltern-Kind-Spiel**.
+
+-   Pädiatrische Übersichtsarbeiten betonen, dass gemeinsames Spiel die Eltern-Kind-Bindung stärkt und als Puffer gegen Stress wirkt [@ginsburg2007; @yogman2018]. Diese Arbeiten sind normative Synthesen; die zugrunde liegende Evidenz ist heterogen.
+-   Die **Aktivierungstheorie** der Vater-Kind-Beziehung [@paquette2004] postuliert, dass väterliches Toben Kindern hilft, Risiko, Aggression und Selbstbehauptung in einem sicheren Rahmen zu regulieren. @fletcher2013 entwickeln ein Maß für die *Qualität* von Rough-and-tumble-Spiel, das neben Aktivität auch Feinfühligkeit und Grenzsetzung des Vaters erfasst.
+-   @menashe2017 zeigen in Beobachtungsstudien, dass elterliche Playfulness den Zusammenhang zwischen ungünstigem Elternverhalten und kindlicher Negativität abschwächt, d. h. als Moderator bzw. Schutzfaktor wirkt.
+
+**Einschränkungen.** Elterliche Playfulness wird selten mit validierten Trait-Skalen gemessen; meist werden Spielinteraktionen kodiert. Familiensystemische Perspektiven (Geschwister, Großeltern, Paarbeziehung der Eltern) sind kaum untersucht.
+
+## Kindliche Entwicklung
+
+**Bewältigung und Wohlbefinden.** Playfulness hängt bei Vorschulkindern [@saunders1999] und Jugendlichen [@hess2003] positiv mit Copingfähigkeiten zusammen; beide Studien haben kleine Stichproben und korrelative Designs.
+
+**Kreativität.** Bereits @lieberman1977 fand Zusammenhänge zwischen Playfulness und divergentem Denken; spätere Studien bestätigen Zusammenhänge etwa mit motorischer Kreativität [@trevlas2003].
+
+**Kognitive Entwicklung und Lernen.** Die Annahme, dass (Als-ob-)Spiel kausal zu Entwicklungsfortschritten führt, wurde kritisch geprüft. Die einflussreiche Übersicht von @lillard2013 kommt zu dem Schluss, dass die Evidenz für kausale Effekte des Pretend Play auf Kreativität, Intelligenz, Problemlösen oder Theory of Mind schwach und methodisch häufig angreifbar ist (u. a. Experimentatoreffekte, fehlende Verblindung); plausibel sei eher, dass Spiel *eine* von mehreren Entwicklungsrouten ist oder ein Epiphänomen. Als vielversprechend gilt **Guided Play**, bei dem Erwachsene eine spielerische Lernumgebung mit Lernzielen strukturieren, das Kind aber die Initiative behält [@weisberg2016].
+
+**Gesellschaftliche Debatte.** @gray2011 argumentiert, der Rückgang freien, unbeaufsichtigten Spiels gehe mit steigenden psychischen Belastungen von Kindern und Jugendlichen einher. Die Argumentation beruht auf zeitlichen Koinzidenzen und ist kausal nicht belastbar, wird aber breit rezipiert.
+
+## Organisationen
+
+**Individuelle Playfulness und Arbeitsergebnisse.** Playfulness bei Beschäftigten hängt mit Innovationsverhalten, Arbeitszufriedenheit und Leistung zusammen [@yu2007]. @mainemelis2006 entwickeln eine Theorie, wonach Spiel Kreativität über kognitive Flexibilität, positive Emotion und das Ausprobieren ungewöhnlicher Kombinationen fördert, sofern Organisationen zeitliche und räumliche "Spielfelder" ermöglichen.
+
+**Playful Work Design (PWD).** Ein jüngerer Ansatz versteht Playfulness als proaktive Strategie, Arbeitsaufgaben selbst spielerisch zu gestalten, entweder durch *designing fun* oder *designing competition* [@bakker2020; @scharp2023]. Tagebuchstudien zeigen tägliche Schwankungen und Zusammenhänge mit Engagement, besonders bei langweiligen Aufgaben [@scharp2019].
+
+**Workplace Fun.** Übersichtsarbeiten unterscheiden zwischen Fun-Aktivitäten, Kollegialität und Unterstützung durch Führung [@michel2019; @petelczyc2018; @celestine2021]. Spaß bei der Arbeit sagt in Studien eine geringere Fluktuation voraus, v. a. bei jüngeren Beschäftigten im Dienstleistungssektor [@tews2014]. Die Effekte auf die Leistung sind uneinheitlich und teils vermittelt über Engagement und positive Affekte [@fluegge2014].
+
+**Ambivalenzen.** Kritische Studien zeigen, dass verordnete "Kulturen des Spaßes" als manipulativ erlebt werden und Zynismus fördern können [@fleming2005], und dass Humor und Spiel Grenzen der Angemessenheit überschreiten und ausschließend wirken können [@plester2009].
+
+## Querschnittsbefund: Gesundheit und Wohlbefinden
+
+Über Lebensbereiche hinweg korreliert Playfulness bei Erwachsenen positiv mit Lebenszufriedenheit, körperlicher Aktivität und subjektiver Gesundheit [@proyer2018health; @proyer2014]. @proyer2021intervention fanden in einem randomisierten, placebokontrollierten Online-Experiment, dass kurze Übungen (z. B. abends drei spielerische Situationen des Tages notieren) Trait-Playfulness und Wohlbefinden kurzfristig steigern können. Das spricht dafür, dass Playfulness zumindest teilweise veränderbar ist. Die Effekte sind klein bis moderat und nicht durchweg langfristig stabil.
+
+# Synthese und Forschungslücken
+
+| Feld | Evidenzlage | Typisches Design | Zentrale Lücke |
+|------------------|------------------|------------------|------------------|
+| Paare | Moderat, konsistent positive Korrelationen | Querschnitt, dyadisch (APIM) | Längsschnitt, Kausalrichtung, diverse Stichproben |
+| Familien | Begrenzt, v. a. Beobachtung von Eltern-Kind-Spiel | Beobachtung, Querschnitt | Validierte Messung elterlicher Playfulness, systemische Perspektive |
+| Kindliche Entwicklung | Umfangreich, aber kausal umstritten | Korrelativ, kleine Experimente | Präregistrierte, verblindete Experimente |
+| Organisationen | Wachsend, gemischte Befunde | Querschnitt, Tagebuchstudien | Mehrebenenanalysen, Kontextbedingungen, Langzeitfolgen |
+
+: Zusammenfassende Einschätzung der Evidenz {#tbl-synthese}
+
+Zusammenfassend:
+
+1.  Die **Messung** hat sich von Fremdbeurteilungen kindlichen Spielverhaltens hin zu mehrdimensionalen Trait-Modellen für Erwachsene (OLIW) entwickelt. Die Konstruktabgrenzung bleibt eine zentrale Herausforderung.
+2.  **Wirkbedingungen** sind vor allem Sicherheit, geteilte Rahmung, Freiwilligkeit und situative Passung. Fehlen sie, sind neutrale oder negative Effekte plausibel.
+3.  Die **Befundlage** ist in allen Feldern überwiegend korrelativ. Kausale Aussagen sind am ehesten für Interventionen im Erwachsenenalter [@proyer2021intervention] und für gemeinsame neue Aktivitäten in Paaren [@aron2000] möglich.
+
+# Literatur
+
+::: {#refs}
+:::
