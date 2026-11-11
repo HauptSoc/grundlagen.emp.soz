@@ -27,7 +27,7 @@ execute:
   cache: true
   message: false
   warning: false
---- 
+---
 
 ## Neues aus der Wissenschaft!
 
@@ -121,16 +121,14 @@ Im Rahmen eines wissenschaftlichen Diskurses und vor allem im Rahmen einer wisse
 Ein Konzept ist eine Menge von Informationen über Objekte, Merkmale oder Relationen. Die Information kann die *Extension* oder die *Intension* spezifizieren oder festlegen.
 
 Die **Extension** eines Konzepts sind alle Dinge, die das Konzept umfasst.
+         
+ - Die Extension des Konzepts *Familie* sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.
 
-```         
-Die Extension des Konzepts *Familie* sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.
-```
 
 Die **Intension** eines Konzepts sind alle Eigenschaften, die den Einheiten innerhalb einer Extension gemeinsam sind.
 
-```         
- Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
-```
+ - Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist.
+
 
 ## Familie und Paar: Überschneidende Konzepte
 
@@ -202,14 +200,16 @@ b) innerhalb der unterschiedenen Gruppen keine *für die Fragestellung* relevant
 
 ![](images/mh-definitionen-ueberblick.svg)
 
-## Staatsbügerschaft
+Eine vertiefende Diskussion gibt @diehlMigrationUndEthnische2024. 
+
+## Personen mit Migrationshintergrund
 
 **Definition:**
 Eine Person hat einen Migrationshintergrund, wenn **sie selbst oder mindestens ein Elternteil nicht mit deutscher Staatsangehörigkeit geboren wurde**.
 
 ![](images/mh-v1-staatsangehoerigkeit.svg)
 
-Probleme: 
+Mögliche (!) Probleme: 
 
 - Aussiedler (u.a. "Russlanddeutsche"), in der DDR geborene, einbürgerte Personen werden der Gruppe "Ohne Migrationshintergrund" zugeordnet.
 - Die dritte migrantische Generation wird als "ohne Migrationshintergrund" klassifiziert, wobei diese Gruppe von ungleicher Behandlung aufgrund askriptiver Merkmale betroffen sein könnte.
@@ -221,12 +221,23 @@ Eine Person gehört zu dieser Gruppe, wenn sie selbst eingewandert ist oder dire
 
 ![](images/mh-v2-migrationsgeschichte.svg)
 
+Mögliche (!) Probleme: 
+
+- Wenn Reaktionen auf askriptive Merkmale (u.a.: Hautfarbe, Name) studiert werden soll, können auch mehrere Generationen nach der Migration betroffen sein. 
+- Vertriebene aus deutschen Gebieten können auch Migrationserfahrungen gemacht haben. 
+
+
 ## Personen mit Einwanderungsgeschichte
 
 **Definition:**
 Eine Person gehört zu dieser Gruppe, **wenn sie oder beide Elternteile seit 1950 ins heutige Bundesgebiet eingewandert sind**.
 
 ![](images/mh-v3-einwanderungsgeschichte.svg)
+
+Mögliche (!) Probleme: 
+
+- Askriptive Merkmale können auch nur von einem Elternteil stammen.
+- Migration vor 1950 kann relevant sein (Vertriebene; Sudetendeutsche)
 
 ## Geburtsortsdefinition
 
@@ -235,6 +246,11 @@ Eine Person gehört zu dieser Gruppe, **wenn sie ins heutige Bundesgebiet eingew
 
 ![](images/mh-v4-geburtsort.svg)
 
+
+Mögliche (!) Probleme: 
+
+- Vertriebene mit gleichen askriptiven Merkmalen wie die Mehrheitsgruppe werden zusammengefasst mit Personen mit abweichenden askriptiven Merkmalen,. 
+
 ## Subjektive Einordnung in Mehrheits- oder Minderheitsgruppe
 
 **Definition:**
@@ -242,6 +258,14 @@ Eine Person gehört zu dieser Gruppe, wenn sie sich zu einer ethnischen oder rel
 
 ![](images/mh-v5-subjektiv.svg)
 
-## Does it matter? 
+Mögliche (!) Probleme: 
 
-!(Quelle: @milewskiBevolkerungMitMigrationshintergrund2024)[https://www.bib.bund.de/DE/Publikationen/Broschueren/Online/Bilder/Pyramiden-Migration/Die-Bevoelkerung-mit-Migrationshintergrund-neu-entdecken-Abb1.png]
+- Subjektive Einordnungen und Reaktionen auf askriptive Merkmale können verschieden sein ("weil jemand sich zur Mehrheitsgesellschaft zählt, bedeutet nicht, dass er/sie von Teilen der Mehrheitsgesellschaft auch so behandelt wird")
+- Die Klassifikation folgt keiner trennscharfen Unterteilung und ist nicht ein-eindeutig. 
+
+## Literatur 
+
+:::{.refs} 
+:::
+
+

@@ -74,7 +74,7 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html#was-ist-ein-konzept",
     "title": "Unterscheiden: Grundlagen",
     "section": "Was ist ein Konzept?",
-    "text": "Was ist ein Konzept?\nEin Konzept ist eine Menge von Informationen über Objekte, Merkmale oder Relationen. Die Information kann die Extension oder die Intension spezifizieren oder festlegen.\nDie Extension eines Konzepts sind alle Dinge, die das Konzept umfasst.\nDie Extension des Konzepts *Familie* sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.\nDie Intension eines Konzepts sind alle Eigenschaften, die den Einheiten innerhalb einer Extension gemeinsam sind.\n Zur Intension des Konzepts *Familie* gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist."
+    "text": "Was ist ein Konzept?\nEin Konzept ist eine Menge von Informationen über Objekte, Merkmale oder Relationen. Die Information kann die Extension oder die Intension spezifizieren oder festlegen.\nDie Extension eines Konzepts sind alle Dinge, die das Konzept umfasst.\n\nDie Extension des Konzepts Familie sind alle Familien in Abgrenzung zu allen nicht-familiären Lebensformen.\n\nDie Intension eines Konzepts sind alle Eigenschaften, die den Einheiten innerhalb einer Extension gemeinsam sind.\n\nZur Intension des Konzepts Familie gehört mindestens: a) es gibt mindestens ein Kind b) es gibt mindestens eine Person, die in der Rolle eines Erziehungsberechtigten ist."
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#warum-das-alles",
@@ -666,7 +666,7 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html",
     "title": "Unterscheiden: Grundlagen",
     "section": "",
-    "text": "Sprachkompetenz und Bildungshintergrund der Eltern (Link zur Studie)"
+    "text": "Note\n\n\n\nStudie: Hausfeld, Hampel, Bach & Menges (2026). Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities. Emotion. https://doi.org/10.1037/emo0001733\n\n\n \nFrage: Sind Frauen emotional intelligenter als Männer? Die Studie fasst dazu 1.279 Artikel mit 1.428 Stichproben und rund 609.000 Personen aus 76 Ländern zusammen.\n \nZu den Shownotes"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
@@ -8156,7 +8156,7 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html#unterscheidung-von-in-groupout-group-auf-nationalstaatsebene",
     "title": "Unterscheiden: Grundlagen",
     "section": "Unterscheidung von In-Group/Out-Group auf Nationalstaatsebene",
-    "text": "Unterscheidung von In-Group/Out-Group auf Nationalstaatsebene"
+    "text": "Unterscheidung von In-Group/Out-Group auf Nationalstaatsebene\n\nEine vertiefende Diskussion gibt Diehl (2024)."
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#geschlechtsspezifische-bildungsungleichheiten",
@@ -8233,27 +8233,41 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html#personen-mit-migrationsgeschichte",
     "title": "Unterscheiden: Grundlagen",
     "section": "Personen mit Migrationsgeschichte",
-    "text": "Personen mit Migrationsgeschichte\nEine Person gehört zu dieser Gruppe, wenn sie selbst eingewandert ist oder direkte Nachkommen eines Eingewanderten ist."
+    "text": "Personen mit Migrationsgeschichte\nEine Person gehört zu dieser Gruppe, wenn sie selbst eingewandert ist oder direkte Nachkommen eines Eingewanderten ist.\n\nMögliche (!) Probleme:\n\nWenn Reaktionen auf askriptive Merkmale (u.a.: Hautfarbe, Name) studiert werden soll, können auch mehrere Generationen nach der Migration betroffen sein.\nVertriebene aus deutschen Gebieten können auch Migrationserfahrungen gemacht haben."
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#personen-mit-einwanderungsgeschichte",
     "href": "slides/02-Unterscheiden_Grundlagen.html#personen-mit-einwanderungsgeschichte",
     "title": "Unterscheiden: Grundlagen",
     "section": "Personen mit Einwanderungsgeschichte",
-    "text": "Personen mit Einwanderungsgeschichte\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie oder beide Elternteile seit 1950 ins heutige Bundesgebiet eingewandert sind."
+    "text": "Personen mit Einwanderungsgeschichte\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie oder beide Elternteile seit 1950 ins heutige Bundesgebiet eingewandert sind.\n\nMögliche (!) Probleme:\n\nAskriptive Merkmale können auch nur von einem Elternteil stammen.\nMigration vor 1950 kann relevant sein (Vertriebene; Sudetendeutsche)"
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#geburtsortsdefinition",
     "href": "slides/02-Unterscheiden_Grundlagen.html#geburtsortsdefinition",
     "title": "Unterscheiden: Grundlagen",
     "section": "Geburtsortsdefinition",
-    "text": "Geburtsortsdefinition\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie ins heutige Bundesgebiet eingewandert ist."
+    "text": "Geburtsortsdefinition\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie ins heutige Bundesgebiet eingewandert ist.\n\nMögliche (!) Probleme:\n\nVertriebene mit gleichen askriptiven Merkmalen wie die Mehrheitsgruppe werden zusammengefasst mit Personen mit abweichenden askriptiven Merkmalen,."
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#subjektive-einordnung-in-mehrheits--oder-minderheitsgruppe",
     "href": "slides/02-Unterscheiden_Grundlagen.html#subjektive-einordnung-in-mehrheits--oder-minderheitsgruppe",
     "title": "Unterscheiden: Grundlagen",
     "section": "Subjektive Einordnung in Mehrheits- oder Minderheitsgruppe",
-    "text": "Subjektive Einordnung in Mehrheits- oder Minderheitsgruppe\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie sich zu einer ethnischen oder religiösen Minderheit zählt, die ihren ihren “Ursprung” nicht im Land verortet (z. B. “Afrikanisch”, “Schwarz”, “Muslimisch”)."
+    "text": "Subjektive Einordnung in Mehrheits- oder Minderheitsgruppe\nDefinition: Eine Person gehört zu dieser Gruppe, wenn sie sich zu einer ethnischen oder religiösen Minderheit zählt, die ihren ihren “Ursprung” nicht im Land verortet (z. B. “Afrikanisch”, “Schwarz”, “Muslimisch”).\n\nMögliche (!) Probleme:\n\nSubjektive Einordnungen und Reaktionen auf askriptive Merkmale können verschieden sein (“weil jemand sich zur Mehrheitsgesellschaft zählt, bedeutet nicht, dass er/sie von Teilen der Mehrheitsgesellschaft auch so behandelt wird”)\nDie Klassifikation folgt keiner trennscharfen Unterteilung und ist nicht ein-eindeutig."
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#personen-mit-migrationshintergrund",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#personen-mit-migrationshintergrund",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Personen mit Migrationshintergrund",
+    "text": "Personen mit Migrationshintergrund\nDefinition: Eine Person hat einen Migrationshintergrund, wenn sie selbst oder mindestens ein Elternteil nicht mit deutscher Staatsangehörigkeit geboren wurde.\n\nMögliche (!) Probleme:\n\nAussiedler (u.a. “Russlanddeutsche”), in der DDR geborene, einbürgerte Personen werden der Gruppe “Ohne Migrationshintergrund” zugeordnet.\nDie dritte migrantische Generation wird als “ohne Migrationshintergrund” klassifiziert, wobei diese Gruppe von ungleicher Behandlung aufgrund askriptiver Merkmale betroffen sein könnte."
+  },
+  {
+    "objectID": "slides/02-Unterscheiden_Grundlagen.html#literatur",
+    "href": "slides/02-Unterscheiden_Grundlagen.html#literatur",
+    "title": "Unterscheiden: Grundlagen",
+    "section": "Literatur",
+    "text": "Literatur\n\n\n\n\n\n\n\nDiehl, Claudia. 2024. “Migration und ethnische Ungleichheiten.” In Handbuch Sozialstrukturanalyse, 1–25. Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-39759-3_47-1.\n\n\nWonka, Arndt. 2022. “Konzepte und Konzeptspezifikation.” In Forschungsstrategien in den Sozialwissenschaften: Eine Einführung, edited by Markus Tausendpfund, 169–94. Wiesbaden: Springer Fachmedien. https://doi.org/10.1007/978-3-658-36972-9_8."
   }
 ]

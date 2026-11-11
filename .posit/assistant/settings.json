@@ -8,7 +8,25 @@
       "*": "allow"
     },
     "bash": {
-      "quarto render *": "allow"
+      "quarto render *": "allow",
+      "sed *": "allow",
+      "cat *": "allow",
+      "head *": "allow",
+      "ls *": "allow",
+      "cd *": "allow",
+      "quarto pandoc *": "allow",
+      "echo *": "allow",
+      "pandoc *": "allow",
+      "tasklist *": "allow",
+      "grep *": "allow",
+      "timeout *": "allow",
+      "git status *": "allow",
+      "git remote *": "allow",
+      "git log *": "allow",
+      "git add *": "allow",
+      "git commit *": "allow",
+      "git push *": "allow",
+      "tail *": "allow"
     },
     "webfetch": {
       "https://box.hu-berlin.de/*": "allow",
