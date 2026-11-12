@@ -12,21 +12,16 @@ format:
 bibliography: playfulness.bib
 csl: https://www.zotero.org/styles/apa
 link-citations: true
+editor: source
 ---
-
-::: callout-warning
-## Hinweis zur Quellenlage
-
-Die Übersicht ist ein Arbeitsentwurf. Bibliografische Angaben (Jahrgänge, Seitenzahlen) sollten vor einer Verwendung in Lehre oder Publikation gegen die Originalquellen geprüft und um DOIs ergänzt werden.
-:::
 
 # Begriff und Abgrenzung
 
 *Playfulness* (Verspieltheit, Spielfreude) bezeichnet in der aktuellen Forschung überwiegend eine **Persönlichkeitsdisposition**: die Neigung, Situationen so zu rahmen (oder umzudeuten), dass sie für sich selbst und/oder andere unterhaltsam, interessant oder intellektuell anregend werden [@proyer2017; @barnett2007]. Davon zu unterscheiden sind
 
--   **Spiel (play)** als beobachtbare Aktivität bzw. Verhaltensklasse [@burghardt2005; @pellegrini2009],
--   **spielerische Zustände (state playfulness)**, etwa der *paratelische* Zustand in Apters Reversal-Theorie [@apter1991],
--   **Humor** und **Spaß (fun)**, die mit Playfulness korrelieren, aber konzeptuell enger sind [@proyer2013].
+- **Spiel (play)** als beobachtbare Aktivität bzw. Verhaltensklasse [@burghardt2005; @pellegrini2009],
+- **spielerische Zustände (state playfulness)**, etwa der *paratelische* Zustand in Apters Reversal-Theorie [@apter1991],
+- **Humor** und **Spaß (fun)**, die mit Playfulness korrelieren, aber konzeptuell enger sind [@proyer2013].
 
 Begriffsgeschichtlich reicht die Diskussion von kulturtheoretischen Ansätzen [@huizinga1938] über Batesons Idee der Metakommunikation ("this is play") [@bateson1972] bis zu evolutionär-biologischen Perspektiven [@burghardt2005; @bateson2013]. Eine interdisziplinäre Übersicht der Definitionen geben @masek2021, für die Erwachsenenforschung @vanvleet2015a und @vanvleet2015b.
 
@@ -51,7 +46,7 @@ Für die Messung ist diese Unterscheidung zentral: Ein Instrument kann Playfulne
 | OLIW | @proyer2017 | Erwachsene | Selbstbericht, 28 Items | **O**ther-directed, **L**ighthearted, **I**ntellectual, **W**himsical |
 | Playful Work Design Scale (PWDS) | @scharp2023 | Beschäftigte | Selbstbericht (auch Tagebuch) | Designing fun, designing competition |
 
-: Ausgewählte Messinstrumente für Playfulness {#tbl-instrumente}
+: Ausgewählte Messinstrumente für Playfulness
 
 ## Entwicklungslinien der Messung
 
@@ -59,10 +54,10 @@ Für die Messung ist diese Unterscheidung zentral: Ein Instrument kann Playfulne
 
 **Erwachsenenalter: Selbstbericht und Strukturfragen.** Für Erwachsene dominieren Selbstberichtsskalen. @proyer2013 analysierten 17 Instrumente gemeinsam und fanden eine hierarchische Struktur mit einem Generalfaktor sowie Subfaktoren, die u. a. mit Extraversion, Offenheit und Humor überlappen. Daraus entstand das OLIW-Modell [@proyer2017], das vier Facetten unterscheidet:
 
--   *Other-directed*: Playfulness im Umgang mit anderen (z. B. Spannungen auflockern),
--   *Lighthearted*: unbeschwerte, wenig zukunftsbesorgte Grundhaltung,
--   *Intellectual*: Spiel mit Ideen und Gedanken,
--   *Whimsical*: Vorliebe für Ungewöhnliches, Skurriles.
+- *Other-directed*: Playfulness im Umgang mit anderen (z. B. Spannungen auflockern),
+- *Lighthearted*: unbeschwerte, wenig zukunftsbesorgte Grundhaltung,
+- *Intellectual*: Spiel mit Ideen und Gedanken,
+- *Whimsical*: Vorliebe für Ungewöhnliches, Skurriles.
 
 ## Methodische Probleme
 
@@ -131,9 +126,9 @@ flowchart LR
 
 Familienbezogene Forschung fokussiert vor allem auf **elterliche Playfulness** und **Eltern-Kind-Spiel**.
 
--   Pädiatrische Übersichtsarbeiten betonen, dass gemeinsames Spiel die Eltern-Kind-Bindung stärkt und als Puffer gegen Stress wirkt [@ginsburg2007; @yogman2018]. Diese Arbeiten sind normative Synthesen; die zugrunde liegende Evidenz ist heterogen.
--   Die **Aktivierungstheorie** der Vater-Kind-Beziehung [@paquette2004] postuliert, dass väterliches Toben Kindern hilft, Risiko, Aggression und Selbstbehauptung in einem sicheren Rahmen zu regulieren. @fletcher2013 entwickeln ein Maß für die *Qualität* von Rough-and-tumble-Spiel, das neben Aktivität auch Feinfühligkeit und Grenzsetzung des Vaters erfasst.
--   @menashe2017 zeigen in Beobachtungsstudien, dass elterliche Playfulness den Zusammenhang zwischen ungünstigem Elternverhalten und kindlicher Negativität abschwächt, d. h. als Moderator bzw. Schutzfaktor wirkt.
+- Pädiatrische Übersichtsarbeiten betonen, dass gemeinsames Spiel die Eltern-Kind-Bindung stärkt und als Puffer gegen Stress wirkt [@ginsburg2007; @yogman2018]. Diese Arbeiten sind normative Synthesen; die zugrunde liegende Evidenz ist heterogen.
+- Die **Aktivierungstheorie** der Vater-Kind-Beziehung [@paquette2004] postuliert, dass väterliches Toben Kindern hilft, Risiko, Aggression und Selbstbehauptung in einem sicheren Rahmen zu regulieren. @fletcher2013 entwickeln ein Maß für die *Qualität* von Rough-and-tumble-Spiel, das neben Aktivität auch Feinfühligkeit und Grenzsetzung des Vaters erfasst.
+- @menashe2017 zeigen in Beobachtungsstudien, dass elterliche Playfulness den Zusammenhang zwischen ungünstigem Elternverhalten und kindlicher Negativität abschwächt, d. h. als Moderator bzw. Schutzfaktor wirkt.
 
 **Einschränkungen.** Elterliche Playfulness wird selten mit validierten Trait-Skalen gemessen; meist werden Spielinteraktionen kodiert. Familiensystemische Perspektiven (Geschwister, Großeltern, Paarbeziehung der Eltern) sind kaum untersucht.
 
@@ -170,7 +165,7 @@ Familienbezogene Forschung fokussiert vor allem auf **elterliche Playfulness** u
 | Kindliche Entwicklung | Umfangreich, aber kausal umstritten | Korrelativ, kleine Experimente | Präregistrierte, verblindete Experimente |
 | Organisationen | Wachsend, gemischte Befunde | Querschnitt, Tagebuchstudien | Mehrebenenanalysen, Kontextbedingungen, Langzeitfolgen |
 
-: Zusammenfassende Einschätzung der Evidenz {#tbl-synthese}
+: Zusammenfassende Einschätzung der Evidenz
 
 Zusammenfassend:
 

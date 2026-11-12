@@ -1,0 +1,67 @@
+---
+title: "Übung: Grundlagen guten Unterscheidens"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: false
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+
+## Let the games begin! 
+
+Wir wollen verstehen, welche Rolle *Verspieltheit* bzw. *verspieltes Verhalten* (zunächst bei Erwachsenen) auf die *Zufriedenheit der Partnerschaft* hat. Das ist ein durchaus dickes Brett (= "komplexe Frage"), daher werden wir es in kleinen Schritten analysieren. 
+
+```{mermaid}
+flowchart LR
+E[Verspieltheit] --> G[Zufriedenheit mit Partnerschaft]
+```
+
+## Erste Schritte
+
+1. Unterscheiden Sie *Verspieltheit* und *verspieltes Verhalten*. Was ist in welchem Fall die Untersuchungseinheit? 
+
+2. Unterscheiden Sie *Verspieltheit* von *Humor* und *Kreativität* 
+
+3. Unterscheiden Sie *verspieltes Verhalten* von *Improvisation* und *Schauspielerei*. 
+
+3. Unterscheiden Sie mindestens drei Ausprägungen von *Verspieltheit* und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen. 
+
+4. Unterscheiden Sie mindestens drei Ausprügungen der Eigenschaft *Zufriedenheit mit der Partnerschaft* und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.
+
+5. Diskutieren Sie, auf welche Art und Weise, die von Ihnen getroffenen Unterschiede von *Verspieltheit* mit *Zufriedenheit mit der Partnerschaft* verbunden sind. Benötigen wir ggf. mehr Eigenschaften, um diese Verbindung zu verstehen? 
+
+
+```{mermaid}
+flowchart LR
+
+E[Verspieltheit] --> BB[?] --> G[Zufr. mit Partnerschaft]
+```
+
+```{mermaid}
+flowchart LR
+E[Verspieltheit]  --> G[Zufr. mit Partnerschaft]
+BB[?] --> E & G 
+
+```
+
+```{mermaid}
+flowchart LR
+E[Verspieltheit]  --> G[Zufr. mit Partnerschaft]
+E --> BB[?] 
+BB --> G
+```
