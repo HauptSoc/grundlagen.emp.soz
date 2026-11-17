@@ -953,14 +953,14 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-1-eindimensional---manifest",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Variante 1: Eindimensional - manifest",
-    "text": "Variante 1: Eindimensional - manifest\n\n\n\n\n\nflowchart LR\n\nE([Einsamkeit]) --&gt; I1[\"`Wie oft fühlen \nSie sich einsam?`\"]"
+    "text": "Variante 1: Eindimensional - manifest\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEinsamkeit\n\n\n\n\n\n\n\nWie oft fühlen Sie sich einsam?"
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-2-eindimensional---latent",
     "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-2-eindimensional---latent",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Variante 2: Eindimensional - latent",
-    "text": "Variante 2: Eindimensional - latent\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; \nend \n\nE --&gt; I1 & I2 & I3"
+    "text": "Variante 2: Eindimensional - latent\n\n\n\n\n\n\n\n\n\n\n\nIndikatoren\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEinsamkeit\n\n\n\n\n\n\n\nI1\n\n\n\n\n\n\n\nI2\n\n\n\n\n\n\n\nI3"
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-3-zweidimensional-a",
@@ -974,21 +974,21 @@
     "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-3-zweidimensional",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Variante 3: Zweidimensional",
-    "text": "Variante 3: Zweidimensional\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\"Dimensionen\"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; I4;\nend \n\nE --&gt; GE & IE\nGE --&gt; I1 & I2\nIE --&gt; I3 & I4"
+    "text": "Variante 3: Zweidimensional\n\n\n\n\n\n\n\n\n\n\n\nIndikatoren\n\n\n\n\n\n\n\nDimensionen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEinsamkeit\n\n\n\n\n\n\n\nSozial einsam\n\n\n\n\n\n\n\nEmotional einsam\n\n\n\n\n\n\n\nI1\n\n\n\n\n\n\n\nI2\n\n\n\n\n\n\n\nI3\n\n\n\n\n\n\n\nI4"
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-4-dreidimensional-a",
     "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-4-dreidimensional-a",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Variante 4: Dreidimensional A",
-    "text": "Variante 4: Dreidimensional A\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\"Dimensionen\"]\nE([Einsamkeit])\nIS([\"`Isoliertheit`\"])\nRV([\"`Relationale Verbundenheit`\"])\nKV([\"`Kollektive Verbundenheit`\"])\nend \n\nsubgraph I[\"Indikatoren\"]\nI1; I2; I3; I4; I5; I6\nend \n\n\nE --&gt; IS & RV & KV\nIS --&gt; I1 & I2\nRV --&gt; I3 & I4\nKV --&gt; I5 & I6"
+    "text": "Variante 4: Dreidimensional A\n\n\n\n\n\n\n\n\n\n\n\nIndikatoren\n\n\n\n\n\n\n\nDimensionen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEinsamkeit\n\n\n\n\n\n\n\nIsoliertheit\n\n\n\n\n\n\n\nRelationale Verbundenheit\n\n\n\n\n\n\n\nKollektive Verbundenheit\n\n\n\n\n\n\n\nI1\n\n\n\n\n\n\n\nI2\n\n\n\n\n\n\n\nI3\n\n\n\n\n\n\n\nI4\n\n\n\n\n\n\n\nI5\n\n\n\n\n\n\n\nI6"
   },
   {
     "objectID": "slides/03-Unterscheiden_Dimensionalität.html#variante-5-dreidimensional-b",
     "href": "slides/03-Unterscheiden_Dimensionalität.html#variante-5-dreidimensional-b",
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Variante 5: Dreidimensional B",
-    "text": "Variante 5: Dreidimensional B\n\n\n\n\n\nflowchart LR\n\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nAE([\"`Affiliativ einsam`\"])\nend \n\nE --&gt; GE & IE & AE\nGE --&gt; I1 & I2\nIE --&gt; I3 & I4\nAE --&gt; I5 & I6"
+    "text": "Variante 5: Dreidimensional B\n\n\n\n\n\n\n\n\n\n\n\nIndikatoren\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEinsamkeit\n\n\n\n\n\n\n\nSozial einsam\n\n\n\n\n\n\n\nEmotional einsam\n\n\n\n\n\n\n\nAffiliativ einsam\n\n\n\n\n\n\n\nI1\n\n\n\n\n\n\n\nI2\n\n\n\n\n\n\n\nI7\n\n\n\n\n\n\n\nI8\n\n\n\n\n\n\n\nI3\n\n\n\n\n\n\n\nI4\n\n\n\n\n\n\n\nI9\n\n\n\n\n\n\n\nI5\n\n\n\n\n\n\n\nI6"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#konzeptspezifikation---reminder",
@@ -8141,8 +8141,8 @@
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#neues-aus-der-wissenschaft",
     "href": "slides/02-Unterscheiden_Grundlagen.html#neues-aus-der-wissenschaft",
     "title": "Unterscheiden: Grundlagen",
-    "section": "",
-    "text": "Note\n\n\n\nStudie: Hausfeld, Hampel, Bach & Menges (2026). Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities. Emotion. https://doi.org/10.1037/emo0001733\n\n\n \nFrage: Sind Frauen emotional intelligenter als Männer? Die Studie fasst dazu 1.279 Artikel mit 1.428 Stichproben und rund 609.000 Personen aus 76 Ländern zusammen.\n \nZu den Shownotes"
+    "section": "Neues aus der Wissenschaft!",
+    "text": "Neues aus der Wissenschaft!\n\n\n\n\n\n\nNote\n\n\nStudie: Hausfeld, Hampel, Bach & Menges (2026). Putting assumptions to the test: A meta-analytic review of gender differences in emotional intelligence and specific emotion abilities. Emotion. https://doi.org/10.1037/emo0001733\n\n\n\n \nFrage: Sind Frauen emotional intelligenter als Männer? Die Studie fasst dazu 1.279 Artikel mit 1.428 Stichproben und rund 609.000 Personen aus 76 Ländern zusammen.\n \nZu den Shownotes"
   },
   {
     "objectID": "slides/02-Unterscheiden_Grundlagen.html#unterscheidung-von-in-gro",
@@ -8268,7 +8268,7 @@
     "href": "slides/02-Unterscheiden_Grundlagen.html#literatur",
     "title": "Unterscheiden: Grundlagen",
     "section": "Literatur",
-    "text": "Literatur"
+    "text": "Literatur\n\n\n\n\n\n\n\nDiehl, Claudia. 2024. “Migration und ethnische Ungleichheiten.” In Handbuch Sozialstrukturanalyse. Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-39759-3_47-1.\n\n\nWonka, Arndt. 2022. “Konzepte und Konzeptspezifikation.” In Forschungsstrategien in den Sozialwissenschaften: Eine Einführung, edited by Markus Tausendpfund. Springer Fachmedien. https://doi.org/10.1007/978-3-658-36972-9_8."
   },
   {
     "objectID": "misc/playfulness/playfulness_literatur.html",
@@ -8465,5 +8465,33 @@
     "title": "Übung: Grundlagen guten Unterscheidens",
     "section": "2 Erste Schritte",
     "text": "2 Erste Schritte\n\nUnterscheiden Sie Verspieltheit und verspieltes Verhalten. Was ist in welchem Fall die Untersuchungseinheit?\nUnterscheiden Sie Verspieltheit von Humor und Kreativität\nUnterscheiden Sie verspieltes Verhalten von Improvisation und Schauspielerei.\nUnterscheiden Sie mindestens drei Ausprägungen von Verspieltheit und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.\nUnterscheiden Sie mindestens drei Ausprügungen der Eigenschaft Zufriedenheit mit der Partnerschaft und erläutern Sie, was Personen erfüllen müssen, um in eine dieser Ausprägungen zu fallen.\nDiskutieren Sie, auf welche Art und Weise, die von Ihnen getroffenen Unterschiede von Verspieltheit mit Zufriedenheit mit der Partnerschaft verbunden sind. Benötigen wir ggf. mehr Eigenschaften, um diese Verbindung zu verstehen?\n\n\n\n\n\n\n\nflowchart LR\n\nE[Verspieltheit] --&gt; BB[?] --&gt; G[Zufr. mit Partnerschaft]\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\nE[Verspieltheit]  --&gt; G[Zufr. mit Partnerschaft]\nBB[?] --&gt; E & G \n\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\nE[Verspieltheit]  --&gt; G[Zufr. mit Partnerschaft]\nE --&gt; BB[?] \nBB --&gt; G"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#male-loneliness",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#male-loneliness",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Male Loneliness?",
+    "text": "Male Loneliness?\n\neb = transpose(eb_raw)\nindikatoren = [...new Set(eb.map(d =&gt; d.indikator))]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof indikator = Inputs.select(indikatoren, {value: indikatoren[0], label: \"Indikator\", width: 420})\n\n\n\n\n\n\n\n\nviewof geschlecht = Inputs.checkbox([\"Männlich\", \"Weiblich\"], {value: [\"Männlich\", \"Weiblich\"], label: \"Geschlecht\"})\n\n\n\n\n\n\n\n\nsel = eb.filter(d =&gt; d.indikator === indikator && geschlecht.includes(d.geschlecht))\nymax = Math.max(...eb.filter(d =&gt; d.indikator === indikator).map(d =&gt; d.ki_oben))\n\nPlot.plot({\n  width: 1000,\n  height: 420,\n  marginLeft: 50,\n  style: {fontSize: \"16px\"},\n  x: {label: \"Erhebungsjahr\", tickFormat: \"d\"},\n  y: {label: \"Anteil in %\", grid: true, domain: [0, Math.ceil(ymax * 1.1)]},\n  color: {domain: [\"Männlich\", \"Weiblich\"], legend: true},\n  marks: [\n    Plot.areaY(sel, {x: \"jahr\", y1: \"ki_unten\", y2: \"ki_oben\", fill: \"geschlecht\", fillOpacity: 0.2}),\n    Plot.line(sel, {x: \"jahr\", y: \"anteil\", stroke: \"geschlecht\", strokeWidth: 2}),\n    Plot.dot(sel, {\n      x: \"jahr\", y: \"anteil\", fill: \"geschlecht\", r: 4,\n      channels: {\"95%-KI unten\": \"ki_unten\", \"95%-KI oben\": \"ki_oben\", n: \"n\"},\n      tip: true\n    })\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnteile in % mit 95%-Konfidenzintervall; Quelle: Einsamkeitsbarometer (2024), statistischer Anhang."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#eigenschaften-und-variablen",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#eigenschaften-und-variablen",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Eigenschaften und Variablen",
+    "text": "Eigenschaften und Variablen\n\n\n\n\nEine Variable ist das Ergebnis der Erfassung von Ausprägungen.\nEine Variable ist nicht die Eigenschaft selbst, sondern unsere symbolisch protokollierte Beobachtungen von individuellen Ausprägungen, die durchaus große Anteile von Störfaktoren haben kann."
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#wie-sieht-das-in-der-praxis-aus",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#wie-sieht-das-in-der-praxis-aus",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Wie sieht das in der Praxis aus?",
+    "text": "Wie sieht das in der Praxis aus?\n\nWie oft haben Sie das Gefühl,\n\ndass Ihnen die Gesellschaft anderer fehlt? [plj0587]\ndass Sie sozial isoliert sind? [plj0588]\naußen vor zu sein? [plj0589]"
+  },
+  {
+    "objectID": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit-in-deutschland-2017",
+    "href": "slides/03-Unterscheiden_Dimensionalität.html#einsamkeit-in-deutschland-2017",
+    "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
+    "section": "Einsamkeit in Deutschland (2017)",
+    "text": "Einsamkeit in Deutschland (2017)"
   }
 ]

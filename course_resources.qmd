@@ -2,11 +2,11 @@
 title: "R Resources"
 ---
 
-::: {.callout-tip}
+::: callout-tip
 Click on the link related to a specific week to explore R skills learned that week!
 :::
 
-# Weekly R Resources 
+# Weekly R Resources
 
 #### [Week 2 -- Exploring Numerical Variables](resources/week2.docx)
 
@@ -24,9 +24,8 @@ Click on the link related to a specific week to explore R skills learned that we
 
 #### [Week 10 -- Two-Way ANOVA](resources/week10.docx)
 
-## Bonus 
+## Bonus
 
 ### [ggplot Customizations](resources/ggplot_customization.docx)
 
 ### [Pivoted Summary Tables](resources/pivoted_tables.docx)
-

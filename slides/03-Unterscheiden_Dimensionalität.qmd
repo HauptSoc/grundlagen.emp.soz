@@ -7,6 +7,7 @@ format:
   revealjs:
     fig-format: svg
     fig-width: 16
+    mermaid-format: svg
     fig-asp: 0.618
     out-width: "70%"
     fig-align: center
@@ -40,6 +41,62 @@ execute:
 -   Es ist jedoch bis jetzt unklar, wie Einsamkeit adäquat erfasst werden kann [(Walsch et al., 2025)](https://www.nature.com/articles/s44220-024-00382-3).
 :::
 :::::
+
+## Male Loneliness? {.smaller}
+
+```{r}
+#| cache: false
+# Daten: scripts/einsamkeitsbarometer_extract.R
+ojs_define(eb_raw = read.csv("../data/einsamkeitsbarometer_geschlecht.csv",
+                             encoding = "UTF-8"))
+```
+
+```{ojs}
+eb = transpose(eb_raw)
+indikatoren = [...new Set(eb.map(d => d.indikator))]
+```
+
+::::: {.columns style="font-size: 0.6em;"}
+::: {.column width="60%"}
+```{ojs}
+viewof indikator = Inputs.select(indikatoren, {value: indikatoren[0], label: "Indikator", width: 420})
+```
+:::
+
+::: {.column width="40%"}
+```{ojs}
+viewof geschlecht = Inputs.checkbox(["Männlich", "Weiblich"], {value: ["Männlich", "Weiblich"], label: "Geschlecht"})
+```
+:::
+:::::
+
+```{ojs}
+sel = eb.filter(d => d.indikator === indikator && geschlecht.includes(d.geschlecht))
+ymax = Math.max(...eb.filter(d => d.indikator === indikator).map(d => d.ki_oben))
+
+Plot.plot({
+  width: 1000,
+  height: 420,
+  marginLeft: 50,
+  style: {fontSize: "16px"},
+  x: {label: "Erhebungsjahr", tickFormat: "d"},
+  y: {label: "Anteil in %", grid: true, domain: [0, Math.ceil(ymax * 1.1)]},
+  color: {domain: ["Männlich", "Weiblich"], legend: true},
+  marks: [
+    Plot.areaY(sel, {x: "jahr", y1: "ki_unten", y2: "ki_oben", fill: "geschlecht", fillOpacity: 0.2}),
+    Plot.line(sel, {x: "jahr", y: "anteil", stroke: "geschlecht", strokeWidth: 2}),
+    Plot.dot(sel, {
+      x: "jahr", y: "anteil", fill: "geschlecht", r: 4,
+      channels: {"95%-KI unten": "ki_unten", "95%-KI oben": "ki_oben", n: "n"},
+      tip: true
+    })
+  ]
+})
+```
+
+::: {.aside}
+Anteile in % mit 95%-Konfidenzintervall; Quelle: [Einsamkeitsbarometer (2024)](https://www.bmbfsfj.bund.de/bmbfsfj/service/publikationen/einsamkeitsbarometer-2024-237576), statistischer Anhang.
+:::
 
 ## Einsamkeit - Konzeptspezifikation {.midi}
 
@@ -121,7 +178,7 @@ Sie sich einsam?`"]
 
 ```{mermaid}
 %%| fig-align: center
-flowchart LR
+flowchart TB
 
 subgraph K[" "]
 E([Einsamkeit])
@@ -139,7 +196,7 @@ E --> I1 & I2 & I3
 
 ```{mermaid}
 %%| fig-align: center
-flowchart LR
+flowchart TB
 
 
 subgraph K["Dimensionen"]
@@ -161,7 +218,7 @@ IE --> I3 & I4
 
 ```{mermaid}
 %%| fig-align: center
-flowchart LR
+flowchart TB
 
 
 subgraph K["Dimensionen"]
@@ -187,7 +244,7 @@ KV --> I5 & I6
 
 ```{mermaid}
 %%| fig-align: center
-flowchart LR
+flowchart TB
 
 
 subgraph K[" "]
@@ -197,12 +254,21 @@ IE(["`Emotional einsam`"])
 AE(["`Affiliativ einsam`"])
 end 
 
+subgraph I["Indikatoren"]
 E --> GE & IE & AE
-GE --> I1 & I2
-IE --> I3 & I4
+GE --> I1 & I2 & I7 & I8
+IE --> I3 & I4 & I9
 AE --> I5 & I6
+end 
 ```
 
+## Beispiel: Intelligenzmessung
+
+![Messmodell für allgmeine Intelligenz g; Quelle: [Deary, 2013](https://www.sciencedirect.com/science/article/pii/S0960982213008440)](images\intelligence-meassure.jpg)
+
+## Beispiel: berufliche Selbstregulation
+
+![Modell für berufliche Selbstregulierung; Quelle: [Menge & Schaeper, 2019](https://link.springer.com/article/10.1007/s11618-018-0851-x)](images/beruflicheselbstregul-dim.png)
 
 ## Dimensionen & Ausprägungen {.midi}
 
@@ -236,25 +302,7 @@ Ausprägungen und verschiedene Dimensionen sind nicht das Gleiche! In der Tabell
 |                  | nein |      |        |
 +==================+======+======+========+
 
-## Dimensionen & Ausprägungen
 
-::: {style="float: left"}
-![](images/SozialerStatus.svg){.plot-padding}
-:::
-
-Dimensionen einer Eigenschaft können in unterschiedlichem Zusammenhang zueinander und zur gesamten Eigenschaft stehen.
-
-Die Kombination aus den Ausprägungen pro Dimension ergibt die Ausprägung der gesamten Eigenschaft für eine Untersuchungseinheit.
-
-
-
-## Beispiel: Intelligenzmessung
-
-![Messmodell für allgmeine Intelligenz g; Quelle: [Deary, 2013](https://www.sciencedirect.com/science/article/pii/S0960982213008440)](images\intelligence-meassure.jpg)
-
-## Beispiel: berufliche Selbstregulation
-
-![Modell für berufliche Selbstregulierung; Quelle: [Menge & Schaeper, 2019](https://link.springer.com/article/10.1007/s11618-018-0851-x)](images/beruflicheselbstregul-dim.png)
 
 ## Unterschiedlichkeit von Eigenschaften und Ausprägungen {.midi}
 
@@ -263,17 +311,6 @@ Personen unterscheiden sich pro Dimension hinsichtlich einer Eigenschaft. Daher 
 Ausprägungen sind daher Wahrnehmungen unter zu Hilfe Nahme von Konzepten (das haben wir als "Beobachtung" definiert).  
 
 [^2]: Ja, das ist eine Theoriefrage. Nicht jede Art des Bildungsabschlusses ist für jede Forschungsfrage relevant. Manchmal sind nur grobe Unterschiede relevant, manchmal müssen es sehr feine Unterschiede sein. Learn to love it!
-
-------------------------------------------------------------------------
-
-## Augenfarben 
-
-![Einordnung von Augenfarben in unterschiedliche Ausprägungsschemata; Quelle: [Meyer et al. 2019](https://www.fsigeneticssup.com/article/S1875-1768(19)30386-5/fulltext)](https://www.fsigeneticssup.com/cms/10.1016/j.fsigss.2019.10.057/asset/21029312-8360-46c0-9f4e-4040e21bdca3/main.assets/gr1_lrg.jpg){width=90%}
-
-## Augenfarben
-
-![Die Verteilung von bläulichen und leicht grünlichen Augen; Quelle: [Wikipedia](https://commons.wikimedia.org/wiki/File:Eye_colors_map_of_Europe.png)](https://upload.wikimedia.org/wikipedia/commons/a/a7/Eye_colors_map_of_Europe.png){width=50%}
-
 
 ## Ausprägungen
 
@@ -300,3 +337,32 @@ Eine etwas detaillierete Unterscheidung der festgelegten Eigenschaften ermöglic
 |              | Ratio     | ja        | ja    | ja       | ja                      | Alter, Arbeitslosigkeitsdauer |
 +==============+===========+===========+=======+==========+=========================+===============================+
 :::
+
+
+
+## Eigenschaften und Variablen
+
+::::: {.columns}
+:::: {.column width="50%"}
+![](images/faktor-ausprägung-verteilung.svg){width=80%}
+::::
+
+:::: {.column width="50%"}
+Eine Variable ist das *Ergebnis* der Erfassung von Ausprägungen. 
+
+Eine Variable ist **nicht** die Eigenschaft selbst, sondern unsere symbolisch protokollierte Beobachtungen von individuellen Ausprägungen, die durchaus große Anteile von Störfaktoren haben kann. 
+::::
+:::::
+
+## Wie sieht das in der Praxis aus? {.midi}
+![](images/soep-einsamkeit-variablen.png){width=70%}
+
+Wie oft haben Sie das Gefühl,
+
+ - dass Ihnen die Gesellschaft anderer fehlt? [plj0587]
+ - dass Sie sozial isoliert sind? [plj0588]
+ - außen vor zu sein? [plj0589]
+
+## Einsamkeit in Deutschland (2017)
+
+![](images/soep-einsamkeit-bar.png){width=80%}
