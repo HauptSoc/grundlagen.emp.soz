@@ -8,6 +8,7 @@ project:
     - "*.docx"
     - docs/slides/*
     - exercises/lego/**
+    - exercises/oliw/**
 
 website:
   page-navigation: true

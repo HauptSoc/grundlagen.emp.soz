@@ -1301,14 +1301,14 @@
   {
     "objectID": "exercises/03-ex.html",
     "href": "exercises/03-ex.html",
-    "title": "Übung: Messtheorie",
+    "title": "Übung: Dimensionen und Ausprägungen",
     "section": "",
     "text": "Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal oder metrisch sind:\n\nAlben einer Plattensammlung\nGeldvermögen\nSprachkompetenz\nDiskriminierung\nEinstellung zu Smartphonenutzung\nAutonomie am Arbeitsplatz"
   },
   {
     "objectID": "exercises/03-ex.html#ausprägungen",
     "href": "exercises/03-ex.html#ausprägungen",
-    "title": "Übung: Messtheorie",
+    "title": "Übung: Dimensionen und Ausprägungen",
     "section": "",
     "text": "Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal oder metrisch sind:\n\nAlben einer Plattensammlung\nGeldvermögen\nSprachkompetenz\nDiskriminierung\nEinstellung zu Smartphonenutzung\nAutonomie am Arbeitsplatz"
   },
@@ -8521,5 +8521,19 @@
     "title": "Unterscheiden: Dimensionen, Ausprägungen, Typen",
     "section": "Unsere Daten: additiver Einsamkeitsscore",
     "text": "Unsere Daten: additiver Einsamkeitsscore"
+  },
+  {
+    "objectID": "exercises/03-ex.html#spielen-mit-der-verspieltheitsskala",
+    "href": "exercises/03-ex.html#spielen-mit-der-verspieltheitsskala",
+    "title": "Übung: Dimensionen und Ausprägungen",
+    "section": "2 Spielen mit der Verspieltheitsskala",
+    "text": "2 Spielen mit der Verspieltheitsskala\nProyer et al. 2018 hat eine Skala zur Messung von Verspieltheit entwickelt.\n\nErstellen Sie für die Items “Verspieltheitsdimensionen” und ordnen Sie die Items den Dimensionen zu. Die Items sollten möglichst ein-eindeutig innerhalb der Dimension zugeordnet werden können.\nGibt es “Problemitems”?\n\nWerkzeug in neuem Tab öffnen"
+  },
+  {
+    "objectID": "exercises/03-ex.html#perspektivwechsel-befragtentypen",
+    "href": "exercises/03-ex.html#perspektivwechsel-befragtentypen",
+    "title": "Übung: Dimensionen und Ausprägungen",
+    "section": "3 Perspektivwechsel: Befragtentypen",
+    "text": "3 Perspektivwechsel: Befragtentypen\nWerkzeug in neuem Tab öffnen"
   }
 ]

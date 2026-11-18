@@ -1,0 +1,59 @@
+---
+title: "Übung: Dimensionen und Ausprägungen"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: false
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Ausprägungen 
+
+Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal oder metrisch sind: 
+
+1. Alben einer Plattensammlung
+2. Geldvermögen
+3. Sprachkompetenz
+4. Diskriminierung
+5. Einstellung zu Smartphonenutzung 
+6. Autonomie am Arbeitsplatz 
+
+## Spielen mit der Verspieltheitsskala
+
+[Proyer et al. 2018](https://doi.org/10.1177/1073191117750469) hat eine Skala zur Messung von Verspieltheit entwickelt. 
+
+1. Erstellen Sie für die Items "Verspieltheitsdimensionen" und ordnen Sie die Items den Dimensionen zu. Die Items sollten möglichst ein-eindeutig innerhalb der Dimension zugeordnet werden können.
+2. Gibt es "Problemitems"? 
+
+
+[Werkzeug in neuem Tab öffnen](oliw/index.html){target="_blank"}
+
+```{=html}
+<iframe src="oliw/index.html" data-external="1" width="100%" height="950"
+        style="border:1px solid #ccc; border-radius:8px"></iframe>
+```
+
+## Perspektivwechsel: Befragtentypen
+
+Überlegen Sie sich mindestens zwei verschiedene "soziale Typen", die unterschiedliche Antwortmuster auf die Items der Verspieltheitsskala zeigen könnten. Versetzen Sie sich in diese Typen und beantworten Sie mit deren Perspektive die Items der Skala. Zusatz: Variieren Sie die Typen anhand der von Ihnen in der zweiten Aufgabe getroffenen Dimensionen (sprich: Es gibt Typen, die in einer Dimension hoch und in einer anderen niedrig sind und vice versa).
+
+[Werkzeug in neuem Tab öffnen](oliw/fragebogen.html){target="_blank"}
+
+```{=html}
+<iframe src="oliw/fragebogen.html" data-external="1" width="100%" height="1000"
+        style="border:1px solid #ccc; border-radius:8px"></iframe>
+```
