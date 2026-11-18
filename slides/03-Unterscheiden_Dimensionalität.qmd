@@ -98,7 +98,37 @@ Plot.plot({
 Anteile in % mit 95%-Konfidenzintervall; Quelle: [Einsamkeitsbarometer (2024)](https://www.bmbfsfj.bund.de/bmbfsfj/service/publikationen/einsamkeitsbarometer-2024-237576), statistischer Anhang.
 :::
 
-## Einsamkeit - Konzeptspezifikation {.midi}
+## Mitmachen: Wie einsam sind wir? {.midi}
+
+::::: columns
+::: {.column width="45%"}
+![](images/qr-einsamkeit.svg){width="90%"}
+:::
+
+::: {.column width="55%"}
+Scannen Sie den QR-Code oder öffnen Sie
+
+<https://shiny-appserver.org/einsamkeit/>
+
+20 Aussagen, ca. 3 Minuten. Die Teilnahme ist freiwillig und anonym; gezeigt werden nur zusammengefasste Ergebnisse.
+
+Fragebogen: KSE -- Kölner Skala zur Messung von Einsamkeit, dt. Version der revidierten UCLA Loneliness Scale ([Testarchiv](https://www.testarchiv.eu/de/test/9003017)).
+:::
+:::::
+
+## Unsere Daten: Antworten nach "Teilbereichen"
+
+<iframe src="https://shiny-appserver.org/einsamkeit-live/?plot=items" width="100%" height="580" style="border:none;"></iframe>
+
+## Unsere Daten: Werte je Dimension
+
+<iframe src="https://shiny-appserver.org/einsamkeit-live/?plot=dims" width="100%" height="580" style="border:none;"></iframe>
+
+## Unsere Daten: additiver Einsamkeitsscore
+
+<iframe src="https://shiny-appserver.org/einsamkeit-live/?plot=score" width="100%" height="580" style="border:none;"></iframe>
+
+## Einsamkeit - Konzeptspezifikation {.smaller}
 
 Wir übernehmen die Definition von [Walsch et al. (2025, 175)](https://www.nature.com/articles/s44220-024-00382-3).
 
@@ -239,6 +269,7 @@ RV --> I3 & I4
 KV --> I5 & I6
 
 ```
+
 
 ## Variante 5: Dreidimensional B
 
