@@ -4,11 +4,20 @@
 
 library(chromote)
 
+# `html` kann ein lokaler Pfad oder eine http(s)-URL sein. Decks mit OJS-Zellen
+# brauchen http (die OJS-Runtime blockiert unter file:// mit einem alert()),
+# z. B. srv <- httpuv::startServer("127.0.0.1", 8765,
+#   list(staticPaths = list("/" = httpuv::staticPath("docs"))))
+# und html = "http://127.0.0.1:8765/slides/x.html" (danach srv$stop()).
 slides_to_pdf <- function(html, pdf = sub("\\.html$", ".pdf", html), wait = 3, margin_cm = 1) {
-  url <- paste0(
-    "file:///", utils::URLencode(normalizePath(html, winslash = "/"), reserved = FALSE),
-    "?print-pdf"
-  )
+  url <- if (grepl("^https?://", html)) {
+    paste0(html, "?print-pdf")
+  } else {
+    paste0(
+      "file:///", utils::URLencode(normalizePath(html, winslash = "/"), reserved = FALSE),
+      "?print-pdf"
+    )
+  }
   b <- ChromoteSession$new()
   on.exit(b$close(), add = TRUE)
 
