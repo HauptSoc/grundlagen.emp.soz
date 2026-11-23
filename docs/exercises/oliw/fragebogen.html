@@ -27,12 +27,20 @@
   td.answer label { margin: 0 4px; cursor: pointer; font-size: 0.9em; color: #456; }
   td.answer input { accent-color: #4a7a8c; cursor: pointer; }
   tr.odd td { background: #fafbfc; }
+
+  .barrow { display: grid; grid-template-columns: minmax(120px, 16em) 1fr 3.5em; gap: 10px; align-items: center; margin: 8px 0; }
+  .bartrack { background: #eef2f3; border-radius: 4px; height: 26px; }
+  .bar { background: #76b5c5; height: 100%; border-radius: 4px; }
+  .barval { font-variant-numeric: tabular-nums; text-align: right; }
+  .axis { display: grid; grid-template-columns: minmax(120px, 16em) 1fr 3.5em; gap: 10px; color: #666; font-size: 0.8em; margin-top: 4px; }
+  .axis span:nth-child(2) { display: flex; justify-content: space-between; }
 </style>
 </head>
 <body>
 <header>
   <input id="group" placeholder="Gruppenname" size="16">
   <button id="export">CSV exportieren</button>
+  <button id="compareScore">Gesamtscore vergleichen</button>
   <button id="reset" class="small">Alle Typen löschen</button>
 </header>
 
@@ -54,38 +62,51 @@
 const ITEMS = window.OLIW_ITEMS;
 const DIM_KEYS = [...new Set(ITEMS.map((p) => p.dim))];
 const SCALE = [1, 2, 3, 4, 5, 6, 7];
+const SCORE_MIN = ITEMS.length * 1, SCORE_MAX = ITEMS.length * 7;
 const $ = (id) => document.getElementById(id);
 const storageKey = "oliw-fragebogen";
 
 // state.types: [{id, name}]; state.answers: {typId: {item1: 1..7, ...}}
-// state.indices (Hintergrundberechnung, nur für den Export): {typId: {dim: Summe}}
+// state.indices (Hintergrundberechnung, nur für Vergleich und Export): {typId: {dim: Summe, gesamt: Summe}}
 const emptyState = () => ({ group: "", types: [], answers: {}, indices: {}, active: null });
 let state = load() || emptyState();
+let compareMode = false;
 
 function load() {
   try {
     const s = JSON.parse(localStorage.getItem(storageKey));
     if (!s) return null;
-    return { ...emptyState(), ...s };
+    const types = (s.types || []).filter((t) => t.name && t.name.trim());
+    return { ...emptyState(), ...s, types };
   } catch (e) { return null; }
 }
 
-// Additiver Index: bei invertierten Items 8 - Antwort (7-stufige Skala)
+// Wert eines Items nach Umkodierung: bei invertierten Items 8 - Antwort (7-stufige Skala)
+function recoded(p, v) { return p.reverse ? 8 - v : v; }
+
+// Additiver Index je Dimension; null, solange Items fehlen
 function indexFor(typId, dim) {
   const a = state.answers[typId] || {};
   const items = ITEMS.filter((p) => p.dim === dim);
-  const vals = items.map((p) => a["item" + p.nr]);
-  if (vals.some((v) => v == null)) return null;
-  return items.reduce((sum, p, i) => sum + (p.reverse ? 8 - vals[i] : vals[i]), 0);
+  if (items.some((p) => a["item" + p.nr] == null)) return null;
+  return items.reduce((sum, p) => sum + recoded(p, a["item" + p.nr]), 0);
+}
+
+// Gesamtscore: Summe aller Items (28–196); null, solange Items fehlen
+function gesamtScore(typId) {
+  const a = state.answers[typId] || {};
+  if (ITEMS.some((p) => a["item" + p.nr] == null)) return null;
+  return ITEMS.reduce((sum, p) => sum + recoded(p, a["item" + p.nr]), 0);
 }
 
 function save() {
   state.indices = Object.fromEntries(state.types.map((t) =>
-    [t.id, Object.fromEntries(DIM_KEYS.map((d) => [d, indexFor(t.id, d)]))]));
+    [t.id, { ...Object.fromEntries(DIM_KEYS.map((d) => [d, indexFor(t.id, d)])), gesamt: gesamtScore(t.id) }]));
   try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch (e) {}
 }
 
 function render() {
+  if (!state.types.some((t) => t.id === state.active)) state.active = state.types[0]?.id ?? null;
   const sel = $("typeSelect");
   if (state.types.length) {
     sel.replaceChildren(...state.types.map((t) => new Option(t.name, t.id)));
@@ -95,7 +116,8 @@ function render() {
   }
   sel.disabled = !state.types.length;
   $("delType").disabled = !state.active;
-  renderTable();
+  $("compareScore").textContent = compareMode ? "Fragebogen anzeigen" : "Gesamtscore vergleichen";
+  if (compareMode) renderCompare(); else renderTable();
 }
 
 function renderTable() {
@@ -145,6 +167,46 @@ function renderTable() {
   updateProgress();
 }
 
+// Gesamtscore aller Typen als Balkendiagramm (Skala 28–196)
+function renderCompare() {
+  const wrap = $("table-wrap");
+  $("progress").textContent = `Gesamtscore: Summe aller ${ITEMS.length} Items nach Umkodierung (möglich: ${SCORE_MIN}–${SCORE_MAX})`;
+  if (!state.types.length) {
+    const hint = document.createElement("p");
+    hint.className = "hint";
+    hint.textContent = "Noch kein Typ angelegt.";
+    wrap.replaceChildren(hint);
+    return;
+  }
+  const rows = state.types.map((t) => {
+    const row = document.createElement("div");
+    row.className = "barrow";
+    const label = document.createElement("span");
+    label.textContent = t.name;
+    const track = document.createElement("div");
+    track.className = "bartrack";
+    const value = document.createElement("span");
+    value.className = "barval";
+    const score = gesamtScore(t.id);
+    if (score == null) {
+      value.textContent = "–";
+      value.title = "Noch nicht alle Items beantwortet";
+    } else {
+      const bar = document.createElement("div");
+      bar.className = "bar";
+      bar.style.width = ((score - SCORE_MIN) / (SCORE_MAX - SCORE_MIN) * 100) + "%";
+      track.append(bar);
+      value.textContent = score;
+    }
+    row.append(label, track, value);
+    return row;
+  });
+  const axis = document.createElement("div");
+  axis.className = "axis";
+  axis.innerHTML = `<span></span><span><span>${SCORE_MIN}</span><span>${SCORE_MAX}</span></span><span></span>`;
+  wrap.replaceChildren(...rows, axis);
+}
+
 // ---- Bedienelemente ----
 $("newType").addEventListener("input", () => {
   $("addType").disabled = !$("newType").value.trim();
@@ -176,6 +238,10 @@ $("delType").addEventListener("click", () => {
   state.active = state.types[0]?.id ?? null;
   save(); render();
 });
+$("compareScore").addEventListener("click", () => {
+  compareMode = !compareMode;
+  render();
+});
 $("reset").addEventListener("click", () => {
   if (!confirm("Alle Typen und Antworten löschen?")) return;
   state = { ...emptyState(), group: state.group };
@@ -187,11 +253,11 @@ $("group").addEventListener("input", () => { state.group = $("group").value; sav
 // ---- CSV-Export (Semikolon + BOM, damit deutsches Excel es direkt öffnet) ----
 function exportCsv() {
   if (!state.types.length) { alert("Noch kein Typ angelegt."); return; }
-  const header = ["gruppe", "typ", "item_nr", "antwort", ...DIM_KEYS.map((d) => "index_" + d)];
+  const header = ["gruppe", "typ", "item_nr", "antwort", ...DIM_KEYS.map((d) => "index_" + d), "gesamtscore"];
   const rows = [];
   state.types.forEach((t) => {
     const a = state.answers[t.id] || {};
-    const idx = DIM_KEYS.map((d) => indexFor(t.id, d) ?? "");
+    const idx = [...DIM_KEYS.map((d) => indexFor(t.id, d) ?? ""), gesamtScore(t.id) ?? ""];
     ITEMS.forEach((p) => rows.push([state.group, t.name, p.nr, a["item" + p.nr] ?? "", ...idx]));
   });
   const q = (v) => `"${String(v).replace(/"/g, '""')}"`;

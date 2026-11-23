@@ -38,7 +38,8 @@ Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal o
 
 1. Erstellen Sie für die Items "Verspieltheitsdimensionen" und ordnen Sie die Items den Dimensionen zu. Die Items sollten möglichst ein-eindeutig innerhalb der Dimension zugeordnet werden können.
 2. Gibt es "Problemitems"? 
-
+3. Überlegen Sie sich mindestens zwei verschiedene "soziale Typen", die unterschiedliche Antwortmuster auf die Items der Verspieltheitsskala zeigen könnten.
+4. Zusatz: Variieren Sie die Typen anhand der von Ihnen in der zweiten Aufgabe getroffenen Dimensionen (sprich: Es gibt Typen, die in einer Dimension hoch und in einer anderen niedrig sind und vice versa).
 
 [Werkzeug in neuem Tab öffnen](oliw/index.html){target="_blank"}
 
@@ -49,7 +50,7 @@ Diskutieren Sie, ob die Ausprägungen folgender Eigenschaften nominal, ordinal o
 
 ## Perspektivwechsel: Befragtentypen
 
-Überlegen Sie sich mindestens zwei verschiedene "soziale Typen", die unterschiedliche Antwortmuster auf die Items der Verspieltheitsskala zeigen könnten. Versetzen Sie sich in diese Typen und beantworten Sie mit deren Perspektive die Items der Skala. Zusatz: Variieren Sie die Typen anhand der von Ihnen in der zweiten Aufgabe getroffenen Dimensionen (sprich: Es gibt Typen, die in einer Dimension hoch und in einer anderen niedrig sind und vice versa).
+Versetzen Sie sich in diese Typen und beantworten Sie mit deren Perspektive die Items der Skala. 
 
 [Werkzeug in neuem Tab öffnen](oliw/fragebogen.html){target="_blank"}
 

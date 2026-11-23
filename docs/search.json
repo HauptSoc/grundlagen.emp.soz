@@ -672,8 +672,8 @@
     "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "href": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
-    "section": "Beobachten und nach Ausprägungen unterscheiden",
-    "text": "Beobachten und nach Ausprägungen unterscheiden\n\n\n\nPlakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+    "section": "",
+    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
@@ -694,7 +694,7 @@
     "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
-    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
@@ -708,14 +708,14 @@
     "href": "slides/04-Messen_Grundlagen.html#latente-und-manifeste-eigenschaften",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Latente und manifeste Eigenschaften",
-    "text": "Latente und manifeste Eigenschaften\nWir können Eigenschaften danach unterscheiden, ob wir bei der Beobachtung ihrer Ausprägungen Störquellen annehmen oder nicht:\n\n\n\n\n\nflowchart TB\n    E[\"Eigenschaften\"] -- Störquelle ausgeschlossen --&gt; M[\"Manifest\"]\n    E -- Störquelle angenommen --&gt; L[\"Latent\"]\n    M --- M1[\"Alter\"] & M2[\"Torvorlagen\"] & M3[\"Blutgruppe\"]\n    L --- L1[\"Einstellungen\"] & L2[\"Armut\"] & L3[\"Einsamkeit\"]\n\n\n\n\n\n\n\nDas ist eine pragmatische Unterscheidung, die wir bei jeder Eigenschaft so oder so treffen können (siehe: Fühlen Sie sich öfter einsam?)"
+    "text": "Latente und manifeste Eigenschaften\nWir können Eigenschaften danach unterscheiden, ob wir bei der Beobachtung ihrer Ausprägungen Störquellen annehmen oder nicht:\n\n\n\n\n\n\nflowchart TB\n    E[\"Eigenschaften\"] -- Störquelle ausgeschlossen --&gt; M[\"Manifest\"]\n    E -- Störquelle angenommen --&gt; L[\"Latent\"]\n    M --- M1[\"Alter\"] & M2[\"Torvorlagen\"] & M3[\"Blutgruppe\"]\n    L --- L1[\"Einstellungen\"] & L2[\"Armut\"] & L3[\"Einsamkeit\"]\n\n\n\n\n\n\n\nDas ist eine pragmatische Unterscheidung, die wir bei jeder Eigenschaft so oder so treffen können (siehe: Fühlen Sie sich öfter einsam?)"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#alles-fliest---vor-allem-pragmatische-unterschiede",
     "href": "slides/04-Messen_Grundlagen.html#alles-fliest---vor-allem-pragmatische-unterschiede",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Alles fliest - vor allem pragmatische Unterschiede",
-    "text": "Alles fliest - vor allem pragmatische Unterschiede\n\n\n\n\n\nflowchart TB\n\nB([Biologisches &lt;br&gt; Alter])\nA[Angegebenes &lt;br&gt; Alter]\nE1((Erinnerungsfehler)) \nE2((Keine &lt;br&gt; Geburtsurkunde))\nE3((Vordatierung))\nE4((Rückdatierung))\n\nE1@{ shape: text}\nE2@{ shape: text}\nE3@{ shape: text}\nE4@{ shape: text}\n\nB --&gt; A ~~~ E1 & E2 & E3 & E4\nE1 & E2 & E3 & E4 --&gt; A"
+    "text": "Alles fliest - vor allem pragmatische Unterschiede\n\n\n\n\n\n\nflowchart TB\n\nB([Biologisches &lt;br&gt; Alter])\nA[Angegebenes &lt;br&gt; Alter]\nE1((Erinnerungsfehler)) \nE2((Keine &lt;br&gt; Geburtsurkunde))\nE3((Vordatierung))\nE4((Rückdatierung))\n\nE1@{ shape: text}\nE2@{ shape: text}\nE3@{ shape: text}\nE4@{ shape: text}\n\nB --&gt; A ~~~ E1 & E2 & E3 & E4\nE1 & E2 & E3 & E4 --&gt; A"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#warum-das-alles",
@@ -1002,7 +1002,7 @@
     "href": "slides/04-Messen_Grundlagen.html#warum-das-alles-1",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Warum das alles?",
-    "text": "Warum das alles?\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; einsamer Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Einsamkeit &lt;br&gt; und sportlicher &lt;br&gt; Aktivität?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je einsamer Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
+    "text": "Warum das alles?\n\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; einsamer Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Einsamkeit &lt;br&gt; und sportlicher &lt;br&gt; Aktivität?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je einsamer Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
   },
   {
     "objectID": "exercises/02-ex.html",
@@ -1030,7 +1030,7 @@
     "href": "slides/04-Messen_Grundlagen.html#wann-benötigen-wir-mehrere-items-zur-messung",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Wann benötigen wir mehrere Items zur Messung?",
-    "text": "Wann benötigen wir mehrere Items zur Messung?\n\n\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nAE([\"`Affiliativ einsam`\"])\nend \n\nE --&gt; GE & IE & AE\nGE --&gt; I1 \nIE --&gt; I2 \nAE --&gt; I3\n\n\n\n\n\n\n\nDas Konzept ist mehrdimensional.\n\n\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nGE([\"`Sozial einsam`\"])\nend \n\nGE --&gt; I1 & I2\n\n\n\n\n\n\n\n\nDie Eigenschaft ist latent und daher durch Beobachtungen nur mit Fehlern zu messen."
+    "text": "Wann benötigen wir mehrere Items zur Messung?\n\n\n\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nE([Einsamkeit])\nGE([\"`Sozial einsam`\"])\nIE([\"`Emotional einsam`\"])\nAE([\"`Affiliativ einsam`\"])\nend \n\nE --&gt; GE & IE & AE\nGE --&gt; I1 \nIE --&gt; I2 \nAE --&gt; I3\n\n\n\n\n\n\n\nDas Konzept ist mehrdimensional.\n\n\n\n\n\n\n\n\nflowchart LR\n\nsubgraph K[\" \"]\nGE([\"`Sozial einsam`\"])\nend \n\nGE --&gt; I1 & I2\n\n\n\n\n\n\n\n\nDie Eigenschaft ist latent und daher durch Beobachtungen nur mit Fehlern zu messen."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#die-messung-latenter-eigenschaften",
@@ -8275,7 +8275,7 @@
     "href": "misc/playfulness/playfulness_literatur.html",
     "title": "Playfulness: Messung, Wirkbedingungen und Befunde",
     "section": "",
-    "text": "WarnungHinweis zur Quellenlage\n\n\n\nDie Übersicht ist ein Arbeitsentwurf. Bibliografische Angaben (Jahrgänge, Seitenzahlen) sollten vor einer Verwendung in Lehre oder Publikation gegen die Originalquellen geprüft und um DOIs ergänzt werden."
+    "text": "Playfulness (Verspieltheit, Spielfreude) bezeichnet in der aktuellen Forschung überwiegend eine Persönlichkeitsdisposition: die Neigung, Situationen so zu rahmen (oder umzudeuten), dass sie für sich selbst und/oder andere unterhaltsam, interessant oder intellektuell anregend werden (Barnett, 2007; Proyer, 2017). Davon zu unterscheiden sind\n\nSpiel (play) als beobachtbare Aktivität bzw. Verhaltensklasse (Burghardt, 2005; Pellegrini, 2009),\nspielerische Zustände (state playfulness), etwa der paratelische Zustand in Apters Reversal-Theorie (Apter, 1991),\nHumor und Spaß (fun), die mit Playfulness korrelieren, aber konzeptuell enger sind (Proyer & Jehle, 2013).\n\nBegriffsgeschichtlich reicht die Diskussion von kulturtheoretischen Ansätzen (Huizinga, 1938/1956) über Batesons Idee der Metakommunikation (“this is play”) (G. Bateson, 1972) bis zu evolutionär-biologischen Perspektiven (P. Bateson & Martin, 2013; Burghardt, 2005). Eine interdisziplinäre Übersicht der Definitionen geben Masek & Stenros (2021), für die Erwachsenenforschung Van Vleet & Feeney (2015b) und Van Vleet & Feeney (2015a).\nFür die Messung ist diese Unterscheidung zentral: Ein Instrument kann Playfulness als Trait (stabile Disposition), als State (situativer Zustand) oder als Verhalten (beobachtete Spielqualität) operationalisieren. Diese Operationalisierungen sind nicht austauschbar."
   },
   {
     "objectID": "misc/playfulness/playfulness_literatur.html#überblick-über-zentrale-instrumente",
@@ -8527,13 +8527,13 @@
     "href": "exercises/03-ex.html#spielen-mit-der-verspieltheitsskala",
     "title": "Übung: Dimensionen und Ausprägungen",
     "section": "2 Spielen mit der Verspieltheitsskala",
-    "text": "2 Spielen mit der Verspieltheitsskala\nProyer et al. 2018 hat eine Skala zur Messung von Verspieltheit entwickelt.\n\nErstellen Sie für die Items “Verspieltheitsdimensionen” und ordnen Sie die Items den Dimensionen zu. Die Items sollten möglichst ein-eindeutig innerhalb der Dimension zugeordnet werden können.\nGibt es “Problemitems”?\n\nWerkzeug in neuem Tab öffnen"
+    "text": "2 Spielen mit der Verspieltheitsskala\nProyer et al. 2018 hat eine Skala zur Messung von Verspieltheit entwickelt.\n\nErstellen Sie für die Items “Verspieltheitsdimensionen” und ordnen Sie die Items den Dimensionen zu. Die Items sollten möglichst ein-eindeutig innerhalb der Dimension zugeordnet werden können.\nGibt es “Problemitems”?\nÜberlegen Sie sich mindestens zwei verschiedene “soziale Typen”, die unterschiedliche Antwortmuster auf die Items der Verspieltheitsskala zeigen könnten.\nZusatz: Variieren Sie die Typen anhand der von Ihnen in der zweiten Aufgabe getroffenen Dimensionen (sprich: Es gibt Typen, die in einer Dimension hoch und in einer anderen niedrig sind und vice versa).\n\nWerkzeug in neuem Tab öffnen"
   },
   {
     "objectID": "exercises/03-ex.html#perspektivwechsel-befragtentypen",
     "href": "exercises/03-ex.html#perspektivwechsel-befragtentypen",
     "title": "Übung: Dimensionen und Ausprägungen",
     "section": "3 Perspektivwechsel: Befragtentypen",
-    "text": "3 Perspektivwechsel: Befragtentypen\nWerkzeug in neuem Tab öffnen"
+    "text": "3 Perspektivwechsel: Befragtentypen\nVersetzen Sie sich in diese Typen und beantworten Sie mit deren Perspektive die Items der Skala.\nWerkzeug in neuem Tab öffnen"
   }
 ]
