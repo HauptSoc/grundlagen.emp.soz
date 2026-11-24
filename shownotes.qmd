@@ -332,3 +332,172 @@ Die Folie zeigt, dass sich "Familie" nach ganz unterschiedlichen Merkmalen unter
 ::: callout-note
 Die Typologien sind nicht trennscharf und schließen sich nicht aus. Dieselbe Familie kann z. B. eine Kernfamilie, monogam, egalitär und neolokal sein. Welche Dimension sinnvoll ist, hängt von der Forschungsfrage ab.
 :::
+
+# Hochsensibilität
+
+Diese Shownotes ergänzen die Folien zu Hochsensibilität in der Sitzung "Messen: Grundlagen". Sie fassen den Hintergrund des Konzepts, den HSP-Test von Satow (2022), die Abgrenzung zu ADHS und die verwendete Literatur zusammen. Zahlen in eckigen Klammern verweisen auf die Literaturliste am Ende des Abschnitts.
+
+## Das Konzept
+
+Die US-amerikanische Psychologin Elaine N. Aron hat in den 1990er Jahren das Konzept der **Hochsensibilität** (engl. *highly sensitive person*, HSP; wissenschaftlich *sensory processing sensitivity*, SPS) geprägt. Gemeint ist ein angeborenes **Persönlichkeitsmerkmal**: Hochsensible Menschen verarbeiten Reize gründlicher und tiefer als andere. Dadurch nehmen sie mehr wahr, sind aber auch schneller überreizt und erschöpft \[1, 2\].
+
+-   **Merkmal, keine Störung:** Hochsensibilität ist keine Diagnose und steht in keinem Klassifikationssystem (DSM-5, ICD-11). Sie gilt als kontinuierlich verteilt. Je nach Studie liegen etwa 20 bis 30 % der Bevölkerung am oberen Ende, sodass man sie als "hochsensibel" bezeichnen kann (zit. nach \[8\]).
+-   **Vor- und Nachteile:** Aron sieht in der Hochsensibilität eine Veranlagung mit Vor- und Nachteilen. Hochsensible Menschen reagieren stärker auf belastende Umwelten, profitieren aber auch stärker von unterstützenden \[2\].
+-   **Von einer zu drei Dimensionen:** Arons ursprüngliche *Highly Sensitive Person Scale* (HSPS, 27 Items) ging von einer einzigen Eigenschaft aus \[1\]. Spätere Studien fanden mehrere Teilbereiche. Am verbreitetsten ist die Unterscheidung in *Ease of Excitation* (leichte Erregbarkeit), *Low Sensory Threshold* (niedrige Wahrnehmungsschwelle) und *Aesthetic Sensitivity* (ästhetische Sensibilität).
+
+::: callout-note
+## Warum ist das für die Messung interessant?
+
+Hochsensibilität ist ein Lehrbuchbeispiel für eine **latente, mehrdimensionale Eigenschaft**. Niemand kann Hochsensibilität direkt beobachten. Wir sehen nur Antworten auf Aussagen wie "Ich werde schnell nervös". Jede einzelne Antwort ist eine fehlerbehaftete Beobachtung. Daher braucht es mehrere Items pro Dimension und Regeln, wie die Antworten zu einem Wert zusammengefasst werden.
+:::
+
+## Der HSP-Test für Hochsensibilität (Satow 2022)
+
+Der HSP-Test von Lars Satow ist frei im Open Test Archive des Leibniz-Instituts für Psychologie (ZPID) verfügbar \[3\]. Er steht unter der Lizenz CC BY-NC-ND 4.0: Der Test darf für nicht-kommerzielle Forschung und Lehre genutzt, aber weder verändert noch gekürzt werden.
+
+### Aufbau
+
+Satow unterscheidet drei Dimensionen. Die dritte unterscheidet sich inhaltlich von Arons "ästhetischer Sensibilität": Sie zielt auf die Beschäftigung mit den *eigenen* Gefühlen.
+
+| Dimension | Bedeutung hoher Werte | Langform | Kurzform |
+|------------------------|------------------------|:----------:|:----------:|
+| Leichte Erregbarkeit (EOE, *Ease of Excitation*) | schnell beunruhigt und aufgeregt, besonders wenn viele Reize gleichzeitig einströmen | 8 | 3 |
+| Niedrige Wahrnehmungsschwelle (LST, *Low Sensory Threshold*) | nimmt Licht, Geräusche, Gerüche und Geschmack intensiver und früher wahr als andere | 8 | 3 |
+| Hohe Empfindsamkeit (HSE, *High Sensitivity*) | beschäftigt sich intensiv mit den eigenen Gefühlen und inneren Vorgängen | 8 | 3 |
+| **Gesamt** |  | **24** | **9** |
+
+: Dimensionen und Itemzahl des HSP-Tests \[3\]
+
+Alle Items werden auf einer vierstufigen Skala beantwortet: *trifft gar nicht zu* (1), *trifft eher nicht zu* (2), *trifft eher zu* (3), *trifft genau zu* (4). Es gibt bewusst keine Mittelkategorie, damit sich Befragte nicht "in die Mitte" flüchten. Die Items der drei Dimensionen sind im Fragebogen gemischt. Die Langform ist für Einzelfallentscheidungen gedacht, die Kurzform für Forschung, Lehre und schnelle Screenings.
+
+### Die Items der Kurzform
+
+| Nr. | Item | Dimension |
+|:----------:|------------------------------------------|:----------:|
+| 1 | Es passiert häufig, dass ich der Erste bin, der etwas wahrnimmt, beispielsweise riecht oder hört. | LST |
+| 2 | Ich rege mich oft zu schnell auf. | EOE |
+| 3 | Meine eigenen Gefühle nehme ich sehr genau wahr. | HSE |
+| 4 | Ich rieche unangenehme Dinge deutlicher als andere. | LST |
+| 5 | Kleinigkeiten bringen mich sehr schnell aus der Ruhe. | EOE |
+| 6 | Ich beschäftige mich sehr viel mit meinen eigenen Gefühlen und Gedanken. | HSE |
+| 7 | Ich versuche immer genau zu wissen, was in mir vorgeht. | HSE |
+| 8 | Ich bin leicht erregbar. | EOE |
+| 9 | Störende Geräusche (tiefes Brummen, hohes Pfeifen) nehme ich intensiver wahr als andere. | LST |
+
+: Kurzform des HSP-Tests in der Reihenfolge des Fragebogens \[3\]
+
+Für die Kurzform wurden pro Dimension die drei Items ausgewählt, die am stärksten mit den übrigen Items ihrer Dimension zusammenhängen (in der Testtheorie heißt das *Trennschärfe*).
+
+### Auswertung
+
+1.  **Rohpunkte:** Jede Antwort erhält 1 bis 4 Punkte. Die Langform enthält ein negativ formuliertes Item ("Ich bin kein Mensch, der viel über sich selbst nachdenkt."). Hier werden die Punkte umgedreht (*trifft genau zu* = 1, ..., *trifft gar nicht zu* = 4), damit überall gilt: mehr Punkte = mehr Hochsensibilität. Die Kurzform enthält nur positiv formulierte Items.
+2.  **Dimensionsscores:** Die Rohpunkte einer Dimension werden addiert (Kurzform 3–12, Langform 8–32).
+3.  **Gesamtscore:** Die drei Dimensionsscores werden addiert (Kurzform 9–36, Langform 24–96).
+4.  **Fehlende Antworten:** Pro Dimension darf höchstens eine Antwort fehlen. Sie wird durch den gerundeten Mittelwert der Skala ersetzt.
+5.  **Vergleich mit einer Referenzgruppe:** Rohwerte sagen für sich wenig. Sie werden deshalb in **T-Werte** umgerechnet (Mittelwert 50, Standardabweichung 10), also mit einer großen Vergleichsstichprobe in Beziehung gesetzt: $$T = 50 + 10 \cdot \frac{\text{Score} - M}{SD}$$ Das Testmanual enthält zusätzlich alters- und geschlechtsspezifische Normen (Stanine-Werte). Es ist nur über den Autor erhältlich.
+6.  **Entscheidungsregel:** Hochsensibilität liegt laut Satow vor, wenn **mindestens zwei Dimensionen** oder der **Gesamtscore** einen T-Wert von 60 (Stanine 7) erreichen. Das entspricht etwa den oberen 16 % der Vergleichsgruppe.
+
+| Skala | Items | *M* | *SD* | Wertebereich | Cronbachs α |
+|------------------------|:--------:|:--------:|:--------:|:--------:|:--------:|
+| Leichte Erregbarkeit (EOE) | 3 | 9,40 | 2,12 | 3–12 | .81 |
+| Niedrige Wahrnehmungsschwelle (LST) | 3 | 9,37 | 2,02 | 3–12 | .74 |
+| Hohe Empfindsamkeit (HSE) | 3 | 10,07 | 1,82 | 3–12 | .77 |
+| Gesamtscore | 9 | 28,84 | 4,05 | 9–36 | .73 |
+
+: Kennwerte der Kurzform in der Validierungsstichprobe (*n* = 65.280) \[3, Tab. 9\]
+
+::: callout-tip
+## Beispiel aus der Vorlesung
+
+Eine Person antwortet bei EOE mit 3 + 4 + 3 = 10, bei LST mit 4 + 4 + 4 = 12 und bei HSE mit 3 + 2 + 3 = 8 Punkten; Gesamtscore 30. Mit den Kennwerten oben ergeben sich die T-Werte 53 (EOE), 63 (LST), 39 (HSE) und 53 (Gesamt). Nur eine Dimension liegt über 60. Nach der Entscheidungsregel ist die Person also *nicht* hochsensibel, trotz sehr niedriger Wahrnehmungsschwelle.
+
+Diese Umrechnung ist vereinfacht und nutzt die Kennwerte der Kurzform aus der Testdokumentation, nicht die Normen aus dem Manual. Sie zeigt auch die Grenzen der Kurzform: Bei EOE und LST erreicht man T ≥ 60 praktisch nur mit der Höchstpunktzahl 12.
+:::
+
+### Güte des Tests
+
+Laut Testdokumentation \[3\] wurde der Test an einer Optimierungsstichprobe (*n* = 16.280) entwickelt und an einer Validierungsstichprobe (*n* = 65.280) geprüft.
+
+-   **Reliabilität:** Cronbachs α liegt in der Langform für die drei Skalen bei etwa .80 und für den Gesamtscore bei .85. In der Kurzform ist der Gesamtscore weniger reliabel (.73) als die einzelnen Dimensionen, weil er drei unterschiedliche Teilbereiche zusammenfasst.
+-   **Struktur:** Die Zuordnung der Items zu den drei Dimensionen wurde statistisch überprüft. Die drei Dimensionen korrelieren nur moderat miteinander (*r* = .26 bis .36). Das spricht dafür, dass sie tatsächlich Unterschiedliches erfassen. Mit dem Gesamtscore korrelieren alle drei hoch (*r* = .70 bis .75).
+-   **Bezug zu Außenkriterien:** Alle Skalen korrelieren mit der Angabe, schon als Kind als sensibel gegolten zu haben (*r* = .32 bis .37; Gesamtscore .46), und mit einem ausgeprägten Ruhebedürfnis (*r* = .25 bis .30; Gesamtscore .37).
+-   **Geschlecht und Alter:** Frauen erreichen in allen Skalen höhere Werte, besonders bei der leichten Erregbarkeit und im Gesamtscore (jeweils *d* ≈ 0,6). Das Alter spielt praktisch keine Rolle.
+
+## Abgrenzung zu ADHS
+
+### Konzeptionelle Unterschiede
+
+Hochsensibilität und ADHS (Aufmerksamkeitsdefizit-/Hyperaktivitätsstörung) werden im Alltag oft verwechselt. Beide können mit Reizüberflutung, starker emotionaler Reaktivität und Schwierigkeiten bei der Emotionsregulation einhergehen. Konzeptionell unterscheiden sie sich jedoch deutlich \[2, 8\]:
+
+|  | Hochsensibilität | ADHS |
+|------------------|------------------------|------------------------|
+| **Status** | Persönlichkeitsmerkmal, keine Diagnose | Diagnose (Entwicklungsstörung in DSM-5 / ICD-11), von Fachleuten gestellt |
+| **Verbreitung** | ca. 20–30 % am oberen Ende des Kontinuums | ca. 5,9 % der Kinder und 2,5 % der Erwachsenen \[10\] |
+| **Kern** | Reize werden *gründlich und tief* verarbeitet | Aufmerksamkeit und Impulse können schlecht *gesteuert* werden |
+| **Typisches Verhalten** | erst innehalten und prüfen, dann handeln ("pause to check") | impulsiv handeln, schnell abgelenkt, motorisch unruhig |
+| **Sinnesempfindlichkeit** | erhöht | kann erhöht *oder* vermindert sein |
+| **Reizüberflutung** | Folge der intensiven Verarbeitung → Rückzug, Ruhe suchen | Folge mangelnder Reizfilterung → teils auch Suche nach neuen Reizen |
+| **Bewertung** | neutral, mit Vor- und Nachteilen | Diagnose setzt Beeinträchtigung im Alltag voraus |
+
+: Konzeptionelle Abgrenzung von Hochsensibilität und ADHS
+
+### Empirische Überschneidung
+
+Die meisten Studien finden einen **positiven Zusammenhang**: Wer mehr ADHS-Merkmale berichtet, berichtet auch mehr Hochsensibilität.
+
+-   **Panagiotidi, Overton & Stafford (2018)** fanden in der Allgemeinbevölkerung (*n* = 234), dass mehr ADHS-Merkmale mit mehr sensorischen Auffälligkeiten einhergehen, über alle Sinnesbereiche hinweg \[4\].
+-   **Panagiotidi, Overton & Stafford (2020)** bestätigten das mit Arons HSP-Skala und einer ADHS-Selbstauskunftsskala (ASRS) bei *n* = 274 Personen \[5\].
+-   **Turjeman-Levi & Kluger (2022)** replizierten den Zusammenhang bei Studierenden, fanden aber keinen Zusammenhang mit der ästhetischen Sensibilität \[6\].
+-   **Damatac et al. (2025)** fanden mit einem neueren Hochsensibilitäts-Fragebogen, der stärker auf positive Aspekte abzielt, für den Gesamtwert *keinen* Zusammenhang, wohl aber für einzelne Unterskalen (zit. nach \[8\]). Das Ergebnis hängt also vom Messinstrument ab.
+-   **Schippers, Greven & Hoogman (2024)** fanden in einer britischen Bevölkerungsstichprobe (*n* = 694) kleine bis mittlere Korrelationen zwischen ADHS-Merkmalen und Hochsensibilität \[7\].
+-   **Schippers, Hoogman & Greven (2025)** haben dieselben Daten genauer nach Dimensionen ausgewertet \[8\]:
+
+| ADHS-Merkmale | Hochsensibilität gesamt | Leichte Erregbarkeit | Niedrige Wahrnehmungsschwelle | Ästhetische Sensibilität |
+|---------------|:-------------:|:-------------:|:-------------:|:-------------:|
+| Gesamt | .36 | .31 | .34 | .21 |
+| Unaufmerksamkeit | .33 | .32 | .32 | .16 |
+| Hyperaktivität/Impulsivität | .32 | .25 | .31 | .22 |
+
+: Korrelationen (Kendalls τ, kontrolliert für Alter) zwischen ADHS-Merkmalen (ASRS) und Hochsensibilität (HSPS), *n* = 694 \[8, Tab. 1\]
+
+Kendalls τ ist eine Rangkorrelation und fällt kleiner aus als der bekanntere Korrelationskoeffizient *r* nach Pearson. Bei normalverteilten Daten entspricht τ ≈ .33 grob einem *r* von etwa .50. Die Zusammenhänge sind bei Frauen etwas stärker als bei Männern (statistisch nicht getestet). Personen mit einer selbst berichteten ADHS-Diagnose hatten in allen Dimensionen höhere Werte, allerdings waren das nur 20 Personen.
+
+Auch aus der ADHS-Forschung kommt ein passender Befund: Eine Metaanalyse über 30 Studien mit über 5.000 Personen zeigt, dass Menschen mit ADHS deutlich häufiger eine erhöhte Reizempfindlichkeit berichten als Vergleichsgruppen \[9\]. Gemessen wurde dort allerdings nicht Hochsensibilität im Sinne Arons, sondern sensorische Verarbeitung allgemein.
+
+### Interpretation und Grenzen
+
+Die Zusammenhänge sind deutlich, aber weit von 1 entfernt: **Hochsensibilität und ADHS überschneiden sich, sind aber nicht dasselbe.** Am stärksten teilen sie die Neigung zur Überreizung (leichte Erregbarkeit, niedrige Wahrnehmungsschwelle). Die ästhetische Sensibilität hängt kaum mit ADHS zusammen.
+
+Bei der Interpretation sind einige Einschränkungen zu beachten:
+
+-   **Merkmale statt Diagnosen:** Fast alle Studien messen ADHS-*Merkmale* per Selbstauskunft in der Allgemeinbevölkerung, keine klinisch gestellten Diagnosen.
+-   **Gemeinsame Methode:** Beide Merkmale werden per Fragebogen bei denselben Personen erhoben. Das kann Korrelationen erhöhen, etwa weil manche Menschen generell mehr Beschwerden angeben.
+-   **Anderes Instrument:** Keine der Studien hat den HSP-Test von Satow verwendet. Satows Dimension "Hohe Empfindsamkeit" ist inhaltlich etwas anderes als Arons "ästhetische Sensibilität".
+-   **Keine Kausalität:** Querschnittsdaten zeigen nicht, ob das eine das andere beeinflusst oder ob beide gemeinsame Ursachen haben.
+-   **Forschungsstand:** Eine Metaanalyse speziell zu Hochsensibilität und ADHS ist uns nicht bekannt.
+
+Für die Messung bedeutet das: Ein guter Hochsensibilitätstest sollte mit ADHS-Skalen möglichst *wenig* korrelieren, damit er wirklich etwas Eigenes misst (vgl. Folie "Konzeptspezifikation"). Eine Korrelation um τ = .33 zeigt eine spürbare Überschneidung, aber keine Gleichheit der Konzepte.
+
+## Literatur zur Hochsensibilität
+
+::: callout-tip
+\[[1](https://doi.org/10.1037/0022-3514.73.2.345)\] Aron, E. N., & Aron, A. (1997). Sensory-processing sensitivity and its relation to introversion and emotionality. *Journal of Personality and Social Psychology*, 73(2), 345–368.
+
+\[[2](https://doi.org/10.1177/1088868311434213)\] Aron, E. N., Aron, A., & Jagiellowicz, J. (2012). Sensory processing sensitivity: A review in the light of the evolution of biological responsivity. *Personality and Social Psychology Review*, 16(3), 262–282.
+
+\[[3](https://www.testarchiv.eu/de/test/9008351)\] Satow, L. (2022). *HSP. HSP-Test für Hochsensibilität* \[Verfahrensdokumentation, Fragebogen in Lang- und Kurzform, Testdokumentation\]. In Leibniz-Institut für Psychologie (ZPID) (Hrsg.), *Open Test Archive*. Trier: ZPID. <https://doi.org/10.23668/psycharchives.5419>
+
+\[[4](https://doi.org/10.1016/j.comppsych.2017.10.008)\] Panagiotidi, M., Overton, P. G., & Stafford, T. (2018). The relationship between ADHD traits and sensory sensitivity in the general population. *Comprehensive Psychiatry*, 80, 179–185.
+
+\[[5](https://doi.org/10.1016/j.psychres.2020.113477)\] Panagiotidi, M., Overton, P. G., & Stafford, T. (2020). The relationship between sensory processing sensitivity and attention deficit hyperactivity disorder traits: A spectrum approach. *Psychiatry Research*, 293, 113477.
+
+\[[6](https://doi.org/10.3389/fpsyg.2022.1010836)\] Turjeman-Levi, Y., & Kluger, A. N. (2022). Sensory-processing sensitivity versus the sensory-processing theory: Convergence and divergence. *Frontiers in Psychology*, 13, 1010836.
+
+\[[7](https://doi.org/10.1016/j.comppsych.2024.152461)\] Schippers, L. M., Greven, C. U., & Hoogman, M. (2024). Associations between ADHD traits and self-reported strengths in the general population. *Comprehensive Psychiatry*, 130, 152461.
+
+\[[8](https://doi.org/10.1016/j.crbeha.2025.100193)\] Schippers, L. M., Hoogman, M., & Greven, C. U. (2025). Sensory processing sensitivity and the association with attention-deficit/hyperactivity disorder (ADHD) traits, and ADHD-related strengths in the general population. *Current Research in Behavioral Sciences*, 9, 100193. Preprint: <https://doi.org/10.31234/osf.io/26gxy_v2>
+
+\[[9](https://pubmed.ncbi.nlm.nih.gov/40250555/)\] Sensory processing in individuals with attention-deficit/hyperactivity disorder compared with control populations: A systematic review and meta-analysis (2025). PubMed-ID 40250555.
+
+\[[10](https://doi.org/10.1016/j.neubiorev.2021.01.022)\] Faraone, S. V., et al. (2021). The World Federation of ADHD International Consensus Statement: 208 evidence-based conclusions about the disorder. *Neuroscience & Biobehavioral Reviews*, 128, 789–818.
+:::

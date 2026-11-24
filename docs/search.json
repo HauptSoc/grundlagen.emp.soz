@@ -672,15 +672,15 @@
     "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "href": "slides/04-Messen_Grundlagen.html#beobachten-und-nach-ausprägungen-unterscheiden",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
-    "section": "",
-    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+    "section": "Beobachten und nach Ausprägungen unterscheiden",
+    "text": "Beobachten und nach Ausprägungen unterscheiden\n\n\n\nPlakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
     "href": "slides/04-Messen_Grundlagen.html#messen-ausprägungen-einer-eigenschaft-unterscheiden",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Messen = Ausprägungen einer Eigenschaft unterscheiden",
-    "text": "Messen = Ausprägungen einer Eigenschaft unterscheiden\n\n\n Bildquelle\n\nWir wollen Personen hinsichtlich ihrer Ausprägungen von Eigenschaften unterscheiden. Dazu brauchen wir ein Symbol für jede (relevante) Ausprägung, die wir einer Beobachtung dieser Ausprägung zuordnen. In den meisten Fällen ist dieses Symbol eine Zahl. Die Anordnung dieser Zahlen/Symbole ist eine Skala."
+    "text": "Messen = Ausprägungen einer Eigenschaft unterscheiden\n\n\n Bildquelle\n\nWir wollen Untersuchungseinheiten hinsichtlich ihrer Ausprägungen von Eigenschaften unterscheiden. Dazu brauchen wir ein Symbol für jede (relevante) Ausprägung, die wir einer Beobachtung dieser Ausprägung zuordnen. In den meisten Fällen ist dieses Symbol eine Zahl. Die Anordnung dieser Zahlen/Symbole ist eine Skala."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#unterschiede-auf-eine-skala-bringen-berufsprestige",
@@ -694,7 +694,7 @@
     "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
-    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)"
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
@@ -722,7 +722,7 @@
     "href": "slides/04-Messen_Grundlagen.html#warum-das-alles",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Warum das alles?",
-    "text": "Warum das alles?\n\nUnser Ziel ist es, soziale Prozesse besser zu verstehen.\nSoziale Prozesse sind Verbindungen von Eigenschaften über Untersuchungseinheiten.\nDazu müssen wir verstehen, wie Unterschiede der Eigenschaft A mit Unterschieden der Eigenschaft B zusammenhängen.\nWenn wir in einem der erfassten Unterschiede auch einen großen Anteil von Störfaktoren/Messfehlern haben, ist unsere Untersuchung problematisch."
+    "text": "Warum das alles?\n\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; hochsensibler Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Hochsensibilität &lt;br&gt; und kreativem Vermögen?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je hochsensibler Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#alter-und-gesundheit",
@@ -8535,5 +8535,173 @@
     "title": "Übung: Dimensionen und Ausprägungen",
     "section": "3 Perspektivwechsel: Befragtentypen",
     "text": "3 Perspektivwechsel: Befragtentypen\nVersetzen Sie sich in diese Typen und beantworten Sie mit deren Perspektive die Items der Skala.\nWerkzeug in neuem Tab öffnen"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#hochsensibilität-das-konzept",
+    "href": "slides/04-Messen_Grundlagen.html#hochsensibilität-das-konzept",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Hochsensibilität: Das Konzept",
+    "text": "Hochsensibilität: Das Konzept\nElaine N. Aron führte dieses Konzept ein, um Menschen danach zu unterscheiden, wie stark und schnell sie Reize verarbeiten.\nUrsprünglich als eindimensionale Eigenschaft gedacht, wird Hochsensibilität heute meist in drei Dimensionen unterschieden.\n\n\n\n\n\n\nflowchart TB\n    H([Hochsensibilität])\n    E([Leichte &lt;br&gt; Erregbarkeit])\n    L([Niedrige &lt;br&gt; Wahrnehmungsschwelle])\n    S([Hohe &lt;br&gt; Empfindsamkeit])\n    H --&gt; E & L & S"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#der-hsp-test-für-hochsensibilität",
+    "href": "slides/04-Messen_Grundlagen.html#der-hsp-test-für-hochsensibilität",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Der HSP-Test für Hochsensibilität",
+    "text": "Der HSP-Test für Hochsensibilität\nHSP-Test von Satow (2022):\n\n\n\n\n\n\n\n\n\nLangform\nKurzform\n\n\n\n\nLeichte Erregbarkeit (EOE, Ease of Excitation)\n8 Items\n3 Items\n\n\nNiedrige Wahrnehmungsschwelle (LST, Low Sensory Threshold)\n8 Items\n3 Items\n\n\nHohe Empfindsamkeit (HSE, High Sensitivity)\n8 Items\n3 Items\n\n\nGesamt\n24 Items\n9 Items\n\n\n\nAlle Items werden auf derselben vierstufigen Skala beantwortet:\ntrifft gar nicht zu – trifft eher nicht zu – trifft eher zu – trifft genau zu\nDie Items der Dimensionen sind im Fragebogen gemischt, damit sich die Befragten nicht an “Blöcken” orientieren."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#die-langform-24-items-in-drei-dimensionen",
+    "href": "slides/04-Messen_Grundlagen.html#die-langform-24-items-in-drei-dimensionen",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Die Langform: 24 Items in drei Dimensionen",
+    "text": "Die Langform: 24 Items in drei Dimensionen\n\n\n\nHochsensibilität\n\n  Leichte Erregbarkeit (EOE)\n  Niedrige Wahrnehmungsschwelle (LST)\n  Hohe Empfindsamkeit (HSE)\n\nItem anklicken oder mit der Maus darüberfahren, um den Originalwortlaut zu sehen.\ngrau = auch in der Kurzform   weiß = nur Langform   Zahl = Position im Fragebogen   (–) = negativ formuliert\n\n\n\n\n\nQuelle: Satow (2022)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#kurzform-13-leichte-erregbarkeit-eoe",
+    "href": "slides/04-Messen_Grundlagen.html#kurzform-13-leichte-erregbarkeit-eoe",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Kurzform (1/3): Leichte Erregbarkeit (EOE)",
+    "text": "Kurzform (1/3): Leichte Erregbarkeit (EOE)\nPersonen mit hohen Werten sind leicht erregbar und schnell beunruhigt, besonders wenn viele Reize und Informationen gleichzeitig auf sie einströmen.\n\nItems der Dimension “Leichte Erregbarkeit” in der Kurzform. Nr. = Position im Fragebogen. Quelle: Satow (2022)\n\n\nNr.\nItem\ntrifft gar nicht zu\ntrifft eher nicht zu\ntrifft eher zu\ntrifft genau zu\n\n\n\n\n2\nIch rege mich oft zu schnell auf.\n○\n○\n○\n○\n\n\n5\nKleinigkeiten bringen mich sehr schnell aus der Ruhe.\n○\n○\n○\n○\n\n\n8\nIch bin leicht erregbar.\n○\n○\n○\n○"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#kurzform-23-niedrige-wahrnehmungsschwelle-lst",
+    "href": "slides/04-Messen_Grundlagen.html#kurzform-23-niedrige-wahrnehmungsschwelle-lst",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Kurzform (2/3): Niedrige Wahrnehmungsschwelle (LST)",
+    "text": "Kurzform (2/3): Niedrige Wahrnehmungsschwelle (LST)\nPersonen mit hohen Werten nehmen ihre Umwelt intensiver und oft früher wahr als andere – z.B. Geräusche, flackerndes Licht oder Gerüche.\n\nItems der Dimension “Niedrige Wahrnehmungsschwelle” in der Kurzform. Nr. = Position im Fragebogen. Quelle: Satow (2022)\n\n\nNr.\nItem\ntrifft gar nicht zu\ntrifft eher nicht zu\ntrifft eher zu\ntrifft genau zu\n\n\n\n\n1\nEs passiert häufig, dass ich der Erste bin, der etwas wahrnimmt, beispielsweise riecht oder hört.\n○\n○\n○\n○\n\n\n4\nIch rieche unangenehme Dinge deutlicher als andere.\n○\n○\n○\n○\n\n\n9\nStörende Geräusche (tiefes Brummen, hohes Pfeifen) nehme ich intensiver wahr als andere.\n○\n○\n○\n○"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#kurzform-33-hohe-empfindsamkeit-hse",
+    "href": "slides/04-Messen_Grundlagen.html#kurzform-33-hohe-empfindsamkeit-hse",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Kurzform (3/3): Hohe Empfindsamkeit (HSE)",
+    "text": "Kurzform (3/3): Hohe Empfindsamkeit (HSE)\nPersonen mit hohen Werten beschäftigen sich intensiv mit ihren Gefühlen und inneren Vorgängen.\n\nItems der Dimension “Hohe Empfindsamkeit” in der Kurzform. Nr. = Position im Fragebogen. Quelle: Satow (2022)\n\n\nNr.\nItem\ntrifft gar nicht zu\ntrifft eher nicht zu\ntrifft eher zu\ntrifft genau zu\n\n\n\n\n3\nMeine eigenen Gefühle nehme ich sehr genau wahr.\n○\n○\n○\n○\n\n\n6\nIch beschäftige mich sehr viel mit meinen eigenen Gefühlen und Gedanken.\n○\n○\n○\n○\n\n\n7\nIch versuche immer genau zu wissen, was in mir vorgeht.\n○\n○\n○\n○"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#schritt-1-antworten-werden-zu-rohpunkten",
+    "href": "slides/04-Messen_Grundlagen.html#schritt-1-antworten-werden-zu-rohpunkten",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Schritt 1: Antworten werden zu Rohpunkten",
+    "text": "Schritt 1: Antworten werden zu Rohpunkten\nJede Antwort erhält einen Zahlenwert – je stärker die Zustimmung, desto mehr Punkte:\n\n\n\n\n\n\n\n\n\ntrifft gar nicht zu\ntrifft eher nicht zu\ntrifft eher zu\ntrifft genau zu\n\n\n\n\n1\n2\n3\n4\n\n\n\nDamit gilt für jedes Item: mehr Punkte = mehr Hochsensibilität.\nAusnahme in der Langform: Item 18 “Ich bin kein Mensch, der viel über sich selbst nachdenkt.” ist negativ formuliert – Zustimmung bedeutet hier weniger Empfindsamkeit. Die Punkte werden daher umgedreht (trifft genau zu = 1, …, trifft gar nicht zu = 4).\nDie Kurzform enthält nur positiv formulierte Items."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#schritt-2-rohpunkte-werden-zu-dimensions--und-gesamtscores",
+    "href": "slides/04-Messen_Grundlagen.html#schritt-2-rohpunkte-werden-zu-dimensions--und-gesamtscores",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Schritt 2: Rohpunkte werden zu Dimensions- und Gesamtscores",
+    "text": "Schritt 2: Rohpunkte werden zu Dimensions- und Gesamtscores\n\n\n\n\n\n\n\n\nflowchart LR\n    I1[Item 2] & I2[Item 5] & I3[Item 8] --&gt; E([EOE &lt;br&gt; 3–12])\n    I4[Item 1] & I5[Item 4] & I6[Item 9] --&gt; L([LST &lt;br&gt; 3–12])\n    I7[Item 3] & I8[Item 6] & I9[Item 7] --&gt; S([HSE &lt;br&gt; 3–12])\n    E & L & S --&gt; G([Gesamt &lt;br&gt; 9–36])\n\n\n\n\n\n\n\nDimensionsscore = Summe der Rohpunkte der Items einer Dimension (Kurzform: 3 bis 12; Langform: 8 bis 32).\nGesamtscore = Summe der drei Dimensionsscores (Kurzform: 9 bis 36; Langform: 24 bis 96).\nWarum addieren? Jedes Item ist eine fehlerbehaftete Beobachtung derselben Eigenschaft. In der Summe gleichen sich zufällige Ausreißer einzelner Antworten teilweise aus.\nFür die Kurzform wurden pro Dimension die drei Items gewählt, die am stärksten mit den übrigen Items ihrer Dimension zusammenhängen."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#beispiel-eine-person-füllt-die-kurzform-aus",
+    "href": "slides/04-Messen_Grundlagen.html#beispiel-eine-person-füllt-die-kurzform-aus",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Beispiel: Eine Person füllt die Kurzform aus",
+    "text": "Beispiel: Eine Person füllt die Kurzform aus\n\n\n\nDimension\nAntworten (Rohpunkte)\nDimensionsscore\n\n\n\n\nLeichte Erregbarkeit (Items 2, 5, 8)\n3 + 4 + 3\n10\n\n\nNiedrige Wahrnehmungsschwelle (Items 1, 4, 9)\n4 + 4 + 4\n12\n\n\nHohe Empfindsamkeit (Items 3, 6, 7)\n3 + 2 + 3\n8\n\n\nGesamtscore\n\n30\n\n\n\nIst 30 von 36 Punkten viel? Das lässt sich erst im Vergleich mit anderen Menschen beantworten."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#schritt-3-vergleich-mit-einer-referenzgruppe",
+    "href": "slides/04-Messen_Grundlagen.html#schritt-3-vergleich-mit-einer-referenzgruppe",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Schritt 3: Vergleich mit einer Referenzgruppe",
+    "text": "Schritt 3: Vergleich mit einer Referenzgruppe\nDer Score wird mit dem Durchschnitt (Mittelwert, M) und der typischen Abweichung vom Durchschnitt (Standardabweichung, SD) einer großen Vergleichsstichprobe (n = 65.280) verglichen und in einen T-Wert umgerechnet:\n\\[T = 50 + 10 \\cdot \\frac{\\text{Score} - M}{SD}\\]\nT = 50 heißt “genau durchschnittlich”, T = 60 heißt “eine typische Abweichung über dem Durchschnitt” (das erreichen nur rund 16 % der Vergleichsgruppe)."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#abgrenzung-hochsensibilität-und-adhs",
+    "href": "slides/04-Messen_Grundlagen.html#abgrenzung-hochsensibilität-und-adhs",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Abgrenzung: Hochsensibilität und ADHS",
+    "text": "Abgrenzung: Hochsensibilität und ADHS\n\nGängige konzeptionelle Abgrenzung, u.a. nach Aron, Aron & Jagiellowicz (2012).\n\n\n\nHochsensibilität\nADHS\n\n\n\n\nStatus\nPersönlichkeitsmerkmal\nDiagnose\n\n\nKern\nReize werden gründlich und tief verarbeitet\nAufmerksamkeit und Impulse können schlecht gesteuert werden\n\n\nReizüberflutung\nFolge der intensiven Verarbeitung → Rückzug, Ruhe suchen\nFolge mangelnder Reizfilterung → teils auch Suche nach neuen Reizen"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#hochsensibilität-das-konzept-1",
+    "href": "slides/04-Messen_Grundlagen.html#hochsensibilität-das-konzept-1",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Hochsensibilität: Das Konzept",
+    "text": "Hochsensibilität: Das Konzept\nHochsensibilität ist …\n\nmehrdimensional → wir brauchen Items für jede Dimension;\nlatent → jede einzelne Antwort ist eine fehlerbehaftete Beobachtung, daher mehrere Items pro Dimension."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#ist-die-abgrenzung-gut",
+    "href": "slides/04-Messen_Grundlagen.html#ist-die-abgrenzung-gut",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Ist die Abgrenzung gut?",
+    "text": "Ist die Abgrenzung gut?\nEmpirisch überschneiden sich beide: Wer mehr ADHS-Merkmale berichtet, berichtet auch mehr Reizempfindlichkeit.\n\nKorrelationen (Kendalls τ) in einer Stichprobe aus der britischen Allgemeinbevölkerung (n = 694), beide Merkmale per Selbstauskunft. Quelle: Schippers, Hoogman & Greven (2025)\n\n\nADHS-Merkmale\nHochsensibilität gesamt\nLeichte Erregbarkeit\nNiedrige Wahrnehmungsschwelle\nÄsthetische Sensibilität\n\n\n\n\nGesamt\n.36\n.31\n.34\n.21\n\n\nUnaufmerksamkeit\n.33\n.32\n.32\n.16\n\n\nHyperaktivität/Impulsivität\n.32\n.25\n.31\n.22\n\n\n\nFür die Messung heißt das: Ein guter Hochsensibilitätstest sollte mit ADHS-Skalen möglichst wenig korrelieren. Die Zusammenhänge sind mittelstark, aber weit von 1 entfernt: Hochsensibilität und ADHS überschneiden sich, sind aber nicht dasselbe – am stärksten teilen sie die Neigung zu Überreizung (Erregbarkeit, Wahrnehmungsschwelle)."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#schritt-3-vergleich-mit-einer-referenzgruppe-1",
+    "href": "slides/04-Messen_Grundlagen.html#schritt-3-vergleich-mit-einer-referenzgruppe-1",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Schritt 3: Vergleich mit einer Referenzgruppe",
+    "text": "Schritt 3: Vergleich mit einer Referenzgruppe\n\n\n\n\n\n\n\n\n\n\n\nEOE\nLST\nHSE\nGesamt\n\n\n\n\nScore der Person\n10\n12\n8\n30\n\n\nM (SD) der Vergleichsgruppe\n9,40 (2,12)\n9,37 (2,02)\n10,07 (1,82)\n28,84 (4,05)\n\n\nT-Wert\n53\n63\n39\n53\n\n\n\nRegel: Hochsensibilität liegt vor, wenn mindestens zwei Dimensionen oder der Gesamtscore einen T-Wert von 60 erreichen. Unsere Beispielperson ist also nicht hochsensibel – trotz sehr niedriger Wahrnehmungsschwelle."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#mitmachen-wie-hochsensibel-sind-wir",
+    "href": "slides/04-Messen_Grundlagen.html#mitmachen-wie-hochsensibel-sind-wir",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Mitmachen: Wie hochsensibel sind wir?",
+    "text": "Mitmachen: Wie hochsensibel sind wir?\n\n\n\n\nScannen Sie den QR-Code oder öffnen Sie\nhttps://shiny-appserver.org/hochsensibilitaet/\n9 Aussagen, ca. 1 Minute. Die Teilnahme ist freiwillig und anonym; gezeigt werden nur zusammengefasste Ergebnisse.\nFragebogen: Kurzform des HSP-Tests für Hochsensibilität (Satow 2022)."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unsere-daten-leichte-erregbarkeit-eoe",
+    "href": "slides/04-Messen_Grundlagen.html#unsere-daten-leichte-erregbarkeit-eoe",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unsere Daten: Leichte Erregbarkeit (EOE)",
+    "text": "Unsere Daten: Leichte Erregbarkeit (EOE)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unsere-daten-niedrige-wahrnehmungsschwelle-lst",
+    "href": "slides/04-Messen_Grundlagen.html#unsere-daten-niedrige-wahrnehmungsschwelle-lst",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unsere Daten: Niedrige Wahrnehmungsschwelle (LST)",
+    "text": "Unsere Daten: Niedrige Wahrnehmungsschwelle (LST)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unsere-daten-hohe-empfindsamkeit-hse",
+    "href": "slides/04-Messen_Grundlagen.html#unsere-daten-hohe-empfindsamkeit-hse",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unsere Daten: Hohe Empfindsamkeit (HSE)",
+    "text": "Unsere Daten: Hohe Empfindsamkeit (HSE)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unsere-daten-die-drei-dimensionen-im-vergleich",
+    "href": "slides/04-Messen_Grundlagen.html#unsere-daten-die-drei-dimensionen-im-vergleich",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unsere Daten: Die drei Dimensionen im Vergleich",
+    "text": "Unsere Daten: Die drei Dimensionen im Vergleich"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unsere-daten-gesamtscore",
+    "href": "slides/04-Messen_Grundlagen.html#unsere-daten-gesamtscore",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unsere Daten: Gesamtscore",
+    "text": "Unsere Daten: Gesamtscore"
+  },
+  {
+    "objectID": "shownotes.html#das-konzept",
+    "href": "shownotes.html#das-konzept",
+    "title": "Shownotes",
+    "section": "Das Konzept",
+    "text": "Das Konzept\nDie US-amerikanische Psychologin Elaine N. Aron hat in den 1990er Jahren das Konzept der Hochsensibilität (engl. highly sensitive person, HSP; wissenschaftlich sensory processing sensitivity, SPS) geprägt. Gemeint ist ein angeborenes Persönlichkeitsmerkmal: Hochsensible Menschen verarbeiten Reize gründlicher und tiefer als andere. Dadurch nehmen sie mehr wahr, sind aber auch schneller überreizt und erschöpft [1, 2].\n\nMerkmal, keine Störung: Hochsensibilität ist keine Diagnose und steht in keinem Klassifikationssystem (DSM-5, ICD-11). Sie gilt als kontinuierlich verteilt. Je nach Studie liegen etwa 20 bis 30 % der Bevölkerung am oberen Ende, sodass man sie als “hochsensibel” bezeichnen kann (zit. nach [8]).\nVor- und Nachteile: Aron sieht in der Hochsensibilität eine Veranlagung mit Vor- und Nachteilen. Hochsensible Menschen reagieren stärker auf belastende Umwelten, profitieren aber auch stärker von unterstützenden [2].\nVon einer zu drei Dimensionen: Arons ursprüngliche Highly Sensitive Person Scale (HSPS, 27 Items) ging von einer einzigen Eigenschaft aus [1]. Spätere Studien fanden mehrere Teilbereiche. Am verbreitetsten ist die Unterscheidung in Ease of Excitation (leichte Erregbarkeit), Low Sensory Threshold (niedrige Wahrnehmungsschwelle) und Aesthetic Sensitivity (ästhetische Sensibilität).\n\n\n\n\n\n\n\nNoteWarum ist das für die Messung interessant?\n\n\n\nHochsensibilität ist ein Lehrbuchbeispiel für eine latente, mehrdimensionale Eigenschaft. Niemand kann Hochsensibilität direkt beobachten. Wir sehen nur Antworten auf Aussagen wie “Ich werde schnell nervös”. Jede einzelne Antwort ist eine fehlerbehaftete Beobachtung. Daher braucht es mehrere Items pro Dimension und Regeln, wie die Antworten zu einem Wert zusammengefasst werden."
+  },
+  {
+    "objectID": "shownotes.html#der-hsp-test-für-hochsensibilität-satow-2022",
+    "href": "shownotes.html#der-hsp-test-für-hochsensibilität-satow-2022",
+    "title": "Shownotes",
+    "section": "Der HSP-Test für Hochsensibilität (Satow 2022)",
+    "text": "Der HSP-Test für Hochsensibilität (Satow 2022)\nDer HSP-Test von Lars Satow ist frei im Open Test Archive des Leibniz-Instituts für Psychologie (ZPID) verfügbar [3]. Er steht unter der Lizenz CC BY-NC-ND 4.0: Der Test darf für nicht-kommerzielle Forschung und Lehre genutzt, aber weder verändert noch gekürzt werden.\n\nAufbau\nSatow unterscheidet drei Dimensionen. Die dritte unterscheidet sich inhaltlich von Arons “ästhetischer Sensibilität”: Sie zielt auf die Beschäftigung mit den eigenen Gefühlen.\n\nDimensionen und Itemzahl des HSP-Tests [3]\n\n\n\n\n\n\n\n\nDimension\nBedeutung hoher Werte\nLangform\nKurzform\n\n\n\n\nLeichte Erregbarkeit (EOE, Ease of Excitation)\nschnell beunruhigt und aufgeregt, besonders wenn viele Reize gleichzeitig einströmen\n8\n3\n\n\nNiedrige Wahrnehmungsschwelle (LST, Low Sensory Threshold)\nnimmt Licht, Geräusche, Gerüche und Geschmack intensiver und früher wahr als andere\n8\n3\n\n\nHohe Empfindsamkeit (HSE, High Sensitivity)\nbeschäftigt sich intensiv mit den eigenen Gefühlen und inneren Vorgängen\n8\n3\n\n\nGesamt\n\n24\n9\n\n\n\nAlle Items werden auf einer vierstufigen Skala beantwortet: trifft gar nicht zu (1), trifft eher nicht zu (2), trifft eher zu (3), trifft genau zu (4). Es gibt bewusst keine Mittelkategorie, damit sich Befragte nicht “in die Mitte” flüchten. Die Items der drei Dimensionen sind im Fragebogen gemischt. Die Langform ist für Einzelfallentscheidungen gedacht, die Kurzform für Forschung, Lehre und schnelle Screenings.\n\n\nDie Items der Kurzform\n\nKurzform des HSP-Tests in der Reihenfolge des Fragebogens [3]\n\n\n\n\n\n\n\nNr.\nItem\nDimension\n\n\n\n\n1\nEs passiert häufig, dass ich der Erste bin, der etwas wahrnimmt, beispielsweise riecht oder hört.\nLST\n\n\n2\nIch rege mich oft zu schnell auf.\nEOE\n\n\n3\nMeine eigenen Gefühle nehme ich sehr genau wahr.\nHSE\n\n\n4\nIch rieche unangenehme Dinge deutlicher als andere.\nLST\n\n\n5\nKleinigkeiten bringen mich sehr schnell aus der Ruhe.\nEOE\n\n\n6\nIch beschäftige mich sehr viel mit meinen eigenen Gefühlen und Gedanken.\nHSE\n\n\n7\nIch versuche immer genau zu wissen, was in mir vorgeht.\nHSE\n\n\n8\nIch bin leicht erregbar.\nEOE\n\n\n9\nStörende Geräusche (tiefes Brummen, hohes Pfeifen) nehme ich intensiver wahr als andere.\nLST\n\n\n\nFür die Kurzform wurden pro Dimension die drei Items ausgewählt, die am stärksten mit den übrigen Items ihrer Dimension zusammenhängen (in der Testtheorie heißt das Trennschärfe).\n\n\nAuswertung\n\nRohpunkte: Jede Antwort erhält 1 bis 4 Punkte. Die Langform enthält ein negativ formuliertes Item (“Ich bin kein Mensch, der viel über sich selbst nachdenkt.”). Hier werden die Punkte umgedreht (trifft genau zu = 1, …, trifft gar nicht zu = 4), damit überall gilt: mehr Punkte = mehr Hochsensibilität. Die Kurzform enthält nur positiv formulierte Items.\nDimensionsscores: Die Rohpunkte einer Dimension werden addiert (Kurzform 3–12, Langform 8–32).\nGesamtscore: Die drei Dimensionsscores werden addiert (Kurzform 9–36, Langform 24–96).\nFehlende Antworten: Pro Dimension darf höchstens eine Antwort fehlen. Sie wird durch den gerundeten Mittelwert der Skala ersetzt.\nVergleich mit einer Referenzgruppe: Rohwerte sagen für sich wenig. Sie werden deshalb in T-Werte umgerechnet (Mittelwert 50, Standardabweichung 10), also mit einer großen Vergleichsstichprobe in Beziehung gesetzt: \\[T = 50 + 10 \\cdot \\frac{\\text{Score} - M}{SD}\\] Das Testmanual enthält zusätzlich alters- und geschlechtsspezifische Normen (Stanine-Werte). Es ist nur über den Autor erhältlich.\nEntscheidungsregel: Hochsensibilität liegt laut Satow vor, wenn mindestens zwei Dimensionen oder der Gesamtscore einen T-Wert von 60 (Stanine 7) erreichen. Das entspricht etwa den oberen 16 % der Vergleichsgruppe.\n\n\nKennwerte der Kurzform in der Validierungsstichprobe (n = 65.280) [3, Tab. 9]\n\n\n\n\n\n\n\n\n\n\nSkala\nItems\nM\nSD\nWertebereich\nCronbachs α\n\n\n\n\nLeichte Erregbarkeit (EOE)\n3\n9,40\n2,12\n3–12\n.81\n\n\nNiedrige Wahrnehmungsschwelle (LST)\n3\n9,37\n2,02\n3–12\n.74\n\n\nHohe Empfindsamkeit (HSE)\n3\n10,07\n1,82\n3–12\n.77\n\n\nGesamtscore\n9\n28,84\n4,05\n9–36\n.73\n\n\n\n\n\n\n\n\n\nTipBeispiel aus der Vorlesung\n\n\n\nEine Person antwortet bei EOE mit 3 + 4 + 3 = 10, bei LST mit 4 + 4 + 4 = 12 und bei HSE mit 3 + 2 + 3 = 8 Punkten; Gesamtscore 30. Mit den Kennwerten oben ergeben sich die T-Werte 53 (EOE), 63 (LST), 39 (HSE) und 53 (Gesamt). Nur eine Dimension liegt über 60. Nach der Entscheidungsregel ist die Person also nicht hochsensibel, trotz sehr niedriger Wahrnehmungsschwelle.\nDiese Umrechnung ist vereinfacht und nutzt die Kennwerte der Kurzform aus der Testdokumentation, nicht die Normen aus dem Manual. Sie zeigt auch die Grenzen der Kurzform: Bei EOE und LST erreicht man T ≥ 60 praktisch nur mit der Höchstpunktzahl 12.\n\n\n\n\nGüte des Tests\nLaut Testdokumentation [3] wurde der Test an einer Optimierungsstichprobe (n = 16.280) entwickelt und an einer Validierungsstichprobe (n = 65.280) geprüft.\n\nReliabilität: Cronbachs α liegt in der Langform für die drei Skalen bei etwa .80 und für den Gesamtscore bei .85. In der Kurzform ist der Gesamtscore weniger reliabel (.73) als die einzelnen Dimensionen, weil er drei unterschiedliche Teilbereiche zusammenfasst.\nStruktur: Die Zuordnung der Items zu den drei Dimensionen wurde statistisch überprüft. Die drei Dimensionen korrelieren nur moderat miteinander (r = .26 bis .36). Das spricht dafür, dass sie tatsächlich Unterschiedliches erfassen. Mit dem Gesamtscore korrelieren alle drei hoch (r = .70 bis .75).\nBezug zu Außenkriterien: Alle Skalen korrelieren mit der Angabe, schon als Kind als sensibel gegolten zu haben (r = .32 bis .37; Gesamtscore .46), und mit einem ausgeprägten Ruhebedürfnis (r = .25 bis .30; Gesamtscore .37).\nGeschlecht und Alter: Frauen erreichen in allen Skalen höhere Werte, besonders bei der leichten Erregbarkeit und im Gesamtscore (jeweils d ≈ 0,6). Das Alter spielt praktisch keine Rolle."
+  },
+  {
+    "objectID": "shownotes.html#abgrenzung-zu-adhs",
+    "href": "shownotes.html#abgrenzung-zu-adhs",
+    "title": "Shownotes",
+    "section": "Abgrenzung zu ADHS",
+    "text": "Abgrenzung zu ADHS\n\nKonzeptionelle Unterschiede\nHochsensibilität und ADHS (Aufmerksamkeitsdefizit-/Hyperaktivitätsstörung) werden im Alltag oft verwechselt. Beide können mit Reizüberflutung, starker emotionaler Reaktivität und Schwierigkeiten bei der Emotionsregulation einhergehen. Konzeptionell unterscheiden sie sich jedoch deutlich [2, 8]:\n\nKonzeptionelle Abgrenzung von Hochsensibilität und ADHS\n\n\n\n\n\n\n\n\nHochsensibilität\nADHS\n\n\n\n\nStatus\nPersönlichkeitsmerkmal, keine Diagnose\nDiagnose (Entwicklungsstörung in DSM-5 / ICD-11), von Fachleuten gestellt\n\n\nVerbreitung\nca. 20–30 % am oberen Ende des Kontinuums\nca. 5,9 % der Kinder und 2,5 % der Erwachsenen [10]\n\n\nKern\nReize werden gründlich und tief verarbeitet\nAufmerksamkeit und Impulse können schlecht gesteuert werden\n\n\nTypisches Verhalten\nerst innehalten und prüfen, dann handeln (“pause to check”)\nimpulsiv handeln, schnell abgelenkt, motorisch unruhig\n\n\nSinnesempfindlichkeit\nerhöht\nkann erhöht oder vermindert sein\n\n\nReizüberflutung\nFolge der intensiven Verarbeitung → Rückzug, Ruhe suchen\nFolge mangelnder Reizfilterung → teils auch Suche nach neuen Reizen\n\n\nBewertung\nneutral, mit Vor- und Nachteilen\nDiagnose setzt Beeinträchtigung im Alltag voraus\n\n\n\n\n\nEmpirische Überschneidung\nDie meisten Studien finden einen positiven Zusammenhang: Wer mehr ADHS-Merkmale berichtet, berichtet auch mehr Hochsensibilität.\n\nPanagiotidi, Overton & Stafford (2018) fanden in der Allgemeinbevölkerung (n = 234), dass mehr ADHS-Merkmale mit mehr sensorischen Auffälligkeiten einhergehen, über alle Sinnesbereiche hinweg [4].\nPanagiotidi, Overton & Stafford (2020) bestätigten das mit Arons HSP-Skala und einer ADHS-Selbstauskunftsskala (ASRS) bei n = 274 Personen [5].\nTurjeman-Levi & Kluger (2022) replizierten den Zusammenhang bei Studierenden, fanden aber keinen Zusammenhang mit der ästhetischen Sensibilität [6].\nDamatac et al. (2025) fanden mit einem neueren Hochsensibilitäts-Fragebogen, der stärker auf positive Aspekte abzielt, für den Gesamtwert keinen Zusammenhang, wohl aber für einzelne Unterskalen (zit. nach [8]). Das Ergebnis hängt also vom Messinstrument ab.\nSchippers, Greven & Hoogman (2024) fanden in einer britischen Bevölkerungsstichprobe (n = 694) kleine bis mittlere Korrelationen zwischen ADHS-Merkmalen und Hochsensibilität [7].\nSchippers, Hoogman & Greven (2025) haben dieselben Daten genauer nach Dimensionen ausgewertet [8]:\n\n\nKorrelationen (Kendalls τ, kontrolliert für Alter) zwischen ADHS-Merkmalen (ASRS) und Hochsensibilität (HSPS), n = 694 [8, Tab. 1]\n\n\n\n\n\n\n\n\n\nADHS-Merkmale\nHochsensibilität gesamt\nLeichte Erregbarkeit\nNiedrige Wahrnehmungsschwelle\nÄsthetische Sensibilität\n\n\n\n\nGesamt\n.36\n.31\n.34\n.21\n\n\nUnaufmerksamkeit\n.33\n.32\n.32\n.16\n\n\nHyperaktivität/Impulsivität\n.32\n.25\n.31\n.22\n\n\n\nKendalls τ ist eine Rangkorrelation und fällt kleiner aus als der bekanntere Korrelationskoeffizient r nach Pearson. Bei normalverteilten Daten entspricht τ ≈ .33 grob einem r von etwa .50. Die Zusammenhänge sind bei Frauen etwas stärker als bei Männern (statistisch nicht getestet). Personen mit einer selbst berichteten ADHS-Diagnose hatten in allen Dimensionen höhere Werte, allerdings waren das nur 20 Personen.\nAuch aus der ADHS-Forschung kommt ein passender Befund: Eine Metaanalyse über 30 Studien mit über 5.000 Personen zeigt, dass Menschen mit ADHS deutlich häufiger eine erhöhte Reizempfindlichkeit berichten als Vergleichsgruppen [9]. Gemessen wurde dort allerdings nicht Hochsensibilität im Sinne Arons, sondern sensorische Verarbeitung allgemein.\n\n\nInterpretation und Grenzen\nDie Zusammenhänge sind deutlich, aber weit von 1 entfernt: Hochsensibilität und ADHS überschneiden sich, sind aber nicht dasselbe. Am stärksten teilen sie die Neigung zur Überreizung (leichte Erregbarkeit, niedrige Wahrnehmungsschwelle). Die ästhetische Sensibilität hängt kaum mit ADHS zusammen.\nBei der Interpretation sind einige Einschränkungen zu beachten:\n\nMerkmale statt Diagnosen: Fast alle Studien messen ADHS-Merkmale per Selbstauskunft in der Allgemeinbevölkerung, keine klinisch gestellten Diagnosen.\nGemeinsame Methode: Beide Merkmale werden per Fragebogen bei denselben Personen erhoben. Das kann Korrelationen erhöhen, etwa weil manche Menschen generell mehr Beschwerden angeben.\nAnderes Instrument: Keine der Studien hat den HSP-Test von Satow verwendet. Satows Dimension “Hohe Empfindsamkeit” ist inhaltlich etwas anderes als Arons “ästhetische Sensibilität”.\nKeine Kausalität: Querschnittsdaten zeigen nicht, ob das eine das andere beeinflusst oder ob beide gemeinsame Ursachen haben.\nForschungsstand: Eine Metaanalyse speziell zu Hochsensibilität und ADHS ist uns nicht bekannt.\n\nFür die Messung bedeutet das: Ein guter Hochsensibilitätstest sollte mit ADHS-Skalen möglichst wenig korrelieren, damit er wirklich etwas Eigenes misst (vgl. Folie “Konzeptspezifikation”). Eine Korrelation um τ = .33 zeigt eine spürbare Überschneidung, aber keine Gleichheit der Konzepte."
+  },
+  {
+    "objectID": "shownotes.html#literatur-zur-hochsensibilität",
+    "href": "shownotes.html#literatur-zur-hochsensibilität",
+    "title": "Shownotes",
+    "section": "Literatur zur Hochsensibilität",
+    "text": "Literatur zur Hochsensibilität\n\n\n\n\n\n\nTip\n\n\n\n[1] Aron, E. N., & Aron, A. (1997). Sensory-processing sensitivity and its relation to introversion and emotionality. Journal of Personality and Social Psychology, 73(2), 345–368.\n[2] Aron, E. N., Aron, A., & Jagiellowicz, J. (2012). Sensory processing sensitivity: A review in the light of the evolution of biological responsivity. Personality and Social Psychology Review, 16(3), 262–282.\n[3] Satow, L. (2022). HSP. HSP-Test für Hochsensibilität [Verfahrensdokumentation, Fragebogen in Lang- und Kurzform, Testdokumentation]. In Leibniz-Institut für Psychologie (ZPID) (Hrsg.), Open Test Archive. Trier: ZPID. https://doi.org/10.23668/psycharchives.5419\n[4] Panagiotidi, M., Overton, P. G., & Stafford, T. (2018). The relationship between ADHD traits and sensory sensitivity in the general population. Comprehensive Psychiatry, 80, 179–185.\n[5] Panagiotidi, M., Overton, P. G., & Stafford, T. (2020). The relationship between sensory processing sensitivity and attention deficit hyperactivity disorder traits: A spectrum approach. Psychiatry Research, 293, 113477.\n[6] Turjeman-Levi, Y., & Kluger, A. N. (2022). Sensory-processing sensitivity versus the sensory-processing theory: Convergence and divergence. Frontiers in Psychology, 13, 1010836.\n[7] Schippers, L. M., Greven, C. U., & Hoogman, M. (2024). Associations between ADHD traits and self-reported strengths in the general population. Comprehensive Psychiatry, 130, 152461.\n[8] Schippers, L. M., Hoogman, M., & Greven, C. U. (2025). Sensory processing sensitivity and the association with attention-deficit/hyperactivity disorder (ADHD) traits, and ADHD-related strengths in the general population. Current Research in Behavioral Sciences, 9, 100193. Preprint: https://doi.org/10.31234/osf.io/26gxy_v2\n[9] Sensory processing in individuals with attention-deficit/hyperactivity disorder compared with control populations: A systematic review and meta-analysis (2025). PubMed-ID 40250555.\n[10] Faraone, S. V., et al. (2021). The World Federation of ADHD International Consensus Statement: 208 evidence-based conclusions about the disorder. Neuroscience & Biobehavioral Reviews, 128, 789–818."
   }
 ]
