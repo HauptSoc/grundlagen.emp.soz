@@ -1,0 +1,27 @@
+---
+title: "Typst-Testdokument"
+author: "Andreas Haupt"
+date: today
+format:
+  typst:
+    toc: false
+    papersize: "a4"
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+    fontsize: 11pt
+---
+
+# Einleitung
+
+Dies ist ein einfaches Testdokument, das mit Quarto und Typst als PDF gerendert wird.
+
+## Beispiel
+
+Mathematik im Fließtext: $x^2 + y^2 = r^2$.
+
+Ein kleiner R-Codeblock:
+
+```{r}
+summary(mtcars$mpg)
+```

@@ -1,0 +1,58 @@
+---
+title: "Methodenausbildung Present & Future"
+author: "Mäs, Horn, Banisch, Haupt"
+date: today
+format:
+  typst:
+    toc: false
+    papersize: "a4"
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+    fontsize: 11pt
+editor: source
+---
+
+## Stand
+
+Im Ergänzungsfach Soziologie sowie im B.A. WMK / LAS WMK sind zwei Methodenmodule Pflicht:
+
+- Modul "Sozialwissenschaftliche Methoden I" (8 LP)
+  - VL: Grundlagen empirischer Sozialwissenschaften und Datenerhebung (SS; Horn & Haupt)
+  - VL: Datenauswertung (WS; Horn & Haupt)
+- Modul: "Sozialwissenschaftliche Methoden II" (8 LP)
+  - K: Computergestützte Datenauswertung (SS, Banisch, Haupt, Nollmann)
+  - S: Methodenanwendung (WS, Banisch, Haupt, Nollmann)
+
+Die Module werden z.T. auch von Informatik, Technischer VWL, Humangeographie und Wirtschaftsingenieurwesen importiert.
+
+## Was brauchen/wollen wir? 
+
+#### Wunschliste Haupt
+
+- Ermöglichung kummulativen Wissensaufbaus durch aufbauende Komplexität
+- Mehr eigene Datenerhebung mit intensiver Besprechung nicht-zufallsbasierten Sampling Designs
+- Mehr Experimente mit und von den Studis (gern auch Feldexperimente)
+- Nutzung von Web-Surveys (Telefon-Surveys sind praktisch tot)
+- Simulation als Methode zum Verständnis von möglichen Problemen in der Datenanalyse und Datenerhebung. 
+- R als primäre Sprache für Datenauswertung und Simulation
+
+## WMK Master Modul (18 LP)
+
+#### Grundstruktur
+
+- Theorieveranstaltung (2 SWS)
+- Methodenveranstaltung (2 SWS)
+- Projektseminar (2 SWS)
+
+#### Daten und Gesellschaft
+
+- V: In welcher Gesellschaft leben wir eigentlich?
+- S: Gesellschaftliche Zustände und Veränderungen live erfassen (Webscraping, Pic2Data, Social Media Daten)
+- P: Do your own Data Journalism!
+
+#### Data Literacy in the age of AI
+
+- V: Was sind gute (sozialwissenschaftliche) Daten?
+- S: Data Detectives - woher wissen wir *das*?
+- P: Den Quellen auf den Grund gehen - Qualität im Daten Journalismus.

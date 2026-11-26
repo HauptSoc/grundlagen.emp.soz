@@ -694,7 +694,7 @@
     "href": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern",
-    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2 Beobachtungen könen fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
+    "text": "Verhältnis von Eigenschaften, Ausprägungen, Beobachtungen und Fehlern\n\n\n\n\nDie Eigenschaft, von der wir ein Konzept formulieren, wird üblicherweise mit F abgekürzen.1 Unterschiedliche Ausprägungen der Eigenschaft werden mit \\(\\tau_1 \\dots \\tau_n\\) (sprich: Tau) abgekürzt. Die Beobachtung einer Ausprägung wird mit I abgekürzt.2\nBeobachtungen können fehlerhaft sein. Die Quelle(n) einer fehlerhaften Beobachtung kürzen wir mit e ab (old school auch \\(\\epsilon\\), sprich: Epsilon.)\n\nKommt aus Großvaters Zeiten, in der alles ein Faktor war.Die Großväter (ja, es waren alles Männer) haben das Indikator genannt."
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#verhältnis-von-eigenschaften-ausprägungen-beobachtungen-und-fehlern-1",
@@ -722,7 +722,7 @@
     "href": "slides/04-Messen_Grundlagen.html#warum-das-alles",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "Warum das alles?",
-    "text": "Warum das alles?\n\n\n\n\n\n\n\nflowchart TD\n        A([\"Sind wir an der systematischen &lt;br&gt; Verbindung von Eigenschaften &lt;br&gt; interessiert?\"])\n        DE([Deskription])\n        T([Haben wir eine Theorie über &lt;br&gt; diese Verbindung, die &lt;br&gt; getestet werden soll?])\n        EX([Exploration])\n        HT([Hypothese])\n        \n        DE1[\"Wie groß ist die Gruppe &lt;br&gt; hochsensibler Personen &lt;br&gt; in Deutschland?\"]\n        DE1@{ shape: text}\n        \n        EX1[\"Gibt es einen Zusammenhang &lt;br&gt; zwischen Hochsensibilität &lt;br&gt; und kreativem Vermögen?\"]\n        EX1@{ shape: text}       \n        \n        HT1[\"Je hochsensibler Personen sind, &lt;br&gt; desto höher ist ihr Suchtrisiko.\"]\n        HT1@{ shape: text}       \n\n        A --&gt;|nein| DE --- DE1\n        A --&gt;|ja| T\n        T --&gt;|nein| EX --- EX1\n        T --&gt;|ja| HT --- HT1"
+    "text": "Warum das alles?"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#alter-und-gesundheit",
@@ -1268,7 +1268,7 @@
     "href": "slides/04-Messen_Grundlagen.html",
     "title": "Unterscheiden: Messtheoretische Grundlagen",
     "section": "",
-    "text": "Plakat der Stiftung Deutsche Depressionshilfe und Suizidprävention."
+    "text": "Greifkraftmessung im Rahmen der NAKO Gesundheitsstudie"
   },
   {
     "objectID": "slides/04-Messen_Grundlagen.html#footnotes",
@@ -8703,5 +8703,117 @@
     "title": "Shownotes",
     "section": "Literatur zur Hochsensibilität",
     "text": "Literatur zur Hochsensibilität\n\n\n\n\n\n\nTip\n\n\n\n[1] Aron, E. N., & Aron, A. (1997). Sensory-processing sensitivity and its relation to introversion and emotionality. Journal of Personality and Social Psychology, 73(2), 345–368.\n[2] Aron, E. N., Aron, A., & Jagiellowicz, J. (2012). Sensory processing sensitivity: A review in the light of the evolution of biological responsivity. Personality and Social Psychology Review, 16(3), 262–282.\n[3] Satow, L. (2022). HSP. HSP-Test für Hochsensibilität [Verfahrensdokumentation, Fragebogen in Lang- und Kurzform, Testdokumentation]. In Leibniz-Institut für Psychologie (ZPID) (Hrsg.), Open Test Archive. Trier: ZPID. https://doi.org/10.23668/psycharchives.5419\n[4] Panagiotidi, M., Overton, P. G., & Stafford, T. (2018). The relationship between ADHD traits and sensory sensitivity in the general population. Comprehensive Psychiatry, 80, 179–185.\n[5] Panagiotidi, M., Overton, P. G., & Stafford, T. (2020). The relationship between sensory processing sensitivity and attention deficit hyperactivity disorder traits: A spectrum approach. Psychiatry Research, 293, 113477.\n[6] Turjeman-Levi, Y., & Kluger, A. N. (2022). Sensory-processing sensitivity versus the sensory-processing theory: Convergence and divergence. Frontiers in Psychology, 13, 1010836.\n[7] Schippers, L. M., Greven, C. U., & Hoogman, M. (2024). Associations between ADHD traits and self-reported strengths in the general population. Comprehensive Psychiatry, 130, 152461.\n[8] Schippers, L. M., Hoogman, M., & Greven, C. U. (2025). Sensory processing sensitivity and the association with attention-deficit/hyperactivity disorder (ADHD) traits, and ADHD-related strengths in the general population. Current Research in Behavioral Sciences, 9, 100193. Preprint: https://doi.org/10.31234/osf.io/26gxy_v2\n[9] Sensory processing in individuals with attention-deficit/hyperactivity disorder compared with control populations: A systematic review and meta-analysis (2025). PubMed-ID 40250555.\n[10] Faraone, S. V., et al. (2021). The World Federation of ADHD International Consensus Statement: 208 evidence-based conclusions about the disorder. Neuroscience & Biobehavioral Reviews, 128, 789–818."
+  },
+  {
+    "objectID": "WMK-Module.html",
+    "href": "WMK-Module.html",
+    "title": "Gute Lehre",
+    "section": "",
+    "text": "The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS1, respectively. We have ported both implementations into the tufte package. If you want LaTeX/PDF output, you may use the tufte_handout format for handouts, and tufte_book for books. For HTML output, use tufte_html. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the rmarkdown::render() function. See @R-rmarkdown for more information about rmarkdown.\n---\ntitle: \"An Example Using the Tufte Style\"\nauthor: \"John Smith\"\noutput:\n  tufte::tufte_handout: default\n  tufte::tufte_html: default\n---\nThere are two goals of this package:\n\nTo produce both PDF and HTML output with similar styles from the same R Markdown document;\nTo provide simple syntax to write elements of the Tufte style such as side notes and margin figures, e.g. when you want a margin figure, all you need to do is the chunk option fig.margin = TRUE, and we will take care of the details for you, so you never need to think about \\begin{marginfigure} \\end{marginfigure} or &lt;span class=\"marginfigure\"&gt; &lt;/span&gt;; the LaTeX and HTML code under the hood may be complicated, but you never need to learn or write such code.\n\nIf you have any feature requests or find bugs in tufte, please do not hesitate to file them to https://github.com/rstudio/tufte/issues. For general questions, you may ask them on StackOverflow: https://stackoverflow.com/tags/rmarkdown."
+  },
+  {
+    "objectID": "WMK-Module.html#margin-figures",
+    "href": "WMK-Module.html#margin-figures",
+    "title": "Gute Lehre",
+    "section": "Margin Figures",
+    "text": "Margin Figures\nImages and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the knitr chunk option fig.margin = TRUE. For example:\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.5.3\n\nmtcars2 &lt;- mtcars\nmtcars2$am &lt;- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() + geom_smooth() +\n  theme(legend.position = 'bottom')\n\n\n\n\n\n\n\nFigure 1: MPG vs horsepower, colored by transmission.\n\n\n\n\n\nNote the use of the fig.cap chunk option to provide a figure caption. You can adjust the proportions of figures using the fig.width and fig.height chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin.\nFor PDF output, the vertical offset of margin figures can be set globally via the margin_fig_pos argument of tufte_handout() and tufte_book() (a LaTeX length such as \"0cm\" or \"-5pt\"). It can also be set per-chunk with the margin_fig_pos chunk option, which lets a single chunk override the global default without interfering with regular figures’ fig.pos."
+  },
+  {
+    "objectID": "WMK-Module.html#arbitrary-margin-content",
+    "href": "WMK-Module.html#arbitrary-margin-content",
+    "title": "Gute Lehre",
+    "section": "Arbitrary Margin Content",
+    "text": "Arbitrary Margin Content\nIn fact, you can include anything in the margin using the knitr engine named marginfigure. Unlike R code chunks ```{r}, you write a chunk starting with ```{marginfigure} instead, then put the content in the chunk. See an example on the right about the first fundamental theorem of calculus.\n\nPlaceholder (you should not see this)\n\nFor the sake of portability between LaTeX and HTML, you should keep the margin content as simple as possible (syntax-wise) in the marginefigure blocks. You may use simple Markdown syntax like **bold** and _italic_ text, but please refrain from using footnotes, citations, or block-level elements (e.g. blockquotes and lists) there.\nNote: if you set echo = FALSE in your global chunk options, you will have to add echo = TRUE to the chunk to display a margin figure, for example ```{marginfigure, echo = TRUE}."
+  },
+  {
+    "objectID": "WMK-Module.html#full-width-figures",
+    "href": "WMK-Module.html#full-width-figures",
+    "title": "Gute Lehre",
+    "section": "Full Width Figures",
+    "text": "Full Width Figures\nYou can arrange for figures to span across the entire page by using the chunk option fig.fullwidth = TRUE.\n\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\n\n\n\nFigure 2: A full width figure.\n\n\n\n\n\nOther chunk options related to figures can still be used, such as fig.width, fig.cap, out.width, and so on. For full width figures, usually fig.width is large and fig.height is small. In the above example, the plot size is \\(10 \\times 2\\)."
+  },
+  {
+    "objectID": "WMK-Module.html#arbitrary-full-width-content",
+    "href": "WMK-Module.html#arbitrary-full-width-content",
+    "title": "Gute Lehre",
+    "section": "Arbitrary Full Width Content",
+    "text": "Arbitrary Full Width Content\nAny content can span to the full width of the page. This feature requires Pandoc 2.0 or above. All you need is to put your content in a fenced Div with the class fullwidth, e.g.,\n::: {.fullwidth}\nAny _full width_ content here.\n:::\nBelow is an example:\n\nR is free software and comes with ABSOLUTELY NO WARRANTY. You are welcome to redistribute it under the terms of the GNU General Public License versions 2 or 3. For more information about these matters see https://www.gnu.org/licenses/."
+  },
+  {
+    "objectID": "WMK-Module.html#main-column-figures",
+    "href": "WMK-Module.html#main-column-figures",
+    "title": "Gute Lehre",
+    "section": "Main Column Figures",
+    "text": "Main Column Figures\nBesides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\n\n\n\nFigure 3: A figure in the main column."
+  },
+  {
+    "objectID": "WMK-Module.html#footnotes",
+    "href": "WMK-Module.html#footnotes",
+    "title": "Gute Lehre",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSee Github repositories tufte-latex and tufte-css↩︎\nBeautiful Evidence↩︎\nNote you should not assume tufte has been attached to your R session. You should either library(tufte) in your R Markdown document before you call newthought(), or use tufte::newthought().↩︎\nThis is a sidenote that was entered using a footnote.↩︎\nThe actual Envisioned CSS was not used in the tufte package. We only changed the fonts, background color, and text color based on the default Tufte style.↩︎"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#beobachten-und-unterscheiden",
+    "href": "slides/04-Messen_Grundlagen.html#beobachten-und-unterscheiden",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Beobachten und Unterscheiden",
+    "text": "Beobachten und Unterscheiden\n\n\n\nGreifkraftmessung im Rahmen der NAKO Gesundheitsstudie"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#messen-beobachtungen-zu-ausprägungen-einer-eigenschaft-zuordnen",
+    "href": "slides/04-Messen_Grundlagen.html#messen-beobachtungen-zu-ausprägungen-einer-eigenschaft-zuordnen",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Messen = Beobachtungen zu Ausprägungen einer Eigenschaft zuordnen",
+    "text": "Messen = Beobachtungen zu Ausprägungen einer Eigenschaft zuordnen\n\n\n Bildquelle\n\nWir wollen Untersuchungseinheiten hinsichtlich ihrer Ausprägungen von Eigenschaften unterscheiden. Dazu brauchen wir ein Symbol für jede (relevante) Ausprägung, die wir einer Beobachtung dieser Ausprägung zuordnen. In den meisten Fällen ist dieses Symbol eine Zahl. Die Anordnung dieser Zahlen/Symbole ist eine Skala."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unterschiede-auf-eine-skala-bringen-greifkraft",
+    "href": "slides/04-Messen_Grundlagen.html#unterschiede-auf-eine-skala-bringen-greifkraft",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unterschiede auf eine Skala bringen: Greifkraft",
+    "text": "Unterschiede auf eine Skala bringen: Greifkraft\n\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#greifkraft-messen-verfahren-und-maximalkraft",
+    "href": "slides/04-Messen_Grundlagen.html#greifkraft-messen-verfahren-und-maximalkraft",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Greifkraft messen: Verfahren und Maximalkraft",
+    "text": "Greifkraft messen: Verfahren und Maximalkraft\n\n\nMessverfahren\n\nHanddynamometer, bis zu vier Messungen pro Person\nReihenfolge: erst rechts, dann links, jeweils wiederholt\nDie erste Messung rechts dient teilweise als Probeversuch\n\nProblem: Händigkeit\n\nDie dominante Hand wird per Selbstauskunft erfasst\nDie Antworten sind 2006 und 2008 nicht hinreichend stabil\n\n\nLösung: Maximalkraft\n\nHöchster Wert aus der gesamten Messreihe, beider Hände\nUnabhängig von der Selbstauskunft zur Händigkeit\nDer Probeversuch-Effekt wirkt nicht mehr, weil nur der Höchstwert zählt\nHöhere Fallzahl, da fehlende Einzelmessungen toleriert werden\n\n\nQuelle: SOEP Survey Papers 227 (DIW 2010), Abschnitt 4.1 bis 4.3 und Tabelle 15."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#unterschiede-der-körperkraft-mit-greifkraftmessung",
+    "href": "slides/04-Messen_Grundlagen.html#unterschiede-der-körperkraft-mit-greifkraftmessung",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Unterschiede der Körperkraft mit Greifkraftmessung",
+    "text": "Unterschiede der Körperkraft mit Greifkraftmessung\n\n\n\nGreifkraftmessung im Rahmen der NAKO Gesundheitsstudie"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#greifkraft-messen---was-kann-da-schief-gehen",
+    "href": "slides/04-Messen_Grundlagen.html#greifkraft-messen---was-kann-da-schief-gehen",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Greifkraft messen - Was kann da schief gehen?",
+    "text": "Greifkraft messen - Was kann da schief gehen?\n\n\nMessverfahren im SOEP\n\nHanddynamometer, bis zu vier Messungen pro Person für 2006 und 2008.\nReihenfolge: erst rechts, dann links, jeweils wiederholt.\nDie erste Messung rechts dient teilweise als Probeversuch - sie ist systematisch niedriger als alle anderen.\n\n\nProblem: Leute wissen manchmal nicht, was ihre dominante Hand ist.\n\nDie dominante Hand wird per Selbstauskunft erfasst.\nDie Antworten sind 2006 und 2008 nicht hinreichend stabil.\n\nLösung: Maximalwert aller Messungen nutzen\n\nHöchster Wert aus der gesamten Messreihe, beider Hände.\nUnabhängig von der Selbstauskunft zur Händigkeit.\nDer Probeversuch-Effekt wirkt nicht mehr, weil nur der Höchstwert zählt.\nHöhere Fallzahl, da fehlende Einzelmessungen toleriert werden."
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#überall-fehler",
+    "href": "slides/04-Messen_Grundlagen.html#überall-fehler",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Überall Fehler",
+    "text": "Überall Fehler\n\n\n\n\nDas Messergebnis \\(y_i\\) (= Beobachteter Wert der Variable \\(Y\\) einer Untersuchungseinheit \\(i\\)) wird mindestens von zwei Komponenten bestimmt:\n\ndie (wahre) Ausprägung eines Merkmals \\(\\tau\\) (sprich: tau) sowie\neinem Störfaktor \\(\\epsilon\\) (sprich: epsilon), den wir zunächst als zufällig betrachten.\n\nWir gehen oft davon aus, dass sich beide Komponenten additiv verhalten und damit gilt:\n\\(y_i = \\tau_i + \\epsilon_i\\)"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#ist-greifkraft-ein-guter-indikator",
+    "href": "slides/04-Messen_Grundlagen.html#ist-greifkraft-ein-guter-indikator",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Ist Greifkraft ein guter Indikator?",
+    "text": "Ist Greifkraft ein guter Indikator?\nDas kommt darauf an! 🤡\n\n\n\n\n\n\n\nIndikator für\nQualität\n\n\n\n\nGesamtmuskelkraft (Kinder, junge Erwachsene)\nhoch, aber gewichtsabhängig\n\n\nEinzelne Muskelgruppen (ältere Erwachsene)\nschwach\n\n\nGesamtmortalität\nmoderat\n\n\nGesamtmortalität\nmoderat\n\n\nDiabetes, Stürze, Frakturen\nnull, komma nix"
+  },
+  {
+    "objectID": "slides/04-Messen_Grundlagen.html#was-machen-fehler-in-einer-messung",
+    "href": "slides/04-Messen_Grundlagen.html#was-machen-fehler-in-einer-messung",
+    "title": "Unterscheiden: Messtheoretische Grundlagen",
+    "section": "Was machen Fehler in einer Messung?",
+    "text": "Was machen Fehler in einer Messung?\n\\[\n\\color{#1b9e77}{y_i} = \\color{#d95f02}{\\tau_i} + \\color{#7570b3}{\\epsilon_i}\n\\]\n\n\\(\\tau_i\\): die wahre Ausprägung\n\n\n\\(\\epsilon_i\\): der Störfaktor"
   }
 ]
