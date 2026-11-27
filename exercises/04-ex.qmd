@@ -1,0 +1,72 @@
+---
+title: "Übung: Messtheoretische Grundlagen"
+author: "Andreas Haupt, Sophia Horn"
+format: 
+  html: 
+    self-contained: false
+    fontsize: 1em
+    mainfont: sans-serif
+    number-sections: true
+    number-depth: 2
+    table-of-contents: true
+    section-divs: true
+    code-block-bg: "#76b5c5"
+    highlight-style: monochrome
+    mermaid:
+      theme: neutral
+editor: source
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## Dimensionen der Verspieltheit nach Proyer
+
+Das OLIW-Modell von [Proyer et al. 2018](https://doi.org/10.1177/1073191117750469) beschreibt Verspieltheit bei Erwachsenen mit vier Dimensionen:
+
+| Dimension | Was sie messen soll |
+|---|---|
+| Other-directed (auf andere ausgerichtet) | Verspieltheit im Umgang mit anderen Menschen, z. B. um andere aufzuheitern oder Spannungen in sozialen Situationen zu lösen |
+| Lighthearted (leichtherzig) | Eine unbeschwerte Grundhaltung, das Leben eher als Spiel zu sehen und sich wenig Sorgen über Zukünftiges zu machen |
+| Intellectual (intellektuell-kognitiv) | Die Neigung, mit Ideen, Gedanken und Problemen zu spielen |
+| Whimsical (extravagant-spontaneös) | Die Vorliebe für Ungewöhnliches, Skurriles und Spontanes sowie eine Abneigung gegen Einordnung in Schubladen |
+
+## Aufgabe: Items den Dimensionen zuordnen
+
+Ordnen Sie die 28 Items der Skala den vier Dimensionen zu. Die Dimensionen sind vorgegeben; Sie können keine eigenen anlegen. Die Items sollten möglichst eindeutig einer Dimension zugeordnet werden können.
+
+[Werkzeug in neuem Tab öffnen](oliw/zuordnung.html){target="_blank"}
+
+```{=html}
+<iframe src="oliw/zuordnung.html" data-external="1" width="100%" height="950"
+        style="border:1px solid #ccc; border-radius:8px"></iframe>
+```
+
+Die Befragten geben ihre Zustimmung auf einer Skala von 1 („trifft gar nicht zu“) bis 7 („trifft voll zu“).
+
+## Problemitems
+
+Prüfen Sie Ihre Zuordnung kritisch. Welche Items sind ggf. problematisch, weil sie
+
+1. mehrere Dimensionen gleichzeitig ansprechen und/oder
+2. ein benachbartes Konzept (mit)erfassen und/oder
+3. einen hohen Grad an Messfehler beeinhalten (beschreiben Sie dann die Quelle des Fehlers wie: Missverständlichkeit, unklare Begriffe, doppelte Negationen, kulturspezifische Bedeutung, usw.). 
+
+## Do your own research
+
+Einigen Sie sich in der Gruppe[^1] auf die Erforschung 
+
+1. einer Grundlage/Bedingung für Verspieltheit in Paarbeziehungen;
+2. einer Folge von Verspieltheit in Paarbeziehungen. 
+
+::: {.callout-important}
+Denken Sie daran, dass jede Box **eine** Eigenschaft mit **allen Ausprägungen** erfasst. Daher gilt für ihre festgelegte Forschung: **Unterschiede** in der Ausprägung **einer** Bedingung führen zu **Unterschieden** in der Ausprägung von Verspieltheit. **Unterschiede** in der Ausprägung von Verspieltheit führen zu **Unterschieden** in der Ausprägung **einer** Folge. 
+:::
+```{mermaid}
+flowchart TB
+
+B["Grundlage/Bedingung/Ursache"] --> V["Verspieltheit"] --> F["Folge"]
+```
+
+[^1]: Im Zweifel entscheidet der/die Diktator:in. 

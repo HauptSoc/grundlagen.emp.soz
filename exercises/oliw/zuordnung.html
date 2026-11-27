@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>OLIW-Skala: Items den Dimensionen zuordnen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: "Atkinson Hyperlegible", system-ui, sans-serif; margin: 0; padding: 10px; background: #fff; font-size: 14px; }
+  header { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  header input { font: inherit; padding: 5px 8px; border: 1px solid #889; border-radius: 6px; }
+  button { font: inherit; padding: 5px 12px; border: 1px solid #456; border-radius: 6px; background: #D9E3E4; cursor: pointer; }
+  button:hover { background: #c3d3d5; }
+  button.small { padding: 1px 7px; font-size: 0.85em; }
+  .hint { color: #666; font-size: 0.85em; }
+
+  main { display: grid; grid-template-columns: minmax(280px, 2fr) 3fr; gap: 12px; align-items: start; }
+  h2 { font-size: 1.05em; margin: 0 0 6px; }
+
+  .zone { min-height: 110px; border: 2px dashed #bbb; border-radius: 8px; padding: 6px;
+          display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; align-content: start; }
+  .zone.over { border-color: #2a7; background: #eefaf2; }
+  #unsorted { min-height: 400px; }
+
+  .klasse { border: 1px solid #9ab; border-radius: 8px; margin-bottom: 10px; background: #f6f9fa; }
+  .klasse-head { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; padding: 6px; border-bottom: 1px solid #dde; }
+  .klasse-head .name { font-weight: bold; flex: 1 1 140px; }
+  .klasse .zone { border: none; min-height: 90px; }
+  .count { color: #567; font-size: 0.85em; }
+
+  figure { margin: 0; border: 1px solid #ddd; border-radius: 6px; padding: 5px 7px; background: #fff;
+           cursor: grab; user-select: none; }
+  figure.selected { outline: 3px solid #e80; }
+  .nr { font-weight: bold; font-size: 0.85em; color: #567; }
+  .itemtext { font-size: 0.82em; line-height: 1.25; pointer-events: none; }
+</style>
+</head>
+<body>
+<header>
+  <input id="group" placeholder="Name / Gruppe" size="16">
+  <button id="export">CSV exportieren</button>
+  <button id="reset" class="small">Zuordnungen löschen</button>
+</header>
+
+<main>
+  <section>
+    <h2>Alle Items <span id="n-unsorted" class="count"></span></h2>
+    <div id="unsorted" class="zone"></div>
+    <p class="hint">Items per Drag &amp; Drop in eine Dimension ziehen. Alternativ: Items anklicken (orange markiert)
+      und dann auf eine Dimension klicken – funktioniert auch auf Tablets. Mehrere Items gleichzeitig:
+      „Shift“-Klick oder Klick auf bereits markierte Items. Zurück in „Alle Items“ bringen Sie ein Item,
+      indem Sie es in den Bereich „Alle Items“ ziehen.</p>
+  </section>
+  <section>
+    <h2>Dimensionen (nach Proyer, OLIW-Modell)</h2>
+    <div id="classes"></div>
+  </section>
+</main>
+
+<script src="items.js"></script>
+<script>
+const ITEMS = window.OLIW_ITEMS;
+const DIMS = Object.entries(window.OLIW_DIMS).map(([id, name]) => ({ id, name }));
+const $ = (id) => document.getElementById(id);
+
+// ---- Zustand (im Browser gespeichert, damit ein Reload nichts löscht) ----
+const storageKey = "oliw-zuordnung-fix";
+const itemKey = (nr) => "item" + nr;
+const selected = new Set();
+let state = { group: "", assign: {} };
+
+function save() { try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch (e) {} }
+function load() {
+  try { return JSON.parse(localStorage.getItem(storageKey)) || state; }
+  catch (e) { return state; }
+}
+
+// ---- Darstellung ----
+function tile(p) {
+  const f = document.createElement("figure");
+  f.draggable = true;
+  f.dataset.id = itemKey(p.nr);
+  if (selected.has(f.dataset.id)) f.classList.add("selected");
+  f.innerHTML = `<div class="nr">Item ${p.nr}</div>
+    <div class="itemtext">${p.text}</div>`;
+  f.addEventListener("dragstart", (e) => {
+    selected.add(f.dataset.id);
+    e.dataTransfer.setData("text/plain", f.dataset.id);
+  });
+  f.addEventListener("click", (e) => {
+    e.stopPropagation();
+    selected.has(f.dataset.id) ? selected.delete(f.dataset.id) : selected.add(f.dataset.id);
+    f.classList.toggle("selected");
+  });
+  return f;
+}
+
+function makeZone(zone, dimId) {
+  zone.addEventListener("dragover", (e) => { e.preventDefault(); zone.classList.add("over"); });
+  zone.addEventListener("dragleave", () => zone.classList.remove("over"));
+  zone.addEventListener("drop", (e) => { e.preventDefault(); zone.classList.remove("over"); moveSelected(dimId); });
+  zone.addEventListener("click", () => { if (selected.size) moveSelected(dimId); });
+}
+
+function moveSelected(dimId) {
+  selected.forEach((id) => { if (dimId) state.assign[id] = dimId; else delete state.assign[id]; });
+  selected.clear();
+  save(); render();
+}
+
+function render() {
+  const unsorted = $("unsorted");
+  unsorted.replaceChildren(...ITEMS.filter((p) => !state.assign[itemKey(p.nr)]).map(tile));
+  $("n-unsorted").textContent = `(${unsorted.children.length} von ${ITEMS.length})`;
+
+  $("classes").replaceChildren(...DIMS.map((d) => {
+    const box = document.createElement("div");
+    box.className = "klasse";
+
+    const head = document.createElement("div");
+    head.className = "klasse-head";
+
+    const name = document.createElement("span");
+    name.className = "name";
+    name.textContent = d.name;
+
+    const items = ITEMS.filter((p) => state.assign[itemKey(p.nr)] === d.id);
+    const count = document.createElement("span");
+    count.className = "count";
+    count.textContent = items.length + (items.length === 1 ? " Item" : " Items");
+
+    head.append(name, count);
+    const zone = document.createElement("div");
+    zone.className = "zone";
+    makeZone(zone, d.id);
+    zone.append(...items.map(tile));
+    box.append(head, zone);
+    return box;
+  }));
+}
+
+// ---- CSV-Export (Semikolon + BOM, damit deutsches Excel es direkt öffnet) ----
+function exportCsv() {
+  const unsortedN = ITEMS.filter((p) => !state.assign[itemKey(p.nr)]).length;
+  if (unsortedN && !confirm(`${unsortedN} Items sind noch unsortiert. Trotzdem exportieren?`)) return;
+  const header = ["gruppe", "item_nr", "zuordnung"];
+  const rows = ITEMS.map((p) => {
+    const d = DIMS.find((c) => c.id === state.assign[itemKey(p.nr)]);
+    return [state.group, p.nr, d ? d.id : ""];
+  });
+  const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
+  const csv = "\ufeff" + [header, ...rows].map((r) => r.map(q).join(";")).join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+  const g = (state.group || "gruppe").replace(/[^\wäöüÄÖÜß-]+/g, "_");
+  a.download = `oliw_zuordnung_${g}.csv`;
+  document.body.append(a); a.click(); a.remove();
+}
+
+// ---- Bedienelemente ----
+makeZone($("unsorted"), null);
+
+$("group").value = (state = load()).group || "";
+$("group").addEventListener("input", () => { state.group = $("group").value; save(); });
+$("export").addEventListener("click", exportCsv);
+$("reset").addEventListener("click", () => {
+  if (!confirm("Alle Zuordnungen löschen?")) return;
+  state = { ...state, assign: {} };
+  save(); render();
+});
+
+render();
+</script>
+</body>
+</html>

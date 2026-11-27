@@ -1,0 +1,63 @@
+---
+title: "TangleLatex-Parabel mit Shiny for Python"
+format: html
+server: shiny
+---
+
+Ziehe eine der farbigen Zahlen in der Formel horizontal. Die durchgezogene Kurve folgt den aktuellen Werten, die gestrichelte zeigt die Werte vor dem Ziehen.
+
+```{python}
+#| context: setup
+import numpy as np
+import matplotlib.pyplot as plt
+from shiny import reactive, render, ui
+from shinywidgets import output_widget, reactive_read, render_widget
+from wigglystuff import TangleLatex
+
+XS = np.linspace(-5, 5, 201)
+```
+
+```{python}
+#| output: false
+@reactive.calc
+def tangle_widget():
+    return TangleLatex(
+        latex=r"y = \tangle{a}x^2 + \tangle{b}x + \tangle{c}",
+        parameters={
+            "a": {"value": 1.5, "min_value": -5, "max_value": 5, "step": 0.1, "digits": 1},
+            "b": {"value": -2, "min_value": -10, "max_value": 10, "step": 0.5, "digits": 1},
+            "c": {"value": 0.5, "min_value": -5, "max_value": 5, "step": 0.1, "digits": 1},
+        },
+        theme="light",
+    )
+
+
+@render_widget
+def tangle():
+    return tangle_widget()
+
+
+@render.plot
+def parabola():
+    values = reactive_read(tangle_widget(), "values")
+    committed = reactive_read(tangle_widget(), "committed_values")
+    fig, ax = plt.subplots(figsize=(5, 3.5))
+    ax.plot(XS, committed["a"] * XS**2 + committed["b"] * XS + committed["c"],
+            ls="--", color="#246bce", label="vorher")
+    ax.plot(XS, values["a"] * XS**2 + values["b"] * XS + values["c"],
+            color="#246bce", lw=2, label="aktuell")
+    ax.axhline(0, color="grey", lw=0.8)
+    ax.axvline(0, color="grey", lw=0.8)
+    ax.grid(alpha=0.3)
+    ax.legend()
+    return fig
+```
+
+```{python}
+#| context: ui
+ui.layout_columns(
+    output_widget("tangle"),
+    ui.output_plot("parabola"),
+    col_widths=[6, 6],
+)
+```

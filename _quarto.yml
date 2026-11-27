@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "!exercises/2025/"
+    - "!demos/"
   resources:
     - "*.docx"
     - docs/slides/*
